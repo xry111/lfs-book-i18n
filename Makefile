@@ -1,12 +1,16 @@
 LFS_EN = /home/xry111/svn-repos/LFS-BOOK
 MLANG=zh_CN
 ALL_XML_FILES = $(shell find $(LFS_EN) -type f -name '*.xml')
-EXCLUDE_FILES = $(LFS_EN)/chapter01/changelog.xml \
-				$(LFS_EN)/chapter01/livecd.xml
+EXCLUDE_FILES = $(LFS_EN)/chapter01/livecd.xml
 XML_FILES = $(filter-out $(EXCLUDE_FILES), $(ALL_XML_FILES))
 PO_FILES = $(patsubst $(LFS_EN)/%.xml, $(MLANG)/%.po, $(XML_FILES))
 
 run: $(PO_FILES)
+
+$(MLANG)/chapter01/changelog.po: $(LFS_EN)/chapter01/changelog.xml changelogtranslator.py templatetranslator.py
+	mkdir -pv "$(@D)"
+	po4a-updatepo -f docbook -m $< -p $@
+	./changelogtranslator.py $(MLANG)
 
 $(MLANG)/%.po: $(LFS_EN)/%.xml
 	mkdir -pv "$(@D)"
