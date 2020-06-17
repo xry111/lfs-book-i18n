@@ -1,9 +1,3 @@
-# SOME DESCRIPTIVE TITLE
-# Copyright (C) YEAR Free Software Foundation, Inc.
-# This file is distributed under the same license as the PACKAGE package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
-#
-#, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
@@ -11,22 +5,23 @@ msgstr ""
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
-"Language: \n"
+"Language: zh_CN\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Translate Toolkit 2.2.5\n"
 
 #. type: Content of: <sect1><title>
 #: /home/xry111/svn-repos/LFS-BOOK/prologue/standards.xml:11
 msgid "LFS and Standards"
-msgstr ""
+msgstr "LFS 和标准"
 
 #. type: Content of: <sect1><para>
 #: /home/xry111/svn-repos/LFS-BOOK/prologue/standards.xml:16
 msgid ""
 "The structure of LFS follows Linux standards as closely as possible.  The "
 "primary standards are:"
-msgstr ""
+msgstr "LFS 的结构尽可能遵循 Linux 的各项标准。主要的标准有："
 
 #. type: Content of: <sect1><itemizedlist><listitem><para>
 #: /home/xry111/svn-repos/LFS-BOOK/prologue/standards.xml:21
@@ -34,6 +29,8 @@ msgid ""
 "<ulink url=\"http://pubs.opengroup.org/onlinepubs/9699919799/\"> "
 "POSIX.1-2008</ulink>."
 msgstr ""
+"<ulink url=\"http://pubs.opengroup.org/onlinepubs/9699919799/\"> "
+"POSIX.1-2008</ulink>."
 
 #. type: Content of: <sect1><itemizedlist><listitem><para>
 #: /home/xry111/svn-repos/LFS-BOOK/prologue/standards.xml:25
@@ -41,6 +38,8 @@ msgid ""
 "<ulink url=\"http://refspecs.linuxfoundation.org/FHS_3.0/fhs/index.html\"> "
 "Filesystem Hierarchy Standard (FHS) Version 3.0</ulink>"
 msgstr ""
+"<ulink url=\"http://refspecs.linuxfoundation.org/FHS_3.0/fhs/index.html\"> "
+"Filesystem Hierarchy Standard (FHS) Version 3.0</ulink>"
 
 #. type: Content of: <sect1><itemizedlist><listitem><para>
 #: /home/xry111/svn-repos/LFS-BOOK/prologue/standards.xml:31
@@ -48,6 +47,8 @@ msgid ""
 "<ulink url=\"http://refspecs.linuxfoundation.org/lsb.shtml\">Linux Standard "
 "Base (LSB) Version 5.0 (2015)</ulink>"
 msgstr ""
+"<ulink url=\"http://refspecs.linuxfoundation.org/lsb.shtml\">Linux Standard "
+"Base (LSB) Version 5.0 (2015)</ulink>"
 
 #. type: Content of: <sect1><itemizedlist><listitem><para>
 #: /home/xry111/svn-repos/LFS-BOOK/prologue/standards.xml:34
@@ -58,6 +59,9 @@ msgid ""
 "Graphics.  LFS attempts to conform to the architectures discussed in the "
 "previous section."
 msgstr ""
+"LSB 由 4 个独立的标准组成：Core、Desktop、Runtime Language 和 Imaging。除了通"
+"用要求外，还有架构特定的要求。另外，还有两个处于试用阶段的标准：Gtk3 和 "
+"Graphics。LFS 试图遵循 LSB 对前一节讨论的那些架构的要求。"
 
 #. type: Content of: <sect1><itemizedlist><listitem><note><para>
 #: /home/xry111/svn-repos/LFS-BOOK/prologue/standards.xml:40
@@ -68,6 +72,9 @@ msgid ""
 "based, the user has complete control over what packages are desired and many "
 "choose not to install some packages that are specified by the LSB."
 msgstr ""
+"许多人不认同 LSB 的要求。定义 LSB 的主要目的是保证专有软件能够在满足 LSB 的"
+"系统上正常运行。然而 LFS 是基于源代码的，用户拥有完全的控制权，有权选择不安"
+"装 LSB 要求的软件包。"
 
 #. type: Content of: <sect1><para>
 #: /home/xry111/svn-repos/LFS-BOOK/prologue/standards.xml:50
@@ -77,25 +84,29 @@ msgid ""
 "the scope of LFS.  These additional packages have installation instructions "
 "in BLFS."
 msgstr ""
+"创建一个能够通过 LSB 认证测试的完整 LFS 系统是可行的，但需要安装大量超过 "
+"LFS 范畴的额外软件包。在 BLFS 中可以找到这些软件包的安装说明。"
 
 #. type: Content of: <sect1><variablelist><bridgehead>
 #: /home/xry111/svn-repos/LFS-BOOK/prologue/standards.xml:56
 msgid "Packages supplied by LFS needed to satisfy the LSB Requirements"
-msgstr ""
+msgstr "LSB 要求的，由 LFS 提供的软件包"
 
 #. type: Content of: <sect1><variablelist>
 #: /home/xry111/svn-repos/LFS-BOOK/prologue/standards.xml:58
 #: /home/xry111/svn-repos/LFS-BOOK/prologue/standards.xml:103
 #: /home/xry111/svn-repos/LFS-BOOK/prologue/standards.xml:150
-msgid "<?dbfo list-presentation=\"list\"?> <?dbhtml list-presentation=\"table\"?>"
+msgid ""
+"<?dbfo list-presentation=\"list\"?> <?dbhtml list-presentation=\"table\"?>"
 msgstr ""
+"<?dbfo list-presentation=\"list\"?> <?dbhtml list-presentation=\"table\"?>"
 
 #. type: Content of: <sect1><variablelist><varlistentry><term>
 #: /home/xry111/svn-repos/LFS-BOOK/prologue/standards.xml:62
 #: /home/xry111/svn-repos/LFS-BOOK/prologue/standards.xml:107
 #: /home/xry111/svn-repos/LFS-BOOK/prologue/standards.xml:154
 msgid "<emphasis>LSB Core:</emphasis>"
-msgstr ""
+msgstr "<emphasis>LSB Core:</emphasis>"
 
 #. type: Content of: <sect1><variablelist><varlistentry><listitem><para>
 #: /home/xry111/svn-repos/LFS-BOOK/prologue/standards.xml:64
@@ -103,13 +114,15 @@ msgid ""
 "Bash, Bc, Binutils, Coreutils, Diffutils, File, Findutils, Gawk, Grep, Gzip, "
 "M4, Man-DB, Ncurses, Procps, Psmisc, Sed, Shadow, Tar, Util-linux, Zlib"
 msgstr ""
+"Bash, Bc, Binutils, Coreutils, Diffutils, File, Findutils, Gawk, Grep, Gzip, "
+"M4, Man-DB, Ncurses, Procps, Psmisc, Sed, Shadow, Tar, Util-linux, Zlib"
 
 #. type: Content of: <sect1><variablelist><varlistentry><term>
 #: /home/xry111/svn-repos/LFS-BOOK/prologue/standards.xml:71
 #: /home/xry111/svn-repos/LFS-BOOK/prologue/standards.xml:116
 #: /home/xry111/svn-repos/LFS-BOOK/prologue/standards.xml:161
 msgid "<emphasis>LSB Desktop:</emphasis>"
-msgstr ""
+msgstr "<emphasis>LSB Desktop:</emphasis>"
 
 #. type: Content of: <sect1><variablelist><varlistentry><listitem><para>
 #: /home/xry111/svn-repos/LFS-BOOK/prologue/standards.xml:73
@@ -120,38 +133,38 @@ msgstr ""
 #: /home/xry111/svn-repos/LFS-BOOK/prologue/standards.xml:177
 #: /home/xry111/svn-repos/LFS-BOOK/prologue/standards.xml:184
 msgid "None"
-msgstr ""
+msgstr "无"
 
 #. type: Content of: <sect1><variablelist><varlistentry><term>
 #: /home/xry111/svn-repos/LFS-BOOK/prologue/standards.xml:78
 #: /home/xry111/svn-repos/LFS-BOOK/prologue/standards.xml:125
 #: /home/xry111/svn-repos/LFS-BOOK/prologue/standards.xml:168
 msgid "<emphasis>LSB Runtime Languages:</emphasis>"
-msgstr ""
+msgstr "<emphasis>LSB Runtime Languages:</emphasis>"
 
 #. type: Content of: <sect1><variablelist><varlistentry><listitem><para>
 #: /home/xry111/svn-repos/LFS-BOOK/prologue/standards.xml:80
 msgid "Perl"
-msgstr ""
+msgstr "Perl"
 
 #. type: Content of: <sect1><variablelist><varlistentry><term>
 #: /home/xry111/svn-repos/LFS-BOOK/prologue/standards.xml:85
 #: /home/xry111/svn-repos/LFS-BOOK/prologue/standards.xml:132
 #: /home/xry111/svn-repos/LFS-BOOK/prologue/standards.xml:175
 msgid "<emphasis>LSB Imaging:</emphasis>"
-msgstr ""
+msgstr "<emphasis>LSB Imaging:</emphasis>"
 
 #. type: Content of: <sect1><variablelist><varlistentry><term>
 #: /home/xry111/svn-repos/LFS-BOOK/prologue/standards.xml:92
 #: /home/xry111/svn-repos/LFS-BOOK/prologue/standards.xml:139
 #: /home/xry111/svn-repos/LFS-BOOK/prologue/standards.xml:182
 msgid "<emphasis>LSB Gtk3 and LSB Graphics (Trial Use):</emphasis>"
-msgstr ""
+msgstr "<emphasis>LSB Gtk3 和 LSB Graphics (试用):</emphasis>"
 
 #. type: Content of: <sect1><variablelist><bridgehead>
 #: /home/xry111/svn-repos/LFS-BOOK/prologue/standards.xml:101
 msgid "Packages supplied by BLFS needed to satisfy the LSB Requirements"
-msgstr ""
+msgstr "LSB 要求的，由 BLFS 提供的软件包"
 
 #. type: Content of: <sect1><variablelist><varlistentry><listitem><para>
 #: /home/xry111/svn-repos/LFS-BOOK/prologue/standards.xml:109
@@ -159,6 +172,8 @@ msgid ""
 "At, Batch (a part of At), Cpio, Ed, Fcrontab, LSB-Tools, NSPR, NSS, PAM, "
 "Pax, Sendmail (or Postfix or Exim), time"
 msgstr ""
+"At, Batch (At 的一部分), Cpio, Ed, Fcrontab, LSB-Tools, NSPR, NSS, PAM, Pax, "
+"Sendmail (或 Postfix，或 Exim), time"
 
 #. type: Content of: <sect1><variablelist><varlistentry><listitem><para>
 #: /home/xry111/svn-repos/LFS-BOOK/prologue/standards.xml:118
@@ -167,28 +182,32 @@ msgid ""
 "Glib2, GTK+2, Icon-naming-utils, Libjpeg-turbo, Libpng, Libtiff, Libxml2, "
 "MesaLib, Pango, Xdg-utils, Xorg"
 msgstr ""
+"Alsa, ATK, Cairo, Desktop-file-utils, Freetype, Fontconfig, Gdk-pixbuf, "
+"Glib2, GTK+2, Icon-naming-utils, Libjpeg-turbo, Libpng, Libtiff, Libxml2, "
+"MesaLib, Pango, Xdg-utils, Xorg"
 
 #. type: Content of: <sect1><variablelist><varlistentry><listitem><para>
 #: /home/xry111/svn-repos/LFS-BOOK/prologue/standards.xml:127
 msgid "Python, Libxml2, Libxslt"
-msgstr ""
+msgstr "Python, Libxml2, Libxslt"
 
 #. type: Content of: <sect1><variablelist><varlistentry><listitem><para>
 #: /home/xry111/svn-repos/LFS-BOOK/prologue/standards.xml:134
 msgid "CUPS, Cups-filters, Ghostscript, SANE"
-msgstr ""
+msgstr "CUPS, Cups-filters, Ghostscript, SANE"
 
 #. type: Content of: <sect1><variablelist><varlistentry><listitem><para>
 #: /home/xry111/svn-repos/LFS-BOOK/prologue/standards.xml:141
 msgid "GTK+3"
-msgstr ""
+msgstr "GTK+3"
 
 #. type: Content of: <sect1><variablelist><bridgehead>
 #: /home/xry111/svn-repos/LFS-BOOK/prologue/standards.xml:148
-msgid "Packages not supplied by LFS or BLFS needed to satisfy the LSB Requirements"
-msgstr ""
+msgid ""
+"Packages not supplied by LFS or BLFS needed to satisfy the LSB Requirements"
+msgstr "LSB 要求的，LFS 和 BLFS 均不提供的软件包"
 
 #. type: Content of: <sect1><variablelist><varlistentry><listitem><para>
 #: /home/xry111/svn-repos/LFS-BOOK/prologue/standards.xml:163
 msgid "Qt4 (but Qt5 is provided)"
-msgstr ""
+msgstr "Qt4 (但提供了 Qt5)"
