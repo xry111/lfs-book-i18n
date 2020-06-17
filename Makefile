@@ -1,6 +1,7 @@
 LFS_EN = /home/xry111/svn-repos/LFS-BOOK
 MLANG=zh_CN
-XML_FILES = $(shell find $(LFS_EN) -type f -name '*.xml')
+ALL_XML_FILES = $(shell find $(LFS_EN) -type f -name '*.xml')
+XML_FILES = $(filter-out $(LFS_EN)/chapter01/changelog.xml, $(ALL_XML_FILES))
 PO_FILES = $(patsubst $(LFS_EN)/%.xml, $(MLANG)/%.po, $(XML_FILES))
 
 run: $(PO_FILES)
@@ -27,4 +28,4 @@ $(MLANG)/book/%: $(LFS_EN)/%
 	cp -v $< $@
 
 test:
-	echo $(BOOK_FILES)
+	echo $(XML_FILES)
