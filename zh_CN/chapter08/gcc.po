@@ -1,0 +1,868 @@
+# SOME DESCRIPTIVE TITLE
+# Copyright (C) YEAR Free Software Foundation, Inc.
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"POT-Creation-Date: 2020-06-17 12:44+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#. type: Content of: <sect1><sect1info><address>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/gcc.xml:14
+#, no-wrap
+msgid "&gcc-url;"
+msgstr ""
+
+#. type: Content of: <sect1><sect1info>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/gcc.xml:12
+msgid ""
+"<productname>gcc</productname> <productnumber>&gcc-version;</productnumber> "
+"<placeholder type=\"address\" id=\"0\"/>"
+msgstr ""
+
+#. type: Content of: <sect1><title>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/gcc.xml:17
+msgid "GCC-&gcc-version;"
+msgstr ""
+
+#. type: Content of: <sect1><indexterm><primary>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/gcc.xml:20
+msgid "GCC"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/gcc.xml:26
+msgid ""
+"The GCC package contains the GNU compiler collection, which includes the C "
+"and C++ compilers."
+msgstr ""
+
+#. type: Content of: <sect1><sect2><segmentedlist><segtitle>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/gcc.xml:30
+msgid "&buildtime;"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><segmentedlist><segtitle>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/gcc.xml:31
+msgid "&diskspace;"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><segmentedlist><seglistitem><seg>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/gcc.xml:34
+msgid "&gcc-fin-sbu;"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><segmentedlist><seglistitem><seg>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/gcc.xml:35
+msgid "&gcc-fin-du;"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><title>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/gcc.xml:42
+msgid "Installation of GCC"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/gcc.xml:44
+msgid ""
+"If building on x86_64, change the default directory name for 64-bit "
+"libraries to <quote>lib</quote>:"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><screen>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/gcc.xml:47
+#, no-wrap
+msgid ""
+"<userinput remap=\"pre\">case $(uname -m) in\n"
+"  x86_64)\n"
+"    sed -e '/m64=/s/lib64/lib/' \\\n"
+"        -i.orig gcc/config/i386/t-linux64\n"
+"  ;;\n"
+"esac</userinput>"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/gcc.xml:54
+msgid ""
+"The GCC documentation recommends building GCC in a dedicated build "
+"directory:"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><screen>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/gcc.xml:56
+#, no-wrap
+msgid ""
+"<userinput remap=\"pre\">mkdir -v build\n"
+"cd       build</userinput>"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/gcc.xml:59
+msgid "Prepare GCC for compilation:"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><screen>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/gcc.xml:61
+#, no-wrap
+msgid ""
+"<userinput remap=\"configure\">../configure --prefix=/usr            \\\n"
+"             LD=ld                    \\\n"
+"             --enable-languages=c,c++ \\\n"
+"             --disable-multilib       \\\n"
+"             --disable-bootstrap      \\\n"
+"             --with-system-zlib</userinput>"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/gcc.xml:68
+msgid ""
+"Note that for other programming languages there are some prerequisites that "
+"are not yet available. See the <ulink "
+"url=\"&blfs-book;general/gcc.html\">BLFS Book GCC page</ulink> for "
+"instructions on how to build all of GCC's supported languages."
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><title>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/gcc.xml:74
+msgid "The meaning of the new configure parameters:"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/gcc.xml:77
+msgid "<parameter>LD=ld</parameter>"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/gcc.xml:79
+msgid ""
+"This parameter makes the configure script use the ld installed by the "
+"binutils built earlier in this chapter, rather than the cross-built version "
+"which would otherwise be used."
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/gcc.xml:86
+msgid "<parameter>--with-system-zlib</parameter>"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/gcc.xml:88
+msgid ""
+"This switch tells GCC to link to the system installed copy of the zlib "
+"library, rather than its own internal copy."
+msgstr ""
+
+#. type: Content of: <sect1><sect2><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/gcc.xml:94
+msgid "Compile the package:"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><screen>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/gcc.xml:96
+#, no-wrap
+msgid "<userinput remap=\"make\">make</userinput>"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><important><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/gcc.xml:99
+msgid ""
+"In this section, the test suite for GCC is considered critical. Do not skip "
+"it under any circumstance."
+msgstr ""
+
+#. type: Content of: <sect1><sect2><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/gcc.xml:103
+msgid ""
+"One set of tests in the GCC test suite is known to exhaust the default "
+"stack, so increase the stack size prior to running the tests:"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><screen>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/gcc.xml:106
+#, no-wrap
+msgid "<userinput remap=\"test\">ulimit -s 32768</userinput>"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/gcc.xml:108
+msgid "Test the results as a non-privileged user, but do not stop at errors:"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><screen>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/gcc.xml:110
+#, no-wrap
+msgid ""
+"<userinput remap=\"test\">chown -Rv tester . \n"
+"su tester -c \"PATH=$PATH make -k check\"</userinput>"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/gcc.xml:113
+msgid "To receive a summary of the test suite results, run:"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><screen>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/gcc.xml:115
+#, no-wrap
+msgid "<userinput remap=\"test\">../contrib/test_summary</userinput>"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/gcc.xml:117
+msgid ""
+"For only the summaries, pipe the output through <userinput>grep -A7 "
+"Summ</userinput>."
+msgstr ""
+
+#. type: Content of: <sect1><sect2><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/gcc.xml:120
+msgid ""
+"Results can be compared with those located at <ulink "
+"url=\"&test-results;\"/> and <ulink "
+"url=\"https://gcc.gnu.org/ml/gcc-testresults/\"/>."
+msgstr ""
+
+#. type: Content of: <sect1><sect2><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/gcc.xml:124
+msgid ""
+"Six tests related to get_time are known to fail.  These are apparently "
+"related to the en_HK locale."
+msgstr ""
+
+#. type: Content of: <sect1><sect2><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/gcc.xml:132
+msgid ""
+"A few unexpected failures cannot always be avoided. The GCC developers are "
+"usually aware of these issues, but have not resolved them yet.  Unless the "
+"test results are vastly different from those at the above URL, it is safe to "
+"continue."
+msgstr ""
+
+#. type: Content of: <sect1><sect2><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/gcc.xml:146
+msgid "Install the package and remove an unneeded directory:"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><screen>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/gcc.xml:148
+#, no-wrap
+msgid ""
+"<userinput remap=\"install\">make install\n"
+"rm -rf /usr/lib/gcc/$(gcc "
+"-dumpmachine)/&gcc-version;/include-fixed/bits/</userinput>"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/gcc.xml:151
+msgid ""
+"The GCC build directory is owned by <systemitem class=\"username\"> "
+"tester</systemitem> now and the ownership of the installed header directory "
+"(and its content) will be incorrect.  Change the ownership to <systemitem "
+"class=\"username\">root</systemitem> user and group:"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><screen>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/gcc.xml:156
+#, no-wrap
+msgid ""
+"<userinput remap=\"install\">chown -v -R root:root \\\n"
+"    /usr/lib/gcc/*linux-gnu/&gcc-version;/include{,-fixed}</userinput>"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/gcc.xml:159
+msgid ""
+"Create a symlink required by the <ulink "
+"url=\"https://refspecs.linuxfoundation.org/FHS_3.0/fhs/ch03s09.html\">FHS</ulink> "
+"for \"historical\" reasons."
+msgstr ""
+
+#. type: Content of: <sect1><sect2><screen>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/gcc.xml:163
+#, no-wrap
+msgid "<userinput remap=\"install\">ln -sv ../usr/bin/cpp /lib</userinput>"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/gcc.xml:170
+msgid ""
+"Add a compatibility symlink to enable building programs with Link Time "
+"Optimization (LTO):"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><screen>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/gcc.xml:173
+#, no-wrap
+msgid ""
+"<userinput remap=\"install\">install -v -dm755 /usr/lib/bfd-plugins\n"
+"ln -sfv ../../libexec/gcc/$(gcc -dumpmachine)/&gcc-version;/liblto_plugin.so "
+"\\\n"
+"        /usr/lib/bfd-plugins/</userinput>"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/gcc.xml:177
+msgid ""
+"Now that our final toolchain is in place, it is important to again ensure "
+"that compiling and linking will work as expected. We do this by performing "
+"some sanity checks:"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><screen>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/gcc.xml:205
+#, no-wrap
+msgid ""
+"<computeroutput>/usr/lib/gcc/x86_64-pc-linux-gnu/&gcc-version;/../../../../lib/crt1.o "
+"succeeded\n"
+"/usr/lib/gcc/x86_64-pc-linux-gnu/&gcc-version;/../../../../lib/crti.o "
+"succeeded\n"
+"/usr/lib/gcc/x86_64-pc-linux-gnu/&gcc-version;/../../../../lib/crtn.o "
+"succeeded</computeroutput>"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/gcc.xml:209
+msgid ""
+"Depending on your machine architecture, the above may differ slightly.  The "
+"difference will be the name of the directory after <filename "
+"class=\"directory\">/usr/lib/gcc</filename>. The important thing to look for "
+"here is that <command>gcc</command> has found all three "
+"<filename>crt*.o</filename> files under the <filename "
+"class=\"directory\">/usr/lib</filename> directory."
+msgstr ""
+
+#. type: Content of: <sect1><sect2><screen>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/gcc.xml:220
+#, no-wrap
+msgid "<userinput>grep -B4 '^ /usr/include' dummy.log</userinput>"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><screen>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/gcc.xml:226
+#, no-wrap
+msgid ""
+"<computeroutput>#include &lt;...&gt; search starts here:\n"
+" /usr/lib/gcc/x86_64-pc-linux-gnu/&gcc-version;/include\n"
+" /usr/local/include\n"
+" /usr/lib/gcc/x86_64-pc-linux-gnu/&gcc-version;/include-fixed\n"
+" /usr/include</computeroutput>"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/gcc.xml:232
+msgid ""
+"Again, the directory named after your target triplet may be different than "
+"the above, depending on your system architecture."
+msgstr ""
+
+#. type: Content of: <sect1><sect2><screen>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/gcc.xml:247
+#, no-wrap
+msgid ""
+"<computeroutput>SEARCH_DIR(\"/usr/x86_64-pc-linux-gnu/lib64\")\n"
+"SEARCH_DIR(\"/usr/local/lib64\")\n"
+"SEARCH_DIR(\"/lib64\")\n"
+"SEARCH_DIR(\"/usr/lib64\")\n"
+"SEARCH_DIR(\"/usr/x86_64-pc-linux-gnu/lib\")\n"
+"SEARCH_DIR(\"/usr/local/lib\")\n"
+"SEARCH_DIR(\"/lib\")\n"
+"SEARCH_DIR(\"/usr/lib\");</computeroutput>"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/gcc.xml:256
+msgid ""
+"A 32-bit system may see a few different directories. For example, here is "
+"the output from an i686 machine:"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><screen>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/gcc.xml:259
+#, no-wrap
+msgid ""
+"<computeroutput>SEARCH_DIR(\"/usr/i686-pc-linux-gnu/lib32\")\n"
+"SEARCH_DIR(\"/usr/local/lib32\")\n"
+"SEARCH_DIR(\"/lib32\")\n"
+"SEARCH_DIR(\"/usr/lib32\")\n"
+"SEARCH_DIR(\"/usr/i686-pc-linux-gnu/lib\")\n"
+"SEARCH_DIR(\"/usr/local/lib\")\n"
+"SEARCH_DIR(\"/lib\")\n"
+"SEARCH_DIR(\"/usr/lib\");</computeroutput>"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/gcc.xml:312
+msgid "Finally, move a misplaced file:"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><screen>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/gcc.xml:314
+#, no-wrap
+msgid ""
+"<userinput remap=\"install\">mkdir -pv /usr/share/gdb/auto-load/usr/lib\n"
+"mv -v /usr/lib/*gdb.py /usr/share/gdb/auto-load/usr/lib</userinput>"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><title>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/gcc.xml:320
+msgid "Contents of GCC"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><segmentedlist><segtitle>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/gcc.xml:323
+msgid "Installed programs"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><segmentedlist><segtitle>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/gcc.xml:324
+msgid "Installed libraries"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><segmentedlist><segtitle>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/gcc.xml:325
+msgid "Installed directories"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><segmentedlist><seglistitem><seg>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/gcc.xml:328
+msgid ""
+"c++, cc (link to gcc), cpp, g++, gcc, gcc-ar, gcc-nm, gcc-ranlib, gcov, "
+"gcov-dump, and gcov-tool"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><segmentedlist><seglistitem><seg>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/gcc.xml:331
+msgid ""
+"libasan.{a,so}, libatomic.{a,so}, libcc1.so, libgcc.a, libgcc_eh.a, "
+"libgcc_s.so, libgcov.a, libgomp.{a,so}, libitm.{a,so}, liblsan.{a,so}, "
+"liblto_plugin.so, libquadmath.{a,so}, libssp.{a,so}, libssp_nonshared.a, "
+"libstdc++.{a,so}, libstdc++fs.a, libsupc++.a, libtsan.{a,so}, and "
+"libubsan.{a,so}"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><segmentedlist><seglistitem><seg>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/gcc.xml:338
+msgid ""
+"/usr/include/c++, /usr/lib/gcc, /usr/libexec/gcc, and "
+"/usr/share/gcc-&gcc-version;"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><bridgehead>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/gcc.xml:344
+msgid "Short Descriptions"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/gcc.xml:345
+msgid "<?dbfo list-presentation=\"list\"?> <?dbhtml list-presentation=\"table\"?>"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/gcc.xml:349
+msgid "<command>c++</command>"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/gcc.xml:351
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/gcc.xml:382
+msgid "The C++ compiler"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/gcc.xml:353
+msgid "c++"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/gcc.xml:359
+msgid "<command>cc</command>"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/gcc.xml:361
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/gcc.xml:392
+msgid "The C compiler"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/gcc.xml:363
+msgid "cc"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/gcc.xml:369
+msgid "<command>cpp</command>"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/gcc.xml:371
+msgid ""
+"The C preprocessor; it is used by the compiler to expand the #include, "
+"#define, and similar statements in the source files"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/gcc.xml:374
+msgid "cpp"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/gcc.xml:380
+msgid "<command>g++</command>"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/gcc.xml:384
+msgid "g++"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/gcc.xml:390
+msgid "<command>gcc</command>"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/gcc.xml:394
+msgid "gcc"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/gcc.xml:400
+msgid "<command>gcc-ar</command>"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/gcc.xml:402
+msgid ""
+"A wrapper around <command>ar</command> that adds a plugin to the command "
+"line. This program is only used to add \"link time optimization\" and is not "
+"useful with the default build options"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/gcc.xml:407
+msgid "gc-ar"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/gcc.xml:413
+msgid "<command>gcc-nm</command>"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/gcc.xml:415
+msgid ""
+"A wrapper around <command>nm</command> that adds a plugin to the command "
+"line. This program is only used to add \"link time optimization\" and is not "
+"useful with the default build options"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/gcc.xml:420
+msgid "gc-nm"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/gcc.xml:426
+msgid "<command>gcc-ranlib</command>"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/gcc.xml:428
+msgid ""
+"A wrapper around <command>ranlib</command> that adds a plugin to the command "
+"line. This program is only used to add \"link time optimization\" and is not "
+"useful with the default build options"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/gcc.xml:433
+msgid "gc-ranlib"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/gcc.xml:439
+msgid "<command>gcov</command>"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/gcc.xml:441
+msgid ""
+"A coverage testing tool; it is used to analyze programs to determine where "
+"optimizations will have the most effect"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/gcc.xml:444
+msgid "gcov"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/gcc.xml:450
+msgid "<command>gcov-dump</command>"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/gcc.xml:452
+msgid "Offline gcda and gcno profile dump tool"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/gcc.xml:454
+msgid "gcov-dump"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/gcc.xml:460
+msgid "<command>gcov-tool</command>"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/gcc.xml:462
+msgid "Offline gcda profile processing tool"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/gcc.xml:464
+msgid "gcov-tool"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/gcc.xml:470
+msgid "<filename class=\"libraryfile\">libasan</filename>"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/gcc.xml:472
+msgid "The Address Sanitizer runtime library"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/gcc.xml:474
+msgid "libasan"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/gcc.xml:480
+msgid "<filename class=\"libraryfile\">libatomic</filename>"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/gcc.xml:482
+msgid "GCC atomic built-in runtime library"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/gcc.xml:484
+msgid "libatomic"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/gcc.xml:490
+msgid "<filename class=\"libraryfile\">libcc1</filename>"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/gcc.xml:492
+msgid "The C preprocessing library"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/gcc.xml:494
+msgid "libcc1"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/gcc.xml:500
+msgid "<filename class=\"libraryfile\">libgcc</filename>"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/gcc.xml:502
+msgid "Contains run-time support for <command>gcc</command>"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/gcc.xml:504
+msgid "libgcc"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/gcc.xml:510
+msgid "<filename class=\"libraryfile\">libgcov</filename>"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/gcc.xml:512
+msgid ""
+"This library is linked in to a program when GCC is instructed to enable "
+"profiling"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/gcc.xml:515
+msgid "libgcov"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/gcc.xml:521
+msgid "<filename class=\"libraryfile\">libgomp</filename>"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/gcc.xml:523
+msgid ""
+"GNU implementation of the OpenMP API for multi-platform shared-memory "
+"parallel programming in C/C++ and Fortran"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/gcc.xml:526
+msgid "libgomp"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/gcc.xml:532
+msgid "<filename class=\"libraryfile\">liblsan</filename>"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/gcc.xml:534
+msgid "The Leak Sanitizer runtime library"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/gcc.xml:536
+msgid "liblsan"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/gcc.xml:542
+msgid "<filename class=\"libraryfile\">liblto_plugin</filename>"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/gcc.xml:544
+msgid ""
+"GCC's Link Time Optimization (LTO) plugin allows GCC to perform "
+"optimizations across compilation units"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/gcc.xml:547
+msgid "liblto_plugin"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/gcc.xml:553
+msgid "<filename class=\"libraryfile\">libquadmath</filename>"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/gcc.xml:555
+msgid "GCC Quad Precision Math Library API"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/gcc.xml:557
+msgid "libquadmath"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/gcc.xml:563
+msgid "<filename class=\"libraryfile\">libssp</filename>"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/gcc.xml:565
+msgid "Contains routines supporting GCC's stack-smashing protection functionality"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/gcc.xml:568
+msgid "libssp"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/gcc.xml:574
+msgid "<filename class=\"libraryfile\">libstdc++</filename>"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/gcc.xml:576
+msgid "The standard C++ library"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/gcc.xml:578
+msgid "libstdc++"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/gcc.xml:584
+msgid "<filename class=\"libraryfile\">libstdc++fs</filename>"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/gcc.xml:586
+msgid "ISO/IEC TS 18822:2015 Filesystem library"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/gcc.xml:588
+msgid "libstdc++fs"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/gcc.xml:594
+msgid "<filename class=\"libraryfile\">libsupc++</filename>"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/gcc.xml:596
+msgid "Provides supporting routines for the C++ programming language"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/gcc.xml:599
+msgid "libsupc++"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/gcc.xml:605
+msgid "<filename class=\"libraryfile\">libtsan</filename>"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/gcc.xml:607
+msgid "The Thread Sanitizer runtime library"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/gcc.xml:609
+msgid "libtsan"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/gcc.xml:615
+msgid "<filename class=\"libraryfile\">libubsan</filename>"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/gcc.xml:617
+msgid "The Undefined Behavior Sanitizer runtime library"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/gcc.xml:619
+msgid "libubsan"
+msgstr ""

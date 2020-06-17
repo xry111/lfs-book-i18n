@@ -1,0 +1,388 @@
+# SOME DESCRIPTIVE TITLE
+# Copyright (C) YEAR Free Software Foundation, Inc.
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"POT-Creation-Date: 2020-06-17 12:44+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#. type: Content of: <sect1><sect1info><address>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/inetutils.xml:14
+#, no-wrap
+msgid "&inetutils-url;"
+msgstr ""
+
+#. type: Content of: <sect1><sect1info>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/inetutils.xml:12
+msgid ""
+"<productname>inetutils</productname> "
+"<productnumber>&inetutils-version;</productnumber> <placeholder "
+"type=\"address\" id=\"0\"/>"
+msgstr ""
+
+#. type: Content of: <sect1><title>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/inetutils.xml:17
+msgid "Inetutils-&inetutils-version;"
+msgstr ""
+
+#. type: Content of: <sect1><indexterm><primary>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/inetutils.xml:20
+msgid "Inetutils"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/inetutils.xml:26
+msgid "The Inetutils package contains programs for basic networking."
+msgstr ""
+
+#. type: Content of: <sect1><sect2><segmentedlist><segtitle>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/inetutils.xml:29
+msgid "&buildtime;"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><segmentedlist><segtitle>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/inetutils.xml:30
+msgid "&diskspace;"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><segmentedlist><seglistitem><seg>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/inetutils.xml:33
+msgid "&inetutils-fin-sbu;"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><segmentedlist><seglistitem><seg>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/inetutils.xml:34
+msgid "&inetutils-fin-du;"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><title>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/inetutils.xml:41
+msgid "Installation of Inetutils"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/inetutils.xml:43
+msgid "Prepare Inetutils for compilation:"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><screen>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/inetutils.xml:45
+#, no-wrap
+msgid ""
+"<userinput remap=\"configure\">./configure --prefix=/usr        \\\n"
+"            --localstatedir=/var \\\n"
+"            --disable-logger     \\\n"
+"            --disable-whois      \\\n"
+"            --disable-rcp        \\\n"
+"            --disable-rexec      \\\n"
+"            --disable-rlogin     \\\n"
+"            --disable-rsh        \\\n"
+"            --disable-servers</userinput>"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><title>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/inetutils.xml:56
+msgid "The meaning of the configure options:"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/inetutils.xml:59
+msgid "<parameter>--disable-logger</parameter>"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/inetutils.xml:61
+msgid ""
+"This option prevents Inetutils from installing the <command>logger</command> "
+"program, which is used by scripts to pass messages to the System Log "
+"Daemon. Do not install it because Util-linux installs a more recent version."
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/inetutils.xml:69
+msgid "<parameter>--disable-whois</parameter>"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/inetutils.xml:71
+msgid ""
+"This option disables the building of the Inetutils <command>whois</command> "
+"client, which is out of date. Instructions for a better "
+"<command>whois</command> client are in the BLFS book."
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/inetutils.xml:78
+msgid "<parameter>--disable-r*</parameter>"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/inetutils.xml:80
+msgid ""
+"These parameters disable building obsolete programs that should not be used "
+"due to security issues. The functions provided by these programs can be "
+"provided by the <application>openssh</application> package in the BLFS book."
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/inetutils.xml:88
+msgid "<parameter>--disable-servers</parameter>"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/inetutils.xml:90
+msgid ""
+"This disables the installation of the various network servers included as "
+"part of the Inetutils package. These servers are deemed not appropriate in a "
+"basic LFS system. Some are insecure by nature and are only considered safe "
+"on trusted networks. Note that better replacements are available for many of "
+"these servers."
+msgstr ""
+
+#. type: Content of: <sect1><sect2><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/inetutils.xml:100
+msgid "Compile the package:"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><screen>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/inetutils.xml:102
+#, no-wrap
+msgid "<userinput remap=\"make\">make</userinput>"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/inetutils.xml:104
+msgid "To test the results, issue:"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><screen>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/inetutils.xml:106
+#, no-wrap
+msgid "<userinput remap=\"test\">make check</userinput>"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><note><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/inetutils.xml:108
+msgid ""
+"One test, libls.sh, may fail in the initial chroot environment but will pass "
+"if the test is rerun after the LFS system is complete. One test, "
+"ping-localhost.sh, will fail if the host system does not have ipv6 "
+"capability."
+msgstr ""
+
+#. type: Content of: <sect1><sect2><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/inetutils.xml:113
+msgid "Install the package:"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><screen>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/inetutils.xml:115
+#, no-wrap
+msgid "<userinput remap=\"install\">make install</userinput>"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/inetutils.xml:117
+msgid ""
+"Move some programs so they are available if <filename "
+"class='directory'>/usr</filename> is not accessible:"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><screen>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/inetutils.xml:120
+#, no-wrap
+msgid ""
+"<userinput remap=\"install\">mv -v /usr/bin/{hostname,ping,ping6,traceroute} "
+"/bin\n"
+"mv -v /usr/bin/ifconfig /sbin</userinput>"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><title>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/inetutils.xml:126
+msgid "Contents of Inetutils"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><segmentedlist><segtitle>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/inetutils.xml:129
+msgid "Installed programs"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><segmentedlist><seglistitem><seg>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/inetutils.xml:132
+msgid ""
+"dnsdomainname, ftp, ifconfig, hostname, ping, ping6, talk, telnet, tftp, and "
+"traceroute"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><bridgehead>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/inetutils.xml:138
+msgid "Short Descriptions"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/inetutils.xml:139
+msgid "<?dbfo list-presentation=\"list\"?> <?dbhtml list-presentation=\"table\"?>"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/inetutils.xml:143
+msgid "<command>dnsdomainname</command>"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/inetutils.xml:145
+msgid "Show the system's DNS domain name"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/inetutils.xml:147
+msgid "dnsdomainname"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/inetutils.xml:153
+msgid "<command>ftp</command>"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/inetutils.xml:155
+msgid "Is the file transfer protocol program"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/inetutils.xml:157
+msgid "ftp"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/inetutils.xml:163
+msgid "<command>hostname</command>"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/inetutils.xml:165
+msgid "Reports or sets the name of the host"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/inetutils.xml:167
+msgid "hostname"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/inetutils.xml:173
+msgid "<command>ifconfig</command>"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/inetutils.xml:175
+msgid "Manages network interfaces"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/inetutils.xml:177
+msgid "ifconfig"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/inetutils.xml:183
+msgid "<command>ping</command>"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/inetutils.xml:185
+msgid "Sends echo-request packets and reports how long the replies take"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/inetutils.xml:188
+msgid "ping"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/inetutils.xml:194
+msgid "<command>ping6</command>"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/inetutils.xml:196
+msgid "A version of <command>ping</command> for IPv6 networks"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/inetutils.xml:198
+msgid "ping6"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/inetutils.xml:204
+msgid "<command>talk</command>"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/inetutils.xml:206
+msgid "Is used to chat with another user"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/inetutils.xml:208
+msgid "talk"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/inetutils.xml:214
+msgid "<command>telnet</command>"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/inetutils.xml:216
+msgid "An interface to the TELNET protocol"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/inetutils.xml:218
+msgid "telnet"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/inetutils.xml:224
+msgid "<command>tftp</command>"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/inetutils.xml:226
+msgid "A trivial file transfer program"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/inetutils.xml:228
+msgid "tftp"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/inetutils.xml:234
+msgid "<command>traceroute</command>"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/inetutils.xml:236
+msgid ""
+"Traces the route your packets take from the host you are working on to "
+"another host on a network, showing all the intermediate hops (gateways) "
+"along the way"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/inetutils.xml:240
+msgid "traceroute"
+msgstr ""

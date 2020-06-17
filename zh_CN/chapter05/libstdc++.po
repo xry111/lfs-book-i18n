@@ -1,0 +1,193 @@
+# SOME DESCRIPTIVE TITLE
+# Copyright (C) YEAR Free Software Foundation, Inc.
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"POT-Creation-Date: 2020-06-17 12:44+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#. type: Content of: <sect1><sect1info><address>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter05/libstdc++.xml:14
+#, no-wrap
+msgid "&gcc-url;"
+msgstr ""
+
+#. type: Content of: <sect1><sect1info>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter05/libstdc++.xml:12
+msgid ""
+"<productname>gcc-libstdc++</productname> "
+"<productnumber>&gcc-version;</productnumber> <placeholder type=\"address\" "
+"id=\"0\"/>"
+msgstr ""
+
+#. type: Content of: <sect1><title>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter05/libstdc++.xml:17
+msgid "Libstdc++ from GCC-&gcc-version;, Pass 1"
+msgstr ""
+
+#. type: Content of: <sect1><indexterm><primary>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter05/libstdc++.xml:20
+msgid "GCC"
+msgstr ""
+
+#. type: Content of: <sect1><indexterm><secondary>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter05/libstdc++.xml:21
+msgid "tools, libstdc++ pass 1"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter05/libstdc++.xml:27
+msgid ""
+"Libstdc++ is the standard C++ library. It is needed to compile C++ code "
+"(part of GCC is written in C++), but we had to defer its installation when "
+"we built <xref linkend=\"ch-tools-gcc-pass1\"/> because it depends on glibc, "
+"which was not yet available in the target directory."
+msgstr ""
+
+#. type: Content of: <sect1><sect2><segmentedlist><segtitle>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter05/libstdc++.xml:36
+msgid "&buildtime;"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><segmentedlist><segtitle>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter05/libstdc++.xml:37
+msgid "&diskspace;"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><segmentedlist><seglistitem><seg>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter05/libstdc++.xml:40
+msgid "&libstdcpp-tmpp1-sbu;"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><segmentedlist><seglistitem><seg>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter05/libstdc++.xml:41
+msgid "&libstdcpp-tmpp1-du;"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><title>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter05/libstdc++.xml:48
+msgid "Installation of Target Libstdc++"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><note><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter05/libstdc++.xml:51
+msgid ""
+"<application>Libstdc++</application> is part of the GCC sources.  You should "
+"first unpack the GCC tarball and change to the "
+"<filename>gcc-&gcc-version;</filename> directory."
+msgstr ""
+
+#. type: Content of: <sect1><sect2><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter05/libstdc++.xml:56
+msgid "Create a separate build directory for libstdc++ and enter it:"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><screen>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter05/libstdc++.xml:58
+#, no-wrap
+msgid ""
+"<userinput remap=\"pre\">mkdir -v build\n"
+"cd       build</userinput>"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter05/libstdc++.xml:61
+msgid "Prepare libstdc++ for compilation:"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><screen>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter05/libstdc++.xml:63
+#, no-wrap
+msgid ""
+"<userinput remap=\"configure\">../libstdc++-v3/configure           \\\n"
+"    --host=$LFS_TGT                 \\\n"
+"    --build=$(../config.guess)      \\\n"
+"    --prefix=/usr                   \\\n"
+"    --disable-multilib              \\\n"
+"    --disable-nls                   \\\n"
+"    --disable-libstdcxx-pch         \\\n"
+"    "
+"--with-gxx-include-dir=/tools/$LFS_TGT/include/c++/&gcc-version;</userinput>"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><title>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter05/libstdc++.xml:73
+msgid "The meaning of the configure options:"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter05/libstdc++.xml:76
+msgid "<parameter>--host=...</parameter>"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter05/libstdc++.xml:78
+msgid ""
+"Specifies the use the cross compiler we have just built instead of the one "
+"in <filename>/usr/bin</filename>."
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter05/libstdc++.xml:84
+msgid "<parameter>--disable-libstdcxx-pch</parameter>"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter05/libstdc++.xml:86
+msgid ""
+"This switch prevents the installation of precompiled include files, which "
+"are not needed at this stage."
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter05/libstdc++.xml:92
+msgid "<parameter>--with-gxx-include-dir=/tools/$LFS_TGT/include/c++/&gcc-version;</parameter>"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter05/libstdc++.xml:94
+msgid ""
+"This is the location where the C++ compiler should search for the standard "
+"include files. In a normal build, this information is automatically passed "
+"to the libstdc++ <command>configure</command> options from the top level "
+"directory. In our case, this information must be explicitly given."
+msgstr ""
+
+#. type: Content of: <sect1><sect2><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter05/libstdc++.xml:104
+msgid "Compile libstdc++ by running:"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><screen>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter05/libstdc++.xml:106
+#, no-wrap
+msgid "<userinput remap=\"make\">make</userinput>"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter05/libstdc++.xml:108
+msgid "Install the library:"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><screen>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter05/libstdc++.xml:110
+#, no-wrap
+msgid "<userinput remap=\"install\">make DESTDIR=$LFS install</userinput>"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter05/libstdc++.xml:117
+msgid ""
+"Details on this package are located in <xref linkend=\"contents-gcc\" "
+"role=\".\"/>"
+msgstr ""

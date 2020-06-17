@@ -1,0 +1,350 @@
+# SOME DESCRIPTIVE TITLE
+# Copyright (C) YEAR Free Software Foundation, Inc.
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"POT-Creation-Date: 2020-06-17 12:44+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#. type: Content of: <sect1><sect1info><address>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/python.xml:14
+#, no-wrap
+msgid "&python-url;"
+msgstr ""
+
+#. type: Content of: <sect1><sect1info>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/python.xml:12
+msgid ""
+"<productname>Python</productname> "
+"<productnumber>&python-version;</productnumber> <placeholder "
+"type=\"address\" id=\"0\"/>"
+msgstr ""
+
+#. type: Content of: <sect1><title>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/python.xml:17
+msgid "Python-&python-version;"
+msgstr ""
+
+#. type: Content of: <sect1><indexterm><primary>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/python.xml:20
+msgid "python"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/python.xml:26
+msgid ""
+"The Python 3 package contains the Python development environment. It is "
+"useful for object-oriented programming, writing scripts, prototyping large "
+"programs, or developing entire applications."
+msgstr ""
+
+#. type: Content of: <sect1><sect2><segmentedlist><segtitle>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/python.xml:31
+msgid "&buildtime;"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><segmentedlist><segtitle>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/python.xml:32
+msgid "&diskspace;"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><segmentedlist><seglistitem><seg>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/python.xml:35
+msgid "&python-fin-sbu;"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><segmentedlist><seglistitem><seg>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/python.xml:36
+msgid "&python-fin-du;"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><title>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/python.xml:43
+msgid "Installation of Python 3"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/python.xml:45
+msgid "Prepare Python for compilation:"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><screen>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/python.xml:47
+#, no-wrap
+msgid ""
+"<userinput remap=\"configure\">./configure --prefix=/usr       \\\n"
+"            --enable-shared     \\\n"
+"            --with-system-expat \\\n"
+"            --with-system-ffi   \\\n"
+"            --with-ensurepip=yes</userinput>"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><title>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/python.xml:54
+msgid "The meaning of the configure options:"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/python.xml:57
+msgid "<parameter>--with-system-expat</parameter>"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/python.xml:59
+msgid ""
+"This switch enables linking against system version of "
+"<application>Expat</application>."
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/python.xml:65
+msgid "<parameter>--with-system-ffi</parameter>"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/python.xml:67
+msgid ""
+"This switch enables linking against system version of "
+"<application>libffi</application>."
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/python.xml:73
+msgid "<parameter>--with-ensurepip=yes</parameter>"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/python.xml:75
+msgid ""
+"This switch enables building <command>pip</command> and "
+"<command>setuptools</command> packaging programs."
+msgstr ""
+
+#. type: Content of: <sect1><sect2><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/python.xml:82
+msgid "Compile the package:"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><screen>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/python.xml:84
+#, no-wrap
+msgid "<userinput remap=\"make\">make</userinput>"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/python.xml:86
+msgid ""
+"To test the results, issue <command>make test</command>.  Some tests "
+"requiring a network connection or additional packages are skipped.  The test "
+"named test_normalization fails because network configuration is not "
+"completed yet.  For more comprehensive results, the test can be rerun when "
+"Python 3 is reinstalled in BLFS."
+msgstr ""
+
+#. type: Content of: <sect1><sect2><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/python.xml:92
+msgid "Install the package:"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><screen>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/python.xml:94
+#, no-wrap
+msgid ""
+"<userinput remap=\"install\">make install\n"
+"chmod -v 755 /usr/lib/libpython&python-minor;.so\n"
+"chmod -v 755 /usr/lib/libpython3.so\n"
+"ln -sfv pip&python-minor; /usr/bin/pip3</userinput>"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><title>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/python.xml:100
+msgid "The meaning of the install commands:"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/python.xml:103
+msgid "<command>chmod -v 755 /usr/lib/libpython3.{8.,}so</command>"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/python.xml:105
+msgid "Fix permissions for libraries to be consistent with other libraries."
+msgstr ""
+
+#. type: Content of: <sect1><sect2><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/python.xml:112
+msgid "If desired, install the preformatted documentation:"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><screen>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/python.xml:114
+#, no-wrap
+msgid ""
+"<userinput remap=\"install\">install -v -dm755 "
+"/usr/share/doc/python-&python-version;/html \n"
+"\n"
+"tar --strip-components=1  \\\n"
+"    --no-same-owner       \\\n"
+"    --no-same-permissions \\\n"
+"    -C /usr/share/doc/python-&python-version;/html \\\n"
+"    -xvf ../python-&python-version;-docs-html.tar.bz2</userinput>"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><title>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/python.xml:123
+msgid "The meaning of the documentation install commands:"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/python.xml:126
+msgid "<option>--no-same-owner</option> and <option>--no-same-permissions</option>"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/python.xml:128
+msgid ""
+"Ensure the installed files have the correct ownership and permissions.  "
+"Without these options, using <application>tar</application> will install the "
+"package files with the upstream creator's values."
+msgstr ""
+
+#. type: Content of: <sect1><sect2><title>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/python.xml:140
+msgid "Contents of Python 3"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><segmentedlist><segtitle>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/python.xml:143
+msgid "Installed Programs"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><segmentedlist><segtitle>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/python.xml:144
+msgid "Installed Library"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><segmentedlist><segtitle>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/python.xml:145
+msgid "Installed Directories"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><segmentedlist><seglistitem><seg>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/python.xml:149
+msgid "2to3, idle3, pip3, pydoc3, python3, and python3-config"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><segmentedlist><seglistitem><seg>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/python.xml:152
+msgid "libpython&python-minor;.so and libpython3.so"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><segmentedlist><seglistitem><seg>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/python.xml:155
+msgid ""
+"/usr/include/python&python-minor;, /usr/lib/python3, and "
+"/usr/share/doc/python-&python-version;"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><bridgehead>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/python.xml:163
+msgid "Short Descriptions"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/python.xml:164
+msgid "<?dbfo list-presentation=\"list\"?> <?dbhtml list-presentation=\"table\"?>"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/python.xml:168
+msgid "<command>2to3</command>"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/python.xml:171
+msgid ""
+"is a <application>Python</application> program that reads "
+"<application>Python 2.x</application> source code and applies a series of "
+"fixes to transform it into valid <application>Python 3.x</application> code."
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/python.xml:177
+msgid "2to3"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/python.xml:183
+msgid "<command>idle3</command>"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/python.xml:186
+msgid ""
+"is a wrapper script that opens a <application>Python</application> aware GUI "
+"editor. For this script to run, you must have installed "
+"<application>Tk</application> before Python so that the Tkinter Python "
+"module is built."
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/python.xml:192
+msgid "idle3"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/python.xml:198
+msgid "<command>pip3</command>"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/python.xml:201
+msgid ""
+"The package installer for Python. You can use pip to install packages from "
+"Python Package Index and other indexes."
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/python.xml:205
+msgid "pip3"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/python.xml:211
+msgid "<command>pydoc3</command>"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/python.xml:214
+msgid "is the <application>Python</application> documentation tool."
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/python.xml:217
+msgid "pydoc3"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/python.xml:223
+msgid "<command>python3</command>"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/python.xml:226
+msgid "is an interpreted, interactive, object-oriented programming language."
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/python.xml:230
+msgid "python3"
+msgstr ""

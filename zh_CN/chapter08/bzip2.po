@@ -1,0 +1,421 @@
+# SOME DESCRIPTIVE TITLE
+# Copyright (C) YEAR Free Software Foundation, Inc.
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"POT-Creation-Date: 2020-06-17 12:44+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#. type: Content of: <sect1><sect1info><address>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/bzip2.xml:14
+#, no-wrap
+msgid "&bzip2-url;"
+msgstr ""
+
+#. type: Content of: <sect1><sect1info>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/bzip2.xml:12
+msgid ""
+"<productname>bzip2</productname> "
+"<productnumber>&bzip2-version;</productnumber> <placeholder type=\"address\" "
+"id=\"0\"/>"
+msgstr ""
+
+#. type: Content of: <sect1><title>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/bzip2.xml:17
+msgid "Bzip2-&bzip2-version;"
+msgstr ""
+
+#. type: Content of: <sect1><indexterm><primary>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/bzip2.xml:20
+msgid "Bzip2"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/bzip2.xml:26
+msgid ""
+"The Bzip2 package contains programs for compressing and decompressing "
+"files. Compressing text files with <command>bzip2</command> yields a much "
+"better compression percentage than with the traditional "
+"<command>gzip</command>."
+msgstr ""
+
+#. type: Content of: <sect1><sect2><segmentedlist><segtitle>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/bzip2.xml:32
+msgid "&buildtime;"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><segmentedlist><segtitle>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/bzip2.xml:33
+msgid "&diskspace;"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><segmentedlist><seglistitem><seg>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/bzip2.xml:36
+msgid "&bzip2-fin-sbu;"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><segmentedlist><seglistitem><seg>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/bzip2.xml:37
+msgid "&bzip2-fin-du;"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><title>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/bzip2.xml:44
+msgid "Installation of Bzip2"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/bzip2.xml:46
+msgid "Apply a patch that will install the documentation for this package:"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><screen>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/bzip2.xml:48
+#, no-wrap
+msgid "<userinput remap=\"pre\">patch -Np1 -i ../&bzip2-docs-patch;</userinput>"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/bzip2.xml:50
+msgid "The following command ensures installation of symbolic links are relative:"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><screen>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/bzip2.xml:52
+#, no-wrap
+msgid ""
+"<userinput remap=\"pre\">sed -i 's@\\(ln -s -f \\)$(PREFIX)/bin/@\\1@' "
+"Makefile</userinput>"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/bzip2.xml:54
+msgid "Ensure the man pages are installed into the correct location:"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><screen>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/bzip2.xml:56
+#, no-wrap
+msgid ""
+"<userinput remap=\"pre\">sed -i \"s@(PREFIX)/man@(PREFIX)/share/man@g\" "
+"Makefile</userinput>"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/bzip2.xml:58
+msgid "Prepare Bzip2 for compilation with:"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><screen>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/bzip2.xml:60
+#, no-wrap
+msgid ""
+"<userinput remap=\"make\">make -f Makefile-libbz2_so\n"
+"make clean</userinput>"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><title>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/bzip2.xml:64
+msgid "The meaning of the make parameter:"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/bzip2.xml:67
+msgid "<parameter>-f Makefile-libbz2_so</parameter>"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/bzip2.xml:69
+msgid ""
+"This will cause Bzip2 to be built using a different "
+"<filename>Makefile</filename> file, in this case the "
+"<filename>Makefile-libbz2_so</filename> file, which creates a dynamic "
+"<filename class=\"libraryfile\">libbz2.so</filename> library and links the "
+"Bzip2 utilities against it."
+msgstr ""
+
+#. type: Content of: <sect1><sect2><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/bzip2.xml:79
+msgid "Compile and test the package:"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><screen>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/bzip2.xml:81
+#, no-wrap
+msgid "<userinput remap=\"make\">make</userinput>"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/bzip2.xml:83
+msgid "Install the programs:"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><screen>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/bzip2.xml:85
+#, no-wrap
+msgid "<userinput remap=\"install\">make PREFIX=/usr install</userinput>"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/bzip2.xml:87
+msgid ""
+"Install the shared <command>bzip2</command> binary into the <filename "
+"class=\"directory\">/bin</filename> directory, make some necessary symbolic "
+"links, and clean up:"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><screen>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/bzip2.xml:91
+#, no-wrap
+msgid ""
+"<userinput remap=\"install\">cp -v bzip2-shared /bin/bzip2\n"
+"cp -av libbz2.so* /lib\n"
+"ln -sv ../../lib/libbz2.so.1.0 $LFS/usr/lib/libbz2.so\n"
+"rm -v /usr/bin/{bunzip2,bzcat,bzip2}\n"
+"ln -sv bzip2 /bin/bunzip2\n"
+"ln -sv bzip2 /bin/bzcat</userinput>"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><title>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/bzip2.xml:101
+msgid "Contents of Bzip2"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><segmentedlist><segtitle>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/bzip2.xml:104
+msgid "Installed programs"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><segmentedlist><segtitle>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/bzip2.xml:105
+msgid "Installed libraries"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><segmentedlist><segtitle>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/bzip2.xml:106
+msgid "Installed directory"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><segmentedlist><seglistitem><seg>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/bzip2.xml:109
+msgid ""
+"bunzip2 (link to bzip2), bzcat (link to bzip2), bzcmp (link to bzdiff), "
+"bzdiff, bzegrep (link to bzgrep), bzfgrep (link to bzgrep), bzgrep, bzip2, "
+"bzip2recover, bzless (link to bzmore), and bzmore"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><segmentedlist><seglistitem><seg>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/bzip2.xml:112
+msgid "libbz2.{a,so}"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><segmentedlist><seglistitem><seg>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/bzip2.xml:113
+msgid "/usr/share/doc/bzip2-&bzip2-version;"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><bridgehead>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/bzip2.xml:118
+msgid "Short Descriptions"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/bzip2.xml:119
+msgid "<?dbfo list-presentation=\"list\"?> <?dbhtml list-presentation=\"table\"?>"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/bzip2.xml:123
+msgid "<command>bunzip2</command>"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/bzip2.xml:125
+msgid "Decompresses bzipped files"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/bzip2.xml:127
+msgid "bunzip2"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/bzip2.xml:133
+msgid "<command>bzcat</command>"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/bzip2.xml:135
+msgid "Decompresses to standard output"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/bzip2.xml:137
+msgid "bzcat"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/bzip2.xml:143
+msgid "<command>bzcmp</command>"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/bzip2.xml:145
+msgid "Runs <command>cmp</command> on bzipped files"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/bzip2.xml:147
+msgid "bzcmp"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/bzip2.xml:153
+msgid "<command>bzdiff</command>"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/bzip2.xml:155
+msgid "Runs <command>diff</command> on bzipped files"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/bzip2.xml:157
+msgid "bzdiff"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/bzip2.xml:163
+msgid "<command>bzegrep</command>"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/bzip2.xml:165
+msgid "Runs <command>egrep</command> on bzipped files"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/bzip2.xml:167
+msgid "bzegrep"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/bzip2.xml:173
+msgid "<command>bzfgrep</command>"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/bzip2.xml:175
+msgid "Runs <command>fgrep</command> on bzipped files"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/bzip2.xml:177
+msgid "bzfgrep"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/bzip2.xml:183
+msgid "<command>bzgrep</command>"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/bzip2.xml:185
+msgid "Runs <command>grep</command> on bzipped files"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/bzip2.xml:187
+msgid "bzgrep"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/bzip2.xml:193
+msgid "<command>bzip2</command>"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/bzip2.xml:195
+msgid ""
+"Compresses files using the Burrows-Wheeler block sorting text compression "
+"algorithm with Huffman coding; the compression rate is better than that "
+"achieved by more conventional compressors using <quote>Lempel-Ziv</quote> "
+"algorithms, like <command>gzip</command>"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/bzip2.xml:200
+msgid "bzip2"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/bzip2.xml:206
+msgid "<command>bzip2recover</command>"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/bzip2.xml:208
+msgid "Tries to recover data from damaged bzipped files"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/bzip2.xml:210
+msgid "bzip2recover"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/bzip2.xml:216
+msgid "<command>bzless</command>"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/bzip2.xml:218
+msgid "Runs <command>less</command> on bzipped files"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/bzip2.xml:220
+msgid "bzless"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/bzip2.xml:226
+msgid "<command>bzmore</command>"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/bzip2.xml:228
+msgid "Runs <command>more</command> on bzipped files"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/bzip2.xml:230
+msgid "bzmore"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/bzip2.xml:236
+msgid "<filename class=\"libraryfile\">libbz2</filename>"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/bzip2.xml:238
+msgid ""
+"The library implementing lossless, block-sorting data compression, using the "
+"Burrows-Wheeler algorithm"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/bzip2.xml:241
+msgid "libbz2"
+msgstr ""

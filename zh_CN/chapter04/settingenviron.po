@@ -1,0 +1,235 @@
+# SOME DESCRIPTIVE TITLE
+# Copyright (C) YEAR Free Software Foundation, Inc.
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"POT-Creation-Date: 2020-06-17 12:44+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#. type: Content of: <sect1><title>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter04/settingenviron.xml:11
+msgid "Setting Up the Environment"
+msgstr ""
+
+#. type: Content of: <sect1><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter04/settingenviron.xml:13
+msgid ""
+"Set up a good working environment by creating two new startup files for the "
+"<command>bash</command> shell. While logged in as user <systemitem "
+"class=\"username\">lfs</systemitem>, issue the following command to create a "
+"new <filename>.bash_profile</filename>:"
+msgstr ""
+
+#. type: Content of: <sect1><screen>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter04/settingenviron.xml:18
+#, no-wrap
+msgid ""
+"<userinput>cat &gt; ~/.bash_profile &lt;&lt; \"EOF\"\n"
+"<literal>exec env -i HOME=$HOME TERM=$TERM PS1='\\u:\\w\\$ ' "
+"/bin/bash</literal>\n"
+"EOF</userinput>"
+msgstr ""
+
+#. type: Content of: <sect1><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter04/settingenviron.xml:22
+msgid ""
+"When logged on as user <systemitem class=\"username\">lfs</systemitem>, the "
+"initial shell is usually a <emphasis>login</emphasis> shell which reads the "
+"<filename>/etc/profile</filename> of the host (probably containing some "
+"settings and environment variables) and then "
+"<filename>.bash_profile</filename>.  The <command>exec env "
+"-i.../bin/bash</command> command in the <filename>.bash_profile</filename> "
+"file replaces the running shell with a new one with a completely empty "
+"environment, except for the <envar>HOME</envar>, <envar>TERM</envar>, and "
+"<envar>PS1</envar> variables. This ensures that no unwanted and potentially "
+"hazardous environment variables from the host system leak into the build "
+"environment. The technique used here achieves the goal of ensuring a clean "
+"environment."
+msgstr ""
+
+#. type: Content of: <sect1><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter04/settingenviron.xml:34
+msgid ""
+"The new instance of the shell is a <emphasis>non-login</emphasis> shell, "
+"which does not read, and execute, the conten of "
+"<filename>/etc/profile</filename> or <filename>.bash_profile</filename> "
+"files, but rather reads, and executes, the <filename>.bashrc</filename> file "
+"instead. Create the <filename>.bashrc</filename> file now:"
+msgstr ""
+
+#. type: Content of: <sect1><screen>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter04/settingenviron.xml:40
+#, no-wrap
+msgid ""
+"<userinput>cat &gt; ~/.bashrc &lt;&lt; \"EOF\"\n"
+"<literal>set +h\n"
+"umask 022\n"
+"LFS=/mnt/lfs\n"
+"LC_ALL=POSIX\n"
+"LFS_TGT=$(uname -m)-lfs-linux-gnu\n"
+"PATH=/usr/bin\n"
+"if [ ! -L /bin ]; then PATH=/bin:$PATH; fi\n"
+"PATH=$LFS/tools/bin:$PATH\n"
+"export LFS LC_ALL LFS_TGT PATH</literal>\n"
+"EOF</userinput>"
+msgstr ""
+
+#. type: Content of: <sect1><variablelist><title>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter04/settingenviron.xml:53
+msgid "The meaning of the settings in <filename>.bashrc</filename>"
+msgstr ""
+
+#. type: Content of: <sect1><variablelist><varlistentry><term>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter04/settingenviron.xml:56
+msgid "<parameter>set +h</parameter>"
+msgstr ""
+
+#. type: Content of: <sect1><variablelist><varlistentry><listitem><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter04/settingenviron.xml:58
+msgid ""
+"The <command>set +h</command> command turns off <command>bash</command>'s "
+"hash function. Hashing is ordinarily a useful "
+"feature&mdash;<command>bash</command> uses a hash table to remember the full "
+"path of executable files to avoid searching the <envar>PATH</envar> time and "
+"again to find the same executable. However, the new tools should be used as "
+"soon as they are installed. By switching off the hash function, the shell "
+"will always search the <envar>PATH</envar> when a program is to be run. As "
+"such, the shell will find the newly compiled tools in <filename "
+"class=\"directory\">~/tools</filename> as soon as they are available without "
+"remembering a previous version of the same program in a different location."
+msgstr ""
+
+#. type: Content of: <sect1><variablelist><varlistentry><term>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter04/settingenviron.xml:73
+msgid "<parameter>umask 022</parameter>"
+msgstr ""
+
+#. type: Content of: <sect1><variablelist><varlistentry><listitem><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter04/settingenviron.xml:75
+msgid ""
+"Setting the user file-creation mask (umask) to 022 ensures that newly "
+"created files and directories are only writable by their owner, but are "
+"readable and executable by anyone (assuming default modes are used by the "
+"<function>open(2)</function> system call, new files will end up with "
+"permission mode 644 and directories with mode 755)."
+msgstr ""
+
+#. type: Content of: <sect1><variablelist><varlistentry><term>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter04/settingenviron.xml:84
+msgid "<parameter>LFS=/mnt/lfs</parameter>"
+msgstr ""
+
+#. type: Content of: <sect1><variablelist><varlistentry><listitem><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter04/settingenviron.xml:86
+msgid "The <envar>LFS</envar> variable should be set to the chosen mount point."
+msgstr ""
+
+#. type: Content of: <sect1><variablelist><varlistentry><term>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter04/settingenviron.xml:92
+msgid "<parameter>LC_ALL=POSIX</parameter>"
+msgstr ""
+
+#. type: Content of: <sect1><variablelist><varlistentry><listitem><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter04/settingenviron.xml:94
+msgid ""
+"The <envar>LC_ALL</envar> variable controls the localization of certain "
+"programs, making their messages follow the conventions of a specified "
+"country.  Setting <envar>LC_ALL</envar> to <quote>POSIX</quote> or "
+"<quote>C</quote> (the two are equivalent) ensures that everything will work "
+"as expected in the chroot environment."
+msgstr ""
+
+#. type: Content of: <sect1><variablelist><varlistentry><term>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter04/settingenviron.xml:103
+msgid "<parameter>LFS_TGT=(uname -m)-lfs-linux-gnu</parameter>"
+msgstr ""
+
+#. type: Content of: <sect1><variablelist><varlistentry><listitem><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter04/settingenviron.xml:105
+msgid ""
+"The <envar>LFS_TGT</envar> variable sets a non-default, but compatible "
+"machine description for use when building our cross compiler and linker and "
+"when cross compiling our temporary toolchain. More information is contained "
+"in <xref linkend=\"ch-tools-toolchaintechnotes\" role=\"\"/>."
+msgstr ""
+
+#. type: Content of: <sect1><variablelist><varlistentry><term>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter04/settingenviron.xml:113
+msgid "<parameter>PATH=/usr/bin</parameter>"
+msgstr ""
+
+#. type: Content of: <sect1><variablelist><varlistentry><listitem><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter04/settingenviron.xml:115
+msgid ""
+"Many modern linux distributions have merged <filename "
+"class=\"directory\">/bin</filename> and <filename "
+"class=\"directory\">/usr/bin</filename>. When this is the case, the standard "
+"<envar>PATH</envar> variable needs just to be set to <filename "
+"class=\"directory\">/usr/bin/</filename> for the <xref "
+"linkend=\"chapter-temporary-tools\"/> environment. When this is not the "
+"case, the following line adds <filename class=\"directory\">/bin</filename> "
+"to the path."
+msgstr ""
+
+#. type: Content of: <sect1><variablelist><varlistentry><term>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter04/settingenviron.xml:127
+msgid "<parameter>if [ ! -L /bin ]; then PATH=/bin:$PATH; fi</parameter>"
+msgstr ""
+
+#. type: Content of: <sect1><variablelist><varlistentry><listitem><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter04/settingenviron.xml:129
+msgid ""
+"If <filename class=\"directory\">/bin</filename> is not a symbolic link, "
+"then it has to be added to the <envar>PATH</envar> variable."
+msgstr ""
+
+#. type: Content of: <sect1><variablelist><varlistentry><term>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter04/settingenviron.xml:135
+msgid "<parameter>PATH=$LFS/tools/bin:$PATH</parameter>"
+msgstr ""
+
+#. type: Content of: <sect1><variablelist><varlistentry><listitem><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter04/settingenviron.xml:137
+msgid ""
+"By putting <filename class=\"directory\">$LFS/tools/bin</filename> ahead of "
+"the standard <envar>PATH</envar>, the cross-compiler installed at the "
+"beginning of <xref linkend=\"chapter-cross-tools\"/> is picked up by the "
+"shell immediately after its installation. This, combined with turning off "
+"hashing, limits the risk that the compiler from the host be used instead of "
+"the cross-compiler."
+msgstr ""
+
+#. type: Content of: <sect1><variablelist><varlistentry><term>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter04/settingenviron.xml:147
+msgid "<parameter>export LFS LC_ALL LFS_TGT PATH</parameter>"
+msgstr ""
+
+#. type: Content of: <sect1><variablelist><varlistentry><listitem><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter04/settingenviron.xml:149
+msgid ""
+"While the above commands have set some variables, in order to make them "
+"visible within any sub-shells, we export them."
+msgstr ""
+
+#. type: Content of: <sect1><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter04/settingenviron.xml:156
+msgid ""
+"Finally, to have the environment fully prepared for building the temporary "
+"tools, source the just-created user profile:"
+msgstr ""
+
+#. type: Content of: <sect1><screen>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter04/settingenviron.xml:159
+#, no-wrap
+msgid "<userinput>source ~/.bash_profile</userinput>"
+msgstr ""

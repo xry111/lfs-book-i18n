@@ -1,0 +1,156 @@
+# SOME DESCRIPTIVE TITLE
+# Copyright (C) YEAR Free Software Foundation, Inc.
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"POT-Creation-Date: 2020-06-17 12:44+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#. type: Content of: <sect1><title>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter03/introduction.xml:11
+msgid "Introduction"
+msgstr ""
+
+#. type: Content of: <sect1><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter03/introduction.xml:13
+msgid ""
+"This chapter includes a list of packages that need to be downloaded in order "
+"to build a basic Linux system. The listed version numbers correspond to "
+"versions of the software that are known to work, and this book is based on "
+"their use. We highly recommend against using newer versions because the "
+"build commands for one version may not work with a newer version. The newest "
+"package versions may also have problems that require work-arounds. These "
+"work-arounds will be developed and stabilized in the development version of "
+"the book."
+msgstr ""
+
+#. type: Content of: <sect1><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter03/introduction.xml:22
+msgid ""
+"Download locations may not always be accessible. If a download location has "
+"changed since this book was published, Google (<ulink "
+"url=\"http://www.google.com/\"/>) provides a useful search engine for most "
+"packages. If this search is unsuccessful, try one of the alternative means "
+"of downloading discussed at <ulink "
+"url=\"&lfs-root;lfs/packages.html#packages\"/>."
+msgstr ""
+
+#. type: Content of: <sect1><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter03/introduction.xml:29
+msgid ""
+"Downloaded packages and patches will need to be stored somewhere that is "
+"conveniently available throughout the entire build. A working directory is "
+"also required to unpack the sources and build them.  <filename "
+"class=\"directory\">$LFS/sources</filename> can be used both as the place to "
+"store the tarballs and patches and as a working directory. By using this "
+"directory, the required elements will be located on the LFS partition and "
+"will be available during all stages of the building process."
+msgstr ""
+
+#. type: Content of: <sect1><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter03/introduction.xml:38
+msgid ""
+"To create this directory, execute the following command, as user <systemitem "
+"class=\"username\">root</systemitem>, before starting the download session:"
+msgstr ""
+
+#. type: Content of: <sect1><screen>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter03/introduction.xml:42
+#, no-wrap
+msgid "<userinput>mkdir -v $LFS/sources</userinput>"
+msgstr ""
+
+#. type: Content of: <sect1><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter03/introduction.xml:44
+msgid ""
+"Make this directory writable and sticky. <quote>Sticky</quote> means that "
+"even if multiple users have write permission on a directory, only the owner "
+"of a file can delete the file within a sticky directory. The following "
+"command will enable the write and sticky modes:"
+msgstr ""
+
+#. type: Content of: <sect1><screen>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter03/introduction.xml:50
+#, no-wrap
+msgid "<userinput>chmod -v a+wt $LFS/sources</userinput>"
+msgstr ""
+
+#. type: Content of: <sect1><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter03/introduction.xml:52
+msgid ""
+"There are several ways to optain all the necessary packages and patches to "
+"build LFS:"
+msgstr ""
+
+#. type: Content of: <sect1><itemizedlist><listitem><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter03/introduction.xml:57
+msgid ""
+"The files can be downloaded individually as described in the next two "
+"sections."
+msgstr ""
+
+#. type: Content of: <sect1><itemizedlist><listitem><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter03/introduction.xml:61
+msgid ""
+"For stable versions of the book, a tarball of all the needed files can be "
+"downloaded from one of the LFS files mirrors listed at <ulink "
+"url=\"http://www.linuxfromscratch.org/mirrors.html#files\"/>."
+msgstr ""
+
+#. type: Content of: <sect1><itemizedlist><listitem><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter03/introduction.xml:66
+msgid ""
+"The files can be downloaded using <command>wget</command> and a wget-list as "
+"described below."
+msgstr ""
+
+#. type: Content of: <sect1><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter03/introduction.xml:71
+msgid ""
+"To download all of the packages and patches by using <ulink "
+"url=\"../wget-list\">wget-list</ulink> as an input to the "
+"<command>wget</command> command, use:"
+msgstr ""
+
+#. type: Content of: <sect1><screen>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter03/introduction.xml:75
+#, no-wrap
+msgid ""
+"<userinput>wget --input-file=wget-list --continue "
+"--directory-prefix=$LFS/sources</userinput>"
+msgstr ""
+
+#. type: Content of: <sect1><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter03/introduction.xml:77
+msgid ""
+"Additionally, starting with LFS-7.0, there is a separate file, <ulink "
+"url=\"../md5sums\">md5sums</ulink>, which can be used to verify that all the "
+"correct packages are available before proceeding.  Place that file in "
+"<filename class=\"directory\">$LFS/sources</filename> and run:"
+msgstr ""
+
+#. type: Content of: <sect1><screen>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter03/introduction.xml:82
+#, no-wrap
+msgid ""
+"<userinput>pushd $LFS/sources\n"
+"  md5sum -c md5sums\n"
+"popd</userinput>"
+msgstr ""
+
+#. type: Content of: <sect1><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter03/introduction.xml:86
+msgid ""
+"This check can be used after retrieving the needed files with any of the "
+"methods listed above."
+msgstr ""

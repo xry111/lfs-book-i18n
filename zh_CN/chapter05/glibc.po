@@ -1,0 +1,371 @@
+# SOME DESCRIPTIVE TITLE
+# Copyright (C) YEAR Free Software Foundation, Inc.
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"POT-Creation-Date: 2020-06-17 12:44+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#. type: Content of: <sect1><sect1info><address>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter05/glibc.xml:14
+#, no-wrap
+msgid "&glibc-url;"
+msgstr ""
+
+#. type: Content of: <sect1><sect1info>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter05/glibc.xml:12
+msgid ""
+"<productname>glibc</productname> "
+"<productnumber>&glibc-version;</productnumber> <placeholder type=\"address\" "
+"id=\"0\"/>"
+msgstr ""
+
+#. type: Content of: <sect1><title>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter05/glibc.xml:17
+msgid "Glibc-&glibc-version;"
+msgstr ""
+
+#. type: Content of: <sect1><indexterm><primary>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter05/glibc.xml:20
+msgid "Glibc"
+msgstr ""
+
+#. type: Content of: <sect1><indexterm><secondary>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter05/glibc.xml:21
+msgid "tools"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><segmentedlist><segtitle>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter05/glibc.xml:32
+msgid "&buildtime;"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><segmentedlist><segtitle>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter05/glibc.xml:33
+msgid "&diskspace;"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><segmentedlist><seglistitem><seg>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter05/glibc.xml:36
+msgid "&glibc-tmp-sbu;"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><segmentedlist><seglistitem><seg>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter05/glibc.xml:37
+msgid "&glibc-tmp-du;"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><title>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter05/glibc.xml:44
+msgid "Installation of Glibc"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter05/glibc.xml:46
+msgid ""
+"First, create a symbolic link for LSB compliance. Additionally, for x86_64, "
+"create a compatibility symbolic link required for proper operation of the "
+"dynamic library loader:"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><screen>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter05/glibc.xml:50
+#, no-wrap
+msgid ""
+"<userinput remap=\"pre\">case $(uname -m) in\n"
+"    i?86)   ln -sfv ld-linux.so.2 $LFS/lib/ld-lsb.so.3\n"
+"    ;;\n"
+"    x86_64) ln -sfv ../lib/ld-linux-x86-64.so.2 $LFS/lib64\n"
+"            ln -sfv ../lib/ld-linux-x86-64.so.2 "
+"$LFS/lib64/ld-lsb-x86-64.so.3\n"
+"    ;;\n"
+"esac</userinput>"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter05/glibc.xml:58
+msgid ""
+"Some of the Glibc programs use the non-FHS compliant <filename "
+"class=\"directory\">/var/db</filename> directory to store their runtime "
+"data. Apply the following patch to make such programs store their runtime "
+"data in the FHS-compliant locations:"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><screen>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter05/glibc.xml:63
+#, no-wrap
+msgid ""
+"<userinput remap=\"pre\">patch -Np1 -i "
+"../glibc-&glibc-version;-fhs-1.patch</userinput>"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter05/glibc.xml:65
+msgid ""
+"The Glibc documentation recommends building Glibc in a dedicated build "
+"directory:"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><screen>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter05/glibc.xml:68
+#, no-wrap
+msgid ""
+"<userinput remap=\"pre\">mkdir -v build\n"
+"cd       build</userinput>"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter05/glibc.xml:71
+msgid "Next, prepare Glibc for compilation:"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><screen>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter05/glibc.xml:73
+#, no-wrap
+msgid ""
+"<userinput remap=\"configure\">../configure                             \\\n"
+"      --prefix=/usr                      \\\n"
+"      --host=$LFS_TGT                    \\\n"
+"      --build=$(../scripts/config.guess) \\\n"
+"      --enable-kernel=&min-kernel;                \\\n"
+"      --with-headers=$LFS/usr/include    \\\n"
+"      libc_cv_slibdir=/lib</userinput>"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><title>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter05/glibc.xml:85
+msgid "The meaning of the configure options:"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter05/glibc.xml:88
+msgid "<parameter>--host=$LFS_TGT, --build=$(../scripts/config.guess)</parameter>"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter05/glibc.xml:90
+msgid ""
+"The combined effect of these switches is that Glibc's build system "
+"configures itself to be cross-compiled, using the cross-linker and "
+"cross-compiler in <filename class=\"directory\">/tools</filename>."
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter05/glibc.xml:97
+msgid "<parameter>--enable-kernel=&min-kernel;</parameter>"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter05/glibc.xml:99
+msgid ""
+"This tells Glibc to compile the library with support for &min-kernel; and "
+"later Linux kernels.  Workarounds for older kernels are not enabled."
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter05/glibc.xml:106
+msgid "<parameter>--with-headers=$LFS/usr/include</parameter>"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter05/glibc.xml:108
+msgid ""
+"This tells Glibc to compile itself against the headers recently installed to "
+"the $LFS/usr/include directory, so that it knows exactly what features the "
+"kernel has and can optimize itself accordingly."
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter05/glibc.xml:116
+msgid "<parameter>libc_cv_slibdir=/lib</parameter>"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter05/glibc.xml:118
+msgid ""
+"This ensures that the library is installed in /lib instead of the default "
+"/lib64 on 64 bit machines."
+msgstr ""
+
+#. type: Content of: <sect1><sect2><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter05/glibc.xml:125
+msgid "During this stage the following warning might appear:"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><blockquote><screen>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter05/glibc.xml:128
+#, no-wrap
+msgid ""
+"<computeroutput>configure: WARNING:\n"
+"*** These auxiliary programs are missing or\n"
+"*** incompatible versions: msgfmt\n"
+"*** some features will be disabled.\n"
+"*** Check the INSTALL file for required versions.</computeroutput>"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter05/glibc.xml:135
+msgid ""
+"The missing or incompatible <command>msgfmt</command> program is generally "
+"harmless. This <command>msgfmt</command> program is part of the Gettext "
+"package which the host distribution should provide."
+msgstr ""
+
+#. type: Content of: <sect1><sect2><note><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter05/glibc.xml:139
+msgid ""
+"There have been reports that this package may fail when building as a "
+"\"parallel make\".  If this occurs, rerun the make command with a \"-j1\" "
+"option."
+msgstr ""
+
+#. type: Content of: <sect1><sect2><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter05/glibc.xml:143
+msgid "Compile the package:"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><screen>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter05/glibc.xml:145
+#, no-wrap
+msgid "<userinput remap=\"make\">make</userinput>"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter05/glibc.xml:147
+msgid "Install the package:"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><warning><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter05/glibc.xml:149
+msgid ""
+"If <envar>LFS</envar> is not properly set, and despite the recommendations, "
+"you are building as root, the next command will install the newly built "
+"glibc to your host system, which most likely will render it unusable. So "
+"double check that the environment is correctly set for user <systemitem "
+"class=\"username\">lfs</systemitem>."
+msgstr ""
+
+#. type: Content of: <sect1><sect2><screen>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter05/glibc.xml:155
+#, no-wrap
+msgid "<userinput remap=\"install\">make DESTDIR=$LFS install</userinput>"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><title>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter05/glibc.xml:158
+msgid "The meaning of the <command>make install</command> option:"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter05/glibc.xml:161
+msgid "<parameter>DESTDIR=$LFS</parameter>"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter05/glibc.xml:163
+msgid ""
+"The <envar>DESTDIR</envar> make variable is used by almost all packages to "
+"define the location where the package should be installed. If it is not set, "
+"it defaults to the root (<filename class=\"directory\">/</filename>) "
+"directory. Here we specify that the package be installed in <filename "
+"class=\"directory\">$LFS </filename>, which will become the root after <xref "
+"linkend= \"ch-tools-chroot\"/>."
+msgstr ""
+
+#. type: Content of: <sect1><sect2><caution><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter05/glibc.xml:176
+msgid ""
+"At this point, it is imperative to stop and ensure that the basic functions "
+"(compiling and linking) of the new toolchain are working as expected. To "
+"perform a sanity check, run the following commands:"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><caution><screen>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter05/glibc.xml:180
+#, no-wrap
+msgid ""
+"<userinput>echo 'int main(){}' &gt; dummy.c\n"
+"$LFS_TGT-gcc dummy.c\n"
+"readelf -l a.out | grep '/ld-linux'</userinput>"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><caution><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter05/glibc.xml:184
+msgid ""
+"If everything is working correctly, there should be no errors, and the "
+"output of the last command will be of the form:"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><caution><screen>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter05/glibc.xml:187
+#, no-wrap
+msgid ""
+"<computeroutput>[Requesting program interpreter: "
+"/lib64/ld-linux-x86-64.so.2]</computeroutput>"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><caution><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter05/glibc.xml:189
+msgid ""
+"Note that for 32-bit machines, the interpreter name will be "
+"<filename>/lib/ld-linux.so.2</filename>."
+msgstr ""
+
+#. type: Content of: <sect1><sect2><caution><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter05/glibc.xml:192
+msgid ""
+"If the output is not shown as above or there was no output at all, then "
+"something is wrong. Investigate and retrace the steps to find out where the "
+"problem is and correct it. This issue must be resolved before continuing on."
+msgstr ""
+
+#. type: Content of: <sect1><sect2><caution><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter05/glibc.xml:197
+msgid "Once all is well, clean up the test files:"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><caution><screen>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter05/glibc.xml:199
+#, no-wrap
+msgid "<userinput>rm -v dummy.c a.out</userinput>"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><note><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter05/glibc.xml:203
+msgid ""
+"Building packages in the next chapter will serve as an additional check that "
+"the toolchain has been built properly. If some package, especially "
+"binutils-pass2 or gcc-pass2, fails to build, it is an indication that "
+"something has gone wrong with the previous Binutils, GCC, or Glibc "
+"installations."
+msgstr ""
+
+#. type: Content of: <sect1><sect2><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter05/glibc.xml:209
+msgid ""
+"Now that our cross-toolchain is complete, finalize the installation of the "
+"limits.h header. For doing so, run a utility provided by the GCC developers:"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><screen>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter05/glibc.xml:213
+#, no-wrap
+msgid "<userinput>$LFS/tools/libexec/gcc/$LFS_TGT/&gcc-version;/install-tools/mkheaders</userinput>"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter05/glibc.xml:220
+msgid ""
+"Details on this package are located in <xref linkend=\"contents-glibc\" "
+"role=\".\"/>"
+msgstr ""

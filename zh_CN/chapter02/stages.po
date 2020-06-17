@@ -1,0 +1,109 @@
+# SOME DESCRIPTIVE TITLE
+# Copyright (C) YEAR Free Software Foundation, Inc.
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"POT-Creation-Date: 2020-06-17 12:44+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#. type: Content of: <sect1><title>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter02/stages.xml:11
+msgid "Building LFS in Stages"
+msgstr ""
+
+#. type: Content of: <sect1><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter02/stages.xml:13
+msgid ""
+"LFS is designed to be built in one session.  That is, the instructions "
+"assume that the system will not be shut down during the process.  That does "
+"not mean that the system has to be done in one sitting.  The issue is that "
+"certain procedures have to be re-accomplished after a reboot if resuming LFS "
+"at different points."
+msgstr ""
+
+#. type: Content of: <sect1><sect2><title>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter02/stages.xml:21
+msgid "Chapters&nbsp;1&ndash;4"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter02/stages.xml:23
+msgid ""
+"These chapters are accomplished on the host system.  When restarting, be "
+"careful of the following:"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><itemizedlist><listitem><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter02/stages.xml:28
+msgid ""
+"Procedures done as the root user after Section 2.4 need to have the LFS "
+"environment variable set <emphasis>FOR THE ROOT USER</emphasis>."
+msgstr ""
+
+#. type: Content of: <sect1><sect2><title>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter02/stages.xml:36
+msgid "Chapter&nbsp;5&ndash;6"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><itemizedlist><listitem><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter02/stages.xml:40
+#: /home/xry111/svn-repos/LFS-BOOK/chapter02/stages.xml:65
+msgid "The /mnt/lfs partition must be mounted."
+msgstr ""
+
+#. type: Content of: <sect1><sect2><itemizedlist><listitem><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter02/stages.xml:44
+msgid ""
+"Threse two chapters must be done as user <emphasis>lfs</emphasis>.  A "
+"<command>su - lfs</command> needs to be done before any task in these "
+"chapters. Failing to do that, you are at risk of installing packages to the "
+"host, and potentially rendering it unusable."
+msgstr ""
+
+#. type: Content of: <sect1><sect2><itemizedlist><listitem><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter02/stages.xml:51
+msgid ""
+"The procedures in <xref linkend='ch-tools-generalinstructions'/> are "
+"critical.  If there is any doubt about installing a package, ensure any "
+"previously expanded tarballs are removed, then re-extract the package files, "
+"and complete all instructions in that section."
+msgstr ""
+
+#. type: Content of: <sect1><sect2><title>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter02/stages.xml:61
+msgid "Chapter&nbsp;7&ndash;10"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><itemizedlist><listitem><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter02/stages.xml:69
+msgid ""
+"A few operations, from <quote>Changing Ownership</quote> to <quote>Entering "
+"the Chroot Environment</quote> must be done as the root user, with the LFS "
+"envirnment variable set for the root user."
+msgstr ""
+
+#. type: Content of: <sect1><sect2><itemizedlist><listitem><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter02/stages.xml:75
+msgid ""
+"When entering chroot, the LFS environment variable must be set for root. The "
+"LFS variable is not used afterwards."
+msgstr ""
+
+#. type: Content of: <sect1><sect2><itemizedlist><listitem><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter02/stages.xml:80
+msgid ""
+"The virtual file systems must be mounted.  This can be done before or after "
+"entering chroot by changing to a host virtual terminal and, as root, running "
+"the commands in <xref linkend='ch-system-bindmount'/> and <xref "
+"linkend='ch-system-kernfsmount'/>."
+msgstr ""

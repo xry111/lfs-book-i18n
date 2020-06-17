@@ -1,0 +1,113 @@
+# SOME DESCRIPTIVE TITLE
+# Copyright (C) YEAR Free Software Foundation, Inc.
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"POT-Creation-Date: 2020-06-17 12:44+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#. type: Content of: <sect1><title>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter09/inputrc.xml:11
+msgid "Creating the /etc/inputrc File"
+msgstr ""
+
+#. type: Content of: <sect1><indexterm><primary>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter09/inputrc.xml:14
+msgid "/etc/inputrc"
+msgstr ""
+
+#. type: Content of: <sect1><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter09/inputrc.xml:17
+msgid ""
+"The <filename>inputrc</filename> file is the configuration file for the "
+"readline library, which provides editing capabilities while the user is "
+"entering a line from the terminal. It works by translating keyboard inputs "
+"into specific actions.  Readline is used by bash and most other shells as "
+"well as many other applications."
+msgstr ""
+
+#. type: Content of: <sect1><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter09/inputrc.xml:23
+msgid ""
+"Most people do not need user-specific functionality so the command below "
+"creates a global <filename>/etc/inputrc</filename> used by everyone who logs "
+"in. If you later decide you need to override the defaults on a per user "
+"basis, you can create a <filename>.inputrc</filename> file in the user's "
+"home directory with the modified mappings."
+msgstr ""
+
+#. type: Content of: <sect1><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter09/inputrc.xml:29
+msgid ""
+"For more information on how to edit the <filename>inputrc</filename> file, "
+"see <command>info bash</command> under the <emphasis>Readline Init "
+"File</emphasis> section. <command>info readline</command> is also a good "
+"source of information."
+msgstr ""
+
+#. type: Content of: <sect1><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter09/inputrc.xml:34
+msgid ""
+"Below is a generic global <filename>inputrc</filename> along with comments "
+"to explain what the various options do. Note that comments cannot be on the "
+"same line as commands. Create the file using the following command:"
+msgstr ""
+
+#. type: Content of: <sect1><screen>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter09/inputrc.xml:38
+#, no-wrap
+msgid ""
+"<userinput>cat &gt; /etc/inputrc &lt;&lt; \"EOF\"\n"
+"<literal># Begin /etc/inputrc\n"
+"# Modified by Chris Lynn &lt;roryo@roryo.dynup.net&gt;\n"
+"\n"
+"# Allow the command prompt to wrap to the next line\n"
+"set horizontal-scroll-mode Off\n"
+"\n"
+"# Enable 8bit input\n"
+"set meta-flag On\n"
+"set input-meta On\n"
+"\n"
+"# Turns off 8th bit stripping\n"
+"set convert-meta Off\n"
+"\n"
+"# Keep the 8th bit for display\n"
+"set output-meta On\n"
+"\n"
+"# none, visible or audible\n"
+"set bell-style none\n"
+"\n"
+"# All of the following map the escape sequence of the value\n"
+"# contained in the 1st argument to the readline specific functions\n"
+"\"\\eOd\": backward-word\n"
+"\"\\eOc\": forward-word\n"
+"\n"
+"# for linux console\n"
+"\"\\e[1~\": beginning-of-line\n"
+"\"\\e[4~\": end-of-line\n"
+"\"\\e[5~\": beginning-of-history\n"
+"\"\\e[6~\": end-of-history\n"
+"\"\\e[3~\": delete-char\n"
+"\"\\e[2~\": quoted-insert\n"
+"\n"
+"# for xterm\n"
+"\"\\eOH\": beginning-of-line\n"
+"\"\\eOF\": end-of-line\n"
+"\n"
+"# for Konsole\n"
+"\"\\e[H\": beginning-of-line\n"
+"\"\\e[F\": end-of-line\n"
+"\n"
+"# End /etc/inputrc</literal>\n"
+"EOF</userinput>"
+msgstr ""

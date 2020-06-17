@@ -1,0 +1,221 @@
+# SOME DESCRIPTIVE TITLE
+# Copyright (C) YEAR Free Software Foundation, Inc.
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"POT-Creation-Date: 2020-06-17 12:44+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#. type: Content of: <sect1><sect1info><address>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/ninja.xml:14
+#, no-wrap
+msgid "&ninja-url;"
+msgstr ""
+
+#. type: Content of: <sect1><sect1info>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/ninja.xml:12
+msgid ""
+"<productname>ninja</productname> "
+"<productnumber>&ninja-version;</productnumber> <placeholder type=\"address\" "
+"id=\"0\"/>"
+msgstr ""
+
+#. type: Content of: <sect1><title>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/ninja.xml:17
+msgid "Ninja-&ninja-version;"
+msgstr ""
+
+#. type: Content of: <sect1><indexterm><primary>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/ninja.xml:20
+msgid "Ninja"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/ninja.xml:26
+msgid "Ninja is a small build system with a focus on speed."
+msgstr ""
+
+#. type: Content of: <sect1><sect2><segmentedlist><segtitle>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/ninja.xml:29
+msgid "&buildtime;"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><segmentedlist><segtitle>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/ninja.xml:30
+msgid "&diskspace;"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><segmentedlist><seglistitem><seg>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/ninja.xml:33
+msgid "&ninja-fin-sbu;"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><segmentedlist><seglistitem><seg>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/ninja.xml:34
+msgid "&ninja-fin-du;"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><tip><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/ninja.xml:39
+msgid ""
+"This section is not strictly required for LFS if not using systemd. On the "
+"other hand, ninja associated to meson makes a powerful build system "
+"combination, which is expected to be used more and more often. It is "
+"required for several packages in <ulink url=\"&blfs-book;\">the BLFS "
+"book</ulink>."
+msgstr ""
+
+#. type: Content of: <sect1><sect2><title>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/ninja.xml:50
+msgid "Installation of Ninja"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/ninja.xml:52
+msgid ""
+"When run, ninja normally runs a maximum number of processes in parallel.  By "
+"default this is the number of cores on the system plus two.  In some cases "
+"this can overheat a CPU or run a system out of memory.  If run from the "
+"command line, passing a -jN parameter will limit the number of parallel "
+"processes, but some packages embed the execution of ninja and do not pass a "
+"-j parameter."
+msgstr ""
+
+#. Using <command>
+#.  here to make the output bold.  We really don't want
+#.      users setting this now and experience shows that many users blindly
+#.      copy/paste anything in a box. 
+#. type: Content of: <sect1><sect2><para><screen>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/ninja.xml:67
+#, no-wrap
+msgid "export NINJAJOBS=4"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/ninja.xml:59
+msgid ""
+"Using the <emphasis>optional</emphasis> procedure below allows a user to "
+"limit the number of parallel processes via an environment variable, "
+"NINJAJOBS.  <command>For example</command>, setting: <placeholder "
+"type=\"screen\" id=\"0\"/> will limit ninja to four parallel processes."
+msgstr ""
+
+#. type: Content of: <sect1><sect2><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/ninja.xml:71
+msgid ""
+"If desired, add the capability to use the environment variable NINJAJOBS by "
+"running:"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><screen>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/ninja.xml:74
+#, no-wrap
+msgid ""
+"<userinput remap=\"pre\">sed -i '/int Guess/a \\\n"
+"  int   j = 0;\\\n"
+"  char* jobs = getenv( \"NINJAJOBS\" );\\\n"
+"  if ( jobs != NULL ) j = atoi( jobs );\\\n"
+"  if ( j > 0 ) return j;\\\n"
+"' src/ninja.cc</userinput>"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/ninja.xml:81
+msgid "Build Ninja with:"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><screen>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/ninja.xml:83
+#, no-wrap
+msgid "<userinput remap=\"configure\">python3 configure.py --bootstrap</userinput>"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><title>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/ninja.xml:86
+msgid "The meaning of the build option:"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/ninja.xml:89
+msgid "<parameter>--bootstrap</parameter>"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/ninja.xml:91
+msgid "This parameter forces ninja to rebuild itself for the current system."
+msgstr ""
+
+#. type: Content of: <sect1><sect2><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/ninja.xml:98
+msgid "To test the results, issue:"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><screen>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/ninja.xml:100
+#, no-wrap
+msgid ""
+"<userinput remap=\"test\">./ninja ninja_test\n"
+"./ninja_test --gtest_filter=-SubprocessTest.SetWithLots</userinput>"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/ninja.xml:103
+msgid "Install the package:"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><screen>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/ninja.xml:105
+#, no-wrap
+msgid ""
+"<userinput remap=\"install\">install -vm755 ninja /usr/bin/\n"
+"install -vDm644 misc/bash-completion "
+"/usr/share/bash-completion/completions/ninja\n"
+"install -vDm644 misc/zsh-completion  "
+"/usr/share/zsh/site-functions/_ninja</userinput>"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><title>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/ninja.xml:112
+msgid "Contents of Ninja"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><segmentedlist><segtitle>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/ninja.xml:115
+msgid "Installed programs"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/ninja.xml:118
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/ninja.xml:131
+msgid "ninja"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><bridgehead>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/ninja.xml:122
+msgid "Short Descriptions"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/ninja.xml:123
+msgid "<?dbfo list-presentation=\"list\"?> <?dbhtml list-presentation=\"table\"?>"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/ninja.xml:127
+msgid "<command>ninja</command>"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/ninja.xml:129
+msgid "is the Ninja build system."
+msgstr ""

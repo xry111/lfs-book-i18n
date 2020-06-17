@@ -1,0 +1,589 @@
+# SOME DESCRIPTIVE TITLE
+# Copyright (C) YEAR Free Software Foundation, Inc.
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"POT-Creation-Date: 2020-06-17 12:44+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#. type: Content of: <sect1><sect1info><address>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/ncurses.xml:14
+#, no-wrap
+msgid "&ncurses-url;"
+msgstr ""
+
+#. type: Content of: <sect1><sect1info>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/ncurses.xml:12
+msgid ""
+"<productname>ncurses</productname> "
+"<productnumber>&ncurses-version;</productnumber> <placeholder "
+"type=\"address\" id=\"0\"/>"
+msgstr ""
+
+#. type: Content of: <sect1><title>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/ncurses.xml:17
+msgid "Ncurses-&ncurses-version;"
+msgstr ""
+
+#. type: Content of: <sect1><indexterm><primary>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/ncurses.xml:20
+msgid "Ncurses"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/ncurses.xml:26
+msgid ""
+"The Ncurses package contains libraries for terminal-independent handling of "
+"character screens."
+msgstr ""
+
+#. type: Content of: <sect1><sect2><segmentedlist><segtitle>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/ncurses.xml:30
+msgid "&buildtime;"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><segmentedlist><segtitle>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/ncurses.xml:31
+msgid "&diskspace;"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><segmentedlist><seglistitem><seg>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/ncurses.xml:34
+msgid "&ncurses-fin-sbu;"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><segmentedlist><seglistitem><seg>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/ncurses.xml:35
+msgid "&ncurses-fin-du;"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><title>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/ncurses.xml:42
+msgid "Installation of Ncurses"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/ncurses.xml:44
+msgid "Don't install a static library that is not handled by configure:"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><screen>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/ncurses.xml:46
+#, no-wrap
+msgid ""
+"<userinput remap=\"pre\">sed -i '/LIBTOOL_INSTALL/d' "
+"c++/Makefile.in</userinput>"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/ncurses.xml:48
+msgid "Prepare Ncurses for compilation:"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><screen>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/ncurses.xml:50
+#, no-wrap
+msgid ""
+"<userinput remap=\"configure\">./configure --prefix=/usr           \\\n"
+"            --mandir=/usr/share/man \\\n"
+"            --with-shared           \\\n"
+"            --without-debug         \\\n"
+"            --without-normal        \\\n"
+"            --enable-pc-files       \\\n"
+"            --enable-widec</userinput>"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><title>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/ncurses.xml:59
+msgid "The meaning of the new configure options:"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/ncurses.xml:62
+msgid "<parameter>--enable-widec</parameter>"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/ncurses.xml:64
+msgid ""
+"This switch causes wide-character libraries (e.g., <filename "
+"class=\"libraryfile\">libncursesw.so.&ncurses-version;</filename>)  to be "
+"built instead of normal ones (e.g., <filename "
+"class=\"libraryfile\">libncurses.so.&ncurses-version;</filename>).  These "
+"wide-character libraries are usable in both multibyte and traditional 8-bit "
+"locales, while normal libraries work properly only in 8-bit "
+"locales. Wide-character and normal libraries are source-compatible, but not "
+"binary-compatible."
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/ncurses.xml:76
+msgid "<parameter>--enable-pc-files</parameter>"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/ncurses.xml:78
+msgid "This switch generates and installs .pc files for pkg-config."
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/ncurses.xml:84
+msgid "<parameter>--without-normal</parameter>"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/ncurses.xml:86
+msgid "This switch disables building and installing most static libraries."
+msgstr ""
+
+#. type: Content of: <sect1><sect2><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/ncurses.xml:93
+msgid "Compile the package:"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><screen>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/ncurses.xml:95
+#, no-wrap
+msgid "<userinput remap=\"make\">make</userinput>"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/ncurses.xml:97
+msgid ""
+"This package has a test suite, but it can only be run after the package has "
+"been installed.  The tests reside in the <filename "
+"class=\"directory\">test/</filename> directory.  See the "
+"<filename>README</filename> file in that directory for further details."
+msgstr ""
+
+#. type: Content of: <sect1><sect2><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/ncurses.xml:103
+msgid "Install the package:"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><screen>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/ncurses.xml:105
+#, no-wrap
+msgid "<userinput remap=\"install\">make install</userinput>"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/ncurses.xml:107
+msgid ""
+"Move the shared libraries to the <filename "
+"class=\"directory\">/lib</filename> directory, where they are expected to "
+"reside:"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><screen>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/ncurses.xml:111
+#, no-wrap
+msgid ""
+"<userinput remap=\"install\">mv -v /usr/lib/libncursesw.so.6* "
+"/lib</userinput>"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/ncurses.xml:113
+msgid ""
+"Because the libraries have been moved, one symlink points to a non-existent "
+"file. Recreate it:"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><screen>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/ncurses.xml:116
+#, no-wrap
+msgid ""
+"<userinput remap=\"install\">ln -sfv ../../lib/$(readlink "
+"/usr/lib/libncursesw.so) /usr/lib/libncursesw.so</userinput>"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/ncurses.xml:118
+msgid ""
+"Many applications still expect the linker to be able to find "
+"non-wide-character Ncurses libraries. Trick such applications into linking "
+"with wide-character libraries by means of symlinks and linker scripts:"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><screen>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/ncurses.xml:122
+#, no-wrap
+msgid ""
+"<userinput remap=\"install\">for lib in ncurses form panel menu ; do\n"
+"    rm -vf                    /usr/lib/lib${lib}.so\n"
+"    echo \"INPUT(-l${lib}w)\" &gt; /usr/lib/lib${lib}.so\n"
+"    ln -sfv ${lib}w.pc        /usr/lib/pkgconfig/${lib}.pc\n"
+"done</userinput>"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/ncurses.xml:128
+msgid ""
+"Finally, make sure that old applications that look for <filename "
+"class=\"libraryfile\">-lcurses</filename> at build time are still buildable:"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><screen>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/ncurses.xml:132
+#, no-wrap
+msgid ""
+"<userinput remap=\"install\">rm -vf                     "
+"/usr/lib/libcursesw.so\n"
+"echo \"INPUT(-lncursesw)\" &gt; /usr/lib/libcursesw.so\n"
+"ln -sfv libncurses.so      /usr/lib/libcurses.so</userinput>"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/ncurses.xml:136
+msgid "If desired, install the Ncurses documentation:"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><screen>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/ncurses.xml:138
+#, no-wrap
+msgid ""
+"<userinput remap=\"install\">mkdir -v       "
+"/usr/share/doc/ncurses-&ncurses-version;\n"
+"cp -v -R doc/* /usr/share/doc/ncurses-&ncurses-version;</userinput>"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><note><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/ncurses.xml:143
+msgid ""
+"The instructions above don't create non-wide-character Ncurses libraries "
+"since no package installed by compiling from sources would link against them "
+"at runtime. However, the only known binary-only applications that link "
+"against non-wide-character Ncurses libraries require version 5.  If you must "
+"have such libraries because of some binary-only application or to be "
+"compliant with LSB, build the package again with the following commands:"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><note><screen>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/ncurses.xml:151
+#, no-wrap
+msgid ""
+"<userinput>make distclean\n"
+"./configure --prefix=/usr    \\\n"
+"            --with-shared    \\\n"
+"            --without-normal \\\n"
+"            --without-debug  \\\n"
+"            --without-cxx-binding \\\n"
+"            --with-abi-version=5 \n"
+"make sources libs\n"
+"cp -av lib/lib*.so.5* /usr/lib</userinput>"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><title>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/ncurses.xml:165
+msgid "Contents of Ncurses"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><segmentedlist><segtitle>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/ncurses.xml:168
+msgid "Installed programs"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><segmentedlist><segtitle>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/ncurses.xml:169
+msgid "Installed libraries"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><segmentedlist><segtitle>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/ncurses.xml:170
+msgid "Installed directories"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><segmentedlist><seglistitem><seg>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/ncurses.xml:174
+msgid ""
+"captoinfo (link to tic), clear, infocmp, infotocap (link to tic), "
+"ncursesw6-config, reset (link to tset), tabs, tic, toe, tput, and tset"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><segmentedlist><seglistitem><seg>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/ncurses.xml:187
+msgid ""
+"libcursesw.so (symlink and linker script to libncursesw.so), libformw.so, "
+"libmenuw.so, libncursesw.so, libncurses++w.a, libpanelw.so, and their "
+"non-wide-character counterparts without \"w\" in the library names."
+msgstr ""
+
+#. type: Content of: <sect1><sect2><segmentedlist><seglistitem><seg>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/ncurses.xml:195
+msgid ""
+"/usr/share/tabset, /usr/share/terminfo, and "
+"/usr/share/doc/ncurses-&ncurses-version;"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><bridgehead>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/ncurses.xml:203
+msgid "Short Descriptions"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/ncurses.xml:204
+msgid "<?dbfo list-presentation=\"list\"?> <?dbhtml list-presentation=\"table\"?>"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/ncurses.xml:208
+msgid "<command>captoinfo</command>"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/ncurses.xml:210
+msgid "Converts a termcap description into a terminfo description"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/ncurses.xml:212
+msgid "captoinfo"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/ncurses.xml:218
+msgid "<command>clear</command>"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/ncurses.xml:220
+msgid "Clears the screen, if possible"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/ncurses.xml:222
+msgid "clear"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/ncurses.xml:228
+msgid "<command>infocmp</command>"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/ncurses.xml:230
+msgid "Compares or prints out terminfo descriptions"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/ncurses.xml:232
+msgid "infocmp"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/ncurses.xml:238
+msgid "<command>infotocap</command>"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/ncurses.xml:240
+msgid "Converts a terminfo description into a termcap description"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/ncurses.xml:242
+msgid "infotocap"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/ncurses.xml:248
+msgid "<command>ncursesw6-config</command>"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/ncurses.xml:250
+msgid "Provides configuration information for ncurses"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/ncurses.xml:252
+msgid "ncursesw6-config"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/ncurses.xml:258
+msgid "<command>reset</command>"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/ncurses.xml:260
+msgid "Reinitializes a terminal to its default values"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/ncurses.xml:262
+msgid "reset"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/ncurses.xml:268
+msgid "<command>tabs</command>"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/ncurses.xml:270
+msgid "Clears and sets tab stops on a terminal"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/ncurses.xml:272
+msgid "tabs"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/ncurses.xml:278
+msgid "<command>tic</command>"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/ncurses.xml:280
+msgid ""
+"The terminfo entry-description compiler that translates a terminfo file from "
+"source format into the binary format needed for the ncurses library routines "
+"[A terminfo file contains information on the capabilities of a certain "
+"terminal.]"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/ncurses.xml:285
+msgid "tic"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/ncurses.xml:291
+msgid "<command>toe</command>"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/ncurses.xml:293
+msgid ""
+"Lists all available terminal types, giving the primary name and description "
+"for each"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/ncurses.xml:296
+msgid "toe"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/ncurses.xml:302
+msgid "<command>tput</command>"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/ncurses.xml:304
+msgid ""
+"Makes the values of terminal-dependent capabilities available to the shell; "
+"it can also be used to reset or initialize a terminal or report its long "
+"name"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/ncurses.xml:308
+msgid "tput"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/ncurses.xml:314
+msgid "<command>tset</command>"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/ncurses.xml:316
+msgid "Can be used to initialize terminals"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/ncurses.xml:318
+msgid "tset"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/ncurses.xml:324
+msgid "<filename class=\"libraryfile\">libcursesw</filename>"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/ncurses.xml:326
+msgid "A link to <filename>libncursesw</filename>"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/ncurses.xml:328
+msgid "libcursesw"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/ncurses.xml:334
+msgid "<filename class=\"libraryfile\">libncursesw</filename>"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/ncurses.xml:336
+msgid ""
+"Contains functions to display text in many complex ways on a terminal "
+"screen; a good example of the use of these functions is the menu displayed "
+"during the kernel's <command>make menuconfig</command>"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/ncurses.xml:341
+msgid "libncursesw"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/ncurses.xml:347
+msgid "<filename class=\"libraryfile\">libformw</filename>"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/ncurses.xml:349
+msgid "Contains functions to implement forms"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/ncurses.xml:351
+msgid "libformw"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/ncurses.xml:357
+msgid "<filename class=\"libraryfile\">libmenuw</filename>"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/ncurses.xml:359
+msgid "Contains functions to implement menus"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/ncurses.xml:361
+msgid "libmenuw"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/ncurses.xml:367
+msgid "<filename class=\"libraryfile\">libpanelw</filename>"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/ncurses.xml:369
+msgid "Contains functions to implement panels"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/ncurses.xml:371
+msgid "libpanelw"
+msgstr ""

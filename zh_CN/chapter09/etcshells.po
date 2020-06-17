@@ -1,0 +1,68 @@
+# SOME DESCRIPTIVE TITLE
+# Copyright (C) YEAR Free Software Foundation, Inc.
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"POT-Creation-Date: 2020-06-17 12:44+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#. type: Content of: <sect1><title>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter09/etcshells.xml:17
+msgid "Creating the /etc/shells File"
+msgstr ""
+
+#. type: Content of: <sect1><indexterm><primary>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter09/etcshells.xml:20
+msgid "/etc/shells"
+msgstr ""
+
+#. type: Content of: <sect1><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter09/etcshells.xml:23
+msgid ""
+"The <filename>shells</filename> file contains a list of login shells on the "
+"system. Applications use this file to determine whether a shell is "
+"valid. For each shell a single line should be present, consisting of the "
+"shell's path relative to the root of the directory structure (/)."
+msgstr ""
+
+#. type: Content of: <sect1><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter09/etcshells.xml:29
+msgid ""
+"For example, this file is consulted by <command>chsh</command> to determine "
+"whether an unprivileged user may change the login shell for her own "
+"account. If the command name is not listed, the user will be denied the "
+"ability to change shells."
+msgstr ""
+
+#. type: Content of: <sect1><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter09/etcshells.xml:34
+msgid ""
+"It is a requirement for applications such as <application>GDM</application> "
+"which does not populate the face browser if it can't find "
+"<filename>/etc/shells</filename>, or FTP daemons which traditionally "
+"disallow access to users with shells not included in this file."
+msgstr ""
+
+#. type: Content of: <sect1><screen>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter09/etcshells.xml:40
+#, no-wrap
+msgid ""
+"<userinput>cat &gt; /etc/shells &lt;&lt; \"EOF\"\n"
+"<literal># Begin /etc/shells\n"
+"\n"
+"/bin/sh\n"
+"/bin/bash\n"
+"\n"
+"# End /etc/shells</literal>\n"
+"EOF</userinput>"
+msgstr ""

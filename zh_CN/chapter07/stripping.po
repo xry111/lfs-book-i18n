@@ -1,0 +1,272 @@
+# SOME DESCRIPTIVE TITLE
+# Copyright (C) YEAR Free Software Foundation, Inc.
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"POT-Creation-Date: 2020-06-17 12:44+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#. type: Content of: <sect1><title>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter07/stripping.xml:11
+msgid "Finishing Temporary Tools"
+msgstr ""
+
+#. type: Content of: <sect1><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter07/stripping.xml:14
+msgid ""
+"The steps in this section are optional. Skip this section entirely if you "
+"are not really short on disk space and do not want to create a backup of the "
+"temporary tools."
+msgstr ""
+
+#. type: Content of: <sect1><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter07/stripping.xml:20
+msgid ""
+"The following steps are performed from outside the chroot environment. That "
+"means, you have to leave the chroot environment first before continuing. The "
+"reason for that is to:"
+msgstr ""
+
+#. type: Content of: <sect1><para><itemizedlist><listitem><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter07/stripping.xml:26
+msgid "make sure that objects are not in use while they are manipulated."
+msgstr ""
+
+#. type: Content of: <sect1><para><itemizedlist><listitem><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter07/stripping.xml:32
+msgid ""
+"get access to file system locations outside of the chroot environment to "
+"store/read the backup archive which should not be placed within the "
+"<filename class=\"directory\">$LFS</filename> hierarchy for safety reasons."
+msgstr ""
+
+#. type: Content of: <sect1><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter07/stripping.xml:43
+msgid "Leave the chroot environment and unmount the kernel virtual file systems:"
+msgstr ""
+
+#. type: Content of: <sect1><note><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter07/stripping.xml:48
+msgid ""
+"All of the following instructions are executed by <systemitem "
+"class=\"username\">root</systemitem>. Take extra care about the commands "
+"you're going to run as mistakes here can modify your host system. Be aware "
+"that the environment variable <envar>LFS</envar> is set for user <systemitem "
+"class=\"username\">lfs</systemitem> by default but it might "
+"<emphasis>not</emphasis> be set for <systemitem "
+"class=\"username\">root</systemitem>. Whenever commands are to be executed "
+"by <systemitem class=\"username\">root</systemitem>, make sure you have set "
+"<envar>LFS</envar> accordingly.  This has been discussed in <xref "
+"linkend='ch-partitioning-aboutlfs'/>."
+msgstr ""
+
+#. type: Content of: <sect1><screen>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter07/stripping.xml:62
+#, no-wrap
+msgid ""
+"<userinput>exit\n"
+"umount $LFS/dev{/pts,}\n"
+"umount $LFS/{sys,proc,run}</userinput>"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><title>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter07/stripping.xml:67
+msgid "Stripping"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter07/stripping.xml:69
+msgid ""
+"If the LFS partition is rather small, it is good to know that unnecessary "
+"items can be removed. The executables and libraries built so far contain a "
+"little over 90 MB of unneeded debugging symbols."
+msgstr ""
+
+#. type: Content of: <sect1><sect2><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter07/stripping.xml:74
+msgid "Strip off debugging symbols from binaries:"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><screen>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter07/stripping.xml:75
+#, no-wrap
+msgid ""
+"<userinput>strip --strip-debug $LFS/usr/lib/*\n"
+"strip --strip-unneeded $LFS/usr/{,s}bin/*\n"
+"strip --strip-unneeded $LFS/tools/bin/*</userinput>"
+msgstr ""
+
+#. Note that we use the <command>
+#. strip</command> program built in
+#.     <quote>Binutils pass 2</quote>, since it is the one that knows how to strip
+#.     our cross-compiled programs.
+#. type: Content of: <sect1><sect2><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter07/stripping.xml:79
+msgid ""
+"These commands will skip a number of files reporting that it does not "
+"recognize their file format. Most of these are scripts instead of binaries."
+msgstr ""
+
+#. type: Content of: <sect1><sect2><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter07/stripping.xml:85
+msgid ""
+"Take care <emphasis>NOT</emphasis> to use "
+"<parameter>--strip-unneeded</parameter> on the libraries. The static ones "
+"would be destroyed and the toolchain packages would need to be built all "
+"over again."
+msgstr ""
+
+#. type: Content of: <sect1><sect2><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter07/stripping.xml:90
+msgid "To save more space (slightly more than 35 MB), remove the documentation:"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><screen>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter07/stripping.xml:92
+#, no-wrap
+msgid "<userinput>rm -rf $LFS/usr/share/{info,man,doc}</userinput>"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter07/stripping.xml:94
+msgid ""
+"The libtool .la files are only useful when linking with static "
+"libraries. They are unneeded, and potentially harmful, when using dynamic "
+"shared libraries, specially when using non-autotools build systems.  Remove "
+"those files now:"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><screen>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter07/stripping.xml:99
+#, no-wrap
+msgid "<userinput>find $LFS/usr/{lib,libexec} -name \\*.la -delete</userinput>"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter07/stripping.xml:101
+msgid ""
+"At this point, you should have at least 5 GB of free space on the chroot "
+"partition that can be used to build and install Glibc and GCC in the next "
+"phase. If you can build and install Glibc, you can build and install the "
+"rest too. You can check the free disk space with the command <command>df -h "
+"$LFS</command>."
+msgstr ""
+
+#. type: Content of: <sect1><sect2><title>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter07/stripping.xml:110
+msgid "Backup"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter07/stripping.xml:113
+msgid ""
+"Now that the essential tools have been created, its time to think about a "
+"backup. When every check has passed successfully in the previously built "
+"packages, your temporary tools are in a good state and might be backed up "
+"for later reuse. In case of fatal failures in the subsequent chapters, it "
+"often turns out that removing everything and starting over (more carefully) "
+"is the best option to recover. Unfortunatly, all the temporary tools will be "
+"removed, too. To avoid spending extra time to redo something which has been "
+"built successfully, prepare a backup."
+msgstr ""
+
+#. type: Content of: <sect1><sect2><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter07/stripping.xml:124
+msgid ""
+"Make sure you have at least 600 MB free disk space (the source tarballs will "
+"be included in the backup archive) in the home directory of user <systemitem "
+"class=\"username\">root</systemitem>."
+msgstr ""
+
+#. type: Content of: <sect1><sect2><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter07/stripping.xml:130
+msgid "Create the backup archive by running the following command:"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><screen>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter07/stripping.xml:133
+#, no-wrap
+msgid ""
+"<userinput>cd $LFS &amp;&amp;\n"
+"tar -cJpf $HOME/lfs-temp-tools-&version;.tar.xz .</userinput>"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><screen>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter07/stripping.xml:136
+#, no-wrap
+msgid ""
+"<userinput>cd $LFS &amp;&amp;\n"
+"tar -cJpf $HOME/lfs-temp-tools-&versiond;.tar.xz .</userinput>"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter07/stripping.xml:140
+msgid ""
+"Replace <envar>$HOME</envar> by a directory of your choice if you do not "
+"want to have the backup stored in <systemitem "
+"class=\"username\">root</systemitem>'s home directory."
+msgstr ""
+
+#. type: Content of: <sect1><sect2><title>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter07/stripping.xml:147
+msgid "Restore"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter07/stripping.xml:150
+msgid ""
+"In case some mistakes have been made and you need to start over, you can use "
+"this backup to restore the temporary tools and save some recovery time.  "
+"Since the sources are located under <filename "
+"class=\"directory\">$LFS</filename>, they are included in the backup archive "
+"as well, so they do not need to be downloaded again. After checking that "
+"<filename class=\"directory\">$LFS</filename> is set properly, restore the "
+"backup by executing the following commands:"
+msgstr ""
+
+#.  Make the following look different so users don't blindly run the
+#.      restore when they don't need to. 
+#. type: Content of: <sect1><sect2><screen>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter07/stripping.xml:162
+#, no-wrap
+msgid ""
+"<computeroutput>cd $LFS &amp;&amp;\n"
+"rm -rf ./* &amp;&amp;\n"
+"tar -xpf $HOME/lfs-temp-tools-&version;.tar.xz</computeroutput>"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><screen>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter07/stripping.xml:166
+#, no-wrap
+msgid ""
+"<computeroutput>cd $LFS &amp;&amp;\n"
+"rm -rf ./* &amp;&amp;\n"
+"tar -xpf $HOME/lfs-temp-tools-&versiond;.tar.xz</computeroutput>"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter07/stripping.xml:171
+msgid ""
+"Again, double check that the environment has been setup properly and "
+"continue building the rest of the system."
+msgstr ""
+
+#. type: Content of: <sect1><sect2><important><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter07/stripping.xml:177
+msgid ""
+"If you left the chroot environment either to strip off debug symbols, create "
+"a backup or restart building using a restore, remember to mount the kernel "
+"virtual filesystems now again as described in <xref "
+"linkend='ch-tools-kernfs'/> and re-enter the chroot environment (see <xref "
+"linkend='ch-tools-chroot'/>)  again before continuing."
+msgstr ""

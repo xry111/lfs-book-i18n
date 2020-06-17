@@ -1,0 +1,924 @@
+# SOME DESCRIPTIVE TITLE
+# Copyright (C) YEAR Free Software Foundation, Inc.
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"POT-Creation-Date: 2020-06-17 12:44+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#. type: Content of: <sect1><title>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter09/usage.xml:12
+msgid "System V Bootscript Usage and Configuration"
+msgstr ""
+
+#. type: Content of: <sect1><indexterm><primary>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter09/usage.xml:15
+msgid "Bootscripts"
+msgstr ""
+
+#. type: Content of: <sect1><indexterm><secondary>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter09/usage.xml:16
+msgid "usage"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><title>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter09/usage.xml:20
+msgid "How Do the System V Bootscripts Work?"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter09/usage.xml:22
+msgid ""
+"Linux uses a special booting facility named SysVinit that is based on a "
+"concept of <emphasis>run-levels</emphasis>. It can be quite different from "
+"one system to another, so it cannot be assumed that because things worked in "
+"one particular Linux distribution, they should work the same in LFS too. LFS "
+"has its own way of doing things, but it respects generally accepted "
+"standards."
+msgstr ""
+
+#. type: Content of: <sect1><sect2><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter09/usage.xml:28
+msgid ""
+"SysVinit (which will be referred to as <quote>init</quote> from now on)  "
+"works using a run-levels scheme. There are seven (numbered 0 to 6) "
+"run-levels (actually, there are more run-levels, but they are for special "
+"cases and are generally not used. See <filename>init(8)</filename> for more "
+"details), and each one of those corresponds to the actions the computer is "
+"supposed to perform when it starts up. The default run-level is 3. Here are "
+"the descriptions of the different run-levels as they are implemented:"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><literallayout>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter09/usage.xml:36
+#, no-wrap
+msgid ""
+"0: halt the computer\n"
+"1: single-user mode\n"
+"2: multi-user mode without networking\n"
+"3: multi-user mode with networking\n"
+"4: reserved for customization, otherwise does the same as 3\n"
+"5: same as 4, it is usually used for GUI login (like X's "
+"<command>xdm</command> or KDE's <command>kdm</command>)\n"
+"6: reboot the computer"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><title>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter09/usage.xml:47
+msgid "Configuring Sysvinit"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><indexterm><primary>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter09/usage.xml:50
+msgid "Sysvinit"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><indexterm><secondary>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter09/usage.xml:51
+#: /home/xry111/svn-repos/LFS-BOOK/chapter09/usage.xml:245
+#: /home/xry111/svn-repos/LFS-BOOK/chapter09/usage.xml:307
+#: /home/xry111/svn-repos/LFS-BOOK/chapter09/usage.xml:541
+#: /home/xry111/svn-repos/LFS-BOOK/chapter09/usage.xml:557
+msgid "configuring"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><indexterm><primary>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter09/usage.xml:55
+msgid "/etc/inittab"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter09/usage.xml:58
+msgid ""
+"During the kernel initialization, the first program that is run is either "
+"specified on the command line or, by default <command>init</command>.  This "
+"program reads the initialization file <filename>/etc/inittab</filename>.  "
+"Create this file with:"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><screen>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter09/usage.xml:63
+#, no-wrap
+msgid ""
+"<userinput>cat &gt; /etc/inittab &lt;&lt; \"EOF\"\n"
+"<literal># Begin /etc/inittab\n"
+"\n"
+"id:3:initdefault:\n"
+"\n"
+"si::sysinit:/etc/rc.d/init.d/rc S\n"
+"\n"
+"l0:0:wait:/etc/rc.d/init.d/rc 0\n"
+"l1:S1:wait:/etc/rc.d/init.d/rc 1\n"
+"l2:2:wait:/etc/rc.d/init.d/rc 2\n"
+"l3:3:wait:/etc/rc.d/init.d/rc 3\n"
+"l4:4:wait:/etc/rc.d/init.d/rc 4\n"
+"l5:5:wait:/etc/rc.d/init.d/rc 5\n"
+"l6:6:wait:/etc/rc.d/init.d/rc 6\n"
+"\n"
+"ca:12345:ctrlaltdel:/sbin/shutdown -t1 -a -r now\n"
+"\n"
+"su:S016:once:/sbin/sulogin\n"
+"\n"
+"1:2345:respawn:/sbin/agetty --noclear tty1 9600\n"
+"2:2345:respawn:/sbin/agetty tty2 9600\n"
+"3:2345:respawn:/sbin/agetty tty3 9600\n"
+"4:2345:respawn:/sbin/agetty tty4 9600\n"
+"5:2345:respawn:/sbin/agetty tty5 9600\n"
+"6:2345:respawn:/sbin/agetty tty6 9600\n"
+"\n"
+"# End /etc/inittab</literal>\n"
+"EOF</userinput>"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter09/usage.xml:92
+msgid ""
+"An explanation of this initialization file is in the man page for "
+"<emphasis>inittab</emphasis>.  For LFS, the key command that is run is "
+"<command>rc</command>. The initialization file above will instruct "
+"<command>rc</command> to run all the scripts starting with an S in the "
+"<filename class=\"directory\">/etc/rc.d/rcS.d</filename> directory followed "
+"by all the scripts starting with an S in the <filename "
+"class=\"directory\">/etc/rc.d/rc?.d</filename> directory where the question "
+"mark is specified by the initdefault value."
+msgstr ""
+
+#. type: Content of: <sect1><sect2><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter09/usage.xml:101
+msgid ""
+"As a convenience, the <command>rc</command> script reads a library of "
+"functions in <filename "
+"class=\"directory\">/lib/lsb/init-functions</filename>.  This library also "
+"reads an optional configuration file, "
+"<filename>/etc/sysconfig/rc.site</filename>.  Any of the system "
+"configuration file parameters described in subsequent sections can be "
+"alternatively placed in this file allowing consolidation of all system "
+"parameters in this one file."
+msgstr ""
+
+#. type: Content of: <sect1><sect2><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter09/usage.xml:109
+msgid ""
+"As a debugging convenience, the functions script also logs all output to "
+"<filename>/run/var/bootlog</filename>.  Since the <filename "
+"class=\"directory\">/run</filename> directory is a tmpfs, this file is not "
+"persistent across boots, however it is appended to the more permanent file "
+"<filename>/var/log/boot.log</filename> at the end of the boot process."
+msgstr ""
+
+#. type: Content of: <sect1><sect2><sect3><title>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter09/usage.xml:116
+msgid "Changing Run Levels"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><sect3><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter09/usage.xml:118
+msgid ""
+"Changing run-levels is done with <command>init "
+"<replaceable>&lt;runlevel&gt;</replaceable></command>, where "
+"<replaceable>&lt;runlevel&gt;</replaceable> is the target run-level. For "
+"example, to reboot the computer, a user could issue the <command>init "
+"6</command> command, which is an alias for the <command>reboot</command> "
+"command. Likewise, <command>init 0</command> is an alias for the "
+"<command>halt</command> command."
+msgstr ""
+
+#. type: Content of: <sect1><sect2><sect3><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter09/usage.xml:126
+msgid ""
+"There are a number of directories under <filename "
+"class=\"directory\">/etc/rc.d</filename> that look like <filename "
+"class=\"directory\">rc?.d</filename> (where ? is the number of the "
+"run-level) and <filename class=\"directory\">rcsysinit.d</filename>, all "
+"containing a number of symbolic links. Some begin with a "
+"<emphasis>K</emphasis>, the others begin with an <emphasis>S</emphasis>, and "
+"all of them have two numbers following the initial letter. The K means to "
+"stop (kill) a service and the S means to start a service. The numbers "
+"determine the order in which the scripts are run, from 00 to 99&mdash;the "
+"lower the number the earlier it gets executed. When <command>init</command> "
+"switches to another run-level, the appropriate services are either started "
+"or stopped, depending on the runlevel chosen."
+msgstr ""
+
+#. type: Content of: <sect1><sect2><sect3><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter09/usage.xml:138
+msgid ""
+"The real scripts are in <filename "
+"class=\"directory\">/etc/rc.d/init.d</filename>. They do the actual work, "
+"and the symlinks all point to them. K links and S links point to the same "
+"script in <filename class=\"directory\">/etc/rc.d/init.d</filename>.  This "
+"is because the scripts can be called with different parameters like "
+"<parameter>start</parameter>, <parameter>stop</parameter>, "
+"<parameter>restart</parameter>, <parameter>reload</parameter>, and "
+"<parameter>status</parameter>. When a K link is encountered, the appropriate "
+"script is run with the <parameter>stop</parameter> argument. When an S link "
+"is encountered, the appropriate script is run with the "
+"<parameter>start</parameter> argument."
+msgstr ""
+
+#. type: Content of: <sect1><sect2><sect3><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter09/usage.xml:150
+msgid ""
+"There is one exception to this explanation. Links that start with an "
+"<emphasis>S</emphasis> in the <filename class=\"directory\">rc0.d</filename> "
+"and <filename class=\"directory\">rc6.d</filename> directories will not "
+"cause anything to be started. They will be called with the parameter "
+"<parameter>stop</parameter> to stop something. The logic behind this is that "
+"when a user is going to reboot or halt the system, nothing needs to be "
+"started.  The system only needs to be stopped."
+msgstr ""
+
+#. type: Content of: <sect1><sect2><sect3><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter09/usage.xml:159
+msgid "These are descriptions of what the arguments make the scripts do:"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><sect3><variablelist><varlistentry><term>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter09/usage.xml:165
+msgid "<parameter>start</parameter>"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><sect3><variablelist><varlistentry><listitem><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter09/usage.xml:167
+msgid "The service is started."
+msgstr ""
+
+#. type: Content of: <sect1><sect2><sect3><variablelist><varlistentry><term>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter09/usage.xml:172
+msgid "<parameter>stop</parameter>"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><sect3><variablelist><varlistentry><listitem><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter09/usage.xml:174
+msgid "The service is stopped."
+msgstr ""
+
+#. type: Content of: <sect1><sect2><sect3><variablelist><varlistentry><term>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter09/usage.xml:179
+msgid "<parameter>restart</parameter>"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><sect3><variablelist><varlistentry><listitem><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter09/usage.xml:181
+msgid "The service is stopped and then started again."
+msgstr ""
+
+#. type: Content of: <sect1><sect2><sect3><variablelist><varlistentry><term>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter09/usage.xml:186
+msgid "<parameter>reload</parameter>"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><sect3><variablelist><varlistentry><listitem><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter09/usage.xml:188
+msgid ""
+"The configuration of the service is updated.  This is used after the "
+"configuration file of a service was modified, when the service does not need "
+"to be restarted."
+msgstr ""
+
+#. type: Content of: <sect1><sect2><sect3><variablelist><varlistentry><term>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter09/usage.xml:195
+msgid "<parameter>status</parameter>"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><sect3><variablelist><varlistentry><listitem><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter09/usage.xml:197
+msgid "Tells if the service is running and with which PIDs."
+msgstr ""
+
+#. type: Content of: <sect1><sect2><sect3><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter09/usage.xml:203
+msgid ""
+"Feel free to modify the way the boot process works (after all, it is your "
+"own LFS system). The files given here are an example of how it can be done."
+msgstr ""
+
+#. type: Content of: <sect1><sect2><title>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter09/usage.xml:211
+msgid "Udev Bootscripts"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter09/usage.xml:213
+msgid ""
+"The <filename>/etc/rc.d/init.d/udev</filename> initscript starts "
+"<command>udevd</command>, triggers any \"coldplug\" devices that have "
+"already been created by the kernel and waits for any rules to complete.  The "
+"script also unsets the uevent handler from the default of "
+"<filename>/sbin/hotplug </filename>.  This is done because the kernel no "
+"longer needs to call out to an external binary.  Instead "
+"<command>udevd</command> will listen on a netlink socket for uevents that "
+"the kernel raises."
+msgstr ""
+
+#. type: Content of: <sect1><sect2><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter09/usage.xml:222
+msgid ""
+"The <command>/etc/rc.d/init.d/udev_retry</command> initscript takes care of "
+"re-triggering events for subsystems whose rules may rely on filesystems that "
+"are not mounted until the <command>mountfs</command> script is run (in "
+"particular, <filename class=\"directory\">/usr</filename> and <filename "
+"class=\"directory\">/var</filename> may cause this).  This script runs after "
+"the <command>mountfs</command> script, so those rules (if re-triggered) "
+"should succeed the second time around.  It is configured from the "
+"<filename>/etc/sysconfig/udev_retry</filename> file; any words in this file "
+"other than comments are considered subsystem names to trigger at retry "
+"time.  To find the subsystem of a device, use <command>udevadm info "
+"--attribute-walk &lt;device&gt;</command> where &lt;device&gt; is an "
+"absolute path in /dev or /sys such as /dev/sr0 or /sys/class/rtc."
+msgstr ""
+
+#. type: Content of: <sect1><sect2><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter09/usage.xml:236
+msgid ""
+"For information on kernel module loading and udev, see <xref "
+"linkend=\"module-loading\"/>."
+msgstr ""
+
+#. type: Content of: <sect1><sect2><title>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter09/usage.xml:241
+msgid "Configuring the System Clock"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><indexterm><primary>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter09/usage.xml:244
+msgid "setclock"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter09/usage.xml:247
+msgid ""
+"The <command>setclock</command> script reads the time from the hardware "
+"clock, also known as the BIOS or the Complementary Metal Oxide Semiconductor "
+"(CMOS) clock. If the hardware clock is set to UTC, this script will convert "
+"the hardware clock's time to the local time using the "
+"<filename>/etc/localtime</filename> file (which tells the "
+"<command>hwclock</command> program which timezone to use). There is no way "
+"to detect whether or not the hardware clock is set to UTC, so this needs to "
+"be configured manually."
+msgstr ""
+
+#. type: Content of: <sect1><sect2><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter09/usage.xml:256
+msgid ""
+"The <command>setclock</command> program is run via "
+"<application>udev</application> when the kernel detects the hardware "
+"capability upon boot.  It can also be run manually with the stop parameter "
+"to store the system time to the CMOS clock."
+msgstr ""
+
+#. type: Content of: <sect1><sect2><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter09/usage.xml:261
+msgid ""
+"If you cannot remember whether or not the hardware clock is set to UTC, find "
+"out by running the <userinput>hwclock --localtime --show</userinput> "
+"command. This will display what the current time is according to the "
+"hardware clock. If this time matches whatever your watch says, then the "
+"hardware clock is set to local time. If the output from "
+"<command>hwclock</command> is not local time, chances are it is set to UTC "
+"time. Verify this by adding or subtracting the proper amount of hours for "
+"the timezone to the time shown by <command>hwclock</command>. For example, "
+"if you are currently in the MST timezone, which is also known as GMT -0700, "
+"add seven hours to the local time."
+msgstr ""
+
+#. type: Content of: <sect1><sect2><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter09/usage.xml:272
+msgid ""
+"Change the value of the <envar>UTC</envar> variable below to a value of "
+"<parameter>0</parameter> (zero) if the hardware clock is "
+"<emphasis>NOT</emphasis> set to UTC time."
+msgstr ""
+
+#. type: Content of: <sect1><sect2><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter09/usage.xml:276
+msgid ""
+"Create a new file <filename>/etc/sysconfig/clock</filename> by running the "
+"following:"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><screen>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter09/usage.xml:279
+#, no-wrap
+msgid ""
+"<userinput>cat &gt; /etc/sysconfig/clock &lt;&lt; \"EOF\"\n"
+"<literal># Begin /etc/sysconfig/clock\n"
+"\n"
+"UTC=1\n"
+"\n"
+"# Set this to any options you might need to give to hwclock,\n"
+"# such as machine hardware clock type for Alphas.\n"
+"CLOCKPARAMS=\n"
+"\n"
+"# End /etc/sysconfig/clock</literal>\n"
+"EOF</userinput>"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter09/usage.xml:291
+msgid ""
+"A good hint explaining how to deal with time on LFS is available at <ulink "
+"url=\"&hints-root;time.txt\"/>. It explains issues such as time zones, UTC, "
+"and the <envar>TZ</envar> environment variable."
+msgstr ""
+
+#. type: Content of: <sect1><sect2><note><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter09/usage.xml:295
+msgid ""
+"The CLOCKPARAMS and UTC paramaters may also be set in the "
+"<filename>/etc/sysconfig/rc.site</filename> file."
+msgstr ""
+
+#. type: Content of: <sect1><sect2><title>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter09/usage.xml:303
+msgid "Configuring the Linux Console"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><indexterm><primary>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter09/usage.xml:306
+msgid "console"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter09/usage.xml:310
+msgid ""
+"This section discusses how to configure the <command>console</command> "
+"bootscript that sets up the keyboard map, console font, and console kernel "
+"log level. If non-ASCII characters (e.g., the copyright sign, the British "
+"pound sign and Euro symbol) will not be used and the keyboard is a U.S. one, "
+"much of this section can be skipped. Without the configuration file, (or "
+"equivalent settings in <filename>rc.site</filename>), the "
+"<command>console</command> bootscript will do nothing."
+msgstr ""
+
+#. type: Content of: <sect1><sect2><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter09/usage.xml:318
+msgid ""
+"The <command>console</command> script reads the "
+"<filename>/etc/sysconfig/console</filename> file for configuration "
+"information.  Decide which keymap and screen font will be used. Various "
+"language-specific HOWTOs can also help with this, see <ulink "
+"url=\"http://www.tldp.org/HOWTO/HOWTO-INDEX/other-lang.html\"/>. If still in "
+"doubt, look in the <filename "
+"class=\"directory\">/usr/share/keymaps</filename> and <filename "
+"class=\"directory\">/usr/share/consolefonts</filename> directories for valid "
+"keymaps and screen fonts. Read <filename>loadkeys(1)</filename> and "
+"<filename>setfont(8)</filename> manual pages to determine the correct "
+"arguments for these programs."
+msgstr ""
+
+#. type: Content of: <sect1><sect2><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter09/usage.xml:329
+msgid ""
+"The <filename>/etc/sysconfig/console</filename> file should contain lines of "
+"the form: VARIABLE=\"value\". The following variables are recognized:"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter09/usage.xml:334
+msgid "LOGLEVEL"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter09/usage.xml:336
+msgid ""
+"This variable specifies the log level for kernel messages sent to the "
+"console as set by <command>dmesg -n</command>. Valid levels are from \"1\" "
+"(no messages) to \"8\". The default level is \"7\"."
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter09/usage.xml:343
+msgid "KEYMAP"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter09/usage.xml:345
+msgid ""
+"This variable specifies the arguments for the <command>loadkeys</command> "
+"program, typically, the name of keymap to load, e.g., <quote>it</quote>. If "
+"this variable is not set, the bootscript will not run the "
+"<command>loadkeys</command> program, and the default kernel keymap will be "
+"used.  Note that a few keymaps have multiple versions with the same name (cz "
+"and its variants in qwerty/ and qwertz/, es in olpc/ and qwerty/, and trf in "
+"fgGIod/ and qwerty/). In these cases the parent directory should also be "
+"specified (e.g. qwerty/es) to ensure the proper keymap is loaded."
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter09/usage.xml:359
+msgid "KEYMAP_CORRECTIONS"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter09/usage.xml:361
+msgid ""
+"This (rarely used) variable specifies the arguments for the second call to "
+"the <command>loadkeys</command> program. This is useful if the stock keymap "
+"is not completely satisfactory and a small adjustment has to be made. E.g., "
+"to include the Euro sign into a keymap that normally doesn't have it, set "
+"this variable to <quote>euro2</quote>."
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter09/usage.xml:371
+msgid "FONT"
+msgstr ""
+
+#.  because of the copyright sign 
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter09/usage.xml:373
+msgid ""
+"This variable specifies the arguments for the <command>setfont</command> "
+"program. Typically, this includes the font name, <quote>-m</quote>, and the "
+"name of the application character map to load. E.g., in order to load the "
+"<quote>lat1-16</quote> font together with the <quote>8859-1</quote> "
+"application character map (as it is appropriate in the USA), set this "
+"variable to <quote>lat1-16 -m 8859-1</quote>.  In UTF-8 mode, the kernel "
+"uses the application character map for conversion of composed 8-bit key "
+"codes in the keymap to UTF-8, and thus the argument of the \"-m\" parameter "
+"should be set to the encoding of the composed key codes in the keymap."
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter09/usage.xml:390
+msgid "UNICODE"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter09/usage.xml:392
+msgid ""
+"Set this variable to <quote>1</quote>, <quote>yes</quote> or "
+"<quote>true</quote> in order to put the console into UTF-8 mode. This is "
+"useful in UTF-8 based locales and harmful otherwise."
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter09/usage.xml:400
+msgid "LEGACY_CHARSET"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter09/usage.xml:402
+msgid ""
+"For many keyboard layouts, there is no stock Unicode keymap in the Kbd "
+"package. The <command>console</command> bootscript will convert an available "
+"keymap to UTF-8 on the fly if this variable is set to the encoding of the "
+"available non-UTF-8 keymap."
+msgstr ""
+
+#. type: Content of: <sect1><sect2><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter09/usage.xml:411
+msgid "Some examples:"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><itemizedlist><listitem><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter09/usage.xml:416
+msgid ""
+"For a non-Unicode setup, only the KEYMAP and FONT variables are generally "
+"needed. E.g., for a Polish setup, one would use:"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><itemizedlist><listitem><screen>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter09/usage.xml:418
+#, no-wrap
+msgid ""
+"<userinput>cat &gt; /etc/sysconfig/console &lt;&lt; \"EOF\"\n"
+"<literal># Begin /etc/sysconfig/console\n"
+"\n"
+"KEYMAP=\"pl2\"\n"
+"FONT=\"lat2a-16 -m 8859-2\"\n"
+"\n"
+"# End /etc/sysconfig/console</literal>\n"
+"EOF</userinput>"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><itemizedlist><listitem><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter09/usage.xml:429
+msgid ""
+"As mentioned above, it is sometimes necessary to adjust a stock keymap "
+"slightly. The following example adds the Euro symbol to the German keymap:"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><itemizedlist><listitem><screen>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter09/usage.xml:433
+#, no-wrap
+msgid ""
+"<userinput>cat &gt; /etc/sysconfig/console &lt;&lt; \"EOF\"\n"
+"<literal># Begin /etc/sysconfig/console\n"
+"\n"
+"KEYMAP=\"de-latin1\"\n"
+"KEYMAP_CORRECTIONS=\"euro2\"\n"
+"FONT=\"lat0-16 -m 8859-15\"\n"
+"UNICODE=\"1\"\n"
+"\n"
+"# End /etc/sysconfig/console</literal>\n"
+"EOF</userinput>"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><itemizedlist><listitem><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter09/usage.xml:446
+msgid ""
+"The following is a Unicode-enabled example for Bulgarian, where a stock "
+"UTF-8 keymap exists:"
+msgstr ""
+
+#.  This is what is used by jhalfs for creating the console file: whenever
+#.      you change the following, please inform the jhalfs maintainer(s). 
+#. type: Content of: <sect1><sect2><itemizedlist><listitem><screen>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter09/usage.xml:450
+#, no-wrap
+msgid ""
+"<userinput>cat &gt; /etc/sysconfig/console &lt;&lt; \"EOF\"\n"
+"<literal># Begin /etc/sysconfig/console\n"
+"\n"
+"UNICODE=\"1\"\n"
+"KEYMAP=\"bg_bds-utf8\"\n"
+"FONT=\"LatArCyrHeb-16\"\n"
+"\n"
+"# End /etc/sysconfig/console</literal>\n"
+"EOF</userinput>"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><itemizedlist><listitem><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter09/usage.xml:462
+msgid ""
+"Due to the use of a 512-glyph LatArCyrHeb-16 font in the previous example, "
+"bright colors are no longer available on the Linux console unless a "
+"framebuffer is used. If one wants to have bright colors without a "
+"framebuffer and can live without characters not belonging to his language, "
+"it is still possible to use a language-specific 256-glyph font, as "
+"illustrated below:"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><itemizedlist><listitem><screen>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter09/usage.xml:469
+#, no-wrap
+msgid ""
+"<userinput>cat &gt; /etc/sysconfig/console &lt;&lt; \"EOF\"\n"
+"<literal># Begin /etc/sysconfig/console\n"
+"\n"
+"UNICODE=\"1\"\n"
+"KEYMAP=\"bg_bds-utf8\"\n"
+"FONT=\"cyr-sun16\"\n"
+"\n"
+"# End /etc/sysconfig/console</literal>\n"
+"EOF</userinput>"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><itemizedlist><listitem><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter09/usage.xml:481
+msgid ""
+"The following example illustrates keymap autoconversion from ISO-8859-15 to "
+"UTF-8 and enabling dead keys in Unicode mode:"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><itemizedlist><listitem><screen>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter09/usage.xml:484
+#, no-wrap
+msgid ""
+"<userinput>cat &gt; /etc/sysconfig/console &lt;&lt; \"EOF\"\n"
+"<literal># Begin /etc/sysconfig/console\n"
+"\n"
+"UNICODE=\"1\"\n"
+"KEYMAP=\"de-latin1\"\n"
+"KEYMAP_CORRECTIONS=\"euro2\"\n"
+"LEGACY_CHARSET=\"iso-8859-15\"\n"
+"FONT=\"LatArCyrHeb-16 -m 8859-15\"\n"
+"\n"
+"# End /etc/sysconfig/console</literal>\n"
+"EOF</userinput>"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><itemizedlist><listitem><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter09/usage.xml:498
+msgid ""
+"Some keymaps have dead keys (i.e., keys that don't produce a character by "
+"themselves, but put an accent on the character produced by the next key) or "
+"define composition rules (such as: <quote>press Ctrl+. A E to get "
+"&AElig;</quote> in the default keymap).  Linux-&linux-version; interprets "
+"dead keys and composition rules in the keymap correctly only when the source "
+"characters to be composed together are not multibyte. This deficiency "
+"doesn't affect keymaps for European languages, because there accents are "
+"added to unaccented ASCII characters, or two ASCII characters are composed "
+"together. However, in UTF-8 mode it is a problem; e.g., for the Greek "
+"language, where one sometimes needs to put an accent on the letter "
+"<quote>alpha</quote>.  The solution is either to avoid the use of UTF-8, or "
+"to install the X window system that doesn't have this limitation in its "
+"input handling."
+msgstr ""
+
+#. type: Content of: <sect1><sect2><itemizedlist><listitem><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter09/usage.xml:515
+msgid ""
+"For Chinese, Japanese, Korean, and some other languages, the Linux console "
+"cannot be configured to display the needed characters. Users who need such "
+"languages should install the X Window System, fonts that cover the necessary "
+"character ranges, and the proper input method (e.g., SCIM, supports a wide "
+"variety of languages)."
+msgstr ""
+
+#. type: Content of: <sect1><sect2><note><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter09/usage.xml:527
+msgid ""
+"The <filename>/etc/sysconfig/console</filename> file only controls the Linux "
+"text console localization. It has nothing to do with setting the proper "
+"keyboard layout and terminal fonts in the X Window System, with ssh "
+"sessions, or with a serial console. In such situations, limitations "
+"mentioned in the last two list items above do not apply."
+msgstr ""
+
+#. type: Content of: <sect1><sect2><title>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter09/usage.xml:537
+msgid "Creating Files at Boot"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><indexterm><primary>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter09/usage.xml:540
+msgid "File creation at boot"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter09/usage.xml:544
+msgid ""
+"At times, it is desirable to create files at boot time.  For instance, the "
+"<filename class=\"directory\">/tmp/.ICE-unix</filename> directory is often "
+"needed.  This can be done by creating an entry in the "
+"<filename>/etc/sysconfig/createfiles</filename> configuration script.  The "
+"format of this file is embedded in the comments of the default configuration "
+"file."
+msgstr ""
+
+#. type: Content of: <sect1><sect2><title>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter09/usage.xml:553
+msgid "Configuring the sysklogd Script"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><indexterm><primary>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter09/usage.xml:556
+msgid "sysklogd"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter09/usage.xml:560
+msgid ""
+"The <filename>sysklogd</filename> script invokes the "
+"<command>syslogd</command> program as a part of System V initialization.  "
+"The <parameter>-m 0</parameter> option turns off the periodic timestamp mark "
+"that <command>syslogd</command> writes to the log files every 20 minutes by "
+"default.  If you want to turn on this periodic timestamp mark, edit "
+"<filename>/etc/sysconfig/rc.site</filename> and define the variable "
+"SYSKLOGD_PARMS to the desired value.  For instance, to remove all "
+"parameters, set the variable to a null value:"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><screen>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter09/usage.xml:569
+#, no-wrap
+msgid "SYSKLOGD_PARMS="
+msgstr ""
+
+#. type: Content of: <sect1><sect2><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter09/usage.xml:571
+msgid "See <userinput>man syslogd</userinput> for more options."
+msgstr ""
+
+#. type: Content of: <sect1><sect2><title>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter09/usage.xml:576
+msgid "The rc.site File"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><indexterm><primary>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter09/usage.xml:579
+msgid "rc.site"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter09/usage.xml:582
+msgid ""
+"The optional <filename>/etc/sysconfig/rc.site</filename> file contains "
+"settings that are automatically set for each SystemV boot script.  It can "
+"alternatively set the values specified in the <filename>hostname</filename>, "
+"<filename>console</filename>, and <filename>clock</filename> files in the "
+"<filename class='directory'>/etc/sysconfig/</filename> directory.  If the "
+"associated variables are present in both these separate files and "
+"<filename>rc.site</filename>, the values in the script specific files have "
+"precedence."
+msgstr ""
+
+#. type: Content of: <sect1><sect2><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter09/usage.xml:591
+msgid ""
+"<filename>rc.site</filename> also contains parameters that can customize "
+"other aspects of the boot process.  Setting the IPROMPT variable will enable "
+"selective running of bootscripts.  Other options are described in the file "
+"comments.  The default version of the file is as follows:"
+msgstr ""
+
+#.  Use role to fix a pdf generation problem 
+#. type: Content of: <sect1><sect2><screen>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter09/usage.xml:597
+#, no-wrap
+msgid "&site;"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><sect3><title>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter09/usage.xml:600
+msgid "Customizing the Boot and Shutdown Scripts"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><sect3><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter09/usage.xml:602
+msgid ""
+"The LFS boot scripts boot and shut down a system in a fairly efficient "
+"manner, but there are a few tweaks that you can make in the rc.site file to "
+"improve speed even more and to adjust messages according to your "
+"preferences. To do this, adjust the settings in the "
+"<filename>/etc/sysconfig/rc.site</filename> file above."
+msgstr ""
+
+#. type: Content of: <sect1><sect2><sect3><itemizedlist><listitem><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter09/usage.xml:610
+msgid ""
+"During the boot script <filename>udev</filename>, there is a call to "
+"<command>udev settle</command> that requires some time to complete. This "
+"time may or may not be required depending on devices present in the system.  "
+"If you only have simple partitions and a single ethernet card, the boot "
+"process will probably not need to wait for this command.  To skip it, set "
+"the variable OMIT_UDEV_SETTLE=y."
+msgstr ""
+
+#. type: Content of: <sect1><sect2><sect3><itemizedlist><listitem><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter09/usage.xml:617
+msgid ""
+"The boot script <filename>udev_retry</filename> also runs <command>udev "
+"settle</command> by default.  This command is only needed by default if the "
+"<filename class='directory'>/var</filename> directory is separately "
+"mounted.  This is because the clock needs the file "
+"<filename>/var/lib/hwclock/adjtime</filename>.  Other customizations may "
+"also need to wait for udev to complete, but in many installations it is not "
+"needed.  Skip the command by setting the variable OMIT_UDEV_RETRY_SETTLE=y."
+msgstr ""
+
+#. type: Content of: <sect1><sect2><sect3><itemizedlist><listitem><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter09/usage.xml:626
+msgid ""
+"By default, the file system checks are silent.  This can appear to be a "
+"delay during the bootup process.  To turn on the <command>fsck</command> "
+"output, set the variable VERBOSE_FSCK=y."
+msgstr ""
+
+#. type: Content of: <sect1><sect2><sect3><itemizedlist><listitem><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter09/usage.xml:631
+msgid ""
+"When rebooting, you may want to skip the filesystem check, "
+"<command>fsck</command>, completely.  To do this, either create the file "
+"<filename>/fastboot</filename> or reboot the system with the command "
+"<command>/sbin/shutdown -f -r now</command>.  On the other hand, you can "
+"force all file systems to be checked by creating "
+"<filename>/forcefsck</filename> or running <command>shutdown</command> with "
+"the <parameter>-F</parameter> parameter instead of "
+"<parameter>-f</parameter>."
+msgstr ""
+
+#. type: Content of: <sect1><sect2><sect3><itemizedlist><listitem><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter09/usage.xml:640
+msgid ""
+"Setting the variable FASTBOOT=y will disable <command>fsck</command> during "
+"the boot process until it is removed.  This is not recommended on a "
+"permanent basis."
+msgstr ""
+
+#. type: Content of: <sect1><sect2><sect3><itemizedlist><listitem><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter09/usage.xml:644
+msgid ""
+"Normally, all files in the <filename class='directory'>/tmp</filename> "
+"directory are deleted at boot time.  Depending on the number of files or "
+"directories present, this can cause a noticeable delay in the boot process.  "
+"To skip removing these files set the variable SKIPTMPCLEAN=y."
+msgstr ""
+
+#. type: Content of: <sect1><sect2><sect3><itemizedlist><listitem><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter09/usage.xml:650
+msgid ""
+"During shutdown, the <command>init</command> program sends a TERM signal to "
+"each program it has started (e.g. agetty), waits for a set time (default 3 "
+"seconds), and sends each process a KILL signal and waits again.  This "
+"process is repeated in the <command>sendsignals</command> script for any "
+"processes that are not shut down by their own scripts.  The delay for "
+"<command>init</command> can be set by passing a parameter.  For example to "
+"remove the delay in <command>init</command>, pass the -t0 parameter when "
+"shutting down or rebooting (e.g.  <command>/sbin/shutdown -t0 -r "
+"now</command>).  The delay for the <command>sendsignals</command> script can "
+"be skipped by setting the parameter KILLDELAY=0."
+msgstr ""

@@ -1,0 +1,112 @@
+# SOME DESCRIPTIVE TITLE
+# Copyright (C) YEAR Free Software Foundation, Inc.
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"POT-Creation-Date: 2020-06-17 12:44+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#. type: Content of: <sect1><title>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/strippingagain.xml:11
+msgid "Stripping Again"
+msgstr ""
+
+#. type: Content of: <sect1><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/strippingagain.xml:13
+msgid ""
+"This section is optional.  If the intended user is not a programmer and does "
+"not plan to do any debugging on the system software, the system size can be "
+"decreased by about 2 GB by removing the debugging symbols from binaries and "
+"libraries. This causes no inconvenience other than not being able to debug "
+"the software fully anymore."
+msgstr ""
+
+#. type: Content of: <sect1><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/strippingagain.xml:20
+msgid ""
+"Most people who use the commands mentioned below do not experience any "
+"difficulties. However, it is easy to make a typo and render the new system "
+"unusable, so before running the <command>strip</command> commands, it is a "
+"good idea to make a backup of the LFS system in its current state."
+msgstr ""
+
+#. type: Content of: <sect1><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/strippingagain.xml:26
+msgid ""
+"First place the debugging symbols for selected libraries in separate files.  "
+"This debugging information is needed if running regression tests that use "
+"<ulink url='&blfs-book;/general/valgrind.html'>valgrind</ulink> or <ulink "
+"url='&blfs-book;/general/gdb.html'>gdb</ulink> later in BLFS."
+msgstr ""
+
+#.  also of interest are libgfortan, libgo, libgomp, and libobjc from GCC 
+#. <screen>
+#. <userinput>save_lib="ld-2.25.so libc-2.25.so libpthread-2.25.so libthread_db-1.0.so"
+#.  libcilkrts.so.&libcilkrts-version;
+#. type: Content of: <sect1><screen>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/strippingagain.xml:36
+#, no-wrap
+msgid ""
+"<userinput>save_lib=\"ld-&glibc-version;.so libc-&glibc-version;.so "
+"libpthread-&glibc-version;.so libthread_db-&libthread_db-version;.so\"\n"
+"\n"
+"cd /lib\n"
+"\n"
+"for LIB in $save_lib; do\n"
+"    objcopy --only-keep-debug $LIB $LIB.dbg \n"
+"    strip --strip-unneeded $LIB\n"
+"    objcopy --add-gnu-debuglink=$LIB.dbg $LIB \n"
+"done    \n"
+"\n"
+"save_usrlib=\"libquadmath.so.&libquadmath-version; "
+"libstdc++.so.&libstdcpp-version;\n"
+"             libitm.so.&libitm-version; libatomic.so.&libatomic-version;\" "
+"\n"
+"\n"
+"cd /usr/lib\n"
+"\n"
+"for LIB in $save_usrlib; do\n"
+"    objcopy --only-keep-debug $LIB $LIB.dbg\n"
+"    strip --strip-unneeded $LIB\n"
+"    objcopy --add-gnu-debuglink=$LIB.dbg $LIB\n"
+"done\n"
+"\n"
+"unset LIB save_lib save_usrlib</userinput>"
+msgstr ""
+
+#. type: Content of: <sect1><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/strippingagain.xml:66
+msgid "Now the binaries and libraries can be stripped:"
+msgstr ""
+
+#. type: Content of: <sect1><screen>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/strippingagain.xml:67
+#, no-wrap
+msgid ""
+"<userinput>find /usr/lib -type f -name \\*.a \\\n"
+"   -exec strip --strip-debug {} ';'\n"
+"\n"
+"find /lib /usr/lib -type f -name \\*.so* ! -name \\*dbg \\\n"
+"   -exec strip --strip-unneeded {} ';'\n"
+"\n"
+"find /{bin,sbin} /usr/{bin,sbin,libexec} -type f \\\n"
+"    -exec strip --strip-all {} ';'</userinput>"
+msgstr ""
+
+#. type: Content of: <sect1><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/strippingagain.xml:76
+msgid ""
+"A large number of files will be reported as having their file format not "
+"recognized. These warnings can be safely ignored. These warnings indicate "
+"that those files are scripts instead of binaries."
+msgstr ""

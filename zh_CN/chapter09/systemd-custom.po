@@ -1,0 +1,439 @@
+# SOME DESCRIPTIVE TITLE
+# Copyright (C) YEAR Free Software Foundation, Inc.
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"POT-Creation-Date: 2020-06-17 12:44+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#. type: Content of: <sect1><title>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter09/systemd-custom.xml:11
+msgid "Systemd Usage and Configuration"
+msgstr ""
+
+#. type: Content of: <sect1><indexterm><primary>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter09/systemd-custom.xml:14
+msgid "Systemd Customization"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><title>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter09/systemd-custom.xml:18
+msgid "Basic Configuration"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter09/systemd-custom.xml:20
+msgid ""
+"The <filename>/etc/systemd/system.conf</filename> file contains a set of "
+"options to control basic systemd operations. The default file has all "
+"entries commented out with the default settings indicated. This file is "
+"where the log level may be changed as well as some basic logging settings.  "
+"See the <filename>systemd-system.conf(5)</filename> manual page for details "
+"on each configuration option."
+msgstr ""
+
+#. type: Content of: <sect1><sect2><title>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter09/systemd-custom.xml:30
+msgid "Disabling Screen Clearing at Boot Time"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter09/systemd-custom.xml:32
+msgid ""
+"The normal behavior for systemd is to clear the screen at the end of the "
+"boot sequence. If desired, this behavior may be changed by running the "
+"following command:"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><screen>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter09/systemd-custom.xml:36
+#, no-wrap
+msgid ""
+"<userinput>mkdir -pv /etc/systemd/system/getty@tty1.service.d\n"
+"\n"
+"cat &gt; /etc/systemd/system/getty@tty1.service.d/noclear.conf &lt;&lt; "
+"EOF\n"
+"<literal>[Service]\n"
+"TTYVTDisallocate=no</literal>\n"
+"EOF</userinput>"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter09/systemd-custom.xml:43
+msgid ""
+"The boot messages can always be reviewed by using the <userinput>journalctl "
+"-b</userinput> command as the root user."
+msgstr ""
+
+#. type: Content of: <sect1><sect2><title>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter09/systemd-custom.xml:49
+msgid "Disabling tmpfs for /tmp"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter09/systemd-custom.xml:51
+msgid ""
+"By default, <filename class=\"directory\">/tmp</filename> is created as a "
+"tmpfs. If this is not desired, it can be overridden by executing the "
+"following command:"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><screen>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter09/systemd-custom.xml:55
+#, no-wrap
+msgid "<userinput>ln -sfv /dev/null /etc/systemd/system/tmp.mount</userinput>"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter09/systemd-custom.xml:57
+msgid ""
+"Alternatively, if a a separate partition for <filename "
+"class=\"directory\">/tmp</filename> is desired, specify that partition in a "
+"<filename>/etc/fstab</filename> entry."
+msgstr ""
+
+#. type: Content of: <sect1><sect2><warning><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter09/systemd-custom.xml:63
+msgid ""
+"Do not create the symbolic link above if a separate partition is used for "
+"<filename class=\"directory\">/tmp</filename>.  This will prevent the root "
+"file system (/) from being remounted r/w and make the system unusable when "
+"booted."
+msgstr ""
+
+#. type: Content of: <sect1><sect2><title>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter09/systemd-custom.xml:73
+msgid "Configuring Automatic File Creation and Deletion"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter09/systemd-custom.xml:75
+msgid "There are several services that create or delete files or directories:"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><itemizedlist><listitem><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter09/systemd-custom.xml:79
+msgid "systemd-tmpfiles-clean.service"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><itemizedlist><listitem><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter09/systemd-custom.xml:80
+msgid "systemd-tmpfiles-setup-dev.service"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><itemizedlist><listitem><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter09/systemd-custom.xml:81
+msgid "systemd-tmpfiles-setup.service"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter09/systemd-custom.xml:84
+msgid ""
+"The system location for the configuration files is "
+"<filename>/usr/lib/tmpfiles.d/*.conf</filename>. The local configuration "
+"files are in <filename class=\"directory\">/etc/tmpfiles.d</filename>. Files "
+"in <filename class=\"directory\">/etc/tmpfiles.d</filename> override files "
+"with the same name in <filename "
+"class=\"directory\">/usr/lib/tmpfiles.d</filename>. See "
+"<filename>tmpfiles.d(5)</filename> manual page for file format details."
+msgstr ""
+
+#. type: Content of: <sect1><sect2><para><screen>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter09/systemd-custom.xml:101
+#, no-wrap
+msgid "q /tmp 1777 root root 10d"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter09/systemd-custom.xml:95
+msgid ""
+"Note that the syntax for the <filename>/usr/lib/tmpfiles.d/*.conf</filename> "
+"files can be confusing.  For example, the default deletion of files in the "
+"/tmp directory is located in "
+"<filename>/usr/lib/tmpfiles.d/tmp.conf</filename> with the line: "
+"<placeholder type=\"screen\" id=\"0\"/> The type field, q, discusses "
+"creating a subvolume with quotas which is really only applicable to btrfs "
+"filesystems.  It references type v which in turn references type d "
+"(directory). This then creates the specified directory if is is not present "
+"and adjusts the permissions and ownership as specified. Contents of the "
+"directory will be subject to time based cleanup if the age argument is "
+"specified."
+msgstr ""
+
+#. type: Content of: <sect1><sect2><para><screen>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter09/systemd-custom.xml:116
+#, no-wrap
+msgid ""
+"<userinput>mkdir -p /etc/tmpfiles.d\n"
+"cp /usr/lib/tmpfiles.d/tmp.conf /etc/tmpfiles.d</userinput>"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter09/systemd-custom.xml:112
+msgid ""
+"If the default parameters are not desired, then the file should be copied to "
+"<filename class=\"directory\">/etc/tmpfiles.d</filename> and edited as "
+"desired.  For example: <placeholder type=\"screen\" id=\"0\"/>"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><title>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter09/systemd-custom.xml:123
+msgid "Overriding Default Services Behavior"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter09/systemd-custom.xml:125
+msgid ""
+"The parameters of a unit can be overriden by creating a directory and a "
+"configuration file in <filename "
+"class=\"directory\">/etc/systemd/system</filename>. For example:"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><screen>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter09/systemd-custom.xml:129
+#, no-wrap
+msgid ""
+"<userinput>mkdir -pv /etc/systemd/system/foobar.service.d\n"
+"\n"
+"cat > /etc/systemd/system/foobar.service.d/foobar.conf &lt;&lt; EOF\n"
+"<literal>[Service]\n"
+"Restart=always\n"
+"RestartSec=30</literal>\n"
+"EOF</userinput>"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter09/systemd-custom.xml:137
+msgid ""
+"See <filename>systemd.unit(5)</filename> manual page for more "
+"information. After creating the configuration file, run <userinput>systemctl "
+"daemon-reload</userinput> and <userinput>systemctl restart "
+"foobar</userinput> to activate the changes to a service."
+msgstr ""
+
+#. type: Content of: <sect1><sect2><title>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter09/systemd-custom.xml:145
+msgid "Debugging the Boot Sequence"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter09/systemd-custom.xml:147
+msgid ""
+"Rather than plain shell scripts used in SysVinit or BSD style init systems, "
+"systemd uses a unified format for different types of startup files (or "
+"units). The command <command>systemctl</command> is used to enable, disable, "
+"control state, and obtain status of unit files. Here are some examples of "
+"frequently used commands:"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><itemizedlist><listitem><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter09/systemd-custom.xml:155
+msgid ""
+"<command>systemctl list-units -t <replaceable>&lt;service&gt;</replaceable> "
+"[--all]</command>: lists loaded unit files of type service."
+msgstr ""
+
+#. type: Content of: <sect1><sect2><itemizedlist><listitem><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter09/systemd-custom.xml:159
+msgid ""
+"<command>systemctl list-units -t <replaceable>&lt;target&gt;</replaceable> "
+"[--all]</command>: lists loaded unit files of type target."
+msgstr ""
+
+#. type: Content of: <sect1><sect2><itemizedlist><listitem><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter09/systemd-custom.xml:163
+msgid ""
+"<command>systemctl show -p Wants "
+"<replaceable>&lt;multi-user.target&gt;</replaceable></command>: shows all "
+"units that depend on the multi-user target. Targets are special unit files "
+"that are anogalous to runlevels under SysVinit."
+msgstr ""
+
+#. type: Content of: <sect1><sect2><itemizedlist><listitem><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter09/systemd-custom.xml:169
+msgid ""
+"<command>systemctl status "
+"<replaceable>&lt;servicename.service&gt;</replaceable></command>: shows the "
+"status of the servicename service. The .service extension can be omitted if "
+"there are no other unit files with the same name, such as .socket files "
+"(which create a listening socket that provides similar functionality to "
+"inetd/xinetd)."
+msgstr ""
+
+#. type: Content of: <sect1><sect2><title>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter09/systemd-custom.xml:180
+msgid "Working with the Systemd Journal"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter09/systemd-custom.xml:182
+msgid ""
+"Logging on a system booted with systemd is handled with systemd-journald (by "
+"default), rather than a typical unix syslog daemon.  You can also add a "
+"normal syslog daemon and have both operate side by side if desired. The "
+"systemd-journald program stores journal entries in a binary format rather "
+"than a plain text log file. To assist with parsing the file, the command "
+"<command>journalctl</command> is provided.  Here are some examples of "
+"frequently used commands:"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><itemizedlist><listitem><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter09/systemd-custom.xml:192
+msgid ""
+"<command>journalctl -r</command>: shows all contents of the journal in "
+"reverse chronological order."
+msgstr ""
+
+#. type: Content of: <sect1><sect2><itemizedlist><listitem><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter09/systemd-custom.xml:196
+msgid ""
+"<command>journalctl -u <replaceable>UNIT</replaceable></command>: shows the "
+"journal entries associated with the specified UNIT file."
+msgstr ""
+
+#. type: Content of: <sect1><sect2><itemizedlist><listitem><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter09/systemd-custom.xml:201
+msgid ""
+"<command>journalctl -b[=ID] -r</command>: shows the journal entries since "
+"last successful boot (or for boot ID) in reverse chronological order."
+msgstr ""
+
+#. type: Content of: <sect1><sect2><itemizedlist><listitem><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter09/systemd-custom.xml:206
+msgid ""
+"<command>journalctl -f</command>: provides functionality similar to tail -f "
+"(follow)."
+msgstr ""
+
+#. type: Content of: <sect1><sect2><title>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter09/systemd-custom.xml:214
+msgid "Working with Core Dumps"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter09/systemd-custom.xml:216
+msgid ""
+"Core dumps are useful to debug crashed programs, especially when a daemon "
+"process crashes. On systemd booted systems the core dumping is handled by "
+"<command>systemd-coredump</command>.  It will log the core dump in the "
+"journal and store the core dump itself in <filename "
+"class=\"directory\">/var/lib/systemd/coredump</filename>.  To retrieve and "
+"process core dumps, the <command>coredumpctl</command> tool is provided.  "
+"Here are some examples of frequently used commands:"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><itemizedlist><listitem><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter09/systemd-custom.xml:227
+msgid ""
+"<command>coredumpctl -r</command>: lists all core dumps in reverse "
+"chronological order."
+msgstr ""
+
+#. type: Content of: <sect1><sect2><itemizedlist><listitem><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter09/systemd-custom.xml:231
+msgid ""
+"<command>coredumpctl -1 info</command>: shows the information from the last "
+"core dump."
+msgstr ""
+
+#. type: Content of: <sect1><sect2><itemizedlist><listitem><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter09/systemd-custom.xml:235
+msgid ""
+"<command>coredumpctl -1 debug</command>: loads the last core dump into "
+"<ulink url=\"&blfs-book;general/gdb.html\">GDB</ulink>."
+msgstr ""
+
+#. type: Content of: <sect1><sect2><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter09/systemd-custom.xml:241
+msgid ""
+"Core dumps may use a lot of disk space.  The maximum disk space used by core "
+"dumps can be limited by creating a configuration file in <filename "
+"class=\"directory\">/etc/systemd/coredump.conf.d</filename>.  For example:"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><screen>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter09/systemd-custom.xml:246
+#, no-wrap
+msgid ""
+"<userinput>mkdir -pv /etc/systemd/coredump.conf.d\n"
+"\n"
+"cat &gt; /etc/systemd/coredump.conf.d/maxuse.conf &lt;&lt; EOF\n"
+"<literal>[Coredump]\n"
+"MaxUse=5G</literal>\n"
+"EOF</userinput>"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter09/systemd-custom.xml:253
+msgid ""
+"See the <filename>systemd-coredump(8)</filename>, "
+"<filename>coredumpctl(1)</filename>, and "
+"<filename>coredump.conf.d(5)</filename> manual pages for more information."
+msgstr ""
+
+#. type: Content of: <sect1><sect2><title>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter09/systemd-custom.xml:260
+msgid "Long Running Processes"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter09/systemd-custom.xml:262
+msgid ""
+"Beginning with systemd-230, all user processes are killed when a user "
+"session is ended, even if nohup is used, or the process uses the "
+"<function>daemon()</function> or <function>setsid()</function> functions.  "
+"This is a deliberate change from a historically permissive environment to a "
+"more restrictive one. The new behavior may cause issues if you depend on "
+"long running programs (e.g., <command>screen</command> or "
+"<command>tmux</command>) to remain active after ending your user session.  "
+"There are three ways to enable lingering processes to remain after a user "
+"session is ended."
+msgstr ""
+
+#. type: Content of: <sect1><sect2><itemizedlist><listitem><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter09/systemd-custom.xml:275
+msgid ""
+"<emphasis>Enable process lingering for only selected users</emphasis>: "
+"Normal users have permission to enable process lingering with the command "
+"<command>loginctl enable-linger</command> for their own user. System "
+"administrators can use the same command with a <parameter>user</parameter> "
+"argument to enable for a user. That user can then use the "
+"<command>systemd-run</command> command to start long running processes. For "
+"example: <command>systemd-run --scope --user /usr/bin/screen</command>. If "
+"you enable lingering for your user, the user@.service will remain even after "
+"all login sessions are closed, and will automatically start at system "
+"boot. This has the advantage of explicitly allowing and disallowing "
+"processes to run after the user session has ended, but breaks backwards "
+"compatibility with tools like <command>nohup</command> and utilities that "
+"use <function>daemon()</function>."
+msgstr ""
+
+#. type: Content of: <sect1><sect2><itemizedlist><listitem><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter09/systemd-custom.xml:293
+msgid ""
+"<emphasis>Enable system-wide process lingering</emphasis>: You can set "
+"<parameter>KillUserProcesses=no</parameter> in "
+"<filename>/etc/systemd/logind.conf</filename> to enable process lingering "
+"globally for all users. This has the benefit of leaving the old method "
+"available to all users at the expense of explicit control."
+msgstr ""
+
+#. type: Content of: <sect1><sect2><itemizedlist><listitem><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter09/systemd-custom.xml:302
+msgid ""
+"<emphasis>Disable at build-time</emphasis>: You can disable lingering by "
+"default while building systemd by adding the switch "
+"<parameter>-Ddefault-kill-user-processes=false</parameter> to the "
+"<command>meson</command> command for systemd. This completely disables the "
+"ability of systemd to kill user processes at session end."
+msgstr ""

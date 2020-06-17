@@ -1,0 +1,101 @@
+# SOME DESCRIPTIVE TITLE
+# Copyright (C) YEAR Free Software Foundation, Inc.
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"POT-Creation-Date: 2020-06-17 12:44+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#. type: Content of: <sect1><title>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter07/chroot.xml:11
+msgid "Entering the Chroot Environment"
+msgstr ""
+
+#. type: Content of: <sect1><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter07/chroot.xml:13
+msgid ""
+"Now that all the packages which are required to build the rest of the needed "
+"tools are on the system, it is time to enter the chroot environment to "
+"finish installing the remaining temporary tools. This environment will be in "
+"use also for installing the final system. As user <systemitem "
+"class=\"username\">root</systemitem>, run the following command to enter the "
+"environment that is, at the moment, populated with only the temporary tools:"
+msgstr ""
+
+#. type: Content of: <sect1><screen>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter07/chroot.xml:21
+#, no-wrap
+msgid ""
+"<userinput>chroot \"$LFS\" /usr/bin/env -i   \\\n"
+"    HOME=/root                  \\\n"
+"    TERM=\"$TERM\"                \\\n"
+"    PS1='(lfs chroot) \\u:\\w\\$ ' \\\n"
+"    PATH=/bin:/usr/bin:/sbin:/usr/sbin \\\n"
+"    /bin/bash --login +h</userinput>"
+msgstr ""
+
+#. type: Content of: <sect1><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter07/chroot.xml:28
+msgid ""
+"The <parameter>-i</parameter> option given to the <command>env</command> "
+"command will clear all variables of the chroot environment. After that, only "
+"the <envar>HOME</envar>, <envar>TERM</envar>, <envar>PS1</envar>, and "
+"<envar>PATH</envar> variables are set again. The "
+"<parameter>TERM=$TERM</parameter> construct will set the <envar>TERM</envar> "
+"variable inside chroot to the same value as outside chroot. This variable is "
+"needed for programs like <command>vim</command> and <command>less</command> "
+"to operate properly.  If other variables are desired, such as "
+"<envar>CFLAGS</envar> or <envar>CXXFLAGS</envar>, this is a good place to "
+"set them again."
+msgstr ""
+
+#. type: Content of: <sect1><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter07/chroot.xml:39
+msgid ""
+"From this point on, there is no need to use the <envar>LFS</envar> variable "
+"anymore because all work will be restricted to the LFS file system.  This is "
+"because the Bash shell is told that <filename "
+"class=\"directory\">$LFS</filename> is now the root (<filename "
+"class=\"directory\">/</filename>) directory."
+msgstr ""
+
+#. type: Content of: <sect1><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter07/chroot.xml:45
+msgid ""
+"Notice that <filename class=\"directory\">/tools/bin</filename> is not in "
+"the <envar>PATH</envar>. This means that a temporary tool will no longer be "
+"used once its final version is installed. This occurs when the shell does "
+"not <quote>remember</quote> the locations of executed binaries&mdash;for "
+"this reason, hashing is switched off by passing the "
+"<parameter>+h</parameter> option to <command>bash</command>."
+msgstr ""
+
+#. type: Content of: <sect1><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter07/chroot.xml:52
+msgid ""
+"Note that the <command>bash</command> prompt will say <computeroutput>I have "
+"no name!</computeroutput> This is normal because the "
+"<filename>/etc/passwd</filename> file has not been created yet."
+msgstr ""
+
+#. type: Content of: <sect1><note><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter07/chroot.xml:57
+msgid ""
+"It is important that all the commands throughout the remainder of this "
+"chapter and the following chapters are run from within the chroot "
+"environment. If you leave this environment for any reason (rebooting for "
+"example), ensure that the virtual kernel filesystems are mounted as "
+"explained in <xref linkend=\"ch-system-bindmount\"/> and <xref "
+"linkend=\"ch-system-kernfsmount\"/> and enter chroot again before continuing "
+"with the installation."
+msgstr ""

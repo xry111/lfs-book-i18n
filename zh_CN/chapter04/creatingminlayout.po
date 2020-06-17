@@ -1,0 +1,65 @@
+# SOME DESCRIPTIVE TITLE
+# Copyright (C) YEAR Free Software Foundation, Inc.
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"POT-Creation-Date: 2020-06-17 12:44+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#. type: Content of: <sect1><title>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter04/creatingminlayout.xml:11
+msgid "Creating the Minimal directory layout in LFS filesystem"
+msgstr ""
+
+#. type: Content of: <sect1><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter04/creatingminlayout.xml:13
+msgid ""
+"The first task performed in the LFS partition is to create a minimal "
+"directory hierarchy so that programs compiled in <xref "
+"linkend=\"chapter-temporary-tools\"/> may be installed in their final "
+"location. This is needed so that those temporary programs be overwritten "
+"when rebuilding them in <xref linkend=\"chapter-building-system\"/>."
+msgstr ""
+
+#. type: Content of: <sect1><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter04/creatingminlayout.xml:19
+msgid ""
+"Create the required directory layout by running the following as <systemitem "
+"class=\"username\">root</systemitem>:"
+msgstr ""
+
+#. type: Content of: <sect1><screen>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter04/creatingminlayout.xml:22
+#, no-wrap
+msgid ""
+"<userinput>mkdir -pv $LFS/{usr,lib,var,etc,bin,sbin}\n"
+"case $(uname -m) in\n"
+"  x86_64) mkdir -pv $LFS/lib64 ;;\n"
+"esac</userinput>"
+msgstr ""
+
+#. type: Content of: <sect1><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter04/creatingminlayout.xml:27
+msgid ""
+"Programs in <xref linkend=\"chapter-temporary-tools\"/> will be compiled "
+"with a cross-compiler (more details in section <xref "
+"linkend=\"ch-tools-toolchaintechnotes\"/>). In order to separate this "
+"cross-compiler from the other programs, it will be installed in a special "
+"directory. Create this directory with:"
+msgstr ""
+
+#. type: Content of: <sect1><screen>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter04/creatingminlayout.xml:33
+#, no-wrap
+msgid "<userinput>mkdir -pv $LFS/tools</userinput>"
+msgstr ""

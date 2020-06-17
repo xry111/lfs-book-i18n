@@ -1,0 +1,1396 @@
+# SOME DESCRIPTIVE TITLE
+# Copyright (C) YEAR Free Software Foundation, Inc.
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"POT-Creation-Date: 2020-06-17 12:44+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#. type: Content of: <sect1><sect1info><address>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/glibc.xml:14
+#, no-wrap
+msgid "&glibc-url;"
+msgstr ""
+
+#. type: Content of: <sect1><sect1info>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/glibc.xml:12
+msgid ""
+"<productname>glibc</productname> "
+"<productnumber>&glibc-version;</productnumber> <placeholder type=\"address\" "
+"id=\"0\"/>"
+msgstr ""
+
+#. type: Content of: <sect1><title>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/glibc.xml:17
+msgid "Glibc-&glibc-version;"
+msgstr ""
+
+#. type: Content of: <sect1><indexterm><primary>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/glibc.xml:20
+msgid "Glibc"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/glibc.xml:26
+msgid ""
+"The Glibc package contains the main C library. This library provides the "
+"basic routines for allocating memory, searching directories, opening and "
+"closing files, reading and writing files, string handling, pattern matching, "
+"arithmetic, and so on."
+msgstr ""
+
+#. type: Content of: <sect1><sect2><segmentedlist><segtitle>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/glibc.xml:32
+msgid "&buildtime;"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><segmentedlist><segtitle>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/glibc.xml:33
+msgid "&diskspace;"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><segmentedlist><seglistitem><seg>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/glibc.xml:36
+msgid "&glibc-fin-sbu;"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><segmentedlist><seglistitem><seg>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/glibc.xml:37
+msgid "&glibc-fin-du;"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><title>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/glibc.xml:44
+msgid "Installation of Glibc"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/glibc.xml:46
+msgid ""
+"Some of the Glibc programs use the non-FHS compliant <filename "
+"class=\"directory\">/var/db</filename> directory to store their runtime "
+"data. Apply the following patch to make such programs store their runtime "
+"data in the FHS-compliant locations:"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><screen>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/glibc.xml:51
+#, no-wrap
+msgid "<userinput remap=\"pre\">patch -Np1 -i ../&glibc-fhs-patch;</userinput>"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/glibc.xml:53
+msgid ""
+"The Glibc documentation recommends building Glibc in a dedicated build "
+"directory:"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><screen>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/glibc.xml:56
+#, no-wrap
+msgid ""
+"<userinput remap=\"pre\">mkdir -v build\n"
+"cd       build</userinput>"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/glibc.xml:59
+msgid "Prepare Glibc for compilation:"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><screen>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/glibc.xml:61
+#, no-wrap
+msgid ""
+"<userinput remap=\"configure\">../configure --prefix=/usr                            "
+"\\\n"
+"             --disable-werror                         \\\n"
+"             --enable-kernel=&min-kernel;                      \\\n"
+"             --enable-stack-protector=strong          \\\n"
+"             --with-headers=/usr/include              \\\n"
+"             libc_cv_slibdir=/lib</userinput>"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><title>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/glibc.xml:70
+msgid "The meaning of the options and new configure parameters:"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/glibc.xml:85
+msgid "<parameter>--disable-werror</parameter>"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/glibc.xml:87
+msgid ""
+"This option disables the -Werror option passed to GCC.  This is necessary "
+"for running the test suite."
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/glibc.xml:93
+msgid "<parameter>--enable-stack-protector=strong</parameter>"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/glibc.xml:95
+msgid ""
+"This option increases system security by adding extra code to check for "
+"buffer overflows, such as stack smashing attacks."
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/glibc.xml:102
+msgid "<parameter>--with-headers=/usr/include</parameter>"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/glibc.xml:104
+msgid "This option tells the build system where to find the kernel API headers."
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/glibc.xml:110
+msgid "<parameter>libc_cv_slibdir=/lib</parameter>"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/glibc.xml:112
+msgid ""
+"This variable sets the correct library for all systems.  We do not want "
+"lib64 to be used."
+msgstr ""
+
+#. type: Content of: <sect1><sect2><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/glibc.xml:119
+msgid "Compile the package:"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><screen>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/glibc.xml:121
+#, no-wrap
+msgid "<userinput remap=\"make\">make</userinput>"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><important><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/glibc.xml:124
+msgid ""
+"In this section, the test suite for Glibc is considered critical.  Do not "
+"skip it under any circumstance."
+msgstr ""
+
+#. type: Content of: <sect1><sect2><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/glibc.xml:128
+msgid ""
+"Generally a few tests do not pass. The test failures listed below are "
+"usually safe to ignore."
+msgstr ""
+
+#.  Use remap="make" here to work around a jhalfs issue. 
+#. type: Content of: <sect1><sect2><screen>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/glibc.xml:132
+#, no-wrap
+msgid ""
+"<userinput remap=\"make\">case $(uname -m) in\n"
+"  i?86)   ln -sfnv $PWD/elf/ld-linux.so.2        /lib ;;\n"
+"  x86_64) ln -sfnv $PWD/elf/ld-linux-x86-64.so.2 /lib ;;\n"
+"esac</userinput>"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><note><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/glibc.xml:137
+msgid ""
+"The symbolic link above is needed to run the tests at this stage of building "
+"in the chroot environment.  It will be overwritten in the install phase "
+"below."
+msgstr ""
+
+#. type: Content of: <sect1><sect2><screen>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/glibc.xml:141
+#, no-wrap
+msgid "<userinput remap=\"test\">make check</userinput>"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/glibc.xml:143
+msgid ""
+"You may see some test failures.  The Glibc test suite is somewhat dependent "
+"on the host system.  This is a list of the most common issues seen for some "
+"versions of LFS:"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><itemizedlist><listitem><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/glibc.xml:150
+msgid ""
+"<emphasis>misc/tst-ttyname</emphasis> is known to fail in the LFS chroot "
+"environment."
+msgstr ""
+
+#. type: Content of: <sect1><sect2><itemizedlist><listitem><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/glibc.xml:166
+msgid ""
+"The <emphasis>nss/tst-nss-files-hosts-multi</emphasis> test may fail for "
+"reasons that have not been determined."
+msgstr ""
+
+#. type: Content of: <sect1><sect2><itemizedlist><listitem><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/glibc.xml:171
+msgid ""
+"The <emphasis>rt/tst-cputimer{1,2,3}</emphasis> tests depend on the host "
+"system kernel. Kernels 4.14.91&ndash;4.14.96, 4.19.13&ndash;4.19.18, and "
+"4.20.0&ndash;4.20.5 are known to cause these tests to fail."
+msgstr ""
+
+#. type: Content of: <sect1><sect2><itemizedlist><listitem><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/glibc.xml:179
+msgid ""
+"The math tests sometimes fail when running on systems where the CPU is not a "
+"relatively new Intel or AMD processor."
+msgstr ""
+
+#. type: Content of: <sect1><sect2><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/glibc.xml:186
+msgid ""
+"Though it is a harmless message, the install stage of Glibc will complain "
+"about the absence of <filename>/etc/ld.so.conf</filename>.  Prevent this "
+"warning with:"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><screen>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/glibc.xml:190
+#, no-wrap
+msgid "<userinput remap=\"install\">touch /etc/ld.so.conf</userinput>"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/glibc.xml:192
+msgid ""
+"Fix the generated Makefile to skip an unneeded sanity check that fails in "
+"the LFS partial environment:"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><screen>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/glibc.xml:196
+#, no-wrap
+msgid ""
+"<userinput remap=\"install\">sed '/test-installation/s@$(PERL)@echo not "
+"running@' -i ../Makefile</userinput>"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/glibc.xml:198
+msgid "Install the package:"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><screen>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/glibc.xml:200
+#, no-wrap
+msgid "<userinput remap=\"install\">make install</userinput>"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/glibc.xml:202
+msgid ""
+"Install the configuration file and runtime directory for "
+"<command>nscd</command>:"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><screen>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/glibc.xml:205
+#, no-wrap
+msgid ""
+"<userinput remap=\"install\">cp -v ../nscd/nscd.conf /etc/nscd.conf\n"
+"mkdir -pv /var/cache/nscd</userinput>"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/glibc.xml:208
+msgid "Install the systemd support files for <command>nscd</command>:"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><screen>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/glibc.xml:211
+#, no-wrap
+msgid ""
+"<userinput remap=\"install\">install -v -Dm644 ../nscd/nscd.tmpfiles "
+"/usr/lib/tmpfiles.d/nscd.conf\n"
+"install -v -Dm644 ../nscd/nscd.service "
+"/lib/systemd/system/nscd.service</userinput>"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/glibc.xml:214
+msgid ""
+"Next, install the locales that can make the system respond in a different "
+"language.  None of the locales are required, but if some of them are "
+"missing, the test suites of future packages would skip important testcases."
+msgstr ""
+
+#. type: Content of: <sect1><sect2><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/glibc.xml:219
+msgid ""
+"Individual locales can be installed using the <command>localedef</command> "
+"program. E.g., the first <command>localedef</command> command below combines "
+"the <filename>/usr/share/i18n/locales/cs_CZ</filename> charset-independent "
+"locale definition with the "
+"<filename>/usr/share/i18n/charmaps/UTF-8.gz</filename> charmap definition "
+"and appends the result to the "
+"<filename>/usr/lib/locale/locale-archive</filename> file.  The following "
+"instructions will install the minimum set of locales necessary for the "
+"optimal coverage of tests:"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><screen>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/glibc.xml:230
+#, no-wrap
+msgid ""
+"<userinput remap=\"locale-test\">mkdir -pv /usr/lib/locale\n"
+"localedef -i POSIX -f UTF-8 C.UTF-8 2> /dev/null || true\n"
+"localedef -i cs_CZ -f UTF-8 cs_CZ.UTF-8\n"
+"localedef -i de_DE -f ISO-8859-1 de_DE\n"
+"localedef -i de_DE@euro -f ISO-8859-15 de_DE@euro\n"
+"localedef -i de_DE -f UTF-8 de_DE.UTF-8\n"
+"localedef -i el_GR -f ISO-8859-7 el_GR\n"
+"localedef -i en_GB -f UTF-8 en_GB.UTF-8\n"
+"localedef -i en_HK -f ISO-8859-1 en_HK\n"
+"localedef -i en_PH -f ISO-8859-1 en_PH\n"
+"localedef -i en_US -f ISO-8859-1 en_US\n"
+"localedef -i en_US -f UTF-8 en_US.UTF-8\n"
+"localedef -i es_MX -f ISO-8859-1 es_MX\n"
+"localedef -i fa_IR -f UTF-8 fa_IR\n"
+"localedef -i fr_FR -f ISO-8859-1 fr_FR\n"
+"localedef -i fr_FR@euro -f ISO-8859-15 fr_FR@euro\n"
+"localedef -i fr_FR -f UTF-8 fr_FR.UTF-8\n"
+"localedef -i it_IT -f ISO-8859-1 it_IT\n"
+"localedef -i it_IT -f UTF-8 it_IT.UTF-8\n"
+"localedef -i ja_JP -f EUC-JP ja_JP\n"
+"localedef -i ja_JP -f SHIFT_JIS ja_JP.SIJS 2> /dev/null || true\n"
+"localedef -i ja_JP -f UTF-8 ja_JP.UTF-8\n"
+"localedef -i ru_RU -f KOI8-R ru_RU.KOI8-R\n"
+"localedef -i ru_RU -f UTF-8 ru_RU.UTF-8\n"
+"localedef -i tr_TR -f UTF-8 tr_TR.UTF-8\n"
+"localedef -i zh_CN -f GB18030 zh_CN.GB18030\n"
+"localedef -i zh_HK -f BIG5-HKSCS zh_HK.BIG5-HKSCS</userinput>"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/glibc.xml:258
+msgid ""
+"In addition, install the locale for your own country, language and character "
+"set."
+msgstr ""
+
+#. type: Content of: <sect1><sect2><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/glibc.xml:261
+msgid ""
+"Alternatively, install all locales listed in the "
+"<filename>glibc-&glibc-version;/localedata/SUPPORTED</filename> file (it "
+"includes every locale listed above and many more) at once with the following "
+"time-consuming command:"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><screen>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/glibc.xml:266
+#, no-wrap
+msgid "<userinput remap=\"locale-full\">make localedata/install-locales</userinput>"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/glibc.xml:268
+msgid ""
+"Then use the <command>localedef</command> command to create and install "
+"locales not listed in the "
+"<filename>glibc-&glibc-version;/localedata/SUPPORTED</filename> file in the "
+"unlikely case you need them."
+msgstr ""
+
+#. type: Content of: <sect1><sect2><note><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/glibc.xml:273
+msgid ""
+"Glibc now uses libidn2 when resolving internationalized domain names.  This "
+"is a run time dependency.  If this capability is needed, the instructions "
+"for installing libidn2 are in the <ulink "
+"url=\"&blfs-book;general/libidn2.html\">BLFS libidn2 page</ulink>."
+msgstr ""
+
+#. type: Content of: <sect1><sect2><title>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/glibc.xml:282
+msgid "Configuring Glibc"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><indexterm><primary>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/glibc.xml:285
+msgid "/etc/nsswitch.conf"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><indexterm><primary>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/glibc.xml:289
+msgid "/etc/localtime"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><sect3><title>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/glibc.xml:293
+msgid "Adding nsswitch.conf"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><sect3><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/glibc.xml:295
+msgid ""
+"The <filename>/etc/nsswitch.conf</filename> file needs to be created because "
+"the Glibc defaults do not work well in a networked environment."
+msgstr ""
+
+#. type: Content of: <sect1><sect2><sect3><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/glibc.xml:299
+msgid ""
+"Create a new file <filename>/etc/nsswitch.conf</filename> by running the "
+"following:"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><sect3><screen>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/glibc.xml:302
+#, no-wrap
+msgid ""
+"<userinput>cat &gt; /etc/nsswitch.conf &lt;&lt; \"EOF\"\n"
+"<literal># Begin /etc/nsswitch.conf\n"
+"\n"
+"passwd: files\n"
+"group: files\n"
+"shadow: files\n"
+"\n"
+"hosts: files dns\n"
+"networks: files\n"
+"\n"
+"protocols: files\n"
+"services: files\n"
+"ethers: files\n"
+"rpc: files\n"
+"\n"
+"# End /etc/nsswitch.conf</literal>\n"
+"EOF</userinput>"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><sect3><title>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/glibc.xml:323
+msgid "Adding time zone data"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><sect3><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/glibc.xml:325
+msgid "Install and set up the time zone data with the following:"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><sect3><screen>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/glibc.xml:326
+#, no-wrap
+msgid ""
+"<userinput>tar -xf ../../tzdata&tzdata-version;.tar.gz\n"
+"\n"
+"ZONEINFO=/usr/share/zoneinfo\n"
+"mkdir -pv $ZONEINFO/{posix,right}\n"
+"\n"
+"for tz in etcetera southamerica northamerica europe africa antarctica  \\\n"
+"          asia australasia backward pacificnew systemv; do\n"
+"    zic -L /dev/null   -d $ZONEINFO       ${tz}\n"
+"    zic -L /dev/null   -d $ZONEINFO/posix ${tz}\n"
+"    zic -L leapseconds -d $ZONEINFO/right ${tz}\n"
+"done\n"
+"\n"
+"cp -v zone.tab zone1970.tab iso3166.tab $ZONEINFO\n"
+"zic -d $ZONEINFO -p America/New_York\n"
+"unset ZONEINFO</userinput>"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><sect3><variablelist><title>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/glibc.xml:343
+msgid "The meaning of the zic commands:"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><sect3><variablelist><varlistentry><term>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/glibc.xml:346
+msgid "<parameter>zic -L /dev/null ...</parameter>"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><sect3><variablelist><varlistentry><listitem><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/glibc.xml:348
+msgid ""
+"This creates posix time zones without any leap seconds.  It is conventional "
+"to put these in both <filename class=\"directory\">zoneinfo</filename> and "
+"<filename class=\"directory\">zoneinfo/posix</filename>. It is necessary to "
+"put the POSIX time zones in <filename "
+"class=\"directory\">zoneinfo</filename>, otherwise various test-suites will "
+"report errors. On an embedded system, where space is tight and you do not "
+"intend to ever update the time zones, you could save 1.9 MB by not using the "
+"<filename class=\"directory\">posix</filename> directory, but some "
+"applications or test-suites might produce some failures."
+msgstr ""
+
+#. type: Content of: <sect1><sect2><sect3><variablelist><varlistentry><term>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/glibc.xml:362
+msgid "<parameter>zic -L leapseconds ...</parameter>"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><sect3><variablelist><varlistentry><listitem><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/glibc.xml:364
+msgid ""
+"This creates right time zones, including leap seconds. On an embedded "
+"system, where space is tight and you do not intend to ever update the time "
+"zones, or care about the correct time, you could save 1.9MB by omitting the "
+"<filename class=\"directory\">right</filename> directory."
+msgstr ""
+
+#. type: Content of: <sect1><sect2><sect3><variablelist><varlistentry><term>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/glibc.xml:372
+msgid "<parameter>zic ... -p ...</parameter>"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><sect3><variablelist><varlistentry><listitem><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/glibc.xml:374
+msgid ""
+"This creates the <filename>posixrules</filename> file. We use New York "
+"because POSIX requires the daylight savings time rules to be in accordance "
+"with US rules."
+msgstr ""
+
+#. type: Content of: <sect1><sect2><sect3><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/glibc.xml:382
+msgid "One way to determine the local time zone is to run the following script:"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><sect3><screen>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/glibc.xml:385
+#, no-wrap
+msgid "<userinput>tzselect</userinput>"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><sect3><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/glibc.xml:387
+msgid ""
+"After answering a few questions about the location, the script will output "
+"the name of the time zone (e.g., "
+"<emphasis>America/Edmonton</emphasis>). There are also some other possible "
+"time zones listed in <filename "
+"class='directory'>/usr/share/zoneinfo</filename> such as "
+"<emphasis>Canada/Eastern</emphasis> or <emphasis>EST5EDT</emphasis> that are "
+"not identified by the script but can be used."
+msgstr ""
+
+#. type: Content of: <sect1><sect2><sect3><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/glibc.xml:395
+msgid "Then create the <filename>/etc/localtime</filename> file by running:"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><sect3><screen>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/glibc.xml:398
+#, no-wrap
+msgid ""
+"<userinput>ln -sfv "
+"/usr/share/zoneinfo/<replaceable>&lt;xxx&gt;</replaceable> "
+"/etc/localtime</userinput>"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><sect3><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/glibc.xml:400
+msgid ""
+"Replace <replaceable>&lt;xxx&gt;</replaceable> with the name of the time "
+"zone selected (e.g., Canada/Eastern)."
+msgstr ""
+
+#. type: Content of: <sect1><sect2><sect3><title>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/glibc.xml:406
+msgid "Configuring the Dynamic Loader"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><sect3><indexterm><primary>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/glibc.xml:409
+msgid "/etc/ld.so.conf"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><sect3><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/glibc.xml:412
+msgid ""
+"By default, the dynamic loader (<filename "
+"class=\"libraryfile\">/lib/ld-linux.so.2</filename>) searches through "
+"<filename class=\"directory\">/lib</filename> and <filename "
+"class=\"directory\">/usr/lib</filename> for dynamic libraries that are "
+"needed by programs as they are run. However, if there are libraries in "
+"directories other than <filename class=\"directory\">/lib</filename> and "
+"<filename class=\"directory\">/usr/lib</filename>, these need to be added to "
+"the <filename>/etc/ld.so.conf</filename> file in order for the dynamic "
+"loader to find them. Two directories that are commonly known to contain "
+"additional libraries are <filename "
+"class=\"directory\">/usr/local/lib</filename> and <filename "
+"class=\"directory\">/opt/lib</filename>, so add those directories to the "
+"dynamic loader's search path."
+msgstr ""
+
+#. type: Content of: <sect1><sect2><sect3><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/glibc.xml:426
+msgid ""
+"Create a new file <filename>/etc/ld.so.conf</filename> by running the "
+"following:"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><sect3><screen>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/glibc.xml:429
+#, no-wrap
+msgid ""
+"<userinput>cat &gt; /etc/ld.so.conf &lt;&lt; \"EOF\"\n"
+"<literal># Begin /etc/ld.so.conf\n"
+"/usr/local/lib\n"
+"/opt/lib\n"
+"</literal>\n"
+"EOF</userinput>"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><sect3><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/glibc.xml:436
+msgid ""
+"If desired, the dynamic loader can also search a directory and include the "
+"contents of files found there.  Generally the files in this include "
+"directory are one line specifying the desired library path.  To add this "
+"capability run the following commands:"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><sect3><screen>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/glibc.xml:441
+#, no-wrap
+msgid ""
+"<userinput>cat &gt;&gt; /etc/ld.so.conf &lt;&lt; \"EOF\"\n"
+"<literal># Add an include directory\n"
+"include /etc/ld.so.conf.d/*.conf\n"
+"</literal>\n"
+"EOF\n"
+"mkdir -pv /etc/ld.so.conf.d</userinput>"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><title>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/glibc.xml:452
+msgid "Contents of Glibc"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><segmentedlist><segtitle>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/glibc.xml:455
+msgid "Installed programs"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><segmentedlist><segtitle>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/glibc.xml:456
+msgid "Installed libraries"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><segmentedlist><segtitle>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/glibc.xml:457
+msgid "Installed directories"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><segmentedlist><seglistitem><seg>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/glibc.xml:460
+msgid ""
+"catchsegv, gencat, getconf, getent, iconv, iconvconfig, ldconfig, ldd, "
+"lddlibc4, locale, localedef, makedb, mtrace, nscd, pcprofiledump, pldd, sln, "
+"sotruss, sprof, tzselect, xtrace, zdump, and zic"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><segmentedlist><seglistitem><seg>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/glibc.xml:464
+msgid ""
+"ld-&glibc-version;.so, libBrokenLocale.{a,so}, libSegFault.so, "
+"libanl.{a,so}, libc.{a,so}, libc_nonshared.a, libcrypt.{a,so}, libdl.{a,so}, "
+"libg.a, libm.{a,so}, libmcheck.a, libmemusage.so, libmvec.{a,so}, "
+"libnsl.{a,so}, libnss_compat.so, libnss_dns.so, libnss_files.so, "
+"libnss_hesiod.so, libpcprofile.so, libpthread.{a,so}, "
+"libpthread_nonshared.a, libresolv.{a,so}, librt.{a,so}, libthread_db.so, and "
+"libutil.{a,so}"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><segmentedlist><seglistitem><seg>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/glibc.xml:472
+msgid ""
+"/usr/include/arpa, /usr/include/bits, /usr/include/gnu, /usr/include/net, "
+"/usr/include/netash, /usr/include/netatalk, /usr/include/netax25, "
+"/usr/include/neteconet, /usr/include/netinet, /usr/include/netipx, "
+"/usr/include/netiucv, /usr/include/netpacket, /usr/include/netrom, "
+"/usr/include/netrose, /usr/include/nfs, /usr/include/protocols, "
+"/usr/include/rpc, /usr/include/sys, /usr/lib/audit, /usr/lib/gconv, "
+"/usr/lib/locale, /usr/libexec/getconf, /usr/share/i18n, /usr/share/zoneinfo, "
+"/var/cache/nscd, and /var/lib/nss_db"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><bridgehead>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/glibc.xml:485
+msgid "Short Descriptions"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/glibc.xml:486
+msgid "<?dbfo list-presentation=\"list\"?> <?dbhtml list-presentation=\"table\"?>"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/glibc.xml:490
+msgid "<command>catchsegv</command>"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/glibc.xml:492
+msgid ""
+"Can be used to create a stack trace when a program terminates with a "
+"segmentation fault"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/glibc.xml:495
+msgid "catchsegv"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/glibc.xml:501
+msgid "<command>gencat</command>"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/glibc.xml:503
+msgid "Generates message catalogues"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/glibc.xml:505
+msgid "gencat"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/glibc.xml:511
+msgid "<command>getconf</command>"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/glibc.xml:513
+msgid "Displays the system configuration values for file system specific variables"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/glibc.xml:516
+msgid "getconf"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/glibc.xml:522
+msgid "<command>getent</command>"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/glibc.xml:524
+msgid "Gets entries from an administrative database"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/glibc.xml:526
+msgid "getent"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/glibc.xml:532
+msgid "<command>iconv</command>"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/glibc.xml:534
+msgid "Performs character set conversion"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/glibc.xml:536
+msgid "iconv"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/glibc.xml:542
+msgid "<command>iconvconfig</command>"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/glibc.xml:544
+msgid "Creates fastloading <command>iconv</command> module configuration files"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/glibc.xml:547
+msgid "iconvconfig"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/glibc.xml:553
+msgid "<command>ldconfig</command>"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/glibc.xml:555
+msgid "Configures the dynamic linker runtime bindings"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/glibc.xml:557
+msgid "ldconfig"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/glibc.xml:563
+msgid "<command>ldd</command>"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/glibc.xml:565
+msgid ""
+"Reports which shared libraries are required by each given program or shared "
+"library"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/glibc.xml:568
+msgid "ldd"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/glibc.xml:574
+msgid "<command>lddlibc4</command>"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/glibc.xml:576
+msgid "Assists <command>ldd</command> with object files"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/glibc.xml:578
+msgid "lddlibc4"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/glibc.xml:584
+msgid "<command>locale</command>"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/glibc.xml:586
+msgid "Prints various information about the current locale"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/glibc.xml:588
+msgid "locale"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/glibc.xml:594
+msgid "<command>localedef</command>"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/glibc.xml:596
+msgid "Compiles locale specifications"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/glibc.xml:598
+msgid "localedef"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/glibc.xml:604
+msgid "<command>makedb</command>"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/glibc.xml:606
+msgid "Creates a simple database from textual input"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/glibc.xml:608
+msgid "makedb"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/glibc.xml:614
+msgid "<command>mtrace</command>"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/glibc.xml:616
+msgid ""
+"Reads and interprets a memory trace file and displays a summary in "
+"human-readable format"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/glibc.xml:619
+msgid "mtrace"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/glibc.xml:625
+msgid "<command>nscd</command>"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/glibc.xml:627
+msgid "A daemon that provides a cache for the most common name service requests"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/glibc.xml:630
+msgid "nscd"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/glibc.xml:636
+msgid "<command>pcprofiledump</command>"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/glibc.xml:638
+msgid "Dump information generated by PC profiling"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/glibc.xml:640
+msgid "pcprofiledump"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/glibc.xml:646
+msgid "<command>pldd</command>"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/glibc.xml:648
+msgid "Lists dynamic shared objects used by running processes"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/glibc.xml:650
+msgid "pldd"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/glibc.xml:656
+msgid "<command>sln</command>"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/glibc.xml:658
+msgid "A statically linked <command>ln</command> program"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/glibc.xml:660
+msgid "sln"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/glibc.xml:666
+msgid "<command>sotruss</command>"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/glibc.xml:668
+msgid "Traces shared library procedure calls of a specified command"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/glibc.xml:670
+msgid "sotruss"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/glibc.xml:676
+msgid "<command>sprof</command>"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/glibc.xml:678
+msgid "Reads and displays shared object profiling data"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/glibc.xml:680
+msgid "sprof"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/glibc.xml:686
+msgid "<command>tzselect</command>"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/glibc.xml:688
+msgid ""
+"Asks the user about the location of the system and reports the corresponding "
+"time zone description"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/glibc.xml:691
+msgid "tzselect"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/glibc.xml:697
+msgid "<command>xtrace</command>"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/glibc.xml:699
+msgid ""
+"Traces the execution of a program by printing the currently executed "
+"function"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/glibc.xml:702
+msgid "xtrace"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/glibc.xml:708
+msgid "<command>zdump</command>"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/glibc.xml:710
+msgid "The time zone dumper"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/glibc.xml:712
+msgid "zdump"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/glibc.xml:718
+msgid "<command>zic</command>"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/glibc.xml:720
+msgid "The time zone compiler"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/glibc.xml:722
+msgid "zic"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/glibc.xml:728
+msgid "<filename class=\"libraryfile\">ld-&glibc-version;.so</filename>"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/glibc.xml:730
+msgid "The helper program for shared library executables"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/glibc.xml:732
+msgid "ld-&glibc-version;.so"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/glibc.xml:738
+msgid "<filename class=\"libraryfile\">libBrokenLocale</filename>"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/glibc.xml:740
+msgid ""
+"Used internally by Glibc as a gross hack to get broken programs (e.g., some "
+"Motif applications) running. See comments in "
+"<filename>glibc-&glibc-version;/locale/broken_cur_max.c</filename> for more "
+"information"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/glibc.xml:745
+msgid "libBrokenLocale"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/glibc.xml:751
+msgid "<filename class=\"libraryfile\">libSegFault</filename>"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/glibc.xml:753
+msgid "The segmentation fault signal handler, used by <command>catchsegv</command>"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/glibc.xml:756
+msgid "libSegFault"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/glibc.xml:762
+msgid "<filename class=\"libraryfile\">libanl</filename>"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/glibc.xml:764
+msgid "An asynchronous name lookup library"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/glibc.xml:766
+msgid "libanl"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/glibc.xml:772
+msgid "<filename class=\"libraryfile\">libc</filename>"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/glibc.xml:774
+msgid "The main C library"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/glibc.xml:776
+msgid "libc"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/glibc.xml:782
+msgid "<filename class=\"libraryfile\">libcrypt</filename>"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/glibc.xml:784
+msgid "The cryptography library"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/glibc.xml:786
+msgid "libcrypt"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/glibc.xml:792
+msgid "<filename class=\"libraryfile\">libdl</filename>"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/glibc.xml:794
+msgid "The dynamic linking interface library"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/glibc.xml:796
+msgid "libdl"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/glibc.xml:802
+msgid "<filename class=\"libraryfile\">libg</filename>"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/glibc.xml:804
+msgid ""
+"Dummy library containing no functions. Previously was a runtime library for "
+"<command>g++</command>"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/glibc.xml:807
+msgid "libg"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/glibc.xml:813
+msgid "<filename class=\"libraryfile\">libm</filename>"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/glibc.xml:815
+msgid "The mathematical library"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/glibc.xml:817
+msgid "libm"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/glibc.xml:823
+msgid "<filename class=\"libraryfile\">libmcheck</filename>"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/glibc.xml:825
+msgid "Turns on memory allocation checking when linked to"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/glibc.xml:827
+msgid "libmcheck"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/glibc.xml:833
+msgid "<filename class=\"libraryfile\">libmemusage</filename>"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/glibc.xml:835
+msgid ""
+"Used by <command>memusage</command> to help collect information about the "
+"memory usage of a program"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/glibc.xml:838
+msgid "libmemusage"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/glibc.xml:844
+msgid "<filename class=\"libraryfile\">libnsl</filename>"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/glibc.xml:846
+msgid "The network services library"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/glibc.xml:848
+msgid "libnsl"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/glibc.xml:854
+msgid "<filename class=\"libraryfile\">libnss</filename>"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/glibc.xml:856
+msgid ""
+"The Name Service Switch libraries, containing functions for resolving host "
+"names, user names, group names, aliases, services, protocols, etc."
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/glibc.xml:860
+msgid "libnss"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/glibc.xml:866
+msgid "<filename class=\"libraryfile\">libpcprofile</filename>"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/glibc.xml:868
+msgid "Can be preloaded to PC profile an executable"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/glibc.xml:870
+msgid "libpcprofile"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/glibc.xml:876
+msgid "<filename class=\"libraryfile\">libpthread</filename>"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/glibc.xml:878
+msgid "The POSIX threads library"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/glibc.xml:880
+msgid "libpthread"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/glibc.xml:886
+msgid "<filename class=\"libraryfile\">libresolv</filename>"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/glibc.xml:888
+msgid ""
+"Contains functions for creating, sending, and interpreting packets to the "
+"Internet domain name servers"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/glibc.xml:891
+msgid "libresolv"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/glibc.xml:897
+msgid "<filename class=\"libraryfile\">librt</filename>"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/glibc.xml:899
+msgid ""
+"Contains functions providing most of the interfaces specified by the "
+"POSIX.1b Realtime Extension"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/glibc.xml:902
+msgid "librt"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/glibc.xml:908
+msgid "<filename class=\"libraryfile\">libthread_db</filename>"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/glibc.xml:910
+msgid "Contains functions useful for building debuggers for multi-threaded programs"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/glibc.xml:913
+msgid "libthread_db"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/glibc.xml:919
+msgid "<filename class=\"libraryfile\">libutil</filename>"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/glibc.xml:921
+msgid ""
+"Contains code for <quote>standard</quote> functions used in many different "
+"Unix utilities"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/glibc.xml:924
+msgid "libutil"
+msgstr ""

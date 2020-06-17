@@ -1,0 +1,54 @@
+# SOME DESCRIPTIVE TITLE
+# Copyright (C) YEAR Free Software Foundation, Inc.
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"POT-Creation-Date: 2020-06-17 12:44+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#. type: Content of: <sect1><title>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter07/introduction.xml:11
+msgid "Introduction"
+msgstr ""
+
+#. type: Content of: <sect1><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter07/introduction.xml:13
+msgid ""
+"This chapter shows how to build the last missing bits of the temporary "
+"system: first, the tools needed by the build machinery of various packages, "
+"then three packages needed to run tests.  Now that all circular dependencies "
+"have been resolved, we can use a <quote>chroot</quote> environment, "
+"completely isolated the host operating system used for the build, except for "
+"the running kernel."
+msgstr ""
+
+#. type: Content of: <sect1><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter07/introduction.xml:20
+msgid ""
+"For proper operation of the isolated environment, some communication with "
+"the running kernel must be established. This is done through the so-called "
+"<emphasis>Virtual Kernel File Systems</emphasis>, which must be mounted when "
+"entering the chroot environment. You may want to check that they are mounted "
+"by issuing <command>findmnt</command>."
+msgstr ""
+
+#. type: Content of: <sect1><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter07/introduction.xml:26
+msgid ""
+"Until <xref linkend=\"ch-tools-chroot\"/>, the commands must be run as "
+"<systemitem class=\"username\">root</systemitem>, with the "
+"<envar>LFS</envar> variable set. After entering chroot, all commands are run "
+"as root, fortunately without access to the OS of the computer you built LFS "
+"on. Be careful anyway, as it is easy to destroy the whole LFS system with "
+"badly formed commands."
+msgstr ""

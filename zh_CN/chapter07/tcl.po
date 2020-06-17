@@ -1,0 +1,325 @@
+# SOME DESCRIPTIVE TITLE
+# Copyright (C) YEAR Free Software Foundation, Inc.
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"POT-Creation-Date: 2020-06-17 12:44+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#. type: Content of the tdbc-ver entity
+#: /home/xry111/svn-repos/LFS-BOOK/chapter07/tcl.xml:6
+msgid "1.1.1"
+msgstr ""
+
+#. type: Content of the itcl-ver entity
+#: /home/xry111/svn-repos/LFS-BOOK/chapter07/tcl.xml:7
+msgid "4.2.0"
+msgstr ""
+
+#. type: Content of: <sect1><sect1info><address>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter07/tcl.xml:16
+#, no-wrap
+msgid "&tcl-url;"
+msgstr ""
+
+#. type: Content of: <sect1><sect1info>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter07/tcl.xml:14
+msgid ""
+"<productname>tcl</productname> <productnumber>&tcl-version;</productnumber> "
+"<placeholder type=\"address\" id=\"0\"/>"
+msgstr ""
+
+#. type: Content of: <sect1><title>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter07/tcl.xml:19
+msgid "Tcl-&tcl-version;"
+msgstr ""
+
+#. type: Content of: <sect1><indexterm><primary>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter07/tcl.xml:22
+msgid "Tcl"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter07/tcl.xml:28
+msgid ""
+"The <application>Tcl</application> package contains the Tool Command "
+"Language, a robust general-purpose scripting language. The "
+"<application>Expect</application> package is written in the "
+"<application>Tcl</application> language."
+msgstr ""
+
+#. type: Content of: <sect1><sect2><segmentedlist><segtitle>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter07/tcl.xml:33
+msgid "&buildtime;"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><segmentedlist><segtitle>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter07/tcl.xml:34
+msgid "&diskspace;"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><segmentedlist><seglistitem><seg>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter07/tcl.xml:37
+msgid "&tcl-tmp-sbu;"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><segmentedlist><seglistitem><seg>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter07/tcl.xml:38
+msgid "&tcl-tmp-du;"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><title>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter07/tcl.xml:45
+msgid "Installation of Tcl"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter07/tcl.xml:47
+msgid ""
+"This package and the next two (Expect and DejaGNU) are installed to support "
+"running the test suites for GCC and binutils and other packages.  Installing "
+"three packages for testing purposes may seem excessive, but it is very "
+"reassuring, if not essential, to know that the most important tools are "
+"working properly. These packages are required to run the test suites in "
+"<xref linkend=\"chapter-building-system\"/>."
+msgstr ""
+
+#. type: Content of: <sect1><sect2><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter07/tcl.xml:54
+msgid ""
+"Note that the Tcl package used here is a minimal version needed to run the "
+"LFS tests.  For the full package, see the <ulink "
+"url='&blfs-book;general/tcl.html'>BLFS Tcl procedures</ulink>."
+msgstr ""
+
+#. type: Content of: <sect1><sect2><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter07/tcl.xml:58
+msgid "Prepare Tcl for compilation:"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><screen>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter07/tcl.xml:60
+#, no-wrap
+msgid ""
+"<userinput remap=\"configure\">SRCDIR=$(pwd)\n"
+"cd unix\n"
+"./configure --prefix=/usr           \\\n"
+"            --mandir=/usr/share/man \\\n"
+"            $([ \"$(uname -m)\" = x86_64 ] &amp;&amp; echo "
+"--enable-64bit)</userinput>"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><title>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter07/tcl.xml:67
+msgid "The meaning of the configure options:"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter07/tcl.xml:70
+msgid ""
+"<parameter>$([ \"$(uname -m)\" = x86_64 ] &amp;&amp; echo "
+"--enable-64bit)</parameter>"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter07/tcl.xml:72
+msgid ""
+"The construct <parameter>$(&lt;shell command&gt;)</parameter> is replaced by "
+"the output of the shell command.  Here this output is empty if running on a "
+"32 bit machine, and is <parameter>--enable-64bit</parameter> if running on a "
+"64 bit machine."
+msgstr ""
+
+#. type: Content of: <sect1><sect2><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter07/tcl.xml:82
+msgid "Build the package:"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><screen>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter07/tcl.xml:84
+#, no-wrap
+msgid ""
+"<userinput remap=\"make\">make\n"
+"\n"
+"sed -e \"s|$SRCDIR/unix|/usr/lib|\" \\\n"
+"    -e \"s|$SRCDIR|/usr/include|\"  \\\n"
+"    -i tclConfig.sh\n"
+"\n"
+"sed -e \"s|$SRCDIR/unix/pkgs/tdbc&tdbc-ver;|/usr/lib/tdbc&tdbc-ver;|\" \\\n"
+"    -e \"s|$SRCDIR/pkgs/tdbc&tdbc-ver;/generic|/usr/include|\"    \\\n"
+"    -e \"s|$SRCDIR/pkgs/tdbc&tdbc-ver;/library|/usr/lib/tcl8.6|\" \\\n"
+"    -e \"s|$SRCDIR/pkgs/tdbc&tdbc-ver;|/usr/include|\"            \\\n"
+"    -i pkgs/tdbc&tdbc-ver;/tdbcConfig.sh\n"
+"\n"
+"sed -e \"s|$SRCDIR/unix/pkgs/itcl&itcl-ver;|/usr/lib/itcl&itcl-ver;|\" \\\n"
+"    -e \"s|$SRCDIR/pkgs/itcl&itcl-ver;/generic|/usr/include|\"    \\\n"
+"    -e \"s|$SRCDIR/pkgs/itcl&itcl-ver;|/usr/include|\"            \\\n"
+"    -i pkgs/itcl&itcl-ver;/itclConfig.sh\n"
+"\n"
+"unset SRCDIR</userinput>"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter07/tcl.xml:103
+msgid ""
+"The various <quote>sed</quote> instructions after the <quote>make</quote> "
+"command removes references to the build directory from the configuration "
+"files and replaces them with the install directory.  This is not mandatory "
+"for the remainder of LFS, but may be needed in case a package built later "
+"uses Tcl."
+msgstr ""
+
+#. type: Content of: <sect1><sect2><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter07/tcl.xml:109
+msgid "Install the package:"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><screen>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter07/tcl.xml:111
+#, no-wrap
+msgid "<userinput remap=\"install\">make install</userinput>"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter07/tcl.xml:113
+msgid ""
+"Make the installed library writable so debugging symbols can be removed "
+"later:"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><screen>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter07/tcl.xml:116
+#, no-wrap
+msgid ""
+"<userinput remap=\"install\">chmod -v u+w "
+"/usr/lib/libtcl&tcl-major-version;.so</userinput>"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter07/tcl.xml:118
+msgid "Install Tcl's headers. The next package, Expect, requires them."
+msgstr ""
+
+#. type: Content of: <sect1><sect2><screen>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter07/tcl.xml:120
+#, no-wrap
+msgid "<userinput remap=\"install\">make install-private-headers</userinput>"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter07/tcl.xml:122
+msgid "Now make a necessary symbolic link:"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><screen>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter07/tcl.xml:124
+#, no-wrap
+msgid ""
+"<userinput remap=\"install\">ln -sfv tclsh&tcl-major-version; "
+"/usr/bin/tclsh</userinput>"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><title>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter07/tcl.xml:129
+msgid "Contents of Tcl"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><segmentedlist><segtitle>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter07/tcl.xml:132
+msgid "Installed programs"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><segmentedlist><segtitle>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter07/tcl.xml:133
+msgid "Installed library"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><segmentedlist><seglistitem><seg>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter07/tcl.xml:137
+msgid "tclsh (link to tclsh&tcl-major-version;) and tclsh&tcl-major-version;"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><segmentedlist><seglistitem><seg>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter07/tcl.xml:141
+msgid "libtcl&tcl-major-version;.so and libtclstub&tcl-major-version;.a"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><bridgehead>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter07/tcl.xml:148
+msgid "Short Descriptions"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter07/tcl.xml:149
+msgid "<?dbfo list-presentation=\"list\"?> <?dbhtml list-presentation=\"table\"?>"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter07/tcl.xml:153
+msgid "<command>tclsh&tcl-major-version;</command>"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter07/tcl.xml:155
+msgid "The Tcl command shell"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter07/tcl.xml:157
+msgid "tclsh&tcl-major-version;"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter07/tcl.xml:163
+msgid "<command>tclsh</command>"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter07/tcl.xml:165
+msgid "A link to tclsh&tcl-major-version;"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter07/tcl.xml:167
+msgid "tclsh"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter07/tcl.xml:173
+msgid "<filename class=\"libraryfile\">libtcl&tcl-major-version;.so</filename>"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter07/tcl.xml:175
+msgid "The Tcl library"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter07/tcl.xml:177
+msgid "libtcl&tcl-major-version;.so"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter07/tcl.xml:183
+msgid "<filename class=\"libraryfile\">libtclstub&tcl-major-version;.a</filename>"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter07/tcl.xml:185
+msgid "The Tcl Stub library"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter07/tcl.xml:187
+msgid "libtclstub&tcl-major-version;.a"
+msgstr ""

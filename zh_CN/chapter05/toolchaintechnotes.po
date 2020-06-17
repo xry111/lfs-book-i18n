@@ -1,0 +1,507 @@
+# SOME DESCRIPTIVE TITLE
+# Copyright (C) YEAR Free Software Foundation, Inc.
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"POT-Creation-Date: 2020-06-17 12:44+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#. type: Content of: <sect1><title>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter05/toolchaintechnotes.xml:11
+msgid "Toolchain Technical Notes"
+msgstr ""
+
+#. type: Content of: <sect1><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter05/toolchaintechnotes.xml:13
+msgid ""
+"This section explains some of the rationale and technical details behind the "
+"overall build method. It is not essential to immediately understand "
+"everything in this section. Most of this information will be clearer after "
+"performing an actual build. This section can be referred to at any time "
+"during the process."
+msgstr ""
+
+#. type: Content of: <sect1><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter05/toolchaintechnotes.xml:19
+msgid ""
+"The overall goal of this chapter and <xref "
+"linkend=\"chapter-temporary-tools\"/> is to produce a temporary area that "
+"contains a known-good set of tools that can be isolated from the host "
+"system.  By using <command>chroot</command>, the commands in the remaining "
+"chapters will be contained within that environment, ensuring a clean, "
+"trouble-free build of the target LFS system. The build process has been "
+"designed to minimize the risks for new readers and to provide the most "
+"educational value at the same time."
+msgstr ""
+
+#. type: Content of: <sect1><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter05/toolchaintechnotes.xml:28
+msgid ""
+"The build process is based on the process of "
+"<emphasis>cross-compilation</emphasis>. Cross-compilation is normally used "
+"for building a compiler and its toolchain for a machine different from the "
+"one that is used for the build. This is not strictly needed for LFS, since "
+"the machine where the new system will run is the same as the one used for "
+"the build. But cross-compilation has the great advantage that anything that "
+"is cross-compiled cannot depend on the host environment."
+msgstr ""
+
+#. type: Content of: <sect1><sect2><title>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter05/toolchaintechnotes.xml:38
+msgid "About Cross-Compilation"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter05/toolchaintechnotes.xml:40
+msgid ""
+"Cross-compilation involves some concepts that deserve a section on their "
+"own. Although this section may be omitted in a first reading, it is strongly "
+"suggested to come back to it later in order to get a full grasp of the build "
+"process."
+msgstr ""
+
+#. type: Content of: <sect1><sect2><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter05/toolchaintechnotes.xml:45
+msgid "Let us first define some terms used in this context:"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter05/toolchaintechnotes.xml:48
+msgid "build"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter05/toolchaintechnotes.xml:49
+msgid ""
+"is the machine where we build programs. Note that this machine is referred "
+"to as the <quote>host</quote> in other sections."
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter05/toolchaintechnotes.xml:54
+msgid "host"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter05/toolchaintechnotes.xml:55
+msgid ""
+"is the machine/system where the built programs will run. Note that this use "
+"of <quote>host</quote> is not the same as in other sections."
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter05/toolchaintechnotes.xml:60
+msgid "target"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter05/toolchaintechnotes.xml:61
+msgid ""
+"is only used for compilers. It is the machine the compiler produces code "
+"for. It may be different from both build and host."
+msgstr ""
+
+#. type: Content of: <sect1><sect2><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter05/toolchaintechnotes.xml:68
+msgid ""
+"As an example, let us imagine the following scenario: we may have a compiler "
+"on a slow machine only, let's call the machine A, and the compiler ccA. We "
+"may have also a fast machine (B), but with no compiler, and we may want to "
+"produce code for a another slow machine (C). Then, to build a compiler for "
+"machine C, we would have three stages:"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><informaltable><tgroup><thead><row><entry>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter05/toolchaintechnotes.xml:82
+#: /home/xry111/svn-repos/LFS-BOOK/chapter05/toolchaintechnotes.xml:116
+#: /home/xry111/svn-repos/LFS-BOOK/chapter05/toolchaintechnotes.xml:186
+msgid "Stage"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><informaltable><tgroup><thead><row><entry>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter05/toolchaintechnotes.xml:82
+#: /home/xry111/svn-repos/LFS-BOOK/chapter05/toolchaintechnotes.xml:116
+#: /home/xry111/svn-repos/LFS-BOOK/chapter05/toolchaintechnotes.xml:186
+msgid "Build"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><informaltable><tgroup><thead><row><entry>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter05/toolchaintechnotes.xml:82
+#: /home/xry111/svn-repos/LFS-BOOK/chapter05/toolchaintechnotes.xml:116
+#: /home/xry111/svn-repos/LFS-BOOK/chapter05/toolchaintechnotes.xml:186
+msgid "Host"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><informaltable><tgroup><thead><row><entry>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter05/toolchaintechnotes.xml:83
+#: /home/xry111/svn-repos/LFS-BOOK/chapter05/toolchaintechnotes.xml:117
+#: /home/xry111/svn-repos/LFS-BOOK/chapter05/toolchaintechnotes.xml:187
+msgid "Target"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><informaltable><tgroup><thead><row><entry>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter05/toolchaintechnotes.xml:83
+#: /home/xry111/svn-repos/LFS-BOOK/chapter05/toolchaintechnotes.xml:117
+#: /home/xry111/svn-repos/LFS-BOOK/chapter05/toolchaintechnotes.xml:187
+msgid "Action"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><informaltable><tgroup><tbody><row><entry>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter05/toolchaintechnotes.xml:87
+#: /home/xry111/svn-repos/LFS-BOOK/chapter05/toolchaintechnotes.xml:191
+msgid "1"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><informaltable><tgroup><tbody><row><entry>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter05/toolchaintechnotes.xml:87
+#: /home/xry111/svn-repos/LFS-BOOK/chapter05/toolchaintechnotes.xml:91
+msgid "A"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><informaltable><tgroup><tbody><row><entry>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter05/toolchaintechnotes.xml:87
+#: /home/xry111/svn-repos/LFS-BOOK/chapter05/toolchaintechnotes.xml:91
+#: /home/xry111/svn-repos/LFS-BOOK/chapter05/toolchaintechnotes.xml:95
+msgid "B"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><informaltable><tgroup><tbody><row><entry>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter05/toolchaintechnotes.xml:88
+msgid "build cross-compiler cc1 using ccA on machine A"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><informaltable><tgroup><tbody><row><entry>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter05/toolchaintechnotes.xml:91
+#: /home/xry111/svn-repos/LFS-BOOK/chapter05/toolchaintechnotes.xml:195
+msgid "2"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><informaltable><tgroup><tbody><row><entry>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter05/toolchaintechnotes.xml:92
+msgid "build cross-compiler cc2 using cc1 on machine A"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><informaltable><tgroup><tbody><row><entry>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter05/toolchaintechnotes.xml:95
+#: /home/xry111/svn-repos/LFS-BOOK/chapter05/toolchaintechnotes.xml:199
+msgid "3"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><informaltable><tgroup><tbody><row><entry>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter05/toolchaintechnotes.xml:95
+#: /home/xry111/svn-repos/LFS-BOOK/chapter05/toolchaintechnotes.xml:121
+msgid "C"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><informaltable><tgroup><tbody><row><entry>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter05/toolchaintechnotes.xml:96
+msgid "build compiler ccC using cc2 on machine B"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter05/toolchaintechnotes.xml:102
+msgid ""
+"Then, all the other programs needed by machine C can be compiled using cc2 "
+"on the fast machine B. Note that unless B can run programs produced for C, "
+"there is no way to test the built programs until machine C itself is "
+"running. For example, for testing ccC, we may want to add a fourth stage:"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><informaltable><tgroup><tbody><row><entry>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter05/toolchaintechnotes.xml:121
+msgid "4"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><informaltable><tgroup><tbody><row><entry>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter05/toolchaintechnotes.xml:122
+msgid "rebuild and test ccC using itself on machine C"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter05/toolchaintechnotes.xml:128
+msgid ""
+"In the example above, only cc1 and cc2 are cross-compilers, that is, they "
+"produce code for a machine different from the one they are run on.  The "
+"other compilers ccA and ccC produce code for the machine they are run "
+"on. Such compilers are called <emphasis>native</emphasis> compilers."
+msgstr ""
+
+#. type: Content of: <sect1><sect2><title>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter05/toolchaintechnotes.xml:136
+msgid "Implementation of Cross-Compilation for LFS"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><note><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter05/toolchaintechnotes.xml:139
+msgid ""
+"Almost all the build systems use names of the form cpu-vendor-kernel-os "
+"referred to as the machine triplet. An astute reader may wonder why a "
+"<quote>triplet</quote> refers to a four component name. The reason is "
+"history: initially, three component names were enough to designate "
+"unambiguously a machine, but with new machines and systems appearing, that "
+"proved insufficient. The word <quote>triplet</quote> remained. A simple way "
+"to determine your machine triplet is to run the "
+"<command>config.guess</command> script that comes with the source for many "
+"packages. Unpack the binutils sources and run the script: "
+"<userinput>./config.guess</userinput> and note the output. For example, for "
+"a 32-bit Intel processor the output will be "
+"<emphasis>i686-pc-linux-gnu</emphasis>. On a 64-bit system it will be "
+"<emphasis>x86_64-pc-linux-gnu</emphasis>."
+msgstr ""
+
+#. type: Content of: <sect1><sect2><note><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter05/toolchaintechnotes.xml:153
+msgid ""
+"Also be aware of the name of the platform's dynamic linker, often referred "
+"to as the dynamic loader (not to be confused with the standard linker "
+"<command>ld</command> that is part of binutils). The dynamic linker provided "
+"by Glibc finds and loads the shared libraries needed by a program, prepares "
+"the program to run, and then runs it. The name of the dynamic linker for a "
+"32-bit Intel machine will be <filename "
+"class=\"libraryfile\">ld-linux.so.2</filename> (<filename "
+"class=\"libraryfile\">ld-linux-x86-64.so.2</filename> for 64-bit systems). A "
+"sure-fire way to determine the name of the dynamic linker is to inspect a "
+"random binary from the host system by running: <userinput>readelf -l "
+"&lt;name of binary&gt; | grep interpreter</userinput> and noting the "
+"output. The authoritative reference covering all platforms is in the "
+"<filename>shlib-versions</filename> file in the root of the Glibc source "
+"tree."
+msgstr ""
+
+#. type: Content of: <sect1><sect2><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter05/toolchaintechnotes.xml:169
+msgid ""
+"In order to fake a cross compilation, the name of the host triplet is "
+"slightly adjusted by changing the &quot;vendor&quot; field in the "
+"<envar>LFS_TGT</envar> variable. We also use the "
+"<parameter>--with-sysroot</parameter> option when building the cross linker "
+"and cross compiler to tell them where to find the needed host files. This "
+"ensures that none of the other programs built in <xref "
+"linkend=\"chapter-temporary-tools\"/> can link to libraries on the build "
+"machine. Only two stages are mandatory, and one more for tests:"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><informaltable><tgroup><tbody><row><entry>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter05/toolchaintechnotes.xml:191
+#: /home/xry111/svn-repos/LFS-BOOK/chapter05/toolchaintechnotes.xml:195
+msgid "pc"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><informaltable><tgroup><tbody><row><entry>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter05/toolchaintechnotes.xml:191
+#: /home/xry111/svn-repos/LFS-BOOK/chapter05/toolchaintechnotes.xml:195
+#: /home/xry111/svn-repos/LFS-BOOK/chapter05/toolchaintechnotes.xml:199
+msgid "lfs"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><informaltable><tgroup><tbody><row><entry>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter05/toolchaintechnotes.xml:192
+msgid "build cross-compiler cc1 using cc-pc on pc"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><informaltable><tgroup><tbody><row><entry>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter05/toolchaintechnotes.xml:196
+msgid "build compiler cc-lfs using cc1 on pc"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><informaltable><tgroup><tbody><row><entry>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter05/toolchaintechnotes.xml:200
+msgid "rebuild and test cc-lfs using itself on lfs"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter05/toolchaintechnotes.xml:206
+msgid ""
+"In the above table, <quote>on pc</quote> means the commands are run on a "
+"machine using the already installed distribution. <quote>On lfs</quote> "
+"means the commands are run in a chrooted environment."
+msgstr ""
+
+#. type: Content of: <sect1><sect2><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter05/toolchaintechnotes.xml:210
+msgid ""
+"Now, there is more about cross-compiling: the C language is not just a "
+"compiler, but also defines a standard library. In this book, the GNU C "
+"library, named glibc, is used. This library must be compiled for the lfs "
+"machine, that is, using the cross compiler cc1.  But the compiler itself "
+"uses an internal library implementing complex instructions not available in "
+"the assembler instruction set. This internal library is named libgcc, and "
+"must be linked to the glibc library to be fully functional! Furthermore, the "
+"standard library for C++ (libstdc++) also needs being linked to glibc. The "
+"solution to this chicken and egg problem is to first build a degraded cc1 "
+"based libgcc, lacking some fuctionalities such as threads and exception "
+"handling, then build glibc using this degraded compiler (glibc itself is not "
+"degraded), then build libstdc++. But this last library will lack the same "
+"functionalities as libgcc."
+msgstr ""
+
+#. type: Content of: <sect1><sect2><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter05/toolchaintechnotes.xml:225
+msgid ""
+"This is not the end of the story: the conclusion of the preceding paragraph "
+"is that cc1 is unable to build a fully functional libstdc++, but this is the "
+"only compiler available for building the C/C++ libraries during stage 2! Of "
+"course, the compiler built during stage 2, cc-lfs, would be able to build "
+"those libraries, but (1) the build system of GCC does not know that it is "
+"usable on pc, and (2) using it on pc would be at risk of linking to the pc "
+"libraries, since cc-lfs is a native compiler. So we have to build libstdc++ "
+"later, in chroot."
+msgstr ""
+
+#. type: Content of: <sect1><sect2><title>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter05/toolchaintechnotes.xml:238
+msgid "Other procedural details"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter05/toolchaintechnotes.xml:240
+msgid ""
+"The cross-compiler will be installed in a separate <filename "
+"class=\"directory\">$LFS/tools</filename> directory, since it will not be "
+"part of the final system."
+msgstr ""
+
+#. type: Content of: <sect1><sect2><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter05/toolchaintechnotes.xml:244
+msgid ""
+"Binutils is installed first because the <command>configure</command> runs of "
+"both GCC and Glibc perform various feature tests on the assembler and linker "
+"to determine which software features to enable or disable. This is more "
+"important than one might first realize. An incorrectly configured GCC or "
+"Glibc can result in a subtly broken toolchain, where the impact of such "
+"breakage might not show up until near the end of the build of an entire "
+"distribution. A test suite failure will usually highlight this error before "
+"too much additional work is performed."
+msgstr ""
+
+#. type: Content of: <sect1><sect2><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter05/toolchaintechnotes.xml:253
+msgid ""
+"Binutils installs its assembler and linker in two locations, <filename "
+"class=\"directory\">$LFS/tools/bin</filename> and <filename "
+"class=\"directory\">$LFS/tools/$LFS_TGT/bin</filename>. The tools in one "
+"location are hard linked to the other. An important facet of the linker is "
+"its library search order. Detailed information can be obtained from "
+"<command>ld</command> by passing it the <parameter>--verbose</parameter> "
+"flag. For example, <command>$LFS_TGT-ld --verbose | grep SEARCH</command> "
+"will illustrate the current search paths and their order. It shows which "
+"files are linked by <command>ld</command> by compiling a dummy program and "
+"passing the <parameter>--verbose</parameter> switch to the linker. For "
+"example, <command>$LFS_TGT-gcc dummy.c -Wl,--verbose 2&gt;&amp;1 | grep "
+"succeeded</command> will show all the files successfully opened during the "
+"linking."
+msgstr ""
+
+#. type: Content of: <sect1><sect2><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter05/toolchaintechnotes.xml:267
+msgid ""
+"The next package installed is GCC. An example of what can be seen during its "
+"run of <command>configure</command> is:"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><screen>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter05/toolchaintechnotes.xml:270
+#, no-wrap
+msgid ""
+"<computeroutput>checking what assembler to "
+"use... /mnt/lfs/tools/i686-lfs-linux-gnu/bin/as\n"
+"checking what linker to "
+"use... /mnt/lfs/tools/i686-lfs-linux-gnu/bin/ld</computeroutput>"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter05/toolchaintechnotes.xml:273
+msgid ""
+"This is important for the reasons mentioned above. It also demonstrates that "
+"GCC's configure script does not search the PATH directories to find which "
+"tools to use. However, during the actual operation of <command>gcc</command> "
+"itself, the same search paths are not necessarily used. To find out which "
+"standard linker <command>gcc</command> will use, run: <command>$LFS_TGT-gcc "
+"-print-prog-name=ld</command>."
+msgstr ""
+
+#. type: Content of: <sect1><sect2><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter05/toolchaintechnotes.xml:280
+msgid ""
+"Detailed information can be obtained from <command>gcc</command> by passing "
+"it the <parameter>-v</parameter> command line option while compiling a dummy "
+"program. For example, <command>gcc -v dummy.c</command> will show detailed "
+"information about the preprocessor, compilation, and assembly stages, "
+"including <command>gcc</command>'s included search paths and their order."
+msgstr ""
+
+#. type: Content of: <sect1><sect2><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter05/toolchaintechnotes.xml:287
+msgid ""
+"Next installed are sanitized Linux API headers. These allow the standard C "
+"library (Glibc) to interface with features that the Linux kernel will "
+"provide."
+msgstr ""
+
+#. type: Content of: <sect1><sect2><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter05/toolchaintechnotes.xml:291
+msgid ""
+"The next package installed is Glibc. The most important considerations for "
+"building Glibc are the compiler, binary tools, and kernel headers. The "
+"compiler is generally not an issue since Glibc will always use the compiler "
+"relating to the <parameter>--host</parameter> parameter passed to its "
+"configure script; e.g. in our case, the compiler will be "
+"<command>$LFS_TGT-gcc</command>. The binary tools and kernel headers can be "
+"a bit more complicated. Therefore, take no risks and use the available "
+"configure switches to enforce the correct selections. After the run of "
+"<command>configure</command>, check the contents of the "
+"<filename>config.make</filename> file in the <filename "
+"class=\"directory\">build</filename> directory for all important details.  "
+"Note the use of <parameter>CC=\"$LFS_TGT-gcc\"</parameter> (with "
+"<envar>$LFS_TGT</envar> expanded) to control which binary tools are used and "
+"the use of the <parameter>-nostdinc</parameter> and "
+"<parameter>-isystem</parameter> flags to control the compiler's include "
+"search path. These items highlight an important aspect of the Glibc "
+"package&mdash;it is very self-sufficient in terms of its build machinery and "
+"generally does not rely on toolchain defaults."
+msgstr ""
+
+#. type: Content of: <sect1><sect2><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter05/toolchaintechnotes.xml:310
+msgid ""
+"As said above, the standard C++ library is compiled next, followed in "
+"Chapter 6 by all the programs that need themselves to be built. The install "
+"step of libstdc++ uses the <envar>DESTDIR</envar> variable to have the "
+"programs land into the LFS filesystem."
+msgstr ""
+
+#. type: Content of: <sect1><sect2><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter05/toolchaintechnotes.xml:315
+msgid ""
+"In Chapter 7 the native lfs compiler is built. First binutils-pass2, with "
+"the same <envar>DESTDIR</envar> install as the other programs is built, and "
+"then the second pass of GCC is constructed, omitting libstdc++ and other "
+"non-important libraries.  Due to some weird logic in GCC's configure script, "
+"<envar>CC_FOR_TARGET</envar> ends up as <command>cc</command> when the host "
+"is the same as the target, but is different from the build system. This is "
+"why <parameter>CC_FOR_TARGET=$LFS_TGT-gcc</parameter> is put explicitely "
+"into the configure options."
+msgstr ""
+
+#. type: Content of: <sect1><sect2><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter05/toolchaintechnotes.xml:325
+msgid ""
+"Upon entering the chroot environment in <xref "
+"linkend=\"chapter-chroot-temporary-tools\"/>, the first task is to install "
+"libstdc++. Then temporary installations of programs needed for the proper "
+"operation of the toolchain are performed. Programs needed for testing other "
+"programs are also built. From this point onwards, the core toolchain is "
+"self-contained and self-hosted.  In <xref "
+"linkend=\"chapter-building-system\"/>, final versions of all the packages "
+"needed for a fully functional system are built, tested and installed."
+msgstr ""

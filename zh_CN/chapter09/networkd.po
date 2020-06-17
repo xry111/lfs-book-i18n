@@ -1,0 +1,487 @@
+# SOME DESCRIPTIVE TITLE
+# Copyright (C) YEAR Free Software Foundation, Inc.
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"POT-Creation-Date: 2020-06-17 12:44+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#. type: Content of: <sect1><title>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter09/networkd.xml:11
+msgid "General Network Configuration"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><indexterm><primary>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter09/networkd.xml:14
+#: /home/xry111/svn-repos/LFS-BOOK/chapter09/networkd.xml:261
+msgid "network"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><indexterm><secondary>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter09/networkd.xml:15
+#: /home/xry111/svn-repos/LFS-BOOK/chapter09/networkd.xml:230
+msgid "configuring"
+msgstr ""
+
+#. type: Content of: <sect1><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter09/networkd.xml:17
+msgid "This section only applies if a network card is to be configured."
+msgstr ""
+
+#. type: Content of: <sect1><sect2><title>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter09/networkd.xml:21
+msgid "Network Interface Configuration Files"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter09/networkd.xml:23
+msgid ""
+"Starting with version 209, systemd ships a network configuration daemon "
+"called <command>systemd-networkd</command> which can be used for basic "
+"network configuration. Additionally, since version 213, DNS name resolution "
+"can be handled by <command>systemd-resolved</command> in place of a static "
+"<filename>/etc/resolv.conf</filename> file. Both services are enabled by "
+"default."
+msgstr ""
+
+#. type: Content of: <sect1><sect2><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter09/networkd.xml:30
+msgid ""
+"Configuration files for <command>systemd-networkd</command> (and "
+"<command>systemd-resolved</command>) can be placed in <filename "
+"class=\"directory\">/usr/lib/systemd/network</filename> or <filename "
+"class=\"directory\">/etc/systemd/network</filename>. Files in <filename "
+"class=\"directory\">/etc/systemd/network</filename> have a higher priority "
+"than the ones in <filename "
+"class=\"directory\">/usr/lib/systemd/network</filename>.  There are three "
+"types of configuration files: <filename "
+"class=\"extension\">.link</filename>, <filename "
+"class=\"extension\">.netdev</filename> and <filename "
+"class=\"extension\">.network</filename> files. For detailed descriptions and "
+"example contents of these configuration files, consult the "
+"<filename>systemd-link(5)</filename>, <filename>systemd-netdev(5)</filename> "
+"and <filename>systemd-network(5)</filename> manual pages."
+msgstr ""
+
+#. type: Content of: <sect1><sect2><sect3><title>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter09/networkd.xml:47
+msgid "Network Device Naming"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><sect3><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter09/networkd.xml:50
+msgid ""
+"Udev normally assigns network card interface names based on physical system "
+"characteristics such as enp2s1. If you are not sure what your interface name "
+"is, you can always run <command>ip link</command> after you have booted your "
+"system."
+msgstr ""
+
+#. type: Content of: <sect1><sect2><sect3><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter09/networkd.xml:57
+msgid ""
+"For most systems, there is only one network interface for each type of "
+"connection.  For example, the classic interface name for a wired connection "
+"is eth0.  A wireless connection will usually have the name wifi0 or wlan0."
+msgstr ""
+
+#. type: Content of: <sect1><sect2><sect3><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter09/networkd.xml:64
+msgid ""
+"If you prefer to use the classic or customized network interface names, "
+"there are three alternative ways to do that:"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><sect3><itemizedlist><listitem><para><screen>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter09/networkd.xml:71
+#, no-wrap
+msgid "<userinput>ln -s /dev/null /etc/systemd/network/99-default.link</userinput>"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><sect3><itemizedlist><listitem><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter09/networkd.xml:70
+msgid ""
+"Mask udev's .link file for the default policy: <placeholder type=\"screen\" "
+"id=\"0\"/>"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><sect3><itemizedlist><listitem><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter09/networkd.xml:77
+msgid ""
+"Create a manual naming scheme, for example by naming the interfaces "
+"something like \"internet0\", \"dmz0\", or \"lan0\".  To do that, create "
+".link files in /etc/systemd/network/ that select an explicit name or a "
+"better naming scheme for your network interfaces. For example:"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><sect3><itemizedlist><listitem><screen>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter09/networkd.xml:84
+#, no-wrap
+msgid ""
+"<userinput>cat &gt; /etc/systemd/network/10-ether0.link &lt;&lt; \"EOF\"\n"
+"<literal>[Match]\n"
+"# Change the MAC address as appropriate for your network device\n"
+"MACAddress=12:34:45:78:90:AB\n"
+"\n"
+"[Link]\n"
+"Name=ether0</literal>\n"
+"EOF</userinput>"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><sect3><itemizedlist><listitem><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter09/networkd.xml:94
+msgid "See the man page systemd.link(5) for more information."
+msgstr ""
+
+#. type: Content of: <sect1><sect2><sect3><itemizedlist><listitem><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter09/networkd.xml:100
+msgid ""
+"In /boot/grub/grub.cfg, pass the option net.ifnames=0 on the kernel command "
+"line."
+msgstr ""
+
+#. type: Content of: <sect1><sect2><sect3><title>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter09/networkd.xml:108
+msgid "Static IP Configuration"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><sect3><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter09/networkd.xml:110
+msgid ""
+"The command below creates a basic configuration file for a Static IP setup "
+"(using both systemd-networkd and systemd-resolved):"
+msgstr ""
+
+#.  jhalfs relies on the values for Name, Address, etc. If you want to change
+#.      them, please inform the jhalfs maintainer(s). 
+#. type: Content of: <sect1><sect2><sect3><screen>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter09/networkd.xml:115
+#, no-wrap
+msgid ""
+"<userinput>cat &gt; /etc/systemd/network/10-eth-static.network &lt;&lt; "
+"\"EOF\"\n"
+"<literal>[Match]\n"
+"Name=<replaceable>&lt;network-device-name&gt;</replaceable>\n"
+"\n"
+"[Network]\n"
+"Address=192.168.0.2/24\n"
+"Gateway=192.168.0.1\n"
+"DNS=192.168.0.1\n"
+"Domains=<replaceable>&lt;Your Domain Name&gt;</replaceable></literal>\n"
+"EOF</userinput>"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><sect3><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter09/networkd.xml:126
+msgid ""
+"Multiple DNS entries can be added if you have more than one DNS server. Do "
+"not include DNS or Domains entries if you intend to use a static "
+"<filename>/etc/resolv.conf</filename> file."
+msgstr ""
+
+#. type: Content of: <sect1><sect2><sect3><title>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter09/networkd.xml:133
+msgid "DHCP Configuration"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><sect3><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter09/networkd.xml:135
+msgid "The command below creates a basic configuration file for an IPv4 DHCP setup:"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><sect3><screen>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter09/networkd.xml:138
+#, no-wrap
+msgid ""
+"<userinput>cat &gt; /etc/systemd/network/10-eth-dhcp.network &lt;&lt; "
+"\"EOF\"\n"
+"<literal>[Match]\n"
+"Name=&lt;network-device-name&gt;\n"
+"\n"
+"[Network]\n"
+"DHCP=ipv4\n"
+"\n"
+"[DHCP]\n"
+"UseDomains=true</literal>\n"
+"EOF</userinput>"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><title>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter09/networkd.xml:154
+msgid "Creating the /etc/resolv.conf File"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><indexterm><primary>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter09/networkd.xml:157
+msgid "/etc/resolv.conf"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter09/networkd.xml:160
+msgid ""
+"If the system is going to be connected to the Internet, it will need some "
+"means of Domain Name Service (DNS) name resolution to resolve Internet "
+"domain names to IP addresses, and vice versa. This is best achieved by "
+"placing the IP address of the DNS server, available from the ISP or network "
+"administrator, into <filename>/etc/resolv.conf</filename>."
+msgstr ""
+
+#. type: Content of: <sect1><sect2><sect3><title>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter09/networkd.xml:168
+msgid "systemd-resolved Configuration"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><sect3><note><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter09/networkd.xml:170
+msgid ""
+"If using another means to configure your network interfaces (ex: ppp, "
+"network-manager, etc.), or if using any type of local resolver (ex: bind, "
+"dnsmasq, unbound, etc.), or any other software that generates an "
+"<filename>/etc/resolv.conf</filename> (ex: resolvconf), the "
+"<command>systemd-resolved</command> service should not be used."
+msgstr ""
+
+#. type: Content of: <sect1><sect2><sect3><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter09/networkd.xml:177
+msgid ""
+"When using <command>systemd-resolved</command> for DNS configuration, it "
+"creates the file "
+"<filename>/run/systemd/resolve/resolv.conf</filename>. Create a symlink in "
+"<filename>/etc</filename> to use the generated file:"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><sect3><screen>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter09/networkd.xml:182
+#, no-wrap
+msgid ""
+"<userinput>ln -sfv /run/systemd/resolve/resolv.conf "
+"/etc/resolv.conf</userinput>"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><sect3><title>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter09/networkd.xml:187
+msgid "Static resolv.conf Configuration"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><sect3><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter09/networkd.xml:189
+msgid ""
+"If a static <filename>/etc/resolv.conf</filename> is desired, create it by "
+"running the following command:"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><sect3><screen>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter09/networkd.xml:192
+#, no-wrap
+msgid ""
+"<userinput>cat &gt; /etc/resolv.conf &lt;&lt; \"EOF\"\n"
+"<literal># Begin /etc/resolv.conf\n"
+"\n"
+"domain <replaceable>&lt;Your Domain Name&gt;</replaceable>\n"
+"nameserver <replaceable>&lt;IP address of your primary "
+"nameserver&gt;</replaceable>\n"
+"nameserver <replaceable>&lt;IP address of your secondary "
+"nameserver&gt;</replaceable>\n"
+"\n"
+"# End /etc/resolv.conf</literal>\n"
+"EOF</userinput>"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><sect3><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter09/networkd.xml:202
+msgid ""
+"The <varname>domain</varname> statement can be omitted or replaced with a "
+"<varname>search</varname> statement.  See the man page for resolv.conf for "
+"more details."
+msgstr ""
+
+#. type: Content of: <sect1><sect2><sect3><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter09/networkd.xml:206
+msgid ""
+"Replace <replaceable>&lt;IP address of the nameserver&gt;</replaceable> with "
+"the IP address of the DNS server most appropriate for your setup.  There "
+"will often be more than one entry (requirements demand secondary servers for "
+"fallback capability). If you only need or want one DNS server, remove the "
+"second <emphasis>nameserver</emphasis> line from the file.  The IP address "
+"may also be a router on the local network. Another option is to use the "
+"Google Public DNS service using the IP addresses below as nameservers."
+msgstr ""
+
+#. type: Content of: <sect1><sect2><sect3><note><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter09/networkd.xml:216
+msgid ""
+"The Google Public IPv4 DNS addresses are <parameter>8.8.8.8</parameter> and "
+"<parameter>8.8.4.4</parameter> for IPv4, and "
+"<parameter>2001:4860:4860::8888</parameter> and "
+"<parameter>2001:4860:4860::8844</parameter> for IPv6."
+msgstr ""
+
+#. type: Content of: <sect1><sect2><title>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter09/networkd.xml:226
+msgid "Configuring the system hostname"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><indexterm><primary>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter09/networkd.xml:229
+msgid "hostname"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter09/networkd.xml:233
+msgid ""
+"During the boot process, the file <filename>/etc/hostname</filename> is used "
+"for establishing the system's hostname."
+msgstr ""
+
+#. type: Content of: <sect1><sect2><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter09/networkd.xml:236
+msgid ""
+"Create the <filename>/etc/hostname</filename> file and enter a hostname by "
+"running:"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><screen>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter09/networkd.xml:239
+#, no-wrap
+msgid ""
+"<userinput>echo \"<replaceable>&lt;lfs&gt;</replaceable>\" &gt; "
+"/etc/hostname</userinput>"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter09/networkd.xml:241
+msgid ""
+"<replaceable>&lt;lfs&gt;</replaceable> needs to be replaced with the name "
+"given to the computer. Do not enter the Fully Qualified Domain Name (FQDN) "
+"here. That information is put in the <filename>/etc/hosts</filename> file."
+msgstr ""
+
+#. type: Content of: <sect1><sect2><title>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter09/networkd.xml:249
+msgid "Customizing the /etc/hosts File"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><indexterm><secondary>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter09/networkd.xml:252
+#: /home/xry111/svn-repos/LFS-BOOK/chapter09/networkd.xml:257
+#: /home/xry111/svn-repos/LFS-BOOK/chapter09/networkd.xml:262
+msgid "/etc/hosts"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><indexterm><primary>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter09/networkd.xml:256
+msgid "localnet"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter09/networkd.xml:265
+msgid ""
+"Decide on a fully-qualified domain name (FQDN), and possible aliases for use "
+"in the <filename>/etc/hosts</filename> file. If using static IP addresses, "
+"you'll also need to decide on an IP address. The syntax for a hosts file "
+"entry is:"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><screen>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter09/networkd.xml:270
+#, no-wrap
+msgid "<literal>IP_address myhost.example.org aliases</literal>"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter09/networkd.xml:272
+msgid ""
+"Unless the computer is to be visible to the Internet (i.e., there is a "
+"registered domain and a valid block of assigned IP addresses&mdash;most "
+"users do not have this), make sure that the IP address is in the private "
+"network IP address range. Valid ranges are:"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><screen>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter09/networkd.xml:277
+#, no-wrap
+msgid ""
+"<literal>Private Network Address Range      Normal Prefix\n"
+"10.0.0.1 - 10.255.255.254           8\n"
+"172.x.0.1 - 172.x.255.254           16\n"
+"192.168.y.1 - 192.168.y.254         24</literal>"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter09/networkd.xml:282
+msgid ""
+"x can be any number in the range 16-31. y can be any number in the range "
+"0-255."
+msgstr ""
+
+#. type: Content of: <sect1><sect2><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter09/networkd.xml:285
+msgid ""
+"A valid private IP address could be 192.168.1.1. A valid FQDN for this IP "
+"could be lfs.example.org."
+msgstr ""
+
+#. type: Content of: <sect1><sect2><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter09/networkd.xml:288
+msgid ""
+"Even if not using a network card, a valid FQDN is still required.  This is "
+"necessary for certain programs, such as MTAs, to operate properly."
+msgstr ""
+
+#. type: Content of: <sect1><sect2><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter09/networkd.xml:307
+msgid "Create the <filename>/etc/hosts</filename> file using the following command:"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><screen>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter09/networkd.xml:310
+#, no-wrap
+msgid ""
+"<userinput>cat &gt; /etc/hosts &lt;&lt; \"EOF\"\n"
+"<literal># Begin /etc/hosts\n"
+"\n"
+"127.0.0.1 localhost.localdomain localhost\n"
+"127.0.1.1 <replaceable>&lt;FQDN&gt;</replaceable> "
+"<replaceable>&lt;HOSTNAME&gt;</replaceable>\n"
+"<replaceable>&lt;192.168.0.2&gt;</replaceable> "
+"<replaceable>&lt;FQDN&gt;</replaceable> "
+"<replaceable>&lt;HOSTNAME&gt;</replaceable> <replaceable>[alias1] [alias2] "
+"...</replaceable>\n"
+"::1       localhost ip6-localhost ip6-loopback\n"
+"ff02::1   ip6-allnodes\n"
+"ff02::2   ip6-allrouters\n"
+"\n"
+"# End /etc/hosts</literal>\n"
+"EOF</userinput>"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter09/networkd.xml:323
+msgid ""
+"The <replaceable>&lt;192.168.0.2&gt;</replaceable>, "
+"<replaceable>&lt;FQDN&gt;</replaceable>, and "
+"<replaceable>&lt;HOSTNAME&gt;</replaceable> values need to be changed for "
+"specific uses or requirements (if assigned an IP address by a network/system "
+"administrator and the machine will be connected to an existing network). The "
+"optional alias name(s) can be omitted, and the "
+"<replaceable>&lt;192.168.0.2</replaceable> line can be omitted if you are "
+"using a connection configured with DHCP or IPv6 Autoconfiguration."
+msgstr ""
+
+#. type: Content of: <sect1><sect2><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter09/networkd.xml:332
+msgid ""
+"The ::1 entry is the IPv6 counterpart of 127.0.0.1 and represents the IPv6 "
+"loopback interface. 127.0.1.1 is a loopback entry reserved specifically for "
+"the FQDN."
+msgstr ""

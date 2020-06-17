@@ -1,0 +1,182 @@
+# SOME DESCRIPTIVE TITLE
+# Copyright (C) YEAR Free Software Foundation, Inc.
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"POT-Creation-Date: 2020-06-17 12:44+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#. type: Content of: <sect1><title>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter10/fstab.xml:11
+msgid "Creating the /etc/fstab File"
+msgstr ""
+
+#. type: Content of: <sect1><indexterm><primary>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter10/fstab.xml:14
+msgid "/etc/fstab"
+msgstr ""
+
+#. type: Content of: <sect1><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter10/fstab.xml:17
+msgid ""
+"The <filename>/etc/fstab</filename> file is used by some programs to "
+"determine where file systems are to be mounted by default, in which order, "
+"and which must be checked (for integrity errors) prior to mounting. Create a "
+"new file systems table like this:"
+msgstr ""
+
+#. type: Content of: <sect1><screen>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter10/fstab.xml:22
+#, no-wrap
+msgid ""
+"<userinput>cat &gt; /etc/fstab &lt;&lt; \"EOF\"\n"
+"<literal># Begin /etc/fstab\n"
+"\n"
+"# file system  mount-point  type     options             dump  fsck\n"
+"#                                                              order\n"
+"\n"
+"/dev/<replaceable>&lt;xxx&gt;</replaceable>     /            "
+"<replaceable>&lt;fff&gt;</replaceable>    defaults            1     1\n"
+"/dev/<replaceable>&lt;yyy&gt;</replaceable>     swap         swap     pri=1               "
+"0     0\n"
+"proc           /proc        proc     nosuid,noexec,nodev 0     0\n"
+"sysfs          /sys         sysfs    nosuid,noexec,nodev 0     0\n"
+"devpts         /dev/pts     devpts   gid=5,mode=620      0     0\n"
+"tmpfs          /run         tmpfs    defaults            0     0\n"
+"devtmpfs       /dev         devtmpfs mode=0755,nosuid    0     0\n"
+"\n"
+"# End /etc/fstab</literal>\n"
+"EOF</userinput>"
+msgstr ""
+
+#. type: Content of: <sect1><screen>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter10/fstab.xml:39
+#, no-wrap
+msgid ""
+"<userinput>cat &gt; /etc/fstab &lt;&lt; \"EOF\"\n"
+"<literal># Begin /etc/fstab\n"
+"\n"
+"# file system  mount-point  type     options             dump  fsck\n"
+"#                                                              order\n"
+"\n"
+"/dev/<replaceable>&lt;xxx&gt;</replaceable>     /            "
+"<replaceable>&lt;fff&gt;</replaceable>    defaults            1     1\n"
+"/dev/<replaceable>&lt;yyy&gt;</replaceable>     swap         swap     pri=1               "
+"0     0\n"
+"\n"
+"# End /etc/fstab</literal>\n"
+"EOF</userinput>"
+msgstr ""
+
+#. type: Content of: <sect1><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter10/fstab.xml:51
+msgid ""
+"Replace <replaceable>&lt;xxx&gt;</replaceable>, "
+"<replaceable>&lt;yyy&gt;</replaceable>, and "
+"<replaceable>&lt;fff&gt;</replaceable> with the values appropriate for the "
+"system, for example, <filename class=\"partition\">sda2</filename>, "
+"<filename class=\"partition\">sda5</filename>, and <systemitem "
+"class=\"filesystem\">ext4</systemitem>. For details on the six fields in "
+"this file, see <command>man 5 fstab</command>."
+msgstr ""
+
+#. type: Content of: <sect1><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter10/fstab.xml:59
+msgid ""
+"Filesystems with MS-DOS or Windows origin (i.e. vfat, ntfs, smbfs, cifs, "
+"iso9660, udf) need a special option, utf8, in order for non-ASCII characters "
+"in file names to be interpreted properly. For non-UTF-8 locales, the value "
+"of <option>iocharset</option> should be set to be the same as the character "
+"set of the locale, adjusted in such a way that the kernel understands it.  "
+"This works if the relevant character set definition (found under File "
+"systems -&gt; Native Language Support when configuring the kernel)  has been "
+"compiled into the kernel or built as a module. However, if the character set "
+"of the locale is UTF-8, the corresponding option "
+"<option>iocharset=utf8</option> would make the file system case "
+"sensitive. To fix this, use the special option <option>utf8</option> instead "
+"of <option>iocharset=utf8</option>, for UTF-8 locales. The "
+"<quote>codepage</quote> option is also needed for vfat and smbfs "
+"filesystems.  It should be set to the codepage number used under MS-DOS in "
+"your country.  For example, in order to mount USB flash drives, a "
+"ru_RU.KOI8-R user would need the following in the options portion of its "
+"mount line in <filename>/etc/fstab</filename>:"
+msgstr ""
+
+#. type: Content of: <sect1><screen>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter10/fstab.xml:77
+#, no-wrap
+msgid "<literal>noauto,user,quiet,showexec,codepage=866,iocharset=koi8r</literal>"
+msgstr ""
+
+#. type: Content of: <sect1><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter10/fstab.xml:79
+msgid "The corresponding options fragment for ru_RU.UTF-8 users is:"
+msgstr ""
+
+#. type: Content of: <sect1><screen>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter10/fstab.xml:81
+#, no-wrap
+msgid "<literal>noauto,user,quiet,showexec,codepage=866,utf8</literal>"
+msgstr ""
+
+#. type: Content of: <sect1><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter10/fstab.xml:83
+msgid ""
+"Note that using <option>iocharset</option> is the default for "
+"<literal>iso8859-1</literal> (which keeps the file system case insensitive), "
+"and the <option>utf8</option> option tells the kernel to convert the file "
+"names using UTF-8 so they can be interpreted in the UTF-8 locale."
+msgstr ""
+
+#. type: Content of: <sect1><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter10/fstab.xml:100
+msgid ""
+"It is also possible to specify default codepage and iocharset values for "
+"some filesystems during kernel configuration. The relevant parameters are "
+"named <quote>Default NLS Option</quote> "
+"(<option>CONFIG_NLS_DEFAULT)</option>, <quote>Default Remote NLS "
+"Option</quote> (<option>CONFIG_SMB_NLS_DEFAULT</option>), <quote>Default "
+"codepage for FAT</quote> (<option>CONFIG_FAT_DEFAULT_CODEPAGE</option>), and "
+"<quote>Default iocharset for FAT</quote> "
+"(<option>CONFIG_FAT_DEFAULT_IOCHARSET</option>).  There is no way to specify "
+"these settings for the ntfs filesystem at kernel compilation time."
+msgstr ""
+
+#. type: Content of: <sect1><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter10/fstab.xml:110
+msgid ""
+"It is possible to make the ext3 filesystem reliable across power failures "
+"for some hard disk types.  To do this, add the <option>barrier=1</option> "
+"mount option to the appropriate entry in <filename>/etc/fstab</filename>.  "
+"To check if the disk drive supports this option, run <ulink "
+"url=\"&blfs-book;general/hdparm.html\">hdparm</ulink> on the applicable disk "
+"drive.  For example, if:"
+msgstr ""
+
+#. type: Content of: <sect1><screen>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter10/fstab.xml:118
+#, no-wrap
+msgid "<userinput>hdparm -I /dev/sda | grep NCQ</userinput>"
+msgstr ""
+
+#. type: Content of: <sect1><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter10/fstab.xml:120
+msgid "returns non-empty output, the option is supported."
+msgstr ""
+
+#. type: Content of: <sect1><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter10/fstab.xml:122
+msgid ""
+"Note: Logical Volume Management (LVM) based partitions cannot use the "
+"<option>barrier</option> option."
+msgstr ""

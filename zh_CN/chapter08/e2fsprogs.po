@@ -1,0 +1,848 @@
+# SOME DESCRIPTIVE TITLE
+# Copyright (C) YEAR Free Software Foundation, Inc.
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"POT-Creation-Date: 2020-06-17 12:44+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#. type: Content of: <sect1><sect1info><address>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/e2fsprogs.xml:14
+#, no-wrap
+msgid "&e2fsprogs-url;"
+msgstr ""
+
+#. type: Content of: <sect1><sect1info>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/e2fsprogs.xml:12
+msgid ""
+"<productname>e2fsprogs</productname> "
+"<productnumber>&e2fsprogs-version;</productnumber> <placeholder "
+"type=\"address\" id=\"0\"/>"
+msgstr ""
+
+#. type: Content of: <sect1><title>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/e2fsprogs.xml:17
+msgid "E2fsprogs-&e2fsprogs-version;"
+msgstr ""
+
+#. type: Content of: <sect1><indexterm><primary>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/e2fsprogs.xml:20
+msgid "E2fsprogs"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/e2fsprogs.xml:26
+msgid ""
+"The e2fsprogs package contains the utilities for handling the <systemitem "
+"class=\"filesystem\">ext2</systemitem> file system. It also supports the "
+"<systemitem class=\"filesystem\">ext3</systemitem> and <systemitem "
+"class=\"filesystem\">ext4</systemitem> journaling file systems."
+msgstr ""
+
+#. type: Content of: <sect1><sect2><segmentedlist><segtitle>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/e2fsprogs.xml:33
+msgid "&buildtime;"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><segmentedlist><segtitle>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/e2fsprogs.xml:34
+msgid "&diskspace;"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><segmentedlist><seglistitem><seg>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/e2fsprogs.xml:37
+msgid "&e2fsprogs-fin-sbu;"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><segmentedlist><seglistitem><seg>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/e2fsprogs.xml:38
+msgid "&e2fsprogs-fin-du;"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><title>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/e2fsprogs.xml:45
+msgid "Installation of E2fsprogs"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/e2fsprogs.xml:47
+msgid ""
+"The e2fsprogs documentation recommends that the package be built in a "
+"subdirectory of the source tree:"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><screen>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/e2fsprogs.xml:50
+#, no-wrap
+msgid ""
+"<userinput remap=\"pre\">mkdir -v build\n"
+"cd       build</userinput>"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/e2fsprogs.xml:53
+msgid "Prepare e2fsprogs for compilation:"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><screen>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/e2fsprogs.xml:55
+#, no-wrap
+msgid ""
+"<userinput remap=\"configure\">../configure --prefix=/usr           \\\n"
+"             --bindir=/bin           \\\n"
+"             --with-root-prefix=\"\"   \\\n"
+"             --enable-elf-shlibs     \\\n"
+"             --disable-libblkid      \\\n"
+"             --disable-libuuid       \\\n"
+"             --disable-uuidd         \\\n"
+"             --disable-fsck</userinput>"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><title>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/e2fsprogs.xml:65
+msgid "The meaning of the configure options:"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/e2fsprogs.xml:68
+msgid ""
+"<parameter>--with-root-prefix=\"\"</parameter> and "
+"<parameter>--bindir=/bin</parameter>"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/e2fsprogs.xml:71
+msgid ""
+"Certain programs (such as the <command>e2fsck</command> program) are "
+"considered essential programs.  When, for example, <filename "
+"class=\"directory\">/usr</filename> is not mounted, these programs still "
+"need to be available. They belong in directories like <filename "
+"class=\"directory\">/lib</filename> and <filename "
+"class=\"directory\">/sbin</filename>. If this option is not passed to "
+"configure, the programs are installed into the <filename "
+"class=\"directory\">/usr</filename> directory."
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/e2fsprogs.xml:83
+msgid "<parameter>--enable-elf-shlibs</parameter>"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/e2fsprogs.xml:85
+msgid "This creates the shared libraries which some programs in this package use."
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/e2fsprogs.xml:91
+msgid "<parameter>--disable-*</parameter>"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/e2fsprogs.xml:93
+msgid ""
+"This prevents e2fsprogs from building and installing the <systemitem "
+"class=\"library\">libuuid</systemitem> and <systemitem "
+"class=\"library\">libblkid</systemitem> libraries, the <systemitem "
+"class=\"daemon\">uuidd</systemitem> daemon, and the <command>fsck</command> "
+"wrapper, as util-linux installs more recent versions."
+msgstr ""
+
+#. type: Content of: <sect1><sect2><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/e2fsprogs.xml:104
+msgid "Compile the package:"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><screen>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/e2fsprogs.xml:106
+#, no-wrap
+msgid "<userinput remap=\"make\">make</userinput>"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/e2fsprogs.xml:108
+msgid "To run the tests, issue:"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><screen>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/e2fsprogs.xml:110
+#, no-wrap
+msgid "<userinput remap=\"test\">make check</userinput>"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/e2fsprogs.xml:119
+msgid ""
+"On a spinning disk, the tests take a little more than 4 SBUs. They can be "
+"much shorter on an SSD (down to about 1.5 SBUs)."
+msgstr ""
+
+#. type: Content of: <sect1><sect2><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/e2fsprogs.xml:121
+msgid "Install the package:"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><screen>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/e2fsprogs.xml:123
+#, no-wrap
+msgid "<userinput remap=\"install\">make install</userinput>"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/e2fsprogs.xml:125
+msgid ""
+"Make the installed static libraries writable so debugging symbols can be "
+"removed later:"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><screen>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/e2fsprogs.xml:128
+#, no-wrap
+msgid ""
+"<userinput remap=\"install\">chmod -v u+w "
+"/usr/lib/{libcom_err,libe2p,libext2fs,libss}.a</userinput>"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/e2fsprogs.xml:130
+msgid ""
+"This package installs a gzipped <filename "
+"class=\"extension\">.info</filename> file but doesn't update the system-wide "
+"<filename>dir</filename> file. Unzip this file and then update the system "
+"<filename>dir</filename> file using the following commands:"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><screen>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/e2fsprogs.xml:136
+#, no-wrap
+msgid ""
+"<userinput remap=\"install\">gunzip -v /usr/share/info/libext2fs.info.gz\n"
+"install-info --dir-file=/usr/share/info/dir "
+"/usr/share/info/libext2fs.info</userinput>"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/e2fsprogs.xml:139
+msgid ""
+"If desired, create and install some additional documentation by issuing the "
+"following commands:"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><screen>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/e2fsprogs.xml:142
+#, no-wrap
+msgid ""
+"<userinput remap=\"install\">makeinfo -o      doc/com_err.info "
+"../lib/et/com_err.texinfo\n"
+"install -v -m644 doc/com_err.info /usr/share/info\n"
+"install-info --dir-file=/usr/share/info/dir "
+"/usr/share/info/com_err.info</userinput>"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><title>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/e2fsprogs.xml:148
+msgid "Contents of E2fsprogs"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><segmentedlist><segtitle>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/e2fsprogs.xml:151
+msgid "Installed programs"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><segmentedlist><segtitle>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/e2fsprogs.xml:152
+msgid "Installed libraries"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><segmentedlist><segtitle>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/e2fsprogs.xml:153
+msgid "Installed directories"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><segmentedlist><seglistitem><seg>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/e2fsprogs.xml:156
+msgid ""
+"badblocks, chattr, compile_et, debugfs, dumpe2fs, e2freefrag, e2fsck, "
+"e2image, e2label, e2mmpstatus, e2scrub, e2scrub_all, e2undo, e4crypt, "
+"e4defrag, filefrag, fsck.ext2, fsck.ext3, fsck.ext4, logsave, lsattr, "
+"mk_cmds, mke2fs, mkfs.ext2, mkfs.ext3, mkfs.ext4, mklost+found, resize2fs, "
+"and tune2fs"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><segmentedlist><seglistitem><seg>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/e2fsprogs.xml:162
+msgid "libcom_err.so, libe2p.so, libext2fs.so, and libss.so"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><segmentedlist><seglistitem><seg>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/e2fsprogs.xml:163
+msgid ""
+"/usr/include/e2p, /usr/include/et, /usr/include/ext2fs, /usr/include/ss, "
+"/usr/lib/e2fsprogs, /usr/share/et, and /usr/share/ss"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><bridgehead>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/e2fsprogs.xml:170
+msgid "Short Descriptions"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/e2fsprogs.xml:171
+msgid "<?dbfo list-presentation=\"list\"?> <?dbhtml list-presentation=\"table\"?>"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/e2fsprogs.xml:175
+msgid "<command>badblocks</command>"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/e2fsprogs.xml:177
+msgid "Searches a device (usually a disk partition) for bad blocks"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/e2fsprogs.xml:180
+msgid "badblocks"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/e2fsprogs.xml:186
+msgid "<command>chattr</command>"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/e2fsprogs.xml:188
+msgid ""
+"Changes the attributes of files on an <systemitem "
+"class=\"filesystem\">ext2</systemitem> file system; it also changes "
+"<systemitem class=\"filesystem\">ext3</systemitem> file systems, the "
+"journaling version of <systemitem class=\"filesystem\">ext2</systemitem> "
+"file systems"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/e2fsprogs.xml:194
+msgid "chattr"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/e2fsprogs.xml:200
+msgid "<command>compile_et</command>"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/e2fsprogs.xml:202
+msgid ""
+"An error table compiler; it converts a table of error-code names and "
+"messages into a C source file suitable for use with the <filename "
+"class=\"libraryfile\">com_err</filename> library"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/e2fsprogs.xml:206
+msgid "compile_et"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/e2fsprogs.xml:212
+msgid "<command>debugfs</command>"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/e2fsprogs.xml:214
+msgid ""
+"A file system debugger; it can be used to examine and change the state of an "
+"<systemitem class=\"filesystem\">ext2</systemitem> file system"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/e2fsprogs.xml:218
+msgid "debugfs"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/e2fsprogs.xml:224
+msgid "<command>dumpe2fs</command>"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/e2fsprogs.xml:226
+msgid ""
+"Prints the super block and blocks group information for the file system "
+"present on a given device"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/e2fsprogs.xml:229
+msgid "dumpe2fs"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/e2fsprogs.xml:235
+msgid "<command>e2freefrag</command>"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/e2fsprogs.xml:237
+msgid "Reports free space fragmentation information"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/e2fsprogs.xml:239
+msgid "e2freefrag"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/e2fsprogs.xml:245
+msgid "<command>e2fsck</command>"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/e2fsprogs.xml:247
+msgid ""
+"Is used to check, and optionally repair <systemitem "
+"class=\"filesystem\">ext2</systemitem> file systems and <systemitem "
+"class=\"filesystem\">ext3</systemitem> file systems"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/e2fsprogs.xml:251
+msgid "e2fsck"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/e2fsprogs.xml:257
+msgid "<command>e2image</command>"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/e2fsprogs.xml:259
+msgid ""
+"Is used to save critical <systemitem class=\"filesystem\">ext2</systemitem> "
+"file system data to a file"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/e2fsprogs.xml:262
+msgid "e2image"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/e2fsprogs.xml:268
+msgid "<command>e2label</command>"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/e2fsprogs.xml:270
+msgid ""
+"Displays or changes the file system label on the <systemitem "
+"class=\"filesystem\">ext2</systemitem> file system present on a given device"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/e2fsprogs.xml:274
+msgid "e2label"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/e2fsprogs.xml:280
+msgid "<command>e2mmpstatus</command>"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/e2fsprogs.xml:282
+msgid "Checks MMP status of an ext4 filesystem"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/e2fsprogs.xml:284
+msgid "e2mmpstatus"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/e2fsprogs.xml:290
+msgid "<command>e2scrub</command>"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/e2fsprogs.xml:292
+msgid "Checks the contents of a mounted ext[234] filesystem"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/e2fsprogs.xml:294
+msgid "e2scrub"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/e2fsprogs.xml:300
+msgid "<command>e2scrub_all</command>"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/e2fsprogs.xml:302
+msgid "Checks all mounted ext[234] filesystems for errors"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/e2fsprogs.xml:304
+msgid "e2scrub_all"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/e2fsprogs.xml:310
+msgid "<command>e2undo</command>"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/e2fsprogs.xml:312
+msgid ""
+"Replays the undo log undo_log for an ext2/ext3/ext4 filesystem found on a "
+"device [This can be used to undo a failed operation by an e2fsprogs "
+"program.]"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/e2fsprogs.xml:316
+msgid "e2undo"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/e2fsprogs.xml:322
+msgid "<command>e4crypt</command>"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/e2fsprogs.xml:324
+msgid "Ext4 filesystem encryption utility"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/e2fsprogs.xml:326
+msgid "e4crypt"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/e2fsprogs.xml:332
+msgid "<command>e4defrag</command>"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/e2fsprogs.xml:334
+msgid "Online defragmenter for ext4 filesystems"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/e2fsprogs.xml:336
+msgid "e4defrag"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/e2fsprogs.xml:342
+msgid "<command>filefrag</command>"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/e2fsprogs.xml:344
+msgid "Reports on how badly fragmented a particular file might be"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/e2fsprogs.xml:346
+msgid "filefrag"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/e2fsprogs.xml:352
+msgid "<command>fsck.ext2</command>"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/e2fsprogs.xml:354
+msgid ""
+"By default checks <systemitem class=\"filesystem\">ext2</systemitem> file "
+"systems and is a hard link to <command>e2fsck</command>"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/e2fsprogs.xml:357
+msgid "fsck.ext2"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/e2fsprogs.xml:363
+msgid "<command>fsck.ext3</command>"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/e2fsprogs.xml:365
+msgid ""
+"By default checks <systemitem class=\"filesystem\">ext3</systemitem> file "
+"systems and is a hard link to <command>e2fsck</command>"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/e2fsprogs.xml:368
+msgid "fsck.ext3"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/e2fsprogs.xml:374
+msgid "<command>fsck.ext4</command>"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/e2fsprogs.xml:376
+msgid ""
+"By default checks <systemitem class=\"filesystem\">ext4</systemitem> file "
+"systems and is a hard link to <command>e2fsck</command>"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/e2fsprogs.xml:379
+msgid "fsck.ext4"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/e2fsprogs.xml:385
+msgid "<command>logsave</command>"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/e2fsprogs.xml:387
+msgid "Saves the output of a command in a log file"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/e2fsprogs.xml:389
+msgid "logsave"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/e2fsprogs.xml:395
+msgid "<command>lsattr</command>"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/e2fsprogs.xml:397
+msgid "Lists the attributes of files on a second extended file system"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/e2fsprogs.xml:400
+msgid "lsattr"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/e2fsprogs.xml:406
+msgid "<command>mk_cmds</command>"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/e2fsprogs.xml:408
+msgid ""
+"Converts a table of command names and help messages into a C source file "
+"suitable for use with the <filename class=\"libraryfile\">libss</filename> "
+"subsystem library"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/e2fsprogs.xml:412
+msgid "mk_cmds"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/e2fsprogs.xml:418
+msgid "<command>mke2fs</command>"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/e2fsprogs.xml:420
+msgid ""
+"Creates an <systemitem class=\"filesystem\">ext2</systemitem> or <systemitem "
+"class=\"filesystem\">ext3</systemitem> file system on the given device"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/e2fsprogs.xml:424
+msgid "mke2fs"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/e2fsprogs.xml:430
+msgid "<command>mkfs.ext2</command>"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/e2fsprogs.xml:432
+msgid ""
+"By default creates <systemitem class=\"filesystem\">ext2</systemitem> file "
+"systems and is a hard link to <command>mke2fs</command>"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/e2fsprogs.xml:435
+msgid "mkfs.ext2"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/e2fsprogs.xml:441
+msgid "<command>mkfs.ext3</command>"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/e2fsprogs.xml:443
+msgid ""
+"By default creates <systemitem class=\"filesystem\">ext3</systemitem> file "
+"systems and is a hard link to <command>mke2fs</command>"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/e2fsprogs.xml:446
+msgid "mkfs.ext3"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/e2fsprogs.xml:452
+msgid "<command>mkfs.ext4</command>"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/e2fsprogs.xml:454
+msgid ""
+"By default creates <systemitem class=\"filesystem\">ext4</systemitem> file "
+"systems and is a hard link to <command>mke2fs</command>"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/e2fsprogs.xml:457
+msgid "mkfs.ext4"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/e2fsprogs.xml:463
+msgid "<command>mklost+found</command>"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/e2fsprogs.xml:465
+msgid ""
+"Used to create a <filename class=\"directory\">lost+found</filename> "
+"directory on an <systemitem class=\"filesystem\">ext2</systemitem> file "
+"system; it pre-allocates disk blocks to this directory to lighten the task "
+"of <command>e2fsck</command>"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/e2fsprogs.xml:470
+msgid "mklost+found"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/e2fsprogs.xml:476
+msgid "<command>resize2fs</command>"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/e2fsprogs.xml:478
+msgid ""
+"Can be used to enlarge or shrink an <systemitem "
+"class=\"filesystem\">ext2</systemitem> file system"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/e2fsprogs.xml:481
+msgid "resize2fs"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/e2fsprogs.xml:487
+msgid "<command>tune2fs</command>"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/e2fsprogs.xml:489
+msgid ""
+"Adjusts tunable file system parameters on an <systemitem "
+"class=\"filesystem\">ext2</systemitem> file system"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/e2fsprogs.xml:492
+msgid "tune2fs"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/e2fsprogs.xml:498
+msgid "<filename class=\"libraryfile\">libcom_err</filename>"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/e2fsprogs.xml:500
+msgid "The common error display routine"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/e2fsprogs.xml:502
+msgid "libcom_err"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/e2fsprogs.xml:508
+msgid "<filename class=\"libraryfile\">libe2p</filename>"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/e2fsprogs.xml:510
+msgid ""
+"Used by <command>dumpe2fs</command>, <command>chattr</command>, and "
+"<command>lsattr</command>"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/e2fsprogs.xml:513
+msgid "libe2p"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/e2fsprogs.xml:519
+msgid "<filename class=\"libraryfile\">libext2fs</filename>"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/e2fsprogs.xml:521
+msgid ""
+"Contains routines to enable user-level programs to manipulate an <systemitem "
+"class=\"filesystem\">ext2</systemitem> file system"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/e2fsprogs.xml:524
+msgid "libext2fs"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/e2fsprogs.xml:530
+msgid "<filename class=\"libraryfile\">libss</filename>"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/e2fsprogs.xml:532
+msgid "Used by <command>debugfs</command>"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/e2fsprogs.xml:534
+msgid "libss"
+msgstr ""

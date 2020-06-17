@@ -1,0 +1,125 @@
+# SOME DESCRIPTIVE TITLE
+# Copyright (C) YEAR Free Software Foundation, Inc.
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"POT-Creation-Date: 2020-06-17 12:44+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#. type: Content of: <sect1><title>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter09/introduction.xml:11
+msgid "Introduction"
+msgstr ""
+
+#. type: Content of: <sect1><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter09/introduction.xml:13
+msgid ""
+"Booting a Linux system involves several tasks.  The process must mount both "
+"virtual and real file systems, initialize devices, activate swap, check file "
+"systems for integrity, mount any swap partitions or files, set the system "
+"clock, bring up networking, start any daemons required by the system, and "
+"accomplish any other custom tasks needed by the user.  This process must be "
+"organized to ensure the tasks are performed in the correct order but, at the "
+"same time, be executed as fast as possible."
+msgstr ""
+
+#. type: Content of: <sect1><sect2><title>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter09/introduction.xml:22
+msgid "System V"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter09/introduction.xml:24
+msgid ""
+"System V is the classic boot process that has been used in Unix and "
+"Unix-like systems such as Linux since about 1983.  It consists of a small "
+"program, <command>init</command>, that sets up basic programs such as "
+"<command>login</command> (via getty) and runs a script.  This script, "
+"usually named <command>rc</command>, controls the execution of a set of "
+"additional scripts that perform the tasks required to initialize the system."
+msgstr ""
+
+#. type: Content of: <sect1><sect2><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter09/introduction.xml:32
+msgid ""
+"The <command>init</command> program is controlled by the "
+"<filename>/etc/inittab</filename> file and is organized into run levels that "
+"can be run by the user:"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><literallayout>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter09/introduction.xml:36
+#, no-wrap
+msgid ""
+"0 &mdash; halt\n"
+"1 &mdash; Single user mode\n"
+"2 &mdash; Multiuser, without networking\n"
+"3 &mdash; Full multiuser mode\n"
+"4 &mdash; User definable\n"
+"5 &mdash; Full multiuser mode with display manager\n"
+"6 &mdash; reboot"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter09/introduction.xml:44
+msgid "The usual default run level is 3 or 5."
+msgstr ""
+
+#. type: Content of: <sect1><sect2><bridgehead>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter09/introduction.xml:46
+msgid "Advantages"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><itemizedlist><listitem><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter09/introduction.xml:50
+msgid "Established, well understood system."
+msgstr ""
+
+#. type: Content of: <sect1><sect2><itemizedlist><listitem><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter09/introduction.xml:54
+msgid "Easy to customize."
+msgstr ""
+
+#. type: Content of: <sect1><sect2><bridgehead>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter09/introduction.xml:60
+msgid "Disadvantages"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><itemizedlist><listitem><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter09/introduction.xml:64
+msgid ""
+"May be slower to boot.  A medium speed base LFS system takes 8-12 seconds "
+"where the boot time is measured from the first kernel message to the login "
+"prompt.  Network connectivity is typically established about 2 seconds after "
+"the login prompt."
+msgstr ""
+
+#. type: Content of: <sect1><sect2><itemizedlist><listitem><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter09/introduction.xml:72
+msgid ""
+"Serial processing of boot tasks. This is related to the previous point.  A "
+"delay in any process such as a file system check, will delay the entire boot "
+"process."
+msgstr ""
+
+#. type: Content of: <sect1><sect2><itemizedlist><listitem><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter09/introduction.xml:78
+msgid ""
+"Does not directly support advanced features like control groups (cgroups), "
+"and per-user fair share scheduling."
+msgstr ""
+
+#. type: Content of: <sect1><sect2><itemizedlist><listitem><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter09/introduction.xml:83
+msgid "Adding scripts requires manual, static sequencing decisions."
+msgstr ""

@@ -1,0 +1,139 @@
+# SOME DESCRIPTIVE TITLE
+# Copyright (C) YEAR Free Software Foundation, Inc.
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"POT-Creation-Date: 2020-06-17 12:44+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#. type: Content of: <sect1><title>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter07/kernfs.xml:11
+msgid "Preparing Virtual Kernel File Systems"
+msgstr ""
+
+#. type: Content of: <sect1><indexterm><primary>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter07/kernfs.xml:14
+msgid "/dev/*"
+msgstr ""
+
+#. type: Content of: <sect1><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter07/kernfs.xml:17
+msgid ""
+"Various file systems exported by the kernel are used to communicate to and "
+"from the kernel itself. These file systems are virtual in that no disk space "
+"is used for them. The content of the file systems resides in memory."
+msgstr ""
+
+#. type: Content of: <sect1><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter07/kernfs.xml:22
+msgid "Begin by creating directories onto which the file systems will be mounted:"
+msgstr ""
+
+#. type: Content of: <sect1><screen>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter07/kernfs.xml:25
+#, no-wrap
+msgid "<userinput>mkdir -pv $LFS/{dev,proc,sys,run}</userinput>"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><title>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter07/kernfs.xml:28
+msgid "Creating Initial Device Nodes"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter07/kernfs.xml:30
+msgid ""
+"When the kernel boots the system, it requires the presence of a few device "
+"nodes, in particular the <filename class=\"devicefile\">console</filename> "
+"and <filename class=\"devicefile\">null</filename> devices. The device nodes "
+"must be created on the hard disk so that they are available before the "
+"kernel populates <systemitem class=\"filesystem\">/dev</systemitem>), and "
+"additionally when Linux is started with "
+"<parameter>init=/bin/bash</parameter>. Create the devices by running the "
+"following commands:"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><screen>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter07/kernfs.xml:40
+#, no-wrap
+msgid ""
+"<userinput>mknod -m 600 $LFS/dev/console c 5 1\n"
+"mknod -m 666 $LFS/dev/null c 1 3</userinput>"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><title>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter07/kernfs.xml:46
+msgid "Mounting and Populating /dev"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter07/kernfs.xml:48
+msgid ""
+"The recommended method of populating the <filename "
+"class=\"directory\">/dev</filename> directory with devices is to mount a "
+"virtual filesystem (such as <systemitem "
+"class=\"filesystem\">tmpfs</systemitem>) on the <filename "
+"class=\"directory\">/dev</filename> directory, and allow the devices to be "
+"created dynamically on that virtual filesystem as they are detected or "
+"accessed. Device creation is generally done during the boot process by "
+"Udev. Since this new system does not yet have Udev and has not yet been "
+"booted, it is necessary to mount and populate <filename "
+"class=\"directory\">/dev</filename> manually. This is accomplished by bind "
+"mounting the host system's <filename class=\"directory\">/dev</filename> "
+"directory. A bind mount is a special type of mount that allows you to create "
+"a mirror of a directory or mount point to some other location. Use the "
+"following command to achieve this:"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><screen>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter07/kernfs.xml:63
+#, no-wrap
+msgid "<userinput>mount -v --bind /dev $LFS/dev</userinput>"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><title>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter07/kernfs.xml:68
+msgid "Mounting Virtual Kernel File Systems"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter07/kernfs.xml:70
+msgid "Now mount the remaining virtual kernel filesystems:"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><screen>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter07/kernfs.xml:72
+#, no-wrap
+msgid ""
+"<userinput>mount -v --bind /dev/pts $LFS/dev/pts\n"
+"mount -vt proc proc $LFS/proc\n"
+"mount -vt sysfs sysfs $LFS/sys\n"
+"mount -vt tmpfs tmpfs $LFS/run</userinput>"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter07/kernfs.xml:105
+msgid ""
+"In some host systems, <filename>/dev/shm</filename> is a symbolic link to "
+"<filename class=\"directory\">/run/shm</filename>.  The /run tmpfs was "
+"mounted above so in this case only a directory needs to be created."
+msgstr ""
+
+#. type: Content of: <sect1><sect2><screen>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter07/kernfs.xml:110
+#, no-wrap
+msgid ""
+"<userinput>if [ -h $LFS/dev/shm ]; then\n"
+"  mkdir -pv $LFS/$(readlink $LFS/dev/shm)\n"
+"fi</userinput>"
+msgstr ""

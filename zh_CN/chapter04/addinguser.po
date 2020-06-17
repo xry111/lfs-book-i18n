@@ -1,0 +1,189 @@
+# SOME DESCRIPTIVE TITLE
+# Copyright (C) YEAR Free Software Foundation, Inc.
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"POT-Creation-Date: 2020-06-17 12:44+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#. type: Content of: <sect1><title>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter04/addinguser.xml:11
+msgid "Adding the LFS User"
+msgstr ""
+
+#. type: Content of: <sect1><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter04/addinguser.xml:13
+msgid ""
+"When logged in as user <systemitem class=\"username\">root</systemitem>, "
+"making a single mistake can damage or destroy a system. Therefore, the "
+"packages in the next two chapters are built as an unprivileged user.  You "
+"could use your own user name, but to make it easier to set up a clean "
+"working environment, create a new user called <systemitem "
+"class=\"username\">lfs</systemitem> as a member of a new group (also named "
+"<systemitem class=\"groupname\">lfs</systemitem>) and use this user during "
+"the installation process. As <systemitem "
+"class=\"username\">root</systemitem>, issue the following commands to add "
+"the new user:"
+msgstr ""
+
+#. type: Content of: <sect1><screen>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter04/addinguser.xml:23
+#, no-wrap
+msgid ""
+"<userinput>groupadd lfs\n"
+"useradd -s /bin/bash -g lfs -m -k /dev/null lfs</userinput>"
+msgstr ""
+
+#. type: Content of: <sect1><variablelist><title>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter04/addinguser.xml:27
+msgid "The meaning of the command line options:"
+msgstr ""
+
+#. type: Content of: <sect1><variablelist><varlistentry><term>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter04/addinguser.xml:30
+msgid "<parameter>-s /bin/bash</parameter>"
+msgstr ""
+
+#. type: Content of: <sect1><variablelist><varlistentry><listitem><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter04/addinguser.xml:32
+msgid ""
+"This makes <command>bash</command> the default shell for user <systemitem "
+"class=\"username\">lfs</systemitem>."
+msgstr ""
+
+#. type: Content of: <sect1><variablelist><varlistentry><term>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter04/addinguser.xml:38
+msgid "<parameter>-g lfs</parameter>"
+msgstr ""
+
+#. type: Content of: <sect1><variablelist><varlistentry><listitem><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter04/addinguser.xml:40
+msgid ""
+"This option adds user <systemitem class=\"username\">lfs</systemitem> to "
+"group <systemitem class=\"groupname\">lfs</systemitem>."
+msgstr ""
+
+#. type: Content of: <sect1><variablelist><varlistentry><term>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter04/addinguser.xml:46
+msgid "<parameter>-m</parameter>"
+msgstr ""
+
+#. type: Content of: <sect1><variablelist><varlistentry><listitem><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter04/addinguser.xml:48
+msgid ""
+"This creates a home directory for <systemitem "
+"class=\"username\">lfs</systemitem>."
+msgstr ""
+
+#. type: Content of: <sect1><variablelist><varlistentry><term>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter04/addinguser.xml:54
+msgid "<parameter>-k /dev/null</parameter>"
+msgstr ""
+
+#. type: Content of: <sect1><variablelist><varlistentry><listitem><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter04/addinguser.xml:56
+msgid ""
+"This parameter prevents possible copying of files from a skeleton directory "
+"(default is <filename class=\"directory\">/etc/skel</filename>)  by changing "
+"the input location to the special null device."
+msgstr ""
+
+#. type: Content of: <sect1><variablelist><varlistentry><term>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter04/addinguser.xml:63
+msgid "<parameter>lfs</parameter>"
+msgstr ""
+
+#. type: Content of: <sect1><variablelist><varlistentry><listitem><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter04/addinguser.xml:65
+msgid "This is the actual name for the created user."
+msgstr ""
+
+#. type: Content of: <sect1><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter04/addinguser.xml:71
+msgid ""
+"To log in as <systemitem class=\"username\">lfs</systemitem> (as opposed to "
+"switching to user <systemitem class=\"username\">lfs</systemitem> when "
+"logged in as <systemitem class=\"username\">root</systemitem>, which does "
+"not require the <systemitem class=\"username\">lfs</systemitem> user to have "
+"a password), give <systemitem class=\"username\">lfs</systemitem> a "
+"password:"
+msgstr ""
+
+#. type: Content of: <sect1><screen>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter04/addinguser.xml:77
+#, no-wrap
+msgid "<userinput>passwd lfs</userinput>"
+msgstr ""
+
+#. type: Content of: <sect1><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter04/addinguser.xml:79
+msgid ""
+"Grant <systemitem class=\"username\">lfs</systemitem> full access to all "
+"directories under <filename class=\"directory\">$LFS</filename> by making "
+"<systemitem class=\"username\">lfs</systemitem> the directory owner:"
+msgstr ""
+
+#. type: Content of: <sect1><screen>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter04/addinguser.xml:83
+#, no-wrap
+msgid ""
+"<userinput>chown -v lfs $LFS/{usr,lib,var,etc,bin,sbin,tools}\n"
+"case $(uname -m) in\n"
+"  x86_64) chown -v lfs $LFS/lib64 ;;\n"
+"esac</userinput>"
+msgstr ""
+
+#. type: Content of: <sect1><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter04/addinguser.xml:88
+msgid ""
+"If a separate working directory was created as suggested, give user "
+"<systemitem class=\"username\">lfs</systemitem> ownership of this directory:"
+msgstr ""
+
+#. type: Content of: <sect1><screen>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter04/addinguser.xml:92
+#, no-wrap
+msgid "<userinput>chown -v lfs $LFS/sources</userinput>"
+msgstr ""
+
+#. type: Content of: <sect1><note><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter04/addinguser.xml:94
+msgid ""
+"In some host systems, the following command does not complete properly and "
+"suspends the login to the lfs user to the background.  If the prompt "
+"\"lfs:~$\" does not appear immediately, entering the <command>fg</command> "
+"command will fix the issue."
+msgstr ""
+
+#. type: Content of: <sect1><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter04/addinguser.xml:99
+msgid ""
+"Next, login as user <systemitem class=\"username\">lfs</systemitem>.  This "
+"can be done via a virtual console, through a display manager, or with the "
+"following substitute/switch user command:"
+msgstr ""
+
+#. type: Content of: <sect1><screen>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter04/addinguser.xml:103
+#, no-wrap
+msgid "<userinput>su - lfs</userinput>"
+msgstr ""
+
+#. type: Content of: <sect1><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter04/addinguser.xml:105
+msgid ""
+"The <quote><parameter>-</parameter></quote> instructs <command>su</command> "
+"to start a login shell as opposed to a non-login shell.  The difference "
+"between these two types of shells can be found in detail in "
+"<filename>bash(1)</filename> and <command>info bash</command>."
+msgstr ""

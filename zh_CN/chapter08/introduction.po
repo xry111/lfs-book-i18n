@@ -1,0 +1,114 @@
+# SOME DESCRIPTIVE TITLE
+# Copyright (C) YEAR Free Software Foundation, Inc.
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"POT-Creation-Date: 2020-06-17 12:44+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#. type: Content of: <sect1><title>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/introduction.xml:11
+msgid "Introduction"
+msgstr ""
+
+#. type: Content of: <sect1><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/introduction.xml:13
+msgid "In this chapter, we start constructing the LFS system in earnest."
+msgstr ""
+
+#. type: Content of: <sect1><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/introduction.xml:16
+msgid ""
+"The installation of this software is straightforward. Although in many cases "
+"the installation instructions could be made shorter and more generic, we "
+"have opted to provide the full instructions for every package to minimize "
+"the possibilities for mistakes.  The key to learning what makes a Linux "
+"system work is to know what each package is used for and why you (or the "
+"system)  may need it."
+msgstr ""
+
+#. type: Content of: <sect1><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/introduction.xml:23
+msgid ""
+"We do not recommend using optimizations.  They can make a program run "
+"slightly faster, but they may also cause compilation difficulties and "
+"problems when running the program.  If a package refuses to compile when "
+"using optimization, try to compile it without optimization and see if that "
+"fixes the problem. Even if the package does compile when using optimization, "
+"there is the risk it may have been compiled incorrectly because of the "
+"complex interactions between the code and build tools.  Also note that the "
+"<option>-march</option> and <option>-mtune</option> options using values not "
+"specified in the book have not been tested. This may cause problems with the "
+"toolchain packages (Binutils, GCC and Glibc).  The small potential gains "
+"achieved in using compiler optimizations are often outweighed by the risks.  "
+"First-time builders of LFS are encouraged to build without custom "
+"optimizations. The subsequent system will still run very fast and be stable "
+"at the same time."
+msgstr ""
+
+#. type: Content of: <sect1><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/introduction.xml:38
+msgid ""
+"Before the installation instructions, each installation page provides "
+"information about the package, including a concise description of what it "
+"contains, approximately how long it will take to build, and how much disk "
+"space is required during this building process. Following the installation "
+"instructions, there is a list of programs and libraries (along with brief "
+"descriptions) that the package installs."
+msgstr ""
+
+#. type: Content of: <sect1><note><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/introduction.xml:45
+msgid ""
+"The SBU values and required disk space includes test suite data for all "
+"applicable packages in <xref linkend=\"chapter-building-system\"/>. SBU "
+"values have been calculated using a single CPU core (-j1) for all "
+"operations."
+msgstr ""
+
+#. type: Content of: <sect1><sect2><title>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/introduction.xml:51
+msgid "About libraries"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/introduction.xml:53
+msgid ""
+"In general, the LFS editors discourage building and installing static "
+"libraries.  The original purpose for most static libraries has been made "
+"obsolete in a modern Linux system.  In addition, linking a static library "
+"into a program can be detrimental.  If an update to the library is needed to "
+"remove a security problem, all programs that use the static library will "
+"need to be relinked to the new library.  Since the use of static libraries "
+"is not always obvious, the relevant programs (and the procedures needed to "
+"do the linking) may not even be known."
+msgstr ""
+
+#. type: Content of: <sect1><sect2><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/introduction.xml:62
+msgid ""
+"In the procedures in this chapter, we remove or disable installation of most "
+"static libraries. Usually this is done by passing a "
+"<option>--disable-static</option> option to <command>configure</command>.  "
+"In other cases, alternate means are needed. In a few cases, especially glibc "
+"and gcc, the use of static libraries remains essential to the general "
+"package building process."
+msgstr ""
+
+#. type: Content of: <sect1><sect2><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/introduction.xml:69
+msgid ""
+"For a more complete discussion of libraries, see the discussion <ulink "
+"url=\"&blfs-root;/view/&short-version;/introduction/libraries.html\"> "
+"Libraries: Static or shared?</ulink> in the BLFS book."
+msgstr ""

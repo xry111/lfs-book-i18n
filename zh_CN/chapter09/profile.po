@@ -1,0 +1,260 @@
+# SOME DESCRIPTIVE TITLE
+# Copyright (C) YEAR Free Software Foundation, Inc.
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"POT-Creation-Date: 2020-06-17 12:44+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#. type: Content of: <sect1><title>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter09/profile.xml:11
+msgid "The Bash Shell Startup Files"
+msgstr ""
+
+#. type: Content of: <sect1><indexterm><primary>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter09/profile.xml:14
+msgid "/etc/profile"
+msgstr ""
+
+#. type: Content of: <sect1><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter09/profile.xml:17
+msgid ""
+"The shell program <command>/bin/bash</command> (hereafter referred to as "
+"<quote>the shell</quote>) uses a collection of startup files to help create "
+"an environment to run in. Each file has a specific use and may affect login "
+"and interactive environments differently. The files in the <filename "
+"class=\"directory\">/etc</filename> directory provide global settings. If an "
+"equivalent file exists in the home directory, it may override the global "
+"settings."
+msgstr ""
+
+#. type: Content of: <sect1><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter09/profile.xml:25
+msgid ""
+"An interactive login shell is started after a successful login, using "
+"<command>/bin/login</command>, by reading the "
+"<filename>/etc/passwd</filename> file. An interactive non-login shell is "
+"started at the command-line (e.g., "
+"<prompt>[prompt]$</prompt><command>/bin/bash</command>). A non-interactive "
+"shell is usually present when a shell script is running. It is "
+"non-interactive because it is processing a script and not waiting for user "
+"input between commands."
+msgstr ""
+
+#. type: Content of: <sect1><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter09/profile.xml:33
+msgid ""
+"For more information, see <command>info bash</command> under the "
+"<emphasis>Bash Startup Files and Interactive Shells</emphasis> section."
+msgstr ""
+
+#. type: Content of: <sect1><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter09/profile.xml:36
+msgid ""
+"The files <filename>/etc/profile</filename> and "
+"<filename>~/.bash_profile</filename> are read when the shell is invoked as "
+"an interactive login shell."
+msgstr ""
+
+#. type: Content of: <sect1><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter09/profile.xml:40
+msgid ""
+"The base <filename>/etc/profile</filename> below sets some environment "
+"variables necessary for native language support. Setting them properly "
+"results in:"
+msgstr ""
+
+#. type: Content of: <sect1><itemizedlist><listitem><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter09/profile.xml:46
+msgid "The output of programs translated into the native language"
+msgstr ""
+
+#. type: Content of: <sect1><itemizedlist><listitem><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter09/profile.xml:49
+msgid ""
+"Correct classification of characters into letters, digits and other "
+"classes. This is necessary for <command>bash</command> to properly accept "
+"non-ASCII characters in command lines in non-English locales"
+msgstr ""
+
+#. type: Content of: <sect1><itemizedlist><listitem><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter09/profile.xml:54
+msgid "The correct alphabetical sorting order for the country"
+msgstr ""
+
+#. type: Content of: <sect1><itemizedlist><listitem><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter09/profile.xml:57
+msgid "Appropriate default paper size"
+msgstr ""
+
+#. type: Content of: <sect1><itemizedlist><listitem><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter09/profile.xml:60
+msgid "Correct formatting of monetary, time, and date values"
+msgstr ""
+
+#. type: Content of: <sect1><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter09/profile.xml:64
+msgid ""
+"Replace <replaceable>&lt;ll&gt;</replaceable> below with the two-letter code "
+"for the desired language (e.g., <quote>en</quote>) and "
+"<replaceable>&lt;CC&gt;</replaceable> with the two-letter code for the "
+"appropriate country (e.g., "
+"<quote>GB</quote>). <replaceable>&lt;charmap&gt;</replaceable> should be "
+"replaced with the canonical charmap for your chosen locale. Optional "
+"modifiers such as <quote>@euro</quote> may also be present."
+msgstr ""
+
+#. type: Content of: <sect1><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter09/profile.xml:71
+msgid ""
+"The list of all locales supported by Glibc can be obtained by running the "
+"following command:"
+msgstr ""
+
+#. type: Content of: <sect1><screen>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter09/profile.xml:74
+#, no-wrap
+msgid "<userinput>locale -a</userinput>"
+msgstr ""
+
+#. type: Content of: <sect1><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter09/profile.xml:76
+msgid ""
+"Charmaps can have a number of aliases, e.g., <quote>ISO-8859-1</quote> is "
+"also referred to as <quote>iso8859-1</quote> and <quote>iso88591</quote>.  "
+"Some applications cannot handle the various synonyms correctly (e.g., "
+"require that <quote>UTF-8</quote> is written as <quote>UTF-8</quote>, not "
+"<quote>utf8</quote>), so it is safest in most cases to choose the canonical "
+"name for a particular locale. To determine the canonical name, run the "
+"following command, where <replaceable>&lt;locale name&gt;</replaceable> is "
+"the output given by <command>locale -a</command> for your preferred locale "
+"(<quote>en_GB.iso88591</quote> in our example)."
+msgstr ""
+
+#. type: Content of: <sect1><screen>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter09/profile.xml:86
+#, no-wrap
+msgid ""
+"<userinput>LC_ALL=<replaceable>&lt;locale name&gt;</replaceable> locale "
+"charmap</userinput>"
+msgstr ""
+
+#. type: Content of: <sect1><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter09/profile.xml:88
+msgid "For the <quote>en_GB.iso88591</quote> locale, the above command will print:"
+msgstr ""
+
+#. type: Content of: <sect1><screen>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter09/profile.xml:91
+#, no-wrap
+msgid "<computeroutput>ISO-8859-1</computeroutput>"
+msgstr ""
+
+#. type: Content of: <sect1><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter09/profile.xml:93
+msgid ""
+"This results in a final locale setting of <quote>en_GB.ISO-8859-1</quote>.  "
+"It is important that the locale found using the heuristic above is tested "
+"prior to it being added to the Bash startup files:"
+msgstr ""
+
+#. type: Content of: <sect1><screen>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter09/profile.xml:97
+#, no-wrap
+msgid ""
+"<userinput>LC_ALL=&lt;locale name&gt; locale language\n"
+"LC_ALL=&lt;locale name&gt; locale charmap\n"
+"LC_ALL=&lt;locale name&gt; locale int_curr_symbol\n"
+"LC_ALL=&lt;locale name&gt; locale int_prefix</userinput>"
+msgstr ""
+
+#. type: Content of: <sect1><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter09/profile.xml:102
+msgid ""
+"The above commands should print the language name, the character encoding "
+"used by the locale, the local currency, and the prefix to dial before the "
+"telephone number in order to get into the country. If any of the commands "
+"above fail with a message similar to the one shown below, this means that "
+"your locale was either not installed in <xref linkend=\"ch-system-glibc\"/> "
+"or is not supported by the default installation of Glibc."
+msgstr ""
+
+#. type: Content of: <sect1><screen>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter09/profile.xml:109
+#, no-wrap
+msgid ""
+"<computeroutput>locale: Cannot set LC_* to default locale: No such file or "
+"directory</computeroutput>"
+msgstr ""
+
+#. type: Content of: <sect1><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter09/profile.xml:111
+msgid ""
+"If this happens, you should either install the desired locale using the "
+"<command>localedef</command> command, or consider choosing a different "
+"locale.  Further instructions assume that there are no such error messages "
+"from Glibc."
+msgstr ""
+
+#. type: Content of: <sect1><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter09/profile.xml:132
+msgid ""
+"Other packages can also function incorrectly (but may not necessarily "
+"display any error messages) if the locale name does not meet their "
+"expectations.  In those cases, investigating how other Linux distributions "
+"support your locale might provide some useful information."
+msgstr ""
+
+#. type: Content of: <sect1><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter09/profile.xml:137
+msgid ""
+"Once the proper locale settings have been determined, create the "
+"<filename>/etc/profile</filename> file:"
+msgstr ""
+
+#. type: Content of: <sect1><screen>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter09/profile.xml:140
+#, no-wrap
+msgid ""
+"<userinput>cat &gt; /etc/profile &lt;&lt; \"EOF\"\n"
+"<literal># Begin /etc/profile\n"
+"\n"
+"export "
+"LANG=<replaceable>&lt;ll&gt;_&lt;CC&gt;.&lt;charmap&gt;&lt;@modifiers&gt;</replaceable>\n"
+"\n"
+"# End /etc/profile</literal>\n"
+"EOF</userinput>"
+msgstr ""
+
+#. type: Content of: <sect1><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter09/profile.xml:148
+msgid ""
+"The <quote>C</quote> (default) and <quote>en_US.utf8</quote> (the "
+"recommended one for United States English users) locales are "
+"different. <quote>C</quote> uses the US-ASCII 7-bit character set, and "
+"treats bytes with the high bit set as invalid characters. That's why, e.g., "
+"the <command>ls</command> command substitutes them with question marks in "
+"that locale. Also, an attempt to send mail with such characters from Mutt or "
+"Pine results in non-RFC-conforming messages being sent (the charset in the "
+"outgoing mail is indicated as <quote>unknown 8-bit</quote>). So you can use "
+"the <quote>C</quote> locale only if you are sure that you will never need "
+"8-bit characters."
+msgstr ""
+
+#. type: Content of: <sect1><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter09/profile.xml:158
+msgid ""
+"UTF-8 based locales are not supported well by some programs.  Work is in "
+"progress to document and, if possible, fix such problems, see <ulink "
+"url=\"&blfs-book;introduction/locale-issues.html\"/>."
+msgstr ""

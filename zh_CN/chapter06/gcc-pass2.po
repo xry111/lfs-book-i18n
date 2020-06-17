@@ -1,0 +1,263 @@
+# SOME DESCRIPTIVE TITLE
+# Copyright (C) YEAR Free Software Foundation, Inc.
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"POT-Creation-Date: 2020-06-17 12:44+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#. type: Content of: <sect1><sect1info><address>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter06/gcc-pass2.xml:14
+#, no-wrap
+msgid "&gcc-url;"
+msgstr ""
+
+#. type: Content of: <sect1><sect1info>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter06/gcc-pass2.xml:12
+msgid ""
+"<productname>gcc-pass2</productname> "
+"<productnumber>&gcc-version;</productnumber> <placeholder type=\"address\" "
+"id=\"0\"/>"
+msgstr ""
+
+#. type: Content of: <sect1><title>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter06/gcc-pass2.xml:17
+msgid "GCC-&gcc-version; - Pass 2"
+msgstr ""
+
+#. type: Content of: <sect1><indexterm><primary>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter06/gcc-pass2.xml:20
+msgid "GCC"
+msgstr ""
+
+#. type: Content of: <sect1><indexterm><secondary>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter06/gcc-pass2.xml:21
+msgid "tools, pass 2"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><segmentedlist><segtitle>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter06/gcc-pass2.xml:32
+msgid "&buildtime;"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><segmentedlist><segtitle>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter06/gcc-pass2.xml:33
+msgid "&diskspace;"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><segmentedlist><seglistitem><seg>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter06/gcc-pass2.xml:36
+msgid "&gcc-tmpp2-sbu;"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><segmentedlist><seglistitem><seg>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter06/gcc-pass2.xml:37
+msgid "&gcc-tmpp2-du;"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><title>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter06/gcc-pass2.xml:44
+msgid "Installation of GCC"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter06/gcc-pass2.xml:46
+msgid ""
+"As in the first build of GCC, the GMP, MPFR, and MPC packages are "
+"required. Unpack the tarballs and move them into the required directory "
+"names:"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><screen>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter06/gcc-pass2.xml:50
+#, no-wrap
+msgid ""
+"<userinput remap=\"pre\">tar -xf ../mpfr-&mpfr-version;.tar.xz\n"
+"mv -v mpfr-&mpfr-version; mpfr\n"
+"tar -xf ../gmp-&gmp-version;.tar.xz\n"
+"mv -v gmp-&gmp-version; gmp\n"
+"tar -xf ../mpc-&mpc-version;.tar.gz\n"
+"mv -v mpc-&mpc-version; mpc</userinput>"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter06/gcc-pass2.xml:57
+msgid ""
+"If building on x86_64, change the default directory name for 64-bit "
+"libraries to <quote>lib</quote>:"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><screen>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter06/gcc-pass2.xml:60
+#, no-wrap
+msgid ""
+"<userinput remap=\"pre\">case $(uname -m) in\n"
+"  x86_64)\n"
+"    sed -e '/m64=/s/lib64/lib/' -i.orig gcc/config/i386/t-linux64\n"
+"  ;;\n"
+"esac</userinput>"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter06/gcc-pass2.xml:66
+msgid "Fix an issue with GCC-10.1 when building with a cross compiler:"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><screen>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter06/gcc-pass2.xml:69
+#, no-wrap
+msgid "<userinput remap=\"pre\">patch -Np1 -i ../&gcc-cross-patch;</userinput>"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter06/gcc-pass2.xml:71
+msgid "Create a separate build directory again:"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><screen>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter06/gcc-pass2.xml:73
+#, no-wrap
+msgid ""
+"<userinput remap=\"pre\">mkdir -v build\n"
+"cd       build</userinput>"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter06/gcc-pass2.xml:76
+msgid "Create a symlink that allows libgcc to be built with posix threads support:"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><screen>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter06/gcc-pass2.xml:79
+#, no-wrap
+msgid ""
+"<userinput remap=\"pre\">mkdir -pv $LFS_TGT/libgcc\n"
+"ln -s ../../../libgcc/gthr-posix.h "
+"$LFS_TGT/libgcc/gthr-default.h</userinput>"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter06/gcc-pass2.xml:82
+msgid ""
+"Before starting to build GCC, remember to unset any environment variables "
+"that override the default optimization flags."
+msgstr ""
+
+#. type: Content of: <sect1><sect2><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter06/gcc-pass2.xml:85
+msgid "Now prepare GCC for compilation:"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><screen>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter06/gcc-pass2.xml:87
+#, no-wrap
+msgid ""
+"<userinput remap=\"configure\">../configure                                       "
+"\\\n"
+"    --build=$(../config.guess)                     \\\n"
+"    --host=$LFS_TGT                                \\\n"
+"    --prefix=/usr                                  \\\n"
+"    CC_FOR_TARGET=$LFS_TGT-gcc                     \\\n"
+"    --with-build-sysroot=$LFS                      \\\n"
+"    --enable-initfini-array                        \\\n"
+"    --disable-nls                                  \\\n"
+"    --disable-multilib                             \\\n"
+"    --disable-decimal-float                        \\\n"
+"    --disable-libatomic                            \\\n"
+"    --disable-libgomp                              \\\n"
+"    --disable-libquadmath                          \\\n"
+"    --disable-libssp                               \\\n"
+"    --disable-libvtv                               \\\n"
+"    --disable-libstdcxx                            \\\n"
+"    --enable-languages=c,c++</userinput>"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><title>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter06/gcc-pass2.xml:106
+msgid "The meaning of the new configure options:"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter06/gcc-pass2.xml:109
+msgid "<parameter>-with-build-sysroot=$LFS</parameter>"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter06/gcc-pass2.xml:111
+msgid ""
+"Normally, using <parameter>--host</parameter> ensures that a cross-compiler "
+"is used for building GCC, and that compiler knows that it has to look for "
+"headers and libraries in <filename class=\"directory\">$LFS</filename>. But "
+"the build system of GCC uses other tools, which are not aware of this "
+"location. This switch is needed to have them find the needed files in "
+"<filename class=\"directory\">$LFS</filename>, and not on the host."
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter06/gcc-pass2.xml:122
+msgid "<parameter>--enable-initfini-array</parameter>"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter06/gcc-pass2.xml:124
+msgid ""
+"This option is automatically enabled when building a native compiler with a "
+"native compiler on x86. But here, we build with a cross compiler, so we need "
+"to explicitely set this option."
+msgstr ""
+
+#. type: Content of: <sect1><sect2><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter06/gcc-pass2.xml:132
+msgid "Compile the package:"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><screen>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter06/gcc-pass2.xml:134
+#, no-wrap
+msgid "<userinput remap=\"make\">make</userinput>"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter06/gcc-pass2.xml:136
+msgid "Install the package:"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><screen>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter06/gcc-pass2.xml:138
+#, no-wrap
+msgid "<userinput remap=\"install\">make DESTDIR=$LFS install</userinput>"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter06/gcc-pass2.xml:140
+msgid ""
+"As a finishing touch, create a utility symlink. Many programs and scripts "
+"run <command>cc</command> instead of <command>gcc</command>, which is used "
+"to keep programs generic and therefore usable on all kinds of UNIX systems "
+"where the GNU C compiler is not always installed. Running "
+"<command>cc</command> leaves the system administrator free to decide which C "
+"compiler to install:"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><screen>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter06/gcc-pass2.xml:147
+#, no-wrap
+msgid "<userinput remap=\"install\">ln -sv gcc $LFS/usr/bin/cc</userinput>"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter06/gcc-pass2.xml:154
+msgid ""
+"Details on this package are located in <xref linkend=\"contents-gcc\" "
+"role=\".\"/>"
+msgstr ""

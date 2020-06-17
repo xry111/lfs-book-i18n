@@ -1,0 +1,102 @@
+# SOME DESCRIPTIVE TITLE
+# Copyright (C) YEAR Free Software Foundation, Inc.
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"POT-Creation-Date: 2020-06-17 12:44+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#. type: Content of: <sect1><title>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter02/aboutlfs.xml:11
+msgid "Setting The $LFS Variable"
+msgstr ""
+
+#. type: Content of: <sect1><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter02/aboutlfs.xml:13
+msgid ""
+"Throughout this book, the environment variable <envar>LFS</envar> will be "
+"used several times. You should ensure that this variable is always defined "
+"throughout the LFS build process. It should be set to the name of the "
+"directory where you will be building your LFS system - we will use <filename "
+"class=\"directory\">/mnt/lfs</filename> as an example, but the directory "
+"choice is up to you. If you are building LFS on a separate partition, this "
+"directory will be the mount point for the partition.  Choose a directory "
+"location and set the variable with the following command:"
+msgstr ""
+
+#. type: Content of: <sect1><screen>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter02/aboutlfs.xml:23
+#, no-wrap
+msgid "<userinput>export LFS=<replaceable>/mnt/lfs</replaceable></userinput>"
+msgstr ""
+
+#. type: Content of: <sect1><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter02/aboutlfs.xml:25
+msgid ""
+"Having this variable set is beneficial in that commands such as "
+"<command>mkdir -v $LFS/tools</command> can be typed literally. The shell "
+"will automatically replace <quote>$LFS</quote> with <quote>/mnt/lfs</quote> "
+"(or whatever the variable was set to) when it processes the command line."
+msgstr ""
+
+#. type: Content of: <sect1><caution><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter02/aboutlfs.xml:32
+msgid ""
+"Do not forget to check that <envar>LFS</envar> is set whenever you leave and "
+"reenter the current working environment (such as when doing a "
+"<command>su</command> to <systemitem class=\"username\">root</systemitem> or "
+"another user). Check that the <envar>LFS</envar> variable is set up properly "
+"with:"
+msgstr ""
+
+#. type: Content of: <sect1><caution><screen>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter02/aboutlfs.xml:38
+#, no-wrap
+msgid "<userinput>echo $LFS</userinput>"
+msgstr ""
+
+#. type: Content of: <sect1><caution><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter02/aboutlfs.xml:40
+msgid ""
+"Make sure the output shows the path to your LFS system's build location, "
+"which is <filename class=\"directory\">/mnt/lfs</filename> if the provided "
+"example was followed. If the output is incorrect, use the command given "
+"earlier on this page to set <envar>$LFS</envar> to the correct directory "
+"name."
+msgstr ""
+
+#. type: Content of: <sect1><note><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter02/aboutlfs.xml:47
+msgid ""
+"One way to ensure that the <envar>LFS</envar> variable is always set is to "
+"edit the <filename>.bash_profile</filename> file in both your personal home "
+"directory and in <filename>/root/.bash_profile</filename> and enter the "
+"export command above.  In addition, the shell specified in the "
+"<filename>/etc/passwd</filename> file for all users that need the "
+"<envar>LFS</envar> variable needs to be bash to ensure that the "
+"<filename>/root/.bash_profile</filename> file is incorporated as a part of "
+"the login process."
+msgstr ""
+
+#. type: Content of: <sect1><note><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter02/aboutlfs.xml:56
+msgid ""
+"Another consideration is the method that is used to log into the host "
+"system.  If logging in through a graphical display manager, the user's "
+"<filename>.bash_profile</filename> is not normally used when a virtual "
+"terminal is started.  In this case, add the export command to the "
+"<filename>.bashrc</filename> file for the user and root.  In addition, some "
+"distributions have instructions to not run the <filename>.bashrc</filename> "
+"instructions in a non-interactive bash invocation.  Be sure to add the "
+"export command before the test for non-interactive use."
+msgstr ""

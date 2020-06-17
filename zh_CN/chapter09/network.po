@@ -1,0 +1,360 @@
+# SOME DESCRIPTIVE TITLE
+# Copyright (C) YEAR Free Software Foundation, Inc.
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"POT-Creation-Date: 2020-06-17 12:44+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#. type: Content of: <sect1><title>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter09/network.xml:11
+msgid "General Network Configuration"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><indexterm><primary>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter09/network.xml:14
+#: /home/xry111/svn-repos/LFS-BOOK/chapter09/network.xml:167
+msgid "network"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><indexterm><secondary>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter09/network.xml:15
+#: /home/xry111/svn-repos/LFS-BOOK/chapter09/network.xml:136
+msgid "configuring"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><title>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter09/network.xml:18
+msgid "Creating Network Interface Configuration Files"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter09/network.xml:20
+msgid ""
+"Which interfaces are brought up and down by the network script usually "
+"depends on the files in <filename "
+"class=\"directory\">/etc/sysconfig/</filename>.  This directory should "
+"contain a file for each interface to be configured, such as "
+"<filename>ifconfig.xyz</filename>, where <quote>xyz</quote> should describe "
+"the network card.  The interface name (e.g. eth0) is usually appropriate.  "
+"Inside this file are attributes to this interface, such as its IP "
+"address(es), subnet masks, and so forth.  It is necessary that the stem of "
+"the filename be <emphasis>ifconfig</emphasis>."
+msgstr ""
+
+#. type: Content of: <sect1><sect2><note><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter09/network.xml:30
+msgid ""
+"If the procedure in the previous section was not used, udev will assign "
+"network card interface names based on system physical characteristics such "
+"as enp2s1. If you are not sure what your interface name is, you can always "
+"run <command>ip link</command> or <command>ls /sys/class/net</command> after "
+"you have booted your system."
+msgstr ""
+
+#. type: Content of: <sect1><sect2><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter09/network.xml:37
+msgid ""
+"The following command creates a sample file for the "
+"<emphasis>eth0</emphasis> device with a static IP address:"
+msgstr ""
+
+#.  jhalfs relies on the values for IFACE, IP, etc. If you want to change
+#.      them, please inform the jhalfs maintainer(s). 
+#. type: Content of: <sect1><sect2><screen>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter09/network.xml:41
+#, no-wrap
+msgid ""
+"<userinput>cd /etc/sysconfig/\n"
+"cat &gt; ifconfig.<replaceable>eth0</replaceable> &lt;&lt; \"EOF\"\n"
+"<literal>ONBOOT=<replaceable>yes</replaceable>\n"
+"IFACE=<replaceable>eth0</replaceable>\n"
+"SERVICE=<replaceable>ipv4-static</replaceable>\n"
+"IP=<replaceable>192.168.1.2</replaceable>\n"
+"GATEWAY=<replaceable>192.168.1.1</replaceable>\n"
+"PREFIX=<replaceable>24</replaceable>\n"
+"BROADCAST=<replaceable>192.168.1.255</replaceable></literal>\n"
+"EOF</userinput>"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter09/network.xml:52
+msgid ""
+"The values in italics must be changed in every file to match the proper "
+"setup."
+msgstr ""
+
+#. type: Content of: <sect1><sect2><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter09/network.xml:55
+msgid ""
+"If the <envar>ONBOOT</envar> variable is set to <quote>yes</quote> the "
+"System V network script will bring up the Network Interface Card (NIC) "
+"during the system boot process. If set to anything but <quote>yes</quote> "
+"the NIC will be ignored by the network script and not be automatically "
+"brought up.  The interface can be manually started or stopped with the "
+"<command>ifup</command> and <command>ifdown</command> commands."
+msgstr ""
+
+#. type: Content of: <sect1><sect2><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter09/network.xml:62
+msgid ""
+"The <envar>IFACE</envar> variable defines the interface name, for example, "
+"eth0.  It is required for all network device configuration files. The "
+"filename extension must match this value."
+msgstr ""
+
+#. type: Content of: <sect1><sect2><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter09/network.xml:66
+msgid ""
+"The <envar>SERVICE</envar> variable defines the method used for obtaining "
+"the IP address. The LFS-Bootscripts package has a modular IP assignment "
+"format, and creating additional files in the <filename "
+"class=\"directory\">/lib/services/</filename> directory allows other IP "
+"assignment methods. This is commonly used for Dynamic Host Configuration "
+"Protocol (DHCP), which is addressed in the BLFS book."
+msgstr ""
+
+#. type: Content of: <sect1><sect2><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter09/network.xml:73
+msgid ""
+"The <envar>GATEWAY</envar> variable should contain the default gateway IP "
+"address, if one is present. If not, then comment out the variable entirely."
+msgstr ""
+
+#. type: Content of: <sect1><sect2><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter09/network.xml:77
+msgid ""
+"The <envar>PREFIX</envar> variable contains the number of bits used in the "
+"subnet. Each octet in an IP address is 8 bits. If the subnet's netmask is "
+"255.255.255.0, then it is using the first three octets (24 bits) to specify "
+"the network number. If the netmask is 255.255.255.240, it would be using the "
+"first 28 bits.  Prefixes longer than 24 bits are commonly used by DSL and "
+"cable-based Internet Service Providers (ISPs).  In this example (PREFIX=24), "
+"the netmask is 255.255.255.0. Adjust the <envar>PREFIX</envar> variable "
+"according to your specific subnet.  If omitted, the PREFIX defaults to 24."
+msgstr ""
+
+#. type: Content of: <sect1><sect2><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter09/network.xml:87
+msgid "For more information see the <command>ifup</command> man page."
+msgstr ""
+
+#. type: Content of: <sect1><sect2><title>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter09/network.xml:91
+msgid "Creating the /etc/resolv.conf File"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><indexterm><primary>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter09/network.xml:94
+msgid "/etc/resolv.conf"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter09/network.xml:97
+msgid ""
+"The system will need some means of obtaining Domain Name Service (DNS) name "
+"resolution to resolve Internet domain names to IP addresses, and vice "
+"versa. This is best achieved by placing the IP address of the DNS server, "
+"available from the ISP or network administrator, into "
+"<filename>/etc/resolv.conf</filename>. Create the file by running the "
+"following:"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><screen>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter09/network.xml:104
+#, no-wrap
+msgid ""
+"<userinput>cat &gt; /etc/resolv.conf &lt;&lt; \"EOF\"\n"
+"<literal># Begin /etc/resolv.conf\n"
+"\n"
+"domain <replaceable>&lt;Your Domain Name&gt;</replaceable>\n"
+"nameserver <replaceable>&lt;IP address of your primary "
+"nameserver&gt;</replaceable>\n"
+"nameserver <replaceable>&lt;IP address of your secondary "
+"nameserver&gt;</replaceable>\n"
+"\n"
+"# End /etc/resolv.conf</literal>\n"
+"EOF</userinput>"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter09/network.xml:114
+msgid ""
+"The <varname>domain</varname> statement can be omitted or replaced with a "
+"<varname>search</varname> statement.  See the man page for resolv.conf for "
+"more details."
+msgstr ""
+
+#. type: Content of: <sect1><sect2><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter09/network.xml:118
+msgid ""
+"Replace <replaceable>&lt;IP address of the nameserver&gt;</replaceable> with "
+"the IP address of the DNS most appropriate for the setup. There will often "
+"be more than one entry (requirements demand secondary servers for fallback "
+"capability). If you only need or want one DNS server, remove the second "
+"<emphasis>nameserver</emphasis> line from the file. The IP address may also "
+"be a router on the local network."
+msgstr ""
+
+#. type: Content of: <sect1><sect2><note><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter09/network.xml:126
+msgid "The Google Public IPv4 DNS addresses are 8.8.8.8 and 8.8.4.4."
+msgstr ""
+
+#. type: Content of: <sect1><sect2><title>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter09/network.xml:132
+msgid "Configuring the system hostname"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><indexterm><primary>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter09/network.xml:135
+msgid "hostname"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter09/network.xml:139
+msgid ""
+"During the boot process, the file <filename>/etc/hostname</filename> is used "
+"for establishing the system's hostname."
+msgstr ""
+
+#. type: Content of: <sect1><sect2><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter09/network.xml:142
+msgid ""
+"Create the <filename>/etc/hostname</filename> file and enter a hostname by "
+"running:"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><screen>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter09/network.xml:145
+#, no-wrap
+msgid ""
+"<userinput>echo \"<replaceable>&lt;lfs&gt;</replaceable>\" &gt; "
+"/etc/hostname</userinput>"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter09/network.xml:147
+msgid ""
+"<replaceable>&lt;lfs&gt;</replaceable> needs to be replaced with the name "
+"given to the computer. Do not enter the Fully Qualified Domain Name (FQDN) "
+"here. That information is put in the <filename>/etc/hosts</filename> file."
+msgstr ""
+
+#. type: Content of: <sect1><sect2><title>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter09/network.xml:155
+msgid "Customizing the /etc/hosts File"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><indexterm><secondary>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter09/network.xml:158
+#: /home/xry111/svn-repos/LFS-BOOK/chapter09/network.xml:163
+#: /home/xry111/svn-repos/LFS-BOOK/chapter09/network.xml:168
+msgid "/etc/hosts"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><indexterm><primary>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter09/network.xml:162
+msgid "localnet"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter09/network.xml:171
+msgid ""
+"Decide on the IP address, fully-qualified domain name (FQDN), and possible "
+"aliases for use in the <filename>/etc/hosts</filename> file. The syntax is:"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><screen>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter09/network.xml:175
+#, no-wrap
+msgid "<literal>IP_address myhost.example.org aliases</literal>"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter09/network.xml:177
+msgid ""
+"Unless the computer is to be visible to the Internet (i.e., there is a "
+"registered domain and a valid block of assigned IP addresses&mdash;most "
+"users do not have this), make sure that the IP address is in the private "
+"network IP address range. Valid ranges are:"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><screen>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter09/network.xml:182
+#, no-wrap
+msgid ""
+"<literal>Private Network Address Range      Normal Prefix\n"
+"10.0.0.1 - 10.255.255.254           8\n"
+"172.x.0.1 - 172.x.255.254           16\n"
+"192.168.y.1 - 192.168.y.254         24</literal>"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter09/network.xml:187
+msgid ""
+"x can be any number in the range 16-31. y can be any number in the range "
+"0-255."
+msgstr ""
+
+#. type: Content of: <sect1><sect2><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter09/network.xml:190
+msgid ""
+"A valid private IP address could be 192.168.1.1. A valid FQDN for this IP "
+"could be lfs.example.org."
+msgstr ""
+
+#. type: Content of: <sect1><sect2><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter09/network.xml:193
+msgid ""
+"Even if not using a network card, a valid FQDN is still required.  This is "
+"necessary for certain programs to operate correctly."
+msgstr ""
+
+#. type: Content of: <sect1><sect2><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter09/network.xml:196
+msgid "Create the <filename>/etc/hosts</filename> file by running:"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><screen>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter09/network.xml:198
+#, no-wrap
+msgid ""
+"<userinput>cat &gt; /etc/hosts &lt;&lt; \"EOF\"\n"
+"<literal># Begin /etc/hosts\n"
+"\n"
+"127.0.0.1 localhost.localdomain localhost\n"
+"127.0.1.1 <replaceable>&lt;FQDN&gt;</replaceable> "
+"<replaceable>&lt;HOSTNAME&gt;</replaceable>\n"
+"<replaceable>&lt;192.168.1.1&gt;</replaceable> "
+"<replaceable>&lt;FQDN&gt;</replaceable> "
+"<replaceable>&lt;HOSTNAME&gt;</replaceable> <replaceable>[alias1] [alias2 "
+"...]</replaceable>\n"
+"::1       localhost ip6-localhost ip6-loopback\n"
+"ff02::1   ip6-allnodes\n"
+"ff02::2   ip6-allrouters\n"
+"\n"
+"# End /etc/hosts</literal>\n"
+"EOF</userinput>"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter09/network.xml:211
+msgid ""
+"The <replaceable>&lt;192.168.1.1&gt;</replaceable>, "
+"<replaceable>&lt;FQDN&gt;</replaceable>, and "
+"<replaceable>&lt;HOSTNAME&gt;</replaceable> values need to be changed for "
+"specific uses or requirements (if assigned an IP address by a network/system "
+"administrator and the machine will be connected to an existing network). The "
+"optional alias name(s) can be omitted."
+msgstr ""

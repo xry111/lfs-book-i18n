@@ -1,0 +1,143 @@
+# SOME DESCRIPTIVE TITLE
+# Copyright (C) YEAR Free Software Foundation, Inc.
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"POT-Creation-Date: 2020-06-17 12:44+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#. type: Content of: <sect1><title>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter11/theend.xml:11
+msgid "The End"
+msgstr ""
+
+#. type: Content of: <sect1><indexterm><primary>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter11/theend.xml:14
+msgid "/etc/lfs-release"
+msgstr ""
+
+#. type: Content of: <sect1><indexterm><primary>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter11/theend.xml:18
+msgid "/etc/lsb-release"
+msgstr ""
+
+#. type: Content of: <sect1><indexterm><primary>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter11/theend.xml:22
+msgid "/etc/os-release"
+msgstr ""
+
+#. type: Content of: <sect1><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter11/theend.xml:25
+msgid ""
+"Well done! The new LFS system is installed! We wish you much success with "
+"your shiny new custom-built Linux system."
+msgstr ""
+
+#. type: Content of: <sect1><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter11/theend.xml:28
+msgid ""
+"It may be a good idea to create an <filename>/etc/lfs-release</filename> "
+"file. By having this file, it is very easy for you (and for us if you need "
+"to ask for help at some point) to find out which LFS version is installed on "
+"the system. Create this file by running:"
+msgstr ""
+
+#. type: Content of: <sect1><screen>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter11/theend.xml:34
+#, no-wrap
+msgid "<userinput>echo &version; &gt; /etc/lfs-release</userinput>"
+msgstr ""
+
+#. type: Content of: <sect1><screen>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter11/theend.xml:36
+#, no-wrap
+msgid "<userinput>echo &versiond; &gt; /etc/lfs-release</userinput>"
+msgstr ""
+
+#. type: Content of: <sect1><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter11/theend.xml:38
+msgid ""
+"Two files describing the installed system may be used by packages that can "
+"be installed on the system later, either in binary form or by building them."
+msgstr ""
+
+#. type: Content of: <sect1><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter11/theend.xml:42
+msgid ""
+"The first one shows the status of your new system with respect to the Linux "
+"Standards Base (LSB).  To create this file, run:"
+msgstr ""
+
+#. type: Content of: <sect1><screen>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter11/theend.xml:46
+#, no-wrap
+msgid ""
+"<userinput>cat &gt; /etc/lsb-release &lt;&lt; \"EOF\"\n"
+"DISTRIB_ID=\"Linux From Scratch\"\n"
+"DISTRIB_RELEASE=\"&version;\"\n"
+"DISTRIB_CODENAME=\"&lt;your name here&gt;\"\n"
+"DISTRIB_DESCRIPTION=\"Linux From Scratch\"\n"
+"EOF</userinput>"
+msgstr ""
+
+#. type: Content of: <sect1><screen>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter11/theend.xml:53
+#, no-wrap
+msgid ""
+"<userinput>cat &gt; /etc/lsb-release &lt;&lt; \"EOF\"\n"
+"DISTRIB_ID=\"Linux From Scratch\"\n"
+"DISTRIB_RELEASE=\"&versiond;\"\n"
+"DISTRIB_CODENAME=\"&lt;your name here&gt;\"\n"
+"DISTRIB_DESCRIPTION=\"Linux From Scratch\"\n"
+"EOF</userinput>"
+msgstr ""
+
+#. type: Content of: <sect1><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter11/theend.xml:60
+msgid ""
+"The second one contains roughly the same information, and is used by systemd "
+"and some graphical desktop environments.  To create this file, run:"
+msgstr ""
+
+#. type: Content of: <sect1><screen>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter11/theend.xml:64
+#, no-wrap
+msgid ""
+"<userinput>cat &gt; /etc/os-release &lt;&lt; \"EOF\"\n"
+"NAME=\"Linux From Scratch\"\n"
+"VERSION=\"&version;\"\n"
+"ID=lfs\n"
+"PRETTY_NAME=\"Linux From Scratch &version;\"\n"
+"VERSION_CODENAME=\"&lt;your name here&gt;\"\n"
+"EOF</userinput>"
+msgstr ""
+
+#. type: Content of: <sect1><screen>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter11/theend.xml:72
+#, no-wrap
+msgid ""
+"<userinput>cat &gt; /etc/os-release &lt;&lt; \"EOF\"\n"
+"NAME=\"Linux From Scratch\"\n"
+"VERSION=\"&versiond;\"\n"
+"ID=lfs\n"
+"PRETTY_NAME=\"Linux From Scratch &versiond;\"\n"
+"VERSION_CODENAME=\"&lt;your name here&gt;\"\n"
+"EOF</userinput>"
+msgstr ""
+
+#. type: Content of: <sect1><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter11/theend.xml:80
+msgid ""
+"Be sure to put some sort of customization for the fields 'DISTRIB_CODENAME' "
+"and 'VERSION_CODENAME' to make the system uniquely yours."
+msgstr ""

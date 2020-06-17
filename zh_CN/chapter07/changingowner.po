@@ -1,0 +1,64 @@
+# SOME DESCRIPTIVE TITLE
+# Copyright (C) YEAR Free Software Foundation, Inc.
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"POT-Creation-Date: 2020-06-17 12:44+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#. type: Content of: <sect1><title>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter07/changingowner.xml:11
+msgid "Changing Ownership"
+msgstr ""
+
+#. type: Content of: <sect1><note><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter07/changingowner.xml:14
+msgid ""
+"The commands in the remainder of this book must be performed while logged in "
+"as user <systemitem class=\"username\">root</systemitem> and no longer as "
+"user <systemitem class=\"username\">lfs</systemitem>. Also, double check "
+"that <envar>$LFS</envar> is set in <systemitem "
+"class=\"username\">root</systemitem>'s environment."
+msgstr ""
+
+#. type: Content of: <sect1><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter07/changingowner.xml:21
+msgid ""
+"Currently, the whole directory hierarchy in <filename "
+"class=\"directory\">$LFS</filename> is owned by the user <systemitem "
+"class=\"username\">lfs</systemitem>, a user that exists only on the host "
+"system. If the directories under <filename "
+"class=\"directory\">$LFS</filename> are kept as they are, the files are "
+"owned by a user ID without a corresponding account. This is dangerous "
+"because a user account created later could get this same user ID and would "
+"own all the files under <filename class=\"directory\">$LFS</filename>, thus "
+"exposing these files to possible malicious manipulation."
+msgstr ""
+
+#. type: Content of: <sect1><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter07/changingowner.xml:31
+msgid ""
+"To address this issue, change the ownership of the <filename "
+"class=\"directory\">$LFS/*</filename> directories to user <systemitem "
+"class=\"username\">root</systemitem> by running the following command:"
+msgstr ""
+
+#. type: Content of: <sect1><screen>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter07/changingowner.xml:36
+#, no-wrap
+msgid ""
+"<userinput>chown -R root:root $LFS/{usr,lib,var,etc,bin,sbin,tools}\n"
+"case $(uname -m) in\n"
+"  x86_64) chown -R root:root $LFS/lib64 ;;\n"
+"esac</userinput>"
+msgstr ""

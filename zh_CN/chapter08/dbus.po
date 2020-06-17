@@ -1,0 +1,393 @@
+# SOME DESCRIPTIVE TITLE
+# Copyright (C) YEAR Free Software Foundation, Inc.
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"POT-Creation-Date: 2020-06-17 12:44+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#. type: Content of: <sect1><sect1info><address>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/dbus.xml:14
+#, no-wrap
+msgid "&dbus-url;"
+msgstr ""
+
+#. type: Content of: <sect1><sect1info>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/dbus.xml:12
+msgid ""
+"<productname>dbus</productname> "
+"<productnumber>&dbus-version;</productnumber> <placeholder type=\"address\" "
+"id=\"0\"/>"
+msgstr ""
+
+#. type: Content of: <sect1><title>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/dbus.xml:17
+msgid "D-Bus-&dbus-version;"
+msgstr ""
+
+#. type: Content of: <sect1><indexterm><primary>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/dbus.xml:20
+msgid "D-Bus"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/dbus.xml:26
+msgid ""
+"D-Bus is a message bus system, a simple way for applications to talk to one "
+"another. D-Bus supplies both a system daemon (for events such as \"new "
+"hardware device added\" or \"printer queue changed\") and a "
+"per-user-login-session daemon (for general IPC needs among user "
+"applications). Also, the message bus is built on top of a general one-to-one "
+"message passing framework, which can be used by any two applications to "
+"communicate directly (without going through the message bus daemon)."
+msgstr ""
+
+#. type: Content of: <sect1><sect2><segmentedlist><segtitle>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/dbus.xml:35
+msgid "&buildtime;"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><segmentedlist><segtitle>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/dbus.xml:36
+msgid "&diskspace;"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><segmentedlist><seglistitem><seg>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/dbus.xml:39
+msgid "&dbus-fin-sbu;"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><segmentedlist><seglistitem><seg>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/dbus.xml:40
+msgid "&dbus-fin-du;"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><title>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/dbus.xml:47
+msgid "Installation of D-Bus"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/dbus.xml:49
+msgid "Prepare D-Bus for compilation:"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><screen>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/dbus.xml:51
+#, no-wrap
+msgid ""
+"<userinput remap=\"configure\">./configure --prefix=/usr                       "
+"\\\n"
+"            --sysconfdir=/etc                   \\\n"
+"            --localstatedir=/var                \\\n"
+"            --disable-static                    \\\n"
+"            --disable-doxygen-docs              \\\n"
+"            --disable-xml-docs                  \\\n"
+"            --docdir=/usr/share/doc/dbus-&dbus-version; \\\n"
+"            --with-console-auth-dir=/run/console</userinput>"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><title>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/dbus.xml:61
+msgid "The meaning of the configure options:"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/dbus.xml:64
+msgid "<parameter>--with-console-auth-dir=/run/console</parameter>"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/dbus.xml:66
+msgid "This specifies the location of the ConsoleKit authorization directory."
+msgstr ""
+
+#. type: Content of: <sect1><sect2><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/dbus.xml:73
+msgid "Compile the package:"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><screen>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/dbus.xml:75
+#, no-wrap
+msgid "<userinput remap=\"make\">make</userinput>"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/dbus.xml:77
+msgid ""
+"This package does come with a test suite, but it requires several packages "
+"that are not included in LFS. Instructions for running the test suite can be "
+"found in the BLFS book at <ulink url=\"&blfs-book;general/dbus.html\"/>."
+msgstr ""
+
+#. type: Content of: <sect1><sect2><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/dbus.xml:82
+msgid "Install the package:"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><screen>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/dbus.xml:84
+#, no-wrap
+msgid "<userinput remap=\"install\">make install</userinput>"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/dbus.xml:86
+msgid ""
+"The shared library needs to be moved to <filename "
+"class=\"directory\">/lib</filename>, and as a result the <filename "
+"class=\"extension\">.so</filename> file in <filename "
+"class=\"directory\">/usr/lib</filename> will need to be recreated:"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><screen>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/dbus.xml:91
+#, no-wrap
+msgid ""
+"<userinput remap=\"install\">mv -v /usr/lib/libdbus-1.so.* /lib\n"
+"ln -sfv ../../lib/$(readlink /usr/lib/libdbus-1.so) "
+"/usr/lib/libdbus-1.so</userinput>"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/dbus.xml:94
+msgid ""
+"Create a symlink so that D-Bus and systemd can use the same "
+"<filename>machine-id</filename> file:"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><screen>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/dbus.xml:97
+#, no-wrap
+msgid ""
+"<userinput remap=\"install\">ln -sfv /etc/machine-id "
+"/var/lib/dbus</userinput>"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/dbus.xml:99
+msgid "Move the socket file to /run instead of the deprecated /var/run:"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><screen>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/dbus.xml:102
+#, no-wrap
+msgid ""
+"<userinput remap=\"install\">sed -i 's:/var/run:/run:' "
+"/lib/systemd/system/dbus.socket</userinput>"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><title>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/dbus.xml:107
+msgid "Contents of D-Bus"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><segmentedlist><segtitle>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/dbus.xml:110
+msgid "Installed programs"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><segmentedlist><segtitle>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/dbus.xml:111
+msgid "Installed libraries"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><segmentedlist><segtitle>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/dbus.xml:112
+msgid "Installed directories"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><segmentedlist><seglistitem><seg>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/dbus.xml:115
+msgid ""
+"dbus-cleanup-sockets, dbus-daemon, dbus-launch, dbus-monitor, "
+"dbus-run-session, dbus-send, dbus-test-tool, "
+"dbus-update-activation-environment, and dbus-uuidgen"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><segmentedlist><seglistitem><seg>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/dbus.xml:118
+msgid "libdbus-1.{a,so}"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><segmentedlist><seglistitem><seg>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/dbus.xml:119
+msgid ""
+"/etc/dbus-1, /usr/include/dbus-1.0, /usr/lib/dbus-1.0, /usr/share/dbus-1, "
+"/usr/share/doc/dbus-&dbus-version;, and /var/lib/dbus"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><bridgehead>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/dbus.xml:126
+msgid "Short Descriptions"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/dbus.xml:127
+msgid "<?dbfo list-presentation=\"list\"?> <?dbhtml list-presentation=\"table\"?>"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/dbus.xml:131
+msgid "<command>dbus-cleanup-sockets</command>"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/dbus.xml:133
+msgid "is used to remove leftover sockets in a directory"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/dbus.xml:135
+msgid "dbus-cleanup-sockets"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/dbus.xml:141
+msgid "<command>dbus-daemon</command>"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/dbus.xml:143
+msgid "Is the D-Bus message bus daemon"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/dbus.xml:145
+msgid "dbus-daemon"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/dbus.xml:151
+msgid "<command>dbus-launch</command>"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/dbus.xml:153
+msgid "Starts <command>dbus-daemon</command> from a shell script"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/dbus.xml:156
+msgid "dbus-launch"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/dbus.xml:162
+msgid "<command>dbus-monitor</command>"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/dbus.xml:164
+msgid "Monitors messages passing through a D-Bus message bus"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/dbus.xml:166
+msgid "dbus-monitor"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/dbus.xml:172
+msgid "<command>dbus-run-session</command>"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/dbus.xml:174
+msgid ""
+"Starts a session bus instance of <command>dbus-daemon</command> from a shell "
+"script and starts a specified program in that session"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/dbus.xml:178
+msgid "dbus-run-session"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/dbus.xml:184
+msgid "<command>dbus-send</command>"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/dbus.xml:186
+msgid "Sends a message to a D-Bus message bus"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/dbus.xml:188
+msgid "dbus-send"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/dbus.xml:194
+msgid "<command>dbus-test-tool</command>"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/dbus.xml:196
+msgid "Is a tool to help packages test <application>D-Bus</application>"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/dbus.xml:199
+msgid "dbus-test-tool"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/dbus.xml:206
+msgid "<command>dbus-update-activation-environment</command>"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/dbus.xml:208
+msgid ""
+"Updates environment variables that will be set for "
+"<application>D-Bus</application> session services"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/dbus.xml:211
+msgid "dbus-update-activation-environment"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/dbus.xml:217
+msgid "<command>dbus-uuidgen</command>"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/dbus.xml:219
+msgid "Generates a universally unique ID"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/dbus.xml:221
+msgid "dbus-uuidgen"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/dbus.xml:227
+msgid "<filename class=\"libraryfile\">libdbus-1</filename>"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/dbus.xml:229
+msgid "Contains API functions used to communicate with the D-Bus message bus"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/dbus.xml:232
+msgid "libdbus-1"
+msgstr ""

@@ -1,0 +1,641 @@
+# SOME DESCRIPTIVE TITLE
+# Copyright (C) YEAR Free Software Foundation, Inc.
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"POT-Creation-Date: 2020-06-17 12:44+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#. type: Content of: <sect1><sect1info><address>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter10/kernel.xml:14
+#, no-wrap
+msgid "&linux-url;"
+msgstr ""
+
+#. type: Content of: <sect1><sect1info>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter10/kernel.xml:12
+msgid ""
+"<productname>kernel</productname> "
+"<productnumber>&linux-version;</productnumber> <placeholder type=\"address\" "
+"id=\"0\"/>"
+msgstr ""
+
+#. type: Content of: <sect1><title>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter10/kernel.xml:17
+msgid "Linux-&linux-version;"
+msgstr ""
+
+#. type: Content of: <sect1><indexterm><primary>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter10/kernel.xml:20
+msgid "Linux"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter10/kernel.xml:26
+msgid "The Linux package contains the Linux kernel."
+msgstr ""
+
+#. type: Content of: <sect1><sect2><segmentedlist><segtitle>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter10/kernel.xml:29
+msgid "&buildtime;"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><segmentedlist><segtitle>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter10/kernel.xml:30
+msgid "&diskspace;"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><segmentedlist><seglistitem><seg>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter10/kernel.xml:33
+msgid "&linux-knl-sbu;"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><segmentedlist><seglistitem><seg>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter10/kernel.xml:34
+msgid "&linux-knl-du;"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><title>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter10/kernel.xml:41
+msgid "Installation of the kernel"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter10/kernel.xml:43
+msgid ""
+"Building the kernel involves a few steps&mdash;configuration, compilation, "
+"and installation. Read the <filename>README</filename> file in the kernel "
+"source tree for alternative methods to the way this book configures the "
+"kernel."
+msgstr ""
+
+#. type: Content of: <sect1><sect2><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter10/kernel.xml:48
+msgid "Prepare for compilation by running the following command:"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><screen>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter10/kernel.xml:50
+#, no-wrap
+msgid "<userinput remap=\"pre\">make mrproper</userinput>"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter10/kernel.xml:52
+msgid ""
+"This ensures that the kernel tree is absolutely clean. The kernel team "
+"recommends that this command be issued prior to each kernel compilation. Do "
+"not rely on the source tree being clean after un-tarring."
+msgstr ""
+
+#. type: Content of: <sect1><sect2><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter10/kernel.xml:59
+msgid ""
+"Configure the kernel via a menu-driven interface. For general information on "
+"kernel configuration see <ulink "
+"url=\"&hints-root;kernel-configuration.txt\"/>.  BLFS has some information "
+"regarding particular kernel configuration requirements of packages outside "
+"of LFS at <ulink url=\"&blfs-book;longindex.html#kernel-config-index\"/>.  "
+"Additional information about configuring and building the kernel can be "
+"found at <ulink url=\"http://www.kroah.com/lkn/\"/>"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><note><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter10/kernel.xml:70
+msgid ""
+"A good starting place for setting up the kernel configuration is to run "
+"<command>make defconfig</command>. This will set the base configuration to a "
+"good state that takes your current system architecture into account."
+msgstr ""
+
+#. type: Content of: <sect1><sect2><note><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter10/kernel.xml:75
+msgid ""
+"Be sure to enable/disable/set the following features or the system might not "
+"work correctly or boot at all:"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><note><screen>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter10/kernel.xml:79
+#, no-wrap
+msgid ""
+"Device Drivers  ---&gt;\n"
+"  Generic Driver Options  ---&gt;\n"
+"   [ ] Support for uevent helper [CONFIG_UEVENT_HELPER]\n"
+"   [*] Maintain a devtmpfs filesystem to mount at /dev [CONFIG_DEVTMPFS]\n"
+"\n"
+"Kernel hacking  ---&gt;\n"
+"       Choose kernel unwinder (Frame pointer unwinder)  ---&gt; "
+"[CONFIG_UNWINDER_FRAME_POINTER]"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><note><screen>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter10/kernel.xml:88
+#, no-wrap
+msgid ""
+"General setup -->\n"
+"   [*] Control Group support [CONFIG_CGROUPS]\n"
+"   [ ] Enable deprecated sysfs features to support old userspace tools "
+"[CONFIG_SYSFS_DEPRECATED]\n"
+"   [*] Configure standard kernel features (expert users) [CONFIG_EXPERT] "
+"---&gt;         \n"
+"      [*] open by fhandle syscalls [CONFIG_FHANDLE]\n"
+"   [ ] Auditing support [CONFIG_AUDIT]\n"
+"Processor type and features  ---&gt;\n"
+"   [*] Enable seccomp to safely compute untrusted bytecode "
+"[CONFIG_SECCOMP]\n"
+"Firmware Drivers  ---&gt;\n"
+"   [*] Export DMI identification via sysfs to userspace [CONFIG_DMIID]\n"
+"Networking support  ---&gt;\n"
+"  Networking options  ---&gt;\n"
+"   &lt;*&gt; The IPv6 protocol [CONFIG_IPV6]\n"
+"Device Drivers  ---&gt;\n"
+"  Generic Driver Options  ---&gt;\n"
+"   [ ] Support for uevent helper [CONFIG_UEVENT_HELPER]\n"
+"   [*] Maintain a devtmpfs filesystem to mount at /dev [CONFIG_DEVTMPFS]\n"
+"   Firmware Loader ---&gt;\n"
+"      [ ] Enable the firmware sysfs fallback mechanism "
+"[CONFIG_FW_LOADER_USER_HELPER]\n"
+"File systems  ---&gt;\n"
+"   [*] Inotify support for userspace [CONFIG_INOTIFY_USER]\n"
+"   &lt;*&gt; Kernel automounter support (supports v3, v4, and v5) "
+"[CONFIG_AUTOFS_FS]\n"
+"  Pseudo filesystems  ---&gt;\n"
+"   [*] Tmpfs POSIX Access Control Lists [CONFIG_TMPFS_POSIX_ACL]\n"
+"   [*] Tmpfs extended attributes [CONFIG_TMPFS_XATTR]"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><note><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter10/kernel.xml:116
+msgid ""
+"While \"The IPv6 Protocol\" is not strictly required, it is highly "
+"recommended by the systemd developers."
+msgstr ""
+
+#. type: Content of: <sect1><sect2><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter10/kernel.xml:120
+msgid ""
+"There are several other options that may be desired depending on the "
+"requirements for the system. For a list of options needed for BLFS packages, "
+"see the <ulink "
+"url=\"&lfs-root;blfs/view/&short-version;/longindex.html#kernel-config-index\">BLFS "
+"Index of Kernel Settings</ulink> "
+"(&lfs-root;blfs/view/&short-version;/longindex.html#kernel-config-index)."
+msgstr ""
+
+#. type: Content of: <sect1><sect2><note><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter10/kernel.xml:128
+msgid ""
+"If your host hardware is using UEFI, then the 'make defconfig' above should "
+"automatically add in some EFI-related kernel options."
+msgstr ""
+
+#. type: Content of: <sect1><sect2><note><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter10/kernel.xml:131
+msgid ""
+"In order to allow your LFS kernel to be booted from within your host's UEFI "
+"boot environment, your kernel must have this option selected:"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><note><screen>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter10/kernel.xml:135
+#, no-wrap
+msgid ""
+"Processor type and features  ---&gt;\n"
+"   [*]   EFI stub support  [CONFIG_EFI_STUB]"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><note><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter10/kernel.xml:138
+msgid ""
+"A fuller description of managing UEFI environments from within LFS is "
+"covered by the lfs-uefi.txt hint at <ulink "
+"url=\"&hints-root;lfs-uefi.txt\"/>."
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><title>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter10/kernel.xml:146
+msgid "The rationale for the above configuration items:"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter10/kernel.xml:149
+msgid "<parameter>Support for uevent helper</parameter>"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter10/kernel.xml:151
+msgid ""
+"Having this option set may interfere with device management when using "
+"Udev/Eudev."
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter10/kernel.xml:157
+msgid "<parameter>Maintain a devtmpfs</parameter>"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter10/kernel.xml:159
+msgid ""
+"This will create automated device nodes which are populated by the kernel, "
+"even without Udev running.  Udev then runs on top of this, managing "
+"permissions and adding symlinks.  This configuration item is required for "
+"all users of Udev/Eudev."
+msgstr ""
+
+#. type: Content of: <sect1><sect2><screen>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter10/kernel.xml:168
+#, no-wrap
+msgid "<userinput>make menuconfig</userinput>"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><title>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter10/kernel.xml:171
+msgid "The meaning of optional make environment variables:"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter10/kernel.xml:174
+msgid "<parameter>LANG=&lt;host_LANG_value&gt; LC_ALL=</parameter>"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter10/kernel.xml:176
+msgid ""
+"This establishes the locale setting to the one used on the host.  This may "
+"be needed for a proper menuconfig ncurses interface line drawing on a UTF-8 "
+"linux text console."
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter10/kernel.xml:180
+msgid ""
+"If used, be sure to replace "
+"<replaceable>&lt;host_LANG_value&gt;</replaceable> by the value of the "
+"<envar>$LANG</envar> variable from your host.  You can alternatively use "
+"instead the host's value of <envar>$LC_ALL</envar> or "
+"<envar>$LC_CTYPE</envar>."
+msgstr ""
+
+#. type: Content of: <sect1><sect2><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter10/kernel.xml:190
+msgid ""
+"Alternatively, <command>make oldconfig</command> may be more appropriate in "
+"some situations. See the <filename>README</filename> file for more "
+"information."
+msgstr ""
+
+#. type: Content of: <sect1><sect2><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter10/kernel.xml:194
+msgid ""
+"If desired, skip kernel configuration by copying the kernel config file, "
+"<filename>.config</filename>, from the host system (assuming it is "
+"available) to the unpacked <filename "
+"class=\"directory\">linux-&linux-version;</filename> directory. However, we "
+"do not recommend this option. It is often better to explore all the "
+"configuration menus and create the kernel configuration from scratch."
+msgstr ""
+
+#. type: Content of: <sect1><sect2><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter10/kernel.xml:202
+msgid "Compile the kernel image and modules:"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><screen>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter10/kernel.xml:204
+#, no-wrap
+msgid "<userinput remap=\"make\">make</userinput>"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter10/kernel.xml:206
+msgid ""
+"If using kernel modules, module configuration in <filename "
+"class=\"directory\">/etc/modprobe.d</filename> may be required.  Information "
+"pertaining to modules and kernel configuration is located in <xref "
+"linkend=\"ch-config-udev\"/> and in the kernel documentation in the "
+"<filename class=\"directory\">linux-&linux-version;/Documentation</filename> "
+"directory.  Also, <filename>modprobe.d(5)</filename> may be of interest."
+msgstr ""
+
+#. type: Content of: <sect1><sect2><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter10/kernel.xml:214
+msgid ""
+"Unless module support has been disabled in the kernel configuration, install "
+"the modules with:"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><screen>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter10/kernel.xml:217
+#, no-wrap
+msgid "<userinput remap=\"install\">make modules_install</userinput>"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter10/kernel.xml:219
+msgid ""
+"After kernel compilation is complete, additional steps are required to "
+"complete the installation. Some files need to be copied to the <filename "
+"class=\"directory\">/boot</filename> directory."
+msgstr ""
+
+#. type: Content of: <sect1><sect2><caution><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter10/kernel.xml:224
+msgid ""
+"If the host system has a separate /boot partition, the files copied below "
+"should go there. The easiest way to do that is to bind /boot on the host "
+"(outside chroot) to /mnt/lfs/boot before proceeding.  As the root user in "
+"the <emphasis>host system</emphasis>:"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><caution><screen>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter10/kernel.xml:229
+#, no-wrap
+msgid "<userinput>mount --bind /boot /mnt/lfs/boot</userinput>"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter10/kernel.xml:232
+msgid ""
+"The path to the kernel image may vary depending on the platform being "
+"used. The filename below can be changed to suit your taste, but the stem of "
+"the filename should be <emphasis>vmlinuz</emphasis> to be compatible with "
+"the automatic setup of the boot process described in the next section.  The "
+"following command assumes an x86 architecture:"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><screen>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter10/kernel.xml:238
+#, no-wrap
+msgid ""
+"<userinput remap=\"install\">cp -iv arch/x86/boot/bzImage "
+"/boot/vmlinuz-&linux-version;-lfs-&version;</userinput>"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><screen>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter10/kernel.xml:240
+#, no-wrap
+msgid ""
+"<userinput remap=\"install\">cp -iv arch/x86/boot/bzImage "
+"/boot/vmlinuz-&linux-version;-lfs-&versiond;</userinput>"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter10/kernel.xml:242
+msgid ""
+"<filename>System.map</filename> is a symbol file for the kernel.  It maps "
+"the function entry points of every function in the kernel API, as well as "
+"the addresses of the kernel data structures for the running kernel.  It is "
+"used as a resource when investigating kernel problems.  Issue the following "
+"command to install the map file:"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><screen>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter10/kernel.xml:248
+#, no-wrap
+msgid ""
+"<userinput remap=\"install\">cp -iv System.map "
+"/boot/System.map-&linux-version;</userinput>"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter10/kernel.xml:250
+msgid ""
+"The kernel configuration file <filename>.config</filename> produced by the "
+"<command>make menuconfig</command> step above contains all the configuration "
+"selections for the kernel that was just compiled. It is a good idea to keep "
+"this file for future reference:"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><screen>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter10/kernel.xml:256
+#, no-wrap
+msgid ""
+"<userinput remap=\"install\">cp -iv .config "
+"/boot/config-&linux-version;</userinput>"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter10/kernel.xml:258
+msgid "Install the documentation for the Linux kernel:"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><screen>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter10/kernel.xml:260
+#, no-wrap
+msgid ""
+"<userinput remap=\"install\">install -d "
+"/usr/share/doc/linux-&linux-version;\n"
+"cp -r Documentation/* /usr/share/doc/linux-&linux-version;</userinput>"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter10/kernel.xml:263
+msgid ""
+"It is important to note that the files in the kernel source directory are "
+"not owned by <emphasis>root</emphasis>. Whenever a package is unpacked as "
+"user <emphasis>root</emphasis> (like we did inside chroot), the files have "
+"the user and group IDs of whatever they were on the packager's "
+"computer. This is usually not a problem for any other package to be "
+"installed because the source tree is removed after the "
+"installation. However, the Linux source tree is often retained for a long "
+"time.  Because of this, there is a chance that whatever user ID the packager "
+"used will be assigned to somebody on the machine. That person would then "
+"have write access to the kernel source."
+msgstr ""
+
+#. type: Content of: <sect1><sect2><note><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter10/kernel.xml:276
+msgid ""
+"In many cases, the configuration of the kernel will need to be updated for "
+"packages that will be installed later in BLFS.  Unlike other packages, it is "
+"not necessary to remove the kernel source tree after the newly built kernel "
+"is installed."
+msgstr ""
+
+#. type: Content of: <sect1><sect2><note><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter10/kernel.xml:281
+msgid ""
+"If the kernel source tree is going to be retained, run <command>chown -R "
+"0:0</command> on the <filename "
+"class=\"directory\">linux-&linux-version;</filename> directory to ensure all "
+"files are owned by user <emphasis>root</emphasis>."
+msgstr ""
+
+#. type: Content of: <sect1><sect2><warning><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter10/kernel.xml:288
+msgid ""
+"Some kernel documentation recommends creating a symlink from <filename "
+"class=\"symlink\">/usr/src/linux</filename> pointing to the kernel source "
+"directory.  This is specific to kernels prior to the 2.6 series and "
+"<emphasis>must not</emphasis> be created on an LFS system as it can cause "
+"problems for packages you may wish to build once your base LFS system is "
+"complete."
+msgstr ""
+
+#. type: Content of: <sect1><sect2><warning><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter10/kernel.xml:297
+msgid ""
+"The headers in the system's <filename class=\"directory\">include</filename> "
+"directory (<filename class=\"directory\">/usr/include</filename>) should "
+"<emphasis>always</emphasis> be the ones against which Glibc was compiled, "
+"that is, the sanitised headers installed in <xref "
+"linkend=\"ch-tools-linux-headers\"/>.  Therefore, they should "
+"<emphasis>never</emphasis> be replaced by either the raw kernel headers or "
+"any other kernel sanitized headers."
+msgstr ""
+
+#. type: Content of: <sect1><sect2><title>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter10/kernel.xml:310
+msgid "Configuring Linux Module Load Order"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><indexterm><primary>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter10/kernel.xml:313
+msgid "/etc/modprobe.d/usb.conf"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter10/kernel.xml:316
+msgid ""
+"Most of the time Linux modules are loaded automatically, but sometimes it "
+"needs some specific direction.  The program that loads modules, "
+"<command>modprobe</command> or <command>insmod</command>, uses "
+"<filename>/etc/modprobe.d/usb.conf</filename> for this purpose.  This file "
+"needs to be created so that if the USB drivers (ehci_hcd, ohci_hcd and "
+"uhci_hcd) have been built as modules, they will be loaded in the correct "
+"order; ehci_hcd needs to be loaded prior to ohci_hcd and uhci_hcd in order "
+"to avoid a warning being output at boot time."
+msgstr ""
+
+#. type: Content of: <sect1><sect2><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter10/kernel.xml:325
+msgid ""
+"Create a new file <filename>/etc/modprobe.d/usb.conf</filename> by running "
+"the following:"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><screen>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter10/kernel.xml:328
+#, no-wrap
+msgid ""
+"<userinput>install -v -m755 -d /etc/modprobe.d\n"
+"cat &gt; /etc/modprobe.d/usb.conf &lt;&lt; \"EOF\"\n"
+"<literal># Begin /etc/modprobe.d/usb.conf\n"
+"\n"
+"install ohci_hcd /sbin/modprobe ehci_hcd ; /sbin/modprobe -i ohci_hcd ; "
+"true\n"
+"install uhci_hcd /sbin/modprobe ehci_hcd ; /sbin/modprobe -i uhci_hcd ; "
+"true\n"
+"\n"
+"# End /etc/modprobe.d/usb.conf</literal>\n"
+"EOF</userinput>"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><title>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter10/kernel.xml:341
+msgid "Contents of Linux"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><segmentedlist><segtitle>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter10/kernel.xml:344
+msgid "Installed files"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><segmentedlist><segtitle>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter10/kernel.xml:345
+msgid "Installed directories"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><segmentedlist><seglistitem><seg>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter10/kernel.xml:348
+msgid ""
+"config-&linux-version;, <phrase "
+"revision=\"sysv\">vmlinuz-&linux-version;-lfs-&version;,</phrase> <phrase "
+"revision=\"systemd\">vmlinuz-&linux-version;-lfs-&versiond;,</phrase> and "
+"System.map-&linux-version;"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><segmentedlist><seglistitem><seg>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter10/kernel.xml:352
+msgid "/lib/modules, /usr/share/doc/linux-&linux-version;"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><bridgehead>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter10/kernel.xml:357
+msgid "Short Descriptions"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter10/kernel.xml:358
+msgid "<?dbfo list-presentation=\"list\"?> <?dbhtml list-presentation=\"table\"?>"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter10/kernel.xml:362
+msgid "<filename>config-&linux-version;</filename>"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter10/kernel.xml:364
+msgid "Contains all the configuration selections for the kernel"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter10/kernel.xml:366
+msgid "/boot/config-&linux-version;"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter10/kernel.xml:372
+msgid "<filename>vmlinuz-&linux-version;-lfs-&version;</filename>"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter10/kernel.xml:373
+msgid "<filename>vmlinuz-&linux-version;-lfs-&versiond;</filename>"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter10/kernel.xml:375
+msgid ""
+"The engine of the Linux system. When turning on the computer, the kernel is "
+"the first part of the operating system that gets loaded.  It detects and "
+"initializes all components of the computer's hardware, then makes these "
+"components available as a tree of files to the software and turns a single "
+"CPU into a multitasking machine capable of running scores of programs "
+"seemingly at the same time"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter10/kernel.xml:382
+msgid "lfskernel-&linux-version;"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter10/kernel.xml:388
+msgid "<filename>System.map-&linux-version;</filename>"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter10/kernel.xml:390
+msgid ""
+"A list of addresses and symbols; it maps the entry points and addresses of "
+"all the functions and data structures in the kernel"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter10/kernel.xml:394
+msgid "/boot/System.map-&linux-version;"
+msgstr ""

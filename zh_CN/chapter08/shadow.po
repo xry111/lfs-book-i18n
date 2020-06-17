@@ -1,0 +1,919 @@
+# SOME DESCRIPTIVE TITLE
+# Copyright (C) YEAR Free Software Foundation, Inc.
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"POT-Creation-Date: 2020-06-17 12:44+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#. type: Content of: <sect1><sect1info><address>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/shadow.xml:14
+#, no-wrap
+msgid "&shadow-url;"
+msgstr ""
+
+#. type: Content of: <sect1><sect1info>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/shadow.xml:12
+msgid ""
+"<productname>shadow</productname> "
+"<productnumber>&shadow-version;</productnumber> <placeholder "
+"type=\"address\" id=\"0\"/>"
+msgstr ""
+
+#. type: Content of: <sect1><title>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/shadow.xml:17
+msgid "Shadow-&shadow-version;"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><indexterm><primary>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/shadow.xml:20
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/shadow.xml:139
+msgid "Shadow"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/shadow.xml:26
+msgid "The Shadow package contains programs for handling passwords in a secure way."
+msgstr ""
+
+#. type: Content of: <sect1><sect2><segmentedlist><segtitle>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/shadow.xml:30
+msgid "&buildtime;"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><segmentedlist><segtitle>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/shadow.xml:31
+msgid "&diskspace;"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><segmentedlist><seglistitem><seg>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/shadow.xml:34
+msgid "&shadow-fin-sbu;"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><segmentedlist><seglistitem><seg>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/shadow.xml:35
+msgid "&shadow-fin-du;"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><title>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/shadow.xml:42
+msgid "Installation of Shadow"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><note><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/shadow.xml:45
+msgid ""
+"If you would like to enforce the use of strong passwords, refer to <ulink "
+"url=\"&blfs-book;postlfs/cracklib.html\"/> for installing CrackLib prior to "
+"building Shadow. Then add <parameter>--with-libcrack</parameter> to the "
+"<command>configure</command> command below."
+msgstr ""
+
+#. type: Content of: <sect1><sect2><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/shadow.xml:52
+msgid ""
+"Disable the installation of the <command>groups</command> program and its "
+"man pages, as Coreutils provides a better version. Also, prevent the "
+"installation of manual pages that were already installed in <xref "
+"linkend=\"ch-system-man-pages\"/>:"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><screen>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/shadow.xml:57
+#, no-wrap
+msgid ""
+"<userinput remap=\"pre\">sed -i 's/groups$(EXEEXT) //' src/Makefile.in\n"
+"find man -name Makefile.in -exec sed -i 's/groups\\.1 / /'   {} \\;\n"
+"find man -name Makefile.in -exec sed -i 's/getspnam\\.3 / /' {} \\;\n"
+"find man -name Makefile.in -exec sed -i 's/passwd\\.5 / /'   {} "
+"\\;</userinput>"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/shadow.xml:62
+msgid ""
+"Instead of using the default <emphasis>crypt</emphasis> method, use the more "
+"secure <emphasis>SHA-512</emphasis> method of password encryption, which "
+"also allows passwords longer than 8 characters. It is also necessary to "
+"change the obsolete <filename class=\"directory\">/var/spool/mail</filename> "
+"location for user mailboxes that Shadow uses by default to the <filename "
+"class=\"directory\">/var/mail</filename> location used currently:"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><screen>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/shadow.xml:70
+#, no-wrap
+msgid ""
+"<userinput remap=\"pre\">sed -e 's:#ENCRYPT_METHOD DES:ENCRYPT_METHOD "
+"SHA512:' \\\n"
+"    -e 's:/var/spool/mail:/var/mail:'                 \\\n"
+"    -i etc/login.defs</userinput>"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><note><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/shadow.xml:75
+msgid "If you chose to build Shadow with Cracklib support, run the following:"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><note><screen>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/shadow.xml:77
+#, no-wrap
+msgid ""
+"<userinput>sed -i 's:DICTPATH.*:DICTPATH\\t/lib/cracklib/pw_dict:' "
+"etc/login.defs</userinput>"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/shadow.xml:80
+msgid ""
+"Make a minor change to make the first group number generated by useradd "
+"1000:"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><screen>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/shadow.xml:83
+#, no-wrap
+msgid "<userinput remap=\"pre\">sed -i 's/1000/999/' etc/useradd</userinput>"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/shadow.xml:85
+msgid "Prepare Shadow for compilation:"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><screen>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/shadow.xml:87
+#, no-wrap
+msgid ""
+"<userinput remap=\"configure\">touch /usr/bin/passwd\n"
+"./configure --sysconfdir=/etc \\\n"
+"            --with-group-name-max-length=32</userinput>"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><title>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/shadow.xml:92
+msgid "The meaning of the configure option:"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/shadow.xml:95
+msgid "<command>touch /usr/bin/passwd</command>"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/shadow.xml:97
+msgid ""
+"The file <filename>/usr/bin/passwd</filename> needs to exist because its "
+"location is harcoded in some programs, and the default location if it does "
+"not exist is not right."
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/shadow.xml:103
+msgid "<parameter>--with-group-name-max-length=32</parameter>"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/shadow.xml:105
+msgid ""
+"The maximum user name is 32 characters.  Make the maximum group name the "
+"same."
+msgstr ""
+
+#. type: Content of: <sect1><sect2><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/shadow.xml:112
+msgid "Compile the package:"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><screen>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/shadow.xml:114
+#, no-wrap
+msgid "<userinput remap=\"make\">make</userinput>"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/shadow.xml:116
+msgid "This package does not come with a test suite."
+msgstr ""
+
+#. type: Content of: <sect1><sect2><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/shadow.xml:118
+msgid "Install the package:"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><screen>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/shadow.xml:120
+#, no-wrap
+msgid "<userinput remap=\"install\">make install</userinput>"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><title>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/shadow.xml:136
+msgid "Configuring Shadow"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><indexterm><secondary>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/shadow.xml:140
+msgid "configuring"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/shadow.xml:143
+msgid ""
+"This package contains utilities to add, modify, and delete users and groups; "
+"set and change their passwords; and perform other administrative tasks. For "
+"a full explanation of what <emphasis>password shadowing</emphasis> means, "
+"see the <filename>doc/HOWTO</filename> file within the unpacked source "
+"tree. If using Shadow support, keep in mind that programs which need to "
+"verify passwords (display managers, FTP programs, pop3 daemons, etc.)  must "
+"be Shadow-compliant. That is, they need to be able to work with shadowed "
+"passwords."
+msgstr ""
+
+#. type: Content of: <sect1><sect2><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/shadow.xml:152
+msgid "To enable shadowed passwords, run the following command:"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><screen>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/shadow.xml:154
+#, no-wrap
+msgid "<userinput>pwconv</userinput>"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/shadow.xml:156
+msgid "To enable shadowed group passwords, run:"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><screen>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/shadow.xml:158
+#, no-wrap
+msgid "<userinput>grpconv</userinput>"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/shadow.xml:160
+msgid ""
+"Shadow's stock configuration for the <command>useradd</command> utility has "
+"a few caveats that need some explanation. First, the default action for the "
+"<command>useradd</command> utility is to create the user and a group of the "
+"same name as the user. By default the user ID (UID) and group ID (GID) "
+"numbers will begin with 1000. This means if you don't pass parameters to "
+"<command>useradd</command>, each user will be a member of a unique group on "
+"the system. If this behavior is undesirable, you'll need to pass the "
+"<parameter>-g</parameter> parameter to <command>useradd</command>. The "
+"default parameters are stored in the "
+"<filename>/etc/default/useradd</filename> file. You may need to modify two "
+"parameters in this file to suit your particular needs."
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><title>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/shadow.xml:173
+msgid "<filename>/etc/default/useradd</filename> Parameter Explanations"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/shadow.xml:176
+msgid "<parameter>GROUP=1000</parameter>"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/shadow.xml:178
+msgid ""
+"This parameter sets the beginning of the group numbers used in the "
+"/etc/group file. You can modify it to anything you desire. Note that "
+"<command>useradd</command> will never reuse a UID or GID. If the number "
+"identified in this parameter is used, it will use the next available number "
+"after this. Note also that if you don't have a group 1000 on your system the "
+"first time you use <command>useradd</command> without the "
+"<parameter>-g</parameter> parameter, you'll get a message displayed on the "
+"terminal that says: <computeroutput>useradd: unknown GID "
+"1000</computeroutput>. You may disregard this message and group number 1000 "
+"will be used."
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/shadow.xml:191
+msgid "<parameter>CREATE_MAIL_SPOOL=yes</parameter>"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/shadow.xml:193
+msgid ""
+"This parameter causes <command>useradd</command> to create a mailbox file "
+"for the newly created user. <command>useradd</command> will make the group "
+"ownership of this file to the <systemitem "
+"class=\"groupname\">mail</systemitem> group with 0660 permissions. If you "
+"would prefer that these mailbox files are not created by "
+"<command>useradd</command>, issue the following command:"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><screen>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/shadow.xml:201
+#, no-wrap
+msgid "<userinput>sed -i 's/yes/no/' /etc/default/useradd</userinput>"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><title>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/shadow.xml:211
+msgid "Setting the root password"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/shadow.xml:213
+msgid "Choose a password for user <emphasis>root</emphasis> and set it by running:"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><screen>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/shadow.xml:216
+#, no-wrap
+msgid "<userinput>passwd root</userinput>"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><title>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/shadow.xml:221
+msgid "Contents of Shadow"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><segmentedlist><segtitle>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/shadow.xml:224
+msgid "Installed programs"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><segmentedlist><segtitle>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/shadow.xml:225
+msgid "Installed directory"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><segmentedlist><seglistitem><seg>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/shadow.xml:228
+msgid ""
+"chage, chfn, chgpasswd, chpasswd, chsh, expiry, faillog, gpasswd, groupadd, "
+"groupdel, groupmems, groupmod, grpck, grpconv, grpunconv, lastlog, login, "
+"logoutd, newgidmap, newgrp, newuidmap, newusers, nologin, passwd, pwck, "
+"pwconv, pwunconv, sg (link to newgrp), su, useradd, userdel, usermod, vigr "
+"(link to vipw), and vipw"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><segmentedlist><seglistitem><seg>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/shadow.xml:233
+msgid "/etc/default"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><bridgehead>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/shadow.xml:238
+msgid "Short Descriptions"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/shadow.xml:239
+msgid "<?dbfo list-presentation=\"list\"?> <?dbhtml list-presentation=\"table\"?>"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/shadow.xml:243
+msgid "<command>chage</command>"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/shadow.xml:245
+msgid ""
+"Used to change the maximum number of days between obligatory password "
+"changes"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/shadow.xml:248
+msgid "chage"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/shadow.xml:254
+msgid "<command>chfn</command>"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/shadow.xml:256
+msgid "Used to change a user's full name and other information"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/shadow.xml:258
+msgid "chfn"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/shadow.xml:264
+msgid "<command>chgpasswd</command>"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/shadow.xml:266
+msgid "Used to update group passwords in batch mode"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/shadow.xml:268
+msgid "chgpasswd"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/shadow.xml:274
+msgid "<command>chpasswd</command>"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/shadow.xml:276
+msgid "Used to update user passwords in batch mode"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/shadow.xml:278
+msgid "chpasswd"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/shadow.xml:284
+msgid "<command>chsh</command>"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/shadow.xml:286
+msgid "Used to change a user's default login shell"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/shadow.xml:288
+msgid "chsh"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/shadow.xml:294
+msgid "<command>expiry</command>"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/shadow.xml:296
+msgid "Checks and enforces the current password expiration policy"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/shadow.xml:298
+msgid "expiry"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/shadow.xml:304
+msgid "<command>faillog</command>"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/shadow.xml:306
+msgid ""
+"Is used to examine the log of login failures, to set a maximum number of "
+"failures before an account is blocked, or to reset the failure count"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/shadow.xml:310
+msgid "faillog"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/shadow.xml:316
+msgid "<command>gpasswd</command>"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/shadow.xml:318
+msgid "Is used to add and delete members and administrators to groups"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/shadow.xml:321
+msgid "gpasswd"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/shadow.xml:327
+msgid "<command>groupadd</command>"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/shadow.xml:329
+msgid "Creates a group with the given name"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/shadow.xml:331
+msgid "groupadd"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/shadow.xml:337
+msgid "<command>groupdel</command>"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/shadow.xml:339
+msgid "Deletes the group with the given name"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/shadow.xml:341
+msgid "groupdel"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/shadow.xml:347
+msgid "<command>groupmems</command>"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/shadow.xml:349
+msgid ""
+"Allows a user to administer his/her own group membership list without the "
+"requirement of super user privileges."
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/shadow.xml:352
+msgid "groupmems"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/shadow.xml:358
+msgid "<command>groupmod</command>"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/shadow.xml:360
+msgid "Is used to modify the given group's name or GID"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/shadow.xml:362
+msgid "groupmod"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/shadow.xml:368
+msgid "<command>grpck</command>"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/shadow.xml:370
+msgid ""
+"Verifies the integrity of the group files <filename>/etc/group</filename> "
+"and <filename>/etc/gshadow</filename>"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/shadow.xml:374
+msgid "grpck"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/shadow.xml:380
+msgid "<command>grpconv</command>"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/shadow.xml:382
+msgid "Creates or updates the shadow group file from the normal group file"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/shadow.xml:385
+msgid "grpconv"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/shadow.xml:391
+msgid "<command>grpunconv</command>"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/shadow.xml:393
+msgid ""
+"Updates <filename>/etc/group</filename> from "
+"<filename>/etc/gshadow</filename> and then deletes the latter"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/shadow.xml:396
+msgid "grpunconv"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/shadow.xml:402
+msgid "<command>lastlog</command>"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/shadow.xml:404
+msgid "Reports the most recent login of all users or of a given user"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/shadow.xml:407
+msgid "lastlog"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/shadow.xml:413
+msgid "<command>login</command>"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/shadow.xml:415
+msgid "Is used by the system to let users sign on"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/shadow.xml:417
+msgid "login"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/shadow.xml:423
+msgid "<command>logoutd</command>"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/shadow.xml:425
+msgid "Is a daemon used to enforce restrictions on log-on time and ports"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/shadow.xml:428
+msgid "logoutd"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/shadow.xml:434
+msgid "<command>newgidmap</command>"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/shadow.xml:436
+msgid "Is used to set the gid mapping of a user namespace"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/shadow.xml:438
+msgid "newgidmap"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/shadow.xml:444
+msgid "<command>newgrp</command>"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/shadow.xml:446
+msgid "Is used to change the current GID during a login session"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/shadow.xml:448
+msgid "newgrp"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/shadow.xml:454
+msgid "<command>newuidmap</command>"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/shadow.xml:456
+msgid "Is used to set the uid mapping of a user namespace"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/shadow.xml:458
+msgid "newuidmap"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/shadow.xml:464
+msgid "<command>newusers</command>"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/shadow.xml:466
+msgid "Is used to create or update an entire series of user accounts"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/shadow.xml:469
+msgid "newusers"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/shadow.xml:475
+msgid "<command>nologin</command>"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/shadow.xml:477
+msgid ""
+"Displays a message that an account is not available; it is designed to be "
+"used as the default shell for accounts that have been disabled"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/shadow.xml:481
+msgid "nologin"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/shadow.xml:487
+msgid "<command>passwd</command>"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/shadow.xml:489
+msgid "Is used to change the password for a user or group account"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/shadow.xml:491
+msgid "passwd"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/shadow.xml:497
+msgid "<command>pwck</command>"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/shadow.xml:499
+msgid ""
+"Verifies the integrity of the password files "
+"<filename>/etc/passwd</filename> and <filename>/etc/shadow</filename>"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/shadow.xml:503
+msgid "pwck"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/shadow.xml:509
+msgid "<command>pwconv</command>"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/shadow.xml:511
+msgid "Creates or updates the shadow password file from the normal password file"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/shadow.xml:514
+msgid "pwconv"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/shadow.xml:520
+msgid "<command>pwunconv</command>"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/shadow.xml:522
+msgid ""
+"Updates <filename>/etc/passwd</filename> from "
+"<filename>/etc/shadow</filename> and then deletes the latter"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/shadow.xml:525
+msgid "pwunconv"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/shadow.xml:531
+msgid "<command>sg</command>"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/shadow.xml:533
+msgid ""
+"Executes a given command while the user's GID is set to that of the given "
+"group"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/shadow.xml:536
+msgid "sg"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/shadow.xml:542
+msgid "<command>su</command>"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/shadow.xml:544
+msgid "Runs a shell with substitute user and group IDs"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/shadow.xml:546
+msgid "su"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/shadow.xml:552
+msgid "<command>useradd</command>"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/shadow.xml:554
+msgid ""
+"Creates a new user with the given name, or updates the default new-user "
+"information"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/shadow.xml:557
+msgid "useradd"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/shadow.xml:563
+msgid "<command>userdel</command>"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/shadow.xml:565
+msgid "Deletes the given user account"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/shadow.xml:567
+msgid "userdel"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/shadow.xml:573
+msgid "<command>usermod</command>"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/shadow.xml:575
+msgid ""
+"Is used to modify the given user's login name, User Identification (UID), "
+"shell, initial group, home directory, etc."
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/shadow.xml:578
+msgid "usermod"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/shadow.xml:584
+msgid "<command>vigr</command>"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/shadow.xml:586
+msgid ""
+"Edits the <filename>/etc/group</filename> or "
+"<filename>/etc/gshadow</filename> files"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/shadow.xml:589
+msgid "vigr"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/shadow.xml:595
+msgid "<command>vipw</command>"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/shadow.xml:597
+msgid ""
+"Edits the <filename>/etc/passwd</filename> or "
+"<filename>/etc/shadow</filename> files"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/shadow.xml:600
+msgid "vipw"
+msgstr ""

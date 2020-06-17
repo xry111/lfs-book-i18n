@@ -1,0 +1,1676 @@
+# SOME DESCRIPTIVE TITLE
+# Copyright (C) YEAR Free Software Foundation, Inc.
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"POT-Creation-Date: 2020-06-17 12:44+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#. type: Content of: <appendix><title>
+#: /home/xry111/svn-repos/LFS-BOOK/appendices/dependencies.xml:12
+msgid "Dependencies"
+msgstr ""
+
+#. type: Content of: <appendix><para>
+#: /home/xry111/svn-repos/LFS-BOOK/appendices/dependencies.xml:14
+msgid ""
+"Every package built in LFS relies on one or more other packages in order to "
+"build and install properly. Some packages even participate in circular "
+"dependencies, that is, the first package depends on the second which in turn "
+"depends on the first. Because of these dependencies, the order in which "
+"packages are built in LFS is very important. The purpose of this page is to "
+"document the dependencies of each package built in LFS."
+msgstr ""
+
+#. type: Content of: <appendix><para>
+#: /home/xry111/svn-repos/LFS-BOOK/appendices/dependencies.xml:21
+msgid ""
+"For each package we build, we have listed three, and sometimes four, types "
+"of dependencies.  The first lists what other packages need to be available "
+"in order to compile and install the package in question. The second lists "
+"what packages, in addition to those on the first list, need to be available "
+"in order to run the test suites. The third list of dependencies are packages "
+"that require this package to be built and installed in its final location "
+"before they are built and installed. In most cases, this is because these "
+"packages will hard code paths to binaries within their scripts. If not built "
+"in a certain order, this could result in paths of /tools/bin/[binary] being "
+"placed inside scripts installed to the final system. This is obviously not "
+"desirable."
+msgstr ""
+
+#. type: Content of: <appendix><para>
+#: /home/xry111/svn-repos/LFS-BOOK/appendices/dependencies.xml:33
+msgid ""
+"The last list of dependencies are optional packages that are not addressed "
+"in LFS, but could be useful to the user.  These packages may have additional "
+"mandatory or optional dependencies of their own.  For these dependencies, "
+"the recommended practice is to install them after completion of the LFS book "
+"and then go back and rebuild the LFS package.  In several cases, "
+"re-installation is addressed in BLFS."
+msgstr ""
+
+#. type: Content of: <appendix><bridgehead>
+#: /home/xry111/svn-repos/LFS-BOOK/appendices/dependencies.xml:41
+msgid "Acl"
+msgstr ""
+
+#. type: Content of: <appendix><segmentedlist><segtitle>
+#: /home/xry111/svn-repos/LFS-BOOK/appendices/dependencies.xml:44
+#: /home/xry111/svn-repos/LFS-BOOK/appendices/dependencies.xml:80
+#: /home/xry111/svn-repos/LFS-BOOK/appendices/dependencies.xml:116
+#: /home/xry111/svn-repos/LFS-BOOK/appendices/dependencies.xml:151
+#: /home/xry111/svn-repos/LFS-BOOK/appendices/dependencies.xml:188
+#: /home/xry111/svn-repos/LFS-BOOK/appendices/dependencies.xml:224
+#: /home/xry111/svn-repos/LFS-BOOK/appendices/dependencies.xml:260
+#: /home/xry111/svn-repos/LFS-BOOK/appendices/dependencies.xml:296
+#: /home/xry111/svn-repos/LFS-BOOK/appendices/dependencies.xml:332
+#: /home/xry111/svn-repos/LFS-BOOK/appendices/dependencies.xml:368
+#: /home/xry111/svn-repos/LFS-BOOK/appendices/dependencies.xml:403
+#: /home/xry111/svn-repos/LFS-BOOK/appendices/dependencies.xml:476
+#: /home/xry111/svn-repos/LFS-BOOK/appendices/dependencies.xml:511
+#: /home/xry111/svn-repos/LFS-BOOK/appendices/dependencies.xml:547
+#: /home/xry111/svn-repos/LFS-BOOK/appendices/dependencies.xml:583
+#: /home/xry111/svn-repos/LFS-BOOK/appendices/dependencies.xml:619
+#: /home/xry111/svn-repos/LFS-BOOK/appendices/dependencies.xml:655
+#: /home/xry111/svn-repos/LFS-BOOK/appendices/dependencies.xml:691
+#: /home/xry111/svn-repos/LFS-BOOK/appendices/dependencies.xml:727
+#: /home/xry111/svn-repos/LFS-BOOK/appendices/dependencies.xml:763
+#: /home/xry111/svn-repos/LFS-BOOK/appendices/dependencies.xml:799
+#: /home/xry111/svn-repos/LFS-BOOK/appendices/dependencies.xml:835
+#: /home/xry111/svn-repos/LFS-BOOK/appendices/dependencies.xml:874
+#: /home/xry111/svn-repos/LFS-BOOK/appendices/dependencies.xml:910
+#: /home/xry111/svn-repos/LFS-BOOK/appendices/dependencies.xml:946
+#: /home/xry111/svn-repos/LFS-BOOK/appendices/dependencies.xml:982
+#: /home/xry111/svn-repos/LFS-BOOK/appendices/dependencies.xml:1018
+#: /home/xry111/svn-repos/LFS-BOOK/appendices/dependencies.xml:1053
+#: /home/xry111/svn-repos/LFS-BOOK/appendices/dependencies.xml:1089
+#: /home/xry111/svn-repos/LFS-BOOK/appendices/dependencies.xml:1125
+#: /home/xry111/svn-repos/LFS-BOOK/appendices/dependencies.xml:1161
+#: /home/xry111/svn-repos/LFS-BOOK/appendices/dependencies.xml:1197
+#: /home/xry111/svn-repos/LFS-BOOK/appendices/dependencies.xml:1232
+#: /home/xry111/svn-repos/LFS-BOOK/appendices/dependencies.xml:1268
+#: /home/xry111/svn-repos/LFS-BOOK/appendices/dependencies.xml:1303
+#: /home/xry111/svn-repos/LFS-BOOK/appendices/dependencies.xml:1339
+#: /home/xry111/svn-repos/LFS-BOOK/appendices/dependencies.xml:1375
+#: /home/xry111/svn-repos/LFS-BOOK/appendices/dependencies.xml:1411
+#: /home/xry111/svn-repos/LFS-BOOK/appendices/dependencies.xml:1447
+#: /home/xry111/svn-repos/LFS-BOOK/appendices/dependencies.xml:1483
+#: /home/xry111/svn-repos/LFS-BOOK/appendices/dependencies.xml:1518
+#: /home/xry111/svn-repos/LFS-BOOK/appendices/dependencies.xml:1553
+#: /home/xry111/svn-repos/LFS-BOOK/appendices/dependencies.xml:1589
+#: /home/xry111/svn-repos/LFS-BOOK/appendices/dependencies.xml:1625
+#: /home/xry111/svn-repos/LFS-BOOK/appendices/dependencies.xml:1661
+#: /home/xry111/svn-repos/LFS-BOOK/appendices/dependencies.xml:1697
+#: /home/xry111/svn-repos/LFS-BOOK/appendices/dependencies.xml:1733
+#: /home/xry111/svn-repos/LFS-BOOK/appendices/dependencies.xml:1769
+#: /home/xry111/svn-repos/LFS-BOOK/appendices/dependencies.xml:1804
+#: /home/xry111/svn-repos/LFS-BOOK/appendices/dependencies.xml:1839
+#: /home/xry111/svn-repos/LFS-BOOK/appendices/dependencies.xml:1875
+#: /home/xry111/svn-repos/LFS-BOOK/appendices/dependencies.xml:1911
+#: /home/xry111/svn-repos/LFS-BOOK/appendices/dependencies.xml:1948
+#: /home/xry111/svn-repos/LFS-BOOK/appendices/dependencies.xml:1983
+#: /home/xry111/svn-repos/LFS-BOOK/appendices/dependencies.xml:2018
+#: /home/xry111/svn-repos/LFS-BOOK/appendices/dependencies.xml:2053
+#: /home/xry111/svn-repos/LFS-BOOK/appendices/dependencies.xml:2089
+#: /home/xry111/svn-repos/LFS-BOOK/appendices/dependencies.xml:2125
+#: /home/xry111/svn-repos/LFS-BOOK/appendices/dependencies.xml:2160
+#: /home/xry111/svn-repos/LFS-BOOK/appendices/dependencies.xml:2195
+#: /home/xry111/svn-repos/LFS-BOOK/appendices/dependencies.xml:2231
+#: /home/xry111/svn-repos/LFS-BOOK/appendices/dependencies.xml:2267
+#: /home/xry111/svn-repos/LFS-BOOK/appendices/dependencies.xml:2303
+#: /home/xry111/svn-repos/LFS-BOOK/appendices/dependencies.xml:2339
+#: /home/xry111/svn-repos/LFS-BOOK/appendices/dependencies.xml:2375
+#: /home/xry111/svn-repos/LFS-BOOK/appendices/dependencies.xml:2410
+#: /home/xry111/svn-repos/LFS-BOOK/appendices/dependencies.xml:2450
+#: /home/xry111/svn-repos/LFS-BOOK/appendices/dependencies.xml:2485
+#: /home/xry111/svn-repos/LFS-BOOK/appendices/dependencies.xml:2521
+#: /home/xry111/svn-repos/LFS-BOOK/appendices/dependencies.xml:2557
+#: /home/xry111/svn-repos/LFS-BOOK/appendices/dependencies.xml:2593
+#: /home/xry111/svn-repos/LFS-BOOK/appendices/dependencies.xml:2629
+#: /home/xry111/svn-repos/LFS-BOOK/appendices/dependencies.xml:2665
+#: /home/xry111/svn-repos/LFS-BOOK/appendices/dependencies.xml:2700
+#: /home/xry111/svn-repos/LFS-BOOK/appendices/dependencies.xml:2735
+#: /home/xry111/svn-repos/LFS-BOOK/appendices/dependencies.xml:2770
+msgid "&dependencies;"
+msgstr ""
+
+#. type: Content of: <appendix><segmentedlist><seglistitem><seg>
+#: /home/xry111/svn-repos/LFS-BOOK/appendices/dependencies.xml:47
+msgid ""
+"Attr, Bash, Binutils, Coreutils, GCC, Gettext, Grep, M4, Make, Perl, Sed, "
+"and Texinfo"
+msgstr ""
+
+#. type: Content of: <appendix><segmentedlist><segtitle>
+#: /home/xry111/svn-repos/LFS-BOOK/appendices/dependencies.xml:53
+#: /home/xry111/svn-repos/LFS-BOOK/appendices/dependencies.xml:89
+#: /home/xry111/svn-repos/LFS-BOOK/appendices/dependencies.xml:124
+#: /home/xry111/svn-repos/LFS-BOOK/appendices/dependencies.xml:160
+#: /home/xry111/svn-repos/LFS-BOOK/appendices/dependencies.xml:197
+#: /home/xry111/svn-repos/LFS-BOOK/appendices/dependencies.xml:233
+#: /home/xry111/svn-repos/LFS-BOOK/appendices/dependencies.xml:269
+#: /home/xry111/svn-repos/LFS-BOOK/appendices/dependencies.xml:305
+#: /home/xry111/svn-repos/LFS-BOOK/appendices/dependencies.xml:341
+#: /home/xry111/svn-repos/LFS-BOOK/appendices/dependencies.xml:376
+#: /home/xry111/svn-repos/LFS-BOOK/appendices/dependencies.xml:412
+#: /home/xry111/svn-repos/LFS-BOOK/appendices/dependencies.xml:484
+#: /home/xry111/svn-repos/LFS-BOOK/appendices/dependencies.xml:520
+#: /home/xry111/svn-repos/LFS-BOOK/appendices/dependencies.xml:556
+#: /home/xry111/svn-repos/LFS-BOOK/appendices/dependencies.xml:592
+#: /home/xry111/svn-repos/LFS-BOOK/appendices/dependencies.xml:628
+#: /home/xry111/svn-repos/LFS-BOOK/appendices/dependencies.xml:664
+#: /home/xry111/svn-repos/LFS-BOOK/appendices/dependencies.xml:700
+#: /home/xry111/svn-repos/LFS-BOOK/appendices/dependencies.xml:736
+#: /home/xry111/svn-repos/LFS-BOOK/appendices/dependencies.xml:772
+#: /home/xry111/svn-repos/LFS-BOOK/appendices/dependencies.xml:808
+#: /home/xry111/svn-repos/LFS-BOOK/appendices/dependencies.xml:845
+#: /home/xry111/svn-repos/LFS-BOOK/appendices/dependencies.xml:883
+#: /home/xry111/svn-repos/LFS-BOOK/appendices/dependencies.xml:919
+#: /home/xry111/svn-repos/LFS-BOOK/appendices/dependencies.xml:955
+#: /home/xry111/svn-repos/LFS-BOOK/appendices/dependencies.xml:991
+#: /home/xry111/svn-repos/LFS-BOOK/appendices/dependencies.xml:1026
+#: /home/xry111/svn-repos/LFS-BOOK/appendices/dependencies.xml:1062
+#: /home/xry111/svn-repos/LFS-BOOK/appendices/dependencies.xml:1098
+#: /home/xry111/svn-repos/LFS-BOOK/appendices/dependencies.xml:1134
+#: /home/xry111/svn-repos/LFS-BOOK/appendices/dependencies.xml:1170
+#: /home/xry111/svn-repos/LFS-BOOK/appendices/dependencies.xml:1205
+#: /home/xry111/svn-repos/LFS-BOOK/appendices/dependencies.xml:1241
+#: /home/xry111/svn-repos/LFS-BOOK/appendices/dependencies.xml:1276
+#: /home/xry111/svn-repos/LFS-BOOK/appendices/dependencies.xml:1312
+#: /home/xry111/svn-repos/LFS-BOOK/appendices/dependencies.xml:1348
+#: /home/xry111/svn-repos/LFS-BOOK/appendices/dependencies.xml:1384
+#: /home/xry111/svn-repos/LFS-BOOK/appendices/dependencies.xml:1420
+#: /home/xry111/svn-repos/LFS-BOOK/appendices/dependencies.xml:1456
+#: /home/xry111/svn-repos/LFS-BOOK/appendices/dependencies.xml:1491
+#: /home/xry111/svn-repos/LFS-BOOK/appendices/dependencies.xml:1526
+#: /home/xry111/svn-repos/LFS-BOOK/appendices/dependencies.xml:1562
+#: /home/xry111/svn-repos/LFS-BOOK/appendices/dependencies.xml:1598
+#: /home/xry111/svn-repos/LFS-BOOK/appendices/dependencies.xml:1634
+#: /home/xry111/svn-repos/LFS-BOOK/appendices/dependencies.xml:1670
+#: /home/xry111/svn-repos/LFS-BOOK/appendices/dependencies.xml:1706
+#: /home/xry111/svn-repos/LFS-BOOK/appendices/dependencies.xml:1742
+#: /home/xry111/svn-repos/LFS-BOOK/appendices/dependencies.xml:1777
+#: /home/xry111/svn-repos/LFS-BOOK/appendices/dependencies.xml:1812
+#: /home/xry111/svn-repos/LFS-BOOK/appendices/dependencies.xml:1848
+#: /home/xry111/svn-repos/LFS-BOOK/appendices/dependencies.xml:1884
+#: /home/xry111/svn-repos/LFS-BOOK/appendices/dependencies.xml:1920
+#: /home/xry111/svn-repos/LFS-BOOK/appendices/dependencies.xml:1956
+#: /home/xry111/svn-repos/LFS-BOOK/appendices/dependencies.xml:1991
+#: /home/xry111/svn-repos/LFS-BOOK/appendices/dependencies.xml:2026
+#: /home/xry111/svn-repos/LFS-BOOK/appendices/dependencies.xml:2062
+#: /home/xry111/svn-repos/LFS-BOOK/appendices/dependencies.xml:2098
+#: /home/xry111/svn-repos/LFS-BOOK/appendices/dependencies.xml:2133
+#: /home/xry111/svn-repos/LFS-BOOK/appendices/dependencies.xml:2168
+#: /home/xry111/svn-repos/LFS-BOOK/appendices/dependencies.xml:2204
+#: /home/xry111/svn-repos/LFS-BOOK/appendices/dependencies.xml:2240
+#: /home/xry111/svn-repos/LFS-BOOK/appendices/dependencies.xml:2276
+#: /home/xry111/svn-repos/LFS-BOOK/appendices/dependencies.xml:2312
+#: /home/xry111/svn-repos/LFS-BOOK/appendices/dependencies.xml:2348
+#: /home/xry111/svn-repos/LFS-BOOK/appendices/dependencies.xml:2383
+#: /home/xry111/svn-repos/LFS-BOOK/appendices/dependencies.xml:2420
+#: /home/xry111/svn-repos/LFS-BOOK/appendices/dependencies.xml:2458
+#: /home/xry111/svn-repos/LFS-BOOK/appendices/dependencies.xml:2494
+#: /home/xry111/svn-repos/LFS-BOOK/appendices/dependencies.xml:2530
+#: /home/xry111/svn-repos/LFS-BOOK/appendices/dependencies.xml:2566
+#: /home/xry111/svn-repos/LFS-BOOK/appendices/dependencies.xml:2602
+#: /home/xry111/svn-repos/LFS-BOOK/appendices/dependencies.xml:2638
+#: /home/xry111/svn-repos/LFS-BOOK/appendices/dependencies.xml:2673
+#: /home/xry111/svn-repos/LFS-BOOK/appendices/dependencies.xml:2708
+#: /home/xry111/svn-repos/LFS-BOOK/appendices/dependencies.xml:2743
+#: /home/xry111/svn-repos/LFS-BOOK/appendices/dependencies.xml:2778
+msgid "&testsuites;"
+msgstr ""
+
+#. type: Content of: <appendix><segmentedlist><seglistitem><seg>
+#: /home/xry111/svn-repos/LFS-BOOK/appendices/dependencies.xml:56
+#: /home/xry111/svn-repos/LFS-BOOK/appendices/dependencies.xml:92
+msgid "Automake, Diffutils, Findutils, and Libtool"
+msgstr ""
+
+#. type: Content of: <appendix><segmentedlist><segtitle>
+#: /home/xry111/svn-repos/LFS-BOOK/appendices/dependencies.xml:61
+#: /home/xry111/svn-repos/LFS-BOOK/appendices/dependencies.xml:97
+#: /home/xry111/svn-repos/LFS-BOOK/appendices/dependencies.xml:132
+#: /home/xry111/svn-repos/LFS-BOOK/appendices/dependencies.xml:169
+#: /home/xry111/svn-repos/LFS-BOOK/appendices/dependencies.xml:205
+#: /home/xry111/svn-repos/LFS-BOOK/appendices/dependencies.xml:241
+#: /home/xry111/svn-repos/LFS-BOOK/appendices/dependencies.xml:277
+#: /home/xry111/svn-repos/LFS-BOOK/appendices/dependencies.xml:313
+#: /home/xry111/svn-repos/LFS-BOOK/appendices/dependencies.xml:349
+#: /home/xry111/svn-repos/LFS-BOOK/appendices/dependencies.xml:384
+#: /home/xry111/svn-repos/LFS-BOOK/appendices/dependencies.xml:420
+#: /home/xry111/svn-repos/LFS-BOOK/appendices/dependencies.xml:492
+#: /home/xry111/svn-repos/LFS-BOOK/appendices/dependencies.xml:528
+#: /home/xry111/svn-repos/LFS-BOOK/appendices/dependencies.xml:564
+#: /home/xry111/svn-repos/LFS-BOOK/appendices/dependencies.xml:600
+#: /home/xry111/svn-repos/LFS-BOOK/appendices/dependencies.xml:636
+#: /home/xry111/svn-repos/LFS-BOOK/appendices/dependencies.xml:672
+#: /home/xry111/svn-repos/LFS-BOOK/appendices/dependencies.xml:708
+#: /home/xry111/svn-repos/LFS-BOOK/appendices/dependencies.xml:744
+#: /home/xry111/svn-repos/LFS-BOOK/appendices/dependencies.xml:780
+#: /home/xry111/svn-repos/LFS-BOOK/appendices/dependencies.xml:816
+#: /home/xry111/svn-repos/LFS-BOOK/appendices/dependencies.xml:853
+#: /home/xry111/svn-repos/LFS-BOOK/appendices/dependencies.xml:891
+#: /home/xry111/svn-repos/LFS-BOOK/appendices/dependencies.xml:927
+#: /home/xry111/svn-repos/LFS-BOOK/appendices/dependencies.xml:963
+#: /home/xry111/svn-repos/LFS-BOOK/appendices/dependencies.xml:999
+#: /home/xry111/svn-repos/LFS-BOOK/appendices/dependencies.xml:1034
+#: /home/xry111/svn-repos/LFS-BOOK/appendices/dependencies.xml:1070
+#: /home/xry111/svn-repos/LFS-BOOK/appendices/dependencies.xml:1106
+#: /home/xry111/svn-repos/LFS-BOOK/appendices/dependencies.xml:1142
+#: /home/xry111/svn-repos/LFS-BOOK/appendices/dependencies.xml:1178
+#: /home/xry111/svn-repos/LFS-BOOK/appendices/dependencies.xml:1213
+#: /home/xry111/svn-repos/LFS-BOOK/appendices/dependencies.xml:1249
+#: /home/xry111/svn-repos/LFS-BOOK/appendices/dependencies.xml:1284
+#: /home/xry111/svn-repos/LFS-BOOK/appendices/dependencies.xml:1320
+#: /home/xry111/svn-repos/LFS-BOOK/appendices/dependencies.xml:1356
+#: /home/xry111/svn-repos/LFS-BOOK/appendices/dependencies.xml:1392
+#: /home/xry111/svn-repos/LFS-BOOK/appendices/dependencies.xml:1428
+#: /home/xry111/svn-repos/LFS-BOOK/appendices/dependencies.xml:1464
+#: /home/xry111/svn-repos/LFS-BOOK/appendices/dependencies.xml:1499
+#: /home/xry111/svn-repos/LFS-BOOK/appendices/dependencies.xml:1534
+#: /home/xry111/svn-repos/LFS-BOOK/appendices/dependencies.xml:1570
+#: /home/xry111/svn-repos/LFS-BOOK/appendices/dependencies.xml:1606
+#: /home/xry111/svn-repos/LFS-BOOK/appendices/dependencies.xml:1642
+#: /home/xry111/svn-repos/LFS-BOOK/appendices/dependencies.xml:1678
+#: /home/xry111/svn-repos/LFS-BOOK/appendices/dependencies.xml:1714
+#: /home/xry111/svn-repos/LFS-BOOK/appendices/dependencies.xml:1750
+#: /home/xry111/svn-repos/LFS-BOOK/appendices/dependencies.xml:1785
+#: /home/xry111/svn-repos/LFS-BOOK/appendices/dependencies.xml:1820
+#: /home/xry111/svn-repos/LFS-BOOK/appendices/dependencies.xml:1856
+#: /home/xry111/svn-repos/LFS-BOOK/appendices/dependencies.xml:1892
+#: /home/xry111/svn-repos/LFS-BOOK/appendices/dependencies.xml:1928
+#: /home/xry111/svn-repos/LFS-BOOK/appendices/dependencies.xml:1964
+#: /home/xry111/svn-repos/LFS-BOOK/appendices/dependencies.xml:1999
+#: /home/xry111/svn-repos/LFS-BOOK/appendices/dependencies.xml:2034
+#: /home/xry111/svn-repos/LFS-BOOK/appendices/dependencies.xml:2070
+#: /home/xry111/svn-repos/LFS-BOOK/appendices/dependencies.xml:2106
+#: /home/xry111/svn-repos/LFS-BOOK/appendices/dependencies.xml:2141
+#: /home/xry111/svn-repos/LFS-BOOK/appendices/dependencies.xml:2176
+#: /home/xry111/svn-repos/LFS-BOOK/appendices/dependencies.xml:2212
+#: /home/xry111/svn-repos/LFS-BOOK/appendices/dependencies.xml:2248
+#: /home/xry111/svn-repos/LFS-BOOK/appendices/dependencies.xml:2284
+#: /home/xry111/svn-repos/LFS-BOOK/appendices/dependencies.xml:2320
+#: /home/xry111/svn-repos/LFS-BOOK/appendices/dependencies.xml:2356
+#: /home/xry111/svn-repos/LFS-BOOK/appendices/dependencies.xml:2391
+#: /home/xry111/svn-repos/LFS-BOOK/appendices/dependencies.xml:2428
+#: /home/xry111/svn-repos/LFS-BOOK/appendices/dependencies.xml:2466
+#: /home/xry111/svn-repos/LFS-BOOK/appendices/dependencies.xml:2502
+#: /home/xry111/svn-repos/LFS-BOOK/appendices/dependencies.xml:2538
+#: /home/xry111/svn-repos/LFS-BOOK/appendices/dependencies.xml:2574
+#: /home/xry111/svn-repos/LFS-BOOK/appendices/dependencies.xml:2610
+#: /home/xry111/svn-repos/LFS-BOOK/appendices/dependencies.xml:2646
+#: /home/xry111/svn-repos/LFS-BOOK/appendices/dependencies.xml:2681
+#: /home/xry111/svn-repos/LFS-BOOK/appendices/dependencies.xml:2716
+#: /home/xry111/svn-repos/LFS-BOOK/appendices/dependencies.xml:2751
+#: /home/xry111/svn-repos/LFS-BOOK/appendices/dependencies.xml:2786
+msgid "&before;"
+msgstr ""
+
+#. type: Content of: <appendix><segmentedlist><seglistitem><seg>
+#: /home/xry111/svn-repos/LFS-BOOK/appendices/dependencies.xml:64
+msgid "Coreutils, Sed, Tar, and Vim"
+msgstr ""
+
+#. type: Content of: <appendix><segmentedlist><segtitle>
+#: /home/xry111/svn-repos/LFS-BOOK/appendices/dependencies.xml:69
+#: /home/xry111/svn-repos/LFS-BOOK/appendices/dependencies.xml:105
+#: /home/xry111/svn-repos/LFS-BOOK/appendices/dependencies.xml:140
+#: /home/xry111/svn-repos/LFS-BOOK/appendices/dependencies.xml:177
+#: /home/xry111/svn-repos/LFS-BOOK/appendices/dependencies.xml:213
+#: /home/xry111/svn-repos/LFS-BOOK/appendices/dependencies.xml:249
+#: /home/xry111/svn-repos/LFS-BOOK/appendices/dependencies.xml:285
+#: /home/xry111/svn-repos/LFS-BOOK/appendices/dependencies.xml:321
+#: /home/xry111/svn-repos/LFS-BOOK/appendices/dependencies.xml:357
+#: /home/xry111/svn-repos/LFS-BOOK/appendices/dependencies.xml:392
+#: /home/xry111/svn-repos/LFS-BOOK/appendices/dependencies.xml:428
+#: /home/xry111/svn-repos/LFS-BOOK/appendices/dependencies.xml:500
+#: /home/xry111/svn-repos/LFS-BOOK/appendices/dependencies.xml:536
+#: /home/xry111/svn-repos/LFS-BOOK/appendices/dependencies.xml:572
+#: /home/xry111/svn-repos/LFS-BOOK/appendices/dependencies.xml:608
+#: /home/xry111/svn-repos/LFS-BOOK/appendices/dependencies.xml:644
+#: /home/xry111/svn-repos/LFS-BOOK/appendices/dependencies.xml:680
+#: /home/xry111/svn-repos/LFS-BOOK/appendices/dependencies.xml:716
+#: /home/xry111/svn-repos/LFS-BOOK/appendices/dependencies.xml:752
+#: /home/xry111/svn-repos/LFS-BOOK/appendices/dependencies.xml:788
+#: /home/xry111/svn-repos/LFS-BOOK/appendices/dependencies.xml:824
+#: /home/xry111/svn-repos/LFS-BOOK/appendices/dependencies.xml:861
+#: /home/xry111/svn-repos/LFS-BOOK/appendices/dependencies.xml:899
+#: /home/xry111/svn-repos/LFS-BOOK/appendices/dependencies.xml:935
+#: /home/xry111/svn-repos/LFS-BOOK/appendices/dependencies.xml:971
+#: /home/xry111/svn-repos/LFS-BOOK/appendices/dependencies.xml:1007
+#: /home/xry111/svn-repos/LFS-BOOK/appendices/dependencies.xml:1042
+#: /home/xry111/svn-repos/LFS-BOOK/appendices/dependencies.xml:1078
+#: /home/xry111/svn-repos/LFS-BOOK/appendices/dependencies.xml:1114
+#: /home/xry111/svn-repos/LFS-BOOK/appendices/dependencies.xml:1150
+#: /home/xry111/svn-repos/LFS-BOOK/appendices/dependencies.xml:1186
+#: /home/xry111/svn-repos/LFS-BOOK/appendices/dependencies.xml:1221
+#: /home/xry111/svn-repos/LFS-BOOK/appendices/dependencies.xml:1257
+#: /home/xry111/svn-repos/LFS-BOOK/appendices/dependencies.xml:1292
+#: /home/xry111/svn-repos/LFS-BOOK/appendices/dependencies.xml:1328
+#: /home/xry111/svn-repos/LFS-BOOK/appendices/dependencies.xml:1364
+#: /home/xry111/svn-repos/LFS-BOOK/appendices/dependencies.xml:1400
+#: /home/xry111/svn-repos/LFS-BOOK/appendices/dependencies.xml:1436
+#: /home/xry111/svn-repos/LFS-BOOK/appendices/dependencies.xml:1472
+#: /home/xry111/svn-repos/LFS-BOOK/appendices/dependencies.xml:1507
+#: /home/xry111/svn-repos/LFS-BOOK/appendices/dependencies.xml:1542
+#: /home/xry111/svn-repos/LFS-BOOK/appendices/dependencies.xml:1578
+#: /home/xry111/svn-repos/LFS-BOOK/appendices/dependencies.xml:1614
+#: /home/xry111/svn-repos/LFS-BOOK/appendices/dependencies.xml:1650
+#: /home/xry111/svn-repos/LFS-BOOK/appendices/dependencies.xml:1686
+#: /home/xry111/svn-repos/LFS-BOOK/appendices/dependencies.xml:1722
+#: /home/xry111/svn-repos/LFS-BOOK/appendices/dependencies.xml:1758
+#: /home/xry111/svn-repos/LFS-BOOK/appendices/dependencies.xml:1793
+#: /home/xry111/svn-repos/LFS-BOOK/appendices/dependencies.xml:1828
+#: /home/xry111/svn-repos/LFS-BOOK/appendices/dependencies.xml:1864
+#: /home/xry111/svn-repos/LFS-BOOK/appendices/dependencies.xml:1900
+#: /home/xry111/svn-repos/LFS-BOOK/appendices/dependencies.xml:1937
+#: /home/xry111/svn-repos/LFS-BOOK/appendices/dependencies.xml:1972
+#: /home/xry111/svn-repos/LFS-BOOK/appendices/dependencies.xml:2007
+#: /home/xry111/svn-repos/LFS-BOOK/appendices/dependencies.xml:2042
+#: /home/xry111/svn-repos/LFS-BOOK/appendices/dependencies.xml:2078
+#: /home/xry111/svn-repos/LFS-BOOK/appendices/dependencies.xml:2114
+#: /home/xry111/svn-repos/LFS-BOOK/appendices/dependencies.xml:2149
+#: /home/xry111/svn-repos/LFS-BOOK/appendices/dependencies.xml:2184
+#: /home/xry111/svn-repos/LFS-BOOK/appendices/dependencies.xml:2220
+#: /home/xry111/svn-repos/LFS-BOOK/appendices/dependencies.xml:2256
+#: /home/xry111/svn-repos/LFS-BOOK/appendices/dependencies.xml:2292
+#: /home/xry111/svn-repos/LFS-BOOK/appendices/dependencies.xml:2328
+#: /home/xry111/svn-repos/LFS-BOOK/appendices/dependencies.xml:2364
+#: /home/xry111/svn-repos/LFS-BOOK/appendices/dependencies.xml:2399
+#: /home/xry111/svn-repos/LFS-BOOK/appendices/dependencies.xml:2436
+#: /home/xry111/svn-repos/LFS-BOOK/appendices/dependencies.xml:2474
+#: /home/xry111/svn-repos/LFS-BOOK/appendices/dependencies.xml:2510
+#: /home/xry111/svn-repos/LFS-BOOK/appendices/dependencies.xml:2546
+#: /home/xry111/svn-repos/LFS-BOOK/appendices/dependencies.xml:2582
+#: /home/xry111/svn-repos/LFS-BOOK/appendices/dependencies.xml:2618
+#: /home/xry111/svn-repos/LFS-BOOK/appendices/dependencies.xml:2654
+#: /home/xry111/svn-repos/LFS-BOOK/appendices/dependencies.xml:2689
+#: /home/xry111/svn-repos/LFS-BOOK/appendices/dependencies.xml:2724
+#: /home/xry111/svn-repos/LFS-BOOK/appendices/dependencies.xml:2759
+#: /home/xry111/svn-repos/LFS-BOOK/appendices/dependencies.xml:2794
+msgid "&external;"
+msgstr ""
+
+#. type: Content of: <appendix><segmentedlist><seglistitem><seg>
+#: /home/xry111/svn-repos/LFS-BOOK/appendices/dependencies.xml:72
+#: /home/xry111/svn-repos/LFS-BOOK/appendices/dependencies.xml:108
+#: /home/xry111/svn-repos/LFS-BOOK/appendices/dependencies.xml:172
+#: /home/xry111/svn-repos/LFS-BOOK/appendices/dependencies.xml:180
+#: /home/xry111/svn-repos/LFS-BOOK/appendices/dependencies.xml:208
+#: /home/xry111/svn-repos/LFS-BOOK/appendices/dependencies.xml:252
+#: /home/xry111/svn-repos/LFS-BOOK/appendices/dependencies.xml:280
+#: /home/xry111/svn-repos/LFS-BOOK/appendices/dependencies.xml:344
+#: /home/xry111/svn-repos/LFS-BOOK/appendices/dependencies.xml:360
+#: /home/xry111/svn-repos/LFS-BOOK/appendices/dependencies.xml:379
+#: /home/xry111/svn-repos/LFS-BOOK/appendices/dependencies.xml:387
+#: /home/xry111/svn-repos/LFS-BOOK/appendices/dependencies.xml:395
+#: /home/xry111/svn-repos/LFS-BOOK/appendices/dependencies.xml:487
+#: /home/xry111/svn-repos/LFS-BOOK/appendices/dependencies.xml:495
+#: /home/xry111/svn-repos/LFS-BOOK/appendices/dependencies.xml:503
+#: /home/xry111/svn-repos/LFS-BOOK/appendices/dependencies.xml:531
+#: /home/xry111/svn-repos/LFS-BOOK/appendices/dependencies.xml:539
+#: /home/xry111/svn-repos/LFS-BOOK/appendices/dependencies.xml:567
+#: /home/xry111/svn-repos/LFS-BOOK/appendices/dependencies.xml:575
+#: /home/xry111/svn-repos/LFS-BOOK/appendices/dependencies.xml:595
+#: /home/xry111/svn-repos/LFS-BOOK/appendices/dependencies.xml:603
+#: /home/xry111/svn-repos/LFS-BOOK/appendices/dependencies.xml:611
+#: /home/xry111/svn-repos/LFS-BOOK/appendices/dependencies.xml:631
+#: /home/xry111/svn-repos/LFS-BOOK/appendices/dependencies.xml:647
+#: /home/xry111/svn-repos/LFS-BOOK/appendices/dependencies.xml:667
+#: /home/xry111/svn-repos/LFS-BOOK/appendices/dependencies.xml:675
+#: /home/xry111/svn-repos/LFS-BOOK/appendices/dependencies.xml:683
+#: /home/xry111/svn-repos/LFS-BOOK/appendices/dependencies.xml:703
+#: /home/xry111/svn-repos/LFS-BOOK/appendices/dependencies.xml:711
+#: /home/xry111/svn-repos/LFS-BOOK/appendices/dependencies.xml:719
+#: /home/xry111/svn-repos/LFS-BOOK/appendices/dependencies.xml:747
+#: /home/xry111/svn-repos/LFS-BOOK/appendices/dependencies.xml:755
+#: /home/xry111/svn-repos/LFS-BOOK/appendices/dependencies.xml:791
+#: /home/xry111/svn-repos/LFS-BOOK/appendices/dependencies.xml:819
+#: /home/xry111/svn-repos/LFS-BOOK/appendices/dependencies.xml:856
+#: /home/xry111/svn-repos/LFS-BOOK/appendices/dependencies.xml:886
+#: /home/xry111/svn-repos/LFS-BOOK/appendices/dependencies.xml:894
+#: /home/xry111/svn-repos/LFS-BOOK/appendices/dependencies.xml:902
+#: /home/xry111/svn-repos/LFS-BOOK/appendices/dependencies.xml:938
+#: /home/xry111/svn-repos/LFS-BOOK/appendices/dependencies.xml:966
+#: /home/xry111/svn-repos/LFS-BOOK/appendices/dependencies.xml:974
+#: /home/xry111/svn-repos/LFS-BOOK/appendices/dependencies.xml:994
+#: /home/xry111/svn-repos/LFS-BOOK/appendices/dependencies.xml:1010
+#: /home/xry111/svn-repos/LFS-BOOK/appendices/dependencies.xml:1037
+#: /home/xry111/svn-repos/LFS-BOOK/appendices/dependencies.xml:1045
+#: /home/xry111/svn-repos/LFS-BOOK/appendices/dependencies.xml:1137
+#: /home/xry111/svn-repos/LFS-BOOK/appendices/dependencies.xml:1145
+#: /home/xry111/svn-repos/LFS-BOOK/appendices/dependencies.xml:1153
+#: /home/xry111/svn-repos/LFS-BOOK/appendices/dependencies.xml:1189
+#: /home/xry111/svn-repos/LFS-BOOK/appendices/dependencies.xml:1224
+#: /home/xry111/svn-repos/LFS-BOOK/appendices/dependencies.xml:1260
+#: /home/xry111/svn-repos/LFS-BOOK/appendices/dependencies.xml:1287
+#: /home/xry111/svn-repos/LFS-BOOK/appendices/dependencies.xml:1295
+#: /home/xry111/svn-repos/LFS-BOOK/appendices/dependencies.xml:1323
+#: /home/xry111/svn-repos/LFS-BOOK/appendices/dependencies.xml:1359
+#: /home/xry111/svn-repos/LFS-BOOK/appendices/dependencies.xml:1367
+#: /home/xry111/svn-repos/LFS-BOOK/appendices/dependencies.xml:1403
+#: /home/xry111/svn-repos/LFS-BOOK/appendices/dependencies.xml:1510
+#: /home/xry111/svn-repos/LFS-BOOK/appendices/dependencies.xml:1545
+#: /home/xry111/svn-repos/LFS-BOOK/appendices/dependencies.xml:1581
+#: /home/xry111/svn-repos/LFS-BOOK/appendices/dependencies.xml:1609
+#: /home/xry111/svn-repos/LFS-BOOK/appendices/dependencies.xml:1617
+#: /home/xry111/svn-repos/LFS-BOOK/appendices/dependencies.xml:1645
+#: /home/xry111/svn-repos/LFS-BOOK/appendices/dependencies.xml:1653
+#: /home/xry111/svn-repos/LFS-BOOK/appendices/dependencies.xml:1717
+#: /home/xry111/svn-repos/LFS-BOOK/appendices/dependencies.xml:1725
+#: /home/xry111/svn-repos/LFS-BOOK/appendices/dependencies.xml:1753
+#: /home/xry111/svn-repos/LFS-BOOK/appendices/dependencies.xml:1761
+#: /home/xry111/svn-repos/LFS-BOOK/appendices/dependencies.xml:1788
+#: /home/xry111/svn-repos/LFS-BOOK/appendices/dependencies.xml:1796
+#: /home/xry111/svn-repos/LFS-BOOK/appendices/dependencies.xml:1831
+#: /home/xry111/svn-repos/LFS-BOOK/appendices/dependencies.xml:1851
+#: /home/xry111/svn-repos/LFS-BOOK/appendices/dependencies.xml:1867
+#: /home/xry111/svn-repos/LFS-BOOK/appendices/dependencies.xml:1887
+#: /home/xry111/svn-repos/LFS-BOOK/appendices/dependencies.xml:1903
+#: /home/xry111/svn-repos/LFS-BOOK/appendices/dependencies.xml:1940
+#: /home/xry111/svn-repos/LFS-BOOK/appendices/dependencies.xml:1959
+#: /home/xry111/svn-repos/LFS-BOOK/appendices/dependencies.xml:1994
+#: /home/xry111/svn-repos/LFS-BOOK/appendices/dependencies.xml:2010
+#: /home/xry111/svn-repos/LFS-BOOK/appendices/dependencies.xml:2037
+#: /home/xry111/svn-repos/LFS-BOOK/appendices/dependencies.xml:2081
+#: /home/xry111/svn-repos/LFS-BOOK/appendices/dependencies.xml:2101
+#: /home/xry111/svn-repos/LFS-BOOK/appendices/dependencies.xml:2117
+#: /home/xry111/svn-repos/LFS-BOOK/appendices/dependencies.xml:2152
+#: /home/xry111/svn-repos/LFS-BOOK/appendices/dependencies.xml:2179
+#: /home/xry111/svn-repos/LFS-BOOK/appendices/dependencies.xml:2187
+#: /home/xry111/svn-repos/LFS-BOOK/appendices/dependencies.xml:2215
+#: /home/xry111/svn-repos/LFS-BOOK/appendices/dependencies.xml:2223
+#: /home/xry111/svn-repos/LFS-BOOK/appendices/dependencies.xml:2295
+#: /home/xry111/svn-repos/LFS-BOOK/appendices/dependencies.xml:2331
+#: /home/xry111/svn-repos/LFS-BOOK/appendices/dependencies.xml:2394
+#: /home/xry111/svn-repos/LFS-BOOK/appendices/dependencies.xml:2402
+#: /home/xry111/svn-repos/LFS-BOOK/appendices/dependencies.xml:2423
+#: /home/xry111/svn-repos/LFS-BOOK/appendices/dependencies.xml:2431
+#: /home/xry111/svn-repos/LFS-BOOK/appendices/dependencies.xml:2469
+#: /home/xry111/svn-repos/LFS-BOOK/appendices/dependencies.xml:2477
+#: /home/xry111/svn-repos/LFS-BOOK/appendices/dependencies.xml:2505
+#: /home/xry111/svn-repos/LFS-BOOK/appendices/dependencies.xml:2513
+#: /home/xry111/svn-repos/LFS-BOOK/appendices/dependencies.xml:2533
+#: /home/xry111/svn-repos/LFS-BOOK/appendices/dependencies.xml:2541
+#: /home/xry111/svn-repos/LFS-BOOK/appendices/dependencies.xml:2549
+#: /home/xry111/svn-repos/LFS-BOOK/appendices/dependencies.xml:2569
+#: /home/xry111/svn-repos/LFS-BOOK/appendices/dependencies.xml:2577
+#: /home/xry111/svn-repos/LFS-BOOK/appendices/dependencies.xml:2585
+#: /home/xry111/svn-repos/LFS-BOOK/appendices/dependencies.xml:2605
+#: /home/xry111/svn-repos/LFS-BOOK/appendices/dependencies.xml:2613
+#: /home/xry111/svn-repos/LFS-BOOK/appendices/dependencies.xml:2641
+#: /home/xry111/svn-repos/LFS-BOOK/appendices/dependencies.xml:2649
+#: /home/xry111/svn-repos/LFS-BOOK/appendices/dependencies.xml:2692
+#: /home/xry111/svn-repos/LFS-BOOK/appendices/dependencies.xml:2711
+#: /home/xry111/svn-repos/LFS-BOOK/appendices/dependencies.xml:2727
+#: /home/xry111/svn-repos/LFS-BOOK/appendices/dependencies.xml:2746
+#: /home/xry111/svn-repos/LFS-BOOK/appendices/dependencies.xml:2762
+#: /home/xry111/svn-repos/LFS-BOOK/appendices/dependencies.xml:2781
+#: /home/xry111/svn-repos/LFS-BOOK/appendices/dependencies.xml:2797
+msgid "None"
+msgstr ""
+
+#. type: Content of: <appendix><bridgehead>
+#: /home/xry111/svn-repos/LFS-BOOK/appendices/dependencies.xml:77
+msgid "Attr"
+msgstr ""
+
+#. type: Content of: <appendix><segmentedlist><seglistitem><seg>
+#: /home/xry111/svn-repos/LFS-BOOK/appendices/dependencies.xml:83
+msgid ""
+"Bash, Binutils, Coreutils, GCC, Gettext, Grep, M4, Make, Perl, Sed, and "
+"Texinfo"
+msgstr ""
+
+#. type: Content of: <appendix><segmentedlist><seglistitem><seg>
+#: /home/xry111/svn-repos/LFS-BOOK/appendices/dependencies.xml:100
+msgid "Acl and Libcap"
+msgstr ""
+
+#. type: Content of: <appendix><segmentedlist><seglistitem><seg>
+#: /home/xry111/svn-repos/LFS-BOOK/appendices/dependencies.xml:113
+#: /home/xry111/svn-repos/LFS-BOOK/appendices/dependencies.xml:2073
+msgid "Autoconf"
+msgstr ""
+
+#. type: Content of: <appendix><segmentedlist><seglistitem><seg>
+#: /home/xry111/svn-repos/LFS-BOOK/appendices/dependencies.xml:119
+msgid "Bash, Coreutils, Grep, M4, Make, Perl, Sed, and Texinfo"
+msgstr ""
+
+#. type: Content of: <appendix><segmentedlist><seglistitem><seg>
+#: /home/xry111/svn-repos/LFS-BOOK/appendices/dependencies.xml:127
+msgid "Automake, Diffutils, Findutils, GCC, and Libtool"
+msgstr ""
+
+#. type: Content of: <appendix><bridgehead>
+#: /home/xry111/svn-repos/LFS-BOOK/appendices/dependencies.xml:135
+#: /home/xry111/svn-repos/LFS-BOOK/appendices/dependencies.xml:148
+msgid "Automake"
+msgstr ""
+
+#. type: Content of: <appendix><segmentedlist><seglistitem><seg>
+#: /home/xry111/svn-repos/LFS-BOOK/appendices/dependencies.xml:143
+msgid "Emacs"
+msgstr ""
+
+#. type: Content of: <appendix><segmentedlist><seglistitem><seg>
+#: /home/xry111/svn-repos/LFS-BOOK/appendices/dependencies.xml:154
+msgid "Autoconf, Bash, Coreutils, Gettext, Grep, M4, Make, Perl, Sed, and Texinfo"
+msgstr ""
+
+#. type: Content of: <appendix><segmentedlist><seglistitem><seg>
+#: /home/xry111/svn-repos/LFS-BOOK/appendices/dependencies.xml:163
+msgid ""
+"Binutils, Bison, Bzip2, DejaGNU, Diffutils, Expect, Findutils, Flex, GCC, "
+"Gettext, Gzip, Libtool, and Tar"
+msgstr ""
+
+#. type: Content of: <appendix><bridgehead>
+#: /home/xry111/svn-repos/LFS-BOOK/appendices/dependencies.xml:185
+msgid "Bash"
+msgstr ""
+
+#. type: Content of: <appendix><segmentedlist><seglistitem><seg>
+#: /home/xry111/svn-repos/LFS-BOOK/appendices/dependencies.xml:191
+msgid ""
+"Bash, Binutils, Bison, Coreutils, Diffutils, Gawk, GCC, Glibc, Grep, Make, "
+"Ncurses, Patch, Readline, Sed, and Texinfo"
+msgstr ""
+
+#. type: Content of: <appendix><bridgehead>
+#: /home/xry111/svn-repos/LFS-BOOK/appendices/dependencies.xml:200
+#: /home/xry111/svn-repos/LFS-BOOK/appendices/dependencies.xml:2336
+msgid "Shadow"
+msgstr ""
+
+#. type: Content of: <appendix><segmentedlist><seglistitem><seg>
+#: /home/xry111/svn-repos/LFS-BOOK/appendices/dependencies.xml:216
+msgid "Xorg"
+msgstr ""
+
+#. type: Content of: <appendix><bridgehead>
+#: /home/xry111/svn-repos/LFS-BOOK/appendices/dependencies.xml:221
+msgid "Bc"
+msgstr ""
+
+#. type: Content of: <appendix><segmentedlist><seglistitem><seg>
+#: /home/xry111/svn-repos/LFS-BOOK/appendices/dependencies.xml:227
+msgid "Bash, Binutils, Coreutils, GCC, Glibc, Grep, and Make"
+msgstr ""
+
+#. type: Content of: <appendix><segmentedlist><seglistitem><seg>
+#: /home/xry111/svn-repos/LFS-BOOK/appendices/dependencies.xml:236
+#: /home/xry111/svn-repos/LFS-BOOK/appendices/dependencies.xml:796
+#: /home/xry111/svn-repos/LFS-BOOK/appendices/dependencies.xml:1065
+msgid "Gawk"
+msgstr ""
+
+#. type: Content of: <appendix><bridgehead>
+#: /home/xry111/svn-repos/LFS-BOOK/appendices/dependencies.xml:244
+#: /home/xry111/svn-repos/LFS-BOOK/appendices/dependencies.xml:1622
+msgid "Linux Kernel"
+msgstr ""
+
+#. type: Content of: <appendix><bridgehead>
+#: /home/xry111/svn-repos/LFS-BOOK/appendices/dependencies.xml:257
+msgid "Binutils"
+msgstr ""
+
+#. type: Content of: <appendix><segmentedlist><seglistitem><seg>
+#: /home/xry111/svn-repos/LFS-BOOK/appendices/dependencies.xml:263
+msgid ""
+"Bash, Binutils, Coreutils, Diffutils, File, Flex, Gawk, GCC, Glibc, Grep, "
+"Make, Perl, Sed, Texinfo and Zlib"
+msgstr ""
+
+#. type: Content of: <appendix><segmentedlist><seglistitem><seg>
+#: /home/xry111/svn-repos/LFS-BOOK/appendices/dependencies.xml:272
+msgid "DejaGNU and Expect"
+msgstr ""
+
+#. type: Content of: <appendix><segmentedlist><seglistitem><seg>
+#: /home/xry111/svn-repos/LFS-BOOK/appendices/dependencies.xml:288
+msgid "Debuginfod"
+msgstr ""
+
+#. type: Content of: <appendix><bridgehead>
+#: /home/xry111/svn-repos/LFS-BOOK/appendices/dependencies.xml:293
+msgid "Bison"
+msgstr ""
+
+#. type: Content of: <appendix><segmentedlist><seglistitem><seg>
+#: /home/xry111/svn-repos/LFS-BOOK/appendices/dependencies.xml:299
+msgid ""
+"Bash, Binutils, Coreutils, GCC, Gettext, Glibc, Grep, M4, Make, Perl, and "
+"Sed"
+msgstr ""
+
+#. type: Content of: <appendix><segmentedlist><seglistitem><seg>
+#: /home/xry111/svn-repos/LFS-BOOK/appendices/dependencies.xml:308
+msgid "Diffutils, Findutils, and Flex"
+msgstr ""
+
+#. type: Content of: <appendix><segmentedlist><seglistitem><seg>
+#: /home/xry111/svn-repos/LFS-BOOK/appendices/dependencies.xml:316
+msgid "Kbd and Tar"
+msgstr ""
+
+#. type: Content of: <appendix><segmentedlist><seglistitem><seg>
+#: /home/xry111/svn-repos/LFS-BOOK/appendices/dependencies.xml:324
+msgid "Doxygen (test suite)"
+msgstr ""
+
+#. type: Content of: <appendix><bridgehead>
+#: /home/xry111/svn-repos/LFS-BOOK/appendices/dependencies.xml:329
+msgid "Bzip2"
+msgstr ""
+
+#. type: Content of: <appendix><segmentedlist><seglistitem><seg>
+#: /home/xry111/svn-repos/LFS-BOOK/appendices/dependencies.xml:335
+msgid "Bash, Binutils, Coreutils, Diffutils, GCC, Glibc, Make, and Patch"
+msgstr ""
+
+#. type: Content of: <appendix><segmentedlist><seglistitem><seg>
+#: /home/xry111/svn-repos/LFS-BOOK/appendices/dependencies.xml:352
+#: /home/xry111/svn-repos/LFS-BOOK/appendices/dependencies.xml:688
+#: /home/xry111/svn-repos/LFS-BOOK/appendices/dependencies.xml:958
+msgid "File"
+msgstr ""
+
+#. type: Content of: <appendix><segmentedlist><seglistitem><seg>
+#: /home/xry111/svn-repos/LFS-BOOK/appendices/dependencies.xml:365
+#: /home/xry111/svn-repos/LFS-BOOK/appendices/dependencies.xml:1565
+msgid "Check"
+msgstr ""
+
+#. type: Content of: <appendix><segmentedlist><seglistitem><seg>
+#: /home/xry111/svn-repos/LFS-BOOK/appendices/dependencies.xml:371
+msgid "GCC, Grep, Make, Sed, and Texinfo"
+msgstr ""
+
+#. type: Content of: <appendix><segmentedlist><seglistitem><seg>
+#: /home/xry111/svn-repos/LFS-BOOK/appendices/dependencies.xml:400
+#: /home/xry111/svn-repos/LFS-BOOK/appendices/dependencies.xml:2359
+msgid "Coreutils"
+msgstr ""
+
+#. type: Content of: <appendix><segmentedlist><seglistitem><seg>
+#: /home/xry111/svn-repos/LFS-BOOK/appendices/dependencies.xml:406
+msgid ""
+"Bash, Binutils, Coreutils, GCC, Gettext, Glibc, GMP, Grep, Libcap, Make, "
+"Patch, Perl, Sed, and Texinfo"
+msgstr ""
+
+#. type: Content of: <appendix><segmentedlist><seglistitem><seg>
+#: /home/xry111/svn-repos/LFS-BOOK/appendices/dependencies.xml:415
+msgid "Diffutils, E2fsprogs, Findutils, Shadow, and Util-linux"
+msgstr ""
+
+#. type: Content of: <appendix><segmentedlist><seglistitem><seg>
+#: /home/xry111/svn-repos/LFS-BOOK/appendices/dependencies.xml:423
+msgid "Bash, Diffutils, Eudev, Findutils, and Man-DB"
+msgstr ""
+
+#. type: Content of: <appendix><segmentedlist><seglistitem><seg>
+#: /home/xry111/svn-repos/LFS-BOOK/appendices/dependencies.xml:431
+msgid "Perl Expect and IO:Tty modules (for test suite)"
+msgstr ""
+
+#. type: Content of: <appendix><segmentedlist><seglistitem><seg>
+#: /home/xry111/svn-repos/LFS-BOOK/appendices/dependencies.xml:473
+#: /home/xry111/svn-repos/LFS-BOOK/appendices/dependencies.xml:2171
+msgid "DejaGNU"
+msgstr ""
+
+#. type: Content of: <appendix><segmentedlist><seglistitem><seg>
+#: /home/xry111/svn-repos/LFS-BOOK/appendices/dependencies.xml:479
+msgid "Bash, Coreutils, Diffutils, GCC, Grep, Make, and Sed"
+msgstr ""
+
+#. type: Content of: <appendix><segmentedlist><seglistitem><seg>
+#: /home/xry111/svn-repos/LFS-BOOK/appendices/dependencies.xml:508
+#: /home/xry111/svn-repos/LFS-BOOK/appendices/dependencies.xml:811
+#: /home/xry111/svn-repos/LFS-BOOK/appendices/dependencies.xml:1673
+#: /home/xry111/svn-repos/LFS-BOOK/appendices/dependencies.xml:2029
+msgid "Diffutils"
+msgstr ""
+
+#. type: Content of: <appendix><segmentedlist><seglistitem><seg>
+#: /home/xry111/svn-repos/LFS-BOOK/appendices/dependencies.xml:514
+msgid ""
+"Bash, Binutils, Coreutils, Gawk, GCC, Gettext, Glibc, Grep, Make, Sed, and "
+"Texinfo"
+msgstr ""
+
+#. type: Content of: <appendix><segmentedlist><seglistitem><seg>
+#: /home/xry111/svn-repos/LFS-BOOK/appendices/dependencies.xml:523
+#: /home/xry111/svn-repos/LFS-BOOK/appendices/dependencies.xml:1216
+#: /home/xry111/svn-repos/LFS-BOOK/appendices/dependencies.xml:1279
+#: /home/xry111/svn-repos/LFS-BOOK/appendices/dependencies.xml:2050
+#: /home/xry111/svn-repos/LFS-BOOK/appendices/dependencies.xml:2676
+msgid "Perl"
+msgstr ""
+
+#. type: Content of: <appendix><bridgehead>
+#: /home/xry111/svn-repos/LFS-BOOK/appendices/dependencies.xml:544
+msgid "E2fsprogs"
+msgstr ""
+
+#. type: Content of: <appendix><segmentedlist><seglistitem><seg>
+#: /home/xry111/svn-repos/LFS-BOOK/appendices/dependencies.xml:550
+msgid ""
+"Bash, Binutils, Coreutils, Diffutils, Gawk, GCC, Glibc, Grep, Gzip, Make, "
+"Sed, Texinfo, and Util-linux"
+msgstr ""
+
+#. type: Content of: <appendix><segmentedlist><seglistitem><seg>
+#: /home/xry111/svn-repos/LFS-BOOK/appendices/dependencies.xml:559
+msgid "Procps-ng and Psmisc"
+msgstr ""
+
+#. type: Content of: <appendix><segmentedlist><seglistitem><seg>
+#: /home/xry111/svn-repos/LFS-BOOK/appendices/dependencies.xml:580
+#: /home/xry111/svn-repos/LFS-BOOK/appendices/dependencies.xml:1395
+msgid "Eudev"
+msgstr ""
+
+#. type: Content of: <appendix><segmentedlist><seglistitem><seg>
+#: /home/xry111/svn-repos/LFS-BOOK/appendices/dependencies.xml:586
+msgid ""
+"Bash, Binutils, Coreutils, Gawk, GCC, Glibc, Grep, Gperf, Make, Sed, and "
+"Util-linux"
+msgstr ""
+
+#. type: Content of: <appendix><bridgehead>
+#: /home/xry111/svn-repos/LFS-BOOK/appendices/dependencies.xml:616
+msgid "Expat"
+msgstr ""
+
+#. type: Content of: <appendix><segmentedlist><seglistitem><seg>
+#: /home/xry111/svn-repos/LFS-BOOK/appendices/dependencies.xml:622
+msgid "Bash, Binutils, Coreutils, Gawk, GCC, Glibc, Grep, Make, and Sed"
+msgstr ""
+
+#. type: Content of: <appendix><segmentedlist><seglistitem><seg>
+#: /home/xry111/svn-repos/LFS-BOOK/appendices/dependencies.xml:639
+msgid "Python and XML::Parser"
+msgstr ""
+
+#. type: Content of: <appendix><bridgehead>
+#: /home/xry111/svn-repos/LFS-BOOK/appendices/dependencies.xml:652
+msgid "Expect"
+msgstr ""
+
+#. type: Content of: <appendix><segmentedlist><seglistitem><seg>
+#: /home/xry111/svn-repos/LFS-BOOK/appendices/dependencies.xml:658
+msgid ""
+"Bash, Binutils, Coreutils, Diffutils, GCC, Glibc, Grep, Make, Patch, Sed, "
+"and Tcl"
+msgstr ""
+
+#. type: Content of: <appendix><segmentedlist><seglistitem><seg>
+#: /home/xry111/svn-repos/LFS-BOOK/appendices/dependencies.xml:694
+msgid ""
+"Bash, Binutils, Bzip2, Coreutils, Diffutils, Gawk, GCC, Glibc, Grep, Make, "
+"Sed, Xz, and Zlib"
+msgstr ""
+
+#. type: Content of: <appendix><bridgehead>
+#: /home/xry111/svn-repos/LFS-BOOK/appendices/dependencies.xml:724
+msgid "Findutils"
+msgstr ""
+
+#. type: Content of: <appendix><segmentedlist><seglistitem><seg>
+#: /home/xry111/svn-repos/LFS-BOOK/appendices/dependencies.xml:730
+#: /home/xry111/svn-repos/LFS-BOOK/appendices/dependencies.xml:1700
+#: /home/xry111/svn-repos/LFS-BOOK/appendices/dependencies.xml:2306
+msgid "Bash, Binutils, Coreutils, GCC, Gettext, Glibc, Grep, Make, Sed, and Texinfo"
+msgstr ""
+
+#. type: Content of: <appendix><segmentedlist><seglistitem><seg>
+#: /home/xry111/svn-repos/LFS-BOOK/appendices/dependencies.xml:739
+msgid "DejaGNU, Diffutils, and Expect"
+msgstr ""
+
+#. type: Content of: <appendix><bridgehead>
+#: /home/xry111/svn-repos/LFS-BOOK/appendices/dependencies.xml:760
+msgid "Flex"
+msgstr ""
+
+#. type: Content of: <appendix><segmentedlist><seglistitem><seg>
+#: /home/xry111/svn-repos/LFS-BOOK/appendices/dependencies.xml:766
+msgid ""
+"Bash, Binutils, Coreutils, GCC, Gettext, Glibc, Grep, M4, Make, Patch, Sed, "
+"and Texinfo"
+msgstr ""
+
+#. type: Content of: <appendix><segmentedlist><seglistitem><seg>
+#: /home/xry111/svn-repos/LFS-BOOK/appendices/dependencies.xml:775
+msgid "Bison and Gawk"
+msgstr ""
+
+#. type: Content of: <appendix><segmentedlist><seglistitem><seg>
+#: /home/xry111/svn-repos/LFS-BOOK/appendices/dependencies.xml:783
+msgid "Binutils, IProute2, Kbd, Kmod, and Man-DB"
+msgstr ""
+
+#. type: Content of: <appendix><segmentedlist><seglistitem><seg>
+#: /home/xry111/svn-repos/LFS-BOOK/appendices/dependencies.xml:802
+msgid ""
+"Bash, Binutils, Coreutils, GCC, Gettext, Glibc, GMP, Grep, Make, MPFR, "
+"Patch, Readline, Sed, and Texinfo"
+msgstr ""
+
+#. type: Content of: <appendix><segmentedlist><seglistitem><seg>
+#: /home/xry111/svn-repos/LFS-BOOK/appendices/dependencies.xml:827
+#: /home/xry111/svn-repos/LFS-BOOK/appendices/dependencies.xml:1689
+msgid "libsigsegv"
+msgstr ""
+
+#. type: Content of: <appendix><segmentedlist><seglistitem><seg>
+#: /home/xry111/svn-repos/LFS-BOOK/appendices/dependencies.xml:832
+#: /home/xry111/svn-repos/LFS-BOOK/appendices/dependencies.xml:1859
+#: /home/xry111/svn-repos/LFS-BOOK/appendices/dependencies.xml:2789
+msgid "GCC"
+msgstr ""
+
+#. type: Content of: <appendix><segmentedlist><seglistitem><seg>
+#: /home/xry111/svn-repos/LFS-BOOK/appendices/dependencies.xml:838
+msgid ""
+"Bash, Binutils, Coreutils, Diffutils, Findutils, Gawk, GCC, Gettext, Glibc, "
+"GMP, Grep, M4, Make, MPC, MPFR, Patch, Perl, Sed, Tar, Texinfo, and Zstd"
+msgstr ""
+
+#. type: Content of: <appendix><segmentedlist><seglistitem><seg>
+#: /home/xry111/svn-repos/LFS-BOOK/appendices/dependencies.xml:848
+msgid "DejaGNU, Expect, and Shadow"
+msgstr ""
+
+#. type: Content of: <appendix><segmentedlist><seglistitem><seg>
+#: /home/xry111/svn-repos/LFS-BOOK/appendices/dependencies.xml:864
+msgid ""
+"<ulink url=\"http://gcc.gnu.org/wiki/GNAT\">GNAT</ulink> and <ulink "
+"url=\"https://repo.or.cz/isl.git\">ISL</ulink>"
+msgstr ""
+
+#. type: Content of: <appendix><bridgehead>
+#: /home/xry111/svn-repos/LFS-BOOK/appendices/dependencies.xml:871
+msgid "GDBM"
+msgstr ""
+
+#. type: Content of: <appendix><segmentedlist><seglistitem><seg>
+#: /home/xry111/svn-repos/LFS-BOOK/appendices/dependencies.xml:877
+msgid "Bash, Binutils, Coreutils, Diffutils, GCC, Grep, Make, and Sed"
+msgstr ""
+
+#. type: Content of: <appendix><bridgehead>
+#: /home/xry111/svn-repos/LFS-BOOK/appendices/dependencies.xml:907
+msgid "Gettext"
+msgstr ""
+
+#. type: Content of: <appendix><segmentedlist><seglistitem><seg>
+#: /home/xry111/svn-repos/LFS-BOOK/appendices/dependencies.xml:913
+msgid ""
+"Bash, Binutils, Coreutils, Gawk, GCC, Glibc, Grep, Make, Ncurses, Sed, and "
+"Texinfo"
+msgstr ""
+
+#. type: Content of: <appendix><segmentedlist><seglistitem><seg>
+#: /home/xry111/svn-repos/LFS-BOOK/appendices/dependencies.xml:922
+msgid "Diffutils, Perl, and Tcl"
+msgstr ""
+
+#. type: Content of: <appendix><segmentedlist><seglistitem><seg>
+#: /home/xry111/svn-repos/LFS-BOOK/appendices/dependencies.xml:930
+msgid "Automake and Bison"
+msgstr ""
+
+#. type: Content of: <appendix><bridgehead>
+#: /home/xry111/svn-repos/LFS-BOOK/appendices/dependencies.xml:943
+msgid "Glibc"
+msgstr ""
+
+#. type: Content of: <appendix><segmentedlist><seglistitem><seg>
+#: /home/xry111/svn-repos/LFS-BOOK/appendices/dependencies.xml:949
+msgid ""
+"Bash, Binutils, Bison, Coreutils, Diffutils, Gawk, GCC, Gettext, Grep, Gzip, "
+"Linux API Headers, Make, Perl, Python, Sed, and Texinfo"
+msgstr ""
+
+#. type: Content of: <appendix><bridgehead>
+#: /home/xry111/svn-repos/LFS-BOOK/appendices/dependencies.xml:979
+msgid "GMP"
+msgstr ""
+
+#. type: Content of: <appendix><segmentedlist><seglistitem><seg>
+#: /home/xry111/svn-repos/LFS-BOOK/appendices/dependencies.xml:985
+msgid ""
+"Bash, Binutils, Coreutils, Diffutils, Gawk, GCC, Glibc, Grep, M4, Make, Sed, "
+"and Texinfo"
+msgstr ""
+
+#. type: Content of: <appendix><segmentedlist><seglistitem><seg>
+#: /home/xry111/svn-repos/LFS-BOOK/appendices/dependencies.xml:1002
+msgid "MPFR and GCC"
+msgstr ""
+
+#. type: Content of: <appendix><bridgehead>
+#: /home/xry111/svn-repos/LFS-BOOK/appendices/dependencies.xml:1015
+msgid "Gperf"
+msgstr ""
+
+#. type: Content of: <appendix><segmentedlist><seglistitem><seg>
+#: /home/xry111/svn-repos/LFS-BOOK/appendices/dependencies.xml:1021
+#: /home/xry111/svn-repos/LFS-BOOK/appendices/dependencies.xml:1486
+msgid "Bash, Binutils, Coreutils, GCC, Glibc, and Make"
+msgstr ""
+
+#. type: Content of: <appendix><segmentedlist><seglistitem><seg>
+#: /home/xry111/svn-repos/LFS-BOOK/appendices/dependencies.xml:1029
+msgid "Diffutils and Expect"
+msgstr ""
+
+#. type: Content of: <appendix><bridgehead>
+#: /home/xry111/svn-repos/LFS-BOOK/appendices/dependencies.xml:1050
+msgid "Grep"
+msgstr ""
+
+#. type: Content of: <appendix><segmentedlist><seglistitem><seg>
+#: /home/xry111/svn-repos/LFS-BOOK/appendices/dependencies.xml:1056
+msgid ""
+"Bash, Binutils, Coreutils, Diffutils, GCC, Gettext, Glibc, Grep, Make, "
+"Patch, Sed, and Texinfo"
+msgstr ""
+
+#. type: Content of: <appendix><bridgehead>
+#: /home/xry111/svn-repos/LFS-BOOK/appendices/dependencies.xml:1073
+#: /home/xry111/svn-repos/LFS-BOOK/appendices/dependencies.xml:1181
+#: /home/xry111/svn-repos/LFS-BOOK/appendices/dependencies.xml:1573
+#: /home/xry111/svn-repos/LFS-BOOK/appendices/dependencies.xml:1730
+msgid "Man-DB"
+msgstr ""
+
+#. type: Content of: <appendix><segmentedlist><seglistitem><seg>
+#: /home/xry111/svn-repos/LFS-BOOK/appendices/dependencies.xml:1081
+msgid "Pcre and libsigsegv"
+msgstr ""
+
+#. type: Content of: <appendix><bridgehead>
+#: /home/xry111/svn-repos/LFS-BOOK/appendices/dependencies.xml:1086
+msgid "Groff"
+msgstr ""
+
+#. type: Content of: <appendix><segmentedlist><seglistitem><seg>
+#: /home/xry111/svn-repos/LFS-BOOK/appendices/dependencies.xml:1092
+msgid ""
+"Bash, Binutils, Bison, Coreutils, Gawk, GCC, Glibc, Grep, Make, Patch, Sed, "
+"and Texinfo"
+msgstr ""
+
+#. type: Content of: <appendix><segmentedlist><seglistitem><seg>
+#: /home/xry111/svn-repos/LFS-BOOK/appendices/dependencies.xml:1101
+#: /home/xry111/svn-repos/LFS-BOOK/appendices/dependencies.xml:1208
+#: /home/xry111/svn-repos/LFS-BOOK/appendices/dependencies.xml:1244
+#: /home/xry111/svn-repos/LFS-BOOK/appendices/dependencies.xml:1315
+#: /home/xry111/svn-repos/LFS-BOOK/appendices/dependencies.xml:1351
+#: /home/xry111/svn-repos/LFS-BOOK/appendices/dependencies.xml:1387
+#: /home/xry111/svn-repos/LFS-BOOK/appendices/dependencies.xml:1423
+#: /home/xry111/svn-repos/LFS-BOOK/appendices/dependencies.xml:1459
+#: /home/xry111/svn-repos/LFS-BOOK/appendices/dependencies.xml:1494
+#: /home/xry111/svn-repos/LFS-BOOK/appendices/dependencies.xml:1637
+#: /home/xry111/svn-repos/LFS-BOOK/appendices/dependencies.xml:1780
+#: /home/xry111/svn-repos/LFS-BOOK/appendices/dependencies.xml:1815
+#: /home/xry111/svn-repos/LFS-BOOK/appendices/dependencies.xml:1923
+#: /home/xry111/svn-repos/LFS-BOOK/appendices/dependencies.xml:2207
+#: /home/xry111/svn-repos/LFS-BOOK/appendices/dependencies.xml:2279
+#: /home/xry111/svn-repos/LFS-BOOK/appendices/dependencies.xml:2351
+#: /home/xry111/svn-repos/LFS-BOOK/appendices/dependencies.xml:2386
+#: /home/xry111/svn-repos/LFS-BOOK/appendices/dependencies.xml:2461
+msgid "No test suite available"
+msgstr ""
+
+#. type: Content of: <appendix><segmentedlist><seglistitem><seg>
+#: /home/xry111/svn-repos/LFS-BOOK/appendices/dependencies.xml:1109
+msgid "Man-DB and Perl"
+msgstr ""
+
+#. type: Content of: <appendix><segmentedlist><seglistitem><seg>
+#: /home/xry111/svn-repos/LFS-BOOK/appendices/dependencies.xml:1117
+msgid "Ghostscript"
+msgstr ""
+
+#. type: Content of: <appendix><bridgehead>
+#: /home/xry111/svn-repos/LFS-BOOK/appendices/dependencies.xml:1122
+msgid "GRUB"
+msgstr ""
+
+#. type: Content of: <appendix><segmentedlist><seglistitem><seg>
+#: /home/xry111/svn-repos/LFS-BOOK/appendices/dependencies.xml:1128
+msgid ""
+"Bash, Binutils, Bison, Coreutils, Diffutils, GCC, Gettext, Glibc, Grep, "
+"Make, Ncurses, Sed, Texinfo, and Xz"
+msgstr ""
+
+#. type: Content of: <appendix><segmentedlist><seglistitem><seg>
+#: /home/xry111/svn-repos/LFS-BOOK/appendices/dependencies.xml:1158
+#: /home/xry111/svn-repos/LFS-BOOK/appendices/dependencies.xml:1431
+msgid "Gzip"
+msgstr ""
+
+#. type: Content of: <appendix><segmentedlist><seglistitem><seg>
+#: /home/xry111/svn-repos/LFS-BOOK/appendices/dependencies.xml:1164
+#: /home/xry111/svn-repos/LFS-BOOK/appendices/dependencies.xml:1664
+msgid "Bash, Binutils, Coreutils, GCC, Glibc, Grep, Make, Sed, and Texinfo"
+msgstr ""
+
+#. type: Content of: <appendix><segmentedlist><seglistitem><seg>
+#: /home/xry111/svn-repos/LFS-BOOK/appendices/dependencies.xml:1173
+msgid "Diffutils and Less"
+msgstr ""
+
+#. type: Content of: <appendix><bridgehead>
+#: /home/xry111/svn-repos/LFS-BOOK/appendices/dependencies.xml:1194
+msgid "Iana-Etc"
+msgstr ""
+
+#. type: Content of: <appendix><segmentedlist><seglistitem><seg>
+#: /home/xry111/svn-repos/LFS-BOOK/appendices/dependencies.xml:1200
+msgid "Coreutils, Gawk, and Make"
+msgstr ""
+
+#. type: Content of: <appendix><bridgehead>
+#: /home/xry111/svn-repos/LFS-BOOK/appendices/dependencies.xml:1229
+msgid "Inetutils"
+msgstr ""
+
+#. type: Content of: <appendix><segmentedlist><seglistitem><seg>
+#: /home/xry111/svn-repos/LFS-BOOK/appendices/dependencies.xml:1235
+msgid ""
+"Bash, Binutils, Coreutils, GCC, Glibc, Grep, Make, Ncurses, Patch, Sed, "
+"Texinfo, and Zlib"
+msgstr ""
+
+#. type: Content of: <appendix><bridgehead>
+#: /home/xry111/svn-repos/LFS-BOOK/appendices/dependencies.xml:1252
+#: /home/xry111/svn-repos/LFS-BOOK/appendices/dependencies.xml:2482
+msgid "Tar"
+msgstr ""
+
+#. type: Content of: <appendix><segmentedlist><seglistitem><seg>
+#: /home/xry111/svn-repos/LFS-BOOK/appendices/dependencies.xml:1265
+#: /home/xry111/svn-repos/LFS-BOOK/appendices/dependencies.xml:2684
+msgid "Intltool"
+msgstr ""
+
+#. type: Content of: <appendix><segmentedlist><seglistitem><seg>
+#: /home/xry111/svn-repos/LFS-BOOK/appendices/dependencies.xml:1271
+msgid "Bash, Gawk, Glibc, Make, Perl, Sed, and XML::Parser"
+msgstr ""
+
+#. type: Content of: <appendix><bridgehead>
+#: /home/xry111/svn-repos/LFS-BOOK/appendices/dependencies.xml:1300
+msgid "IProute2"
+msgstr ""
+
+#. type: Content of: <appendix><segmentedlist><seglistitem><seg>
+#: /home/xry111/svn-repos/LFS-BOOK/appendices/dependencies.xml:1306
+msgid ""
+"Bash, Bison, Coreutils, Flex, GCC, Glibc, Make, Libcap, Libelf, and Linux "
+"API Headers"
+msgstr ""
+
+#. type: Content of: <appendix><segmentedlist><seglistitem><seg>
+#: /home/xry111/svn-repos/LFS-BOOK/appendices/dependencies.xml:1331
+msgid "Berkeley DB and Iptables"
+msgstr ""
+
+#. type: Content of: <appendix><bridgehead>
+#: /home/xry111/svn-repos/LFS-BOOK/appendices/dependencies.xml:1336
+msgid "Kbd"
+msgstr ""
+
+#. type: Content of: <appendix><segmentedlist><seglistitem><seg>
+#: /home/xry111/svn-repos/LFS-BOOK/appendices/dependencies.xml:1342
+msgid ""
+"Bash, Binutils, Bison, Check, Coreutils, Flex, GCC, Gettext, Glibc, Gzip, "
+"Make, Patch, and Sed"
+msgstr ""
+
+#. type: Content of: <appendix><segmentedlist><seglistitem><seg>
+#: /home/xry111/svn-repos/LFS-BOOK/appendices/dependencies.xml:1372
+#: /home/xry111/svn-repos/LFS-BOOK/appendices/dependencies.xml:2109
+msgid "Kmod"
+msgstr ""
+
+#. type: Content of: <appendix><segmentedlist><seglistitem><seg>
+#: /home/xry111/svn-repos/LFS-BOOK/appendices/dependencies.xml:1378
+msgid ""
+"Bash, Binutils, Bison, Coreutils, Flex, GCC, Gettext, Glibc, Gzip, Make, "
+"Pkg-config, Sed, Xz-Utils, and Zlib"
+msgstr ""
+
+#. type: Content of: <appendix><bridgehead>
+#: /home/xry111/svn-repos/LFS-BOOK/appendices/dependencies.xml:1408
+msgid "Less"
+msgstr ""
+
+#. type: Content of: <appendix><segmentedlist><seglistitem><seg>
+#: /home/xry111/svn-repos/LFS-BOOK/appendices/dependencies.xml:1414
+msgid ""
+"Bash, Binutils, Coreutils, Diffutils, GCC, Glibc, Grep, Make, Ncurses, and "
+"Sed"
+msgstr ""
+
+#. type: Content of: <appendix><segmentedlist><seglistitem><seg>
+#: /home/xry111/svn-repos/LFS-BOOK/appendices/dependencies.xml:1439
+msgid "Pcre"
+msgstr ""
+
+#. type: Content of: <appendix><bridgehead>
+#: /home/xry111/svn-repos/LFS-BOOK/appendices/dependencies.xml:1444
+msgid "Libcap"
+msgstr ""
+
+#. type: Content of: <appendix><segmentedlist><seglistitem><seg>
+#: /home/xry111/svn-repos/LFS-BOOK/appendices/dependencies.xml:1450
+msgid "Attr, Bash, Binutils, Coreutils, GCC, Glibc, Perl, Make, and Sed"
+msgstr ""
+
+#. type: Content of: <appendix><segmentedlist><seglistitem><seg>
+#: /home/xry111/svn-repos/LFS-BOOK/appendices/dependencies.xml:1467
+msgid "IProute2 and Shadow"
+msgstr ""
+
+#. type: Content of: <appendix><segmentedlist><seglistitem><seg>
+#: /home/xry111/svn-repos/LFS-BOOK/appendices/dependencies.xml:1475
+msgid "Linux-PAM"
+msgstr ""
+
+#. type: Content of: <appendix><bridgehead>
+#: /home/xry111/svn-repos/LFS-BOOK/appendices/dependencies.xml:1480
+msgid "Libelf"
+msgstr ""
+
+#. type: Content of: <appendix><segmentedlist><seglistitem><seg>
+#: /home/xry111/svn-repos/LFS-BOOK/appendices/dependencies.xml:1502
+msgid "IProute2 and Linux Kernel"
+msgstr ""
+
+#. type: Content of: <appendix><bridgehead>
+#: /home/xry111/svn-repos/LFS-BOOK/appendices/dependencies.xml:1515
+msgid "Libffi"
+msgstr ""
+
+#. type: Content of: <appendix><segmentedlist><seglistitem><seg>
+#: /home/xry111/svn-repos/LFS-BOOK/appendices/dependencies.xml:1521
+#: /home/xry111/svn-repos/LFS-BOOK/appendices/dependencies.xml:2738
+msgid "Bash, Binutils, Coreutils, GCC, Glibc, Make, and Sed"
+msgstr ""
+
+#. type: Content of: <appendix><segmentedlist><seglistitem><seg>
+#: /home/xry111/svn-repos/LFS-BOOK/appendices/dependencies.xml:1529
+msgid "DejaGnu"
+msgstr ""
+
+#. type: Content of: <appendix><bridgehead>
+#: /home/xry111/svn-repos/LFS-BOOK/appendices/dependencies.xml:1537
+#: /home/xry111/svn-repos/LFS-BOOK/appendices/dependencies.xml:2228
+msgid "Python"
+msgstr ""
+
+#. type: Content of: <appendix><bridgehead>
+#: /home/xry111/svn-repos/LFS-BOOK/appendices/dependencies.xml:1550
+msgid "Libpipeline"
+msgstr ""
+
+#. type: Content of: <appendix><segmentedlist><seglistitem><seg>
+#: /home/xry111/svn-repos/LFS-BOOK/appendices/dependencies.xml:1556
+#: /home/xry111/svn-repos/LFS-BOOK/appendices/dependencies.xml:1592
+msgid ""
+"Bash, Binutils, Coreutils, Diffutils, Gawk, GCC, Glibc, Grep, Make, Sed, and "
+"Texinfo"
+msgstr ""
+
+#. type: Content of: <appendix><bridgehead>
+#: /home/xry111/svn-repos/LFS-BOOK/appendices/dependencies.xml:1586
+msgid "Libtool"
+msgstr ""
+
+#. type: Content of: <appendix><segmentedlist><seglistitem><seg>
+#: /home/xry111/svn-repos/LFS-BOOK/appendices/dependencies.xml:1601
+msgid "Autoconf, Automake, and Findutils"
+msgstr ""
+
+#. type: Content of: <appendix><segmentedlist><seglistitem><seg>
+#: /home/xry111/svn-repos/LFS-BOOK/appendices/dependencies.xml:1628
+msgid ""
+"Bash, Bc, Binutils, Coreutils, Diffutils, Findutils, GCC, Glibc, Grep, Gzip, "
+"Kmod, Libelf, Make, Ncurses, OpenSSL, Perl, and Sed"
+msgstr ""
+
+#. type: Content of: <appendix><bridgehead>
+#: /home/xry111/svn-repos/LFS-BOOK/appendices/dependencies.xml:1658
+msgid "M4"
+msgstr ""
+
+#. type: Content of: <appendix><segmentedlist><seglistitem><seg>
+#: /home/xry111/svn-repos/LFS-BOOK/appendices/dependencies.xml:1681
+msgid "Autoconf and Bison"
+msgstr ""
+
+#. type: Content of: <appendix><bridgehead>
+#: /home/xry111/svn-repos/LFS-BOOK/appendices/dependencies.xml:1694
+msgid "Make"
+msgstr ""
+
+#. type: Content of: <appendix><segmentedlist><seglistitem><seg>
+#: /home/xry111/svn-repos/LFS-BOOK/appendices/dependencies.xml:1709
+msgid "Perl and Procps-ng"
+msgstr ""
+
+#. type: Content of: <appendix><segmentedlist><seglistitem><seg>
+#: /home/xry111/svn-repos/LFS-BOOK/appendices/dependencies.xml:1736
+msgid ""
+"Bash, Binutils, Bzip2, Coreutils, Flex, GCC, GDBM, Gettext, Glibc, Grep, "
+"Groff, Gzip, Less, Libpipeline, Make, Sed, and Xz"
+msgstr ""
+
+#. type: Content of: <appendix><bridgehead>
+#: /home/xry111/svn-repos/LFS-BOOK/appendices/dependencies.xml:1745
+#: /home/xry111/svn-repos/LFS-BOOK/appendices/dependencies.xml:2590
+msgid "Util-linux"
+msgstr ""
+
+#. type: Content of: <appendix><bridgehead>
+#: /home/xry111/svn-repos/LFS-BOOK/appendices/dependencies.xml:1766
+msgid "Man-Pages"
+msgstr ""
+
+#. type: Content of: <appendix><segmentedlist><seglistitem><seg>
+#: /home/xry111/svn-repos/LFS-BOOK/appendices/dependencies.xml:1772
+msgid "Bash, Coreutils, and Make"
+msgstr ""
+
+#. type: Content of: <appendix><segmentedlist><seglistitem><seg>
+#: /home/xry111/svn-repos/LFS-BOOK/appendices/dependencies.xml:1801
+#: /home/xry111/svn-repos/LFS-BOOK/appendices/dependencies.xml:1967
+msgid "Meson"
+msgstr ""
+
+#. type: Content of: <appendix><segmentedlist><seglistitem><seg>
+#: /home/xry111/svn-repos/LFS-BOOK/appendices/dependencies.xml:1807
+msgid "Ninja and Python"
+msgstr ""
+
+#. type: Content of: <appendix><bridgehead>
+#: /home/xry111/svn-repos/LFS-BOOK/appendices/dependencies.xml:1823
+#: /home/xry111/svn-repos/LFS-BOOK/appendices/dependencies.xml:2407
+msgid "Systemd"
+msgstr ""
+
+#. type: Content of: <appendix><bridgehead>
+#: /home/xry111/svn-repos/LFS-BOOK/appendices/dependencies.xml:1836
+msgid "MPC"
+msgstr ""
+
+#. type: Content of: <appendix><segmentedlist><seglistitem><seg>
+#: /home/xry111/svn-repos/LFS-BOOK/appendices/dependencies.xml:1842
+msgid ""
+"Bash, Binutils, Coreutils, Diffutils, Gawk, GCC, Glibc, Grep, GMP, Make, "
+"MPFR, Sed, and Texinfo"
+msgstr ""
+
+#. type: Content of: <appendix><bridgehead>
+#: /home/xry111/svn-repos/LFS-BOOK/appendices/dependencies.xml:1872
+msgid "MPFR"
+msgstr ""
+
+#. type: Content of: <appendix><segmentedlist><seglistitem><seg>
+#: /home/xry111/svn-repos/LFS-BOOK/appendices/dependencies.xml:1878
+msgid ""
+"Bash, Binutils, Coreutils, Diffutils, Gawk, GCC, Glibc, Grep, GMP, Make, "
+"Sed, and Texinfo"
+msgstr ""
+
+#. type: Content of: <appendix><segmentedlist><seglistitem><seg>
+#: /home/xry111/svn-repos/LFS-BOOK/appendices/dependencies.xml:1895
+msgid "Gawk and GCC"
+msgstr ""
+
+#. type: Content of: <appendix><bridgehead>
+#: /home/xry111/svn-repos/LFS-BOOK/appendices/dependencies.xml:1908
+msgid "Ncurses"
+msgstr ""
+
+#. type: Content of: <appendix><segmentedlist><seglistitem><seg>
+#: /home/xry111/svn-repos/LFS-BOOK/appendices/dependencies.xml:1914
+msgid ""
+"Bash, Binutils, Coreutils, Diffutils, Gawk, GCC, Glibc, Grep, Make, Patch, "
+"and Sed"
+msgstr ""
+
+#. type: Content of: <appendix><segmentedlist><seglistitem><seg>
+#: /home/xry111/svn-repos/LFS-BOOK/appendices/dependencies.xml:1931
+msgid ""
+"Bash, GRUB, Inetutils, Less, Procps-ng, Psmisc, Readline, Texinfo, "
+"Util-linux, and Vim"
+msgstr ""
+
+#. type: Content of: <appendix><segmentedlist><seglistitem><seg>
+#: /home/xry111/svn-repos/LFS-BOOK/appendices/dependencies.xml:1945
+#: /home/xry111/svn-repos/LFS-BOOK/appendices/dependencies.xml:2251
+msgid "Ninja"
+msgstr ""
+
+#. type: Content of: <appendix><segmentedlist><seglistitem><seg>
+#: /home/xry111/svn-repos/LFS-BOOK/appendices/dependencies.xml:1951
+msgid "Binutils, Coreutils, GCC, and Python"
+msgstr ""
+
+#. type: Content of: <appendix><segmentedlist><seglistitem><seg>
+#: /home/xry111/svn-repos/LFS-BOOK/appendices/dependencies.xml:1975
+msgid "Asciidoc, Doxygen, Emacs, and re2c"
+msgstr ""
+
+#. type: Content of: <appendix><bridgehead>
+#: /home/xry111/svn-repos/LFS-BOOK/appendices/dependencies.xml:1980
+msgid "Openssl"
+msgstr ""
+
+#. type: Content of: <appendix><segmentedlist><seglistitem><seg>
+#: /home/xry111/svn-repos/LFS-BOOK/appendices/dependencies.xml:1986
+msgid "Binutils, Coreutils, GCC, Make, and Perl"
+msgstr ""
+
+#. type: Content of: <appendix><segmentedlist><seglistitem><seg>
+#: /home/xry111/svn-repos/LFS-BOOK/appendices/dependencies.xml:2002
+msgid "Linux"
+msgstr ""
+
+#. type: Content of: <appendix><bridgehead>
+#: /home/xry111/svn-repos/LFS-BOOK/appendices/dependencies.xml:2015
+msgid "Patch"
+msgstr ""
+
+#. type: Content of: <appendix><segmentedlist><seglistitem><seg>
+#: /home/xry111/svn-repos/LFS-BOOK/appendices/dependencies.xml:2021
+msgid "Bash, Binutils, Coreutils, GCC, Glibc, Grep, Make, and Sed"
+msgstr ""
+
+#. type: Content of: <appendix><segmentedlist><seglistitem><seg>
+#: /home/xry111/svn-repos/LFS-BOOK/appendices/dependencies.xml:2045
+msgid "Ed"
+msgstr ""
+
+#. type: Content of: <appendix><segmentedlist><seglistitem><seg>
+#: /home/xry111/svn-repos/LFS-BOOK/appendices/dependencies.xml:2056
+msgid ""
+"Bash, Binutils, Coreutils, Gawk, GCC, GDBM, Glibc, Grep, Groff, Make, Sed, "
+"and Zlib"
+msgstr ""
+
+#. type: Content of: <appendix><segmentedlist><seglistitem><seg>
+#: /home/xry111/svn-repos/LFS-BOOK/appendices/dependencies.xml:2065
+msgid "Iana-Etc and Procps-ng"
+msgstr ""
+
+#. type: Content of: <appendix><segmentedlist><seglistitem><seg>
+#: /home/xry111/svn-repos/LFS-BOOK/appendices/dependencies.xml:2086
+#: /home/xry111/svn-repos/LFS-BOOK/appendices/dependencies.xml:2144
+msgid "Pkg-config"
+msgstr ""
+
+#. type: Content of: <appendix><segmentedlist><seglistitem><seg>
+#: /home/xry111/svn-repos/LFS-BOOK/appendices/dependencies.xml:2092
+msgid "Bash, Binutils, Coreutils, Gawk, GCC, Glibc, Grep, Make, Popt, and Sed"
+msgstr ""
+
+#. type: Content of: <appendix><bridgehead>
+#: /home/xry111/svn-repos/LFS-BOOK/appendices/dependencies.xml:2122
+msgid "Popt"
+msgstr ""
+
+#. type: Content of: <appendix><segmentedlist><seglistitem><seg>
+#: /home/xry111/svn-repos/LFS-BOOK/appendices/dependencies.xml:2128
+msgid "Bash, Binutils, Coreutils, Gawk, GCC, Glibc, Grep, and Make"
+msgstr ""
+
+#. type: Content of: <appendix><segmentedlist><seglistitem><seg>
+#: /home/xry111/svn-repos/LFS-BOOK/appendices/dependencies.xml:2136
+msgid "Diffutils and Sed"
+msgstr ""
+
+#. type: Content of: <appendix><bridgehead>
+#: /home/xry111/svn-repos/LFS-BOOK/appendices/dependencies.xml:2157
+msgid "Procps-ng"
+msgstr ""
+
+#. type: Content of: <appendix><segmentedlist><seglistitem><seg>
+#: /home/xry111/svn-repos/LFS-BOOK/appendices/dependencies.xml:2163
+msgid "Bash, Binutils, Coreutils, GCC, Glibc, Make, and Ncurses"
+msgstr ""
+
+#. type: Content of: <appendix><bridgehead>
+#: /home/xry111/svn-repos/LFS-BOOK/appendices/dependencies.xml:2192
+msgid "Psmisc"
+msgstr ""
+
+#. type: Content of: <appendix><segmentedlist><seglistitem><seg>
+#: /home/xry111/svn-repos/LFS-BOOK/appendices/dependencies.xml:2198
+msgid "Bash, Binutils, Coreutils, GCC, Gettext, Glibc, Grep, Make, Ncurses, and Sed"
+msgstr ""
+
+#. type: Content of: <appendix><segmentedlist><seglistitem><seg>
+#: /home/xry111/svn-repos/LFS-BOOK/appendices/dependencies.xml:2234
+msgid ""
+"Bash, Binutils, Coreutils, Expat, GCC, Gdbm, Gettext, Glibc, Grep, Libffi, "
+"Make, Ncurses, Sed, and Util-linux"
+msgstr ""
+
+#. type: Content of: <appendix><segmentedlist><seglistitem><seg>
+#: /home/xry111/svn-repos/LFS-BOOK/appendices/dependencies.xml:2243
+msgid "GDB and Valgrind"
+msgstr ""
+
+#. type: Content of: <appendix><segmentedlist><seglistitem><seg>
+#: /home/xry111/svn-repos/LFS-BOOK/appendices/dependencies.xml:2259
+msgid "Berkeley DB, OpenSSL, SQLite, and Tk"
+msgstr ""
+
+#. type: Content of: <appendix><bridgehead>
+#: /home/xry111/svn-repos/LFS-BOOK/appendices/dependencies.xml:2264
+msgid "Readline"
+msgstr ""
+
+#. type: Content of: <appendix><segmentedlist><seglistitem><seg>
+#: /home/xry111/svn-repos/LFS-BOOK/appendices/dependencies.xml:2270
+msgid ""
+"Bash, Binutils, Coreutils, Gawk, GCC, Glibc, Grep, Make, Ncurses, Patch, "
+"Sed, and Texinfo"
+msgstr ""
+
+#. type: Content of: <appendix><segmentedlist><seglistitem><seg>
+#: /home/xry111/svn-repos/LFS-BOOK/appendices/dependencies.xml:2287
+msgid "Bash and Gawk"
+msgstr ""
+
+#. type: Content of: <appendix><bridgehead>
+#: /home/xry111/svn-repos/LFS-BOOK/appendices/dependencies.xml:2300
+msgid "Sed"
+msgstr ""
+
+#. type: Content of: <appendix><segmentedlist><seglistitem><seg>
+#: /home/xry111/svn-repos/LFS-BOOK/appendices/dependencies.xml:2315
+msgid "Diffutils and Gawk"
+msgstr ""
+
+#. type: Content of: <appendix><segmentedlist><seglistitem><seg>
+#: /home/xry111/svn-repos/LFS-BOOK/appendices/dependencies.xml:2323
+msgid "E2fsprogs, File, Libtool, and Shadow"
+msgstr ""
+
+#. type: Content of: <appendix><segmentedlist><seglistitem><seg>
+#: /home/xry111/svn-repos/LFS-BOOK/appendices/dependencies.xml:2342
+msgid ""
+"Acl, Attr, Bash, Binutils, Coreutils, Diffutils, Findutils, Gawk, GCC, "
+"Gettext, Glibc, Grep, Libcap, Make, and Sed"
+msgstr ""
+
+#. type: Content of: <appendix><segmentedlist><seglistitem><seg>
+#: /home/xry111/svn-repos/LFS-BOOK/appendices/dependencies.xml:2367
+msgid "Cracklib and PAM"
+msgstr ""
+
+#. type: Content of: <appendix><bridgehead>
+#: /home/xry111/svn-repos/LFS-BOOK/appendices/dependencies.xml:2372
+msgid "Sysklogd"
+msgstr ""
+
+#. type: Content of: <appendix><segmentedlist><seglistitem><seg>
+#: /home/xry111/svn-repos/LFS-BOOK/appendices/dependencies.xml:2378
+msgid "Binutils, Coreutils, GCC, Glibc, Make, and Patch"
+msgstr ""
+
+#. type: Content of: <appendix><segmentedlist><seglistitem><seg>
+#: /home/xry111/svn-repos/LFS-BOOK/appendices/dependencies.xml:2413
+msgid ""
+"Acl, Attr, Bash, Binutils, Coreutils, Diffutils, Expat, Gawk, GCC, Glibc, "
+"Gperf, Grep, Intltool, Libcap, Meson, Sed, and Util-linux"
+msgstr ""
+
+#. type: Content of: <appendix><segmentedlist><seglistitem><seg>
+#: /home/xry111/svn-repos/LFS-BOOK/appendices/dependencies.xml:2439
+msgid ""
+"Many, see <ulink url=\"&blfs-root;view/systemd/general/systemd.html\">BLFS "
+"systemd page</ulink>"
+msgstr ""
+
+#. type: Content of: <appendix><bridgehead>
+#: /home/xry111/svn-repos/LFS-BOOK/appendices/dependencies.xml:2447
+msgid "Sysvinit"
+msgstr ""
+
+#. type: Content of: <appendix><segmentedlist><seglistitem><seg>
+#: /home/xry111/svn-repos/LFS-BOOK/appendices/dependencies.xml:2453
+msgid "Binutils, Coreutils, GCC, Glibc, Make, and Sed"
+msgstr ""
+
+#. type: Content of: <appendix><segmentedlist><seglistitem><seg>
+#: /home/xry111/svn-repos/LFS-BOOK/appendices/dependencies.xml:2488
+msgid ""
+"Acl, Attr, Bash, Binutils, Bison, Coreutils, GCC, Gettext, Glibc, Grep, "
+"Inetutils, Make, Sed, and Texinfo"
+msgstr ""
+
+#. type: Content of: <appendix><segmentedlist><seglistitem><seg>
+#: /home/xry111/svn-repos/LFS-BOOK/appendices/dependencies.xml:2497
+msgid "Autoconf, Diffutils, Findutils, Gawk, and Gzip"
+msgstr ""
+
+#. type: Content of: <appendix><bridgehead>
+#: /home/xry111/svn-repos/LFS-BOOK/appendices/dependencies.xml:2518
+msgid "Tcl"
+msgstr ""
+
+#. type: Content of: <appendix><segmentedlist><seglistitem><seg>
+#: /home/xry111/svn-repos/LFS-BOOK/appendices/dependencies.xml:2524
+msgid "Bash, Binutils, Coreutils, Diffutils, GCC, Glibc, Grep, Make, and Sed"
+msgstr ""
+
+#. type: Content of: <appendix><bridgehead>
+#: /home/xry111/svn-repos/LFS-BOOK/appendices/dependencies.xml:2554
+msgid "Texinfo"
+msgstr ""
+
+#. type: Content of: <appendix><segmentedlist><seglistitem><seg>
+#: /home/xry111/svn-repos/LFS-BOOK/appendices/dependencies.xml:2560
+msgid ""
+"Bash, Binutils, Coreutils, GCC, Gettext, Glibc, Grep, Make, Ncurses, Patch, "
+"and Sed"
+msgstr ""
+
+#. type: Content of: <appendix><segmentedlist><seglistitem><seg>
+#: /home/xry111/svn-repos/LFS-BOOK/appendices/dependencies.xml:2596
+msgid ""
+"Bash, Binutils, Coreutils, Diffutils, Eudev, Findutils, Gawk, GCC, Gettext, "
+"Glibc, Grep, Make, Ncurses, Sed, and Zlib"
+msgstr ""
+
+#. type: Content of: <appendix><segmentedlist><seglistitem><seg>
+#: /home/xry111/svn-repos/LFS-BOOK/appendices/dependencies.xml:2621
+msgid "<ulink url=\"https://people.redhat.com/sgrubb/libcap-ng/\">Libcap-ng</ulink>"
+msgstr ""
+
+#. type: Content of: <appendix><bridgehead>
+#: /home/xry111/svn-repos/LFS-BOOK/appendices/dependencies.xml:2626
+msgid "Vim"
+msgstr ""
+
+#. type: Content of: <appendix><segmentedlist><seglistitem><seg>
+#: /home/xry111/svn-repos/LFS-BOOK/appendices/dependencies.xml:2632
+msgid ""
+"Acl, Attr, Bash, Binutils, Coreutils, Diffutils, GCC, Glibc, Grep, Make, "
+"Ncurses, and Sed"
+msgstr ""
+
+#. type: Content of: <appendix><segmentedlist><seglistitem><seg>
+#: /home/xry111/svn-repos/LFS-BOOK/appendices/dependencies.xml:2657
+msgid "Xorg, GTK+2, LessTif, Python, Tcl, Ruby, and GPM"
+msgstr ""
+
+#. type: Content of: <appendix><bridgehead>
+#: /home/xry111/svn-repos/LFS-BOOK/appendices/dependencies.xml:2662
+msgid "XML::Parser"
+msgstr ""
+
+#. type: Content of: <appendix><segmentedlist><seglistitem><seg>
+#: /home/xry111/svn-repos/LFS-BOOK/appendices/dependencies.xml:2668
+msgid "Bash, Binutils, Coreutils, Expat, GCC, Glibc, Make, and Perl"
+msgstr ""
+
+#. type: Content of: <appendix><bridgehead>
+#: /home/xry111/svn-repos/LFS-BOOK/appendices/dependencies.xml:2697
+msgid "Xz"
+msgstr ""
+
+#. type: Content of: <appendix><segmentedlist><seglistitem><seg>
+#: /home/xry111/svn-repos/LFS-BOOK/appendices/dependencies.xml:2703
+msgid "Bash, Binutils, Coreutils, Diffutils, GCC, Glibc, and Make"
+msgstr ""
+
+#. type: Content of: <appendix><segmentedlist><seglistitem><seg>
+#: /home/xry111/svn-repos/LFS-BOOK/appendices/dependencies.xml:2719
+msgid "Eudev, File, GRUB, Kmod, and Man-DB"
+msgstr ""
+
+#. type: Content of: <appendix><bridgehead>
+#: /home/xry111/svn-repos/LFS-BOOK/appendices/dependencies.xml:2732
+msgid "Zlib"
+msgstr ""
+
+#. type: Content of: <appendix><segmentedlist><seglistitem><seg>
+#: /home/xry111/svn-repos/LFS-BOOK/appendices/dependencies.xml:2754
+msgid "File, Kmod, Perl, and Util-linux"
+msgstr ""
+
+#. type: Content of: <appendix><bridgehead>
+#: /home/xry111/svn-repos/LFS-BOOK/appendices/dependencies.xml:2767
+msgid "Zstd"
+msgstr ""
+
+#. type: Content of: <appendix><segmentedlist><seglistitem><seg>
+#: /home/xry111/svn-repos/LFS-BOOK/appendices/dependencies.xml:2773
+msgid "Binutils, Coreutils, GCC, Glibc, Gzip, Make, and Xz"
+msgstr ""

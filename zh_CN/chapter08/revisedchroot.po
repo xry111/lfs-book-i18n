@@ -1,0 +1,131 @@
+# SOME DESCRIPTIVE TITLE
+# Copyright (C) YEAR Free Software Foundation, Inc.
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"POT-Creation-Date: 2020-06-17 12:44+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#. type: Content of: <sect1><title>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/revisedchroot.xml:11
+msgid "Cleaning Up"
+msgstr ""
+
+#. type: Content of: <sect1><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/revisedchroot.xml:13
+msgid "Finally, clean up some extra files left around from running tests:"
+msgstr ""
+
+#. type: Content of: <sect1><screen>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/revisedchroot.xml:15
+#, no-wrap
+msgid "<userinput>rm -rf /tmp/*</userinput>"
+msgstr ""
+
+#. type: Content of: <sect1><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/revisedchroot.xml:17
+msgid ""
+"Now log out and reenter the chroot environment with an updated chroot "
+"command.  From now on, use this updated chroot command any time you need to "
+"reenter the chroot environment after exiting:"
+msgstr ""
+
+#. type: Content of: <sect1><screen>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/revisedchroot.xml:21
+#, no-wrap
+msgid ""
+"<userinput>logout\n"
+"\n"
+"chroot \"$LFS\" /usr/bin/env -i          \\\n"
+"    HOME=/root TERM=\"$TERM\"            \\\n"
+"    PS1='(lfs chroot) \\u:\\w\\$ '        \\\n"
+"    PATH=/bin:/usr/bin:/sbin:/usr/sbin \\\n"
+"    /bin/bash --login</userinput>"
+msgstr ""
+
+#. type: Content of: <sect1><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/revisedchroot.xml:29
+msgid ""
+"Here the <parameter>+h</parameter> option is not used anymore, since all the "
+"previous programs have been replaced: hashing is therefore possible."
+msgstr ""
+
+#. type: Content of: <sect1><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/revisedchroot.xml:33
+msgid ""
+"If the virtual kernel file systems have been unmounted, either manually or "
+"through a reboot, ensure that the virtual kernel file systems are mounted "
+"when reentering the chroot. This process was explained in <xref "
+"linkend=\"ch-system-bindmount\"/> and <xref "
+"linkend=\"ch-system-kernfsmount\"/>."
+msgstr ""
+
+#. type: Content of: <sect1><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/revisedchroot.xml:39
+msgid ""
+"There were several static libraries that were not suppressed earlier in the "
+"chapter in order to satisfy the regression tests in several packages. These "
+"libraries are from binutils, bzip2, e2fsprogs, flex, libtool, and zlib.  If "
+"desired, remove them now:"
+msgstr ""
+
+#. type: Content of: <sect1><screen>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/revisedchroot.xml:44
+#, no-wrap
+msgid ""
+"<userinput>rm -f /usr/lib/lib{bfd,opcodes}.a\n"
+"rm -f /usr/lib/libctf{,-nobfd}.a\n"
+"rm -f /usr/lib/libbz2.a\n"
+"rm -f /usr/lib/lib{com_err,e2p,ext2fs,ss}.a\n"
+"rm -f /usr/lib/libltdl.a\n"
+"rm -f /usr/lib/libfl.a\n"
+"rm -f /usr/lib/libz.a</userinput>"
+msgstr ""
+
+#. type: Content of: <sect1><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/revisedchroot.xml:52
+msgid ""
+"There are also several files installed in the /usr/lib and /usr/libexec "
+"directories with a file name extention of .la. These are \"libtool archive\" "
+"files. As already said, they are only useful when linking with static "
+"libraries. They are unneeded, and potentially harmful, when using dynamic "
+"shared libraries, specially when using also non-autotools build systems.  To "
+"remove them, run:"
+msgstr ""
+
+#. type: Content of: <sect1><screen>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/revisedchroot.xml:59
+#, no-wrap
+msgid "<userinput>find /usr/lib /usr/libexec -name \\*.la -delete</userinput>"
+msgstr ""
+
+#. type: Content of: <sect1><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/revisedchroot.xml:61
+msgid ""
+"For more information about libtool archive files, see the <ulink "
+"url=\"&blfs-book;/introduction/la-files.html\">BLFS section \"About Libtool "
+"Archive (.la) files\"</ulink>."
+msgstr ""
+
+#. type: Content of: <sect1><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/revisedchroot.xml:65
+msgid ""
+"Finally, remove the temporary 'tester' user account created at the beginning "
+"of the previous chapter."
+msgstr ""
+
+#. type: Content of: <sect1><screen>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/revisedchroot.xml:68
+#, no-wrap
+msgid "<userinput>userdel -r tester</userinput>"
+msgstr ""

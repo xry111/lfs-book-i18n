@@ -1,0 +1,161 @@
+# SOME DESCRIPTIVE TITLE
+# Copyright (C) YEAR Free Software Foundation, Inc.
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"POT-Creation-Date: 2020-06-17 12:44+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#. type: Content of: <sect1><sect1info><address>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter06/coreutils.xml:14
+#, no-wrap
+msgid "&coreutils-url;"
+msgstr ""
+
+#. type: Content of: <sect1><sect1info>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter06/coreutils.xml:12
+msgid ""
+"<productname>coreutils</productname> "
+"<productnumber>&coreutils-version;</productnumber> <placeholder "
+"type=\"address\" id=\"0\"/>"
+msgstr ""
+
+#. type: Content of: <sect1><title>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter06/coreutils.xml:17
+msgid "Coreutils-&coreutils-version;"
+msgstr ""
+
+#. type: Content of: <sect1><indexterm><primary>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter06/coreutils.xml:20
+msgid "Coreutils"
+msgstr ""
+
+#. type: Content of: <sect1><indexterm><secondary>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter06/coreutils.xml:21
+msgid "tools"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><segmentedlist><segtitle>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter06/coreutils.xml:32
+msgid "&buildtime;"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><segmentedlist><segtitle>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter06/coreutils.xml:33
+msgid "&diskspace;"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><segmentedlist><seglistitem><seg>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter06/coreutils.xml:36
+msgid "&coreutils-tmp-sbu;"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><segmentedlist><seglistitem><seg>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter06/coreutils.xml:37
+msgid "&coreutils-tmp-du;"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><title>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter06/coreutils.xml:44
+msgid "Installation of Coreutils"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter06/coreutils.xml:46
+msgid "Prepare Coreutils for compilation:"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><screen>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter06/coreutils.xml:48
+#, no-wrap
+msgid ""
+"<userinput remap=\"configure\">./configure --prefix=/usr                     "
+"\\\n"
+"            --host=$LFS_TGT                   \\\n"
+"            --build=$(build-aux/config.guess) \\\n"
+"            --enable-install-program=hostname \\\n"
+"            --enable-no-install-program=kill,uptime</userinput>"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><title>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter06/coreutils.xml:55
+msgid "The meaning of the configure options:"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter06/coreutils.xml:58
+msgid "<envar>--enable-install-program=hostname</envar>"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter06/coreutils.xml:60
+msgid ""
+"This enables the <command>hostname</command> binary to be built and "
+"installed &ndash; it is disabled by default but is required by the Perl test "
+"suite."
+msgstr ""
+
+#. type: Content of: <sect1><sect2><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter06/coreutils.xml:67
+msgid "Compile the package:"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><screen>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter06/coreutils.xml:69
+#, no-wrap
+msgid "<userinput remap=\"make\">make</userinput>"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter06/coreutils.xml:71
+msgid "Install the package:"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><screen>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter06/coreutils.xml:73
+#, no-wrap
+msgid "<userinput remap=\"install\">make DESTDIR=$LFS install</userinput>"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter06/coreutils.xml:82
+msgid ""
+"Move programs to their final expected locations. Although this is not "
+"necessary in this temporary environment, we must do so because some programs "
+"harcode executable locations:"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><screen>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter06/coreutils.xml:86
+#, no-wrap
+msgid ""
+"<userinput remap=\"install\">mv -v "
+"$LFS/usr/bin/{cat,chgrp,chmod,chown,cp,date,dd,df,echo} $LFS/bin\n"
+"mv -v $LFS/usr/bin/{false,ln,ls,mkdir,mknod,mv,pwd,rm}        $LFS/bin\n"
+"mv -v $LFS/usr/bin/{rmdir,stty,sync,true,uname}               $LFS/bin\n"
+"mv -v $LFS/usr/bin/{head,nice,sleep,touch}                    $LFS/bin\n"
+"mv -v $LFS/usr/bin/chroot                                     "
+"$LFS/usr/sbin\n"
+"mkdir -pv $LFS/usr/share/man/man8\n"
+"mv -v $LFS/usr/share/man/man1/chroot.1                        "
+"$LFS/usr/share/man/man8/chroot.8\n"
+"sed -i 's/\"1\"/\"8\"/'                                           "
+"$LFS/usr/share/man/man8/chroot.8</userinput>"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter06/coreutils.xml:100
+msgid ""
+"Details on this package are located in <xref linkend=\"contents-coreutils\" "
+"role=\".\"/>"
+msgstr ""

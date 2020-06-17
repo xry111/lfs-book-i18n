@@ -1,0 +1,1237 @@
+# SOME DESCRIPTIVE TITLE
+# Copyright (C) YEAR Free Software Foundation, Inc.
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"POT-Creation-Date: 2020-06-17 12:44+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#. type: Content of: <sect1><sect1info><address>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/systemd.xml:14
+#, no-wrap
+msgid "&systemd-url;"
+msgstr ""
+
+#. type: Content of: <sect1><sect1info>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/systemd.xml:12
+msgid ""
+"<productname>systemd</productname> "
+"<productnumber>&systemd-version;</productnumber> <placeholder "
+"type=\"address\" id=\"0\"/>"
+msgstr ""
+
+#. type: Content of: <sect1><title>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/systemd.xml:17
+msgid "Systemd-&systemd-version;"
+msgstr ""
+
+#. type: Content of: <sect1><indexterm><primary>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/systemd.xml:20
+msgid "systemd"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/systemd.xml:26
+msgid ""
+"The systemd package contains programs for controlling the startup, running, "
+"and shutdown of the system."
+msgstr ""
+
+#. type: Content of: <sect1><sect2><segmentedlist><segtitle>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/systemd.xml:30
+msgid "&buildtime;"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><segmentedlist><segtitle>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/systemd.xml:31
+msgid "&diskspace;"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><segmentedlist><seglistitem><seg>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/systemd.xml:34
+msgid "&systemd-fin-sbu;"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><segmentedlist><seglistitem><seg>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/systemd.xml:35
+msgid "&systemd-fin-du;"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><title>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/systemd.xml:41
+msgid "Installation of systemd"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/systemd.xml:43
+msgid "First, apply a patch to fix the build with GCC-10:"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><screen>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/systemd.xml:45
+#, no-wrap
+msgid ""
+"<userinput remap=\"pre\">patch -Np1 -i "
+"../systemd-&systemd-version;-gcc_10-fixes-1.patch</userinput>"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/systemd.xml:47
+msgid "Create a symlink to work around the xsltproc command not being installed:"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><screen>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/systemd.xml:49
+#, no-wrap
+msgid "<userinput remap=\"pre\">ln -sf /bin/true /usr/bin/xsltproc</userinput>"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/systemd.xml:51
+msgid "Set up the man pages:"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><screen>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/systemd.xml:53
+#, no-wrap
+msgid ""
+"<userinput remap=\"pre\">tar -xf "
+"../systemd-man-pages-&systemd-version;.tar.xz</userinput>"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/systemd.xml:55
+msgid "Remove tests that cannot be built in chroot:"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><screen>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/systemd.xml:57
+#, no-wrap
+msgid ""
+"<userinput remap=\"pre\">sed '179,$ d' -i "
+"src/resolve/meson.build</userinput>"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/systemd.xml:59
+msgid ""
+"Remove an unneeded group, <systemitem "
+"class=\"groupname\">render</systemitem>, from the default udev rules:"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><screen>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/systemd.xml:63
+#, no-wrap
+msgid ""
+"<userinput remap=\"pre\">sed -i 's/GROUP=\"render\", //' "
+"rules.d/50-udev-default.rules.in</userinput>"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/systemd.xml:65
+msgid "Prepare systemd for compilation:"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><screen>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/systemd.xml:67
+#, no-wrap
+msgid ""
+"<userinput remap=\"configure\">mkdir -p build\n"
+"cd       build\n"
+"\n"
+"LANG=en_US.UTF-8                    \\\n"
+"meson --prefix=/usr                 \\\n"
+"      --sysconfdir=/etc             \\\n"
+"      --localstatedir=/var          \\\n"
+"      -Dblkid=true                  \\\n"
+"      -Dbuildtype=release           \\\n"
+"      -Ddefault-dnssec=no           \\\n"
+"      -Dfirstboot=false             \\\n"
+"      -Dinstall-tests=false         \\\n"
+"      -Dkmod-path=/bin/kmod         \\\n"
+"      -Dldconfig=false              \\\n"
+"      -Dmount-path=/bin/mount       \\\n"
+"      -Drootprefix=                 \\\n"
+"      -Drootlibdir=/lib             \\\n"
+"      -Dsplit-usr=true              \\\n"
+"      -Dsulogin-path=/sbin/sulogin  \\\n"
+"      -Dsysusers=false              \\\n"
+"      -Dumount-path=/bin/umount     \\\n"
+"      -Db_lto=false                 \\\n"
+"      -Drpmmacrosdir=no             \\\n"
+"      -Dhomed=false                 \\\n"
+"      -Duserdb=false                \\\n"
+"      -Dman=true                    \\\n"
+"      ..</userinput>"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><title>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/systemd.xml:96
+msgid "The meaning of the meson options:"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/systemd.xml:99
+msgid "<parameter>-D*-path=*</parameter>"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/systemd.xml:101
+msgid ""
+"These switches provide the location of binaries needed by systemd at runtime "
+"that have not yet been installed."
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/systemd.xml:107
+msgid "<parameter>-Ddefault-dnssec=no</parameter>"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/systemd.xml:109
+msgid "This switch turns off the experimental DNSSEC support."
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/systemd.xml:114
+msgid "<parameter>-Dfirstboot=false</parameter>"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/systemd.xml:116
+msgid ""
+"This switch prevents installation of systemd services responsible for "
+"setting up the system for the first time. They are not useful for LFS "
+"because everything is done manually."
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/systemd.xml:124
+msgid "<parameter>-Dinstall-tests=false</parameter>"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/systemd.xml:126
+msgid "This switch prevents installation of the compiled tests."
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/systemd.xml:131
+msgid "<parameter>-Dldconfig=false</parameter>"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/systemd.xml:133
+msgid ""
+"This switch prevents installation of a systemd unit that runs "
+"<command>ldconfig</command> at boot, which is not useful for source "
+"distributions such as LFS and makes the boot time longer. Remove it if the "
+"described feature is desired."
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/systemd.xml:141
+msgid "<parameter>-Droot*</parameter>"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/systemd.xml:143
+msgid ""
+"These switches ensure that core programs and shared libraries are installed "
+"in subdirectories of the root partition."
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/systemd.xml:150
+msgid "<parameter>-Dsplit-usr=true</parameter>"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/systemd.xml:152
+msgid ""
+"This switch ensures that systemd will work on systems where /bin, /lib and "
+"/sbin directories are not symlinks to their /usr counterparts."
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/systemd.xml:159
+msgid "<parameter>-Dsysusers=false</parameter>"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/systemd.xml:161
+msgid ""
+"This switch prevents installation of systemd services responsible for "
+"setting up the <filename>/etc/group</filename> and "
+"<filename>/etc/passwd</filename> files. Both files were created earlier in "
+"this chapter."
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/systemd.xml:170
+msgid "<parameter>-Drpmmacrosdir=no</parameter>"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/systemd.xml:172
+msgid ""
+"This switch disables installation of RPM Macros for use with systemd because "
+"LFS does not support RPM."
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/systemd.xml:178
+msgid "<parameter>-D{userdb,homed}=false</parameter>"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/systemd.xml:180
+msgid "Remove two daemons that have dependencies that do not fit the scope of LFS."
+msgstr ""
+
+#. type: Content of: <sect1><sect2><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/systemd.xml:187
+msgid "Compile the package:"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><screen>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/systemd.xml:189
+#, no-wrap
+msgid "<userinput remap=\"make\">LANG=en_US.UTF-8 ninja</userinput>"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/systemd.xml:191
+msgid "Install the package:"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><screen>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/systemd.xml:193
+#, no-wrap
+msgid "<userinput remap=\"install\">LANG=en_US.UTF-8 ninja install</userinput>"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/systemd.xml:195
+msgid "Remove an unnecessary symbolic link:"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><screen>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/systemd.xml:197
+#, no-wrap
+msgid "<userinput remap=\"install\">rm -f /usr/bin/xsltproc</userinput>"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/systemd.xml:199
+msgid ""
+"Create the <filename>/etc/machine-id</filename> file needed by "
+"<command>systemd-journald</command>:"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><screen>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/systemd.xml:202
+#, no-wrap
+msgid "<userinput remap=\"adjust\">systemd-machine-id-setup</userinput>"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/systemd.xml:204
+msgid "Setup the basic target structure:"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><screen>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/systemd.xml:206
+#, no-wrap
+msgid "<userinput remap=\"adjust\">systemctl preset-all</userinput>"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/systemd.xml:208
+msgid ""
+"Disable a service that is known to cause problems with systems that use a "
+"network configuration other than what is provided by systemd-networkd:"
+msgstr ""
+
+#.  Observed halting startup with dhcpcd handling the primary NIC 
+#. type: Content of: <sect1><sect2><screen>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/systemd.xml:213
+#, no-wrap
+msgid ""
+"<userinput remap=\"adjust\">systemctl disable "
+"systemd-time-wait-sync.service</userinput>"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/systemd.xml:215
+msgid ""
+"Prevent systemd from resetting the maximum PID value which causes some "
+"problems with packages and units in BLFS:"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><screen>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/systemd.xml:218
+#, no-wrap
+msgid ""
+"<userinput remap=\"adjust\">rm -f "
+"/usr/lib/sysctl.d/50-pid-max.conf</userinput>"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><title>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/systemd.xml:223
+msgid "Contents of systemd"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><segmentedlist><segtitle>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/systemd.xml:226
+msgid "Installed programs"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><segmentedlist><segtitle>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/systemd.xml:227
+msgid "Installed libraries"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><segmentedlist><segtitle>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/systemd.xml:228
+msgid "Installed directories"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><segmentedlist><seglistitem><seg>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/systemd.xml:231
+msgid ""
+"bootctl, busctl, coredumpctl, halt (symlink to systemctl), hostnamectl, "
+"init, journalctl, kernel-install, localectl, loginctl, machinectl, "
+"networkctl, portablectl, poweroff (symlink to systemctl), reboot (symlink to "
+"systemctl), resolvconf (symlink to resolvectl), resolvectl, runlevel "
+"(symlink to systemctl), shutdown (symlink to systemctl), systemctl, "
+"systemd-analyze, systemd-ask-password, systemd-cat, systemd-cgls, "
+"systemd-cgtop, systemd-delta, systemd-detect-virt, systemd-escape, "
+"systemd-hwdb, systemd-id128, systemd-inhibit, systemd-machine-id-setup, "
+"systemd-mount, systemd-notify, systemd-nspawn, systemd-path, systemd-repart, "
+"systemd-resolve (symlink to resolvectl), systemd-run, "
+"systemd-socket-activate, systemd-stdio-bridge, systemd-tmpfiles, "
+"systemd-tty-ask-password-agent, systemd-umount (symlink to systemd-mount), "
+"telinit (symlink to systemctl), timedatectl, and udevadm"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><segmentedlist><seglistitem><seg>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/systemd.xml:246
+msgid ""
+"libnss_myhostname.so.2, libnss_mymachines.so.2, libnss_resolve.so.2, "
+"libnss_systemd.so.2, libsystemd.so, libsystemd-shared-&systemd-version;.so "
+"(in /lib/systemd), and libudev.so"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><segmentedlist><seglistitem><seg>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/systemd.xml:250
+msgid ""
+"/etc/binfmt.d, /etc/init.d, /etc/kernel, /etc/modules-load.d, /etc/sysctl.d, "
+"/etc/systemd, /etc/tmpfiles.d, /etc/udev, /etc/xdg/systemd, /lib/systemd, "
+"/lib/udev, /usr/include/systemd, /usr/lib/binfmt.d, /usr/lib/kernel, "
+"/usr/lib/modules-load.d, /usr/lib/sysctl.d, /usr/lib/systemd, "
+"/usr/lib/tmpfiles.d, /usr/share/doc/systemd-&systemd-version;, "
+"/usr/share/factory, /usr/share/systemd, /var/lib/systemd, and "
+"/var/log/journal"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><bridgehead>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/systemd.xml:261
+msgid "Short Descriptions"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/systemd.xml:262
+msgid "<?dbfo list-presentation=\"list\"?> <?dbhtml list-presentation=\"table\"?>"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/systemd.xml:266
+msgid "<command>bootctl</command>"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/systemd.xml:268
+msgid "Is used to query the firmware and boot manager settings"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/systemd.xml:270
+msgid "bootctl"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/systemd.xml:276
+msgid "<command>busctl</command>"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/systemd.xml:278
+msgid "Is used to introspect and monitor the D-Bus bus"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/systemd.xml:280
+msgid "busctl"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/systemd.xml:286
+msgid "<command>coredumpctl</command>"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/systemd.xml:288
+msgid "Is used to retrieve coredumps from the systemd journal"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/systemd.xml:290
+msgid "coredumpctl"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/systemd.xml:296
+msgid "<command>halt</command>"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/systemd.xml:298
+msgid ""
+"Normally invokes <command>shutdown</command> with the "
+"<parameter>-h</parameter> option, except when already in run-level 0, then "
+"it tells the kernel to halt the system; it notes in the file "
+"<filename>/var/log/wtmp</filename> that the system is being brought down"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/systemd.xml:304
+msgid "halt"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/systemd.xml:310
+msgid "<command>hostnamectl</command>"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/systemd.xml:312
+msgid "Is used to query and change the system hostname and related settings"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/systemd.xml:315
+msgid "hostnamectl"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/systemd.xml:321
+msgid "<command>init</command>"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/systemd.xml:323
+msgid ""
+"Is the first process to be started when the kernel has initialized the "
+"hardware which takes over the boot process and starts all processes "
+"according to its configuration files. In this case, it starts systemd."
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/systemd.xml:328
+msgid "init"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/systemd.xml:334
+msgid "<command>journalctl</command>"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/systemd.xml:336
+msgid "Is used to query the contents of the systemd journal"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/systemd.xml:338
+msgid "journalctl"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/systemd.xml:344
+msgid "<command>kernel-install</command>"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/systemd.xml:346
+msgid ""
+"Is used to add and remove kernel and initramfs images to and from /boot. In "
+"LFS, this is done manually."
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/systemd.xml:349
+msgid "kernel-install"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/systemd.xml:355
+msgid "<command>localectl</command>"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/systemd.xml:357
+msgid "Is used to query and change the system locale and keyboard layout settings"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/systemd.xml:360
+msgid "localectl"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/systemd.xml:366
+msgid "<command>loginctl</command>"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/systemd.xml:368
+msgid "Is used to introspect and control the state of the systemd Login Manager"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/systemd.xml:371
+msgid "loginctl"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/systemd.xml:377
+msgid "<command>machinectl</command>"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/systemd.xml:379
+msgid ""
+"Is used to introspect and control the state of the systemd Virtual Machine "
+"and Container Registration Manager"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/systemd.xml:382
+msgid "machinectl"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/systemd.xml:388
+msgid "<command>networkctl</command>"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/systemd.xml:390
+msgid ""
+"Is used to introspect and configure the state of the network links "
+"configured by systemd-networkd"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/systemd.xml:393
+msgid "networkctl"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/systemd.xml:399
+msgid "<command>portablectl</command>"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/systemd.xml:401
+msgid "Is used to attach or detach portable services from the local system"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/systemd.xml:404
+msgid "portablectl"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/systemd.xml:410
+msgid "<command>poweroff</command>"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/systemd.xml:412
+msgid ""
+"Instructs the kernel to halt the system and switch off the computer (see "
+"<command>halt</command>)"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/systemd.xml:415
+msgid "poweroff"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/systemd.xml:421
+msgid "<command>reboot</command>"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/systemd.xml:423
+msgid "Instructs the kernel to reboot the system (see <command>halt</command>)"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/systemd.xml:426
+msgid "reboot"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/systemd.xml:432
+msgid "<command>resolvconf</command>"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/systemd.xml:434
+msgid ""
+"Registers DNS server and domain configuration with "
+"<command>systemd-resolved</command>"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/systemd.xml:437
+msgid "resolvconf"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/systemd.xml:443
+msgid "<command>resolvectl</command>"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/systemd.xml:445
+msgid ""
+"Sends control commands to the network name resolution manager, or resolves "
+"domain names, IPv4 and IPv6 addresses, DNS records, and services."
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/systemd.xml:449
+msgid "resolvectl"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/systemd.xml:455
+msgid "<command>runlevel</command>"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/systemd.xml:457
+msgid ""
+"Outputs the previous and the current run-level, as noted in the last "
+"run-level record in <filename>/var/run/utmp</filename>"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/systemd.xml:460
+msgid "runlevel"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/systemd.xml:466
+msgid "<command>shutdown</command>"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/systemd.xml:468
+msgid ""
+"Brings the system down in a safe and secure manner, signaling all processes "
+"and notifying all logged-in users"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/systemd.xml:471
+msgid "shutdown"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/systemd.xml:477
+msgid "<command>systemctl</command>"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/systemd.xml:479
+msgid ""
+"Is used to introspect and control the state of the systemd system and "
+"service manager"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/systemd.xml:482
+msgid "systemctl"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/systemd.xml:488
+msgid "<command>systemd-analyze</command>"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/systemd.xml:490
+msgid ""
+"Is used to determine system startup performance of the current boot, as well "
+"as identify troublesome systemd units"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/systemd.xml:493
+msgid "systemd-analyze"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/systemd.xml:499
+msgid "<command>systemd-ask-password</command>"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/systemd.xml:501
+msgid ""
+"Is used to query a system password or passphrase from the user, using a "
+"question message specified on the command line"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/systemd.xml:504
+msgid "systemd-ask-password"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/systemd.xml:510
+msgid "<command>systemd-cat</command>"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/systemd.xml:512
+msgid ""
+"Is used to connect the STDOUT and STDERR outputs of a process with the "
+"systemd journal."
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/systemd.xml:516
+msgid "systemd-cat"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/systemd.xml:522
+msgid "<command>systemd-cgls</command>"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/systemd.xml:524
+msgid ""
+"Recursively shows the contents of the selected Linux control group hierarchy "
+"in a tree"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/systemd.xml:527
+msgid "systemd-cgls"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/systemd.xml:533
+msgid "<command>systemd-cgtop</command>"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/systemd.xml:535
+msgid ""
+"Shows the top control groups of the local Linux control group hierarchy, "
+"ordered by their CPU, memory and disk I/O load"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/systemd.xml:538
+msgid "systemd-cgtop"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/systemd.xml:544
+msgid "<command>systemd-delta</command>"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/systemd.xml:546
+msgid ""
+"Is used to identify and compare configuration files in <filename "
+"class=\"directory\">/etc</filename> that override default counterparts in "
+"<filename class=\"directory\">/usr</filename>"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/systemd.xml:550
+msgid "systemd-delta"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/systemd.xml:556
+msgid "<command>systemd-detect-virt</command>"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/systemd.xml:558
+msgid ""
+"Detects whether the system is being run in a virtual environment, and "
+"adjusts udev accordingly."
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/systemd.xml:561
+msgid "systemd-detect-virt"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/systemd.xml:567
+msgid "<command>systemd-escape</command>"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/systemd.xml:569
+msgid "Is used to escape strings for inclusion in systemd unit names"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/systemd.xml:572
+msgid "systemd-escape"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/systemd.xml:578
+msgid "<command>systemd-hwdb</command>"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/systemd.xml:580
+msgid "Is used to manage the hardware database (hwdb)"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/systemd.xml:582
+msgid "systemd-hwdb"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/systemd.xml:588
+msgid "<command>systemd-id128</command>"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/systemd.xml:590
+msgid "Generates and prints id128 strings"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/systemd.xml:592
+msgid "systemd-id128"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/systemd.xml:598
+msgid "<command>systemd-inhibit</command>"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/systemd.xml:600
+msgid ""
+"Is used to execute a program with a shutdown, sleep or idle inhibitor lock "
+"taken, preventing an action such as a system shutdown until the process is "
+"completed."
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/systemd.xml:604
+msgid "systemd-inhibit"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/systemd.xml:610
+msgid "<command>systemd-machine-id-setup</command>"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/systemd.xml:612
+msgid ""
+"Is used by system installer tools to initialize the machine ID stored in "
+"<filename>/etc/machine-id</filename> at install time with a randomly "
+"generated ID"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/systemd.xml:616
+msgid "systemd-machine-id-setup"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/systemd.xml:622
+msgid "<command>systemd-mount</command>"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/systemd.xml:624
+msgid "Is used to temporarily mount or automount disks."
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/systemd.xml:626
+msgid "systemd-mount"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/systemd.xml:632
+msgid "<command>systemd-notify</command>"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/systemd.xml:634
+msgid "Is used by daemon scripts to notify the init system about status changes"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/systemd.xml:637
+msgid "systemd-notify"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/systemd.xml:643
+msgid "<command>systemd-nspawn</command>"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/systemd.xml:645
+msgid "Is used to run a command or OS in a light-weight namespace container"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/systemd.xml:648
+msgid "systemd-nspawn"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/systemd.xml:654
+msgid "<command>systemd-path</command>"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/systemd.xml:656
+msgid "Is used to query system and user paths"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/systemd.xml:658
+msgid "systemd-path"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/systemd.xml:664
+msgid "<command>systemd-repart</command>"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/systemd.xml:666
+msgid ""
+"Is used to grow and add partitions to a partition table when systemd is used "
+"in an OS image (e.g. a container)."
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/systemd.xml:669
+msgid "systemd-repart"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/systemd.xml:675
+msgid "<command>systemd-resolve</command>"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/systemd.xml:677
+msgid ""
+"Is used to resolve domain names, IPV4 and IPv6 addresses, DNS resource "
+"records, and services"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/systemd.xml:680
+msgid "systemd-resolve"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/systemd.xml:686
+msgid "<command>systemd-run</command>"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/systemd.xml:688
+msgid ""
+"Is used to create and start a transient .service or a .scope unit and run "
+"the specified command in it. This is useful for validating systemd units."
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/systemd.xml:692
+msgid "systemd-run"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/systemd.xml:698
+msgid "<command>systemd-socket-activate</command>"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/systemd.xml:700
+msgid ""
+"Is used to listen on socket devices and launch a process upon a successful "
+"connection to the socket."
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/systemd.xml:703
+msgid "systemd-socket-activate"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/systemd.xml:709
+msgid "<command>systemd-tmpfiles</command>"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/systemd.xml:711
+msgid ""
+"Creates, deletes and cleans up volatile and temporary files and directories, "
+"based on the configuration file format and location specified in <filename "
+"class=\"directory\">tmpfiles.d</filename> directories"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/systemd.xml:716
+msgid "systemd-tmpfiles"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/systemd.xml:722
+msgid "<command>systemd-umount</command>"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/systemd.xml:724
+msgid "Unmounts mount points"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/systemd.xml:726
+msgid "systemd-umount"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/systemd.xml:732
+msgid "<command>systemd-tty-ask-password-agent</command>"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/systemd.xml:734
+msgid "Is used to list and/or process pending systemd password requests"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/systemd.xml:737
+msgid "systemd-tty-ask-password-agent"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/systemd.xml:743
+msgid "<command>telinit</command>"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/systemd.xml:745
+msgid "Tells <command>init</command> which run-level to change to"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/systemd.xml:748
+msgid "telinit"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/systemd.xml:754
+msgid "<command>timedatectl</command>"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/systemd.xml:756
+msgid "Is used to query and change the system clock and its settings"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/systemd.xml:759
+msgid "timedatectl"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/systemd.xml:765
+msgid "<command>udevadm</command>"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/systemd.xml:767
+msgid ""
+"Is a generic udev administration tool which controls the udevd daemon, "
+"provides info from the Udev hardware database, monitors uevents, waits for "
+"uevents to finish, tests udev configuration, and triggers uevents for a "
+"given device"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/systemd.xml:772
+msgid "udevadm"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/systemd.xml:778
+msgid "<filename class=\"libraryfile\">libsystemd</filename>"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/systemd.xml:780
+msgid "Is the main systemd utility library"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/systemd.xml:782
+msgid "libsystemd"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/systemd.xml:788
+msgid "<filename class=\"libraryfile\">libudev</filename>"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/systemd.xml:790
+msgid "Is a library to access Udev device information"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/systemd.xml:792
+msgid "libudev"
+msgstr ""

@@ -1,0 +1,278 @@
+# SOME DESCRIPTIVE TITLE
+# Copyright (C) YEAR Free Software Foundation, Inc.
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"POT-Creation-Date: 2020-06-17 12:44+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#. type: Content of: <sect1><title>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter09/locale.xml:11
+msgid "Configuring the System Locale"
+msgstr ""
+
+#. type: Content of: <sect1><indexterm><primary>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter09/locale.xml:14
+msgid "/etc/locale.conf"
+msgstr ""
+
+#. type: Content of: <sect1><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter09/locale.xml:17
+msgid ""
+"The <filename>/etc/locale.conf</filename> file below sets some environment "
+"variables necessary for native language support. Setting them properly "
+"results in:"
+msgstr ""
+
+#. type: Content of: <sect1><itemizedlist><listitem><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter09/locale.xml:23
+msgid "The output of programs being translated into your native language"
+msgstr ""
+
+#. type: Content of: <sect1><itemizedlist><listitem><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter09/locale.xml:26
+msgid ""
+"The correct classification of characters into letters, digits and other "
+"classes. This is necessary for <command>bash</command> to properly accept "
+"non-ASCII characters in command lines in non-English locales"
+msgstr ""
+
+#. type: Content of: <sect1><itemizedlist><listitem><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter09/locale.xml:31
+msgid "The correct alphabetical sorting order for the country"
+msgstr ""
+
+#. type: Content of: <sect1><itemizedlist><listitem><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter09/locale.xml:34
+msgid "The appropriate default paper size"
+msgstr ""
+
+#. type: Content of: <sect1><itemizedlist><listitem><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter09/locale.xml:37
+msgid "The correct formatting of monetary, time, and date values"
+msgstr ""
+
+#. type: Content of: <sect1><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter09/locale.xml:41
+msgid ""
+"Replace <replaceable>&lt;ll&gt;</replaceable> below with the two-letter code "
+"for your desired language (e.g., <quote>en</quote>) and "
+"<replaceable>&lt;CC&gt;</replaceable> with the two-letter code for the "
+"appropriate country (e.g., "
+"<quote>GB</quote>). <replaceable>&lt;charmap&gt;</replaceable> should be "
+"replaced with the canonical charmap for your chosen locale. Optional "
+"modifiers such as <quote>@euro</quote> may also be present."
+msgstr ""
+
+#. type: Content of: <sect1><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter09/locale.xml:48
+msgid ""
+"The list of all locales supported by Glibc can be obtained by running the "
+"following command:"
+msgstr ""
+
+#. type: Content of: <sect1><screen>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter09/locale.xml:51
+#, no-wrap
+msgid "<userinput>locale -a</userinput>"
+msgstr ""
+
+#. type: Content of: <sect1><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter09/locale.xml:53
+msgid ""
+"Charmaps can have a number of aliases, e.g., <quote>ISO-8859-1</quote> is "
+"also referred to as <quote>iso8859-1</quote> and <quote>iso88591</quote>.  "
+"Some applications cannot handle the various synonyms correctly (e.g., "
+"require that <quote>UTF-8</quote> is written as <quote>UTF-8</quote>, not "
+"<quote>utf8</quote>), so it is the safest in most cases to choose the "
+"canonical name for a particular locale. To determine the canonical name, run "
+"the following command, where <replaceable>&lt;locale name&gt;</replaceable> "
+"is the output given by <command>locale -a</command> for your preferred "
+"locale (<quote>en_GB.iso88591</quote> in our example)."
+msgstr ""
+
+#. type: Content of: <sect1><screen>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter09/locale.xml:63
+#, no-wrap
+msgid ""
+"<userinput>LC_ALL=<replaceable>&lt;locale name&gt;</replaceable> locale "
+"charmap</userinput>"
+msgstr ""
+
+#. type: Content of: <sect1><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter09/locale.xml:65
+msgid "For the <quote>en_GB.iso88591</quote> locale, the above command will print:"
+msgstr ""
+
+#. type: Content of: <sect1><screen>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter09/locale.xml:68
+#, no-wrap
+msgid "<computeroutput>ISO-8859-1</computeroutput>"
+msgstr ""
+
+#. type: Content of: <sect1><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter09/locale.xml:70
+msgid ""
+"This results in a final locale setting of <quote>en_GB.ISO-8859-1</quote>.  "
+"It is important that the locale found using the heuristic above is tested "
+"prior to it being added to the Bash startup files:"
+msgstr ""
+
+#. type: Content of: <sect1><screen>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter09/locale.xml:74
+#, no-wrap
+msgid ""
+"<userinput>LC_ALL=&lt;locale name&gt; locale language\n"
+"LC_ALL=&lt;locale name&gt; locale charmap\n"
+"LC_ALL=&lt;locale name&gt; locale int_curr_symbol\n"
+"LC_ALL=&lt;locale name&gt; locale int_prefix</userinput>"
+msgstr ""
+
+#. type: Content of: <sect1><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter09/locale.xml:79
+msgid ""
+"The above commands should print the language name, the character encoding "
+"used by the locale, the local currency, and the prefix to dial before the "
+"telephone number in order to get into the country. If any of the commands "
+"above fail with a message similar to the one shown below, this means that "
+"your locale was either not installed in Chapter&nbsp;6 or is not supported "
+"by the default installation of Glibc."
+msgstr ""
+
+#. type: Content of: <sect1><screen>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter09/locale.xml:86
+#, no-wrap
+msgid ""
+"<computeroutput>locale: Cannot set LC_* to default locale: No such file or "
+"directory</computeroutput>"
+msgstr ""
+
+#. type: Content of: <sect1><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter09/locale.xml:88
+msgid ""
+"If this happens, you should either install the desired locale using the "
+"<command>localedef</command> command, or consider choosing a different "
+"locale.  Further instructions assume that there are no such error messages "
+"from Glibc."
+msgstr ""
+
+#. type: Content of: <sect1><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter09/locale.xml:94
+msgid ""
+"Some packages beyond LFS may also lack support for your chosen locale. One "
+"example is the X library (part of the X Window System), which outputs the "
+"following error message if the locale does not exactly match one of the "
+"character map names in its internal files:"
+msgstr ""
+
+#. type: Content of: <sect1><screen>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter09/locale.xml:99
+#, no-wrap
+msgid ""
+"<computeroutput>Warning: locale not supported by Xlib, locale set to "
+"C</computeroutput>"
+msgstr ""
+
+#. type: Content of: <sect1><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter09/locale.xml:101
+msgid ""
+"In several cases Xlib expects that the character map will be listed in "
+"uppercase notation with canonical dashes. For instance, \"ISO-8859-1\" "
+"rather than \"iso88591\". It is also possible to find an appropriate "
+"specification by removing the charmap part of the locale specification.  "
+"This can be checked by running the <command>locale charmap</command> command "
+"in both locales.  For example, one would have to change "
+"\"de_DE.ISO-8859-15@euro\" to \"de_DE@euro\" in order to get this locale "
+"recognized by Xlib."
+msgstr ""
+
+#. type: Content of: <sect1><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter09/locale.xml:109
+msgid ""
+"Other packages can also function incorrectly (but may not necessarily "
+"display any error messages) if the locale name does not meet their "
+"expectations.  In those cases, investigating how other Linux distributions "
+"support your locale might provide some useful information."
+msgstr ""
+
+#. type: Content of: <sect1><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter09/locale.xml:114
+msgid ""
+"Once the proper locale settings have been determined, create the "
+"<filename>/etc/locale.conf</filename> file:"
+msgstr ""
+
+#. type: Content of: <sect1><screen>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter09/locale.xml:117
+#, no-wrap
+msgid ""
+"<userinput>cat &gt; /etc/locale.conf &lt;&lt; \"EOF\"\n"
+"<literal>LANG=<replaceable>&lt;ll&gt;_&lt;CC&gt;.&lt;charmap&gt;&lt;@modifiers&gt;</replaceable></literal>\n"
+"EOF</userinput>"
+msgstr ""
+
+#. type: Content of: <sect1><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter09/locale.xml:121
+msgid ""
+"Note that you can modify <filename>/etc/locale.conf</filename> with the "
+"systemd <command>localectl</command> utility. To use "
+"<command>localectl</command> for the example above, run:"
+msgstr ""
+
+#. type: Content of: <sect1><screen>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter09/locale.xml:125
+#, no-wrap
+msgid ""
+"<userinput>localectl set-locale "
+"LANG=\"<replaceable>&lt;ll&gt;_&lt;CC&gt;.&lt;charmap&gt;&lt;@modifiers&gt;</replaceable>\"</userinput>"
+msgstr ""
+
+#. type: Content of: <sect1><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter09/locale.xml:127
+msgid ""
+"You can also specify other language specific environment variables such as "
+"<envar>LANG</envar>, <envar>LC_CTYPE</envar>, <envar>LC_NUMERIC</envar> or "
+"any other environment variable from <command>locale</command> output. Just "
+"separate them with a space. An example where <envar>LANG</envar> is set as "
+"en_US.UTF-8 but <envar>LC_CTYPE</envar> is set as just en_US is:"
+msgstr ""
+
+#. type: Content of: <sect1><screen>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter09/locale.xml:133
+#, no-wrap
+msgid ""
+"<userinput>localectl set-locale LANG=\"en_US.UTF-8\" "
+"LC_CTYPE=\"en_US\"</userinput>"
+msgstr ""
+
+#. type: Content of: <sect1><note><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter09/locale.xml:135
+msgid ""
+"Please note that the <command>localectl</command> command can be used only "
+"on a system booted with systemd."
+msgstr ""
+
+#. type: Content of: <sect1><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter09/locale.xml:138
+msgid ""
+"The <quote>C</quote> (default) and <quote>en_US</quote> (the recommended one "
+"for United States English users) locales are different. <quote>C</quote> "
+"uses the US-ASCII 7-bit character set, and treats bytes with the high bit "
+"set as invalid characters. That's why, e.g., the <command>ls</command> "
+"command substitutes them with question marks in that locale. Also, an "
+"attempt to send mail with such characters from Mutt or Pine results in "
+"non-RFC-conforming messages being sent (the charset in the outgoing mail is "
+"indicated as <quote>unknown 8-bit</quote>). It's suggested that you use the "
+"<quote>C</quote> locale only if you are certain that you will never need "
+"8-bit characters."
+msgstr ""

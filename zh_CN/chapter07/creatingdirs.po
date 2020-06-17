@@ -1,0 +1,89 @@
+# SOME DESCRIPTIVE TITLE
+# Copyright (C) YEAR Free Software Foundation, Inc.
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"POT-Creation-Date: 2020-06-17 12:44+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#. type: Content of: <sect1><title>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter07/creatingdirs.xml:11
+msgid "Creating Directories"
+msgstr ""
+
+#. type: Content of: <sect1><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter07/creatingdirs.xml:13
+msgid ""
+"It is time to create the full structure in the LFS file system. Create a "
+"standard directory tree by issuing the following commands:"
+msgstr ""
+
+#. type: Content of: <sect1><screen>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter07/creatingdirs.xml:16
+#, no-wrap
+msgid ""
+"<userinput>mkdir -pv "
+"/{bin,boot,etc/{opt,sysconfig},home,lib/firmware,mnt,opt}\n"
+"mkdir -pv /{media/{floppy,cdrom},srv,var}\n"
+"mkdir -pv /usr/{,local/}{bin,include,lib,sbin,src}\n"
+"mkdir -pv /usr/{,local/}share/{color,dict,doc,info,locale,man}\n"
+"mkdir -pv /usr/{,local/}share/{misc,terminfo,zoneinfo}\n"
+"mkdir -pv /usr/{,local/}share/man/man{1..8}\n"
+"install -dv -m 1777 /tmp /var/tmp\n"
+"install -dv -m 0750 /root\n"
+"\n"
+"mkdir -v /var/{log,mail,spool}\n"
+"ln -sv /run /var/run\n"
+"ln -sv /run/lock /var/lock\n"
+"mkdir -pv /var/{opt,cache,lib/{color,misc,locate},local}</userinput>"
+msgstr ""
+
+#. type: Content of: <sect1><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter07/creatingdirs.xml:30
+msgid ""
+"Directories are, by default, created with permission mode 755, but this is "
+"not desirable for all directories. In the commands above, two changes are "
+"made&mdash;one to the home directory of user <systemitem "
+"class=\"username\">root</systemitem>, and another to the directories for "
+"temporary files."
+msgstr ""
+
+#. type: Content of: <sect1><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter07/creatingdirs.xml:36
+msgid ""
+"The first mode change ensures that not just anybody can enter the <filename "
+"class=\"directory\">/root</filename> directory&mdash;the same as a normal "
+"user would do with his or her home directory. The second mode change makes "
+"sure that any user can write to the <filename "
+"class=\"directory\">/tmp</filename> and <filename "
+"class=\"directory\">/var/tmp</filename> directories, but cannot remove "
+"another user's files from them. The latter is prohibited by the so-called "
+"<quote>sticky bit,</quote> the highest bit (1) in the 1777 bit mask."
+msgstr ""
+
+#. type: Content of: <sect1><sect2><title>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter07/creatingdirs.xml:46
+msgid "FHS Compliance Note"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter07/creatingdirs.xml:48
+msgid ""
+"The directory tree is based on the Filesystem Hierarchy Standard (FHS) "
+"(available at <ulink "
+"url=\"https://refspecs.linuxfoundation.org/fhs.shtml\"/>).  The FHS also "
+"specifies the optional existence of some directories such as <filename "
+"class=\"directory\">/usr/local/games</filename> and <filename "
+"class=\"directory\">/usr/share/games</filename>.  We create only the "
+"directories that are needed. However, feel free to create these directories."
+msgstr ""

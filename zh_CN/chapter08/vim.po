@@ -1,0 +1,507 @@
+# SOME DESCRIPTIVE TITLE
+# Copyright (C) YEAR Free Software Foundation, Inc.
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"POT-Creation-Date: 2020-06-17 12:44+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#. type: Content of: <sect1><sect1info><address>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/vim.xml:14
+#, no-wrap
+msgid "&vim-url;"
+msgstr ""
+
+#. type: Content of: <sect1><sect1info>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/vim.xml:12
+msgid ""
+"<productname>vim</productname> <productnumber>&vim-version;</productnumber> "
+"<placeholder type=\"address\" id=\"0\"/>"
+msgstr ""
+
+#. type: Content of: <sect1><title>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/vim.xml:17
+msgid "Vim-&vim-version;"
+msgstr ""
+
+#. type: Content of: <sect1><indexterm><primary>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/vim.xml:20
+msgid "Vim"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/vim.xml:26
+msgid "The Vim package contains a powerful text editor."
+msgstr ""
+
+#. type: Content of: <sect1><sect2><segmentedlist><segtitle>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/vim.xml:29
+msgid "&buildtime;"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><segmentedlist><segtitle>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/vim.xml:30
+msgid "&diskspace;"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><segmentedlist><seglistitem><seg>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/vim.xml:33
+msgid "&vim-fin-sbu;"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><segmentedlist><seglistitem><seg>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/vim.xml:34
+msgid "&vim-fin-du;"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><tip><title>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/vim.xml:39
+msgid "Alternatives to Vim"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><tip><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/vim.xml:41
+msgid ""
+"If you prefer another editor&mdash;such as Emacs, Joe, or Nano&mdash;please "
+"refer to <ulink url=\"&blfs-book;postlfs/editors.html\"/> for suggested "
+"installation instructions."
+msgstr ""
+
+#. type: Content of: <sect1><sect2><title>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/vim.xml:50
+msgid "Installation of Vim"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/vim.xml:52
+msgid ""
+"First, change the default location of the <filename>vimrc</filename> "
+"configuration file to <filename class=\"directory\">/etc</filename>:"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><screen>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/vim.xml:55
+#, no-wrap
+msgid ""
+"<userinput remap=\"pre\">echo '#define SYS_VIMRC_FILE \"/etc/vimrc\"' "
+"&gt;&gt; src/feature.h</userinput>"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/vim.xml:57
+msgid "Prepare vim for compilation:"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><screen>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/vim.xml:59
+#, no-wrap
+msgid "<userinput remap=\"configure\">./configure --prefix=/usr</userinput>"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/vim.xml:61
+msgid "Compile the package:"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><screen>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/vim.xml:63
+#, no-wrap
+msgid "<userinput remap=\"make\">make</userinput>"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/vim.xml:65
+msgid ""
+"To prepare the tests, ensure that user <systemitem "
+"class=\"username\">tester</systemitem> can write to the source tree:"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><screen>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/vim.xml:69
+#, no-wrap
+msgid "<userinput remap=\"test\">chown -Rv tester .</userinput>"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/vim.xml:71
+msgid ""
+"Now run the tests as user <systemitem "
+"class=\"username\">tester</systemitem>:"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><screen>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/vim.xml:74
+#, no-wrap
+msgid ""
+"<userinput remap=\"test\">su tester -c \"LANG=en_US.UTF-8 make -j1 test\" "
+"&amp;> vim-test.log</userinput>"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/vim.xml:76
+msgid ""
+"The test suite outputs a lot of binary data to the screen.  This can cause "
+"issues with the settings of the current terminal.  The problem can be "
+"avoided by redirecting the output to a log file as shown above.  A "
+"successful test will result in the words \"ALL DONE\" in the log file at "
+"completion."
+msgstr ""
+
+#. type: Content of: <sect1><sect2><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/vim.xml:82
+msgid "Install the package:"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><screen>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/vim.xml:84
+#, no-wrap
+msgid "<userinput remap=\"install\">make install</userinput>"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/vim.xml:86
+msgid ""
+"Many users are used to using <command>vi</command> instead of "
+"<command>vim</command>. To allow execution of <command>vim</command> when "
+"users habitually enter <command>vi</command>, create a symlink for both the "
+"binary and the man page in the provided languages:"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><screen>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/vim.xml:92
+#, no-wrap
+msgid ""
+"<userinput remap=\"install\">ln -sv vim /usr/bin/vi\n"
+"for L in  /usr/share/man/{,*/}man1/vim.1; do\n"
+"    ln -sv vim.1 $(dirname $L)/vi.1\n"
+"done</userinput>"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/vim.xml:97
+msgid ""
+"By default, vim's documentation is installed in <filename "
+"class=\"directory\">/usr/share/vim</filename>. The following symlink allows "
+"the documentation to be accessed via <filename "
+"class=\"directory\">/usr/share/doc/vim-&vim-version;</filename>, making it "
+"consistent with the location of documentation for other packages:"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><screen>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/vim.xml:103
+#, no-wrap
+msgid ""
+"<userinput remap=\"install\">ln -sv ../&vim-docdir;/doc "
+"/usr/share/doc/vim-&vim-version;</userinput>"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/vim.xml:105
+msgid ""
+"If an X Window System is going to be installed on the LFS system, it may be "
+"necessary to recompile vim after installing X. Vim comes with a GUI version "
+"of the editor that requires X and some additional libraries to be "
+"installed. For more information on this process, refer to the vim "
+"documentation and the vim installation page in the BLFS book at <ulink "
+"url=\"&blfs-book;postlfs/vim.html\"/>."
+msgstr ""
+
+#. type: Content of: <sect1><sect2><title>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/vim.xml:116
+msgid "Configuring Vim"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><indexterm><primary>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/vim.xml:119
+msgid "/etc/vimrc"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/vim.xml:122
+msgid ""
+"By default, <command>vim</command> runs in vi-incompatible mode.  This may "
+"be new to users who have used other editors in the past. The "
+"<quote>nocompatible</quote> setting is included below to highlight the fact "
+"that a new behavior is being used. It also reminds those who would change to "
+"<quote>compatible</quote> mode that it should be the first setting in the "
+"configuration file. This is necessary because it changes other settings, and "
+"overrides must come after this setting. Create a default "
+"<command>vim</command> configuration file by running the following:"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><screen>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/vim.xml:131
+#, no-wrap
+msgid ""
+"<userinput>cat &gt; /etc/vimrc &lt;&lt; \"EOF\"\n"
+"<literal>\" Begin /etc/vimrc\n"
+"\n"
+"\" Ensure defaults are set before customizing settings, not after\n"
+"source $VIMRUNTIME/defaults.vim\n"
+"let skip_defaults_vim=1 \n"
+"\n"
+"set nocompatible\n"
+"set backspace=2\n"
+"set mouse=\n"
+"syntax on\n"
+"if (&amp;term == \"xterm\") || (&amp;term == \"putty\")\n"
+"  set background=dark\n"
+"endif\n"
+"\n"
+"\" End /etc/vimrc</literal>\n"
+"EOF</userinput>"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/vim.xml:149
+msgid ""
+"The <parameter>set nocompatible</parameter> setting makes "
+"<command>vim</command> behave in a more useful way (the default) than the "
+"vi-compatible manner. Remove the <quote>no</quote> to keep the old "
+"<command>vi</command> behavior. The <parameter>set backspace=2</parameter> "
+"setting allows backspacing over line breaks, autoindents, and the start of "
+"an insert. The <parameter>syntax on</parameter> parameter enables vim's "
+"syntax highlighting.  The <parameter>set mouse=</parameter> setting enables "
+"proper pasting of text with the mouse when working in chroot or over a "
+"remote connection.  Finally, the <emphasis>if</emphasis> statement with the "
+"<parameter>set background=dark</parameter> setting corrects "
+"<command>vim</command>'s guess about the background color of some terminal "
+"emulators. This gives the highlighting a better color scheme for use on the "
+"black background of these programs."
+msgstr ""
+
+#. type: Content of: <sect1><sect2><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/vim.xml:163
+msgid ""
+"Documentation for other available options can be obtained by running the "
+"following command:"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><screen>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/vim.xml:166
+#, no-wrap
+msgid "<userinput>vim -c ':options'</userinput>"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><note><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/vim.xml:169
+msgid ""
+"By default, vim only installs spell files for the English language.  To "
+"install spell files for your preferred language, download the "
+"<filename>*.spl</filename> and optionally, the <filename>*.sug</filename> "
+"files for your language and character encoding from <ulink "
+"url=\"ftp://ftp.vim.org/pub/vim/runtime/spell/\"/> and save them to "
+"<filename class='directory'>/usr/share/&vim-docdir;/spell/</filename>."
+msgstr ""
+
+#. type: Content of: <sect1><sect2><note><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/vim.xml:176
+msgid ""
+"To use these spell files, some configuration in "
+"<filename>/etc/vimrc</filename> is needed, e.g.:"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><note><screen>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/vim.xml:179
+#, no-wrap
+msgid ""
+"<literal>set spelllang=en,ru\n"
+"set spell</literal>"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><note><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/vim.xml:182
+msgid ""
+"For more information, see the appropriate README file located at the URL "
+"above."
+msgstr ""
+
+#. type: Content of: <sect1><sect2><title>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/vim.xml:189
+msgid "Contents of Vim"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><segmentedlist><segtitle>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/vim.xml:192
+msgid "Installed programs"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><segmentedlist><segtitle>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/vim.xml:193
+msgid "Installed directory"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><segmentedlist><seglistitem><seg>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/vim.xml:196
+msgid ""
+"ex (link to vim), rview (link to vim), rvim (link to vim), vi (link to vim), "
+"view (link to vim), vim, vimdiff (link to vim), vimtutor, and xxd"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><segmentedlist><seglistitem><seg>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/vim.xml:199
+msgid "/usr/share/vim"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><bridgehead>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/vim.xml:204
+msgid "Short Descriptions"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/vim.xml:205
+msgid "<?dbfo list-presentation=\"list\"?> <?dbhtml list-presentation=\"table\"?>"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/vim.xml:209
+msgid "<command>ex</command>"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/vim.xml:211
+msgid "Starts <command>vim</command> in ex mode"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/vim.xml:213
+msgid "ex"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/vim.xml:219
+msgid "<command>rview</command>"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/vim.xml:221
+msgid ""
+"Is a restricted version of <command>view</command>; no shell commands can be "
+"started and <command>view</command> cannot be suspended"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/vim.xml:225
+msgid "rview"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/vim.xml:231
+msgid "<command>rvim</command>"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/vim.xml:233
+msgid ""
+"Is a restricted version of <command>vim</command>; no shell commands can be "
+"started and <command>vim</command> cannot be suspended"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/vim.xml:237
+msgid "rvim"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/vim.xml:243
+msgid "<command>vi</command>"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/vim.xml:245
+msgid "Link to <command>vim</command>"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/vim.xml:247
+msgid "vi"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/vim.xml:253
+msgid "<command>view</command>"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/vim.xml:255
+msgid "Starts <command>vim</command> in read-only mode"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/vim.xml:257
+msgid "view"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/vim.xml:263
+msgid "<command>vim</command>"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/vim.xml:265
+msgid "Is the editor"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/vim.xml:267
+msgid "vim"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/vim.xml:273
+msgid "<command>vimdiff</command>"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/vim.xml:275
+msgid ""
+"Edits two or three versions of a file with <command>vim</command> and shows "
+"differences"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/vim.xml:278
+msgid "vimdiff"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/vim.xml:284
+msgid "<command>vimtutor</command>"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/vim.xml:286
+msgid "Teaches the basic keys and commands of <command>vim</command>"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/vim.xml:289
+msgid "vimtutor"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/vim.xml:295
+msgid "<command>xxd</command>"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/vim.xml:297
+msgid ""
+"Creates a hex dump of the given file; it can also do the reverse, so it can "
+"be used for binary patching"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/vim.xml:300
+msgid "xxd"
+msgstr ""

@@ -1,0 +1,246 @@
+# SOME DESCRIPTIVE TITLE
+# Copyright (C) YEAR Free Software Foundation, Inc.
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"POT-Creation-Date: 2020-06-17 12:44+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#. type: Content of: <sect1><sect1info><address>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter06/ncurses.xml:14
+#, no-wrap
+msgid "&ncurses-url;"
+msgstr ""
+
+#. type: Content of: <sect1><sect1info>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter06/ncurses.xml:12
+msgid ""
+"<productname>ncurses</productname> "
+"<productnumber>&ncurses-version;</productnumber> <placeholder "
+"type=\"address\" id=\"0\"/>"
+msgstr ""
+
+#. type: Content of: <sect1><title>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter06/ncurses.xml:17
+msgid "Ncurses-&ncurses-version;"
+msgstr ""
+
+#. type: Content of: <sect1><indexterm><primary>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter06/ncurses.xml:20
+msgid "Ncurses"
+msgstr ""
+
+#. type: Content of: <sect1><indexterm><secondary>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter06/ncurses.xml:21
+msgid "tools"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><segmentedlist><segtitle>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter06/ncurses.xml:32
+msgid "&buildtime;"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><segmentedlist><segtitle>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter06/ncurses.xml:33
+msgid "&diskspace;"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><segmentedlist><seglistitem><seg>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter06/ncurses.xml:36
+msgid "&ncurses-tmp-sbu;"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><segmentedlist><seglistitem><seg>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter06/ncurses.xml:37
+msgid "&ncurses-tmp-du;"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><title>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter06/ncurses.xml:44
+msgid "Installation of Ncurses"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter06/ncurses.xml:46
+msgid ""
+"First, ensure that <command>gawk</command> is found first during "
+"configuration:"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><screen>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter06/ncurses.xml:48
+#, no-wrap
+msgid "<userinput remap=\"pre\">sed -i s/mawk// configure</userinput>"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter06/ncurses.xml:50
+msgid ""
+"Then, run the following commands to build the <quote>tic</quote> program on "
+"the build host:"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><screen>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter06/ncurses.xml:53
+#, no-wrap
+msgid ""
+"<userinput remap=\"pre\">mkdir build\n"
+"pushd build\n"
+"  ../configure\n"
+"  make -C include\n"
+"  make -C progs tic\n"
+"popd</userinput>"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter06/ncurses.xml:60
+msgid "Prepare Ncurses for compilation:"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><screen>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter06/ncurses.xml:62
+#, no-wrap
+msgid ""
+"<userinput remap=\"configure\">./configure --prefix=/usr                \\\n"
+"            --host=$LFS_TGT              \\\n"
+"            --build=$(./config.guess)    \\\n"
+"            --mandir=/usr/share/man      \\\n"
+"            --with-manpage-format=normal \\\n"
+"            --with-shared                \\\n"
+"            --without-debug              \\\n"
+"            --without-ada                \\\n"
+"            --without-normal             \\\n"
+"            --enable-widec</userinput>"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><title>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter06/ncurses.xml:74
+msgid "The meaning of the new configure options:"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter06/ncurses.xml:77
+msgid "<parameter>--with-manpage-format=normal</parameter>"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter06/ncurses.xml:79
+msgid ""
+"This prevents Ncurses installing compressed manual pages, which may happen "
+"if the host distribution itself has compressed manual pages."
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter06/ncurses.xml:86
+msgid "<parameter>--without-ada</parameter>"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter06/ncurses.xml:88
+msgid ""
+"This ensures that Ncurses does not build support for the Ada compiler which "
+"may be present on the host but will not be available once we enter the "
+"<command>chroot</command> environment."
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter06/ncurses.xml:95
+msgid "<parameter>--enable-widec</parameter>"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter06/ncurses.xml:97
+msgid ""
+"This switch causes wide-character libraries (e.g., <filename "
+"class=\"libraryfile\">libncursesw.so.&ncurses-version;</filename>)  to be "
+"built instead of normal ones (e.g., <filename "
+"class=\"libraryfile\">libncurses.so.&ncurses-version;</filename>).  These "
+"wide-character libraries are usable in both multibyte and traditional 8-bit "
+"locales, while normal libraries work properly only in 8-bit "
+"locales. Wide-character and normal libraries are source-compatible, but not "
+"binary-compatible."
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter06/ncurses.xml:109
+msgid "<parameter>--without-normal</parameter>"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter06/ncurses.xml:111
+msgid "This switch disables building and installing most static libraries."
+msgstr ""
+
+#. type: Content of: <sect1><sect2><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter06/ncurses.xml:118
+msgid "Compile the package:"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><screen>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter06/ncurses.xml:120
+#, no-wrap
+msgid "<userinput remap=\"make\">make</userinput>"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter06/ncurses.xml:122
+msgid "Install the package:"
+msgstr ""
+
+#.  TODO: check and document 
+#. type: Content of: <sect1><sect2><screen>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter06/ncurses.xml:124
+#, no-wrap
+msgid ""
+"<userinput remap=\"install\">make DESTDIR=$LFS "
+"TIC_PATH=$(pwd)/build/progs/tic install\n"
+"ln -s libncursesw.so $LFS/usr/lib/libncurses.so</userinput>"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter06/ncurses.xml:127
+msgid ""
+"Move the shared libraries to the <filename "
+"class=\"directory\">/lib</filename> directory, where they are expected to "
+"reside:"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><screen>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter06/ncurses.xml:131
+#, no-wrap
+msgid ""
+"<userinput remap=\"install\">mv -v $LFS/usr/lib/libncursesw.so.6* "
+"$LFS/lib</userinput>"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter06/ncurses.xml:133
+msgid ""
+"Because the libraries have been moved, one symlink points to a non-existent "
+"file. Recreate it:"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><screen>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter06/ncurses.xml:136
+#, no-wrap
+msgid ""
+"<userinput remap=\"install\">ln -sfv ../../lib/$(readlink "
+"$LFS/usr/lib/libncursesw.so) $LFS/usr/lib/libncursesw.so</userinput>"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter06/ncurses.xml:144
+msgid ""
+"Details on this package are located in <xref linkend=\"contents-ncurses\" "
+"role=\".\"/>"
+msgstr ""

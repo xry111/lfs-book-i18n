@@ -1,0 +1,124 @@
+# SOME DESCRIPTIVE TITLE
+# Copyright (C) YEAR Free Software Foundation, Inc.
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"POT-Creation-Date: 2020-06-17 12:44+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#. type: Content of: <sect1><title>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter02/creatingfilesystem.xml:11
+msgid "Creating a File System on the Partition"
+msgstr ""
+
+#. type: Content of: <sect1><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter02/creatingfilesystem.xml:13
+msgid ""
+"Now that a blank partition has been set up, the file system can be created.  "
+"LFS can use any file system recognized by the Linux kernel, but the most "
+"common types are ext3 and ext4.  The choice of file system can be complex "
+"and depends on the characteristics of the files and the size of the "
+"partition.  For example:"
+msgstr ""
+
+#. type: Content of: <sect1><variablelist><varlistentry><term>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter02/creatingfilesystem.xml:21
+msgid "ext2"
+msgstr ""
+
+#. type: Content of: <sect1><variablelist><varlistentry><listitem><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter02/creatingfilesystem.xml:22
+msgid ""
+"is suitable for small partitions that are updated infrequently such as "
+"/boot."
+msgstr ""
+
+#. type: Content of: <sect1><variablelist><varlistentry><term>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter02/creatingfilesystem.xml:27
+msgid "ext3"
+msgstr ""
+
+#. type: Content of: <sect1><variablelist><varlistentry><listitem><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter02/creatingfilesystem.xml:28
+msgid ""
+"is an upgrade to ext2 that includes a journal to help recover the "
+"partition's status in the case of an unclean shutdown.  It is commonly used "
+"as a general purpose file system."
+msgstr ""
+
+#. type: Content of: <sect1><variablelist><varlistentry><term>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter02/creatingfilesystem.xml:35
+msgid "ext4"
+msgstr ""
+
+#. type: Content of: <sect1><variablelist><varlistentry><listitem><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter02/creatingfilesystem.xml:36
+msgid ""
+"is the latest version of the ext file system family of partition types.  It "
+"provides several new capabilities including nano-second timestamps, creation "
+"and use of very large files (16 TB), and speed improvements."
+msgstr ""
+
+#. type: Content of: <sect1><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter02/creatingfilesystem.xml:44
+msgid ""
+"Other file systems, including FAT32, NTFS, ReiserFS, JFS, and XFS are useful "
+"for specialized purposes.  More information about these file systems can be "
+"found at <ulink "
+"url=\"http://en.wikipedia.org/wiki/Comparison_of_file_systems\"/>."
+msgstr ""
+
+#. type: Content of: <sect1><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter02/creatingfilesystem.xml:49
+msgid ""
+"LFS assumes that the root file system (/) is of type ext4.  To create an "
+"<systemitem class=\"filesystem\">ext4</systemitem> file system on the LFS "
+"partition, run the following:"
+msgstr ""
+
+#. type: Content of: <sect1><screen>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter02/creatingfilesystem.xml:53
+#, no-wrap
+msgid ""
+"<userinput>mkfs -v -t ext4 "
+"/dev/<replaceable>&lt;xxx&gt;</replaceable></userinput>"
+msgstr ""
+
+#. type: Content of: <sect1><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter02/creatingfilesystem.xml:55
+msgid ""
+"Replace <replaceable>&lt;xxx&gt;</replaceable> with the name of the LFS "
+"partition."
+msgstr ""
+
+#. type: Content of: <sect1><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter02/creatingfilesystem.xml:58
+msgid ""
+"If you are using an existing <systemitem class=\"filesystem\">swap "
+"</systemitem> partition, there is no need to format it. If a new <systemitem "
+"class=\"filesystem\"> swap</systemitem> partition was created, it will need "
+"to be initialized with this command:"
+msgstr ""
+
+#. type: Content of: <sect1><screen>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter02/creatingfilesystem.xml:63
+#, no-wrap
+msgid "<userinput>mkswap /dev/<replaceable>&lt;yyy&gt;</replaceable></userinput>"
+msgstr ""
+
+#. type: Content of: <sect1><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter02/creatingfilesystem.xml:65
+msgid ""
+"Replace <replaceable>&lt;yyy&gt;</replaceable> with the name of the "
+"<systemitem class=\"filesystem\">swap</systemitem> partition."
+msgstr ""
