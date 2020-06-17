@@ -1,7 +1,9 @@
 LFS_EN = /home/xry111/svn-repos/LFS-BOOK
 MLANG=zh_CN
 ALL_XML_FILES = $(shell find $(LFS_EN) -type f -name '*.xml')
-XML_FILES = $(filter-out $(LFS_EN)/chapter01/changelog.xml, $(ALL_XML_FILES))
+EXCLUDE_FILES = $(LFS_EN)/chapter01/changelog.xml \
+				$(LFS_EN)/chapter01/livecd.xml
+XML_FILES = $(filter-out $(EXCLUDE_FILES), $(ALL_XML_FILES))
 PO_FILES = $(patsubst $(LFS_EN)/%.xml, $(MLANG)/%.po, $(XML_FILES))
 
 run: $(PO_FILES)
