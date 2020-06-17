@@ -1,0 +1,30 @@
+diff -uNr book/stylesheets/lfs-xsl/lfs-l10n.xml book.new/stylesheets/lfs-xsl/lfs-l10n.xml
+--- book/stylesheets/lfs-xsl/lfs-l10n.xml	2020-06-17 14:58:37.499744806 +0800
++++ book.new/stylesheets/lfs-xsl/lfs-l10n.xml	2020-06-17 16:10:48.233397825 +0800
+@@ -111,4 +111,26 @@
+ 
+   </l:l10n>
+ 
++  <!-- Simplified Chinese -->
++<l:l10n xmlns:l="http://docbook.sourceforge.net/xmlns/l10n/1.0"
++          language="zh_cn" english-language-name="Simplified Chinese">
++
++    <l:gentext key="description" text="描述"/>
++    <l:gentext key="Bootscripts" text="引导脚本"/>
++    <l:gentext key="Configuration Files" text="配置文件"/>
++    <l:gentext key="Kernel Configuration" text="内核配置"/>
++    <l:gentext key="Libraries" text="库"/>
++    <l:gentext key="Others" text="其他"/>
++    <l:gentext key="Packages" text="软件包"/>
++    <l:gentext key="Programs" text="程序"/>
++    <l:gentext key="Scripts" text="脚本"/>
++
++    <l:context name="title-numbered">
++      <l:template name="part" text="第 %n 部分 %t"/>
++    </l:context>
++
++    <l:gentext key="Copyright" text="版权所有"/>
++
++  </l:l10n>
++
+ </l:i18n>

@@ -18,16 +18,26 @@ KEEP_FILES = $(filter-out $(MXML_FILES), KEEP_FILES)
 
 MBOOK_FILES = $(patsubst %, $(MLANG)/book/%, $(BOOK_FILES))
 
-booksrc: $(MBOOK_FILES)
+booksrc: $(MBOOK_FILES) $(PATCHES)
 
 $(MLANG)/book/%.xml: $(LFS_EN)/%.xml $(MLANG)/%.po
 	mkdir -pv "$(@D)"
 	po4a-translate -f docbook -m $< -p $(filter-out $<, $^) -l $@
 	[ -e $@ ] || cp -v $< $@
+	relpath=$$(echo $@ | sed 's@$(MLANG)/book/@@'); \
+	patch_path=$(MLANG)/patches/$${relpath}.patch; \
+	if [ -e $${patch_path} ]; then \
+		pushd $(MLANG)/book; patch -Np1 -i ../patches/$${relpath}.patch; popd; \
+	fi
 
 $(MLANG)/book/%: $(LFS_EN)/%
 	mkdir -pv "$(@D)"
 	cp -v $< $@
+	relpath=$$(echo $@ | sed 's@$(MLANG)/book/@@'); \
+	patch_path=$(MLANG)/patches/$${relpath}.patch; \
+	if [ -e $${patch_path} ]; then \
+		pushd $(MLANG)/book; patch -Np1 -i ../patches/$${relpath}.patch; popd; \
+	fi
 
 test:
 	echo $(XML_FILES)
