@@ -1,9 +1,3 @@
-# SOME DESCRIPTIVE TITLE
-# Copyright (C) YEAR Free Software Foundation, Inc.
-# This file is distributed under the same license as the PACKAGE package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
-#
-#, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
@@ -19,7 +13,7 @@ msgstr ""
 #. type: Content of: <sect1><title>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter04/creatingminlayout.xml:11
 msgid "Creating the Minimal directory layout in LFS filesystem"
-msgstr ""
+msgstr "在 LFS 文件系统中创建最小目录布局"
 
 #. type: Content of: <sect1><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter04/creatingminlayout.xml:13
@@ -30,6 +24,10 @@ msgid ""
 "location. This is needed so that those temporary programs be overwritten "
 "when rebuilding them in <xref linkend=\"chapter-building-system\"/>."
 msgstr ""
+"在 LFS 分区中需要进行的第一项任务是，创建一个最小目录树，使得在"
+"<xref linkend=\"chapter-temporary-tools\"/>中编译的程序可以被安装到它们"
+"的最终位置。这样，在<xref linkend=\"chapter-building-system\"/>中重新构建"
+"它们时，就能直接覆盖这些临时程序。"
 
 #. type: Content of: <sect1><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter04/creatingminlayout.xml:19
@@ -37,6 +35,8 @@ msgid ""
 "Create the required directory layout by running the following as <systemitem "
 "class=\"username\">root</systemitem>:"
 msgstr ""
+"以 <systemitem class=\"username\">root</systemitem> 身份，"
+"执行以下命令创建所需的目录布局："
 
 #. type: Content of: <sect1><screen>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter04/creatingminlayout.xml:22
@@ -47,6 +47,10 @@ msgid ""
 "  x86_64) mkdir -pv $LFS/lib64 ;;\n"
 "esac</userinput>"
 msgstr ""
+"<userinput>mkdir -pv $LFS/{usr,lib,var,etc,bin,sbin}\n"
+"case $(uname -m) in\n"
+"  x86_64) mkdir -pv $LFS/lib64 ;;\n"
+"esac</userinput>"
 
 #. type: Content of: <sect1><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter04/creatingminlayout.xml:27
@@ -57,9 +61,14 @@ msgid ""
 "cross-compiler from the other programs, it will be installed in a special "
 "directory. Create this directory with:"
 msgstr ""
+"在 <xref linkend=\"chapter-temporary-tools\"/> 中，"
+"会使用交叉编译器编译程序 (细节参见"
+"<xref linkend=\"ch-tools-toolchaintechnotes\"/>一节)。"
+"为了将这个交叉编译器和其他程序分离，它会被安装在一个专门的目录。"
+"执行以下命令创建该目录："
 
 #. type: Content of: <sect1><screen>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter04/creatingminlayout.xml:33
 #, no-wrap
 msgid "<userinput>mkdir -pv $LFS/tools</userinput>"
-msgstr ""
+msgstr "<userinput>mkdir -pv $LFS/tools</userinput>"

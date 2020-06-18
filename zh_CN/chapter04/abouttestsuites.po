@@ -1,9 +1,3 @@
-# SOME DESCRIPTIVE TITLE
-# Copyright (C) YEAR Free Software Foundation, Inc.
-# This file is distributed under the same license as the PACKAGE package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
-#
-#, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
@@ -11,15 +5,16 @@ msgstr ""
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
-"Language: \n"
+"Language: zh_CN\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Translate Toolkit 2.2.5\n"
 
 #. type: Content of: <sect1><title>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter04/abouttestsuites.xml:11
 msgid "About the Test Suites"
-msgstr ""
+msgstr "关于测试套件"
 
 #. type: Content of: <sect1><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter04/abouttestsuites.xml:13
@@ -31,17 +26,25 @@ msgid ""
 "developer intended. It does not, however, guarantee that the package is "
 "totally bug free."
 msgstr ""
+"多数软件包提供测试套件，一般来说，为新构建的软件包运行测试套件是个好主意，"
+"这可以进行一次 <quote>完整性检查</quote> ，从而确认所有东西编译正确。如果测"
+"试套件中的所有检验项目都能通过，一般就可以证明这个软件包像开发者期望的那样运"
+"行。然而，这并不保证软件包完全没有错误。"
 
 #. type: Content of: <sect1><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter04/abouttestsuites.xml:20
 msgid ""
 "Some test suites are more important than others. For example, the test "
-"suites for the core toolchain packages&mdash;GCC, binutils, and "
-"glibc&mdash;are of the utmost importance due to their central role in a "
-"properly functioning system. The test suites for GCC and glibc can take a "
-"very long time to complete, especially on slower hardware, but are strongly "
+"suites for the core toolchain packages&mdash;GCC, binutils, and glibc&mdash;"
+"are of the utmost importance due to their central role in a properly "
+"functioning system. The test suites for GCC and glibc can take a very long "
+"time to complete, especially on slower hardware, but are strongly "
 "recommended."
 msgstr ""
+"某些软件包的测试套件比其他的更为重要。例如，组成核心工具链的几个软件包 "
+"&mdash; GCC、Binutils 和 Glibc 的测试套件就最为重要，因为这些软件包在系统的正"
+"常工作中发挥中心作用。GCC 和 Glibc 的测试套件需要运行很长时间，特别是在较慢"
+"的硬件上，但我们仍然强烈推荐运行它们。"
 
 #. type: Content of: <sect1><note><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter04/abouttestsuites.xml:28
@@ -51,6 +54,9 @@ msgid ""
 "compiled with a cross-compiler, so are not supposed to be able to run on the "
 "build host."
 msgstr ""
+"在<xref linkend=\"chapter-cross-tools\"/>和<xref "
+"linkend=\"chapter-temporary-tools\"/>中不可能运行测试套件，"
+"因为这些程序是使用交叉编译器编译的，根本不该在构建它们的宿主系统运行。"
 
 #. type: Content of: <sect1><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter04/abouttestsuites.xml:34
@@ -58,11 +64,15 @@ msgid ""
 "A common issue with running the test suites for binutils and GCC is running "
 "out of pseudo terminals (PTYs). This can result in a high number of failing "
 "tests. This may happen for several reasons, but the most likely cause is "
-"that the host system does not have the <systemitem "
-"class=\"filesystem\">devpts</systemitem> file system set up correctly. This "
-"issue is discussed in greater detail at <ulink "
-"url=\"&lfs-root;lfs/faq.html#no-ptys\"/>."
+"that the host system does not have the <systemitem class=\"filesystem"
+"\">devpts</systemitem> file system set up correctly. This issue is discussed "
+"in greater detail at <ulink url=\"&lfs-root;lfs/faq.html#no-ptys\"/>."
 msgstr ""
+"在运行 Binutils 和 GCC 的测试套件时，最普遍发生的问题是伪终端 (PTY) 被耗尽。"
+"这会导致大量测试出现失败结果。这种现象有多种可能原因，但最常见的原因是宿主系"
+"统没有正确设置 <systemitem class=\"filesystem\">devpts</systemitem> 文件系"
+"统。关于这个问题的更多细节在 <ulink url=\"&lfs-root;lfs/faq.html#no-ptys\"/"
+"> 中进行了讨论。"
 
 #. type: Content of: <sect1><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter04/abouttestsuites.xml:42
@@ -70,6 +80,26 @@ msgid ""
 "Sometimes package test suites will fail, but for reasons which the "
 "developers are aware of and have deemed non-critical. Consult the logs "
 "located at <ulink url=\"&test-results;\"/> to verify whether or not these "
-"failures are expected. This site is valid for all tests throughout this "
-"book."
+"failures are expected. This site is valid for all tests throughout this book."
 msgstr ""
+"一些软件包的测试套件总是失败，但开发者已经知道失败原因，并判定这些失败并不重"
+"要。参照 <ulink url=\"&test-results;\"/> 中的构建日志，来检查这些失败是否符合"
+"预期。本书中的所有测试都可以在该网址查询。"
+
+#~ msgid ""
+#~ "Experience has shown that there is little to be gained from running the "
+#~ "test suites in <xref linkend=\"chapter-temporary-tools\"/>. There can be "
+#~ "no escaping the fact that the host system always exerts some influence on "
+#~ "the tests in that chapter, often causing inexplicable failures. Because "
+#~ "the tools built in <xref linkend=\"chapter-temporary-tools\"/> are "
+#~ "temporary and eventually discarded, we do not recommend running the test "
+#~ "suites in <xref linkend=\"chapter-temporary-tools\"/> for the average "
+#~ "reader. The instructions for running those test suites are provided for "
+#~ "the benefit of testers and developers, but they are strictly optional."
+#~ msgstr ""
+#~ "经验表明，在 <xref linkend=\"chapter-temporary-tools\"/> 中运行测试套件几"
+#~ "乎没有意义。在这一章中，我们无法绝对避免宿主系统对测试过程的影响，这往往"
+#~ "导致不可避免的失败结果。再加上由于 <xref linkend=\"chapter-temporary-tools"
+#~ "\"/> 中的工具是临时的，最终会被丢弃，我们不建议一般读者在 <xref linkend="
+#~ "\"chapter-temporary-tools\"/> 中运行测试套件。尽管我们为测试人员和开发人"
+#~ "员考虑，提供了运行这些测试套件的方法，但它们绝对不是必须运行的。"
