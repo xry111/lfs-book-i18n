@@ -1,9 +1,3 @@
-# SOME DESCRIPTIVE TITLE
-# Copyright (C) YEAR Free Software Foundation, Inc.
-# This file is distributed under the same license as the PACKAGE package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
-#
-#, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
@@ -11,15 +5,16 @@ msgstr ""
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
-"Language: \n"
+"Language: zh_CN\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Translate Toolkit 2.2.5\n"
 
 #. type: Content of: <sect1><title>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter03/introduction.xml:11
 msgid "Introduction"
-msgstr ""
+msgstr "概述"
 
 #. type: Content of: <sect1><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter03/introduction.xml:13
@@ -33,29 +28,41 @@ msgid ""
 "work-arounds will be developed and stabilized in the development version of "
 "the book."
 msgstr ""
+"本章包含了构建基本的 Linux 系统时需要下载的软件包列表。我们给出的版本号对应于"
+"已经确定可以正常工作的版本，本书是基于这些版本编写的。我们强烈反对使用更新的"
+"版本，因为特定版本可用的构建命令未必适用于新版本。最新版本的软件包可能有需要"
+"排查的问题，我们会在本书的开发过程中进行排查，将解决方案找到并固定下来。"
 
 #. type: Content of: <sect1><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter03/introduction.xml:22
 msgid ""
 "Download locations may not always be accessible. If a download location has "
-"changed since this book was published, Google (<ulink "
-"url=\"http://www.google.com/\"/>) provides a useful search engine for most "
-"packages. If this search is unsuccessful, try one of the alternative means "
-"of downloading discussed at <ulink "
-"url=\"&lfs-root;lfs/packages.html#packages\"/>."
+"changed since this book was published, Google (<ulink url=\"http://www."
+"google.com/\"/>) provides a useful search engine for most packages. If this "
+"search is unsuccessful, try one of the alternative means of downloading "
+"discussed at <ulink url=\"&lfs-root;lfs/packages.html#packages\"/>."
 msgstr ""
+"本书列出的下载位置可能失效。如果本书发布后，某个下载位置发生变化，可以用 "
+"Google (<ulink url=\"http://www.google.com/\"/>) 提供的搜索引擎找到大多数软件"
+"包。如果搜索不到，尝试 <ulink url=\"&lfs-root;lfs/packages.html#packages\"/> "
+"给出的备用地址。"
 
 #. type: Content of: <sect1><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter03/introduction.xml:29
 msgid ""
 "Downloaded packages and patches will need to be stored somewhere that is "
 "conveniently available throughout the entire build. A working directory is "
-"also required to unpack the sources and build them.  <filename "
-"class=\"directory\">$LFS/sources</filename> can be used both as the place to "
-"store the tarballs and patches and as a working directory. By using this "
+"also required to unpack the sources and build them.  <filename class="
+"\"directory\">$LFS/sources</filename> can be used both as the place to store "
+"the tarballs and patches and as a working directory. By using this "
 "directory, the required elements will be located on the LFS partition and "
 "will be available during all stages of the building process."
 msgstr ""
+"下载好的软件包和补丁需要保存在一个适当的位置，使得在整个构建过程中都能容易地"
+"访问它们。另外，还需要一个工作目录，以便解压和编译软件包。我们可以将 "
+"<filename class=\"directory\">$LFS/sources</filename> 既用于保存软件包和补"
+"丁，又作为工作目录。这样，我们需要的所有东西都在 LFS 分区中，因此在整个构建过"
+"程中都能够访问。"
 
 #. type: Content of: <sect1><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter03/introduction.xml:38
@@ -63,12 +70,14 @@ msgid ""
 "To create this directory, execute the following command, as user <systemitem "
 "class=\"username\">root</systemitem>, before starting the download session:"
 msgstr ""
+"为了创建这个目录，在开始下载软件包之前，以<systemitem class=\"username"
+"\">root</systemitem>身份执行："
 
 #. type: Content of: <sect1><screen>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter03/introduction.xml:42
 #, no-wrap
 msgid "<userinput>mkdir -v $LFS/sources</userinput>"
-msgstr ""
+msgstr "<userinput>mkdir -v $LFS/sources</userinput>"
 
 #. type: Content of: <sect1><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter03/introduction.xml:44
@@ -78,12 +87,15 @@ msgid ""
 "of a file can delete the file within a sticky directory. The following "
 "command will enable the write and sticky modes:"
 msgstr ""
+"下面为该目录添加写入权限和 sticky 标志。<quote>Sticky</quote> 标志使得即使有"
+"多个用户对该目录有写入权限，也只有文件所有者能够删除其中的文件。输入以下命"
+"令，启用写入权限和 sticky 标志："
 
 #. type: Content of: <sect1><screen>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter03/introduction.xml:50
 #, no-wrap
 msgid "<userinput>chmod -v a+wt $LFS/sources</userinput>"
-msgstr ""
+msgstr "<userinput>chmod -v a+wt $LFS/sources</userinput>"
 
 #. type: Content of: <sect1><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter03/introduction.xml:52
@@ -91,6 +103,7 @@ msgid ""
 "There are several ways to optain all the necessary packages and patches to "
 "build LFS:"
 msgstr ""
+"存在多种获取构建 LFS 必须的软件包和补丁的方法："
 
 #. type: Content of: <sect1><itemizedlist><listitem><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter03/introduction.xml:57
@@ -98,14 +111,18 @@ msgid ""
 "The files can be downloaded individually as described in the next two "
 "sections."
 msgstr ""
+"可以在后续的两节中，单独下载这些文件。"
 
 #. type: Content of: <sect1><itemizedlist><listitem><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter03/introduction.xml:61
 msgid ""
 "For stable versions of the book, a tarball of all the needed files can be "
-"downloaded from one of the LFS files mirrors listed at <ulink "
-"url=\"http://www.linuxfromscratch.org/mirrors.html#files\"/>."
+"downloaded from one of the LFS files mirrors listed at <ulink url=\"http://"
+"www.linuxfromscratch.org/mirrors.html#files\"/>."
 msgstr ""
+"对于本手册的稳定版，可以从 "
+"<ulink url=\"http://www.linuxfromscratch.org/mirrors.html#files\"/> "
+"中列出的某个镜像站下载包含所有所需文件的压缩包。"
 
 #. type: Content of: <sect1><itemizedlist><listitem><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter03/introduction.xml:66
@@ -113,31 +130,36 @@ msgid ""
 "The files can be downloaded using <command>wget</command> and a wget-list as "
 "described below."
 msgstr ""
+"可以使用 <command>wget</command> 和下面描述的 wget-list 下载这些文件。"
 
 #. type: Content of: <sect1><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter03/introduction.xml:71
 msgid ""
-"To download all of the packages and patches by using <ulink "
-"url=\"../wget-list\">wget-list</ulink> as an input to the "
-"<command>wget</command> command, use:"
+"To download all of the packages and patches by using <ulink url=\"../wget-"
+"list\">wget-list</ulink> as an input to the <command>wget</command> command, "
+"use:"
 msgstr ""
+"如果要使用 <ulink url=\"../wget-"
+"list\">wget-list</ulink> 作为 <command>wget</command> 命令的输入，"
+"以下载所有软件包和补丁，使用命令："
 
 #. type: Content of: <sect1><screen>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter03/introduction.xml:75
 #, no-wrap
-msgid ""
-"<userinput>wget --input-file=wget-list --continue "
-"--directory-prefix=$LFS/sources</userinput>"
-msgstr ""
+msgid "<userinput>wget --input-file=wget-list --continue --directory-prefix=$LFS/sources</userinput>"
+msgstr "<userinput>wget --input-file=wget-list --continue --directory-prefix=$LFS/sources</userinput>"
 
 #. type: Content of: <sect1><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter03/introduction.xml:77
 msgid ""
-"Additionally, starting with LFS-7.0, there is a separate file, <ulink "
-"url=\"../md5sums\">md5sums</ulink>, which can be used to verify that all the "
+"Additionally, starting with LFS-7.0, there is a separate file, <ulink url="
+"\"../md5sums\">md5sums</ulink>, which can be used to verify that all the "
 "correct packages are available before proceeding.  Place that file in "
 "<filename class=\"directory\">$LFS/sources</filename> and run:"
 msgstr ""
+"另外，自 LFS-7.0 以来，本书提供一个单独的文件 <ulink url=\"../md5sums"
+"\">md5sums</ulink>，用来检查所有软件包的正确性。将该文件复制到<filename "
+"class=\"directory\">$LFS/sources</filename>，运行以下命令即可得到检查结果："
 
 #. type: Content of: <sect1><screen>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter03/introduction.xml:82
@@ -147,6 +169,9 @@ msgid ""
 "  md5sum -c md5sums\n"
 "popd</userinput>"
 msgstr ""
+"<userinput>pushd $LFS/sources\n"
+"  md5sum -c md5sums\n"
+"popd</userinput>"
 
 #. type: Content of: <sect1><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter03/introduction.xml:86
@@ -154,3 +179,4 @@ msgid ""
 "This check can be used after retrieving the needed files with any of the "
 "methods listed above."
 msgstr ""
+"使用上面的各种方法获取文件后，都可以执行这项检查。"
