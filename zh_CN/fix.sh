@@ -12,6 +12,8 @@ sed -e '/output-encoding:/s|latin1|utf8|' -i tidy.conf
 # Remove two seds causing encoding error in UTF-8
 sed -e '/xa9/d' -i Makefile
 
+sed -e 's|<book>|<book lang="zh_cn">|' -i index.xml
+
 sed -e '/xreflabel/s|Chapter.nbsp.1 - Mailing Lists|第 1 章 - 邮件列表|' \
 	-e '/xreflabel/s|Chapter.nbsp.1 - Mirror sites|第 1 章 - 镜像站|'    \
 	-i chapter01/resources.xml
