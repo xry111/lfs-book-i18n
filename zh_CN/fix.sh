@@ -16,6 +16,9 @@ sed -e '/xreflabel/s|Chapter.nbsp.\([0-9]\+\)|第 \1 章|' \
 sed -e '/xreflabel/s|Host System Requirements|宿主系统需求|' \
 	-i chapter02/hostreqs.xml
 
+sed -e '/xreflabel/s|General Compilation Instructions|通用编译说明|' \
+	-i part3intro/generalinstructions.xml
+
 sed -e '/xreflabel/s|Toolchain Technical Notes|工具链技术说明|' \
 	-i part3intro/toolchaintechnotes.xml
 
