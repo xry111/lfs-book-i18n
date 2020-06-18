@@ -7,7 +7,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2020-06-17 12:44+0800\n"
+"POT-Creation-Date: 2020-06-18 09:37+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -17,19 +17,19 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 
 #. type: Content of: <sect1><title>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter05/generalinstructions.xml:11
+#: /home/xry111/svn-repos/LFS-BOOK/part3intro/generalinstructions.xml:12
 msgid "General Compilation Instructions"
 msgstr ""
 
 #. type: Content of: <sect1><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter05/generalinstructions.xml:13
+#: /home/xry111/svn-repos/LFS-BOOK/part3intro/generalinstructions.xml:14
 msgid ""
 "When building packages there are several assumptions made within the "
 "instructions:"
 msgstr ""
 
 #. type: Content of: <sect1><itemizedlist><listitem><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter05/generalinstructions.xml:19
+#: /home/xry111/svn-repos/LFS-BOOK/part3intro/generalinstructions.xml:20
 msgid ""
 "Several of the packages are patched before compilation, but only when the "
 "patch is needed to circumvent a problem. A patch is often needed in both "
@@ -41,7 +41,7 @@ msgid ""
 msgstr ""
 
 #. type: Content of: <sect1><itemizedlist><listitem><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter05/generalinstructions.xml:30
+#: /home/xry111/svn-repos/LFS-BOOK/part3intro/generalinstructions.xml:31
 msgid ""
 "During the compilation of most packages, there will be several warnings that "
 "scroll by on the screen. These are normal and can safely be ignored.  These "
@@ -52,20 +52,20 @@ msgid ""
 msgstr ""
 
 #. type: Content of: <sect1><itemizedlist><listitem><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter05/generalinstructions.xml:39
+#: /home/xry111/svn-repos/LFS-BOOK/part3intro/generalinstructions.xml:40
 msgid ""
 "Check one last time that the <envar>LFS</envar> environment variable is set "
 "up properly:"
 msgstr ""
 
 #. type: Content of: <sect1><itemizedlist><listitem><screen>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter05/generalinstructions.xml:42
+#: /home/xry111/svn-repos/LFS-BOOK/part3intro/generalinstructions.xml:43
 #, no-wrap
 msgid "<userinput>echo $LFS</userinput>"
 msgstr ""
 
 #. type: Content of: <sect1><itemizedlist><listitem><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter05/generalinstructions.xml:44
+#: /home/xry111/svn-repos/LFS-BOOK/part3intro/generalinstructions.xml:45
 msgid ""
 "Make sure the output shows the path to the LFS partition's mount point, "
 "which is <filename class=\"directory\">/mnt/lfs</filename>, using our "
@@ -73,12 +73,12 @@ msgid ""
 msgstr ""
 
 #. type: Content of: <sect1><itemizedlist><listitem><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter05/generalinstructions.xml:51
+#: /home/xry111/svn-repos/LFS-BOOK/part3intro/generalinstructions.xml:52
 msgid "Finally, two important items must be emphasized:"
 msgstr ""
 
 #. type: Content of: <sect1><itemizedlist><listitem><important><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter05/generalinstructions.xml:55
+#: /home/xry111/svn-repos/LFS-BOOK/part3intro/generalinstructions.xml:56
 msgid ""
 "The build instructions assume that the <xref "
 "linkend='ch-partitioning-hostreqs'/>, including symbolic links, have been "
@@ -86,31 +86,31 @@ msgid ""
 msgstr ""
 
 #. type: Content of: <sect1><itemizedlist><listitem><important><itemizedlist><listitem><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter05/generalinstructions.xml:61
+#: /home/xry111/svn-repos/LFS-BOOK/part3intro/generalinstructions.xml:62
 msgid "<command>bash</command> is the shell in use."
 msgstr ""
 
 #. type: Content of: <sect1><itemizedlist><listitem><important><itemizedlist><listitem><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter05/generalinstructions.xml:64
+#: /home/xry111/svn-repos/LFS-BOOK/part3intro/generalinstructions.xml:65
 msgid "<command>sh</command> is a symbolic link to <command>bash</command>."
 msgstr ""
 
 #. type: Content of: <sect1><itemizedlist><listitem><important><itemizedlist><listitem><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter05/generalinstructions.xml:67
+#: /home/xry111/svn-repos/LFS-BOOK/part3intro/generalinstructions.xml:68
 msgid ""
 "<command>/usr/bin/awk</command> is a symbolic link to "
 "<command>gawk</command>."
 msgstr ""
 
 #. type: Content of: <sect1><itemizedlist><listitem><important><itemizedlist><listitem><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter05/generalinstructions.xml:70
+#: /home/xry111/svn-repos/LFS-BOOK/part3intro/generalinstructions.xml:71
 msgid ""
 "<command>/usr/bin/yacc</command> is a symbolic link to "
 "<command>bison</command> or a small script that executes bison."
 msgstr ""
 
 #. type: Content of: <sect1><itemizedlist><listitem><important><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter05/generalinstructions.xml:78
+#: /home/xry111/svn-repos/LFS-BOOK/part3intro/generalinstructions.xml:79
 msgid "To re-emphasize the build process:"
 msgstr ""
 
@@ -119,7 +119,7 @@ msgstr ""
 #. not</emphasis> put sources in
 #. 	  <filename class="directory">/mnt/lfs/tools/</filename>. 
 #. type: Content of: <sect1><itemizedlist><listitem><important><orderedlist><listitem><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter05/generalinstructions.xml:82
+#: /home/xry111/svn-repos/LFS-BOOK/part3intro/generalinstructions.xml:83
 msgid ""
 "Place all the sources and patches in a directory that will be accessible "
 "from the chroot environment such as <filename "
@@ -127,17 +127,17 @@ msgid ""
 msgstr ""
 
 #. type: Content of: <sect1><itemizedlist><listitem><important><orderedlist><listitem><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter05/generalinstructions.xml:89
+#: /home/xry111/svn-repos/LFS-BOOK/part3intro/generalinstructions.xml:90
 msgid "Change to the sources directory."
 msgstr ""
 
 #. type: Content of: <sect1><itemizedlist><listitem><important><orderedlist><listitem><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter05/generalinstructions.xml:92
+#: /home/xry111/svn-repos/LFS-BOOK/part3intro/generalinstructions.xml:93
 msgid "For each package:"
 msgstr ""
 
 #. type: Content of: <sect1><itemizedlist><listitem><important><orderedlist><listitem><orderedlist><listitem><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter05/generalinstructions.xml:95
+#: /home/xry111/svn-repos/LFS-BOOK/part3intro/generalinstructions.xml:96
 msgid ""
 "Using the <command>tar</command> program, extract the package to be built.  "
 "In Chapters 5 and 6, ensure you are the <emphasis>lfs</emphasis> user when "
@@ -145,21 +145,21 @@ msgid ""
 msgstr ""
 
 #. type: Content of: <sect1><itemizedlist><listitem><important><orderedlist><listitem><orderedlist><listitem><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter05/generalinstructions.xml:100
+#: /home/xry111/svn-repos/LFS-BOOK/part3intro/generalinstructions.xml:101
 msgid "Change to the directory created when the package was extracted."
 msgstr ""
 
 #. type: Content of: <sect1><itemizedlist><listitem><important><orderedlist><listitem><orderedlist><listitem><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter05/generalinstructions.xml:104
+#: /home/xry111/svn-repos/LFS-BOOK/part3intro/generalinstructions.xml:105
 msgid "Follow the book's instructions for building the package."
 msgstr ""
 
 #. type: Content of: <sect1><itemizedlist><listitem><important><orderedlist><listitem><orderedlist><listitem><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter05/generalinstructions.xml:107
+#: /home/xry111/svn-repos/LFS-BOOK/part3intro/generalinstructions.xml:108
 msgid "Change back to the sources directory."
 msgstr ""
 
 #. type: Content of: <sect1><itemizedlist><listitem><important><orderedlist><listitem><orderedlist><listitem><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter05/generalinstructions.xml:110
+#: /home/xry111/svn-repos/LFS-BOOK/part3intro/generalinstructions.xml:111
 msgid "Delete the extracted source directory unless instructed otherwise."
 msgstr ""

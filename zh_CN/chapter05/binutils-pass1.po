@@ -7,7 +7,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2020-06-17 12:44+0800\n"
+"POT-Creation-Date: 2020-06-18 09:37+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -25,9 +25,8 @@ msgstr ""
 #. type: Content of: <sect1><sect1info>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter05/binutils-pass1.xml:12
 msgid ""
-"<productname>binutils-pass1</productname> "
-"<productnumber>&binutils-version;</productnumber> <placeholder "
-"type=\"address\" id=\"0\"/>"
+"<productname>binutils-pass1</productname> <productnumber>&binutils-version;</"
+"productnumber> <placeholder type=\"address\" id=\"0\"/>"
 msgstr ""
 
 #. type: Content of: <sect1><title>
@@ -73,12 +72,13 @@ msgstr ""
 #. type: Content of: <sect1><sect2><note><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter05/binutils-pass1.xml:46
 msgid ""
-"Go back and re-read the notes in the previous section.  Understanding the "
-"notes labeled important will save you a lot of problems later."
+"Go back and re-read the notes in the section titled <xref linkend=\"ch-tools-"
+"generalinstructions\"/>.  Understanding the notes labeled important can save "
+"you a lot of problems later."
 msgstr ""
 
 #. type: Content of: <sect1><sect2><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter05/binutils-pass1.xml:50
+#: /home/xry111/svn-repos/LFS-BOOK/chapter05/binutils-pass1.xml:51
 msgid ""
 "It is important that Binutils be the first package compiled because both "
 "Glibc and GCC perform various tests on the available linker and assembler to "
@@ -86,14 +86,14 @@ msgid ""
 msgstr ""
 
 #. type: Content of: <sect1><sect2><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter05/binutils-pass1.xml:55
+#: /home/xry111/svn-repos/LFS-BOOK/chapter05/binutils-pass1.xml:56
 msgid ""
 "The Binutils documentation recommends building Binutils in a dedicated build "
 "directory:"
 msgstr ""
 
 #. type: Content of: <sect1><sect2><screen>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter05/binutils-pass1.xml:58
+#: /home/xry111/svn-repos/LFS-BOOK/chapter05/binutils-pass1.xml:59
 #, no-wrap
 msgid ""
 "<userinput remap=\"pre\">mkdir -v build\n"
@@ -101,22 +101,22 @@ msgid ""
 msgstr ""
 
 #. type: Content of: <sect1><sect2><note><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter05/binutils-pass1.xml:62
+#: /home/xry111/svn-repos/LFS-BOOK/chapter05/binutils-pass1.xml:63
 msgid ""
 "In order for the SBU values listed in the rest of the book to be of any use, "
 "measure the time it takes to build this package from the configuration, up "
 "to and including the first install. To achieve this easily, wrap the "
-"commands in a <command>time</command> command like this: <userinput>time { "
-"./configure ... &amp;&amp; make &amp;&amp; make install; }</userinput>."
+"commands in a <command>time</command> command like this: <userinput>time { ./"
+"configure ... &amp;&amp; make &amp;&amp; make install; }</userinput>."
 msgstr ""
 
 #. type: Content of: <sect1><sect2><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter05/binutils-pass1.xml:70
+#: /home/xry111/svn-repos/LFS-BOOK/chapter05/binutils-pass1.xml:71
 msgid "Now prepare Binutils for compilation:"
 msgstr ""
 
 #. type: Content of: <sect1><sect2><screen>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter05/binutils-pass1.xml:72
+#: /home/xry111/svn-repos/LFS-BOOK/chapter05/binutils-pass1.xml:73
 #, no-wrap
 msgid ""
 "<userinput remap=\"configure\">../configure --prefix=$LFS/tools       \\\n"
@@ -127,97 +127,96 @@ msgid ""
 msgstr ""
 
 #. type: Content of: <sect1><sect2><variablelist><title>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter05/binutils-pass1.xml:79
+#: /home/xry111/svn-repos/LFS-BOOK/chapter05/binutils-pass1.xml:80
 msgid "The meaning of the configure options:"
 msgstr ""
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter05/binutils-pass1.xml:82
+#: /home/xry111/svn-repos/LFS-BOOK/chapter05/binutils-pass1.xml:83
 msgid "<parameter>--prefix=$LFS/tools</parameter>"
 msgstr ""
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter05/binutils-pass1.xml:84
+#: /home/xry111/svn-repos/LFS-BOOK/chapter05/binutils-pass1.xml:85
 msgid ""
 "This tells the configure script to prepare to install the binutils programs "
 "in the <filename class=\"directory\">$LFS/tools</filename> directory."
 msgstr ""
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter05/binutils-pass1.xml:91
+#: /home/xry111/svn-repos/LFS-BOOK/chapter05/binutils-pass1.xml:92
 msgid "<parameter>--with-sysroot=$LFS</parameter>"
 msgstr ""
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter05/binutils-pass1.xml:93
+#: /home/xry111/svn-repos/LFS-BOOK/chapter05/binutils-pass1.xml:94
 msgid ""
 "For cross compilation, this tells the build system to look in $LFS for the "
 "target system libraries as needed."
 msgstr ""
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter05/binutils-pass1.xml:99
+#: /home/xry111/svn-repos/LFS-BOOK/chapter05/binutils-pass1.xml:100
 msgid "<envar>--target=$LFS_TGT</envar>"
 msgstr ""
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter05/binutils-pass1.xml:101
+#: /home/xry111/svn-repos/LFS-BOOK/chapter05/binutils-pass1.xml:102
 msgid ""
 "Because the machine description in the <envar>LFS_TGT</envar> variable is "
-"slightly different than the value returned by the "
-"<command>config.guess</command> script, this switch will tell the "
-"<command>configure</command> script to adjust binutil's build system for "
-"building a cross linker."
+"slightly different than the value returned by the <command>config.guess</"
+"command> script, this switch will tell the <command>configure</command> "
+"script to adjust binutil's build system for building a cross linker."
 msgstr ""
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter05/binutils-pass1.xml:110
+#: /home/xry111/svn-repos/LFS-BOOK/chapter05/binutils-pass1.xml:111
 msgid "<parameter>--disable-nls</parameter>"
 msgstr ""
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter05/binutils-pass1.xml:112
+#: /home/xry111/svn-repos/LFS-BOOK/chapter05/binutils-pass1.xml:113
 msgid ""
 "This disables internationalization as i18n is not needed for the temporary "
 "tools."
 msgstr ""
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter05/binutils-pass1.xml:118
+#: /home/xry111/svn-repos/LFS-BOOK/chapter05/binutils-pass1.xml:119
 msgid "<parameter>--disable-werror</parameter>"
 msgstr ""
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter05/binutils-pass1.xml:120
+#: /home/xry111/svn-repos/LFS-BOOK/chapter05/binutils-pass1.xml:121
 msgid ""
 "This prevents the build from stopping in the event that there are warnings "
 "from the host's compiler."
 msgstr ""
 
 #. type: Content of: <sect1><sect2><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter05/binutils-pass1.xml:127
+#: /home/xry111/svn-repos/LFS-BOOK/chapter05/binutils-pass1.xml:128
 msgid "Continue with compiling the package:"
 msgstr ""
 
 #. type: Content of: <sect1><sect2><screen>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter05/binutils-pass1.xml:129
+#: /home/xry111/svn-repos/LFS-BOOK/chapter05/binutils-pass1.xml:130
 #, no-wrap
 msgid "<userinput remap=\"make\">make</userinput>"
 msgstr ""
 
 #. type: Content of: <sect1><sect2><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter05/binutils-pass1.xml:131
+#: /home/xry111/svn-repos/LFS-BOOK/chapter05/binutils-pass1.xml:132
 msgid "Install the package:"
 msgstr ""
 
 #. type: Content of: <sect1><sect2><screen>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter05/binutils-pass1.xml:133
+#: /home/xry111/svn-repos/LFS-BOOK/chapter05/binutils-pass1.xml:134
 #, no-wrap
 msgid "<userinput remap=\"install\">make install</userinput>"
 msgstr ""
 
 #. type: Content of: <sect1><sect2><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter05/binutils-pass1.xml:140
+#: /home/xry111/svn-repos/LFS-BOOK/chapter05/binutils-pass1.xml:141
 msgid ""
 "Details on this package are located in <xref linkend=\"contents-binutils\" "
 "role=\".\"/>"

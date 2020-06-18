@@ -7,7 +7,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2020-06-17 12:44+0800\n"
+"POT-Creation-Date: 2020-06-18 09:37+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -17,12 +17,12 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 
 #. type: Content of: <sect1><title>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter05/toolchaintechnotes.xml:11
+#: /home/xry111/svn-repos/LFS-BOOK/part3intro/toolchaintechnotes.xml:11
 msgid "Toolchain Technical Notes"
 msgstr ""
 
 #. type: Content of: <sect1><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter05/toolchaintechnotes.xml:13
+#: /home/xry111/svn-repos/LFS-BOOK/part3intro/toolchaintechnotes.xml:13
 msgid ""
 "This section explains some of the rationale and technical details behind the "
 "overall build method. It is not essential to immediately understand "
@@ -32,7 +32,7 @@ msgid ""
 msgstr ""
 
 #. type: Content of: <sect1><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter05/toolchaintechnotes.xml:19
+#: /home/xry111/svn-repos/LFS-BOOK/part3intro/toolchaintechnotes.xml:19
 msgid ""
 "The overall goal of this chapter and <xref "
 "linkend=\"chapter-temporary-tools\"/> is to produce a temporary area that "
@@ -45,7 +45,7 @@ msgid ""
 msgstr ""
 
 #. type: Content of: <sect1><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter05/toolchaintechnotes.xml:28
+#: /home/xry111/svn-repos/LFS-BOOK/part3intro/toolchaintechnotes.xml:28
 msgid ""
 "The build process is based on the process of "
 "<emphasis>cross-compilation</emphasis>. Cross-compilation is normally used "
@@ -57,12 +57,12 @@ msgid ""
 msgstr ""
 
 #. type: Content of: <sect1><sect2><title>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter05/toolchaintechnotes.xml:38
+#: /home/xry111/svn-repos/LFS-BOOK/part3intro/toolchaintechnotes.xml:38
 msgid "About Cross-Compilation"
 msgstr ""
 
 #. type: Content of: <sect1><sect2><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter05/toolchaintechnotes.xml:40
+#: /home/xry111/svn-repos/LFS-BOOK/part3intro/toolchaintechnotes.xml:40
 msgid ""
 "Cross-compilation involves some concepts that deserve a section on their "
 "own. Although this section may be omitted in a first reading, it is strongly "
@@ -71,48 +71,48 @@ msgid ""
 msgstr ""
 
 #. type: Content of: <sect1><sect2><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter05/toolchaintechnotes.xml:45
+#: /home/xry111/svn-repos/LFS-BOOK/part3intro/toolchaintechnotes.xml:45
 msgid "Let us first define some terms used in this context:"
 msgstr ""
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter05/toolchaintechnotes.xml:48
+#: /home/xry111/svn-repos/LFS-BOOK/part3intro/toolchaintechnotes.xml:48
 msgid "build"
 msgstr ""
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter05/toolchaintechnotes.xml:49
+#: /home/xry111/svn-repos/LFS-BOOK/part3intro/toolchaintechnotes.xml:49
 msgid ""
 "is the machine where we build programs. Note that this machine is referred "
 "to as the <quote>host</quote> in other sections."
 msgstr ""
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter05/toolchaintechnotes.xml:54
+#: /home/xry111/svn-repos/LFS-BOOK/part3intro/toolchaintechnotes.xml:54
 msgid "host"
 msgstr ""
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter05/toolchaintechnotes.xml:55
+#: /home/xry111/svn-repos/LFS-BOOK/part3intro/toolchaintechnotes.xml:55
 msgid ""
 "is the machine/system where the built programs will run. Note that this use "
 "of <quote>host</quote> is not the same as in other sections."
 msgstr ""
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter05/toolchaintechnotes.xml:60
+#: /home/xry111/svn-repos/LFS-BOOK/part3intro/toolchaintechnotes.xml:60
 msgid "target"
 msgstr ""
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter05/toolchaintechnotes.xml:61
+#: /home/xry111/svn-repos/LFS-BOOK/part3intro/toolchaintechnotes.xml:61
 msgid ""
 "is only used for compilers. It is the machine the compiler produces code "
 "for. It may be different from both build and host."
 msgstr ""
 
 #. type: Content of: <sect1><sect2><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter05/toolchaintechnotes.xml:68
+#: /home/xry111/svn-repos/LFS-BOOK/part3intro/toolchaintechnotes.xml:68
 msgid ""
 "As an example, let us imagine the following scenario: we may have a compiler "
 "on a slow machine only, let's call the machine A, and the compiler ccA. We "
@@ -122,94 +122,94 @@ msgid ""
 msgstr ""
 
 #. type: Content of: <sect1><sect2><informaltable><tgroup><thead><row><entry>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter05/toolchaintechnotes.xml:82
-#: /home/xry111/svn-repos/LFS-BOOK/chapter05/toolchaintechnotes.xml:116
-#: /home/xry111/svn-repos/LFS-BOOK/chapter05/toolchaintechnotes.xml:186
+#: /home/xry111/svn-repos/LFS-BOOK/part3intro/toolchaintechnotes.xml:82
+#: /home/xry111/svn-repos/LFS-BOOK/part3intro/toolchaintechnotes.xml:116
+#: /home/xry111/svn-repos/LFS-BOOK/part3intro/toolchaintechnotes.xml:186
 msgid "Stage"
 msgstr ""
 
 #. type: Content of: <sect1><sect2><informaltable><tgroup><thead><row><entry>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter05/toolchaintechnotes.xml:82
-#: /home/xry111/svn-repos/LFS-BOOK/chapter05/toolchaintechnotes.xml:116
-#: /home/xry111/svn-repos/LFS-BOOK/chapter05/toolchaintechnotes.xml:186
+#: /home/xry111/svn-repos/LFS-BOOK/part3intro/toolchaintechnotes.xml:82
+#: /home/xry111/svn-repos/LFS-BOOK/part3intro/toolchaintechnotes.xml:116
+#: /home/xry111/svn-repos/LFS-BOOK/part3intro/toolchaintechnotes.xml:186
 msgid "Build"
 msgstr ""
 
 #. type: Content of: <sect1><sect2><informaltable><tgroup><thead><row><entry>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter05/toolchaintechnotes.xml:82
-#: /home/xry111/svn-repos/LFS-BOOK/chapter05/toolchaintechnotes.xml:116
-#: /home/xry111/svn-repos/LFS-BOOK/chapter05/toolchaintechnotes.xml:186
+#: /home/xry111/svn-repos/LFS-BOOK/part3intro/toolchaintechnotes.xml:82
+#: /home/xry111/svn-repos/LFS-BOOK/part3intro/toolchaintechnotes.xml:116
+#: /home/xry111/svn-repos/LFS-BOOK/part3intro/toolchaintechnotes.xml:186
 msgid "Host"
 msgstr ""
 
 #. type: Content of: <sect1><sect2><informaltable><tgroup><thead><row><entry>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter05/toolchaintechnotes.xml:83
-#: /home/xry111/svn-repos/LFS-BOOK/chapter05/toolchaintechnotes.xml:117
-#: /home/xry111/svn-repos/LFS-BOOK/chapter05/toolchaintechnotes.xml:187
+#: /home/xry111/svn-repos/LFS-BOOK/part3intro/toolchaintechnotes.xml:83
+#: /home/xry111/svn-repos/LFS-BOOK/part3intro/toolchaintechnotes.xml:117
+#: /home/xry111/svn-repos/LFS-BOOK/part3intro/toolchaintechnotes.xml:187
 msgid "Target"
 msgstr ""
 
 #. type: Content of: <sect1><sect2><informaltable><tgroup><thead><row><entry>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter05/toolchaintechnotes.xml:83
-#: /home/xry111/svn-repos/LFS-BOOK/chapter05/toolchaintechnotes.xml:117
-#: /home/xry111/svn-repos/LFS-BOOK/chapter05/toolchaintechnotes.xml:187
+#: /home/xry111/svn-repos/LFS-BOOK/part3intro/toolchaintechnotes.xml:83
+#: /home/xry111/svn-repos/LFS-BOOK/part3intro/toolchaintechnotes.xml:117
+#: /home/xry111/svn-repos/LFS-BOOK/part3intro/toolchaintechnotes.xml:187
 msgid "Action"
 msgstr ""
 
 #. type: Content of: <sect1><sect2><informaltable><tgroup><tbody><row><entry>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter05/toolchaintechnotes.xml:87
-#: /home/xry111/svn-repos/LFS-BOOK/chapter05/toolchaintechnotes.xml:191
+#: /home/xry111/svn-repos/LFS-BOOK/part3intro/toolchaintechnotes.xml:87
+#: /home/xry111/svn-repos/LFS-BOOK/part3intro/toolchaintechnotes.xml:191
 msgid "1"
 msgstr ""
 
 #. type: Content of: <sect1><sect2><informaltable><tgroup><tbody><row><entry>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter05/toolchaintechnotes.xml:87
-#: /home/xry111/svn-repos/LFS-BOOK/chapter05/toolchaintechnotes.xml:91
+#: /home/xry111/svn-repos/LFS-BOOK/part3intro/toolchaintechnotes.xml:87
+#: /home/xry111/svn-repos/LFS-BOOK/part3intro/toolchaintechnotes.xml:91
 msgid "A"
 msgstr ""
 
 #. type: Content of: <sect1><sect2><informaltable><tgroup><tbody><row><entry>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter05/toolchaintechnotes.xml:87
-#: /home/xry111/svn-repos/LFS-BOOK/chapter05/toolchaintechnotes.xml:91
-#: /home/xry111/svn-repos/LFS-BOOK/chapter05/toolchaintechnotes.xml:95
+#: /home/xry111/svn-repos/LFS-BOOK/part3intro/toolchaintechnotes.xml:87
+#: /home/xry111/svn-repos/LFS-BOOK/part3intro/toolchaintechnotes.xml:91
+#: /home/xry111/svn-repos/LFS-BOOK/part3intro/toolchaintechnotes.xml:95
 msgid "B"
 msgstr ""
 
 #. type: Content of: <sect1><sect2><informaltable><tgroup><tbody><row><entry>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter05/toolchaintechnotes.xml:88
+#: /home/xry111/svn-repos/LFS-BOOK/part3intro/toolchaintechnotes.xml:88
 msgid "build cross-compiler cc1 using ccA on machine A"
 msgstr ""
 
 #. type: Content of: <sect1><sect2><informaltable><tgroup><tbody><row><entry>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter05/toolchaintechnotes.xml:91
-#: /home/xry111/svn-repos/LFS-BOOK/chapter05/toolchaintechnotes.xml:195
+#: /home/xry111/svn-repos/LFS-BOOK/part3intro/toolchaintechnotes.xml:91
+#: /home/xry111/svn-repos/LFS-BOOK/part3intro/toolchaintechnotes.xml:195
 msgid "2"
 msgstr ""
 
 #. type: Content of: <sect1><sect2><informaltable><tgroup><tbody><row><entry>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter05/toolchaintechnotes.xml:92
+#: /home/xry111/svn-repos/LFS-BOOK/part3intro/toolchaintechnotes.xml:92
 msgid "build cross-compiler cc2 using cc1 on machine A"
 msgstr ""
 
 #. type: Content of: <sect1><sect2><informaltable><tgroup><tbody><row><entry>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter05/toolchaintechnotes.xml:95
-#: /home/xry111/svn-repos/LFS-BOOK/chapter05/toolchaintechnotes.xml:199
+#: /home/xry111/svn-repos/LFS-BOOK/part3intro/toolchaintechnotes.xml:95
+#: /home/xry111/svn-repos/LFS-BOOK/part3intro/toolchaintechnotes.xml:199
 msgid "3"
 msgstr ""
 
 #. type: Content of: <sect1><sect2><informaltable><tgroup><tbody><row><entry>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter05/toolchaintechnotes.xml:95
-#: /home/xry111/svn-repos/LFS-BOOK/chapter05/toolchaintechnotes.xml:121
+#: /home/xry111/svn-repos/LFS-BOOK/part3intro/toolchaintechnotes.xml:95
+#: /home/xry111/svn-repos/LFS-BOOK/part3intro/toolchaintechnotes.xml:121
 msgid "C"
 msgstr ""
 
 #. type: Content of: <sect1><sect2><informaltable><tgroup><tbody><row><entry>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter05/toolchaintechnotes.xml:96
+#: /home/xry111/svn-repos/LFS-BOOK/part3intro/toolchaintechnotes.xml:96
 msgid "build compiler ccC using cc2 on machine B"
 msgstr ""
 
 #. type: Content of: <sect1><sect2><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter05/toolchaintechnotes.xml:102
+#: /home/xry111/svn-repos/LFS-BOOK/part3intro/toolchaintechnotes.xml:102
 msgid ""
 "Then, all the other programs needed by machine C can be compiled using cc2 "
 "on the fast machine B. Note that unless B can run programs produced for C, "
@@ -218,17 +218,17 @@ msgid ""
 msgstr ""
 
 #. type: Content of: <sect1><sect2><informaltable><tgroup><tbody><row><entry>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter05/toolchaintechnotes.xml:121
+#: /home/xry111/svn-repos/LFS-BOOK/part3intro/toolchaintechnotes.xml:121
 msgid "4"
 msgstr ""
 
 #. type: Content of: <sect1><sect2><informaltable><tgroup><tbody><row><entry>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter05/toolchaintechnotes.xml:122
+#: /home/xry111/svn-repos/LFS-BOOK/part3intro/toolchaintechnotes.xml:122
 msgid "rebuild and test ccC using itself on machine C"
 msgstr ""
 
 #. type: Content of: <sect1><sect2><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter05/toolchaintechnotes.xml:128
+#: /home/xry111/svn-repos/LFS-BOOK/part3intro/toolchaintechnotes.xml:128
 msgid ""
 "In the example above, only cc1 and cc2 are cross-compilers, that is, they "
 "produce code for a machine different from the one they are run on.  The "
@@ -237,12 +237,12 @@ msgid ""
 msgstr ""
 
 #. type: Content of: <sect1><sect2><title>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter05/toolchaintechnotes.xml:136
+#: /home/xry111/svn-repos/LFS-BOOK/part3intro/toolchaintechnotes.xml:136
 msgid "Implementation of Cross-Compilation for LFS"
 msgstr ""
 
 #. type: Content of: <sect1><sect2><note><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter05/toolchaintechnotes.xml:139
+#: /home/xry111/svn-repos/LFS-BOOK/part3intro/toolchaintechnotes.xml:139
 msgid ""
 "Almost all the build systems use names of the form cpu-vendor-kernel-os "
 "referred to as the machine triplet. An astute reader may wonder why a "
@@ -260,7 +260,7 @@ msgid ""
 msgstr ""
 
 #. type: Content of: <sect1><sect2><note><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter05/toolchaintechnotes.xml:153
+#: /home/xry111/svn-repos/LFS-BOOK/part3intro/toolchaintechnotes.xml:153
 msgid ""
 "Also be aware of the name of the platform's dynamic linker, often referred "
 "to as the dynamic loader (not to be confused with the standard linker "
@@ -279,7 +279,7 @@ msgid ""
 msgstr ""
 
 #. type: Content of: <sect1><sect2><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter05/toolchaintechnotes.xml:169
+#: /home/xry111/svn-repos/LFS-BOOK/part3intro/toolchaintechnotes.xml:169
 msgid ""
 "In order to fake a cross compilation, the name of the host triplet is "
 "slightly adjusted by changing the &quot;vendor&quot; field in the "
@@ -292,35 +292,35 @@ msgid ""
 msgstr ""
 
 #. type: Content of: <sect1><sect2><informaltable><tgroup><tbody><row><entry>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter05/toolchaintechnotes.xml:191
-#: /home/xry111/svn-repos/LFS-BOOK/chapter05/toolchaintechnotes.xml:195
+#: /home/xry111/svn-repos/LFS-BOOK/part3intro/toolchaintechnotes.xml:191
+#: /home/xry111/svn-repos/LFS-BOOK/part3intro/toolchaintechnotes.xml:195
 msgid "pc"
 msgstr ""
 
 #. type: Content of: <sect1><sect2><informaltable><tgroup><tbody><row><entry>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter05/toolchaintechnotes.xml:191
-#: /home/xry111/svn-repos/LFS-BOOK/chapter05/toolchaintechnotes.xml:195
-#: /home/xry111/svn-repos/LFS-BOOK/chapter05/toolchaintechnotes.xml:199
+#: /home/xry111/svn-repos/LFS-BOOK/part3intro/toolchaintechnotes.xml:191
+#: /home/xry111/svn-repos/LFS-BOOK/part3intro/toolchaintechnotes.xml:195
+#: /home/xry111/svn-repos/LFS-BOOK/part3intro/toolchaintechnotes.xml:199
 msgid "lfs"
 msgstr ""
 
 #. type: Content of: <sect1><sect2><informaltable><tgroup><tbody><row><entry>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter05/toolchaintechnotes.xml:192
+#: /home/xry111/svn-repos/LFS-BOOK/part3intro/toolchaintechnotes.xml:192
 msgid "build cross-compiler cc1 using cc-pc on pc"
 msgstr ""
 
 #. type: Content of: <sect1><sect2><informaltable><tgroup><tbody><row><entry>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter05/toolchaintechnotes.xml:196
+#: /home/xry111/svn-repos/LFS-BOOK/part3intro/toolchaintechnotes.xml:196
 msgid "build compiler cc-lfs using cc1 on pc"
 msgstr ""
 
 #. type: Content of: <sect1><sect2><informaltable><tgroup><tbody><row><entry>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter05/toolchaintechnotes.xml:200
+#: /home/xry111/svn-repos/LFS-BOOK/part3intro/toolchaintechnotes.xml:200
 msgid "rebuild and test cc-lfs using itself on lfs"
 msgstr ""
 
 #. type: Content of: <sect1><sect2><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter05/toolchaintechnotes.xml:206
+#: /home/xry111/svn-repos/LFS-BOOK/part3intro/toolchaintechnotes.xml:206
 msgid ""
 "In the above table, <quote>on pc</quote> means the commands are run on a "
 "machine using the already installed distribution. <quote>On lfs</quote> "
@@ -328,7 +328,7 @@ msgid ""
 msgstr ""
 
 #. type: Content of: <sect1><sect2><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter05/toolchaintechnotes.xml:210
+#: /home/xry111/svn-repos/LFS-BOOK/part3intro/toolchaintechnotes.xml:210
 msgid ""
 "Now, there is more about cross-compiling: the C language is not just a "
 "compiler, but also defines a standard library. In this book, the GNU C "
@@ -346,7 +346,7 @@ msgid ""
 msgstr ""
 
 #. type: Content of: <sect1><sect2><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter05/toolchaintechnotes.xml:225
+#: /home/xry111/svn-repos/LFS-BOOK/part3intro/toolchaintechnotes.xml:225
 msgid ""
 "This is not the end of the story: the conclusion of the preceding paragraph "
 "is that cc1 is unable to build a fully functional libstdc++, but this is the "
@@ -359,12 +359,12 @@ msgid ""
 msgstr ""
 
 #. type: Content of: <sect1><sect2><title>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter05/toolchaintechnotes.xml:238
+#: /home/xry111/svn-repos/LFS-BOOK/part3intro/toolchaintechnotes.xml:238
 msgid "Other procedural details"
 msgstr ""
 
 #. type: Content of: <sect1><sect2><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter05/toolchaintechnotes.xml:240
+#: /home/xry111/svn-repos/LFS-BOOK/part3intro/toolchaintechnotes.xml:240
 msgid ""
 "The cross-compiler will be installed in a separate <filename "
 "class=\"directory\">$LFS/tools</filename> directory, since it will not be "
@@ -372,7 +372,7 @@ msgid ""
 msgstr ""
 
 #. type: Content of: <sect1><sect2><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter05/toolchaintechnotes.xml:244
+#: /home/xry111/svn-repos/LFS-BOOK/part3intro/toolchaintechnotes.xml:244
 msgid ""
 "Binutils is installed first because the <command>configure</command> runs of "
 "both GCC and Glibc perform various feature tests on the assembler and linker "
@@ -385,7 +385,7 @@ msgid ""
 msgstr ""
 
 #. type: Content of: <sect1><sect2><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter05/toolchaintechnotes.xml:253
+#: /home/xry111/svn-repos/LFS-BOOK/part3intro/toolchaintechnotes.xml:253
 msgid ""
 "Binutils installs its assembler and linker in two locations, <filename "
 "class=\"directory\">$LFS/tools/bin</filename> and <filename "
@@ -403,14 +403,14 @@ msgid ""
 msgstr ""
 
 #. type: Content of: <sect1><sect2><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter05/toolchaintechnotes.xml:267
+#: /home/xry111/svn-repos/LFS-BOOK/part3intro/toolchaintechnotes.xml:267
 msgid ""
 "The next package installed is GCC. An example of what can be seen during its "
 "run of <command>configure</command> is:"
 msgstr ""
 
 #. type: Content of: <sect1><sect2><screen>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter05/toolchaintechnotes.xml:270
+#: /home/xry111/svn-repos/LFS-BOOK/part3intro/toolchaintechnotes.xml:270
 #, no-wrap
 msgid ""
 "<computeroutput>checking what assembler to "
@@ -420,7 +420,7 @@ msgid ""
 msgstr ""
 
 #. type: Content of: <sect1><sect2><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter05/toolchaintechnotes.xml:273
+#: /home/xry111/svn-repos/LFS-BOOK/part3intro/toolchaintechnotes.xml:273
 msgid ""
 "This is important for the reasons mentioned above. It also demonstrates that "
 "GCC's configure script does not search the PATH directories to find which "
@@ -431,7 +431,7 @@ msgid ""
 msgstr ""
 
 #. type: Content of: <sect1><sect2><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter05/toolchaintechnotes.xml:280
+#: /home/xry111/svn-repos/LFS-BOOK/part3intro/toolchaintechnotes.xml:280
 msgid ""
 "Detailed information can be obtained from <command>gcc</command> by passing "
 "it the <parameter>-v</parameter> command line option while compiling a dummy "
@@ -441,7 +441,7 @@ msgid ""
 msgstr ""
 
 #. type: Content of: <sect1><sect2><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter05/toolchaintechnotes.xml:287
+#: /home/xry111/svn-repos/LFS-BOOK/part3intro/toolchaintechnotes.xml:287
 msgid ""
 "Next installed are sanitized Linux API headers. These allow the standard C "
 "library (Glibc) to interface with features that the Linux kernel will "
@@ -449,7 +449,7 @@ msgid ""
 msgstr ""
 
 #. type: Content of: <sect1><sect2><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter05/toolchaintechnotes.xml:291
+#: /home/xry111/svn-repos/LFS-BOOK/part3intro/toolchaintechnotes.xml:291
 msgid ""
 "The next package installed is Glibc. The most important considerations for "
 "building Glibc are the compiler, binary tools, and kernel headers. The "
@@ -472,7 +472,7 @@ msgid ""
 msgstr ""
 
 #. type: Content of: <sect1><sect2><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter05/toolchaintechnotes.xml:310
+#: /home/xry111/svn-repos/LFS-BOOK/part3intro/toolchaintechnotes.xml:310
 msgid ""
 "As said above, the standard C++ library is compiled next, followed in "
 "Chapter 6 by all the programs that need themselves to be built. The install "
@@ -481,7 +481,7 @@ msgid ""
 msgstr ""
 
 #. type: Content of: <sect1><sect2><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter05/toolchaintechnotes.xml:315
+#: /home/xry111/svn-repos/LFS-BOOK/part3intro/toolchaintechnotes.xml:315
 msgid ""
 "In Chapter 7 the native lfs compiler is built. First binutils-pass2, with "
 "the same <envar>DESTDIR</envar> install as the other programs is built, and "
@@ -494,7 +494,7 @@ msgid ""
 msgstr ""
 
 #. type: Content of: <sect1><sect2><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter05/toolchaintechnotes.xml:325
+#: /home/xry111/svn-repos/LFS-BOOK/part3intro/toolchaintechnotes.xml:325
 msgid ""
 "Upon entering the chroot environment in <xref "
 "linkend=\"chapter-chroot-temporary-tools\"/>, the first task is to install "
