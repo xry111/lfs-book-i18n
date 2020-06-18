@@ -15,6 +15,7 @@ $(MLANG)/chapter01/changelog.po: $(LFS_EN)/chapter01/changelog.xml changelogtran
 $(MLANG)/%.po: $(LFS_EN)/%.xml
 	mkdir -pv "$(@D)"
 	po4a-updatepo -f docbook -m $< -p $@
+	touch $@
 
 MXML_FILES = $(patsubst $(LFS_EN)/%.xml, %.xml, $(XML_FILES))
 BOOK_FILES = $(patsubst $(LFS_EN)/%, %, $(shell find $(LFS_EN) -type f -not -path "$(LFS_EN)/.svn/*"))
