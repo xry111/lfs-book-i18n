@@ -1,10 +1,16 @@
 #!/bin/sh
 
-# fix English text in xreflabels which can not be handled by po4a
+# fix some English and ASCII specific stuff which can not be handled by po4a
 
 # This should be handled by po4a, but if some pages are not done yet
 # we will need to do it manually.
 sed -e '/encoding=/s|ISO-8859-1|UTF-8|' -i $(find -name \*.xml)
+
+# Let tidy output UTF-8
+sed -e '/output-encoding:/s|latin1|utf8|' -i tidy.conf
+
+# Remove two seds causing encoding error in UTF-8
+sed -e '/xa9/d' -i Makefile
 
 sed -e '/xreflabel/s|Chapter.nbsp.1 - Mailing Lists|第 1 章 - 邮件列表|' \
 	-e '/xreflabel/s|Chapter.nbsp.1 - Mirror sites|第 1 章 - 镜像站|'    \
