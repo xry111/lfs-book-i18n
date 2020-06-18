@@ -23,7 +23,11 @@ KEEP_FILES = $(filter-out $(MXML_FILES), KEEP_FILES)
 
 MBOOK_FILES = $(patsubst %, $(MLANG)/book/%, $(BOOK_FILES))
 
-booksrc: $(MBOOK_FILES) $(PATCHES)
+.PHONY: booksrc
+booksrc: booksrc_unfixed
+	[ ! -e $(MLANG)/fix.sh ] || (pushd $(MLANG)/book; sh ../fix.sh; popd)
+
+booksrc_unfixed: $(MBOOK_FILES) $(PATCHES)
 
 $(MLANG)/book/%.xml: $(LFS_EN)/%.xml $(MLANG)/%.po
 	mkdir -pv "$(@D)"
