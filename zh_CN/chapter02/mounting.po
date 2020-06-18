@@ -1,9 +1,3 @@
-# SOME DESCRIPTIVE TITLE
-# Copyright (C) YEAR Free Software Foundation, Inc.
-# This file is distributed under the same license as the PACKAGE package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
-#
-#, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
@@ -11,15 +5,16 @@ msgstr ""
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
-"Language: \n"
+"Language: zh_CN\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Translate Toolkit 2.2.5\n"
 
 #. type: Content of: <sect1><title>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter02/mounting.xml:11
 msgid "Mounting the New Partition"
-msgstr ""
+msgstr "挂载新的分区"
 
 #. type: Content of: <sect1><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter02/mounting.xml:13
@@ -27,39 +22,45 @@ msgid ""
 "Now that a file system has been created, the partition needs to be made "
 "accessible. In order to do this, the partition needs to be mounted at a "
 "chosen mount point. For the purposes of this book, it is assumed that the "
-"file system is mounted under the directory specified by the "
-"<envar>LFS</envar> environment variable as described in the previous "
-"section."
+"file system is mounted under the directory specified by the <envar>LFS</"
+"envar> environment variable as described in the previous section."
 msgstr ""
+"我们已经在分区上建立了文件系统，为了访问分区，我们需要把分区挂载到选定的挂载"
+"点上。正如前一节所述，本书假设将文件系统挂载到 <envar>LFS</envar> 环境变量指"
+"定的目录中。"
 
 #. type: Content of: <sect1><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter02/mounting.xml:20
 msgid "Create the mount point and mount the LFS file system by running:"
-msgstr ""
+msgstr "输入以下命令以创建挂载点，并挂载 LFS 文件系统："
 
 #. type: Content of: <sect1><screen>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter02/mounting.xml:22
 #, no-wrap
 msgid ""
 "<userinput>mkdir -pv $LFS\n"
-"mount -v -t ext4 /dev/<replaceable>&lt;xxx&gt;</replaceable> "
-"$LFS</userinput>"
+"mount -v -t ext4 /dev/<replaceable>&lt;xxx&gt;</replaceable> $LFS</userinput>"
 msgstr ""
+"<userinput>mkdir -pv $LFS\n"
+"mount -v -t ext4 /dev/<replaceable>&lt;xxx&gt;</replaceable> $LFS</userinput>"
 
 #. type: Content of: <sect1><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter02/mounting.xml:25
 msgid ""
 "Replace <replaceable>&lt;xxx&gt;</replaceable> with the designation of the "
 "LFS partition."
-msgstr ""
+msgstr "将 <replaceable>&lt;xxx&gt;</replaceable> 替换成 LFS 分区的代号。"
 
 #. type: Content of: <sect1><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter02/mounting.xml:28
 msgid ""
-"If using multiple partitions for LFS (e.g., one for <filename "
-"class=\"directory\">/</filename> and another for <filename "
-"class=\"directory\">/usr</filename>), mount them using:"
+"If using multiple partitions for LFS (e.g., one for <filename class="
+"\"directory\">/</filename> and another for <filename class=\"directory\">/"
+"usr</filename>), mount them using:"
 msgstr ""
+"如果为 LFS 创建了多个分区 (例如一个作为 <filename class=\"directory\">/</"
+"filename>，另一个作为 <filename class=\"directory\">/usr</filename>)，那么它"
+"们都需要被挂载："
 
 #. type: Content of: <sect1><screen>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter02/mounting.xml:32
@@ -68,16 +69,21 @@ msgid ""
 "<userinput>mkdir -pv $LFS\n"
 "mount -v -t ext4 /dev/<replaceable>&lt;xxx&gt;</replaceable> $LFS\n"
 "mkdir -v $LFS/usr\n"
-"mount -v -t ext4 /dev/<replaceable>&lt;yyy&gt;</replaceable> "
-"$LFS/usr</userinput>"
+"mount -v -t ext4 /dev/<replaceable>&lt;yyy&gt;</replaceable> $LFS/usr</userinput>"
 msgstr ""
+"<userinput>mkdir -pv $LFS\n"
+"mount -v -t ext4 /dev/<replaceable>&lt;xxx&gt;</replaceable> $LFS\n"
+"mkdir -v $LFS/usr\n"
+"mount -v -t ext4 /dev/<replaceable>&lt;yyy&gt;</replaceable> $LFS/usr</userinput>"
 
 #. type: Content of: <sect1><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter02/mounting.xml:37
 msgid ""
-"Replace <replaceable>&lt;xxx&gt;</replaceable> and "
-"<replaceable>&lt;yyy&gt;</replaceable> with the appropriate partition names."
+"Replace <replaceable>&lt;xxx&gt;</replaceable> and <replaceable>&lt;yyy&gt;</"
+"replaceable> with the appropriate partition names."
 msgstr ""
+"将 <replaceable>&lt;xxx&gt;</replaceable> 和 <replaceable>&lt;yyy&gt;</"
+"replaceable> 替换成对应的分区代号。"
 
 #. type: Content of: <sect1><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter02/mounting.xml:41
@@ -85,18 +91,21 @@ msgid ""
 "Ensure that this new partition is not mounted with permissions that are too "
 "restrictive (such as the <option>nosuid</option> or <option>nodev</option> "
 "options). Run the <command>mount</command> command without any parameters to "
-"see what options are set for the mounted LFS partition. If "
-"<option>nosuid</option> and/or <option>nodev</option> are set, the partition "
-"will need to be remounted."
+"see what options are set for the mounted LFS partition. If <option>nosuid</"
+"option> and/or <option>nodev</option> are set, the partition will need to be "
+"remounted."
 msgstr ""
+"请确认在挂载新分区时没有使用过于严格的安全限制 (比如 <option>nosuid</option> "
+"或者 <option>nodev</option> 等选项) 。直接执行不带任何参数的 "
+"<command>mount</command> 命令，检查挂载好的 LFS 分区被指定了哪些选项。如果 "
+"<option>nodev</option> 或者 <option>nosuid</option> 被设置了，就必须重新挂载"
+"分区。"
 
 #. type: Content of: <sect1><warning><para><screen>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter02/mounting.xml:54
 #, no-wrap
-msgid ""
-"/dev/<replaceable>&lt;xxx&gt;</replaceable>  /mnt/lfs ext4   defaults      1     "
-"1"
-msgstr ""
+msgid "/dev/<replaceable>&lt;xxx&gt;</replaceable>  /mnt/lfs ext4   defaults      1     1"
+msgstr "/dev/<replaceable>&lt;xxx&gt;</replaceable>  /mnt/lfs ext4   defaults      1     1"
 
 #. type: Content of: <sect1><warning><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter02/mounting.xml:48
@@ -108,6 +117,10 @@ msgid ""
 "boot.  For example: <placeholder type=\"screen\" id=\"0\"/> If you use "
 "additional optional partitions, be sure to add them also."
 msgstr ""
+"上面的命令假设您在构建 LFS 的过程中不会重启计算机。如果您关闭了系统，那么您"
+"要么在继续构建过程时重新挂载分区，要么修改宿主系统的 /etc/fstab 文件，使得"
+"系统在引导时自动挂载它们。例如： <placeholder type=\"screen\" id=\"0\"/> 如果"
+"您使用了多个分区，它们都需要添加到 fstab 中。"
 
 #. type: Content of: <sect1><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter02/mounting.xml:61
@@ -116,14 +129,14 @@ msgid ""
 "partition, ensure that it is enabled using the <command>swapon</command> "
 "command:"
 msgstr ""
+"如果您使用了 <systemitem class=\"filesystem\">swap</systemitem> 分区，使用 "
+"<command>swapon</command> 命令启用它："
 
 #. type: Content of: <sect1><screen>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter02/mounting.xml:65
 #, no-wrap
-msgid ""
-"<userinput>/sbin/swapon -v "
-"/dev/<replaceable>&lt;zzz&gt;</replaceable></userinput>"
-msgstr ""
+msgid "<userinput>/sbin/swapon -v /dev/<replaceable>&lt;zzz&gt;</replaceable></userinput>"
+msgstr "<userinput>/sbin/swapon -v /dev/<replaceable>&lt;zzz&gt;</replaceable></userinput>"
 
 #. type: Content of: <sect1><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter02/mounting.xml:67
@@ -131,10 +144,12 @@ msgid ""
 "Replace <replaceable>&lt;zzz&gt;</replaceable> with the name of the "
 "<systemitem class=\"filesystem\">swap</systemitem> partition."
 msgstr ""
+"将 <replaceable>&lt;zzz&gt;</replaceable> 替换成 <systemitem class="
+"\"filesystem\">swap</systemitem> 分区的名称。"
 
 #. type: Content of: <sect1><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter02/mounting.xml:70
 msgid ""
 "Now that there is an established place to work, it is time to download the "
 "packages."
-msgstr ""
+msgstr "现在我们准备好了工作环境，可以下载软件包了。"

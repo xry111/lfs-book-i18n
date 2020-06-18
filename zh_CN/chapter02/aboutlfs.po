@@ -1,9 +1,3 @@
-# SOME DESCRIPTIVE TITLE
-# Copyright (C) YEAR Free Software Foundation, Inc.
-# This file is distributed under the same license as the PACKAGE package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
-#
-#, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
@@ -11,15 +5,16 @@ msgstr ""
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
-"Language: \n"
+"Language: zh_CN\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Translate Toolkit 2.2.5\n"
 
 #. type: Content of: <sect1><title>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter02/aboutlfs.xml:11
 msgid "Setting The $LFS Variable"
-msgstr ""
+msgstr "设置 $LFS 环境变量"
 
 #. type: Content of: <sect1><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter02/aboutlfs.xml:13
@@ -33,12 +28,17 @@ msgid ""
 "directory will be the mount point for the partition.  Choose a directory "
 "location and set the variable with the following command:"
 msgstr ""
+"在本书中，我们经常使用环境变量 <envar>LFS</envar> 。您应该保证，在构建 LFS "
+"的全过程中，该变量都被定义且设置为您构建 LFS 使用的目录 —— 我们使用 "
+"<filename class=\"directory\">/mnt/lfs</filename> 作为例子，但您可以选择其他"
+"目录。如果您在一个独立的分区上构建 LFS ，那么这个目录将成为该分区的挂载点。"
+"选择一个目录，然后用以下命令设置环境变量："
 
 #. type: Content of: <sect1><screen>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter02/aboutlfs.xml:23
 #, no-wrap
 msgid "<userinput>export LFS=<replaceable>/mnt/lfs</replaceable></userinput>"
-msgstr ""
+msgstr "<userinput>export LFS=<replaceable>/mnt/lfs</replaceable></userinput>"
 
 #. type: Content of: <sect1><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter02/aboutlfs.xml:25
@@ -48,22 +48,28 @@ msgid ""
 "will automatically replace <quote>$LFS</quote> with <quote>/mnt/lfs</quote> "
 "(or whatever the variable was set to) when it processes the command line."
 msgstr ""
+"设置该环境变量的好处是，我们可以直接输入书中的命令，例如 <command>mkdir -v "
+"$LFS/tools</command> 。Shell 在解析命令时会自动将 <quote>$LFS</quote> 替换"
+"成 <quote>/mnt/lfs</quote>（或是您设置的其他值）。"
 
 #. type: Content of: <sect1><caution><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter02/aboutlfs.xml:32
 msgid ""
 "Do not forget to check that <envar>LFS</envar> is set whenever you leave and "
-"reenter the current working environment (such as when doing a "
-"<command>su</command> to <systemitem class=\"username\">root</systemitem> or "
-"another user). Check that the <envar>LFS</envar> variable is set up properly "
-"with:"
+"reenter the current working environment (such as when doing a <command>su</"
+"command> to <systemitem class=\"username\">root</systemitem> or another "
+"user). Check that the <envar>LFS</envar> variable is set up properly with:"
 msgstr ""
+"无论何时，如果您离开并重新进入了工作环境，一定要确认 <envar>LFS</envar> 的设"
+"定值和您离开工作环境时相同。（例如，使用 <command>su</command> 切换到 "
+"<systemitem class=\"username\">root</systemitem> 或者其他用户时。）请执行以下"
+"命令，检查 <envar>LFS</envar> 的设置是否正确："
 
 #. type: Content of: <sect1><caution><screen>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter02/aboutlfs.xml:38
 #, no-wrap
 msgid "<userinput>echo $LFS</userinput>"
-msgstr ""
+msgstr "<userinput>echo $LFS</userinput>"
 
 #. type: Content of: <sect1><caution><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter02/aboutlfs.xml:40
@@ -74,6 +80,9 @@ msgid ""
 "earlier on this page to set <envar>$LFS</envar> to the correct directory "
 "name."
 msgstr ""
+"确认该命令的输出是您构建 LFS 的位置，如果您使用本书提供的例子，那么输出应该"
+"是 <filename class=\"directory\">/mnt/lfs</filename>。如果输出不正确，使用前"
+"文给出的命令，将 <envar>$LFS</envar> 设置成正确的目录名。"
 
 #. type: Content of: <sect1><note><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter02/aboutlfs.xml:47
@@ -81,12 +90,16 @@ msgid ""
 "One way to ensure that the <envar>LFS</envar> variable is always set is to "
 "edit the <filename>.bash_profile</filename> file in both your personal home "
 "directory and in <filename>/root/.bash_profile</filename> and enter the "
-"export command above.  In addition, the shell specified in the "
-"<filename>/etc/passwd</filename> file for all users that need the "
-"<envar>LFS</envar> variable needs to be bash to ensure that the "
-"<filename>/root/.bash_profile</filename> file is incorporated as a part of "
-"the login process."
+"export command above.  In addition, the shell specified in the <filename>/"
+"etc/passwd</filename> file for all users that need the <envar>LFS</envar> "
+"variable needs to be bash to ensure that the <filename>/root/.bash_profile</"
+"filename> file is incorporated as a part of the login process."
 msgstr ""
+"确保 <envar>LFS</envar> 始终正确的一种方法是：编辑您的主目录中的 <filename>."
+"bash_profile</filename>，以及<filename>/root/.bash_profile</filename>，为它们"
+"加入上述设置并导出 LFS 变量的 export 命令。还要确认 <filename>/etc/passwd</"
+"filename> 中为每个需要使用 <envar>LFS</envar> 变量的用户指定的 shell 都是 "
+"bash，以保证每次登录时都执行 <filename>.bash_profile</filename> 中的命令。"
 
 #. type: Content of: <sect1><note><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter02/aboutlfs.xml:56
@@ -94,9 +107,15 @@ msgid ""
 "Another consideration is the method that is used to log into the host "
 "system.  If logging in through a graphical display manager, the user's "
 "<filename>.bash_profile</filename> is not normally used when a virtual "
-"terminal is started.  In this case, add the export command to the "
-"<filename>.bashrc</filename> file for the user and root.  In addition, some "
+"terminal is started.  In this case, add the export command to the <filename>."
+"bashrc</filename> file for the user and root.  In addition, some "
 "distributions have instructions to not run the <filename>.bashrc</filename> "
 "instructions in a non-interactive bash invocation.  Be sure to add the "
 "export command before the test for non-interactive use."
 msgstr ""
+"另外还要考虑登录宿主系统的方式，如果您使用图形显示管理器登录，再启动虚拟终"
+"端，那么 <filename>.bash_profile</filename> 一般不会被虚拟终端执行。此时，应"
+"该将 export 命令加入到您使用的用户和 root 用户的 <filename>.bashrc</"
+"filename> 文件中。另外，如果以非交互模式启动 bash，有的发行版不会执行 "
+"<filename>.bashrc</filename> 中的指令。此时一定要在使用环境变量前添加 "
+"export 命令。"

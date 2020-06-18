@@ -1,9 +1,3 @@
-# SOME DESCRIPTIVE TITLE
-# Copyright (C) YEAR Free Software Foundation, Inc.
-# This file is distributed under the same license as the PACKAGE package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
-#
-#, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
@@ -11,15 +5,16 @@ msgstr ""
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
-"Language: \n"
+"Language: zh_CN\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Translate Toolkit 2.2.5\n"
 
 #. type: Content of: <sect1><title>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter02/creatingfilesystem.xml:11
 msgid "Creating a File System on the Partition"
-msgstr ""
+msgstr "在分区上建立文件系统"
 
 #. type: Content of: <sect1><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter02/creatingfilesystem.xml:13
@@ -30,23 +25,25 @@ msgid ""
 "and depends on the characteristics of the files and the size of the "
 "partition.  For example:"
 msgstr ""
+"现在我们建立好了空白分区，可以在分区上建立文件系统。LFS 可以使用 Linux 内核"
+"能够识别的任何文件系统，最常见的是 ext3 和 ext4。文件系统的选型是一个复杂的"
+"问题，要综合考虑分区的大小，以及其中所存储文件的特征。例如："
 
 #. type: Content of: <sect1><variablelist><varlistentry><term>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter02/creatingfilesystem.xml:21
 msgid "ext2"
-msgstr ""
+msgstr "ext2"
 
 #. type: Content of: <sect1><variablelist><varlistentry><listitem><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter02/creatingfilesystem.xml:22
 msgid ""
-"is suitable for small partitions that are updated infrequently such as "
-"/boot."
-msgstr ""
+"is suitable for small partitions that are updated infrequently such as /boot."
+msgstr "适用于不经常更新的小分区，例如 /boot。"
 
 #. type: Content of: <sect1><variablelist><varlistentry><term>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter02/creatingfilesystem.xml:27
 msgid "ext3"
-msgstr ""
+msgstr "ext3"
 
 #. type: Content of: <sect1><variablelist><varlistentry><listitem><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter02/creatingfilesystem.xml:28
@@ -55,11 +52,13 @@ msgid ""
 "partition's status in the case of an unclean shutdown.  It is commonly used "
 "as a general purpose file system."
 msgstr ""
+"是 ext2 的升级版本，拥有日志系统，能够在非正常关机的情况下恢复分区的正常状"
+"态。它被广泛用于一般场合。"
 
 #. type: Content of: <sect1><variablelist><varlistentry><term>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter02/creatingfilesystem.xml:35
 msgid "ext4"
-msgstr ""
+msgstr "ext4"
 
 #. type: Content of: <sect1><variablelist><varlistentry><listitem><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter02/creatingfilesystem.xml:36
@@ -68,15 +67,20 @@ msgid ""
 "provides several new capabilities including nano-second timestamps, creation "
 "and use of very large files (16 TB), and speed improvements."
 msgstr ""
+"是 ext 文件系统家族的最新成员，它具有纳秒精度时间戳、 超大 (16 TB) 文件支持等"
+"新功能，速度也更快。"
 
 #. type: Content of: <sect1><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter02/creatingfilesystem.xml:44
 msgid ""
 "Other file systems, including FAT32, NTFS, ReiserFS, JFS, and XFS are useful "
 "for specialized purposes.  More information about these file systems can be "
-"found at <ulink "
-"url=\"http://en.wikipedia.org/wiki/Comparison_of_file_systems\"/>."
+"found at <ulink url=\"http://en.wikipedia.org/wiki/Comparison_of_file_systems"
+"\"/>."
 msgstr ""
+"其他文件系统，包括 FAT32, NTFS, ReiserFS, JFS 和 XFS 在特定场合也很有用。关于"
+"这些文件系统的更多信息，可以在 <ulink url=\"http://en.wikipedia.org/wiki/"
+"Comparison_of_file_systems\"/> 找到。"
 
 #. type: Content of: <sect1><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter02/creatingfilesystem.xml:49
@@ -85,14 +89,14 @@ msgid ""
 "<systemitem class=\"filesystem\">ext4</systemitem> file system on the LFS "
 "partition, run the following:"
 msgstr ""
+"LFS 假设根文件系统 (/) 采用 ext4 文件系统。输入以下命令在 LFS 分区创建一个 "
+"<systemitem class=\"filesystem\">ext4</systemitem> 文件系统："
 
 #. type: Content of: <sect1><screen>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter02/creatingfilesystem.xml:53
 #, no-wrap
-msgid ""
-"<userinput>mkfs -v -t ext4 "
-"/dev/<replaceable>&lt;xxx&gt;</replaceable></userinput>"
-msgstr ""
+msgid "<userinput>mkfs -v -t ext4 /dev/<replaceable>&lt;xxx&gt;</replaceable></userinput>"
+msgstr "<userinput>mkfs -v -t ext4 /dev/<replaceable>&lt;xxx&gt;</replaceable></userinput>"
 
 #. type: Content of: <sect1><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter02/creatingfilesystem.xml:55
@@ -100,21 +104,25 @@ msgid ""
 "Replace <replaceable>&lt;xxx&gt;</replaceable> with the name of the LFS "
 "partition."
 msgstr ""
+"命令中 <replaceable>&lt;xxx&gt;</replaceable> 应该替换成 LFS 分区的名称。"
 
 #. type: Content of: <sect1><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter02/creatingfilesystem.xml:58
 msgid ""
-"If you are using an existing <systemitem class=\"filesystem\">swap "
-"</systemitem> partition, there is no need to format it. If a new <systemitem "
+"If you are using an existing <systemitem class=\"filesystem\">swap </"
+"systemitem> partition, there is no need to format it. If a new <systemitem "
 "class=\"filesystem\"> swap</systemitem> partition was created, it will need "
 "to be initialized with this command:"
 msgstr ""
+"如果您拥有一个现成的 <systemitem class=\"filesystem\">swap</systemitem>分"
+"区，就不需要格式化它。如果新创建了一个 <systemitem class=\"filesystem"
+"\">swap</systemitem>分区，需要执行以下命令以初始化它："
 
 #. type: Content of: <sect1><screen>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter02/creatingfilesystem.xml:63
 #, no-wrap
 msgid "<userinput>mkswap /dev/<replaceable>&lt;yyy&gt;</replaceable></userinput>"
-msgstr ""
+msgstr "<userinput>mkswap /dev/<replaceable>&lt;yyy&gt;</replaceable></userinput>"
 
 #. type: Content of: <sect1><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter02/creatingfilesystem.xml:65
@@ -122,3 +130,5 @@ msgid ""
 "Replace <replaceable>&lt;yyy&gt;</replaceable> with the name of the "
 "<systemitem class=\"filesystem\">swap</systemitem> partition."
 msgstr ""
+"命令中 <replaceable>&lt;yyy&gt;</replaceable> 应该替换成 <systemitem class="
+"\"filesystem\">swap</systemitem> 分区的名称。"
