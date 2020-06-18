@@ -37,3 +37,7 @@ sed -e '/xreflabel/s|Appendix|附录|' -i \
 	appendices/license.xml              \
 	appendices/scripts.xml              \
 	appendices/udev-rules.xml
+
+# Apply lfs-l10n.xml patch, if it's not applied
+grep "Simplified Chinese" stylesheets/lfs-xsl/lfs-l10n.xml ||
+	patch -N -p1 -i ../patches/lfs-l10n.xml.patch
