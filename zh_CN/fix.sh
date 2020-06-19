@@ -61,6 +61,12 @@ if reldate_cn=$(LANG=zh_CN.UTF-8 \
 	sed "/releasedate/s/\".*\"/\"${reldate_cn}\"/" -i general.ent
 fi
 
+# Some buggy comments produced by po4a are adding extra empty lines.
+# Remove them.
+sed -e '/<screen.*><!--/,+1N;s/<!--.*-->\n//' -i \
+	chapter02/hostreqs.xml                       \
+	chapter06/ncurses.xml
+
 # Apply lfs-l10n.xml patch, if it's not applied
 grep "Simplified Chinese" stylesheets/lfs-xsl/lfs-l10n.xml ||
 	patch -N -p1 -i ../patches/lfs-l10n.xml.patch
