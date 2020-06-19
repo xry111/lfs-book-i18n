@@ -1,25 +1,20 @@
-# SOME DESCRIPTIVE TITLE
-# Copyright (C) YEAR Free Software Foundation, Inc.
-# This file is distributed under the same license as the PACKAGE package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
-#
-#, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2020-06-18 09:37+0800\n"
+"POT-Creation-Date: 2020-06-18 16:42+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
-"Language: \n"
+"Language: zh_CN\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Translate Toolkit 2.2.5\n"
 
 #. type: Content of: <sect1><title>
 #: /home/xry111/svn-repos/LFS-BOOK/part3intro/toolchaintechnotes.xml:11
 msgid "Toolchain Technical Notes"
-msgstr ""
+msgstr "工具链技术说明"
 
 #. type: Content of: <sect1><para>
 #: /home/xry111/svn-repos/LFS-BOOK/part3intro/toolchaintechnotes.xml:13
@@ -30,11 +25,14 @@ msgid ""
 "performing an actual build. This section can be referred to at any time "
 "during the process."
 msgstr ""
+"本节综合地解释构建方法中的逻辑和技术细节。您现在并不需要立刻理解本节的所有内"
+"容，在实际进行构建的过程中，可以更清晰地理解本节的信息。在整个构建过程中，您"
+"随时可以回来翻阅本节。"
 
 #. type: Content of: <sect1><para>
 #: /home/xry111/svn-repos/LFS-BOOK/part3intro/toolchaintechnotes.xml:19
 msgid ""
-"The overall goal of this chapter and <xref "
+"The overall goal of <xref linkend=\"chapter-cross-tools\"/> and <xref "
 "linkend=\"chapter-temporary-tools\"/> is to produce a temporary area that "
 "contains a known-good set of tools that can be isolated from the host "
 "system.  By using <command>chroot</command>, the commands in the remaining "
@@ -43,23 +41,34 @@ msgid ""
 "designed to minimize the risks for new readers and to provide the most "
 "educational value at the same time."
 msgstr ""
+"<xref linkend=\"chapter-cross-tools\"/>和"
+"<xref linkend=\"chapter-temporary-tools\"/>的总目标是构造一个临时环境，它包含"
+"一组可靠的，能够与宿主系统完全分离的工具。这样，通过使用 <command>chroot</"
+"command> 命令，其余各章中执行的命令就被限制在这个临时环境中。这确保我们能够"
+"干净、顺利地构建 LFS 系统。整个构建过程被精心设计，以尽量降低新读者可能面临"
+"的风险，同时提供尽可能多的教育价值。"
 
 #. type: Content of: <sect1><para>
 #: /home/xry111/svn-repos/LFS-BOOK/part3intro/toolchaintechnotes.xml:28
 msgid ""
-"The build process is based on the process of "
-"<emphasis>cross-compilation</emphasis>. Cross-compilation is normally used "
-"for building a compiler and its toolchain for a machine different from the "
-"one that is used for the build. This is not strictly needed for LFS, since "
-"the machine where the new system will run is the same as the one used for "
-"the build. But cross-compilation has the great advantage that anything that "
-"is cross-compiled cannot depend on the host environment."
+"The build process is based on the process of <emphasis>cross-compilation</"
+"emphasis>. Cross-compilation is normally used for building a compiler and "
+"its toolchain for a machine different from the one that is used for the "
+"build. This is not strictly needed for LFS, since the machine where the new "
+"system will run is the same as the one used for the build. But cross-"
+"compilation has the great advantage that anything that is cross-compiled "
+"cannot depend on the host environment."
 msgstr ""
+"构建过程是基于<emphasis>交叉编译</emphasis>过程的。"
+"交叉编译通常被用于为一台与本机完全不同的计算机构建编译器及其工具链。"
+"这对于 LFS 并不严格必要，因为新系统运行的机器就是构建它时使用的。"
+"但是，交叉编译拥有一项重要优势，即任何交叉编译产生的程序都不可能依赖于"
+"宿主环境。"
 
 #. type: Content of: <sect1><sect2><title>
 #: /home/xry111/svn-repos/LFS-BOOK/part3intro/toolchaintechnotes.xml:38
 msgid "About Cross-Compilation"
-msgstr ""
+msgstr "关于交叉编译"
 
 #. type: Content of: <sect1><sect2><para>
 #: /home/xry111/svn-repos/LFS-BOOK/part3intro/toolchaintechnotes.xml:40
@@ -69,16 +78,18 @@ msgid ""
 "suggested to come back to it later in order to get a full grasp of the build "
 "process."
 msgstr ""
+"交叉编译涉及一些概念，值得专门用一节讨论。尽管您可以在初次阅读时跳过本节，"
+"但强烈建议您之后回头阅读本节，以完全掌握构建过程。"
 
 #. type: Content of: <sect1><sect2><para>
 #: /home/xry111/svn-repos/LFS-BOOK/part3intro/toolchaintechnotes.xml:45
 msgid "Let us first define some terms used in this context:"
-msgstr ""
+msgstr "首先我们定义讨论交叉编译时常用的术语："
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: /home/xry111/svn-repos/LFS-BOOK/part3intro/toolchaintechnotes.xml:48
 msgid "build"
-msgstr ""
+msgstr "build"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: /home/xry111/svn-repos/LFS-BOOK/part3intro/toolchaintechnotes.xml:49
@@ -86,11 +97,13 @@ msgid ""
 "is the machine where we build programs. Note that this machine is referred "
 "to as the <quote>host</quote> in other sections."
 msgstr ""
+"指构建程序时使用的机器。注意在某些其他章节，这台机器被称为<quote>host"
+"</quote>(宿主)。"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: /home/xry111/svn-repos/LFS-BOOK/part3intro/toolchaintechnotes.xml:54
 msgid "host"
-msgstr ""
+msgstr "host"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: /home/xry111/svn-repos/LFS-BOOK/part3intro/toolchaintechnotes.xml:55
@@ -98,11 +111,13 @@ msgid ""
 "is the machine/system where the built programs will run. Note that this use "
 "of <quote>host</quote> is not the same as in other sections."
 msgstr ""
+"指将来会运行被构建的程序的机器。注意这里说的<quote>host</quote>"
+"与其他章节使用的“宿主”(host) 一词不同。"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: /home/xry111/svn-repos/LFS-BOOK/part3intro/toolchaintechnotes.xml:60
 msgid "target"
-msgstr ""
+msgstr "target"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: /home/xry111/svn-repos/LFS-BOOK/part3intro/toolchaintechnotes.xml:61
@@ -110,6 +125,8 @@ msgid ""
 "is only used for compilers. It is the machine the compiler produces code "
 "for. It may be different from both build and host."
 msgstr ""
+"只有编译器使用这个术语。编译器为这台机器产生代码。"
+"它可能和 build 与 host 都不同。"
 
 #. type: Content of: <sect1><sect2><para>
 #: /home/xry111/svn-repos/LFS-BOOK/part3intro/toolchaintechnotes.xml:68
@@ -120,93 +137,97 @@ msgid ""
 "produce code for a another slow machine (C). Then, to build a compiler for "
 "machine C, we would have three stages:"
 msgstr ""
+"例如，我们考虑下列场景：我们仅在一台运行缓慢的机器上有编译器，"
+"称这台机器为 A，这个编译器为 ccA。我们还有一台运行较快的机器 (B)，"
+"但它没有安装编译器，而我们希望为另一台缓慢的机器 (C) 生成代码。"
+"这样，如果要为 C 构建编译器，可以通过三个阶段完成："
 
 #. type: Content of: <sect1><sect2><informaltable><tgroup><thead><row><entry>
 #: /home/xry111/svn-repos/LFS-BOOK/part3intro/toolchaintechnotes.xml:82
 #: /home/xry111/svn-repos/LFS-BOOK/part3intro/toolchaintechnotes.xml:116
 #: /home/xry111/svn-repos/LFS-BOOK/part3intro/toolchaintechnotes.xml:186
 msgid "Stage"
-msgstr ""
+msgstr "阶段"
 
 #. type: Content of: <sect1><sect2><informaltable><tgroup><thead><row><entry>
 #: /home/xry111/svn-repos/LFS-BOOK/part3intro/toolchaintechnotes.xml:82
 #: /home/xry111/svn-repos/LFS-BOOK/part3intro/toolchaintechnotes.xml:116
 #: /home/xry111/svn-repos/LFS-BOOK/part3intro/toolchaintechnotes.xml:186
 msgid "Build"
-msgstr ""
+msgstr "Build"
 
 #. type: Content of: <sect1><sect2><informaltable><tgroup><thead><row><entry>
 #: /home/xry111/svn-repos/LFS-BOOK/part3intro/toolchaintechnotes.xml:82
 #: /home/xry111/svn-repos/LFS-BOOK/part3intro/toolchaintechnotes.xml:116
 #: /home/xry111/svn-repos/LFS-BOOK/part3intro/toolchaintechnotes.xml:186
 msgid "Host"
-msgstr ""
+msgstr "Host"
 
 #. type: Content of: <sect1><sect2><informaltable><tgroup><thead><row><entry>
 #: /home/xry111/svn-repos/LFS-BOOK/part3intro/toolchaintechnotes.xml:83
 #: /home/xry111/svn-repos/LFS-BOOK/part3intro/toolchaintechnotes.xml:117
 #: /home/xry111/svn-repos/LFS-BOOK/part3intro/toolchaintechnotes.xml:187
 msgid "Target"
-msgstr ""
+msgstr "Target"
 
 #. type: Content of: <sect1><sect2><informaltable><tgroup><thead><row><entry>
 #: /home/xry111/svn-repos/LFS-BOOK/part3intro/toolchaintechnotes.xml:83
 #: /home/xry111/svn-repos/LFS-BOOK/part3intro/toolchaintechnotes.xml:117
 #: /home/xry111/svn-repos/LFS-BOOK/part3intro/toolchaintechnotes.xml:187
 msgid "Action"
-msgstr ""
+msgstr "操作描述"
 
 #. type: Content of: <sect1><sect2><informaltable><tgroup><tbody><row><entry>
 #: /home/xry111/svn-repos/LFS-BOOK/part3intro/toolchaintechnotes.xml:87
 #: /home/xry111/svn-repos/LFS-BOOK/part3intro/toolchaintechnotes.xml:191
 msgid "1"
-msgstr ""
+msgstr "1"
 
 #. type: Content of: <sect1><sect2><informaltable><tgroup><tbody><row><entry>
 #: /home/xry111/svn-repos/LFS-BOOK/part3intro/toolchaintechnotes.xml:87
 #: /home/xry111/svn-repos/LFS-BOOK/part3intro/toolchaintechnotes.xml:91
 msgid "A"
-msgstr ""
+msgstr "A"
 
 #. type: Content of: <sect1><sect2><informaltable><tgroup><tbody><row><entry>
 #: /home/xry111/svn-repos/LFS-BOOK/part3intro/toolchaintechnotes.xml:87
 #: /home/xry111/svn-repos/LFS-BOOK/part3intro/toolchaintechnotes.xml:91
 #: /home/xry111/svn-repos/LFS-BOOK/part3intro/toolchaintechnotes.xml:95
 msgid "B"
-msgstr ""
+msgstr "B"
 
 #. type: Content of: <sect1><sect2><informaltable><tgroup><tbody><row><entry>
 #: /home/xry111/svn-repos/LFS-BOOK/part3intro/toolchaintechnotes.xml:88
 msgid "build cross-compiler cc1 using ccA on machine A"
-msgstr ""
+msgstr "在机器 A 上，使用 ccA 构建交叉编译器 cc1"
 
 #. type: Content of: <sect1><sect2><informaltable><tgroup><tbody><row><entry>
 #: /home/xry111/svn-repos/LFS-BOOK/part3intro/toolchaintechnotes.xml:91
 #: /home/xry111/svn-repos/LFS-BOOK/part3intro/toolchaintechnotes.xml:195
 msgid "2"
-msgstr ""
+msgstr "2"
 
 #. type: Content of: <sect1><sect2><informaltable><tgroup><tbody><row><entry>
 #: /home/xry111/svn-repos/LFS-BOOK/part3intro/toolchaintechnotes.xml:92
 msgid "build cross-compiler cc2 using cc1 on machine A"
-msgstr ""
+msgstr "在机器 A 上，使用 cc1 构建交叉编译器 cc2"
 
 #. type: Content of: <sect1><sect2><informaltable><tgroup><tbody><row><entry>
 #: /home/xry111/svn-repos/LFS-BOOK/part3intro/toolchaintechnotes.xml:95
 #: /home/xry111/svn-repos/LFS-BOOK/part3intro/toolchaintechnotes.xml:199
 msgid "3"
-msgstr ""
+msgstr "3"
 
 #. type: Content of: <sect1><sect2><informaltable><tgroup><tbody><row><entry>
 #: /home/xry111/svn-repos/LFS-BOOK/part3intro/toolchaintechnotes.xml:95
 #: /home/xry111/svn-repos/LFS-BOOK/part3intro/toolchaintechnotes.xml:121
 msgid "C"
-msgstr ""
+msgstr "C"
 
 #. type: Content of: <sect1><sect2><informaltable><tgroup><tbody><row><entry>
 #: /home/xry111/svn-repos/LFS-BOOK/part3intro/toolchaintechnotes.xml:96
 msgid "build compiler ccC using cc2 on machine B"
-msgstr ""
+msgstr "在机器 B 上，使用 cc2 构建交叉编译器 ccC"
 
 #. type: Content of: <sect1><sect2><para>
 #: /home/xry111/svn-repos/LFS-BOOK/part3intro/toolchaintechnotes.xml:102
@@ -216,30 +237,37 @@ msgid ""
 "there is no way to test the built programs until machine C itself is "
 "running. For example, for testing ccC, we may want to add a fourth stage:"
 msgstr ""
+"这样，我们可以为机器 C 使用 cc2 在快速的机器 B 上构建所有其他程序。"
+"注意除非 B 能运行为 C 编译的程序，我们无法测试编译得到的程序，"
+"直到在 C 上运行它。例如，如果要测试 ccC，我们可以增加第四个阶段："
 
 #. type: Content of: <sect1><sect2><informaltable><tgroup><tbody><row><entry>
 #: /home/xry111/svn-repos/LFS-BOOK/part3intro/toolchaintechnotes.xml:121
 msgid "4"
-msgstr ""
+msgstr "4"
 
 #. type: Content of: <sect1><sect2><informaltable><tgroup><tbody><row><entry>
 #: /home/xry111/svn-repos/LFS-BOOK/part3intro/toolchaintechnotes.xml:122
 msgid "rebuild and test ccC using itself on machine C"
-msgstr ""
+msgstr "在机器 C 上，用 ccC 重新构建它本身，并测试"
 
 #. type: Content of: <sect1><sect2><para>
 #: /home/xry111/svn-repos/LFS-BOOK/part3intro/toolchaintechnotes.xml:128
 msgid ""
 "In the example above, only cc1 and cc2 are cross-compilers, that is, they "
 "produce code for a machine different from the one they are run on.  The "
-"other compilers ccA and ccC produce code for the machine they are run "
-"on. Such compilers are called <emphasis>native</emphasis> compilers."
+"other compilers ccA and ccC produce code for the machine they are run on. "
+"Such compilers are called <emphasis>native</emphasis> compilers."
 msgstr ""
+"在上面的例子中，只有 cc1 和 cc2 是交叉编译器，"
+"它们为与它们本身运行的机器不同的机器产生代码。"
+"而另外的编译器 ccA 和 ccC 为它们本身运行的机器产生代码，"
+"它们称为<emphasis>本地</emphasis>编译器。"
 
 #. type: Content of: <sect1><sect2><title>
 #: /home/xry111/svn-repos/LFS-BOOK/part3intro/toolchaintechnotes.xml:136
 msgid "Implementation of Cross-Compilation for LFS"
-msgstr ""
+msgstr "LFS 的交叉编译实现"
 
 #. type: Content of: <sect1><sect2><note><para>
 #: /home/xry111/svn-repos/LFS-BOOK/part3intro/toolchaintechnotes.xml:139
@@ -250,14 +278,24 @@ msgid ""
 "history: initially, three component names were enough to designate "
 "unambiguously a machine, but with new machines and systems appearing, that "
 "proved insufficient. The word <quote>triplet</quote> remained. A simple way "
-"to determine your machine triplet is to run the "
-"<command>config.guess</command> script that comes with the source for many "
-"packages. Unpack the binutils sources and run the script: "
-"<userinput>./config.guess</userinput> and note the output. For example, for "
-"a 32-bit Intel processor the output will be "
-"<emphasis>i686-pc-linux-gnu</emphasis>. On a 64-bit system it will be "
-"<emphasis>x86_64-pc-linux-gnu</emphasis>."
+"to determine your machine triplet is to run the <command>config.guess</"
+"command> script that comes with the source for many packages. Unpack the "
+"binutils sources and run the script: <userinput>./config.guess</userinput> "
+"and note the output. For example, for a 32-bit Intel processor the output "
+"will be <emphasis>i686-pc-linux-gnu</emphasis>. On a 64-bit system it will "
+"be <emphasis>x86_64-pc-linux-gnu</emphasis>."
 msgstr ""
+"几乎所有构建系统都使用形如 CPU-供应商-内核-操作系统，称为三元组的名称"
+"表示目标机器。好奇的读者可能感到奇怪，为什么一个<quote>三元组</quote>"
+"却包含四个部分。这是历史遗留的：最早，三个部分就足以无歧义地描述一台机器。"
+"但是随着新的机器和系统不断出现，最终证明三个部分是不够的。"
+"然而，<quote>三元组</quote>这个术语保留了下来。"
+"有一种简单方法可以获得您的机器的三元组，即"
+"运行许多软件包附带的 <command>config.guess</command> 脚本。解压缩 "
+"Binutils 源码，然后运行脚本：<userinput>./config.guess</userinput>，观察输"
+"出。例如，对于 32 位 Intel 处理器，输出应该是 <emphasis>i686-pc-linux-gnu</"
+"emphasis>，而对于 64 位系统输出应该是 <emphasis>x86_64-pc-linux-gnu</"
+"emphasis>。"
 
 #. type: Content of: <sect1><sect2><note><para>
 #: /home/xry111/svn-repos/LFS-BOOK/part3intro/toolchaintechnotes.xml:153
@@ -267,57 +305,72 @@ msgid ""
 "<command>ld</command> that is part of binutils). The dynamic linker provided "
 "by Glibc finds and loads the shared libraries needed by a program, prepares "
 "the program to run, and then runs it. The name of the dynamic linker for a "
-"32-bit Intel machine will be <filename "
-"class=\"libraryfile\">ld-linux.so.2</filename> (<filename "
-"class=\"libraryfile\">ld-linux-x86-64.so.2</filename> for 64-bit systems). A "
-"sure-fire way to determine the name of the dynamic linker is to inspect a "
-"random binary from the host system by running: <userinput>readelf -l "
-"&lt;name of binary&gt; | grep interpreter</userinput> and noting the "
-"output. The authoritative reference covering all platforms is in the "
-"<filename>shlib-versions</filename> file in the root of the Glibc source "
-"tree."
+"32-bit Intel machine will be <filename class=\"libraryfile\">ld-linux.so.2</"
+"filename> (<filename class=\"libraryfile\">ld-linux-x86-64.so.2</filename> "
+"for 64-bit systems). A sure-fire way to determine the name of the dynamic "
+"linker is to inspect a random binary from the host system by running: "
+"<userinput>readelf -l &lt;name of binary&gt; | grep interpreter</userinput> "
+"and noting the output. The authoritative reference covering all platforms is "
+"in the <filename>shlib-versions</filename> file in the root of the Glibc "
+"source tree."
 msgstr ""
+"另外注意平台的动态链接器的名称，它又被称为动态加载器 (不要和 Binutils 中的普"
+"通链接器 <command>ld</command> 混淆)。动态链接器由 Glibc 提供，它寻找并加载"
+"程序所需的共享库，为程序运行做好准备，然后运行程序。在 32 位 Intel 机器上动"
+"态链接器的名称是 <filename class=\"libraryfile\">ld-linux.so.2</filename> "
+"(在 64 位系统上是 <filename class=\"libraryfile\">ld-linux-x86-64.so.2</"
+"filename>)。一个确定动态链接器名称的准确方法是从宿主系统找一个二进制可执行"
+"文件，然后执行：<userinput>readelf -l &lt;二进制文件名&gt; | grep "
+"interpreter</userinput> 并观察输出。包含所有平台的权威参考可以在 Glibc 源码树"
+"根目录的 <filename>shlib-versions</filename> 文件中找到。"
 
 #. type: Content of: <sect1><sect2><para>
 #: /home/xry111/svn-repos/LFS-BOOK/part3intro/toolchaintechnotes.xml:169
 msgid ""
 "In order to fake a cross compilation, the name of the host triplet is "
 "slightly adjusted by changing the &quot;vendor&quot; field in the "
-"<envar>LFS_TGT</envar> variable. We also use the "
-"<parameter>--with-sysroot</parameter> option when building the cross linker "
-"and cross compiler to tell them where to find the needed host files. This "
-"ensures that none of the other programs built in <xref "
-"linkend=\"chapter-temporary-tools\"/> can link to libraries on the build "
-"machine. Only two stages are mandatory, and one more for tests:"
+"<envar>LFS_TGT</envar> variable. We also use the <parameter>--with-sysroot</"
+"parameter> option when building the cross linker and cross compiler to tell "
+"them where to find the needed host files. This ensures that none of the "
+"other programs built in <xref linkend=\"chapter-temporary-tools\"/> can link "
+"to libraries on the build machine. Only two stages are mandatory, and one "
+"more for tests:"
 msgstr ""
+"为了将本机伪装成交叉编译目标机器，我们在 <envar>LFS_TGT</envar> 变量中，"
+"对宿主系统三元组的 &quot;vendor&quot; 域进行修改。我们还会在构建交叉链接器"
+"和交叉编译器时使用 <parameter>--with-sysroot</parameter> 选项，"
+"指定查找所需的 host 系统文件的位置。这保证在"
+"<xref linkend=\"chapter-temporary-tools\"/>中的其他程序在构建时"
+"不会链接到宿主 (build) 系统的库。前两个阶段是必要的，"
+"第三个阶段可以用于测试："
 
 #. type: Content of: <sect1><sect2><informaltable><tgroup><tbody><row><entry>
 #: /home/xry111/svn-repos/LFS-BOOK/part3intro/toolchaintechnotes.xml:191
 #: /home/xry111/svn-repos/LFS-BOOK/part3intro/toolchaintechnotes.xml:195
 msgid "pc"
-msgstr ""
+msgstr "pc"
 
 #. type: Content of: <sect1><sect2><informaltable><tgroup><tbody><row><entry>
 #: /home/xry111/svn-repos/LFS-BOOK/part3intro/toolchaintechnotes.xml:191
 #: /home/xry111/svn-repos/LFS-BOOK/part3intro/toolchaintechnotes.xml:195
 #: /home/xry111/svn-repos/LFS-BOOK/part3intro/toolchaintechnotes.xml:199
 msgid "lfs"
-msgstr ""
+msgstr "lfs"
 
 #. type: Content of: <sect1><sect2><informaltable><tgroup><tbody><row><entry>
 #: /home/xry111/svn-repos/LFS-BOOK/part3intro/toolchaintechnotes.xml:192
 msgid "build cross-compiler cc1 using cc-pc on pc"
-msgstr ""
+msgstr "在 pc 上使用 cc-pc 构建交叉编译器 cc1"
 
 #. type: Content of: <sect1><sect2><informaltable><tgroup><tbody><row><entry>
 #: /home/xry111/svn-repos/LFS-BOOK/part3intro/toolchaintechnotes.xml:196
 msgid "build compiler cc-lfs using cc1 on pc"
-msgstr ""
+msgstr "在 pc 上使用 cc1 构建 cc-lfs"
 
 #. type: Content of: <sect1><sect2><informaltable><tgroup><tbody><row><entry>
 #: /home/xry111/svn-repos/LFS-BOOK/part3intro/toolchaintechnotes.xml:200
 msgid "rebuild and test cc-lfs using itself on lfs"
-msgstr ""
+msgstr "在 lfs 上使用 cc-lfs 重新构建并测试它本身"
 
 #. type: Content of: <sect1><sect2><para>
 #: /home/xry111/svn-repos/LFS-BOOK/part3intro/toolchaintechnotes.xml:206
@@ -326,6 +379,8 @@ msgid ""
 "machine using the already installed distribution. <quote>On lfs</quote> "
 "means the commands are run in a chrooted environment."
 msgstr ""
+"在上表中，<quote>在 pc 上</quote> 意味着命令在已经安装好的发行版中执行。"
+"<quote>在 lfs 上</quote> 意味着命令在 chroot 环境中执行。"
 
 #. type: Content of: <sect1><sect2><para>
 #: /home/xry111/svn-repos/LFS-BOOK/part3intro/toolchaintechnotes.xml:210
@@ -344,6 +399,16 @@ msgid ""
 "degraded), then build libstdc++. But this last library will lack the same "
 "functionalities as libgcc."
 msgstr ""
+"现在，关于交叉编译，还有更多要处理的问题：C 语言并不仅仅由一个编译器实现，"
+"它还规定了一个标准库。在本书中，我们使用 GNU C 运行库，即 glibc。"
+"它必须为 lfs 目标机器使用交叉编译器 cc1 编译。"
+"但是，编译器本身使用一个库，实现汇编指令集并不支持的一些复杂指令。"
+"这个内部库称为 libgcc，它必须链接到 glibc 库才能实现完整功能！"
+"另外，C++ 标准库 (libstdc++) 也必须链接到 glibc。"
+"为了解决这个”先有鸡还是先有蛋“的问题，只能先构建一个降级的 cc1，"
+"它的 libgcc 缺失线程和异常等功能，再用这个降级的编译器构建 glibc "
+"(这不会导致 glibc 缺失功能)，再构建 libstdc++。但是这种方法构建的 "
+"libstdc++ 和 libgcc 一样，会缺失一些功能。"
 
 #. type: Content of: <sect1><sect2><para>
 #: /home/xry111/svn-repos/LFS-BOOK/part3intro/toolchaintechnotes.xml:225
@@ -357,19 +422,27 @@ msgid ""
 "libraries, since cc-lfs is a native compiler. So we have to build libstdc++ "
 "later, in chroot."
 msgstr ""
+"讨论还没有结束：上面一段的结论是 cc1 无法构建功能完整的 libstdc++，"
+"但这是我们在阶段 2 构建 C/C++ 库时唯一可用的编译器！"
+"当然，在阶段 2 中构建的编译器 cc-lfs 将会可以构建这些库，"
+"但是 (1) GCC 构建系统不知道这个编译器在 pc 上可以使用，而且 (2) "
+"它是一个本地编译器，因此在 pc 上使用它可能产生链接到 pc (宿主系统) "
+"库的风险。因此我们必须在进入 chroot 后再次构建 libstdc++。"
 
 #. type: Content of: <sect1><sect2><title>
 #: /home/xry111/svn-repos/LFS-BOOK/part3intro/toolchaintechnotes.xml:238
 msgid "Other procedural details"
-msgstr ""
+msgstr "构建过程的其他细节"
 
 #. type: Content of: <sect1><sect2><para>
 #: /home/xry111/svn-repos/LFS-BOOK/part3intro/toolchaintechnotes.xml:240
 msgid ""
-"The cross-compiler will be installed in a separate <filename "
-"class=\"directory\">$LFS/tools</filename> directory, since it will not be "
-"part of the final system."
+"The cross-compiler will be installed in a separate <filename class="
+"\"directory\">$LFS/tools</filename> directory, since it will not be part of "
+"the final system."
 msgstr ""
+"交叉编译器会被安装在独立的 <filename class=\"directory\">$LFS/tools"
+"</filename> 目录，因为它不属于最终构建的系统。"
 
 #. type: Content of: <sect1><sect2><para>
 #: /home/xry111/svn-repos/LFS-BOOK/part3intro/toolchaintechnotes.xml:244
@@ -383,24 +456,38 @@ msgid ""
 "distribution. A test suite failure will usually highlight this error before "
 "too much additional work is performed."
 msgstr ""
+"我们首先安装 Binutils 。这是由于 GCC 和 Glibc 的 <command>configure</"
+"command> 脚本首先测试汇编器和链接器的一些特性，以决定启用或禁用一些软件特"
+"性。初看起来这并不重要，但没有正确配置的 GCC 或者 Glibc 可以导致工具链中潜伏"
+"的故障。这些故障可能到整个构建过程快要结束时才突然爆发，不过在花费大量无用"
+"功之前，测试套件的失败可以将这类错误凸显出来。"
 
 #. type: Content of: <sect1><sect2><para>
 #: /home/xry111/svn-repos/LFS-BOOK/part3intro/toolchaintechnotes.xml:253
 msgid ""
-"Binutils installs its assembler and linker in two locations, <filename "
-"class=\"directory\">$LFS/tools/bin</filename> and <filename "
-"class=\"directory\">$LFS/tools/$LFS_TGT/bin</filename>. The tools in one "
-"location are hard linked to the other. An important facet of the linker is "
-"its library search order. Detailed information can be obtained from "
-"<command>ld</command> by passing it the <parameter>--verbose</parameter> "
-"flag. For example, <command>$LFS_TGT-ld --verbose | grep SEARCH</command> "
-"will illustrate the current search paths and their order. It shows which "
-"files are linked by <command>ld</command> by compiling a dummy program and "
-"passing the <parameter>--verbose</parameter> switch to the linker. For "
-"example, <command>$LFS_TGT-gcc dummy.c -Wl,--verbose 2&gt;&amp;1 | grep "
-"succeeded</command> will show all the files successfully opened during the "
-"linking."
+"Binutils installs its assembler and linker in two locations, <filename class="
+"\"directory\">$LFS/tools/bin</filename> and <filename class=\"directory\">"
+"$LFS/tools/$LFS_TGT/bin</filename>. The tools in one location are hard "
+"linked to the other. An important facet of the linker is its library search "
+"order. Detailed information can be obtained from <command>ld</command> by "
+"passing it the <parameter>--verbose</parameter> flag. For example, <command>"
+"$LFS_TGT-ld --verbose | grep SEARCH</command> will illustrate the current "
+"search paths and their order. It shows which files are linked by "
+"<command>ld</command> by compiling a dummy program and passing the "
+"<parameter>--verbose</parameter> switch to the linker. For example, <command>"
+"$LFS_TGT-gcc dummy.c -Wl,--verbose 2&gt;&amp;1 | grep succeeded</command> "
+"will show all the files successfully opened during the linking."
 msgstr ""
+"Binutils 将汇编器和链接器安装在两个位置，一个是 <filename class=\"directory"
+"\">$LFS/tools/bin</filename>，另一个是 <filename class=\"directory\">$LFS/tools/"
+"$LFS_TGT/bin</filename>。这两个位置中的工具互为硬链接。链接器的一项重要属性"
+"是它搜索库的顺序，通过向 <command>ld</command> 命令加入 <parameter>--"
+"verbose</parameter> 参数，可以得到关于搜索路径的详细信息。例如，"
+"<userinput>ld --verbose | grep SEARCH</userinput> 会输出当前的搜索路径及其顺"
+"序。此外，通过编译一个样品 (dummy) 程序并向链接器 <command>ld</command> 传递 "
+"<parameter>--verbose</parameter> 参数，可以知道哪些文件被链接。例如，"
+"<userinput>gcc dummy.c -Wl,--verbose 2&gt;&amp;1 | grep succeeded</"
+"userinput> 将显示所有在链接过程中被成功打开的文件。"
 
 #. type: Content of: <sect1><sect2><para>
 #: /home/xry111/svn-repos/LFS-BOOK/part3intro/toolchaintechnotes.xml:267
@@ -408,16 +495,18 @@ msgid ""
 "The next package installed is GCC. An example of what can be seen during its "
 "run of <command>configure</command> is:"
 msgstr ""
+"下一步安装 GCC。在执行它的 <command>configure</command> 脚本时，您会看到类似"
+"下面这样的输出："
 
 #. type: Content of: <sect1><sect2><screen>
 #: /home/xry111/svn-repos/LFS-BOOK/part3intro/toolchaintechnotes.xml:270
 #, no-wrap
 msgid ""
-"<computeroutput>checking what assembler to "
-"use... /mnt/lfs/tools/i686-lfs-linux-gnu/bin/as\n"
-"checking what linker to "
-"use... /mnt/lfs/tools/i686-lfs-linux-gnu/bin/ld</computeroutput>"
+"<computeroutput>checking what assembler to use... /mnt/lfs/tools/i686-lfs-linux-gnu/bin/as\n"
+"checking what linker to use... /mnt/lfs/tools/i686-lfs-linux-gnu/bin/ld</computeroutput>"
 msgstr ""
+"<computeroutput>checking what assembler to use... /tools/i686-lfs-linux-gnu/bin/as\n"
+"checking what linker to use... /mnt/lfs/tools/i686-lfs-linux-gnu/bin/ld</computeroutput>"
 
 #. type: Content of: <sect1><sect2><para>
 #: /home/xry111/svn-repos/LFS-BOOK/part3intro/toolchaintechnotes.xml:273
@@ -426,9 +515,13 @@ msgid ""
 "GCC's configure script does not search the PATH directories to find which "
 "tools to use. However, during the actual operation of <command>gcc</command> "
 "itself, the same search paths are not necessarily used. To find out which "
-"standard linker <command>gcc</command> will use, run: <command>$LFS_TGT-gcc "
-"-print-prog-name=ld</command>."
+"standard linker <command>gcc</command> will use, run: <command>$LFS_TGT-gcc -"
+"print-prog-name=ld</command>."
 msgstr ""
+"基于我们上面论述的原因，这些输出非常重要。这说明 GCC 的配置脚本没有在 PATH "
+"变量指定的目录中搜索工具。然而，在 <command>gcc</command> 的实际运行中，未"
+"必会使用同样的搜索路径。为了查询 <command>gcc</command> 会使用哪个链接器，需"
+"要执行以下命令： <userinput>$LFS_TGT-gcc -print-prog-name=ld</userinput>。"
 
 #. type: Content of: <sect1><sect2><para>
 #: /home/xry111/svn-repos/LFS-BOOK/part3intro/toolchaintechnotes.xml:280
@@ -439,6 +532,10 @@ msgid ""
 "information about the preprocessor, compilation, and assembly stages, "
 "including <command>gcc</command>'s included search paths and their order."
 msgstr ""
+"通过向 <command>gcc</command> 传递 <parameter>-v</parameter> 参数，可以知道在"
+"编译样品程序时发生的细节。例如，<userinput>gcc -v dummy.c</userinput> 会输出"
+"预处理、编译和汇编阶段中的详细信息，包括 <command>gcc</command> 的包含文件搜"
+"索路径和顺序。"
 
 #. type: Content of: <sect1><sect2><para>
 #: /home/xry111/svn-repos/LFS-BOOK/part3intro/toolchaintechnotes.xml:287
@@ -447,6 +544,8 @@ msgid ""
 "library (Glibc) to interface with features that the Linux kernel will "
 "provide."
 msgstr ""
+"下一步安装“净化的” (sanitized) Linux API 头文件。这允许 C 标准库 (Glibc) 与 "
+"Linux 内核提供的各种特性交互。"
 
 #. type: Content of: <sect1><sect2><para>
 #: /home/xry111/svn-repos/LFS-BOOK/part3intro/toolchaintechnotes.xml:291
@@ -455,21 +554,32 @@ msgid ""
 "building Glibc are the compiler, binary tools, and kernel headers. The "
 "compiler is generally not an issue since Glibc will always use the compiler "
 "relating to the <parameter>--host</parameter> parameter passed to its "
-"configure script; e.g. in our case, the compiler will be "
-"<command>$LFS_TGT-gcc</command>. The binary tools and kernel headers can be "
-"a bit more complicated. Therefore, take no risks and use the available "
-"configure switches to enforce the correct selections. After the run of "
-"<command>configure</command>, check the contents of the "
-"<filename>config.make</filename> file in the <filename "
-"class=\"directory\">build</filename> directory for all important details.  "
-"Note the use of <parameter>CC=\"$LFS_TGT-gcc\"</parameter> (with "
-"<envar>$LFS_TGT</envar> expanded) to control which binary tools are used and "
-"the use of the <parameter>-nostdinc</parameter> and "
-"<parameter>-isystem</parameter> flags to control the compiler's include "
-"search path. These items highlight an important aspect of the Glibc "
-"package&mdash;it is very self-sufficient in terms of its build machinery and "
-"generally does not rely on toolchain defaults."
+"configure script; e.g. in our case, the compiler will be <command>$LFS_TGT-"
+"gcc</command>. The binary tools and kernel headers can be a bit more "
+"complicated. Therefore, take no risks and use the available configure "
+"switches to enforce the correct selections. After the run of "
+"<command>configure</command>, check the contents of the <filename>config."
+"make</filename> file in the <filename class=\"directory\">build</filename> "
+"directory for all important details.  Note the use of <parameter>CC="
+"\"$LFS_TGT-gcc\"</parameter> (with <envar>$LFS_TGT</envar> expanded) to "
+"control which binary tools are used and the use of the <parameter>-nostdinc</"
+"parameter> and <parameter>-isystem</parameter> flags to control the "
+"compiler's include search path. These items highlight an important aspect of "
+"the Glibc package&mdash;it is very self-sufficient in terms of its build "
+"machinery and generally does not rely on toolchain defaults."
 msgstr ""
+"下一步安装 Glibc。在构建 Glibc 时需要着重考虑是编译器，二进制工具，以及内核头文"
+"件。编译器一般不成问题，Glibc 总是使用传递给配置脚本的 <parameter>--host</"
+"parameter> 参数相关的编译器。例如，在我们的例子中，使用的编译器是 "
+"<command>$LFS_TGT-gcc</command>。但二进制工具和内核头文件的问题比"
+"较复杂。安全起见，我们使用配置脚本提供的开关，保证正确的选择。在 "
+"<command>configure</command> 脚本运行完成后，可以检查 <filename>build</"
+"filename> 目录中的 <filename>config.make</filename> 文件，了解全部重要的细"
+"节。注意参数 <parameter>CC=\"$LFS_TGT-gcc\"</parameter> "
+"(其中 <envar>$LFS_TGT</envar> 会被展开) 控制构建系统使"
+"用正确的二进制工具，而参数 <parameter>-nostdinc</parameter> 和 <parameter>-"
+"isystem</parameter> 控制编译器的包含文件搜索路径。这些事项凸显了 Glibc 软件包"
+"的一个重要性质 —— 它的构建机制是相当自给自足的，通常不依赖于工具链默认值。"
 
 #. type: Content of: <sect1><sect2><para>
 #: /home/xry111/svn-repos/LFS-BOOK/part3intro/toolchaintechnotes.xml:310
@@ -479,29 +589,46 @@ msgid ""
 "step of libstdc++ uses the <envar>DESTDIR</envar> variable to have the "
 "programs land into the LFS filesystem."
 msgstr ""
+"正如前文所述，在第 6 章中，构建所有需要自身才能构建的程序后，编译 C++ "
+"标准库。在安装 libstdc++ 时使用 <envar>DESTDIR</envar> 变量，"
+"将它安装到 LFS 文件系统中。"
 
 #. type: Content of: <sect1><sect2><para>
 #: /home/xry111/svn-repos/LFS-BOOK/part3intro/toolchaintechnotes.xml:315
 msgid ""
 "In Chapter 7 the native lfs compiler is built. First binutils-pass2, with "
 "the same <envar>DESTDIR</envar> install as the other programs is built, and "
-"then the second pass of GCC is constructed, omitting libstdc++ and other "
-"non-important libraries.  Due to some weird logic in GCC's configure script, "
+"then the second pass of GCC is constructed, omitting libstdc++ and other non-"
+"important libraries.  Due to some weird logic in GCC's configure script, "
 "<envar>CC_FOR_TARGET</envar> ends up as <command>cc</command> when the host "
 "is the same as the target, but is different from the build system. This is "
 "why <parameter>CC_FOR_TARGET=$LFS_TGT-gcc</parameter> is put explicitely "
 "into the configure options."
 msgstr ""
+"在第 7 章中，构建 lfs 本地编译器。"
+"首先使用和其他程序相同的 <envar>DESTDIR</envar> 第二次构建 binutils，"
+"然后第二次构建 GCC，构建时忽略 libstdc++ 和其他不重要的库。"
+"由于 GCC 配置脚本的一些奇怪逻辑，<envar>CC_FOR_TARGET</envar> "
+"变量在 host 系统和 target 相同，但与 build 不同时，"
+"被设定为 <command>cc</command>。因此我们必须显式地在配置选项中指定 "
+"<parameter>CC_FOR_TARGET=$LFS_TGT-gcc</parameter>。"
 
 #. type: Content of: <sect1><sect2><para>
 #: /home/xry111/svn-repos/LFS-BOOK/part3intro/toolchaintechnotes.xml:325
 msgid ""
-"Upon entering the chroot environment in <xref "
-"linkend=\"chapter-chroot-temporary-tools\"/>, the first task is to install "
-"libstdc++. Then temporary installations of programs needed for the proper "
-"operation of the toolchain are performed. Programs needed for testing other "
-"programs are also built. From this point onwards, the core toolchain is "
-"self-contained and self-hosted.  In <xref "
-"linkend=\"chapter-building-system\"/>, final versions of all the packages "
-"needed for a fully functional system are built, tested and installed."
+"Upon entering the chroot environment in <xref linkend=\"chapter-chroot-"
+"temporary-tools\"/>, the first task is to install libstdc++. Then temporary "
+"installations of programs needed for the proper operation of the toolchain "
+"are performed. Programs needed for testing other programs are also built. "
+"From this point onwards, the core toolchain is self-contained and self-"
+"hosted.  In <xref linkend=\"chapter-building-system\"/>, final versions of "
+"all the packages needed for a fully functional system are built, tested and "
+"installed."
 msgstr ""
+"在<xref linkend=\"chapter-chroot-temporary-tools\"/>中，进入 chroot "
+"环境后，首先安装 libstdc++。"
+"之后临时性地安装工具链的正常工作所必须的程序。"
+"还要构建测试其他程序时必须的程序。"
+"此后，核心工具链成为自包含的本地工具链。"
+"在<xref linkend=\"chapter-building-system\"/>中，"
+"构建、测试并最后一次安装所有软件包，它们组成功能完整的系统。"
