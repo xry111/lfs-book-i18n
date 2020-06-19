@@ -1,9 +1,3 @@
-# SOME DESCRIPTIVE TITLE
-# Copyright (C) YEAR Free Software Foundation, Inc.
-# This file is distributed under the same license as the PACKAGE package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
-#
-#, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
@@ -11,69 +5,71 @@ msgstr ""
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
-"Language: \n"
+"Language: zh_CN\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Translate Toolkit 2.2.5\n"
 
 #. type: Content of: <sect1><sect1info><address>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter06/findutils.xml:14
 #, no-wrap
 msgid "&findutils-url;"
-msgstr ""
+msgstr "&findutils-url;"
 
 #. type: Content of: <sect1><sect1info>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter06/findutils.xml:12
 msgid ""
-"<productname>findutils</productname> "
-"<productnumber>&findutils-version;</productnumber> <placeholder "
-"type=\"address\" id=\"0\"/>"
+"<productname>findutils</productname> <productnumber>&findutils-version;</"
+"productnumber> <placeholder type=\"address\" id=\"0\"/>"
 msgstr ""
+"<productname>findutils</productname> <productnumber>&findutils-version;</"
+"productnumber> <placeholder type=\"address\" id=\"0\"/>"
 
 #. type: Content of: <sect1><title>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter06/findutils.xml:17
 msgid "Findutils-&findutils-version;"
-msgstr ""
+msgstr "Findutils-&findutils-version;"
 
 #. type: Content of: <sect1><indexterm><primary>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter06/findutils.xml:20
 msgid "Findutils"
-msgstr ""
+msgstr "Findutils"
 
 #. type: Content of: <sect1><indexterm><secondary>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter06/findutils.xml:21
 msgid "tools"
-msgstr ""
+msgstr "tools"
 
 #. type: Content of: <sect1><sect2><segmentedlist><segtitle>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter06/findutils.xml:32
 msgid "&buildtime;"
-msgstr ""
+msgstr "&buildtime;"
 
 #. type: Content of: <sect1><sect2><segmentedlist><segtitle>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter06/findutils.xml:33
 msgid "&diskspace;"
-msgstr ""
+msgstr "&diskspace;"
 
 #. type: Content of: <sect1><sect2><segmentedlist><seglistitem><seg>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter06/findutils.xml:36
 msgid "&findutils-tmp-sbu;"
-msgstr ""
+msgstr "&findutils-tmp-sbu;"
 
 #. type: Content of: <sect1><sect2><segmentedlist><seglistitem><seg>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter06/findutils.xml:37
 msgid "&findutils-tmp-du;"
-msgstr ""
+msgstr "&findutils-tmp-du;"
 
 #. type: Content of: <sect1><sect2><title>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter06/findutils.xml:44
 msgid "Installation of Findutils"
-msgstr ""
+msgstr "安装 Findutils"
 
 #. type: Content of: <sect1><sect2><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter06/findutils.xml:46
 msgid "Prepare Findutils for compilation:"
-msgstr ""
+msgstr "准备编译 Findutils："
 
 #. type: Content of: <sect1><sect2><screen>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter06/findutils.xml:48
@@ -83,33 +79,36 @@ msgid ""
 "            --host=$LFS_TGT \\\n"
 "            --build=$(build-aux/config.guess)</userinput>"
 msgstr ""
+"<userinput remap=\"configure\">./configure --prefix=/usr   \\\n"
+"            --host=$LFS_TGT \\\n"
+"            --build=$(build-aux/config.guess)</userinput>"
 
 #. type: Content of: <sect1><sect2><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter06/findutils.xml:52
 msgid "Compile the package:"
-msgstr ""
+msgstr "编译该软件包："
 
 #. type: Content of: <sect1><sect2><screen>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter06/findutils.xml:54
 #, no-wrap
 msgid "<userinput remap=\"make\">make</userinput>"
-msgstr ""
+msgstr "<userinput remap=\"make\">make</userinput>"
 
 #. type: Content of: <sect1><sect2><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter06/findutils.xml:56
 msgid "Install the package:"
-msgstr ""
+msgstr "安装该软件包："
 
 #. type: Content of: <sect1><sect2><screen>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter06/findutils.xml:58
 #, no-wrap
 msgid "<userinput remap=\"install\">make DESTDIR=$LFS install</userinput>"
-msgstr ""
+msgstr "<userinput remap=\"install\">make DESTDIR=$LFS install</userinput>"
 
 #. type: Content of: <sect1><sect2><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter06/findutils.xml:60
 msgid "Move the excutable to its final expected location:"
-msgstr ""
+msgstr "将可执行文件移动到最终安装时的正确位置："
 
 #. type: Content of: <sect1><sect2><screen>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter06/findutils.xml:62
@@ -118,6 +117,8 @@ msgid ""
 "<userinput remap=\"install\">mv -v $LFS/usr/bin/find $LFS/bin\n"
 "sed -i 's|find:=${BINDIR}|find:=/bin|' $LFS/usr/bin/updatedb</userinput>"
 msgstr ""
+"<userinput remap=\"install\">mv -v $LFS/usr/bin/find $LFS/bin\n"
+"sed -i 's|find:=${BINDIR}|find:=/bin|' $LFS/usr/bin/updatedb</userinput>"
 
 #. type: Content of: <sect1><sect2><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter06/findutils.xml:70
@@ -125,3 +126,4 @@ msgid ""
 "Details on this package are located in <xref linkend=\"contents-findutils\" "
 "role=\".\"/>"
 msgstr ""
+"该软件包的详细信息可以在<xref linkend=\"contents-findutils\"/>中找到。"

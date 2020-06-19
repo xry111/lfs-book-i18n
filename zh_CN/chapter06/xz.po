@@ -1,9 +1,3 @@
-# SOME DESCRIPTIVE TITLE
-# Copyright (C) YEAR Free Software Foundation, Inc.
-# This file is distributed under the same license as the PACKAGE package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
-#
-#, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
@@ -11,16 +5,17 @@ msgstr ""
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
-"Language: \n"
+"Language: zh_CN\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Translate Toolkit 2.2.5\n"
 
 #. type: Content of: <sect1><sect1info><address>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter06/xz.xml:14
 #, no-wrap
 msgid "&xz-url;"
-msgstr ""
+msgstr "&xz-url;"
 
 #. type: Content of: <sect1><sect1info>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter06/xz.xml:12
@@ -28,105 +23,112 @@ msgid ""
 "<productname>xz</productname> <productnumber>&xz-version;</productnumber> "
 "<placeholder type=\"address\" id=\"0\"/>"
 msgstr ""
+"<productname>xz</productname> <productnumber>&xz-version;</productnumber> "
+"<placeholder type=\"address\" id=\"0\"/>"
 
 #. type: Content of: <sect1><title>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter06/xz.xml:17
 msgid "Xz-&xz-version;"
-msgstr ""
+msgstr "Xz-&xz-version;"
 
 #. type: Content of: <sect1><indexterm><primary>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter06/xz.xml:20
 msgid "Xz"
-msgstr ""
+msgstr "Xz"
 
 #. type: Content of: <sect1><indexterm><secondary>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter06/xz.xml:21
 msgid "tools"
-msgstr ""
+msgstr "tools"
 
 #. type: Content of: <sect1><sect2><segmentedlist><segtitle>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter06/xz.xml:32
 msgid "&buildtime;"
-msgstr ""
+msgstr "&buildtime;"
 
 #. type: Content of: <sect1><sect2><segmentedlist><segtitle>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter06/xz.xml:33
 msgid "&diskspace;"
-msgstr ""
+msgstr "&diskspace;"
 
 #. type: Content of: <sect1><sect2><segmentedlist><seglistitem><seg>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter06/xz.xml:36
 msgid "&xz-tmp-sbu;"
-msgstr ""
+msgstr "&xz-tmp-sbu;"
 
 #. type: Content of: <sect1><sect2><segmentedlist><seglistitem><seg>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter06/xz.xml:37
 msgid "&xz-tmp-du;"
-msgstr ""
+msgstr "&xz-tmp-du;"
 
 #. type: Content of: <sect1><sect2><title>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter06/xz.xml:44
 msgid "Installation of Xz"
-msgstr ""
+msgstr "安装 Xz"
 
 #. type: Content of: <sect1><sect2><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter06/xz.xml:46
 msgid "Prepare Xz for compilation:"
-msgstr ""
+msgstr "准备编译 Xz："
 
 #. type: Content of: <sect1><sect2><screen>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter06/xz.xml:48
 #, no-wrap
 msgid ""
-"<userinput remap=\"configure\">./configure --prefix=/usr                     "
-"\\\n"
+"<userinput remap=\"configure\">./configure --prefix=/usr                     \\\n"
 "            --host=$LFS_TGT                   \\\n"
 "            --build=$(build-aux/config.guess) \\\n"
 "            --disable-static                  \\\n"
 "            --docdir=/usr/share/doc/xz-&xz-version;</userinput>"
 msgstr ""
+"<userinput remap=\"configure\">./configure --prefix=/usr                     \\\n"
+"            --host=$LFS_TGT                   \\\n"
+"            --build=$(build-aux/config.guess) \\\n"
+"            --disable-static                  \\\n"
+"            --docdir=/usr/share/doc/xz-&xz-version;</userinput>"
 
 #. type: Content of: <sect1><sect2><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter06/xz.xml:54
 msgid "Compile the package:"
-msgstr ""
+msgstr "编译该软件包："
 
 #. type: Content of: <sect1><sect2><screen>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter06/xz.xml:56
 #, no-wrap
 msgid "<userinput remap=\"make\">make</userinput>"
-msgstr ""
+msgstr "<userinput remap=\"make\">make</userinput>"
 
 #. type: Content of: <sect1><sect2><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter06/xz.xml:58
 msgid "Install the package:"
-msgstr ""
+msgstr "安装该软件包："
 
 #. type: Content of: <sect1><sect2><screen>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter06/xz.xml:60
 #, no-wrap
 msgid "<userinput remap=\"install\">make DESTDIR=$LFS install</userinput>"
-msgstr ""
+msgstr "<userinput remap=\"install\">make DESTDIR=$LFS install</userinput>"
 
 #. type: Content of: <sect1><sect2><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter06/xz.xml:62
 msgid "Make sure that all essential files are in the correct directory:"
-msgstr ""
+msgstr "确保所有关键文件位于正确的目录中："
 
 #. type: Content of: <sect1><sect2><screen>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter06/xz.xml:64
 #, no-wrap
 msgid ""
-"<userinput remap=\"install\">mv -v "
-"$LFS/usr/bin/{lzma,unlzma,lzcat,xz,unxz,xzcat}  $LFS/bin\n"
+"<userinput remap=\"install\">mv -v $LFS/usr/bin/{lzma,unlzma,lzcat,xz,unxz,xzcat}  $LFS/bin\n"
 "mv -v $LFS/usr/lib/liblzma.so.*                       $LFS/lib\n"
-"ln -svf ../../lib/$(readlink $LFS/usr/lib/liblzma.so) "
-"$LFS/usr/lib/liblzma.so</userinput>"
+"ln -svf ../../lib/$(readlink $LFS/usr/lib/liblzma.so) $LFS/usr/lib/liblzma.so</userinput>"
 msgstr ""
+"<userinput remap=\"install\">mv -v $LFS/usr/bin/{lzma,unlzma,lzcat,xz,unxz,xzcat}  $LFS/bin\n"
+"mv -v $LFS/usr/lib/liblzma.so.*                       $LFS/lib\n"
+"ln -svf ../../lib/$(readlink $LFS/usr/lib/liblzma.so) $LFS/usr/lib/liblzma.so</userinput>"
 
 #. type: Content of: <sect1><sect2><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter06/xz.xml:72
 msgid ""
-"Details on this package are located in <xref linkend=\"contents-xz\" "
-"role=\".\"/>"
-msgstr ""
+"Details on this package are located in <xref linkend=\"contents-xz\" role=\"."
+"\"/>"
+msgstr "该软件包的详细信息可以在<xref linkend=\"contents-xz\"/>中找到。"
