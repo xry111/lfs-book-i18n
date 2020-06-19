@@ -37,12 +37,29 @@ sed -e '/xreflabel/s|"gcc-pass1"|"第一遍的 GCC"|' \
 	-i chapter05/gcc-pass1.xml
 
 sed -e '/xreflabel/s|Appendix|附录|' -i \
-	appendices/acknowledgments.xml     \
+	appendices/acknowledgments.xml      \
 	appendices/acronymlist.xml          \
 	appendices/dependencies.xml         \
 	appendices/license.xml              \
 	appendices/scripts.xml              \
 	appendices/udev-rules.xml
+
+sed -e 's/Approximate build time/估计编译时间/'               \
+	-e 's/Required disk space/需要硬盘空间/'                  \
+	-e 's/Installation depends on/安装依赖于/'                \
+	-e 's/Test suite depends on/测试依赖于/'                  \
+	-e 's/Must be installed before/必须在下列软件包之前安装/' \
+	-e 's/Optional dependencies/可选依赖项/'                  \
+	-i  general.ent
+
+reldate=$(grep 'releasedate' general.ent |
+	      sed 's/.*"\(.*\)".*/\1/;s/st\|nd\|rd\|th//');
+if reldate_cn=$(LANG=zh_CN.UTF-8 \
+                date -d "$reldate" "+%Y 年 %b %d 日" \
+                2>/dev/null); then
+	reldate_cn=$(echo "$reldate_cn" | sed 's/月/ &/')
+	sed "/releasedate/s/\".*\"/\"${reldate_cn}\"/" -i general.ent
+fi
 
 # Apply lfs-l10n.xml patch, if it's not applied
 grep "Simplified Chinese" stylesheets/lfs-xsl/lfs-l10n.xml ||
