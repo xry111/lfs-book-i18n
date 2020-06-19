@@ -7,7 +7,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2020-06-17 12:44+0800\n"
+"POT-Creation-Date: 2020-06-19 11:33+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -25,9 +25,8 @@ msgstr ""
 #. type: Content of: <sect1><sect1info>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/bzip2.xml:12
 msgid ""
-"<productname>bzip2</productname> "
-"<productnumber>&bzip2-version;</productnumber> <placeholder type=\"address\" "
-"id=\"0\"/>"
+"<productname>bzip2</productname> <productnumber>&bzip2-version;</"
+"productnumber> <placeholder type=\"address\" id=\"0\"/>"
 msgstr ""
 
 #. type: Content of: <sect1><title>
@@ -43,10 +42,9 @@ msgstr ""
 #. type: Content of: <sect1><sect2><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/bzip2.xml:26
 msgid ""
-"The Bzip2 package contains programs for compressing and decompressing "
-"files. Compressing text files with <command>bzip2</command> yields a much "
-"better compression percentage than with the traditional "
-"<command>gzip</command>."
+"The Bzip2 package contains programs for compressing and decompressing files. "
+"Compressing text files with <command>bzip2</command> yields a much better "
+"compression percentage than with the traditional <command>gzip</command>."
 msgstr ""
 
 #. type: Content of: <sect1><sect2><segmentedlist><segtitle>
@@ -87,15 +85,14 @@ msgstr ""
 
 #. type: Content of: <sect1><sect2><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/bzip2.xml:50
-msgid "The following command ensures installation of symbolic links are relative:"
+msgid ""
+"The following command ensures installation of symbolic links are relative:"
 msgstr ""
 
 #. type: Content of: <sect1><sect2><screen>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/bzip2.xml:52
 #, no-wrap
-msgid ""
-"<userinput remap=\"pre\">sed -i 's@\\(ln -s -f \\)$(PREFIX)/bin/@\\1@' "
-"Makefile</userinput>"
+msgid "<userinput remap=\"pre\">sed -i 's@\\(ln -s -f \\)$(PREFIX)/bin/@\\1@' Makefile</userinput>"
 msgstr ""
 
 #. type: Content of: <sect1><sect2><para>
@@ -106,9 +103,7 @@ msgstr ""
 #. type: Content of: <sect1><sect2><screen>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/bzip2.xml:56
 #, no-wrap
-msgid ""
-"<userinput remap=\"pre\">sed -i \"s@(PREFIX)/man@(PREFIX)/share/man@g\" "
-"Makefile</userinput>"
+msgid "<userinput remap=\"pre\">sed -i \"s@(PREFIX)/man@(PREFIX)/share/man@g\" Makefile</userinput>"
 msgstr ""
 
 #. type: Content of: <sect1><sect2><para>
@@ -137,11 +132,10 @@ msgstr ""
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/bzip2.xml:69
 msgid ""
-"This will cause Bzip2 to be built using a different "
-"<filename>Makefile</filename> file, in this case the "
-"<filename>Makefile-libbz2_so</filename> file, which creates a dynamic "
-"<filename class=\"libraryfile\">libbz2.so</filename> library and links the "
-"Bzip2 utilities against it."
+"This will cause Bzip2 to be built using a different <filename>Makefile</"
+"filename> file, in this case the <filename>Makefile-libbz2_so</filename> "
+"file, which creates a dynamic <filename class=\"libraryfile\">libbz2.so</"
+"filename> library and links the Bzip2 utilities against it."
 msgstr ""
 
 #. type: Content of: <sect1><sect2><para>
@@ -169,9 +163,9 @@ msgstr ""
 #. type: Content of: <sect1><sect2><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/bzip2.xml:87
 msgid ""
-"Install the shared <command>bzip2</command> binary into the <filename "
-"class=\"directory\">/bin</filename> directory, make some necessary symbolic "
-"links, and clean up:"
+"Install the shared <command>bzip2</command> binary into the <filename class="
+"\"directory\">/bin</filename> directory, make some necessary symbolic links, "
+"and clean up:"
 msgstr ""
 
 #. type: Content of: <sect1><sect2><screen>
@@ -180,7 +174,7 @@ msgstr ""
 msgid ""
 "<userinput remap=\"install\">cp -v bzip2-shared /bin/bzip2\n"
 "cp -av libbz2.so* /lib\n"
-"ln -sv ../../lib/libbz2.so.1.0 $LFS/usr/lib/libbz2.so\n"
+"ln -sv ../../lib/libbz2.so.1.0 /usr/lib/libbz2.so\n"
 "rm -v /usr/bin/{bunzip2,bzcat,bzip2}\n"
 "ln -sv bzip2 /bin/bunzip2\n"
 "ln -sv bzip2 /bin/bzcat</userinput>"
@@ -231,7 +225,8 @@ msgstr ""
 
 #. type: Content of: <sect1><sect2><variablelist>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/bzip2.xml:119
-msgid "<?dbfo list-presentation=\"list\"?> <?dbhtml list-presentation=\"table\"?>"
+msgid ""
+"<?dbfo list-presentation=\"list\"?> <?dbhtml list-presentation=\"table\"?>"
 msgstr ""
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
