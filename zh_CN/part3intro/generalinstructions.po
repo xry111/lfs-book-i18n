@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2020-06-18 09:37+0800\n"
+"POT-Creation-Date: 2020-06-19 20:54+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -35,10 +35,10 @@ msgid ""
 "not worry about these warnings, as the patch was still successfully applied."
 msgstr ""
 "某些软件包在编译前需要打补丁，然而补丁只在绕过特定问题时才需要。补丁常常在本"
-"章和下一章都要使用，然而有时只在其中一章使用。因此，如果发现本书给出的步骤"
-"中没有使用某个下载好的补丁，这是正常的，不必担心。在应用补丁时可能会出现"
-"关于 <emphasis>offset</emphasis> 或者 <emphasis>fuzz</emphasis> 的警告信息。"
-"不用担心这些警告，补丁还是会成功应用到源码上的。"
+"章和下一章都要使用，然而有时只在其中一章使用。因此，如果发现本书给出的步骤中"
+"没有使用某个下载好的补丁，这是正常的，不必担心。在应用补丁时可能会出现关于 "
+"<emphasis>offset</emphasis> 或者 <emphasis>fuzz</emphasis> 的警告信息。不用担"
+"心这些警告，补丁还是会成功应用到源码上的。"
 
 #. type: Content of: <sect1><itemizedlist><listitem><para>
 #: /home/xry111/svn-repos/LFS-BOOK/part3intro/generalinstructions.xml:31
@@ -51,8 +51,8 @@ msgid ""
 "prompt the warning."
 msgstr ""
 "在编译大多数软件包时，屏幕上都会出现一些警告。这是正常的，可以放心地忽略。这"
-"些警告就像它们描述的那样，是关于一些过时的，但并不是错误的 C 或 C++ 语法。C 标"
-"准经常改变，一些软件包仍然在使用旧的标准。这并不是一个严重的问题，但确实会"
+"些警告就像它们描述的那样，是关于一些过时的，但并不是错误的 C 或 C++ 语法。C "
+"标准经常改变，一些软件包仍然在使用旧的标准。这并不是一个严重的问题，但确实会"
 "触发警告。"
 
 #. type: Content of: <sect1><itemizedlist><listitem><para>
@@ -89,8 +89,8 @@ msgid ""
 "The build instructions assume that the <xref linkend='ch-partitioning-"
 "hostreqs'/>, including symbolic links, have been set properly:"
 msgstr ""
-"本书中的命令假设<xref linkend='ch-partitioning-hostreqs'/>中的所有内容，包"
-"括符号链接，都被正确设置："
+"本书中的命令假设<xref linkend='ch-partitioning-hostreqs'/>中的所有内容，包括"
+"符号链接，都被正确设置："
 
 #. type: Content of: <sect1><itemizedlist><listitem><important><itemizedlist><listitem><para>
 #: /home/xry111/svn-repos/LFS-BOOK/part3intro/generalinstructions.xml:62
@@ -152,28 +152,31 @@ msgstr "对于每个软件包："
 #: /home/xry111/svn-repos/LFS-BOOK/part3intro/generalinstructions.xml:96
 msgid ""
 "Using the <command>tar</command> program, extract the package to be built.  "
-"In Chapters 5 and 6, ensure you are the <emphasis>lfs</emphasis> user when "
+"In <xref linkend=\"chapter-cross-tools\"/> and <xref linkend=\"chapter-"
+"temporary-tools\"/>, ensure you are the <emphasis>lfs</emphasis> user when "
 "extracting the package."
 msgstr ""
-"使用 <command>tar</command> 程序，解压需要构建的软件包。在第 5 章和第 6 章中解压软件"
-"包时，确认您以用户 <emphasis>lfs</emphasis> 的身份登录。"
+"使用 <command>tar</command> 程序，解压需要构建的软件包。在"
+"<xref linkend=\"chapter-cross-tools\"/>和"
+"<xref linkend=\"chapter-temporary-tools\"/>中"
+"解压软件包时，确认您以用户 <emphasis>lfs</emphasis> 的身份登录。"
 
 #. type: Content of: <sect1><itemizedlist><listitem><important><orderedlist><listitem><orderedlist><listitem><para>
-#: /home/xry111/svn-repos/LFS-BOOK/part3intro/generalinstructions.xml:101
+#: /home/xry111/svn-repos/LFS-BOOK/part3intro/generalinstructions.xml:102
 msgid "Change to the directory created when the package was extracted."
 msgstr "切换到解压源码包时产生的目录。"
 
 #. type: Content of: <sect1><itemizedlist><listitem><important><orderedlist><listitem><orderedlist><listitem><para>
-#: /home/xry111/svn-repos/LFS-BOOK/part3intro/generalinstructions.xml:105
+#: /home/xry111/svn-repos/LFS-BOOK/part3intro/generalinstructions.xml:106
 msgid "Follow the book's instructions for building the package."
 msgstr "根据书中的指示构建软件包。"
 
 #. type: Content of: <sect1><itemizedlist><listitem><important><orderedlist><listitem><orderedlist><listitem><para>
-#: /home/xry111/svn-repos/LFS-BOOK/part3intro/generalinstructions.xml:108
+#: /home/xry111/svn-repos/LFS-BOOK/part3intro/generalinstructions.xml:109
 msgid "Change back to the sources directory."
 msgstr "切换回包含所有源码包的目录。"
 
 #. type: Content of: <sect1><itemizedlist><listitem><important><orderedlist><listitem><orderedlist><listitem><para>
-#: /home/xry111/svn-repos/LFS-BOOK/part3intro/generalinstructions.xml:111
+#: /home/xry111/svn-repos/LFS-BOOK/part3intro/generalinstructions.xml:112
 msgid "Delete the extracted source directory unless instructed otherwise."
 msgstr "除非另有说明，删除解压出来的目录。"
