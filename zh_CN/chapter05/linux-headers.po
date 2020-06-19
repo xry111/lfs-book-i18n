@@ -1,9 +1,3 @@
-# SOME DESCRIPTIVE TITLE
-# Copyright (C) YEAR Free Software Foundation, Inc.
-# This file is distributed under the same license as the PACKAGE package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
-#
-#, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
@@ -11,39 +5,41 @@ msgstr ""
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
-"Language: \n"
+"Language: zh_CN\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Translate Toolkit 2.2.5\n"
 
 #. type: Content of: <sect1><sect1info><address>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter05/linux-headers.xml:14
 #, no-wrap
 msgid "&linux-url;"
-msgstr ""
+msgstr "&linux-url;"
 
 #. type: Content of: <sect1><sect1info>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter05/linux-headers.xml:12
 msgid ""
-"<productname>linux-headers</productname> "
-"<productnumber>&linux-version;</productnumber> <placeholder type=\"address\" "
-"id=\"0\"/>"
+"<productname>linux-headers</productname> <productnumber>&linux-version;</"
+"productnumber> <placeholder type=\"address\" id=\"0\"/>"
 msgstr ""
+"<productname>linux-headers</productname> <productnumber>&linux-version;</"
+"productnumber> <placeholder type=\"address\" id=\"0\"/>"
 
 #. type: Content of: <sect1><title>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter05/linux-headers.xml:17
 msgid "Linux-&linux-version; API Headers"
-msgstr ""
+msgstr "Linux-&linux-version; API 头文件"
 
 #. type: Content of: <sect1><indexterm><primary>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter05/linux-headers.xml:20
 msgid "Linux"
-msgstr ""
+msgstr "Linux"
 
 #. type: Content of: <sect1><indexterm><secondary>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter05/linux-headers.xml:21
 msgid "tools, API headers"
-msgstr ""
+msgstr "tools, API headers"
 
 #. type: Content of: <sect1><sect2><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter05/linux-headers.xml:27
@@ -51,31 +47,33 @@ msgid ""
 "The Linux API Headers (in linux-&linux-version;.tar.xz) expose the kernel's "
 "API for use by Glibc."
 msgstr ""
+"Linux API 头文件 (在 linux-&linux-version;.tar.xz 中) 导出内核 API 供 "
+"Glibc 使用。"
 
 #. type: Content of: <sect1><sect2><segmentedlist><segtitle>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter05/linux-headers.xml:31
 msgid "&buildtime;"
-msgstr ""
+msgstr "&buildtime;"
 
 #. type: Content of: <sect1><sect2><segmentedlist><segtitle>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter05/linux-headers.xml:32
 msgid "&diskspace;"
-msgstr ""
+msgstr "&diskspace;"
 
 #. type: Content of: <sect1><sect2><segmentedlist><seglistitem><seg>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter05/linux-headers.xml:35
 msgid "&linux-headers-tmp-sbu;"
-msgstr ""
+msgstr "&linux-headers-tmp-sbu;"
 
 #. type: Content of: <sect1><sect2><segmentedlist><seglistitem><seg>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter05/linux-headers.xml:36
 msgid "&linux-headers-tmp-du;"
-msgstr ""
+msgstr "&linux-headers-tmp-du;"
 
 #. type: Content of: <sect1><sect2><title>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter05/linux-headers.xml:43
 msgid "Installation of Linux API Headers"
-msgstr ""
+msgstr "安装 Linux API 头文件"
 
 #. type: Content of: <sect1><sect2><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter05/linux-headers.xml:45
@@ -85,17 +83,19 @@ msgid ""
 "sanitizing various C header files that are shipped in the Linux kernel "
 "source tarball."
 msgstr ""
+"Linux 内核需要导出一个应用程序编程接口 (API) 供系统的 C 运行库 (例如 LFS 中"
+"的 Glibc) 使用。这通过净化内核源码包中提供的若干 C 头文件完成。"
 
 #. type: Content of: <sect1><sect2><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter05/linux-headers.xml:50
 msgid "Make sure there are no stale files embedded in the package:"
-msgstr ""
+msgstr "确保软件包中没有遗留陈旧的文件："
 
 #. type: Content of: <sect1><sect2><screen>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter05/linux-headers.xml:52
 #, no-wrap
 msgid "<userinput remap=\"pre\">make mrproper</userinput>"
-msgstr ""
+msgstr "<userinput remap=\"pre\">make mrproper</userinput>"
 
 #. type: Content of: <sect1><sect2><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter05/linux-headers.xml:54
@@ -103,9 +103,13 @@ msgid ""
 "Now extract the user-visible kernel headers from the source.  The "
 "recommended make target <quote>headers_install</quote> cannot be used, "
 "because it requires <application>rsync</application>, which may not be "
-"available. The headers are first placed in <filename "
-"class=\"directory\">./usr</filename>, then copied to the needed location."
+"available. The headers are first placed in <filename class=\"directory\">./"
+"usr</filename>, then copied to the needed location."
 msgstr ""
+"下面从源代码中提取用户可见的头文件。我们不能使用推荐的 make 目标"
+"<quote>headers_install</quote>，因为它需要 <application>rsync</application>，"
+"这个程序在宿主系统中未必可用。头文件会"
+"先被放置在 <filename class=\"directory\">./usr</filename> 目录中，之后再将它们复制到最终的位置。"
 
 #. type: Content of: <sect1><sect2><screen>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter05/linux-headers.xml:61
@@ -114,214 +118,232 @@ msgid ""
 "<userinput remap=\"make\">make headers\n"
 "find usr/include -name '.*' -delete\n"
 "rm usr/include/Makefile\n"
-"</userinput><userinput remap=\"install\">cp -rv usr/include "
-"$LFS/usr</userinput>"
+"</userinput><userinput remap=\"install\">cp -rv usr/include $LFS/usr</userinput>"
 msgstr ""
+"<userinput remap=\"make\">make headers\n"
+"find usr/include -name '.*' -delete\n"
+"rm usr/include/Makefile\n"
+"</userinput><userinput remap=\"install\">cp -rv usr/include $LFS/usr</userinput>"
 
 #. type: Content of: <sect1><sect2><title>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter05/linux-headers.xml:69
 msgid "Contents of Linux API Headers"
-msgstr ""
+msgstr "Linux API 头文件的内容"
 
 #. type: Content of: <sect1><sect2><segmentedlist><segtitle>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter05/linux-headers.xml:72
 msgid "Installed headers"
-msgstr ""
+msgstr "安装的头文件"
 
 #. type: Content of: <sect1><sect2><segmentedlist><segtitle>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter05/linux-headers.xml:73
 msgid "Installed directories"
-msgstr ""
+msgstr "安装的目录"
 
 #. type: Content of: <sect1><sect2><segmentedlist><seglistitem><seg>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter05/linux-headers.xml:76
 msgid ""
-"/usr/include/asm/*.h, /usr/include/asm-generic/*.h, /usr/include/drm/*.h, "
-"/usr/include/linux/*.h, /usr/include/misc/*.h, /usr/include/mtd/*.h, "
-"/usr/include/rdma/*.h, /usr/include/scsi/*.h, /usr/include/sound/*.h, "
-"/usr/include/video/*.h, and /usr/include/xen/*.h"
+"/usr/include/asm/*.h, /usr/include/asm-generic/*.h, /usr/include/drm/*.h, /"
+"usr/include/linux/*.h, /usr/include/misc/*.h, /usr/include/mtd/*.h, /usr/"
+"include/rdma/*.h, /usr/include/scsi/*.h, /usr/include/sound/*.h, /usr/"
+"include/video/*.h, and /usr/include/xen/*.h"
 msgstr ""
+"/usr/include/asm/*.h, /usr/include/asm-generic/*.h, /usr/include/drm/*.h, /"
+"usr/include/linux/*.h, /usr/include/misc/*.h, /usr/include/mtd/*.h, /usr/"
+"include/rdma/*.h, /usr/include/scsi/*.h, /usr/include/sound/*.h, /usr/"
+"include/video/*.h, 以及 /usr/include/xen/*.h"
 
 #. type: Content of: <sect1><sect2><segmentedlist><seglistitem><seg>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter05/linux-headers.xml:81
 msgid ""
-"/usr/include/asm, /usr/include/asm-generic, /usr/include/drm, "
-"/usr/include/linux, /usr/include/misc, /usr/include/mtd, /usr/include/rdma, "
-"/usr/include/scsi, /usr/include/sound, /usr/include/video, and "
-"/usr/include/xen"
+"/usr/include/asm, /usr/include/asm-generic, /usr/include/drm, /usr/include/"
+"linux, /usr/include/misc, /usr/include/mtd, /usr/include/rdma, /usr/include/"
+"scsi, /usr/include/sound, /usr/include/video, and /usr/include/xen"
 msgstr ""
+"/usr/include/asm, /usr/include/asm-generic, /usr/include/drm, /usr/include/"
+"linux, /usr/include/misc, /usr/include/mtd, /usr/include/rdma, /usr/include/"
+"scsi, /usr/include/sound, /usr/include/video, 以及 /usr/include/xen"
 
 #. type: Content of: <sect1><sect2><variablelist><bridgehead>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter05/linux-headers.xml:89
 msgid "Short Descriptions"
-msgstr ""
+msgstr "简要描述"
 
 #. type: Content of: <sect1><sect2><variablelist>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter05/linux-headers.xml:90
-msgid "<?dbfo list-presentation=\"list\"?> <?dbhtml list-presentation=\"table\"?>"
+msgid ""
+"<?dbfo list-presentation=\"list\"?> <?dbhtml list-presentation=\"table\"?>"
 msgstr ""
+"<?dbfo list-presentation=\"list\"?> <?dbhtml list-presentation=\"table\"?>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter05/linux-headers.xml:94
 msgid "<filename class=\"headerfile\">/usr/include/asm/*.h</filename>"
-msgstr ""
+msgstr "<filename class=\"headerfile\">/usr/include/asm/*.h</filename>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter05/linux-headers.xml:96
 msgid "The Linux API ASM Headers"
-msgstr ""
+msgstr "Linux API 汇编头文件"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter05/linux-headers.xml:98
 msgid "/usr/include/asm/*.h"
-msgstr ""
+msgstr "/usr/include/asm/*.h"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter05/linux-headers.xml:104
 msgid "<filename class=\"headerfile\">/usr/include/asm-generic/*.h</filename>"
-msgstr ""
+msgstr "<filename class=\"headerfile\">/usr/include/asm-generic/*.h</filename>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter05/linux-headers.xml:106
 msgid "The Linux API ASM Generic Headers"
-msgstr ""
+msgstr "Linux API 通用汇编头文件"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter05/linux-headers.xml:108
 msgid "/usr/include/asm-generic/*.h"
-msgstr ""
+msgstr "/usr/include/asm-generic/*.h"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter05/linux-headers.xml:114
 msgid "<filename class=\"headerfile\">/usr/include/drm/*.h</filename>"
-msgstr ""
+msgstr "<filename class=\"headerfile\">/usr/include/drm/*.h</filename>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter05/linux-headers.xml:116
 msgid "The Linux API DRM Headers"
-msgstr ""
+msgstr "Linux API DRM 头文件"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter05/linux-headers.xml:118
 msgid "/usr/include/drm/*.h"
-msgstr ""
+msgstr "/usr/include/drm/*.h"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter05/linux-headers.xml:124
 msgid "<filename class=\"headerfile\">/usr/include/linux/*.h</filename>"
-msgstr ""
+msgstr "<filename class=\"headerfile\">/usr/include/linux/*.h</filename>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter05/linux-headers.xml:126
 msgid "The Linux API Linux Headers"
-msgstr ""
+msgstr "Linux API Linux 头文件"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter05/linux-headers.xml:128
 msgid "/usr/include/linux/*.h"
-msgstr ""
+msgstr "/usr/include/linux/*.h"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter05/linux-headers.xml:134
 msgid "<filename class=\"headerfile\">/usr/include/misc/*.h</filename>"
-msgstr ""
+msgstr "<filename class=\"headerfile\">/usr/include/misc/*.h</filename>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter05/linux-headers.xml:136
 msgid "The Linux API Miscellaneous Headers"
-msgstr ""
+msgstr "Linux API 杂项头文件"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter05/linux-headers.xml:138
 msgid "/usr/include/misc/*.h"
-msgstr ""
+msgstr "/usr/include/misc/*.h"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter05/linux-headers.xml:144
 msgid "<filename class=\"headerfile\">/usr/include/mtd/*.h</filename>"
-msgstr ""
+msgstr "<filename class=\"headerfile\">/usr/include/mtd/*.h</filename>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter05/linux-headers.xml:146
 msgid "The Linux API MTD Headers"
-msgstr ""
+msgstr "Linux API MTD 头文件"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter05/linux-headers.xml:148
 msgid "/usr/include/mtd/*.h"
-msgstr ""
+msgstr "/usr/include/mtd/*.h"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter05/linux-headers.xml:154
 msgid "<filename class=\"headerfile\">/usr/include/rdma/*.h</filename>"
-msgstr ""
+msgstr "<filename class=\"headerfile\">/usr/include/rdma/*.h</filename>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter05/linux-headers.xml:156
 msgid "The Linux API RDMA Headers"
-msgstr ""
+msgstr "Linux API RDMA 头文件"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter05/linux-headers.xml:158
 msgid "/usr/include/rdma/*.h"
-msgstr ""
+msgstr "/usr/include/rdma/*.h"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter05/linux-headers.xml:164
 msgid "<filename class=\"headerfile\">/usr/include/scsi/*.h</filename>"
-msgstr ""
+msgstr "<filename class=\"headerfile\">/usr/include/scsi/*.h</filename>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter05/linux-headers.xml:166
 msgid "The Linux API SCSI Headers"
-msgstr ""
+msgstr "Linux API SCSI 头文件"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter05/linux-headers.xml:168
 msgid "/usr/include/scsi/*.h"
-msgstr ""
+msgstr "/usr/include/scsi/*.h"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter05/linux-headers.xml:174
 msgid "<filename class=\"headerfile\">/usr/include/sound/*.h</filename>"
-msgstr ""
+msgstr "<filename class=\"headerfile\">/usr/include/sound/*.h</filename>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter05/linux-headers.xml:176
 msgid "The Linux API Sound Headers"
-msgstr ""
+msgstr "Linux API 音频头文件"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter05/linux-headers.xml:178
 msgid "/usr/include/sound/*.h"
-msgstr ""
+msgstr "/usr/include/sound/*.h"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter05/linux-headers.xml:184
 msgid "<filename class=\"headerfile\">/usr/include/video/*.h</filename>"
-msgstr ""
+msgstr "<filename class=\"headerfile\">/usr/include/video/*.h</filename>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter05/linux-headers.xml:186
 msgid "The Linux API Video Headers"
-msgstr ""
+msgstr "Linux API 视频头文件"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter05/linux-headers.xml:188
 msgid "/usr/include/video/*.h"
-msgstr ""
+msgstr "/usr/include/video/*.h"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter05/linux-headers.xml:194
 msgid "<filename class=\"headerfile\">/usr/include/xen/*.h</filename>"
-msgstr ""
+msgstr "<filename class=\"headerfile\">/usr/include/xen/*.h</filename>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter05/linux-headers.xml:196
 msgid "The Linux API Xen Headers"
-msgstr ""
+msgstr "Linux API Xen 头文件"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter05/linux-headers.xml:198
 msgid "/usr/include/xen/*.h"
+msgstr "/usr/include/xen/*.h"
+
+msgid ""
+"Details on this package are located in <xref linkend=\"contents-linux-headers"
+"\" role=\".\"/>"
 msgstr ""
+"这个软件包的详细信息可以在 <xref linkend=\"contents-linux-headers\"/> 中找"
+"到。"
