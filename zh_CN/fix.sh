@@ -44,7 +44,7 @@ sed -e '/xreflabel/s|Appendix|附录|' -i \
 	appendices/scripts.xml              \
 	appendices/udev-rules.xml
 
-sed -e 's/Approximate build time/估计编译时间/'               \
+sed -e 's/Approximate build time/估计构建时间/'               \
 	-e 's/Required disk space/需要硬盘空间/'                  \
 	-e 's/Installation depends on/安装依赖于/'                \
 	-e 's/Test suite depends on/测试依赖于/'                  \
