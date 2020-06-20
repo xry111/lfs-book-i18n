@@ -96,7 +96,7 @@ msgid ""
 "do not recommend it."
 msgstr ""
 "如果需要升级 Glibc (例如从 Glibc-2.31 升级到 Glibc-2.32)，最安全的方法是重新"
-"构建 LFS 。尽管您<emphasis>或许</emphasis>能按依赖顺序重新构建所有软件"
+"构建 LFS。尽管您<emphasis>或许</emphasis>能按依赖顺序重新构建所有软件"
 "包，但我们不推荐这样做。"
 
 #. type: Content of: <sect1><sect2><itemizedlist><listitem><para>
@@ -262,7 +262,7 @@ msgstr ""
 "libfoo 库。如果要编译一个依赖于 libfoo 的软件包，您可能发现它链接到了 "
 "<filename class='libraryfile'>/usr/pkg/libfoo/1.1/lib/libfoo.so.1</filename> "
 "而不是您期望的 <filename class='libraryfile'>/usr/lib/libfoo.so.1</"
-"filename> 。正确的做法是使用 <envar>DESTDIR</envar> 策略伪装软件包的安装过"
+"filename>。正确的做法是使用 <envar>DESTDIR</envar> 策略伪装软件包的安装过"
 "程。就像下面这样做："
 
 #. type: Content of: <sect1><sect2><sect3><screen>
