@@ -55,6 +55,12 @@ sed -e 's/Approximate build time/估计构建时间/'               \
 	-e 's/Optional dependencies/可选依赖项/'                  \
 	-i  general.ent
 
+sed -e 's/less than/不到/' \
+	-e 's/typically about/一般约/' \
+	-e 's/about \(.*\) with tests/计入测试为约 \1/' \
+	-e '/encoding=/s/ISO-8859-1/UTF-8/' \
+	-i  packages.ent
+
 reldate=$(grep 'releasedate' general.ent |
 	      sed 's/.*"\(.*\)".*/\1/;s/st\|nd\|rd\|th//');
 if reldate_cn=$(LANG=zh_CN.UTF-8 \
