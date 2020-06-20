@@ -59,15 +59,13 @@ msgstr "&diskspace;"
 
 #. type: Content of: <sect1><sect2><segmentedlist><seglistitem><seg>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/glibc.xml:36
-#, fuzzy
 msgid "&glibc-fin-sbu;"
-msgstr "&glibc-ch6-sbu;"
+msgstr "&glibc-fin-sbu;"
 
 #. type: Content of: <sect1><sect2><segmentedlist><seglistitem><seg>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/glibc.xml:37
-#, fuzzy
 msgid "&glibc-fin-du;"
-msgstr "&glibc-ch6-du;"
+msgstr "&glibc-fin-du;"
 
 #. type: Content of: <sect1><sect2><title>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/glibc.xml:44
@@ -116,7 +114,7 @@ msgstr "准备编译 Glibc："
 
 #. type: Content of: <sect1><sect2><screen>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/glibc.xml:61
-#, fuzzy, no-wrap
+#, no-wrap
 msgid ""
 "<userinput remap=\"configure\">../configure --prefix=/usr                            \\\n"
 "             --disable-werror                         \\\n"
@@ -125,12 +123,11 @@ msgid ""
 "             --with-headers=/usr/include              \\\n"
 "             libc_cv_slibdir=/lib</userinput>"
 msgstr ""
-"<userinput remap=\"configure\">CC=\"gcc -ffile-prefix-map=/tools=/usr\" \\\n"
-"../configure --prefix=/usr                          \\\n"
-"             --disable-werror                       \\\n"
-"             --enable-kernel=&min-kernel;                    \\\n"
-"             --enable-stack-protector=strong        \\\n"
-"             --with-headers=/usr/include            \\\n"
+"<userinput remap=\"configure\">../configure --prefix=/usr                            \\\n"
+"             --disable-werror                         \\\n"
+"             --enable-kernel=&min-kernel;                      \\\n"
+"             --enable-stack-protector=strong          \\\n"
+"             --with-headers=/usr/include              \\\n"
 "             libc_cv_slibdir=/lib</userinput>"
 
 #. type: Content of: <sect1><sect2><variablelist><title>
@@ -171,12 +168,10 @@ msgstr "<parameter>--with-headers=/usr/include</parameter>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/glibc.xml:104
-#, fuzzy
 msgid ""
 "This option tells the build system where to find the kernel API headers."
 msgstr ""
-"该选项指定构建系统搜索内核 API 头文件的位置。默认情况下，会在<filename class="
-"\"directory\">/tools/include</filename> 中进行查找。"
+"该选项指定构建系统搜索内核 API 头文件的位置。"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/glibc.xml:110
@@ -316,7 +311,7 @@ msgid ""
 "Fix the generated Makefile to skip an unneeded sanity check that fails in "
 "the LFS partial environment:"
 msgstr ""
-"修正生成的 Makefile ，跳过一个在 LFS 的不完整环境中会失败的完整性检查："
+"修正生成的 Makefile，跳过一个在 LFS 的不完整环境中会失败的完整性检查："
 
 #. type: Content of: <sect1><sect2><screen>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/glibc.xml:196
@@ -374,7 +369,7 @@ msgid ""
 "language.  None of the locales are required, but if some of them are "
 "missing, the test suites of future packages would skip important testcases."
 msgstr ""
-"下面，安装一些 locale ，它们可以使得系统用不同语言响应用户请求。这些 locale "
+"下面，安装一些 locale，它们可以使得系统用不同语言响应用户请求。这些 locale "
 "都不是必须的，但是如果缺少了它们中的某些，在将来运行软件包的测试套件时，可能"
 "跳过重要的测试。"
 
@@ -390,7 +385,7 @@ msgid ""
 "install the minimum set of locales necessary for the optimal coverage of "
 "tests:"
 msgstr ""
-"可以用 <command>localedef</command> 程序安装单独的 locale 。例如，下面的第一"
+"可以用 <command>localedef</command> 程序安装单独的 locale。例如，下面的第一"
 "个 <command>localedef</command> 命令将 <filename>/usr/share/i18n/locales/"
 "cs_CZ</filename> 中的字符集无关 locale 定义和 <filename>/usr/share/i18n/"
 "charmaps/UTF-8.gz</filename> 中的字符映射定义组合起来，并附加到 <filename>/"
@@ -462,7 +457,7 @@ msgstr ""
 msgid ""
 "In addition, install the locale for your own country, language and character "
 "set."
-msgstr "另外，安装适合您自己国家、语言和字符集的 locale 。"
+msgstr "另外，安装适合您自己国家、语言和字符集的 locale。"
 
 #. type: Content of: <sect1><sect2><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/glibc.xml:261
@@ -473,7 +468,7 @@ msgid ""
 "command:"
 msgstr ""
 "或者，也可以一次安装 <filename>glibc-&glibc-version;/localedata/SUPPORTED</"
-"filename> 中列出的所有 locale （包括上面列出的所有 locale，以及其他很多)。执"
+"filename> 中列出的所有 locale (包括上面列出的所有 locale，以及其他很多)。执"
 "行下面这个需要很长时间的命令："
 
 #. type: Content of: <sect1><sect2><screen>
@@ -490,7 +485,7 @@ msgid ""
 "SUPPORTED</filename> file in the unlikely case you need them."
 msgstr ""
 "如果需要，再使用 <command>localedef</command> 命令创建和安装 <filename>glibc-"
-"&glibc-version;/localedata/SUPPORTED</filename> 中没有列出的 locale ，当然您"
+"&glibc-version;/localedata/SUPPORTED</filename> 中没有列出的 locale，当然您"
 "不太可能需要它们。"
 
 #. type: Content of: <sect1><sect2><note><para>
@@ -639,7 +634,6 @@ msgstr "<parameter>zic -L /dev/null ...</parameter>"
 
 #. type: Content of: <sect1><sect2><sect3><variablelist><varlistentry><listitem><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/glibc.xml:348
-#, fuzzy
 msgid ""
 "This creates posix time zones without any leap seconds.  It is conventional "
 "to put these in both <filename class=\"directory\">zoneinfo</filename> and "
@@ -653,8 +647,8 @@ msgid ""
 msgstr ""
 "该命令创建没有闰秒的 POSIX 时区。一般的惯例是将它们安装在 <filename class="
 "\"directory\">zoneinfo</filename> 和 <filename class=\"directory\">zoneinfo/"
-"posix</filename> 两个目录中。<filename class=\"directory\">zoneinfo</"
-"filename> 是必须的，否则若干测试套件会报告错误。在嵌入式系统上，如果存储空间"
+"posix</filename> 两个目录中。必须将 POSIX 时区安装到 <filename class=\"directory\">zoneinfo</"
+"filename>，否则若干测试套件会报告错误。在嵌入式系统上，如果存储空间"
 "十分紧张，而且您永远不会更新时区信息，您可以不使用 <filename class="
 "\"directory\">posix</filename> 目录，以节约 1.9 MB，但个别程序或测试套件可能"
 "会失败。"
@@ -735,8 +729,8 @@ msgid ""
 "Replace <replaceable>&lt;xxx&gt;</replaceable> with the name of the time "
 "zone selected (e.g., Canada/Eastern)."
 msgstr ""
-"将 <replaceable>&lt;xxx&gt;</replaceable> 替换成选定时区的名称 （例如 Canada/"
-"Eastern）。"
+"将 <replaceable>&lt;xxx&gt;</replaceable> 替换成选定时区的名称 (例如 Canada/"
+"Eastern)。"
 
 #. type: Content of: <sect1><sect2><sect3><title>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/glibc.xml:406
@@ -763,8 +757,8 @@ msgid ""
 "lib</filename> and <filename class=\"directory\">/opt/lib</filename>, so add "
 "those directories to the dynamic loader's search path."
 msgstr ""
-"默认情况下，动态加载器 （<filename class=\"libraryfile\">/lib/ld-linux.so.2</"
-"filename>） 在 <filename class=\"directory\">/lib</filename> 和 <filename "
+"默认情况下，动态加载器 (<filename class=\"libraryfile\">/lib/ld-linux.so.2</"
+"filename>) 在 <filename class=\"directory\">/lib</filename> 和 <filename "
 "class=\"directory\">/usr/lib</filename> 中搜索程序运行时需要的动态库。然而，"
 "如果在除了 <filename class=\"directory\">/lib</filename> 和 <filename class="
 "\"directory\">/usr/lib</filename> 以外的其他目录中有动态库，为了使动态加载器"
@@ -905,6 +899,7 @@ msgstr "简要描述"
 msgid ""
 "<?dbfo list-presentation=\"list\"?> <?dbhtml list-presentation=\"table\"?>"
 msgstr ""
+"<?dbfo list-presentation=\"list\"?> <?dbhtml list-presentation=\"table\"?>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/glibc.xml:490
@@ -1576,7 +1571,7 @@ msgstr "libutil"
 #~ "give false results and defeat the goal of achieving a clean build."
 #~ msgstr ""
 #~ "Glibc 构建系统是自给自足的，即使编译器 specs 文件和链接器仍然指向 "
-#~ "<filename class=\"directory\">/tools</filename>，也能完美地安装 Glibc 。"
+#~ "<filename class=\"directory\">/tools</filename>，也能完美地安装 Glibc。"
 #~ "在安装 Glibc 之前不能调整工具链，否则 Glibc 的 autoconf 测试会给出错误结"
 #~ "果，结果无法达成干净地构建 Glibc 这一目的。"
 
@@ -1585,7 +1580,7 @@ msgstr "libutil"
 #~ "compatibility symlink required for the dynamic loader to function "
 #~ "correctly:"
 #~ msgstr ""
-#~ "为了兼容 LSB 创建一个符号链接。另外，对于 x86_64 ，还要创建一个动态链接器"
+#~ "为了兼容 LSB 创建一个符号链接。另外，对于 x86_64，还要创建一个动态链接器"
 #~ "的兼容性符号链接，使它能够正常工作："
 
 #~ msgid ""

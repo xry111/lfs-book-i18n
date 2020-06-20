@@ -74,7 +74,8 @@ fi
 # Remove them.
 sed -e '/<screen.*><!--/,+1N;s/<!--.*-->\n//' -i \
 	chapter02/hostreqs.xml                       \
-	chapter06/ncurses.xml
+	chapter06/ncurses.xml                        \
+	chapter08/glibc.xml
 
 # Apply lfs-l10n.xml patch, if it's not applied
 grep "Simplified Chinese" stylesheets/lfs-xsl/lfs-l10n.xml ||
