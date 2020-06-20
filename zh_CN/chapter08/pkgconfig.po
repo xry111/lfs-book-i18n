@@ -1,9 +1,3 @@
-# SOME DESCRIPTIVE TITLE
-# Copyright (C) YEAR Free Software Foundation, Inc.
-# This file is distributed under the same license as the PACKAGE package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
-#
-#, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
@@ -11,72 +5,79 @@ msgstr ""
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
-"Language: \n"
+"Language: zh_CN\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Translate Toolkit 2.2.5\n"
 
 #. type: Content of: <sect1><sect1info><address>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/pkgconfig.xml:14
 #, no-wrap
 msgid "&pkgconfig-url;"
-msgstr ""
+msgstr "&pkgconfig-url;"
 
 #. type: Content of: <sect1><sect1info>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/pkgconfig.xml:12
 msgid ""
-"<productname>pkg-config</productname> "
-"<productnumber>&pkgconfig-version;</productnumber> <placeholder "
-"type=\"address\" id=\"0\"/>"
+"<productname>pkg-config</productname> <productnumber>&pkgconfig-version;</"
+"productnumber> <placeholder type=\"address\" id=\"0\"/>"
 msgstr ""
+"<productname>pkg-config</productname> <productnumber>&pkgconfig-version;</"
+"productnumber> <placeholder type=\"address\" id=\"0\"/>"
 
 #. type: Content of: <sect1><title>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/pkgconfig.xml:17
 msgid "Pkg-config-&pkgconfig-version;"
-msgstr ""
+msgstr "Pkg-config-&pkgconfig-version;"
 
 #. type: Content of: <sect1><indexterm><primary>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/pkgconfig.xml:20
 msgid "Pkgconfig"
-msgstr ""
+msgstr "Pkgconfig"
 
 #. type: Content of: <sect1><sect2><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/pkgconfig.xml:26
+#, fuzzy
 msgid ""
 "The pkg-config package contains a tool for passing the include path and/or "
 "library paths to build tools during the configure and make phases of package "
 "installations."
 msgstr ""
+"pkg-config 软件包提供一个在 configure 和 make 文件执行过程中向构建工具传递头"
+"文件和/或库文件路径的工具。"
 
 #. type: Content of: <sect1><sect2><segmentedlist><segtitle>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/pkgconfig.xml:31
 msgid "&buildtime;"
-msgstr ""
+msgstr "&buildtime;"
 
 #. type: Content of: <sect1><sect2><segmentedlist><segtitle>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/pkgconfig.xml:32
 msgid "&diskspace;"
-msgstr ""
+msgstr "&diskspace;"
 
 #. type: Content of: <sect1><sect2><segmentedlist><seglistitem><seg>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/pkgconfig.xml:35
+#, fuzzy
 msgid "&pkgconfig-fin-sbu;"
-msgstr ""
+msgstr "&pkgconfig-ch6-sbu;"
 
 #. type: Content of: <sect1><sect2><segmentedlist><seglistitem><seg>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/pkgconfig.xml:36
+#, fuzzy
 msgid "&pkgconfig-fin-du;"
-msgstr ""
+msgstr "&pkgconfig-ch6-du;"
 
 #. type: Content of: <sect1><sect2><title>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/pkgconfig.xml:43
 msgid "Installation of Pkg-config"
-msgstr ""
+msgstr "安装 Pkg-config"
 
 #. type: Content of: <sect1><sect2><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/pkgconfig.xml:45
 msgid "Prepare Pkg-config for compilation:"
-msgstr ""
+msgstr "准备编译 Pkg-config："
 
 #. type: Content of: <sect1><sect2><screen>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/pkgconfig.xml:47
@@ -85,19 +86,22 @@ msgid ""
 "<userinput remap=\"configure\">./configure --prefix=/usr              \\\n"
 "            --with-internal-glib       \\\n"
 "            --disable-host-tool        \\\n"
-"            "
-"--docdir=/usr/share/doc/pkg-config-&pkgconfig-version;</userinput>"
+"            --docdir=/usr/share/doc/pkg-config-&pkgconfig-version;</userinput>"
 msgstr ""
+"<userinput remap=\"configure\">./configure --prefix=/usr              \\\n"
+"            --with-internal-glib       \\\n"
+"            --disable-host-tool        \\\n"
+"            --docdir=/usr/share/doc/pkg-config-&pkgconfig-version;</userinput>"
 
 #. type: Content of: <sect1><sect2><variablelist><title>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/pkgconfig.xml:53
 msgid "The meaning of the new configure options:"
-msgstr ""
+msgstr "新的配置选项的含义："
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/pkgconfig.xml:56
 msgid "<parameter>--with-internal-glib</parameter>"
-msgstr ""
+msgstr "<parameter>--with-internal-glib</parameter>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/pkgconfig.xml:58
@@ -105,94 +109,96 @@ msgid ""
 "This will allow pkg-config to use its internal version of Glib because an "
 "external version is not available in LFS."
 msgstr ""
+"该选项允许 pkg-config 使用它内部的 Glib 版本，因为 LFS 不提供外部的 Glib。"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/pkgconfig.xml:64
 msgid "<parameter>--disable-host-tool</parameter>"
-msgstr ""
+msgstr "<parameter>--disable-host-tool</parameter>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/pkgconfig.xml:66
 msgid ""
-"This option disables the creation of an undesired hard link to the "
-"pkg-config program."
-msgstr ""
+"This option disables the creation of an undesired hard link to the pkg-"
+"config program."
+msgstr "该选项防止创建一个指向 pkg-config 程序的不需要的硬链接。"
 
 #. type: Content of: <sect1><sect2><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/pkgconfig.xml:73
 msgid "Compile the package:"
-msgstr ""
+msgstr "编译该软件包："
 
 #. type: Content of: <sect1><sect2><screen>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/pkgconfig.xml:75
 #, no-wrap
 msgid "<userinput remap=\"make\">make</userinput>"
-msgstr ""
+msgstr "<userinput remap=\"make\">make</userinput>"
 
 #. type: Content of: <sect1><sect2><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/pkgconfig.xml:77
 msgid "To test the results, issue:"
-msgstr ""
+msgstr "运行以下命令以测试编译结果："
 
 #. type: Content of: <sect1><sect2><screen>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/pkgconfig.xml:79
 #, no-wrap
 msgid "<userinput remap=\"test\">make check</userinput>"
-msgstr ""
+msgstr "<userinput remap=\"test\">make check</userinput>"
 
 #. type: Content of: <sect1><sect2><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/pkgconfig.xml:81
 msgid "Install the package:"
-msgstr ""
+msgstr "安装该软件包："
 
 #. type: Content of: <sect1><sect2><screen>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/pkgconfig.xml:83
 #, no-wrap
 msgid "<userinput remap=\"install\">make install</userinput>"
-msgstr ""
+msgstr "<userinput remap=\"install\">make install</userinput>"
 
 #. type: Content of: <sect1><sect2><title>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/pkgconfig.xml:88
 msgid "Contents of Pkg-config"
-msgstr ""
+msgstr "Pkg-config 的内容"
 
 #. type: Content of: <sect1><sect2><segmentedlist><segtitle>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/pkgconfig.xml:91
 msgid "Installed program"
-msgstr ""
+msgstr "安装的程序"
 
 #. type: Content of: <sect1><sect2><segmentedlist><segtitle>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/pkgconfig.xml:92
 msgid "Installed directory"
-msgstr ""
+msgstr "安装的目录"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/pkgconfig.xml:95
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/pkgconfig.xml:112
 msgid "pkg-config"
-msgstr ""
+msgstr "pkg-config"
 
 #. type: Content of: <sect1><sect2><segmentedlist><seglistitem><seg>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/pkgconfig.xml:96
 msgid "/usr/share/doc/pkg-config-&pkgconfig-version;"
-msgstr ""
+msgstr "/usr/share/doc/pkg-config-&pkgconfig-version;"
 
 #. type: Content of: <sect1><sect2><variablelist><bridgehead>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/pkgconfig.xml:101
 msgid "Short Descriptions"
-msgstr ""
+msgstr "简要描述"
 
 #. type: Content of: <sect1><sect2><variablelist>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/pkgconfig.xml:102
-msgid "<?dbfo list-presentation=\"list\"?> <?dbhtml list-presentation=\"table\"?>"
+msgid ""
+"<?dbfo list-presentation=\"list\"?> <?dbhtml list-presentation=\"table\"?>"
 msgstr ""
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/pkgconfig.xml:107
 msgid "<command>pkg-config </command>"
-msgstr ""
+msgstr "<command>pkg-config </command>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/pkgconfig.xml:109
 msgid "Returns meta information for the specified library or package"
-msgstr ""
+msgstr "返回某个库或软件包的元数据信息"

@@ -1,9 +1,3 @@
-# SOME DESCRIPTIVE TITLE
-# Copyright (C) YEAR Free Software Foundation, Inc.
-# This file is distributed under the same license as the PACKAGE package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
-#
-#, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
@@ -11,16 +5,17 @@ msgstr ""
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
-"Language: \n"
+"Language: zh_CN\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Translate Toolkit 2.2.5\n"
 
 #. type: Content of: <sect1><sect1info><address>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/xz.xml:14
 #, no-wrap
 msgid "&xz-url;"
-msgstr ""
+msgstr "&xz-url;"
 
 #. type: Content of: <sect1><sect1info>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/xz.xml:12
@@ -28,16 +23,18 @@ msgid ""
 "<productname>xz</productname> <productnumber>&xz-version;</productnumber> "
 "<placeholder type=\"address\" id=\"0\"/>"
 msgstr ""
+"<productname>xz</productname> <productnumber>&xz-version;</productnumber> "
+"<placeholder type=\"address\" id=\"0\"/>"
 
 #. type: Content of: <sect1><title>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/xz.xml:17
 msgid "Xz-&xz-version;"
-msgstr ""
+msgstr "Xz-&xz-version;"
 
 #. type: Content of: <sect1><indexterm><primary>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/xz.xml:20
 msgid "Xz"
-msgstr ""
+msgstr "Xz"
 
 #. type: Content of: <sect1><sect2><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/xz.xml:26
@@ -48,36 +45,41 @@ msgid ""
 "compression percentage than with the traditional <command>gzip</command> or "
 "<command>bzip2</command> commands."
 msgstr ""
+"Xz 软件包包含文件压缩和解压缩工具，它能够处理 lzma 和新的 xz 压缩文件格式。使"
+"用 <command>xz</command> 压缩文本文件，可以得到比传统的 <command>gzip</"
+"command> 或 <command>bzip2</command> 更好的压缩比。"
 
 #. type: Content of: <sect1><sect2><segmentedlist><segtitle>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/xz.xml:33
 msgid "&buildtime;"
-msgstr ""
+msgstr "&buildtime;"
 
 #. type: Content of: <sect1><sect2><segmentedlist><segtitle>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/xz.xml:34
 msgid "&diskspace;"
-msgstr ""
+msgstr "&diskspace;"
 
 #. type: Content of: <sect1><sect2><segmentedlist><seglistitem><seg>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/xz.xml:37
+#, fuzzy
 msgid "&xz-fin-sbu;"
-msgstr ""
+msgstr "&xz-ch6-sbu;"
 
 #. type: Content of: <sect1><sect2><segmentedlist><seglistitem><seg>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/xz.xml:38
+#, fuzzy
 msgid "&xz-fin-du;"
-msgstr ""
+msgstr "&xz-ch6-du;"
 
 #. type: Content of: <sect1><sect2><title>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/xz.xml:45
 msgid "Installation of Xz"
-msgstr ""
+msgstr "安装 Xz"
 
 #. type: Content of: <sect1><sect2><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/xz.xml:47
 msgid "Prepare Xz for compilation with:"
-msgstr ""
+msgstr "准备编译 Xz："
 
 #. type: Content of: <sect1><sect2><screen>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/xz.xml:49
@@ -87,35 +89,38 @@ msgid ""
 "            --disable-static \\\n"
 "            --docdir=/usr/share/doc/xz-&xz-version;</userinput>"
 msgstr ""
+"<userinput remap=\"configure\">./configure --prefix=/usr    \\\n"
+"            --disable-static \\\n"
+"            --docdir=/usr/share/doc/xz-&xz-version;</userinput>"
 
 #. type: Content of: <sect1><sect2><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/xz.xml:53
 msgid "Compile the package:"
-msgstr ""
+msgstr "编译该软件包："
 
 #. type: Content of: <sect1><sect2><screen>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/xz.xml:55
 #, no-wrap
 msgid "<userinput remap=\"make\">make</userinput>"
-msgstr ""
+msgstr "<userinput remap=\"make\">make</userinput>"
 
 #. type: Content of: <sect1><sect2><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/xz.xml:57
 msgid "To test the results, issue:"
-msgstr ""
+msgstr "运行以下命令以测试编译结果："
 
 #. type: Content of: <sect1><sect2><screen>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/xz.xml:59
 #, no-wrap
 msgid "<userinput remap=\"test\">make check</userinput>"
-msgstr ""
+msgstr "<userinput remap=\"test\">make check</userinput>"
 
 #. type: Content of: <sect1><sect2><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/xz.xml:61
 msgid ""
 "Install the package and make sure that all essential files are in the "
 "correct directory:"
-msgstr ""
+msgstr "安装该软件包，并保证所有重要文件都位于正确的目录中："
 
 #. type: Content of: <sect1><sect2><screen>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/xz.xml:64
@@ -124,29 +129,32 @@ msgid ""
 "<userinput remap=\"install\">make install\n"
 "mv -v   /usr/bin/{lzma,unlzma,lzcat,xz,unxz,xzcat} /bin\n"
 "mv -v /usr/lib/liblzma.so.* /lib\n"
-"ln -svf ../../lib/$(readlink /usr/lib/liblzma.so) "
-"/usr/lib/liblzma.so</userinput>"
+"ln -svf ../../lib/$(readlink /usr/lib/liblzma.so) /usr/lib/liblzma.so</userinput>"
 msgstr ""
+"<userinput remap=\"install\">make install\n"
+"mv -v   /usr/bin/{lzma,unlzma,lzcat,xz,unxz,xzcat} /bin\n"
+"mv -v /usr/lib/liblzma.so.* /lib\n"
+"ln -svf ../../lib/$(readlink /usr/lib/liblzma.so) /usr/lib/liblzma.so</userinput>"
 
 #. type: Content of: <sect1><sect2><title>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/xz.xml:72
 msgid "Contents of Xz"
-msgstr ""
+msgstr "Xz 的内容"
 
 #. type: Content of: <sect1><sect2><segmentedlist><segtitle>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/xz.xml:75
 msgid "Installed programs"
-msgstr ""
+msgstr "安装的程序"
 
 #. type: Content of: <sect1><sect2><segmentedlist><segtitle>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/xz.xml:76
 msgid "Installed libraries"
-msgstr ""
+msgstr "安装的库"
 
 #. type: Content of: <sect1><sect2><segmentedlist><segtitle>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/xz.xml:77
 msgid "Installed directories"
-msgstr ""
+msgstr "安装的目录"
 
 #. type: Content of: <sect1><sect2><segmentedlist><seglistitem><seg>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/xz.xml:81
@@ -158,381 +166,388 @@ msgid ""
 "xzcmp (link to xzdiff), xzdec, xzdiff, xzegrep (link to xzgrep), xzfgrep "
 "(link to xzgrep), xzgrep, xzless, and xzmore"
 msgstr ""
+"lzcat (到 xz 的链接), lzcmp (到 xzdiff 的链接), lzdiff (到 xzdiff 的链接), "
+"lzegrep (到 xzgrep 的链接), lzfgrep (到 xzgrep 的链接), lzgrep (到 xzgrep 的"
+"链接), lzless (到 xzless 的链接), lzma (到 xz 的链接), lzmadec, lzmainfo, "
+"lzmore (到 xzmore 的链接), unlzma (到 xz 的链接), unxz (到 xz 的链接), xz, "
+"xzcat (到 xz 的链接), xzcmp (到 xzdiff 的链接), xzdec, xzdiff, xzegrep (到 "
+"xzgrep 的链接), xzfgrep (到 xzgrep 的链接), xzgrep, xzless, 以及 xzmore"
 
 #. type: Content of: <sect1><sect2><segmentedlist><seglistitem><seg>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/xz.xml:105
 msgid "liblzma.so"
-msgstr ""
+msgstr "liblzma.so"
 
 #. type: Content of: <sect1><sect2><segmentedlist><seglistitem><seg>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/xz.xml:108
 msgid "/usr/include/lzma and /usr/share/doc/xz-&xz-version;"
-msgstr ""
+msgstr "/usr/include/lzma 和 /usr/share/doc/xz-&xz-version;"
 
 #. type: Content of: <sect1><sect2><variablelist><bridgehead>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/xz.xml:115
 msgid "Short Descriptions"
-msgstr ""
+msgstr "简要描述"
 
 #. type: Content of: <sect1><sect2><variablelist>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/xz.xml:116
-msgid "<?dbfo list-presentation=\"list\"?> <?dbhtml list-presentation=\"table\"?>"
+msgid ""
+"<?dbfo list-presentation=\"list\"?> <?dbhtml list-presentation=\"table\"?>"
 msgstr ""
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/xz.xml:120
 msgid "<command>lzcat</command>"
-msgstr ""
+msgstr "<command>lzcat</command>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/xz.xml:122
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/xz.xml:262
 msgid "Decompresses to standard output"
-msgstr ""
+msgstr "解压到标准输出"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/xz.xml:124
 msgid "lzcat"
-msgstr ""
+msgstr "lzcat"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/xz.xml:130
 msgid "<command>lzcmp</command>"
-msgstr ""
+msgstr "<command>lzcmp</command>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/xz.xml:132
 msgid "Runs <command>cmp</command> on LZMA compressed files"
-msgstr ""
+msgstr "在 LZMA 压缩文件上执行 <command>cmp</command>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/xz.xml:134
 msgid "lzcmp"
-msgstr ""
+msgstr "lzcmp"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/xz.xml:140
 msgid "<command>lzdiff</command>"
-msgstr ""
+msgstr "<command>lzdiff</command>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/xz.xml:142
 msgid "Runs <command>diff</command> on LZMA compressed files"
-msgstr ""
+msgstr "在 LZMA 压缩文件上执行 <command>diff</command>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/xz.xml:144
 msgid "lzdiff"
-msgstr ""
+msgstr "lzdiff"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/xz.xml:150
 msgid "<command>lzegrep</command>"
-msgstr ""
+msgstr "<command>lzegrep</command>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/xz.xml:152
 msgid "Runs <command>egrep</command> on LZMA compressed files"
-msgstr ""
+msgstr "在 LZMA 压缩文件上执行 <command>egrep</command>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/xz.xml:154
 msgid "lzegrep"
-msgstr ""
+msgstr "lzegrep"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/xz.xml:160
 msgid "<command>lzfgrep</command>"
-msgstr ""
+msgstr "<command>lzfgrep</command>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/xz.xml:162
 msgid "Runs <command>fgrep</command> on LZMA compressed files"
-msgstr ""
+msgstr "在 LZMA 压缩文件上执行 <command>fgrep</command>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/xz.xml:164
 msgid "lzfgrep"
-msgstr ""
+msgstr "lzfgrep"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/xz.xml:170
 msgid "<command>lzgrep</command>"
-msgstr ""
+msgstr "<command>lzgrep</command>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/xz.xml:172
 msgid "Runs <command>grep</command> on LZMA compressed files"
-msgstr ""
+msgstr "在 LZMA 压缩文件上执行 <command>grep</command>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/xz.xml:174
 msgid "lzgrep"
-msgstr ""
+msgstr "lzgrep"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/xz.xml:180
 msgid "<command>lzless</command>"
-msgstr ""
+msgstr "<command>lzless</command>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/xz.xml:182
 msgid "Runs <command>less</command> on LZMA compressed files"
-msgstr ""
+msgstr "在 LZMA 压缩文件上执行 <command>less</command>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/xz.xml:184
 msgid "lzless"
-msgstr ""
+msgstr "lzless"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/xz.xml:190
 msgid "<command>lzma</command>"
-msgstr ""
+msgstr "<command>lzma</command>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/xz.xml:192
 msgid "Compresses or decompresses files using the LZMA format"
-msgstr ""
+msgstr "使用 LZMA 格式压缩或解压缩文件"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/xz.xml:194
 msgid "lzma"
-msgstr ""
+msgstr "lzma"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/xz.xml:200
 msgid "<command>lzmadec</command>"
-msgstr ""
+msgstr "<command>lzmadec</command>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/xz.xml:202
 msgid "A small and fast decoder for LZMA compressed files"
-msgstr ""
+msgstr "一个轻量、快速的 LZMA 压缩文件解码器"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/xz.xml:204
 msgid "lzmadec"
-msgstr ""
+msgstr "lzmadec"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/xz.xml:210
 msgid "<command>lzmainfo</command>"
-msgstr ""
+msgstr "<command>lzmainfo</command>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/xz.xml:212
 msgid "Shows information stored in the LZMA compressed file header"
-msgstr ""
+msgstr "显示 LZMA 压缩文件头中存储的信息"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/xz.xml:214
 msgid "lzmainfo"
-msgstr ""
+msgstr "lzmainfo"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/xz.xml:220
 msgid "<command>lzmore</command>"
-msgstr ""
+msgstr "<command>lzmore</command>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/xz.xml:222
 msgid "Runs <command>more</command> on LZMA compressed files"
-msgstr ""
+msgstr "在 LZMA 压缩文件上执行 <command>more</command>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/xz.xml:224
 msgid "lzmore"
-msgstr ""
+msgstr "lzmore"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/xz.xml:230
 msgid "<command>unlzma</command>"
-msgstr ""
+msgstr "<command>unlzma</command>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/xz.xml:232
 msgid "Decompresses files using the LZMA format"
-msgstr ""
+msgstr "使用 LZMA 格式解压缩文件"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/xz.xml:234
 msgid "unlzma"
-msgstr ""
+msgstr "unlzma"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/xz.xml:240
 msgid "<command>unxz</command>"
-msgstr ""
+msgstr "<command>unxz</command>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/xz.xml:242
 msgid "Decompresses files using the XZ format"
-msgstr ""
+msgstr "使用 XZ 格式解压缩文件"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/xz.xml:244
 msgid "unxz"
-msgstr ""
+msgstr "unxz"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/xz.xml:250
 msgid "<command>xz</command>"
-msgstr ""
+msgstr "<command>xz</command>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/xz.xml:252
 msgid "Compresses or decompresses files using the XZ format"
-msgstr ""
+msgstr "使用 XZ 格式压缩或解压缩文件"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/xz.xml:254
 msgid "xz"
-msgstr ""
+msgstr "xz"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/xz.xml:260
 msgid "<command>xzcat</command>"
-msgstr ""
+msgstr "<command>xzcat</command>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/xz.xml:264
 msgid "xzcat"
-msgstr ""
+msgstr "xzcat"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/xz.xml:270
 msgid "<command>xzcmp</command>"
-msgstr ""
+msgstr "<command>xzcmp</command>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/xz.xml:272
 msgid "Runs <command>cmp</command> on XZ compressed files"
-msgstr ""
+msgstr "在 XZ 压缩文件上执行 <command>cmp</command>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/xz.xml:274
 msgid "xzcmp"
-msgstr ""
+msgstr "xzcmp"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/xz.xml:280
 msgid "<command>xzdec</command>"
-msgstr ""
+msgstr "<command>xzdec</command>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/xz.xml:282
 msgid "A small and fast decoder for XZ compressed files"
-msgstr ""
+msgstr "一个轻量、快速的 XZ 压缩文件解码器"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/xz.xml:284
 msgid "xzdec"
-msgstr ""
+msgstr "xzdec"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/xz.xml:290
 msgid "<command>xzdiff</command>"
-msgstr ""
+msgstr "<command>xzdiff</command>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/xz.xml:292
 msgid "Runs <command>diff</command> on XZ compressed files"
-msgstr ""
+msgstr "在 XZ 压缩文件上执行 <command>diff</command>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/xz.xml:294
 msgid "xzdiff"
-msgstr ""
+msgstr "xzdiff"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/xz.xml:300
 msgid "<command>xzegrep</command>"
-msgstr ""
+msgstr "<command>xzegrep</command>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/xz.xml:302
 msgid "Runs <command>egrep</command> on XZ compressed files"
-msgstr ""
+msgstr "在 XZ 压缩文件上执行 <command>egrep</command>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/xz.xml:304
 msgid "xzegrep"
-msgstr ""
+msgstr "xzegrep"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/xz.xml:310
 msgid "<command>xzfgrep</command>"
-msgstr ""
+msgstr "<command>xzfgrep</command>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/xz.xml:312
 msgid "Runs <command>fgrep</command> on XZ compressed files"
-msgstr ""
+msgstr "在 XZ 压缩文件上执行 <command>fgrep</command>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/xz.xml:314
 msgid "xzfgrep"
-msgstr ""
+msgstr "xzfgrep"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/xz.xml:320
 msgid "<command>xzgrep</command>"
-msgstr ""
+msgstr "<command>xzgrep</command>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/xz.xml:322
 msgid "Runs <command>grep</command> on XZ compressed files"
-msgstr ""
+msgstr "在 XZ 压缩文件上执行 <command>grep</command>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/xz.xml:324
 msgid "xzgrep"
-msgstr ""
+msgstr "xzgrep"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/xz.xml:330
 msgid "<command>xzless</command>"
-msgstr ""
+msgstr "<command>xzless</command>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/xz.xml:332
 msgid "Runs <command>less</command> on XZ compressed files"
-msgstr ""
+msgstr "在 XZ 压缩文件上执行 <command>less</command>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/xz.xml:334
 msgid "xzless"
-msgstr ""
+msgstr "xzless"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/xz.xml:340
 msgid "<command>xzmore</command>"
-msgstr ""
+msgstr "<command>xzmore</command>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/xz.xml:342
 msgid "Runs <command>more</command> on XZ compressed files"
-msgstr ""
+msgstr "在 XZ 压缩文件上执行 <command>more</command>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/xz.xml:344
 msgid "xzmore"
-msgstr ""
+msgstr "xzmore"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/xz.xml:350
 msgid "<filename class=\"libraryfile\">liblzma</filename>"
-msgstr ""
+msgstr "<filename class=\"libraryfile\">liblzma</filename>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/xz.xml:352
 msgid ""
 "The library implementing lossless, block-sorting data compression, using the "
 "Lempel-Ziv-Markov chain algorithm"
-msgstr ""
+msgstr "实现基于 Lempel-Zip-Markov 链的无损块排序数据压缩算法的库"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/xz.xml:355
 msgid "liblzma"
-msgstr ""
+msgstr "liblzma"

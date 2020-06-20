@@ -1,9 +1,3 @@
-# SOME DESCRIPTIVE TITLE
-# Copyright (C) YEAR Free Software Foundation, Inc.
-# This file is distributed under the same license as the PACKAGE package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
-#
-#, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
@@ -11,83 +5,91 @@ msgstr ""
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
-"Language: \n"
+"Language: zh_CN\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Translate Toolkit 2.2.5\n"
 
 #. type: Content of: <sect1><sect1info><address>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/dbus.xml:14
 #, no-wrap
 msgid "&dbus-url;"
-msgstr ""
+msgstr "&dbus-url;"
 
 #. type: Content of: <sect1><sect1info>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/dbus.xml:12
 msgid ""
-"<productname>dbus</productname> "
-"<productnumber>&dbus-version;</productnumber> <placeholder type=\"address\" "
-"id=\"0\"/>"
+"<productname>dbus</productname> <productnumber>&dbus-version;</"
+"productnumber> <placeholder type=\"address\" id=\"0\"/>"
 msgstr ""
+"<productname>dbus</productname> <productnumber>&dbus-version;</"
+"productnumber> <placeholder type=\"address\" id=\"0\"/>"
 
 #. type: Content of: <sect1><title>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/dbus.xml:17
 msgid "D-Bus-&dbus-version;"
-msgstr ""
+msgstr "D-Bus-&dbus-version;"
 
 #. type: Content of: <sect1><indexterm><primary>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/dbus.xml:20
 msgid "D-Bus"
-msgstr ""
+msgstr "D-Bus"
 
 #. type: Content of: <sect1><sect2><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/dbus.xml:26
 msgid ""
 "D-Bus is a message bus system, a simple way for applications to talk to one "
 "another. D-Bus supplies both a system daemon (for events such as \"new "
-"hardware device added\" or \"printer queue changed\") and a "
-"per-user-login-session daemon (for general IPC needs among user "
-"applications). Also, the message bus is built on top of a general one-to-one "
-"message passing framework, which can be used by any two applications to "
-"communicate directly (without going through the message bus daemon)."
+"hardware device added\" or \"printer queue changed\") and a per-user-login-"
+"session daemon (for general IPC needs among user applications). Also, the "
+"message bus is built on top of a general one-to-one message passing "
+"framework, which can be used by any two applications to communicate directly "
+"(without going through the message bus daemon)."
 msgstr ""
+"D-bus 是一个消息总线系统，即应用程序之间互相通信的一种简单方式。D-Bus 提供一"
+"个系统守护进程 (负责 “添加了新硬件” 或 “打印队列发生改变” 等事件)，并对每个用"
+"户登录会话提供一个守护进程 (负责一般用户程序的进程间通信)。另外，消息总线被构"
+"建在一个通用的一对一消息传递网络上，它可以被任意两个程序用于直接通信 (不需通"
+"过消息总线守护进程)。"
 
 #. type: Content of: <sect1><sect2><segmentedlist><segtitle>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/dbus.xml:35
 msgid "&buildtime;"
-msgstr ""
+msgstr "&buildtime;"
 
 #. type: Content of: <sect1><sect2><segmentedlist><segtitle>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/dbus.xml:36
 msgid "&diskspace;"
-msgstr ""
+msgstr "&diskspace;"
 
 #. type: Content of: <sect1><sect2><segmentedlist><seglistitem><seg>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/dbus.xml:39
+#, fuzzy
 msgid "&dbus-fin-sbu;"
-msgstr ""
+msgstr "&dbus-ch6-sbu;"
 
 #. type: Content of: <sect1><sect2><segmentedlist><seglistitem><seg>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/dbus.xml:40
+#, fuzzy
 msgid "&dbus-fin-du;"
-msgstr ""
+msgstr "&dbus-ch6-du;"
 
 #. type: Content of: <sect1><sect2><title>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/dbus.xml:47
 msgid "Installation of D-Bus"
-msgstr ""
+msgstr "安装 D-Bus"
 
 #. type: Content of: <sect1><sect2><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/dbus.xml:49
 msgid "Prepare D-Bus for compilation:"
-msgstr ""
+msgstr "准备编译 D-Bus："
 
 #. type: Content of: <sect1><sect2><screen>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/dbus.xml:51
 #, no-wrap
 msgid ""
-"<userinput remap=\"configure\">./configure --prefix=/usr                       "
-"\\\n"
+"<userinput remap=\"configure\">./configure --prefix=/usr                       \\\n"
 "            --sysconfdir=/etc                   \\\n"
 "            --localstatedir=/var                \\\n"
 "            --disable-static                    \\\n"
@@ -96,32 +98,41 @@ msgid ""
 "            --docdir=/usr/share/doc/dbus-&dbus-version; \\\n"
 "            --with-console-auth-dir=/run/console</userinput>"
 msgstr ""
+"<userinput remap=\"configure\">./configure --prefix=/usr                       \\\n"
+"            --sysconfdir=/etc                   \\\n"
+"            --localstatedir=/var                \\\n"
+"            --disable-static                    \\\n"
+"            --disable-doxygen-docs              \\\n"
+"            --disable-xml-docs                  \\\n"
+"            --docdir=/usr/share/doc/dbus-&dbus-version; \\\n"
+"            --with-console-auth-dir=/run/console</userinput>"
 
 #. type: Content of: <sect1><sect2><variablelist><title>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/dbus.xml:61
 msgid "The meaning of the configure options:"
-msgstr ""
+msgstr "配置选项的含义："
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/dbus.xml:64
 msgid "<parameter>--with-console-auth-dir=/run/console</parameter>"
-msgstr ""
+msgstr "<parameter>--with-console-auth-dir=/run/console</parameter>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/dbus.xml:66
+#, fuzzy
 msgid "This specifies the location of the ConsoleKit authorization directory."
-msgstr ""
+msgstr "该选项指定 ConsoleKit 认证目录位置。"
 
 #. type: Content of: <sect1><sect2><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/dbus.xml:73
 msgid "Compile the package:"
-msgstr ""
+msgstr "编译该软件包："
 
 #. type: Content of: <sect1><sect2><screen>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/dbus.xml:75
 #, no-wrap
 msgid "<userinput remap=\"make\">make</userinput>"
-msgstr ""
+msgstr "<userinput remap=\"make\">make</userinput>"
 
 #. type: Content of: <sect1><sect2><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/dbus.xml:77
@@ -130,50 +141,57 @@ msgid ""
 "that are not included in LFS. Instructions for running the test suite can be "
 "found in the BLFS book at <ulink url=\"&blfs-book;general/dbus.html\"/>."
 msgstr ""
+"该软件包有测试套件，但需要 LFS 没有包含的一些软件包。阅读 BLFS 手册中的 "
+"<ulink url=\"&blfs-book;general/dbus.html\"/>，以查阅运行测试套件的说明。"
 
 #. type: Content of: <sect1><sect2><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/dbus.xml:82
 msgid "Install the package:"
-msgstr ""
+msgstr "安装该软件包："
 
 #. type: Content of: <sect1><sect2><screen>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/dbus.xml:84
 #, no-wrap
 msgid "<userinput remap=\"install\">make install</userinput>"
-msgstr ""
+msgstr "<userinput remap=\"install\">make install</userinput>"
 
 #. type: Content of: <sect1><sect2><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/dbus.xml:86
 msgid ""
-"The shared library needs to be moved to <filename "
-"class=\"directory\">/lib</filename>, and as a result the <filename "
-"class=\"extension\">.so</filename> file in <filename "
-"class=\"directory\">/usr/lib</filename> will need to be recreated:"
+"The shared library needs to be moved to <filename class=\"directory\">/lib</"
+"filename>, and as a result the <filename class=\"extension\">.so</filename> "
+"file in <filename class=\"directory\">/usr/lib</filename> will need to be "
+"recreated:"
 msgstr ""
+"需要将共享库移动到 <filename class=\"directory\">/lib</filename>，因此 "
+"<filename class=\"directory\">/usr/lib</filename> 中的 <filename class="
+"\"extension\">.so</filename> 符号链接需要重新建立："
 
 #. type: Content of: <sect1><sect2><screen>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/dbus.xml:91
 #, no-wrap
 msgid ""
 "<userinput remap=\"install\">mv -v /usr/lib/libdbus-1.so.* /lib\n"
-"ln -sfv ../../lib/$(readlink /usr/lib/libdbus-1.so) "
-"/usr/lib/libdbus-1.so</userinput>"
+"ln -sfv ../../lib/$(readlink /usr/lib/libdbus-1.so) /usr/lib/libdbus-1.so</userinput>"
 msgstr ""
+"<userinput remap=\"install\">mv -v /usr/lib/libdbus-1.so.* /lib\n"
+"ln -sfv ../../lib/$(readlink /usr/lib/libdbus-1.so) /usr/lib/libdbus-1.so</userinput>"
 
 #. type: Content of: <sect1><sect2><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/dbus.xml:94
+#, fuzzy
 msgid ""
 "Create a symlink so that D-Bus and systemd can use the same "
 "<filename>machine-id</filename> file:"
 msgstr ""
+"创建符号链接，使 D-Bus 和 systemd 使用同样的 <filename>machine-id</filename> "
+"文件："
 
 #. type: Content of: <sect1><sect2><screen>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/dbus.xml:97
 #, no-wrap
-msgid ""
-"<userinput remap=\"install\">ln -sfv /etc/machine-id "
-"/var/lib/dbus</userinput>"
-msgstr ""
+msgid "<userinput remap=\"install\">ln -sfv /etc/machine-id /var/lib/dbus</userinput>"
+msgstr "<userinput remap=\"install\">ln -sfv /etc/machine-id /var/lib/dbus</userinput>"
 
 #. type: Content of: <sect1><sect2><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/dbus.xml:99
@@ -182,126 +200,132 @@ msgstr ""
 
 #. type: Content of: <sect1><sect2><screen>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/dbus.xml:102
-#, no-wrap
-msgid ""
-"<userinput remap=\"install\">sed -i 's:/var/run:/run:' "
-"/lib/systemd/system/dbus.socket</userinput>"
-msgstr ""
+#, fuzzy, no-wrap
+msgid "<userinput remap=\"install\">sed -i 's:/var/run:/run:' /lib/systemd/system/dbus.socket</userinput>"
+msgstr "<userinput remap=\"install\">ln -sfv /etc/machine-id /var/lib/dbus</userinput>"
 
 #. type: Content of: <sect1><sect2><title>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/dbus.xml:107
 msgid "Contents of D-Bus"
-msgstr ""
+msgstr "D-Bus 的内容"
 
 #. type: Content of: <sect1><sect2><segmentedlist><segtitle>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/dbus.xml:110
 msgid "Installed programs"
-msgstr ""
+msgstr "安装的程序"
 
 #. type: Content of: <sect1><sect2><segmentedlist><segtitle>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/dbus.xml:111
 msgid "Installed libraries"
-msgstr ""
+msgstr "安装的库"
 
 #. type: Content of: <sect1><sect2><segmentedlist><segtitle>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/dbus.xml:112
 msgid "Installed directories"
-msgstr ""
+msgstr "安装的目录"
 
 #. type: Content of: <sect1><sect2><segmentedlist><seglistitem><seg>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/dbus.xml:115
 msgid ""
-"dbus-cleanup-sockets, dbus-daemon, dbus-launch, dbus-monitor, "
-"dbus-run-session, dbus-send, dbus-test-tool, "
-"dbus-update-activation-environment, and dbus-uuidgen"
+"dbus-cleanup-sockets, dbus-daemon, dbus-launch, dbus-monitor, dbus-run-"
+"session, dbus-send, dbus-test-tool, dbus-update-activation-environment, and "
+"dbus-uuidgen"
 msgstr ""
+"dbus-cleanup-sockets, dbus-daemon, dbus-launch, dbus-monitor, dbus-run-"
+"session, dbus-send, dbus-test-tool, dbus-update-activation-environment, 以及 "
+"dbus-uuidgen"
 
 #. type: Content of: <sect1><sect2><segmentedlist><seglistitem><seg>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/dbus.xml:118
 msgid "libdbus-1.{a,so}"
-msgstr ""
+msgstr "libdbus-1.{a,so}"
 
 #. type: Content of: <sect1><sect2><segmentedlist><seglistitem><seg>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/dbus.xml:119
 msgid ""
-"/etc/dbus-1, /usr/include/dbus-1.0, /usr/lib/dbus-1.0, /usr/share/dbus-1, "
-"/usr/share/doc/dbus-&dbus-version;, and /var/lib/dbus"
+"/etc/dbus-1, /usr/include/dbus-1.0, /usr/lib/dbus-1.0, /usr/share/dbus-1, /"
+"usr/share/doc/dbus-&dbus-version;, and /var/lib/dbus"
 msgstr ""
+"/etc/dbus-1, /usr/include/dbus-1.0, /usr/lib/dbus-1.0, /usr/share/dbus-1, /"
+"usr/share/doc/dbus-&dbus-version;, 以及 /var/lib/dbus"
 
 #. type: Content of: <sect1><sect2><variablelist><bridgehead>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/dbus.xml:126
 msgid "Short Descriptions"
-msgstr ""
+msgstr "简要描述"
 
 #. type: Content of: <sect1><sect2><variablelist>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/dbus.xml:127
-msgid "<?dbfo list-presentation=\"list\"?> <?dbhtml list-presentation=\"table\"?>"
+msgid ""
+"<?dbfo list-presentation=\"list\"?> <?dbhtml list-presentation=\"table\"?>"
 msgstr ""
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/dbus.xml:131
 msgid "<command>dbus-cleanup-sockets</command>"
-msgstr ""
+msgstr "<command>dbus-cleanup-sockets</command>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/dbus.xml:133
+#, fuzzy
 msgid "is used to remove leftover sockets in a directory"
-msgstr ""
+msgstr "用于清理目录中遗留的套接字"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/dbus.xml:135
 msgid "dbus-cleanup-sockets"
-msgstr ""
+msgstr "dbus-cleanup-sockets"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/dbus.xml:141
 msgid "<command>dbus-daemon</command>"
-msgstr ""
+msgstr "<command>dbus-daemon</command>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/dbus.xml:143
+#, fuzzy
 msgid "Is the D-Bus message bus daemon"
-msgstr ""
+msgstr "D-Bus 消息总线守护程序"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/dbus.xml:145
 msgid "dbus-daemon"
-msgstr ""
+msgstr "dbus-daemon"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/dbus.xml:151
 msgid "<command>dbus-launch</command>"
-msgstr ""
+msgstr "<command>dbus-launch</command>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/dbus.xml:153
 msgid "Starts <command>dbus-daemon</command> from a shell script"
-msgstr ""
+msgstr "从 shell 脚本启动 <command>dbus-daemon</command>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/dbus.xml:156
 msgid "dbus-launch"
-msgstr ""
+msgstr "dbus-launch"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/dbus.xml:162
 msgid "<command>dbus-monitor</command>"
-msgstr ""
+msgstr "<command>dbus-monitor</command>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/dbus.xml:164
 msgid "Monitors messages passing through a D-Bus message bus"
-msgstr ""
+msgstr "监视通过一个 D-Bus 消息总线的消息"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/dbus.xml:166
 msgid "dbus-monitor"
-msgstr ""
+msgstr "dbus-monitor"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/dbus.xml:172
 msgid "<command>dbus-run-session</command>"
-msgstr ""
+msgstr "<command>dbus-run-session</command>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/dbus.xml:174
@@ -309,85 +333,88 @@ msgid ""
 "Starts a session bus instance of <command>dbus-daemon</command> from a shell "
 "script and starts a specified program in that session"
 msgstr ""
+"从 shell 脚本启动一个 <command>dbus-daemon</command> 的会话总线实例，并在该会"
+"话中启动给定程序"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/dbus.xml:178
 msgid "dbus-run-session"
-msgstr ""
+msgstr "dbus-run-session"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/dbus.xml:184
 msgid "<command>dbus-send</command>"
-msgstr ""
+msgstr "<command>dbus-send</command>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/dbus.xml:186
 msgid "Sends a message to a D-Bus message bus"
-msgstr ""
+msgstr "向 D-Bus 消息总线发送消息"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/dbus.xml:188
 msgid "dbus-send"
-msgstr ""
+msgstr "dbus-send"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/dbus.xml:194
 msgid "<command>dbus-test-tool</command>"
-msgstr ""
+msgstr "<command>dbus-test-tool</command>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/dbus.xml:196
+#, fuzzy
 msgid "Is a tool to help packages test <application>D-Bus</application>"
-msgstr ""
+msgstr "一个帮助软件包测试 <application>D-Bus</application> 的工具"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/dbus.xml:199
 msgid "dbus-test-tool"
-msgstr ""
+msgstr "dbus-test-tool"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/dbus.xml:206
 msgid "<command>dbus-update-activation-environment</command>"
-msgstr ""
+msgstr "<command>dbus-update-activation-environment</command>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/dbus.xml:208
 msgid ""
-"Updates environment variables that will be set for "
-"<application>D-Bus</application> session services"
-msgstr ""
+"Updates environment variables that will be set for <application>D-Bus</"
+"application> session services"
+msgstr "更新将会为 <application>D-Bus</application> 会话服务设置的环境变量"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/dbus.xml:211
 msgid "dbus-update-activation-environment"
-msgstr ""
+msgstr "dbus-update-activation-environment"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/dbus.xml:217
 msgid "<command>dbus-uuidgen</command>"
-msgstr ""
+msgstr "<command>dbus-uuidgen</command>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/dbus.xml:219
 msgid "Generates a universally unique ID"
-msgstr ""
+msgstr "产生通用唯一识别码"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/dbus.xml:221
 msgid "dbus-uuidgen"
-msgstr ""
+msgstr "dbus-uuidgen"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/dbus.xml:227
 msgid "<filename class=\"libraryfile\">libdbus-1</filename>"
-msgstr ""
+msgstr "<filename class=\"libraryfile\">libdbus-1</filename>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/dbus.xml:229
 msgid "Contains API functions used to communicate with the D-Bus message bus"
-msgstr ""
+msgstr "包含用于和 D-Bus 消息总线通信的 API 函数"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/dbus.xml:232
 msgid "libdbus-1"
-msgstr ""
+msgstr "libdbus-1"

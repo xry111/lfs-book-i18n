@@ -1,9 +1,3 @@
-# SOME DESCRIPTIVE TITLE
-# Copyright (C) YEAR Free Software Foundation, Inc.
-# This file is distributed under the same license as the PACKAGE package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
-#
-#, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
@@ -11,65 +5,70 @@ msgstr ""
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
-"Language: \n"
+"Language: zh_CN\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Translate Toolkit 2.2.5\n"
 
 #. type: Content of: <sect1><sect1info><address>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/shadow.xml:14
 #, no-wrap
 msgid "&shadow-url;"
-msgstr ""
+msgstr "&shadow-url;"
 
 #. type: Content of: <sect1><sect1info>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/shadow.xml:12
 msgid ""
-"<productname>shadow</productname> "
-"<productnumber>&shadow-version;</productnumber> <placeholder "
-"type=\"address\" id=\"0\"/>"
+"<productname>shadow</productname> <productnumber>&shadow-version;</"
+"productnumber> <placeholder type=\"address\" id=\"0\"/>"
 msgstr ""
+"<productname>shadow</productname> <productnumber>&shadow-version;</"
+"productnumber> <placeholder type=\"address\" id=\"0\"/>"
 
 #. type: Content of: <sect1><title>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/shadow.xml:17
 msgid "Shadow-&shadow-version;"
-msgstr ""
+msgstr "Shadow-&shadow-version;"
 
 #. type: Content of: <sect1><sect2><indexterm><primary>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/shadow.xml:20
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/shadow.xml:139
 msgid "Shadow"
-msgstr ""
+msgstr "阴影Shadow"
 
 #. type: Content of: <sect1><sect2><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/shadow.xml:26
-msgid "The Shadow package contains programs for handling passwords in a secure way."
-msgstr ""
+msgid ""
+"The Shadow package contains programs for handling passwords in a secure way."
+msgstr "Shadow 软件包包含安全地处理密码的程序。"
 
 #. type: Content of: <sect1><sect2><segmentedlist><segtitle>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/shadow.xml:30
 msgid "&buildtime;"
-msgstr ""
+msgstr "&buildtime;"
 
 #. type: Content of: <sect1><sect2><segmentedlist><segtitle>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/shadow.xml:31
 msgid "&diskspace;"
-msgstr ""
+msgstr "&diskspace;"
 
 #. type: Content of: <sect1><sect2><segmentedlist><seglistitem><seg>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/shadow.xml:34
+#, fuzzy
 msgid "&shadow-fin-sbu;"
-msgstr ""
+msgstr "&shadow-ch6-sbu;"
 
 #. type: Content of: <sect1><sect2><segmentedlist><seglistitem><seg>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/shadow.xml:35
+#, fuzzy
 msgid "&shadow-fin-du;"
-msgstr ""
+msgstr "&shadow-ch6-du;"
 
 #. type: Content of: <sect1><sect2><title>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/shadow.xml:42
 msgid "Installation of Shadow"
-msgstr ""
+msgstr "安装 Shadow"
 
 #. type: Content of: <sect1><sect2><note><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/shadow.xml:45
@@ -79,15 +78,21 @@ msgid ""
 "building Shadow. Then add <parameter>--with-libcrack</parameter> to the "
 "<command>configure</command> command below."
 msgstr ""
+"如果您希望强制使用强密码，参考 <ulink url=\"&blfs-book;postlfs/cracklib.html"
+"\"/> 以在构建 Shadow 前安装 CrackLib。然后，将 <parameter>--with-libcrack</"
+"parameter> 添加到下面的 <command>configure</command> 命令中。"
 
 #. type: Content of: <sect1><sect2><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/shadow.xml:52
 msgid ""
 "Disable the installation of the <command>groups</command> program and its "
 "man pages, as Coreutils provides a better version. Also, prevent the "
-"installation of manual pages that were already installed in <xref "
-"linkend=\"ch-system-man-pages\"/>:"
+"installation of manual pages that were already installed in <xref linkend="
+"\"ch-system-man-pages\"/>:"
 msgstr ""
+"禁止该软件包安装 <command>groups</command> 程序和它的 man 页面，因为 "
+"Coreutils 会提供更好的版本。同样，避免安装 <xref linkend=\"ch-system-man-"
+"pages\"/>软件包已经提供的 man 页面："
 
 #. type: Content of: <sect1><sect2><screen>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/shadow.xml:57
@@ -96,9 +101,12 @@ msgid ""
 "<userinput remap=\"pre\">sed -i 's/groups$(EXEEXT) //' src/Makefile.in\n"
 "find man -name Makefile.in -exec sed -i 's/groups\\.1 / /'   {} \\;\n"
 "find man -name Makefile.in -exec sed -i 's/getspnam\\.3 / /' {} \\;\n"
-"find man -name Makefile.in -exec sed -i 's/passwd\\.5 / /'   {} "
-"\\;</userinput>"
+"find man -name Makefile.in -exec sed -i 's/passwd\\.5 / /'   {} \\;</userinput>"
 msgstr ""
+"<userinput remap=\"pre\">sed -i 's/groups$(EXEEXT) //' src/Makefile.in\n"
+"find man -name Makefile.in -exec sed -i 's/groups\\.1 / /'   {} \\;\n"
+"find man -name Makefile.in -exec sed -i 's/getspnam\\.3 / /' {} \\;\n"
+"find man -name Makefile.in -exec sed -i 's/passwd\\.5 / /'   {} \\;</userinput>"
 
 #. type: Content of: <sect1><sect2><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/shadow.xml:62
@@ -110,66 +118,70 @@ msgid ""
 "location for user mailboxes that Shadow uses by default to the <filename "
 "class=\"directory\">/var/mail</filename> location used currently:"
 msgstr ""
+"不使用默认的 <emphasis>crypt</emphasis> 加密方法，使用更安全的 "
+"<emphasis>SHA-512</emphasis> 方法加密密码，该方法也允许长度超过 8 个字符的密"
+"码。另外，还需要把过时的用户邮箱位置 <filename class=\"directory\">/var/"
+"spool/mail</filename> 改为当前普遍使用的 <filename class=\"directory\">/var/"
+"mail</filename> 目录："
 
 #. type: Content of: <sect1><sect2><screen>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/shadow.xml:70
-#, no-wrap
+#, fuzzy, no-wrap
 msgid ""
-"<userinput remap=\"pre\">sed -e 's:#ENCRYPT_METHOD DES:ENCRYPT_METHOD "
-"SHA512:' \\\n"
+"<userinput remap=\"pre\">sed -e 's:#ENCRYPT_METHOD DES:ENCRYPT_METHOD SHA512:' \\\n"
 "    -e 's:/var/spool/mail:/var/mail:'                 \\\n"
 "    -i etc/login.defs</userinput>"
 msgstr ""
+"<userinput remap=\"pre\">sed -i -e 's@#ENCRYPT_METHOD DES@ENCRYPT_METHOD SHA512@' \\\n"
+"       -e 's@/var/spool/mail@/var/mail@' etc/login.defs</userinput>"
 
 #. type: Content of: <sect1><sect2><note><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/shadow.xml:75
 msgid "If you chose to build Shadow with Cracklib support, run the following:"
-msgstr ""
+msgstr "如果您选择构建有 Cracklib 支持的 Shadow，执行以下命令："
 
 #. type: Content of: <sect1><sect2><note><screen>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/shadow.xml:77
-#, no-wrap
-msgid ""
-"<userinput>sed -i 's:DICTPATH.*:DICTPATH\\t/lib/cracklib/pw_dict:' "
-"etc/login.defs</userinput>"
-msgstr ""
+#, fuzzy, no-wrap
+msgid "<userinput>sed -i 's:DICTPATH.*:DICTPATH\\t/lib/cracklib/pw_dict:' etc/login.defs</userinput>"
+msgstr "<userinput>sed -i 's@DICTPATH.*@DICTPATH\\t/lib/cracklib/pw_dict@' etc/login.defs</userinput>"
 
 #. type: Content of: <sect1><sect2><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/shadow.xml:80
 msgid ""
-"Make a minor change to make the first group number generated by useradd "
-"1000:"
-msgstr ""
+"Make a minor change to make the first group number generated by useradd 1000:"
+msgstr "进行微小的改动，使 useradd 使用 1000 作为第一个组编号："
 
 #. type: Content of: <sect1><sect2><screen>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/shadow.xml:83
 #, no-wrap
 msgid "<userinput remap=\"pre\">sed -i 's/1000/999/' etc/useradd</userinput>"
-msgstr ""
+msgstr "<userinput remap=\"pre\">sed -i 's/1000/999/' etc/useradd</userinput>"
 
 #. type: Content of: <sect1><sect2><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/shadow.xml:85
 msgid "Prepare Shadow for compilation:"
-msgstr ""
+msgstr "准备编译 Shadow："
 
 #. type: Content of: <sect1><sect2><screen>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/shadow.xml:87
-#, no-wrap
+#, fuzzy, no-wrap
 msgid ""
 "<userinput remap=\"configure\">touch /usr/bin/passwd\n"
 "./configure --sysconfdir=/etc \\\n"
 "            --with-group-name-max-length=32</userinput>"
-msgstr ""
+msgstr "<userinput remap=\"configure\">./configure --sysconfdir=/etc --with-group-name-max-length=32</userinput>"
 
 #. type: Content of: <sect1><sect2><variablelist><title>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/shadow.xml:92
 msgid "The meaning of the configure option:"
-msgstr ""
+msgstr "配置选项的含义："
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/shadow.xml:95
+#, fuzzy
 msgid "<command>touch /usr/bin/passwd</command>"
-msgstr ""
+msgstr "<command>chpasswd</command>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/shadow.xml:97
@@ -182,51 +194,51 @@ msgstr ""
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/shadow.xml:103
 msgid "<parameter>--with-group-name-max-length=32</parameter>"
-msgstr ""
+msgstr "<parameter>--with-group-name-max-length=32</parameter>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/shadow.xml:105
 msgid ""
 "The maximum user name is 32 characters.  Make the maximum group name the "
 "same."
-msgstr ""
+msgstr "最长用户名可以有 32 个字符。设定组名称最大长度为相同值。"
 
 #. type: Content of: <sect1><sect2><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/shadow.xml:112
 msgid "Compile the package:"
-msgstr ""
+msgstr "编译该软件包："
 
 #. type: Content of: <sect1><sect2><screen>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/shadow.xml:114
 #, no-wrap
 msgid "<userinput remap=\"make\">make</userinput>"
-msgstr ""
+msgstr "<userinput remap=\"make\">make</userinput>"
 
 #. type: Content of: <sect1><sect2><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/shadow.xml:116
 msgid "This package does not come with a test suite."
-msgstr ""
+msgstr "该软件包不包含测试套件。"
 
 #. type: Content of: <sect1><sect2><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/shadow.xml:118
 msgid "Install the package:"
-msgstr ""
+msgstr "安装该软件包："
 
 #. type: Content of: <sect1><sect2><screen>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/shadow.xml:120
 #, no-wrap
 msgid "<userinput remap=\"install\">make install</userinput>"
-msgstr ""
+msgstr "<userinput remap=\"install\">make install</userinput>"
 
 #. type: Content of: <sect1><sect2><title>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/shadow.xml:136
 msgid "Configuring Shadow"
-msgstr ""
+msgstr "配置 Shadow"
 
 #. type: Content of: <sect1><sect2><indexterm><secondary>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/shadow.xml:140
 msgid "configuring"
-msgstr ""
+msgstr "configuring"
 
 #. type: Content of: <sect1><sect2><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/shadow.xml:143
@@ -234,34 +246,40 @@ msgid ""
 "This package contains utilities to add, modify, and delete users and groups; "
 "set and change their passwords; and perform other administrative tasks. For "
 "a full explanation of what <emphasis>password shadowing</emphasis> means, "
-"see the <filename>doc/HOWTO</filename> file within the unpacked source "
-"tree. If using Shadow support, keep in mind that programs which need to "
-"verify passwords (display managers, FTP programs, pop3 daemons, etc.)  must "
-"be Shadow-compliant. That is, they need to be able to work with shadowed "
+"see the <filename>doc/HOWTO</filename> file within the unpacked source tree. "
+"If using Shadow support, keep in mind that programs which need to verify "
+"passwords (display managers, FTP programs, pop3 daemons, etc.)  must be "
+"Shadow-compliant. That is, they need to be able to work with shadowed "
 "passwords."
 msgstr ""
+"该软件包包含用于添加、修改、删除用户和组，设定和修改它们的密码，以及进行其他"
+"管理任务的工具。如果希望查阅关于 <emphasis>password shadowing</emphasis> 的详"
+"细解释，阅读解压得到源代码目录树中的 <filename>doc/HOWTO</filename> 文件。如"
+"果使用 Shadow 支持，请注意所有需要验证密码的程序 (如显示管理器、FTP 程序、"
+"pop3 守护进程等)  都必须和 Shadow 兼容。换句话说，它们必须能使用 Shadow 加密"
+"的密码。"
 
 #. type: Content of: <sect1><sect2><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/shadow.xml:152
 msgid "To enable shadowed passwords, run the following command:"
-msgstr ""
+msgstr "如果要对用户密码启用 Shadow 加密，执行以下命令："
 
 #. type: Content of: <sect1><sect2><screen>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/shadow.xml:154
 #, no-wrap
 msgid "<userinput>pwconv</userinput>"
-msgstr ""
+msgstr "<userinput>pwconv</userinput>"
 
 #. type: Content of: <sect1><sect2><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/shadow.xml:156
 msgid "To enable shadowed group passwords, run:"
-msgstr ""
+msgstr "如果要对组密码启用 Shadow 加密，执行："
 
 #. type: Content of: <sect1><sect2><screen>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/shadow.xml:158
 #, no-wrap
 msgid "<userinput>grpconv</userinput>"
-msgstr ""
+msgstr "<userinput>grpconv</userinput>"
 
 #. type: Content of: <sect1><sect2><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/shadow.xml:160
@@ -274,88 +292,105 @@ msgid ""
 "<command>useradd</command>, each user will be a member of a unique group on "
 "the system. If this behavior is undesirable, you'll need to pass the "
 "<parameter>-g</parameter> parameter to <command>useradd</command>. The "
-"default parameters are stored in the "
-"<filename>/etc/default/useradd</filename> file. You may need to modify two "
-"parameters in this file to suit your particular needs."
+"default parameters are stored in the <filename>/etc/default/useradd</"
+"filename> file. You may need to modify two parameters in this file to suit "
+"your particular needs."
 msgstr ""
+"Shadow 附带的 <command>useradd</command> 配置文件有一些需要解释的事项。首先，"
+"<command>useradd</command> 的默认操作是创建一个用户，以及一个名字和用户名相同"
+"的组。默认情况下，用户 ID (UID) 和组 ID (GID) 会从 1000 开始。这意味着，如果"
+"您不向 <command>useradd</command>传递参数，每个用户都会属于一个不同的组。如果"
+"您不希望这样，就要传递 <parameter>-g</parameter> 参数给 <command>useradd</"
+"command>。默认参数保存在 <filename>/etc/default/useradd</filename> 文件中。您"
+"可以编辑其中的两个参数，以满足您的特定需求。"
 
 #. type: Content of: <sect1><sect2><variablelist><title>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/shadow.xml:173
 msgid "<filename>/etc/default/useradd</filename> Parameter Explanations"
-msgstr ""
+msgstr "<filename>/etc/default/useradd</filename> 参数解释"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/shadow.xml:176
 msgid "<parameter>GROUP=1000</parameter>"
-msgstr ""
+msgstr "<parameter>GROUP=1000</parameter>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/shadow.xml:178
 msgid ""
-"This parameter sets the beginning of the group numbers used in the "
-"/etc/group file. You can modify it to anything you desire. Note that "
+"This parameter sets the beginning of the group numbers used in the /etc/"
+"group file. You can modify it to anything you desire. Note that "
 "<command>useradd</command> will never reuse a UID or GID. If the number "
 "identified in this parameter is used, it will use the next available number "
 "after this. Note also that if you don't have a group 1000 on your system the "
-"first time you use <command>useradd</command> without the "
-"<parameter>-g</parameter> parameter, you'll get a message displayed on the "
-"terminal that says: <computeroutput>useradd: unknown GID "
-"1000</computeroutput>. You may disregard this message and group number 1000 "
-"will be used."
+"first time you use <command>useradd</command> without the <parameter>-g</"
+"parameter> parameter, you'll get a message displayed on the terminal that "
+"says: <computeroutput>useradd: unknown GID 1000</computeroutput>. You may "
+"disregard this message and group number 1000 will be used."
 msgstr ""
+"该参数设定 /etc/group 文件中使用的第一个组编号。您可以将它修改为您希望的任何"
+"值。注意，<command>useradd</command> 绝不会重用 UID 或 GID。如果该参数指定的"
+"数字已经被使用了，它就会使用下一个可用的数字。另外，如果您第一次使用 "
+"<command>useradd</command> 时没有编号 1000 的组，也没有使用 <parameter>-g</"
+"parameter> 选项，您就会在终端看到一条消息：<computeroutput>useradd: unknown "
+"GID 1000</computeroutput>。您可以忽略这条消息，它会使用组编号 1000。"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/shadow.xml:191
 msgid "<parameter>CREATE_MAIL_SPOOL=yes</parameter>"
-msgstr ""
+msgstr "<parameter>CREATE_MAIL_SPOOL=yes</parameter>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/shadow.xml:193
 msgid ""
 "This parameter causes <command>useradd</command> to create a mailbox file "
 "for the newly created user. <command>useradd</command> will make the group "
-"ownership of this file to the <systemitem "
-"class=\"groupname\">mail</systemitem> group with 0660 permissions. If you "
-"would prefer that these mailbox files are not created by "
-"<command>useradd</command>, issue the following command:"
+"ownership of this file to the <systemitem class=\"groupname\">mail</"
+"systemitem> group with 0660 permissions. If you would prefer that these "
+"mailbox files are not created by <command>useradd</command>, issue the "
+"following command:"
 msgstr ""
+"该参数使得 <command>useradd</command> 为新创建的用户建立邮箱文件。"
+"<command>useradd</command> 会使得 <systemitem class=\"groupname\">mail</"
+"systemitem> 为邮箱文件属组，并为邮箱文件赋予 0660 权限码。如果您不希望 "
+"<command>useradd</command>创建这些邮箱文件，执行以下命令："
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><screen>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/shadow.xml:201
 #, no-wrap
 msgid "<userinput>sed -i 's/yes/no/' /etc/default/useradd</userinput>"
-msgstr ""
+msgstr "<userinput>sed -i 's/yes/no/' /etc/default/useradd</userinput>"
 
 #. type: Content of: <sect1><sect2><title>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/shadow.xml:211
 msgid "Setting the root password"
-msgstr ""
+msgstr "设定 root 密码"
 
 #. type: Content of: <sect1><sect2><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/shadow.xml:213
-msgid "Choose a password for user <emphasis>root</emphasis> and set it by running:"
-msgstr ""
+msgid ""
+"Choose a password for user <emphasis>root</emphasis> and set it by running:"
+msgstr "为用户 <emphasis>root</emphasis> 选择一个密码，并执行以下命令设定它："
 
 #. type: Content of: <sect1><sect2><screen>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/shadow.xml:216
 #, no-wrap
 msgid "<userinput>passwd root</userinput>"
-msgstr ""
+msgstr "<userinput>passwd root</userinput>"
 
 #. type: Content of: <sect1><sect2><title>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/shadow.xml:221
 msgid "Contents of Shadow"
-msgstr ""
+msgstr "Shadow 的内容"
 
 #. type: Content of: <sect1><sect2><segmentedlist><segtitle>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/shadow.xml:224
 msgid "Installed programs"
-msgstr ""
+msgstr "安装的程序"
 
 #. type: Content of: <sect1><sect2><segmentedlist><segtitle>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/shadow.xml:225
 msgid "Installed directory"
-msgstr ""
+msgstr "安装的目录"
 
 #. type: Content of: <sect1><sect2><segmentedlist><seglistitem><seg>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/shadow.xml:228
@@ -366,212 +401,217 @@ msgid ""
 "pwconv, pwunconv, sg (link to newgrp), su, useradd, userdel, usermod, vigr "
 "(link to vipw), and vipw"
 msgstr ""
+"chage, chfn, chgpasswd, chpasswd, chsh, expiry, faillog, gpasswd, groupadd, "
+"groupdel, groupmems, groupmod, grpck, grpconv, grpunconv, lastlog, login, "
+"logoutd, newgidmap, newgrp, newuidmap, newusers, nologin, passwd, pwck, "
+"pwconv, pwunconv, sg (到 newgrp 的链接), su, useradd, userdel, usermod, vigr "
+"(到 vipw 的链接), 以及 vipw"
 
 #. type: Content of: <sect1><sect2><segmentedlist><seglistitem><seg>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/shadow.xml:233
 msgid "/etc/default"
-msgstr ""
+msgstr "/etc/default"
 
 #. type: Content of: <sect1><sect2><variablelist><bridgehead>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/shadow.xml:238
 msgid "Short Descriptions"
-msgstr ""
+msgstr "简要描述"
 
 #. type: Content of: <sect1><sect2><variablelist>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/shadow.xml:239
-msgid "<?dbfo list-presentation=\"list\"?> <?dbhtml list-presentation=\"table\"?>"
+msgid ""
+"<?dbfo list-presentation=\"list\"?> <?dbhtml list-presentation=\"table\"?>"
 msgstr ""
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/shadow.xml:243
 msgid "<command>chage</command>"
-msgstr ""
+msgstr "<command>chage</command>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/shadow.xml:245
 msgid ""
-"Used to change the maximum number of days between obligatory password "
-"changes"
-msgstr ""
+"Used to change the maximum number of days between obligatory password changes"
+msgstr "用于修改强制性密码更新的最大天数"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/shadow.xml:248
 msgid "chage"
-msgstr ""
+msgstr "chage"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/shadow.xml:254
 msgid "<command>chfn</command>"
-msgstr ""
+msgstr "<command>chfn</command>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/shadow.xml:256
 msgid "Used to change a user's full name and other information"
-msgstr ""
+msgstr "用于修改用户全名和其他信息"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/shadow.xml:258
 msgid "chfn"
-msgstr ""
+msgstr "chfn"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/shadow.xml:264
 msgid "<command>chgpasswd</command>"
-msgstr ""
+msgstr "<command>chgpasswd</command>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/shadow.xml:266
 msgid "Used to update group passwords in batch mode"
-msgstr ""
+msgstr "用于批量更新组密码"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/shadow.xml:268
 msgid "chgpasswd"
-msgstr ""
+msgstr "chgpasswd"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/shadow.xml:274
 msgid "<command>chpasswd</command>"
-msgstr ""
+msgstr "<command>chpasswd</command>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/shadow.xml:276
 msgid "Used to update user passwords in batch mode"
-msgstr ""
+msgstr "用于批量更新用户密码"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/shadow.xml:278
 msgid "chpasswd"
-msgstr ""
+msgstr "chpasswd"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/shadow.xml:284
 msgid "<command>chsh</command>"
-msgstr ""
+msgstr "<command>chsh</command>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/shadow.xml:286
 msgid "Used to change a user's default login shell"
-msgstr ""
+msgstr "用于改变用户的默认登录 shell"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/shadow.xml:288
 msgid "chsh"
-msgstr ""
+msgstr "chsh"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/shadow.xml:294
 msgid "<command>expiry</command>"
-msgstr ""
+msgstr "<command>expiry</command>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/shadow.xml:296
 msgid "Checks and enforces the current password expiration policy"
-msgstr ""
+msgstr "检查并强制保证当前密码过期策略"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/shadow.xml:298
 msgid "expiry"
-msgstr ""
+msgstr "expiry"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/shadow.xml:304
 msgid "<command>faillog</command>"
-msgstr ""
+msgstr "<command>faillog</command>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/shadow.xml:306
 msgid ""
 "Is used to examine the log of login failures, to set a maximum number of "
 "failures before an account is blocked, or to reset the failure count"
-msgstr ""
+msgstr "检查失败登录日志，设定锁定账户的最大失败次数，或重置失败次数"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/shadow.xml:310
 msgid "faillog"
-msgstr ""
+msgstr "faillog"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/shadow.xml:316
 msgid "<command>gpasswd</command>"
-msgstr ""
+msgstr "<command>gpasswd</command>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/shadow.xml:318
 msgid "Is used to add and delete members and administrators to groups"
-msgstr ""
+msgstr "用于增加或删除组的用户和管理员"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/shadow.xml:321
 msgid "gpasswd"
-msgstr ""
+msgstr "gpasswd"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/shadow.xml:327
 msgid "<command>groupadd</command>"
-msgstr ""
+msgstr "<command>groupadd</command>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/shadow.xml:329
 msgid "Creates a group with the given name"
-msgstr ""
+msgstr "以指定名称创建组"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/shadow.xml:331
 msgid "groupadd"
-msgstr ""
+msgstr "groupadd"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/shadow.xml:337
 msgid "<command>groupdel</command>"
-msgstr ""
+msgstr "<command>groupdel</command>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/shadow.xml:339
 msgid "Deletes the group with the given name"
-msgstr ""
+msgstr "删除指定的组"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/shadow.xml:341
 msgid "groupdel"
-msgstr ""
+msgstr "groupdel"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/shadow.xml:347
 msgid "<command>groupmems</command>"
-msgstr ""
+msgstr "<command>groupmems</command>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/shadow.xml:349
 msgid ""
 "Allows a user to administer his/her own group membership list without the "
 "requirement of super user privileges."
-msgstr ""
+msgstr "允许用户在不需要超级用户权限的情况下，管理自己的组成员列表"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/shadow.xml:352
 msgid "groupmems"
-msgstr ""
+msgstr "groupmems"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/shadow.xml:358
 msgid "<command>groupmod</command>"
-msgstr ""
+msgstr "<command>groupmod</command>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/shadow.xml:360
 msgid "Is used to modify the given group's name or GID"
-msgstr ""
+msgstr "用于修改给定的组名称或 GID"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/shadow.xml:362
 msgid "groupmod"
-msgstr ""
+msgstr "groupmod"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/shadow.xml:368
 msgid "<command>grpck</command>"
-msgstr ""
+msgstr "<command>grpck</command>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/shadow.xml:370
@@ -579,298 +619,307 @@ msgid ""
 "Verifies the integrity of the group files <filename>/etc/group</filename> "
 "and <filename>/etc/gshadow</filename>"
 msgstr ""
+"验证组文件 <filename>/etc/group</filename> 和 <filename>/etc/gshadow</"
+"filename> 的完整性"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/shadow.xml:374
 msgid "grpck"
-msgstr ""
+msgstr "grpck"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/shadow.xml:380
 msgid "<command>grpconv</command>"
-msgstr ""
+msgstr "<command>grpconv</command>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/shadow.xml:382
 msgid "Creates or updates the shadow group file from the normal group file"
-msgstr ""
+msgstr "根据普通组文件创建或更新加密组文件"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/shadow.xml:385
 msgid "grpconv"
-msgstr ""
+msgstr "grpconv"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/shadow.xml:391
 msgid "<command>grpunconv</command>"
-msgstr ""
+msgstr "<command>grpunconv</command>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/shadow.xml:393
 msgid ""
-"Updates <filename>/etc/group</filename> from "
-"<filename>/etc/gshadow</filename> and then deletes the latter"
+"Updates <filename>/etc/group</filename> from <filename>/etc/gshadow</"
+"filename> and then deletes the latter"
 msgstr ""
+"根据 <filename>/etc/gshadow</filename> 文件更新 <filename>/etc/group</"
+"filename> 文件，并删除前者"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/shadow.xml:396
 msgid "grpunconv"
-msgstr ""
+msgstr "grpunconv"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/shadow.xml:402
 msgid "<command>lastlog</command>"
-msgstr ""
+msgstr "<command>lastlog</command>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/shadow.xml:404
 msgid "Reports the most recent login of all users or of a given user"
-msgstr ""
+msgstr "报告所有用户或给定用户最后一次登录的信息"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/shadow.xml:407
 msgid "lastlog"
-msgstr ""
+msgstr "lastlog"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/shadow.xml:413
 msgid "<command>login</command>"
-msgstr ""
+msgstr "<command>login</command>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/shadow.xml:415
 msgid "Is used by the system to let users sign on"
-msgstr ""
+msgstr "被系统用于允许用户登录"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/shadow.xml:417
 msgid "login"
-msgstr ""
+msgstr "login"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/shadow.xml:423
 msgid "<command>logoutd</command>"
-msgstr ""
+msgstr "<command>logoutd</command>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/shadow.xml:425
 msgid "Is a daemon used to enforce restrictions on log-on time and ports"
-msgstr ""
+msgstr "是一个限制登录时间和端口的守护进程"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/shadow.xml:428
 msgid "logoutd"
-msgstr ""
+msgstr "logoutd"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/shadow.xml:434
 msgid "<command>newgidmap</command>"
-msgstr ""
+msgstr "<command>newgidmap</command>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/shadow.xml:436
 msgid "Is used to set the gid mapping of a user namespace"
-msgstr ""
+msgstr "用于设定用户命名空间的 gid 映射"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/shadow.xml:438
 msgid "newgidmap"
-msgstr ""
+msgstr "newgidmap"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/shadow.xml:444
 msgid "<command>newgrp</command>"
-msgstr ""
+msgstr "<command>newgrp</command>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/shadow.xml:446
 msgid "Is used to change the current GID during a login session"
-msgstr ""
+msgstr "用于在登录会话中修改当前 GID"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/shadow.xml:448
 msgid "newgrp"
-msgstr ""
+msgstr "newgrp"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/shadow.xml:454
 msgid "<command>newuidmap</command>"
-msgstr ""
+msgstr "<command>newuidmap</command>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/shadow.xml:456
 msgid "Is used to set the uid mapping of a user namespace"
-msgstr ""
+msgstr "用于设定用户命名空间的 uid 映射"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/shadow.xml:458
 msgid "newuidmap"
-msgstr ""
+msgstr "newuidmap"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/shadow.xml:464
 msgid "<command>newusers</command>"
-msgstr ""
+msgstr "<command>newusers</command>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/shadow.xml:466
 msgid "Is used to create or update an entire series of user accounts"
-msgstr ""
+msgstr "用于批量创建或更新用户账户"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/shadow.xml:469
 msgid "newusers"
-msgstr ""
+msgstr "newusers"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/shadow.xml:475
 msgid "<command>nologin</command>"
-msgstr ""
+msgstr "<command>nologin</command>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/shadow.xml:477
 msgid ""
 "Displays a message that an account is not available; it is designed to be "
 "used as the default shell for accounts that have been disabled"
-msgstr ""
+msgstr "显示一条账户不可用的消息；它被设计为用来当作被禁用的账户的默认 shell"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/shadow.xml:481
 msgid "nologin"
-msgstr ""
+msgstr "nologin"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/shadow.xml:487
 msgid "<command>passwd</command>"
-msgstr ""
+msgstr "<command>passwd</command>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/shadow.xml:489
 msgid "Is used to change the password for a user or group account"
-msgstr ""
+msgstr "用于修改用户或组账户的密码"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/shadow.xml:491
 msgid "passwd"
-msgstr ""
+msgstr "passwd"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/shadow.xml:497
 msgid "<command>pwck</command>"
-msgstr ""
+msgstr "<command>pwck</command>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/shadow.xml:499
 msgid ""
-"Verifies the integrity of the password files "
-"<filename>/etc/passwd</filename> and <filename>/etc/shadow</filename>"
+"Verifies the integrity of the password files <filename>/etc/passwd</"
+"filename> and <filename>/etc/shadow</filename>"
 msgstr ""
+"检验密码文件 <filename>/etc/passwd</filename> 和 <filename>/etc/shadow</"
+"filename> 的完整性"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/shadow.xml:503
 msgid "pwck"
-msgstr ""
+msgstr "pwck"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/shadow.xml:509
 msgid "<command>pwconv</command>"
-msgstr ""
+msgstr "<command>pwconv</command>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/shadow.xml:511
-msgid "Creates or updates the shadow password file from the normal password file"
-msgstr ""
+msgid ""
+"Creates or updates the shadow password file from the normal password file"
+msgstr "从普通密码文件创建或更新加密密码文件"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/shadow.xml:514
 msgid "pwconv"
-msgstr ""
+msgstr "pwconv"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/shadow.xml:520
 msgid "<command>pwunconv</command>"
-msgstr ""
+msgstr "<command>pwunconv</command>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/shadow.xml:522
 msgid ""
-"Updates <filename>/etc/passwd</filename> from "
-"<filename>/etc/shadow</filename> and then deletes the latter"
+"Updates <filename>/etc/passwd</filename> from <filename>/etc/shadow</"
+"filename> and then deletes the latter"
 msgstr ""
+"根据 <filename>/etc/shadow</filename> 更新 <filename>/etc/passwd</filename> "
+"并删除前者"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/shadow.xml:525
 msgid "pwunconv"
-msgstr ""
+msgstr "pwunconv"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/shadow.xml:531
 msgid "<command>sg</command>"
-msgstr ""
+msgstr "<command>sg</command>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/shadow.xml:533
 msgid ""
 "Executes a given command while the user's GID is set to that of the given "
 "group"
-msgstr ""
+msgstr "在用户 GID 设为给定组 ID 的情况下，执行给定命令"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/shadow.xml:536
 msgid "sg"
-msgstr ""
+msgstr "sg"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/shadow.xml:542
 msgid "<command>su</command>"
-msgstr ""
+msgstr "<command>su</command>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/shadow.xml:544
 msgid "Runs a shell with substitute user and group IDs"
-msgstr ""
+msgstr "用替换的用户和组 ID 运行 shell"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/shadow.xml:546
 msgid "su"
-msgstr ""
+msgstr "su"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/shadow.xml:552
 msgid "<command>useradd</command>"
-msgstr ""
+msgstr "<command>useradd</command>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/shadow.xml:554
 msgid ""
 "Creates a new user with the given name, or updates the default new-user "
 "information"
-msgstr ""
+msgstr "以指定名称创建新用户，或更新新用户默认信息"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/shadow.xml:557
 msgid "useradd"
-msgstr ""
+msgstr "useradd"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/shadow.xml:563
 msgid "<command>userdel</command>"
-msgstr ""
+msgstr "<command>userdel</command>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/shadow.xml:565
 msgid "Deletes the given user account"
-msgstr ""
+msgstr "删除给定用户"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/shadow.xml:567
 msgid "userdel"
-msgstr ""
+msgstr "userdel"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/shadow.xml:573
 msgid "<command>usermod</command>"
-msgstr ""
+msgstr "<command>usermod</command>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/shadow.xml:575
@@ -878,42 +927,47 @@ msgid ""
 "Is used to modify the given user's login name, User Identification (UID), "
 "shell, initial group, home directory, etc."
 msgstr ""
+"修改给定用户的登录名称、用户标识符 (UID)、shell、初始组、home 目录等信息"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/shadow.xml:578
 msgid "usermod"
-msgstr ""
+msgstr "usermod"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/shadow.xml:584
 msgid "<command>vigr</command>"
-msgstr ""
+msgstr "<command>vigr</command>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/shadow.xml:586
 msgid ""
-"Edits the <filename>/etc/group</filename> or "
-"<filename>/etc/gshadow</filename> files"
+"Edits the <filename>/etc/group</filename> or <filename>/etc/gshadow</"
+"filename> files"
 msgstr ""
+"编辑 <filename>/etc/group</filename> 或 <filename>/etc/gshadow</filename> 文"
+"件"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/shadow.xml:589
 msgid "vigr"
-msgstr ""
+msgstr "vigr"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/shadow.xml:595
 msgid "<command>vipw</command>"
-msgstr ""
+msgstr "<command>vipw</command>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/shadow.xml:597
 msgid ""
-"Edits the <filename>/etc/passwd</filename> or "
-"<filename>/etc/shadow</filename> files"
+"Edits the <filename>/etc/passwd</filename> or <filename>/etc/shadow</"
+"filename> files"
 msgstr ""
+"编辑 <filename>/etc/passwd</filename> 或 <filename>/etc/shadow</filename> 文"
+"件"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/shadow.xml:600
 msgid "vipw"
-msgstr ""
+msgstr "vipw"

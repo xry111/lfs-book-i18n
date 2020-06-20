@@ -1,9 +1,3 @@
-# SOME DESCRIPTIVE TITLE
-# Copyright (C) YEAR Free Software Foundation, Inc.
-# This file is distributed under the same license as the PACKAGE package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
-#
-#, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
@@ -11,16 +5,17 @@ msgstr ""
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
-"Language: \n"
+"Language: zh_CN\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Translate Toolkit 2.2.5\n"
 
 #. type: Content of: <sect1><sect1info><address>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/gmp.xml:14
 #, no-wrap
 msgid "&gmp-url;"
-msgstr ""
+msgstr "&gmp-url;"
 
 #. type: Content of: <sect1><sect1info>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/gmp.xml:12
@@ -28,54 +23,58 @@ msgid ""
 "<productname>gmp</productname> <productnumber>&gmp-version;</productnumber> "
 "<placeholder type=\"address\" id=\"0\"/>"
 msgstr ""
+"<productname>gmp</productname> <productnumber>&gmp-version;</productnumber> "
+"<placeholder type=\"address\" id=\"0\"/>"
 
 #. type: Content of: <sect1><title>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/gmp.xml:17
 msgid "GMP-&gmp-version;"
-msgstr ""
+msgstr "GMP-&gmp-version;"
 
 #. type: Content of: <sect1><indexterm><primary>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/gmp.xml:20
 msgid "GMP"
-msgstr ""
+msgstr "GMP"
 
 #. type: Content of: <sect1><sect2><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/gmp.xml:26
 msgid ""
 "The GMP package contains math libraries. These have useful functions for "
 "arbitrary precision arithmetic."
-msgstr ""
+msgstr "GMP 软件包包含提供任意精度算术函数的数学库。"
 
 #. type: Content of: <sect1><sect2><segmentedlist><segtitle>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/gmp.xml:30
 msgid "&buildtime;"
-msgstr ""
+msgstr "&buildtime;"
 
 #. type: Content of: <sect1><sect2><segmentedlist><segtitle>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/gmp.xml:31
 msgid "&diskspace;"
-msgstr ""
+msgstr "&diskspace;"
 
 #. type: Content of: <sect1><sect2><segmentedlist><seglistitem><seg>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/gmp.xml:34
+#, fuzzy
 msgid "&gmp-fin-sbu;"
-msgstr ""
+msgstr "&gmp-ch6-sbu;"
 
 #. type: Content of: <sect1><sect2><segmentedlist><seglistitem><seg>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/gmp.xml:35
+#, fuzzy
 msgid "&gmp-fin-du;"
-msgstr ""
+msgstr "&gmp-ch6-du;"
 
 #. type: Content of: <sect1><sect2><title>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/gmp.xml:42
 msgid "Installation of GMP"
-msgstr ""
+msgstr "安装 GMP"
 
 #. type: Content of: <sect1><sect2><note><para><screen>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/gmp.xml:50
 #, no-wrap
 msgid "<userinput><parameter>ABI=32</parameter> ./configure ...</userinput>"
-msgstr ""
+msgstr "<userinput><parameter>ABI=32</parameter> ./configure ...</userinput>"
 
 #. type: Content of: <sect1><sect2><note><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/gmp.xml:45
@@ -86,6 +85,10 @@ msgid ""
 "to configure for 64-bits and fail.  Avoid this by invoking the configure "
 "command below with <placeholder type=\"screen\" id=\"0\"/>"
 msgstr ""
+"如果您在为 32 位 x86 构建 LFS ，但您的 CPU 能够运行 64 位代码，<emphasis>而"
+"且</emphasis> 您指定了 <envar>CFLAGS</envar> 环境变量，配置脚本会试图为 64 "
+"位 CPU 进行配置并且失败。为了避免这个问题，像下面这样执行 configure 命令："
+"<placeholder type=\"screen\" id=\"0\"/>"
 
 #. type: Content of: <sect1><sect2><note><para><screen>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/gmp.xml:59
@@ -94,6 +97,8 @@ msgid ""
 "<userinput>cp -v configfsf.guess config.guess\n"
 "cp -v configfsf.sub   config.sub</userinput>"
 msgstr ""
+"<userinput>cp -v configfsf.guess config.guess\n"
+"cp -v configfsf.sub   config.sub</userinput>"
 
 #. type: Content of: <sect1><sect2><note><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/gmp.xml:54
@@ -103,11 +108,14 @@ msgid ""
 "host's CPU are desired, generic libraries can be created by running the "
 "following: <placeholder type=\"screen\" id=\"0\"/>"
 msgstr ""
+"GMP 的默认设定会生成为本机处理器优化的库。如果您希望获得适合功能没有本机强大"
+"的 CPU 的库，执行以下命令，以生成通用库：<placeholder type=\"screen\" id="
+"\"0\"/>"
 
 #. type: Content of: <sect1><sect2><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/gmp.xml:63
 msgid "Prepare GMP for compilation:"
-msgstr ""
+msgstr "准备编译 GMP："
 
 #. type: Content of: <sect1><sect2><screen>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/gmp.xml:65
@@ -118,36 +126,40 @@ msgid ""
 "            --disable-static \\\n"
 "            --docdir=/usr/share/doc/gmp-&gmp-version;</userinput>"
 msgstr ""
+"<userinput remap=\"configure\">./configure --prefix=/usr    \\\n"
+"            --enable-cxx     \\\n"
+"            --disable-static \\\n"
+"            --docdir=/usr/share/doc/gmp-&gmp-version;</userinput>"
 
 #. type: Content of: <sect1><sect2><variablelist><title>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/gmp.xml:71
 msgid "The meaning of the new configure options:"
-msgstr ""
+msgstr "新的配置选项的含义："
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/gmp.xml:74
 msgid "<parameter>--enable-cxx</parameter>"
-msgstr ""
+msgstr "<parameter>--enable-cxx</parameter>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/gmp.xml:76
 msgid "This parameter enables C++ support"
-msgstr ""
+msgstr "该参数启用 C++ 支持"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/gmp.xml:81
 msgid "<parameter>--docdir=/usr/share/doc/gmp-&gmp-version;</parameter>"
-msgstr ""
+msgstr "<parameter>--docdir=/usr/share/doc/gmp-&gmp-version;</parameter>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/gmp.xml:83
 msgid "This variable specifies the correct place for the documentation."
-msgstr ""
+msgstr "该变量指定文档的正确位置"
 
 #. type: Content of: <sect1><sect2><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/gmp.xml:90
 msgid "Compile the package and generate the HTML documentation:"
-msgstr ""
+msgstr "编译该软件包，并生成 HTML 文档："
 
 #. type: Content of: <sect1><sect2><screen>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/gmp.xml:92
@@ -156,6 +168,8 @@ msgid ""
 "<userinput remap=\"make\">make\n"
 "make html</userinput>"
 msgstr ""
+"<userinput remap=\"make\">make\n"
+"make html</userinput>"
 
 #. type: Content of: <sect1><sect2><important><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/gmp.xml:96
@@ -163,50 +177,52 @@ msgid ""
 "The test suite for GMP in this section is considered critical.  Do not skip "
 "it under any circumstances."
 msgstr ""
+"我们认为，本节中 GMP 的测试套件被认为是关键的。无论如何都不要跳过测试过程。"
 
 #. type: Content of: <sect1><sect2><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/gmp.xml:100
 msgid "Test the results:"
-msgstr ""
+msgstr "测试编译结果："
 
 #. type: Content of: <sect1><sect2><screen>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/gmp.xml:102
 #, no-wrap
-msgid ""
-"<userinput remap=\"test\">make check 2>&amp;1 | tee "
-"gmp-check-log</userinput>"
-msgstr ""
+msgid "<userinput remap=\"test\">make check 2>&amp;1 | tee gmp-check-log</userinput>"
+msgstr "<userinput remap=\"test\">make check 2>&amp;1 | tee gmp-check-log</userinput>"
 
 #. type: Content of: <sect1><sect2><caution><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/gmp.xml:104
 msgid ""
-"The code in gmp is highly optimized for the processor where it is "
-"built. Occasionally, the code that detects the processor misidentifies the "
-"system capabilities and there will be errors in the tests or other "
-"applications using the gmp libraries with the message \"Illegal "
-"instruction\".  In this case, gmp should be reconfigured with the option "
-"--build=x86_64-unknown-linux-gnu and rebuilt."
+"The code in gmp is highly optimized for the processor where it is built. "
+"Occasionally, the code that detects the processor misidentifies the system "
+"capabilities and there will be errors in the tests or other applications "
+"using the gmp libraries with the message \"Illegal instruction\".  In this "
+"case, gmp should be reconfigured with the option --build=x86_64-unknown-"
+"linux-gnu and rebuilt."
 msgstr ""
+"GMP 中的代码是针对本机处理器高度优化的。在偶然情况下，检测处理器的代码会错误"
+"识别 CPU 的功能，导致测试套件或使用 GMP 的其他程序输出消息 “Illegal "
+"instruction” (非法指令)。如果发生这种情况，需要加入选项 --build=x86_64-"
+"unknown-linux-gnu 并重新构建 GMP。"
 
 #. type: Content of: <sect1><sect2><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/gmp.xml:111
+#, fuzzy
 msgid ""
 "Ensure that all 197 tests in the test suite passed.  Check the results by "
 "issuing the following command:"
-msgstr ""
+msgstr "务必确认测试套件中的 190 个测试全部通过。运行以下命令检验结果："
 
 #. type: Content of: <sect1><sect2><screen>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/gmp.xml:114
 #, no-wrap
-msgid ""
-"<userinput remap=\"test\">awk '/# PASS:/{total+=$3} ; END{print total}' "
-"gmp-check-log</userinput>"
-msgstr ""
+msgid "<userinput remap=\"test\">awk '/# PASS:/{total+=$3} ; END{print total}' gmp-check-log</userinput>"
+msgstr "<userinput remap=\"test\">awk '/# PASS:/{total+=$3} ; END{print total}' gmp-check-log</userinput>"
 
 #. type: Content of: <sect1><sect2><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/gmp.xml:116
 msgid "Install the package and its documentation:"
-msgstr ""
+msgstr "安装该软件包及其文档："
 
 #. type: Content of: <sect1><sect2><screen>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/gmp.xml:118
@@ -215,68 +231,71 @@ msgid ""
 "<userinput remap=\"install\">make install\n"
 "make install-html</userinput>"
 msgstr ""
+"<userinput remap=\"install\">make install\n"
+"make install-html</userinput>"
 
 #. type: Content of: <sect1><sect2><title>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/gmp.xml:124
 msgid "Contents of GMP"
-msgstr ""
+msgstr "GMP 的内容"
 
 #. type: Content of: <sect1><sect2><segmentedlist><segtitle>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/gmp.xml:127
 msgid "Installed Libraries"
-msgstr ""
+msgstr "安装的库"
 
 #. type: Content of: <sect1><sect2><segmentedlist><segtitle>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/gmp.xml:128
 msgid "Installed directory"
-msgstr ""
+msgstr "安装的目录"
 
 #. type: Content of: <sect1><sect2><segmentedlist><seglistitem><seg>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/gmp.xml:131
 msgid "libgmp.so and libgmpxx.so"
-msgstr ""
+msgstr "libgmp.so 和 libgmpxx.so"
 
 #. type: Content of: <sect1><sect2><segmentedlist><seglistitem><seg>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/gmp.xml:132
 msgid "/usr/share/doc/gmp-&gmp-version;"
-msgstr ""
+msgstr "/usr/share/doc/gmp-&gmp-version;"
 
 #. type: Content of: <sect1><sect2><variablelist><bridgehead>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/gmp.xml:137
 msgid "Short Descriptions"
-msgstr ""
+msgstr "简要描述"
 
 #. type: Content of: <sect1><sect2><variablelist>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/gmp.xml:138
-msgid "<?dbfo list-presentation=\"list\"?> <?dbhtml list-presentation=\"table\"?>"
+msgid ""
+"<?dbfo list-presentation=\"list\"?> <?dbhtml list-presentation=\"table\"?>"
 msgstr ""
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/gmp.xml:142
 msgid "<filename class=\"libraryfile\">libgmp</filename>"
-msgstr ""
+msgstr "<filename class=\"libraryfile\">libgmp</filename>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/gmp.xml:144
 msgid "Contains precision math functions"
-msgstr ""
+msgstr "包含任意精度数学函数"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/gmp.xml:146
 msgid "libgmp"
-msgstr ""
+msgstr "libgmp"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/gmp.xml:152
 msgid "<filename class=\"libraryfile\">libgmpxx</filename>"
-msgstr ""
+msgstr "<filename class=\"libraryfile\">libgmpxx</filename>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/gmp.xml:154
 msgid "Contains C++ precision math functions"
-msgstr ""
+msgstr "包含 C++ 任意精度数学函数"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/gmp.xml:156
 msgid "libgmpxx"
-msgstr ""
+msgstr "libgmpxx"

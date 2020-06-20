@@ -1,9 +1,3 @@
-# SOME DESCRIPTIVE TITLE
-# Copyright (C) YEAR Free Software Foundation, Inc.
-# This file is distributed under the same license as the PACKAGE package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
-#
-#, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
@@ -11,78 +5,88 @@ msgstr ""
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
-"Language: \n"
+"Language: zh_CN\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Translate Toolkit 2.2.5\n"
 
 #. type: Content of: <sect1><sect1info><address>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/iproute2.xml:14
 #, no-wrap
 msgid "&iproute2-url;"
-msgstr ""
+msgstr "&iproute2-url;"
 
 #. type: Content of: <sect1><sect1info>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/iproute2.xml:12
 msgid ""
-"<productname>iproute2</productname> "
-"<productnumber>&iproute2-version;</productnumber> <placeholder "
-"type=\"address\" id=\"0\"/>"
+"<productname>iproute2</productname> <productnumber>&iproute2-version;</"
+"productnumber> <placeholder type=\"address\" id=\"0\"/>"
 msgstr ""
+"<productname>iproute2</productname> <productnumber>&iproute2-version;</"
+"productnumber> <placeholder type=\"address\" id=\"0\"/>"
 
 #. type: Content of: <sect1><title>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/iproute2.xml:17
 msgid "IPRoute2-&iproute2-version;"
-msgstr ""
+msgstr "IPRoute2-&iproute2-version;"
 
 #. type: Content of: <sect1><indexterm><primary>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/iproute2.xml:20
 msgid "IPRoute2"
-msgstr ""
+msgstr "IPRoute2"
 
 #. type: Content of: <sect1><sect2><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/iproute2.xml:26
 msgid ""
 "The IPRoute2 package contains programs for basic and advanced IPV4-based "
 "networking."
-msgstr ""
+msgstr "IPRoute2 软件包包含基于 IPv4 的基本和高级网络程序。"
 
 #. type: Content of: <sect1><sect2><segmentedlist><segtitle>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/iproute2.xml:30
 msgid "&buildtime;"
-msgstr ""
+msgstr "&buildtime;"
 
 #. type: Content of: <sect1><sect2><segmentedlist><segtitle>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/iproute2.xml:31
 msgid "&diskspace;"
-msgstr ""
+msgstr "&diskspace;"
 
 #. type: Content of: <sect1><sect2><segmentedlist><seglistitem><seg>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/iproute2.xml:34
+#, fuzzy
 msgid "&iproute2-fin-sbu;"
-msgstr ""
+msgstr "&iproute2-ch6-sbu;"
 
 #. type: Content of: <sect1><sect2><segmentedlist><seglistitem><seg>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/iproute2.xml:35
+#, fuzzy
 msgid "&iproute2-fin-du;"
-msgstr ""
+msgstr "&iproute2-ch6-du;"
 
 #. type: Content of: <sect1><sect2><title>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/iproute2.xml:42
 msgid "Installation of IPRoute2"
-msgstr ""
+msgstr "安装 IPRoute2"
 
 #. type: Content of: <sect1><sect2><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/iproute2.xml:44
+#, fuzzy
 msgid ""
 "The <command>arpd</command> program included in this package will not be "
-"built since it is dependent on Berkeley DB, which is not installed in "
-"LFS. However, a directory for <command>arpd</command> and a man page will "
-"still be installed. Prevent this by running the commands below.  If the "
+"built since it is dependent on Berkeley DB, which is not installed in LFS. "
+"However, a directory for <command>arpd</command> and a man page will still "
+"be installed. Prevent this by running the commands below.  If the "
 "<command>arpd</command> binary is needed, instructions for compiling "
-"Berkeley DB can be found in the BLFS Book at <ulink "
-"url=\"&blfs-book;server/db.html\"/>."
+"Berkeley DB can be found in the BLFS Book at <ulink url=\"&blfs-book;server/"
+"db.html\"/>."
 msgstr ""
+"该软件包中的 <command>arpd</command> 程序依赖于 LFS 不安装的 Berkeley DB，因"
+"此不会被构建。然而，用于 <command>arpd</command> 的一个目录和它的 man 页面仍"
+"会被安装。运行以下命令以防止它们的安装。如果需要使用 <command>arpd</"
+"command> 二进制程序，参考 BLFS 手册中的 Berkeley DB 编译说明，它位于 <ulink "
+"url=\"&blfs-book;server/databases.html#db\"/>。"
 
 #. type: Content of: <sect1><sect2><screen>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/iproute2.xml:53
@@ -91,63 +95,65 @@ msgid ""
 "<userinput remap=\"pre\">sed -i /ARPD/d Makefile\n"
 "rm -fv man/man8/arpd.8</userinput>"
 msgstr ""
+"<userinput remap=\"pre\">sed -i /ARPD/d Makefile\n"
+"rm -fv man/man8/arpd.8</userinput>"
 
 #. type: Content of: <sect1><sect2><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/iproute2.xml:56
+#, fuzzy
 msgid ""
-"It is also necessary to disable building two modules that require <ulink "
-"url=\"&blfs-book;postlfs/iptables.html\"/>."
+"It is also necessary to disable building two modules that require <ulink url="
+"\"&blfs-book;postlfs/iptables.html\"/>."
 msgstr ""
+"还需要禁用两个需要 <ulink url=\"&blfs-book;postlfs/iptables.html\"/> 的模块。"
 
 #. type: Content of: <sect1><sect2><screen>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/iproute2.xml:59
 #, no-wrap
 msgid "<userinput remap=\"pre\">sed -i 's/.m_ipt.o//' tc/Makefile</userinput>"
-msgstr ""
+msgstr "<userinput remap=\"pre\">sed -i 's/.m_ipt.o//' tc/Makefile</userinput>"
 
 #. type: Content of: <sect1><sect2><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/iproute2.xml:61
 msgid "Compile the package:"
-msgstr ""
+msgstr "编译该软件包："
 
 #. type: Content of: <sect1><sect2><screen>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/iproute2.xml:63
 #, no-wrap
 msgid "<userinput remap=\"make\">make</userinput>"
-msgstr ""
+msgstr "<userinput remap=\"make\">make</userinput>"
 
 #. type: Content of: <sect1><sect2><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/iproute2.xml:65
 msgid "This package does not have a working test suite."
-msgstr ""
+msgstr "该软件包没有能够工作的测试套件。"
 
 #. type: Content of: <sect1><sect2><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/iproute2.xml:76
 msgid "Install the package:"
-msgstr ""
+msgstr "安装该软件包："
 
 #. type: Content of: <sect1><sect2><screen>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/iproute2.xml:78
 #, no-wrap
-msgid ""
-"<userinput remap=\"install\">make "
-"DOCDIR=/usr/share/doc/iproute2-&iproute2-version; install</userinput>"
-msgstr ""
+msgid "<userinput remap=\"install\">make DOCDIR=/usr/share/doc/iproute2-&iproute2-version; install</userinput>"
+msgstr "<userinput remap=\"install\">make DOCDIR=/usr/share/doc/iproute2-&iproute2-version; install</userinput>"
 
 #. type: Content of: <sect1><sect2><title>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/iproute2.xml:83
 msgid "Contents of IPRoute2"
-msgstr ""
+msgstr "IPRoute2 的内容"
 
 #. type: Content of: <sect1><sect2><segmentedlist><segtitle>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/iproute2.xml:86
 msgid "Installed programs"
-msgstr ""
+msgstr "安装的程序"
 
 #. type: Content of: <sect1><sect2><segmentedlist><segtitle>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/iproute2.xml:87
 msgid "Installed directories"
-msgstr ""
+msgstr "安装的目录"
 
 #. type: Content of: <sect1><sect2><segmentedlist><seglistitem><seg>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/iproute2.xml:90
@@ -155,112 +161,120 @@ msgid ""
 "bridge, ctstat (link to lnstat), genl, ifcfg, ifstat, ip, lnstat, nstat, "
 "routef, routel, rtacct, rtmon, rtpr, rtstat (link to lnstat), ss, and tc"
 msgstr ""
+"bridge, ctstat (到 lnstat 的链接), genl, ifcfg, ifstat, ip, lnstat, nstat, "
+"routef, routel, rtacct, rtmon, rtpr, rtstat (到 lnstat 的链接), ss, 以及 tc"
 
 #. type: Content of: <sect1><sect2><segmentedlist><seglistitem><seg>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/iproute2.xml:93
-msgid "/etc/iproute2, /usr/lib/tc, and /usr/share/doc/iproute2-&iproute2-version;,"
+msgid ""
+"/etc/iproute2, /usr/lib/tc, and /usr/share/doc/iproute2-&iproute2-version;,"
 msgstr ""
+"/etc/iproute2, /usr/lib/tc, 以及 /usr/share/doc/iproute2-&iproute2-version;,"
 
 #. type: Content of: <sect1><sect2><variablelist><bridgehead>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/iproute2.xml:99
 msgid "Short Descriptions"
-msgstr ""
+msgstr "简要描述"
 
 #. type: Content of: <sect1><sect2><variablelist>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/iproute2.xml:100
-msgid "<?dbfo list-presentation=\"list\"?> <?dbhtml list-presentation=\"table\"?>"
+msgid ""
+"<?dbfo list-presentation=\"list\"?> <?dbhtml list-presentation=\"table\"?>"
 msgstr ""
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/iproute2.xml:104
 msgid "<command>bridge</command>"
-msgstr ""
+msgstr "<command>bridge</command>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/iproute2.xml:106
 msgid "Configures network bridges"
-msgstr ""
+msgstr "配置网桥"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/iproute2.xml:108
 msgid "bridge"
-msgstr ""
+msgstr "bridge"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/iproute2.xml:114
 msgid "<command>ctstat</command>"
-msgstr ""
+msgstr "<command>ctstat</command>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/iproute2.xml:116
 msgid "Connection status utility"
-msgstr ""
+msgstr "连接状态工具"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/iproute2.xml:118
 msgid "ctstat"
-msgstr ""
+msgstr "ctstat"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/iproute2.xml:124
 msgid "<command>genl</command>"
-msgstr ""
+msgstr "<command>genl</command>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/iproute2.xml:126
 msgid "Generic netlink utility frontend"
-msgstr ""
+msgstr "通用网络连接工具前端"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/iproute2.xml:128
 msgid "genl"
-msgstr ""
+msgstr "genl"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/iproute2.xml:134
 msgid "<command>ifcfg</command>"
-msgstr ""
+msgstr "<command>ifcfg</command>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/iproute2.xml:136
 msgid ""
 "A shell script wrapper for the <command>ip</command> command [Note that it "
 "requires the <command>arping</command> and <command>rdisk</command> programs "
-"from the iputils package found at <ulink "
-"url=\"http://www.skbuff.net/iputils/\"/>.]"
+"from the iputils package found at <ulink url=\"http://www.skbuff.net/iputils/"
+"\"/>.]"
 msgstr ""
+"一个封装 <command>ip</command> 命令的脚本 [注意它需要 <command>arping</"
+"command> 和 <command>rdisk</command> 程序，它们来自于 iputils 软件包，可以在 "
+"<ulink url=\"http://www.skbuff.net/iputils/\"/>找到。]"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/iproute2.xml:141
 msgid "ifcfg"
-msgstr ""
+msgstr "ifcfg"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/iproute2.xml:147
 msgid "<command>ifstat</command>"
-msgstr ""
+msgstr "<command>ifstat</command>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/iproute2.xml:149
 msgid ""
 "Shows the interface statistics, including the amount of transmitted and "
 "received packets by interface"
-msgstr ""
+msgstr "显示网络接口统计，包括接口上发送和接收的数据包数量"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/iproute2.xml:152
 msgid "ifstat"
-msgstr ""
+msgstr "ifstat"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/iproute2.xml:158
 msgid "<command>ip</command>"
-msgstr ""
+msgstr "<command>ip</command>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/iproute2.xml:160
 msgid "The main executable. It has several different functions:"
-msgstr ""
+msgstr "该软件包的主程序。它包含几种不同的功能："
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/iproute2.xml:162
@@ -268,6 +282,8 @@ msgid ""
 "<command>ip link <replaceable>&lt;device&gt;</replaceable></command> allows "
 "users to look at the state of devices and to make changes"
 msgstr ""
+"<command>ip link <replaceable>&lt;device&gt;</replaceable></command> 允许用户"
+"查看和修改设备状态"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/iproute2.xml:165
@@ -275,6 +291,8 @@ msgid ""
 "<command>ip addr</command> allows users to look at addresses and their "
 "properties, add new addresses, and delete old ones"
 msgstr ""
+"<command>ip addr</command> 允许用户查看网络地址及其属性，添加新地址或删除旧"
+"地址"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/iproute2.xml:168
@@ -282,41 +300,43 @@ msgid ""
 "<command>ip neighbor</command> allows users to look at neighbor bindings and "
 "their properties, add new neighbor entries, and delete old ones"
 msgstr ""
+"<command>ip neigh</command> 允许用户查看 ARP 近邻绑定及其属性，增加新近邻项，"
+"或删除旧项"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/iproute2.xml:172
 msgid ""
 "<command>ip rule</command> allows users to look at the routing policies and "
 "change them"
-msgstr ""
+msgstr "<command>ip rule</command> 允许用户查看或修改路由策略"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/iproute2.xml:175
 msgid ""
 "<command>ip route</command> allows users to look at the routing table and "
 "change routing table rules"
-msgstr ""
+msgstr "<command>ip route</command> 允许用户查看路由表或修改路由表规则"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/iproute2.xml:178
 msgid ""
 "<command>ip tunnel</command> allows users to look at the IP tunnels and "
 "their properties, and change them"
-msgstr ""
+msgstr "<command>ip tunnel</command> 允许用户查看 IP 隧道及其属性，或修改它们"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/iproute2.xml:181
 msgid ""
 "<command>ip maddr</command> allows users to look at the multicast addresses "
 "and their properties, and change them"
-msgstr ""
+msgstr "<command>ip maddr</command> 允许用户查看多播地址及其属性，或修改它们"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/iproute2.xml:184
 msgid ""
 "<command>ip mroute</command> allows users to set, change, or delete the "
 "multicast routing"
-msgstr ""
+msgstr "<command>ip mroute</command> 允许用户设定、 修改或删除多播路由"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/iproute2.xml:187
@@ -324,197 +344,203 @@ msgid ""
 "<command>ip monitor</command> allows users to continuously monitor the state "
 "of devices, addresses and routes"
 msgstr ""
+"<command>ip monitor</command> 允许用户连续地监视设备、 地址和路由的状态"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/iproute2.xml:190
 msgid "ip"
-msgstr ""
+msgstr "ip"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/iproute2.xml:196
 msgid "<command>lnstat</command>"
-msgstr ""
+msgstr "<command>lnstat</command>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/iproute2.xml:198
 msgid ""
-"Provides Linux network statistics; it is a generalized and more "
-"feature-complete replacement for the old <command>rtstat</command> program"
+"Provides Linux network statistics; it is a generalized and more feature-"
+"complete replacement for the old <command>rtstat</command> program"
 msgstr ""
+"提供 Linux 网络统计；它是旧的<command>rtstat</command> 的更通用、功能更完备的"
+"替代品"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/iproute2.xml:202
 msgid "lnstat"
-msgstr ""
+msgstr "lnstat"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/iproute2.xml:208
 msgid "<command>nstat</command>"
-msgstr ""
+msgstr "<command>nstat</command>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/iproute2.xml:210
 msgid "Shows network statistics"
-msgstr ""
+msgstr "显示网络统计"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/iproute2.xml:212
 msgid "nstat"
-msgstr ""
+msgstr "nstat"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/iproute2.xml:218
 msgid "<command>routef</command>"
-msgstr ""
+msgstr "<command>routef</command>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/iproute2.xml:220
 msgid ""
 "A component of <command>ip route</command>. This is for flushing the routing "
 "tables"
-msgstr ""
+msgstr "<command>ip route</command> 的一个组件。用于刷新路由表"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/iproute2.xml:223
 msgid "routef"
-msgstr ""
+msgstr "routef"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/iproute2.xml:229
 msgid "<command>routel</command>"
-msgstr ""
+msgstr "<command>routel</command>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/iproute2.xml:231
 msgid ""
 "A component of <command>ip route</command>. This is for listing the routing "
 "tables"
-msgstr ""
+msgstr "<command>ip route</command> 的一个组件。用于显示路由表"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/iproute2.xml:234
 msgid "routel"
-msgstr ""
+msgstr "routel"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/iproute2.xml:240
 msgid "<command>rtacct</command>"
-msgstr ""
+msgstr "<command>rtacct</command>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/iproute2.xml:242
 msgid "Displays the contents of <filename>/proc/net/rt_acct</filename>"
-msgstr ""
+msgstr "显示 <filename>/proc/net/rt_acct</filename> 的内容"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/iproute2.xml:245
 msgid "rtacct"
-msgstr ""
+msgstr "rtacct"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/iproute2.xml:251
 msgid "<command>rtmon</command>"
-msgstr ""
+msgstr "<command>rtmon</command>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/iproute2.xml:253
 msgid "Route monitoring utility"
-msgstr ""
+msgstr "路由监视工具"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/iproute2.xml:255
 msgid "rtmon"
-msgstr ""
+msgstr "rtmon"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/iproute2.xml:261
 msgid "<command>rtpr</command>"
-msgstr ""
+msgstr "<command>rtpr</command>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/iproute2.xml:263
-msgid "Converts the output of <command>ip -o</command> back into a readable form"
-msgstr ""
+msgid ""
+"Converts the output of <command>ip -o</command> back into a readable form"
+msgstr "将 <command>ip -o</command> 的输出转换为可读形式"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/iproute2.xml:266
 msgid "rtpr"
-msgstr ""
+msgstr "rtpr"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/iproute2.xml:272
 msgid "<command>rtstat</command>"
-msgstr ""
+msgstr "<command>rtstat</command>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/iproute2.xml:274
 msgid "Route status utility"
-msgstr ""
+msgstr "路由状态工具"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/iproute2.xml:276
 msgid "rtstat"
-msgstr ""
+msgstr "rtstat"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/iproute2.xml:282
 msgid "<command>ss</command>"
-msgstr ""
+msgstr "<command>ss</command>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/iproute2.xml:284
-msgid "Similar to the <command>netstat</command> command; shows active connections"
-msgstr ""
+msgid ""
+"Similar to the <command>netstat</command> command; shows active connections"
+msgstr "与 <command>netstat</command> 命令相似；显示活动连接"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/iproute2.xml:287
 msgid "ss"
-msgstr ""
+msgstr "ss"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/iproute2.xml:293
 msgid "<command>tc</command>"
-msgstr ""
+msgstr "<command>tc</command>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/iproute2.xml:295
 msgid ""
 "Traffic Controlling Executable; this is for Quality Of Service (QOS) and "
 "Class Of Service (COS) implementations"
-msgstr ""
+msgstr "流量管制可执行程序；用于实现服务质量 (QOS) 和服务类型 (COS) 协议"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/iproute2.xml:298
-msgid "<command>tc qdisc</command> allows users to setup the queueing discipline"
-msgstr ""
+msgid ""
+"<command>tc qdisc</command> allows users to setup the queueing discipline"
+msgstr "<command>tc qdisc</command> 允许用户设定排队规则"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/iproute2.xml:301
 msgid ""
 "<command>tc class</command> allows users to setup classes based on the "
 "queuing discipline scheduling"
-msgstr ""
+msgstr "<command>tc class</command> 允许用户设定基于排队规则调度的调度类"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/iproute2.xml:304
 msgid ""
 "<command>tc estimator</command> allows users to estimate the network flow "
 "into a network"
-msgstr ""
+msgstr "<command>tc estimator</command> 允许用户预计进入网络的流量"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/iproute2.xml:307
 msgid ""
 "<command>tc filter</command> allows users to setup the QOS/COS packet "
 "filtering"
-msgstr ""
+msgstr "<command>tc filter</command> 允许用户设定 QOS/COS 数据包过滤"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/iproute2.xml:310
 msgid "<command>tc policy</command> allows users to setup the QOS/COS policies"
-msgstr ""
+msgstr "<command>tc policy</command> 允许用户设定 QOS/COS 策略"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/iproute2.xml:313
 msgid "tc"
-msgstr ""
+msgstr "tc"

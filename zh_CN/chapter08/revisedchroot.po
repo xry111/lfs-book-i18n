@@ -1,9 +1,3 @@
-# SOME DESCRIPTIVE TITLE
-# Copyright (C) YEAR Free Software Foundation, Inc.
-# This file is distributed under the same license as the PACKAGE package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
-#
-#, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
@@ -11,26 +5,27 @@ msgstr ""
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
-"Language: \n"
+"Language: zh_CN\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Translate Toolkit 2.2.5\n"
 
 #. type: Content of: <sect1><title>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/revisedchroot.xml:11
 msgid "Cleaning Up"
-msgstr ""
+msgstr "清理系统"
 
 #. type: Content of: <sect1><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/revisedchroot.xml:13
 msgid "Finally, clean up some extra files left around from running tests:"
-msgstr ""
+msgstr "最后，清理在执行测试的过程中遗留的一些文件："
 
 #. type: Content of: <sect1><screen>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/revisedchroot.xml:15
 #, no-wrap
 msgid "<userinput>rm -rf /tmp/*</userinput>"
-msgstr ""
+msgstr "<userinput>rm -rf /tmp/*</userinput>"
 
 #. type: Content of: <sect1><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/revisedchroot.xml:17
@@ -39,6 +34,8 @@ msgid ""
 "command.  From now on, use this updated chroot command any time you need to "
 "reenter the chroot environment after exiting:"
 msgstr ""
+"现在需要登出，并使用新的 chroot 命令行重新进入 chroot 环境。从现在起，在退"
+"出并重新进入 chroot 环境时，要使用下面的修改过的 chroot 命令："
 
 #. type: Content of: <sect1><screen>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/revisedchroot.xml:21
@@ -52,6 +49,13 @@ msgid ""
 "    PATH=/bin:/usr/bin:/sbin:/usr/sbin \\\n"
 "    /bin/bash --login</userinput>"
 msgstr ""
+"<userinput>logout\n"
+"\n"
+"chroot \"$LFS\" /usr/bin/env -i          \\\n"
+"    HOME=/root TERM=\"$TERM\"            \\\n"
+"    PS1='(lfs chroot) \\u:\\w\\$ '        \\\n"
+"    PATH=/bin:/usr/bin:/sbin:/usr/sbin \\\n"
+"    /bin/bash --login</userinput>"
 
 #. type: Content of: <sect1><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/revisedchroot.xml:29
@@ -65,10 +69,12 @@ msgstr ""
 msgid ""
 "If the virtual kernel file systems have been unmounted, either manually or "
 "through a reboot, ensure that the virtual kernel file systems are mounted "
-"when reentering the chroot. This process was explained in <xref "
-"linkend=\"ch-system-bindmount\"/> and <xref "
-"linkend=\"ch-system-kernfsmount\"/>."
+"when reentering the chroot. This process was explained in <xref linkend=\"ch-"
+"system-bindmount\"/> and <xref linkend=\"ch-system-kernfsmount\"/>."
 msgstr ""
+"如果解除了虚拟内核文件系统的挂载，必须通过手动或重启系统的方式重新挂载它们，"
+"保证在进入 chroot 时它们已经挂载好。<xref linkend=\"ch-system-bindmount\"/> "
+"和 <xref linkend=\"ch-system-kernfsmount\"/>已经说明了这一过程。"
 
 #. type: Content of: <sect1><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/revisedchroot.xml:39
@@ -78,10 +84,13 @@ msgid ""
 "libraries are from binutils, bzip2, e2fsprogs, flex, libtool, and zlib.  If "
 "desired, remove them now:"
 msgstr ""
+"在本章的前几节中，有几个静态库的安装没有被禁止，目的是满足一些软件包的退化测"
+"试需要。这些库来自于 binutils、bzip2、e2fsprogs、flex、libtool 和 zlib。如"
+"果您希望的话，可以现在删除它们："
 
 #. type: Content of: <sect1><screen>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/revisedchroot.xml:44
-#, no-wrap
+#, fuzzy, no-wrap
 msgid ""
 "<userinput>rm -f /usr/lib/lib{bfd,opcodes}.a\n"
 "rm -f /usr/lib/libctf{,-nobfd}.a\n"
@@ -91,9 +100,16 @@ msgid ""
 "rm -f /usr/lib/libfl.a\n"
 "rm -f /usr/lib/libz.a</userinput>"
 msgstr ""
+"<userinput>rm -f /usr/lib/lib{bfd,opcodes}.a\n"
+"rm -f /usr/lib/libbz2.a\n"
+"rm -f /usr/lib/lib{com_err,e2p,ext2fs,ss}.a\n"
+"rm -f /usr/lib/libltdl.a\n"
+"rm -f /usr/lib/libfl.a\n"
+"rm -f /usr/lib/libz.a</userinput>"
 
 #. type: Content of: <sect1><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/revisedchroot.xml:52
+#, fuzzy
 msgid ""
 "There are also several files installed in the /usr/lib and /usr/libexec "
 "directories with a file name extention of .la. These are \"libtool archive\" "
@@ -102,20 +118,26 @@ msgid ""
 "shared libraries, specially when using also non-autotools build systems.  To "
 "remove them, run:"
 msgstr ""
+"在 /usr/lib 和 /usr/libexec 目录中还有一些扩展名为 .la 的文件。它们是 "
+"\"libtool 档案\" 文件，在 Linux 系统上一般是不必要的。截至目前，已经安装的 ."
+"la 文件中没有一个是必要的。执行以下命令删除它们："
 
 #. type: Content of: <sect1><screen>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/revisedchroot.xml:59
 #, no-wrap
 msgid "<userinput>find /usr/lib /usr/libexec -name \\*.la -delete</userinput>"
-msgstr ""
+msgstr "<userinput>find /usr/lib /usr/libexec -name \\*.la -delete</userinput>"
 
 #. type: Content of: <sect1><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/revisedchroot.xml:61
 msgid ""
-"For more information about libtool archive files, see the <ulink "
-"url=\"&blfs-book;/introduction/la-files.html\">BLFS section \"About Libtool "
-"Archive (.la) files\"</ulink>."
+"For more information about libtool archive files, see the <ulink url=\"&blfs-"
+"book;/introduction/la-files.html\">BLFS section \"About Libtool Archive (."
+"la) files\"</ulink>."
 msgstr ""
+"如果希望了解更多关于 libtool 档案文件的信息，参阅 <ulink url=\"&blfs-book;/"
+"introduction/la-files.html\">BLFS 章节 \"About Libtool Archive (.la) files"
+"\"</ulink>。"
 
 #. type: Content of: <sect1><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/revisedchroot.xml:65
@@ -126,6 +148,28 @@ msgstr ""
 
 #. type: Content of: <sect1><screen>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/revisedchroot.xml:68
-#, no-wrap
+#, fuzzy, no-wrap
 msgid "<userinput>userdel -r tester</userinput>"
-msgstr ""
+msgstr "<userinput>rm -rf /tmp/*</userinput>"
+
+#~ msgid ""
+#~ "The reason for this is that the programs in <filename class=\"directory"
+#~ "\">/tools</filename> are no longer needed.  For this reason you can "
+#~ "delete the <filename class=\"directory\">/tools</filename> directory if "
+#~ "so desired."
+#~ msgstr ""
+#~ "这是由于 <filename class=\"directory\">/tools</filename> 中的程序不再必"
+#~ "要。因此，如果您希望的话，可以删除 <filename class=\"directory\">/"
+#~ "tools</filename> 目录。"
+
+#~ msgid ""
+#~ "Removing <filename class=\"directory\">/tools</filename> will also remove "
+#~ "the temporary copies of Tcl, Expect, and DejaGNU which were used for "
+#~ "running the toolchain tests. If you need these programs later on, they "
+#~ "will need to be recompiled and re-installed. The BLFS book has "
+#~ "instructions for this (see <ulink url=\"&blfs-root;\"/>)."
+#~ msgstr ""
+#~ "删除 <filename class=\"directory\">/tools</filename> 也会移除 Tcl、Expect "
+#~ "和 DejaGNU 的临时拷贝，它们之前被用于进行工具链测试。如果您之后仍然需要它"
+#~ "们，必须重新编译和安装这些软件包。BLFS 手册包含了安装它们的说明 (见 "
+#~ "<ulink url=\"&blfs-root;\"/>)。"

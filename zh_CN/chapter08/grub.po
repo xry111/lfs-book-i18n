@@ -1,9 +1,3 @@
-# SOME DESCRIPTIVE TITLE
-# Copyright (C) YEAR Free Software Foundation, Inc.
-# This file is distributed under the same license as the PACKAGE package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
-#
-#, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
@@ -11,69 +5,73 @@ msgstr ""
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
-"Language: \n"
+"Language: zh_CN\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Translate Toolkit 2.2.5\n"
 
 #. type: Content of: <sect1><sect1info><address>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/grub.xml:14
 #, no-wrap
 msgid "&grub-url;"
-msgstr ""
+msgstr "&grub-url;"
 
 #. type: Content of: <sect1><sect1info>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/grub.xml:12
 msgid ""
-"<productname>grub</productname> "
-"<productnumber>&grub-version;</productnumber> <placeholder type=\"address\" "
-"id=\"0\"/>"
+"<productname>grub</productname> <productnumber>&grub-version;</"
+"productnumber> <placeholder type=\"address\" id=\"0\"/>"
 msgstr ""
+"<productname>grub</productname> <productnumber>&grub-version;</"
+"productnumber> <placeholder type=\"address\" id=\"0\"/>"
 
 #. type: Content of: <sect1><title>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/grub.xml:17
 msgid "GRUB-&grub-version;"
-msgstr ""
+msgstr "GRUB-&grub-version;"
 
 #. type: Content of: <sect1><indexterm><primary>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/grub.xml:20
 msgid "GRUB"
-msgstr ""
+msgstr "GRUB"
 
 #. type: Content of: <sect1><sect2><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/grub.xml:26
 msgid "The GRUB package contains the GRand Unified Bootloader."
-msgstr ""
+msgstr "GRUB 软件包包含 “大统一” (GRand Unified) 启动引导器。"
 
 #. type: Content of: <sect1><sect2><segmentedlist><segtitle>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/grub.xml:29
 msgid "&buildtime;"
-msgstr ""
+msgstr "&buildtime;"
 
 #. type: Content of: <sect1><sect2><segmentedlist><segtitle>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/grub.xml:30
 msgid "&diskspace;"
-msgstr ""
+msgstr "&diskspace;"
 
 #. type: Content of: <sect1><sect2><segmentedlist><seglistitem><seg>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/grub.xml:33
+#, fuzzy
 msgid "&grub-fin-sbu;"
-msgstr ""
+msgstr "&grub-ch6-sbu;"
 
 #. type: Content of: <sect1><sect2><segmentedlist><seglistitem><seg>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/grub.xml:34
+#, fuzzy
 msgid "&grub-fin-du;"
-msgstr ""
+msgstr "&grub-ch6-du;"
 
 #. type: Content of: <sect1><sect2><title>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/grub.xml:41
 msgid "Installation of GRUB"
-msgstr ""
+msgstr "安装 GRUB"
 
 #. type: Content of: <sect1><sect2><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/grub.xml:43
 msgid "Prepare GRUB for compilation:"
-msgstr ""
+msgstr "准备编译 GRUB："
 
 #. type: Content of: <sect1><sect2><screen>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/grub.xml:45
@@ -85,65 +83,71 @@ msgid ""
 "            --disable-efiemu       \\\n"
 "            --disable-werror</userinput>"
 msgstr ""
+"<userinput remap=\"configure\">./configure --prefix=/usr          \\\n"
+"            --sbindir=/sbin        \\\n"
+"            --sysconfdir=/etc      \\\n"
+"            --disable-efiemu       \\\n"
+"            --disable-werror</userinput>"
 
 #. type: Content of: <sect1><sect2><variablelist><title>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/grub.xml:52
 msgid "The meaning of the new configure options:"
-msgstr ""
+msgstr "新的配置选项的含义："
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/grub.xml:55
 msgid "<parameter>--disable-werror</parameter>"
-msgstr ""
+msgstr "<parameter>--disable-werror</parameter>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/grub.xml:57
 msgid ""
 "This allows the build to complete with warnings introduced by more recent "
 "Flex versions."
-msgstr ""
+msgstr "该选项允许在有较新的 Flex 版本导致的警告时完成构建。"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/grub.xml:63
 msgid "<parameter>--disable-efiemu</parameter>"
-msgstr ""
+msgstr "<parameter>--disable-efiemu</parameter>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/grub.xml:65
 msgid ""
 "This option minimizes what is built by disabling a feature and testing "
 "programs not needed for LFS."
-msgstr ""
+msgstr "该选项通过禁用 LFS 不需要的特性和测试程序，最小化需要构建的内容。"
 
 #. type: Content of: <sect1><sect2><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/grub.xml:72
 msgid "Compile the package:"
-msgstr ""
+msgstr "编译该软件包："
 
 #. type: Content of: <sect1><sect2><screen>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/grub.xml:74
 #, no-wrap
 msgid "<userinput remap=\"make\">make</userinput>"
-msgstr ""
+msgstr "<userinput remap=\"make\">make</userinput>"
 
 #. type: Content of: <sect1><sect2><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/grub.xml:76
 msgid "This package does not come with a test suite."
-msgstr ""
+msgstr "该软件包不包含测试套件。"
 
 #. type: Content of: <sect1><sect2><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/grub.xml:78
 msgid "Install the package:"
-msgstr ""
+msgstr "安装该软件包："
 
 #. type: Content of: <sect1><sect2><screen>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/grub.xml:80
 #, no-wrap
 msgid ""
 "<userinput remap=\"install\">make install\n"
-"mv -v /etc/bash_completion.d/grub "
-"/usr/share/bash-completion/completions</userinput>"
+"mv -v /etc/bash_completion.d/grub /usr/share/bash-completion/completions</userinput>"
 msgstr ""
+"<userinput remap=\"install\">make install\n"
+"mv -v /etc/bash_completion.d/grub /usr/share/bash-completion/completions</userinput>"
 
 #. type: Content of: <sect1><sect2><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/grub.xml:83
@@ -151,425 +155,437 @@ msgid ""
 "Using GRUB to make your LFS system bootable will be discussed in <xref "
 "linkend=\"ch-bootable-grub\"/>."
 msgstr ""
+"使用 GRUB 引导您的 LFS 系统的方法将在 <xref linkend=\"ch-bootable-grub\"/> 中"
+"讨论。"
 
 #. type: Content of: <sect1><sect2><title>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/grub.xml:89
 msgid "Contents of GRUB"
-msgstr ""
+msgstr "GRUB 的内容"
 
 #. type: Content of: <sect1><sect2><segmentedlist><segtitle>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/grub.xml:92
 msgid "Installed programs"
-msgstr ""
+msgstr "安装的程序"
 
 #. type: Content of: <sect1><sect2><segmentedlist><segtitle>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/grub.xml:93
 msgid "Installed directories"
-msgstr ""
+msgstr "安装的目录"
 
 #. type: Content of: <sect1><sect2><segmentedlist><seglistitem><seg>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/grub.xml:97
 msgid ""
-"grub-bios-setup, grub-editenv, grub-file, grub-fstest, grub-glue-efi, "
-"grub-install, grub-kbdcomp, grub-macbless, grub-menulst2cfg, grub-mkconfig, "
-"grub-mkimage, grub-mklayout, grub-mknetdir, grub-mkpasswd-pbkdf2, "
-"grub-mkrelpath, grub-mkrescue, grub-mkstandalone, grub-ofpathname, "
-"grub-probe, grub-reboot, grub-render-label, grub-script-check, "
-"grub-set-default, grub-sparc64-setup, and grub-syslinux2cfg"
+"grub-bios-setup, grub-editenv, grub-file, grub-fstest, grub-glue-efi, grub-"
+"install, grub-kbdcomp, grub-macbless, grub-menulst2cfg, grub-mkconfig, grub-"
+"mkimage, grub-mklayout, grub-mknetdir, grub-mkpasswd-pbkdf2, grub-mkrelpath, "
+"grub-mkrescue, grub-mkstandalone, grub-ofpathname, grub-probe, grub-reboot, "
+"grub-render-label, grub-script-check, grub-set-default, grub-sparc64-setup, "
+"and grub-syslinux2cfg"
 msgstr ""
+"grub-bios-setup, grub-editenv, grub-file, grub-fstest, grub-glue-efi, grub-"
+"install, grub-kbdcomp, grub-macbless, grub-menulst2cfg, grub-mkconfig, grub-"
+"mkimage, grub-mklayout, grub-mknetdir, grub-mkpasswd-pbkdf2, grub-mkrelpath, "
+"grub-mkrescue, grub-mkstandalone, grub-ofpathname, grub-probe, grub-reboot, "
+"grub-render-label, grub-script-check, grub-set-default, grub-sparc64-setup, "
+"以及 grub-syslinux2cfg"
 
 #. type: Content of: <sect1><sect2><segmentedlist><seglistitem><seg>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/grub.xml:106
 msgid ""
-"/usr/lib/grub, /etc/grub.d, /usr/share/grub, and /boot/grub (when "
-"grub-install is first run)"
+"/usr/lib/grub, /etc/grub.d, /usr/share/grub, and /boot/grub (when grub-"
+"install is first run)"
 msgstr ""
+"/usr/lib/grub, /etc/grub.d, /usr/share/grub, 以及 /boot/grub (在初次运行 "
+"grub-install 时安装)"
 
 #. type: Content of: <sect1><sect2><variablelist><bridgehead>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/grub.xml:112
 msgid "Short Descriptions"
-msgstr ""
+msgstr "简要描述"
 
 #. type: Content of: <sect1><sect2><variablelist>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/grub.xml:113
-msgid "<?dbfo list-presentation=\"list\"?> <?dbhtml list-presentation=\"table\"?>"
+msgid ""
+"<?dbfo list-presentation=\"list\"?> <?dbhtml list-presentation=\"table\"?>"
 msgstr ""
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/grub.xml:117
 msgid "<command>grub-bios-setup</command>"
-msgstr ""
+msgstr "<command>grub-bios-setup</command>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/grub.xml:119
 msgid "Is a helper program for grub-install"
-msgstr ""
+msgstr "grub-install 使用的辅助程序"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/grub.xml:121
 msgid "grub-bios-setup"
-msgstr ""
+msgstr "grub-bios-setup"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/grub.xml:127
 msgid "<command>grub-editenv</command>"
-msgstr ""
+msgstr "<command>grub-editenv</command>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/grub.xml:129
 msgid "A tool to edit the environment block"
-msgstr ""
+msgstr "用于编辑环境块的工具"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/grub.xml:131
 msgid "grub-editenv"
-msgstr ""
+msgstr "grub-editenv"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/grub.xml:137
 msgid "<command>grub-file</command>"
-msgstr ""
+msgstr "<command>grub-file</command>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/grub.xml:139
 msgid "Checks if FILE is of the specified type."
-msgstr ""
+msgstr "检验文件是否是给定类型"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/grub.xml:141
 msgid "grub-file"
-msgstr ""
+msgstr "grub-file"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/grub.xml:147
 msgid "<command>grub-fstest</command>"
-msgstr ""
+msgstr "<command>grub-fstest</command>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/grub.xml:149
 msgid "Tool to debug the filesystem driver"
-msgstr ""
+msgstr "调试文件系统驱动程序的工具"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/grub.xml:151
 msgid "grub-fstest"
-msgstr ""
+msgstr "grub-fstest"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/grub.xml:157
 msgid "<command>grub-glue-efi</command>"
-msgstr ""
+msgstr "<command>grub-glue-efi</command>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/grub.xml:159
 msgid ""
-"Processes ia32 and amd64 EFI images and glues them according to Apple "
-"format."
-msgstr ""
+"Processes ia32 and amd64 EFI images and glues them according to Apple format."
+msgstr "处理 ia32 和 amd64 EFI 镜像，根据 Apple 格式粘合它们"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/grub.xml:162
 msgid "grub-glue-efi"
-msgstr ""
+msgstr "grub-glue-efi"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/grub.xml:168
 msgid "<command>grub-install</command>"
-msgstr ""
+msgstr "<command>grub-install</command>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/grub.xml:170
 msgid "Install GRUB on your drive"
-msgstr ""
+msgstr "在您的驱动器上安装 GRUB"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/grub.xml:172
 msgid "grub-install"
-msgstr ""
+msgstr "grub-install"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/grub.xml:178
 msgid "<command>grub-kbdcomp</command>"
-msgstr ""
+msgstr "<command>grub-kbdcomp</command>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/grub.xml:180
 msgid "Script that converts an xkb layout into one recognized by GRUB"
-msgstr ""
+msgstr "将 xkb 布局转化为 GRUB 能够识别的格式的脚本"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/grub.xml:183
 msgid "grub-kbdcomp"
-msgstr ""
+msgstr "grub-kbdcomp"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/grub.xml:189
 msgid "<command>grub-macbless</command>"
-msgstr ""
+msgstr "<command>grub-macbless</command>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/grub.xml:191
 msgid "Mac-style bless on HFS or HFS+ files"
-msgstr ""
+msgstr "Mac 风格的 bless 命令，用于 HFS 或 HFS+ 文件系统"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/grub.xml:193
 msgid "grub-macbless"
-msgstr ""
+msgstr "grub-macbless"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/grub.xml:199
 msgid "<command>grub-menulst2cfg</command>"
-msgstr ""
+msgstr "<command>grub-menulst2cfg</command>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/grub.xml:201
 msgid ""
-"Converts a GRUB Legacy <filename>menu.lst</filename> into a "
-"<filename>grub.cfg</filename> for use with GRUB 2"
+"Converts a GRUB Legacy <filename>menu.lst</filename> into a <filename>grub."
+"cfg</filename> for use with GRUB 2"
 msgstr ""
+"将经典的 GRUB <filename>menu.lst</filename> 转化为 <filename>grub.cfg</"
+"filename> 以供 GRUB 2 使用"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/grub.xml:204
 msgid "grub-menulst2cfg"
-msgstr ""
+msgstr "grub-menulst2cfg"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/grub.xml:210
 msgid "<command>grub-mkconfig</command>"
-msgstr ""
+msgstr "<command>grub-mkconfig</command>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/grub.xml:212
 msgid "Generate a grub config file"
-msgstr ""
+msgstr "生成 GRUB 配置文件"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/grub.xml:214
 msgid "grub-mkconfig"
-msgstr ""
+msgstr "grub-mkconfig"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/grub.xml:220
 msgid "<command>grub-mkimage</command>"
-msgstr ""
+msgstr "<command>grub-mkimage</command>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/grub.xml:222
 msgid "Make a bootable image of GRUB"
-msgstr ""
+msgstr "创建 GRUB 可引导镜像"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/grub.xml:224
 msgid "grub-mkimage"
-msgstr ""
+msgstr "grub-mkimage"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/grub.xml:230
 msgid "<command>grub-mklayout</command>"
-msgstr ""
+msgstr "<command>grub-mklayout</command>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/grub.xml:232
 msgid "Generates a GRUB keyboard layout file"
-msgstr ""
+msgstr "生成 GRUB 键盘布局文件"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/grub.xml:234
 msgid "grub-mklayout"
-msgstr ""
+msgstr "grub-mklayout"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/grub.xml:240
 msgid "<command>grub-mknetdir</command>"
-msgstr ""
+msgstr "<command>grub-mknetdir</command>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/grub.xml:242
 msgid "Prepares a GRUB netboot directory"
-msgstr ""
+msgstr "准备 GRUB 网络启动目录"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/grub.xml:244
 msgid "grub-mknetdir"
-msgstr ""
+msgstr "grub-mknetdir"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/grub.xml:250
 msgid "<command>grub-mkpasswd-pbkdf2</command>"
-msgstr ""
+msgstr "<command>grub-mkpasswd-pbkdf2</command>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/grub.xml:252
 msgid "Generates an encrypted PBKDF2 password for use in the boot menu"
-msgstr ""
+msgstr "生成用于引导菜单的加密 PBKDF2 密码"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/grub.xml:255
 msgid "grub-mkpasswd-pbkdf2"
-msgstr ""
+msgstr "grub-mkpasswd-pbkdf2"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/grub.xml:261
 msgid "<command>grub-mkrelpath</command>"
-msgstr ""
+msgstr "<command>grub-mkrelpath</command>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/grub.xml:263
 msgid "Makes a system pathname relative to its root"
-msgstr ""
+msgstr "生成相对于根目录的系统路径名称"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/grub.xml:265
 msgid "grub-mkrelpath"
-msgstr ""
+msgstr "grub-mkrelpath"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/grub.xml:271
 msgid "<command>grub-mkrescue</command>"
-msgstr ""
+msgstr "<command>grub-mkrescue</command>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/grub.xml:273
 msgid "Make a bootable image of GRUB suitable for a floppy disk or CDROM/DVD"
-msgstr ""
+msgstr "为软盘或 CDROM/DVD 创建 GRUB 可引导镜像"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/grub.xml:275
 msgid "grub-mkrescue"
-msgstr ""
+msgstr "grub-mkrescue"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/grub.xml:281
 msgid "<command>grub-mkstandalone</command>"
-msgstr ""
+msgstr "<command>grub-mkstandalone</command>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/grub.xml:283
 msgid "Generates a standalone image"
-msgstr ""
+msgstr "生成独立（包含所有模块）的镜像"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/grub.xml:285
 msgid "grub-mkstandalone"
-msgstr ""
+msgstr "grub-mkstandalone"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/grub.xml:291
 msgid "<command>grub-ofpathname</command>"
-msgstr ""
+msgstr "<command>grub-ofpathname</command>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/grub.xml:293
 msgid "Is a helper program that prints the path of a GRUB device"
-msgstr ""
+msgstr "打印 GRUB 设备路径的帮助程序"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/grub.xml:295
 msgid "grub-ofpathname"
-msgstr ""
+msgstr "grub-ofpathname"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/grub.xml:301
 msgid "<command>grub-probe</command>"
-msgstr ""
+msgstr "<command>grub-probe</command>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/grub.xml:303
 msgid "Probe device information for a given path or device"
-msgstr ""
+msgstr "对给定路径或设备探测信息"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/grub.xml:305
 msgid "grub-probe"
-msgstr ""
+msgstr "grub-probe"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/grub.xml:311
 msgid "<command>grub-reboot</command>"
-msgstr ""
+msgstr "<command>grub-reboot</command>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/grub.xml:313
 msgid "Sets the default boot entry for GRUB for the next boot only"
-msgstr ""
+msgstr "仅为下次启动设置 GRUB 默认引导项"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/grub.xml:315
 msgid "grub-reboot"
-msgstr ""
+msgstr "grub-reboot"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/grub.xml:321
 msgid "<command>grub-render-label</command>"
-msgstr ""
+msgstr "<command>grub-render-label</command>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/grub.xml:323
 msgid "Render Apple .disk_label for Apple Macs"
-msgstr ""
+msgstr "为 Apple Mac 设置 Apple .disk_label"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/grub.xml:325
 msgid "grub-render-label"
-msgstr ""
+msgstr "grub-render-label"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/grub.xml:331
 msgid "<command>grub-script-check</command>"
-msgstr ""
+msgstr "<command>grub-script-check</command>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/grub.xml:333
 msgid "Checks GRUB configuration script for syntax errors"
-msgstr ""
+msgstr "在 GRUB 配置脚本中检查语法错误"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/grub.xml:335
 msgid "grub-script-check"
-msgstr ""
+msgstr "grub-script-check"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/grub.xml:341
 msgid "<command>grub-set-default</command>"
-msgstr ""
+msgstr "<command>grub-set-default</command>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/grub.xml:343
 msgid "Sets the default boot entry for GRUB"
-msgstr ""
+msgstr "设置 GRUB 默认引导项"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/grub.xml:345
 msgid "grub-set-default"
-msgstr ""
+msgstr "grub-set-default"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/grub.xml:351
 msgid "<command>grub-sparc64-setup</command>"
-msgstr ""
+msgstr "<command>grub-sparc64-setup</command>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/grub.xml:353
 msgid "Is a helper program for grub-setup"
-msgstr ""
+msgstr "grub-setup 使用的帮助程序"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/grub.xml:355
 msgid "grub-setup"
-msgstr ""
+msgstr "grub-setup"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/grub.xml:361
 msgid "<command>grub-syslinux2cfg</command>"
-msgstr ""
+msgstr "<command>grub-syslinux2cfg</command>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/grub.xml:363
 msgid "Transform a syslinux config file into grub.cfg format"
-msgstr ""
+msgstr "将 syslinux 配置文件转换为 grub.cfg 格式"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/grub.xml:365
 msgid "grub-syslinux2cfg"
-msgstr ""
+msgstr "grub-syslinux2cfg"

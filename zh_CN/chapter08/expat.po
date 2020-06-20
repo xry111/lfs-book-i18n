@@ -1,9 +1,3 @@
-# SOME DESCRIPTIVE TITLE
-# Copyright (C) YEAR Free Software Foundation, Inc.
-# This file is distributed under the same license as the PACKAGE package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
-#
-#, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
@@ -11,80 +5,84 @@ msgstr ""
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
-"Language: \n"
+"Language: zh_CN\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Translate Toolkit 2.2.5\n"
 
 #. type: Content of: <sect1><sect1info><address>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/expat.xml:14
 #, no-wrap
 msgid "&expat-url;"
-msgstr ""
+msgstr "&expat-url;"
 
 #. type: Content of: <sect1><sect1info>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/expat.xml:12
 msgid ""
-"<productname>expat</productname> "
-"<productnumber>&expat-version;</productnumber> <placeholder type=\"address\" "
-"id=\"0\"/>"
+"<productname>expat</productname> <productnumber>&expat-version;</"
+"productnumber> <placeholder type=\"address\" id=\"0\"/>"
 msgstr ""
+"<productname>expat</productname> <productnumber>&expat-version;</"
+"productnumber> <placeholder type=\"address\" id=\"0\"/>"
 
 #. type: Content of: <sect1><title>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/expat.xml:17
 msgid "Expat-&expat-version;"
-msgstr ""
+msgstr "Expat-&expat-version;"
 
 #. type: Content of: <sect1><indexterm><primary>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/expat.xml:20
 msgid "Expat"
-msgstr ""
+msgstr "Expat"
 
 #. type: Content of: <sect1><sect2><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/expat.xml:26
 msgid "The Expat package contains a stream oriented C library for parsing XML."
-msgstr ""
+msgstr "Expat 软件包包含用于解析 XML 文件的面向流的 C 语言库。"
 
 #. type: Content of: <sect1><sect2><segmentedlist><segtitle>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/expat.xml:30
 msgid "&buildtime;"
-msgstr ""
+msgstr "&buildtime;"
 
 #. type: Content of: <sect1><sect2><segmentedlist><segtitle>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/expat.xml:31
 msgid "&diskspace;"
-msgstr ""
+msgstr "&diskspace;"
 
 #. type: Content of: <sect1><sect2><segmentedlist><seglistitem><seg>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/expat.xml:34
+#, fuzzy
 msgid "&expat-fin-sbu;"
-msgstr ""
+msgstr "&expat-ch6-sbu;"
 
 #. type: Content of: <sect1><sect2><segmentedlist><seglistitem><seg>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/expat.xml:35
+#, fuzzy
 msgid "&expat-fin-du;"
-msgstr ""
+msgstr "&expat-ch6-du;"
 
 #. type: Content of: <sect1><sect2><title>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/expat.xml:42
 msgid "Installation of Expat"
-msgstr ""
+msgstr "安装 Expat"
 
 #. type: Content of: <sect1><sect2><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/expat.xml:44
 msgid "First fix a problem with the regression tests in the LFS environment:"
-msgstr ""
+msgstr "首先修正 LFS 环境中退化测试的一个问题："
 
 #. type: Content of: <sect1><sect2><screen>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/expat.xml:46
-#, no-wrap
+#, fuzzy, no-wrap
 msgid "<userinput remap=\"pre\">sed -i 's:usr/bin/env :bin/:' run.sh.in</userinput>"
-msgstr ""
+msgstr "<userinput remap=\"pre\">sed -i 's|usr/bin/env |bin/|' run.sh.in</userinput>"
 
 #. type: Content of: <sect1><sect2><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/expat.xml:48
 msgid "Prepare Expat for compilation:"
-msgstr ""
+msgstr "准备编译 Expat："
 
 #. type: Content of: <sect1><sect2><screen>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/expat.xml:50
@@ -94,122 +92,124 @@ msgid ""
 "            --disable-static \\\n"
 "            --docdir=/usr/share/doc/expat-&expat-version;</userinput>"
 msgstr ""
+"<userinput remap=\"configure\">./configure --prefix=/usr    \\\n"
+"            --disable-static \\\n"
+"            --docdir=/usr/share/doc/expat-&expat-version;</userinput>"
 
 #. type: Content of: <sect1><sect2><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/expat.xml:54
 msgid "Compile the package:"
-msgstr ""
+msgstr "编译该软件包："
 
 #. type: Content of: <sect1><sect2><screen>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/expat.xml:56
 #, no-wrap
 msgid "<userinput remap=\"make\">make</userinput>"
-msgstr ""
+msgstr "<userinput remap=\"make\">make</userinput>"
 
 #. type: Content of: <sect1><sect2><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/expat.xml:58
 msgid "To test the results, issue:"
-msgstr ""
+msgstr "运行以下命令以测试编译结果："
 
 #. type: Content of: <sect1><sect2><screen>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/expat.xml:60
 #, no-wrap
 msgid "<userinput remap=\"test\">make check</userinput>"
-msgstr ""
+msgstr "<userinput remap=\"test\">make check</userinput>"
 
 #. type: Content of: <sect1><sect2><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/expat.xml:62
 msgid "Install the package:"
-msgstr ""
+msgstr "安装该软件包："
 
 #. type: Content of: <sect1><sect2><screen>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/expat.xml:64
 #, no-wrap
 msgid "<userinput remap=\"install\">make install</userinput>"
-msgstr ""
+msgstr "<userinput remap=\"install\">make install</userinput>"
 
 #. type: Content of: <sect1><sect2><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/expat.xml:66
 msgid "If desired, install the documentation:"
-msgstr ""
+msgstr "如果需要，安装该软件包的文档："
 
 #. type: Content of: <sect1><sect2><screen>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/expat.xml:68
 #, no-wrap
-msgid ""
-"<userinput remap=\"install\">install -v -m644 doc/*.{html,png,css} "
-"/usr/share/doc/expat-&expat-version;</userinput>"
-msgstr ""
+msgid "<userinput remap=\"install\">install -v -m644 doc/*.{html,png,css} /usr/share/doc/expat-&expat-version;</userinput>"
+msgstr "<userinput remap=\"install\">install -v -m644 doc/*.{html,png,css} /usr/share/doc/expat-&expat-version;</userinput>"
 
 #. type: Content of: <sect1><sect2><title>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/expat.xml:73
 msgid "Contents of Expat"
-msgstr ""
+msgstr "Expat 的内容"
 
 #. type: Content of: <sect1><sect2><segmentedlist><segtitle>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/expat.xml:76
 msgid "Installed program"
-msgstr ""
+msgstr "安装的程序"
 
 #. type: Content of: <sect1><sect2><segmentedlist><segtitle>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/expat.xml:77
 msgid "Installed libraries"
-msgstr ""
+msgstr "安装的库"
 
 #. type: Content of: <sect1><sect2><segmentedlist><segtitle>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/expat.xml:78
 msgid "Installed directory"
-msgstr ""
+msgstr "安装的目录"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/expat.xml:81
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/expat.xml:98
 msgid "xmlwf"
-msgstr ""
+msgstr "xmlwf"
 
 #. type: Content of: <sect1><sect2><segmentedlist><seglistitem><seg>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/expat.xml:82
 msgid "libexpat.so"
-msgstr ""
+msgstr "libexpat.so"
 
 #. type: Content of: <sect1><sect2><segmentedlist><seglistitem><seg>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/expat.xml:83
 msgid "/usr/share/doc/expat-&expat-version;"
-msgstr ""
+msgstr "/usr/share/doc/expat-&expat-version;"
 
 #. type: Content of: <sect1><sect2><variablelist><bridgehead>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/expat.xml:88
 msgid "Short Descriptions"
-msgstr ""
+msgstr "简要描述"
 
 #. type: Content of: <sect1><sect2><variablelist>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/expat.xml:89
-msgid "<?dbfo list-presentation=\"list\"?> <?dbhtml list-presentation=\"table\"?>"
+msgid ""
+"<?dbfo list-presentation=\"list\"?> <?dbhtml list-presentation=\"table\"?>"
 msgstr ""
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/expat.xml:93
 msgid "<command>xmlwf </command>"
-msgstr ""
+msgstr "<command>xmlwf </command>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/expat.xml:95
 msgid ""
 "Is a non-validating utility to check whether or not XML documents are well "
 "formed"
-msgstr ""
+msgstr "是一个用于检验 XML 文档是否良好的非验证性工具"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/expat.xml:104
 msgid "<filename class=\"libraryfile\">libexpat</filename>"
-msgstr ""
+msgstr "<filename class=\"libraryfile\">libexpat</filename>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/expat.xml:106
 msgid "Contains API functions for parsing XML"
-msgstr ""
+msgstr "包含解析 XML 文档的 API 函数"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/expat.xml:108
 msgid "libexpat"
-msgstr ""
+msgstr "libexpat"

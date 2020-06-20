@@ -1,9 +1,3 @@
-# SOME DESCRIPTIVE TITLE
-# Copyright (C) YEAR Free Software Foundation, Inc.
-# This file is distributed under the same license as the PACKAGE package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
-#
-#, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
@@ -11,34 +5,36 @@ msgstr ""
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
-"Language: \n"
+"Language: zh_CN\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Translate Toolkit 2.2.5\n"
 
 #. type: Content of: <sect1><sect1info><address>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/util-linux.xml:14
 #, no-wrap
 msgid "&util-linux-url;"
-msgstr ""
+msgstr "&util-linux-url;"
 
 #. type: Content of: <sect1><sect1info>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/util-linux.xml:12
 msgid ""
-"<productname>util-linux</productname> "
-"<productnumber>&util-linux-version;</productnumber> <placeholder "
-"type=\"address\" id=\"0\"/>"
+"<productname>util-linux</productname> <productnumber>&util-linux-version;</"
+"productnumber> <placeholder type=\"address\" id=\"0\"/>"
 msgstr ""
+"<productname>util-linux</productname> <productnumber>&util-linux-version;</"
+"productnumber> <placeholder type=\"address\" id=\"0\"/>"
 
 #. type: Content of: <sect1><title>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/util-linux.xml:17
 msgid "Util-linux-&util-linux-version;"
-msgstr ""
+msgstr "Util-linux-&util-linux-version;"
 
 #. type: Content of: <sect1><indexterm><primary>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/util-linux.xml:20
 msgid "Util-linux"
-msgstr ""
+msgstr "Util-linux"
 
 #. type: Content of: <sect1><sect2><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/util-linux.xml:26
@@ -46,59 +42,66 @@ msgid ""
 "The Util-linux package contains miscellaneous utility programs.  Among them "
 "are utilities for handling file systems, consoles, partitions, and messages."
 msgstr ""
+"Util-linux 软件包包含若干工具程序。这些程序中有处理文件系统、终端、分区和消"
+"息的工具。"
 
 #. type: Content of: <sect1><sect2><segmentedlist><segtitle>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/util-linux.xml:31
 msgid "&buildtime;"
-msgstr ""
+msgstr "&buildtime;"
 
 #. type: Content of: <sect1><sect2><segmentedlist><segtitle>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/util-linux.xml:32
 msgid "&diskspace;"
-msgstr ""
+msgstr "&diskspace;"
 
 #. type: Content of: <sect1><sect2><segmentedlist><seglistitem><seg>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/util-linux.xml:35
+#, fuzzy
 msgid "&util-linux-fin-sbu;"
-msgstr ""
+msgstr "&util-linux-ch6-sbu;"
 
 #. type: Content of: <sect1><sect2><segmentedlist><seglistitem><seg>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/util-linux.xml:36
+#, fuzzy
 msgid "&util-linux-fin-du;"
-msgstr ""
+msgstr "&util-linux-ch6-du;"
 
 #. type: Content of: <sect1><sect2><title>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/util-linux.xml:43
 msgid "Installation of Util-linux"
-msgstr ""
+msgstr "安装 Util-linux"
 
 #. type: Content of: <sect1><sect2><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/util-linux.xml:45
+#, fuzzy
 msgid ""
-"The FHS recommends using the <filename "
-"class=\"directory\">/var/lib/hwclock</filename> directory instead of the "
-"usual <filename class=\"directory\">/etc</filename> directory as the "
-"location for the <filename>adjtime</filename> file. Create this directory "
-"with:"
+"The FHS recommends using the <filename class=\"directory\">/var/lib/hwclock</"
+"filename> directory instead of the usual <filename class=\"directory\">/etc</"
+"filename> directory as the location for the <filename>adjtime</filename> "
+"file. Create this directory with:"
 msgstr ""
+"FHS 建议使用 <filename class=\"directory\">/var/lib/hwclock</filename> 目录，"
+"而非一般的 <filename class=\"directory\">/etc</filename> 目录作为 "
+"<filename>adjtime</filename> 文件的位置。首先创建该目录，启用 "
+"<command>hwclock</command> 程序的存储功能："
 
 #. type: Content of: <sect1><sect2><screen>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/util-linux.xml:51
 #, no-wrap
 msgid "<userinput remap=\"pre\">mkdir -pv /var/lib/hwclock</userinput>"
-msgstr ""
+msgstr "<userinput remap=\"pre\">mkdir -pv /var/lib/hwclock</userinput>"
 
 #. type: Content of: <sect1><sect2><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/util-linux.xml:53
 msgid "Prepare Util-linux for compilation:"
-msgstr ""
+msgstr "准备安装 Util-linux："
 
 #. type: Content of: <sect1><sect2><screen>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/util-linux.xml:55
 #, no-wrap
 msgid ""
-"<userinput remap=\"configure\">./configure "
-"ADJTIME_PATH=/var/lib/hwclock/adjtime   \\\n"
+"<userinput remap=\"configure\">./configure ADJTIME_PATH=/var/lib/hwclock/adjtime   \\\n"
 "            --docdir=/usr/share/doc/util-linux-&util-linux-version; \\\n"
 "            --disable-chfn-chsh  \\\n"
 "            --disable-login      \\\n"
@@ -112,13 +115,25 @@ msgid ""
 "            --without-systemd    \\\n"
 "            --without-systemdsystemunitdir</userinput>"
 msgstr ""
+"<userinput remap=\"configure\">./configure ADJTIME_PATH=/var/lib/hwclock/adjtime   \\\n"
+"            --docdir=/usr/share/doc/util-linux-&util-linux-version; \\\n"
+"            --disable-chfn-chsh  \\\n"
+"            --disable-login      \\\n"
+"            --disable-nologin    \\\n"
+"            --disable-su         \\\n"
+"            --disable-setpriv    \\\n"
+"            --disable-runuser    \\\n"
+"            --disable-pylibmount \\\n"
+"            --disable-static     \\\n"
+"            --without-python     \\\n"
+"            --without-systemd    \\\n"
+"            --without-systemdsystemunitdir</userinput>"
 
 #. type: Content of: <sect1><sect2><screen>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/util-linux.xml:69
 #, no-wrap
 msgid ""
-"<userinput remap=\"configure\">./configure "
-"ADJTIME_PATH=/var/lib/hwclock/adjtime   \\\n"
+"<userinput remap=\"configure\">./configure ADJTIME_PATH=/var/lib/hwclock/adjtime   \\\n"
 "            --docdir=/usr/share/doc/util-linux-&util-linux-version; \\\n"
 "            --disable-chfn-chsh  \\\n"
 "            --disable-login      \\\n"
@@ -130,6 +145,17 @@ msgid ""
 "            --disable-static     \\\n"
 "            --without-python</userinput>"
 msgstr ""
+"<userinput remap=\"configure\">./configure ADJTIME_PATH=/var/lib/hwclock/adjtime   \\\n"
+"            --docdir=/usr/share/doc/util-linux-&util-linux-version; \\\n"
+"            --disable-chfn-chsh  \\\n"
+"            --disable-login      \\\n"
+"            --disable-nologin    \\\n"
+"            --disable-su         \\\n"
+"            --disable-setpriv    \\\n"
+"            --disable-runuser    \\\n"
+"            --disable-pylibmount \\\n"
+"            --disable-static     \\\n"
+"            --without-python</userinput>"
 
 #. type: Content of: <sect1><sect2><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/util-linux.xml:81
@@ -138,25 +164,28 @@ msgid ""
 "components that require packages not in LFS or are inconsistent with "
 "programs installed by other packages."
 msgstr ""
+"--disable 和 --without 选项防止一些警告，它们与一些 LFS 中不存在，或与其他软"
+"件包安装的程序不兼容的构建组件相关。"
 
 #. type: Content of: <sect1><sect2><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/util-linux.xml:85
 msgid "Compile the package:"
-msgstr ""
+msgstr "编译该软件包："
 
 #. type: Content of: <sect1><sect2><screen>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/util-linux.xml:87
 #, no-wrap
 msgid "<userinput remap=\"make\">make</userinput>"
-msgstr ""
+msgstr "<userinput remap=\"make\">make</userinput>"
 
 #. type: Content of: <sect1><sect2><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/util-linux.xml:89
 msgid "If desired, run the test suite as a non-root user:"
-msgstr ""
+msgstr "如果希望的话，以非 root 用户身份运行测试套件："
 
 #. type: Content of: <sect1><sect2><warning><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/util-linux.xml:91
+#, fuzzy
 msgid ""
 "Running the test suite as the root user can be harmful to your system.  To "
 "run it, the CONFIG_SCSI_DEBUG option for the kernel must be available in the "
@@ -165,51 +194,58 @@ msgid ""
 "must be installed.  If desired, this test can be run after rebooting into "
 "the completed LFS system and running:"
 msgstr ""
+"以 root 用户身份运行测试套件可能对系统造成损害。为了运行它，内核配置选项 "
+"CONFIG_SCSI_DEBUG 必须在当前运行的系统中可用，且必须被构建为内核模块。直接"
+"将其构建为内核的一部分会导致系统无法引导。为了测试的完整覆盖，必须安装其他 "
+"BLFS 软件包。如果希望的话，可以在重启进入完整的 LFS 系统后，执行以下命令运"
+"行测试："
 
 #. type: Content of: <sect1><sect2><warning><screen>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/util-linux.xml:98
 #, no-wrap
 msgid "<userinput>bash tests/run.sh --srcdir=$PWD --builddir=$PWD</userinput>"
-msgstr ""
+msgstr "<userinput>bash tests/run.sh --srcdir=$PWD --builddir=$PWD</userinput>"
 
 #. type: Content of: <sect1><sect2><screen>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/util-linux.xml:101
-#, no-wrap
+#, fuzzy, no-wrap
 msgid ""
 "<userinput remap=\"test\">chown -Rv tester .\n"
 "su tester -c \"make -k check\"</userinput>"
 msgstr ""
+"<userinput remap=\"test\">chown -Rv nobody .\n"
+"su nobody -s /bin/bash -c \"PATH=$PATH make -k check\"</userinput>"
 
 #. type: Content of: <sect1><sect2><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/util-linux.xml:104
 msgid "Install the package:"
-msgstr ""
+msgstr "安装该软件包："
 
 #. type: Content of: <sect1><sect2><screen>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/util-linux.xml:106
 #, no-wrap
 msgid "<userinput remap=\"install\">make install</userinput>"
-msgstr ""
+msgstr "<userinput remap=\"install\">make install</userinput>"
 
 #. type: Content of: <sect1><sect2><title>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/util-linux.xml:111
 msgid "Contents of Util-linux"
-msgstr ""
+msgstr "Util-linux 的内容"
 
 #. type: Content of: <sect1><sect2><segmentedlist><segtitle>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/util-linux.xml:114
 msgid "Installed programs"
-msgstr ""
+msgstr "安装的程序"
 
 #. type: Content of: <sect1><sect2><segmentedlist><segtitle>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/util-linux.xml:115
 msgid "Installed libraries"
-msgstr ""
+msgstr "安装的库"
 
 #. type: Content of: <sect1><sect2><segmentedlist><segtitle>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/util-linux.xml:116
 msgid "Installed directories"
-msgstr ""
+msgstr "安装的目录"
 
 #. type: Content of: <sect1><sect2><segmentedlist><seglistitem><seg>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/util-linux.xml:119
@@ -228,550 +264,570 @@ msgid ""
 "ul, umount, uname26, unshare, utmpdump, uuidd, uuidgen, uuidparse, wall, "
 "wdctl, whereis, wipefs, x86_64, and zramctl"
 msgstr ""
+"addpart, agetty, blkdiscard, blkid, blkzone, blockdev, cal, cfdisk, chcpu, "
+"chmem, choom, chrt, col, colcrt, colrm, column, ctrlaltdel, delpart, dmesg, "
+"eject, fallocate, fdformat, fdisk, fincore, findfs, findmnt, flock, fsck, "
+"fsck.cramfs, fsck.minix, fsfreeze, fstrim, getopt, hexdump, hwclock, i386, "
+"ionice, ipcmk, ipcrm, ipcs, isosize, kill, last, lastb (到 last 的链接), "
+"ldattach, linux32, linux64, logger, look, losetup, lsblk, lscpu, lsipc, "
+"lslocks, lslogins, lsmem, lsns, mcookie, mesg, mkfs, mkfs.bfs, mkfs.cramfs, "
+"mkfs.minix, mkswap, more, mount, mountpoint, namei, nsenter, partx, "
+"pivot_root, prlimit, raw, readprofile, rename, renice, resizepart, rev, "
+"rfkill, rtcwake, script, scriptreplay, setarch, setsid, setterm, sfdisk, "
+"sulogin, swaplabel, swapoff (到 swapon 的链接), swapon, switch_root, "
+"taskset, ul, umount, uname26, unshare, utmpdump, uuidd, uuidgen, uuidparse, "
+"wall, wdctl, whereis, wipefs, x86_64, 以及 zramctl"
 
 #. type: Content of: <sect1><sect2><segmentedlist><seglistitem><seg>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/util-linux.xml:132
 msgid "libblkid.so, libfdisk.so, libmount.so, libsmartcols.so, and libuuid.so"
 msgstr ""
+"libblkid.so, libfdisk.so, libmount.so, libsmartcols.so, 以及 libuuid.so"
 
 #. type: Content of: <sect1><sect2><segmentedlist><seglistitem><seg>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/util-linux.xml:134
 msgid ""
-"/usr/include/blkid, /usr/include/libfdisk, /usr/include/libmount, "
-"/usr/include/libsmartcols, /usr/include/uuid, "
-"/usr/share/doc/util-linux-&util-linux-version;, and /var/lib/hwclock"
+"/usr/include/blkid, /usr/include/libfdisk, /usr/include/libmount, /usr/"
+"include/libsmartcols, /usr/include/uuid, /usr/share/doc/util-linux-&util-"
+"linux-version;, and /var/lib/hwclock"
 msgstr ""
+"/usr/include/blkid, /usr/include/libfdisk, /usr/include/libmount, /usr/"
+"include/libsmartcols, /usr/include/uuid, /usr/share/doc/util-linux-&util-"
+"linux-version;, 以及 /var/lib/hwclock"
 
 #. type: Content of: <sect1><sect2><variablelist><bridgehead>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/util-linux.xml:145
 msgid "Short Descriptions"
-msgstr ""
+msgstr "简要描述"
 
 #. type: Content of: <sect1><sect2><variablelist>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/util-linux.xml:146
-msgid "<?dbfo list-presentation=\"list\"?> <?dbhtml list-presentation=\"table\"?>"
+msgid ""
+"<?dbfo list-presentation=\"list\"?> <?dbhtml list-presentation=\"table\"?>"
 msgstr ""
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/util-linux.xml:150
 msgid "<command>addpart</command>"
-msgstr ""
+msgstr "<command>addpart</command>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/util-linux.xml:152
 msgid "Informs the Linux kernel of new partitions"
-msgstr ""
+msgstr "告知 Linux 内核有新的分区"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/util-linux.xml:154
 msgid "addpart"
-msgstr ""
+msgstr "addpart"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/util-linux.xml:160
 msgid "<command>agetty</command>"
-msgstr ""
+msgstr "<command>agetty</command>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/util-linux.xml:162
 msgid ""
 "Opens a tty port, prompts for a login name, and then invokes the "
 "<command>login</command> program"
-msgstr ""
+msgstr "打开 tty 端口，提示输入登录名，再启动 <command>login</command> 程序"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/util-linux.xml:165
 msgid "agetty"
-msgstr ""
+msgstr "agetty"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/util-linux.xml:171
 msgid "<command>blkdiscard</command>"
-msgstr ""
+msgstr "<command>blkdiscard</command>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/util-linux.xml:173
 msgid "Discards sectors on a device"
-msgstr ""
+msgstr "丢弃设备上的扇区"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/util-linux.xml:175
 msgid "blkdiscard"
-msgstr ""
+msgstr "blkdiscard"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/util-linux.xml:181
 msgid "<command>blkid</command>"
-msgstr ""
+msgstr "<command>blkid</command>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/util-linux.xml:183
 msgid "A command line utility to locate and print block device attributes"
-msgstr ""
+msgstr "一个命令行工具，用于定位和打印块设备属性"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/util-linux.xml:186
 msgid "blkid"
-msgstr ""
+msgstr "blkid"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/util-linux.xml:192
 msgid "<command>blkzone</command>"
-msgstr ""
+msgstr "<command>blkzone</command>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/util-linux.xml:194
 msgid "Runs zone command on the given block device"
-msgstr ""
+msgstr "在给定块设备上运行 zone 命令"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/util-linux.xml:196
 msgid "blkzone"
-msgstr ""
+msgstr "blkzone"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/util-linux.xml:202
 msgid "<command>blockdev</command>"
-msgstr ""
+msgstr "<command>blockdev</command>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/util-linux.xml:204
 msgid "Allows users to call block device ioctls from the command line"
-msgstr ""
+msgstr "允许用户从命令行调用块设备 ioctl"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/util-linux.xml:207
 msgid "blockdev"
-msgstr ""
+msgstr "blockdev"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/util-linux.xml:213
 msgid "<command>cal</command>"
-msgstr ""
+msgstr "<command>cal</command>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/util-linux.xml:215
 msgid "Displays a simple calendar"
-msgstr ""
+msgstr "显示简单的日历"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/util-linux.xml:217
 msgid "cal"
-msgstr ""
+msgstr "cal"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/util-linux.xml:223
 msgid "<command>cfdisk</command>"
-msgstr ""
+msgstr "<command>cfdisk</command>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/util-linux.xml:225
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/util-linux.xml:377
 msgid "Manipulates the partition table of the given device"
-msgstr ""
+msgstr "操作给定设备的分区表"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/util-linux.xml:227
 msgid "cfdisk"
-msgstr ""
+msgstr "cfdisk"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/util-linux.xml:233
 msgid "<command>chcpu</command>"
-msgstr ""
+msgstr "<command>chcpu</command>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/util-linux.xml:235
 msgid "Modifies the state of CPUs"
-msgstr ""
+msgstr "修改 CPU 状态"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/util-linux.xml:237
 msgid "chcpu"
-msgstr ""
+msgstr "chcpu"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/util-linux.xml:243
 msgid "<command>chmem</command>"
-msgstr ""
+msgstr "<command>chmem</command>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/util-linux.xml:245
 msgid "Configures memory"
-msgstr ""
+msgstr "配置内存"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/util-linux.xml:247
 msgid "chmem"
-msgstr ""
+msgstr "chmem"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/util-linux.xml:253
 msgid "<command>choom</command>"
-msgstr ""
+msgstr "<command>choom</command>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/util-linux.xml:255
 msgid "Displays and adjusts OOM-killer score"
-msgstr ""
+msgstr "显示和调整 OOM-killer 分数"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/util-linux.xml:257
 msgid "choom"
-msgstr ""
+msgstr "choom"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/util-linux.xml:263
 msgid "<command>chrt</command>"
-msgstr ""
+msgstr "<command>chrt</command>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/util-linux.xml:265
 msgid "Manipulates real-time attributes of a process"
-msgstr ""
+msgstr "操纵进程实时属性"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/util-linux.xml:267
 msgid "chrt"
-msgstr ""
+msgstr "chrt"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/util-linux.xml:273
 msgid "<command>col</command>"
-msgstr ""
+msgstr "<command>col</command>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/util-linux.xml:275
 msgid "Filters out reverse line feeds"
-msgstr ""
+msgstr "过滤掉反向换行符"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/util-linux.xml:277
 msgid "col"
-msgstr ""
+msgstr "col"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/util-linux.xml:283
 msgid "<command>colcrt</command>"
-msgstr ""
+msgstr "<command>colcrt</command>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/util-linux.xml:285
 msgid ""
 "Filters <command>nroff</command> output for terminals that lack some "
 "capabilities, such as overstriking and half-lines"
-msgstr ""
+msgstr "为缺失加粗、半行等功能的终端过滤 <command>nroff</command> 输出"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/util-linux.xml:288
 msgid "colcrt"
-msgstr ""
+msgstr "colcrt"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/util-linux.xml:294
 msgid "<command>colrm</command>"
-msgstr ""
+msgstr "<command>colrm</command>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/util-linux.xml:296
 msgid "Filters out the given columns"
-msgstr ""
+msgstr "过滤掉给定列"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/util-linux.xml:298
 msgid "colrm"
-msgstr ""
+msgstr "colrm"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/util-linux.xml:304
 msgid "<command>column</command>"
-msgstr ""
+msgstr "<command>column</command>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/util-linux.xml:306
 msgid "Formats a given file into multiple columns"
-msgstr ""
+msgstr "将给定文件格式化为多栏"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/util-linux.xml:308
 msgid "column"
-msgstr ""
+msgstr "column"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/util-linux.xml:314
 msgid "<command>ctrlaltdel</command>"
-msgstr ""
+msgstr "<command>ctrlaltdel</command>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/util-linux.xml:316
 msgid ""
 "Sets the function of the Ctrl+Alt+Del key combination to a hard or a soft "
 "reset"
-msgstr ""
+msgstr "将 Ctrl+Alt+Del 键组合的功能设定为硬复位或软复位"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/util-linux.xml:319
 msgid "ctrlaltdel"
-msgstr ""
+msgstr "ctrlaltdel"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/util-linux.xml:325
 msgid "<command>delpart</command>"
-msgstr ""
+msgstr "<command>delpart</command>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/util-linux.xml:327
 msgid "Asks the Linux kernel to remove a partition"
-msgstr ""
+msgstr "要求 Linux 内核删除分区"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/util-linux.xml:329
 msgid "delpart"
-msgstr ""
+msgstr "delpart"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/util-linux.xml:335
 msgid "<command>dmesg</command>"
-msgstr ""
+msgstr "<command>dmesg</command>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/util-linux.xml:337
 msgid "Dumps the kernel boot messages"
-msgstr ""
+msgstr "转储内核引导消息"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/util-linux.xml:339
 msgid "dmesg"
-msgstr ""
+msgstr "dmesg"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/util-linux.xml:345
 msgid "<command>eject</command>"
-msgstr ""
+msgstr "<command>eject</command>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/util-linux.xml:347
 msgid "Ejects removable media"
-msgstr ""
+msgstr "弹出可移动媒体"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/util-linux.xml:349
 msgid "eject"
-msgstr ""
+msgstr "eject"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/util-linux.xml:355
 msgid "<command>fallocate</command>"
-msgstr ""
+msgstr "<command>fallocate</command>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/util-linux.xml:357
 msgid "Preallocates space to a file"
-msgstr ""
+msgstr "为文件预先分配空间"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/util-linux.xml:359
 msgid "fallocate"
-msgstr ""
+msgstr "fallocate"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/util-linux.xml:365
 msgid "<command>fdformat</command>"
-msgstr ""
+msgstr "<command>fdformat</command>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/util-linux.xml:367
 msgid "Low-level formats a floppy disk"
-msgstr ""
+msgstr "低级格式化软盘"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/util-linux.xml:369
 msgid "fdformat"
-msgstr ""
+msgstr "fdformat"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/util-linux.xml:375
 msgid "<command>fdisk</command>"
-msgstr ""
+msgstr "<command>fdisk</command>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/util-linux.xml:379
 msgid "fdisk"
-msgstr ""
+msgstr "fdisk"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/util-linux.xml:385
 msgid "<command>fincore</command>"
-msgstr ""
+msgstr "<command>fincore</command>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/util-linux.xml:387
 msgid "Counts pages of file contents in core"
-msgstr ""
+msgstr "统计给定文件在内存中占用的页面数"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/util-linux.xml:389
 msgid "fincore"
-msgstr ""
+msgstr "fincore"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/util-linux.xml:395
 msgid "<command>findfs</command>"
-msgstr ""
+msgstr "<command>findfs</command>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/util-linux.xml:397
 msgid "Finds a file system by label or Universally Unique Identifier (UUID)"
-msgstr ""
+msgstr "根据通用唯一识别码 (UUID) 查找文件系统"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/util-linux.xml:400
 msgid "findfs"
-msgstr ""
+msgstr "findfs"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/util-linux.xml:406
 msgid "<command>findmnt</command>"
-msgstr ""
+msgstr "<command>findmnt</command>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/util-linux.xml:408
 msgid ""
 "Is a command line interface to the libmount library for work with mountinfo, "
 "fstab and mtab files"
-msgstr ""
+msgstr "是 libmount 库的命令行接口，可以处理 mountinfo、fstab 和 mtab 文件"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/util-linux.xml:411
 msgid "findmnt"
-msgstr ""
+msgstr "findmnt"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/util-linux.xml:417
 msgid "<command>flock</command>"
-msgstr ""
+msgstr "<command>flock</command>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/util-linux.xml:419
 msgid "Acquires a file lock and then executes a command with the lock held"
-msgstr ""
+msgstr "获取文件锁，并在持有锁的情况下运行命令"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/util-linux.xml:422
 msgid "flock"
-msgstr ""
+msgstr "flock"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/util-linux.xml:428
 msgid "<command>fsck</command>"
-msgstr ""
+msgstr "<command>fsck</command>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/util-linux.xml:430
 msgid "Is used to check, and optionally repair, file systems"
-msgstr ""
+msgstr "用于检查或修复文件系统"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/util-linux.xml:432
 msgid "fsck"
-msgstr ""
+msgstr "fsck"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/util-linux.xml:438
 msgid "<command>fsck.cramfs</command>"
-msgstr ""
+msgstr "<command>fsck.cramfs</command>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/util-linux.xml:440
-msgid "Performs a consistency check on the Cramfs file system on the given device"
-msgstr ""
+msgid ""
+"Performs a consistency check on the Cramfs file system on the given device"
+msgstr "用于对给定设备上的 Cramfs 文件系统进行一致性检查"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/util-linux.xml:443
 msgid "fsck.cramfs"
-msgstr ""
+msgstr "fsck.cramfs"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/util-linux.xml:449
 msgid "<command>fsck.minix</command>"
-msgstr ""
+msgstr "<command>fsck.minix</command>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/util-linux.xml:451
-msgid "Performs a consistency check on the Minix file system on the given device"
-msgstr ""
+msgid ""
+"Performs a consistency check on the Minix file system on the given device"
+msgstr "用于对给定设备上的 Minix 文件系统进行一致性检查"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/util-linux.xml:454
 msgid "fsck.minix"
-msgstr ""
+msgstr "fsck.minix"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/util-linux.xml:460
 msgid "<command>fsfreeze</command>"
-msgstr ""
+msgstr "<command>fsfreeze</command>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/util-linux.xml:462
 msgid ""
 "Is a very simple wrapper around FIFREEZE/FITHAW ioctl kernel driver "
 "operations"
-msgstr ""
+msgstr "是内核驱动 ioctl 操作 FIFREEZE/FITHAW 的简单包装"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/util-linux.xml:465
 msgid "fsfreeze"
-msgstr ""
+msgstr "fsfreeze"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/util-linux.xml:471
 msgid "<command>fstrim</command>"
-msgstr ""
+msgstr "<command>fstrim</command>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/util-linux.xml:473
 msgid "Discards unused blocks on a mounted filesystem"
-msgstr ""
+msgstr "丢弃已挂载文件系统上未使用的块"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/util-linux.xml:475
 msgid "fstrim"
-msgstr ""
+msgstr "fstrim"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/util-linux.xml:481
 msgid "<command>getopt</command>"
-msgstr ""
+msgstr "<command>getopt</command>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/util-linux.xml:483
 msgid "Parses options in the given command line"
-msgstr ""
+msgstr "解析给定命令行的选项"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/util-linux.xml:485
 msgid "getopt"
-msgstr ""
+msgstr "getopt"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/util-linux.xml:491
 msgid "<command>hexdump</command>"
-msgstr ""
+msgstr "<command>hexdump</command>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/util-linux.xml:493
 msgid "Dumps the given file in hexadecimal or in another given format"
-msgstr ""
+msgstr "以十六进制或其他给定格式转储文件"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/util-linux.xml:496
 msgid "hexdump"
-msgstr ""
+msgstr "hexdump"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/util-linux.xml:502
 msgid "<command>hwclock</command>"
-msgstr ""
+msgstr "<command>hwclock</command>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/util-linux.xml:504
@@ -779,16 +835,18 @@ msgid ""
 "Reads or sets the system's hardware clock, also called the Real-Time Clock "
 "(RTC) or Basic Input-Output System (BIOS)  clock"
 msgstr ""
+"读取或设置系统硬件时钟，它又被称为实时时钟 (RTC) 或基本输入输出系统 (BIOS)  "
+"时钟"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/util-linux.xml:508
 msgid "hwclock"
-msgstr ""
+msgstr "hwclock"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/util-linux.xml:514
 msgid "<command>i386</command>"
-msgstr ""
+msgstr "<command>i386</command>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/util-linux.xml:516
@@ -797,107 +855,107 @@ msgstr ""
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/util-linux.xml:1138
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/util-linux.xml:1244
 msgid "A symbolic link to setarch"
-msgstr ""
+msgstr "到 setarch 的符号链接"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/util-linux.xml:518
 msgid "i386"
-msgstr ""
+msgstr "i386"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/util-linux.xml:524
 msgid "<command>ionice</command>"
-msgstr ""
+msgstr "<command>ionice</command>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/util-linux.xml:526
 msgid "Gets or sets the io scheduling class and priority for a program"
-msgstr ""
+msgstr "设定程序的 IO 调度类和优先级"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/util-linux.xml:528
 msgid "ionice"
-msgstr ""
+msgstr "ionice"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/util-linux.xml:534
 msgid "<command>ipcmk</command>"
-msgstr ""
+msgstr "<command>ipcmk</command>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/util-linux.xml:536
 msgid "Creates various IPC resources"
-msgstr ""
+msgstr "创建多种 IPC 资源"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/util-linux.xml:538
 msgid "ipcmk"
-msgstr ""
+msgstr "ipcmk"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/util-linux.xml:544
 msgid "<command>ipcrm</command>"
-msgstr ""
+msgstr "<command>ipcrm</command>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/util-linux.xml:546
 msgid "Removes the given Inter-Process Communication (IPC) resource"
-msgstr ""
+msgstr "删除给定的进程间通信 (IPC) 资源"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/util-linux.xml:548
 msgid "ipcrm"
-msgstr ""
+msgstr "ipcrm"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/util-linux.xml:554
 msgid "<command>ipcs</command>"
-msgstr ""
+msgstr "<command>ipcs</command>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/util-linux.xml:556
 msgid "Provides IPC status information"
-msgstr ""
+msgstr "提供 IPC 状态信息"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/util-linux.xml:558
 msgid "ipcs"
-msgstr ""
+msgstr "ipcs"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/util-linux.xml:564
 msgid "<command>isosize</command>"
-msgstr ""
+msgstr "<command>isosize</command>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/util-linux.xml:566
 msgid "Reports the size of an iso9660 file system"
-msgstr ""
+msgstr "报告 ISO 9660 文件系统的大小"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/util-linux.xml:568
 msgid "isosize"
-msgstr ""
+msgstr "isosize"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/util-linux.xml:574
 msgid "<command>kill</command>"
-msgstr ""
+msgstr "<command>kill</command>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/util-linux.xml:576
 msgid "Sends signals to processes"
-msgstr ""
+msgstr "向进程发送信号"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/util-linux.xml:578
 msgid "kill"
-msgstr ""
+msgstr "kill"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/util-linux.xml:584
 msgid "<command>last</command>"
-msgstr ""
+msgstr "<command>last</command>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/util-linux.xml:586
@@ -906,661 +964,664 @@ msgid ""
 "<filename>/var/log/wtmp</filename> file; it also shows system boots, "
 "shutdowns, and run-level changes"
 msgstr ""
+"显示哪些用户最后登录 (或登出)，在 <filename>/var/log/wtmp</filename> 文件中反"
+"向搜索；它也会显示系统引导、关闭和运行级别变化记录"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/util-linux.xml:590
 msgid "last"
-msgstr ""
+msgstr "last"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/util-linux.xml:596
 msgid "<command>lastb</command>"
-msgstr ""
+msgstr "<command>lastb</command>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/util-linux.xml:598
 msgid ""
-"Shows the failed login attempts, as logged in "
-"<filename>/var/log/btmp</filename>"
-msgstr ""
+"Shows the failed login attempts, as logged in <filename>/var/log/btmp</"
+"filename>"
+msgstr "显示 <filename>/var/log/btmp</filename> 记录的失败登录企图"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/util-linux.xml:601
 msgid "lastb"
-msgstr ""
+msgstr "lastb"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/util-linux.xml:607
 msgid "<command>ldattach</command>"
-msgstr ""
+msgstr "<command>ldattach</command>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/util-linux.xml:609
 msgid "Attaches a line discipline to a serial line"
-msgstr ""
+msgstr "为串口线附加行规则"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/util-linux.xml:611
 msgid "ldattach"
-msgstr ""
+msgstr "ldattach"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/util-linux.xml:617
 msgid "<command>linux32</command>"
-msgstr ""
+msgstr "<command>linux32</command>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/util-linux.xml:621
 msgid "linux32"
-msgstr ""
+msgstr "linux32"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/util-linux.xml:627
 msgid "<command>linux64</command>"
-msgstr ""
+msgstr "<command>linux64</command>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/util-linux.xml:631
 msgid "linux64"
-msgstr ""
+msgstr "linux64"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/util-linux.xml:637
 msgid "<command>logger</command>"
-msgstr ""
+msgstr "<command>logger</command>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/util-linux.xml:639
 msgid "Enters the given message into the system log"
-msgstr ""
+msgstr "将给定消息记入系统日志"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/util-linux.xml:641
 msgid "logger"
-msgstr ""
+msgstr "logger"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/util-linux.xml:647
 msgid "<command>look</command>"
-msgstr ""
+msgstr "<command>look</command>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/util-linux.xml:649
 msgid "Displays lines that begin with the given string"
-msgstr ""
+msgstr "显示以给定字符串开始的行"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/util-linux.xml:651
 msgid "look"
-msgstr ""
+msgstr "look"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/util-linux.xml:657
 msgid "<command>losetup</command>"
-msgstr ""
+msgstr "<command>losetup</command>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/util-linux.xml:659
 msgid "Sets up and controls loop devices"
-msgstr ""
+msgstr "设定和控制回环设备"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/util-linux.xml:661
 msgid "losetup"
-msgstr ""
+msgstr "losetup"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/util-linux.xml:667
 msgid "<command>lsblk</command>"
-msgstr ""
+msgstr "<command>lsblk</command>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/util-linux.xml:669
-msgid "Lists information about all or selected block devices in a tree-like format"
-msgstr ""
+msgid ""
+"Lists information about all or selected block devices in a tree-like format"
+msgstr "以树状格式列出所有或给定块设备的信息"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/util-linux.xml:672
 msgid "lsblk"
-msgstr ""
+msgstr "lsblk"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/util-linux.xml:678
 msgid "<command>lscpu</command>"
-msgstr ""
+msgstr "<command>lscpu</command>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/util-linux.xml:680
 msgid "Prints CPU architecture information"
-msgstr ""
+msgstr "打印 CPU 体系结构信息"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/util-linux.xml:682
 msgid "lscpu"
-msgstr ""
+msgstr "lscpu"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/util-linux.xml:688
 msgid "<command>lsipc</command>"
-msgstr ""
+msgstr "<command>lsipc</command>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/util-linux.xml:690
 msgid "Prints information on IPC facilities currently employed in the system"
-msgstr ""
+msgstr "打印系统当前部署的 IPC 设施的信息"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/util-linux.xml:693
 msgid "lsipc"
-msgstr ""
+msgstr "lsipc"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/util-linux.xml:699
 msgid "<command>lslocks</command>"
-msgstr ""
+msgstr "<command>lslocks</command>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/util-linux.xml:701
 msgid "Lists local system locks"
-msgstr ""
+msgstr "列出本地系统锁"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/util-linux.xml:703
 msgid "lslocks"
-msgstr ""
+msgstr "lslocks"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/util-linux.xml:709
 msgid "<command>lslogins</command>"
-msgstr ""
+msgstr "<command>lslogins</command>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/util-linux.xml:711
 msgid "Lists information about users, groups and system accounts"
-msgstr ""
+msgstr "列出用户、组和系统账户的信息"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/util-linux.xml:713
 msgid "lslogins"
-msgstr ""
+msgstr "lslogins"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/util-linux.xml:719
 msgid "<command>lsmem</command>"
-msgstr ""
+msgstr "<command>lsmem</command>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/util-linux.xml:721
 msgid "Lists the ranges of available memory with their online status"
-msgstr ""
+msgstr "列出可用内存的范围和它们的在线状态"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/util-linux.xml:724
 msgid "lsmem"
-msgstr ""
+msgstr "lsmem"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/util-linux.xml:730
 msgid "<command>lsns</command>"
-msgstr ""
+msgstr "<command>lsns</command>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/util-linux.xml:732
 msgid "Lists namespaces"
-msgstr ""
+msgstr "列出命名空间"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/util-linux.xml:734
 msgid "lsns"
-msgstr ""
+msgstr "lsns"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/util-linux.xml:740
 msgid "<command>mcookie</command>"
-msgstr ""
+msgstr "<command>mcookie</command>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/util-linux.xml:742
 msgid ""
 "Generates magic cookies (128-bit random hexadecimal numbers) for "
 "<command>xauth</command>"
-msgstr ""
+msgstr "为 <command>xauth</command> 创建魔术 cookie (128位随机十六进制数)"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/util-linux.xml:745
 msgid "mcookie"
-msgstr ""
+msgstr "mcookie"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/util-linux.xml:751
 msgid "<command>mesg</command>"
-msgstr ""
+msgstr "<command>mesg</command>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/util-linux.xml:753
 msgid ""
-"Controls whether other users can send messages to the current user's "
-"terminal"
-msgstr ""
+"Controls whether other users can send messages to the current user's terminal"
+msgstr "控制其他用户能否向当前用户终端发送消息"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/util-linux.xml:756
 msgid "mesg"
-msgstr ""
+msgstr "mesg"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/util-linux.xml:762
 msgid "<command>mkfs</command>"
-msgstr ""
+msgstr "<command>mkfs</command>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/util-linux.xml:764
 msgid "Builds a file system on a device (usually a hard disk partition)"
-msgstr ""
+msgstr "在设备 (一般是硬盘分区) 上创建文件系统"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/util-linux.xml:767
 msgid "mkfs"
-msgstr ""
+msgstr "mkfs"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/util-linux.xml:773
 msgid "<command>mkfs.bfs</command>"
-msgstr ""
+msgstr "<command>mkfs.bfs</command>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/util-linux.xml:775
 msgid "Creates a Santa Cruz Operations (SCO) bfs file system"
-msgstr ""
+msgstr "创建 Santa Cruz Operations (SCO) bfs 文件系统"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/util-linux.xml:777
 msgid "mkfs.bfs"
-msgstr ""
+msgstr "mkfs.bfs"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/util-linux.xml:783
 msgid "<command>mkfs.cramfs</command>"
-msgstr ""
+msgstr "<command>mkfs.cramfs</command>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/util-linux.xml:785
 msgid "Creates a cramfs file system"
-msgstr ""
+msgstr "创建 cramfs 文件系统"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/util-linux.xml:787
 msgid "mkfs.cramfs"
-msgstr ""
+msgstr "mkfs.cramfs"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/util-linux.xml:793
 msgid "<command>mkfs.minix</command>"
-msgstr ""
+msgstr "<command>mkfs.minix</command>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/util-linux.xml:795
 msgid "Creates a Minix file system"
-msgstr ""
+msgstr "创建 Minix 文件系统"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/util-linux.xml:797
 msgid "mkfs.minix"
-msgstr ""
+msgstr "mkfs.minix"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/util-linux.xml:803
 msgid "<command>mkswap</command>"
-msgstr ""
+msgstr "<command>mkswap</command>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/util-linux.xml:805
 msgid "Initializes the given device or file to be used as a swap area"
-msgstr ""
+msgstr "将给定文件或设备初始化为交换空间"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/util-linux.xml:808
 msgid "mkswap"
-msgstr ""
+msgstr "mkswap"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/util-linux.xml:814
 msgid "<command>more</command>"
-msgstr ""
+msgstr "<command>more</command>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/util-linux.xml:816
 msgid "A filter for paging through text one screen at a time"
-msgstr ""
+msgstr "在屏幕上分页文本的过滤器"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/util-linux.xml:818
 msgid "more"
-msgstr ""
+msgstr "more"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/util-linux.xml:824
 msgid "<command>mount</command>"
-msgstr ""
+msgstr "<command>mount</command>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/util-linux.xml:826
 msgid ""
 "Attaches the file system on the given device to a specified directory in the "
 "file-system tree"
-msgstr ""
+msgstr "将给定设备上的文件系统挂载到文件系统树结构中的给定目录"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/util-linux.xml:829
 msgid "mount"
-msgstr ""
+msgstr "mount"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/util-linux.xml:835
 msgid "<command>mountpoint</command>"
-msgstr ""
+msgstr "<command>mountpoint</command>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/util-linux.xml:837
 msgid "Checks if the directory is a mountpoint"
-msgstr ""
+msgstr "检查目录是否为挂载点"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/util-linux.xml:839
 msgid "mountpoint"
-msgstr ""
+msgstr "mountpoint"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/util-linux.xml:845
 msgid "<command>namei</command>"
-msgstr ""
+msgstr "<command>namei</command>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/util-linux.xml:847
 msgid "Shows the symbolic links in the given pathnames"
-msgstr ""
+msgstr "显示给定目录名中的符号链接"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/util-linux.xml:849
 msgid "namei"
-msgstr ""
+msgstr "namei"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/util-linux.xml:855
 msgid "<command>nsenter</command>"
-msgstr ""
+msgstr "<command>nsenter</command>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/util-linux.xml:857
 msgid "Runs a program with namespaces of other processes"
-msgstr ""
+msgstr "在其他程序的命名空间中运行程序"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/util-linux.xml:859
 msgid "nsenter"
-msgstr ""
+msgstr "nsenter"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/util-linux.xml:865
 msgid "<command>partx</command>"
-msgstr ""
+msgstr "<command>partx</command>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/util-linux.xml:867
 msgid "Tells the kernel about the presence and numbering of on-disk partitions"
-msgstr ""
+msgstr "告知内核磁盘分区的存在性和编号"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/util-linux.xml:870
 msgid "partx"
-msgstr ""
+msgstr "partx"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/util-linux.xml:876
 msgid "<command>pivot_root</command>"
-msgstr ""
+msgstr "<command>pivot_root</command>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/util-linux.xml:878
-msgid "Makes the given file system the new root file system of the current process"
-msgstr ""
+msgid ""
+"Makes the given file system the new root file system of the current process"
+msgstr "将当前进程的根文件系统设为给定文件系统"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/util-linux.xml:881
 msgid "pivot_root"
-msgstr ""
+msgstr "pivot_root"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/util-linux.xml:887
 msgid "<command>prlimit</command>"
-msgstr ""
+msgstr "<command>prlimit</command>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/util-linux.xml:889
 msgid "Get and set a process' resource limits"
-msgstr ""
+msgstr "获取和设定进程资源限制"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/util-linux.xml:891
 msgid "prlimit"
-msgstr ""
+msgstr "prlimit"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/util-linux.xml:897
 msgid "<command>raw</command>"
-msgstr ""
+msgstr "<command>raw</command>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/util-linux.xml:899
 msgid "Bind a Linux raw character device to a block device"
-msgstr ""
+msgstr "将 Linux raw 字符设备绑定到块设备"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/util-linux.xml:901
 msgid "raw"
-msgstr ""
+msgstr "raw"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/util-linux.xml:907
 msgid "<command>readprofile</command>"
-msgstr ""
+msgstr "<command>readprofile</command>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/util-linux.xml:909
 msgid "Reads kernel profiling information"
-msgstr ""
+msgstr "读取内核性能分析信息"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/util-linux.xml:911
 msgid "readprofile"
-msgstr ""
+msgstr "readprofile"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/util-linux.xml:917
 msgid "<command>rename</command>"
-msgstr ""
+msgstr "<command>rename</command>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/util-linux.xml:919
 msgid "Renames the given files, replacing a given string with another"
-msgstr ""
+msgstr "重命名给定文件，将给定字符串替换为另一个字符串"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/util-linux.xml:922
 msgid "rename"
-msgstr ""
+msgstr "rename"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/util-linux.xml:928
 msgid "<command>renice</command>"
-msgstr ""
+msgstr "<command>renice</command>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/util-linux.xml:930
 msgid "Alters the priority of running processes"
-msgstr ""
+msgstr "修改正在运行的进程的优先级"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/util-linux.xml:932
 msgid "renice"
-msgstr ""
+msgstr "renice"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/util-linux.xml:938
 msgid "<command>resizepart</command>"
-msgstr ""
+msgstr "<command>resizepart</command>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/util-linux.xml:940
 msgid "Asks the Linux kernel to resize a partition"
-msgstr ""
+msgstr "要求 Linux 内核改变分区大小"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/util-linux.xml:942
 msgid "resizepart"
-msgstr ""
+msgstr "resizepart"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/util-linux.xml:948
 msgid "<command>rev</command>"
-msgstr ""
+msgstr "<command>rev</command>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/util-linux.xml:950
 msgid "Reverses the lines of a given file"
-msgstr ""
+msgstr "反转给定文件的每一行"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/util-linux.xml:952
 msgid "rev"
-msgstr ""
+msgstr "rev"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/util-linux.xml:958
 msgid "<command>rkfill</command>"
-msgstr ""
+msgstr "<command>rkfill</command>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/util-linux.xml:960
 msgid "Tool for enabling and disabling wireless devices"
-msgstr ""
+msgstr "用于启用或禁用无线设备的工具"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/util-linux.xml:962
 msgid "rkfill"
-msgstr ""
+msgstr "rkfill"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/util-linux.xml:968
 msgid "<command>rtcwake</command>"
-msgstr ""
+msgstr "<command>rtcwake</command>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/util-linux.xml:970
 msgid "Used to enter a system sleep state until specified wakeup time"
-msgstr ""
+msgstr "进入睡眠状态，直到给定的唤醒时间"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/util-linux.xml:973
 msgid "rtcwake"
-msgstr ""
+msgstr "rtcwake"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/util-linux.xml:979
 msgid "<command>script</command>"
-msgstr ""
+msgstr "<command>script</command>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/util-linux.xml:981
 msgid "Makes a typescript of a terminal session"
-msgstr ""
+msgstr "记录终端会话打字机文档"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/util-linux.xml:983
 msgid "script"
-msgstr ""
+msgstr "script"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/util-linux.xml:989
 msgid "<command>scriptreplay</command>"
-msgstr ""
+msgstr "<command>scriptreplay</command>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/util-linux.xml:991
 msgid "Plays back typescripts using timing information"
-msgstr ""
+msgstr "根据计时信息重放终端会话打字机文档"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/util-linux.xml:993
 msgid "scriptreplay"
-msgstr ""
+msgstr "scriptreplay"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/util-linux.xml:999
 msgid "<command>setarch</command>"
-msgstr ""
+msgstr "<command>setarch</command>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/util-linux.xml:1001
 msgid ""
 "Changes reported architecture in a new program environment and sets "
 "personality flags"
-msgstr ""
+msgstr "在新程序环境中修改系统报告的体系结构，并设置进程执行域信息"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/util-linux.xml:1004
 msgid "setarch"
-msgstr ""
+msgstr "setarch"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/util-linux.xml:1010
 msgid "<command>setsid</command>"
-msgstr ""
+msgstr "<command>setsid</command>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/util-linux.xml:1012
 msgid "Runs the given program in a new session"
-msgstr ""
+msgstr "在新会话中运行给定程序"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/util-linux.xml:1014
 msgid "setsid"
-msgstr ""
+msgstr "setsid"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/util-linux.xml:1020
 msgid "<command>setterm</command>"
-msgstr ""
+msgstr "<command>setterm</command>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/util-linux.xml:1022
 msgid "Sets terminal attributes"
-msgstr ""
+msgstr "设定终端属性"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/util-linux.xml:1024
 msgid "setterm"
-msgstr ""
+msgstr "setterm"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/util-linux.xml:1030
 msgid "<command>sfdisk</command>"
-msgstr ""
+msgstr "<command>sfdisk</command>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/util-linux.xml:1032
 msgid "A disk partition table manipulator"
-msgstr ""
+msgstr "一个分区表修改器"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/util-linux.xml:1034
 msgid "sfdisk"
-msgstr ""
+msgstr "sfdisk"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/util-linux.xml:1040
 msgid "<command>sulogin</command>"
-msgstr ""
+msgstr "<command>sulogin</command>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/util-linux.xml:1042
@@ -1569,200 +1630,204 @@ msgid ""
 "normally invoked by <command>init</command> when the system goes into single "
 "user mode"
 msgstr ""
+"允许 <systemitem class=\"username\">root</systemitem> 登录；一般在系统进入单"
+"用户模式时由 <command>init</command> 执行"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/util-linux.xml:1046
 msgid "sulogin"
-msgstr ""
+msgstr "sulogin"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/util-linux.xml:1052
 msgid "<command>swaplabel</command>"
-msgstr ""
+msgstr "<command>swaplabel</command>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/util-linux.xml:1054
 msgid "Allows to change swaparea UUID and label"
-msgstr ""
+msgstr "允许修改交换空间 UUID 和标签"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/util-linux.xml:1056
 msgid "swaplabel"
-msgstr ""
+msgstr "swaplabel"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/util-linux.xml:1062
 msgid "<command>swapoff</command>"
-msgstr ""
+msgstr "<command>swapoff</command>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/util-linux.xml:1064
 msgid "Disables devices and files for paging and swapping"
-msgstr ""
+msgstr "禁止在文件或设备上进行分页交换"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/util-linux.xml:1066
 msgid "swapoff"
-msgstr ""
+msgstr "swapoff"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/util-linux.xml:1072
 msgid "<command>swapon</command>"
-msgstr ""
+msgstr "<command>swapon</command>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/util-linux.xml:1074
 msgid ""
 "Enables devices and files for paging and swapping and lists the devices and "
 "files currently in use"
-msgstr ""
+msgstr "启用文件或设备上的分页交换，或列出当前用于交换的设备和文件"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/util-linux.xml:1077
 msgid "swapon"
-msgstr ""
+msgstr "swapon"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/util-linux.xml:1083
 msgid "<command>switch_root</command>"
-msgstr ""
+msgstr "<command>switch_root</command>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/util-linux.xml:1085
 msgid "Switches to another filesystem as the root of the mount tree"
-msgstr ""
+msgstr "将另一个文件系统切换为挂载树的根"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/util-linux.xml:1087
 msgid "switch_root"
-msgstr ""
+msgstr "switch_root"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/util-linux.xml:1093
 msgid "<command>tailf</command>"
-msgstr ""
+msgstr "<command>tailf</command>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/util-linux.xml:1095
 msgid ""
 "Tracks the growth of a log file; displays the last 10 lines of a log file, "
-"then continues displaying any new entries in the log file as they are "
-"created"
+"then continues displaying any new entries in the log file as they are created"
 msgstr ""
+"跟踪日志文件的增长；显示日志文件的最后 10 行，并在日志文件有新记录时继续显示"
+"它们"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/util-linux.xml:1099
 msgid "tailf"
-msgstr ""
+msgstr "tailf"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/util-linux.xml:1105
 msgid "<command>taskset</command>"
-msgstr ""
+msgstr "<command>taskset</command>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/util-linux.xml:1107
 msgid "Retrieves or sets a process' CPU affinity"
-msgstr ""
+msgstr "获取或设置进程 CPU 亲和性"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/util-linux.xml:1109
 msgid "taskset"
-msgstr ""
+msgstr "taskset"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/util-linux.xml:1115
 msgid "<command>ul</command>"
-msgstr ""
+msgstr "<command>ul</command>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/util-linux.xml:1117
 msgid ""
 "A filter for translating underscores into escape sequences indicating "
 "underlining for the terminal in use"
-msgstr ""
+msgstr "将下划线转换为在当前终端中表示下划线的 escape 序列的过滤器"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/util-linux.xml:1120
 msgid "ul"
-msgstr ""
+msgstr "ul"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/util-linux.xml:1126
 msgid "<command>umount</command>"
-msgstr ""
+msgstr "<command>umount</command>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/util-linux.xml:1128
 msgid "Disconnects a file system from the system's file tree"
-msgstr ""
+msgstr "断开文件系统与系统文件目录树的连接"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/util-linux.xml:1130
 msgid "umount"
-msgstr ""
+msgstr "umount"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/util-linux.xml:1136
 msgid "<command>uname26</command>"
-msgstr ""
+msgstr "<command>uname26</command>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/util-linux.xml:1140
 msgid "uname26"
-msgstr ""
+msgstr "uname26"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/util-linux.xml:1146
 msgid "<command>unshare</command>"
-msgstr ""
+msgstr "<command>unshare</command>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/util-linux.xml:1148
 msgid "Runs a program with some namespaces unshared from parent"
-msgstr ""
+msgstr "在某些命名空间与父进程脱离的情况下运行程序"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/util-linux.xml:1150
 msgid "unshare"
-msgstr ""
+msgstr "unshare"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/util-linux.xml:1156
 msgid "<command>utmpdump</command>"
-msgstr ""
+msgstr "<command>utmpdump</command>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/util-linux.xml:1158
-msgid "Displays the content of the given login file in a more user-friendly format"
-msgstr ""
+msgid ""
+"Displays the content of the given login file in a more user-friendly format"
+msgstr "以更加用户友好的格式显示给定登录文件"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/util-linux.xml:1161
 msgid "utmpdump"
-msgstr ""
+msgstr "utmpdump"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/util-linux.xml:1167
 msgid "<command>uuidd</command>"
-msgstr ""
+msgstr "<command>uuidd</command>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/util-linux.xml:1169
 msgid ""
 "A daemon used by the UUID library to generate time-based UUIDs in a secure "
 "and guaranteed-unique fashion"
-msgstr ""
+msgstr "UUID 库使用的守护进程，用于安全、确保唯一性地生成 UUID"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/util-linux.xml:1172
 msgid "uuidd"
-msgstr ""
+msgstr "uuidd"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/util-linux.xml:1178
 msgid "<command>uuidgen</command>"
-msgstr ""
+msgstr "<command>uuidgen</command>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/util-linux.xml:1180
@@ -1771,189 +1836,204 @@ msgid ""
 "all UUIDs created, on the local system and on other systems, in the past and "
 "in the future"
 msgstr ""
+"创建新的 UUID。每个新的 UUID 可以被合理地认为在本地系统和其他系统上，在过去和"
+"未来，都是唯一的"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/util-linux.xml:1184
 msgid "uuidgen"
-msgstr ""
+msgstr "uuidgen"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/util-linux.xml:1190
 msgid "<command>uuidparse</command>"
-msgstr ""
+msgstr "<command>uuidparse</command>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/util-linux.xml:1192
 msgid "An utility to parse unique identifiers"
-msgstr ""
+msgstr "用于解析统一标识符的工具"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/util-linux.xml:1194
 msgid "uuidparse"
-msgstr ""
+msgstr "uuidparse"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/util-linux.xml:1200
 msgid "<command>wall</command>"
-msgstr ""
+msgstr "<command>wall</command>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/util-linux.xml:1202
 msgid ""
 "Displays the contents of a file or, by default, its standard input, on the "
 "terminals of all currently logged in users"
-msgstr ""
+msgstr "显示文件或标准输入（默认值）的内容到所有登录用户的终端"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/util-linux.xml:1205
 msgid "wall"
-msgstr ""
+msgstr "wall"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/util-linux.xml:1211
 msgid "<command>wdctl</command>"
-msgstr ""
+msgstr "<command>wdctl</command>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/util-linux.xml:1213
 msgid "Shows hardware watchdog status"
-msgstr ""
+msgstr "显示硬件看门狗电路状态"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/util-linux.xml:1215
 msgid "wdctl"
-msgstr ""
+msgstr "wdctl"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/util-linux.xml:1221
 msgid "<command>whereis</command>"
-msgstr ""
+msgstr "<command>whereis</command>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/util-linux.xml:1223
 msgid ""
 "Reports the location of the binary, source, and man page for the given "
 "command"
-msgstr ""
+msgstr "报告给定命令二进制文件、源代码文件和 man 页面的位置"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/util-linux.xml:1226
 msgid "whereis"
-msgstr ""
+msgstr "whereis"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/util-linux.xml:1232
 msgid "<command>wipefs</command>"
-msgstr ""
+msgstr "<command>wipefs</command>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/util-linux.xml:1234
 msgid "Wipes a filesystem signature from a device"
-msgstr ""
+msgstr "从设备上擦除文件系统签名"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/util-linux.xml:1236
 msgid "wipefs"
-msgstr ""
+msgstr "wipefs"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/util-linux.xml:1242
 msgid "<command>x86_64</command>"
-msgstr ""
+msgstr "<command>x86_64</command>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/util-linux.xml:1246
 msgid "x86_64"
-msgstr ""
+msgstr "x86_64"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/util-linux.xml:1252
 msgid "<command>zramctl</command>"
-msgstr ""
+msgstr "<command>zramctl</command>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/util-linux.xml:1254
 msgid "A program to set up and control zram (compressed ram disk)  devices"
-msgstr ""
+msgstr "设定和控制 zram (压缩内存盘) 设备的程序"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/util-linux.xml:1257
 msgid "zramctl"
-msgstr ""
+msgstr "zramctl"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/util-linux.xml:1263
 msgid "<filename class=\"libraryfile\">libblkid</filename>"
-msgstr ""
+msgstr "<filename class=\"libraryfile\">libblkid</filename>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/util-linux.xml:1265
 msgid "Contains routines for device identification and token extraction"
-msgstr ""
+msgstr "包含设备识别和标识提取子程序"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/util-linux.xml:1268
 msgid "libblkid"
-msgstr ""
+msgstr "libblkid"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/util-linux.xml:1274
 msgid "<filename class=\"libraryfile\">libfdisk</filename>"
-msgstr ""
+msgstr "<filename class=\"libraryfile\">libfdisk</filename>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/util-linux.xml:1276
 msgid "Contains routines for manipulating partition tables"
-msgstr ""
+msgstr "包含操作分区表的子程序"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/util-linux.xml:1278
 msgid "libfdisk"
-msgstr ""
+msgstr "libfdisk"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/util-linux.xml:1284
 msgid "<filename class=\"libraryfile\">libmount</filename>"
-msgstr ""
+msgstr "<filename class=\"libraryfile\">libmount</filename>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/util-linux.xml:1286
 msgid "Contains routines for block device mounting and unmounting"
-msgstr ""
+msgstr "包含挂载和解挂块设备的子程序"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/util-linux.xml:1289
 msgid "libmount"
-msgstr ""
+msgstr "libmount"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/util-linux.xml:1295
 msgid "<filename class=\"libraryfile\">libsmartcols</filename>"
-msgstr ""
+msgstr "<filename class=\"libraryfile\">libsmartcols</filename>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/util-linux.xml:1297
 msgid "Contains routines for aiding screen output in tabular form"
-msgstr ""
+msgstr "包含以表格形式在屏幕上输出的辅助子程序"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/util-linux.xml:1299
 msgid "libsmartcols"
-msgstr ""
+msgstr "libsmartcols"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/util-linux.xml:1305
 msgid "<filename class=\"libraryfile\">libuuid</filename>"
-msgstr ""
+msgstr "<filename class=\"libraryfile\">libuuid</filename>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/util-linux.xml:1307
 msgid ""
 "Contains routines for generating unique identifiers for objects that may be "
 "accessible beyond the local system"
-msgstr ""
+msgstr "包含为对象生成唯一标识符，使它在本地系统以外也可以访问的子程序"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/util-linux.xml:1310
 msgid "libuuid"
-msgstr ""
+msgstr "libuuid"
+
+#~ msgid "FHS compliance notes"
+#~ msgstr "FHS 兼容性注意事项"
+
+#~ msgid "Remove the earlier created symlinks:"
+#~ msgstr "删除之前创建的符号链接："
+
+#~ msgid ""
+#~ "<userinput remap=\"pre\">rm -vf /usr/include/{blkid,libmount,uuid}</"
+#~ "userinput>"
+#~ msgstr ""
+#~ "<userinput remap=\"pre\">rm -vf /usr/include/{blkid,libmount,uuid}</"
+#~ "userinput>"

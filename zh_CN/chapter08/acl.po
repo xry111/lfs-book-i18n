@@ -1,9 +1,3 @@
-# SOME DESCRIPTIVE TITLE
-# Copyright (C) YEAR Free Software Foundation, Inc.
-# This file is distributed under the same license as the PACKAGE package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
-#
-#, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
@@ -11,16 +5,17 @@ msgstr ""
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
-"Language: \n"
+"Language: zh_CN\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Translate Toolkit 2.2.5\n"
 
 #. type: Content of: <sect1><sect1info><address>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/acl.xml:14
 #, no-wrap
 msgid "&acl-url;"
-msgstr ""
+msgstr "&acl-url;"
 
 #. type: Content of: <sect1><sect1info>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/acl.xml:12
@@ -28,16 +23,18 @@ msgid ""
 "<productname>acl</productname> <productnumber>&acl-version;</productnumber> "
 "<placeholder type=\"address\" id=\"0\"/>"
 msgstr ""
+"<productname>acl</productname> <productnumber>&acl-version;</productnumber> "
+"<placeholder type=\"address\" id=\"0\"/>"
 
 #. type: Content of: <sect1><title>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/acl.xml:17
 msgid "Acl-&acl-version;"
-msgstr ""
+msgstr "Acl-&acl-version;"
 
 #. type: Content of: <sect1><indexterm><primary>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/acl.xml:20
 msgid "Acl"
-msgstr ""
+msgstr "Acl"
 
 #. type: Content of: <sect1><sect2><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/acl.xml:26
@@ -46,36 +43,40 @@ msgid ""
 "are used to define more fine-grained discretionary access rights for files "
 "and directories."
 msgstr ""
+"Acl 软件包包含管理访问控制列表的工具，访问控制列表能够更细致地自由定义文件和"
+"目录的访问权限。"
 
 #. type: Content of: <sect1><sect2><segmentedlist><segtitle>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/acl.xml:31
 msgid "&buildtime;"
-msgstr ""
+msgstr "&buildtime;"
 
 #. type: Content of: <sect1><sect2><segmentedlist><segtitle>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/acl.xml:32
 msgid "&diskspace;"
-msgstr ""
+msgstr "&diskspace;"
 
 #. type: Content of: <sect1><sect2><segmentedlist><seglistitem><seg>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/acl.xml:35
+#, fuzzy
 msgid "&acl-fin-sbu;"
-msgstr ""
+msgstr "&acl-ch6-sbu;"
 
 #. type: Content of: <sect1><sect2><segmentedlist><seglistitem><seg>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/acl.xml:36
+#, fuzzy
 msgid "&acl-fin-du;"
-msgstr ""
+msgstr "&acl-ch6-du;"
 
 #. type: Content of: <sect1><sect2><title>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/acl.xml:43
 msgid "Installation of Acl"
-msgstr ""
+msgstr "安装 Acl"
 
 #. type: Content of: <sect1><sect2><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/acl.xml:45
 msgid "Prepare Acl for compilation:"
-msgstr ""
+msgstr "准备编译 Acl："
 
 #. type: Content of: <sect1><sect2><screen>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/acl.xml:47
@@ -87,10 +88,15 @@ msgid ""
 "            --libexecdir=/usr/lib \\\n"
 "            --docdir=/usr/share/doc/acl-&acl-version;</userinput>"
 msgstr ""
+"<userinput remap=\"configure\">./configure --prefix=/usr         \\\n"
+"            --bindir=/bin         \\\n"
+"            --disable-static      \\\n"
+"            --libexecdir=/usr/lib \\\n"
+"            --docdir=/usr/share/doc/acl-&acl-version;</userinput>"
 
 #. type: Content of: <sect1><sect2><screen>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/acl.xml:53
-#, no-wrap
+#, fuzzy, no-wrap
 msgid ""
 "<userinput remap=\"configure\">\n"
 "./configure --prefix=/usr         \\\n"
@@ -98,158 +104,171 @@ msgid ""
 "            --libexecdir=/usr/lib \\\n"
 "            --docdir=/usr/share/doc/acl-&acl-version;</userinput>"
 msgstr ""
+"<userinput remap=\"configure\">./configure --prefix=/usr         \\\n"
+"            --disable-static      \\\n"
+"            --libexecdir=/usr/lib \\\n"
+"            --docdir=/usr/share/doc/acl-&acl-version;</userinput>"
 
 #. type: Content of: <sect1><sect2><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/acl.xml:59
 msgid "Compile the package:"
-msgstr ""
+msgstr "编译该软件包："
 
 #. type: Content of: <sect1><sect2><screen>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/acl.xml:61
 #, no-wrap
 msgid "<userinput remap=\"make\">make</userinput>"
-msgstr ""
+msgstr "<userinput remap=\"make\">make</userinput>"
 
 #. type: Content of: <sect1><sect2><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/acl.xml:63
 msgid ""
 "The Acl tests need to be run on a filesystem that supports access controls "
 "after <application>Coreutils</application> has been built with the Acl "
-"libraries.  If desired, return to this package and run <command>make "
-"check</command> after <application>Coreutils</application> has been built "
-"later in this chapter."
+"libraries.  If desired, return to this package and run <command>make check</"
+"command> after <application>Coreutils</application> has been built later in "
+"this chapter."
 msgstr ""
+"Acl 的测试套件必须在构建了链接到 Acl 库的 <application>Coreutils</"
+"application> 后才能在支持访问控制的文件系统上运行。如果想运行它们，在构建好 "
+"<application>Coreutils</application> 后再返回这里，并执行 <command>make "
+"check</command>。"
 
 #. type: Content of: <sect1><sect2><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/acl.xml:69
 msgid "Install the package:"
-msgstr ""
+msgstr "安装该软件包："
 
 #. type: Content of: <sect1><sect2><screen>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/acl.xml:71
 #, no-wrap
 msgid "<userinput remap=\"install\">make install</userinput>"
-msgstr ""
+msgstr "<userinput remap=\"install\">make install</userinput>"
 
 #. type: Content of: <sect1><sect2><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/acl.xml:73
 msgid ""
-"The shared library needs to be moved to <filename "
-"class=\"directory\">/lib</filename>, and as a result the <filename "
-"class=\"extension\">.so</filename> file in <filename "
-"class=\"directory\">/usr/lib</filename> will need to be recreated:"
+"The shared library needs to be moved to <filename class=\"directory\">/lib</"
+"filename>, and as a result the <filename class=\"extension\">.so</filename> "
+"file in <filename class=\"directory\">/usr/lib</filename> will need to be "
+"recreated:"
 msgstr ""
+"共享库需要被移动到 <filename class=\"directory\">/lib</filename> 目录，因此 "
+"<filename class=\"directory\">/usr/lib</filename> 中的 <filename class="
+"\"extension\">.so</filename> 符号链接需要重新建立："
 
 #. type: Content of: <sect1><sect2><screen>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/acl.xml:78
 #, no-wrap
 msgid ""
 "<userinput remap=\"install\">mv -v /usr/lib/libacl.so.* /lib\n"
-"ln -sfv ../../lib/$(readlink /usr/lib/libacl.so) "
-"/usr/lib/libacl.so</userinput>"
+"ln -sfv ../../lib/$(readlink /usr/lib/libacl.so) /usr/lib/libacl.so</userinput>"
 msgstr ""
+"<userinput remap=\"install\">mv -v /usr/lib/libacl.so.* /lib\n"
+"ln -sfv ../../lib/$(readlink /usr/lib/libacl.so) /usr/lib/libacl.so</userinput>"
 
 #. type: Content of: <sect1><sect2><title>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/acl.xml:84
 msgid "Contents of Acl"
-msgstr ""
+msgstr "Acl 的内容"
 
 #. type: Content of: <sect1><sect2><segmentedlist><segtitle>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/acl.xml:87
 msgid "Installed programs"
-msgstr ""
+msgstr "安装的程序"
 
 #. type: Content of: <sect1><sect2><segmentedlist><segtitle>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/acl.xml:88
 msgid "Installed library"
-msgstr ""
+msgstr "安装的库"
 
 #. type: Content of: <sect1><sect2><segmentedlist><segtitle>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/acl.xml:89
 msgid "Installed directories"
-msgstr ""
+msgstr "安装的目录"
 
 #. type: Content of: <sect1><sect2><segmentedlist><seglistitem><seg>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/acl.xml:92
 msgid "chacl, getfacl, and setfacl"
-msgstr ""
+msgstr "chacl, getfacl, 以及 setfacl"
 
 #. type: Content of: <sect1><sect2><segmentedlist><seglistitem><seg>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/acl.xml:93
 msgid "libacl.so"
-msgstr ""
+msgstr "libacl.so"
 
 #. type: Content of: <sect1><sect2><segmentedlist><seglistitem><seg>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/acl.xml:94
 msgid "/usr/include/acl and /usr/share/doc/acl-&acl-version;"
-msgstr ""
+msgstr "/usr/include/acl 和 /usr/share/doc/acl-&acl-version;"
 
 #. type: Content of: <sect1><sect2><variablelist><bridgehead>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/acl.xml:99
 msgid "Short Descriptions"
-msgstr ""
+msgstr "简要描述"
 
 #. type: Content of: <sect1><sect2><variablelist>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/acl.xml:100
-msgid "<?dbfo list-presentation=\"list\"?> <?dbhtml list-presentation=\"table\"?>"
+msgid ""
+"<?dbfo list-presentation=\"list\"?> <?dbhtml list-presentation=\"table\"?>"
 msgstr ""
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/acl.xml:104
 msgid "<command>chacl</command>"
-msgstr ""
+msgstr "<command>chacl</command>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/acl.xml:106
 msgid "Changes the access control list of a file or directory"
-msgstr ""
+msgstr "修改文件或目录的访问控制列表"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/acl.xml:109
 msgid "chacl"
-msgstr ""
+msgstr "chacl"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/acl.xml:115
 msgid "<command>getfacl</command>"
-msgstr ""
+msgstr "<command>getfacl</command>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/acl.xml:117
 msgid "Gets file access control lists"
-msgstr ""
+msgstr "获取文件访问控制列表"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/acl.xml:119
 msgid "getfacl"
-msgstr ""
+msgstr "getfacl"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/acl.xml:125
 msgid "<command>setfacl</command>"
-msgstr ""
+msgstr "<command>setfacl</command>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/acl.xml:127
 msgid "Sets file access control lists"
-msgstr ""
+msgstr "设定文件访问控制列表"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/acl.xml:129
 msgid "setfacl"
-msgstr ""
+msgstr "setfacl"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/acl.xml:135
 msgid "<filename class=\"libraryfile\">libacl</filename>"
-msgstr ""
+msgstr "<filename class=\"libraryfile\">libacl</filename>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/acl.xml:137
 msgid "Contains the library functions for manipulating Access Control Lists"
-msgstr ""
+msgstr "包含操作访问控制列表的库函数"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/acl.xml:139
 msgid "libacl"
-msgstr ""
+msgstr "libacl"

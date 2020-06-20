@@ -1,9 +1,3 @@
-# SOME DESCRIPTIVE TITLE
-# Copyright (C) YEAR Free Software Foundation, Inc.
-# This file is distributed under the same license as the PACKAGE package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
-#
-#, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
@@ -11,84 +5,86 @@ msgstr ""
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
-"Language: \n"
+"Language: zh_CN\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Translate Toolkit 2.2.5\n"
 
 #. type: Content of: <sect1><sect1info><address>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/ncurses.xml:14
 #, no-wrap
 msgid "&ncurses-url;"
-msgstr ""
+msgstr "&ncurses-url;"
 
 #. type: Content of: <sect1><sect1info>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/ncurses.xml:12
 msgid ""
-"<productname>ncurses</productname> "
-"<productnumber>&ncurses-version;</productnumber> <placeholder "
-"type=\"address\" id=\"0\"/>"
+"<productname>ncurses</productname> <productnumber>&ncurses-version;</"
+"productnumber> <placeholder type=\"address\" id=\"0\"/>"
 msgstr ""
+"<productname>ncurses</productname> <productnumber>&ncurses-version;</"
+"productnumber> <placeholder type=\"address\" id=\"0\"/>"
 
 #. type: Content of: <sect1><title>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/ncurses.xml:17
 msgid "Ncurses-&ncurses-version;"
-msgstr ""
+msgstr "Ncurses-&ncurses-version;"
 
 #. type: Content of: <sect1><indexterm><primary>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/ncurses.xml:20
 msgid "Ncurses"
-msgstr ""
+msgstr "Ncurses"
 
 #. type: Content of: <sect1><sect2><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/ncurses.xml:26
 msgid ""
 "The Ncurses package contains libraries for terminal-independent handling of "
 "character screens."
-msgstr ""
+msgstr "Ncurses 软件包包含终端无关的字符屏幕处理库。"
 
 #. type: Content of: <sect1><sect2><segmentedlist><segtitle>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/ncurses.xml:30
 msgid "&buildtime;"
-msgstr ""
+msgstr "&buildtime;"
 
 #. type: Content of: <sect1><sect2><segmentedlist><segtitle>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/ncurses.xml:31
 msgid "&diskspace;"
-msgstr ""
+msgstr "&diskspace;"
 
 #. type: Content of: <sect1><sect2><segmentedlist><seglistitem><seg>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/ncurses.xml:34
+#, fuzzy
 msgid "&ncurses-fin-sbu;"
-msgstr ""
+msgstr "&ncurses-ch6-sbu;"
 
 #. type: Content of: <sect1><sect2><segmentedlist><seglistitem><seg>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/ncurses.xml:35
+#, fuzzy
 msgid "&ncurses-fin-du;"
-msgstr ""
+msgstr "&ncurses-ch6-du;"
 
 #. type: Content of: <sect1><sect2><title>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/ncurses.xml:42
 msgid "Installation of Ncurses"
-msgstr ""
+msgstr "安装 Ncurses"
 
 #. type: Content of: <sect1><sect2><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/ncurses.xml:44
 msgid "Don't install a static library that is not handled by configure:"
-msgstr ""
+msgstr "输入以下命令，使构建系统不安装一个 configure 脚本未处理的静态库："
 
 #. type: Content of: <sect1><sect2><screen>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/ncurses.xml:46
 #, no-wrap
-msgid ""
-"<userinput remap=\"pre\">sed -i '/LIBTOOL_INSTALL/d' "
-"c++/Makefile.in</userinput>"
-msgstr ""
+msgid "<userinput remap=\"pre\">sed -i '/LIBTOOL_INSTALL/d' c++/Makefile.in</userinput>"
+msgstr "<userinput remap=\"pre\">sed -i '/LIBTOOL_INSTALL/d' c++/Makefile.in</userinput>"
 
 #. type: Content of: <sect1><sect2><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/ncurses.xml:48
 msgid "Prepare Ncurses for compilation:"
-msgstr ""
+msgstr "准备编译 Ncurses："
 
 #. type: Content of: <sect1><sect2><screen>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/ncurses.xml:50
@@ -102,119 +98,131 @@ msgid ""
 "            --enable-pc-files       \\\n"
 "            --enable-widec</userinput>"
 msgstr ""
+"<userinput remap=\"configure\">./configure --prefix=/usr           \\\n"
+"            --mandir=/usr/share/man \\\n"
+"            --with-shared           \\\n"
+"            --without-debug         \\\n"
+"            --without-normal        \\\n"
+"            --enable-pc-files       \\\n"
+"            --enable-widec</userinput>"
 
 #. type: Content of: <sect1><sect2><variablelist><title>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/ncurses.xml:59
 msgid "The meaning of the new configure options:"
-msgstr ""
+msgstr "新的配置选项的含义："
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/ncurses.xml:62
 msgid "<parameter>--enable-widec</parameter>"
-msgstr ""
+msgstr "<parameter>--enable-widec</parameter>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/ncurses.xml:64
 msgid ""
-"This switch causes wide-character libraries (e.g., <filename "
-"class=\"libraryfile\">libncursesw.so.&ncurses-version;</filename>)  to be "
-"built instead of normal ones (e.g., <filename "
-"class=\"libraryfile\">libncurses.so.&ncurses-version;</filename>).  These "
-"wide-character libraries are usable in both multibyte and traditional 8-bit "
-"locales, while normal libraries work properly only in 8-bit "
-"locales. Wide-character and normal libraries are source-compatible, but not "
-"binary-compatible."
+"This switch causes wide-character libraries (e.g., <filename class="
+"\"libraryfile\">libncursesw.so.&ncurses-version;</filename>)  to be built "
+"instead of normal ones (e.g., <filename class=\"libraryfile\">libncurses.so."
+"&ncurses-version;</filename>).  These wide-character libraries are usable in "
+"both multibyte and traditional 8-bit locales, while normal libraries work "
+"properly only in 8-bit locales. Wide-character and normal libraries are "
+"source-compatible, but not binary-compatible."
 msgstr ""
+"该选项使得宽字符库 (例如 <filename class=\"libraryfile\">libncursesw.so."
+"&ncurses-version;</filename>)  被构建，而不构建常规字符库 (例如 <filename "
+"class=\"libraryfile\">libncurses.so.&ncurses-version;</filename>)。宽字符库"
+"在多字节和传统 8 位 locale 中都能工作，而常规字符库只能在 8 位 locale 中工"
+"作。宽字符库和普通字符库在源码层面是兼容的，但二进制不兼容。"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/ncurses.xml:76
 msgid "<parameter>--enable-pc-files</parameter>"
-msgstr ""
+msgstr "<parameter>--enable-pc-files</parameter>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/ncurses.xml:78
 msgid "This switch generates and installs .pc files for pkg-config."
-msgstr ""
+msgstr "该参数使得构建系统生成并安装 pkg-config 使用的 .pc 文件。"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/ncurses.xml:84
 msgid "<parameter>--without-normal</parameter>"
-msgstr ""
+msgstr "<parameter>--without-normal</parameter>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/ncurses.xml:86
 msgid "This switch disables building and installing most static libraries."
-msgstr ""
+msgstr "该选项禁止构建系统编译并安装多数静态库。"
 
 #. type: Content of: <sect1><sect2><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/ncurses.xml:93
 msgid "Compile the package:"
-msgstr ""
+msgstr "编译该软件包："
 
 #. type: Content of: <sect1><sect2><screen>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/ncurses.xml:95
 #, no-wrap
 msgid "<userinput remap=\"make\">make</userinput>"
-msgstr ""
+msgstr "<userinput remap=\"make\">make</userinput>"
 
 #. type: Content of: <sect1><sect2><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/ncurses.xml:97
 msgid ""
 "This package has a test suite, but it can only be run after the package has "
-"been installed.  The tests reside in the <filename "
-"class=\"directory\">test/</filename> directory.  See the "
-"<filename>README</filename> file in that directory for further details."
+"been installed.  The tests reside in the <filename class=\"directory\">test/"
+"</filename> directory.  See the <filename>README</filename> file in that "
+"directory for further details."
 msgstr ""
+"该软件包有测试套件，但只能在安装该软件包后才能运行。测试用例位于 <filename "
+"class=\"directory\">test/</filename> 中。阅读其中的 <filename>README</"
+"filename> 文件了解更多细节。"
 
 #. type: Content of: <sect1><sect2><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/ncurses.xml:103
 msgid "Install the package:"
-msgstr ""
+msgstr "安装该软件包："
 
 #. type: Content of: <sect1><sect2><screen>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/ncurses.xml:105
 #, no-wrap
 msgid "<userinput remap=\"install\">make install</userinput>"
-msgstr ""
+msgstr "<userinput remap=\"install\">make install</userinput>"
 
 #. type: Content of: <sect1><sect2><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/ncurses.xml:107
 msgid ""
-"Move the shared libraries to the <filename "
-"class=\"directory\">/lib</filename> directory, where they are expected to "
-"reside:"
+"Move the shared libraries to the <filename class=\"directory\">/lib</"
+"filename> directory, where they are expected to reside:"
 msgstr ""
+"将共享库移动到期望的 <filename class=\"directory\">/lib</filename> 目录："
 
 #. type: Content of: <sect1><sect2><screen>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/ncurses.xml:111
 #, no-wrap
-msgid ""
-"<userinput remap=\"install\">mv -v /usr/lib/libncursesw.so.6* "
-"/lib</userinput>"
-msgstr ""
+msgid "<userinput remap=\"install\">mv -v /usr/lib/libncursesw.so.6* /lib</userinput>"
+msgstr "<userinput remap=\"install\">mv -v /usr/lib/libncursesw.so.6* /lib</userinput>"
 
 #. type: Content of: <sect1><sect2><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/ncurses.xml:113
 msgid ""
 "Because the libraries have been moved, one symlink points to a non-existent "
 "file. Recreate it:"
-msgstr ""
+msgstr "由于共享库被移走了，一个符号链接指向了不存在的文件。重新创建它："
 
 #. type: Content of: <sect1><sect2><screen>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/ncurses.xml:116
 #, no-wrap
-msgid ""
-"<userinput remap=\"install\">ln -sfv ../../lib/$(readlink "
-"/usr/lib/libncursesw.so) /usr/lib/libncursesw.so</userinput>"
-msgstr ""
+msgid "<userinput remap=\"install\">ln -sfv ../../lib/$(readlink /usr/lib/libncursesw.so) /usr/lib/libncursesw.so</userinput>"
+msgstr "<userinput remap=\"install\">ln -sfv ../../lib/$(readlink /usr/lib/libncursesw.so) /usr/lib/libncursesw.so</userinput>"
 
 #. type: Content of: <sect1><sect2><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/ncurses.xml:118
 msgid ""
-"Many applications still expect the linker to be able to find "
-"non-wide-character Ncurses libraries. Trick such applications into linking "
-"with wide-character libraries by means of symlinks and linker scripts:"
+"Many applications still expect the linker to be able to find non-wide-"
+"character Ncurses libraries. Trick such applications into linking with wide-"
+"character libraries by means of symlinks and linker scripts:"
 msgstr ""
+"许多程序仍然希望链接器能够找到非宽字符版本的 Ncurses 库。通过使用符号链接和链"
+"接脚本，诱导它们链接到宽字符库："
 
 #. type: Content of: <sect1><sect2><screen>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/ncurses.xml:122
@@ -226,37 +234,47 @@ msgid ""
 "    ln -sfv ${lib}w.pc        /usr/lib/pkgconfig/${lib}.pc\n"
 "done</userinput>"
 msgstr ""
+"<userinput remap=\"install\">for lib in ncurses form panel menu ; do\n"
+"    rm -vf                    /usr/lib/lib${lib}.so\n"
+"    echo \"INPUT(-l${lib}w)\" &gt; /usr/lib/lib${lib}.so\n"
+"    ln -sfv ${lib}w.pc        /usr/lib/pkgconfig/${lib}.pc\n"
+"done</userinput>"
 
 #. type: Content of: <sect1><sect2><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/ncurses.xml:128
 msgid ""
-"Finally, make sure that old applications that look for <filename "
-"class=\"libraryfile\">-lcurses</filename> at build time are still buildable:"
+"Finally, make sure that old applications that look for <filename class="
+"\"libraryfile\">-lcurses</filename> at build time are still buildable:"
 msgstr ""
+"最后，确保那些在构建时寻找 <filename class=\"libraryfile\">-lcurses</"
+"filename> 的老式程序仍然能够构建："
 
 #. type: Content of: <sect1><sect2><screen>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/ncurses.xml:132
 #, no-wrap
 msgid ""
-"<userinput remap=\"install\">rm -vf                     "
-"/usr/lib/libcursesw.so\n"
+"<userinput remap=\"install\">rm -vf                     /usr/lib/libcursesw.so\n"
 "echo \"INPUT(-lncursesw)\" &gt; /usr/lib/libcursesw.so\n"
 "ln -sfv libncurses.so      /usr/lib/libcurses.so</userinput>"
 msgstr ""
+"<userinput remap=\"install\">rm -vf                     /usr/lib/libcursesw.so\n"
+"echo \"INPUT(-lncursesw)\" &gt; /usr/lib/libcursesw.so\n"
+"ln -sfv libncurses.so      /usr/lib/libcurses.so</userinput>"
 
 #. type: Content of: <sect1><sect2><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/ncurses.xml:136
 msgid "If desired, install the Ncurses documentation:"
-msgstr ""
+msgstr "如果需要的话，安装 Ncurses 文档："
 
 #. type: Content of: <sect1><sect2><screen>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/ncurses.xml:138
 #, no-wrap
 msgid ""
-"<userinput remap=\"install\">mkdir -v       "
-"/usr/share/doc/ncurses-&ncurses-version;\n"
+"<userinput remap=\"install\">mkdir -v       /usr/share/doc/ncurses-&ncurses-version;\n"
 "cp -v -R doc/* /usr/share/doc/ncurses-&ncurses-version;</userinput>"
 msgstr ""
+"<userinput remap=\"install\">mkdir -v       /usr/share/doc/ncurses-&ncurses-version;\n"
+"cp -v -R doc/* /usr/share/doc/ncurses-&ncurses-version;</userinput>"
 
 #. type: Content of: <sect1><sect2><note><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/ncurses.xml:143
@@ -268,6 +286,10 @@ msgid ""
 "have such libraries because of some binary-only application or to be "
 "compliant with LSB, build the package again with the following commands:"
 msgstr ""
+"上述指令没有创建非宽字符的 Ncurses 库，因为从源码编译的软件包不会在运行时链接"
+"到它。然而，已知的需要链接到非宽字符 Ncurses 库的二进制程序都需要版本 5。如"
+"果您为了满足一些仅有二进制版本的程序，或者满足 LSB 兼容性，必须安装这样的库，"
+"执行以下命令再次构建该软件包："
 
 #. type: Content of: <sect1><sect2><note><screen>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/ncurses.xml:151
@@ -283,168 +305,185 @@ msgid ""
 "make sources libs\n"
 "cp -av lib/lib*.so.5* /usr/lib</userinput>"
 msgstr ""
+"<userinput>make distclean\n"
+"./configure --prefix=/usr    \\\n"
+"            --with-shared    \\\n"
+"            --without-normal \\\n"
+"            --without-debug  \\\n"
+"            --without-cxx-binding \\\n"
+"            --with-abi-version=5 \n"
+"make sources libs\n"
+"cp -av lib/lib*.so.5* /usr/lib</userinput>"
 
 #. type: Content of: <sect1><sect2><title>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/ncurses.xml:165
 msgid "Contents of Ncurses"
-msgstr ""
+msgstr "Ncurses 的内容"
 
 #. type: Content of: <sect1><sect2><segmentedlist><segtitle>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/ncurses.xml:168
 msgid "Installed programs"
-msgstr ""
+msgstr "安装的程序"
 
 #. type: Content of: <sect1><sect2><segmentedlist><segtitle>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/ncurses.xml:169
 msgid "Installed libraries"
-msgstr ""
+msgstr "安装的库"
 
 #. type: Content of: <sect1><sect2><segmentedlist><segtitle>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/ncurses.xml:170
 msgid "Installed directories"
-msgstr ""
+msgstr "安装的目录"
 
 #. type: Content of: <sect1><sect2><segmentedlist><seglistitem><seg>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/ncurses.xml:174
 msgid ""
-"captoinfo (link to tic), clear, infocmp, infotocap (link to tic), "
-"ncursesw6-config, reset (link to tset), tabs, tic, toe, tput, and tset"
+"captoinfo (link to tic), clear, infocmp, infotocap (link to tic), ncursesw6-"
+"config, reset (link to tset), tabs, tic, toe, tput, and tset"
 msgstr ""
+"captoinfo (链接到 tic), clear, infocmp, infotocap (链接到 tic), ncursesw6-"
+"config, reset (链接到 tset), tabs, tic, toe, tput, 以及 tset"
 
 #. type: Content of: <sect1><sect2><segmentedlist><seglistitem><seg>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/ncurses.xml:187
 msgid ""
 "libcursesw.so (symlink and linker script to libncursesw.so), libformw.so, "
-"libmenuw.so, libncursesw.so, libncurses++w.a, libpanelw.so, and their "
-"non-wide-character counterparts without \"w\" in the library names."
+"libmenuw.so, libncursesw.so, libncurses++w.a, libpanelw.so, and their non-"
+"wide-character counterparts without \"w\" in the library names."
 msgstr ""
+"libcursesw.so (指向 libncursesw.so 的符号链接和链接脚本), libformw.so, "
+"libmenuw.so, libncursesw.so, libncurses++w.a, libpanelw.so, 以及它们的库名称"
+"没有 “w” 的非宽字符替代品。"
 
 #. type: Content of: <sect1><sect2><segmentedlist><seglistitem><seg>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/ncurses.xml:195
 msgid ""
-"/usr/share/tabset, /usr/share/terminfo, and "
-"/usr/share/doc/ncurses-&ncurses-version;"
+"/usr/share/tabset, /usr/share/terminfo, and /usr/share/doc/ncurses-&ncurses-"
+"version;"
 msgstr ""
+"/usr/share/tabset, /usr/share/terminfo, 以及 /usr/share/doc/ncurses-&ncurses-"
+"version;"
 
 #. type: Content of: <sect1><sect2><variablelist><bridgehead>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/ncurses.xml:203
 msgid "Short Descriptions"
-msgstr ""
+msgstr "简要描述"
 
 #. type: Content of: <sect1><sect2><variablelist>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/ncurses.xml:204
-msgid "<?dbfo list-presentation=\"list\"?> <?dbhtml list-presentation=\"table\"?>"
+msgid ""
+"<?dbfo list-presentation=\"list\"?> <?dbhtml list-presentation=\"table\"?>"
 msgstr ""
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/ncurses.xml:208
 msgid "<command>captoinfo</command>"
-msgstr ""
+msgstr "<command>captoinfo</command>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/ncurses.xml:210
 msgid "Converts a termcap description into a terminfo description"
-msgstr ""
+msgstr "将 termcap 描述转换成 terminfo 描述"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/ncurses.xml:212
 msgid "captoinfo"
-msgstr ""
+msgstr "captoinfo"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/ncurses.xml:218
 msgid "<command>clear</command>"
-msgstr ""
+msgstr "<command>clear</command>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/ncurses.xml:220
 msgid "Clears the screen, if possible"
-msgstr ""
+msgstr "如果可能的话，清空屏幕"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/ncurses.xml:222
 msgid "clear"
-msgstr ""
+msgstr "clear"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/ncurses.xml:228
 msgid "<command>infocmp</command>"
-msgstr ""
+msgstr "<command>infocmp</command>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/ncurses.xml:230
 msgid "Compares or prints out terminfo descriptions"
-msgstr ""
+msgstr "比较或输出 terminfo 描述"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/ncurses.xml:232
 msgid "infocmp"
-msgstr ""
+msgstr "infocmp"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/ncurses.xml:238
 msgid "<command>infotocap</command>"
-msgstr ""
+msgstr "<command>infotocap</command>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/ncurses.xml:240
 msgid "Converts a terminfo description into a termcap description"
-msgstr ""
+msgstr "将 terminfo 描述转化为 termcap 描述"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/ncurses.xml:242
 msgid "infotocap"
-msgstr ""
+msgstr "infotocap"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/ncurses.xml:248
 msgid "<command>ncursesw6-config</command>"
-msgstr ""
+msgstr "<command>ncursesw6-config</command>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/ncurses.xml:250
 msgid "Provides configuration information for ncurses"
-msgstr ""
+msgstr "提供 ncurses 的配置信息"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/ncurses.xml:252
 msgid "ncursesw6-config"
-msgstr ""
+msgstr "ncursesw6-config"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/ncurses.xml:258
 msgid "<command>reset</command>"
-msgstr ""
+msgstr "<command>reset</command>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/ncurses.xml:260
 msgid "Reinitializes a terminal to its default values"
-msgstr ""
+msgstr "以终端默认值重新初始化终端"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/ncurses.xml:262
 msgid "reset"
-msgstr ""
+msgstr "reset"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/ncurses.xml:268
 msgid "<command>tabs</command>"
-msgstr ""
+msgstr "<command>tabs</command>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/ncurses.xml:270
 msgid "Clears and sets tab stops on a terminal"
-msgstr ""
+msgstr "清除并设置终端的制表符宽度"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/ncurses.xml:272
 msgid "tabs"
-msgstr ""
+msgstr "tabs"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/ncurses.xml:278
 msgid "<command>tic</command>"
-msgstr ""
+msgstr "<command>tic</command>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/ncurses.xml:280
@@ -454,81 +493,83 @@ msgid ""
 "[A terminfo file contains information on the capabilities of a certain "
 "terminal.]"
 msgstr ""
+"Terminfo 条目描述编译器，将 terminfo 文件从源代码格式翻译为 ncurses 库子程序"
+"需要的二进制格式 [terminfo 文件包含特定终端的功能信息。]"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/ncurses.xml:285
 msgid "tic"
-msgstr ""
+msgstr "tic"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/ncurses.xml:291
 msgid "<command>toe</command>"
-msgstr ""
+msgstr "<command>toe</command>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/ncurses.xml:293
 msgid ""
 "Lists all available terminal types, giving the primary name and description "
 "for each"
-msgstr ""
+msgstr "列出所有可用的终端类型，并给出每种类型的主要名称和描述"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/ncurses.xml:296
 msgid "toe"
-msgstr ""
+msgstr "toe"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/ncurses.xml:302
 msgid "<command>tput</command>"
-msgstr ""
+msgstr "<command>tput</command>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/ncurses.xml:304
 msgid ""
 "Makes the values of terminal-dependent capabilities available to the shell; "
-"it can also be used to reset or initialize a terminal or report its long "
-"name"
+"it can also be used to reset or initialize a terminal or report its long name"
 msgstr ""
+"使 shell 可以使用终端相关的功能；也可以重置或初始化终端，或者报告它的长名称"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/ncurses.xml:308
 msgid "tput"
-msgstr ""
+msgstr "tput"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/ncurses.xml:314
 msgid "<command>tset</command>"
-msgstr ""
+msgstr "<command>tset</command>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/ncurses.xml:316
 msgid "Can be used to initialize terminals"
-msgstr ""
+msgstr "可以被用于初始化终端"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/ncurses.xml:318
 msgid "tset"
-msgstr ""
+msgstr "tset"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/ncurses.xml:324
 msgid "<filename class=\"libraryfile\">libcursesw</filename>"
-msgstr ""
+msgstr "<filename class=\"libraryfile\">libcursesw</filename>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/ncurses.xml:326
 msgid "A link to <filename>libncursesw</filename>"
-msgstr ""
+msgstr "指向 <filename>libncursesw</filename> 的链接"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/ncurses.xml:328
 msgid "libcursesw"
-msgstr ""
+msgstr "libcursesw"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/ncurses.xml:334
 msgid "<filename class=\"libraryfile\">libncursesw</filename>"
-msgstr ""
+msgstr "<filename class=\"libraryfile\">libncursesw</filename>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/ncurses.xml:336
@@ -537,53 +578,55 @@ msgid ""
 "screen; a good example of the use of these functions is the menu displayed "
 "during the kernel's <command>make menuconfig</command>"
 msgstr ""
+"包含在终端屏幕上以多种复杂方式显示文本的函数；使用这些函数的典型例子是运行内"
+"核的 <command>make menuconfig</command> 时显示的目录"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/ncurses.xml:341
 msgid "libncursesw"
-msgstr ""
+msgstr "libncursesw"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/ncurses.xml:347
 msgid "<filename class=\"libraryfile\">libformw</filename>"
-msgstr ""
+msgstr "<filename class=\"libraryfile\">libformw</filename>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/ncurses.xml:349
 msgid "Contains functions to implement forms"
-msgstr ""
+msgstr "包含实现表单的函数"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/ncurses.xml:351
 msgid "libformw"
-msgstr ""
+msgstr "libformw"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/ncurses.xml:357
 msgid "<filename class=\"libraryfile\">libmenuw</filename>"
-msgstr ""
+msgstr "<filename class=\"libraryfile\">libmenuw</filename>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/ncurses.xml:359
 msgid "Contains functions to implement menus"
-msgstr ""
+msgstr "包含实现目录的函数"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/ncurses.xml:361
 msgid "libmenuw"
-msgstr ""
+msgstr "libmenuw"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/ncurses.xml:367
 msgid "<filename class=\"libraryfile\">libpanelw</filename>"
-msgstr ""
+msgstr "<filename class=\"libraryfile\">libpanelw</filename>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/ncurses.xml:369
 msgid "Contains functions to implement panels"
-msgstr ""
+msgstr "包含实现面板的函数"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/ncurses.xml:371
 msgid "libpanelw"
-msgstr ""
+msgstr "libpanelw"

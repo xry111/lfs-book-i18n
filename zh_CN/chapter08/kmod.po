@@ -1,9 +1,3 @@
-# SOME DESCRIPTIVE TITLE
-# Copyright (C) YEAR Free Software Foundation, Inc.
-# This file is distributed under the same license as the PACKAGE package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
-#
-#, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
@@ -11,69 +5,74 @@ msgstr ""
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
-"Language: \n"
+"Language: zh_CN\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Translate Toolkit 2.2.5\n"
 
 #. type: Content of: <sect1><sect1info><address>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/kmod.xml:14
 #, no-wrap
 msgid "&kmod-url;"
-msgstr ""
+msgstr "&kmod-url;"
 
 #. type: Content of: <sect1><sect1info>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/kmod.xml:12
 msgid ""
-"<productname>kmod</productname> "
-"<productnumber>&kmod-version;</productnumber> <placeholder type=\"address\" "
-"id=\"0\"/>"
+"<productname>kmod</productname> <productnumber>&kmod-version;</"
+"productnumber> <placeholder type=\"address\" id=\"0\"/>"
 msgstr ""
+"<productname>kmod</productname> <productnumber>&kmod-version;</"
+"productnumber> <placeholder type=\"address\" id=\"0\"/>"
 
 #. type: Content of: <sect1><title>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/kmod.xml:17
 msgid "Kmod-&kmod-version;"
-msgstr ""
+msgstr "Kmod-&kmod-version;"
 
 #. type: Content of: <sect1><indexterm><primary>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/kmod.xml:20
 msgid "Kmod"
-msgstr ""
+msgstr "Kmod"
 
 #. type: Content of: <sect1><sect2><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/kmod.xml:26
-msgid "The Kmod package contains libraries and utilities for loading kernel modules"
-msgstr ""
+msgid ""
+"The Kmod package contains libraries and utilities for loading kernel modules"
+msgstr "Kmod 软件包包含用于加载内核模块的库和工具。"
 
 #. type: Content of: <sect1><sect2><segmentedlist><segtitle>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/kmod.xml:30
 msgid "&buildtime;"
-msgstr ""
+msgstr "&buildtime;"
 
 #. type: Content of: <sect1><sect2><segmentedlist><segtitle>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/kmod.xml:31
 msgid "&diskspace;"
-msgstr ""
+msgstr "&diskspace;"
 
 #. type: Content of: <sect1><sect2><segmentedlist><seglistitem><seg>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/kmod.xml:34
+#, fuzzy
 msgid "&kmod-fin-sbu;"
-msgstr ""
+msgstr "&kmod-ch6-sbu;"
 
 #. type: Content of: <sect1><sect2><segmentedlist><seglistitem><seg>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/kmod.xml:35
+#, fuzzy
 msgid "&kmod-fin-du;"
-msgstr ""
+msgstr "&kmod-ch6-du;"
 
 #. type: Content of: <sect1><sect2><title>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/kmod.xml:42
 msgid "Installation of Kmod"
-msgstr ""
+msgstr "安装 Kmod"
 
 #. type: Content of: <sect1><sect2><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/kmod.xml:44
 msgid "Prepare Kmod for compilation:"
-msgstr ""
+msgstr "准备编译 Kmod："
 
 #. type: Content of: <sect1><sect2><screen>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/kmod.xml:46
@@ -86,44 +85,50 @@ msgid ""
 "            --with-xz              \\\n"
 "            --with-zlib</userinput>"
 msgstr ""
+"<userinput remap=\"configure\">./configure --prefix=/usr          \\\n"
+"            --bindir=/bin          \\\n"
+"            --sysconfdir=/etc      \\\n"
+"            --with-rootlibdir=/lib \\\n"
+"            --with-xz              \\\n"
+"            --with-zlib</userinput>"
 
 #. type: Content of: <sect1><sect2><variablelist><title>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/kmod.xml:54
 msgid "The meaning of the configure options:"
-msgstr ""
+msgstr "配置选项的含义："
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/kmod.xml:57
 msgid "<parameter>--with-xz, --with-zlib</parameter>"
-msgstr ""
+msgstr "<parameter>--with-xz, --with-zlib</parameter>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/kmod.xml:59
 msgid "These options enable Kmod to handle compressed kernel modules."
-msgstr ""
+msgstr "它们允许 Kmod 处理压缩过的内核模块。"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/kmod.xml:64
 msgid "<parameter>--with-rootlibdir=/lib</parameter>"
-msgstr ""
+msgstr "<parameter>--with-rootlibdir=/lib</parameter>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/kmod.xml:66
 msgid ""
 "This option ensures different library related files are placed in the "
 "correct directories."
-msgstr ""
+msgstr "该选项保证一些和库有关的文件被放置在正确的目录中。"
 
 #. type: Content of: <sect1><sect2><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/kmod.xml:73
 msgid "Compile the package:"
-msgstr ""
+msgstr "编译该软件包："
 
 #. type: Content of: <sect1><sect2><screen>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/kmod.xml:75
 #, no-wrap
 msgid "<userinput remap=\"make\">make</userinput>"
-msgstr ""
+msgstr "<userinput remap=\"make\">make</userinput>"
 
 #. type: Content of: <sect1><sect2><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/kmod.xml:77
@@ -132,14 +137,18 @@ msgid ""
 "chroot environment.  At a minimum the git program is required and several "
 "tests will not run outside of a git repository."
 msgstr ""
+"该软件包不包含能在 LFS chroot 环境下运行的测试套件。测试套件至少需要 git 程"
+"序的支持，且有些测试在 git 仓库外不会运行。"
 
 #. type: Content of: <sect1><sect2><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/kmod.xml:81
+#, fuzzy
 msgid ""
-"Install the package and create symlinks for compatibility with "
-"Module-Init-Tools (the package that previously handled Linux kernel "
-"modules):"
+"Install the package and create symlinks for compatibility with Module-Init-"
+"Tools (the package that previously handled Linux kernel modules):"
 msgstr ""
+"安装该软件包，并创建与 Module-Init-Tools (曾经用于处理 Linux 内核模块的软件"
+"包) 兼容的符号链接："
 
 #. type: Content of: <sect1><sect2><screen>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/kmod.xml:85
@@ -153,21 +162,28 @@ msgid ""
 "\n"
 "ln -sfv kmod /bin/lsmod</userinput>"
 msgstr ""
+"<userinput remap=\"install\">make install\n"
+"\n"
+"for target in depmod insmod lsmod modinfo modprobe rmmod; do\n"
+"  ln -sfv ../bin/kmod /sbin/$target\n"
+"done\n"
+"\n"
+"ln -sfv kmod /bin/lsmod</userinput>"
 
 #. type: Content of: <sect1><sect2><title>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/kmod.xml:96
 msgid "Contents of Kmod"
-msgstr ""
+msgstr "Kmod 的内容"
 
 #. type: Content of: <sect1><sect2><segmentedlist><segtitle>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/kmod.xml:99
 msgid "Installed programs"
-msgstr ""
+msgstr "安装的程序"
 
 #. type: Content of: <sect1><sect2><segmentedlist><segtitle>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/kmod.xml:100
 msgid "Installed library"
-msgstr ""
+msgstr "安装的库"
 
 #. type: Content of: <sect1><sect2><segmentedlist><seglistitem><seg>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/kmod.xml:103
@@ -175,26 +191,30 @@ msgid ""
 "depmod (link to kmod), insmod (link to kmod), kmod, lsmod (link to kmod), "
 "modinfo (link to kmod), modprobe (link to kmod), and rmmod (link to kmod)"
 msgstr ""
+"depmod (到 kmod 的链接), insmod (到 kmod 的链接), kmod, lsmod (到 kmod 的链"
+"接), modinfo (到 kmod 的链接), modprobe (到 kmod 的链接), 以及 rmmod (到 "
+"kmod 的链接)"
 
 #. type: Content of: <sect1><sect2><segmentedlist><seglistitem><seg>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/kmod.xml:106
 msgid "libkmod.so"
-msgstr ""
+msgstr "libkmod.so"
 
 #. type: Content of: <sect1><sect2><variablelist><bridgehead>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/kmod.xml:111
 msgid "Short Descriptions"
-msgstr ""
+msgstr "简要描述"
 
 #. type: Content of: <sect1><sect2><variablelist>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/kmod.xml:112
-msgid "<?dbfo list-presentation=\"list\"?> <?dbhtml list-presentation=\"table\"?>"
+msgid ""
+"<?dbfo list-presentation=\"list\"?> <?dbhtml list-presentation=\"table\"?>"
 msgstr ""
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/kmod.xml:116
 msgid "<command>depmod</command>"
-msgstr ""
+msgstr "<command>depmod</command>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/kmod.xml:118
@@ -203,78 +223,80 @@ msgid ""
 "of modules; this dependency file is used by <command>modprobe</command> to "
 "automatically load the required modules"
 msgstr ""
+"根据现有模块的符号信息创建依赖关系文件；<command>modprobe</command> 使用依赖"
+"关系文件自动加载需要的模块"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/kmod.xml:123
 msgid "depmod"
-msgstr ""
+msgstr "depmod"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/kmod.xml:129
 msgid "<command>insmod</command>"
-msgstr ""
+msgstr "<command>insmod</command>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/kmod.xml:131
 msgid "Installs a loadable module in the running kernel"
-msgstr ""
+msgstr "在正在运行的内核中安装可加载模块"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/kmod.xml:133
 msgid "insmod"
-msgstr ""
+msgstr "insmod"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/kmod.xml:139
 msgid "<command>kmod</command>"
-msgstr ""
+msgstr "<command>kmod</command>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/kmod.xml:141
 msgid "Loads and unloads kernel modules"
-msgstr ""
+msgstr "加载或卸载内核模块"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/kmod.xml:143
 msgid "kmod"
-msgstr ""
+msgstr "kmod"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/kmod.xml:149
 msgid "<command>lsmod</command>"
-msgstr ""
+msgstr "<command>lsmod</command>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/kmod.xml:151
 msgid "Lists currently loaded modules"
-msgstr ""
+msgstr "列出当前加载的模块"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/kmod.xml:153
 msgid "lsmod"
-msgstr ""
+msgstr "lsmod"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/kmod.xml:159
 msgid "<command>modinfo</command>"
-msgstr ""
+msgstr "<command>modinfo</command>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/kmod.xml:161
 msgid ""
 "Examines an object file associated with a kernel module and displays any "
 "information that it can glean"
-msgstr ""
+msgstr "检验与某个内核模块相关的目标文件，打印它能够收集到的一切信息"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/kmod.xml:164
 msgid "modinfo"
-msgstr ""
+msgstr "modinfo"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/kmod.xml:170
 msgid "<command>modprobe</command>"
-msgstr ""
+msgstr "<command>modprobe</command>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/kmod.xml:172
@@ -282,38 +304,40 @@ msgid ""
 "Uses a dependency file, created by <command>depmod</command>, to "
 "automatically load relevant modules"
 msgstr ""
+"使用一个 <command>depmod</command> 创建的依赖关系文件，自动加载相关模块"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/kmod.xml:175
 msgid "modprobe"
-msgstr ""
+msgstr "modprobe"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/kmod.xml:181
 msgid "<command>rmmod</command>"
-msgstr ""
+msgstr "<command>rmmod</command>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/kmod.xml:183
 msgid "Unloads modules from the running kernel"
-msgstr ""
+msgstr "从正在运行的内核中卸载模块"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/kmod.xml:185
 msgid "rmmod"
-msgstr ""
+msgstr "rmmod"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/kmod.xml:191
 msgid "<filename class=\"libraryfile\">libkmod</filename>"
-msgstr ""
+msgstr "<filename class=\"libraryfile\">libkmod</filename>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/kmod.xml:193
-msgid "This library is used by other programs to load and unload kernel modules"
-msgstr ""
+msgid ""
+"This library is used by other programs to load and unload kernel modules"
+msgstr "这个库被其他程序用于加载和卸载内核模块"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/kmod.xml:196
 msgid "libkmod"
-msgstr ""
+msgstr "libkmod"

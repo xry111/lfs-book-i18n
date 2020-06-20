@@ -1,9 +1,3 @@
-# SOME DESCRIPTIVE TITLE
-# Copyright (C) YEAR Free Software Foundation, Inc.
-# This file is distributed under the same license as the PACKAGE package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
-#
-#, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
@@ -11,15 +5,16 @@ msgstr ""
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
-"Language: \n"
+"Language: zh_CN\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Translate Toolkit 2.2.5\n"
 
 #. type: Content of: <sect1><title>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/pkgmgt.xml:11
 msgid "Package Management"
-msgstr ""
+msgstr "软件包管理"
 
 #. type: Content of: <sect1><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/pkgmgt.xml:13
@@ -35,18 +30,25 @@ msgid ""
 "these techniques. This section briefly mentions issues that may arise when "
 "upgrading packages."
 msgstr ""
+"经常有人请求将软件包管理加入 LFS 手册。包管理器可以跟踪文件的安装过程，简化移"
+"除或升级软件包的工作。如同处理二进制程序和库文件一样，包管理器也会处理配置文"
+"件的安装过程。在您开始想入非非前，不 —— 本节不会讨论或者推荐任何一个特定的"
+"包管理器。本节对软件包管理的流行技术及其工作原理进行综述。对您来说，完美的包"
+"管理器可能是其中的某个技术，也可能是几个技术的结合。本节还会简要介绍在升级软"
+"件包时可能遇到的问题。"
 
 #. type: Content of: <sect1><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/pkgmgt.xml:24
-msgid "Some reasons why no package manager is mentioned in LFS or BLFS include:"
-msgstr ""
+msgid ""
+"Some reasons why no package manager is mentioned in LFS or BLFS include:"
+msgstr "LFS 或 BLFS 不介绍任何包管理器的原因包括："
 
 #. type: Content of: <sect1><itemizedlist><listitem><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/pkgmgt.xml:29
 msgid ""
 "Dealing with package management takes the focus away from the goals of these "
 "books&mdash;teaching how a Linux system is built."
-msgstr ""
+msgstr "处理软件包管理会偏离这两本手册的目标 —— 讲述如何构建 Linux 系统。"
 
 #. type: Content of: <sect1><itemizedlist><listitem><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/pkgmgt.xml:34
@@ -55,6 +57,8 @@ msgid ""
 "strengths and drawbacks.  Including one that satisfies all audiences is "
 "difficult."
 msgstr ""
+"存在多种软件包管理的解决方案，它们各有优缺点。很难找到一种让所有读者满意的"
+"方案。"
 
 #. type: Content of: <sect1><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/pkgmgt.xml:40
@@ -63,32 +67,43 @@ msgid ""
 "<ulink url=\"&hints-index;\">Hints Project</ulink> and see if one of them "
 "fits your need."
 msgstr ""
+"已经有人写了一些关于软件包管理这一主题的短文。您可以访问 <ulink url=\"&hints-"
+"index;\">Hints Project</ulink> 并看一看是否有符合您的需求的方案。"
 
 #. type: Content of: <sect1><sect2><title>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/pkgmgt.xml:45
 msgid "Upgrade Issues"
-msgstr ""
+msgstr "升级问题"
 
 #. type: Content of: <sect1><sect2><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/pkgmgt.xml:47
+#, fuzzy
 msgid ""
 "A Package Manager makes it easy to upgrade to newer versions when they are "
 "released. Generally the instructions in the LFS and BLFS books can be used "
 "to upgrade to the newer versions. Here are some points that you should be "
 "aware of when upgrading packages, especially on a running system."
 msgstr ""
+"使用包管理器可以在软件包新版本发布后容易地完成升级。一般来说，使用 LFS 或者 "
+"BLFS 手册中的指令即可升级软件包。下面是您在升级时必须注意的重点，特别是升级正"
+"在运行的系统时。"
 
 #. type: Content of: <sect1><sect2><itemizedlist><listitem><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/pkgmgt.xml:54
+#, fuzzy
 msgid ""
 "If Glibc needs to be upgraded to a newer version, (e.g.  from glibc-2.31 to "
-"glibc-2.32), it is safer to rebuild LFS.  Though you "
-"<emphasis>may</emphasis> be able to rebuild all the packages in their "
-"dependency order, we do not recommend it."
+"glibc-2.32), it is safer to rebuild LFS.  Though you <emphasis>may</"
+"emphasis> be able to rebuild all the packages in their dependency order, we "
+"do not recommend it."
 msgstr ""
+"如果需要升级 Glibc  (例如从 Glibc-2.19 升级到 Glibc-2.20)，最安全的方法是重新"
+"构建 LFS 。尽管您 <emphasis>或许</emphasis> 能按依赖顺序重新构建所有软件"
+"包，但我们不推荐这样做。"
 
 #. type: Content of: <sect1><sect2><itemizedlist><listitem><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/pkgmgt.xml:60
+#, fuzzy
 msgid ""
 "If a package containing a shared library is updated, and if the name of the "
 "library changes, then any the packages dynamically linked to the library "
@@ -104,11 +119,20 @@ msgid ""
 "the new library version. You should not remove the previous libraries unless "
 "all the dependent packages are recompiled."
 msgstr ""
+"如果更新了一个包含共享库的软件包，而且共享库的名称发生改变，那么所有动态链接"
+"到这个库的软件包都需要重新编译，以链接到新版本的库。(注意软件包的版本和共享"
+"库的名称没有关系。) 例如，如果一个软件包 foo-1.2.3 安装了名为 <filename "
+"class='libraryfile'>libfoo.so.1</filename>的共享库，您把该软件包升级到了新版"
+"本 foo-1.2.4，它安装了名为 <filename class='libraryfile'>libfoo.so.2</"
+"filename>的共享库。那么，所有链接到 <filename class='libraryfile'>libfoo."
+"so.1</filename> 的软件包都要重新编译以链接到 <filename "
+"class='libraryfile'>libfoo.so.2</filename>。注意，在重新编译这些软件包之前，"
+"您不能删除旧版本的库。"
 
 #. type: Content of: <sect1><sect2><title>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/pkgmgt.xml:79
 msgid "Package Management Techniques"
-msgstr ""
+msgstr "软件包管理技术"
 
 #. type: Content of: <sect1><sect2><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/pkgmgt.xml:81
@@ -117,11 +141,13 @@ msgid ""
 "decision on a package manager, do some research on the various techniques, "
 "particularly the drawbacks of the particular scheme."
 msgstr ""
+"以下是几种常见的软件包管理技术。在决定使用某种包管理器前，请研读这些技术，特"
+"别是要了解特定技术的不足。"
 
 #. type: Content of: <sect1><sect2><sect3><title>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/pkgmgt.xml:86
 msgid "It is All in My Head!"
-msgstr ""
+msgstr "这都在我的脑袋里！"
 
 #. type: Content of: <sect1><sect2><sect3><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/pkgmgt.xml:88
@@ -132,11 +158,14 @@ msgid ""
 "package management because they plan on rebuilding the entire system when a "
 "package is changed."
 msgstr ""
+"没错，这是一种包管理技术。有些人觉得不需要管理软件包，因为他们十分了解软件"
+"包，知道每个软件包安装了什么文件。有的用户则计划每次有软件包发生变动时就重新"
+"构建系统，所以不需要管理软件包。"
 
 #. type: Content of: <sect1><sect2><sect3><title>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/pkgmgt.xml:97
 msgid "Install in Separate Directories"
-msgstr ""
+msgstr "安装到独立目录"
 
 #. type: Content of: <sect1><sect2><sect3><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/pkgmgt.xml:99
@@ -145,39 +174,54 @@ msgid ""
 "to manage the installations. Each package is installed in a separate "
 "directory. For example, package foo-1.1 is installed in <filename "
 "class='directory'>/usr/pkg/foo-1.1</filename> and a symlink is made from "
-"<filename>/usr/pkg/foo</filename> to <filename "
-"class='directory'>/usr/pkg/foo-1.1</filename>. When installing a new version "
-"foo-1.2, it is installed in <filename "
-"class='directory'>/usr/pkg/foo-1.2</filename> and the previous symlink is "
-"replaced by a symlink to the new version."
+"<filename>/usr/pkg/foo</filename> to <filename class='directory'>/usr/pkg/"
+"foo-1.1</filename>. When installing a new version foo-1.2, it is installed "
+"in <filename class='directory'>/usr/pkg/foo-1.2</filename> and the previous "
+"symlink is replaced by a symlink to the new version."
 msgstr ""
+"这是一种最简单的软件包管理方式，它不需要任何额外的软件来控制软件包的安装。每"
+"个软件包都被安装在单独的目录中。例如，软件包 foo-1.1 将会被安装在 <filename "
+"class='directory'>/usr/pkg/foo-1.1</filename> ，然后创建一个符号链接 "
+"<filename>/usr/pkg/foo</filename> 指向 <filename class='directory'>/usr/pkg/"
+"foo-1.1</filename>。在安装新版本 foo-1.2 的时候，把它安装到 <filename "
+"class='directory'>/usr/pkg/foo-1.2</filename> ，然后把之前的符号链接替换为指"
+"向新版本的符号链接。"
 
 #. type: Content of: <sect1><sect2><sect3><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/pkgmgt.xml:109
 msgid ""
-"Environment variables such as <envar>PATH</envar>, "
-"<envar>LD_LIBRARY_PATH</envar>, <envar>MANPATH</envar>, "
-"<envar>INFOPATH</envar> and <envar>CPPFLAGS</envar> need to be expanded to "
-"include <filename>/usr/pkg/foo</filename>. For more than a few packages, "
-"this scheme becomes unmanageable."
+"Environment variables such as <envar>PATH</envar>, <envar>LD_LIBRARY_PATH</"
+"envar>, <envar>MANPATH</envar>, <envar>INFOPATH</envar> and <envar>CPPFLAGS</"
+"envar> need to be expanded to include <filename>/usr/pkg/foo</filename>. For "
+"more than a few packages, this scheme becomes unmanageable."
 msgstr ""
+"<envar>PATH</envar>、<envar>LD_LIBRARY_PATH</envar>、 <envar>MANPATH</"
+"envar>、<envar>INFOPATH</envar> 和 <envar>CPPFLAGS</envar> 等环境变量需要被扩"
+"充，以包含 <filename>/usr/pkg/foo</filename>。一旦软件包的数量较多，这种架构"
+"就会变得无法管理。"
 
 #. type: Content of: <sect1><sect2><sect3><title>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/pkgmgt.xml:118
 msgid "Symlink Style Package Management"
-msgstr ""
+msgstr "符号链接风格的软件包管理"
 
 #. type: Content of: <sect1><sect2><sect3><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/pkgmgt.xml:120
 msgid ""
 "This is a variation of the previous package management technique.  Each "
 "package is installed similar to the previous scheme. But instead of making "
-"the symlink, each file is symlinked into the <filename "
-"class='directory'>/usr</filename> hierarchy. This removes the need to expand "
-"the environment variables. Though the symlinks can be created by the user to "
-"automate the creation, many package managers have been written using this "
-"approach. A few of the popular ones include Stow, Epkg, Graft, and Depot."
+"the symlink, each file is symlinked into the <filename class='directory'>/"
+"usr</filename> hierarchy. This removes the need to expand the environment "
+"variables. Though the symlinks can be created by the user to automate the "
+"creation, many package managers have been written using this approach. A few "
+"of the popular ones include Stow, Epkg, Graft, and Depot."
 msgstr ""
+"这是前一种软件包管理技术的变种。和前一种方式一样，将各个软件包同样安装在独"
+"立的目录中。但不是建立目录的符号链接，而是把其中的每个文件符号链接到 "
+"<filename class='directory'>/usr</filename> 目录树中对应的位置。这样就不需要"
+"修改环境变量。虽然这些符号链接可以由用户自己创建，但已经有许多包管理器能够自"
+"动化这一过程。一些流行的包管理器如 Stow、Epkg、Graft 和 Depot 使用这种管理方"
+"式。"
 
 #. type: Content of: <sect1><sect2><sect3><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/pkgmgt.xml:129
@@ -189,6 +233,10 @@ msgid ""
 "example, consider that you are installing a package libfoo-1.1. The "
 "following instructions may not install the package properly:"
 msgstr ""
+"安装过程需要伪装，使得软件包认为它处于 <filename class=\"directory\">/usr</"
+"filename> 中，尽管它实际上被安装在 <filename class=\"directory\">/usr/pkg</"
+"filename> 目录结构中。这种安装过程一般是超出常规的。例如，考虑安装软件包 "
+"libfoo-1.1。下面的指令可能不能正确安装该软件包："
 
 #. type: Content of: <sect1><sect2><sect3><screen>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/pkgmgt.xml:137
@@ -198,19 +246,27 @@ msgid ""
 "make\n"
 "make install</userinput>"
 msgstr ""
+"<userinput>./configure --prefix=/usr/pkg/libfoo/1.1\n"
+"make\n"
+"make install</userinput>"
 
 #. type: Content of: <sect1><sect2><sect3><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/pkgmgt.xml:141
 msgid ""
 "The installation will work, but the dependent packages may not link to "
 "libfoo as you would expect. If you compile a package that links against "
-"libfoo, you may notice that it is linked to <filename "
-"class='libraryfile'>/usr/pkg/libfoo/1.1/lib/libfoo.so.1</filename> instead "
-"of <filename class='libraryfile'>/usr/lib/libfoo.so.1</filename> as you "
-"would expect. The correct approach is to use the <envar>DESTDIR</envar> "
-"strategy to fake installation of the package. This approach works as "
-"follows:"
+"libfoo, you may notice that it is linked to <filename class='libraryfile'>/"
+"usr/pkg/libfoo/1.1/lib/libfoo.so.1</filename> instead of <filename "
+"class='libraryfile'>/usr/lib/libfoo.so.1</filename> as you would expect. The "
+"correct approach is to use the <envar>DESTDIR</envar> strategy to fake "
+"installation of the package. This approach works as follows:"
 msgstr ""
+"尽管安装过程本身可以顺利进行，但依赖于它的软件包可能不会像您期望的那样链接 "
+"libfoo 库。如果要编译一个依赖于 libfoo 的软件包，您可能发现它链接到了 "
+"<filename class='libraryfile'>/usr/pkg/libfoo/1.1/lib/libfoo.so.1</filename> "
+"而不是您期望的 <filename class='libraryfile'>/usr/lib/libfoo.so.1</"
+"filename> 。正确的做法是使用 <envar>DESTDIR</envar> 策略伪装软件包的安装过"
+"程。就像下面这样做："
 
 #. type: Content of: <sect1><sect2><sect3><screen>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/pkgmgt.xml:150
@@ -220,6 +276,9 @@ msgid ""
 "make\n"
 "make DESTDIR=/usr/pkg/libfoo/1.1 install</userinput>"
 msgstr ""
+"<userinput>./configure --prefix=/usr\n"
+"make\n"
+"make DESTDIR=/usr/pkg/libfoo/1.1 install</userinput>"
 
 #. type: Content of: <sect1><sect2><sect3><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/pkgmgt.xml:154
@@ -229,11 +288,14 @@ msgid ""
 "package, or you may find that it is easier to install some problematic "
 "packages into <filename class='directory'>/opt</filename>."
 msgstr ""
+"多数软件包可以这样安装，但有些不能。对于那些不兼容的软件包，您要么亲自动手"
+"安装，要么更简单地把一些出问题的软件包安装在 <filename class='directory'>/"
+"opt</filename>中。"
 
 #. type: Content of: <sect1><sect2><sect3><title>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/pkgmgt.xml:162
 msgid "Timestamp Based"
-msgstr ""
+msgstr "基于时间戳的方案"
 
 #. type: Content of: <sect1><sect2><sect3><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/pkgmgt.xml:164
@@ -244,29 +306,37 @@ msgid ""
 "installed after the timestamp file was created. A package manager written "
 "with this approach is install-log."
 msgstr ""
+"在这种技巧中，安装一个软件包之前，为它创建一个时间戳文件。在安装后，用一行简"
+"单的 <command>find</command> 命令，加上正确的参数，就能生成安装日志，包含在时"
+"间戳文件创建以后安装的所有文件。有一个采用这个方案的包管理器叫做 install-"
+"log。"
 
 #. type: Content of: <sect1><sect2><sect3><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/pkgmgt.xml:170
 msgid ""
-"Though this scheme has the advantage of being simple, it has two "
-"drawbacks. If, during installation, the files are installed with any "
-"timestamp other than the current time, those files will not be tracked by "
-"the package manager. Also, this scheme can only be used when one package is "
-"installed at a time. The logs are not reliable if two packages are being "
-"installed on two different consoles."
+"Though this scheme has the advantage of being simple, it has two drawbacks. "
+"If, during installation, the files are installed with any timestamp other "
+"than the current time, those files will not be tracked by the package "
+"manager. Also, this scheme can only be used when one package is installed at "
+"a time. The logs are not reliable if two packages are being installed on two "
+"different consoles."
 msgstr ""
+"尽管这种方式很简单，但它有两个缺点。如果在安装过程中，某些文件没有以当前时间"
+"作为时间戳安装，它们就不能被包管理器跟踪。另外，只有每次只安装一个软件包时才"
+"能使用这种技术。如果在两个终端中同时安装两个不同的软件包，它们的安装日志就不"
+"可靠了。"
 
 #. type: Content of: <sect1><sect2><sect3><title>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/pkgmgt.xml:180
 msgid "Tracing Installation Scripts"
-msgstr ""
+msgstr "追踪安装脚本"
 
 #. type: Content of: <sect1><sect2><sect3><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/pkgmgt.xml:182
 msgid ""
 "In this approach, the commands that the installation scripts perform are "
 "recorded.  There are two techniques that one can use:"
-msgstr ""
+msgstr "在这种方式中，安装脚本执行的命令被记录下来。有两种技术可以进行记录："
 
 #. type: Content of: <sect1><sect2><sect3><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/pkgmgt.xml:185
@@ -274,15 +344,21 @@ msgid ""
 "The <envar>LD_PRELOAD</envar> environment variable can be set to point to a "
 "library to be preloaded before installation.  During installation, this "
 "library tracks the packages that are being installed by attaching itself to "
-"various executables such as <command>cp</command>, "
-"<command>install</command>, <command>mv</command> and tracking the system "
-"calls that modify the filesystem. For this approach to work, all the "
-"executables need to be dynamically linked without the suid or sgid bit.  "
-"Preloading the library may cause some unwanted side-effects during "
-"installation. Therefore, it is advised that one performs some tests to "
-"ensure that the package manager does not break anything and logs all the "
-"appropriate files."
+"various executables such as <command>cp</command>, <command>install</"
+"command>, <command>mv</command> and tracking the system calls that modify "
+"the filesystem. For this approach to work, all the executables need to be "
+"dynamically linked without the suid or sgid bit.  Preloading the library may "
+"cause some unwanted side-effects during installation. Therefore, it is "
+"advised that one performs some tests to ensure that the package manager does "
+"not break anything and logs all the appropriate files."
 msgstr ""
+"在安装前设置 <envar>LD_PRELOAD</envar> 环境变量，将其指向一个库以在安装过程中"
+"预加载它。在安装过程中，这个库附加在 <command>cp</command>、"
+"<command>install</command>、<command>mv</command> 等可执行文件上，跟踪修改文"
+"件系统的系统调用。如果要使用这种方法，所有需要跟踪的可执行文件必须是动态链接"
+"的，且没有设定 suid 和 sgid 位。预加载动态库可能在安装过程中导致不希望的副"
+"作用。因此，建议在实际使用前进行一些测试，以确保包管理器不会造成破坏，并且记"
+"录了所有应该记录的文件。"
 
 #. type: Content of: <sect1><sect2><sect3><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/pkgmgt.xml:197
@@ -290,11 +366,13 @@ msgid ""
 "The second technique is to use <command>strace</command>, which logs all "
 "system calls made during the execution of the installation scripts."
 msgstr ""
+"第二种技术是使用 <command>strace</command>，它能够记录安装脚本执行过程中的所"
+"有系统调用。"
 
 #. type: Content of: <sect1><sect2><sect3><title>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/pkgmgt.xml:203
 msgid "Creating Package Archives"
-msgstr ""
+msgstr "创建软件包档案"
 
 #. type: Content of: <sect1><sect2><sect3><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/pkgmgt.xml:205
@@ -305,25 +383,33 @@ msgid ""
 "used to install the package either on the local machine or can even be used "
 "to install the package on other machines."
 msgstr ""
+"在这种架构中，软件包被伪装安装到一个独立的目录树中，就像软链接风格的软件包管"
+"理那样。在安装后，使用被安装的文件创建一个软件包档案。它可以被用来在本地机"
+"器甚至其他机器上安装该软件包。"
 
 #. type: Content of: <sect1><sect2><sect3><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/pkgmgt.xml:211
 msgid ""
 "This approach is used by most of the package managers found in the "
 "commercial distributions. Examples of package managers that follow this "
-"approach are RPM (which, incidentally, is required by the <ulink "
-"url=\"http://refspecs.linuxfoundation.org/lsb.shtml\">Linux Standard Base "
+"approach are RPM (which, incidentally, is required by the <ulink url="
+"\"http://refspecs.linuxfoundation.org/lsb.shtml\">Linux Standard Base "
 "Specification</ulink>), pkg-utils, Debian's apt, and Gentoo's Portage "
 "system.  A hint describing how to adopt this style of package management for "
 "LFS systems is located at <ulink url=\"&hints-root;fakeroot.txt\"/>."
 msgstr ""
+"大多数商业发行版的包管理器采用这种策略。例如 RPM (值得一提的是，它被 <ulink "
+"url=\"http://refspecs.linuxfoundation.org/lsb.shtml\">Linux Standard Base 规"
+"则</ulink>所要求)、pkg-utils、Debian 的 apt，以及 Gentoo 的 Portage 系统"
+"等。LFS Hint 中的一篇短文描述了如何为 LFS 系统适用这种管理方式：<ulink url="
+"\"&hints-root;fakeroot.txt\"/>。"
 
 #. type: Content of: <sect1><sect2><sect3><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/pkgmgt.xml:220
 msgid ""
 "Creation of package files that include dependency information is complex and "
 "is beyond the scope of LFS."
-msgstr ""
+msgstr "创建包含依赖关系信息的软件包文件十分复杂，超出了 LFS 的范畴。"
 
 #. type: Content of: <sect1><sect2><sect3><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/pkgmgt.xml:223
@@ -333,11 +419,15 @@ msgid ""
 "package managers do.  For details of Slackware package management, see "
 "<ulink url=\"http://www.slackbook.org/html/package-management.html\"/>."
 msgstr ""
+"Slackware 使用一个基于 <command>tar</command> 的系统创建软件包档案。和更复"
+"杂的包管理器不同，该系统有意地没有涉及软件包依赖关系。如果想了解 Slackware "
+"包管理器的详细信息，阅读 <ulink url=\"http://www.slackbook.org/html/package-"
+"management.html\"/>。"
 
 #. type: Content of: <sect1><sect2><sect3><title>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/pkgmgt.xml:231
 msgid "User Based Management"
-msgstr ""
+msgstr "基于用户的软件包管理"
 
 #. type: Content of: <sect1><sect2><sect3><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/pkgmgt.xml:233
@@ -350,11 +440,16 @@ msgid ""
 "to describe in this section. For the details please see the hint at <ulink "
 "url=\"&hints-root;more_control_and_pkg_man.txt\"/>."
 msgstr ""
+"这种架构是 LFS 特有的，由 Matthias Benkmann 提出，可以在 <ulink url=\"&hints-"
+"index;\">Hints Project</ulink>查阅。在该架构中，每个软件包都由一个单独的用户"
+"安装到标准位置。只要检查文件所有者，就能找出属于一个软件包的所有文件。它的优"
+"缺点十分复杂，无法在本节讨论。如果想详细了解，请访问 <ulink url=\"&hints-"
+"root;more_control_and_pkg_man.txt\"/>阅读。"
 
 #. type: Content of: <sect1><sect2><title>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/pkgmgt.xml:246
 msgid "Deploying LFS on Multiple Systems"
-msgstr ""
+msgstr "在多个系统上部署 LFS"
 
 #. type: Content of: <sect1><sect2><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/pkgmgt.xml:248
@@ -366,23 +461,34 @@ msgid ""
 "directory (about 250MB uncompressed for a base LFS build), copying that file "
 "via network transfer or CD-ROM to the new system and expanding it.  From "
 "that point, a few configuration files will have to be changed.  "
-"Configuration files that may need to be updated include: "
-"<filename>/etc/hosts</filename>, <filename>/etc/fstab</filename>, "
-"<filename>/etc/passwd</filename>, <filename>/etc/group</filename>, <phrase "
-"revision=\"systemd\"> <filename>/etc/shadow</filename>, and "
-"<filename>/etc/ld.so.conf</filename>.  </phrase> <phrase revision=\"sysv\"> "
-"<filename>/etc/shadow</filename>, <filename>/etc/ld.so.conf</filename>, "
-"<filename>/etc/sysconfig/rc.site</filename>, "
-"<filename>/etc/sysconfig/network</filename>, and "
-"<filename>/etc/sysconfig/ifconfig.eth0</filename>.  </phrase>"
+"Configuration files that may need to be updated include: <filename>/etc/"
+"hosts</filename>, <filename>/etc/fstab</filename>, <filename>/etc/passwd</"
+"filename>, <filename>/etc/group</filename>, <phrase revision=\"systemd\"> "
+"<filename>/etc/shadow</filename>, and <filename>/etc/ld.so.conf</filename>.  "
+"</phrase> <phrase revision=\"sysv\"> <filename>/etc/shadow</filename>, "
+"<filename>/etc/ld.so.conf</filename>, <filename>/etc/sysconfig/rc.site</"
+"filename>, <filename>/etc/sysconfig/network</filename>, and <filename>/etc/"
+"sysconfig/ifconfig.eth0</filename>.  </phrase>"
 msgstr ""
+"LFS 系统的一项优势是，没有依赖于磁盘系统中文件位置的文件。将构建好的 LFS 系"
+"统复制到另一台具有相同硬件架构的计算机很简单，只要用 <command>tar</command> "
+"命令把包含根目录的 LFS 分区打包 (未压缩的情况下，一个基本的 LFS 系统需要 250 "
+"MB)，然后通过网络或者 CD-ROM 复制到新的系统上，再展开即可。这时，个别配置文"
+"件需要修改。可能需要更新的配置文件有：<filename>/etc/hosts</filename>, "
+"<filename>/etc/fstab</filename>, <filename>/etc/passwd</filename>, "
+"<filename>/etc/group</filename>, <phrase revision=\"systemd\"> <filename>/"
+"etc/shadow</filename>, 以及 <filename>/etc/ld.so.conf</filename>。</"
+"phrase> <phrase revision=\"sysv\"> <filename>/etc/shadow</filename>, "
+"<filename>/etc/ld.so.conf</filename>, <filename>/etc/sysconfig/rc.site</"
+"filename>, <filename>/etc/sysconfig/network</filename>, 以及 <filename>/etc/"
+"sysconfig/ifconfig.eth0</filename>。</phrase>"
 
 #. type: Content of: <sect1><sect2><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/pkgmgt.xml:273
 msgid ""
 "A custom kernel may need to be built for the new system depending on "
 "differences in system hardware and the original kernel configuration."
-msgstr ""
+msgstr "由于系统硬件和原始内核配置的区别，可能需要为新系统重新配置并构建内核。"
 
 #. type: Content of: <sect1><sect2><note><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/pkgmgt.xml:277
@@ -392,10 +498,15 @@ msgid ""
 "system is not identical with an AMD processor and later versions of some "
 "processors may have instructions that are unavailable in earlier versions."
 msgstr ""
+"有一些报告反映称，在架构相近但不完全一致的计算机之间拷贝 LFS 系统时出现问题。"
+"例如，Intel 系统使用的指令集和 AMD 处理器不完全相同，且较新的处理器可能包含旧"
+"处理器没有的指令。"
 
 #. type: Content of: <sect1><sect2><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/pkgmgt.xml:283
 msgid ""
-"Finally the new system has to be made bootable via <xref "
-"linkend=\"ch-bootable-grub\"/>."
+"Finally the new system has to be made bootable via <xref linkend=\"ch-"
+"bootable-grub\"/>."
 msgstr ""
+"最后，按照 <xref linkend=\"ch-bootable-grub\"/>中的指示，为新系统配置引导加载"
+"器。"

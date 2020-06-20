@@ -1,9 +1,3 @@
-# SOME DESCRIPTIVE TITLE
-# Copyright (C) YEAR Free Software Foundation, Inc.
-# This file is distributed under the same license as the PACKAGE package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
-#
-#, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
@@ -11,132 +5,137 @@ msgstr ""
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
-"Language: \n"
+"Language: zh_CN\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Translate Toolkit 2.2.5\n"
 
 #. type: Content of: <sect1><sect1info><address>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/groff.xml:14
 #, no-wrap
 msgid "&groff-url;"
-msgstr ""
+msgstr "&groff-url;"
 
 #. type: Content of: <sect1><sect1info>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/groff.xml:12
 msgid ""
-"<productname>groff</productname> "
-"<productnumber>&groff-version;</productnumber> <placeholder type=\"address\" "
-"id=\"0\"/>"
+"<productname>groff</productname> <productnumber>&groff-version;</"
+"productnumber> <placeholder type=\"address\" id=\"0\"/>"
 msgstr ""
+"<productname>groff</productname> <productnumber>&groff-version;</"
+"productnumber> <placeholder type=\"address\" id=\"0\"/>"
 
 #. type: Content of: <sect1><title>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/groff.xml:17
 msgid "Groff-&groff-version;"
-msgstr ""
+msgstr "Groff-&groff-version;"
 
 #. type: Content of: <sect1><indexterm><primary>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/groff.xml:20
 msgid "Groff"
-msgstr ""
+msgstr "Groff"
 
 #. type: Content of: <sect1><sect2><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/groff.xml:26
 msgid "The Groff package contains programs for processing and formatting text."
-msgstr ""
+msgstr "Groff 软件包包含处理和格式化文本的程序。"
 
 #. type: Content of: <sect1><sect2><segmentedlist><segtitle>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/groff.xml:30
 msgid "&buildtime;"
-msgstr ""
+msgstr "&buildtime;"
 
 #. type: Content of: <sect1><sect2><segmentedlist><segtitle>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/groff.xml:31
 msgid "&diskspace;"
-msgstr ""
+msgstr "&diskspace;"
 
 #. type: Content of: <sect1><sect2><segmentedlist><seglistitem><seg>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/groff.xml:34
+#, fuzzy
 msgid "&groff-fin-sbu;"
-msgstr ""
+msgstr "&groff-ch6-sbu;"
 
 #. type: Content of: <sect1><sect2><segmentedlist><seglistitem><seg>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/groff.xml:35
+#, fuzzy
 msgid "&groff-fin-du;"
-msgstr ""
+msgstr "&groff-ch6-du;"
 
 #. type: Content of: <sect1><sect2><title>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/groff.xml:42
 msgid "Installation of Groff"
-msgstr ""
+msgstr "安装 Groff"
 
 #. type: Content of: <sect1><sect2><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/groff.xml:44
 msgid ""
 "Groff expects the environment variable <envar>PAGE</envar> to contain the "
-"default paper size. For users in the United States, "
-"<parameter>PAGE=letter</parameter> is appropriate. Elsewhere, "
-"<parameter>PAGE=A4</parameter> may be more suitable. While the default paper "
-"size is configured during compilation, it can be overridden later by echoing "
-"either <quote>A4</quote> or <quote>letter</quote> to the "
-"<filename>/etc/papersize</filename> file."
+"default paper size. For users in the United States, <parameter>PAGE=letter</"
+"parameter> is appropriate. Elsewhere, <parameter>PAGE=A4</parameter> may be "
+"more suitable. While the default paper size is configured during "
+"compilation, it can be overridden later by echoing either <quote>A4</quote> "
+"or <quote>letter</quote> to the <filename>/etc/papersize</filename> file."
 msgstr ""
+"Groff 期望环境变量 <envar>PAGE</envar> 包含默认纸张大小。对于美国用户来说，"
+"<parameter>PAGE=letter</parameter> 是正确的。对于其他地方的用户，"
+"<parameter>PAGE=A4</parameter> 可能更好。尽管在编译时配置了默认纸张大小，可"
+"以通过写入 <quote>A4</quote> 或 <quote>letter</quote> 到 <filename>/etc/"
+"papersize</filename> 文件，覆盖默认值。"
 
 #. type: Content of: <sect1><sect2><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/groff.xml:52
 msgid "Prepare Groff for compilation:"
-msgstr ""
+msgstr "准备编译 Groff："
 
 #. type: Content of: <sect1><sect2><screen>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/groff.xml:54
 #, no-wrap
-msgid ""
-"<userinput "
-"remap=\"configure\">PAGE=<replaceable>&lt;paper_size&gt;</replaceable> "
-"./configure --prefix=/usr</userinput>"
-msgstr ""
+msgid "<userinput remap=\"configure\">PAGE=<replaceable>&lt;paper_size&gt;</replaceable> ./configure --prefix=/usr</userinput>"
+msgstr "<userinput remap=\"configure\">PAGE=<replaceable>&lt;paper_size&gt;</replaceable> ./configure --prefix=/usr</userinput>"
 
 #. type: Content of: <sect1><sect2><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/groff.xml:56
 msgid "This package does not support parallel build. Compile the package:"
-msgstr ""
+msgstr "该软件包不支持并行构建。编译该软件包："
 
 #. type: Content of: <sect1><sect2><screen>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/groff.xml:58
 #, no-wrap
 msgid "<userinput remap=\"make\">make -j1</userinput>"
-msgstr ""
+msgstr "<userinput remap=\"make\">make -j1</userinput>"
 
 #. type: Content of: <sect1><sect2><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/groff.xml:60
 msgid "This package does not come with a test suite."
-msgstr ""
+msgstr "该软件包不包含测试套件。"
 
 #. type: Content of: <sect1><sect2><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/groff.xml:62
 msgid "Install the package:"
-msgstr ""
+msgstr "安装该软件包："
 
 #. type: Content of: <sect1><sect2><screen>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/groff.xml:64
 #, no-wrap
 msgid "<userinput remap=\"install\">make install</userinput>"
-msgstr ""
+msgstr "<userinput remap=\"install\">make install</userinput>"
 
 #. type: Content of: <sect1><sect2><title>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/groff.xml:69
 msgid "Contents of Groff"
-msgstr ""
+msgstr "Groff 的内容"
 
 #. type: Content of: <sect1><sect2><segmentedlist><segtitle>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/groff.xml:72
 msgid "Installed programs"
-msgstr ""
+msgstr "安装的程序"
 
 #. type: Content of: <sect1><sect2><segmentedlist><segtitle>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/groff.xml:73
 msgid "Installed directories"
-msgstr ""
+msgstr "安装的目录"
 
 #. type: Content of: <sect1><sect2><segmentedlist><seglistitem><seg>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/groff.xml:76
@@ -144,30 +143,39 @@ msgid ""
 "addftinfo, afmtodit, chem, eqn, eqn2graph, gdiffmk, glilypond, gperl, "
 "gpinyin, grap2graph, grn, grodvi, groff, groffer, grog, grolbp, grolj4, "
 "gropdf, grops, grotty, hpftodit, indxbib, lkbib, lookbib, mmroff, neqn, "
-"nroff, pdfmom, pdfroff, pfbtops, pic, pic2graph, post-grohtml, preconv, "
-"pre-grohtml, refer, roff2dvi, roff2html, roff2pdf, roff2ps, roff2text, "
-"roff2x, soelim, tbl, tfmtodit, and troff"
+"nroff, pdfmom, pdfroff, pfbtops, pic, pic2graph, post-grohtml, preconv, pre-"
+"grohtml, refer, roff2dvi, roff2html, roff2pdf, roff2ps, roff2text, roff2x, "
+"soelim, tbl, tfmtodit, and troff"
 msgstr ""
+"addftinfo, afmtodit, chem, eqn, eqn2graph, gdiffmk, glilypond, gperl, "
+"gpinyin, grap2graph, grn, grodvi, groff, groffer, grog, grolbp, grolj4, "
+"gropdf, grops, grotty, hpftodit, indxbib, lkbib, lookbib, mmroff, neqn, "
+"nroff, pdfmom, pdfroff, pfbtops, pic, pic2graph, post-grohtml, preconv, pre-"
+"grohtml, refer, roff2dvi, roff2html, roff2pdf, roff2ps, roff2text, roff2x, "
+"soelim, tbl, tfmtodit, 以及 troff"
 
 #. type: Content of: <sect1><sect2><segmentedlist><seglistitem><seg>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/groff.xml:83
-msgid "/usr/lib/groff and /usr/share/doc/groff-&groff-version;, /usr/share/groff"
+msgid ""
+"/usr/lib/groff and /usr/share/doc/groff-&groff-version;, /usr/share/groff"
 msgstr ""
+"/usr/lib/groff, /usr/share/doc/groff-&groff-version;, 以及 /usr/share/groff"
 
 #. type: Content of: <sect1><sect2><variablelist><bridgehead>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/groff.xml:89
 msgid "Short Descriptions"
-msgstr ""
+msgstr "简要描述"
 
 #. type: Content of: <sect1><sect2><variablelist>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/groff.xml:90
-msgid "<?dbfo list-presentation=\"list\"?> <?dbhtml list-presentation=\"table\"?>"
+msgid ""
+"<?dbfo list-presentation=\"list\"?> <?dbhtml list-presentation=\"table\"?>"
 msgstr ""
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/groff.xml:94
 msgid "<command>addftinfo</command>"
-msgstr ""
+msgstr "<command>addftinfo</command>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/groff.xml:96
@@ -175,16 +183,18 @@ msgid ""
 "Reads a troff font file and adds some additional font-metric information "
 "that is used by the <command>groff</command> system"
 msgstr ""
+"读取 troff 字体文件并为其添加 <command>groff</command> 系统使用的一些额外字体"
+"规格信息"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/groff.xml:99
 msgid "addftinfo"
-msgstr ""
+msgstr "addftinfo"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/groff.xml:105
 msgid "<command>afmtodit</command>"
-msgstr ""
+msgstr "<command>afmtodit</command>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/groff.xml:107
@@ -192,31 +202,32 @@ msgid ""
 "Creates a font file for use with <command>groff</command> and "
 "<command>grops</command>"
 msgstr ""
+"创建供 <command>groff</command> 和 <command>grops</command> 使用的字体文件"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/groff.xml:110
 msgid "afmtodit"
-msgstr ""
+msgstr "afmtodit"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/groff.xml:116
 msgid "<command>chem</command>"
-msgstr ""
+msgstr "<command>chem</command>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/groff.xml:118
 msgid "Groff preprocessor for producing chemical structure diagrams"
-msgstr ""
+msgstr "产生化学结构式的 groff 预处理器"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/groff.xml:120
 msgid "chem"
-msgstr ""
+msgstr "chem"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/groff.xml:126
 msgid "<command>eqn</command>"
-msgstr ""
+msgstr "<command>eqn</command>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/groff.xml:128
@@ -224,140 +235,141 @@ msgid ""
 "Compiles descriptions of equations embedded within troff input files into "
 "commands that are understood by <command>troff</command>"
 msgstr ""
+"将 troff 输入文件中嵌入的公式描述编译成 <command>troff</command> 理解的命令"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/groff.xml:132
 msgid "eqn"
-msgstr ""
+msgstr "eqn"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/groff.xml:138
 msgid "<command>eqn2graph</command>"
-msgstr ""
+msgstr "<command>eqn2graph</command>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/groff.xml:140
 msgid "Converts a troff EQN (equation) into a cropped image"
-msgstr ""
+msgstr "将 troff EQN (公式) 转换成裁减好的图像"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/groff.xml:142
 msgid "eqn2graph"
-msgstr ""
+msgstr "eqn2graph"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/groff.xml:148
 msgid "<command>gdiffmk</command>"
-msgstr ""
+msgstr "<command>gdiffmk</command>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/groff.xml:150
 msgid "Marks differences between groff/nroff/troff files"
-msgstr ""
+msgstr "标出 groff/nroff/troff 文件的区别"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/groff.xml:152
 msgid "gdiffmk"
-msgstr ""
+msgstr "gdiffmk"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/groff.xml:158
 msgid "<command>glilypond</command>"
-msgstr ""
+msgstr "<command>glilypond</command>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/groff.xml:160
 msgid ""
 "Transforms sheet music written in the lilypond language into the groff "
 "language"
-msgstr ""
+msgstr "将 lilypond 语言写成的乐谱转换为 groff 语言"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/groff.xml:163
 msgid "glilypond"
-msgstr ""
+msgstr "glilypond"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/groff.xml:169
 msgid "<command>gperl</command>"
-msgstr ""
+msgstr "<command>gperl</command>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/groff.xml:171
 msgid "Preprocesor for groff, allowing addition of perl code into groff files"
-msgstr ""
+msgstr "groff 预处理器，允许在 groff 文件中增加 perl 代码"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/groff.xml:174
 msgid "gperl"
-msgstr ""
+msgstr "gperl"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/groff.xml:180
 msgid "<command>gpinyin</command>"
-msgstr ""
+msgstr "<command>gpinyin</command>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/groff.xml:182
 msgid ""
 "Preprocesor for groff, allowing addition of Chinese European-like language "
 "Pinyin into groff files."
-msgstr ""
+msgstr "groff 的预处理器，允许在 groff 文件中增加汉语拼音"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/groff.xml:185
 msgid "gpinyin"
-msgstr ""
+msgstr "gpinyin"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/groff.xml:191
 msgid "<command>grap2graph</command>"
-msgstr ""
+msgstr "<command>grap2graph</command>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/groff.xml:193
 msgid "Converts a grap diagram into a cropped bitmap image"
-msgstr ""
+msgstr "将 grap 图形转换成裁减好的位图图像"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/groff.xml:195
 msgid "grap2graph"
-msgstr ""
+msgstr "grap2graph"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/groff.xml:201
 msgid "<command>grn</command>"
-msgstr ""
+msgstr "<command>grn</command>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/groff.xml:203
 msgid "A <command>groff</command> preprocessor for gremlin files"
-msgstr ""
+msgstr "用于 gremlin 文件的<command>groff</command> 预处理器"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/groff.xml:205
 msgid "grn"
-msgstr ""
+msgstr "grn"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/groff.xml:211
 msgid "<command>grodvi</command>"
-msgstr ""
+msgstr "<command>grodvi</command>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/groff.xml:213
 msgid "A driver for <command>groff</command> that produces TeX dvi format"
-msgstr ""
+msgstr "<command>groff</command> 的驱动程序，生成 TeX dvi 格式"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/groff.xml:216
 msgid "grodvi"
-msgstr ""
+msgstr "grodvi"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/groff.xml:222
 msgid "<command>groff</command>"
-msgstr ""
+msgstr "<command>groff</command>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/groff.xml:224
@@ -366,52 +378,58 @@ msgid ""
 "<command>troff</command> program and a post-processor appropriate for the "
 "selected device"
 msgstr ""
+"groff 文档格式化系统的前端；一般来说，它运行 <command>troff</command> 程序和"
+"一个适用于选定设备的后处理器"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/groff.xml:228
 msgid "groff"
-msgstr ""
+msgstr "groff"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/groff.xml:234
 msgid "<command>groffer</command>"
-msgstr ""
+msgstr "<command>groffer</command>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/groff.xml:236
 msgid "Displays groff files and man pages on X and tty terminals"
-msgstr ""
+msgstr "在 X 和 tty 终端显示 groff 文件和 man 页面"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/groff.xml:238
 msgid "groffer"
-msgstr ""
+msgstr "groffer"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/groff.xml:244
 msgid "<command>grog</command>"
-msgstr ""
+msgstr "<command>grog</command>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/groff.xml:246
 msgid ""
 "Reads files and guesses which of the <command>groff</command> options "
-"<option>-e</option>, <option>-man</option>, <option>-me</option>, "
-"<option>-mm</option>, <option>-ms</option>, <option>-p</option>, "
-"<option>-s</option>, and <option>-t</option> are required for printing "
-"files, and reports the <command>groff</command> command including those "
-"options"
+"<option>-e</option>, <option>-man</option>, <option>-me</option>, <option>-"
+"mm</option>, <option>-ms</option>, <option>-p</option>, <option>-s</option>, "
+"and <option>-t</option> are required for printing files, and reports the "
+"<command>groff</command> command including those options"
 msgstr ""
+"读取文件，并猜测 <command>groff</command> 选项 <option>-e</option>, <option>-"
+"man</option>, <option>-me</option>, <option>-mm</option>, <option>-ms</"
+"option>, <option>-p</option>, <option>-s</option>, 以及 <option>-t</option> "
+"中哪一个在打印文件时是必要的，并报告包含这些选项的 <command>groff</command> "
+"命令"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/groff.xml:253
 msgid "grog"
-msgstr ""
+msgstr "grog"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/groff.xml:259
 msgid "<command>grolbp</command>"
-msgstr ""
+msgstr "<command>grolbp</command>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/groff.xml:261
@@ -419,16 +437,18 @@ msgid ""
 "Is a <command>groff</command> driver for Canon CAPSL printers (LBP-4 and "
 "LBP-8 series laser printers)"
 msgstr ""
+"是一个用于 Canon CAPSL 打印机 （LBP-4 和 LBP-8 系列激光打印机）的 "
+"<command>groff</command> 驱动程序"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/groff.xml:264
 msgid "grolbp"
-msgstr ""
+msgstr "grolbp"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/groff.xml:270
 msgid "<command>grolj4</command>"
-msgstr ""
+msgstr "<command>grolj4</command>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/groff.xml:272
@@ -436,80 +456,84 @@ msgid ""
 "Is a driver for <command>groff</command> that produces output in PCL5 format "
 "suitable for an HP LaserJet 4 printer"
 msgstr ""
+"是一个生成用于 HP LaserJet 4 打印机的 PCL5 格式的 <command>groff</command> 驱"
+"动程序"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/groff.xml:275
 msgid "grolj4"
-msgstr ""
+msgstr "grolj4"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/groff.xml:281
 msgid "<command>gropdf</command>"
-msgstr ""
+msgstr "<command>gropdf</command>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/groff.xml:283
 msgid "Translates the output of GNU <command>troff</command> to PDF"
-msgstr ""
+msgstr "将 <command>troff</command> 输出转换成 PDF"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/groff.xml:286
 msgid "gropdf"
-msgstr ""
+msgstr "gropdf"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/groff.xml:292
 msgid "<command>grops</command>"
-msgstr ""
+msgstr "<command>grops</command>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/groff.xml:294
 msgid "Translates the output of GNU <command>troff</command> to PostScript"
-msgstr ""
+msgstr "将 <command>troff</command> 输出转换成 PostScript"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/groff.xml:297
 msgid "grops"
-msgstr ""
+msgstr "grops"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/groff.xml:303
 msgid "<command>grotty</command>"
-msgstr ""
+msgstr "<command>grotty</command>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/groff.xml:305
 msgid ""
 "Translates the output of GNU <command>troff</command> into a form suitable "
 "for typewriter-like devices"
-msgstr ""
+msgstr "将 <command>troff</command> 输出转换成用于打字机类设备的形式"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/groff.xml:308
 msgid "grotty"
-msgstr ""
+msgstr "grotty"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/groff.xml:314
 msgid "<command>hpftodit</command>"
-msgstr ""
+msgstr "<command>hpftodit</command>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/groff.xml:316
 msgid ""
-"Creates a font file for use with <command>groff -Tlj4</command> from an "
-"HP-tagged font metric file"
+"Creates a font file for use with <command>groff -Tlj4</command> from an HP-"
+"tagged font metric file"
 msgstr ""
+"根据 HP 标签的字体规格文件，创建用于 <command>groff -Tlj4</command>的字体文"
+"件"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/groff.xml:319
 msgid "hpftodit"
-msgstr ""
+msgstr "hpftodit"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/groff.xml:325
 msgid "<command>indxbib</command>"
-msgstr ""
+msgstr "<command>indxbib</command>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/groff.xml:327
@@ -518,33 +542,35 @@ msgid ""
 "file for use with <command>refer</command>, <command>lookbib</command>, and "
 "<command>lkbib</command>"
 msgstr ""
+"创建用于给定文件文献数据库的反向索引，以供 <command>refer</command>、"
+"<command>lookbib</command> 以及 <command>lkbib</command> 使用"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/groff.xml:331
 msgid "indxbib"
-msgstr ""
+msgstr "indxbib"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/groff.xml:337
 msgid "<command>lkbib</command>"
-msgstr ""
+msgstr "<command>lkbib</command>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/groff.xml:339
 msgid ""
 "Searches bibliographic databases for references that contain specified keys "
 "and reports any references found"
-msgstr ""
+msgstr "在文献数据库中搜索包含指定关键字的引用，并报告找到的所有引用"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/groff.xml:342
 msgid "lkbib"
-msgstr ""
+msgstr "lkbib"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/groff.xml:348
 msgid "<command>lookbib</command>"
-msgstr ""
+msgstr "<command>lookbib</command>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/groff.xml:350
@@ -555,48 +581,51 @@ msgid ""
 "references containing those keywords, prints any references found on the "
 "standard output, and repeats this process until the end of input"
 msgstr ""
+"在标准错误输出上显示命令提示符 (除非标准输入不是终端)，读取包含一组关键字的"
+"行，在给定文件的文献数据库中搜索包含这些关键字的引用，将它们打印到标准输"
+"出，重复这一过程直到输入结束"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/groff.xml:357
 msgid "lookbib"
-msgstr ""
+msgstr "lookbib"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/groff.xml:363
 msgid "<command>mmroff</command>"
-msgstr ""
+msgstr "<command>mmroff</command>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/groff.xml:365
 msgid "A simple preprocessor for <command>groff</command>"
-msgstr ""
+msgstr "<command>groff</command> 的简单预处理器"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/groff.xml:367
 msgid "mmroff"
-msgstr ""
+msgstr "mmroff"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/groff.xml:373
 msgid "<command>neqn</command>"
-msgstr ""
+msgstr "<command>neqn</command>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/groff.xml:375
 msgid ""
 "Formats equations for American Standard Code for Information Interchange "
 "(ASCII) output"
-msgstr ""
+msgstr "将公式格式化为美国标准信息交换代码（ASCII）输出"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/groff.xml:378
 msgid "neqn"
-msgstr ""
+msgstr "neqn"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/groff.xml:384
 msgid "<command>nroff</command>"
-msgstr ""
+msgstr "<command>nroff</command>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/groff.xml:386
@@ -604,65 +633,68 @@ msgid ""
 "A script that emulates the <command>nroff</command> command using "
 "<command>groff</command>"
 msgstr ""
+"一个使用 <command>groff</command> 仿真 <command>nroff</command> 命令的脚本"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/groff.xml:389
 msgid "nroff"
-msgstr ""
+msgstr "nroff"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/groff.xml:395
 msgid "<command>pdfmom</command>"
-msgstr ""
+msgstr "<command>pdfmom</command>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/groff.xml:397
 msgid ""
 "Is a wrapper around groff that facilitates the production of PDF documents "
 "from files formatted with the mom macros."
-msgstr ""
+msgstr "一个 groff 包装器，提供从 mom 宏包编码的文件转换为 PDF 文档的功能"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/groff.xml:400
 msgid "pdfmom"
-msgstr ""
+msgstr "pdfmom"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/groff.xml:406
 msgid "<command>pdfroff</command>"
-msgstr ""
+msgstr "<command>pdfroff</command>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/groff.xml:408
 msgid "Creates pdf documents using groff"
-msgstr ""
+msgstr "用 groff 创建 PDF 文档"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/groff.xml:410
 msgid "pdfroff"
-msgstr ""
+msgstr "pdfroff"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/groff.xml:416
 msgid "<command>pfbtops</command>"
-msgstr ""
+msgstr "<command>pfbtops</command>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/groff.xml:418
 msgid ""
-"Translates a PostScript font in <filename "
-"class=\"extension\">.pfb</filename> format to ASCII"
+"Translates a PostScript font in <filename class=\"extension\">.pfb</"
+"filename> format to ASCII"
 msgstr ""
+"将 <filename class=\"extension\">.pfb</filename> 格式的 PostScript 字体转换"
+"为 ASCII"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/groff.xml:421
 msgid "pfbtops"
-msgstr ""
+msgstr "pfbtops"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/groff.xml:427
 msgid "<command>pic</command>"
-msgstr ""
+msgstr "<command>pic</command>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/groff.xml:429
@@ -670,184 +702,188 @@ msgid ""
 "Compiles descriptions of pictures embedded within troff or TeX input files "
 "into commands understood by TeX or <command>troff</command>"
 msgstr ""
+"将 troff 或 TeX 输入文件中嵌入的图片描述编译成 TeX 或 <command>troff</"
+"command> 理解的命令"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/groff.xml:433
 msgid "pic"
-msgstr ""
+msgstr "pic"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/groff.xml:439
 msgid "<command>pic2graph</command>"
-msgstr ""
+msgstr "<command>pic2graph</command>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/groff.xml:441
 msgid "Converts a PIC diagram into a cropped image"
-msgstr ""
+msgstr "将 PIC 图示转换成裁切好的图像"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/groff.xml:443
 msgid "pic2graph"
-msgstr ""
+msgstr "pic2graph"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/groff.xml:449
 msgid "<command>post-grohtml</command>"
-msgstr ""
+msgstr "<command>post-grohtml</command>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/groff.xml:451
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/groff.xml:473
 msgid "Translates the output of GNU <command>troff</command> to HTML"
-msgstr ""
+msgstr "将 GNU <command>troff</command> 的输出翻译成 HTML"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/groff.xml:454
 msgid "post-grohtml"
-msgstr ""
+msgstr "post-grohtml"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/groff.xml:460
 msgid "<command>preconv</command>"
-msgstr ""
+msgstr "<command>preconv</command>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/groff.xml:462
 msgid ""
 "Converts encoding of input files to something GNU <command>troff</command> "
 "understands"
-msgstr ""
+msgstr "将输入文件的编码转换成 GNU <command>troff</command> 理解的格式"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/groff.xml:465
 msgid "preconv"
-msgstr ""
+msgstr "preconv"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/groff.xml:471
 msgid "<command>pre-grohtml </command>"
-msgstr ""
+msgstr "<command>pre-grohtml </command>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/groff.xml:476
 msgid "pre-grohtml"
-msgstr ""
+msgstr "pre-grohtml"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/groff.xml:482
 msgid "<command>refer</command>"
-msgstr ""
+msgstr "<command>refer</command>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/groff.xml:484
 msgid ""
 "Copies the contents of a file to the standard output, except that lines "
 "between <emphasis>.[</emphasis> and <emphasis>.]</emphasis> are interpreted "
-"as citations, and lines between <emphasis>.R1</emphasis> and "
-"<emphasis>.R2</emphasis> are interpreted as commands for how citations are "
-"to be processed"
+"as citations, and lines between <emphasis>.R1</emphasis> and <emphasis>.R2</"
+"emphasis> are interpreted as commands for how citations are to be processed"
 msgstr ""
+"将文件内容复制到标准输出，除了在 <emphasis>.[</emphasis> 和 <emphasis>.]</"
+"emphasis> 之间的行被解释为文献引用，<emphasis>.R1</emphasis> 和 <emphasis>."
+"R2</emphasis> 之间的行被解释为处理文献引用的方式"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/groff.xml:490
 msgid "refer"
-msgstr ""
+msgstr "refer"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/groff.xml:496
 msgid "<command>roff2dvi</command>"
-msgstr ""
+msgstr "<command>roff2dvi</command>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/groff.xml:498
 msgid "Transforms roff files into DVI format"
-msgstr ""
+msgstr "将 roff 文件转换成 DVI 格式"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/groff.xml:500
 msgid "roff2dvi"
-msgstr ""
+msgstr "roff2dvi"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/groff.xml:506
 msgid "<command>roff2html</command>"
-msgstr ""
+msgstr "<command>roff2html</command>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/groff.xml:508
 msgid "Transforms roff files into HTML format"
-msgstr ""
+msgstr "将 roff 文件转换成 HTML 格式"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/groff.xml:510
 msgid "roff2html"
-msgstr ""
+msgstr "roff2html"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/groff.xml:516
 msgid "<command>roff2pdf</command>"
-msgstr ""
+msgstr "<command>roff2pdf</command>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/groff.xml:518
 msgid "Transforms roff files into PDFs"
-msgstr ""
+msgstr "将 roff 文件转换成 PDF"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/groff.xml:520
 msgid "roff2pdf"
-msgstr ""
+msgstr "roff2pdf"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/groff.xml:526
 msgid "<command>roff2ps</command>"
-msgstr ""
+msgstr "<command>roff2ps</command>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/groff.xml:528
 msgid "Transforms roff files into ps files"
-msgstr ""
+msgstr "将 roff 文件转换成 ps 文件"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/groff.xml:530
 msgid "roff2ps"
-msgstr ""
+msgstr "roff2ps"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/groff.xml:536
 msgid "<command>roff2text</command>"
-msgstr ""
+msgstr "<command>roff2text</command>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/groff.xml:538
 msgid "Transforms roff files into text files"
-msgstr ""
+msgstr "将 roff 文件转换成文本文件"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/groff.xml:540
 msgid "roff2text"
-msgstr ""
+msgstr "roff2text"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/groff.xml:546
 msgid "<command>roff2x</command>"
-msgstr ""
+msgstr "<command>roff2x</command>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/groff.xml:548
 msgid "Transforms roff files into other formats"
-msgstr ""
+msgstr "将 roff 文件转换成其他格式"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/groff.xml:550
 msgid "roff2x"
-msgstr ""
+msgstr "roff2x"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/groff.xml:556
 msgid "<command>soelim</command>"
-msgstr ""
+msgstr "<command>soelim</command>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/groff.xml:558
@@ -855,16 +891,18 @@ msgid ""
 "Reads files and replaces lines of the form <emphasis>.so file</emphasis> by "
 "the contents of the mentioned <emphasis>file</emphasis>"
 msgstr ""
+"读取文件，将 <emphasis>.so 文件</emphasis> 形式的行替换为该<emphasis>文件</"
+"emphasis>的内容"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/groff.xml:562
 msgid "soelim"
-msgstr ""
+msgstr "soelim"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/groff.xml:568
 msgid "<command>tbl</command>"
-msgstr ""
+msgstr "<command>tbl</command>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/groff.xml:570
@@ -872,31 +910,32 @@ msgid ""
 "Compiles descriptions of tables embedded within troff input files into "
 "commands that are understood by <command>troff</command>"
 msgstr ""
+"将 troff 输入中嵌入的表格描述编译成 <command>troff</command> 理解的命令"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/groff.xml:574
 msgid "tbl"
-msgstr ""
+msgstr "tbl"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/groff.xml:580
 msgid "<command>tfmtodit</command>"
-msgstr ""
+msgstr "<command>tfmtodit</command>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/groff.xml:582
 msgid "Creates a font file for use with <command>groff -Tdvi</command>"
-msgstr ""
+msgstr "创建用于 <command>groff -Tdvi</command> 的字体文件"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/groff.xml:585
 msgid "tfmtodit"
-msgstr ""
+msgstr "tfmtodit"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/groff.xml:591
 msgid "<command>troff</command>"
-msgstr ""
+msgstr "<command>troff</command>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/groff.xml:593
@@ -906,8 +945,10 @@ msgid ""
 "preprocessors and post-processors in the appropriate order and with the "
 "appropriate options"
 msgstr ""
+"和 UNIX <command>troff</command> 高度兼容； 它应该由 <command>groff</"
+"command> 命令调用，后者也会以正确的顺序和选项运行预处理器和后处理器"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/groff.xml:598
 msgid "troff"
-msgstr ""
+msgstr "troff"

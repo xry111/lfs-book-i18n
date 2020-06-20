@@ -1,9 +1,3 @@
-# SOME DESCRIPTIVE TITLE
-# Copyright (C) YEAR Free Software Foundation, Inc.
-# This file is distributed under the same license as the PACKAGE package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
-#
-#, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
@@ -11,35 +5,37 @@ msgstr ""
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
-"Language: \n"
+"Language: zh_CN\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Translate Toolkit 2.2.5\n"
 
 #. type: Content of: <sect1><sect1info><address>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/zstd.xml:14
 #, no-wrap
 msgid "&zstd-url;"
-msgstr ""
+msgstr "&zstd-url;"
 
 #. type: Content of: <sect1><sect1info>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/zstd.xml:12
 msgid ""
-"<productname>zstd</productname> "
-"<productnumber>&zstd-version;</productnumber> <placeholder type=\"address\" "
-"id=\"0\"/>"
+"<productname>zstd</productname> <productnumber>&zstd-version;</"
+"productnumber> <placeholder type=\"address\" id=\"0\"/>"
 msgstr ""
+"<productname>zstd</productname> <productnumber>&zstd-version;</"
+"productnumber> <placeholder type=\"address\" id=\"0\"/>"
 
 #. type: Content of: <sect1><title>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/zstd.xml:17
 msgid "Zstd-&zstd-version;"
-msgstr ""
+msgstr "Zstd-&zstd-version;"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/zstd.xml:20
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/zstd.xml:96
 msgid "zstd"
-msgstr ""
+msgstr "zstd"
 
 #. type: Content of: <sect1><sect2><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/zstd.xml:26
@@ -48,67 +44,74 @@ msgid ""
 "ratios. It offers a very wide range of compression / speed trade-offs, while "
 "being backed by a very fast decoder."
 msgstr ""
+"Zstandard 是一种实时压缩算法，提供了较高的压缩比。它具有很宽的压缩比/速度权衡"
+"范围，同时支持具有非常快速的解压缩。"
 
 #. type: Content of: <sect1><sect2><segmentedlist><segtitle>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/zstd.xml:31
 msgid "&buildtime;"
-msgstr ""
+msgstr "&buildtime;"
 
 #. type: Content of: <sect1><sect2><segmentedlist><segtitle>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/zstd.xml:32
 msgid "&diskspace;"
-msgstr ""
+msgstr "&diskspace;"
 
 #. type: Content of: <sect1><sect2><segmentedlist><seglistitem><seg>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/zstd.xml:35
+#, fuzzy
 msgid "&zstd-fin-sbu;"
-msgstr ""
+msgstr "&zstd-ch6-sbu;"
 
 #. type: Content of: <sect1><sect2><segmentedlist><seglistitem><seg>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/zstd.xml:36
+#, fuzzy
 msgid "&zstd-fin-du;"
-msgstr ""
+msgstr "&zstd-ch6-du;"
 
 #. type: Content of: <sect1><sect2><title>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/zstd.xml:43
 msgid "Installation of Zstd"
-msgstr ""
+msgstr "安装 Zstd"
 
 #. type: Content of: <sect1><sect2><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/zstd.xml:45
 msgid "Compile the package:"
-msgstr ""
+msgstr "编译该软件包"
 
 #. type: Content of: <sect1><sect2><screen>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/zstd.xml:47
 #, no-wrap
 msgid "<userinput remap=\"make\">make</userinput>"
-msgstr ""
+msgstr "<userinput remap=\"make\">make</userinput>"
 
 #. type: Content of: <sect1><sect2><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/zstd.xml:49
 msgid "This package does not come with a test suite."
-msgstr ""
+msgstr "该软件包没有测试套件。"
 
 #. type: Content of: <sect1><sect2><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/zstd.xml:51
 msgid "Install the package:"
-msgstr ""
+msgstr "安装该软件包："
 
 #. type: Content of: <sect1><sect2><screen>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/zstd.xml:53
 #, no-wrap
 msgid "<userinput remap=\"install\">make prefix=/usr install</userinput>"
-msgstr ""
+msgstr "<userinput remap=\"install\">make prefix=/usr install</userinput>"
 
 #. type: Content of: <sect1><sect2><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/zstd.xml:55
 msgid ""
-"Remove the static library and move the shared library to <filename "
-"class=\"directory\">/lib</filename>. Also, the <filename "
-"class=\"extension\">.so</filename> file in <filename "
-"class=\"directory\">/usr/lib</filename> will need to be recreated:"
+"Remove the static library and move the shared library to <filename class="
+"\"directory\">/lib</filename>. Also, the <filename class=\"extension\">.so</"
+"filename> file in <filename class=\"directory\">/usr/lib</filename> will "
+"need to be recreated:"
 msgstr ""
+"删除静态库，并将共享库移动到<filename class=\"directory\">/lib</filename>。另"
+"外，<filename class=\"extension\">.so</filename> 符号链接也要在<filename "
+"class=\"directory\">/usr/lib</filename> 中重建："
 
 #. type: Content of: <sect1><sect2><screen>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/zstd.xml:60
@@ -116,24 +119,26 @@ msgstr ""
 msgid ""
 "<userinput remap=\"install\">rm -v /usr/lib/libzstd.a\n"
 "mv -v /usr/lib/libzstd.so.* /lib\n"
-"ln -sfv ../../lib/$(readlink /usr/lib/libzstd.so) "
-"/usr/lib/libzstd.so</userinput>"
+"ln -sfv ../../lib/$(readlink /usr/lib/libzstd.so) /usr/lib/libzstd.so</userinput>"
 msgstr ""
+"<userinput remap=\"install\">rm -v /usr/lib/libzstd.a\n"
+"mv -v /usr/lib/libzstd.so.* /lib\n"
+"ln -sfv ../../lib/$(readlink /usr/lib/libzstd.so) /usr/lib/libzstd.so</userinput>"
 
 #. type: Content of: <sect1><sect2><title>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/zstd.xml:67
 msgid "Contents of Zstd"
-msgstr ""
+msgstr "Zstd 的内容"
 
 #. type: Content of: <sect1><sect2><segmentedlist><segtitle>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/zstd.xml:70
 msgid "Installed programs"
-msgstr ""
+msgstr "安装的程序"
 
 #. type: Content of: <sect1><sect2><segmentedlist><segtitle>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/zstd.xml:71
 msgid "Installed library"
-msgstr ""
+msgstr "安装的库"
 
 #. type: Content of: <sect1><sect2><segmentedlist><seglistitem><seg>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/zstd.xml:74
@@ -141,73 +146,77 @@ msgid ""
 "zstd, zstdcat (link to zstd), zstdgrep, zstdless, zstdmt (link to zstd), and "
 "unzstd (link to zstd)"
 msgstr ""
+"zstd, zstdcat (到 zstd 的链接), zstdgrep, zstdless, zstdmt (到 zstd 的链接), "
+"以及 unzstd (到 zstd 的链接)"
 
 #. type: Content of: <sect1><sect2><segmentedlist><seglistitem><seg>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/zstd.xml:82
 msgid "libzstd.so"
-msgstr ""
+msgstr "libzstd.so"
 
 #. type: Content of: <sect1><sect2><variablelist><bridgehead>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/zstd.xml:87
 msgid "Short Descriptions"
-msgstr ""
+msgstr "简要描述"
 
 #. type: Content of: <sect1><sect2><variablelist>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/zstd.xml:88
-msgid "<?dbfo list-presentation=\"list\"?> <?dbhtml list-presentation=\"table\"?>"
+msgid ""
+"<?dbfo list-presentation=\"list\"?> <?dbhtml list-presentation=\"table\"?>"
 msgstr ""
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/zstd.xml:92
 msgid "<command>zstd</command>"
-msgstr ""
+msgstr "<command>zstd</command>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/zstd.xml:94
 msgid "Compresses or decompresses files using the ZSTD format"
-msgstr ""
+msgstr "使用 ZSTD 格式压缩或解压缩文件"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/zstd.xml:102
 msgid "<command>zstdgrep</command>"
-msgstr ""
+msgstr "<command>zstdgrep</command>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/zstd.xml:104
 msgid "Runs <command>grep</command> on ZSTD compressed files"
-msgstr ""
+msgstr "在 ZSTD 压缩文件上运行 <command>grep</command>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/zstd.xml:106
 msgid "zstdgrep"
-msgstr ""
+msgstr "zstdgrep"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/zstd.xml:112
 msgid "<command>zstdless</command>"
-msgstr ""
+msgstr "<command>zstdless</command>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/zstd.xml:114
 msgid "Runs <command>less</command> on ZSTD compressed files"
-msgstr ""
+msgstr "在 ZSTD 压缩文件上运行 <command>less</command>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/zstd.xml:116
 msgid "zstdless"
-msgstr ""
+msgstr "zstdless"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/zstd.xml:122
 msgid "<filename class=\"libraryfile\">libzstd</filename>"
-msgstr ""
+msgstr "<filename class=\"libraryfile\">libzstd</filename>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/zstd.xml:124
-msgid "The library implementing lossless data compression, using the ZSTD algorithm"
-msgstr ""
+msgid ""
+"The library implementing lossless data compression, using the ZSTD algorithm"
+msgstr "基于 ZSTD 算法实现无损数据压缩的库"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/zstd.xml:127
 msgid "libzstd"
-msgstr ""
+msgstr "libzstd"

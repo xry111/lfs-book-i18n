@@ -1,9 +1,3 @@
-# SOME DESCRIPTIVE TITLE
-# Copyright (C) YEAR Free Software Foundation, Inc.
-# This file is distributed under the same license as the PACKAGE package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
-#
-#, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
@@ -11,72 +5,79 @@ msgstr ""
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
-"Language: \n"
+"Language: zh_CN\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Translate Toolkit 2.2.5\n"
 
 #. type: Content of: <sect1><sect1info><address>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/python.xml:14
 #, no-wrap
 msgid "&python-url;"
-msgstr ""
+msgstr "&python-url;"
 
 #. type: Content of: <sect1><sect1info>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/python.xml:12
 msgid ""
-"<productname>Python</productname> "
-"<productnumber>&python-version;</productnumber> <placeholder "
-"type=\"address\" id=\"0\"/>"
+"<productname>Python</productname> <productnumber>&python-version;</"
+"productnumber> <placeholder type=\"address\" id=\"0\"/>"
 msgstr ""
+"<productname>Python</productname> <productnumber>&python-version;</"
+"productnumber> <placeholder type=\"address\" id=\"0\"/>"
 
 #. type: Content of: <sect1><title>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/python.xml:17
 msgid "Python-&python-version;"
-msgstr ""
+msgstr "Python-&python-version;"
 
 #. type: Content of: <sect1><indexterm><primary>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/python.xml:20
 msgid "python"
-msgstr ""
+msgstr "python"
 
 #. type: Content of: <sect1><sect2><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/python.xml:26
+#, fuzzy
 msgid ""
 "The Python 3 package contains the Python development environment. It is "
 "useful for object-oriented programming, writing scripts, prototyping large "
 "programs, or developing entire applications."
 msgstr ""
+"Python 3 软件包包含 Python 开发环境。它被用于面向对象编程、 编写脚本、为大型"
+"程序建立原型或开发完整的应用。"
 
 #. type: Content of: <sect1><sect2><segmentedlist><segtitle>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/python.xml:31
 msgid "&buildtime;"
-msgstr ""
+msgstr "&buildtime;"
 
 #. type: Content of: <sect1><sect2><segmentedlist><segtitle>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/python.xml:32
 msgid "&diskspace;"
-msgstr ""
+msgstr "&diskspace;"
 
 #. type: Content of: <sect1><sect2><segmentedlist><seglistitem><seg>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/python.xml:35
+#, fuzzy
 msgid "&python-fin-sbu;"
-msgstr ""
+msgstr "&python-ch6-sbu;"
 
 #. type: Content of: <sect1><sect2><segmentedlist><seglistitem><seg>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/python.xml:36
+#, fuzzy
 msgid "&python-fin-du;"
-msgstr ""
+msgstr "&python-ch6-du;"
 
 #. type: Content of: <sect1><sect2><title>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/python.xml:43
 msgid "Installation of Python 3"
-msgstr ""
+msgstr "安装 Python 3"
 
 #. type: Content of: <sect1><sect2><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/python.xml:45
 msgid "Prepare Python for compilation:"
-msgstr ""
+msgstr "准备编译 Python："
 
 #. type: Content of: <sect1><sect2><screen>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/python.xml:47
@@ -88,61 +89,69 @@ msgid ""
 "            --with-system-ffi   \\\n"
 "            --with-ensurepip=yes</userinput>"
 msgstr ""
+"<userinput remap=\"configure\">./configure --prefix=/usr       \\\n"
+"            --enable-shared     \\\n"
+"            --with-system-expat \\\n"
+"            --with-system-ffi   \\\n"
+"            --with-ensurepip=yes</userinput>"
 
 #. type: Content of: <sect1><sect2><variablelist><title>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/python.xml:54
 msgid "The meaning of the configure options:"
-msgstr ""
+msgstr "配置选项的含义："
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/python.xml:57
 msgid "<parameter>--with-system-expat</parameter>"
-msgstr ""
+msgstr "<parameter>--with-system-expat</parameter>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/python.xml:59
 msgid ""
-"This switch enables linking against system version of "
-"<application>Expat</application>."
-msgstr ""
+"This switch enables linking against system version of <application>Expat</"
+"application>."
+msgstr "该选项允许链接到系统已经安装的 <application>Expat</application>。"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/python.xml:65
 msgid "<parameter>--with-system-ffi</parameter>"
-msgstr ""
+msgstr "<parameter>--with-system-ffi</parameter>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/python.xml:67
 msgid ""
-"This switch enables linking against system version of "
-"<application>libffi</application>."
-msgstr ""
+"This switch enables linking against system version of <application>libffi</"
+"application>."
+msgstr "该选项允许链接到系统已经安装的 <application>libffi</application>。"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/python.xml:73
 msgid "<parameter>--with-ensurepip=yes</parameter>"
-msgstr ""
+msgstr "<parameter>--with-ensurepip=yes</parameter>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/python.xml:75
 msgid ""
-"This switch enables building <command>pip</command> and "
-"<command>setuptools</command> packaging programs."
+"This switch enables building <command>pip</command> and <command>setuptools</"
+"command> packaging programs."
 msgstr ""
+"该选项启用 <command>pip</command> 和 <command>setuptools</command> 包管理程序"
+"的构建。"
 
 #. type: Content of: <sect1><sect2><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/python.xml:82
 msgid "Compile the package:"
-msgstr ""
+msgstr "编译该软件包："
 
 #. type: Content of: <sect1><sect2><screen>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/python.xml:84
 #, no-wrap
 msgid "<userinput remap=\"make\">make</userinput>"
-msgstr ""
+msgstr "<userinput remap=\"make\">make</userinput>"
 
 #. type: Content of: <sect1><sect2><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/python.xml:86
+#, fuzzy
 msgid ""
 "To test the results, issue <command>make test</command>.  Some tests "
 "requiring a network connection or additional packages are skipped.  The test "
@@ -150,11 +159,14 @@ msgid ""
 "completed yet.  For more comprehensive results, the test can be rerun when "
 "Python 3 is reinstalled in BLFS."
 msgstr ""
+"运行 <command>make test</command> 以测试编译结果。一些需要网络连接或额外软件"
+"包的测试会被跳过。名为 test_normalization 的测试会由于网络配置不完整而失败。"
+"如果需要更全面的测试结果，可以在 BLFS 中重新安装 Python 3 时再次进行测试。"
 
 #. type: Content of: <sect1><sect2><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/python.xml:92
 msgid "Install the package:"
-msgstr ""
+msgstr "安装该软件包："
 
 #. type: Content of: <sect1><sect2><screen>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/python.xml:94
@@ -165,33 +177,36 @@ msgid ""
 "chmod -v 755 /usr/lib/libpython3.so\n"
 "ln -sfv pip&python-minor; /usr/bin/pip3</userinput>"
 msgstr ""
+"<userinput remap=\"install\">make install\n"
+"chmod -v 755 /usr/lib/libpython&python-minor;.so\n"
+"chmod -v 755 /usr/lib/libpython3.so\n"
+"ln -sfv pip&python-minor; /usr/bin/pip3</userinput>"
 
 #. type: Content of: <sect1><sect2><variablelist><title>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/python.xml:100
 msgid "The meaning of the install commands:"
-msgstr ""
+msgstr "安装命令的含义："
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/python.xml:103
 msgid "<command>chmod -v 755 /usr/lib/libpython3.{8.,}so</command>"
-msgstr ""
+msgstr "<command>chmod -v 755 /usr/lib/libpython3.{8.,}so</command>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/python.xml:105
 msgid "Fix permissions for libraries to be consistent with other libraries."
-msgstr ""
+msgstr "修正库文件访问权限，使之和其他库文件一致。"
 
 #. type: Content of: <sect1><sect2><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/python.xml:112
 msgid "If desired, install the preformatted documentation:"
-msgstr ""
+msgstr "如果需要的话，安装预先格式化的文档："
 
 #. type: Content of: <sect1><sect2><screen>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/python.xml:114
 #, no-wrap
 msgid ""
-"<userinput remap=\"install\">install -v -dm755 "
-"/usr/share/doc/python-&python-version;/html \n"
+"<userinput remap=\"install\">install -v -dm755 /usr/share/doc/python-&python-version;/html \n"
 "\n"
 "tar --strip-components=1  \\\n"
 "    --no-same-owner       \\\n"
@@ -199,16 +214,25 @@ msgid ""
 "    -C /usr/share/doc/python-&python-version;/html \\\n"
 "    -xvf ../python-&python-version;-docs-html.tar.bz2</userinput>"
 msgstr ""
+"<userinput remap=\"install\">install -v -dm755 /usr/share/doc/python-&python-version;/html \n"
+"\n"
+"tar --strip-components=1  \\\n"
+"    --no-same-owner       \\\n"
+"    --no-same-permissions \\\n"
+"    -C /usr/share/doc/python-&python-version;/html \\\n"
+"    -xvf ../python-&python-version;-docs-html.tar.bz2</userinput>"
 
 #. type: Content of: <sect1><sect2><variablelist><title>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/python.xml:123
 msgid "The meaning of the documentation install commands:"
-msgstr ""
+msgstr "文档安装命令的含义："
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/python.xml:126
-msgid "<option>--no-same-owner</option> and <option>--no-same-permissions</option>"
+msgid ""
+"<option>--no-same-owner</option> and <option>--no-same-permissions</option>"
 msgstr ""
+"<option>--no-same-owner</option> 和 <option>--no-same-permissions</option>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/python.xml:128
@@ -217,58 +241,63 @@ msgid ""
 "Without these options, using <application>tar</application> will install the "
 "package files with the upstream creator's values."
 msgstr ""
+"保证安装的文件拥有正确的所有者和权限码。在没有这些选项的时候，"
+"<application>tar</application> 会以上游开发者使用的用户和权限码安装文件。"
 
 #. type: Content of: <sect1><sect2><title>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/python.xml:140
 msgid "Contents of Python 3"
-msgstr ""
+msgstr "Python 3 的内容"
 
 #. type: Content of: <sect1><sect2><segmentedlist><segtitle>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/python.xml:143
 msgid "Installed Programs"
-msgstr ""
+msgstr "安装的程序"
 
 #. type: Content of: <sect1><sect2><segmentedlist><segtitle>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/python.xml:144
 msgid "Installed Library"
-msgstr ""
+msgstr "安装的库"
 
 #. type: Content of: <sect1><sect2><segmentedlist><segtitle>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/python.xml:145
 msgid "Installed Directories"
-msgstr ""
+msgstr "安装的目录"
 
 #. type: Content of: <sect1><sect2><segmentedlist><seglistitem><seg>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/python.xml:149
 msgid "2to3, idle3, pip3, pydoc3, python3, and python3-config"
-msgstr ""
+msgstr "2to3, idle3, pip3, pydoc3, python3, 以及 python3-config"
 
 #. type: Content of: <sect1><sect2><segmentedlist><seglistitem><seg>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/python.xml:152
 msgid "libpython&python-minor;.so and libpython3.so"
-msgstr ""
+msgstr "libpython&python-minor;.so 和 libpython3.so"
 
 #. type: Content of: <sect1><sect2><segmentedlist><seglistitem><seg>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/python.xml:155
 msgid ""
-"/usr/include/python&python-minor;, /usr/lib/python3, and "
-"/usr/share/doc/python-&python-version;"
+"/usr/include/python&python-minor;, /usr/lib/python3, and /usr/share/doc/"
+"python-&python-version;"
 msgstr ""
+"/usr/include/python&python-minor;, /usr/lib/python3 以及 /usr/share/doc/"
+"python-&python-version;"
 
 #. type: Content of: <sect1><sect2><variablelist><bridgehead>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/python.xml:163
 msgid "Short Descriptions"
-msgstr ""
+msgstr "简要描述"
 
 #. type: Content of: <sect1><sect2><variablelist>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/python.xml:164
-msgid "<?dbfo list-presentation=\"list\"?> <?dbhtml list-presentation=\"table\"?>"
+msgid ""
+"<?dbfo list-presentation=\"list\"?> <?dbhtml list-presentation=\"table\"?>"
 msgstr ""
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/python.xml:168
 msgid "<command>2to3</command>"
-msgstr ""
+msgstr "<command>2to3</command>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/python.xml:171
@@ -277,35 +306,40 @@ msgid ""
 "<application>Python 2.x</application> source code and applies a series of "
 "fixes to transform it into valid <application>Python 3.x</application> code."
 msgstr ""
+"是一个 <application>Python</application> 程序，读取 <application>Python 2.x</"
+"application> 源代码并对它进行一系列修正，转换成合法的 <application>Python 3."
+"x</application> 源代码。"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/python.xml:177
 msgid "2to3"
-msgstr ""
+msgstr "2to3"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/python.xml:183
 msgid "<command>idle3</command>"
-msgstr ""
+msgstr "<command>idle3</command>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/python.xml:186
 msgid ""
 "is a wrapper script that opens a <application>Python</application> aware GUI "
-"editor. For this script to run, you must have installed "
-"<application>Tk</application> before Python so that the Tkinter Python "
-"module is built."
+"editor. For this script to run, you must have installed <application>Tk</"
+"application> before Python so that the Tkinter Python module is built."
 msgstr ""
+"一个封装脚本，启动支持 <application>Python</application> 语法的 GUI 文本编辑"
+"器。要运行这个脚本，必须在 Python 之前安装 <application>Tk</application> ，从"
+"而构建 Tkinter Python 模块。"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/python.xml:192
 msgid "idle3"
-msgstr ""
+msgstr "idle3"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/python.xml:198
 msgid "<command>pip3</command>"
-msgstr ""
+msgstr "<command>pip3</command>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/python.xml:201
@@ -313,38 +347,39 @@ msgid ""
 "The package installer for Python. You can use pip to install packages from "
 "Python Package Index and other indexes."
 msgstr ""
+"Python 包安装器。您可以使用 pip 安装来自 Python 软件包目录或其他目录的包。"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/python.xml:205
 msgid "pip3"
-msgstr ""
+msgstr "pip3"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/python.xml:211
 msgid "<command>pydoc3</command>"
-msgstr ""
+msgstr "<command>pydoc3</command>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/python.xml:214
 msgid "is the <application>Python</application> documentation tool."
-msgstr ""
+msgstr "是 <application>Python</application> 文档工具。"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/python.xml:217
 msgid "pydoc3"
-msgstr ""
+msgstr "pydoc3"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/python.xml:223
 msgid "<command>python3</command>"
-msgstr ""
+msgstr "<command>python3</command>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/python.xml:226
 msgid "is an interpreted, interactive, object-oriented programming language."
-msgstr ""
+msgstr "是一个解释性、交互性、面向对象的程序设计语言。"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/python.xml:230
 msgid "python3"
-msgstr ""
+msgstr "python3"
