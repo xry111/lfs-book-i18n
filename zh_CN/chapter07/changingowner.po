@@ -1,9 +1,3 @@
-# SOME DESCRIPTIVE TITLE
-# Copyright (C) YEAR Free Software Foundation, Inc.
-# This file is distributed under the same license as the PACKAGE package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
-#
-#, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
@@ -11,7 +5,7 @@ msgstr ""
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
-"Language: \n"
+"Language: zh_CN\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -19,7 +13,7 @@ msgstr ""
 #. type: Content of: <sect1><title>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter07/changingowner.xml:11
 msgid "Changing Ownership"
-msgstr ""
+msgstr "改变所有者"
 
 #. type: Content of: <sect1><note><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter07/changingowner.xml:14
@@ -30,6 +24,10 @@ msgid ""
 "that <envar>$LFS</envar> is set in <systemitem "
 "class=\"username\">root</systemitem>'s environment."
 msgstr ""
+"本书中后续的所有命令都应该在以 <systemitem class=\"username\">root"
+"</systemitem> 用户登录的情况下完成，而不是 <systemitem class=\"username\">"
+"lfs</systemitem> 用户。另外，请再次检查 <envar>$LFS</envar> 变量已经在 "
+"<systemitem class=\"username\">root</systemitem> 用户的环境中设定好。"
 
 #. type: Content of: <sect1><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter07/changingowner.xml:21
@@ -44,6 +42,13 @@ msgid ""
 "own all the files under <filename class=\"directory\">$LFS</filename>, thus "
 "exposing these files to possible malicious manipulation."
 msgstr ""
+"目前，<filename class=\"directory\">$LFS</filename> 中整个目录树的所有者"
+"都是 <systemitem class=\"username\">lfs</systemitem>，这个用户只在宿主系统"
+"存在。如果不改变 <filename class=\"directory\">$LFS</filename> 中目录的"
+"所有权，这些文件会被一个没有对应账户的用户 ID 所有。这是危险的，"
+"因为后续创建的新用户可能获得这个用户 ID，并成为 "
+"<filename class=\"directory\">$LFS</filename> 中全部文件的所有者，"
+"从而产生恶意操作这些文件的可能。"
 
 #. type: Content of: <sect1><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter07/changingowner.xml:31
@@ -52,6 +57,9 @@ msgid ""
 "class=\"directory\">$LFS/*</filename> directories to user <systemitem "
 "class=\"username\">root</systemitem> by running the following command:"
 msgstr ""
+"为了避免这样的问题，执行以下命令，将 <filename class=\"directory\">"
+"$LFS/*</filename> 目录的所有者改变为 <systemitem class=\"username\">"
+"root</systemitem>："
 
 #. type: Content of: <sect1><screen>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter07/changingowner.xml:36
@@ -62,3 +70,7 @@ msgid ""
 "  x86_64) chown -R root:root $LFS/lib64 ;;\n"
 "esac</userinput>"
 msgstr ""
+"<userinput>chown -R root:root $LFS/{usr,lib,var,etc,bin,sbin,tools}\n"
+"case $(uname -m) in\n"
+"  x86_64) chown -R root:root $LFS/lib64 ;;\n"
+"esac</userinput>"
