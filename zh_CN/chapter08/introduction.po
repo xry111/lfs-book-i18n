@@ -19,7 +19,7 @@ msgstr "概述"
 #. type: Content of: <sect1><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/introduction.xml:13
 msgid "In this chapter, we start constructing the LFS system in earnest."
-msgstr ""
+msgstr "在本章中，我们将真正开始构造 LFS 系统。"
 
 #. type: Content of: <sect1><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/introduction.xml:16
@@ -64,7 +64,6 @@ msgstr ""
 
 #. type: Content of: <sect1><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/introduction.xml:38
-#, fuzzy
 msgid ""
 "Before the installation instructions, each installation page provides "
 "information about the package, including a concise description of what it "
@@ -73,20 +72,20 @@ msgid ""
 "instructions, there is a list of programs and libraries (along with brief "
 "descriptions) that the package installs."
 msgstr ""
-"在安装指令之前，每个页面都提供了软件包的基本信息，包括其内容的简要描述，以及"
+"在提供安装过程的说明之前，每个页面都提供了软件包的基本信息，包括其内容的简要描述，以及"
 "构建过程大概需要的时间和磁盘空间。在安装指令之后，有一个包含该软件包提供的所"
 "有程序和库的清单 (以及对它们的简要描述)。"
 
 #. type: Content of: <sect1><note><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/introduction.xml:45
-#, fuzzy
 msgid ""
 "The SBU values and required disk space includes test suite data for all "
 "applicable packages in <xref linkend=\"chapter-building-system\"/>. SBU "
 "values have been calculated using a single CPU core (-j1) for all operations."
 msgstr ""
-"对于拥有可用的测试套件的软件包，第 6 章中给出的 SBU 值和需要的磁盘空间包含了"
+"对于拥有可用的测试套件的软件包，<xref linkend=\"chapter-building-system\"/>中给出的 SBU 值和需要的磁盘空间包含了"
 "运行测试套件需要的时间和磁盘空间。"
+"SBU 值根据仅使用单个 CPU 核心 (-j1) 进行操作时测得的时间计算。"
 
 #. type: Content of: <sect1><sect2><title>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/introduction.xml:51
@@ -95,7 +94,6 @@ msgstr "关于库"
 
 #. type: Content of: <sect1><sect2><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/introduction.xml:53
-#, fuzzy
 msgid ""
 "In general, the LFS editors discourage building and installing static "
 "libraries.  The original purpose for most static libraries has been made "
@@ -108,13 +106,11 @@ msgid ""
 msgstr ""
 "一般来说，LFS 作者不推荐构建和安装静态库。它们是为了某些在现代 Linux 系统中"
 "早已过时的原因而存在的。另外，将静态库链接到程序中可能是有害的。如果需要"
-"更新这个库以解决安全问题，所有使用该静态库的程序都要重新链接。程序对静态库"
-"的使用并不是显然的，甚至可能搞不清有哪些相关程序需要链接 (或不知道如何重新链"
-"接)。"
+"更新这个库以解决安全问题，所有使用该静态库的程序都要重新链接到新版本的库。程序对静态库"
+"的使用并不总是显然的，甚至可能无法查明有哪些程序需要重新链接 (以及如何重新链接)。"
 
 #. type: Content of: <sect1><sect2><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/introduction.xml:62
-#, fuzzy
 msgid ""
 "In the procedures in this chapter, we remove or disable installation of most "
 "static libraries. Usually this is done by passing a <option>--disable-"
@@ -123,7 +119,7 @@ msgid ""
 "use of static libraries remains essential to the general package building "
 "process."
 msgstr ""
-"在第 6 章的安装过程中，我们删除或者禁止安装多数静态库。一般来说，传递 "
+"在本章的安装过程中，我们删除或者禁止安装多数静态库。一般来说，传递 "
 "<option>--disable-static</option> 选项给 <command>configure</command> 就可以"
 "禁用静态库。然而，某些情况下需要其他手段。在极个别情况下，特别是对于 Glibc "
 "和 GCC，静态库对于一般的软件包构建过程仍然很关键，就不能禁用静态库。"
@@ -138,30 +134,3 @@ msgstr ""
 "关于库的更详细讨论，可以参阅 BLFS 手册中的 <ulink url=\"&blfs-root;/view/"
 "&short-version;/introduction/libraries.html\">Libraries: Static or shared?</"
 "ulink> 一节。"
-
-#~ msgid ""
-#~ "In this chapter, we enter the building site and start constructing the "
-#~ "LFS system in earnest. That is, we chroot into the temporary mini Linux "
-#~ "system, make a few final preparations, and then begin installing the "
-#~ "packages."
-#~ msgstr ""
-#~ "在本章中，我们将进入构建环境，并真正开始构建 LFS 系统。换句话说，我们 "
-#~ "chroot 到前一章构建的临时迷你 Linux 系统中，进行一些最后的准备，然后开始"
-#~ "安装各软件包。"
-
-#~ msgid ""
-#~ "The order that packages are installed in this chapter needs to be "
-#~ "strictly followed to ensure that no program accidentally acquires a path "
-#~ "referring to <filename class=\"directory\">/tools</filename> hard-wired "
-#~ "into it.  For the same reason, do not compile separate packages in "
-#~ "parallel.  Compiling in parallel may save time (especially on dual-CPU "
-#~ "machines), but it could result in a program containing a hard-wired path "
-#~ "to <filename class=\"directory\">/tools</filename>, which will cause the "
-#~ "program to stop working when that directory is removed."
-#~ msgstr ""
-#~ "必须严格按照本章给出的顺序安装软件包，才能保证没有程序意外地获得指向 "
-#~ "<filename class=\"directory\">/tools</filename> 的路径，甚至将这样的路径"
-#~ "硬编码到程序中。同理，不要同时构建多个软件包。这可能节约时间 (特别是在"
-#~ "双 CPU 机器上)，但往往会导致某个程序包含一个硬编码的，指向 <filename "
-#~ "class=\"directory\">/tools</filename> 的路径，结果删除该目录后程序不能工"
-#~ "作。"
