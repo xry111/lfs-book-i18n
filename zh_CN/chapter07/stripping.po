@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2020-06-19 11:33+0800\n"
+"POT-Creation-Date: 2020-06-20 20:57+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -25,10 +25,9 @@ msgid ""
 "backup of the temporary tools as described below. The other steps are only "
 "needed if you are really short on disk space."
 msgstr ""
-"本节中的步骤都是可选的。不过，一旦您开始在<xref linkend="
-"\"chapter-building-system\"/>中安装软件包，临时工具就会被覆盖。"
-"因此，按照下面描述的步骤备份临时工具可能是个好主意。"
-"其余步骤只有在您的磁盘空间非常紧张时才需要执行。"
+"本节中的步骤都是可选的。不过，一旦您开始在<xref linkend=\"chapter-building-"
+"system\"/>中安装软件包，临时工具就会被覆盖。因此，按照下面描述的步骤备份临时"
+"工具可能是个好主意。其余步骤只有在您的磁盘空间非常紧张时才需要执行。"
 
 #. type: Content of: <sect1><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter07/stripping.xml:23
@@ -37,8 +36,8 @@ msgid ""
 "means, you have to leave the chroot environment first before continuing. The "
 "reason for that is to:"
 msgstr ""
-"以下步骤在 chroot 环境之外进行。换句话说，您需要在继续操作之前退出 "
-"chroot 环境。这样做的主要原因是："
+"以下步骤在 chroot 环境之外进行。换句话说，您需要在继续操作之前退出 chroot 环"
+"境。这样做的主要原因是："
 
 #. type: Content of: <sect1><para><itemizedlist><listitem><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter07/stripping.xml:29
@@ -52,16 +51,14 @@ msgid ""
 "store/read the backup archive which should not be placed within the "
 "<filename class=\"directory\">$LFS</filename> hierarchy for safety reasons."
 msgstr ""
-"访问 chroot 环境之外的文件系统位置，以写入或读取备份档案，备份档案不应"
-"存放在 <filename class=\"directory\">$LFS</filename> 目录树中，"
-"以保证安全。"
+"访问 chroot 环境之外的文件系统位置，以写入或读取备份档案，备份档案不应存放在 "
+"<filename class=\"directory\">$LFS</filename> 目录树中，以保证安全。"
 
 #. type: Content of: <sect1><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter07/stripping.xml:46
 msgid ""
 "Leave the chroot environment and unmount the kernel virtual file systems:"
-msgstr ""
-"退出 chroot 环境，并解除挂载内核虚拟文件系统："
+msgstr "退出 chroot 环境，并解除挂载内核虚拟文件系统："
 
 #. type: Content of: <sect1><note><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter07/stripping.xml:51
@@ -76,14 +73,13 @@ msgid ""
 "systemitem>, make sure you have set <envar>LFS</envar> accordingly.  This "
 "has been discussed in <xref linkend='ch-partitioning-aboutlfs'/>."
 msgstr ""
-"以下给出的所有步骤都以 <systemitem class=\"username\">root</systemitem> "
-"身份执行。请非常小心地执行命令，错误的命令可能修改您的宿主系统。"
-"特别注意环境变量 <envar>LFS</envar> 会自动为用户 "
-"<systemitem class=\"username\">lfs</systemitem> 设定，"
-"但可能<emphasis>没有</emphasis>为 <systemitem class=\"username\">root"
-"</systemitem> 设定。无论何时，只要准备以 <systemitem class=\"username\">"
-"root</systemitem> 身份执行命令，一定要确认 <envar>LFS</envar> 变量"
-"正确设定。<xref linkend='ch-partitioning-aboutlfs'/>已经讨论了这个问题。"
+"以下给出的所有步骤都以 <systemitem class=\"username\">root</systemitem> 身份"
+"执行。请非常小心地执行命令，错误的命令可能修改您的宿主系统。特别注意环境变量 "
+"<envar>LFS</envar> 会自动为用户 <systemitem class=\"username\">lfs</"
+"systemitem> 设定，但可能<emphasis>没有</emphasis>为 <systemitem class="
+"\"username\">root</systemitem> 设定。无论何时，只要准备以 <systemitem class="
+"\"username\">root</systemitem> 身份执行命令，一定要确认 <envar>LFS</envar> 变"
+"量正确设定。<xref linkend='ch-partitioning-aboutlfs'/>已经讨论了这个问题。"
 
 #. type: Content of: <sect1><screen>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter07/stripping.xml:65
@@ -109,8 +105,8 @@ msgid ""
 "items can be removed. The executables and libraries built so far contain a "
 "little over 90 MB of unneeded debugging symbols."
 msgstr ""
-"如果 LFS 分区比较小，好消息是，有些无用的内容"
-"可以删除。到现在为止，已经构建的可执行文件和库包含大约 90MB 的无用调试符号。"
+"如果 LFS 分区比较小，好消息是，有些无用的内容可以删除。到现在为止，已经构建的"
+"可执行文件和库包含大约 90MB 的无用调试符号。"
 
 #. type: Content of: <sect1><sect2><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter07/stripping.xml:77
@@ -172,8 +168,8 @@ msgid ""
 "libraries, specially when using non-autotools build systems.  Remove those "
 "files now:"
 msgstr ""
-"libtool .la 文件仅在链接到静态库时有用，在使用动态共享库时它们是没有意义，"
-"甚至有害的，特别是对于非 autotools 构建系统。现在删除它们："
+"libtool .la 文件仅在链接到静态库时有用，在使用动态共享库时它们是没有意义，甚"
+"至有害的，特别是对于非 autotools 构建系统。现在删除它们："
 
 #. type: Content of: <sect1><sect2><screen>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter07/stripping.xml:102
@@ -190,9 +186,9 @@ msgid ""
 "rest too. You can check the free disk space with the command <command>df -h "
 "$LFS</command>."
 msgstr ""
-"现在，您应该保证 chroot 分区有至少 5 GB 的可用空间，以在下一阶段构"
-"建和安装 Glibc 和 GCC 。如果空间足够构建和安装 Glibc，那么构建和安装剩余的软"
-"件包就不成问题。您可以使用命令 <command>df -h $LFS</command> 查询磁盘可用空间。"
+"现在，您应该保证 chroot 分区有至少 5 GB 的可用空间，以在下一阶段构建和安装 "
+"Glibc 和 GCC 。如果空间足够构建和安装 Glibc，那么构建和安装剩余的软件包就不成"
+"问题。您可以使用命令 <command>df -h $LFS</command> 查询磁盘可用空间。"
 
 #. type: Content of: <sect1><sect2><title>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter07/stripping.xml:113
@@ -211,11 +207,11 @@ msgid ""
 "be removed, too. To avoid spending extra time to redo something which has "
 "been built successfully, prepare a backup."
 msgstr ""
-"现在已经建立了必要的工具，可以考虑备份它们。如果对之前构建的软件包进行的"
-"各项检查都没有发现问题，即可判定您的临时工具状态良好，可以将它们备份起来"
-"供以后重新使用。如果在后续章节发生了无法挽回的错误，通常来说，最好的办法是"
-"删除所有东西，然后 (更小心地) 从头开始。不幸的是，这也会删除所有临时工具。"
-"为了避免浪费时间对已经构建成功的部分进行返工，可以准备一个备份。"
+"现在已经建立了必要的工具，可以考虑备份它们。如果对之前构建的软件包进行的各项"
+"检查都没有发现问题，即可判定您的临时工具状态良好，可以将它们备份起来供以后重"
+"新使用。如果在后续章节发生了无法挽回的错误，通常来说，最好的办法是删除所有东"
+"西，然后 (更小心地) 从头开始。不幸的是，这也会删除所有临时工具。为了避免浪费"
+"时间对已经构建成功的部分进行返工，可以准备一个备份。"
 
 #. type: Content of: <sect1><sect2><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter07/stripping.xml:127
@@ -224,8 +220,8 @@ msgid ""
 "be included in the backup archive) in the home directory of user <systemitem "
 "class=\"username\">root</systemitem>."
 msgstr ""
-"确认在 <systemitem class=\"username\">root</systemitem> 的主目录中，"
-"有至少 600 MB 的可用存储空间 (源代码压缩包也会被包含在备份档案中)。"
+"确认在 <systemitem class=\"username\">root</systemitem> 的主目录中，有至少 "
+"600 MB 的可用存储空间 (源代码压缩包也会被包含在备份档案中)。"
 
 #. type: Content of: <sect1><sect2><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter07/stripping.xml:133
@@ -259,8 +255,8 @@ msgid ""
 "want to have the backup stored in <systemitem class=\"username\">root</"
 "systemitem>'s home directory."
 msgstr ""
-"如果您不想将备份存储在 <systemitem class=\"username\">root</systemitem> "
-"的主目录中，将 <envar>$HOME</envar> 替换为您选择的其他位置。"
+"如果您不想将备份存储在 <systemitem class=\"username\">root</systemitem> 的主"
+"目录中，将 <envar>$HOME</envar> 替换为您选择的其他位置。"
 
 #. type: Content of: <sect1><sect2><title>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter07/stripping.xml:150
@@ -269,21 +265,27 @@ msgstr "还原"
 
 #. type: Content of: <sect1><sect2><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter07/stripping.xml:153
+#, fuzzy
+#| msgid ""
+#| "In case some mistakes have been made and you need to start over, you can "
+#| "use this backup to restore the temporary tools and save some recovery "
+#| "time.  Since the sources are located under <filename class=\"directory\">"
+#| "$LFS</filename>, they are included in the backup archive as well, so they "
+#| "do not need to be downloaded again. After checking that <filename class="
+#| "\"directory\">$LFS</filename> is set properly, restore the backup by "
+#| "executing the following commands:"
 msgid ""
 "In case some mistakes have been made and you need to start over, you can use "
 "this backup to restore the temporary tools and save some recovery time.  "
 "Since the sources are located under <filename class=\"directory\">$LFS</"
 "filename>, they are included in the backup archive as well, so they do not "
-"need to be downloaded again. After checking that <filename class=\"directory"
-"\">$LFS</filename> is set properly, restore the backup by executing the "
-"following commands:"
+"need to be downloaded again. After checking that <envar>$LFS</envar> is set "
+"properly, restore the backup by executing the following commands:"
 msgstr ""
-"如果您犯下了一些错误，并不得不重新开始构建，您可以使用备份档案"
-"还原临时工具，节约一些工作时间。由于源代码在 "
-"<filename class=\"directory\">$LFS</filename> 中，"
-"它们也包含在备份档案内，因此不需要重新下载它们。"
-"在确认 <filename class=\"directory\">$LFS</filename> 设定正确后，"
-"运行以下命令从备份档案进行还原："
+"如果您犯下了一些错误，并不得不重新开始构建，您可以使用备份档案还原临时工具，"
+"节约一些工作时间。由于源代码在 <filename class=\"directory\">$LFS</filename> "
+"中，它们也包含在备份档案内，因此不需要重新下载它们。在确认 <envar>$LFS</envar>"
+"设定正确后，运行以下命令从备份档案进行还原："
 
 #.  Make the following look different so users don't blindly run the
 #.      restore when they don't need to. 
@@ -316,8 +318,7 @@ msgstr ""
 msgid ""
 "Again, double check that the environment has been setup properly and "
 "continue building the rest of the system."
-msgstr ""
-"再一次复查环境是否配置正确，即可继续构建系统。"
+msgstr "再一次复查环境是否配置正确，即可继续构建系统。"
 
 #. type: Content of: <sect1><sect2><important><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter07/stripping.xml:180
@@ -328,7 +329,6 @@ msgid ""
 "kernfs'/> and re-enter the chroot environment (see <xref linkend='ch-tools-"
 "chroot'/>)  again before continuing."
 msgstr ""
-"如果您在移除调试符号，进行备份，或从备份进行恢复时退出了 chroot 环境，"
-"记得按照<xref linkend='ch-tools-kernfs'/>的描述重新挂载内核虚拟文件系统，"
-"并重新进入 chroot 环境 (参阅<xref linkend='ch-tools-chroot'/>)，"
-"再继续进行构建。"
+"如果您在移除调试符号，进行备份，或从备份进行恢复时退出了 chroot 环境，记得按"
+"照<xref linkend='ch-tools-kernfs'/>的描述重新挂载内核虚拟文件系统，并重新进"
+"入 chroot 环境 (参阅<xref linkend='ch-tools-chroot'/>)，再继续进行构建。"

@@ -36,6 +36,9 @@ sed -e '/xreflabel/s|Package build instructions|软件包构建说明|' \
 sed -e '/xreflabel/s|"gcc-pass1"|"第一遍的 GCC"|' \
 	-i chapter05/gcc-pass1.xml
 
+sed -e '/xreflabel/s|"gcc-pass2"|"第二遍的 GCC"|' \
+	-i chapter06/gcc-pass2.xml
+
 sed -e '/xreflabel/s|Appendix|附录|' -i \
 	appendices/acknowledgments.xml      \
 	appendices/acronymlist.xml          \
