@@ -1,9 +1,3 @@
-# SOME DESCRIPTIVE TITLE
-# Copyright (C) YEAR Free Software Foundation, Inc.
-# This file is distributed under the same license as the PACKAGE package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
-#
-#, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
@@ -11,73 +5,78 @@ msgstr ""
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
-"Language: \n"
+"Language: zh_CN\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Translate Toolkit 2.2.5\n"
 
 #. type: Content of: <sect1><sect1info><address>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter07/dejagnu.xml:14
 #, no-wrap
 msgid "&dejagnu-url;"
-msgstr ""
+msgstr "&dejagnu-url;"
 
 #. type: Content of: <sect1><sect1info>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter07/dejagnu.xml:12
 msgid ""
-"<productname>dejagnu</productname> "
-"<productnumber>&dejagnu-version;</productnumber> <placeholder "
-"type=\"address\" id=\"0\"/>"
+"<productname>dejagnu</productname> <productnumber>&dejagnu-version;</"
+"productnumber> <placeholder type=\"address\" id=\"0\"/>"
 msgstr ""
+"<productname>dejagnu</productname> <productnumber>&dejagnu-version;</"
+"productnumber> <placeholder type=\"address\" id=\"0\"/>"
 
 #. type: Content of: <sect1><title>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter07/dejagnu.xml:17
 msgid "DejaGNU-&dejagnu-version;"
-msgstr ""
+msgstr "DejaGNU-&dejagnu-version;"
 
 #. type: Content of: <sect1><indexterm><primary>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter07/dejagnu.xml:20
 msgid "DejaGNU"
-msgstr ""
+msgstr "DejaGNU"
 
 #. type: Content of: <sect1><sect2><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter07/dejagnu.xml:26
 msgid ""
 "The <application>DejaGnu</application> package contains a framework for "
-"running test suites on GNU tools. It is written in "
-"<command>expect</command>, which itself uses <application>Tcl</application> "
-"(Tool Command Language)."
+"running test suites on GNU tools. It is written in <command>expect</"
+"command>, which itself uses <application>Tcl</application> (Tool Command "
+"Language)."
 msgstr ""
+"<application>DejaGnu</application> 包含使用 GNU 工具运行测试套件的框架。"
+"它是用 <command>expect</command> 编写的，后者又使用 <application>Tcl"
+"</application> (工具命令语言)。"
 
 #. type: Content of: <sect1><sect2><segmentedlist><segtitle>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter07/dejagnu.xml:31
 msgid "&buildtime;"
-msgstr ""
+msgstr "&buildtime;"
 
 #. type: Content of: <sect1><sect2><segmentedlist><segtitle>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter07/dejagnu.xml:32
 msgid "&diskspace;"
-msgstr ""
+msgstr "&diskspace;"
 
 #. type: Content of: <sect1><sect2><segmentedlist><seglistitem><seg>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter07/dejagnu.xml:35
 msgid "&dejagnu-tmp-sbu;"
-msgstr ""
+msgstr "&dejagnu-tmp-sbu;"
 
 #. type: Content of: <sect1><sect2><segmentedlist><seglistitem><seg>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter07/dejagnu.xml:36
 msgid "&dejagnu-tmp-du;"
-msgstr ""
+msgstr "&dejagnu-tmp-du;"
 
 #. type: Content of: <sect1><sect2><title>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter07/dejagnu.xml:43
 msgid "Installation of DejaGNU"
-msgstr ""
+msgstr "安装 DejaGNU"
 
 #. type: Content of: <sect1><sect2><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter07/dejagnu.xml:45
 msgid "Prepare DejaGNU for compilation:"
-msgstr ""
+msgstr "准备编译 DejaGNU："
 
 #. type: Content of: <sect1><sect2><screen>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter07/dejagnu.xml:47
@@ -87,11 +86,14 @@ msgid ""
 "makeinfo --html --no-split -o doc/dejagnu.html doc/dejagnu.texi\n"
 "makeinfo --plaintext       -o doc/dejagnu.txt  doc/dejagnu.texi</userinput>"
 msgstr ""
+"<userinput remap=\"configure\">./configure --prefix=/usr\n"
+"makeinfo --html --no-split -o doc/dejagnu.html doc/dejagnu.texi\n"
+"makeinfo --plaintext       -o doc/dejagnu.txt  doc/dejagnu.texi</userinput>"
 
 #. type: Content of: <sect1><sect2><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter07/dejagnu.xml:51
 msgid "Build and install the package:"
-msgstr ""
+msgstr "构建并安装该软件包："
 
 #. type: Content of: <sect1><sect2><screen>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter07/dejagnu.xml:53
@@ -99,51 +101,55 @@ msgstr ""
 msgid ""
 "<userinput remap=\"install\">make install\n"
 "install -v -dm755  /usr/share/doc/dejagnu-&dejagnu-version;\n"
-"install -v -m644   doc/dejagnu.{html,txt} "
-"/usr/share/doc/dejagnu-&dejagnu-version;</userinput>"
+"install -v -m644   doc/dejagnu.{html,txt} /usr/share/doc/dejagnu-&dejagnu-version;</userinput>"
 msgstr ""
+"<userinput remap=\"install\">make install\n"
+"install -v -dm755  /usr/share/doc/dejagnu-&dejagnu-version;\n"
+"install -v -m644   doc/dejagnu.{html,txt} /usr/share/doc/dejagnu-&dejagnu-version;</userinput>"
 
 #. type: Content of: <sect1><sect2><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter07/dejagnu.xml:57
 msgid "To test the results, issue:"
-msgstr ""
+msgstr "如果要测试该软件包，执行："
 
 #. type: Content of: <sect1><sect2><screen>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter07/dejagnu.xml:59
 #, no-wrap
 msgid "<userinput remap=\"test\">make check</userinput>"
-msgstr ""
+msgstr "<userinput remap=\"test\">make check</userinput>"
 
 #. type: Content of: <sect1><sect2><title>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter07/dejagnu.xml:65
 msgid "Contents of DejaGNU"
-msgstr ""
+msgstr "DejaGNU 的内容"
 
 #. type: Content of: <sect1><sect2><segmentedlist><segtitle>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter07/dejagnu.xml:68
 msgid "Installed program"
-msgstr ""
+msgstr "安装的程序"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter07/dejagnu.xml:71
 #: /home/xry111/svn-repos/LFS-BOOK/chapter07/dejagnu.xml:86
 msgid "runtest"
-msgstr ""
+msgstr "runtest"
 
 #. type: Content of: <sect1><sect2><variablelist><bridgehead>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter07/dejagnu.xml:76
 msgid "Short Descriptions"
-msgstr ""
+msgstr "简要描述"
 
 #. type: Content of: <sect1><sect2><variablelist>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter07/dejagnu.xml:77
-msgid "<?dbfo list-presentation=\"list\"?> <?dbhtml list-presentation=\"table\"?>"
+msgid ""
+"<?dbfo list-presentation=\"list\"?> <?dbhtml list-presentation=\"table\"?>"
 msgstr ""
+"<?dbfo list-presentation=\"list\"?> <?dbhtml list-presentation=\"table\"?>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter07/dejagnu.xml:81
 msgid "<command>runtest</command>"
-msgstr ""
+msgstr "<command>runtest</command>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter07/dejagnu.xml:83
@@ -151,3 +157,4 @@ msgid ""
 "A wrapper script that locates the proper <command>expect</command> shell and "
 "then runs DejaGNU"
 msgstr ""
+"一个寻找正确的 <command>expect</command> shell，并运行 DejaGNU 的封装脚本。"

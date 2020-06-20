@@ -1,20 +1,18 @@
-# SOME DESCRIPTIVE TITLE
-# Copyright (C) YEAR Free Software Foundation, Inc.
-# This file is distributed under the same license as the PACKAGE package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
-#
-#, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-06-19 11:33+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
-"Language: \n"
+"Language: zh_CN\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Translate Toolkit 2.2.5\n"
+"X-Pootle-Path: /zh_CN/lfs/chapter05/stripping.po\n"
+"X-Pootle-Revision: 1247303\n"
 
 #. type: Content of: <sect1><title>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter07/stripping.xml:11
@@ -84,15 +82,19 @@ msgstr ""
 #. type: Content of: <sect1><sect2><title>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter07/stripping.xml:70
 msgid "Stripping"
-msgstr ""
+msgstr "移除无用内容"
 
 #. type: Content of: <sect1><sect2><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter07/stripping.xml:72
+#, fuzzy
 msgid ""
 "If the LFS partition is rather small, it is good to know that unnecessary "
 "items can be removed. The executables and libraries built so far contain a "
 "little over 90 MB of unneeded debugging symbols."
 msgstr ""
+"本节中的步骤是可选的，但如果 LFS 分区比较小，您应该了解一下，有些无用的内容"
+"可以删除。到现在为止，已经构建的可执行文件和库包含大约 70MB 的无用调试符号。"
+"执行以下命令，移除这些符号："
 
 #. type: Content of: <sect1><sect2><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter07/stripping.xml:77
@@ -101,12 +103,14 @@ msgstr ""
 
 #. type: Content of: <sect1><sect2><screen>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter07/stripping.xml:78
-#, no-wrap
+#, fuzzy, no-wrap
 msgid ""
 "<userinput>strip --strip-debug $LFS/usr/lib/*\n"
 "strip --strip-unneeded $LFS/usr/{,s}bin/*\n"
 "strip --strip-unneeded $LFS/tools/bin/*</userinput>"
 msgstr ""
+"<userinput>strip --strip-debug /tools/lib/*\n"
+"/usr/bin/strip --strip-unneeded /tools/{,s}bin/*</userinput>"
 
 #. Note that we use the <command>
 #. strip</command> program built in
@@ -114,30 +118,38 @@ msgstr ""
 #.     our cross-compiled programs.
 #. type: Content of: <sect1><sect2><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter07/stripping.xml:82
+#, fuzzy
 msgid ""
 "These commands will skip a number of files reporting that it does not "
 "recognize their file format. Most of these are scripts instead of binaries."
 msgstr ""
+"以上命令会跳过一些文件，并报告说无法识别它们的格式。这些文件大多数都是脚本文"
+"件，而不是二进制文件。这里使用了宿主系统的 strip 命令，因为它可以清理 /"
+"tools 中的 strip 二进制程序。"
 
 #. type: Content of: <sect1><sect2><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter07/stripping.xml:88
+#, fuzzy
 msgid ""
 "Take care <emphasis>NOT</emphasis> to use <parameter>--strip-unneeded</"
 "parameter> on the libraries. The static ones would be destroyed and the "
 "toolchain packages would need to be built all over again."
 msgstr ""
+"注意<emphasis>不要</emphasis>对库文件使用 <parameter>--strip-unneeded</"
+"parameter> 选项。这会损坏静态库，结果整个工具链都要重新构建。"
 
 #. type: Content of: <sect1><sect2><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter07/stripping.xml:93
+#, fuzzy
 msgid ""
 "To save more space (slightly more than 35 MB), remove the documentation:"
-msgstr ""
+msgstr "为了节约更多空间，删除文档："
 
 #. type: Content of: <sect1><sect2><screen>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter07/stripping.xml:95
-#, no-wrap
+#, fuzzy, no-wrap
 msgid "<userinput>rm -rf $LFS/usr/share/{info,man,doc}</userinput>"
-msgstr ""
+msgstr "<userinput>rm -rf /tools/{,share}/{info,man,doc}</userinput>"
 
 #. type: Content of: <sect1><sect2><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter07/stripping.xml:97
@@ -150,12 +162,13 @@ msgstr ""
 
 #. type: Content of: <sect1><sect2><screen>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter07/stripping.xml:102
-#, no-wrap
+#, fuzzy, no-wrap
 msgid "<userinput>find $LFS/usr/{lib,libexec} -name \\*.la -delete</userinput>"
-msgstr ""
+msgstr "<userinput>find /tools/{lib,libexec} -name \\*.la -delete</userinput>"
 
 #. type: Content of: <sect1><sect2><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter07/stripping.xml:104
+#, fuzzy
 msgid ""
 "At this point, you should have at least 5 GB of free space on the chroot "
 "partition that can be used to build and install Glibc and GCC in the next "
@@ -163,6 +176,9 @@ msgid ""
 "rest too. You can check the free disk space with the command <command>df -h "
 "$LFS</command>."
 msgstr ""
+"现在，您应该保证 <envar>$LFS</envar> 有至少 3 GB 的可用空间，以在下一阶段构"
+"建和安装 Glibc 和 GCC 。如果空间足够构建和安装 Glibc，那么构建和安装剩余的软"
+"件包就不成问题。"
 
 #. type: Content of: <sect1><sect2><title>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter07/stripping.xml:113
@@ -272,3 +288,6 @@ msgid ""
 "kernfs'/> and re-enter the chroot environment (see <xref linkend='ch-tools-"
 "chroot'/>)  again before continuing."
 msgstr ""
+
+#~ msgid "Remove unneeded files:"
+#~ msgstr "删除无用的文件："

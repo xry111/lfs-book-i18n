@@ -1,9 +1,3 @@
-# SOME DESCRIPTIVE TITLE
-# Copyright (C) YEAR Free Software Foundation, Inc.
-# This file is distributed under the same license as the PACKAGE package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
-#
-#, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
@@ -11,78 +5,86 @@ msgstr ""
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
-"Language: \n"
+"Language: zh_CN\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Translate Toolkit 2.2.5\n"
 
 #. type: Content of: <sect1><sect1info><address>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter07/expect.xml:14
 #, no-wrap
 msgid "&expect-url;"
-msgstr ""
+msgstr "&expect-url;"
 
 #. type: Content of: <sect1><sect1info>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter07/expect.xml:12
 msgid ""
-"<productname>expect</productname> "
-"<productnumber>&expect-version;</productnumber> <placeholder "
-"type=\"address\" id=\"0\"/>"
+"<productname>expect</productname> <productnumber>&expect-version;</"
+"productnumber> <placeholder type=\"address\" id=\"0\"/>"
 msgstr ""
+"<productname>expect</productname> <productnumber>&expect-version;</"
+"productnumber> <placeholder type=\"address\" id=\"0\"/>"
 
 #. type: Content of: <sect1><title>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter07/expect.xml:17
 msgid "Expect-&expect-version;"
-msgstr ""
+msgstr "Expect-&expect-version;"
 
 #. type: Content of: <sect1><indexterm><primary>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter07/expect.xml:20
 msgid "Expect"
-msgstr ""
+msgstr "Expect"
 
 #. type: Content of: <sect1><sect2><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter07/expect.xml:26
 msgid ""
 "The <application>Expect</application> package contains tools for automating, "
-"via scripted dialogues, interactive applications such as "
-"<command>telnet</command>, <command>ftp</command>, "
-"<command>passwd</command>, <command>fsck</command>, "
-"<command>rlogin</command>, and <command>tip</command>.  "
+"via scripted dialogues, interactive applications such as <command>telnet</"
+"command>, <command>ftp</command>, <command>passwd</command>, <command>fsck</"
+"command>, <command>rlogin</command>, and <command>tip</command>.  "
 "<application>Expect</application> is also useful for testing these same "
 "applications as well as easing all sorts of tasks that are prohibitively "
 "difficult with anything else. The <application>DejaGnu</application> "
 "framework is written in <application>Expect</application>."
 msgstr ""
+"<application>Expect</application> 软件包包含通过脚本控制的对话，"
+"自动化 <command>telnet</command>，<command>ftp</command>，<command>passwd"
+"</command>，<command>fsck</command>，<command>rlogin</command>，"
+"以及 <command>tip</command> 等交互应用的工具。<application>Expect"
+"</application> 对于测试这类程序也很有用，它简化了这类通过其他方式很难完成"
+"的工作。<application>DejaGnu</application> 框架是使用 <application>"
+"Expect</application> 编写的。"
 
 #. type: Content of: <sect1><sect2><segmentedlist><segtitle>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter07/expect.xml:37
 msgid "&buildtime;"
-msgstr ""
+msgstr "&buildtime;"
 
 #. type: Content of: <sect1><sect2><segmentedlist><segtitle>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter07/expect.xml:38
 msgid "&diskspace;"
-msgstr ""
+msgstr "&diskspace;"
 
 #. type: Content of: <sect1><sect2><segmentedlist><seglistitem><seg>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter07/expect.xml:41
 msgid "&expect-tmp-sbu;"
-msgstr ""
+msgstr "&expect-tmp-sbu;"
 
 #. type: Content of: <sect1><sect2><segmentedlist><seglistitem><seg>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter07/expect.xml:42
 msgid "&expect-tmp-du;"
-msgstr ""
+msgstr "&expect-tmp-du;"
 
 #. type: Content of: <sect1><sect2><title>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter07/expect.xml:49
 msgid "Installation of Expect"
-msgstr ""
+msgstr "安装 Expect"
 
 #. type: Content of: <sect1><sect2><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter07/expect.xml:51
 msgid "Prepare Expect for compilation:"
-msgstr ""
+msgstr "准备编译 Expect："
 
 #. type: Content of: <sect1><sect2><screen>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter07/expect.xml:53
@@ -94,16 +96,21 @@ msgid ""
 "            --mandir=/usr/share/man \\\n"
 "            --with-tclinclude=/usr/include</userinput>"
 msgstr ""
+"<userinput remap=\"configure\">./configure --prefix=/usr           \\\n"
+"            --with-tcl=/usr/lib     \\\n"
+"            --enable-shared         \\\n"
+"            --mandir=/usr/share/man \\\n"
+"            --with-tclinclude=/usr/include</userinput>"
 
 #. type: Content of: <sect1><sect2><variablelist><title>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter07/expect.xml:60
 msgid "The meaning of the configure options:"
-msgstr ""
+msgstr "配置选项的含义："
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter07/expect.xml:63
 msgid "<parameter>--with-tcl=/usr/lib</parameter>"
-msgstr ""
+msgstr "<parameter>--with-tcl=/usr/lib</parameter>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter07/expect.xml:65
@@ -111,92 +118,99 @@ msgid ""
 "This parameter is needed to tell <command>configure</command> where the "
 "<command>tclConfig.sh</command> script is located."
 msgstr ""
+"需要使用该选项告知 <command>configure</command> 配置脚本 "
+"<command>tclConfig.sh</command> 的位置。"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter07/expect.xml:72
 msgid "<parameter>--with-tclinclude=/usr/include</parameter>"
-msgstr ""
+msgstr "<parameter>--with-tclinclude=/usr/include</parameter>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter07/expect.xml:74
 msgid "This explicitly tells Expect where to find Tcl's internal headers."
-msgstr ""
+msgstr "该选项显式指定查找 Tcl 内部头文件的位置。"
 
 #. type: Content of: <sect1><sect2><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter07/expect.xml:81
 msgid "Build the package:"
-msgstr ""
+msgstr "构建该软件包："
 
 #. type: Content of: <sect1><sect2><screen>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter07/expect.xml:83
 #, no-wrap
 msgid "<userinput remap=\"make\">make</userinput>"
-msgstr ""
+msgstr "<userinput remap=\"make\">make</userinput>"
 
 #. type: Content of: <sect1><sect2><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter07/expect.xml:85
 msgid "Install the package:"
-msgstr ""
+msgstr "安装该软件包："
 
 #. type: Content of: <sect1><sect2><screen>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter07/expect.xml:87
 #, no-wrap
 msgid ""
 "<userinput remap=\"install\">make install\n"
-"ln -svf expect&expect-version;/libexpect&expect-version;.so "
-"/usr/lib</userinput>"
+"ln -svf expect&expect-version;/libexpect&expect-version;.so /usr/lib</userinput>"
 msgstr ""
+"<userinput remap=\"install\">make install\n"
+"ln -svf expect&expect-version;/libexpect&expect-version;.so /usr/lib</userinput>"
 
 #. type: Content of: <sect1><sect2><title>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter07/expect.xml:93
 msgid "Contents of Expect"
-msgstr ""
+msgstr "Expect 的内容"
 
 #. type: Content of: <sect1><sect2><segmentedlist><segtitle>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter07/expect.xml:96
 msgid "Installed program"
-msgstr ""
+msgstr "安装的程序"
 
 #. type: Content of: <sect1><sect2><segmentedlist><segtitle>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter07/expect.xml:97
 msgid "Installed library"
-msgstr ""
+msgstr "安装的库"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter07/expect.xml:100
 #: /home/xry111/svn-repos/LFS-BOOK/chapter07/expect.xml:116
 msgid "expect"
-msgstr ""
+msgstr "expect"
 
 #. type: Content of: <sect1><sect2><segmentedlist><seglistitem><seg>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter07/expect.xml:101
 msgid "libexpect-&expect-lib-version;.so"
-msgstr ""
+msgstr "libexpect-&expect-lib-version;.so"
 
 #. type: Content of: <sect1><sect2><variablelist><bridgehead>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter07/expect.xml:106
 msgid "Short Descriptions"
-msgstr ""
+msgstr "简要描述"
 
 #. type: Content of: <sect1><sect2><variablelist>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter07/expect.xml:107
-msgid "<?dbfo list-presentation=\"list\"?> <?dbhtml list-presentation=\"table\"?>"
+msgid ""
+"<?dbfo list-presentation=\"list\"?> <?dbhtml list-presentation=\"table\"?>"
 msgstr ""
+"<?dbfo list-presentation=\"list\"?> <?dbhtml list-presentation=\"table\"?>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter07/expect.xml:111
 msgid "<command>expect</command>"
-msgstr ""
+msgstr "<command>expect</command>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter07/expect.xml:113
 msgid "Communicates with other interactive programs according to a script"
-msgstr ""
+msgstr "根据一个脚本与其他交互程序交流"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter07/expect.xml:122
-msgid "<filename class=\"libraryfile\">libexpect-&expect-lib-version;.so</filename>"
+msgid ""
+"<filename class=\"libraryfile\">libexpect-&expect-lib-version;.so</filename>"
 msgstr ""
+"<filename class=\"libraryfile\">libexpect-&expect-lib-version;.so</filename>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter07/expect.xml:124
@@ -204,8 +218,10 @@ msgid ""
 "Contains functions that allow Expect to be used as a Tcl extension or to be "
 "used directly from C or C++ (without Tcl)"
 msgstr ""
+"包含一些函数，使得 Expect 可以作为 Tcl 扩展使用，也可以直接在 C 或 C++ 中使"
+"用 (不使用 Tcl)"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter07/expect.xml:127
 msgid "libexpect-&expect-lib-version;"
-msgstr ""
+msgstr "libexpect-&expect-lib-version;"
