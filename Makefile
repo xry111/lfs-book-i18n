@@ -1,3 +1,5 @@
+default: html
+
 LFS_EN = /home/xry111/svn-repos/LFS-BOOK
 MLANG=zh_CN
 ALL_XML_FILES = $(shell find $(LFS_EN) -type f -name '*.xml')
@@ -6,8 +8,6 @@ EXCLUDE_FILES = $(LFS_EN)/chapter01/livecd.xml \
 				$(LFS_EN)/chapter04/aboutlfs.xml
 XML_FILES = $(filter-out $(EXCLUDE_FILES), $(ALL_XML_FILES))
 PO_FILES = $(patsubst $(LFS_EN)/%.xml, $(MLANG)/%.po, $(XML_FILES))
-
-run: $(PO_FILES)
 
 $(MLANG)/chapter01/changelog.po: $(LFS_EN)/chapter01/changelog.xml changelogtranslator.py templatetranslator.py
 	mkdir -pv "$(@D)"
@@ -25,11 +25,14 @@ KEEP_FILES = $(filter-out $(MXML_FILES), KEEP_FILES)
 
 MBOOK_FILES = $(patsubst %, $(MLANG)/book/%, $(BOOK_FILES))
 
-.PHONY: booksrc
-booksrc: booksrc_unfixed
-	[ ! -e $(MLANG)/fix.sh ] || (pushd $(MLANG)/book; sh ../fix.sh; popd)
+.PHONY: html booksrc
 
-booksrc_unfixed: $(MBOOK_FILES) $(PATCHES)
+html: booksrc
+	rm -rf $(MLANG)/book/render # without this tidy may be stupidly slow
+	make -C $(MLANG)/book REV=$(REV) BASEDIR=render
+
+booksrc: $(MBOOK_FILES) $(PATCHES)
+	[ ! -e $(MLANG)/fix.sh ] || (pushd $(MLANG)/book; sh ../fix.sh; popd)
 
 $(MLANG)/book/%.xml: $(LFS_EN)/%.xml $(MLANG)/%.po
 	mkdir -pv "$(@D)"
@@ -39,6 +42,3 @@ $(MLANG)/book/%.xml: $(LFS_EN)/%.xml $(MLANG)/%.po
 $(MLANG)/book/%: $(LFS_EN)/%
 	mkdir -pv "$(@D)"
 	cp -v $< $@
-
-test:
-	echo $(XML_FILES)
