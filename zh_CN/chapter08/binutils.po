@@ -55,15 +55,13 @@ msgstr "&diskspace;"
 
 #. type: Content of: <sect1><sect2><segmentedlist><seglistitem><seg>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/binutils.xml:34
-#, fuzzy
 msgid "&binutils-fin-sbu;"
-msgstr "&binutils-ch6-sbu;"
+msgstr "&binutils-fin-sbu;"
 
 #. type: Content of: <sect1><sect2><segmentedlist><seglistitem><seg>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/binutils.xml:35
-#, fuzzy
 msgid "&binutils-fin-du;"
-msgstr "&binutils-ch6-du;"
+msgstr "&binutils-fin-du;"
 
 #. type: Content of: <sect1><sect2><title>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/binutils.xml:42
@@ -75,7 +73,7 @@ msgstr "安装 Binutils"
 msgid ""
 "Verify that the PTYs are working properly inside the chroot environment by "
 "performing a simple test:"
-msgstr "进行简单测试，确认伪终端（PTY）在 chroot 环境中能正常工作："
+msgstr "进行简单测试，确认伪终端 (PTY) 在 chroot 环境中能正常工作："
 
 #. type: Content of: <sect1><sect2><screen>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/binutils.xml:47
@@ -116,19 +114,22 @@ msgstr ""
 
 #. type: Content of: <sect1><sect2><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/binutils.xml:60
-#, fuzzy
 msgid ""
 "Now remove one test that prevents the tests from running to completion, and "
 "fix other tests in the gold test suite, which need to be adjusted for GCC 10:"
-msgstr "删除一项导致测试套件无法完成的测试："
+msgstr ""
+"删除一项导致测试套件无法完成的测试，并且修复 gold 测试套件中的一些"
+"需要为 GCC 10 进行调整的其他测试："
 
 #. type: Content of: <sect1><sect2><screen>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/binutils.xml:64
-#, fuzzy, no-wrap
+#, no-wrap
 msgid ""
 "<userinput remap=\"pre\">sed -i '/@\\tincremental_copy/d' gold/testsuite/Makefile.in\n"
 "patch -Np1 -i ../binutils-&binutils-version;-gcc10_gold_test_fix-1.patch</userinput>"
-msgstr "<userinput remap=\"pre\">sed -i '/@\\tincremental_copy/d' gold/testsuite/Makefile.in</userinput>"
+msgstr ""
+"<userinput remap=\"pre\">sed -i '/@\\tincremental_copy/d' gold/testsuite/Makefile.in\n"
+"patch -Np1 -i ../binutils-&binutils-version;-gcc10_gold_test_fix-1.patch</userinput>"
 
 #. type: Content of: <sect1><sect2><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/binutils.xml:67
@@ -189,7 +190,7 @@ msgstr "<parameter>--enable-gold</parameter>"
 msgid ""
 "Build the gold linker and install it as ld.gold (along side the default "
 "linker)."
-msgstr "构建 gold 链接器，并且将它（和默认链接器一起）安装为 ld.gold。"
+msgstr "构建 gold 链接器，并且将它 (和默认链接器一起) 安装为 ld.gold。"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/binutils.xml:95
@@ -224,7 +225,7 @@ msgid ""
 "Enables 64-bit support (on hosts with narrower word sizes).  May not be "
 "needed on 64-bit systems, but does no harm."
 msgstr ""
-"（在字长较小的宿主平台上）启用 64 位支持。在 64 位平台上可能不需要，但无害。"
+"(在字长较小的宿主平台上) 启用 64 位支持。在 64 位平台上可能不需要，但无害。"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/binutils.xml:118
@@ -271,12 +272,12 @@ msgid ""
 "system was used to cross-compile (for example, compiling a package on an "
 "Intel machine that generates code that can be executed on PowerPC machines)."
 msgstr ""
-"一般来说，工具目录（最终存放该软件包中可执行文件的目录） 被设定为 <filename "
+"一般来说，工具目录 (最终存放该软件包中可执行文件的目录) 被设定为 <filename "
 "class=\"directory\">$(exec_prefix)/$(target_alias)</filename>。例如，在 "
 "x86_64 机器上，它将展开为 <filename class=\"directory\">/usr/x86_64-unknown-"
 "linux-gnu </filename>。因为 LFS 是定制系统，不需要 <filename class="
-"\"directory\">/usr</filename> 中的特定目标工具目录。如果系统用于交叉编译 （例"
-"如，在 Intel 机器上编译软件包，生成可以在 PowerPC 机器上执行的代码），，就"
+"\"directory\">/usr</filename> 中的特定目标工具目录。如果系统用于交叉编译 (例"
+"如，在 Intel 机器上编译软件包，生成可以在 PowerPC 机器上执行的代码)，就"
 "会使用 <filename class=\"directory\">$(exec_prefix)/$(target_alias)</"
 "filename> 目录。"
 
@@ -359,6 +360,7 @@ msgstr "简要描述"
 msgid ""
 "<?dbfo list-presentation=\"list\"?> <?dbhtml list-presentation=\"table\"?>"
 msgstr ""
+"<?dbfo list-presentation=\"list\"?> <?dbhtml list-presentation=\"table\"?>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/binutils.xml:192
@@ -638,7 +640,7 @@ msgid ""
 "prints, by default, only the strings from the initializing and loading "
 "sections while for other types of files, it scans the entire file"
 msgstr ""
-"对于每个给定文件，输出其中长度不小于给定长度 （默认是 4）的可打印字符序列；对"
+"对于每个给定文件，输出其中长度不小于给定长度 (默认是 4) 的可打印字符序列；对"
 "于目标文件，它默认只输出可加载的已初始化数据段中的字符串，对于其他文件，它"
 "扫描整个文件"
 
