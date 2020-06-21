@@ -61,13 +61,12 @@ sed -e 's/less than/不到/' \
 	-e '/encoding=/s/ISO-8859-1/UTF-8/' \
 	-i  packages.ent
 
-reldate=$(grep 'releasedate' general.ent |
+reldate=$(grep 'releasedate' general.ent.orig |
 	      sed 's/.*"\(.*\)".*/\1/;s/st\|nd\|rd\|th//');
-if reldate_cn=$(LANG=en_US.UTF-8 \
-                date -d "$reldate" "+%Y 年 %1m 月 %d 日" \
-                2>/dev/null); then
-	sed "/releasedate/s/\".*\"/\"${reldate_cn}\"/" -i general.ent
-fi
+reldate_cn=$(LANG=en_US.UTF-8 \
+             date -d "$reldate" "+%Y 年 %1m 月 %d 日" \
+             2>/dev/null)
+sed "/releasedate/s/\".*\"/\"${reldate_cn}\"/" -i general.ent
 
 # Some buggy comments produced by po4a are adding extra empty lines.
 # Remove them.

@@ -43,7 +43,7 @@ pdf: booksrc
 	rm -rf $(MLANG)/book/pdf
 	make -C $(MLANG)/book REV=$(REV) BASEDIR=pdf pdf
 
-booksrc: $(MBOOK_FILES) $(PATCHES)
+booksrc: $(MBOOK_FILES) $(PATCHES) $(MLANG)/book/general.ent.orig
 	[ ! -e $(MLANG)/fix.sh ] || (pushd $(MLANG)/book; sh ../fix.sh; popd)
 
 $(MLANG)/book/%.xml: $(LFS_EN)/%.xml $(MLANG)/%.po
@@ -55,6 +55,6 @@ $(MLANG)/book/%: $(LFS_EN)/%
 	mkdir -pv "$(@D)"
 	cp -v $< $@
 
-$(MLANG)/book/general.ent: $(LFS_EN)/general.ent $(MLANG)/fix.sh
+$(MLANG)/book/general.ent.orig: $(LFS_EN)/general.ent
 	mkdir -pv "$(@D)"
 	cp -v $< $@
