@@ -26,11 +26,19 @@ KEEP_FILES = $(filter-out $(MXML_FILES), KEEP_FILES)
 
 MBOOK_FILES = $(patsubst %, $(MLANG)/book/%, $(BOOK_FILES))
 
-.PHONY: html booksrc
+.PHONY: html booksrc nochunks pdf
 
 html: booksrc
 	rm -rf $(MLANG)/book/render # without this tidy may be stupidly slow
 	make -C $(MLANG)/book REV=$(REV) BASEDIR=render
+
+nochunks: booksrc
+	rm -rf $(MLANG)/book/nochunks
+	make -C $(MLANG)/book REV=$(REV) BASEDIR=nochunks nochunks
+
+pdf: booksrc
+	rm -rf $(MLANG)/book/pdf
+	make -C $(MLANG)/book REV=$(REV) BASEDIR=pdf pdf
 
 booksrc: $(MBOOK_FILES) $(PATCHES)
 	[ ! -e $(MLANG)/fix.sh ] || (pushd $(MLANG)/book; sh ../fix.sh; popd)
