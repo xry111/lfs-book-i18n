@@ -55,6 +55,6 @@ $(MLANG)/book/%: $(LFS_EN)/%
 	mkdir -pv "$(@D)"
 	cp -v $< $@
 
-$(MLANG)/book/general.ent: $(LFS_EN)/general.ent fix.sh
+$(MLANG)/book/general.ent: $(LFS_EN)/general.ent $(MLANG)/fix.sh
 	mkdir -pv "$(@D)"
 	cp -v $< $@
