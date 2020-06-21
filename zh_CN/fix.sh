@@ -9,9 +9,6 @@ sed -e '/encoding=/s|ISO-8859-1|UTF-8|' -i $(find -name \*.xml)
 # Let tidy output UTF-8
 sed -e '/output-encoding:/s|latin1|utf8|' -i tidy.conf
 
-# Remove two seds causing encoding error in UTF-8
-sed -e '/xa9/d' -i Makefile
-
 sed -e 's|<book>|<book lang="zh_cn">|' -i index.xml
 
 sed -e '/xreflabel/s|Chapter.nbsp.1 - Mailing Lists|第 1 章 - 邮件列表|' \
@@ -106,9 +103,13 @@ grep zh_CN-fonts stylesheets/lfs-xsl/pdf.xsl ||
 	sed '/<\/xsl:stylesheet>/i <xsl:include href="pdf/zh_CN-fonts.xsl"/>' \
 	    -i stylesheets/lfs-xsl/pdf.xsl
 
-# Copy fonts to tmp dir, and let fop to use our custom config
-grep '\-c fop.xml' Makefile ||
-	sed 's|fop -q|& -c ../fop.xml|' -i Makefile
+# Edit Makefile
+cp -v Makefile.orig Makefile
 
-grep 'RENDERTMP)/fonts' Makefile ||
-	sed '/fop -q/i \\tmkdir -pv $(RENDERTMP)/fonts; cp -v fonts/* $(RENDERTMP)/fonts' -i Makefile
+# Remove two seds causing encoding error in UTF-8
+sed -e '/xa9/d' -i Makefile
+
+# Copy fonts to tmp dir, and let fop to use our custom config
+sed '/fop -q/i \\tmkdir -pv $(RENDERTMP)/fonts; cp -v fonts/* $(RENDERTMP)/fonts' -i Makefile
+
+sed 's|fop -q|& -c ../fop.xml|' -i Makefile

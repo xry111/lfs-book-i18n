@@ -44,7 +44,10 @@ pdf: booksrc
 	pushd $(MLANG)/book; sh ../fetch_fonts.sh; popd
 	make -C $(MLANG)/book REV=$(REV) BASEDIR=pdf pdf
 
-booksrc: $(MBOOK_FILES) $(PATCHES) $(MLANG)/book/general.ent.orig
+ORIG_FILES = $(MLANG)/book/general.ent.orig \
+			 $(MLANG)/book/Makefile.orig
+
+booksrc: $(MBOOK_FILES) $(PATCHES) $(ORIG_FILES)
 	[ ! -e $(MLANG)/fix.sh ] || (pushd $(MLANG)/book; sh ../fix.sh; popd)
 
 $(MLANG)/book/%.xml: $(LFS_EN)/%.xml $(MLANG)/%.po
@@ -59,3 +62,8 @@ $(MLANG)/book/%: $(LFS_EN)/%
 $(MLANG)/book/general.ent.orig: $(LFS_EN)/general.ent
 	mkdir -pv "$(@D)"
 	cp -v $< $@
+
+$(MLANG)/book/Makefile.orig: $(LFS_EN)/Makefile
+	mkdir -pv "$(@D)"
+	cp -v $< $@
+
