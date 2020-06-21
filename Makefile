@@ -1,3 +1,4 @@
+SHELL := /bin/bash
 default: html
 
 LFS_EN = /home/xry111/svn-repos/LFS-BOOK
