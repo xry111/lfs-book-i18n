@@ -64,8 +64,8 @@ sed -e 's/less than/不到/' \
 reldate=$(grep 'releasedate' general.ent.orig |
 	      sed 's/.*"\(.*\)".*/\1/;s/st\|nd\|rd\|th//');
 reldate_cn=$(LANG=en_US.UTF-8 \
-             date -d "$reldate" "+%Y 年 %1m 月 %d 日" \
-             2>/dev/null)
+             date -d "$reldate" "+%Y 年 %m 月 %d 日" \
+             2>/dev/null | sed 's@ 0@ @g')
 sed "/releasedate/s/\".*\"/\"${reldate_cn}\"/" -i general.ent
 
 # Some buggy comments produced by po4a are adding extra empty lines.
