@@ -116,7 +116,7 @@ msgstr "准备编译 GCC："
 
 #. type: Content of: <sect1><sect2><screen>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/gcc.xml:61
-#, fuzzy, no-wrap
+#, no-wrap
 msgid ""
 "<userinput remap=\"configure\">../configure --prefix=/usr            \\\n"
 "             LD=ld                    \\\n"
@@ -125,8 +125,8 @@ msgid ""
 "             --disable-bootstrap      \\\n"
 "             --with-system-zlib</userinput>"
 msgstr ""
-"<userinput remap=\"configure\">SED=sed                               \\\n"
-"../configure --prefix=/usr            \\\n"
+"<userinput remap=\"configure\">../configure --prefix=/usr            \\\n"
+"             LD=ld                    \\\n"
 "             --enable-languages=c,c++ \\\n"
 "             --disable-multilib       \\\n"
 "             --disable-bootstrap      \\\n"
@@ -134,7 +134,6 @@ msgstr ""
 
 #. type: Content of: <sect1><sect2><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/gcc.xml:68
-#, fuzzy
 msgid ""
 "Note that for other programming languages there are some prerequisites that "
 "are not yet available. See the <ulink url=\"&blfs-book;general/gcc.html"
@@ -151,9 +150,8 @@ msgstr "新的配置选项的含义："
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/gcc.xml:77
-#, fuzzy
 msgid "<parameter>LD=ld</parameter>"
-msgstr "<parameter>--with-system-zlib</parameter>"
+msgstr "<parameter>LD=ld</parameter>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/gcc.xml:79
@@ -162,6 +160,8 @@ msgid ""
 "binutils built earlier in this chapter, rather than the cross-built version "
 "which would otherwise be used."
 msgstr ""
+"该选项使得配置脚本使用之前在本章中构建的 ld，而没有该选项时会使用交叉编译"
+"构建的版本。"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/gcc.xml:86
@@ -170,7 +170,6 @@ msgstr "<parameter>--with-system-zlib</parameter>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/gcc.xml:88
-#, fuzzy
 msgid ""
 "This switch tells GCC to link to the system installed copy of the zlib "
 "library, rather than its own internal copy."
@@ -196,12 +195,11 @@ msgstr "本节中 GCC 的测试套件被认为是关键的，无论如何不能�
 
 #. type: Content of: <sect1><sect2><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/gcc.xml:103
-#, fuzzy
 msgid ""
 "One set of tests in the GCC test suite is known to exhaust the default "
 "stack, so increase the stack size prior to running the tests:"
 msgstr ""
-"已知 GCC 测试套件中的一组测试可能耗尽栈空间，因此运行测试前要增加栈空间："
+"已知 GCC 测试套件中的一组测试可能耗尽默认栈空间，因此运行测试前要增加栈空间："
 
 #. type: Content of: <sect1><sect2><screen>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/gcc.xml:106
@@ -216,13 +214,13 @@ msgstr "以非特权用户身份测试编译结果，但出错时继续执行其
 
 #. type: Content of: <sect1><sect2><screen>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/gcc.xml:110
-#, fuzzy, no-wrap
+#, , no-wrap
 msgid ""
 "<userinput remap=\"test\">chown -Rv tester . \n"
 "su tester -c \"PATH=$PATH make -k check\"</userinput>"
 msgstr ""
-"<userinput remap=\"test\">chown -Rv nobody .\n"
-"su nobody -s /bin/bash -c \"PATH=$PATH make -k check\"</userinput>"
+"<userinput remap=\"test\">chown -Rv tester . \n"
+"su tester -c \"PATH=$PATH make -k check\"</userinput>"
 
 #. type: Content of: <sect1><sect2><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/gcc.xml:113
@@ -288,14 +286,13 @@ msgstr ""
 
 #. type: Content of: <sect1><sect2><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/gcc.xml:151
-#, fuzzy
 msgid ""
 "The GCC build directory is owned by <systemitem class=\"username\"> tester</"
 "systemitem> now and the ownership of the installed header directory (and its "
 "content) will be incorrect.  Change the ownership to <systemitem class="
 "\"username\">root</systemitem> user and group:"
 msgstr ""
-"GCC 构建目录目前属于用户 <systemitem class=\"username\"> nobody</"
+"GCC 构建目录目前属于用户 <systemitem class=\"username\">tester</"
 "systemitem>，这会导致安装的头文件目录 (及其内容) 具有不正确的所有权。将所"
 "有者修改为 <systemitem class=\"username\">root</systemitem> 用户和组："
 
@@ -346,14 +343,13 @@ msgstr ""
 
 #. type: Content of: <sect1><sect2><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/gcc.xml:177
-#, fuzzy
 msgid ""
 "Now that our final toolchain is in place, it is important to again ensure "
 "that compiling and linking will work as expected. We do this by performing "
 "some sanity checks:"
 msgstr ""
 "现在最终的工具链已经就位，重要的是再次确认编译和链接像我们期望的一样正常工"
-"作。再一次执行之前进行过的完整性检查："
+"作。我们通过进行一些完整性检查，进行确认："
 
 #. type: Content of: <sect1><sect2><screen>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/gcc.xml:205
@@ -369,7 +365,6 @@ msgstr ""
 
 #. type: Content of: <sect1><sect2><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/gcc.xml:209
-#, fuzzy
 msgid ""
 "Depending on your machine architecture, the above may differ slightly.  The "
 "difference will be the name of the directory after <filename class="
@@ -378,7 +373,7 @@ msgid ""
 "filename> files under the <filename class=\"directory\">/usr/lib</filename> "
 "directory."
 msgstr ""
-"以上结果可能随您的机器体系结构不同而略微不同，区别一般是 <filename class="
+"以上结果可能随您的机器体系结构不同而略微不同。差异在于 <filename class="
 "\"directory\">/usr/lib/gcc</filename> 之后的目录名。我们关注的重点是，"
 "<command>gcc</command> 应该找到所有三个 <filename>crt*.o</filename> 文件，它"
 "们应该位于 <filename class=\"directory\">/usr/lib</filename> 目录中。"
@@ -407,12 +402,11 @@ msgstr ""
 
 #. type: Content of: <sect1><sect2><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/gcc.xml:232
-#, fuzzy
 msgid ""
 "Again, the directory named after your target triplet may be different than "
 "the above, depending on your system architecture."
 msgstr ""
-"同样要注意以您的目标三元组命名的目录根据您体系结构的不同，可能和以上不同。"
+"同样要注意，以您的目标三元组命名的目录由于您体系结构的不同，可能和以上不同。"
 
 #. type: Content of: <sect1><sect2><screen>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/gcc.xml:247
@@ -950,45 +944,3 @@ msgstr "未定义行为清理检查库"
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/gcc.xml:619
 msgid "libubsan"
 msgstr "libubsan"
-
-#~ msgid "As in gcc-pass2, fix a problem introduced by Glibc-2.31:"
-#~ msgstr ""
-#~ "就像在临时工具链中第二次构建 GCC 时那样，修复 Glibc-2.31 引入的一个问题："
-
-#~ msgid ""
-#~ "<userinput remap=\"pre\">sed -e '1161 s|^|//|' \\\n"
-#~ "    -i libsanitizer/sanitizer_common/sanitizer_platform_limits_posix.cc</"
-#~ "userinput>"
-#~ msgstr ""
-#~ "<userinput remap=\"pre\">sed -e '1161 s|^|//|' \\\n"
-#~ "    -i libsanitizer/sanitizer_common/sanitizer_platform_limits_posix.cc</"
-#~ "userinput>"
-
-#~ msgid "<envar>SED=sed</envar>"
-#~ msgstr "<envar>SED=sed</envar>"
-
-#~ msgid ""
-#~ "Setting this environment variable prevents a hard-coded path to /tools/"
-#~ "bin/sed."
-#~ msgstr "设定该环境变量，防止路径 /tools/bin/sed 被硬编码到编译结果中。"
-
-#~ msgid ""
-#~ "Two tests named lookup.cc and reverse.cc in experimental/net are known to "
-#~ "fail in LFS chroot environment because they require /etc/hosts and iana-"
-#~ "etc."
-#~ msgstr ""
-#~ "已知 experimental/net 目录中名为 lookup.cc 和 reverse.cc 的两个测试在 LFS "
-#~ "chroot 环境中会失败，因为它们需要 /etc/hosts 和 iana-etc。"
-
-#~ msgid "Two tests named pr57193.c and pr90178.c are known to fail."
-#~ msgstr "已知名为 pr57193.c 和 pr90178.c 的测试会失败。"
-
-#~ msgid ""
-#~ "Many packages use the name <command>cc</command> to call the C compiler. "
-#~ "To satisfy those packages, create a symlink:"
-#~ msgstr ""
-#~ "许多软件包使用 <command>cc</command> 调用 C 编译器。为了满足它们，创建一"
-#~ "个符号链接："
-
-#~ msgid "<userinput remap=\"install\">ln -sv gcc /usr/bin/cc</userinput>"
-#~ msgstr "<userinput remap=\"install\">ln -sv gcc /usr/bin/cc</userinput>"

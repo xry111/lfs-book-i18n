@@ -72,7 +72,6 @@ msgstr "安装 Util-linux"
 
 #. type: Content of: <sect1><sect2><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/util-linux.xml:45
-#, fuzzy
 msgid ""
 "The FHS recommends using the <filename class=\"directory\">/var/lib/hwclock</"
 "filename> directory instead of the usual <filename class=\"directory\">/etc</"
@@ -81,8 +80,7 @@ msgid ""
 msgstr ""
 "FHS 建议使用 <filename class=\"directory\">/var/lib/hwclock</filename> 目录，"
 "而非一般的 <filename class=\"directory\">/etc</filename> 目录作为 "
-"<filename>adjtime</filename> 文件的位置。首先创建该目录，启用 "
-"<command>hwclock</command> 程序的存储功能："
+"<filename>adjtime</filename> 文件的位置。首先创建该目录："
 
 #. type: Content of: <sect1><sect2><screen>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/util-linux.xml:51
@@ -183,7 +181,6 @@ msgstr "如果希望的话，以非 root 用户身份运行测试套件："
 
 #. type: Content of: <sect1><sect2><warning><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/util-linux.xml:91
-#, fuzzy
 msgid ""
 "Running the test suite as the root user can be harmful to your system.  To "
 "run it, the CONFIG_SCSI_DEBUG option for the kernel must be available in the "
@@ -206,13 +203,13 @@ msgstr "<userinput>bash tests/run.sh --srcdir=$PWD --builddir=$PWD</userinput>"
 
 #. type: Content of: <sect1><sect2><screen>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/util-linux.xml:101
-#, fuzzy, no-wrap
+#, no-wrap
 msgid ""
 "<userinput remap=\"test\">chown -Rv tester .\n"
 "su tester -c \"make -k check\"</userinput>"
 msgstr ""
-"<userinput remap=\"test\">chown -Rv nobody .\n"
-"su nobody -s /bin/bash -c \"PATH=$PATH make -k check\"</userinput>"
+"<userinput remap=\"test\">chown -Rv tester .\n"
+"su tester -c \"make -k check\"</userinput>"
 
 #. type: Content of: <sect1><sect2><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/util-linux.xml:104
@@ -1868,7 +1865,7 @@ msgstr "<command>wall</command>"
 msgid ""
 "Displays the contents of a file or, by default, its standard input, on the "
 "terminals of all currently logged in users"
-msgstr "显示文件或标准输入（默认值）的内容到所有登录用户的终端"
+msgstr "显示文件或标准输入 (默认值) 的内容到所有登录用户的终端"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/util-linux.xml:1205
@@ -2023,16 +2020,3 @@ msgstr "包含为对象生成唯一标识符，使它在本地系统以外也可
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/util-linux.xml:1310
 msgid "libuuid"
 msgstr "libuuid"
-
-#~ msgid "FHS compliance notes"
-#~ msgstr "FHS 兼容性注意事项"
-
-#~ msgid "Remove the earlier created symlinks:"
-#~ msgstr "删除之前创建的符号链接："
-
-#~ msgid ""
-#~ "<userinput remap=\"pre\">rm -vf /usr/include/{blkid,libmount,uuid}</"
-#~ "userinput>"
-#~ msgstr ""
-#~ "<userinput remap=\"pre\">rm -vf /usr/include/{blkid,libmount,uuid}</"
-#~ "userinput>"

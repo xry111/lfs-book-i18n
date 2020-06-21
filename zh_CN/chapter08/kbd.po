@@ -70,7 +70,6 @@ msgstr "安装 Kbd"
 
 #. type: Content of: <sect1><sect2><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/kbd.xml:44
-#, fuzzy
 msgid ""
 "The behaviour of the backspace and delete keys is not consistent across the "
 "keymaps in the Kbd package. The following patch fixes this issue for i386 "
@@ -87,7 +86,6 @@ msgstr "<userinput remap=\"pre\">patch -Np1 -i ../&kbd-backspace-patch;</userinp
 
 #. type: Content of: <sect1><sect2><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/kbd.xml:50
-#, fuzzy
 msgid ""
 "After patching, the backspace key generates the character with code 127, and "
 "the delete key generates a well-known escape sequence."
@@ -108,12 +106,12 @@ msgstr ""
 
 #. type: Content of: <sect1><sect2><screen>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/kbd.xml:58
-#, fuzzy, no-wrap
+#, no-wrap
 msgid ""
 "<userinput remap=\"pre\">sed -i '/RESIZECONS_PROGS=/s/yes/no/' configure\n"
 "sed -i 's/resizecons.8 //' docs/man/man8/Makefile.in</userinput>"
 msgstr ""
-"<userinput remap=\"pre\">sed -i 's/\\(RESIZECONS_PROGS=\\)yes/\\1no/g' configure\n"
+"<userinput remap=\"pre\">sed -i '/RESIZECONS_PROGS=/s/yes/no/' configure\n"
 "sed -i 's/resizecons.8 //' docs/man/man8/Makefile.in</userinput>"
 
 #. type: Content of: <sect1><sect2><para>
@@ -123,13 +121,12 @@ msgstr "准备编译 Kbd："
 
 #. type: Content of: <sect1><sect2><screen>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/kbd.xml:63
-#, fuzzy, no-wrap
+#, no-wrap
 msgid "<userinput remap=\"configure\">./configure --prefix=/usr --disable-vlock</userinput>"
-msgstr "<userinput remap=\"configure\">PKG_CONFIG_PATH=/tools/lib/pkgconfig ./configure --prefix=/usr --disable-vlock</userinput>"
+msgstr "<userinput remap=\"configure\">./configure --prefix=/usr --disable-vlock</userinput>"
 
 #. type: Content of: <sect1><sect2><variablelist><title>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/kbd.xml:66
-#, fuzzy
 msgid "The meaning of the configure option:"
 msgstr "配置选项的含义："
 
@@ -140,7 +137,6 @@ msgstr "<parameter>--disable-vlock</parameter>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/kbd.xml:71
-#, fuzzy
 msgid ""
 "This option prevents the vlock utility from being built because it requires "
 "the PAM library, which isn't available in the chroot environment."
@@ -199,12 +195,12 @@ msgstr "如果需要的话，安装文档："
 
 #. type: Content of: <sect1><sect2><screen>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/kbd.xml:100
-#, fuzzy, no-wrap
+#, no-wrap
 msgid ""
 "<userinput remap=\"install\">mkdir -v            /usr/share/doc/kbd-&kbd-version;\n"
 "cp -R -v docs/doc/* /usr/share/doc/kbd-&kbd-version;</userinput>"
 msgstr ""
-"<userinput remap=\"install\">mkdir -v       /usr/share/doc/kbd-&kbd-version;\n"
+"<userinput remap=\"install\">mkdir -v            /usr/share/doc/kbd-&kbd-version;\n"
 "cp -R -v docs/doc/* /usr/share/doc/kbd-&kbd-version;</userinput>"
 
 #. type: Content of: <sect1><sect2><title>
@@ -546,7 +542,7 @@ msgstr "<command>setleds</command>"
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/kbd.xml:318
 msgid "Sets the keyboard flags and Light Emitting Diodes (LEDs)"
-msgstr "设置键盘标志位和发光二极管（LED）"
+msgstr "设置键盘标志位和发光二极管 (LED)"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/kbd.xml:320

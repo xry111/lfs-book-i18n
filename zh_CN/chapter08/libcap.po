@@ -74,15 +74,14 @@ msgstr "安装 Libcap"
 
 #. type: Content of: <sect1><sect2><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/libcap.xml:46
-#, fuzzy
 msgid "Prevent a static library from being installed:"
-msgstr "防止两个静态库的安装："
+msgstr "防止一个静态库的安装："
 
 #. type: Content of: <sect1><sect2><screen>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/libcap.xml:48
-#, fuzzy, no-wrap
+#, no-wrap
 msgid "<userinput remap=\"pre\">sed -i '/install.*STACAPLIBNAME/d' libcap/Makefile</userinput>"
-msgstr "<userinput remap=\"pre\">sed -i '/install.*STA...LIBNAME/d' libcap/Makefile</userinput>"
+msgstr "<userinput remap=\"pre\">sed -i '/install.*STACAPLIBNAME/d' libcap/Makefile</userinput>"
 
 #. type: Content of: <sect1><sect2><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/libcap.xml:50
@@ -127,13 +126,12 @@ msgstr "<userinput remap=\"test\">make test</userinput>"
 
 #. type: Content of: <sect1><sect2><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/libcap.xml:72
-#, fuzzy
 msgid "Install the package and do some cleanup:"
-msgstr "安装该软件包："
+msgstr "安装该软件包，并进行清理工作："
 
 #. type: Content of: <sect1><sect2><screen>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/libcap.xml:74
-#, fuzzy, no-wrap
+#, no-wrap
 msgid ""
 "<userinput remap=\"install\">make lib=lib PKGCONFIGDIR=/usr/lib/pkgconfig install\n"
 "chmod -v 755 /lib/libcap.so.&libcap-version;\n"
@@ -141,8 +139,11 @@ msgid ""
 "rm -v /lib/libcap.so\n"
 "ln -sfv ../../lib/libcap.so.2 /usr/lib/libcap.so</userinput>"
 msgstr ""
-"<userinput remap=\"install\">make lib=lib install\n"
-"chmod -v 755 /lib/libcap.so.&libcap-version;</userinput>"
+"<userinput remap=\"install\">make lib=lib PKGCONFIGDIR=/usr/lib/pkgconfig install\n"
+"chmod -v 755 /lib/libcap.so.&libcap-version;\n"
+"mv -v /lib/libpsx.a /usr/lib\n"
+"rm -v /lib/libcap.so\n"
+"ln -sfv ../../lib/libcap.so.2 /usr/lib/libcap.so</userinput>"
 
 #. type: Content of: <sect1><sect2><title>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/libcap.xml:83

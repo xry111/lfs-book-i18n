@@ -38,7 +38,6 @@ msgstr "Findutils"
 
 #. type: Content of: <sect1><sect2><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/findutils.xml:26
-#, fuzzy
 msgid ""
 "The Findutils package contains programs to find files. These programs are "
 "provided to recursively search through a directory tree and to create, "
@@ -46,7 +45,7 @@ msgid ""
 "is unreliable if the database has not been recently updated)."
 msgstr ""
 "Findutils 软件包包含用于查找文件的程序。这些程序能够递归地搜索目录树，以及创"
-"建、维护和搜索数据库 （一般比递归搜索快，但在数据库最近没有更新时不可靠）。"
+"建、维护和搜索文件数据库 (一般比递归搜索快，但在数据库最近没有更新时不可靠)。"
 
 #. type: Content of: <sect1><sect2><segmentedlist><segtitle>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/findutils.xml:32
@@ -122,11 +121,13 @@ msgstr "运行以下命令以测试编译结果："
 
 #. type: Content of: <sect1><sect2><screen>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/findutils.xml:70
-#, fuzzy, no-wrap
+#, no-wrap
 msgid ""
 "<userinput remap=\"test\">chown -Rv tester .\n"
 "su tester -c \"PATH=$PATH make check\"</userinput>"
-msgstr "<userinput remap=\"test\">make check</userinput>"
+msgstr ""
+"<userinput remap=\"test\">chown -Rv tester .\n"
+"su tester -c \"PATH=$PATH make check\"</userinput>"
 
 #. type: Content of: <sect1><sect2><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/findutils.xml:73
@@ -277,10 +278,3 @@ msgstr "可以将给定命令作用于一个列表中的所有文件"
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/findutils.xml:152
 msgid "xargs"
 msgstr "xargs"
-
-#~ msgid ""
-#~ "Two tests are known to fail in the chroot environment: sv-bug-54171.old-"
-#~ "O3 and sv-bug-54171.new-O3."
-#~ msgstr ""
-#~ "已知有两项测试在 chroot 环境中会失败：sv-bug-54171.old-O3 和 sv-"
-#~ "bug-54171.new-O3。"

@@ -98,7 +98,6 @@ msgstr "<userinput remap=\"pre\">echo '#define SYS_VIMRC_FILE \"/etc/vimrc\"' &g
 
 #. type: Content of: <sect1><sect2><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/vim.xml:57
-#, fuzzy
 msgid "Prepare vim for compilation:"
 msgstr "准备编译 Vim："
 
@@ -121,33 +120,31 @@ msgstr "<userinput remap=\"make\">make</userinput>"
 
 #. type: Content of: <sect1><sect2><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/vim.xml:65
-#, fuzzy
 msgid ""
 "To prepare the tests, ensure that user <systemitem class=\"username"
 "\">tester</systemitem> can write to the source tree:"
 msgstr ""
-"为了准备运行测试套件，需要使得 <systemitem class=\"username\">nobody</"
+"为了准备运行测试套件，需要使得 <systemitem class=\"username\">tester</"
 "systemitem> 用户拥有写入源代码目录树的权限："
 
 #. type: Content of: <sect1><sect2><screen>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/vim.xml:69
-#, fuzzy, no-wrap
+#, no-wrap
 msgid "<userinput remap=\"test\">chown -Rv tester .</userinput>"
-msgstr "<userinput remap=\"test\">chown -Rv nobody .</userinput>"
+msgstr "<userinput remap=\"test\">chown -Rv tester .</userinput>"
 
 #. type: Content of: <sect1><sect2><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/vim.xml:71
-#, fuzzy
 msgid ""
 "Now run the tests as user <systemitem class=\"username\">tester</systemitem>:"
 msgstr ""
-"现在，以 <systemitem class=\"username\">nobody</systemitem> 用户运行测试："
+"现在，以 <systemitem class=\"username\">tester</systemitem> 用户身份运行测试："
 
 #. type: Content of: <sect1><sect2><screen>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/vim.xml:74
-#, fuzzy, no-wrap
+#, no-wrap
 msgid "<userinput remap=\"test\">su tester -c \"LANG=en_US.UTF-8 make -j1 test\" &amp;> vim-test.log</userinput>"
-msgstr "<userinput remap=\"test\">su nobody -s /bin/bash -c \"LANG=en_US.UTF-8 make -j1 test\" &amp;> vim-test.log</userinput>"
+msgstr "<userinput remap=\"test\">su tester -c \"LANG=en_US.UTF-8 make -j1 test\" &amp;> vim-test.log</userinput>"
 
 #. type: Content of: <sect1><sect2><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/vim.xml:76
@@ -201,7 +198,6 @@ msgstr ""
 
 #. type: Content of: <sect1><sect2><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/vim.xml:97
-#, fuzzy
 msgid ""
 "By default, vim's documentation is installed in <filename class=\"directory"
 "\">/usr/share/vim</filename>. The following symlink allows the documentation "
@@ -210,7 +206,7 @@ msgid ""
 "for other packages:"
 msgstr ""
 "默认情况下，Vim 的文档安装在 <filename class=\"directory\">/usr/share/vim</"
-"filename>。下面创建的符号链接允许通过 <filename class=\"directory\">/usr/"
+"filename> 中。下面创建符号链接，使得可以通过 <filename class=\"directory\">/usr/"
 "share/doc/vim-&vim-version;</filename> 访问符号链接，这个路径与其他软件包的文"
 "档位置格式一致："
 
@@ -222,7 +218,6 @@ msgstr "<userinput remap=\"install\">ln -sv ../&vim-docdir;/doc /usr/share/doc/v
 
 #. type: Content of: <sect1><sect2><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/vim.xml:105
-#, fuzzy
 msgid ""
 "If an X Window System is going to be installed on the LFS system, it may be "
 "necessary to recompile vim after installing X. Vim comes with a GUI version "
@@ -258,11 +253,11 @@ msgid ""
 "overrides must come after this setting. Create a default <command>vim</"
 "command> configuration file by running the following:"
 msgstr ""
-"默认情况下，<command>vim</command> 在不兼容 vi 的模式下运行，这对于过去使用"
+"默认情况下，<command>vim</command> 在不兼容 vi 的模式下运行。这对于过去使用"
 "其他编辑器的用户来说可能显得陌生。以下配置包含的 <quote>nocompatible</"
 "quote> 设定是为了强调编辑器使用了新的行为这一事实。它也提醒那些想要使用 "
-"<quote>compatible</quote> 模式的用户，必须在配置文件的一开始改变模式，因为它"
-"会修改其他设置，因此对这些设置的覆盖必须在设定模式后进行。执行以下命令创建"
+"<quote>compatible</quote> 模式的用户，必须在配置文件的一开始改变模式。这是因为它"
+"会修改其他设置，对这些设置的覆盖必须在设定模式后进行。执行以下命令创建"
 "默认 <command>vim</command> 配置文件："
 
 #. type: Content of: <sect1><sect2><screen>
@@ -307,7 +302,6 @@ msgstr ""
 
 #. type: Content of: <sect1><sect2><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/vim.xml:149
-#, fuzzy
 msgid ""
 "The <parameter>set nocompatible</parameter> setting makes <command>vim</"
 "command> behave in a more useful way (the default) than the vi-compatible "
@@ -326,12 +320,12 @@ msgstr ""
 "<parameter>set nocompatible</parameter> 设定使得 <command>vim</command> 以一"
 "种更有用的方式 (也是默认方式) 行动，而不是兼容于 vi 的旧模式。删除其中的 "
 "<quote>no</quote> 可以保持旧的 <command>vi</command> 行为。<parameter>set "
-"backspace=2</parameter> 设定允许退格越过换行、 自动缩进和插入模式的起始位置。"
+"backspace=2</parameter> 设定允许退格越过换行，自动缩进，以及插入模式的起始位置。"
 "参数 <parameter>syntax on</parameter> 启用 vim 符号高亮功能。参数 "
 "<parameter>set mouse=</parameter> 允许在 chroot 中或通过远程连接工作时使用鼠"
 "标正确地粘贴文本。最后，<emphasis>if</emphasis> 语句为 <parameter>set "
 "background=dark</parameter> 纠正 <command>vim</command> 对于某些终端模拟器背"
-"景色的猜测，这能够提供更适合这些程序黑色背景的配色方案。"
+"景色的猜测。这能够提供更适合这些程序黑色背景的配色方案。"
 
 #. type: Content of: <sect1><sect2><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/vim.xml:163
@@ -348,7 +342,6 @@ msgstr "<userinput>vim -c ':options'</userinput>"
 
 #. type: Content of: <sect1><sect2><note><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/vim.xml:169
-#, fuzzy
 msgid ""
 "By default, vim only installs spell files for the English language.  To "
 "install spell files for your preferred language, download the <filename>*."

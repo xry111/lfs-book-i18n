@@ -136,38 +136,39 @@ msgstr "如果不运行测试套件，跳到 <quote>安装该软件包</quote>�
 
 #. type: Content of: <sect1><sect2><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/bash.xml:76
-#, fuzzy
 msgid ""
 "To prepare the tests, ensure that the <systemitem class=\"username\">tester</"
 "systemitem> user can write to the sources tree:"
 msgstr ""
-"为了准备进行测试，确保 <systemitem class=\"username\">nobody</systemitem> 用"
+"为了准备进行测试，确保 <systemitem class=\"username\">tester</systemitem> 用"
 "户可以写入源代码目录："
 
 #. type: Content of: <sect1><sect2><screen>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/bash.xml:78
-#, fuzzy, no-wrap
+#, no-wrap
 msgid "<userinput remap=\"test\">chown -Rv tester .</userinput>"
-msgstr "<userinput remap=\"test\">chown -Rv nobody .</userinput>"
+msgstr "<userinput remap=\"test\">chown -Rv tester .</userinput>"
 
 #. type: Content of: <sect1><sect2><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/bash.xml:80
-#, fuzzy
 msgid ""
 "Now, run the tests as the <systemitem class=\"username\">tester</systemitem> "
 "user:"
 msgstr ""
-"现在以 <systemitem class=\"username\">nobody</systemitem> 用户的身份运行测"
+"现在以 <systemitem class=\"username\">tester</systemitem> 用户的身份运行测"
 "试："
 
 #. type: Content of: <sect1><sect2><screen>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/bash.xml:83
-#, fuzzy, no-wrap
+#, no-wrap
 msgid ""
 "<userinput remap=\"test\">su tester &lt;&lt; EOF\n"
 "PATH=$PATH make tests &lt; $(tty)\n"
 "EOF</userinput>"
-msgstr "<userinput remap=\"test\">su nobody -s /bin/bash -c \"PATH=$PATH HOME=/home make tests\"</userinput>"
+msgstr ""
+"<userinput remap=\"test\">su tester &lt;&lt; EOF\n"
+"PATH=$PATH make tests &lt; $(tty)\n"
+"EOF</userinput>"
 
 #. type: Content of: <sect1><sect2><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/bash.xml:87
@@ -193,7 +194,7 @@ msgstr ""
 msgid ""
 "Run the newly compiled <command>bash</command> program (replacing the one "
 "that is currently being executed):"
-msgstr "执行新编译的 <command>bash</command> 程序 （替换当前正在执行的版本）："
+msgstr "执行新编译的 <command>bash</command> 程序 (替换当前正在执行的版本)："
 
 #. type: Content of: <sect1><sect2><screen>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/bash.xml:96
@@ -203,7 +204,6 @@ msgstr "<userinput>exec /bin/bash --login +h</userinput>"
 
 #. type: Content of: <sect1><sect2><note><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/bash.xml:99
-#, fuzzy
 msgid ""
 "The parameters used make the <command>bash</command> process an interactive "
 "login shell and continues to disable hashing so that new programs are found "

@@ -71,24 +71,23 @@ msgstr "安装 systemd"
 #. type: Content of: <sect1><sect2><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/systemd.xml:43
 msgid "First, apply a patch to fix the build with GCC-10:"
-msgstr ""
+msgstr "首先，应用一个补丁，修复使用 GCC-10 编译时出现的问题："
 
 #. type: Content of: <sect1><sect2><screen>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/systemd.xml:45
-#, fuzzy, no-wrap
+#, no-wrap
 msgid "<userinput remap=\"pre\">patch -Np1 -i ../systemd-&systemd-version;-gcc_10-fixes-1.patch</userinput>"
-msgstr "<userinput remap=\"pre\">tar -xf ../systemd-man-pages-&systemd-version;.tar.xz</userinput>"
+msgstr "<userinput remap=\"pre\">patch -Np1 -i ../systemd-&systemd-version;-gcc_10-fixes-1.patch</userinput>"
 
 #. type: Content of: <sect1><sect2><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/systemd.xml:47
-#, fuzzy
 msgid ""
 "Create a symlink to work around the xsltproc command not being installed:"
-msgstr "创建一个符号链接，绕过不存在的 xsltproc："
+msgstr "创建一个符号链接，绕过本书不会安装的 xsltproc："
 
 #. type: Content of: <sect1><sect2><screen>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/systemd.xml:49
-#, fuzzy, no-wrap
+#, no-wrap
 msgid "<userinput remap=\"pre\">ln -sf /bin/true /usr/bin/xsltproc</userinput>"
 msgstr "<userinput remap=\"pre\">ln -sf /tools/bin/true /usr/bin/xsltproc</userinput>"
 
@@ -110,9 +109,9 @@ msgstr "删除在 chroot 环境中无法构建的测试："
 
 #. type: Content of: <sect1><sect2><screen>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/systemd.xml:57
-#, fuzzy, no-wrap
+#, no-wrap
 msgid "<userinput remap=\"pre\">sed '179,$ d' -i src/resolve/meson.build</userinput>"
-msgstr "<userinput remap=\"pre\">sed '177,$ d' -i src/resolve/meson.build</userinput>"
+msgstr "<userinput remap=\"pre\">sed '179,$ d' -i src/resolve/meson.build</userinput>"
 
 #. type: Content of: <sect1><sect2><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/systemd.xml:59
@@ -136,7 +135,7 @@ msgstr "准备安装 systemd："
 
 #. type: Content of: <sect1><sect2><screen>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/systemd.xml:67
-#, fuzzy, no-wrap
+#, no-wrap
 msgid ""
 "<userinput remap=\"configure\">mkdir -p build\n"
 "cd       build\n"
@@ -169,27 +168,29 @@ msgstr ""
 "<userinput remap=\"configure\">mkdir -p build\n"
 "cd       build\n"
 "\n"
-"PKG_CONFIG_PATH=\"/usr/lib/pkgconfig:/tools/lib/pkgconfig\" \\\n"
-"LANG=en_US.UTF-8                   \\\n"
-"meson --prefix=/usr                \\\n"
-"      --sysconfdir=/etc            \\\n"
-"      --localstatedir=/var         \\\n"
-"      -Dblkid=true                 \\\n"
-"      -Dbuildtype=release          \\\n"
-"      -Ddefault-dnssec=no          \\\n"
-"      -Dfirstboot=false            \\\n"
-"      -Dinstall-tests=false        \\\n"
-"      -Dkmod-path=/bin/kmod        \\\n"
-"      -Dldconfig=false             \\\n"
-"      -Dmount-path=/bin/mount      \\\n"
-"      -Drootprefix=                \\\n"
-"      -Drootlibdir=/lib            \\\n"
-"      -Dsplit-usr=true             \\\n"
-"      -Dsulogin-path=/sbin/sulogin \\\n"
-"      -Dsysusers=false             \\\n"
-"      -Dumount-path=/bin/umount    \\\n"
-"      -Db_lto=false                \\\n"
-"      -Drpmmacrosdir=no            \\\n"
+"LANG=en_US.UTF-8                    \\\n"
+"meson --prefix=/usr                 \\\n"
+"      --sysconfdir=/etc             \\\n"
+"      --localstatedir=/var          \\\n"
+"      -Dblkid=true                  \\\n"
+"      -Dbuildtype=release           \\\n"
+"      -Ddefault-dnssec=no           \\\n"
+"      -Dfirstboot=false             \\\n"
+"      -Dinstall-tests=false         \\\n"
+"      -Dkmod-path=/bin/kmod         \\\n"
+"      -Dldconfig=false              \\\n"
+"      -Dmount-path=/bin/mount       \\\n"
+"      -Drootprefix=                 \\\n"
+"      -Drootlibdir=/lib             \\\n"
+"      -Dsplit-usr=true              \\\n"
+"      -Dsulogin-path=/sbin/sulogin  \\\n"
+"      -Dsysusers=false              \\\n"
+"      -Dumount-path=/bin/umount     \\\n"
+"      -Db_lto=false                 \\\n"
+"      -Drpmmacrosdir=no             \\\n"
+"      -Dhomed=false                 \\\n"
+"      -Duserdb=false                \\\n"
+"      -Dman=true                    \\\n"
 "      ..</userinput>"
 
 #. type: Content of: <sect1><sect2><variablelist><title>
@@ -204,14 +205,11 @@ msgstr "<parameter>-D*-path=*</parameter>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/systemd.xml:101
-#, fuzzy
 msgid ""
 "These switches provide the location of binaries needed by systemd at runtime "
 "that have not yet been installed."
 msgstr ""
-"这些开关提供了 systemd 在运行时需要的二进制程序的位置，这些程序有些尚未安"
-"装，有些的 pkgconfig 文件还在 <filename>/tools/lib/pkgconfig</filename>目录"
-"中。"
+"这些开关提供了 systemd 在运行时需要，但尚未安装的二进制程序的位置。"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/systemd.xml:107
@@ -272,11 +270,10 @@ msgstr "<parameter>-Droot*</parameter>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/systemd.xml:143
-#, fuzzy
 msgid ""
 "These switches ensure that core programs and shared libraries are installed "
 "in subdirectories of the root partition."
-msgstr "这个开关保证核心程序和共享库被安装到 root 分区下的子目录中。"
+msgstr "这个开关保证核心程序和共享库被安装到根分区下的子目录中。"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/systemd.xml:150
@@ -322,15 +319,15 @@ msgstr "该选项禁止安装用于 systemd 的 RPM 宏，因为 LFS 并不支�
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/systemd.xml:178
-#, fuzzy
 msgid "<parameter>-D{userdb,homed}=false</parameter>"
-msgstr "<parameter>-Dsysusers=false</parameter>"
+msgstr "<parameter>-D{userdb,homed}=false</parameter>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/systemd.xml:180
 msgid ""
 "Remove two daemons that have dependencies that do not fit the scope of LFS."
 msgstr ""
+"移除两个守护程序，它们的依赖项超出了 LFS 的范围。"
 
 #. type: Content of: <sect1><sect2><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/systemd.xml:187
@@ -413,12 +410,13 @@ msgid ""
 "Prevent systemd from resetting the maximum PID value which causes some "
 "problems with packages and units in BLFS:"
 msgstr ""
+"防止 systemd 重设最大 PID 值，它会导致 BLFS 中一些软件包和单元出现问题："
 
 #. type: Content of: <sect1><sect2><screen>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/systemd.xml:218
-#, fuzzy, no-wrap
+#, no-wrap
 msgid "<userinput remap=\"adjust\">rm -f /usr/lib/sysctl.d/50-pid-max.conf</userinput>"
-msgstr "<userinput remap=\"adjust\">rm -fv /usr/lib/lib{blkid,uuid,mount}.so*</userinput>"
+msgstr "<userinput remap=\"adjust\">rm -f /usr/lib/sysctl.d/50-pid-max.conf</userinput>"
 
 #. type: Content of: <sect1><sect2><title>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/systemd.xml:223
@@ -442,7 +440,6 @@ msgstr "安装的目录"
 
 #. type: Content of: <sect1><sect2><segmentedlist><seglistitem><seg>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/systemd.xml:231
-#, fuzzy
 msgid ""
 "bootctl, busctl, coredumpctl, halt (symlink to systemctl), hostnamectl, "
 "init, journalctl, kernel-install, localectl, loginctl, machinectl, "
@@ -466,7 +463,7 @@ msgstr ""
 "systemctl, systemd-analyze, systemd-ask-password, systemd-cat, systemd-cgls, "
 "systemd-cgtop, systemd-delta, systemd-detect-virt, systemd-escape, systemd-"
 "hwdb, systemd-id128, systemd-inhibit, systemd-machine-id-setup, systemd-"
-"mount, systemd-notify, systemd-nspawn, systemd-path, systemd-resolve (到 "
+"mount, systemd-notify, systemd-nspawn, systemd-path, systemd-repart, systemd-resolve (到 "
 "resolvectl 的符号链接), systemd-run, systemd-socket-activate, systemd-stdio-"
 "bridge, systemd-tmpfiles, systemd-tty-ask-password-agent, systemd-umount (到 "
 "systemd-mount 的符号链接), telinit (到 systemctl 的符号链接), timedatectl, 以"
@@ -519,7 +516,6 @@ msgstr "<command>bootctl</command>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/systemd.xml:268
-#, fuzzy
 msgid "Is used to query the firmware and boot manager settings"
 msgstr "用于查询固件和启动管理器设置"
 
@@ -535,7 +531,6 @@ msgstr "<command>busctl</command>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/systemd.xml:278
-#, fuzzy
 msgid "Is used to introspect and monitor the D-Bus bus"
 msgstr "用于探查和监视 D-bus 总线"
 
@@ -551,7 +546,6 @@ msgstr "<command>coredumpctl</command>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/systemd.xml:288
-#, fuzzy
 msgid "Is used to retrieve coredumps from the systemd journal"
 msgstr "用于从 systemd 日志获取核心转储"
 
@@ -589,9 +583,8 @@ msgstr "<command>hostnamectl</command>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/systemd.xml:312
-#, fuzzy
 msgid "Is used to query and change the system hostname and related settings"
-msgstr "查询和修改系统机器名"
+msgstr "用于查询和修改系统机器名和相关设置"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/systemd.xml:315
@@ -605,14 +598,13 @@ msgstr "<command>init</command>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/systemd.xml:323
-#, fuzzy
 msgid ""
 "Is the first process to be started when the kernel has initialized the "
 "hardware which takes over the boot process and starts all processes "
 "according to its configuration files. In this case, it starts systemd."
 msgstr ""
 "在内核初始化硬件后第一个启动的进程，它接管引导过程，并根据它的配置文件启动所"
-"有进程"
+"有进程。在本例中，它启动 systemd。"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/systemd.xml:328
@@ -626,7 +618,6 @@ msgstr "<command>journalctl</command>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/systemd.xml:336
-#, fuzzy
 msgid "Is used to query the contents of the systemd journal"
 msgstr "用于查询 systemd 日志的内容"
 
@@ -642,11 +633,11 @@ msgstr "<command>kernel-install</command>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/systemd.xml:346
-#, fuzzy
 msgid ""
 "Is used to add and remove kernel and initramfs images to and from /boot. In "
 "LFS, this is done manually."
-msgstr "用于在 /boot 中添加或删除内核和 initramfs 映像文件"
+msgstr "用于在 /boot 中添加或删除内核和 initramfs 映像文件。"
+"在 LFS 中，这项工作是手工完成的。"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/systemd.xml:349
@@ -660,7 +651,6 @@ msgstr "<command>localectl</command>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/systemd.xml:357
-#, fuzzy
 msgid ""
 "Is used to query and change the system locale and keyboard layout settings"
 msgstr "用于查询和修改系统 locale 和键盘布局设置"
@@ -677,7 +667,6 @@ msgstr "<command>loginctl</command>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/systemd.xml:368
-#, fuzzy
 msgid ""
 "Is used to introspect and control the state of the systemd Login Manager"
 msgstr "用于探查和控制 systemd 登录管理器的状态"
@@ -694,7 +683,6 @@ msgstr "<command>machinectl</command>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/systemd.xml:379
-#, fuzzy
 msgid ""
 "Is used to introspect and control the state of the systemd Virtual Machine "
 "and Container Registration Manager"
@@ -712,11 +700,10 @@ msgstr "<command>networkctl</command>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/systemd.xml:390
-#, fuzzy
 msgid ""
 "Is used to introspect and configure the state of the network links "
 "configured by systemd-networkd"
-msgstr "用于探查 systemd-networkd 管理的网络连接状态"
+msgstr "用于探查和配置 systemd-networkd 管理的网络连接状态"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/systemd.xml:393
@@ -730,7 +717,6 @@ msgstr "<command>portablectl</command>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/systemd.xml:401
-#, fuzzy
 msgid "Is used to attach or detach portable services from the local system"
 msgstr "用于在本地系统附加或移除可移植服务"
 
@@ -746,7 +732,6 @@ msgstr "<command>poweroff</command>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/systemd.xml:412
-#, fuzzy
 msgid ""
 "Instructs the kernel to halt the system and switch off the computer (see "
 "<command>halt</command>)"
@@ -764,7 +749,6 @@ msgstr "<command>reboot</command>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/systemd.xml:423
-#, fuzzy
 msgid "Instructs the kernel to reboot the system (see <command>halt</command>)"
 msgstr "告诉内核重启系统 (见 <command>halt</command>)"
 
@@ -780,7 +764,6 @@ msgstr "<command>resolvconf</command>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/systemd.xml:434
-#, fuzzy
 msgid ""
 "Registers DNS server and domain configuration with <command>systemd-"
 "resolved</command>"
@@ -798,7 +781,6 @@ msgstr "<command>resolvectl</command>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/systemd.xml:445
-#, fuzzy
 msgid ""
 "Sends control commands to the network name resolution manager, or resolves "
 "domain names, IPv4 and IPv6 addresses, DNS records, and services."
@@ -818,7 +800,6 @@ msgstr "<command>runlevel</command>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/systemd.xml:457
-#, fuzzy
 msgid ""
 "Outputs the previous and the current run-level, as noted in the last run-"
 "level record in <filename>/var/run/utmp</filename>"
@@ -838,7 +819,6 @@ msgstr "<command>shutdown</command>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/systemd.xml:468
-#, fuzzy
 msgid ""
 "Brings the system down in a safe and secure manner, signaling all processes "
 "and notifying all logged-in users"
@@ -856,7 +836,6 @@ msgstr "<command>systemctl</command>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/systemd.xml:479
-#, fuzzy
 msgid ""
 "Is used to introspect and control the state of the systemd system and "
 "service manager"
@@ -874,11 +853,10 @@ msgstr "<command>systemd-analyze</command>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/systemd.xml:490
-#, fuzzy
 msgid ""
 "Is used to determine system startup performance of the current boot, as well "
 "as identify troublesome systemd units"
-msgstr "用于分析当前运行系统的引导性能"
+msgstr "用于分析当前运行系统的引导性能，找出导致问题的 systemd 单元"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/systemd.xml:493
@@ -892,7 +870,6 @@ msgstr "<command>systemd-ask-password</command>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/systemd.xml:501
-#, fuzzy
 msgid ""
 "Is used to query a system password or passphrase from the user, using a "
 "question message specified on the command line"
@@ -910,7 +887,6 @@ msgstr "<command>systemd-cat</command>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/systemd.xml:512
-#, fuzzy
 msgid ""
 "Is used to connect the STDOUT and STDERR outputs of a process with the "
 "systemd journal."
@@ -964,7 +940,6 @@ msgstr "<command>systemd-delta</command>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/systemd.xml:546
-#, fuzzy
 msgid ""
 "Is used to identify and compare configuration files in <filename class="
 "\"directory\">/etc</filename> that override default counterparts in "
@@ -989,6 +964,7 @@ msgid ""
 "Detects whether the system is being run in a virtual environment, and "
 "adjusts udev accordingly."
 msgstr ""
+"确定系统是否在虚拟化环境中运行，并据此调节 udev。"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/systemd.xml:561
@@ -1002,7 +978,6 @@ msgstr "<command>systemd-escape</command>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/systemd.xml:569
-#, fuzzy
 msgid "Is used to escape strings for inclusion in systemd unit names"
 msgstr "用于转义字符串，以便将其包含在 systemd 单元名中"
 
@@ -1018,7 +993,6 @@ msgstr "<command>systemd-hwdb</command>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/systemd.xml:580
-#, fuzzy
 msgid "Is used to manage the hardware database (hwdb)"
 msgstr "用于管理硬件数据库 (hwdb)"
 
@@ -1034,7 +1008,6 @@ msgstr "<command>systemd-id128</command>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/systemd.xml:590
-#, fuzzy
 msgid "Generates and prints id128 strings"
 msgstr "生成和打印 id128 串"
 
@@ -1050,12 +1023,12 @@ msgstr "<command>systemd-inhibit</command>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/systemd.xml:600
-#, fuzzy
 msgid ""
 "Is used to execute a program with a shutdown, sleep or idle inhibitor lock "
 "taken, preventing an action such as a system shutdown until the process is "
 "completed."
-msgstr "用于在关机、休眠或待机抑制锁被锁定的情况下运行程序"
+msgstr "用于在关机、休眠或待机抑制锁被锁定的情况下运行程序，在进程结束前"
+"防止关闭系统等动作。"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/systemd.xml:604
@@ -1069,7 +1042,6 @@ msgstr "<command>systemd-machine-id-setup</command>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/systemd.xml:612
-#, fuzzy
 msgid ""
 "Is used by system installer tools to initialize the machine ID stored in "
 "<filename>/etc/machine-id</filename> at install time with a randomly "
@@ -1090,7 +1062,6 @@ msgstr "<command>systemd-mount</command>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/systemd.xml:624
-#, fuzzy
 msgid "Is used to temporarily mount or automount disks."
 msgstr "一个用于临时挂载或自动挂载驱动器的工具。"
 
@@ -1106,7 +1077,6 @@ msgstr "<command>systemd-notify</command>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/systemd.xml:634
-#, fuzzy
 msgid ""
 "Is used by daemon scripts to notify the init system about status changes"
 msgstr "被守护脚本用于通知 init 系统关于状态变化的信息"
@@ -1123,7 +1093,6 @@ msgstr "<command>systemd-nspawn</command>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/systemd.xml:645
-#, fuzzy
 msgid "Is used to run a command or OS in a light-weight namespace container"
 msgstr "用于在轻量级命名空间容器中运行命令或操作系统"
 
@@ -1139,7 +1108,6 @@ msgstr "<command>systemd-path</command>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/systemd.xml:656
-#, fuzzy
 msgid "Is used to query system and user paths"
 msgstr "用于查询系统和用户路径"
 
@@ -1150,22 +1118,21 @@ msgstr "systemd-path"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/systemd.xml:664
-#, fuzzy
 msgid "<command>systemd-repart</command>"
-msgstr "<command>systemd-path</command>"
+msgstr "<command>systemd-repart</command>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/systemd.xml:666
 msgid ""
 "Is used to grow and add partitions to a partition table when systemd is used "
 "in an OS image (e.g. a container)."
-msgstr ""
+msgstr "在 systemd 被作为 OS 映像使用 (例如在容器中) 时，"
+"用于在分区表中添加分区或增长分区大小。"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/systemd.xml:669
-#, fuzzy
 msgid "systemd-repart"
-msgstr "systemd-path"
+msgstr "systemd-repart"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/systemd.xml:675
@@ -1174,11 +1141,10 @@ msgstr "<command>systemd-resolve</command>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/systemd.xml:677
-#, fuzzy
 msgid ""
 "Is used to resolve domain names, IPV4 and IPv6 addresses, DNS resource "
 "records, and services"
-msgstr "用于解析域名、IPv4 和 IPv6 地址、DNS 资源记录，以及服务"
+msgstr "用于解析域名，IPv4 和 IPv6 地址，DNS 资源记录，以及服务"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/systemd.xml:680
@@ -1192,11 +1158,11 @@ msgstr "<command>systemd-run</command>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/systemd.xml:688
-#, fuzzy
 msgid ""
 "Is used to create and start a transient .service or a .scope unit and run "
 "the specified command in it. This is useful for validating systemd units."
-msgstr "用于创建一个临时的 .service 或 .scope 单元，并在其中运行指定命令"
+msgstr "用于创建一个临时的 .service 或 .scope 单元，并在其中运行指定命令。"
+"这对于验证 systemd 单元很有用。"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/systemd.xml:692
@@ -1210,11 +1176,10 @@ msgstr "<command>systemd-socket-activate</command>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/systemd.xml:700
-#, fuzzy
 msgid ""
 "Is used to listen on socket devices and launch a process upon a successful "
 "connection to the socket."
-msgstr "用于监听 socket 服务，并在连接时启动进程。"
+msgstr "用于监听 socket 服务，并在 socket 成功连接时启动进程。"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/systemd.xml:703
@@ -1248,7 +1213,6 @@ msgstr "<command>systemd-umount</command>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/systemd.xml:724
-#, fuzzy
 msgid "Unmounts mount points"
 msgstr "卸载挂载点"
 
@@ -1264,7 +1228,6 @@ msgstr "<command>systemd-tty-ask-password-agent</command>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/systemd.xml:734
-#, fuzzy
 msgid "Is used to list and/or process pending systemd password requests"
 msgstr "列出或处理等待中的 systemd 密码请求"
 
@@ -1295,7 +1258,6 @@ msgstr "<command>timedatectl</command>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/systemd.xml:756
-#, fuzzy
 msgid "Is used to query and change the system clock and its settings"
 msgstr "用于查询和修改系统时钟及其设置"
 
@@ -1311,15 +1273,14 @@ msgstr "<command>udevadm</command>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/systemd.xml:767
-#, fuzzy
 msgid ""
 "Is a generic udev administration tool which controls the udevd daemon, "
 "provides info from the Udev hardware database, monitors uevents, waits for "
 "uevents to finish, tests udev configuration, and triggers uevents for a "
 "given device"
 msgstr ""
-"通用 udev 管理工具：控制 udevd 守护进程，提供 udev 数据库的信息，监视 udev "
-"事件，等待 udev 事件结束，测试 udev 配置，或对于给定设备触发 udev 事件"
+"通用 udev 管理工具，它控制 udevd 守护进程，提供 udev 数据库的信息，监视 uevent "
+"事件，等待 uevent 事件结束，测试 udev 配置，或对于给定设备触发 uevent 事件"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/systemd.xml:772
@@ -1333,7 +1294,6 @@ msgstr "<filename class=\"libraryfile\">libsystemd</filename>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/systemd.xml:780
-#, fuzzy
 msgid "Is the main systemd utility library"
 msgstr "主要的 systemd 工具库"
 
@@ -1349,7 +1309,6 @@ msgstr "<filename class=\"libraryfile\">libudev</filename>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/systemd.xml:790
-#, fuzzy
 msgid "Is a library to access Udev device information"
 msgstr "用于访问 udev 设备信息的库"
 
@@ -1357,27 +1316,3 @@ msgstr "用于访问 udev 设备信息的库"
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/systemd.xml:792
 msgid "libudev"
 msgstr "libudev"
-
-#~ msgid ""
-#~ "Because we have not yet installed the final version of Util-Linux, create "
-#~ "links to the libraries in the appropriate location:"
-#~ msgstr ""
-#~ "由于还没有安装好最终的 Util-Linux，需要在适当的位置创建指向一些库的符号链"
-#~ "接："
-
-#~ msgid ""
-#~ "<userinput remap=\"pre\">for file in /tools/lib/lib{blkid,mount,uuid}."
-#~ "so*; do\n"
-#~ "    ln -sf $file /usr/lib/\n"
-#~ "done</userinput>"
-#~ msgstr ""
-#~ "<userinput remap=\"pre\">for file in /tools/lib/lib{blkid,mount,uuid}."
-#~ "so*; do\n"
-#~ "    ln -sf $file /usr/lib/\n"
-#~ "done</userinput>"
-
-#~ msgid "Cleanup symbolic links to Util-Linux libraries:"
-#~ msgstr "清理指向 Util-Linux 库的符号链接："
-
-#~ msgid "Detects execution in a virtualized environment"
-#~ msgstr "检测系统是否在虚拟化环境下运行"

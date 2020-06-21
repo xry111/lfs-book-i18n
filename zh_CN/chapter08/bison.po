@@ -94,12 +94,14 @@ msgid ""
 "The tests are known to fail using multiple processors.  To test the results "
 "(about 5.5 SBU), issue:"
 msgstr ""
+"已知测试在使用多个处理器时可能失败。如果要测试编译结果 (需要约 5.5 SBU)，"
+"运行命令："
 
 #. type: Content of: <sect1><sect2><screen>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/bison.xml:54
-#, fuzzy, no-wrap
+#, no-wrap
 msgid "<userinput remap=\"test\">make -j1 check</userinput>"
-msgstr "<userinput remap=\"make\">make</userinput>"
+msgstr "<userinput remap=\"make\">make -j1 check</userinput>"
 
 #. type: Content of: <sect1><sect2><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/bison.xml:56
@@ -218,13 +220,3 @@ msgstr ""
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/bison.xml:114
 msgid "liby"
 msgstr "liby"
-
-#~ msgid ""
-#~ "There is a circular dependency between bison and flex with regard to the "
-#~ "checks.  If desired, after installing flex in the next section, the bison "
-#~ "package can be rebuilt and the bison checks can be run with <command>make "
-#~ "check</command>."
-#~ msgstr ""
-#~ "在考虑测试的情况下，bison 和 flex 之间存在循环依赖。如果希望的话，可以在"
-#~ "下一节安装 flex 后，重新构建 bison 软件包，再执行 <command>make check</"
-#~ "command> 运行测试。"

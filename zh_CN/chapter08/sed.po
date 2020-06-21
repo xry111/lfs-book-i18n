@@ -99,11 +99,13 @@ msgstr "运行以下命令以测试编译结果："
 
 #. type: Content of: <sect1><sect2><screen>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/sed.xml:54
-#, fuzzy, no-wrap
+#, no-wrap
 msgid ""
 "<userinput remap=\"test\">chown -Rv tester .\n"
 "su tester -c \"PATH=$PATH make check\"</userinput>"
-msgstr "<userinput remap=\"test\">make check</userinput>"
+msgstr ""
+"<userinput remap=\"test\">chown -Rv tester .\n"
+"su tester -c \"PATH=$PATH make check\"</userinput>"
 
 #. type: Content of: <sect1><sect2><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/sed.xml:57
@@ -169,15 +171,3 @@ msgstr "<command>sed</command>"
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/sed.xml:86
 msgid "Filters and transforms text files in a single pass"
 msgstr "一次性过滤和转换文本文件"
-
-#~ msgid "First fix an issue in the LFS environment and remove a failing test:"
-#~ msgstr "首先修复 LFS 环境中的一个问题，并删除一个失败的测试："
-
-#~ msgid ""
-#~ "<userinput remap=\"pre\">sed -i 's/usr/tools/'                 build-aux/"
-#~ "help2man\n"
-#~ "sed -i 's/testsuite.panic-tests.sh//' Makefile.in</userinput>"
-#~ msgstr ""
-#~ "<userinput remap=\"pre\">sed -i 's/usr/tools/'                 build-aux/"
-#~ "help2man\n"
-#~ "sed -i 's/testsuite.panic-tests.sh//' Makefile.in</userinput>"

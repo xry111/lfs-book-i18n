@@ -89,7 +89,7 @@ msgid ""
 "\"ch-system-man-pages\"/>:"
 msgstr ""
 "禁止该软件包安装 <command>groups</command> 程序和它的 man 页面，因为 "
-"Coreutils 会提供更好的版本。同样，避免安装 <xref linkend=\"ch-system-man-"
+"Coreutils 会提供更好的版本。同样，避免安装<xref linkend=\"ch-system-man-"
 "pages\"/>软件包已经提供的 man 页面："
 
 #. type: Content of: <sect1><sect2><screen>
@@ -124,14 +124,15 @@ msgstr ""
 
 #. type: Content of: <sect1><sect2><screen>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/shadow.xml:70
-#, fuzzy, no-wrap
+#, no-wrap
 msgid ""
 "<userinput remap=\"pre\">sed -e 's:#ENCRYPT_METHOD DES:ENCRYPT_METHOD SHA512:' \\\n"
 "    -e 's:/var/spool/mail:/var/mail:'                 \\\n"
 "    -i etc/login.defs</userinput>"
 msgstr ""
-"<userinput remap=\"pre\">sed -i -e 's@#ENCRYPT_METHOD DES@ENCRYPT_METHOD SHA512@' \\\n"
-"       -e 's@/var/spool/mail@/var/mail@' etc/login.defs</userinput>"
+"<userinput remap=\"pre\">sed -e 's:#ENCRYPT_METHOD DES:ENCRYPT_METHOD SHA512:' \\\n"
+"    -e 's:/var/spool/mail:/var/mail:'                 \\\n"
+"    -i etc/login.defs</userinput>"
 
 #. type: Content of: <sect1><sect2><note><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/shadow.xml:75
@@ -140,9 +141,9 @@ msgstr "如果您选择构建有 Cracklib 支持的 Shadow，执行以下命令�
 
 #. type: Content of: <sect1><sect2><note><screen>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/shadow.xml:77
-#, fuzzy, no-wrap
+#, no-wrap
 msgid "<userinput>sed -i 's:DICTPATH.*:DICTPATH\\t/lib/cracklib/pw_dict:' etc/login.defs</userinput>"
-msgstr "<userinput>sed -i 's@DICTPATH.*@DICTPATH\\t/lib/cracklib/pw_dict@' etc/login.defs</userinput>"
+msgstr "<userinput>sed -i 's:DICTPATH.*:DICTPATH\\t/lib/cracklib/pw_dict:' etc/login.defs</userinput>"
 
 #. type: Content of: <sect1><sect2><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/shadow.xml:80
@@ -163,12 +164,15 @@ msgstr "准备编译 Shadow："
 
 #. type: Content of: <sect1><sect2><screen>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/shadow.xml:87
-#, fuzzy, no-wrap
+#, no-wrap
 msgid ""
 "<userinput remap=\"configure\">touch /usr/bin/passwd\n"
 "./configure --sysconfdir=/etc \\\n"
 "            --with-group-name-max-length=32</userinput>"
-msgstr "<userinput remap=\"configure\">./configure --sysconfdir=/etc --with-group-name-max-length=32</userinput>"
+msgstr ""
+"<userinput remap=\"configure\">touch /usr/bin/passwd\n"
+"./configure --sysconfdir=/etc \\\n"
+"            --with-group-name-max-length=32</userinput>"
 
 #. type: Content of: <sect1><sect2><variablelist><title>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/shadow.xml:92
@@ -177,9 +181,8 @@ msgstr "配置选项的含义："
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/shadow.xml:95
-#, fuzzy
 msgid "<command>touch /usr/bin/passwd</command>"
-msgstr "<command>chpasswd</command>"
+msgstr "<command>touch /usr/bin/passwd</command>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/shadow.xml:97
@@ -188,6 +191,9 @@ msgid ""
 "location is harcoded in some programs, and the default location if it does "
 "not exist is not right."
 msgstr ""
+"我们需要保证 <filename>/usr/bin/passwd</filename> 存在，"
+"因为它的位置会被硬编码到一些程序中，如果它不存在的话，"
+"会使用错误的默认位置。"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/shadow.xml:103
@@ -297,7 +303,7 @@ msgstr ""
 "Shadow 附带的 <command>useradd</command> 配置文件有一些需要解释的事项。首先，"
 "<command>useradd</command> 的默认操作是创建一个用户，以及一个名字和用户名相同"
 "的组。默认情况下，用户 ID (UID) 和组 ID (GID) 会从 1000 开始。这意味着，如果"
-"您不向 <command>useradd</command>传递参数，每个用户都会属于一个不同的组。如果"
+"您不向 <command>useradd</command> 传递参数，每个用户都会属于一个不同的组。如果"
 "您不希望这样，就要传递 <parameter>-g</parameter> 参数给 <command>useradd</"
 "command>。默认参数保存在 <filename>/etc/default/useradd</filename> 文件中。您"
 "可以编辑其中的两个参数，以满足您的特定需求。"

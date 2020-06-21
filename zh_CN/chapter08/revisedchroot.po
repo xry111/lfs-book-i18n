@@ -63,6 +63,8 @@ msgid ""
 "Here the <parameter>+h</parameter> option is not used anymore, since all the "
 "previous programs have been replaced: hashing is therefore possible."
 msgstr ""
+"这里不再使用 <parameter>+h</parameter> 选项，因为所有之前安装的程序都已经"
+"替换成了最终版本，可以进行散列。"
 
 #. type: Content of: <sect1><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/revisedchroot.xml:33
@@ -73,8 +75,8 @@ msgid ""
 "system-bindmount\"/> and <xref linkend=\"ch-system-kernfsmount\"/>."
 msgstr ""
 "如果解除了虚拟内核文件系统的挂载，必须通过手动或重启系统的方式重新挂载它们，"
-"保证在进入 chroot 时它们已经挂载好。<xref linkend=\"ch-system-bindmount\"/> "
-"和 <xref linkend=\"ch-system-kernfsmount\"/>已经说明了这一过程。"
+"保证在进入 chroot 时它们已经挂载好。<xref linkend=\"ch-system-bindmount\"/>"
+"和<xref linkend=\"ch-system-kernfsmount\"/>已经说明了这一过程。"
 
 #. type: Content of: <sect1><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/revisedchroot.xml:39
@@ -90,7 +92,7 @@ msgstr ""
 
 #. type: Content of: <sect1><screen>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/revisedchroot.xml:44
-#, fuzzy, no-wrap
+#, no-wrap
 msgid ""
 "<userinput>rm -f /usr/lib/lib{bfd,opcodes}.a\n"
 "rm -f /usr/lib/libctf{,-nobfd}.a\n"
@@ -101,6 +103,7 @@ msgid ""
 "rm -f /usr/lib/libz.a</userinput>"
 msgstr ""
 "<userinput>rm -f /usr/lib/lib{bfd,opcodes}.a\n"
+"rm -f /usr/lib/libctf{,-nobfd}.a\n"
 "rm -f /usr/lib/libbz2.a\n"
 "rm -f /usr/lib/lib{com_err,e2p,ext2fs,ss}.a\n"
 "rm -f /usr/lib/libltdl.a\n"
@@ -109,7 +112,6 @@ msgstr ""
 
 #. type: Content of: <sect1><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/revisedchroot.xml:52
-#, fuzzy
 msgid ""
 "There are also several files installed in the /usr/lib and /usr/libexec "
 "directories with a file name extention of .la. These are \"libtool archive\" "
@@ -119,8 +121,8 @@ msgid ""
 "remove them, run:"
 msgstr ""
 "在 /usr/lib 和 /usr/libexec 目录中还有一些扩展名为 .la 的文件。它们是 "
-"\"libtool 档案\" 文件，在 Linux 系统上一般是不必要的。截至目前，已经安装的 ."
-"la 文件中没有一个是必要的。执行以下命令删除它们："
+"\"libtool 档案\" 文件。正如我们已经讨论过的，它们在链接到共享库，特别是"
+"使用 autotools 以外的构建系统时，是不必要，甚至有害的。执行以下命令删除它们："
 
 #. type: Content of: <sect1><screen>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/revisedchroot.xml:59
@@ -145,31 +147,10 @@ msgid ""
 "Finally, remove the temporary 'tester' user account created at the beginning "
 "of the previous chapter."
 msgstr ""
+"最后，移除上一章开始时创建的临时 'tester' 用户账户。"
 
 #. type: Content of: <sect1><screen>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/revisedchroot.xml:68
-#, fuzzy, no-wrap
+#, no-wrap
 msgid "<userinput>userdel -r tester</userinput>"
-msgstr "<userinput>rm -rf /tmp/*</userinput>"
-
-#~ msgid ""
-#~ "The reason for this is that the programs in <filename class=\"directory"
-#~ "\">/tools</filename> are no longer needed.  For this reason you can "
-#~ "delete the <filename class=\"directory\">/tools</filename> directory if "
-#~ "so desired."
-#~ msgstr ""
-#~ "这是由于 <filename class=\"directory\">/tools</filename> 中的程序不再必"
-#~ "要。因此，如果您希望的话，可以删除 <filename class=\"directory\">/"
-#~ "tools</filename> 目录。"
-
-#~ msgid ""
-#~ "Removing <filename class=\"directory\">/tools</filename> will also remove "
-#~ "the temporary copies of Tcl, Expect, and DejaGNU which were used for "
-#~ "running the toolchain tests. If you need these programs later on, they "
-#~ "will need to be recompiled and re-installed. The BLFS book has "
-#~ "instructions for this (see <ulink url=\"&blfs-root;\"/>)."
-#~ msgstr ""
-#~ "删除 <filename class=\"directory\">/tools</filename> 也会移除 Tcl、Expect "
-#~ "和 DejaGNU 的临时拷贝，它们之前被用于进行工具链测试。如果您之后仍然需要它"
-#~ "们，必须重新编译和安装这些软件包。BLFS 手册包含了安装它们的说明 (见 "
-#~ "<ulink url=\"&blfs-root;\"/>)。"
+msgstr "<userinput>userdel -r tester</userinput>"

@@ -38,7 +38,6 @@ msgstr "E2fsprogs"
 
 #. type: Content of: <sect1><sect2><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/e2fsprogs.xml:26
-#, fuzzy
 msgid ""
 "The e2fsprogs package contains the utilities for handling the <systemitem "
 "class=\"filesystem\">ext2</systemitem> file system. It also supports the "
@@ -77,11 +76,10 @@ msgstr "安装 E2fsprogs"
 
 #. type: Content of: <sect1><sect2><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/e2fsprogs.xml:47
-#, fuzzy
 msgid ""
 "The e2fsprogs documentation recommends that the package be built in a "
 "subdirectory of the source tree:"
-msgstr "E2fsprogs 文档推荐在源代码目录树中的一个子目录中构建该软件包："
+msgstr "E2fsprogs 文档推荐在源代码目录树中的一个子目录内构建该软件包："
 
 #. type: Content of: <sect1><sect2><screen>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/e2fsprogs.xml:50
@@ -95,7 +93,6 @@ msgstr ""
 
 #. type: Content of: <sect1><sect2><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/e2fsprogs.xml:53
-#, fuzzy
 msgid "Prepare e2fsprogs for compilation:"
 msgstr "准备编译 E2fsprogs："
 
@@ -123,9 +120,8 @@ msgstr ""
 
 #. type: Content of: <sect1><sect2><variablelist><title>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/e2fsprogs.xml:65
-#, fuzzy
 msgid "The meaning of the configure options:"
-msgstr "环境变量和配置选项的含义："
+msgstr "配置选项的含义："
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/e2fsprogs.xml:68
@@ -138,7 +134,6 @@ msgstr ""
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/e2fsprogs.xml:71
-#, fuzzy
 msgid ""
 "Certain programs (such as the <command>e2fsck</command> program) are "
 "considered essential programs.  When, for example, <filename class="
@@ -173,7 +168,6 @@ msgstr "<parameter>--disable-*</parameter>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/e2fsprogs.xml:93
-#, fuzzy
 msgid ""
 "This prevents e2fsprogs from building and installing the <systemitem class="
 "\"library\">libuuid</systemitem> and <systemitem class=\"library\">libblkid</"
@@ -184,7 +178,7 @@ msgstr ""
 "该选项防止 e2fsprogs 构建和安装 <systemitem class=\"library\">libuuid</"
 "systemitem> 和 <systemitem class=\"library\">libblkid</systemitem> 库，"
 "<systemitem class=\"daemon\">uuidd</systemitem> 守护程序，以及 "
-"<command>fsck</command> 包装器, 因为 Util-linux 会安装更新的版本。"
+"<command>fsck</command> 包装器，因为 Util-linux 会安装更新的版本。"
 
 #. type: Content of: <sect1><sect2><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/e2fsprogs.xml:104
@@ -214,6 +208,8 @@ msgid ""
 "On a spinning disk, the tests take a little more than 4 SBUs. They can be "
 "much shorter on an SSD (down to about 1.5 SBUs)."
 msgstr ""
+"在机械硬盘上，测试使用的时间略超过 4 SBU。在 SSD 上测试时间短很多 "
+"(只要约 1.5 SBU)。"
 
 #. type: Content of: <sect1><sect2><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/e2fsprogs.xml:121
@@ -302,7 +298,6 @@ msgstr "安装的目录"
 
 #. type: Content of: <sect1><sect2><segmentedlist><seglistitem><seg>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/e2fsprogs.xml:156
-#, fuzzy
 msgid ""
 "badblocks, chattr, compile_et, debugfs, dumpe2fs, e2freefrag, e2fsck, "
 "e2image, e2label, e2mmpstatus, e2scrub, e2scrub_all, e2undo, e4crypt, "
@@ -350,7 +345,7 @@ msgstr "<command>badblocks</command>"
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/e2fsprogs.xml:177
 msgid "Searches a device (usually a disk partition) for bad blocks"
-msgstr "在一个设备（一般是磁盘分区）上搜索坏块"
+msgstr "在一个设备 (一般是磁盘分区) 上搜索坏块"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/e2fsprogs.xml:180
@@ -926,15 +921,3 @@ msgstr "被 <command>debugfs</command> 使用"
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/e2fsprogs.xml:534
 msgid "libss"
 msgstr "libss"
-
-#~ msgid ""
-#~ "One of the E2fsprogs tests will attempt to allocate 256 MB of memory.  If "
-#~ "you do not have significantly more RAM than this, be sure to enable "
-#~ "sufficient swap space for the test. See <xref linkend=\"ch-partitioning-"
-#~ "creatingfilesystem\"/> and <xref linkend=\"ch-partitioning-mounting\"/> "
-#~ "for details on creating and enabling swap space."
-#~ msgstr ""
-#~ "某个 e2fsprogs 测试会试图分配 256MB 内存。如果系统内存不比 256MB 大很"
-#~ "多，请确认为测试启用了足够的交换空间。参阅 <xref linkend=\"ch-"
-#~ "partitioning-creatingfilesystem\"/> 和 <xref linkend=\"ch-partitioning-"
-#~ "mounting\"/>，了解创建和启用交换空间的详细信息。"

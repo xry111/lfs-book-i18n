@@ -194,13 +194,12 @@ msgstr ""
 
 #. type: Content of: <sect1><sect2><screen>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/coreutils.xml:111
-#, fuzzy, no-wrap
+#, no-wrap
 msgid "<userinput remap=\"test\">make NON_ROOT_USERNAME=tester check-root</userinput>"
-msgstr "<userinput remap=\"test\">make NON_ROOT_USERNAME=nobody check-root</userinput>"
+msgstr "<userinput remap=\"test\">make NON_ROOT_USERNAME=tester check-root</userinput>"
 
 #. type: Content of: <sect1><sect2><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/coreutils.xml:113
-#, fuzzy
 msgid ""
 "We're going to run the remainder of the tests as the <systemitem class="
 "\"username\">tester</systemitem> user. Certain tests require that the user "
@@ -208,16 +207,16 @@ msgid ""
 "a temporary group and make the user <systemitem class=\"username\">tester</"
 "systemitem> a part of it:"
 msgstr ""
-"之后我们要以 <systemitem class=\"username\">nobody</systemitem> 用户身份运行"
+"之后我们要以 <systemitem class=\"username\">tester</systemitem> 用户身份运行"
 "其余测试。然而，某些测试要求测试用户属于至少一个组。为了不跳过这些测试，我们"
-"添加一个临时组，并使得 <systemitem class=\"username\">nobody</systemitem> 用"
+"添加一个临时组，并使得 <systemitem class=\"username\">tester</systemitem> 用"
 "户成为它的成员："
 
 #. type: Content of: <sect1><sect2><screen>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/coreutils.xml:119
-#, fuzzy, no-wrap
+#, no-wrap
 msgid "<userinput remap=\"test\">echo \"dummy:x:102:tester\" &gt;&gt; /etc/group</userinput>"
-msgstr "<userinput remap=\"test\">echo \"dummy:x:1000:nobody\" &gt;&gt; /etc/group</userinput>"
+msgstr "<userinput remap=\"test\">echo \"dummy:x:102:tester\" &gt;&gt; /etc/group</userinput>"
 
 #. type: Content of: <sect1><sect2><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/coreutils.xml:121
@@ -228,22 +227,19 @@ msgstr "修正访问权限，使得非 root 用户可以编译和运行测试：
 
 #. type: Content of: <sect1><sect2><screen>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/coreutils.xml:124
-#, fuzzy, no-wrap
 msgid "<userinput remap=\"test\">chown -Rv tester . </userinput>"
-msgstr "<userinput remap=\"test\">chown -Rv nobody . </userinput>"
+msgstr "<userinput remap=\"test\">chown -Rv tester . </userinput>"
 
 #. type: Content of: <sect1><sect2><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/coreutils.xml:126
 msgid "Now run the tests:"
-msgstr ""
+msgstr "现在运行测试："
 
 #. type: Content of: <sect1><sect2><screen>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/coreutils.xml:128
-#, fuzzy, no-wrap
+#, no-wrap
 msgid "<userinput remap=\"test\">su tester -c \"PATH=$PATH make RUN_EXPENSIVE_TESTS=yes check\"</userinput>"
-msgstr ""
-"<userinput remap=\"test\">su nobody -s /bin/bash \\\n"
-"          -c \"PATH=$PATH make RUN_EXPENSIVE_TESTS=yes check\"</userinput>"
+msgstr "<userinput remap=\"test\">su tester -c \"PATH=$PATH make RUN_EXPENSIVE_TESTS=yes check\"</userinput>"
 
 #. type: Content of: <sect1><sect2><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/coreutils.xml:130
@@ -274,7 +270,7 @@ msgstr "将程序移动到 FHS 要求的位置："
 
 #. type: Content of: <sect1><sect2><screen>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/coreutils.xml:139
-#, fuzzy, no-wrap
+#, no-wrap
 msgid ""
 "<userinput remap=\"install\">mv -v /usr/bin/{cat,chgrp,chmod,chown,cp,date,dd,df,echo} /bin\n"
 "mv -v /usr/bin/{false,ln,ls,mkdir,mknod,mv,pwd,rm} /bin\n"
@@ -288,7 +284,7 @@ msgstr ""
 "mv -v /usr/bin/{rmdir,stty,sync,true,uname} /bin\n"
 "mv -v /usr/bin/chroot /usr/sbin\n"
 "mv -v /usr/share/man/man1/chroot.1 /usr/share/man/man8/chroot.8\n"
-"sed -i s/\\\"1\\\"/\\\"8\\\"/1 /usr/share/man/man8/chroot.8</userinput>"
+"sed -i 's/\"1\"/\"8\"/' /usr/share/man/man8/chroot.8</userinput>"
 
 #. type: Content of: <sect1><sect2><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/coreutils.xml:146
@@ -379,9 +375,8 @@ msgstr ""
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/coreutils.xml:188
-#, fuzzy
 msgid "<command>[</command>"
-msgstr "<command>cp</command>"
+msgstr "<command>[</command>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/coreutils.xml:190
@@ -389,11 +384,13 @@ msgid ""
 "Is an actual command, /usr/bin/[, that is a synonym for the <command>test</"
 "command> command."
 msgstr ""
+"这是一个真实存在的命令，/usr/bin/[，它和 <command>test</command> 命令"
+"的功能相同。"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/coreutils.xml:193
 msgid "["
-msgstr ""
+msgstr "["
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/coreutils.xml:199
@@ -576,7 +573,7 @@ msgstr "<command>cksum</command>"
 msgid ""
 "Prints the Cyclic Redundancy Check (CRC) checksum and the byte counts of "
 "each specified file"
-msgstr "输出每个给定文件的循环冗余检查（CRC） 校验和及字节数"
+msgstr "输出每个给定文件的循环冗余检查 (CRC) 校验和及字节数"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/coreutils.xml:320
@@ -693,7 +690,7 @@ msgstr "<command>df</command>"
 msgid ""
 "Reports the amount of disk space available (and used) on all mounted file "
 "systems, or only on the file systems holding the selected files"
-msgstr "报告每个已挂载文件系统（或包含给定文件的文件系统） 的总大小和可用空间"
+msgstr "报告每个已挂载文件系统 (或包含给定文件的文件系统) 的总大小和可用空间"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/coreutils.xml:398
@@ -710,7 +707,7 @@ msgstr "<command>dir</command>"
 msgid ""
 "Lists the contents of each given directory (the same as the <command>ls</"
 "command> command)"
-msgstr "列出给定目录的内容 （和 <command>ls</command> 命令相同）"
+msgstr "列出给定目录的内容 (和 <command>ls</command> 命令相同)"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/coreutils.xml:409
@@ -915,7 +912,7 @@ msgstr "<command>head</command>"
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/coreutils.xml:542
 msgid ""
 "Prints the first ten lines (or the given number of lines)  of each given file"
-msgstr "打印文件的前 10 （或给定行数）行"
+msgstr "打印文件的前 10 (或给定行数) 行"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/coreutils.xml:545
@@ -964,7 +961,7 @@ msgstr "<command>install</command>"
 msgid ""
 "Copies files while setting their permission modes and, if possible, their "
 "owner and group"
-msgstr "复制文件并设定它们的访问权限，以及（如果可能） 它们的所有者和属组"
+msgstr "复制文件并设定它们的访问权限，以及 (如果可能) 它们的所有者和属组"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/coreutils.xml:577
@@ -1009,7 +1006,7 @@ msgstr "<command>ln</command>"
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/coreutils.xml:606
 msgid "Makes hard links or soft (symbolic) links between files"
-msgstr "在文件之间创建硬链接或软（符号）链接"
+msgstr "在文件之间创建硬链接或软 (符号) 链接"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/coreutils.xml:608
@@ -1054,7 +1051,7 @@ msgstr "<command>md5sum</command>"
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/coreutils.xml:636
 msgid "Reports or checks Message Digest 5 (MD5) checksums"
-msgstr "报告或检查消息摘要 5 （MD5）校验和"
+msgstr "报告或检查消息摘要 5 (MD5) 校验和"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/coreutils.xml:638
@@ -2024,19 +2021,3 @@ msgstr "<command>stdbuf</command> 使用的库"
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/coreutils.xml:1283
 msgid "libstdbuf"
 msgstr "libstdbuf"
-
-#~ msgid ""
-#~ "Now run the tests. Make sure the PATH in the <userinput>su</userinput> "
-#~ "environment includes /tools/bin."
-#~ msgstr ""
-#~ "现在运行测试。执行以下命令，确保在 <userinput>su</userinput> 环境的 PATH "
-#~ "变量包含 /tools/bin 的情况下运行测试。"
-
-#~ msgid ""
-#~ "The test program test-getlogin is known to fail in a partially built "
-#~ "system environment like the chroot environment here, but passes if run at "
-#~ "the end of this chapter.  The test program tty.sh is also known to fail."
-#~ msgstr ""
-#~ "已知测试程序 test-getlogin 在部分构建的系统环境（如这里的 chroot 环境）会"
-#~ "失败，但是在本章的最后再运行即可通过。另外已知测试程序 tty.sh 可能会失"
-#~ "败。"

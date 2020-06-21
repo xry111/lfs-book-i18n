@@ -117,7 +117,6 @@ msgstr "<parameter>--with-console-auth-dir=/run/console</parameter>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/dbus.xml:66
-#, fuzzy
 msgid "This specifies the location of the ConsoleKit authorization directory."
 msgstr "该选项指定 ConsoleKit 认证目录位置。"
 
@@ -177,12 +176,11 @@ msgstr ""
 
 #. type: Content of: <sect1><sect2><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/dbus.xml:94
-#, fuzzy
 msgid ""
 "Create a symlink so that D-Bus and systemd can use the same "
 "<filename>machine-id</filename> file:"
 msgstr ""
-"创建符号链接，使 D-Bus 和 systemd 使用同样的 <filename>machine-id</filename> "
+"创建符号链接，使 D-Bus 和 systemd 使用同一个 <filename>machine-id</filename> "
 "文件："
 
 #. type: Content of: <sect1><sect2><screen>
@@ -194,13 +192,13 @@ msgstr "<userinput remap=\"install\">ln -sfv /etc/machine-id /var/lib/dbus</user
 #. type: Content of: <sect1><sect2><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/dbus.xml:99
 msgid "Move the socket file to /run instead of the deprecated /var/run:"
-msgstr ""
+msgstr "将 socket 文件从过时的 /var/run 移动到 /run："
 
 #. type: Content of: <sect1><sect2><screen>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/dbus.xml:102
-#, fuzzy, no-wrap
+#, no-wrap
 msgid "<userinput remap=\"install\">sed -i 's:/var/run:/run:' /lib/systemd/system/dbus.socket</userinput>"
-msgstr "<userinput remap=\"install\">ln -sfv /etc/machine-id /var/lib/dbus</userinput>"
+msgstr "<userinput remap=\"install\">sed -i 's:/var/run:/run:' /lib/systemd/system/dbus.socket</userinput>"
 
 #. type: Content of: <sect1><sect2><title>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/dbus.xml:107
@@ -266,7 +264,6 @@ msgstr "<command>dbus-cleanup-sockets</command>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/dbus.xml:133
-#, fuzzy
 msgid "is used to remove leftover sockets in a directory"
 msgstr "用于清理目录中遗留的套接字"
 
@@ -282,9 +279,8 @@ msgstr "<command>dbus-daemon</command>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/dbus.xml:143
-#, fuzzy
 msgid "Is the D-Bus message bus daemon"
-msgstr "D-Bus 消息总线守护程序"
+msgstr "是 D-Bus 消息总线守护程序"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/dbus.xml:145
@@ -362,9 +358,8 @@ msgstr "<command>dbus-test-tool</command>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/dbus.xml:196
-#, fuzzy
 msgid "Is a tool to help packages test <application>D-Bus</application>"
-msgstr "一个帮助软件包测试 <application>D-Bus</application> 的工具"
+msgstr "是一个帮助软件包测试 <application>D-Bus</application> 的工具"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/dbus.xml:199

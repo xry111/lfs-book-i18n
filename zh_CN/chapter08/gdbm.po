@@ -38,7 +38,6 @@ msgstr "GDBM"
 
 #. type: Content of: <sect1><sect2><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/gdbm.xml:26
-#, fuzzy
 msgid ""
 "The GDBM package contains the GNU Database Manager.  It is a library of "
 "database functions that use extensible hashing and works similar to the "
@@ -78,13 +77,13 @@ msgstr "安装 GDBM"
 #. type: Content of: <sect1><sect2><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/gdbm.xml:47
 msgid "First, fix an issue first identified by gcc-10:"
-msgstr ""
+msgstr "首先，修复一个 GCC-10 首先发现的问题："
 
 #. type: Content of: <sect1><sect2><screen>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/gdbm.xml:49
 #, no-wrap
 msgid "<userinput remap=\"pre\">sed -r -i '/^char.*parseopt_program_(doc|args)/d' src/parseopt.c</userinput>"
-msgstr ""
+msgstr "<userinput remap=\"pre\">sed -r -i '/^char.*parseopt_program_(doc|args)/d' src/parseopt.c</userinput>"
 
 #. type: Content of: <sect1><sect2><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/gdbm.xml:51
@@ -115,12 +114,11 @@ msgstr "<envar>--enable-libgdbm-compat</envar>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/gdbm.xml:63
-#, fuzzy
 msgid ""
 "This switch enables building the libgdbm compatibility library.  Some "
 "packages outside of LFS may require the older DBM routines it provides."
 msgstr ""
-"该选项启用 libgdbm 兼容性库的构建，因为 LFS 之外的一些软件包需要它提供的老"
+"该选项启用 libgdbm 兼容性库的构建。LFS 之外的一些软件包需要它提供的老"
 "式 DBM 子程序。"
 
 #. type: Content of: <sect1><sect2><para>
