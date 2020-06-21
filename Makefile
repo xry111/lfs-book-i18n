@@ -27,7 +27,9 @@ KEEP_FILES = $(filter-out $(MXML_FILES), KEEP_FILES)
 
 MBOOK_FILES = $(patsubst %, $(MLANG)/book/%, $(BOOK_FILES))
 
-.PHONY: html booksrc nochunks pdf
+.PHONY: html booksrc nochunks pdf pofiles
+
+pofiles: $(PO_FILES)
 
 html: booksrc
 	rm -rf $(MLANG)/book/render # without this tidy may be stupidly slow
