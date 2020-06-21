@@ -1,9 +1,3 @@
-# SOME DESCRIPTIVE TITLE
-# Copyright (C) YEAR Free Software Foundation, Inc.
-# This file is distributed under the same license as the PACKAGE package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
-#
-#, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
@@ -11,48 +5,58 @@ msgstr ""
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
-"Language: \n"
+"Language: zh_CN\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Translate Toolkit 2.2.5\n"
 
 #. type: Content of: <sect1><title>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter09/udev.xml:11
 msgid "Overview of Device and Module Handling"
-msgstr ""
+msgstr "设备和模块管理概述"
 
 #. type: Content of: <sect1><indexterm><primary>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter09/udev.xml:14
 msgid "Udev"
-msgstr ""
+msgstr "Udev"
 
 #. type: Content of: <sect1><indexterm><secondary>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter09/udev.xml:15
 msgid "usage"
-msgstr ""
+msgstr "usage"
 
 #. type: Content of: <sect1><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter09/udev.xml:18
 msgid ""
 "In <xref linkend=\"chapter-building-system\"/>, we installed the udev "
-"package when <phrase revision=\"sysv\">eudev</phrase> <phrase "
-"revision=\"systemd\">systemd</phrase> was built. Before we go into the "
-"details regarding how this works, a brief history of previous methods of "
-"handling devices is in order."
+"package when <phrase revision=\"sysv\">eudev</phrase> <phrase revision="
+"\"systemd\">systemd</phrase> was built. Before we go into the details "
+"regarding how this works, a brief history of previous methods of handling "
+"devices is in order."
 msgstr ""
+"在<xref linkend=\"chapter-building-system\"/>中，我们在构建 <phrase "
+"revision=\"sysv\">eudev</phrase> <phrase revision=\"systemd\">systemd</"
+"phrase> 时安装了 Udev 软件包。在我们详细讨论它的工作原理之前，首先按时间顺序"
+"简要介绍历史上曾经使用过的设备管理方式。"
 
 #. type: Content of: <sect1><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter09/udev.xml:24
 msgid ""
 "Linux systems in general traditionally used a static device creation method, "
-"whereby a great many device nodes were created under <filename "
-"class=\"directory\">/dev</filename> (sometimes literally thousands of "
-"nodes), regardless of whether the corresponding hardware devices actually "
-"existed. This was typically done via a <command>MAKEDEV</command> script, "
-"which contains a number of calls to the <command>mknod</command> program "
-"with the relevant major and minor device numbers for every possible device "
-"that might exist in the world."
+"whereby a great many device nodes were created under <filename class="
+"\"directory\">/dev</filename> (sometimes literally thousands of nodes), "
+"regardless of whether the corresponding hardware devices actually existed. "
+"This was typically done via a <command>MAKEDEV</command> script, which "
+"contains a number of calls to the <command>mknod</command> program with the "
+"relevant major and minor device numbers for every possible device that might "
+"exist in the world."
 msgstr ""
+"传统的 Linux 系统通常使用静态地创建设备，即在 <filename class=\"directory\">/"
+"dev</filename> 下创建大量设备节点 (有时有数千个节点)，无论对应的硬件设备是否"
+"真的存在。一般通过 <command>MAKEDEV</command> 脚本完成这一工作，它包含以相"
+"关的主设备号和次设备号，为世界上可能存在的每个设备建立节点的大量 "
+"<command>mknod</command> 命令。"
 
 #. type: Content of: <sect1><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter09/udev.xml:33
@@ -64,39 +68,52 @@ msgid ""
 "system that resides entirely in system memory). Device nodes do not require "
 "much space, so the memory that is used is negligible."
 msgstr ""
+"使用 Udev，则只有那些被内核检测到的设备才会获得为它们创建的设备节点。由于这些"
+"设备节点在每次引导系统时都会重新创建，它们被储存在 <systemitem class="
+"\"filesystem\">devtmpfs</systemitem> 文件系统中 (一个虚拟文件系统，完全驻留在"
+"系统内存)。设备节点不需要太多空间，它们使用的系统内存可以忽略不计。"
 
 #. type: Content of: <sect1><sect2><title>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter09/udev.xml:41
 msgid "History"
-msgstr ""
+msgstr "历史"
 
 #. type: Content of: <sect1><sect2><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter09/udev.xml:43
 msgid ""
-"In February 2000, a new filesystem called <systemitem "
-"class=\"filesystem\">devfs</systemitem> was merged into the 2.3.46 kernel "
-"and was made available during the 2.4 series of stable kernels. Although it "
-"was present in the kernel source itself, this method of creating devices "
-"dynamically never received overwhelming support from the core kernel "
-"developers."
+"In February 2000, a new filesystem called <systemitem class=\"filesystem"
+"\">devfs</systemitem> was merged into the 2.3.46 kernel and was made "
+"available during the 2.4 series of stable kernels. Although it was present "
+"in the kernel source itself, this method of creating devices dynamically "
+"never received overwhelming support from the core kernel developers."
 msgstr ""
+"在 2000 年 2 月，一个称为 <systemitem class=\"filesystem\">devfs</"
+"systemitem> 的新文件系统被合并到 2.3.46 版内核中，并在 2.4 系列稳定内核中可"
+"用。尽管它本身曾经存在于内核源代码中，但这种设备节点动态创建方法从未得到内核"
+"核心开发者的大力支持。"
 
 #. type: Content of: <sect1><sect2><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter09/udev.xml:50
 msgid ""
-"The main problem with the approach adopted by <systemitem "
-"class=\"filesystem\">devfs</systemitem> was the way it handled device "
-"detection, creation, and naming. The latter issue, that of device node "
-"naming, was perhaps the most critical. It is generally accepted that if "
-"device names are allowed to be configurable, then the device naming policy "
-"should be up to a system administrator, not imposed on them by any "
-"particular developer(s). The <systemitem "
-"class=\"filesystem\">devfs</systemitem> file system also suffered from race "
-"conditions that were inherent in its design and could not be fixed without a "
-"substantial revision to the kernel. It was marked as deprecated for a long "
-"period &ndash; due to a lack of maintenance &ndash; and was finally removed "
-"from the kernel in June, 2006."
+"The main problem with the approach adopted by <systemitem class=\"filesystem"
+"\">devfs</systemitem> was the way it handled device detection, creation, and "
+"naming. The latter issue, that of device node naming, was perhaps the most "
+"critical. It is generally accepted that if device names are allowed to be "
+"configurable, then the device naming policy should be up to a system "
+"administrator, not imposed on them by any particular developer(s). The "
+"<systemitem class=\"filesystem\">devfs</systemitem> file system also "
+"suffered from race conditions that were inherent in its design and could not "
+"be fixed without a substantial revision to the kernel. It was marked as "
+"deprecated for a long period &ndash; due to a lack of maintenance &ndash; "
+"and was finally removed from the kernel in June, 2006."
 msgstr ""
+"<systemitem class=\"filesystem\">devfs</systemitem> 实现机制的主要问题是它处"
+"理设备的检测、创建和命名的方式，其中最致命的或许最后一项，即设备节点命名方"
+"式。通常认为，如果设备名称是可配置的，那么设备命名策略应该由系统管理员，而不"
+"是某个 (某些)特定开发者决定。<systemitem class=\"filesystem\">devfs</"
+"systemitem> 还受到其设计中固有的竞争条件的严重影响，在不对内核进行大量修改的"
+"前提下无法修复这一问题。由于缺乏维护，它早已被标记为过时特性，最终在 2006 年 "
+"6 月被从内核中移除。"
 
 #. type: Content of: <sect1><sect2><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter09/udev.xml:63
@@ -110,63 +127,89 @@ msgid ""
 "<systemitem class=\"filesystem\">devfs</systemitem> became much more "
 "realistic."
 msgstr ""
+"在不稳定的 2.5 系列内核开发过程中，加入了一个新的虚拟文件系统，称为 "
+"<systemitem class=\"filesystem\">sysfs</systemitem>，并在 2.6 系列稳定内核中"
+"发布。<systemitem class=\"filesystem\">sysfs</systemitem> 的工作是将系统硬件"
+"配置信息导出给用户空间进程，有了这个用户空间可见的配置描述，就可能开发一种 "
+"<systemitem class=\"filesystem\">devfs</systemitem> 的用户空间替代品。"
 
 #. type: Content of: <sect1><sect2><title>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter09/udev.xml:75
 msgid "Udev Implementation"
-msgstr ""
+msgstr "Udev 实现"
 
 #. type: Content of: <sect1><sect2><sect3><title>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter09/udev.xml:78
 msgid "Sysfs"
-msgstr ""
+msgstr "Sysfs"
 
 #. type: Content of: <sect1><sect2><sect3><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter09/udev.xml:80
 msgid ""
 "The <systemitem class=\"filesystem\">sysfs</systemitem> filesystem was "
-"mentioned briefly above. One may wonder how <systemitem "
-"class=\"filesystem\">sysfs</systemitem> knows about the devices present on a "
-"system and what device numbers should be used for them. Drivers that have "
-"been compiled into the kernel directly register their objects with a "
-"<systemitem class=\"filesystem\">sysfs</systemitem> (devtmpfs internally)  "
-"as they are detected by the kernel. For drivers compiled as modules, this "
-"registration will happen when the module is loaded. Once the <systemitem "
-"class=\"filesystem\">sysfs</systemitem> filesystem is mounted (on /sys), "
-"data which the drivers register with <systemitem "
-"class=\"filesystem\">sysfs</systemitem> are available to userspace processes "
-"and to udevd for processing (including modifications to device nodes)."
+"mentioned briefly above. One may wonder how <systemitem class=\"filesystem"
+"\">sysfs</systemitem> knows about the devices present on a system and what "
+"device numbers should be used for them. Drivers that have been compiled into "
+"the kernel directly register their objects with a <systemitem class="
+"\"filesystem\">sysfs</systemitem> (devtmpfs internally)  as they are "
+"detected by the kernel. For drivers compiled as modules, this registration "
+"will happen when the module is loaded. Once the <systemitem class="
+"\"filesystem\">sysfs</systemitem> filesystem is mounted (on /sys), data "
+"which the drivers register with <systemitem class=\"filesystem\">sysfs</"
+"systemitem> are available to userspace processes and to udevd for processing "
+"(including modifications to device nodes)."
 msgstr ""
+"前面已经简要提到了 <systemitem class=\"filesystem\">sysfs</systemitem> 文件系"
+"统。有些读者可能好奇，<systemitem class=\"filesystem\">sysfs</systemitem> "
+"是如何知道系统中存在哪些设备，以及应该为它们使用什么设备号的。答案是，那些编"
+"译到内核中的驱动程序在它们的对象被内核检测到时，直接将它们注册到 "
+"<systemitem class=\"filesystem\">sysfs</systemitem>  (内部的 devtmpfs)。对于"
+"那些被编译为模块的驱动程序，注册过程在模块加载时进行。只要 <systemitem "
+"class=\"filesystem\">sysfs</systemitem> 文件系统被挂载好 (位于 /sys)，用户空"
+"间程序即可使用驱动程序注册在 <systemitem class=\"filesystem\">sysfs</"
+"systemitem> 中的数据，Udev 就能够使用这些数据对设备进行处理 (包括修改设备节"
+"点)。"
 
 #. type: Content of: <sect1><sect2><sect3><title>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter09/udev.xml:97
 msgid "Device Node Creation"
-msgstr ""
+msgstr "设备节点的创建"
 
 #. type: Content of: <sect1><sect2><sect3><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter09/udev.xml:99
 msgid ""
-"Device files are created by the kernel by the <systemitem "
-"class=\"filesystem\">devtmpfs</systemitem> filesystem.  Any driver that "
-"wishes to register a device node will go through the <systemitem "
-"class=\"filesystem\">devtmpfs</systemitem> (via the driver core) to do it.  "
-"When a <systemitem class=\"filesystem\">devtmpfs</systemitem> instance is "
-"mounted on <filename class=\"directory\">/dev</filename>, the device node "
-"will initially be created with a fixed name, permissions, and owner."
+"Device files are created by the kernel by the <systemitem class=\"filesystem"
+"\">devtmpfs</systemitem> filesystem.  Any driver that wishes to register a "
+"device node will go through the <systemitem class=\"filesystem\">devtmpfs</"
+"systemitem> (via the driver core) to do it.  When a <systemitem class="
+"\"filesystem\">devtmpfs</systemitem> instance is mounted on <filename class="
+"\"directory\">/dev</filename>, the device node will initially be created "
+"with a fixed name, permissions, and owner."
 msgstr ""
+"内核通过 <systemitem class=\"filesystem\">devtmpfs</systemitem> 直接创建设备"
+"文件，任何希望注册设备节点的驱动程序都要通过 <systemitem class=\"filesystem"
+"\">devtmpfs</systemitem> (经过驱动程序核心) 实现。当一个 <systemitem class="
+"\"filesystem\">devtmpfs</systemitem> 实例被挂载到 <filename class=\"directory"
+"\">/dev</filename> 时，设备节点将被以固定的名称、访问权限和所有者首次创建。"
 
 #. type: Content of: <sect1><sect2><sect3><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter09/udev.xml:108
 msgid ""
-"A short time later, the kernel will send a uevent to <command> "
-"udevd</command>.  Based on the rules specified in the files within the "
-"<filename class=\"directory\">/etc/udev/rules.d</filename>, <filename "
-"class=\"directory\">/lib/udev/rules.d</filename>, and <filename "
-"class=\"directory\">/run/udev/rules.d</filename> directories, <command> "
-"udevd</command> will create additional symlinks to the device node, or "
-"change its permissions, owner, or group, or modify the internal "
-"<command>udevd</command> database entry (name) for that object."
+"A short time later, the kernel will send a uevent to <command> udevd</"
+"command>.  Based on the rules specified in the files within the <filename "
+"class=\"directory\">/etc/udev/rules.d</filename>, <filename class=\"directory"
+"\">/lib/udev/rules.d</filename>, and <filename class=\"directory\">/run/udev/"
+"rules.d</filename> directories, <command> udevd</command> will create "
+"additional symlinks to the device node, or change its permissions, owner, or "
+"group, or modify the internal <command>udevd</command> database entry (name) "
+"for that object."
 msgstr ""
+"很快，内核会向 <command>udevd</command> 发送一个 uevent。根据 <filename "
+"class=\"directory\">/etc/udev/rules.d</filename>，<filename class=\"directory"
+"\">/lib/udev/rules.d</filename>，以及 <filename class=\"directory\">/run/"
+"udev/rules.d</filename> 目录中文件指定的规则，<command>udevd</command> 将为设"
+"备节点创建额外的符号链接，修改其访问权限，所有者，或属组，或者修改该对象的 "
+"<command>udevd</command> 数据库条目 (名称)。"
 
 #. type: Content of: <sect1><sect2><sect3><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter09/udev.xml:117
@@ -177,11 +220,14 @@ msgid ""
 "whatever <systemitem class=\"filesystem\">devtmpfs</systemitem> used "
 "initially."
 msgstr ""
+"以上三个目录中的规则都被编号，且这三个目录的内容将合并处理。如果 "
+"<command>udevd</command> 找不到它正在创建的设备对应的规则，它将会沿用 "
+"<systemitem class=\"filesystem\">devtmpfs</systemitem> 最早使用的配置。"
 
 #. type: Content of: <sect1><sect2><sect3><title>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter09/udev.xml:124
 msgid "Module Loading"
-msgstr ""
+msgstr "模块加载"
 
 #. type: Content of: <sect1><sect2><sect3><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter09/udev.xml:126
@@ -195,36 +241,51 @@ msgid ""
 "the bus driver exports the alias of the driver that would handle the device "
 "via <systemitem class=\"filesystem\">sysfs</systemitem>. E.g., the "
 "<filename>/sys/bus/pci/devices/0000:00:0d.0/modalias</filename> file might "
-"contain the string "
-"<quote>pci:v00001319d00000801sv00001319sd00001319bc04sc01i00</quote>.  The "
-"default rules provided with udev will cause <command>udevd</command> to call "
-"out to <command>/sbin/modprobe</command> with the contents of the "
-"<envar>MODALIAS</envar> uevent environment variable (which should be the "
-"same as the contents of the <filename>modalias</filename> file in sysfs), "
-"thus loading all modules whose aliases match this string after wildcard "
-"expansion."
+"contain the string <quote>pci:"
+"v00001319d00000801sv00001319sd00001319bc04sc01i00</quote>.  The default "
+"rules provided with udev will cause <command>udevd</command> to call out to "
+"<command>/sbin/modprobe</command> with the contents of the <envar>MODALIAS</"
+"envar> uevent environment variable (which should be the same as the contents "
+"of the <filename>modalias</filename> file in sysfs), thus loading all "
+"modules whose aliases match this string after wildcard expansion."
 msgstr ""
+"编译为内核模块的设备驱动程序可能有内建的别名。别名可以通过 "
+"<command>modinfo</command> 程序查询，它通常和该模块支持的设备的总线相关标识符"
+"有关。例如，<emphasis>snd-fm801</emphasis> 驱动程序支持厂商 ID 为 0x1319，设"
+"备 ID 为 0x0801 的 PCI 设备，其别名为<quote>pci:"
+"v00001319d00000801sv*sd*bc04sc01l*</quote>。对于多数设备，总线驱动程序会通"
+"过 <systemitem class=\"filesystem\">sysfs</systemitem> 导出应该处理该设备的驱"
+"动程序别名，例如 <filename>/sys/bus/pci/devices/0000:00:0d.0/modalias</"
+"filename> 文件应该包含字符串<quote>pci:"
+"v00001319d00000801sv00001319sd00001319bc04sc01i00</quote>。Udev 附带的默认规"
+"则会导致 <command>udevd</command> 调用 <command>/sbin/modprobe</command> 时传"
+"递 <envar>MODALIAS</envar> uevent 环境变量 (它的值应该和 sysfs 中"
+"<filename>modalias</filename> 文件的内容相同)，从而加载那些在通配符扩展后别名"
+"与这个字符串匹配的模块。"
 
 #. type: Content of: <sect1><sect2><sect3><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter09/udev.xml:145
 msgid ""
-"In this example, this means that, in addition to "
-"<emphasis>snd-fm801</emphasis>, the obsolete (and unwanted)  "
-"<emphasis>forte</emphasis> driver will be loaded if it is available. See "
-"below for ways in which the loading of unwanted drivers can be prevented."
+"In this example, this means that, in addition to <emphasis>snd-fm801</"
+"emphasis>, the obsolete (and unwanted)  <emphasis>forte</emphasis> driver "
+"will be loaded if it is available. See below for ways in which the loading "
+"of unwanted drivers can be prevented."
 msgstr ""
+"在本例中，这意味着除了 <emphasis>snd-fm801</emphasis> 外，过时 (且不希望) 的 "
+"<emphasis>forte</emphasis> 如果可用，也会被加载。之后将介绍防止加载不希望的"
+"驱动程序的方法。"
 
 #. type: Content of: <sect1><sect2><sect3><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter09/udev.xml:151
 msgid ""
 "The kernel itself is also able to load modules for network protocols, "
 "filesystems, and NLS support on demand."
-msgstr ""
+msgstr "内核本身也能够在需要时为网络协议，文件系统，以及 NLS 支持加载模块。"
 
 #. type: Content of: <sect1><sect2><sect3><title>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter09/udev.xml:157
 msgid "Handling Hotpluggable/Dynamic Devices"
-msgstr ""
+msgstr "处理热插拔/动态设备"
 
 #. type: Content of: <sect1><sect2><sect3><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter09/udev.xml:159
@@ -234,54 +295,69 @@ msgid ""
 "uevent. This uevent is then handled by <command>udevd</command> as described "
 "above."
 msgstr ""
+"当您插入一个设备，例如通用串行总线 (USB) MP3 播放器时，内核能够发现该设备现"
+"在已经被连接到系统，并生成一个 uevent 事件。之后 <command>udevd</command> 像"
+"前面描述的一样，处理该 uevent 事件。"
 
 #. type: Content of: <sect1><sect2><title>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter09/udev.xml:169
 msgid "Problems with Loading Modules and Creating Devices"
-msgstr ""
+msgstr "加载模块和创建设备时的问题"
 
 #. type: Content of: <sect1><sect2><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter09/udev.xml:171
 msgid ""
 "There are a few possible problems when it comes to automatically creating "
 "device nodes."
-msgstr ""
+msgstr "在自动创建设备节点时，可能出现一些问题。"
 
 #. type: Content of: <sect1><sect2><sect3><title>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter09/udev.xml:175
 msgid "A kernel module is not loaded automatically"
-msgstr ""
+msgstr "内核模块没有自动加载"
 
 #. type: Content of: <sect1><sect2><sect3><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter09/udev.xml:177
 msgid ""
 "Udev will only load a module if it has a bus-specific alias and the bus "
-"driver properly exports the necessary aliases to <systemitem "
-"class=\"filesystem\">sysfs</systemitem>. In other cases, one should arrange "
-"module loading by other means. With Linux-&linux-version;, udev is known to "
-"load properly-written drivers for INPUT, IDE, PCI, USB, SCSI, SERIO, and "
-"FireWire devices."
+"driver properly exports the necessary aliases to <systemitem class="
+"\"filesystem\">sysfs</systemitem>. In other cases, one should arrange module "
+"loading by other means. With Linux-&linux-version;, udev is known to load "
+"properly-written drivers for INPUT, IDE, PCI, USB, SCSI, SERIO, and FireWire "
+"devices."
 msgstr ""
+"Udev 只加载拥有总线特定别名，且总线驱动程序正确地向 <systemitem class="
+"\"filesystem\">sysfs</systemitem> 导出了必要别名的模块。如果情况不是这样，您"
+"应该考虑用其他方法加载模块。在 Linux-&linux-version; 中，已知 Udev 可以加载"
+"编写正确的 INPUT，IDE，PCI，USB，SCSI，SERIO，以及 FireWire 驱动程序。"
 
 #. type: Content of: <sect1><sect2><sect3><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter09/udev.xml:184
 msgid ""
 "To determine if the device driver you require has the necessary support for "
 "udev, run <command>modinfo</command> with the module name as the argument.  "
-"Now try locating the device directory under <filename "
-"class=\"directory\">/sys/bus</filename> and check whether there is a "
-"<filename>modalias</filename> file there."
+"Now try locating the device directory under <filename class=\"directory\">/"
+"sys/bus</filename> and check whether there is a <filename>modalias</"
+"filename> file there."
 msgstr ""
+"为了确定您需要的设备驱动程序是否包含 Udev 支持，以模块名为参数运行 "
+"<command>modinfo</command> 命令。然后试着在 <filename class=\"directory\">/"
+"sys/bus</filename> 中找到设备对应的目录，并检查其中是否有 "
+"<filename>modalias</filename> 文件。"
 
 #. type: Content of: <sect1><sect2><sect3><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter09/udev.xml:190
 msgid ""
-"If the <filename>modalias</filename> file exists in <systemitem "
-"class=\"filesystem\">sysfs</systemitem>, the driver supports the device and "
-"can talk to it directly, but doesn't have the alias, it is a bug in the "
-"driver. Load the driver without the help from udev and expect the issue to "
-"be fixed later."
+"If the <filename>modalias</filename> file exists in <systemitem class="
+"\"filesystem\">sysfs</systemitem>, the driver supports the device and can "
+"talk to it directly, but doesn't have the alias, it is a bug in the driver. "
+"Load the driver without the help from udev and expect the issue to be fixed "
+"later."
 msgstr ""
+"如果 <filename>modalias</filename> 文件存在于 <systemitem class=\"filesystem"
+"\">sysfs</systemitem> 中，说明驱动程序支持该设备，并能够直接和设备交互，但却"
+"没有正确的别名。这是驱动程序的 bug，您需要不通过 Udev 直接加载驱动，并等待这"
+"个问题日后被解决。"
 
 #. type: Content of: <sect1><sect2><sect3><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter09/udev.xml:196
@@ -292,6 +368,10 @@ msgid ""
 "Linux-&linux-version;, this is the case with ISA busses. Expect this issue "
 "to be fixed in later kernel versions."
 msgstr ""
+"如果 <filename>modalias</filename> 文件不存在于 <filename class=\"directory"
+"\">/sys/bus</filename> 下的对应目录中，说明内核开发者尚未对该总线类型增加 "
+"modalias 支持。在 Linux-&linux-version; 中，ISA 总线不受支持。只能等待这个问"
+"题在日后被解决。"
 
 #. type: Content of: <sect1><sect2><sect3><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter09/udev.xml:202
@@ -300,13 +380,15 @@ msgid ""
 "<emphasis>snd-pcm-oss</emphasis> and non-hardware drivers such as "
 "<emphasis>loop</emphasis> at all."
 msgstr ""
+"Udev 根本不会尝试加载<quote>包装器</quote> 驱动程序，比如 <emphasis>snd-pcm-"
+"oss</emphasis> 等，或 <emphasis>loop</emphasis> 等非硬件驱动程序。"
 
 #. type: Content of: <sect1><sect2><sect3><title>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter09/udev.xml:209
 msgid ""
 "A kernel module is not loaded automatically, and udev is not intended to "
 "load it"
-msgstr ""
+msgstr "内核模块没有自动加载，且 Udev 不尝试加载它"
 
 #. type: Content of: <sect1><sect2><sect3><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter09/udev.xml:212
@@ -314,57 +396,73 @@ msgid ""
 "If the <quote>wrapper</quote> module only enhances the functionality "
 "provided by some other module (e.g., <emphasis>snd-pcm-oss</emphasis> "
 "enhances the functionality of <emphasis>snd-pcm</emphasis> by making the "
-"sound cards available to OSS applications), configure "
-"<command>modprobe</command> to load the wrapper after udev loads the wrapped "
-"module. To do this, add a <quote>softdep</quote> line to the corresponding "
-"<filename>/etc/modprobe.d/<replaceable>&lt;filename&gt;</replaceable>.conf</filename> "
-"file. For example:"
+"sound cards available to OSS applications), configure <command>modprobe</"
+"command> to load the wrapper after udev loads the wrapped module. To do "
+"this, add a <quote>softdep</quote> line to the corresponding <filename>/etc/"
+"modprobe.d/<replaceable>&lt;filename&gt;</replaceable>.conf</filename> file. "
+"For example:"
 msgstr ""
+"如果<quote>包装器</quote>仅仅用于增强其他模块的功能 (例如，<emphasis>snd-"
+"pcm-oss</emphasis> 增强 <emphasis>snd-pcm</emphasis> 的功能，使 OSS 应用程序"
+"能够使用声卡)，需要配置 <command>modprobe</command>，使其在 Udev 加载被包装的"
+"模块时，自动加载包装器。为此，需要将<quote>softdep</quote>行添加到对应的 "
+"<filename>/etc/modprobe.d/<replaceable>&lt;filename&gt;</replaceable>.conf</"
+"filename> 中。例如："
 
 #. type: Content of: <sect1><sect2><sect3><screen>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter09/udev.xml:222
 #, no-wrap
 msgid "<literal>softdep snd-pcm post: snd-pcm-oss</literal>"
-msgstr ""
+msgstr "<literal>softdep snd-pcm post: snd-pcm-oss</literal>"
 
 #. type: Content of: <sect1><sect2><sect3><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter09/udev.xml:224
 msgid ""
-"Note that the <quote>softdep</quote> command also allows "
-"<literal>pre:</literal> dependencies, or a mixture of both "
-"<literal>pre:</literal> and <literal>post:</literal> dependencies.  See the "
-"<filename>modprobe.d(5)</filename> manual page for more information on "
-"<quote>softdep</quote> syntax and capabilities."
+"Note that the <quote>softdep</quote> command also allows <literal>pre:</"
+"literal> dependencies, or a mixture of both <literal>pre:</literal> and "
+"<literal>post:</literal> dependencies.  See the <filename>modprobe.d(5)</"
+"filename> manual page for more information on <quote>softdep</quote> syntax "
+"and capabilities."
 msgstr ""
+"注意<quote>softdep</quote>命令也允许 <literal>pre:</literal> 依赖项，或混合"
+"使用 <literal>pre:</literal> 和 <literal>post:</literal> 依赖项。参阅 "
+"<filename>modprobe.d(5)</filename> man 手册页面，了解更多关于"
+"<quote>softdep</quote>语法和功能的信息。"
 
 #. type: Content of: <sect1><sect2><sect3><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter09/udev.xml:230
 msgid ""
 "If the module in question is not a wrapper and is useful by itself, "
 "configure the <command>modules</command> bootscript to load this module on "
-"system boot. To do this, add the module name to the "
-"<filename>/etc/sysconfig/modules</filename> file on a separate line.  This "
-"works for wrapper modules too, but is suboptimal in that case."
+"system boot. To do this, add the module name to the <filename>/etc/sysconfig/"
+"modules</filename> file on a separate line.  This works for wrapper modules "
+"too, but is suboptimal in that case."
 msgstr ""
+"如果出现问题的模块不是包装器，而是本身就有特定功能的模块，需要配置 "
+"<command>modules</command> 引导脚本以在系统引导时加载它。为此，将模块名添加"
+"到 <filename>/etc/sysconfig/modules</filename> 中，作为单独的一行。包装器模块"
+"也可以被添加到这里，但对于包装器来说这不是最好的方案。"
 
 #. type: Content of: <sect1><sect2><sect3><title>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter09/udev.xml:239
 msgid "Udev loads some unwanted module"
-msgstr ""
+msgstr "Udev 加载了不希望的模块"
 
 #. type: Content of: <sect1><sect2><sect3><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter09/udev.xml:241
 msgid ""
-"Either don't build the module, or blacklist it in a "
-"<filename>/etc/modprobe.d/blacklist.conf</filename> file as done with the "
-"<emphasis>forte</emphasis> module in the example below:"
+"Either don't build the module, or blacklist it in a <filename>/etc/modprobe."
+"d/blacklist.conf</filename> file as done with the <emphasis>forte</emphasis> "
+"module in the example below:"
 msgstr ""
+"不要构建该模块，或者在 <filename>/etc/modprobe.d/blacklist.conf</filename> 文"
+"件中禁用它。以 <emphasis>forte</emphasis> 为例，下面一行禁用了该模块："
 
 #. type: Content of: <sect1><sect2><sect3><screen>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter09/udev.xml:245
 #, no-wrap
 msgid "<literal>blacklist forte</literal>"
-msgstr ""
+msgstr "<literal>blacklist forte</literal>"
 
 #. type: Content of: <sect1><sect2><sect3><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter09/udev.xml:247
@@ -372,11 +470,12 @@ msgid ""
 "Blacklisted modules can still be loaded manually with the explicit "
 "<command>modprobe</command> command."
 msgstr ""
+"被禁用的模块仍然可以通过直接执行 <command>modprobe</command> 手动加载。"
 
 #. type: Content of: <sect1><sect2><sect3><title>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter09/udev.xml:253
 msgid "Udev creates a device incorrectly, or makes a wrong symlink"
-msgstr ""
+msgstr "Udev 创建了错误的设备或错误的符号链接"
 
 #. type: Content of: <sect1><sect2><sect3><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter09/udev.xml:255
@@ -387,11 +486,14 @@ msgid ""
 "offending rule and make it more specific, with the help of the "
 "<command>udevadm info</command> command."
 msgstr ""
+"这一般是由于一条规则意外地匹配了某个设备。例如，一个写得不好的规则可能同时匹"
+"配到 SCSI 磁盘 (正确的) 和对应厂商的 SCSI 通用设备 (不正确的)。找到引起问题"
+"的规则，并通过 <command>udevadm info</command> 的帮助，将它进一步细化。"
 
 #. type: Content of: <sect1><sect2><sect3><title>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter09/udev.xml:264
 msgid "Udev rule works unreliably"
-msgstr ""
+msgstr "Udev 规则工作不可靠"
 
 #. type: Content of: <sect1><sect2><sect3><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter09/udev.xml:266
@@ -405,11 +507,18 @@ msgid ""
 "this file if it does not exist). Please notify the LFS Development list if "
 "you do so and it helps."
 msgstr ""
+"这可能是前一个问题的另一个表现形式。如果不是，而且您的规则使用了 "
+"<systemitem class=\"filesystem\">sysfs</systemitem> 属性，这个问题可能由内核"
+"计时问题引发，这类问题需要在新的内核版本中修复。目前，您可以创建一条规则以等"
+"待被使用的 <systemitem class=\"filesystem\">sysfs</systemitem> 属性，并将它"
+"附加到 <filename>/etc/udev/rules.d/10-wait-for-sysfs.rules</filename> 文件中"
+" (如果不存在就创建一个文件)，绕过这个问题。如果您通过这种方法解决了问题，请"
+"通知 LFS 开发邮件列表。"
 
 #. type: Content of: <sect1><sect2><sect3><title>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter09/udev.xml:278
 msgid "Udev does not create a device"
-msgstr ""
+msgstr "Udev 没有创建设备"
 
 #. type: Content of: <sect1><sect2><sect3><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter09/udev.xml:280
@@ -418,25 +527,34 @@ msgid ""
 "already loaded as a module, and that you have already checked that udev "
 "doesn't create a misnamed device."
 msgstr ""
+"以下内容假设驱动程序已经被编译到内核中，或作为模块被加载，而且您已经检查过并"
+"确认 Udev 没有创建命名错误的设备。"
 
 #. type: Content of: <sect1><sect2><sect3><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter09/udev.xml:284
 msgid ""
 "Udev has no information needed to create a device node if a kernel driver "
-"does not export its data to <systemitem "
-"class=\"filesystem\">sysfs</systemitem>. This is most common with third "
-"party drivers from outside the kernel tree. Create a static device node in "
-"<filename>/lib/udev/devices</filename> with the appropriate major/minor "
-"numbers (see the file <filename>devices.txt</filename> inside the kernel "
-"documentation or the documentation provided by the third party driver "
-"vendor). The static device node will be copied to <filename "
-"class=\"directory\">/dev</filename> by <command>udev</command>."
+"does not export its data to <systemitem class=\"filesystem\">sysfs</"
+"systemitem>. This is most common with third party drivers from outside the "
+"kernel tree. Create a static device node in <filename>/lib/udev/devices</"
+"filename> with the appropriate major/minor numbers (see the file "
+"<filename>devices.txt</filename> inside the kernel documentation or the "
+"documentation provided by the third party driver vendor). The static device "
+"node will be copied to <filename class=\"directory\">/dev</filename> by "
+"<command>udev</command>."
 msgstr ""
+"如果驱动程序没有将它的信息导出到 <systemitem class=\"filesystem\">sysfs</"
+"systemitem>，Udev 就无法获得创建设备节点必需的信息。这种问题往往出现在内核"
+"源代码树以外的第三方驱动程序中。这时，需要在 <filename>/lib/udev/devices</"
+"filename> 中使用正确的主设备号和次设备号，创建一个静态设备节点 (参考内核文档"
+"中的 <filename>devices.txt</filename> 或第三方驱动厂商提供的文档)，该静态设备"
+"节点将被复制到 <filename class=\"directory\">/dev</filename>，"
+"<command>udev</command> 会自动完成复制。"
 
 #. type: Content of: <sect1><sect2><sect3><title>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter09/udev.xml:298
 msgid "Device naming order changes randomly after rebooting"
-msgstr ""
+msgstr "重启后设备命名顺序随机变化"
 
 #. type: Content of: <sect1><sect2><sect3><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter09/udev.xml:300
@@ -446,32 +564,44 @@ msgid ""
 "<quote>fixed</quote>. You should not rely upon the kernel device names being "
 "stable. Instead, create your own rules that make symlinks with stable names "
 "based on some stable attributes of the device, such as a serial number or "
-"the output of various *_id utilities installed by udev.  See <xref "
-"linkend=\"ch-config-symlinks\"/> and <xref linkend=\"ch-config-network\"/> "
-"for examples."
+"the output of various *_id utilities installed by udev.  See <xref linkend="
+"\"ch-config-symlinks\"/> and <xref linkend=\"ch-config-network\"/> for "
+"examples."
 msgstr ""
+"这是由于 Udev 从设计上就是并行加载模块的，因此无法预测加载顺序。这个问题永远"
+"也不会被 <quote>修复</quote>。您不应该指望内核提供稳定的设备命名，而是应该创"
+"建您自己的规则，以根据设备的一些稳定属性，例如设备序列号或 Udev 安装的一些 "
+"*_id 工具的输出，来创建具有稳定名称的符号链接。可以参考<xref linkend=\"ch-"
+"config-symlinks\"/>和<xref linkend=\"ch-config-network\"/>中的例子。"
 
 #. type: Content of: <sect1><sect2><title>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter09/udev.xml:314
 msgid "Useful Reading"
-msgstr ""
+msgstr "扩展阅读"
 
 #. type: Content of: <sect1><sect2><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter09/udev.xml:316
 msgid "Additional helpful documentation is available at the following sites:"
-msgstr ""
+msgstr "以下链接包含了一些额外的帮助文档："
 
 #. type: Content of: <sect1><sect2><itemizedlist><listitem><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter09/udev.xml:322
 msgid ""
-"A Userspace Implementation of <systemitem "
-"class=\"filesystem\">devfs</systemitem> <ulink "
-"url=\"http://www.kroah.com/linux/talks/ols_2003_udev_paper/Reprint-Kroah-Hartman-OLS2003.pdf\"/>"
+"A Userspace Implementation of <systemitem class=\"filesystem\">devfs</"
+"systemitem> <ulink url=\"http://www.kroah.com/linux/talks/"
+"ols_2003_udev_paper/Reprint-Kroah-Hartman-OLS2003.pdf\"/>"
 msgstr ""
+"A Userspace Implementation of <systemitem class=\"filesystem\">devfs</"
+"systemitem> <ulink url=\"http://www.kroah.com/linux/talks/"
+"ols_2003_udev_paper/Reprint-Kroah-Hartman-OLS2003.pdf\"/>"
 
 #. type: Content of: <sect1><sect2><itemizedlist><listitem><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter09/udev.xml:327
 msgid ""
 "The <systemitem class=\"filesystem\">sysfs</systemitem> Filesystem <ulink "
-"url=\"http://www.kernel.org/pub/linux/kernel/people/mochel/doc/papers/ols-2005/mochel.pdf\"/>"
+"url=\"http://www.kernel.org/pub/linux/kernel/people/mochel/doc/papers/"
+"ols-2005/mochel.pdf\"/>"
 msgstr ""
+"The <systemitem class=\"filesystem\">sysfs</systemitem> Filesystem <ulink "
+"url=\"http://www.kernel.org/pub/linux/kernel/people/mochel/doc/papers/"
+"ols-2005/mochel.pdf\"/>"

@@ -1,9 +1,3 @@
-# SOME DESCRIPTIVE TITLE
-# Copyright (C) YEAR Free Software Foundation, Inc.
-# This file is distributed under the same license as the PACKAGE package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
-#
-#, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
@@ -11,20 +5,21 @@ msgstr ""
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
-"Language: \n"
+"Language: zh_CN\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Translate Toolkit 2.2.5\n"
 
 #. type: Content of: <sect1><title>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter09/symlinks.xml:11
 msgid "Managing Devices"
-msgstr ""
+msgstr "管理设备"
 
 #. type: Content of: <sect1><sect2><title>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter09/symlinks.xml:15
 msgid "Network Devices"
-msgstr ""
+msgstr "网络设备"
 
 #. type: Content of: <sect1><sect2><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter09/symlinks.xml:17
@@ -38,6 +33,12 @@ msgid ""
 "becomes eth1. In some cases, after a reboot the cards could get renumbered "
 "the other way around."
 msgstr ""
+"Udev 在默认情况下，根据固件或 BIOS 的数据，或总线、插槽与 MAC 地址等物理特性"
+"命名网络设备。这种命名法的主要目的是保证网络设备在每次引导时获得一致的命"
+"名，而不是基于网卡被系统发现的时间进行命名。例如，在老式命名方法中，如果一"
+"台计算机拥有两块网卡，其中一块由 Intel 生产，另一块由 Realtek 生产，则 "
+"Intel 网卡可能被命名为 eth0，而 Realtek 网卡被命名为 eth1。然而在重新启动系"
+"统后，它们的顺序可能会颠倒。"
 
 #. type: Content of: <sect1><sect2><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter09/symlinks.xml:26
@@ -46,11 +47,13 @@ msgid ""
 "something like enp5s0 or wlp3s0.  If this naming convention is not desired, "
 "the traditional naming scheme or a custom scheme can be implemented."
 msgstr ""
+"在新的命名架构中，典型的网络设备名称就像 enp5s0 或 wlp3s0 这样。如果您不喜欢"
+"这种命名惯例，可以采用传统或自定义命名架构。"
 
 #. type: Content of: <sect1><sect2><sect3><title>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter09/symlinks.xml:32
 msgid "Disabling Persistent Naming on the Kernel Command Line"
-msgstr ""
+msgstr "在内核命令行中禁用一致性命名"
 
 #. type: Content of: <sect1><sect2><sect3><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter09/symlinks.xml:34
@@ -60,14 +63,19 @@ msgid ""
 "This is most appropriate for those systems that have only one ethernet "
 "device of the same type.  Laptops often have multiple ethernet connections "
 "that are named eth0 and wlan0 and are also candidates for this method.  The "
-"command line is passed in the GRUB configuration file.  See <xref "
-"linkend=\"grub-cfg\"/>."
+"command line is passed in the GRUB configuration file.  See <xref linkend="
+"\"grub-cfg\"/>."
 msgstr ""
+"传统的，如同 eth0，eth1 这样的命名架构可以通过在内核命令行中加入 "
+"<userinput>net.ifnames=0</userinput> 而恢复。这在那些没有两块同类以太网设备"
+"的机器上最为合适。笔记本一般拥有两个以太网连接，在这种命名方式下分别是 eth0 "
+"和 wlan0，也可以采用这种方法。内核命令行需要写入 GRUB 配置文件中，参阅 "
+"<xref linkend=\"grub-cfg\"/>。"
 
 #. type: Content of: <sect1><sect2><sect3><title>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter09/symlinks.xml:45
 msgid "Creating Custom Udev Rules"
-msgstr ""
+msgstr "创建自定义 Udev 规则"
 
 #. type: Content of: <sect1><sect2><sect3><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter09/symlinks.xml:47
@@ -76,26 +84,29 @@ msgid ""
 "has been included that generates the initial rules.  Generate these rules by "
 "running:"
 msgstr ""
+"可以创建自定义 Udev 规则，定制命名架构。系统中包含一个生成初始规则的脚本，执"
+"行以下命令生成初始规则："
 
 #. type: Content of: <sect1><sect2><sect3><screen>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter09/symlinks.xml:51
 #, no-wrap
 msgid "<userinput>bash /lib/udev/init-net-rules.sh</userinput>"
-msgstr ""
+msgstr "<userinput>bash /lib/udev/init-net-rules.sh</userinput>"
 
 #. type: Content of: <sect1><sect2><sect3><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter09/symlinks.xml:53
 msgid ""
-"Now, inspect the "
-"<filename>/etc/udev/rules.d/70-persistent-net.rules</filename> file, to find "
-"out which name was assigned to which network device:"
+"Now, inspect the <filename>/etc/udev/rules.d/70-persistent-net.rules</"
+"filename> file, to find out which name was assigned to which network device:"
 msgstr ""
+"现在检查文件 <filename>/etc/udev/rules.d/70-persistent-net.rules</"
+"filename>，确认网络设备与命名的对应关系："
 
 #. type: Content of: <sect1><sect2><sect3><screen>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter09/symlinks.xml:57
 #, no-wrap
 msgid "<userinput>cat /etc/udev/rules.d/70-persistent-net.rules</userinput>"
-msgstr ""
+msgstr "<userinput>cat /etc/udev/rules.d/70-persistent-net.rules</userinput>"
 
 #. type: Content of: <sect1><sect2><sect3><note><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter09/symlinks.xml:59
@@ -105,6 +116,9 @@ msgid ""
 "rules file may not have been generated because addresses are not "
 "consistently assigned.  In these cases, this method cannot be used."
 msgstr ""
+"某些情况下，例如 MAC 地址被手动指定给了某块网卡，或在 Qemu、Xen 等虚拟环境"
+"下，可能不会生成网络设备规则文件，因为 MAC 地址的分配没有一致性。此时不能使"
+"用本方法。"
 
 #. type: Content of: <sect1><sect2><sect3><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter09/symlinks.xml:65
@@ -117,6 +131,11 @@ msgid ""
 "information is only for reference. The second line is the udev rule that "
 "matches this NIC and actually assigns it a name."
 msgstr ""
+"该文件的开头是一个注释块，之后对于每个网络接口设备 (NIC) 都给出两行。第一行是"
+"注释，给出该 NIC 的硬件 ID (例如对于 PCI 设备，就是 PCI 生产商 ID 和设备 "
+"ID)，如果能找到驱动程序的话，也会在括号中给出。它们并不被用于确定该设备的命"
+"名，仅供您在编写规则时进行参考。第二行是匹配该 NIC 的 udev 规则，和实际赋予它"
+"的设备名。"
 
 #. type: Content of: <sect1><sect2><sect3><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter09/symlinks.xml:73
@@ -125,6 +144,8 @@ msgid ""
 "whitespace. This rule's keys and an explanation of each of them are as "
 "follows:"
 msgstr ""
+"所有 udev 规则包含若干键值，用逗号和可选的空格进行分隔。下面给出规则中包含的"
+"键值和对它们的解释："
 
 #. type: Content of: <sect1><sect2><sect3><itemizedlist><listitem><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter09/symlinks.xml:79
@@ -132,6 +153,7 @@ msgid ""
 "<literal>SUBSYSTEM==\"net\"</literal> - This tells udev to ignore devices "
 "that are not network cards."
 msgstr ""
+"<literal>SUBSYSTEM==\"net\"</literal> - 告诉 udev 忽略除网卡以外的设备。"
 
 #. type: Content of: <sect1><sect2><sect3><itemizedlist><listitem><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter09/symlinks.xml:83
@@ -140,6 +162,8 @@ msgid ""
 "a uevent that isn't an add (\"remove\" and \"change\" uevents also happen, "
 "but don't need to rename network interfaces)."
 msgstr ""
+"<literal>ACTION==\"add\"</literal> - 告诉 udev 忽略除了“添加”外的所有 uevent "
+"(也存在“删除”或“修改”类型的 uevent，但在这种情况下不需要重命名网络接口)。"
 
 #. type: Content of: <sect1><sect2><sect3><itemizedlist><listitem><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter09/symlinks.xml:88
@@ -149,13 +173,15 @@ msgid ""
 "drivers). These sub-interfaces are skipped because the name that would be "
 "assigned would collide with their parent devices."
 msgstr ""
+"<literal>DRIVERS==\"?*\"</literal> - 这使得 udev 忽略 VLAN 或桥接子接口 (它们"
+"没有驱动程序)。它们必须被忽略，否则其命名会与父设备冲突。"
 
 #. type: Content of: <sect1><sect2><sect3><itemizedlist><listitem><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter09/symlinks.xml:94
 msgid ""
 "<literal>ATTR{address}</literal> - The value of this key is the NIC's MAC "
 "address."
-msgstr ""
+msgstr "<literal>ATTR{address}</literal> - 该键的值是 NIC 的 MAC 地址。"
 
 #. type: Content of: <sect1><sect2><sect3><itemizedlist><listitem><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter09/symlinks.xml:98
@@ -166,13 +192,16 @@ msgid ""
 "same reason that VLAN and bridge sub-interfaces are skipped: there would be "
 "a name collision otherwise."
 msgstr ""
+"<literal>ATTR{type}==\"1\"</literal> - 这保证在使用创建多个虚拟接口的无线驱动"
+"程序时，只匹配主要接口。跳过其他接口的原因和忽略 VLAN 与桥接子接口一样，是"
+"为了防止命名冲突。"
 
 #. type: Content of: <sect1><sect2><sect3><itemizedlist><listitem><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter09/symlinks.xml:105
 msgid ""
 "<literal>NAME</literal> - The value of this key is the name that udev will "
 "assign to this interface."
-msgstr ""
+msgstr "<literal>NAME</literal> - 该键的值是 udev 将赋予该网络接口的命名。"
 
 #. type: Content of: <sect1><sect2><sect3><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter09/symlinks.xml:110
@@ -182,11 +211,14 @@ msgid ""
 "proceeding, and be sure to use that <literal>NAME</literal> value when "
 "creating your configuration files below."
 msgstr ""
+"<literal>NAME</literal> 的值是我们关注的重点。在继续阅读之前，您需要确保自己"
+"知道赋予每个网络接口的命名，在之后的配置文件中需要使用这些名称作为 "
+"<literal>NAME</literal> 的值。"
 
 #. type: Content of: <sect1><sect2><title>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter09/symlinks.xml:121
 msgid "CD-ROM symlinks"
-msgstr ""
+msgstr "CD-ROM 符号链接"
 
 #. type: Content of: <sect1><sect2><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter09/symlinks.xml:123
@@ -200,6 +232,12 @@ msgid ""
 "for you, depending on the capabilities of each device, but you need to "
 "decide which of two modes of operation you wish to have the script use."
 msgstr ""
+"您之后可能希望安装的一些程序 (如某些媒体播放器) 预期 <filename class="
+"\"symlink\">/dev/cdrom</filename> 和 <filename class=\"symlink\">/dev/dvd</"
+"filename> 符号链接存在，并指向 CD-ROM 或 DVD-ROM 设备。另外，在 <filename>/"
+"etc/fstab</filename> 中引用它们也非常方便。Udev 提供了一个脚本，能根据每个设"
+"备的功能，为您生成创建这两个符号链接的规则。但是，您需要确定，自己希望使用该"
+"脚本提供的两种操作模式中的哪一种。"
 
 #. type: Content of: <sect1><sect2><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter09/symlinks.xml:132
@@ -214,6 +252,12 @@ msgid ""
 "<command>ata_id</command> or <command>scsi_id</command> programs, depending "
 "on which type of device you have."
 msgstr ""
+"首先，该脚本可以在 <quote>by-path</quote> 模式下运行 (这是 USB 和 FireWire 设"
+"备的默认模式)，此时它创建的规则依赖于 CD 或 DVD 设备的物理路径。其次，它可以"
+"在 <quote>by-id</quote> 模式下运行，此时它创建的规则依赖于 CD 或 DVD 设备本身"
+"存储的识别字符串。物理路径由 udev 的 <command>path_id</command> 脚本确定，而"
+"识别字符串由 <command>ata_id</command> 或 <command>scsi_id</command> 程序 (根"
+"据设备类型选用其中一个) 从硬件中读取。"
 
 #. type: Content of: <sect1><sect2><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter09/symlinks.xml:142
@@ -226,80 +270,102 @@ msgid ""
 "<quote>by-id</quote> mode. On the other hand, if you expect the device's "
 "identification to change, for example because it may die, and you would "
 "replace it with a different device with the same capabilities and which is "
-"plugged into the same connectors, then you should use the "
-"<quote>by-path</quote> mode."
+"plugged into the same connectors, then you should use the <quote>by-path</"
+"quote> mode."
 msgstr ""
+"两种方式各有优缺点，正确地方式依赖于设备可能发生的变化。如果您预期指向设备的"
+"物理路径 (即它连接的端口或插槽) 可能变化，例如您可能会将它移动到另一个 IDE "
+"接口或另一个 USB 接口，您应该使用 <quote>by-id</quote> 模式。另一方面，如果"
+"您可能用具有相同功能，并接入相同接口的另一台设备替换它，则您应该使用 "
+"<quote>by-path</quote> 模式。"
 
 #. type: Content of: <sect1><sect2><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter09/symlinks.xml:153
 msgid ""
 "If either type of change is possible with your drive, then choose a mode "
 "based on the type of change you expect to happen more often."
-msgstr ""
+msgstr "如果两种变化都可能发生，则根据您预期较常发生的变化选择模式。"
 
 #. type: Content of: <sect1><sect2><important><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter09/symlinks.xml:159
 msgid ""
-"External devices (for example, a USB-connected CD drive)  should not use "
-"by-path persistence, because each time the device is plugged into a new "
+"External devices (for example, a USB-connected CD drive)  should not use by-"
+"path persistence, because each time the device is plugged into a new "
 "external port, its physical path will change. All externally-connected "
 "devices will have this problem if you write udev rules to recognize them by "
 "their physical path; the problem is not limited to CD and DVD drives."
 msgstr ""
+"外接设备 (例如 USB 接口的 CD 驱动器) 不应使用 by-path 模式，因为每次将该设备"
+"插入到新的外部接口时，其物理路径都可能变化。只要您使用了基于物理路径识别外接"
+"设备的 udev 规则，都会导致这个问题，并不仅限于 CD 或 DVD 设备。"
 
 #. type: Content of: <sect1><sect2><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter09/symlinks.xml:166
 msgid ""
 "If you wish to see the values that the udev scripts will use, then for the "
 "appropriate CD-ROM device, find the corresponding directory under <filename "
-"class=\"directory\">/sys</filename> (e.g., this can be <filename "
-"class=\"directory\">/sys/block/hdd</filename>) and run a command similar to "
-"the following:"
+"class=\"directory\">/sys</filename> (e.g., this can be <filename class="
+"\"directory\">/sys/block/hdd</filename>) and run a command similar to the "
+"following:"
 msgstr ""
+"如果您希望知道 udev 脚本会使用的路径或识别字符串值，对于正确的 CD-ROM 驱动"
+"器，在 <filename class=\"directory\">/sys</filename> 目录中找到对应的目录 (例"
+"如 <filename class=\"directory\">/sys/block/hdd</filename>)，然后运行类似下"
+"面这样的命令："
 
 #. type: Content of: <sect1><sect2><screen>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter09/symlinks.xml:172
 #, no-wrap
 msgid "<userinput>udevadm test /sys/block/hdd</userinput>"
-msgstr ""
+msgstr "<userinput>udevadm test /sys/block/hdd</userinput>"
 
 #. type: Content of: <sect1><sect2><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter09/symlinks.xml:174
 msgid ""
 "Look at the lines containing the output of various *_id programs.  The "
 "<quote>by-id</quote> mode will use the ID_SERIAL value if it exists and is "
-"not empty, otherwise it will use a combination of ID_MODEL and "
-"ID_REVISION. The <quote>by-path</quote> mode will use the ID_PATH value."
+"not empty, otherwise it will use a combination of ID_MODEL and ID_REVISION. "
+"The <quote>by-path</quote> mode will use the ID_PATH value."
 msgstr ""
+"观察包含一些 *_id 程序输出的行。<quote>by-id</quote> 模式在 ID_SERIAL 存在且"
+"非空时会使用它，否则就使用 ID_MODEL 和 ID_REVISION 的组合。<quote>by-path</"
+"quote> 模式会使用 ID_PATH 的值。"
 
 #. type: Content of: <sect1><sect2><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter09/symlinks.xml:179
 msgid ""
 "If the default mode is not suitable for your situation, then the following "
-"modification can be made to the "
-"<filename>/etc/udev/rules.d/83-cdrom-symlinks.rules</filename> file, as "
-"follows (where <replaceable>mode</replaceable> is one of "
-"<quote>by-id</quote> or <quote>by-path</quote>):"
+"modification can be made to the <filename>/etc/udev/rules.d/83-cdrom-"
+"symlinks.rules</filename> file, as follows (where <replaceable>mode</"
+"replaceable> is one of <quote>by-id</quote> or <quote>by-path</quote>):"
 msgstr ""
+"如果默认模式不适合您的情况，可以像下面这样修改 <filename>/etc/udev/rules."
+"d/83-cdrom-symlinks.rules</filename> 文件 (将 <replaceable>mode</"
+"replaceable> 替换成 <quote>by-id</quote> 或 <quote>by-path</quote> 中的一"
+"个)："
 
 #. type: Content of: <sect1><sect2><screen>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter09/symlinks.xml:185
 #, no-wrap
 msgid ""
-"<userinput>sed -e 's/\"write_cd_rules\"/\"write_cd_rules "
-"<replaceable>mode</replaceable>\"/' \\\n"
+"<userinput>sed -e 's/\"write_cd_rules\"/\"write_cd_rules <replaceable>mode</replaceable>\"/' \\\n"
 "    -i /etc/udev/rules.d/83-cdrom-symlinks.rules</userinput>"
 msgstr ""
+"<userinput>sed -e 's/\"write_cd_rules\"/\"write_cd_rules <replaceable>mode</replaceable>\"/' \\\n"
+"    -i /etc/udev/rules.d/83-cdrom-symlinks.rules</userinput>"
 
 #. type: Content of: <sect1><sect2><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter09/symlinks.xml:188
 msgid ""
 "Note that it is not necessary to create the rules files or symlinks at this "
-"time because you have bind-mounted the host's <filename "
-"class=\"directory\">/dev</filename> directory into the LFS system and we "
-"assume the symlinks exist on the host. The rules and symlinks will be "
-"created the first time you boot your LFS system."
+"time because you have bind-mounted the host's <filename class=\"directory\">/"
+"dev</filename> directory into the LFS system and we assume the symlinks "
+"exist on the host. The rules and symlinks will be created the first time you "
+"boot your LFS system."
 msgstr ""
+"注意现在并不需要创建规则文件和符号链接，因为已经绑定挂载了宿主的 <filename "
+"class=\"directory\">/dev</filename> 目录，我们假定宿主系统存在正确的符号链"
+"接。只要在第一次引导 LFS 系统后创建规则和符号链接即可。"
 
 #. type: Content of: <sect1><sect2><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter09/symlinks.xml:194
@@ -313,75 +379,100 @@ msgid ""
 "<filename>/etc/udev/rules.d/70-persistent-cd.rules</filename> file after "
 "booting, to make sure the assigned symlinks match what you need."
 msgstr ""
+"然而，如果您有多个 CD-ROM 设备，则生成的符号链接可能指向不同于您的宿主系统的"
+"设备，因为设备发现的顺序不可预测。在您第一次引导 LFS 系统后，创建的设备分配"
+"将会是稳定的，因此这仅在您希望宿主系统和 LFS 中的符号链接指向同一设备时才会成"
+"为问题。如果您有这种需求，在引导后检查 (如果需要的话修改) 生成的 <filename>/"
+"etc/udev/rules.d/70-persistent-cd.rules</filename> 文件，保证分配的符号链接和"
+"您的需要一致。"
 
 #. type: Content of: <sect1><sect2><title>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter09/symlinks.xml:207
 msgid "Dealing with duplicate devices"
-msgstr ""
+msgstr "处理重复设备"
 
 #. type: Content of: <sect1><sect2><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter09/symlinks.xml:209
 msgid ""
 "As explained in <xref linkend=\"ch-config-udev\"/>, the order in which "
-"devices with the same function appear in <filename "
-"class=\"directory\">/dev</filename> is essentially random.  E.g., if you "
-"have a USB web camera and a TV tuner, sometimes "
-"<filename>/dev/video0</filename> refers to the camera and "
-"<filename>/dev/video1</filename> refers to the tuner, and sometimes after a "
-"reboot the order changes.  For all classes of hardware except sound cards "
-"and network cards, this is fixable by creating udev rules for custom "
+"devices with the same function appear in <filename class=\"directory\">/dev</"
+"filename> is essentially random.  E.g., if you have a USB web camera and a "
+"TV tuner, sometimes <filename>/dev/video0</filename> refers to the camera "
+"and <filename>/dev/video1</filename> refers to the tuner, and sometimes "
+"after a reboot the order changes.  For all classes of hardware except sound "
+"cards and network cards, this is fixable by creating udev rules for custom "
 "persistent symlinks.  The case of network cards is covered separately in "
 "<xref linkend=\"ch-config-network\"/>, and sound card configuration can be "
 "found in <ulink url=\"&blfs-book;postlfs/devices.html\">BLFS</ulink>."
 msgstr ""
+"正如<xref linkend=\"ch-config-udev\"/>中所述，那些功能相同的设备在 "
+"<filename class=\"directory\">/dev</filename> 中的顺序是随机的。例如，如果您"
+"有一个 USB 摄像头和一个电视棒，有时 <filename>/dev/video0</filename> 会指向"
+"摄像头，<filename>/dev/video1</filename> 指向电视棒，而有时在重启后这个顺序"
+"正好颠倒过来。对于所有除了声卡和网卡以外的设备，该问题都可以通过"
+"创建自定义持久化符号链接的 Udev 规则来解决。对于网卡的解决方案在<xref linkend=\"ch-"
+"config-network\"/>中单独描述，而声卡配置可以在 <ulink url=\"&blfs-book;"
+"postlfs/devices.html\">BLFS</ulink> 中找到。"
 
 #. type: Content of: <sect1><sect2><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter09/symlinks.xml:222
 msgid ""
 "For each of your devices that is likely to have this problem (even if the "
 "problem doesn't exist in your current Linux distribution), find the "
-"corresponding directory under <filename "
-"class=\"directory\">/sys/class</filename> or <filename "
-"class=\"directory\">/sys/block</filename>.  For video devices, this may be "
-"<filename "
-"class=\"directory\">/sys/class/video4linux/video<replaceable>X</replaceable></filename>.  "
-"Figure out the attributes that identify the device uniquely (usually, vendor "
-"and product IDs and/or serial numbers work):"
+"corresponding directory under <filename class=\"directory\">/sys/class</"
+"filename> or <filename class=\"directory\">/sys/block</filename>.  For video "
+"devices, this may be <filename class=\"directory\">/sys/class/video4linux/"
+"video<replaceable>X</replaceable></filename>.  Figure out the attributes "
+"that identify the device uniquely (usually, vendor and product IDs and/or "
+"serial numbers work):"
 msgstr ""
+"对于您的每个可能有这类问题的设备 (即使在您当前使用的 Linux 发行版上并没有问"
+"题)，找到 <filename class=\"directory\">/sys/class</filename> 或 <filename "
+"class=\"directory\">/sys/block</filename> 中的对应目录。对于视频设备，目录可"
+"能是 <filename class=\"directory\"> /sys/class/video4linux/"
+"video<replaceable>X</replaceable></filename>。找出能够唯一确认该设备的属性 "
+"(通常是厂商和产品 ID，或者序列号)："
 
 #. type: Content of: <sect1><sect2><screen>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter09/symlinks.xml:233
 #, no-wrap
 msgid "<userinput>udevadm info -a -p /sys/class/video4linux/video0</userinput>"
-msgstr ""
+msgstr "<userinput>udevadm info -a -p /sys/class/video4linux/video0</userinput>"
 
 #. type: Content of: <sect1><sect2><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter09/symlinks.xml:235
 msgid "Then write rules that create the symlinks, e.g.:"
-msgstr ""
+msgstr "然后编写创建符号链接的规则，例如："
 
 #. type: Content of: <sect1><sect2><screen>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter09/symlinks.xml:237
 #, no-wrap
 msgid ""
-"<userinput>cat &gt; /etc/udev/rules.d/83-duplicate_devs.rules &lt;&lt; "
-"\"EOF\"\n"
+"<userinput>cat &gt; /etc/udev/rules.d/83-duplicate_devs.rules &lt;&lt; \"EOF\"\n"
 "<literal>\n"
 "# Persistent symlinks for webcam and tuner\n"
-"KERNEL==\"video*\", ATTRS{idProduct}==\"1910\", ATTRS{idVendor}==\"0d81\", "
-"SYMLINK+=\"webcam\"\n"
-"KERNEL==\"video*\", ATTRS{device}==\"0x036f\",  ATTRS{vendor}==\"0x109e\", "
-"SYMLINK+=\"tvtuner\"\n"
+"KERNEL==\"video*\", ATTRS{idProduct}==\"1910\", ATTRS{idVendor}==\"0d81\", SYMLINK+=\"webcam\"\n"
+"KERNEL==\"video*\", ATTRS{device}==\"0x036f\",  ATTRS{vendor}==\"0x109e\", SYMLINK+=\"tvtuner\"\n"
 "</literal>\n"
 "EOF</userinput>"
 msgstr ""
+"<userinput>cat &gt; /etc/udev/rules.d/83-duplicate_devs.rules &lt;&lt; \"EOF\"\n"
+"<literal>\n"
+"# 摄像头和电视棒的持久化符号链接\n"
+"KERNEL==\"video*\", ATTRS{idProduct}==\"1910\", ATTRS{idVendor}==\"0d81\", SYMLINK+=\"webcam\"\n"
+"KERNEL==\"video*\", ATTRS{device}==\"0x036f\",  ATTRS{vendor}==\"0x109e\", SYMLINK+=\"tvtuner\"\n"
+"</literal>\n"
+"EOF</userinput>"
 
 #. type: Content of: <sect1><sect2><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter09/symlinks.xml:245
 msgid ""
-"The result is that <filename>/dev/video0</filename> and "
-"<filename>/dev/video1</filename> devices still refer randomly to the tuner "
-"and the web camera (and thus should never be used directly), but there are "
-"symlinks <filename>/dev/tvtuner</filename> and "
-"<filename>/dev/webcam</filename> that always point to the correct device."
+"The result is that <filename>/dev/video0</filename> and <filename>/dev/"
+"video1</filename> devices still refer randomly to the tuner and the web "
+"camera (and thus should never be used directly), but there are symlinks "
+"<filename>/dev/tvtuner</filename> and <filename>/dev/webcam</filename> that "
+"always point to the correct device."
 msgstr ""
+"结果是，<filename>/dev/video0</filename> 和 <filename>/dev/video1</filename> "
+"仍然会随机指向电视棒和摄像头 (因此不应直接使用它们)，但符号链接 <filename>/"
+"dev/tvtuner</filename> 和 <filename>/dev/webcam</filename> 总会指向正确设备。"

@@ -1,9 +1,3 @@
-# SOME DESCRIPTIVE TITLE
-# Copyright (C) YEAR Free Software Foundation, Inc.
-# This file is distributed under the same license as the PACKAGE package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
-#
-#, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
@@ -11,20 +5,21 @@ msgstr ""
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
-"Language: \n"
+"Language: zh_CN\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Translate Toolkit 2.2.5\n"
 
 #. type: Content of: <sect1><title>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter09/inputrc.xml:11
 msgid "Creating the /etc/inputrc File"
-msgstr ""
+msgstr "创建 /etc/inputrc 文件"
 
 #. type: Content of: <sect1><indexterm><primary>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter09/inputrc.xml:14
 msgid "/etc/inputrc"
-msgstr ""
+msgstr "/etc/inputrc"
 
 #. type: Content of: <sect1><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter09/inputrc.xml:17
@@ -35,6 +30,9 @@ msgid ""
 "into specific actions.  Readline is used by bash and most other shells as "
 "well as many other applications."
 msgstr ""
+"<filename>inputrc</filename> 文件是 Readline 库的配置文件，该库在用户从终端"
+"输入命令行时提供编辑功能。它的工作原理是将键盘输入翻译为特定动作。"
+"Readline 被 Bash 和大多数其他 shell，以及许多其他程序使用。"
 
 #. type: Content of: <sect1><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter09/inputrc.xml:23
@@ -45,15 +43,22 @@ msgid ""
 "basis, you can create a <filename>.inputrc</filename> file in the user's "
 "home directory with the modified mappings."
 msgstr ""
+"多数人不需要 Readline 的用户配置功能，因此以下命令创建全局的 <filename>/etc/"
+"inputrc</filename> 文件，供所有登录用户使用。如果您之后决定对于某个用户覆盖"
+"掉默认值，您可以在该用户的主目录下创建 <filename>.inputrc</filename> 文件，包"
+"含需要修改的映射。"
 
 #. type: Content of: <sect1><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter09/inputrc.xml:29
 msgid ""
 "For more information on how to edit the <filename>inputrc</filename> file, "
-"see <command>info bash</command> under the <emphasis>Readline Init "
-"File</emphasis> section. <command>info readline</command> is also a good "
-"source of information."
+"see <command>info bash</command> under the <emphasis>Readline Init File</"
+"emphasis> section. <command>info readline</command> is also a good source of "
+"information."
 msgstr ""
+"关于更多如何编写 <filename>inputrc</filename> 文件的信息，参考 "
+"<command>info bash</command> 中 <emphasis>Readline Init File</emphasis> 一"
+"节。<command>info readline</command> 也是一个很好的信息源。"
 
 #. type: Content of: <sect1><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter09/inputrc.xml:34
@@ -62,6 +67,8 @@ msgid ""
 "to explain what the various options do. Note that comments cannot be on the "
 "same line as commands. Create the file using the following command:"
 msgstr ""
+"下面是一个通用的全局 <filename>inputrc</filename> 文件，包含解释一些选项含义"
+"的注释。注意注释不能和命令写在同一行。执行以下命令创建该文件："
 
 #. type: Content of: <sect1><screen>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter09/inputrc.xml:38
@@ -111,3 +118,46 @@ msgid ""
 "# End /etc/inputrc</literal>\n"
 "EOF</userinput>"
 msgstr ""
+"<userinput>cat &gt; /etc/inputrc &lt;&lt; \"EOF\"\n"
+"<literal># Begin /etc/inputrc\n"
+"# Modified by Chris Lynn &lt;roryo@roryo.dynup.net&gt;\n"
+"\n"
+"# Allow the command prompt to wrap to the next line\n"
+"set horizontal-scroll-mode Off\n"
+"\n"
+"# Enable 8bit input\n"
+"set meta-flag On\n"
+"set input-meta On\n"
+"\n"
+"# Turns off 8th bit stripping\n"
+"set convert-meta Off\n"
+"\n"
+"# Keep the 8th bit for display\n"
+"set output-meta On\n"
+"\n"
+"# none, visible or audible\n"
+"set bell-style none\n"
+"\n"
+"# All of the following map the escape sequence of the value\n"
+"# contained in the 1st argument to the readline specific functions\n"
+"\"\\eOd\": backward-word\n"
+"\"\\eOc\": forward-word\n"
+"\n"
+"# for linux console\n"
+"\"\\e[1~\": beginning-of-line\n"
+"\"\\e[4~\": end-of-line\n"
+"\"\\e[5~\": beginning-of-history\n"
+"\"\\e[6~\": end-of-history\n"
+"\"\\e[3~\": delete-char\n"
+"\"\\e[2~\": quoted-insert\n"
+"\n"
+"# for xterm\n"
+"\"\\eOH\": beginning-of-line\n"
+"\"\\eOF\": end-of-line\n"
+"\n"
+"# for Konsole\n"
+"\"\\e[H\": beginning-of-line\n"
+"\"\\e[F\": end-of-line\n"
+"\n"
+"# End /etc/inputrc</literal>\n"
+"EOF</userinput>"

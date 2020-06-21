@@ -92,7 +92,11 @@ $p
 	chapter08/flex.xml                           \
 	chapter08/ninja.xml                          \
 	chapter08/texinfo.xml                        \
-	chapter08/systemd.xml
+	chapter08/systemd.xml                        \
+	chapter09/networkd.xml                       \
+	chapter09/network.xml                        \
+	chapter09/consoled.xml                       \
+	chapter09/usage.xml
 
 # Apply lfs-l10n.xml patch, if it's not applied
 grep "Simplified Chinese" stylesheets/lfs-xsl/lfs-l10n.xml ||

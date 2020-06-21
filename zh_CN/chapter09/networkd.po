@@ -1,9 +1,3 @@
-# SOME DESCRIPTIVE TITLE
-# Copyright (C) YEAR Free Software Foundation, Inc.
-# This file is distributed under the same license as the PACKAGE package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
-#
-#, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
@@ -11,37 +5,38 @@ msgstr ""
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
-"Language: \n"
+"Language: zh_CN\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Translate Toolkit 2.2.5\n"
 
 #. type: Content of: <sect1><title>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter09/networkd.xml:11
 msgid "General Network Configuration"
-msgstr ""
+msgstr "一般网络配置"
 
 #. type: Content of: <sect1><sect2><indexterm><primary>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter09/networkd.xml:14
 #: /home/xry111/svn-repos/LFS-BOOK/chapter09/networkd.xml:261
 msgid "network"
-msgstr ""
+msgstr "network"
 
 #. type: Content of: <sect1><sect2><indexterm><secondary>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter09/networkd.xml:15
 #: /home/xry111/svn-repos/LFS-BOOK/chapter09/networkd.xml:230
 msgid "configuring"
-msgstr ""
+msgstr "configuring"
 
 #. type: Content of: <sect1><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter09/networkd.xml:17
 msgid "This section only applies if a network card is to be configured."
-msgstr ""
+msgstr "本节只适用于需要配置网卡的情况。"
 
 #. type: Content of: <sect1><sect2><title>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter09/networkd.xml:21
 msgid "Network Interface Configuration Files"
-msgstr ""
+msgstr "网络接口配置文件"
 
 #. type: Content of: <sect1><sect2><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter09/networkd.xml:23
@@ -53,30 +48,44 @@ msgid ""
 "<filename>/etc/resolv.conf</filename> file. Both services are enabled by "
 "default."
 msgstr ""
+"从 209 版本开始，systemd 提供一个名为 <command>systemd-networkd</command> 的"
+"网络配置守护进程，它能够用于基础网络配置。另外，自 213 版本起，可以用 "
+"<command>systemd-resolved</command> 代替静态 <filename>/etc/resolv.conf</"
+"filename> 文件处理域名解析。这两个服务在默认情况下都是启用的。"
 
 #. type: Content of: <sect1><sect2><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter09/networkd.xml:30
 msgid ""
 "Configuration files for <command>systemd-networkd</command> (and "
-"<command>systemd-resolved</command>) can be placed in <filename "
-"class=\"directory\">/usr/lib/systemd/network</filename> or <filename "
-"class=\"directory\">/etc/systemd/network</filename>. Files in <filename "
-"class=\"directory\">/etc/systemd/network</filename> have a higher priority "
-"than the ones in <filename "
-"class=\"directory\">/usr/lib/systemd/network</filename>.  There are three "
-"types of configuration files: <filename "
-"class=\"extension\">.link</filename>, <filename "
-"class=\"extension\">.netdev</filename> and <filename "
-"class=\"extension\">.network</filename> files. For detailed descriptions and "
-"example contents of these configuration files, consult the "
-"<filename>systemd-link(5)</filename>, <filename>systemd-netdev(5)</filename> "
-"and <filename>systemd-network(5)</filename> manual pages."
+"<command>systemd-resolved</command>) can be placed in <filename class="
+"\"directory\">/usr/lib/systemd/network</filename> or <filename class="
+"\"directory\">/etc/systemd/network</filename>. Files in <filename class="
+"\"directory\">/etc/systemd/network</filename> have a higher priority than "
+"the ones in <filename class=\"directory\">/usr/lib/systemd/network</"
+"filename>.  There are three types of configuration files: <filename class="
+"\"extension\">.link</filename>, <filename class=\"extension\">.netdev</"
+"filename> and <filename class=\"extension\">.network</filename> files. For "
+"detailed descriptions and example contents of these configuration files, "
+"consult the <filename>systemd-link(5)</filename>, <filename>systemd-"
+"netdev(5)</filename> and <filename>systemd-network(5)</filename> manual "
+"pages."
 msgstr ""
+"<command>systemd-networkd</command> (以及 <command>systemd-resolved</"
+"command>)的配置文件可以放置在 <filename class=\"directory\">/usr/lib/systemd/"
+"network</filename> 或 <filename class=\"directory\">/etc/systemd/network</"
+"filename> 中。<filename class=\"directory\">/etc/systemd/network</filename> "
+"中的配置文件优先级高于 <filename class=\"directory\">/usr/lib/systemd/"
+"network</filename> 中的配置文件。有三种类型的配置文件：<filename class="
+"\"extension\">.link</filename>、 <filename class=\"extension\">.netdev</"
+"filename> 和 <filename class=\"extension\">.network</filename> 文件。要获得"
+"它们的详细描述和内容示例，参阅 <filename>systemd-link(5)</filename>、 "
+"<filename>systemd-netdev(5)</filename> 和 <filename>systemd-network(5)</"
+"filename> man 手册页面。"
 
 #. type: Content of: <sect1><sect2><sect3><title>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter09/networkd.xml:47
 msgid "Network Device Naming"
-msgstr ""
+msgstr "网络设备命名"
 
 #. type: Content of: <sect1><sect2><sect3><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter09/networkd.xml:50
@@ -86,6 +95,8 @@ msgid ""
 "is, you can always run <command>ip link</command> after you have booted your "
 "system."
 msgstr ""
+"Udev 一般根据系统物理特征为网卡分配接口名，例如 enp2s1。如果您不确定接口名是"
+"什么，可以在引导您的系统后，运行 <command>ip link</command> 命令。"
 
 #. type: Content of: <sect1><sect2><sect3><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter09/networkd.xml:57
@@ -94,19 +105,21 @@ msgid ""
 "connection.  For example, the classic interface name for a wired connection "
 "is eth0.  A wireless connection will usually have the name wifi0 or wlan0."
 msgstr ""
+"对于多数系统，每种连接类型只有一个网络接口。例如，有线连接的经典接口名是 "
+"eth0，而无线连接的接口名一般是 wifi0 或 wlan0。"
 
 #. type: Content of: <sect1><sect2><sect3><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter09/networkd.xml:64
 msgid ""
 "If you prefer to use the classic or customized network interface names, "
 "there are three alternative ways to do that:"
-msgstr ""
+msgstr "如果您偏爱经典或自定义网络接口名，可以使用三种不同方式："
 
 #. type: Content of: <sect1><sect2><sect3><itemizedlist><listitem><para><screen>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter09/networkd.xml:71
 #, no-wrap
 msgid "<userinput>ln -s /dev/null /etc/systemd/network/99-default.link</userinput>"
-msgstr ""
+msgstr "<userinput>ln -s /dev/null /etc/systemd/network/99-default.link</userinput>"
 
 #. type: Content of: <sect1><sect2><sect3><itemizedlist><listitem><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter09/networkd.xml:70
@@ -114,15 +127,19 @@ msgid ""
 "Mask udev's .link file for the default policy: <placeholder type=\"screen\" "
 "id=\"0\"/>"
 msgstr ""
+"覆盖 udev 提供默认策略的 .link 文件：<placeholder type=\"screen\" id=\"0\"/>"
 
 #. type: Content of: <sect1><sect2><sect3><itemizedlist><listitem><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter09/networkd.xml:77
 msgid ""
 "Create a manual naming scheme, for example by naming the interfaces "
-"something like \"internet0\", \"dmz0\", or \"lan0\".  To do that, create "
-".link files in /etc/systemd/network/ that select an explicit name or a "
-"better naming scheme for your network interfaces. For example:"
+"something like \"internet0\", \"dmz0\", or \"lan0\".  To do that, create ."
+"link files in /etc/systemd/network/ that select an explicit name or a better "
+"naming scheme for your network interfaces. For example:"
 msgstr ""
+"手动创建命名架构，例如将网络接口命名为“internet0”、“dmz0” 或 “lan0”。为此，"
+"在 /etc/systemd/network 中创建 .link 文件，为您的一个、一些或全部网络接口直"
+"接选择名称，或选择更好的命名架构。例如："
 
 #. type: Content of: <sect1><sect2><sect3><itemizedlist><listitem><screen>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter09/networkd.xml:84
@@ -137,23 +154,31 @@ msgid ""
 "Name=ether0</literal>\n"
 "EOF</userinput>"
 msgstr ""
+"<userinput>cat &gt; /etc/systemd/network/10-ether0.link &lt;&lt; \"EOF\"\n"
+"<literal>[Match]\n"
+"# 将 MAC 地址替换为适用于您的网络设备的值\n"
+"MACAddress=12:34:45:78:90:AB\n"
+"\n"
+"[Link]\n"
+"Name=ether0</literal>\n"
+"EOF</userinput>"
 
 #. type: Content of: <sect1><sect2><sect3><itemizedlist><listitem><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter09/networkd.xml:94
 msgid "See the man page systemd.link(5) for more information."
-msgstr ""
+msgstr "参阅 man 页面 systemd.link(5) 获得更多信息。"
 
 #. type: Content of: <sect1><sect2><sect3><itemizedlist><listitem><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter09/networkd.xml:100
 msgid ""
 "In /boot/grub/grub.cfg, pass the option net.ifnames=0 on the kernel command "
 "line."
-msgstr ""
+msgstr "在 /boot/grub/grub.cfg 的内核命令行中传递选项 net.ifnames=0。"
 
 #. type: Content of: <sect1><sect2><sect3><title>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter09/networkd.xml:108
 msgid "Static IP Configuration"
-msgstr ""
+msgstr "静态 IP 配置"
 
 #. type: Content of: <sect1><sect2><sect3><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter09/networkd.xml:110
@@ -161,6 +186,8 @@ msgid ""
 "The command below creates a basic configuration file for a Static IP setup "
 "(using both systemd-networkd and systemd-resolved):"
 msgstr ""
+"以下命令为静态 IP 设置创建一个基本的配置文件 (使用 systemd-networkd 和 "
+"systemd-resolved)。"
 
 #.  jhalfs relies on the values for Name, Address, etc. If you want to change
 #.      them, please inform the jhalfs maintainer(s). 
@@ -168,8 +195,7 @@ msgstr ""
 #: /home/xry111/svn-repos/LFS-BOOK/chapter09/networkd.xml:115
 #, no-wrap
 msgid ""
-"<userinput>cat &gt; /etc/systemd/network/10-eth-static.network &lt;&lt; "
-"\"EOF\"\n"
+"<userinput>cat &gt; /etc/systemd/network/10-eth-static.network &lt;&lt; \"EOF\"\n"
 "<literal>[Match]\n"
 "Name=<replaceable>&lt;network-device-name&gt;</replaceable>\n"
 "\n"
@@ -180,31 +206,44 @@ msgid ""
 "Domains=<replaceable>&lt;Your Domain Name&gt;</replaceable></literal>\n"
 "EOF</userinput>"
 msgstr ""
+"<userinput>cat &gt; /etc/systemd/network/10-eth-static.network &lt;&lt; \"EOF\"\n"
+"<literal>[Match]\n"
+"Name=<replaceable>&lt;网络设备名&gt;</replaceable>\n"
+"\n"
+"[Network]\n"
+"Address=192.168.0.2/24\n"
+"Gateway=192.168.0.1\n"
+"DNS=192.168.0.1\n"
+"Domains=<replaceable>&lt;您的域名&gt;</replaceable></literal>\n"
+"EOF</userinput>"
 
 #. type: Content of: <sect1><sect2><sect3><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter09/networkd.xml:126
 msgid ""
 "Multiple DNS entries can be added if you have more than one DNS server. Do "
-"not include DNS or Domains entries if you intend to use a static "
-"<filename>/etc/resolv.conf</filename> file."
+"not include DNS or Domains entries if you intend to use a static <filename>/"
+"etc/resolv.conf</filename> file."
 msgstr ""
+"如果您有多个 DNS 服务器，可以在配置文件中创建多个 DNS 项。如果您希望使用静"
+"态 <filename>/etc/resolv.conf</filename> 文件，则不要在配置文件中包含 DNS "
+"和 Domains 项。"
 
 #. type: Content of: <sect1><sect2><sect3><title>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter09/networkd.xml:133
 msgid "DHCP Configuration"
-msgstr ""
+msgstr "DHCP 配置"
 
 #. type: Content of: <sect1><sect2><sect3><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter09/networkd.xml:135
-msgid "The command below creates a basic configuration file for an IPv4 DHCP setup:"
-msgstr ""
+msgid ""
+"The command below creates a basic configuration file for an IPv4 DHCP setup:"
+msgstr "以下命令为 IPv4 DHCP 配置创建基本配置文件："
 
 #. type: Content of: <sect1><sect2><sect3><screen>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter09/networkd.xml:138
 #, no-wrap
 msgid ""
-"<userinput>cat &gt; /etc/systemd/network/10-eth-dhcp.network &lt;&lt; "
-"\"EOF\"\n"
+"<userinput>cat &gt; /etc/systemd/network/10-eth-dhcp.network &lt;&lt; \"EOF\"\n"
 "<literal>[Match]\n"
 "Name=&lt;network-device-name&gt;\n"
 "\n"
@@ -215,16 +254,26 @@ msgid ""
 "UseDomains=true</literal>\n"
 "EOF</userinput>"
 msgstr ""
+"<userinput>cat &gt; /etc/systemd/network/10-eth-dhcp.network &lt;&lt; \"EOF\"\n"
+"<literal>[Match]\n"
+"Name=&lt;网络设备名&gt;\n"
+"\n"
+"[Network]\n"
+"DHCP=ipv4\n"
+"\n"
+"[DHCP]\n"
+"UseDomains=true</literal>\n"
+"EOF</userinput>"
 
 #. type: Content of: <sect1><sect2><title>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter09/networkd.xml:154
 msgid "Creating the /etc/resolv.conf File"
-msgstr ""
+msgstr "创建 /etc/resolv.conf 文件"
 
 #. type: Content of: <sect1><sect2><indexterm><primary>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter09/networkd.xml:157
 msgid "/etc/resolv.conf"
-msgstr ""
+msgstr "/etc/resolv.conf"
 
 #. type: Content of: <sect1><sect2><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter09/networkd.xml:160
@@ -235,43 +284,50 @@ msgid ""
 "placing the IP address of the DNS server, available from the ISP or network "
 "administrator, into <filename>/etc/resolv.conf</filename>."
 msgstr ""
+"如果要将系统连接到 Internet，它需要某种域名服务 (DNS) 名称解析方式，以将 "
+"Internet 域名解析为 IP 地址，或将 IP 地址解析为域名。最好的方法是将 ISP 或网"
+"络管理员提供的 DNS 服务器 IP 地址写入 <filename>/etc/resolv.conf</filename>。"
 
 #. type: Content of: <sect1><sect2><sect3><title>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter09/networkd.xml:168
 msgid "systemd-resolved Configuration"
-msgstr ""
+msgstr "systemd-resolved 配置"
 
 #. type: Content of: <sect1><sect2><sect3><note><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter09/networkd.xml:170
 msgid ""
 "If using another means to configure your network interfaces (ex: ppp, "
 "network-manager, etc.), or if using any type of local resolver (ex: bind, "
-"dnsmasq, unbound, etc.), or any other software that generates an "
-"<filename>/etc/resolv.conf</filename> (ex: resolvconf), the "
-"<command>systemd-resolved</command> service should not be used."
+"dnsmasq, unbound, etc.), or any other software that generates an <filename>/"
+"etc/resolv.conf</filename> (ex: resolvconf), the <command>systemd-resolved</"
+"command> service should not be used."
 msgstr ""
+"如果使用其他方式配置网络接口 (例如 ppp 或 network-manager 等)，或使用了某种本"
+"地解析器 (如 bind，dnsmasq，或者 unbound 等)，或其他任何生成 <filename>/etc/resolv."
+"conf</filename> 的软件 (如 resolvconf)，则不应使用 <command>systemd-"
+"resolved</command> 服务。"
 
 #. type: Content of: <sect1><sect2><sect3><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter09/networkd.xml:177
 msgid ""
 "When using <command>systemd-resolved</command> for DNS configuration, it "
-"creates the file "
-"<filename>/run/systemd/resolve/resolv.conf</filename>. Create a symlink in "
-"<filename>/etc</filename> to use the generated file:"
+"creates the file <filename>/run/systemd/resolve/resolv.conf</filename>. "
+"Create a symlink in <filename>/etc</filename> to use the generated file:"
 msgstr ""
+"在使用 <command>systemd-resolved</command> 进行 DNS 配置时，它创建文件 "
+"<filename>/run/systemd/resolve/resolv.conf</filename>。在 <filename>/etc</"
+"filename> 中创建符号链接以使用生成的文件："
 
 #. type: Content of: <sect1><sect2><sect3><screen>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter09/networkd.xml:182
 #, no-wrap
-msgid ""
-"<userinput>ln -sfv /run/systemd/resolve/resolv.conf "
-"/etc/resolv.conf</userinput>"
-msgstr ""
+msgid "<userinput>ln -sfv /run/systemd/resolve/resolv.conf /etc/resolv.conf</userinput>"
+msgstr "<userinput>ln -sfv /run/systemd/resolve/resolv.conf /etc/resolv.conf</userinput>"
 
 #. type: Content of: <sect1><sect2><sect3><title>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter09/networkd.xml:187
 msgid "Static resolv.conf Configuration"
-msgstr ""
+msgstr "静态 resolv.conf 配置"
 
 #. type: Content of: <sect1><sect2><sect3><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter09/networkd.xml:189
@@ -279,6 +335,7 @@ msgid ""
 "If a static <filename>/etc/resolv.conf</filename> is desired, create it by "
 "running the following command:"
 msgstr ""
+"如果希望使用静态的 <filename>/etc/resolv.conf</filename> 执行以下命令创建它："
 
 #. type: Content of: <sect1><sect2><sect3><screen>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter09/networkd.xml:192
@@ -288,14 +345,21 @@ msgid ""
 "<literal># Begin /etc/resolv.conf\n"
 "\n"
 "domain <replaceable>&lt;Your Domain Name&gt;</replaceable>\n"
-"nameserver <replaceable>&lt;IP address of your primary "
-"nameserver&gt;</replaceable>\n"
-"nameserver <replaceable>&lt;IP address of your secondary "
-"nameserver&gt;</replaceable>\n"
+"nameserver <replaceable>&lt;IP address of your primary nameserver&gt;</replaceable>\n"
+"nameserver <replaceable>&lt;IP address of your secondary nameserver&gt;</replaceable>\n"
 "\n"
 "# End /etc/resolv.conf</literal>\n"
 "EOF</userinput>"
 msgstr ""
+"<userinput>cat &gt; /etc/resolv.conf &lt;&lt; \"EOF\"\n"
+"<literal># Begin /etc/resolv.conf\n"
+"\n"
+"domain <replaceable>&lt;您的域名&gt;</replaceable>\n"
+"nameserver <replaceable>&lt;您的主要域名服务器 IP 地址&gt;</replaceable>\n"
+"nameserver <replaceable>&lt;您的次要域名服务器 IP 地址&gt;</replaceable>\n"
+"\n"
+"# End /etc/resolv.conf</literal>\n"
+"EOF</userinput>"
 
 #. type: Content of: <sect1><sect2><sect3><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter09/networkd.xml:202
@@ -304,6 +368,8 @@ msgid ""
 "<varname>search</varname> statement.  See the man page for resolv.conf for "
 "more details."
 msgstr ""
+"可以省略 <varname>domain</varname> 语句，或使用一条 <varname>search</"
+"varname> 语句代替它。阅读 resolv.conf 的 man 页面了解更多细节。"
 
 #. type: Content of: <sect1><sect2><sect3><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter09/networkd.xml:206
@@ -316,6 +382,10 @@ msgid ""
 "may also be a router on the local network. Another option is to use the "
 "Google Public DNS service using the IP addresses below as nameservers."
 msgstr ""
+"将 <replaceable>&lt;域名服务器的 IP 地址&gt;</replaceable> 替换为您的网络环境"
+"下最合适的 DNS 服务器 IP 地址。这里往往会写入不止一个 DNS 服务器 (需要次要服务器作为后备"
+")。如果您只需要或只希望使用一个 DNS 服务器，可以删除文件中"
+"的第二个 <emphasis>nameserver</emphasis> 行。可以写入本地网络路由器的 IP 地址。也可以使用 Google 公用 DNS 服务器作为域名服务器，它们的 IP 地址在下面给出。"
 
 #. type: Content of: <sect1><sect2><sect3><note><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter09/networkd.xml:216
@@ -325,16 +395,20 @@ msgid ""
 "<parameter>2001:4860:4860::8888</parameter> and "
 "<parameter>2001:4860:4860::8844</parameter> for IPv6."
 msgstr ""
+"Google 公用 DNS 服务器的 IPv4 地址是 <parameter>8.8.8.8</parameter> 和 "
+"<parameter>8.8.4.4</parameter>，IPv6 地址是 "
+"<parameter>2001:4860:4860::8888</parameter> 和 "
+"<parameter>2001:4860:4860::8844</parameter>。"
 
 #. type: Content of: <sect1><sect2><title>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter09/networkd.xml:226
 msgid "Configuring the system hostname"
-msgstr ""
+msgstr "配置系统主机名"
 
 #. type: Content of: <sect1><sect2><indexterm><primary>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter09/networkd.xml:229
 msgid "hostname"
-msgstr ""
+msgstr "hostname"
 
 #. type: Content of: <sect1><sect2><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter09/networkd.xml:233
@@ -342,6 +416,7 @@ msgid ""
 "During the boot process, the file <filename>/etc/hostname</filename> is used "
 "for establishing the system's hostname."
 msgstr ""
+"在引导过程中，<filename>/etc/hostname</filename> 被用于设定系统主机名。"
 
 #. type: Content of: <sect1><sect2><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter09/networkd.xml:236
@@ -349,14 +424,14 @@ msgid ""
 "Create the <filename>/etc/hostname</filename> file and enter a hostname by "
 "running:"
 msgstr ""
+"执行以下命令，创建 <filename>/etc/hostname</filename> 文件，并输入一个主机"
+"名："
 
 #. type: Content of: <sect1><sect2><screen>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter09/networkd.xml:239
 #, no-wrap
-msgid ""
-"<userinput>echo \"<replaceable>&lt;lfs&gt;</replaceable>\" &gt; "
-"/etc/hostname</userinput>"
-msgstr ""
+msgid "<userinput>echo \"<replaceable>&lt;lfs&gt;</replaceable>\" &gt; /etc/hostname</userinput>"
+msgstr "<userinput>echo \"<replaceable>&lt;lfs&gt;</replaceable>\" &gt; /etc/hostname</userinput>"
 
 #. type: Content of: <sect1><sect2><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter09/networkd.xml:241
@@ -365,23 +440,26 @@ msgid ""
 "given to the computer. Do not enter the Fully Qualified Domain Name (FQDN) "
 "here. That information is put in the <filename>/etc/hosts</filename> file."
 msgstr ""
+"<replaceable>&lt;lfs&gt;</replaceable> 需要被替换为赋予该计算机的名称。不要"
+"在这里输入全限定域名 (FQDN)，它应该被写入 <filename>/etc/hosts</filename> 文"
+"件。"
 
 #. type: Content of: <sect1><sect2><title>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter09/networkd.xml:249
 msgid "Customizing the /etc/hosts File"
-msgstr ""
+msgstr "自定义 /etc/hosts 文件"
 
 #. type: Content of: <sect1><sect2><indexterm><secondary>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter09/networkd.xml:252
 #: /home/xry111/svn-repos/LFS-BOOK/chapter09/networkd.xml:257
 #: /home/xry111/svn-repos/LFS-BOOK/chapter09/networkd.xml:262
 msgid "/etc/hosts"
-msgstr ""
+msgstr "/etc/hosts"
 
 #. type: Content of: <sect1><sect2><indexterm><primary>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter09/networkd.xml:256
 msgid "localnet"
-msgstr ""
+msgstr "localnet"
 
 #. type: Content of: <sect1><sect2><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter09/networkd.xml:265
@@ -391,12 +469,15 @@ msgid ""
 "you'll also need to decide on an IP address. The syntax for a hosts file "
 "entry is:"
 msgstr ""
+"选择一个全限定域名 (FQDN)，和可能的别名，以供 <filename>/etc/hosts</"
+"filename> 文件使用。如果使用静态 IP 地址，您还需要确定要使用的 IP 地址。"
+"hosts 文件条目的语法是："
 
 #. type: Content of: <sect1><sect2><screen>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter09/networkd.xml:270
 #, no-wrap
 msgid "<literal>IP_address myhost.example.org aliases</literal>"
-msgstr ""
+msgstr "<literal>IP_地址 主机名.域名 别名</literal>"
 
 #. type: Content of: <sect1><sect2><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter09/networkd.xml:272
@@ -406,6 +487,9 @@ msgid ""
 "users do not have this), make sure that the IP address is in the private "
 "network IP address range. Valid ranges are:"
 msgstr ""
+"除非该计算机可以从 Internet 访问 (即拥有一个注册域名，并分配了一个有效的 IP "
+"地址段 —— 多数用户没有分配有效 IP)，确认使用的 IP 地址属于私网 IP 范围。有效"
+"的范围是："
 
 #. type: Content of: <sect1><sect2><screen>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter09/networkd.xml:277
@@ -416,13 +500,18 @@ msgid ""
 "172.x.0.1 - 172.x.255.254           16\n"
 "192.168.y.1 - 192.168.y.254         24</literal>"
 msgstr ""
+"<literal>"
+"私网地址范围                         公共前缀长度\n"
+"10.0.0.1 - 10.255.255.254           8\n"
+"172.x.0.1 - 172.x.255.254           16\n"
+"192.168.y.1 - 192.168.y.254         24</literal>"
 
 #. type: Content of: <sect1><sect2><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter09/networkd.xml:282
 msgid ""
 "x can be any number in the range 16-31. y can be any number in the range "
 "0-255."
-msgstr ""
+msgstr "x 可以是 16-31 之间的任何数字。y 可以是 0-255 之间的任何数字。"
 
 #. type: Content of: <sect1><sect2><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter09/networkd.xml:285
@@ -430,18 +519,22 @@ msgid ""
 "A valid private IP address could be 192.168.1.1. A valid FQDN for this IP "
 "could be lfs.example.org."
 msgstr ""
+"有效的私网 IP 地址的一个例子是 192.168.1.1。与之对应的 FQDN 可以是 lfs."
+"example.org。"
 
 #. type: Content of: <sect1><sect2><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter09/networkd.xml:288
 msgid ""
 "Even if not using a network card, a valid FQDN is still required.  This is "
 "necessary for certain programs, such as MTAs, to operate properly."
-msgstr ""
+msgstr "即使没有网卡，也要提供一个有效的 FQDN。某些程序，如 MTA，需要它才能正常工作。"
 
 #. type: Content of: <sect1><sect2><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter09/networkd.xml:307
-msgid "Create the <filename>/etc/hosts</filename> file using the following command:"
+msgid ""
+"Create the <filename>/etc/hosts</filename> file using the following command:"
 msgstr ""
+"执行以下命令，创建 <filename>/etc/hostname</filename> 文件："
 
 #. type: Content of: <sect1><sect2><screen>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter09/networkd.xml:310
@@ -451,12 +544,8 @@ msgid ""
 "<literal># Begin /etc/hosts\n"
 "\n"
 "127.0.0.1 localhost.localdomain localhost\n"
-"127.0.1.1 <replaceable>&lt;FQDN&gt;</replaceable> "
-"<replaceable>&lt;HOSTNAME&gt;</replaceable>\n"
-"<replaceable>&lt;192.168.0.2&gt;</replaceable> "
-"<replaceable>&lt;FQDN&gt;</replaceable> "
-"<replaceable>&lt;HOSTNAME&gt;</replaceable> <replaceable>[alias1] [alias2] "
-"...</replaceable>\n"
+"127.0.1.1 <replaceable>&lt;FQDN&gt;</replaceable> <replaceable>&lt;HOSTNAME&gt;</replaceable>\n"
+"<replaceable>&lt;192.168.0.2&gt;</replaceable> <replaceable>&lt;FQDN&gt;</replaceable> <replaceable>&lt;HOSTNAME&gt;</replaceable> <replaceable>[alias1] [alias2] ...</replaceable>\n"
 "::1       localhost ip6-localhost ip6-loopback\n"
 "ff02::1   ip6-allnodes\n"
 "ff02::2   ip6-allrouters\n"
@@ -464,19 +553,34 @@ msgid ""
 "# End /etc/hosts</literal>\n"
 "EOF</userinput>"
 msgstr ""
+"<userinput>cat &gt; /etc/hosts &lt;&lt; \"EOF\"\n"
+"<literal># Begin /etc/hosts\n"
+"\n"
+"127.0.0.1 localhost.localdomain localhost\n"
+"127.0.1.1 <replaceable>&lt;FQDN&gt;</replaceable> <replaceable>&lt;HOSTNAME&gt;</replaceable>\n"
+"<replaceable>&lt;192.168.0.2&gt;</replaceable> <replaceable>&lt;FQDN&gt;</replaceable> <replaceable>&lt;HOSTNAME&gt;</replaceable> <replaceable>[alias1] [alias2] ...</replaceable>\n"
+"::1       localhost ip6-localhost ip6-loopback\n"
+"ff02::1   ip6-allnodes\n"
+"ff02::2   ip6-allrouters\n"
+"\n"
+"# End /etc/hosts</literal>\n"
+"EOF</userinput>"
 
 #. type: Content of: <sect1><sect2><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter09/networkd.xml:323
 msgid ""
-"The <replaceable>&lt;192.168.0.2&gt;</replaceable>, "
-"<replaceable>&lt;FQDN&gt;</replaceable>, and "
-"<replaceable>&lt;HOSTNAME&gt;</replaceable> values need to be changed for "
-"specific uses or requirements (if assigned an IP address by a network/system "
-"administrator and the machine will be connected to an existing network). The "
-"optional alias name(s) can be omitted, and the "
+"The <replaceable>&lt;192.168.0.2&gt;</replaceable>, <replaceable>&lt;FQDN&gt;"
+"</replaceable>, and <replaceable>&lt;HOSTNAME&gt;</replaceable> values need "
+"to be changed for specific uses or requirements (if assigned an IP address "
+"by a network/system administrator and the machine will be connected to an "
+"existing network). The optional alias name(s) can be omitted, and the "
 "<replaceable>&lt;192.168.0.2</replaceable> line can be omitted if you are "
 "using a connection configured with DHCP or IPv6 Autoconfiguration."
 msgstr ""
+"其中 <replaceable>&lt;192.168.0.2&gt;</replaceable>，<replaceable>&lt;"
+"FQDN&gt;</replaceable>，以及<replaceable>&lt;主机名&gt;</replaceable> 的值需要"
+"为特定使用环境和需求进行修改 (如果系统或网络管理员分配了 IP 地址，且本机将被"
+"连接到现有的网络中)。可以略去别名 (alias)，它们不是必要的。"
 
 #. type: Content of: <sect1><sect2><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter09/networkd.xml:332
@@ -484,4 +588,4 @@ msgid ""
 "The ::1 entry is the IPv6 counterpart of 127.0.0.1 and represents the IPv6 "
 "loopback interface. 127.0.1.1 is a loopback entry reserved specifically for "
 "the FQDN."
-msgstr ""
+msgstr "::1 是 127.0.0.1 在 IPv6 中的对应，即 IPv6 回环接口。"

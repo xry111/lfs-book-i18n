@@ -1,9 +1,3 @@
-# SOME DESCRIPTIVE TITLE
-# Copyright (C) YEAR Free Software Foundation, Inc.
-# This file is distributed under the same license as the PACKAGE package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
-#
-#, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
@@ -11,34 +5,36 @@ msgstr ""
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
-"Language: \n"
+"Language: zh_CN\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Translate Toolkit 2.2.5\n"
 
 #. type: Content of: <sect1><sect1info><address>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter09/bootscripts.xml:14
 #, no-wrap
 msgid "&lfs-bootscripts-url;"
-msgstr ""
+msgstr "&lfs-bootscripts-url;"
 
 #. type: Content of: <sect1><sect1info>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter09/bootscripts.xml:12
 msgid ""
-"<productname>bootscripts</productname> "
-"<productnumber>&lfs-bootscripts-version;</productnumber> <placeholder "
-"type=\"address\" id=\"0\"/>"
+"<productname>bootscripts</productname> <productnumber>&lfs-bootscripts-"
+"version;</productnumber> <placeholder type=\"address\" id=\"0\"/>"
 msgstr ""
+"<productname>bootscripts</productname> <productnumber>&lfs-bootscripts-"
+"version;</productnumber> <placeholder type=\"address\" id=\"0\"/>"
 
 #. type: Content of: <sect1><title>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter09/bootscripts.xml:17
 msgid "LFS-Bootscripts-&lfs-bootscripts-version;"
-msgstr ""
+msgstr "LFS-Bootscripts-&lfs-bootscripts-version;"
 
 #. type: Content of: <sect1><indexterm><primary>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter09/bootscripts.xml:20
 msgid "Bootscripts"
-msgstr ""
+msgstr "Bootscripts"
 
 #. type: Content of: <sect1><sect2><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter09/bootscripts.xml:26
@@ -47,219 +43,233 @@ msgid ""
 "system at bootup/shutdown.  The configuration files and procedures needed to "
 "customize the boot process are described in the following sections."
 msgstr ""
+"LFS-Bootscripts 软件包包含一组在引导和关机过程中，启动和停止 LFS 系统的脚"
+"本。它们的配置文件和自定义引导过程的方法将在后续章节中描述。"
 
 #. type: Content of: <sect1><sect2><segmentedlist><segtitle>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter09/bootscripts.xml:32
 msgid "&buildtime;"
-msgstr ""
+msgstr "&buildtime;"
 
 #. type: Content of: <sect1><sect2><segmentedlist><segtitle>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter09/bootscripts.xml:33
 msgid "&diskspace;"
-msgstr ""
+msgstr "&diskspace;"
 
 #. type: Content of: <sect1><sect2><segmentedlist><seglistitem><seg>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter09/bootscripts.xml:36
 msgid "&lfs-bootscripts-cfg-sbu;"
-msgstr ""
+msgstr "&lfs-bootscripts-cfg-sbu;"
 
 #. type: Content of: <sect1><sect2><segmentedlist><seglistitem><seg>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter09/bootscripts.xml:37
 msgid "&lfs-bootscripts-cfg-du;"
-msgstr ""
+msgstr "&lfs-bootscripts-cfg-du;"
 
 #. type: Content of: <sect1><sect2><title>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter09/bootscripts.xml:44
 msgid "Installation of LFS-Bootscripts"
-msgstr ""
+msgstr "安装 LFS-Bootscripts"
 
 #. type: Content of: <sect1><sect2><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter09/bootscripts.xml:46
 msgid "Install the package:"
-msgstr ""
+msgstr "安装该软件包："
 
 #. type: Content of: <sect1><sect2><screen>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter09/bootscripts.xml:48
 #, no-wrap
 msgid "<userinput remap=\"install\">make install</userinput>"
-msgstr ""
+msgstr "<userinput remap=\"install\">make install</userinput>"
 
 #. type: Content of: <sect1><sect2><title>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter09/bootscripts.xml:53
 msgid "Contents of LFS-Bootscripts"
-msgstr ""
+msgstr "LFS-Bootscripts 的内容"
 
 #. type: Content of: <sect1><sect2><segmentedlist><segtitle>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter09/bootscripts.xml:55
 msgid "Installed scripts"
-msgstr ""
+msgstr "安装的脚本"
 
 #. type: Content of: <sect1><sect2><segmentedlist><segtitle>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter09/bootscripts.xml:56
 msgid "Installed directories"
-msgstr ""
+msgstr "安装的目录"
 
 #. type: Content of: <sect1><sect2><segmentedlist><seglistitem><seg>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter09/bootscripts.xml:59
 msgid ""
 "checkfs, cleanfs, console, functions, halt, ifdown, ifup, localnet, modules, "
-"mountfs, mountvirtfs, network, rc, reboot, sendsignals, setclock, "
-"ipv4-static, swap, sysctl, sysklogd, template, udev, and udev_retry"
+"mountfs, mountvirtfs, network, rc, reboot, sendsignals, setclock, ipv4-"
+"static, swap, sysctl, sysklogd, template, udev, and udev_retry"
 msgstr ""
+"checkfs, cleanfs, console, functions, halt, ifdown, ifup, localnet, modules, "
+"mountfs, mountvirtfs, network, rc, reboot, sendsignals, setclock, ipv4-"
+"static, swap, sysctl, sysklogd, template, udev, 以及 udev_retry"
 
 #. type: Content of: <sect1><sect2><segmentedlist><seglistitem><seg>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter09/bootscripts.xml:63
 msgid ""
-"/etc/rc.d, /etc/init.d (symbolic link), /etc/sysconfig, /lib/services, "
-"/lib/lsb (symbolic link)"
+"/etc/rc.d, /etc/init.d (symbolic link), /etc/sysconfig, /lib/services, /lib/"
+"lsb (symbolic link)"
 msgstr ""
+"/etc/rc.d, /etc/init.d (符号链接), /etc/sysconfig, /lib/services, /lib/lsb "
+"(符号链接)"
 
 #. type: Content of: <sect1><sect2><variablelist><bridgehead>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter09/bootscripts.xml:69
 msgid "Short Descriptions"
-msgstr ""
+msgstr "简要描述"
 
 #. type: Content of: <sect1><sect2><variablelist>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter09/bootscripts.xml:70
-msgid "<?dbfo list-presentation=\"list\"?> <?dbhtml list-presentation=\"table\"?>"
+msgid ""
+"<?dbfo list-presentation=\"list\"?> <?dbhtml list-presentation=\"table\"?>"
 msgstr ""
+"<?dbfo list-presentation=\"list\"?> <?dbhtml list-presentation=\"table\"?>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter09/bootscripts.xml:74
 msgid "<command>checkfs</command>"
-msgstr ""
+msgstr "<command>checkfs</command>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter09/bootscripts.xml:76
 msgid ""
 "Checks the integrity of the file systems before they are mounted (with the "
 "exception of journal and network based file systems)"
-msgstr ""
+msgstr "在挂载文件系统前检查文件系统完整性 (日志文件系统和网络文件系统除外)"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter09/bootscripts.xml:79
 msgid "checkfs"
-msgstr ""
+msgstr "checkfs"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter09/bootscripts.xml:85
 msgid "<command>cleanfs</command>"
-msgstr ""
+msgstr "<command>cleanfs</command>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter09/bootscripts.xml:87
 msgid ""
 "Removes files that should not be preserved between reboots, such as those in "
-"<filename class=\"directory\">/var/run/</filename> and <filename "
-"class=\"directory\">/var/lock/</filename>; it re-creates "
-"<filename>/var/run/utmp</filename> and removes the possibly present "
-"<filename>/etc/nologin</filename>, <filename>/fastboot</filename>, and "
-"<filename>/forcefsck</filename> files"
+"<filename class=\"directory\">/var/run/</filename> and <filename class="
+"\"directory\">/var/lock/</filename>; it re-creates <filename>/var/run/utmp</"
+"filename> and removes the possibly present <filename>/etc/nologin</"
+"filename>, <filename>/fastboot</filename>, and <filename>/forcefsck</"
+"filename> files"
 msgstr ""
+"删除在重启过程中不应保留的文件，例如 <filename class=\"directory\">/var/run/"
+"</filename> 和 <filename class=\"directory\">/var/lock/</filename> 中的文"
+"件； 重新创建 <filename>/var/run/utmp</filename> 并删除可能存在的 <filename>/"
+"etc/nologin</filename>, <filename>/fastboot</filename>, 以及 <filename>/"
+"forcefsck</filename> 文件"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter09/bootscripts.xml:94
 msgid "cleanfs"
-msgstr ""
+msgstr "cleanfs"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter09/bootscripts.xml:100
 msgid "<command>console</command>"
-msgstr ""
+msgstr "<command>console</command>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter09/bootscripts.xml:102
 msgid ""
 "Loads the correct keymap table for the desired keyboard layout; it also sets "
 "the screen font"
-msgstr ""
+msgstr "加载用户希望使用的键盘布局对应的键映射表，并加载屏幕字体"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter09/bootscripts.xml:105
 msgid "console"
-msgstr ""
+msgstr "console"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter09/bootscripts.xml:111
 msgid "<command>functions</command>"
-msgstr ""
+msgstr "<command>functions</command>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter09/bootscripts.xml:113
 msgid ""
 "Contains common functions, such as error and status checking, that are used "
 "by several bootscripts"
-msgstr ""
+msgstr "包含若干引导脚本使用的错误处理和状态检查等脚本"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter09/bootscripts.xml:116
 msgid "functions"
-msgstr ""
+msgstr "functions"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter09/bootscripts.xml:122
 msgid "<command>halt</command>"
-msgstr ""
+msgstr "<command>halt</command>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter09/bootscripts.xml:124
 msgid "Halts the system"
-msgstr ""
+msgstr "停止系统运行"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter09/bootscripts.xml:126
 msgid "halt"
-msgstr ""
+msgstr "halt"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter09/bootscripts.xml:132
 msgid "<command>ifdown</command>"
-msgstr ""
+msgstr "<command>ifdown</command>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter09/bootscripts.xml:134
 msgid "Stops a network device"
-msgstr ""
+msgstr "停用网络设备"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter09/bootscripts.xml:136
 msgid "ifdown"
-msgstr ""
+msgstr "ifdown"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter09/bootscripts.xml:142
 msgid "<command>ifup</command>"
-msgstr ""
+msgstr "<command>ifup</command>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter09/bootscripts.xml:144
 msgid "Initializes a network device"
-msgstr ""
+msgstr "启用网络设备"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter09/bootscripts.xml:146
 msgid "ifup"
-msgstr ""
+msgstr "ifup"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter09/bootscripts.xml:152
 msgid "<command>localnet</command>"
-msgstr ""
+msgstr "<command>localnet</command>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter09/bootscripts.xml:154
 msgid "Sets up the system's hostname and local loopback device"
-msgstr ""
+msgstr "设置系统主机名和本地回环设备"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter09/bootscripts.xml:156
 msgid "localnet"
-msgstr ""
+msgstr "localnet"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter09/bootscripts.xml:162
 msgid "<command>modules</command>"
-msgstr ""
+msgstr "<command>modules</command>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter09/bootscripts.xml:164
@@ -267,67 +277,72 @@ msgid ""
 "Loads kernel modules listed in <filename>/etc/sysconfig/modules</filename>, "
 "using arguments that are also given there"
 msgstr ""
+"加载 <filename>/etc/sysconfig/modules</filename> 中指定的模块，并在加载过程"
+"中使用该文件中给定的参数"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter09/bootscripts.xml:168
 msgid "modules"
-msgstr ""
+msgstr "modules"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter09/bootscripts.xml:174
 msgid "<command>mountfs</command>"
-msgstr ""
+msgstr "<command>mountfs</command>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter09/bootscripts.xml:176
 msgid ""
-"Mounts all file systems, except ones that are marked "
-"<emphasis>noauto</emphasis> or are network based"
+"Mounts all file systems, except ones that are marked <emphasis>noauto</"
+"emphasis> or are network based"
 msgstr ""
+"挂载所有文件系统，标为 <emphasis>noauto</emphasis> 的文件系统和网络文件系统除"
+"外"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter09/bootscripts.xml:179
 msgid "mountfs"
-msgstr ""
+msgstr "mountfs"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter09/bootscripts.xml:185
 msgid "<command>mountvirtfs</command>"
-msgstr ""
+msgstr "<command>mountvirtfs</command>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter09/bootscripts.xml:187
 msgid ""
-"Mounts virtual kernel file systems, such as <systemitem "
-"class=\"filesystem\">proc</systemitem>"
+"Mounts virtual kernel file systems, such as <systemitem class=\"filesystem"
+"\">proc</systemitem>"
 msgstr ""
+"挂载 <systemitem class=\"filesystem\">proc</systemitem> 等虚拟内核文件系统"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter09/bootscripts.xml:190
 msgid "mountvirtfs"
-msgstr ""
+msgstr "mountvirtfs"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter09/bootscripts.xml:196
 msgid "<command>network</command>"
-msgstr ""
+msgstr "<command>network</command>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter09/bootscripts.xml:198
 msgid ""
 "Sets up network interfaces, such as network cards, and sets up the default "
 "gateway (where applicable)"
-msgstr ""
+msgstr "设定网卡等网络接口，并 (在可能的情况下) 设定默认网关"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter09/bootscripts.xml:201
 msgid "network"
-msgstr ""
+msgstr "network"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter09/bootscripts.xml:207
 msgid "<command>rc</command>"
-msgstr ""
+msgstr "<command>rc</command>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter09/bootscripts.xml:209
@@ -336,170 +351,177 @@ msgid ""
 "other bootscripts one-by-one, in a sequence determined by the name of the "
 "symbolic links being processed"
 msgstr ""
+"主要运行级别控制脚本； 它负责逐个运行所有其他引导脚本，运行的顺序根据脚本符"
+"号链接的名称确定"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter09/bootscripts.xml:213
 msgid "rc"
-msgstr ""
+msgstr "rc"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter09/bootscripts.xml:219
 msgid "<command>reboot</command>"
-msgstr ""
+msgstr "<command>reboot</command>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter09/bootscripts.xml:221
 msgid "Reboots the system"
-msgstr ""
+msgstr "重启系统"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter09/bootscripts.xml:223
 msgid "reboot"
-msgstr ""
+msgstr "reboot"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter09/bootscripts.xml:229
 msgid "<command>sendsignals</command>"
-msgstr ""
+msgstr "<command>sendsignals</command>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter09/bootscripts.xml:231
-msgid "Makes sure every process is terminated before the system reboots or halts"
-msgstr ""
+msgid ""
+"Makes sure every process is terminated before the system reboots or halts"
+msgstr "保证在系统重启或停止运行前，所有进程已经终止"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter09/bootscripts.xml:234
 msgid "sendsignals"
-msgstr ""
+msgstr "sendsignals"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter09/bootscripts.xml:240
 msgid "<command>setclock</command>"
-msgstr ""
+msgstr "<command>setclock</command>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter09/bootscripts.xml:242
 msgid ""
 "Resets the kernel clock to local time in case the hardware clock is not set "
 "to UTC time"
-msgstr ""
+msgstr "在硬件时钟没有设定为 UTC 时，将内核时钟重设为本地时间"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter09/bootscripts.xml:245
 msgid "setclock"
-msgstr ""
+msgstr "setclock"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter09/bootscripts.xml:251
 msgid "<command>ipv4-static</command>"
-msgstr ""
+msgstr "<command>ipv4-static</command>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter09/bootscripts.xml:253
 msgid ""
 "Provides the functionality needed to assign a static Internet Protocol (IP) "
 "address to a network interface"
-msgstr ""
+msgstr "提供为网络接口分配静态网际互联协议 (IP) 地址的功能"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter09/bootscripts.xml:256
 msgid "ipv4-static"
-msgstr ""
+msgstr "ipv4-static"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter09/bootscripts.xml:262
 msgid "<command>swap</command>"
-msgstr ""
+msgstr "<command>swap</command>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter09/bootscripts.xml:264
 msgid "Enables and disables swap files and partitions"
-msgstr ""
+msgstr "启用或禁用交换文件和交换分区"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter09/bootscripts.xml:266
 msgid "swap"
-msgstr ""
+msgstr "swap"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter09/bootscripts.xml:272
 msgid "<command>sysctl</command>"
-msgstr ""
+msgstr "<command>sysctl</command>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter09/bootscripts.xml:274
 msgid ""
-"Loads system configuration values from "
-"<filename>/etc/sysctl.conf</filename>, if that file exists, into the running "
-"kernel"
+"Loads system configuration values from <filename>/etc/sysctl.conf</"
+"filename>, if that file exists, into the running kernel"
 msgstr ""
+"如果 <filename>/etc/sysctl.conf</filename> 存在，将其中的系统配置选项值加载"
+"到内核"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter09/bootscripts.xml:278
 msgid "sysctl"
-msgstr ""
+msgstr "sysctl"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter09/bootscripts.xml:284
 msgid "<command>sysklogd</command>"
-msgstr ""
+msgstr "<command>sysklogd</command>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter09/bootscripts.xml:286
 msgid "Starts and stops the system and kernel log daemons"
-msgstr ""
+msgstr "启动或停止系统与内核日志守护进程"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter09/bootscripts.xml:288
 msgid "sysklogd"
-msgstr ""
+msgstr "sysklogd"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter09/bootscripts.xml:294
 msgid "<command>template</command>"
-msgstr ""
+msgstr "<command>template</command>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter09/bootscripts.xml:296
 msgid "A template to create custom bootscripts for other daemons"
-msgstr ""
+msgstr "为其他守护进程创建自定义引导脚本的模板"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter09/bootscripts.xml:299
 msgid "template"
-msgstr ""
+msgstr "template"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter09/bootscripts.xml:305
 msgid "<command>udev</command>"
-msgstr ""
+msgstr "<command>udev</command>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter09/bootscripts.xml:307
 msgid ""
 "Prepares the <filename class=\"directory\">/dev</filename> directory and "
 "starts Udev"
-msgstr ""
+msgstr "准备 <filename class=\"directory\">/dev</filename> 目录，并启动 udev"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter09/bootscripts.xml:310
 msgid "udev"
-msgstr ""
+msgstr "udev"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter09/bootscripts.xml:316
 msgid "<command>udev_retry</command>"
-msgstr ""
+msgstr "<command>udev_retry</command>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter09/bootscripts.xml:318
 msgid ""
 "Retries failed udev uevents, and copies generated rules files from <filename "
-"class=\"directory\">/run/udev</filename> to <filename "
-"class=\"directory\">/etc/udev/rules.d</filename> if required"
+"class=\"directory\">/run/udev</filename> to <filename class=\"directory\">/"
+"etc/udev/rules.d</filename> if required"
 msgstr ""
+"重试失败的 udev 事件，如果必要的话，将生成的规则从 <filename class="
+"\"directory\">/run/udev</filename> 拷贝到 <filename class=\"directory\">/etc/"
+"udev/rules.d</filename>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter09/bootscripts.xml:322
 msgid "udev_retry"
-msgstr ""
+msgstr "udev_retry"
