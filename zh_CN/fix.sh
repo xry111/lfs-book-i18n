@@ -99,3 +99,12 @@ $p
 # Apply lfs-l10n.xml patch, if it's not applied
 grep "Simplified Chinese" stylesheets/lfs-xsl/lfs-l10n.xml ||
 	patch -N -p1 -i ../patches/lfs-l10n.xml.patch
+
+cp -v ../zh_CN-fonts.xsl stylesheets/lfs-xsl/pdf/
+
+grep zh_CN-fonts stylesheets/lfs-xsl/pdf.xsl ||
+	sed '/<\/xsl:stylesheet>/i <xsl:include href="pdf/zh_CN-fonts.xsl"/>' \
+	    -i stylesheets/lfs-xsl/pdf.xsl
+
+grep '\-c fop.xml' Makefile ||
+	sed 's|fop -q|& -c ../fop.xml|' -i Makefile

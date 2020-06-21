@@ -41,6 +41,7 @@ nochunks: booksrc
 
 pdf: booksrc
 	rm -rf $(MLANG)/book/pdf
+	pushd $(MLANG)/book; sh ../fetch_fonts.sh; popd
 	make -C $(MLANG)/book REV=$(REV) BASEDIR=pdf pdf
 
 booksrc: $(MBOOK_FILES) $(PATCHES) $(MLANG)/book/general.ent.orig
