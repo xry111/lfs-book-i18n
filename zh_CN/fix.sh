@@ -63,10 +63,9 @@ sed -e 's/less than/不到/' \
 
 reldate=$(grep 'releasedate' general.ent |
 	      sed 's/.*"\(.*\)".*/\1/;s/st\|nd\|rd\|th//');
-if reldate_cn=$(LANG=zh_CN.UTF-8 \
-                date -d "$reldate" "+%Y 年 %b %d 日" \
+if reldate_cn=$(LANG=en_US.UTF-8 \
+                date -d "$reldate" "+%Y 年 %1m 月 %d 日" \
                 2>/dev/null); then
-	reldate_cn=$(echo "$reldate_cn" | sed 's/月/ &/')
 	sed "/releasedate/s/\".*\"/\"${reldate_cn}\"/" -i general.ent
 fi
 
