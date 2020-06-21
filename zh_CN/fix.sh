@@ -72,10 +72,24 @@ fi
 
 # Some buggy comments produced by po4a are adding extra empty lines.
 # Remove them.
-sed -e '/<screen.*><!--/,+1N;s/<!--.*-->\n//' -i \
+sed -n '
+1h
+1!{
+	/<screen[^\n]*><!--.*-->\n/!H
+	g
+	/<screen[^\n]*><!--.*-->\n/{
+		s/\(<screen[^\n]*>\)<!--.*-->\n/\1/
+		p
+		n
+		h
+	}
+}
+$p
+'   -i \
 	chapter02/hostreqs.xml                       \
 	chapter06/ncurses.xml                        \
-	chapter08/glibc.xml
+	chapter08/glibc.xml                          \
+	chapter08/flex.xml
 
 # Apply lfs-l10n.xml patch, if it's not applied
 grep "Simplified Chinese" stylesheets/lfs-xsl/lfs-l10n.xml ||
