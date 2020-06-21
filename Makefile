@@ -20,7 +20,7 @@ $(MLANG)/%.po: $(LFS_EN)/%.xml
 	touch $@
 
 MXML_FILES = $(patsubst $(LFS_EN)/%.xml, %.xml, $(XML_FILES))
-BOOK_FILES = $(patsubst $(LFS_EN)/%, %, $(shell find $(LFS_EN) -type f -not -path "$(LFS_EN)/.svn/*"))
+BOOK_FILES = $(patsubst $(LFS_EN)/%, %, $(shell find $(LFS_EN) -type f -not -path "$(LFS_EN)/.svn/*" -not -path "$(LFS_EN)/render/*"))
 KEEP_FILES = $(filter-out $(MXML_FILES), KEEP_FILES)
 
 MBOOK_FILES = $(patsubst %, $(MLANG)/book/%, $(BOOK_FILES))
