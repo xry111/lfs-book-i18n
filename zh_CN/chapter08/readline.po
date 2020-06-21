@@ -55,15 +55,13 @@ msgstr "&diskspace;"
 
 #. type: Content of: <sect1><sect2><segmentedlist><seglistitem><seg>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/readline.xml:34
-#, fuzzy
 msgid "&readline-fin-sbu;"
-msgstr "&readline-ch6-sbu;"
+msgstr "&readline-fin-sbu;"
 
 #. type: Content of: <sect1><sect2><segmentedlist><seglistitem><seg>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/readline.xml:35
-#, fuzzy
 msgid "&readline-fin-du;"
-msgstr "&readline-ch6-du;"
+msgstr "&readline-fin-du;"
 
 #. type: Content of: <sect1><sect2><title>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/readline.xml:42
@@ -99,7 +97,7 @@ msgstr "准备编译 Readline："
 
 #. type: Content of: <sect1><sect2><screen>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/readline.xml:54
-#, fuzzy, no-wrap
+#, no-wrap
 msgid ""
 "<userinput remap=\"configure\">./configure --prefix=/usr    \\\n"
 "            --disable-static \\\n"
@@ -108,19 +106,18 @@ msgid ""
 msgstr ""
 "<userinput remap=\"configure\">./configure --prefix=/usr    \\\n"
 "            --disable-static \\\n"
+"            --with-curses    \\\n"
 "            --docdir=/usr/share/doc/readline-&readline-version;</userinput>"
 
 #. type: Content of: <sect1><sect2><variablelist><title>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/readline.xml:60
-#, fuzzy
 msgid "The meaning of the configure option:"
-msgstr "make 命令选项的含义"
+msgstr "配置选项的含义"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/readline.xml:63
-#, fuzzy
 msgid "<parameter>--with-curses\"</parameter>"
-msgstr "<parameter>SHLIB_LIBS=\"-L/tools/lib -lncursesw\"</parameter>"
+msgstr "<parameter>--with-curses\"</parameter>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/readline.xml:65
@@ -129,6 +126,8 @@ msgid ""
 "the curses library, rather than a separate termcap library. It allows "
 "generating a correct <filename>readline.pc</filename> file."
 msgstr ""
+"该选项告诉 Readline 它可以在 curses 库中查找 termcap 库函数，而不是单独的"
+"termcap 库。这样就能生成正确的 <filename>readline.pc</filename> 文件。"
 
 #. type: Content of: <sect1><sect2><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/readline.xml:74
@@ -137,9 +136,9 @@ msgstr "编译该软件包："
 
 #. type: Content of: <sect1><sect2><screen>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/readline.xml:76
-#, fuzzy, no-wrap
+#, no-wrap
 msgid "<userinput remap=\"make\">make SHLIB_LIBS=\"-lncursesw\"</userinput>"
-msgstr "<userinput remap=\"make\">make SHLIB_LIBS=\"-L/tools/lib -lncursesw\"</userinput>"
+msgstr "<userinput remap=\"make\">make SHLIB_LIBS=\"-lncursesw\"</userinput>"
 
 #. type: Content of: <sect1><sect2><variablelist><title>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/readline.xml:79
@@ -148,9 +147,8 @@ msgstr "make 命令选项的含义"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/readline.xml:82
-#, fuzzy
 msgid "<parameter>SHLIB_LIBS=\"-lncursesw\"</parameter>"
-msgstr "<parameter>SHLIB_LIBS=\"-L/tools/lib -lncursesw\"</parameter>"
+msgstr "<parameter>SHLIB_LIBS=\"-lncursesw\"</parameter>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/readline.xml:84
@@ -173,9 +171,9 @@ msgstr "安装该软件包："
 
 #. type: Content of: <sect1><sect2><screen>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/readline.xml:95
-#, fuzzy, no-wrap
+#, no-wrap
 msgid "<userinput remap=\"install\">make SHLIB_LIBS=\"-lncursesw\" install</userinput>"
-msgstr "<userinput remap=\"install\">make SHLIB_LIBS=\"-L/tools/lib -lncursesw\" install</userinput>"
+msgstr "<userinput remap=\"install\">make SHLIB_LIBS=\"-lncursesw\" install</userinput>"
 
 #. type: Content of: <sect1><sect2><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/readline.xml:97
@@ -244,6 +242,7 @@ msgstr "简要描述"
 msgid ""
 "<?dbfo list-presentation=\"list\"?> <?dbhtml list-presentation=\"table\"?>"
 msgstr ""
+"<?dbfo list-presentation=\"list\"?> <?dbhtml list-presentation=\"table\"?>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/readline.xml:131

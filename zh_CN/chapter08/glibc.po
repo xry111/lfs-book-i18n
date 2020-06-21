@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2020-06-17 12:44+0800\n"
+"POT-Creation-Date: 2020-06-21 14:05+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -81,8 +81,8 @@ msgid ""
 "the FHS-compliant locations:"
 msgstr ""
 "某些 Glibc 程序使用与 FHS 不兼容的 <filename class=\"directory\">/var/db</"
-"filename> 目录存放运行时数据。应用下列补丁，使得这些程序在 FHS 兼容的位置存"
-"储运行时数据："
+"filename> 目录存放运行时数据。应用下列补丁，使得这些程序在 FHS 兼容的位置存储"
+"运行时数据："
 
 #. type: Content of: <sect1><sect2><screen>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/glibc.xml:51
@@ -131,29 +131,44 @@ msgstr ""
 "             libc_cv_slibdir=/lib</userinput>"
 
 #. type: Content of: <sect1><sect2><variablelist><title>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/glibc.xml:70
-msgid "The meaning of the options and new configure parameters:"
-msgstr "新的配置选项和参数的含义："
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/glibc.xml:69
+msgid "The meaning of the configure options:"
+msgstr "配置选项的含义："
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/glibc.xml:85
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/glibc.xml:72
 msgid "<parameter>--disable-werror</parameter>"
 msgstr "<parameter>--disable-werror</parameter>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/glibc.xml:87
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/glibc.xml:74
 msgid ""
 "This option disables the -Werror option passed to GCC.  This is necessary "
 "for running the test suite."
 msgstr "该选项禁用 GCC 的 -Werror 选项。这对于运行测试套件来说是必须的。"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/glibc.xml:93
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/glibc.xml:80
+msgid "<parameter>--enable-kernel=&min-kernel;</parameter>"
+msgstr "<parameter>--enable-kernel=&min-kernel;</parameter>"
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/glibc.xml:82
+msgid ""
+"This option tells the build system that this glibc may be used with kernels "
+"as old as &min-kernel;. This means generating workarounds in case a system "
+"call introduced in a later version cannot be used."
+msgstr ""
+"该选项告诉构建系统 Glibc 可能被与 &min-kernel; 这样老版本的内核一起使用。"
+"这样，Glibc 会生成代码，在后续版本引入的系统调用不可用时绕过它们。"
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/glibc.xml:90
 msgid "<parameter>--enable-stack-protector=strong</parameter>"
 msgstr "<parameter>--enable-stack-protector=strong</parameter>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/glibc.xml:95
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/glibc.xml:92
 msgid ""
 "This option increases system security by adding extra code to check for "
 "buffer overflows, such as stack smashing attacks."
@@ -162,42 +177,41 @@ msgstr ""
 "全性。"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/glibc.xml:102
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/glibc.xml:99
 msgid "<parameter>--with-headers=/usr/include</parameter>"
 msgstr "<parameter>--with-headers=/usr/include</parameter>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/glibc.xml:104
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/glibc.xml:101
 msgid ""
 "This option tells the build system where to find the kernel API headers."
-msgstr ""
-"该选项指定构建系统搜索内核 API 头文件的位置。"
+msgstr "该选项指定构建系统搜索内核 API 头文件的位置。"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/glibc.xml:110
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/glibc.xml:107
 msgid "<parameter>libc_cv_slibdir=/lib</parameter>"
 msgstr "<parameter>libc_cv_slibdir=/lib</parameter>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/glibc.xml:112
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/glibc.xml:109
 msgid ""
 "This variable sets the correct library for all systems.  We do not want "
 "lib64 to be used."
 msgstr "这个变量纠正库文件安装位置。我们不希望使用 lib64 目录。"
 
 #. type: Content of: <sect1><sect2><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/glibc.xml:119
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/glibc.xml:116
 msgid "Compile the package:"
 msgstr "编译该软件包："
 
 #. type: Content of: <sect1><sect2><screen>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/glibc.xml:121
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/glibc.xml:118
 #, no-wrap
 msgid "<userinput remap=\"make\">make</userinput>"
 msgstr "<userinput remap=\"make\">make</userinput>"
 
 #. type: Content of: <sect1><sect2><important><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/glibc.xml:124
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/glibc.xml:121
 msgid ""
 "In this section, the test suite for Glibc is considered critical.  Do not "
 "skip it under any circumstance."
@@ -205,7 +219,7 @@ msgstr ""
 "我们认为，在本节中，Glibc 的测试套件十分关键。在任何情况下都不要跳过它。"
 
 #. type: Content of: <sect1><sect2><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/glibc.xml:128
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/glibc.xml:125
 msgid ""
 "Generally a few tests do not pass. The test failures listed below are "
 "usually safe to ignore."
@@ -215,7 +229,7 @@ msgstr ""
 
 #.  Use remap="make" here to work around a jhalfs issue. 
 #. type: Content of: <sect1><sect2><screen>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/glibc.xml:132
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/glibc.xml:129
 #, no-wrap
 msgid ""
 "<userinput remap=\"make\">case $(uname -m) in\n"
@@ -229,33 +243,33 @@ msgstr ""
 "esac</userinput>"
 
 #. type: Content of: <sect1><sect2><note><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/glibc.xml:137
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/glibc.xml:134
 msgid ""
 "The symbolic link above is needed to run the tests at this stage of building "
 "in the chroot environment.  It will be overwritten in the install phase "
 "below."
 msgstr ""
-"我们需要上面的符号链接，以便在当前的 chroot 构建环境中运行测试套件。后续的"
-"安装过程将会覆盖它。"
+"我们需要上面的符号链接，以便在当前的 chroot 构建环境中运行测试套件。后续的安"
+"装过程将会覆盖它。"
 
 #. type: Content of: <sect1><sect2><screen>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/glibc.xml:141
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/glibc.xml:138
 #, no-wrap
 msgid "<userinput remap=\"test\">make check</userinput>"
 msgstr "<userinput remap=\"test\">make check</userinput>"
 
 #. type: Content of: <sect1><sect2><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/glibc.xml:143
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/glibc.xml:140
 msgid ""
 "You may see some test failures.  The Glibc test suite is somewhat dependent "
 "on the host system.  This is a list of the most common issues seen for some "
 "versions of LFS:"
 msgstr ""
-"您可能看到一些失败结果。Glibc 的测试套件和宿主系统之间有某种依赖关系。下"
-"面列出是在一些版本的 LFS 上发现的，最常见的问题："
+"您可能看到一些失败结果。Glibc 的测试套件和宿主系统之间有某种依赖关系。下面列"
+"出是在一些版本的 LFS 上发现的，最常见的问题："
 
 #. type: Content of: <sect1><sect2><itemizedlist><listitem><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/glibc.xml:150
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/glibc.xml:147
 msgid ""
 "<emphasis>misc/tst-ttyname</emphasis> is known to fail in the LFS chroot "
 "environment."
@@ -263,7 +277,7 @@ msgstr ""
 "已知 <emphasis>misc/tst-ttyname</emphasis> 在 LFS chroot 环境中会失败。"
 
 #. type: Content of: <sect1><sect2><itemizedlist><listitem><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/glibc.xml:166
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/glibc.xml:163
 msgid ""
 "The <emphasis>nss/tst-nss-files-hosts-multi</emphasis> test may fail for "
 "reasons that have not been determined."
@@ -272,7 +286,7 @@ msgstr ""
 "明。"
 
 #. type: Content of: <sect1><sect2><itemizedlist><listitem><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/glibc.xml:171
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/glibc.xml:168
 msgid ""
 "The <emphasis>rt/tst-cputimer{1,2,3}</emphasis> tests depend on the host "
 "system kernel. Kernels 4.14.91&ndash;4.14.96, 4.19.13&ndash;4.19.18, and "
@@ -283,62 +297,61 @@ msgstr ""
 "4.20.0&ndash;4.20.5 会导致它们失败。"
 
 #. type: Content of: <sect1><sect2><itemizedlist><listitem><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/glibc.xml:179
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/glibc.xml:176
 msgid ""
 "The math tests sometimes fail when running on systems where the CPU is not a "
 "relatively new Intel or AMD processor."
 msgstr "如果 CPU 不是较新的 Intel 或 AMD 处理器，数学测试有时会失败。"
 
 #. type: Content of: <sect1><sect2><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/glibc.xml:186
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/glibc.xml:183
 msgid ""
 "Though it is a harmless message, the install stage of Glibc will complain "
 "about the absence of <filename>/etc/ld.so.conf</filename>.  Prevent this "
 "warning with:"
 msgstr ""
-"在安装 Glibc 时，它会抱怨文件 <filename>/etc/ld.so.conf</filename> 不存在。"
-"尽管这是一条无害的消息，执行以下命令即可防止这个警告："
+"在安装 Glibc 时，它会抱怨文件 <filename>/etc/ld.so.conf</filename> 不存在。尽"
+"管这是一条无害的消息，执行以下命令即可防止这个警告："
 
 #. type: Content of: <sect1><sect2><screen>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/glibc.xml:190
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/glibc.xml:187
 #, no-wrap
 msgid "<userinput remap=\"install\">touch /etc/ld.so.conf</userinput>"
 msgstr "<userinput remap=\"install\">touch /etc/ld.so.conf</userinput>"
 
 #. type: Content of: <sect1><sect2><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/glibc.xml:192
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/glibc.xml:189
 msgid ""
 "Fix the generated Makefile to skip an unneeded sanity check that fails in "
 "the LFS partial environment:"
-msgstr ""
-"修正生成的 Makefile，跳过一个在 LFS 的不完整环境中会失败的完整性检查："
+msgstr "修正生成的 Makefile，跳过一个在 LFS 的不完整环境中会失败的完整性检查："
 
 #. type: Content of: <sect1><sect2><screen>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/glibc.xml:196
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/glibc.xml:193
 #, no-wrap
 msgid "<userinput remap=\"install\">sed '/test-installation/s@$(PERL)@echo not running@' -i ../Makefile</userinput>"
 msgstr "<userinput remap=\"install\">sed '/test-installation/s@$(PERL)@echo not running@' -i ../Makefile</userinput>"
 
 #. type: Content of: <sect1><sect2><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/glibc.xml:198
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/glibc.xml:195
 msgid "Install the package:"
 msgstr "安装该软件包："
 
 #. type: Content of: <sect1><sect2><screen>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/glibc.xml:200
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/glibc.xml:197
 #, no-wrap
 msgid "<userinput remap=\"install\">make install</userinput>"
 msgstr "<userinput remap=\"install\">make install</userinput>"
 
 #. type: Content of: <sect1><sect2><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/glibc.xml:202
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/glibc.xml:199
 msgid ""
 "Install the configuration file and runtime directory for <command>nscd</"
 "command>:"
 msgstr "安装 <command>nscd</command> 的配置文件和运行时目录："
 
 #. type: Content of: <sect1><sect2><screen>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/glibc.xml:205
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/glibc.xml:202
 #, no-wrap
 msgid ""
 "<userinput remap=\"install\">cp -v ../nscd/nscd.conf /etc/nscd.conf\n"
@@ -348,12 +361,12 @@ msgstr ""
 "mkdir -pv /var/cache/nscd</userinput>"
 
 #. type: Content of: <sect1><sect2><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/glibc.xml:208
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/glibc.xml:205
 msgid "Install the systemd support files for <command>nscd</command>:"
 msgstr "安装 <command>nscd</command> 的 systemd 支持文件："
 
 #. type: Content of: <sect1><sect2><screen>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/glibc.xml:211
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/glibc.xml:208
 #, no-wrap
 msgid ""
 "<userinput remap=\"install\">install -v -Dm644 ../nscd/nscd.tmpfiles /usr/lib/tmpfiles.d/nscd.conf\n"
@@ -363,18 +376,18 @@ msgstr ""
 "install -v -Dm644 ../nscd/nscd.service /lib/systemd/system/nscd.service</userinput>"
 
 #. type: Content of: <sect1><sect2><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/glibc.xml:214
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/glibc.xml:211
 msgid ""
 "Next, install the locales that can make the system respond in a different "
 "language.  None of the locales are required, but if some of them are "
 "missing, the test suites of future packages would skip important testcases."
 msgstr ""
-"下面，安装一些 locale，它们可以使得系统用不同语言响应用户请求。这些 locale "
-"都不是必须的，但是如果缺少了它们中的某些，在将来运行软件包的测试套件时，可能"
-"跳过重要的测试。"
+"下面，安装一些 locale，它们可以使得系统用不同语言响应用户请求。这些 locale 都"
+"不是必须的，但是如果缺少了它们中的某些，在将来运行软件包的测试套件时，可能跳"
+"过重要的测试。"
 
 #. type: Content of: <sect1><sect2><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/glibc.xml:219
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/glibc.xml:216
 msgid ""
 "Individual locales can be installed using the <command>localedef</command> "
 "program. E.g., the first <command>localedef</command> command below combines "
@@ -389,11 +402,11 @@ msgstr ""
 "个 <command>localedef</command> 命令将 <filename>/usr/share/i18n/locales/"
 "cs_CZ</filename> 中的字符集无关 locale 定义和 <filename>/usr/share/i18n/"
 "charmaps/UTF-8.gz</filename> 中的字符映射定义组合起来，并附加到 <filename>/"
-"usr/lib/locale/locale-archive</filename> 文件。以下命令将会安装能够覆盖测试"
-"所需的最小 locale 集合："
+"usr/lib/locale/locale-archive</filename> 文件。以下命令将会安装能够覆盖测试所"
+"需的最小 locale 集合："
 
 #. type: Content of: <sect1><sect2><screen>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/glibc.xml:230
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/glibc.xml:227
 #, no-wrap
 msgid ""
 "<userinput remap=\"locale-test\">mkdir -pv /usr/lib/locale\n"
@@ -453,14 +466,14 @@ msgstr ""
 "localedef -i zh_HK -f BIG5-HKSCS zh_HK.BIG5-HKSCS</userinput>"
 
 #. type: Content of: <sect1><sect2><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/glibc.xml:258
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/glibc.xml:255
 msgid ""
 "In addition, install the locale for your own country, language and character "
 "set."
 msgstr "另外，安装适合您自己国家、语言和字符集的 locale。"
 
 #. type: Content of: <sect1><sect2><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/glibc.xml:261
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/glibc.xml:258
 msgid ""
 "Alternatively, install all locales listed in the <filename>glibc-&glibc-"
 "version;/localedata/SUPPORTED</filename> file (it includes every locale "
@@ -468,60 +481,60 @@ msgid ""
 "command:"
 msgstr ""
 "或者，也可以一次安装 <filename>glibc-&glibc-version;/localedata/SUPPORTED</"
-"filename> 中列出的所有 locale (包括上面列出的所有 locale，以及其他很多)。执"
-"行下面这个需要很长时间的命令："
+"filename> 中列出的所有 locale (包括上面列出的所有 locale，以及其他很多)。执行"
+"下面这个需要很长时间的命令："
 
 #. type: Content of: <sect1><sect2><screen>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/glibc.xml:266
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/glibc.xml:263
 #, no-wrap
 msgid "<userinput remap=\"locale-full\">make localedata/install-locales</userinput>"
 msgstr "<userinput remap=\"locale-full\">make localedata/install-locales</userinput>"
 
 #. type: Content of: <sect1><sect2><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/glibc.xml:268
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/glibc.xml:265
 msgid ""
 "Then use the <command>localedef</command> command to create and install "
 "locales not listed in the <filename>glibc-&glibc-version;/localedata/"
 "SUPPORTED</filename> file in the unlikely case you need them."
 msgstr ""
 "如果需要，再使用 <command>localedef</command> 命令创建和安装 <filename>glibc-"
-"&glibc-version;/localedata/SUPPORTED</filename> 中没有列出的 locale，当然您"
-"不太可能需要它们。"
+"&glibc-version;/localedata/SUPPORTED</filename> 中没有列出的 locale，当然您不"
+"太可能需要它们。"
 
 #. type: Content of: <sect1><sect2><note><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/glibc.xml:273
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/glibc.xml:270
 msgid ""
 "Glibc now uses libidn2 when resolving internationalized domain names.  This "
 "is a run time dependency.  If this capability is needed, the instructions "
 "for installing libidn2 are in the <ulink url=\"&blfs-book;general/libidn2."
 "html\">BLFS libidn2 page</ulink>."
 msgstr ""
-"目前 glibc 在解析国际化域名时使用 libidn2。这形成了一个运行时依赖关系。如"
-"果需要使用解析国际化域名的功能，参阅 <ulink url=\"&blfs-book;general/libidn2."
-"html\">BLFS libidn2 页面</ulink>安装 libidn2。"
+"目前 glibc 在解析国际化域名时使用 libidn2。这形成了一个运行时依赖关系。如果需"
+"要使用解析国际化域名的功能，参阅 <ulink url=\"&blfs-book;general/libidn2.html"
+"\">BLFS libidn2 页面</ulink>安装 libidn2。"
 
 #. type: Content of: <sect1><sect2><title>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/glibc.xml:282
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/glibc.xml:279
 msgid "Configuring Glibc"
 msgstr "配置 Glibc"
 
 #. type: Content of: <sect1><sect2><indexterm><primary>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/glibc.xml:285
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/glibc.xml:282
 msgid "/etc/nsswitch.conf"
 msgstr "/etc/nsswitch.conf"
 
 #. type: Content of: <sect1><sect2><indexterm><primary>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/glibc.xml:289
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/glibc.xml:286
 msgid "/etc/localtime"
 msgstr "/etc/localtime"
 
 #. type: Content of: <sect1><sect2><sect3><title>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/glibc.xml:293
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/glibc.xml:290
 msgid "Adding nsswitch.conf"
 msgstr "创建 nsswitch.conf"
 
 #. type: Content of: <sect1><sect2><sect3><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/glibc.xml:295
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/glibc.xml:292
 msgid ""
 "The <filename>/etc/nsswitch.conf</filename> file needs to be created because "
 "the Glibc defaults do not work well in a networked environment."
@@ -530,14 +543,14 @@ msgstr ""
 "etc/nsswitch.conf</filename>。"
 
 #. type: Content of: <sect1><sect2><sect3><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/glibc.xml:299
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/glibc.xml:296
 msgid ""
 "Create a new file <filename>/etc/nsswitch.conf</filename> by running the "
 "following:"
 msgstr "执行以下命令创建新的 <filename>/etc/nsswitch.conf</filename>："
 
 #. type: Content of: <sect1><sect2><sect3><screen>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/glibc.xml:302
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/glibc.xml:299
 #, no-wrap
 msgid ""
 "<userinput>cat &gt; /etc/nsswitch.conf &lt;&lt; \"EOF\"\n"
@@ -577,17 +590,17 @@ msgstr ""
 "EOF</userinput>"
 
 #. type: Content of: <sect1><sect2><sect3><title>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/glibc.xml:323
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/glibc.xml:320
 msgid "Adding time zone data"
 msgstr "添加时区数据"
 
 #. type: Content of: <sect1><sect2><sect3><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/glibc.xml:325
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/glibc.xml:322
 msgid "Install and set up the time zone data with the following:"
 msgstr "输入以下命令，安装并设置时区数据："
 
 #. type: Content of: <sect1><sect2><sect3><screen>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/glibc.xml:326
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/glibc.xml:323
 #, no-wrap
 msgid ""
 "<userinput>tar -xf ../../tzdata&tzdata-version;.tar.gz\n"
@@ -623,17 +636,17 @@ msgstr ""
 "unset ZONEINFO</userinput>"
 
 #. type: Content of: <sect1><sect2><sect3><variablelist><title>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/glibc.xml:343
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/glibc.xml:340
 msgid "The meaning of the zic commands:"
 msgstr "zic 命令的含义："
 
 #. type: Content of: <sect1><sect2><sect3><variablelist><varlistentry><term>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/glibc.xml:346
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/glibc.xml:343
 msgid "<parameter>zic -L /dev/null ...</parameter>"
 msgstr "<parameter>zic -L /dev/null ...</parameter>"
 
 #. type: Content of: <sect1><sect2><sect3><variablelist><varlistentry><listitem><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/glibc.xml:348
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/glibc.xml:345
 msgid ""
 "This creates posix time zones without any leap seconds.  It is conventional "
 "to put these in both <filename class=\"directory\">zoneinfo</filename> and "
@@ -647,19 +660,19 @@ msgid ""
 msgstr ""
 "该命令创建没有闰秒的 POSIX 时区。一般的惯例是将它们安装在 <filename class="
 "\"directory\">zoneinfo</filename> 和 <filename class=\"directory\">zoneinfo/"
-"posix</filename> 两个目录中。必须将 POSIX 时区安装到 <filename class=\"directory\">zoneinfo</"
-"filename>，否则若干测试套件会报告错误。在嵌入式系统上，如果存储空间"
-"十分紧张，而且您永远不会更新时区信息，您可以不使用 <filename class="
-"\"directory\">posix</filename> 目录，以节约 1.9 MB，但个别程序或测试套件可能"
-"会失败。"
+"posix</filename> 两个目录中。必须将 POSIX 时区安装到 <filename class="
+"\"directory\">zoneinfo</filename>，否则若干测试套件会报告错误。在嵌入式系统"
+"上，如果存储空间十分紧张，而且您永远不会更新时区信息，您可以不使用 <filename "
+"class=\"directory\">posix</filename> 目录，以节约 1.9 MB，但个别程序或测试套"
+"件可能会失败。"
 
 #. type: Content of: <sect1><sect2><sect3><variablelist><varlistentry><term>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/glibc.xml:362
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/glibc.xml:359
 msgid "<parameter>zic -L leapseconds ...</parameter>"
 msgstr "<parameter>zic -L leapseconds ...</parameter>"
 
 #. type: Content of: <sect1><sect2><sect3><variablelist><varlistentry><listitem><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/glibc.xml:364
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/glibc.xml:361
 msgid ""
 "This creates right time zones, including leap seconds. On an embedded "
 "system, where space is tight and you do not intend to ever update the time "
@@ -667,38 +680,38 @@ msgid ""
 "<filename class=\"directory\">right</filename> directory."
 msgstr ""
 "该命令创建正确的，包含闰秒的时区。在嵌入式系统上，如果存储空间十分紧张，而且"
-"您永远不会更新时区信息，也不关心系统时间是否正确，您可以跳过 <filename "
-"class=\"directory\">right</filename> 目录，以节约 1.9 MB。"
+"您永远不会更新时区信息，也不关心系统时间是否正确，您可以跳过 <filename class="
+"\"directory\">right</filename> 目录，以节约 1.9 MB。"
 
 #. type: Content of: <sect1><sect2><sect3><variablelist><varlistentry><term>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/glibc.xml:372
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/glibc.xml:369
 msgid "<parameter>zic ... -p ...</parameter>"
 msgstr "<parameter>zic ... -p ...</parameter>"
 
 #. type: Content of: <sect1><sect2><sect3><variablelist><varlistentry><listitem><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/glibc.xml:374
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/glibc.xml:371
 msgid ""
 "This creates the <filename>posixrules</filename> file. We use New York "
 "because POSIX requires the daylight savings time rules to be in accordance "
 "with US rules."
 msgstr ""
-"该命令创建 <filename>posixrule</filename> 文件。我们使用纽约时区，因为 "
-"POSIX 要求与美国一致的夏令时规则。"
+"该命令创建 <filename>posixrule</filename> 文件。我们使用纽约时区，因为 POSIX "
+"要求与美国一致的夏令时规则。"
 
 #. type: Content of: <sect1><sect2><sect3><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/glibc.xml:382
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/glibc.xml:379
 msgid ""
 "One way to determine the local time zone is to run the following script:"
 msgstr "一种确定本地时区的方法是运行脚本："
 
 #. type: Content of: <sect1><sect2><sect3><screen>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/glibc.xml:385
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/glibc.xml:382
 #, no-wrap
 msgid "<userinput>tzselect</userinput>"
 msgstr "<userinput>tzselect</userinput>"
 
 #. type: Content of: <sect1><sect2><sect3><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/glibc.xml:387
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/glibc.xml:384
 msgid ""
 "After answering a few questions about the location, the script will output "
 "the name of the time zone (e.g., <emphasis>America/Edmonton</emphasis>). "
@@ -713,18 +726,18 @@ msgstr ""
 "<emphasis>Canada/Eastern</emphasis> 或者 <emphasis>EST5EDT</emphasis>。"
 
 #. type: Content of: <sect1><sect2><sect3><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/glibc.xml:395
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/glibc.xml:392
 msgid "Then create the <filename>/etc/localtime</filename> file by running:"
 msgstr "确定时区后，执行以下命令，创建 <filename>/etc/localtime</filename>："
 
 #. type: Content of: <sect1><sect2><sect3><screen>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/glibc.xml:398
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/glibc.xml:395
 #, no-wrap
 msgid "<userinput>ln -sfv /usr/share/zoneinfo/<replaceable>&lt;xxx&gt;</replaceable> /etc/localtime</userinput>"
 msgstr "<userinput>ln -sfv /usr/share/zoneinfo/<replaceable>&lt;xxx&gt;</replaceable> /etc/localtime</userinput>"
 
 #. type: Content of: <sect1><sect2><sect3><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/glibc.xml:400
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/glibc.xml:397
 msgid ""
 "Replace <replaceable>&lt;xxx&gt;</replaceable> with the name of the time "
 "zone selected (e.g., Canada/Eastern)."
@@ -733,17 +746,17 @@ msgstr ""
 "Eastern)。"
 
 #. type: Content of: <sect1><sect2><sect3><title>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/glibc.xml:406
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/glibc.xml:403
 msgid "Configuring the Dynamic Loader"
 msgstr "配置动态加载器"
 
 #. type: Content of: <sect1><sect2><sect3><indexterm><primary>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/glibc.xml:409
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/glibc.xml:406
 msgid "/etc/ld.so.conf"
 msgstr "/etc/ld.so.conf"
 
 #. type: Content of: <sect1><sect2><sect3><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/glibc.xml:412
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/glibc.xml:409
 msgid ""
 "By default, the dynamic loader (<filename class=\"libraryfile\">/lib/ld-"
 "linux.so.2</filename>) searches through <filename class=\"directory\">/lib</"
@@ -768,14 +781,14 @@ msgstr ""
 "现在将它们添加到动态加载器的搜索目录中。"
 
 #. type: Content of: <sect1><sect2><sect3><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/glibc.xml:426
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/glibc.xml:423
 msgid ""
 "Create a new file <filename>/etc/ld.so.conf</filename> by running the "
 "following:"
 msgstr "运行以下命令，创建一个新的 <filename>/etc/ld.so.conf</filename>："
 
 #. type: Content of: <sect1><sect2><sect3><screen>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/glibc.xml:429
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/glibc.xml:426
 #, no-wrap
 msgid ""
 "<userinput>cat &gt; /etc/ld.so.conf &lt;&lt; \"EOF\"\n"
@@ -793,7 +806,7 @@ msgstr ""
 "EOF</userinput>"
 
 #. type: Content of: <sect1><sect2><sect3><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/glibc.xml:436
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/glibc.xml:433
 msgid ""
 "If desired, the dynamic loader can also search a directory and include the "
 "contents of files found there.  Generally the files in this include "
@@ -801,11 +814,11 @@ msgid ""
 "capability run the following commands:"
 msgstr ""
 "如果希望的话，动态加载器也可以搜索一个目录，并将其中的文件包含在 ld.so.conf "
-"中。通常包含文件目录中的文件只有一行，指定一个期望的库文件目录。如果需要"
-"这项功能，执行以下命令："
+"中。通常包含文件目录中的文件只有一行，指定一个期望的库文件目录。如果需要这项"
+"功能，执行以下命令："
 
 #. type: Content of: <sect1><sect2><sect3><screen>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/glibc.xml:441
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/glibc.xml:438
 #, no-wrap
 msgid ""
 "<userinput>cat &gt;&gt; /etc/ld.so.conf &lt;&lt; \"EOF\"\n"
@@ -823,27 +836,27 @@ msgstr ""
 "mkdir -pv /etc/ld.so.conf.d</userinput>"
 
 #. type: Content of: <sect1><sect2><title>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/glibc.xml:452
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/glibc.xml:449
 msgid "Contents of Glibc"
 msgstr "Glibc 的内容"
 
 #. type: Content of: <sect1><sect2><segmentedlist><segtitle>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/glibc.xml:455
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/glibc.xml:452
 msgid "Installed programs"
 msgstr "安装的程序"
 
 #. type: Content of: <sect1><sect2><segmentedlist><segtitle>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/glibc.xml:456
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/glibc.xml:453
 msgid "Installed libraries"
 msgstr "安装的库"
 
 #. type: Content of: <sect1><sect2><segmentedlist><segtitle>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/glibc.xml:457
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/glibc.xml:454
 msgid "Installed directories"
 msgstr "安装的目录"
 
 #. type: Content of: <sect1><sect2><segmentedlist><seglistitem><seg>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/glibc.xml:460
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/glibc.xml:457
 msgid ""
 "catchsegv, gencat, getconf, getent, iconv, iconvconfig, ldconfig, ldd, "
 "lddlibc4, locale, localedef, makedb, mtrace, nscd, pcprofiledump, pldd, sln, "
@@ -854,7 +867,7 @@ msgstr ""
 "sotruss, sprof, tzselect, xtrace, zdump, 以及 zic"
 
 #. type: Content of: <sect1><sect2><segmentedlist><seglistitem><seg>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/glibc.xml:464
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/glibc.xml:461
 msgid ""
 "ld-&glibc-version;.so, libBrokenLocale.{a,so}, libSegFault.so, libanl.{a,"
 "so}, libc.{a,so}, libc_nonshared.a, libcrypt.{a,so}, libdl.{a,so}, libg.a, "
@@ -863,15 +876,15 @@ msgid ""
 "libpcprofile.so, libpthread.{a,so}, libpthread_nonshared.a, libresolv.{a,"
 "so}, librt.{a,so}, libthread_db.so, and libutil.{a,so}"
 msgstr ""
-"ld-&glibc-version;.so, libBrokenLocale.{a,so}, libSegFault.so, libanl.{a,so}, "
-"libc.{a,so}, libc_nonshared.a, libcrypt.{a,so}, libdl.{a,so}, libg.a, libm."
-"{a,so}, libmcheck.a, libmemusage.so, libmvec.{a,so}, libnsl.{a,so}, "
+"ld-&glibc-version;.so, libBrokenLocale.{a,so}, libSegFault.so, libanl.{a,"
+"so}, libc.{a,so}, libc_nonshared.a, libcrypt.{a,so}, libdl.{a,so}, libg.a, "
+"libm.{a,so}, libmcheck.a, libmemusage.so, libmvec.{a,so}, libnsl.{a,so}, "
 "libnss_compat.so, libnss_dns.so, libnss_files.so, libnss_hesiod.so, "
 "libpcprofile.so, libpthread.{a,so}, libpthread_nonshared.a, libresolv.{a,"
 "so}, librt.{a,so}, libthread_db.so, 以及 libutil.{a,so}"
 
 #. type: Content of: <sect1><sect2><segmentedlist><seglistitem><seg>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/glibc.xml:472
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/glibc.xml:469
 msgid ""
 "/usr/include/arpa, /usr/include/bits, /usr/include/gnu, /usr/include/net, /"
 "usr/include/netash, /usr/include/netatalk, /usr/include/netax25, /usr/"
@@ -890,395 +903,395 @@ msgstr ""
 "usr/share/i18n, /usr/share/zoneinfo, /var/cache/nscd, 以及 /var/lib/nss_db"
 
 #. type: Content of: <sect1><sect2><variablelist><bridgehead>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/glibc.xml:485
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/glibc.xml:482
 msgid "Short Descriptions"
 msgstr "简要描述"
 
 #. type: Content of: <sect1><sect2><variablelist>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/glibc.xml:486
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/glibc.xml:483
 msgid ""
 "<?dbfo list-presentation=\"list\"?> <?dbhtml list-presentation=\"table\"?>"
 msgstr ""
 "<?dbfo list-presentation=\"list\"?> <?dbhtml list-presentation=\"table\"?>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/glibc.xml:490
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/glibc.xml:487
 msgid "<command>catchsegv</command>"
 msgstr "<command>catchsegv</command>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/glibc.xml:492
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/glibc.xml:489
 msgid ""
 "Can be used to create a stack trace when a program terminates with a "
 "segmentation fault"
 msgstr "在程序因为段错误而终止时创建栈跟踪"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/glibc.xml:495
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/glibc.xml:492
 msgid "catchsegv"
 msgstr "catchsegv"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/glibc.xml:501
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/glibc.xml:498
 msgid "<command>gencat</command>"
 msgstr "<command>gencat</command>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/glibc.xml:503
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/glibc.xml:500
 msgid "Generates message catalogues"
 msgstr "生成消息目录"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/glibc.xml:505
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/glibc.xml:502
 msgid "gencat"
 msgstr "gencat"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/glibc.xml:511
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/glibc.xml:508
 msgid "<command>getconf</command>"
 msgstr "<command>getconf</command>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/glibc.xml:513
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/glibc.xml:510
 msgid ""
 "Displays the system configuration values for file system specific variables"
 msgstr "显示文件系统指定的系统配置变量值"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/glibc.xml:516
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/glibc.xml:513
 msgid "getconf"
 msgstr "getconf"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/glibc.xml:522
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/glibc.xml:519
 msgid "<command>getent</command>"
 msgstr "<command>getent</command>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/glibc.xml:524
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/glibc.xml:521
 msgid "Gets entries from an administrative database"
 msgstr "从管理数据库取得条目"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/glibc.xml:526
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/glibc.xml:523
 msgid "getent"
 msgstr "getent"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/glibc.xml:532
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/glibc.xml:529
 msgid "<command>iconv</command>"
 msgstr "<command>iconv</command>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/glibc.xml:534
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/glibc.xml:531
 msgid "Performs character set conversion"
 msgstr "转换给定文件的字符集"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/glibc.xml:536
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/glibc.xml:533
 msgid "iconv"
 msgstr "iconv"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/glibc.xml:542
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/glibc.xml:539
 msgid "<command>iconvconfig</command>"
 msgstr "<command>iconvconfig</command>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/glibc.xml:544
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/glibc.xml:541
 msgid "Creates fastloading <command>iconv</command> module configuration files"
 msgstr "创建可快速加载的 <command>iconv</command> 模块配置文件"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/glibc.xml:547
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/glibc.xml:544
 msgid "iconvconfig"
 msgstr "iconvconfig"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/glibc.xml:553
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/glibc.xml:550
 msgid "<command>ldconfig</command>"
 msgstr "<command>ldconfig</command>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/glibc.xml:555
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/glibc.xml:552
 msgid "Configures the dynamic linker runtime bindings"
 msgstr "配置动态链接器运行时绑定"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/glibc.xml:557
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/glibc.xml:554
 msgid "ldconfig"
 msgstr "ldconfig"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/glibc.xml:563
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/glibc.xml:560
 msgid "<command>ldd</command>"
 msgstr "<command>ldd</command>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/glibc.xml:565
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/glibc.xml:562
 msgid ""
 "Reports which shared libraries are required by each given program or shared "
 "library"
 msgstr "报告给定程序或共享库依赖于哪些共享库"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/glibc.xml:568
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/glibc.xml:565
 msgid "ldd"
 msgstr "ldd"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/glibc.xml:574
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/glibc.xml:571
 msgid "<command>lddlibc4</command>"
 msgstr "<command>lddlibc4</command>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/glibc.xml:576
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/glibc.xml:573
 msgid "Assists <command>ldd</command> with object files"
 msgstr "辅助 <command>ldd</command> 处理对象文件"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/glibc.xml:578
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/glibc.xml:575
 msgid "lddlibc4"
 msgstr "lddlibc4"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/glibc.xml:584
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/glibc.xml:581
 msgid "<command>locale</command>"
 msgstr "<command>locale</command>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/glibc.xml:586
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/glibc.xml:583
 msgid "Prints various information about the current locale"
 msgstr "给出当前 locale 的一些信息"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/glibc.xml:588
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/glibc.xml:585
 msgid "locale"
 msgstr "locale"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/glibc.xml:594
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/glibc.xml:591
 msgid "<command>localedef</command>"
 msgstr "<command>localedef</command>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/glibc.xml:596
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/glibc.xml:593
 msgid "Compiles locale specifications"
 msgstr "编译 locale 规范"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/glibc.xml:598
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/glibc.xml:595
 msgid "localedef"
 msgstr "localedef"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/glibc.xml:604
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/glibc.xml:601
 msgid "<command>makedb</command>"
 msgstr "<command>makedb</command>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/glibc.xml:606
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/glibc.xml:603
 msgid "Creates a simple database from textual input"
 msgstr "从文本输入创建简单的数据库"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/glibc.xml:608
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/glibc.xml:605
 msgid "makedb"
 msgstr "makedb"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/glibc.xml:614
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/glibc.xml:611
 msgid "<command>mtrace</command>"
 msgstr "<command>mtrace</command>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/glibc.xml:616
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/glibc.xml:613
 msgid ""
 "Reads and interprets a memory trace file and displays a summary in human-"
 "readable format"
 msgstr "读取并解析内存跟踪文件，以人类可读的形式输出内存跟踪信息"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/glibc.xml:619
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/glibc.xml:616
 msgid "mtrace"
 msgstr "mtrace"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/glibc.xml:625
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/glibc.xml:622
 msgid "<command>nscd</command>"
 msgstr "<command>nscd</command>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/glibc.xml:627
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/glibc.xml:624
 msgid ""
 "A daemon that provides a cache for the most common name service requests"
 msgstr "一个缓存最常见命名服务请求的守护进程"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/glibc.xml:630
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/glibc.xml:627
 msgid "nscd"
 msgstr "nscd"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/glibc.xml:636
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/glibc.xml:633
 msgid "<command>pcprofiledump</command>"
 msgstr "<command>pcprofiledump</command>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/glibc.xml:638
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/glibc.xml:635
 msgid "Dump information generated by PC profiling"
 msgstr "显示基于程序计数器的性能剖析数据"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/glibc.xml:640
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/glibc.xml:637
 msgid "pcprofiledump"
 msgstr "pcprofiledump"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/glibc.xml:646
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/glibc.xml:643
 msgid "<command>pldd</command>"
 msgstr "<command>pldd</command>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/glibc.xml:648
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/glibc.xml:645
 msgid "Lists dynamic shared objects used by running processes"
 msgstr "列出正在运行的进程使用的共享库"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/glibc.xml:650
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/glibc.xml:647
 msgid "pldd"
 msgstr "pldd"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/glibc.xml:656
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/glibc.xml:653
 msgid "<command>sln</command>"
 msgstr "<command>sln</command>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/glibc.xml:658
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/glibc.xml:655
 msgid "A statically linked <command>ln</command> program"
 msgstr "静态链接的 <command>ln</command> 程序"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/glibc.xml:660
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/glibc.xml:657
 msgid "sln"
 msgstr "sln"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/glibc.xml:666
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/glibc.xml:663
 msgid "<command>sotruss</command>"
 msgstr "<command>sotruss</command>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/glibc.xml:668
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/glibc.xml:665
 msgid "Traces shared library procedure calls of a specified command"
 msgstr "跟踪特定命令对共享库中子程序的调用"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/glibc.xml:670
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/glibc.xml:667
 msgid "sotruss"
 msgstr "sotruss"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/glibc.xml:676
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/glibc.xml:673
 msgid "<command>sprof</command>"
 msgstr "<command>sprof</command>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/glibc.xml:678
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/glibc.xml:675
 msgid "Reads and displays shared object profiling data"
 msgstr "读取并显示共享库性能剖析数据"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/glibc.xml:680
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/glibc.xml:677
 msgid "sprof"
 msgstr "sprof"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/glibc.xml:686
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/glibc.xml:683
 msgid "<command>tzselect</command>"
 msgstr "<command>tzselect</command>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/glibc.xml:688
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/glibc.xml:685
 msgid ""
 "Asks the user about the location of the system and reports the corresponding "
 "time zone description"
 msgstr "询问用户系统所在的位置并报告对应的时区"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/glibc.xml:691
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/glibc.xml:688
 msgid "tzselect"
 msgstr "tzselect"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/glibc.xml:697
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/glibc.xml:694
 msgid "<command>xtrace</command>"
 msgstr "<command>xtrace</command>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/glibc.xml:699
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/glibc.xml:696
 msgid ""
 "Traces the execution of a program by printing the currently executed function"
 msgstr "显示正在执行的函数以跟踪程序执行"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/glibc.xml:702
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/glibc.xml:699
 msgid "xtrace"
 msgstr "xtrace"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/glibc.xml:708
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/glibc.xml:705
 msgid "<command>zdump</command>"
 msgstr "<command>zdump</command>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/glibc.xml:710
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/glibc.xml:707
 msgid "The time zone dumper"
 msgstr "输出当前时间在多个时区中的表示"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/glibc.xml:712
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/glibc.xml:709
 msgid "zdump"
 msgstr "zdump"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/glibc.xml:718
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/glibc.xml:715
 msgid "<command>zic</command>"
 msgstr "<command>zic</command>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/glibc.xml:720
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/glibc.xml:717
 msgid "The time zone compiler"
 msgstr "时区编译器"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/glibc.xml:722
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/glibc.xml:719
 msgid "zic"
 msgstr "zic"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/glibc.xml:728
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/glibc.xml:725
 msgid "<filename class=\"libraryfile\">ld-&glibc-version;.so</filename>"
 msgstr "<filename class=\"libraryfile\">ld-&glibc-version;.so</filename>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/glibc.xml:730
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/glibc.xml:727
 msgid "The helper program for shared library executables"
 msgstr "动态链接器/加载器"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/glibc.xml:732
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/glibc.xml:729
 msgid "ld-&glibc-version;.so"
 msgstr "ld-&glibc-version;.so"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/glibc.xml:738
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/glibc.xml:735
 msgid "<filename class=\"libraryfile\">libBrokenLocale</filename>"
 msgstr "<filename class=\"libraryfile\">libBrokenLocale</filename>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/glibc.xml:740
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/glibc.xml:737
 msgid ""
 "Used internally by Glibc as a gross hack to get broken programs (e.g., some "
 "Motif applications) running. See comments in <filename>glibc-&glibc-version;/"
@@ -1289,172 +1302,172 @@ msgstr ""
 "中的注释了解更多信息"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/glibc.xml:745
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/glibc.xml:742
 msgid "libBrokenLocale"
 msgstr "libBrokenLocale"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/glibc.xml:751
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/glibc.xml:748
 msgid "<filename class=\"libraryfile\">libSegFault</filename>"
 msgstr "<filename class=\"libraryfile\">libSegFault</filename>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/glibc.xml:753
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/glibc.xml:750
 msgid ""
 "The segmentation fault signal handler, used by <command>catchsegv</command>"
 msgstr "<command>catchsegv</command> 使用的段错误信号处理程序"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/glibc.xml:756
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/glibc.xml:753
 msgid "libSegFault"
 msgstr "libSegFault"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/glibc.xml:762
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/glibc.xml:759
 msgid "<filename class=\"libraryfile\">libanl</filename>"
 msgstr "<filename class=\"libraryfile\">libanl</filename>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/glibc.xml:764
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/glibc.xml:761
 msgid "An asynchronous name lookup library"
 msgstr "异步的命名查找库"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/glibc.xml:766
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/glibc.xml:763
 msgid "libanl"
 msgstr "libanl"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/glibc.xml:772
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/glibc.xml:769
 msgid "<filename class=\"libraryfile\">libc</filename>"
 msgstr "<filename class=\"libraryfile\">libc</filename>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/glibc.xml:774
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/glibc.xml:771
 msgid "The main C library"
 msgstr "主要的 C 运行库"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/glibc.xml:776
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/glibc.xml:773
 msgid "libc"
 msgstr "libc"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/glibc.xml:782
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/glibc.xml:779
 msgid "<filename class=\"libraryfile\">libcrypt</filename>"
 msgstr "<filename class=\"libraryfile\">libcrypt</filename>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/glibc.xml:784
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/glibc.xml:781
 msgid "The cryptography library"
 msgstr "密码学库"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/glibc.xml:786
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/glibc.xml:783
 msgid "libcrypt"
 msgstr "libcrypt"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/glibc.xml:792
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/glibc.xml:789
 msgid "<filename class=\"libraryfile\">libdl</filename>"
 msgstr "<filename class=\"libraryfile\">libdl</filename>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/glibc.xml:794
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/glibc.xml:791
 msgid "The dynamic linking interface library"
 msgstr "动态链接接口库"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/glibc.xml:796
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/glibc.xml:793
 msgid "libdl"
 msgstr "libdl"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/glibc.xml:802
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/glibc.xml:799
 msgid "<filename class=\"libraryfile\">libg</filename>"
 msgstr "<filename class=\"libraryfile\">libg</filename>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/glibc.xml:804
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/glibc.xml:801
 msgid ""
 "Dummy library containing no functions. Previously was a runtime library for "
 "<command>g++</command>"
 msgstr "没有功能的空库，曾经是 <command>g++</command> 的运行库。"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/glibc.xml:807
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/glibc.xml:804
 msgid "libg"
 msgstr "libg"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/glibc.xml:813
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/glibc.xml:810
 msgid "<filename class=\"libraryfile\">libm</filename>"
 msgstr "<filename class=\"libraryfile\">libm</filename>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/glibc.xml:815
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/glibc.xml:812
 msgid "The mathematical library"
 msgstr "数学库"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/glibc.xml:817
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/glibc.xml:814
 msgid "libm"
 msgstr "libm"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/glibc.xml:823
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/glibc.xml:820
 msgid "<filename class=\"libraryfile\">libmcheck</filename>"
 msgstr "<filename class=\"libraryfile\">libmcheck</filename>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/glibc.xml:825
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/glibc.xml:822
 msgid "Turns on memory allocation checking when linked to"
 msgstr "链接到该库时启用内存分配检查"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/glibc.xml:827
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/glibc.xml:824
 msgid "libmcheck"
 msgstr "libmcheck"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/glibc.xml:833
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/glibc.xml:830
 msgid "<filename class=\"libraryfile\">libmemusage</filename>"
 msgstr "<filename class=\"libraryfile\">libmemusage</filename>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/glibc.xml:835
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/glibc.xml:832
 msgid ""
 "Used by <command>memusage</command> to help collect information about the "
 "memory usage of a program"
 msgstr "被 <command>memusage</command> 用于收集程序内存使用信息"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/glibc.xml:838
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/glibc.xml:835
 msgid "libmemusage"
 msgstr "libmemusage"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/glibc.xml:844
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/glibc.xml:841
 msgid "<filename class=\"libraryfile\">libnsl</filename>"
 msgstr "<filename class=\"libraryfile\">libnsl</filename>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/glibc.xml:846
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/glibc.xml:843
 msgid "The network services library"
 msgstr "网络服务库"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/glibc.xml:848
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/glibc.xml:845
 msgid "libnsl"
 msgstr "libnsl"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/glibc.xml:854
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/glibc.xml:851
 msgid "<filename class=\"libraryfile\">libnss</filename>"
 msgstr "<filename class=\"libraryfile\">libnss</filename>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/glibc.xml:856
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/glibc.xml:853
 msgid ""
 "The Name Service Switch libraries, containing functions for resolving host "
 "names, user names, group names, aliases, services, protocols, etc."
@@ -1462,106 +1475,109 @@ msgstr ""
 "命名服务开关库，包含用于解析域名、用户名、组名、代号、 服务、协议等的函数。"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/glibc.xml:860
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/glibc.xml:857
 msgid "libnss"
 msgstr "libnss"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/glibc.xml:866
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/glibc.xml:863
 msgid "<filename class=\"libraryfile\">libpcprofile</filename>"
 msgstr "<filename class=\"libraryfile\">libpcprofile</filename>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/glibc.xml:868
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/glibc.xml:865
 msgid "Can be preloaded to PC profile an executable"
 msgstr "可以预加载它，以对程序进行基于程序计数器的性能剖析"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/glibc.xml:870
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/glibc.xml:867
 msgid "libpcprofile"
 msgstr "libpcprofile"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/glibc.xml:876
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/glibc.xml:873
 msgid "<filename class=\"libraryfile\">libpthread</filename>"
 msgstr "<filename class=\"libraryfile\">libpthread</filename>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/glibc.xml:878
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/glibc.xml:875
 msgid "The POSIX threads library"
 msgstr "POSIX 线程库"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/glibc.xml:880
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/glibc.xml:877
 msgid "libpthread"
 msgstr "libpthread"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/glibc.xml:886
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/glibc.xml:883
 msgid "<filename class=\"libraryfile\">libresolv</filename>"
 msgstr "<filename class=\"libraryfile\">libresolv</filename>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/glibc.xml:888
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/glibc.xml:885
 msgid ""
 "Contains functions for creating, sending, and interpreting packets to the "
 "Internet domain name servers"
 msgstr "包含用于创建、发送和解析因特网域名服务数据包的函数。"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/glibc.xml:891
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/glibc.xml:888
 msgid "libresolv"
 msgstr "libresolv"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/glibc.xml:897
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/glibc.xml:894
 msgid "<filename class=\"libraryfile\">librt</filename>"
 msgstr "<filename class=\"libraryfile\">librt</filename>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/glibc.xml:899
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/glibc.xml:896
 msgid ""
 "Contains functions providing most of the interfaces specified by the "
 "POSIX.1b Realtime Extension"
 msgstr "包含 POSIX.1b 实时扩展要求的多数接口"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/glibc.xml:902
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/glibc.xml:899
 msgid "librt"
 msgstr "librt"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/glibc.xml:908
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/glibc.xml:905
 msgid "<filename class=\"libraryfile\">libthread_db</filename>"
 msgstr "<filename class=\"libraryfile\">libthread_db</filename>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/glibc.xml:910
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/glibc.xml:907
 msgid ""
 "Contains functions useful for building debuggers for multi-threaded programs"
 msgstr "包含用于构建多线程程序调试的函数器"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/glibc.xml:913
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/glibc.xml:910
 msgid "libthread_db"
 msgstr "libthread_db"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/glibc.xml:919
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/glibc.xml:916
 msgid "<filename class=\"libraryfile\">libutil</filename>"
 msgstr "<filename class=\"libraryfile\">libutil</filename>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/glibc.xml:921
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/glibc.xml:918
 msgid ""
 "Contains code for <quote>standard</quote> functions used in many different "
 "Unix utilities"
 msgstr "包含许多 Unix 工具使用的 <quote>标准</quote> 函数"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/glibc.xml:924
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/glibc.xml:921
 msgid "libutil"
 msgstr "libutil"
+
+#~ msgid "The meaning of the options and new configure parameters:"
+#~ msgstr "新的配置选项和参数的含义："
 
 #~ msgid ""
 #~ "The Glibc build system is self-contained and will install perfectly, even "
@@ -1571,17 +1587,17 @@ msgstr "libutil"
 #~ "give false results and defeat the goal of achieving a clean build."
 #~ msgstr ""
 #~ "Glibc 构建系统是自给自足的，即使编译器 specs 文件和链接器仍然指向 "
-#~ "<filename class=\"directory\">/tools</filename>，也能完美地安装 Glibc。"
-#~ "在安装 Glibc 之前不能调整工具链，否则 Glibc 的 autoconf 测试会给出错误结"
-#~ "果，结果无法达成干净地构建 Glibc 这一目的。"
+#~ "<filename class=\"directory\">/tools</filename>，也能完美地安装 Glibc。在"
+#~ "安装 Glibc 之前不能调整工具链，否则 Glibc 的 autoconf 测试会给出错误结果，"
+#~ "结果无法达成干净地构建 Glibc 这一目的。"
 
 #~ msgid ""
 #~ "Create a symlink for LSB compliance. Additionally, for x86_64, create a "
 #~ "compatibility symlink required for the dynamic loader to function "
 #~ "correctly:"
 #~ msgstr ""
-#~ "为了兼容 LSB 创建一个符号链接。另外，对于 x86_64，还要创建一个动态链接器"
-#~ "的兼容性符号链接，使它能够正常工作："
+#~ "为了兼容 LSB 创建一个符号链接。另外，对于 x86_64，还要创建一个动态链接器的"
+#~ "兼容性符号链接，使它能够正常工作："
 
 #~ msgid ""
 #~ "<userinput remap=\"pre\">case $(uname -m) in\n"
