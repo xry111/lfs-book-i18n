@@ -111,4 +111,4 @@ grep '\-c fop.xml' Makefile ||
 	sed 's|fop -q|& -c ../fop.xml|' -i Makefile
 
 grep 'RENDERTMP)/fonts' Makefile ||
-	sed '/fop -q/i \\tmkdir -pv $(RENDERTMP)/fonts; cp -v ../fonts/* $(RENDERTMP)/fonts' -i Makefile
+	sed '/fop -q/i \\tmkdir -pv $(RENDERTMP)/fonts; cp -v fonts/* $(RENDERTMP)/fonts' -i Makefile
