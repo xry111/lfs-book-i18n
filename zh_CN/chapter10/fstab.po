@@ -1,9 +1,3 @@
-# SOME DESCRIPTIVE TITLE
-# Copyright (C) YEAR Free Software Foundation, Inc.
-# This file is distributed under the same license as the PACKAGE package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
-#
-#, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
@@ -11,20 +5,21 @@ msgstr ""
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
-"Language: \n"
+"Language: zh_CN\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Translate Toolkit 2.2.5\n"
 
 #. type: Content of: <sect1><title>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter10/fstab.xml:11
 msgid "Creating the /etc/fstab File"
-msgstr ""
+msgstr "创建 /etc/fstab 文件"
 
 #. type: Content of: <sect1><indexterm><primary>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter10/fstab.xml:14
 msgid "/etc/fstab"
-msgstr ""
+msgstr "/etc/fstab"
 
 #. type: Content of: <sect1><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter10/fstab.xml:17
@@ -34,6 +29,9 @@ msgid ""
 "and which must be checked (for integrity errors) prior to mounting. Create a "
 "new file systems table like this:"
 msgstr ""
+"一些程序使用 <filename>/etc/fstab</filename> 文件，以确定哪些文件系统是默认"
+"挂载的，和它们应该按什么顺序挂载，以及哪些文件系统在挂载前必须被检查 (确定是"
+"否有完整性错误)。参考以下命令，创建一个新的文件系统表："
 
 #. type: Content of: <sect1><screen>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter10/fstab.xml:22
@@ -45,10 +43,8 @@ msgid ""
 "# file system  mount-point  type     options             dump  fsck\n"
 "#                                                              order\n"
 "\n"
-"/dev/<replaceable>&lt;xxx&gt;</replaceable>     /            "
-"<replaceable>&lt;fff&gt;</replaceable>    defaults            1     1\n"
-"/dev/<replaceable>&lt;yyy&gt;</replaceable>     swap         swap     pri=1               "
-"0     0\n"
+"/dev/<replaceable>&lt;xxx&gt;</replaceable>     /            <replaceable>&lt;fff&gt;</replaceable>    defaults            1     1\n"
+"/dev/<replaceable>&lt;yyy&gt;</replaceable>     swap         swap     pri=1               0     0\n"
 "proc           /proc        proc     nosuid,noexec,nodev 0     0\n"
 "sysfs          /sys         sysfs    nosuid,noexec,nodev 0     0\n"
 "devpts         /dev/pts     devpts   gid=5,mode=620      0     0\n"
@@ -58,6 +54,22 @@ msgid ""
 "# End /etc/fstab</literal>\n"
 "EOF</userinput>"
 msgstr ""
+"<userinput>cat &gt; /etc/fstab &lt;&lt; \"EOF\"\n"
+"<literal># Begin /etc/fstab\n"
+"\n"
+"# 文件系统     挂载点       类型     选项                转储  检查\n"
+"#                                                              顺序\n"
+"\n"
+"/dev/<replaceable>&lt;xxx&gt;</replaceable>     /            <replaceable>&lt;fff&gt;</replaceable>    defaults            1     1\n"
+"/dev/<replaceable>&lt;yyy&gt;</replaceable>     swap         swap     pri=1               0     0\n"
+"proc           /proc        proc     nosuid,noexec,nodev 0     0\n"
+"sysfs          /sys         sysfs    nosuid,noexec,nodev 0     0\n"
+"devpts         /dev/pts     devpts   gid=5,mode=620      0     0\n"
+"tmpfs          /run         tmpfs    defaults            0     0\n"
+"devtmpfs       /dev         devtmpfs mode=0755,nosuid    0     0\n"
+"\n"
+"# End /etc/fstab</literal>\n"
+"EOF</userinput>"
 
 #. type: Content of: <sect1><screen>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter10/fstab.xml:39
@@ -69,26 +81,40 @@ msgid ""
 "# file system  mount-point  type     options             dump  fsck\n"
 "#                                                              order\n"
 "\n"
-"/dev/<replaceable>&lt;xxx&gt;</replaceable>     /            "
-"<replaceable>&lt;fff&gt;</replaceable>    defaults            1     1\n"
-"/dev/<replaceable>&lt;yyy&gt;</replaceable>     swap         swap     pri=1               "
-"0     0\n"
+"/dev/<replaceable>&lt;xxx&gt;</replaceable>     /            <replaceable>&lt;fff&gt;</replaceable>    defaults            1     1\n"
+"/dev/<replaceable>&lt;yyy&gt;</replaceable>     swap         swap     pri=1               0     0\n"
 "\n"
 "# End /etc/fstab</literal>\n"
 "EOF</userinput>"
 msgstr ""
+"<userinput>cat &gt; /etc/fstab &lt;&lt; \"EOF\"\n"
+"<literal># Begin /etc/fstab\n"
+"\n"
+"# 文件系统     挂载点       类型     选项                转储  检查\n"
+"#                                                              顺序\n"
+"\n"
+"/dev/<replaceable>&lt;xxx&gt;</replaceable>     /            <replaceable>&lt;fff&gt;</replaceable>    defaults            1     1\n"
+"/dev/<replaceable>&lt;yyy&gt;</replaceable>     swap         swap     pri=1               0     0\n"
+"\n"
+"# End /etc/fstab</literal>\n"
+"EOF</userinput>"
 
 #. type: Content of: <sect1><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter10/fstab.xml:51
 msgid ""
-"Replace <replaceable>&lt;xxx&gt;</replaceable>, "
-"<replaceable>&lt;yyy&gt;</replaceable>, and "
-"<replaceable>&lt;fff&gt;</replaceable> with the values appropriate for the "
-"system, for example, <filename class=\"partition\">sda2</filename>, "
-"<filename class=\"partition\">sda5</filename>, and <systemitem "
+"Replace <replaceable>&lt;xxx&gt;</replaceable>, <replaceable>&lt;yyy&gt;</"
+"replaceable>, and <replaceable>&lt;fff&gt;</replaceable> with the values "
+"appropriate for the system, for example, <filename class=\"partition\">sda2</"
+"filename>, <filename class=\"partition\">sda5</filename>, and <systemitem "
 "class=\"filesystem\">ext4</systemitem>. For details on the six fields in "
 "this file, see <command>man 5 fstab</command>."
 msgstr ""
+"将 <replaceable>&lt;xxx&gt;</replaceable>、 <replaceable>&lt;yyy&gt;</"
+"replaceable> 和 <replaceable>&lt;fff&gt;</replaceable> 替换为适用于您的系统的"
+"值，例如 <filename class=\"partition\">sda2</filename>、<filename class="
+"\"partition\">sda5</filename> 和 <systemitem class=\"filesystem\">ext4</"
+"systemitem>。参阅 <command>man 5 fstab</command> 了解该文件中 6 个域的详细信"
+"息。"
 
 #. type: Content of: <sect1><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter10/fstab.xml:59
@@ -101,33 +127,44 @@ msgid ""
 "This works if the relevant character set definition (found under File "
 "systems -&gt; Native Language Support when configuring the kernel)  has been "
 "compiled into the kernel or built as a module. However, if the character set "
-"of the locale is UTF-8, the corresponding option "
-"<option>iocharset=utf8</option> would make the file system case "
-"sensitive. To fix this, use the special option <option>utf8</option> instead "
-"of <option>iocharset=utf8</option>, for UTF-8 locales. The "
-"<quote>codepage</quote> option is also needed for vfat and smbfs "
-"filesystems.  It should be set to the codepage number used under MS-DOS in "
-"your country.  For example, in order to mount USB flash drives, a "
-"ru_RU.KOI8-R user would need the following in the options portion of its "
-"mount line in <filename>/etc/fstab</filename>:"
+"of the locale is UTF-8, the corresponding option <option>iocharset=utf8</"
+"option> would make the file system case sensitive. To fix this, use the "
+"special option <option>utf8</option> instead of <option>iocharset=utf8</"
+"option>, for UTF-8 locales. The <quote>codepage</quote> option is also "
+"needed for vfat and smbfs filesystems.  It should be set to the codepage "
+"number used under MS-DOS in your country.  For example, in order to mount "
+"USB flash drives, a ru_RU.KOI8-R user would need the following in the "
+"options portion of its mount line in <filename>/etc/fstab</filename>:"
 msgstr ""
+"在挂载来源于 MS-DOS 或 Windows 的文件系统 (如 vfat、ntfs、smbfs、cifs、"
+"iso9660、udf) 时，需要一个特殊的挂载选项 —— utf8，才能正常解析文件名中的非 "
+"ASCII 字符。对于非 UTF-8 locale，选项 <option>iocharset</option> 的值应该和您"
+"的 locale 字符集设定一致，但改写成内核可以识别的写法。该选项能够正常工作的前"
+"提是，将相关的字符集定义 (在内核配置选项的 File Systems -&gt; Native "
+"Language Support 子菜单中) 编译到内核中，或构建为内核模块。然而，如果使用了 "
+"UTF-8 locale，对应的 <option>iocharset=utf8</option> 会导致文件系统变得大小"
+"写敏感。为了避免这个问题，在使用 UTF-8 locale 时，需要用特殊选项 "
+"<option>utf8</option> 代替 <option>iocharset=utf8</option>。另外，vfat 和 "
+"smbfs 文件系统还需要<quote>codepage</quote>选项，它应该被设定为您的语言在 "
+"MS-DOS 下的代码页编号。例如，为了挂载一个 USB 闪存盘，一个 ru_RU.KOI8-R 用户"
+"应该在 <filename>/etc/fstab</filename> 中对应于闪存盘的行添加下列挂载选项："
 
 #. type: Content of: <sect1><screen>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter10/fstab.xml:77
 #, no-wrap
 msgid "<literal>noauto,user,quiet,showexec,codepage=866,iocharset=koi8r</literal>"
-msgstr ""
+msgstr "<literal>noauto,user,quiet,showexec,codepage=866,iocharset=koi8r</literal>"
 
 #. type: Content of: <sect1><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter10/fstab.xml:79
 msgid "The corresponding options fragment for ru_RU.UTF-8 users is:"
-msgstr ""
+msgstr "相应的，ru_RU.UTF-8 用户应该使用下列选项："
 
 #. type: Content of: <sect1><screen>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter10/fstab.xml:81
 #, no-wrap
 msgid "<literal>noauto,user,quiet,showexec,codepage=866,utf8</literal>"
-msgstr ""
+msgstr "<literal>noauto,user,quiet,showexec,codepage=866,utf8</literal>"
 
 #. type: Content of: <sect1><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter10/fstab.xml:83
@@ -137,20 +174,31 @@ msgid ""
 "and the <option>utf8</option> option tells the kernel to convert the file "
 "names using UTF-8 so they can be interpreted in the UTF-8 locale."
 msgstr ""
+"注意此时使用的 <option>iocharset</option> 默认为 <literal>iso8859-1</"
+"literal> (这保证文件系统是大小写不敏感的)，而 <option>utf8</option> 选项告诉"
+"内核使用 UTF-8 编码转换文件名，这样它们就能在 UTF-8 locale 中被正确解析。"
 
 #. type: Content of: <sect1><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter10/fstab.xml:100
 msgid ""
 "It is also possible to specify default codepage and iocharset values for "
 "some filesystems during kernel configuration. The relevant parameters are "
-"named <quote>Default NLS Option</quote> "
-"(<option>CONFIG_NLS_DEFAULT)</option>, <quote>Default Remote NLS "
-"Option</quote> (<option>CONFIG_SMB_NLS_DEFAULT</option>), <quote>Default "
-"codepage for FAT</quote> (<option>CONFIG_FAT_DEFAULT_CODEPAGE</option>), and "
-"<quote>Default iocharset for FAT</quote> "
-"(<option>CONFIG_FAT_DEFAULT_IOCHARSET</option>).  There is no way to specify "
-"these settings for the ntfs filesystem at kernel compilation time."
+"named <quote>Default NLS Option</quote> (<option>CONFIG_NLS_DEFAULT)</"
+"option>, <quote>Default Remote NLS Option</quote> "
+"(<option>CONFIG_SMB_NLS_DEFAULT</option>), <quote>Default codepage for FAT</"
+"quote> (<option>CONFIG_FAT_DEFAULT_CODEPAGE</option>), and <quote>Default "
+"iocharset for FAT</quote> (<option>CONFIG_FAT_DEFAULT_IOCHARSET</option>).  "
+"There is no way to specify these settings for the ntfs filesystem at kernel "
+"compilation time."
 msgstr ""
+"也可以在内核配置中，为一些文件系统指定默认 codepage 和 iocharset 选项值。相"
+"关的配置参数名为<quote>Default NLS Option</quote> "
+"(<option>CONFIG_NLS_DEFAULT</option>)，<quote>Default Remote NLS Option</"
+"quote> (<option>CONFIG_SMB_NLS_DEFAULT</option>)，<quote>Default codepage "
+"for FAT</quote> (<option>CONFIG_FAT_DEFAULT_CODEPAGE</option>)，以及 "
+"<quote>Default iocharset for FAT</quote> "
+"(<option>CONFIG_FAT_DEFAULT_IOCHARSET</option>)。无法在编译内核时为 ntfs 文"
+"件系统指定这些默认值。"
 
 #. type: Content of: <sect1><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter10/fstab.xml:110
@@ -158,21 +206,25 @@ msgid ""
 "It is possible to make the ext3 filesystem reliable across power failures "
 "for some hard disk types.  To do this, add the <option>barrier=1</option> "
 "mount option to the appropriate entry in <filename>/etc/fstab</filename>.  "
-"To check if the disk drive supports this option, run <ulink "
-"url=\"&blfs-book;general/hdparm.html\">hdparm</ulink> on the applicable disk "
-"drive.  For example, if:"
+"To check if the disk drive supports this option, run <ulink url=\"&blfs-book;"
+"general/hdparm.html\">hdparm</ulink> on the applicable disk drive.  For "
+"example, if:"
 msgstr ""
+"在某些硬盘上，通过将 <option>barrier=1</option> 挂载选项加入 <filename>/etc/"
+"fstab</filename>，可以使得 ext3 文件系统在发生电源故障时更可靠。为了检查磁"
+"盘驱动器是否支持该选项，在可用的磁盘驱动器上运行 <ulink url=\"&blfs-book;"
+"general/hdparm.html\">hdparm</ulink>。例如："
 
 #. type: Content of: <sect1><screen>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter10/fstab.xml:118
 #, no-wrap
 msgid "<userinput>hdparm -I /dev/sda | grep NCQ</userinput>"
-msgstr ""
+msgstr "<userinput>hdparm -I /dev/sda | grep NCQ</userinput>"
 
 #. type: Content of: <sect1><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter10/fstab.xml:120
 msgid "returns non-empty output, the option is supported."
-msgstr ""
+msgstr "如果输出内容不为空，说明该选项可用。"
 
 #. type: Content of: <sect1><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter10/fstab.xml:122
@@ -180,3 +232,4 @@ msgid ""
 "Note: Logical Volume Management (LVM) based partitions cannot use the "
 "<option>barrier</option> option."
 msgstr ""
+"注意：基于逻辑卷管理 (LVM) 的分区不能使用 <option>barrier</option> 选项。"

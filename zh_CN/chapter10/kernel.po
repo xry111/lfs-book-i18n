@@ -1,9 +1,3 @@
-# SOME DESCRIPTIVE TITLE
-# Copyright (C) YEAR Free Software Foundation, Inc.
-# This file is distributed under the same license as the PACKAGE package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
-#
-#, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
@@ -11,64 +5,68 @@ msgstr ""
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
-"Language: \n"
+"Language: zh_CN\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Translate Toolkit 2.2.5\n"
 
 #. type: Content of: <sect1><sect1info><address>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter10/kernel.xml:14
 #, no-wrap
 msgid "&linux-url;"
-msgstr ""
+msgstr "&linux-url;"
 
 #. type: Content of: <sect1><sect1info>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter10/kernel.xml:12
 msgid ""
-"<productname>kernel</productname> "
-"<productnumber>&linux-version;</productnumber> <placeholder type=\"address\" "
-"id=\"0\"/>"
+"<productname>kernel</productname> <productnumber>&linux-version;</"
+"productnumber> <placeholder type=\"address\" id=\"0\"/>"
 msgstr ""
+"<productname>kernel</productname> <productnumber>&linux-version;</"
+"productnumber> <placeholder type=\"address\" id=\"0\"/>"
 
 #. type: Content of: <sect1><title>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter10/kernel.xml:17
 msgid "Linux-&linux-version;"
-msgstr ""
+msgstr "Linux-&linux-version;"
 
 #. type: Content of: <sect1><indexterm><primary>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter10/kernel.xml:20
 msgid "Linux"
-msgstr ""
+msgstr "Linux"
 
 #. type: Content of: <sect1><sect2><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter10/kernel.xml:26
 msgid "The Linux package contains the Linux kernel."
-msgstr ""
+msgstr "Linux 软件包包含 Linux 内核。"
 
 #. type: Content of: <sect1><sect2><segmentedlist><segtitle>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter10/kernel.xml:29
 msgid "&buildtime;"
-msgstr ""
+msgstr "&buildtime;"
 
 #. type: Content of: <sect1><sect2><segmentedlist><segtitle>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter10/kernel.xml:30
 msgid "&diskspace;"
-msgstr ""
+msgstr "&diskspace;"
 
 #. type: Content of: <sect1><sect2><segmentedlist><seglistitem><seg>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter10/kernel.xml:33
+#, fuzzy
 msgid "&linux-knl-sbu;"
-msgstr ""
+msgstr "&linux-ch8-sbu;"
 
 #. type: Content of: <sect1><sect2><segmentedlist><seglistitem><seg>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter10/kernel.xml:34
+#, fuzzy
 msgid "&linux-knl-du;"
-msgstr ""
+msgstr "&linux-ch8-du;"
 
 #. type: Content of: <sect1><sect2><title>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter10/kernel.xml:41
 msgid "Installation of the kernel"
-msgstr ""
+msgstr "安装内核"
 
 #. type: Content of: <sect1><sect2><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter10/kernel.xml:43
@@ -78,17 +76,19 @@ msgid ""
 "source tree for alternative methods to the way this book configures the "
 "kernel."
 msgstr ""
+"构建内核需要三步 —— 配置、编译、安装。阅读内核源代码树中的 "
+"<filename>README</filename> 文件，了解不同于本手册的内核配置方法。"
 
 #. type: Content of: <sect1><sect2><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter10/kernel.xml:48
 msgid "Prepare for compilation by running the following command:"
-msgstr ""
+msgstr "运行以下命令，准备编译内核："
 
 #. type: Content of: <sect1><sect2><screen>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter10/kernel.xml:50
 #, no-wrap
 msgid "<userinput remap=\"pre\">make mrproper</userinput>"
-msgstr ""
+msgstr "<userinput remap=\"pre\">make mrproper</userinput>"
 
 #. type: Content of: <sect1><sect2><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter10/kernel.xml:52
@@ -97,18 +97,25 @@ msgid ""
 "recommends that this command be issued prior to each kernel compilation. Do "
 "not rely on the source tree being clean after un-tarring."
 msgstr ""
+"该命令确保内核源代码树绝对干净，内核开发组建议在每次编译内核前运行该命令。"
+"尽管内核源代码树在解压后应该是干净的，但这并不完全可靠。"
 
 #. type: Content of: <sect1><sect2><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter10/kernel.xml:59
 msgid ""
 "Configure the kernel via a menu-driven interface. For general information on "
-"kernel configuration see <ulink "
-"url=\"&hints-root;kernel-configuration.txt\"/>.  BLFS has some information "
-"regarding particular kernel configuration requirements of packages outside "
-"of LFS at <ulink url=\"&blfs-book;longindex.html#kernel-config-index\"/>.  "
-"Additional information about configuring and building the kernel can be "
-"found at <ulink url=\"http://www.kroah.com/lkn/\"/>"
+"kernel configuration see <ulink url=\"&hints-root;kernel-configuration.txt\"/"
+">.  BLFS has some information regarding particular kernel configuration "
+"requirements of packages outside of LFS at <ulink url=\"&blfs-book;longindex."
+"html#kernel-config-index\"/>.  Additional information about configuring and "
+"building the kernel can be found at <ulink url=\"http://www.kroah.com/lkn/\"/"
+">"
 msgstr ""
+"下面通过菜单界面配置内核，阅读 <ulink url=\"&hints-root;kernel-configuration."
+"txt\"/> 了解关于内核配置的一般信息。BLFS 的某些软件包需要特定内核配置，阅读 "
+"<ulink url=\"&blfs-book;longindex.html#kernel-config-index\"/> 了解它们。另外"
+"在 <ulink url=\"http://www.kroah.com/lkn/\"/> 也有一些关于配置和构建内核的信"
+"息。"
 
 #. type: Content of: <sect1><sect2><note><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter10/kernel.xml:70
@@ -117,6 +124,8 @@ msgid ""
 "<command>make defconfig</command>. This will set the base configuration to a "
 "good state that takes your current system architecture into account."
 msgstr ""
+"一个较好的初始内核配置可以通过运行 <command>make defconfig</command> 获得。"
+"它会考虑您的当前系统体系结构，将基本内核配置设定到较好的状态。"
 
 #. type: Content of: <sect1><sect2><note><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter10/kernel.xml:75
@@ -124,6 +133,8 @@ msgid ""
 "Be sure to enable/disable/set the following features or the system might not "
 "work correctly or boot at all:"
 msgstr ""
+"一定要按照以下列表启用/禁用/设定其中列出的内核特性，否则系统可能不能正常工"
+"作，甚至根本无法引导："
 
 #. type: Content of: <sect1><sect2><note><screen>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter10/kernel.xml:79
@@ -135,25 +146,28 @@ msgid ""
 "   [*] Maintain a devtmpfs filesystem to mount at /dev [CONFIG_DEVTMPFS]\n"
 "\n"
 "Kernel hacking  ---&gt;\n"
-"       Choose kernel unwinder (Frame pointer unwinder)  ---&gt; "
-"[CONFIG_UNWINDER_FRAME_POINTER]"
+"       Choose kernel unwinder (Frame pointer unwinder)  ---&gt; [CONFIG_UNWINDER_FRAME_POINTER]"
 msgstr ""
+"Device Drivers  ---&gt;\n"
+"  Generic Driver Options  ---&gt;\n"
+"   [ ] Support for uevent helper [CONFIG_UEVENT_HELPER]\n"
+"   [*] Maintain a devtmpfs filesystem to mount at /dev [CONFIG_DEVTMPFS]\n"
+"\n"
+"Kernel hacking  ---&gt;\n"
+"       Choose kernel unwinder (Frame pointer unwinder)  ---&gt; [CONFIG_UNWINDER_FRAME_POINTER]"
 
 #. type: Content of: <sect1><sect2><note><screen>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter10/kernel.xml:88
-#, no-wrap
+#, fuzzy, no-wrap
 msgid ""
 "General setup -->\n"
 "   [*] Control Group support [CONFIG_CGROUPS]\n"
-"   [ ] Enable deprecated sysfs features to support old userspace tools "
-"[CONFIG_SYSFS_DEPRECATED]\n"
-"   [*] Configure standard kernel features (expert users) [CONFIG_EXPERT] "
-"---&gt;         \n"
+"   [ ] Enable deprecated sysfs features to support old userspace tools [CONFIG_SYSFS_DEPRECATED]\n"
+"   [*] Configure standard kernel features (expert users) [CONFIG_EXPERT] ---&gt;         \n"
 "      [*] open by fhandle syscalls [CONFIG_FHANDLE]\n"
 "   [ ] Auditing support [CONFIG_AUDIT]\n"
 "Processor type and features  ---&gt;\n"
-"   [*] Enable seccomp to safely compute untrusted bytecode "
-"[CONFIG_SECCOMP]\n"
+"   [*] Enable seccomp to safely compute untrusted bytecode [CONFIG_SECCOMP]\n"
 "Firmware Drivers  ---&gt;\n"
 "   [*] Export DMI identification via sysfs to userspace [CONFIG_DMIID]\n"
 "Networking support  ---&gt;\n"
@@ -164,16 +178,42 @@ msgid ""
 "   [ ] Support for uevent helper [CONFIG_UEVENT_HELPER]\n"
 "   [*] Maintain a devtmpfs filesystem to mount at /dev [CONFIG_DEVTMPFS]\n"
 "   Firmware Loader ---&gt;\n"
-"      [ ] Enable the firmware sysfs fallback mechanism "
-"[CONFIG_FW_LOADER_USER_HELPER]\n"
+"      [ ] Enable the firmware sysfs fallback mechanism [CONFIG_FW_LOADER_USER_HELPER]\n"
 "File systems  ---&gt;\n"
 "   [*] Inotify support for userspace [CONFIG_INOTIFY_USER]\n"
-"   &lt;*&gt; Kernel automounter support (supports v3, v4, and v5) "
-"[CONFIG_AUTOFS_FS]\n"
+"   &lt;*&gt; Kernel automounter support (supports v3, v4, and v5) [CONFIG_AUTOFS_FS]\n"
 "  Pseudo filesystems  ---&gt;\n"
 "   [*] Tmpfs POSIX Access Control Lists [CONFIG_TMPFS_POSIX_ACL]\n"
 "   [*] Tmpfs extended attributes [CONFIG_TMPFS_XATTR]"
 msgstr ""
+"General setup -->\n"
+"   [ ] Enable deprecated sysfs features to support old userspace tools [CONFIG_SYSFS_DEPRECATED]\n"
+"   [*] Configure standard kernel features (expert users) [CONFIG_EXPERT] ---&gt;         \n"
+"      [*] open by fhandle syscalls [CONFIG_FHANDLE]\n"
+"   [ ] Auditing support [CONFIG_AUDIT]\n"
+"   [*] Control Group support [CONFIG_CGROUPS]\n"
+"Processor type and features  ---&gt;\n"
+"   [*] Enable seccomp to safely compute untrusted bytecode [CONFIG_SECCOMP]\n"
+"Firmware Drivers  ---&gt;\n"
+"   [*] Export DMI identification via sysfs to userspace [CONFIG_DMIID]\n"
+"Networking support  ---&gt;\n"
+"  Networking options  ---&gt;\n"
+"   &lt;*&gt; The IPv6 protocol [CONFIG_IPV6]\n"
+"Device Drivers  ---&gt;\n"
+"  Generic Driver Options  ---&gt;\n"
+"   [ ] Support for uevent helper [CONFIG_UEVENT_HELPER]\n"
+"   [*] Maintain a devtmpfs filesystem to mount at /dev [CONFIG_DEVTMPFS]\n"
+"   Firmware Loader ---&gt;\n"
+"      [ ] Enable the firmware sysfs fallback mechanism [CONFIG_FW_LOADER_USER_HELPER]\n"
+"File systems  ---&gt;\n"
+"   [*] Inotify support for userspace [CONFIG_INOTIFY_USER]\n"
+"   &lt;*&gt; Kernel automounter support (supports v3, v4, and v5) [CONFIG_AUTOFS_FS]\n"
+"  Pseudo filesystems  ---&gt;\n"
+"   [*] Tmpfs POSIX Access Control Lists [CONFIG_TMPFS_POSIX_ACL]\n"
+"   [*] Tmpfs extended attributes [CONFIG_TMPFS_XATTR]\n"
+"Kernel hacking  ---&gt;\n"
+"   x86 Debugging ---&gt;\n"
+"       Choose kernel unwinder (Frame pointer unwinder)  ---&gt; [CONFIG_UNWINDER_FRAME_POINTER]"
 
 #. type: Content of: <sect1><sect2><note><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter10/kernel.xml:116
@@ -181,17 +221,22 @@ msgid ""
 "While \"The IPv6 Protocol\" is not strictly required, it is highly "
 "recommended by the systemd developers."
 msgstr ""
+"尽管 “The IPv6 Protocol” (IPv6 协议支持) 并不是严格要求的，但是 systemd 开发"
+"者强烈推荐启用它。"
 
 #. type: Content of: <sect1><sect2><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter10/kernel.xml:120
 msgid ""
 "There are several other options that may be desired depending on the "
 "requirements for the system. For a list of options needed for BLFS packages, "
-"see the <ulink "
-"url=\"&lfs-root;blfs/view/&short-version;/longindex.html#kernel-config-index\">BLFS "
-"Index of Kernel Settings</ulink> "
-"(&lfs-root;blfs/view/&short-version;/longindex.html#kernel-config-index)."
+"see the <ulink url=\"&lfs-root;blfs/view/&short-version;/longindex."
+"html#kernel-config-index\">BLFS Index of Kernel Settings</ulink> (&lfs-root;"
+"blfs/view/&short-version;/longindex.html#kernel-config-index)."
 msgstr ""
+"根据系统的需求，可能需要一些其他配置选项。BLFS 软件包需要的内核配置选项列表"
+"可以在 <ulink url=\"&lfs-root;blfs/view/&short-version;/longindex."
+"html#kernel-config-index\">BLFS Index of Kernel Settings</ulink> (&lfs-root;"
+"blfs/view/&short-version;/longindex.html#kernel-config-index) 查阅。"
 
 #. type: Content of: <sect1><sect2><note><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter10/kernel.xml:128
@@ -199,6 +244,8 @@ msgid ""
 "If your host hardware is using UEFI, then the 'make defconfig' above should "
 "automatically add in some EFI-related kernel options."
 msgstr ""
+"如果您的硬件平台使用 UEFI，则 “make defconfig” 命令也会自动加入一些 EFI 相关"
+"的内核选项。"
 
 #. type: Content of: <sect1><sect2><note><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter10/kernel.xml:131
@@ -206,6 +253,7 @@ msgid ""
 "In order to allow your LFS kernel to be booted from within your host's UEFI "
 "boot environment, your kernel must have this option selected:"
 msgstr ""
+"为了允许从宿主系统的 UEFI 引导环境引导 LFS 内核，您必须选择一个内核选项："
 
 #. type: Content of: <sect1><sect2><note><screen>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter10/kernel.xml:135
@@ -214,36 +262,40 @@ msgid ""
 "Processor type and features  ---&gt;\n"
 "   [*]   EFI stub support  [CONFIG_EFI_STUB]"
 msgstr ""
+"Processor type and features  ---&gt;\n"
+"   [*]   EFI stub support  [CONFIG_EFI_STUB]"
 
 #. type: Content of: <sect1><sect2><note><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter10/kernel.xml:138
 msgid ""
 "A fuller description of managing UEFI environments from within LFS is "
-"covered by the lfs-uefi.txt hint at <ulink "
-"url=\"&hints-root;lfs-uefi.txt\"/>."
+"covered by the lfs-uefi.txt hint at <ulink url=\"&hints-root;lfs-uefi.txt\"/"
+">."
 msgstr ""
+"在 LFS 中管理 UEFI 环境的较完整说明包含在 lfs-uefi.txt 中，它位于 <ulink "
+"url=\"&hints-root;lfs-uefi.txt\"/>。"
 
 #. type: Content of: <sect1><sect2><variablelist><title>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter10/kernel.xml:146
 msgid "The rationale for the above configuration items:"
-msgstr ""
+msgstr "上述配置选项的含义："
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter10/kernel.xml:149
 msgid "<parameter>Support for uevent helper</parameter>"
-msgstr ""
+msgstr "<parameter>Support for uevent helper</parameter>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter10/kernel.xml:151
 msgid ""
-"Having this option set may interfere with device management when using "
-"Udev/Eudev."
-msgstr ""
+"Having this option set may interfere with device management when using Udev/"
+"Eudev."
+msgstr "如果启用了该选项，它可能干扰 Udev/Eudev 的设备管理。"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter10/kernel.xml:157
 msgid "<parameter>Maintain a devtmpfs</parameter>"
-msgstr ""
+msgstr "<parameter>Maintain a devtmpfs</parameter>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter10/kernel.xml:159
@@ -253,22 +305,25 @@ msgid ""
 "permissions and adding symlinks.  This configuration item is required for "
 "all users of Udev/Eudev."
 msgstr ""
+"该选项会使内核自动创建设备节点，即使 Udev 没有运行。Udev 之后才在这些设备节"
+"点的基础上运行，管理它们的访问权限并为它们建立符号链接。所有 Udev/Eudev 用"
+"户都需要启用该选项。"
 
 #. type: Content of: <sect1><sect2><screen>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter10/kernel.xml:168
 #, no-wrap
 msgid "<userinput>make menuconfig</userinput>"
-msgstr ""
+msgstr "<userinput>make menuconfig</userinput>"
 
 #. type: Content of: <sect1><sect2><variablelist><title>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter10/kernel.xml:171
 msgid "The meaning of optional make environment variables:"
-msgstr ""
+msgstr "以上命令中可选的 make 环境变量及含义："
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter10/kernel.xml:174
 msgid "<parameter>LANG=&lt;host_LANG_value&gt; LC_ALL=</parameter>"
-msgstr ""
+msgstr "<parameter>LANG=&lt;host_LANG_value&gt; LC_ALL=</parameter>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter10/kernel.xml:176
@@ -277,16 +332,20 @@ msgid ""
 "be needed for a proper menuconfig ncurses interface line drawing on a UTF-8 "
 "linux text console."
 msgstr ""
+"它们根据宿主使用的 locale 建立 locale 设定。在 UTF-8 Linux 文本终端下，有时"
+"必须这样做才能正确绘制基于 ncurses 的配置菜单接口。"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter10/kernel.xml:180
 msgid ""
-"If used, be sure to replace "
-"<replaceable>&lt;host_LANG_value&gt;</replaceable> by the value of the "
-"<envar>$LANG</envar> variable from your host.  You can alternatively use "
-"instead the host's value of <envar>$LC_ALL</envar> or "
-"<envar>$LC_CTYPE</envar>."
+"If used, be sure to replace <replaceable>&lt;host_LANG_value&gt;</"
+"replaceable> by the value of the <envar>$LANG</envar> variable from your "
+"host.  You can alternatively use instead the host's value of <envar>$LC_ALL</"
+"envar> or <envar>$LC_CTYPE</envar>."
 msgstr ""
+"在这种情况下，一定要将 <replaceable>&lt;host_LANG_value&gt; </replaceable> 替"
+"换成宿主环境中的 <envar>$LANG</envar> 变量值。您也可以使用宿主环境中 <envar>"
+"$LC_ALL</envar> 或 <envar>$LC_CTYPE</envar> 的值代替。"
 
 #. type: Content of: <sect1><sect2><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter10/kernel.xml:190
@@ -295,52 +354,63 @@ msgid ""
 "some situations. See the <filename>README</filename> file for more "
 "information."
 msgstr ""
+"某些情况下，<command>make oldconfig</command> 更为合适。阅读 "
+"<filename>README</filename> 文件了解更多信息。"
 
 #. type: Content of: <sect1><sect2><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter10/kernel.xml:194
 msgid ""
 "If desired, skip kernel configuration by copying the kernel config file, "
 "<filename>.config</filename>, from the host system (assuming it is "
-"available) to the unpacked <filename "
-"class=\"directory\">linux-&linux-version;</filename> directory. However, we "
-"do not recommend this option. It is often better to explore all the "
-"configuration menus and create the kernel configuration from scratch."
+"available) to the unpacked <filename class=\"directory\">linux-&linux-"
+"version;</filename> directory. However, we do not recommend this option. It "
+"is often better to explore all the configuration menus and create the kernel "
+"configuration from scratch."
 msgstr ""
+"如果希望的话，也可以将宿主系统的内核配置文件 <filename>.config</filename> 拷"
+"贝到解压出的 <filename class=\"directory\">linux-&linux-version;</filename> "
+"目录 (前提是可以找到该文件)。然而我们不推荐这样做，一般来说，浏览整个配置目"
+"录，并从头创建内核配置是更好的选择。"
 
 #. type: Content of: <sect1><sect2><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter10/kernel.xml:202
 msgid "Compile the kernel image and modules:"
-msgstr ""
+msgstr "编译内核映像和模块："
 
 #. type: Content of: <sect1><sect2><screen>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter10/kernel.xml:204
 #, no-wrap
 msgid "<userinput remap=\"make\">make</userinput>"
-msgstr ""
+msgstr "<userinput remap=\"make\">make</userinput>"
 
 #. type: Content of: <sect1><sect2><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter10/kernel.xml:206
 msgid ""
-"If using kernel modules, module configuration in <filename "
-"class=\"directory\">/etc/modprobe.d</filename> may be required.  Information "
-"pertaining to modules and kernel configuration is located in <xref "
-"linkend=\"ch-config-udev\"/> and in the kernel documentation in the "
-"<filename class=\"directory\">linux-&linux-version;/Documentation</filename> "
-"directory.  Also, <filename>modprobe.d(5)</filename> may be of interest."
+"If using kernel modules, module configuration in <filename class=\"directory"
+"\">/etc/modprobe.d</filename> may be required.  Information pertaining to "
+"modules and kernel configuration is located in <xref linkend=\"ch-config-udev"
+"\"/> and in the kernel documentation in the <filename class=\"directory"
+"\">linux-&linux-version;/Documentation</filename> directory.  Also, "
+"<filename>modprobe.d(5)</filename> may be of interest."
 msgstr ""
+"如果要使用内核模块，可能需要在 <filename class=\"directory\">/etc/modprobe."
+"d</filename> 中写入模块配置。讨论模块和内核配置的信息位于<xref linkend=\"ch-"
+"config-udev\"/>和 <filename class=\"directory\">linux-&linux-version;/"
+"Documentation </filename> 目录下的内核文档中。另外 <filename>modprobe.d(5)</"
+"filename> 也可以作为参考。"
 
 #. type: Content of: <sect1><sect2><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter10/kernel.xml:214
 msgid ""
 "Unless module support has been disabled in the kernel configuration, install "
 "the modules with:"
-msgstr ""
+msgstr "如果内核配置使用了模块，安装它们："
 
 #. type: Content of: <sect1><sect2><screen>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter10/kernel.xml:217
 #, no-wrap
 msgid "<userinput remap=\"install\">make modules_install</userinput>"
-msgstr ""
+msgstr "<userinput remap=\"install\">make modules_install</userinput>"
 
 #. type: Content of: <sect1><sect2><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter10/kernel.xml:219
@@ -349,6 +419,8 @@ msgid ""
 "complete the installation. Some files need to be copied to the <filename "
 "class=\"directory\">/boot</filename> directory."
 msgstr ""
+"在内核编译完成后，需要进行额外步骤完成安装，一些文件需要拷贝到 <filename "
+"class=\"directory\">/boot</filename> 目录中。"
 
 #. type: Content of: <sect1><sect2><caution><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter10/kernel.xml:224
@@ -358,38 +430,40 @@ msgid ""
 "(outside chroot) to /mnt/lfs/boot before proceeding.  As the root user in "
 "the <emphasis>host system</emphasis>:"
 msgstr ""
+"如果宿主系统有单独的 /boot 分区，需要将这些文件拷贝到该分区中。最简单的方法"
+"是将宿主系统的 /boot (在 chroot 之外) 绑定到 /mnt/lfs/boot 再拷贝文件，在"
+"<emphasis>宿主系统</emphasis>中，以 root 身份执行："
 
 #. type: Content of: <sect1><sect2><caution><screen>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter10/kernel.xml:229
 #, no-wrap
 msgid "<userinput>mount --bind /boot /mnt/lfs/boot</userinput>"
-msgstr ""
+msgstr "<userinput>mount --bind /boot /mnt/lfs/boot</userinput>"
 
 #. type: Content of: <sect1><sect2><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter10/kernel.xml:232
 msgid ""
-"The path to the kernel image may vary depending on the platform being "
-"used. The filename below can be changed to suit your taste, but the stem of "
-"the filename should be <emphasis>vmlinuz</emphasis> to be compatible with "
-"the automatic setup of the boot process described in the next section.  The "
+"The path to the kernel image may vary depending on the platform being used. "
+"The filename below can be changed to suit your taste, but the stem of the "
+"filename should be <emphasis>vmlinuz</emphasis> to be compatible with the "
+"automatic setup of the boot process described in the next section.  The "
 "following command assumes an x86 architecture:"
 msgstr ""
+"指向内核映像的路径可能随机器平台的不同而变化。下面使用的文件名可以依照您的需"
+"要改变，但文件名的开头应该保持为 <emphasis>vmlinuz</emphasis>，以保证和下一"
+"节描述的引导过程自动设定相兼容。下面的命令假定是机器是 x86 体系结构："
 
 #. type: Content of: <sect1><sect2><screen>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter10/kernel.xml:238
 #, no-wrap
-msgid ""
-"<userinput remap=\"install\">cp -iv arch/x86/boot/bzImage "
-"/boot/vmlinuz-&linux-version;-lfs-&version;</userinput>"
-msgstr ""
+msgid "<userinput remap=\"install\">cp -iv arch/x86/boot/bzImage /boot/vmlinuz-&linux-version;-lfs-&version;</userinput>"
+msgstr "<userinput remap=\"install\">cp -iv arch/x86/boot/bzImage /boot/vmlinuz-&linux-version;-lfs-&version;</userinput>"
 
 #. type: Content of: <sect1><sect2><screen>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter10/kernel.xml:240
 #, no-wrap
-msgid ""
-"<userinput remap=\"install\">cp -iv arch/x86/boot/bzImage "
-"/boot/vmlinuz-&linux-version;-lfs-&versiond;</userinput>"
-msgstr ""
+msgid "<userinput remap=\"install\">cp -iv arch/x86/boot/bzImage /boot/vmlinuz-&linux-version;-lfs-&versiond;</userinput>"
+msgstr "<userinput remap=\"install\">cp -iv arch/x86/boot/bzImage /boot/vmlinuz-&linux-version;-lfs-&versiond;</userinput>"
 
 #. type: Content of: <sect1><sect2><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter10/kernel.xml:242
@@ -400,14 +474,15 @@ msgid ""
 "used as a resource when investigating kernel problems.  Issue the following "
 "command to install the map file:"
 msgstr ""
+"<filename>System.map</filename> 是内核符号文件，它将内核 API 的每个函数入口"
+"点和运行时数据结构映射到它们的地址。它被用于调查分析内核可能出现的问题。执行"
+"以下命令安装该文件："
 
 #. type: Content of: <sect1><sect2><screen>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter10/kernel.xml:248
 #, no-wrap
-msgid ""
-"<userinput remap=\"install\">cp -iv System.map "
-"/boot/System.map-&linux-version;</userinput>"
-msgstr ""
+msgid "<userinput remap=\"install\">cp -iv System.map /boot/System.map-&linux-version;</userinput>"
+msgstr "<userinput remap=\"install\">cp -iv System.map /boot/System.map-&linux-version;</userinput>"
 
 #. type: Content of: <sect1><sect2><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter10/kernel.xml:250
@@ -417,28 +492,30 @@ msgid ""
 "selections for the kernel that was just compiled. It is a good idea to keep "
 "this file for future reference:"
 msgstr ""
+"内核配置文件 <filename>.config</filename> 由上述的 <command>make menuconfig</"
+"command> 步骤生成，包含编译好的内核的所有配置选项。最好能将它保留下来以供日"
+"后参考："
 
 #. type: Content of: <sect1><sect2><screen>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter10/kernel.xml:256
 #, no-wrap
-msgid ""
-"<userinput remap=\"install\">cp -iv .config "
-"/boot/config-&linux-version;</userinput>"
-msgstr ""
+msgid "<userinput remap=\"install\">cp -iv .config /boot/config-&linux-version;</userinput>"
+msgstr "<userinput remap=\"install\">cp -iv .config /boot/config-&linux-version;</userinput>"
 
 #. type: Content of: <sect1><sect2><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter10/kernel.xml:258
 msgid "Install the documentation for the Linux kernel:"
-msgstr ""
+msgstr "安装 Linux 内核文档："
 
 #. type: Content of: <sect1><sect2><screen>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter10/kernel.xml:260
 #, no-wrap
 msgid ""
-"<userinput remap=\"install\">install -d "
-"/usr/share/doc/linux-&linux-version;\n"
+"<userinput remap=\"install\">install -d /usr/share/doc/linux-&linux-version;\n"
 "cp -r Documentation/* /usr/share/doc/linux-&linux-version;</userinput>"
 msgstr ""
+"<userinput remap=\"install\">install -d /usr/share/doc/linux-&linux-version;\n"
+"cp -r Documentation/* /usr/share/doc/linux-&linux-version;</userinput>"
 
 #. type: Content of: <sect1><sect2><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter10/kernel.xml:263
@@ -446,14 +523,19 @@ msgid ""
 "It is important to note that the files in the kernel source directory are "
 "not owned by <emphasis>root</emphasis>. Whenever a package is unpacked as "
 "user <emphasis>root</emphasis> (like we did inside chroot), the files have "
-"the user and group IDs of whatever they were on the packager's "
-"computer. This is usually not a problem for any other package to be "
-"installed because the source tree is removed after the "
-"installation. However, the Linux source tree is often retained for a long "
-"time.  Because of this, there is a chance that whatever user ID the packager "
-"used will be assigned to somebody on the machine. That person would then "
-"have write access to the kernel source."
+"the user and group IDs of whatever they were on the packager's computer. "
+"This is usually not a problem for any other package to be installed because "
+"the source tree is removed after the installation. However, the Linux source "
+"tree is often retained for a long time.  Because of this, there is a chance "
+"that whatever user ID the packager used will be assigned to somebody on the "
+"machine. That person would then have write access to the kernel source."
 msgstr ""
+"需要注意的是，在内核源代码目录中可能有不属于 <emphasis>root</emphasis> 的文"
+"件。在以 <emphasis>root</emphasis> 身份解压源代码包时 (就像我们在 chroot 环境"
+"中所做的那样)，这些文件会获得它们之前在软件包创建者的计算机上的用户和组 "
+"ID。这一般不会造成问题，因为在安装后通常会删除源代码目录树。然而，Linux 源"
+"代码目录树一般会被保留较长时间，这样创建者当时使用的用户 ID 就可能被分配给本"
+"机的某个用户，导致该用户拥有内核源代码的写权限。"
 
 #. type: Content of: <sect1><sect2><note><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter10/kernel.xml:276
@@ -463,26 +545,35 @@ msgid ""
 "not necessary to remove the kernel source tree after the newly built kernel "
 "is installed."
 msgstr ""
+"之后在 BLFS 中安装软件包时往往需要修改内核配置。因此，和其他软件包不同，我们"
+"在安装好内核后可以不移除源代码树。"
 
 #. type: Content of: <sect1><sect2><note><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter10/kernel.xml:281
 msgid ""
 "If the kernel source tree is going to be retained, run <command>chown -R "
-"0:0</command> on the <filename "
-"class=\"directory\">linux-&linux-version;</filename> directory to ensure all "
-"files are owned by user <emphasis>root</emphasis>."
+"0:0</command> on the <filename class=\"directory\">linux-&linux-version;</"
+"filename> directory to ensure all files are owned by user <emphasis>root</"
+"emphasis>."
 msgstr ""
+"如果要保留内核源代码树，切换到内核源代码目录，执行 <command>chown -R 0:0</"
+"command>，以保证 <filename class=\"directory\">linux-&linux-version;</"
+"filename> 目录中所有文件都属于 <emphasis>root</emphasis>。"
 
 #. type: Content of: <sect1><sect2><warning><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter10/kernel.xml:288
 msgid ""
-"Some kernel documentation recommends creating a symlink from <filename "
-"class=\"symlink\">/usr/src/linux</filename> pointing to the kernel source "
+"Some kernel documentation recommends creating a symlink from <filename class="
+"\"symlink\">/usr/src/linux</filename> pointing to the kernel source "
 "directory.  This is specific to kernels prior to the 2.6 series and "
 "<emphasis>must not</emphasis> be created on an LFS system as it can cause "
 "problems for packages you may wish to build once your base LFS system is "
 "complete."
 msgstr ""
+"有的内核文档建议创建符号链接 <filename class=\"symlink\">/usr/src/linux</"
+"filename> 指向内核源代码目录，这仅仅适用于 2.6 系列之前的内核。在 LFS 系统上"
+"<emphasis>绝对不要</emphasis>创建它，因为在构建完基本 LFS 系统后，它可能在您"
+"构建其他软件包时引起问题。"
 
 #. type: Content of: <sect1><sect2><warning><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter10/kernel.xml:297
@@ -490,34 +581,44 @@ msgid ""
 "The headers in the system's <filename class=\"directory\">include</filename> "
 "directory (<filename class=\"directory\">/usr/include</filename>) should "
 "<emphasis>always</emphasis> be the ones against which Glibc was compiled, "
-"that is, the sanitised headers installed in <xref "
-"linkend=\"ch-tools-linux-headers\"/>.  Therefore, they should "
-"<emphasis>never</emphasis> be replaced by either the raw kernel headers or "
-"any other kernel sanitized headers."
+"that is, the sanitised headers installed in <xref linkend=\"ch-tools-linux-"
+"headers\"/>.  Therefore, they should <emphasis>never</emphasis> be replaced "
+"by either the raw kernel headers or any other kernel sanitized headers."
 msgstr ""
+"在系统 <filename class=\"directory\">include</filename> 目录 (即 <filename "
+"class=\"directory\">/usr/include</filename>) 中的内核头文件应该<emphasis>总是"
+"</emphasis>与构建 Glibc 时使用的内核头文件一致，即保持为<xref linkend=\"ch-"
+"tools-linux-headers\"/>中安装的净化头文件。换句话说，<emphasis>永远不要</"
+"emphasis>用原始内核头文件，或其他版本内核的净化头文件替换它们。"
 
 #. type: Content of: <sect1><sect2><title>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter10/kernel.xml:310
 msgid "Configuring Linux Module Load Order"
-msgstr ""
+msgstr "配置 Linux 内核模块加载顺序"
 
 #. type: Content of: <sect1><sect2><indexterm><primary>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter10/kernel.xml:313
 msgid "/etc/modprobe.d/usb.conf"
-msgstr ""
+msgstr "/etc/modprobe.d/usb.conf"
 
 #. type: Content of: <sect1><sect2><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter10/kernel.xml:316
 msgid ""
 "Most of the time Linux modules are loaded automatically, but sometimes it "
 "needs some specific direction.  The program that loads modules, "
-"<command>modprobe</command> or <command>insmod</command>, uses "
-"<filename>/etc/modprobe.d/usb.conf</filename> for this purpose.  This file "
-"needs to be created so that if the USB drivers (ehci_hcd, ohci_hcd and "
-"uhci_hcd) have been built as modules, they will be loaded in the correct "
-"order; ehci_hcd needs to be loaded prior to ohci_hcd and uhci_hcd in order "
-"to avoid a warning being output at boot time."
+"<command>modprobe</command> or <command>insmod</command>, uses <filename>/"
+"etc/modprobe.d/usb.conf</filename> for this purpose.  This file needs to be "
+"created so that if the USB drivers (ehci_hcd, ohci_hcd and uhci_hcd) have "
+"been built as modules, they will be loaded in the correct order; ehci_hcd "
+"needs to be loaded prior to ohci_hcd and uhci_hcd in order to avoid a "
+"warning being output at boot time."
 msgstr ""
+"多数情况下 Linux 内核模块可以自动加载，但有时需要指定加载顺序。负责加载内核"
+"模块的程序 <command>modprobe</command> 和 <command>insmod</command> 从 "
+"<filename>/etc/modprobe.d</filename> 下的配置文件中读取加载顺序，例如，如果 "
+"USB 驱动程序 (ehci_hcd、ohci_hcd 和 uhci_hcd) 被构建为模块，则必须按照先加"
+"载 echi_hcd，再加载 ohci_hcd 和 uhci_hcd 的正确顺序，才能避免引导时出现警告"
+"信息。"
 
 #. type: Content of: <sect1><sect2><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter10/kernel.xml:325
@@ -525,6 +626,7 @@ msgid ""
 "Create a new file <filename>/etc/modprobe.d/usb.conf</filename> by running "
 "the following:"
 msgstr ""
+"为此，执行以下命令创建文件 <filename>/etc/modprobe.d/usb.conf</filename>："
 
 #. type: Content of: <sect1><sect2><screen>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter10/kernel.xml:328
@@ -534,78 +636,88 @@ msgid ""
 "cat &gt; /etc/modprobe.d/usb.conf &lt;&lt; \"EOF\"\n"
 "<literal># Begin /etc/modprobe.d/usb.conf\n"
 "\n"
-"install ohci_hcd /sbin/modprobe ehci_hcd ; /sbin/modprobe -i ohci_hcd ; "
-"true\n"
-"install uhci_hcd /sbin/modprobe ehci_hcd ; /sbin/modprobe -i uhci_hcd ; "
-"true\n"
+"install ohci_hcd /sbin/modprobe ehci_hcd ; /sbin/modprobe -i ohci_hcd ; true\n"
+"install uhci_hcd /sbin/modprobe ehci_hcd ; /sbin/modprobe -i uhci_hcd ; true\n"
 "\n"
 "# End /etc/modprobe.d/usb.conf</literal>\n"
 "EOF</userinput>"
 msgstr ""
+"<userinput>install -v -m755 -d /etc/modprobe.d\n"
+"cat &gt; /etc/modprobe.d/usb.conf &lt;&lt; \"EOF\"\n"
+"<literal># Begin /etc/modprobe.d/usb.conf\n"
+"\n"
+"install ohci_hcd /sbin/modprobe ehci_hcd ; /sbin/modprobe -i ohci_hcd ; true\n"
+"install uhci_hcd /sbin/modprobe ehci_hcd ; /sbin/modprobe -i uhci_hcd ; true\n"
+"\n"
+"# End /etc/modprobe.d/usb.conf</literal>\n"
+"EOF</userinput>"
 
 #. type: Content of: <sect1><sect2><title>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter10/kernel.xml:341
 msgid "Contents of Linux"
-msgstr ""
+msgstr "Linux 的内容"
 
 #. type: Content of: <sect1><sect2><segmentedlist><segtitle>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter10/kernel.xml:344
 msgid "Installed files"
-msgstr ""
+msgstr "安装的文件"
 
 #. type: Content of: <sect1><sect2><segmentedlist><segtitle>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter10/kernel.xml:345
 msgid "Installed directories"
-msgstr ""
+msgstr "安装的目录"
 
 #. type: Content of: <sect1><sect2><segmentedlist><seglistitem><seg>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter10/kernel.xml:348
 msgid ""
-"config-&linux-version;, <phrase "
-"revision=\"sysv\">vmlinuz-&linux-version;-lfs-&version;,</phrase> <phrase "
-"revision=\"systemd\">vmlinuz-&linux-version;-lfs-&versiond;,</phrase> and "
-"System.map-&linux-version;"
+"config-&linux-version;, <phrase revision=\"sysv\">vmlinuz-&linux-version;-"
+"lfs-&version;,</phrase> <phrase revision=\"systemd\">vmlinuz-&linux-version;-"
+"lfs-&versiond;,</phrase> and System.map-&linux-version;"
 msgstr ""
+"config-&linux-version;, <phrase revision=\"sysv\">vmlinuz-&linux-version;-"
+"lfs-&version;,</phrase> <phrase revision=\"systemd\">vmlinuz-&linux-version;-"
+"lfs-&versiond;,</phrase> 以及 System.map-&linux-version;"
 
 #. type: Content of: <sect1><sect2><segmentedlist><seglistitem><seg>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter10/kernel.xml:352
 msgid "/lib/modules, /usr/share/doc/linux-&linux-version;"
-msgstr ""
+msgstr "/lib/modules 和 /usr/share/doc/linux-&linux-version;"
 
 #. type: Content of: <sect1><sect2><variablelist><bridgehead>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter10/kernel.xml:357
 msgid "Short Descriptions"
-msgstr ""
+msgstr "简要描述"
 
 #. type: Content of: <sect1><sect2><variablelist>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter10/kernel.xml:358
-msgid "<?dbfo list-presentation=\"list\"?> <?dbhtml list-presentation=\"table\"?>"
+msgid ""
+"<?dbfo list-presentation=\"list\"?> <?dbhtml list-presentation=\"table\"?>"
 msgstr ""
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter10/kernel.xml:362
 msgid "<filename>config-&linux-version;</filename>"
-msgstr ""
+msgstr "<filename>config-&linux-version;</filename>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter10/kernel.xml:364
 msgid "Contains all the configuration selections for the kernel"
-msgstr ""
+msgstr "包含所有内核配置选项的值"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter10/kernel.xml:366
 msgid "/boot/config-&linux-version;"
-msgstr ""
+msgstr "/boot/config-&linux-version;"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter10/kernel.xml:372
 msgid "<filename>vmlinuz-&linux-version;-lfs-&version;</filename>"
-msgstr ""
+msgstr "<filename>vmlinuz-&linux-version;-lfs-&version;</filename>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter10/kernel.xml:373
 msgid "<filename>vmlinuz-&linux-version;-lfs-&versiond;</filename>"
-msgstr ""
+msgstr "<filename>vmlinuz-&linux-version;-lfs-&versiond;</filename>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter10/kernel.xml:375
@@ -617,25 +729,28 @@ msgid ""
 "CPU into a multitasking machine capable of running scores of programs "
 "seemingly at the same time"
 msgstr ""
+"Linux 系统的引擎，在启动计算机时，它是操作系统中被最早加载的部分。它检测并初"
+"始化计算机硬件，将它们以目录树的形式提供给软件，并将单个 CPU 封装成多任务系"
+"统，使多个用户程序看上去在同时执行。"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter10/kernel.xml:382
 msgid "lfskernel-&linux-version;"
-msgstr ""
+msgstr "lfskernel-&linux-version;"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter10/kernel.xml:388
 msgid "<filename>System.map-&linux-version;</filename>"
-msgstr ""
+msgstr "<filename>System.map-&linux-version;</filename>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter10/kernel.xml:390
 msgid ""
 "A list of addresses and symbols; it maps the entry points and addresses of "
 "all the functions and data structures in the kernel"
-msgstr ""
+msgstr "地址和符号列表；它将内核函数和数据结构映射为入口点和地址"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter10/kernel.xml:394
 msgid "/boot/System.map-&linux-version;"
-msgstr ""
+msgstr "/boot/System.map-&linux-version;"

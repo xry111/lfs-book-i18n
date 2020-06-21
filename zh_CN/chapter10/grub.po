@@ -1,9 +1,3 @@
-# SOME DESCRIPTIVE TITLE
-# Copyright (C) YEAR Free Software Foundation, Inc.
-# This file is distributed under the same license as the PACKAGE package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
-#
-#, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
@@ -11,34 +5,36 @@ msgstr ""
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
-"Language: \n"
+"Language: zh_CN\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Translate Toolkit 2.2.5\n"
 
 #. type: Content of: <sect1><sect1info><address>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter10/grub.xml:14
 #, no-wrap
 msgid "&grub-url;"
-msgstr ""
+msgstr "&grub-url;"
 
 #. type: Content of: <sect1><sect1info>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter10/grub.xml:12
 msgid ""
-"<productname>grub</productname> "
-"<productnumber>&grub-version;</productnumber> <placeholder type=\"address\" "
-"id=\"0\"/>"
+"<productname>grub</productname> <productnumber>&grub-version;</"
+"productnumber> <placeholder type=\"address\" id=\"0\"/>"
 msgstr ""
+"<productname>grub</productname> <productnumber>&grub-version;</"
+"productnumber> <placeholder type=\"address\" id=\"0\"/>"
 
 #. type: Content of: <sect1><title>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter10/grub.xml:17
 msgid "Using GRUB to Set Up the Boot Process"
-msgstr ""
+msgstr "使用 GRUB 设定引导过程"
 
 #. type: Content of: <sect1><sect2><title>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter10/grub.xml:20
 msgid "Introduction"
-msgstr ""
+msgstr "概述"
 
 #. type: Content of: <sect1><sect2><warning><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter10/grub.xml:22
@@ -48,6 +44,10 @@ msgid ""
 "is not required to boot your LFS system.  You may just want to modify your "
 "current boot loader, e.g. Grub-Legacy, GRUB2, or LILO."
 msgstr ""
+"如果您不小心错误地配置了 GRUB，可能导致您的系统完全无法使用，"
+"除非使用 CD-ROM 或可引导的 USB 存储器等备用引导设备。"
+"本节不是引导您的 LFS 系统的唯一方案，您可能只要修改现"
+"有的启动加载器 (如 Grub-Legacy、GRUB2 或 LILO) 配置即可引导 LFS。"
 
 #. type: Content of: <sect1><sect2><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter10/grub.xml:28
@@ -56,9 +56,14 @@ msgid ""
 "computer if the computer becomes unusable (un-bootable).  If you do not "
 "already have a boot device, you can create one.  In order for the procedure "
 "below to work, you need to jump ahead to BLFS and install "
-"<userinput>xorriso</userinput> from the <ulink "
-"url=\"&blfs-book;multimedia/libisoburn.html\"> libisoburn</ulink> package."
+"<userinput>xorriso</userinput> from the <ulink url=\"&blfs-book;multimedia/"
+"libisoburn.html\"> libisoburn</ulink> package."
 msgstr ""
+"您务必保证自己拥有一个紧急引导磁盘，它在计算机不可用 (无法引导) 时能够 "
+"<quote>抢修</quote> 计算机。如果您现在还没有引导设备，您可以执行以下命令创建"
+"一个。在运行下列命令前，您需要跳到 BLFS，安装包含 <userinput>xorriso</"
+"userinput> 的 <ulink url=\"&blfs-book;multimedia/libisoburn.html"
+"\">libisoburn</ulink> 软件包："
 
 #. type: Content of: <sect1><sect2><screen>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter10/grub.xml:36
@@ -66,26 +71,33 @@ msgstr ""
 msgid ""
 "<userinput>cd /tmp \n"
 "grub-mkrescue --output=grub-img.iso \n"
-"xorriso -as cdrecord -v dev=/dev/cdrw blank=as_needed "
-"grub-img.iso</userinput>"
+"xorriso -as cdrecord -v dev=/dev/cdrw blank=as_needed grub-img.iso</userinput>"
 msgstr ""
+"<userinput>cd /tmp \n"
+"grub-mkrescue --output=grub-img.iso \n"
+"xorriso -as cdrecord -v dev=/dev/cdrw blank=as_needed grub-img.iso</userinput>"
 
 #. type: Content of: <sect1><sect2><note><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter10/grub.xml:42
 msgid ""
 "To boot LFS on host systems that have UEFI enabled, the kernel needs to have "
 "been built with the CONFIG_EFI_STUB capabality described in the previous "
-"section.  However, LFS can be booted using GRUB2 without such an "
-"addition. To do this, the UEFI Mode and Secure Boot capabilities in the host "
-"system's BIOS need to be turned off.  For details, see <ulink "
-"url=\"&hints-root;lfs-uefi.txt\"> the lfs-uefi.txt hint</ulink> at "
-"&hints-root;lfs-uefi.txt."
+"section.  However, LFS can be booted using GRUB2 without such an addition. "
+"To do this, the UEFI Mode and Secure Boot capabilities in the host system's "
+"BIOS need to be turned off.  For details, see <ulink url=\"&hints-root;lfs-"
+"uefi.txt\"> the lfs-uefi.txt hint</ulink> at &hints-root;lfs-uefi.txt."
 msgstr ""
+"为了在使用 UEFI 的宿主系统上引导 LFS，在构建内核时，需要启用 "
+"CONFIG_EFI_STUB 功能，正如上一节所述。不过，可以使用 GRUB2 在没有该功能的情"
+"况下引导 LFS，前提是在系统 BIOS 设定中关闭 UEFI 模式和安全引导 (Secure "
+"Boot) 功能。关于在 UEFI 环境下引导 LFS 的的详细信息，可以参阅 <ulink url="
+"\"&hints-root;lfs-uefi.txt\">lfs-"
+"uefi.txt hint</ulink>，它位于 &hints-root;lfs-uefi.txt。"
 
 #. type: Content of: <sect1><sect2><title>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter10/grub.xml:56
 msgid "GRUB Naming Conventions"
-msgstr ""
+msgstr "GRUB 命名惯例"
 
 #. type: Content of: <sect1><sect2><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter10/grub.xml:58
@@ -97,19 +109,28 @@ msgid ""
 "partitions and five for extended partitions.  Note that this is different "
 "from earlier versions where both numbers started from zero. For example, "
 "partition <filename class=\"partition\">sda1</filename> is "
-"<emphasis>(hd0,1)</emphasis> to GRUB and <filename "
-"class=\"partition\">sdb3</filename> is <emphasis>(hd1,3)</emphasis>. In "
-"contrast to Linux, GRUB does not consider CD-ROM drives to be hard "
-"drives. For example, if using a CD on <filename "
-"class=\"partition\">hdb</filename> and a second hard drive on <filename "
-"class=\"partition\">hdc</filename>, that second hard drive would still be "
-"<emphasis>(hd1)</emphasis>."
+"<emphasis>(hd0,1)</emphasis> to GRUB and <filename class=\"partition\">sdb3</"
+"filename> is <emphasis>(hd1,3)</emphasis>. In contrast to Linux, GRUB does "
+"not consider CD-ROM drives to be hard drives. For example, if using a CD on "
+"<filename class=\"partition\">hdb</filename> and a second hard drive on "
+"<filename class=\"partition\">hdc</filename>, that second hard drive would "
+"still be <emphasis>(hd1)</emphasis>."
 msgstr ""
+"GRUB 使用一种独特的命名结构，为驱动器和分区命名。分区名的形式为 "
+"<emphasis>(hdn,m)</emphasis>，这里 <emphasis>n</emphasis> 是硬盘驱动器编号，"
+"<emphasis>m</emphasis> 是分区编号。硬盘驱动器编号从 0 开始，但分区号对于主分"
+"区来说从 1 开始，而对于扩展分区来说从 5 开始。例如，分区 <filename class="
+"\"partition\">sda1</filename> 在 GRUB 中的名字是 <emphasis>(hd0, 1)</"
+"emphasis>，而 <filename class=\"partition\">sda3</filename> 的名字是 "
+"<emphasis>(hd1, 3)</emphasis>。和 Linux 不同，GRUB 不认为 CD-ROM 驱动器属于"
+"硬盘驱动器。例如，如果在 <filename class=\"partition\">hdb</filename> 上有一"
+"个 CD-ROM 驱动器，而 <filename class=\"partition\">hdc</filename> 上有第二个"
+"硬盘驱动器，则第二个硬盘驱动器仍然名为 <emphasis>hd1</emphasis>。"
 
 #. type: Content of: <sect1><sect2><title>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter10/grub.xml:76
 msgid "Setting Up the Configuration"
-msgstr ""
+msgstr "设定 GRUB 配置"
 
 #. type: Content of: <sect1><sect2><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter10/grub.xml:78
@@ -118,6 +139,9 @@ msgid ""
 "This area is not part of any file system.  The programs there access GRUB "
 "modules in the boot partition.  The default location is /boot/grub/."
 msgstr ""
+"GRUB 的工作方式是，将数据写入硬盘的第一个物理磁道。这里不属于任何文件系统，"
+"在启动时，第一个物理磁道中的程序从引导分区加载 GRUB 模块，默认在 /boot/"
+"grub 中查找模块。"
 
 #. type: Content of: <sect1><sect2><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter10/grub.xml:83
@@ -130,17 +154,24 @@ msgid ""
 "will need to mount the separate partition, move all files in the current "
 "<filename class=\"directory\">/boot</filename> directory (e.g. the linux "
 "kernel you just built in the previous section) to the new partition.  You "
-"will then need to unmount the partition and remount it as <filename "
-"class=\"directory\">/boot</filename>.  If you do this, be sure to update "
+"will then need to unmount the partition and remount it as <filename class="
+"\"directory\">/boot</filename>.  If you do this, be sure to update "
 "<filename>/etc/fstab</filename>."
 msgstr ""
+"引导分区的位置由负责进行配置的用户自己决定，作者推荐创建一个小的 (建议大小"
+"为 200 MB) 分区，专门存放引导信息。这样，不同的 Linux 系统 (无论是 LFS 还是"
+"商业发行版) 在启动时和启动后都能访问相同的引导文件。如果您选择这样做，您需要"
+"挂载这个单独的分区，将 <filename class=\"directory\">/boot</filename> 中已有"
+"的文件 (例如上一节中构建的内核) 移动到新的分区中。之后，解除该分区的挂载，并"
+"将它挂载为 <filename class=\"directory\">/boot</filename>。另外，还要注意更新 "
+"<filename>/etc/fstab</filename>。"
 
 #. type: Content of: <sect1><sect2><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter10/grub.xml:95
 msgid ""
 "Using the current lfs partition will also work, but configuration for "
 "multiple systems is more difficult."
-msgstr ""
+msgstr "直接使用 LFS 分区也是可以的，但这样在配置多系统启动时比较麻烦。"
 
 #. type: Content of: <sect1><sect2><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter10/grub.xml:98
@@ -150,13 +181,18 @@ msgid ""
 "following example, it is assumed that the root (or separate boot) partition "
 "is <filename class=\"partition\">sda2</filename>."
 msgstr ""
+"根据以上信息，确定 LFS 根分区 (或 boot 分区，如果使用了独立的 boot 分区) 的名"
+"称。下面假设 LFS 根分区 (或 boot 分区) 是 <filename class=\"partition"
+"\">sda2</filename>。"
 
 #. type: Content of: <sect1><sect2><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter10/grub.xml:104
 msgid ""
-"Install the GRUB files into <filename "
-"class=\"directory\">/boot/grub</filename> and set up the boot track:"
+"Install the GRUB files into <filename class=\"directory\">/boot/grub</"
+"filename> and set up the boot track:"
 msgstr ""
+"将 GRUB 文件安装到<filename class=\"directory\">/boot/grub</filename> 并设定"
+"引导磁道："
 
 #. type: Content of: <sect1><sect2><warning><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter10/grub.xml:108
@@ -165,12 +201,14 @@ msgid ""
 "command if this is not desired, for example, if using a third party boot "
 "manager to manage the Master Boot Record (MBR)."
 msgstr ""
+"以下命令会覆盖当前启动引导器，如果这不是您希望的，不要运行该命令。例如，如果"
+"您使用第三方启动引导器管理主引导记录 (MBR)。"
 
 #. type: Content of: <sect1><sect2><screen>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter10/grub.xml:113
 #, no-wrap
 msgid "<userinput>grub-install /dev/sda</userinput>"
-msgstr ""
+msgstr "<userinput>grub-install /dev/sda</userinput>"
 
 #. type: Content of: <sect1><sect2><note><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter10/grub.xml:116
@@ -180,16 +218,19 @@ msgid ""
 "but those files have not been installed in chapter 6. If this is the case, "
 "add <option>--target i386-pc</option> to the command above."
 msgstr ""
+"如果系统是使用 UEFI 引导的，<command>grub-install</command> 会试图为 "
+"<emphasis>x86_64-efi</emphasis> 目标安装文件，但它们并未在第 6 章中安装。如"
+"果出现了这类问题，请在以上命令中添加 <option>--target i386-pc</option> 选项。"
 
 #. type: Content of: <sect1><sect2><title>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter10/grub.xml:137
 msgid "Creating the GRUB Configuration File"
-msgstr ""
+msgstr "创建 GRUB 配置文件"
 
 #. type: Content of: <sect1><sect2><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter10/grub.xml:139
 msgid "Generate <filename>/boot/grub/grub.cfg</filename>:"
-msgstr ""
+msgstr "生成 <filename>/boot/grub/grub.cfg</filename>："
 
 #. type: Content of: <sect1><sect2><screen>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter10/grub.xml:141
@@ -204,11 +245,22 @@ msgid ""
 "set root=(hd0,2)\n"
 "\n"
 "menuentry \"GNU/Linux, Linux &linux-version;-lfs-&version;\" {\n"
-"        linux   /boot/vmlinuz-&linux-version;-lfs-&version; root=/dev/sda2 "
-"ro\n"
+"        linux   /boot/vmlinuz-&linux-version;-lfs-&version; root=/dev/sda2 ro\n"
 "}</literal>\n"
 "EOF</userinput>"
 msgstr ""
+"<userinput>cat &gt; /boot/grub/grub.cfg &lt;&lt; \"EOF\"\n"
+"<literal># Begin /boot/grub/grub.cfg\n"
+"set default=0\n"
+"set timeout=5\n"
+"\n"
+"insmod ext2\n"
+"set root=(hd0,2)\n"
+"\n"
+"menuentry \"GNU/Linux, Linux &linux-version;-lfs-&version;\" {\n"
+"        linux   /boot/vmlinuz-&linux-version;-lfs-&version; root=/dev/sda2 ro\n"
+"}</literal>\n"
+"EOF</userinput>"
 
 #. type: Content of: <sect1><sect2><screen>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter10/grub.xml:154
@@ -223,11 +275,22 @@ msgid ""
 "set root=(hd0,2)\n"
 "\n"
 "menuentry \"GNU/Linux, Linux &linux-version;-lfs-&versiond;\" {\n"
-"        linux   /boot/vmlinuz-&linux-version;-lfs-&versiond; root=/dev/sda2 "
-"ro\n"
+"        linux   /boot/vmlinuz-&linux-version;-lfs-&versiond; root=/dev/sda2 ro\n"
 "}</literal>\n"
 "EOF</userinput>"
 msgstr ""
+"<userinput>cat &gt; /boot/grub/grub.cfg &lt;&lt; \"EOF\"\n"
+"<literal># Begin /boot/grub/grub.cfg\n"
+"set default=0\n"
+"set timeout=5\n"
+"\n"
+"insmod ext2\n"
+"set root=(hd0,2)\n"
+"\n"
+"menuentry \"GNU/Linux, Linux &linux-version;-lfs-&versiond;\" {\n"
+"        linux   /boot/vmlinuz-&linux-version;-lfs-&versiond; root=/dev/sda2 ro\n"
+"}</literal>\n"
+"EOF</userinput>"
 
 #. type: Content of: <sect1><sect2><note><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter10/grub.xml:168
@@ -238,6 +301,9 @@ msgid ""
 "need to change the <emphasis>set root</emphasis> line to point to the boot "
 "partition."
 msgstr ""
+"从 <application>GRUB</application>的视角来看，内核文件的位置相对于它使用的分"
+"区。如果您使用了单独的 /boot 分区，需要从上面的 <emphasis>linux</emphasis> 行"
+"删除 /boot，然后修改 <emphasis>set root</emphasis> 行，指向 /boot 分区。"
 
 #. type: Content of: <sect1><sect2><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter10/grub.xml:175
@@ -248,15 +314,21 @@ msgid ""
 "graphical splash screens, playing sounds, mouse input, etc.  The details of "
 "these options are beyond the scope of this introduction."
 msgstr ""
+"GRUB 是一个很强大的程序，它提供了非常多的选项，可以支持多种设备、操作系统和"
+"分区类型，还有很多用于定制启动屏幕、 声音、鼠标输入等的选项。这些选项的细节超"
+"过了本书的范围，不予讨论。"
 
 #. type: Content of: <sect1><sect2><caution><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter10/grub.xml:181
 msgid ""
 "There is a command, <application>grub-mkconfig</application>, that can write "
-"a configuration file automatically.  It uses a set of scripts in "
-"/etc/grub.d/ and will destroy any customizations that you make.  These "
-"scripts are designed primarily for non-source distributions and are not "
-"recommended for LFS.  If you install a commercial Linux distribution, there "
-"is a good chance that this program will be run.  Be sure to back up your "
-"grub.cfg file."
+"a configuration file automatically.  It uses a set of scripts in /etc/grub."
+"d/ and will destroy any customizations that you make.  These scripts are "
+"designed primarily for non-source distributions and are not recommended for "
+"LFS.  If you install a commercial Linux distribution, there is a good chance "
+"that this program will be run.  Be sure to back up your grub.cfg file."
 msgstr ""
+"有一个命令 <application>grub-mkconfig</application> 被用于自动创建配置文件。"
+"它使用 /etc/grub.d 中的脚本创建新配置文件，这会覆盖您手动编写的 grub.cfg。这"
+"些脚本主要是为非源代码发行版设计的，在 LFS 中不推荐使用。但是，如果您安装了"
+"商业发行版，它很可能在发行版中被运行，记得备份 grub.cfg 以防它被覆盖。"

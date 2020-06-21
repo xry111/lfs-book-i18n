@@ -1,9 +1,3 @@
-# SOME DESCRIPTIVE TITLE
-# Copyright (C) YEAR Free Software Foundation, Inc.
-# This file is distributed under the same license as the PACKAGE package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
-#
-#, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
@@ -11,15 +5,16 @@ msgstr ""
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
-"Language: \n"
+"Language: zh_CN\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Translate Toolkit 2.2.5\n"
 
 #. type: Content of: <sect1><title>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter11/reboot.xml:11
 msgid "Rebooting the System"
-msgstr ""
+msgstr "重启系统"
 
 #. type: Content of: <sect1><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter11/reboot.xml:13
@@ -32,15 +27,20 @@ msgid ""
 "environment, you can leave yourself in a much better position to continue on "
 "once you reboot into your new LFS installation. Here are some suggestions:"
 msgstr ""
+"现在已经安装好了本书中的所有软件，可以重新启动进入 LFS 了。然而，您应该注意一"
+"些可能出现的问题。您根据本书构建的系统是很小的，可能缺失一些功能，导致您无法"
+"继续使用。您可以在当前的 chroot 环境中安装一些 BLFS 手册提供的额外软件包，以"
+"便在重启进入新的 LFS 系统后更容易工作。下面是一些建议您考虑的软件包："
 
 #. type: Content of: <sect1><itemizedlist><listitem><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter11/reboot.xml:23
 msgid ""
-"A text mode browser such as <ulink "
-"url='&blfs-book;basicnet/lynx.html'>Lynx</ulink> will allow you to easily "
-"view the BLFS book in one virtual terminal, while building packages in "
-"another."
+"A text mode browser such as <ulink url='&blfs-book;basicnet/lynx.html'>Lynx</"
+"ulink> will allow you to easily view the BLFS book in one virtual terminal, "
+"while building packages in another."
 msgstr ""
+"字符模式浏览器，例如 <ulink url='&blfs-book;basicnet/lynx.html'>Lynx</ulink>，"
+"这样您可以在一个虚拟终端中阅读 BLFS 手册，同时在另一个虚拟终端构建软件包。"
 
 #. type: Content of: <sect1><itemizedlist><listitem><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter11/reboot.xml:28
@@ -48,15 +48,20 @@ msgid ""
 "The <ulink url='&blfs-book;general/gpm.html'>GPM</ulink> package will allow "
 "you to perform copy/paste actions in your virtual terminals."
 msgstr ""
+"<ulink url='&blfs-book;general/gpm.html'>GPM</ulink> 软件包允许您在 虚拟终端"
+"中进行复制粘贴操作。"
 
 #. type: Content of: <sect1><itemizedlist><listitem><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter11/reboot.xml:33
 msgid ""
 "If you are in a situation where static IP configuration does not meet your "
-"networking requirements, installing a package such as <ulink "
-"url='&blfs-book;basicnet/dhcpcd.html'>dhcpcd</ulink> or the client portion "
-"of <ulink url='&blfs-book;basicnet/dhcp.html'>dhcp</ulink> may be useful."
+"networking requirements, installing a package such as <ulink url='&blfs-book;"
+"basicnet/dhcpcd.html'>dhcpcd</ulink> or the client portion of <ulink "
+"url='&blfs-book;basicnet/dhcp.html'>dhcp</ulink> may be useful."
 msgstr ""
+"如果静态 IP 配置不符合您的网络环境要求，安装 <ulink url='&blfs-book;basicnet/"
+"dhcpcd.html'>dhcpcd</ulink> 或 <ulink url='&blfs-book;basicnet/dhcp."
+"html'>dhcp</ulink> 的客户端部分等在这种环境下有用的软件包。"
 
 #. type: Content of: <sect1><itemizedlist><listitem><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter11/reboot.xml:40
@@ -65,21 +70,27 @@ msgid ""
 "useful for building packages as a non-root user and easily installing the "
 "resulting packages in your new system."
 msgstr ""
+"可以安装 <ulink url='&blfs-book;postlfs/sudo.html'>sudo</ulink>，这样就能使用"
+"非 root 用户构建软件包，再很容易地切换到 root 身份进行安装。"
 
 #. type: Content of: <sect1><itemizedlist><listitem><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter11/reboot.xml:45
 msgid ""
 "If you want to access your new system from a remote system within a "
-"comfortable GUI environment, install <ulink "
-"url='&blfs-book;postlfs/openssh.html'>openssh</ulink>."
+"comfortable GUI environment, install <ulink url='&blfs-book;postlfs/openssh."
+"html'>openssh</ulink>."
 msgstr ""
+"如果您想从具有舒适的 GUI 环境的远程计算机访问新系统，安装 <ulink url='&blfs-"
+"book;postlfs/openssh.html'>openssh</ulink>。"
 
 #. type: Content of: <sect1><itemizedlist><listitem><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter11/reboot.xml:50
 msgid ""
-"To make fetching files over the internet easier, install <ulink "
-"url='&blfs-book;basicnet/wget.html'>wget</ulink>."
+"To make fetching files over the internet easier, install <ulink url='&blfs-"
+"book;basicnet/wget.html'>wget</ulink>."
 msgstr ""
+"为了更方便地从网络下载文件，安装 <ulink url='&blfs-book;basicnet/wget."
+"html'>wget</ulink>。"
 
 #. type: Content of: <sect1><itemizedlist><listitem><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter11/reboot.xml:54
@@ -88,68 +99,71 @@ msgid ""
 "<ulink url='&blfs-book;postlfs/gptfdisk.html'>gptfdisk</ulink> or <ulink "
 "url='&blfs-book;postlfs/parted.html'>parted</ulink> will be useful."
 msgstr ""
+"如果您有 GUID 分区表 (GPT) 磁盘，可能需要安装 <ulink url='&blfs-book;postlfs/"
+"gptfdisk.html'>gptfdisk</ulink> 或 <ulink url='&blfs-book;postlfs/parted."
+"html'>parted</ulink>。"
 
 #. type: Content of: <sect1><itemizedlist><listitem><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter11/reboot.xml:60
 msgid ""
 "Finally, a review of the following configuration files is also appropriate "
 "at this point."
-msgstr ""
+msgstr "最后，可以再次检查下列配置文件。"
 
 #. type: Content of: <sect1><itemizedlist><listitem><itemizedlist><listitem><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter11/reboot.xml:64
 msgid "/etc/bashrc"
-msgstr ""
+msgstr "/etc/bashrc"
 
 #. type: Content of: <sect1><itemizedlist><listitem><itemizedlist><listitem><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter11/reboot.xml:65
 msgid "/etc/dircolors"
-msgstr ""
+msgstr "/etc/dircolors"
 
 #. type: Content of: <sect1><itemizedlist><listitem><itemizedlist><listitem><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter11/reboot.xml:66
 msgid "/etc/fstab"
-msgstr ""
+msgstr "/etc/fstab"
 
 #. type: Content of: <sect1><itemizedlist><listitem><itemizedlist><listitem><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter11/reboot.xml:67
 msgid "/etc/hosts"
-msgstr ""
+msgstr "/etc/hosts"
 
 #. type: Content of: <sect1><itemizedlist><listitem><itemizedlist><listitem><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter11/reboot.xml:68
 msgid "/etc/inputrc"
-msgstr ""
+msgstr "/etc/inputrc"
 
 #. type: Content of: <sect1><itemizedlist><listitem><itemizedlist><listitem><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter11/reboot.xml:69
 msgid "/etc/profile"
-msgstr ""
+msgstr "/etc/profile"
 
 #. type: Content of: <sect1><itemizedlist><listitem><itemizedlist><listitem><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter11/reboot.xml:70
 msgid "/etc/resolv.conf"
-msgstr ""
+msgstr "/etc/resolv.conf"
 
 #. type: Content of: <sect1><itemizedlist><listitem><itemizedlist><listitem><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter11/reboot.xml:71
 msgid "/etc/vimrc"
-msgstr ""
+msgstr "/etc/vimrc"
 
 #. type: Content of: <sect1><itemizedlist><listitem><itemizedlist><listitem><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter11/reboot.xml:72
 msgid "/root/.bash_profile"
-msgstr ""
+msgstr "/root/.bash_profile"
 
 #. type: Content of: <sect1><itemizedlist><listitem><itemizedlist><listitem><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter11/reboot.xml:73
 msgid "/root/.bashrc"
-msgstr ""
+msgstr "/root/.bashrc"
 
 #. type: Content of: <sect1><itemizedlist><listitem><itemizedlist><listitem><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter11/reboot.xml:74
 msgid "/etc/sysconfig/ifconfig.eth0"
-msgstr ""
+msgstr "/etc/sysconfig/ifconfig.eth0"
 
 #. type: Content of: <sect1><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter11/reboot.xml:79
@@ -157,17 +171,18 @@ msgid ""
 "Now that we have said that, let's move on to booting our shiny new LFS "
 "installation for the first time! First exit from the chroot environment:"
 msgstr ""
+"现在，正如我们之前保证的，您可以引导全新的 LFS 系统了！首先退出 chroot 环境："
 
 #. type: Content of: <sect1><screen>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter11/reboot.xml:82
 #, no-wrap
 msgid "<userinput>logout</userinput>"
-msgstr ""
+msgstr "<userinput>logout</userinput>"
 
 #. type: Content of: <sect1><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter11/reboot.xml:84
 msgid "Then unmount the virtual file systems:"
-msgstr ""
+msgstr "解除虚拟文件系统的挂载："
 
 #. type: Content of: <sect1><screen>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter11/reboot.xml:86
@@ -179,6 +194,11 @@ msgid ""
 "umount -v $LFS/proc\n"
 "umount -v $LFS/sys</userinput>"
 msgstr ""
+"<userinput>umount -v $LFS/dev/pts\n"
+"umount -v $LFS/dev\n"
+"umount -v $LFS/run\n"
+"umount -v $LFS/proc\n"
+"umount -v $LFS/sys</userinput>"
 
 #. type: Content of: <sect1><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter11/reboot.xml:92
@@ -186,6 +206,7 @@ msgid ""
 "If multiple partitions were created, unmount the other partitions before "
 "unmounting the main one, like this:"
 msgstr ""
+"如果为 LFS 创建了多个分区，在解除 LFS 文件系统的挂载前，先解除其他挂载点："
 
 #. type: Content of: <sect1><screen>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter11/reboot.xml:95
@@ -195,28 +216,31 @@ msgid ""
 "umount -v $LFS/home\n"
 "umount -v $LFS</userinput>"
 msgstr ""
+"<userinput>umount -v $LFS/usr\n"
+"umount -v $LFS/home\n"
+"umount -v $LFS</userinput>"
 
 #. type: Content of: <sect1><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter11/reboot.xml:99
 msgid "Unmount the LFS file system itself:"
-msgstr ""
+msgstr "解除 LFS 文件系统本身的挂载："
 
 #. type: Content of: <sect1><screen>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter11/reboot.xml:101
 #, no-wrap
 msgid "<userinput>umount -v $LFS</userinput>"
-msgstr ""
+msgstr "<userinput>umount -v $LFS</userinput>"
 
 #. type: Content of: <sect1><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter11/reboot.xml:103
 msgid "Now, reboot the system with:"
-msgstr ""
+msgstr "现在重新启动系统："
 
 #. type: Content of: <sect1><screen>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter11/reboot.xml:105
 #, no-wrap
 msgid "<userinput>shutdown -r now</userinput>"
-msgstr ""
+msgstr "<userinput>shutdown -r now</userinput>"
 
 #. type: Content of: <sect1><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter11/reboot.xml:107
@@ -224,6 +248,8 @@ msgid ""
 "Assuming the GRUB boot loader was set up as outlined earlier, the menu is "
 "set to boot <emphasis>LFS &version;</emphasis> automatically."
 msgstr ""
+"如果 GRUB 引导加载器如同本书前文所述安装，并配置正确，GRUB 目录应该已经配置为"
+"自动引导 <emphasis>LFS &version;</emphasis> 启动项。"
 
 #. type: Content of: <sect1><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter11/reboot.xml:110
@@ -231,3 +257,4 @@ msgid ""
 "When the reboot is complete, the LFS system is ready for use and more "
 "software may be added to suit your needs."
 msgstr ""
+"重启完成后，LFS 系统就可以使用了，您可以安装更多软件包以满足自己的需求。"
