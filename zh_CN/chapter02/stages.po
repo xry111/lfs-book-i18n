@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2020-06-17 12:44+0800\n"
+"POT-Creation-Date: 2020-06-23 15:47+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -81,8 +81,8 @@ msgid ""
 "and complete all instructions in that section."
 msgstr ""
 "<xref linkend='ch-tools-generalinstructions'/>中的过程是关键的。如果在安装软"
-"件包时感觉不对劲，确认之前解压的源码包已经被删除，然后重新解压源码包的文"
-"件，重新执行该软件包对应章节的所有命令。"
+"件包时感觉不对劲，确认之前解压的源码包已经被删除，然后重新解压源码包的文件，"
+"重新执行该软件包对应章节的所有命令。"
 
 #. type: Content of: <sect1><sect2><title>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter02/stages.xml:61
@@ -96,8 +96,8 @@ msgid ""
 "the Chroot Environment</quote> must be done as the root user, with the LFS "
 "envirnment variable set for the root user."
 msgstr ""
-"从 <quote>改变所有权</quote> 到 <quote>进入 Chroot 环境</quote> 的一些"
-"操作必须以 root 身份完成，且 LFS 环境变量必须为 root 用户设定。"
+"从 <quote>改变所有权</quote> 到 <quote>进入 Chroot 环境</quote> 的一些操作必"
+"须以 root 身份完成，且 LFS 环境变量必须为 root 用户设定。"
 
 #. type: Content of: <sect1><sect2><itemizedlist><listitem><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter02/stages.xml:75
@@ -105,16 +105,15 @@ msgid ""
 "When entering chroot, the LFS environment variable must be set for root. The "
 "LFS variable is not used afterwards."
 msgstr ""
-"在进入 chroot 环境时，LFS 环境变量必须为 root 设置好。之后就不需要 LFS 变"
-"量。"
+"在进入 chroot 环境时，LFS 环境变量必须为 root 设置好。之后就不需要 LFS 变量。"
 
 #. type: Content of: <sect1><sect2><itemizedlist><listitem><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter02/stages.xml:80
 msgid ""
 "The virtual file systems must be mounted.  This can be done before or after "
 "entering chroot by changing to a host virtual terminal and, as root, running "
-"the commands in <xref linkend='ch-system-bindmount'/> and <xref linkend='ch-"
-"system-kernfsmount'/>."
+"the commands in <xref linkend='ch-tools-bindmount'/> and <xref linkend='ch-"
+"tools-kernfsmount'/>."
 msgstr ""
-"虚拟文件系统必须挂载好，在进入 chroot 环境之前，请执行<xref linkend='ch-"
-"system-bindmount'/>和<xref linkend='ch-system-kernfsmount'/>中的命令。"
+"虚拟文件系统必须挂载好。在进入 chroot 环境之前，请切换到一个宿主系统的虚拟终端，以 root 身份执行<xref linkend='ch-"
+"tools-bindmount'/>和<xref linkend='ch-tools-kernfsmount'/>中的命令。"

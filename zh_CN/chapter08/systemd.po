@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2020-06-17 12:44+0800\n"
+"POT-Creation-Date: 2020-06-23 15:47+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -70,14 +70,14 @@ msgstr "安装 systemd"
 
 #. type: Content of: <sect1><sect2><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/systemd.xml:43
-msgid "First, apply a patch to fix the build with GCC-10:"
-msgstr "首先，应用一个补丁，修复使用 GCC-10 编译时出现的问题："
+msgid "First, apply a patch to fix the build with GCC-10 and fix a segfault:"
+msgstr "首先，应用一个补丁，修复使用 GCC-10 编译时出现的问题，并修复一个段错误："
 
 #. type: Content of: <sect1><sect2><screen>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/systemd.xml:45
 #, no-wrap
-msgid "<userinput remap=\"pre\">patch -Np1 -i ../systemd-&systemd-version;-gcc_10-fixes-1.patch</userinput>"
-msgstr "<userinput remap=\"pre\">patch -Np1 -i ../systemd-&systemd-version;-gcc_10-fixes-1.patch</userinput>"
+msgid "<userinput remap=\"pre\">patch -Np1 -i ../systemd-&systemd-version;-gcc_10-fixes-2.patch</userinput>"
+msgstr "<userinput remap=\"pre\">patch -Np1 -i ../systemd-&systemd-version;-gcc_10-fixes-2.patch</userinput>"
 
 #. type: Content of: <sect1><sect2><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/systemd.xml:47
@@ -208,8 +208,7 @@ msgstr "<parameter>-D*-path=*</parameter>"
 msgid ""
 "These switches provide the location of binaries needed by systemd at runtime "
 "that have not yet been installed."
-msgstr ""
-"这些开关提供了 systemd 在运行时需要，但尚未安装的二进制程序的位置。"
+msgstr "这些开关提供了 systemd 在运行时需要，但尚未安装的二进制程序的位置。"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/systemd.xml:107
@@ -260,8 +259,8 @@ msgid ""
 "described feature is desired."
 msgstr ""
 "这个开关防止一个 systemd 单元的安装，它在引导时运行 <command>ldconfig</"
-"command>，这对于 LFS 等源代码发行版来说没有意义，还会增加引导时间。如果您需"
-"要这个功能，可以删除这个开关。"
+"command>，这对于 LFS 等源代码发行版来说没有意义，还会增加引导时间。如果您需要"
+"这个功能，可以删除这个开关。"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/systemd.xml:141
@@ -326,8 +325,7 @@ msgstr "<parameter>-D{userdb,homed}=false</parameter>"
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/systemd.xml:180
 msgid ""
 "Remove two daemons that have dependencies that do not fit the scope of LFS."
-msgstr ""
-"移除两个守护程序，它们的依赖项超出了 LFS 的范围。"
+msgstr "移除两个守护程序，它们的依赖项超出了 LFS 的范围。"
 
 #. type: Content of: <sect1><sect2><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/systemd.xml:187
@@ -463,11 +461,11 @@ msgstr ""
 "systemctl, systemd-analyze, systemd-ask-password, systemd-cat, systemd-cgls, "
 "systemd-cgtop, systemd-delta, systemd-detect-virt, systemd-escape, systemd-"
 "hwdb, systemd-id128, systemd-inhibit, systemd-machine-id-setup, systemd-"
-"mount, systemd-notify, systemd-nspawn, systemd-path, systemd-repart, systemd-resolve (到 "
-"resolvectl 的符号链接), systemd-run, systemd-socket-activate, systemd-stdio-"
-"bridge, systemd-tmpfiles, systemd-tty-ask-password-agent, systemd-umount (到 "
-"systemd-mount 的符号链接), telinit (到 systemctl 的符号链接), timedatectl, 以"
-"及 udevadm"
+"mount, systemd-notify, systemd-nspawn, systemd-path, systemd-repart, systemd-"
+"resolve (到 resolvectl 的符号链接), systemd-run, systemd-socket-activate, "
+"systemd-stdio-bridge, systemd-tmpfiles, systemd-tty-ask-password-agent, "
+"systemd-umount (到 systemd-mount 的符号链接), telinit (到 systemctl 的符号链"
+"接), timedatectl, 以及 udevadm"
 
 #. type: Content of: <sect1><sect2><segmentedlist><seglistitem><seg>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/systemd.xml:246
@@ -636,8 +634,9 @@ msgstr "<command>kernel-install</command>"
 msgid ""
 "Is used to add and remove kernel and initramfs images to and from /boot. In "
 "LFS, this is done manually."
-msgstr "用于在 /boot 中添加或删除内核和 initramfs 映像文件。"
-"在 LFS 中，这项工作是手工完成的。"
+msgstr ""
+"用于在 /boot 中添加或删除内核和 initramfs 映像文件。在 LFS 中，这项工作是手工"
+"完成的。"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/systemd.xml:349
@@ -963,8 +962,7 @@ msgstr "<command>systemd-detect-virt</command>"
 msgid ""
 "Detects whether the system is being run in a virtual environment, and "
 "adjusts udev accordingly."
-msgstr ""
-"确定系统是否在虚拟化环境中运行，并据此调节 udev。"
+msgstr "确定系统是否在虚拟化环境中运行，并据此调节 udev。"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/systemd.xml:561
@@ -1027,8 +1025,9 @@ msgid ""
 "Is used to execute a program with a shutdown, sleep or idle inhibitor lock "
 "taken, preventing an action such as a system shutdown until the process is "
 "completed."
-msgstr "用于在关机、休眠或待机抑制锁被锁定的情况下运行程序，在进程结束前"
-"防止关闭系统等动作。"
+msgstr ""
+"用于在关机、休眠或待机抑制锁被锁定的情况下运行程序，在进程结束前防止关闭系统"
+"等动作。"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/systemd.xml:604
@@ -1126,8 +1125,9 @@ msgstr "<command>systemd-repart</command>"
 msgid ""
 "Is used to grow and add partitions to a partition table when systemd is used "
 "in an OS image (e.g. a container)."
-msgstr "在 systemd 被作为 OS 映像使用 (例如在容器中) 时，"
-"用于在分区表中添加分区或增长分区大小。"
+msgstr ""
+"在 systemd 被作为 OS 映像使用 (例如在容器中) 时，用于在分区表中添加分区或增长"
+"分区大小。"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/systemd.xml:669
@@ -1161,8 +1161,9 @@ msgstr "<command>systemd-run</command>"
 msgid ""
 "Is used to create and start a transient .service or a .scope unit and run "
 "the specified command in it. This is useful for validating systemd units."
-msgstr "用于创建一个临时的 .service 或 .scope 单元，并在其中运行指定命令。"
-"这对于验证 systemd 单元很有用。"
+msgstr ""
+"用于创建一个临时的 .service 或 .scope 单元，并在其中运行指定命令。这对于验证 "
+"systemd 单元很有用。"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/systemd.xml:692
@@ -1279,8 +1280,9 @@ msgid ""
 "uevents to finish, tests udev configuration, and triggers uevents for a "
 "given device"
 msgstr ""
-"通用 udev 管理工具，它控制 udevd 守护进程，提供 udev 数据库的信息，监视 uevent "
-"事件，等待 uevent 事件结束，测试 udev 配置，或对于给定设备触发 uevent 事件"
+"通用 udev 管理工具，它控制 udevd 守护进程，提供 udev 数据库的信息，监视 "
+"uevent 事件，等待 uevent 事件结束，测试 udev 配置，或对于给定设备触发 uevent "
+"事件"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/systemd.xml:772

@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2020-06-17 12:44+0800\n"
+"POT-Creation-Date: 2020-06-23 15:47+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -34,8 +34,8 @@ msgid ""
 "command.  From now on, use this updated chroot command any time you need to "
 "reenter the chroot environment after exiting:"
 msgstr ""
-"现在需要登出，并使用新的 chroot 命令行重新进入 chroot 环境。从现在起，在退"
-"出并重新进入 chroot 环境时，要使用下面的修改过的 chroot 命令："
+"现在需要登出，并使用新的 chroot 命令行重新进入 chroot 环境。从现在起，在退出"
+"并重新进入 chroot 环境时，要使用下面的修改过的 chroot 命令："
 
 #. type: Content of: <sect1><screen>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/revisedchroot.xml:21
@@ -63,8 +63,8 @@ msgid ""
 "Here the <parameter>+h</parameter> option is not used anymore, since all the "
 "previous programs have been replaced: hashing is therefore possible."
 msgstr ""
-"这里不再使用 <parameter>+h</parameter> 选项，因为所有之前安装的程序都已经"
-"替换成了最终版本，可以进行散列。"
+"这里不再使用 <parameter>+h</parameter> 选项，因为所有之前安装的程序都已经替换"
+"成了最终版本，可以进行散列。"
 
 #. type: Content of: <sect1><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/revisedchroot.xml:33
@@ -72,11 +72,11 @@ msgid ""
 "If the virtual kernel file systems have been unmounted, either manually or "
 "through a reboot, ensure that the virtual kernel file systems are mounted "
 "when reentering the chroot. This process was explained in <xref linkend=\"ch-"
-"system-bindmount\"/> and <xref linkend=\"ch-system-kernfsmount\"/>."
+"tools-bindmount\"/> and <xref linkend=\"ch-tools-kernfsmount\"/>."
 msgstr ""
 "如果解除了虚拟内核文件系统的挂载，必须通过手动或重启系统的方式重新挂载它们，"
-"保证在进入 chroot 时它们已经挂载好。<xref linkend=\"ch-system-bindmount\"/>"
-"和<xref linkend=\"ch-system-kernfsmount\"/>已经说明了这一过程。"
+"保证在进入 chroot 时它们已经挂载好。<xref linkend=\"ch-tools-bindmount\"/>和"
+"<xref linkend=\"ch-tools-kernfsmount\"/>已经说明了这一过程。"
 
 #. type: Content of: <sect1><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/revisedchroot.xml:39
@@ -87,8 +87,8 @@ msgid ""
 "desired, remove them now:"
 msgstr ""
 "在本章的前几节中，有几个静态库的安装没有被禁止，目的是满足一些软件包的退化测"
-"试需要。这些库来自于 binutils、bzip2、e2fsprogs、flex、libtool 和 zlib。如"
-"果您希望的话，可以现在删除它们："
+"试需要。这些库来自于 binutils、bzip2、e2fsprogs、flex、libtool 和 zlib。如果"
+"您希望的话，可以现在删除它们："
 
 #. type: Content of: <sect1><screen>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/revisedchroot.xml:44
@@ -121,8 +121,8 @@ msgid ""
 "remove them, run:"
 msgstr ""
 "在 /usr/lib 和 /usr/libexec 目录中还有一些扩展名为 .la 的文件。它们是 "
-"\"libtool 档案\" 文件。正如我们已经讨论过的，它们在链接到共享库，特别是"
-"使用 autotools 以外的构建系统时，是不必要，甚至有害的。执行以下命令删除它们："
+"\"libtool 档案\" 文件。正如我们已经讨论过的，它们在链接到共享库，特别是使用 "
+"autotools 以外的构建系统时，是不必要，甚至有害的。执行以下命令删除它们："
 
 #. type: Content of: <sect1><screen>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/revisedchroot.xml:59
@@ -146,8 +146,7 @@ msgstr ""
 msgid ""
 "Finally, remove the temporary 'tester' user account created at the beginning "
 "of the previous chapter."
-msgstr ""
-"最后，移除上一章开始时创建的临时 'tester' 用户账户。"
+msgstr "最后，移除上一章开始时创建的临时 'tester' 用户账户。"
 
 #. type: Content of: <sect1><screen>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/revisedchroot.xml:68
