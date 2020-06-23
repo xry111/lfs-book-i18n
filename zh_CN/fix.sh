@@ -81,7 +81,6 @@ sed -n '
 }
 $p
 '   -i \
-	chapter02/hostreqs.xml                       \
 	chapter06/ncurses.xml                        \
 	chapter08/glibc.xml                          \
 	chapter08/flex.xml                           \
