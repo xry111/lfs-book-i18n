@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2020-06-19 11:33+0800\n"
+"POT-Creation-Date: 2020-07-01 03:56+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -73,21 +73,40 @@ msgstr "准备编译 Perl："
 
 #. type: Content of: <sect1><sect2><screen>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter07/perl.xml:48
-msgid "<userinput remap=\"configure\">sh Configure -des -Dprefix=/usr</userinput>"
-msgstr "<userinput remap=\"configure\">sh Configure -des -Dprefix=/usr</userinput>"
+#, no-wrap
+msgid ""
+"<userinput remap=\"configure\">sh Configure -des                                     \\\n"
+"             -Dprefix=/usr                            \\\n"
+"             -Dvendorprefix=/usr                      \\\n"
+"             -Dprivlib=/usr/share/perl5/core_perl     \\\n"
+"             -Darchlib=/usr/lib/perl5/&perl-version-min;/core_perl  \\\n"
+"             -Dsitelib=/usr/share/perl5/site_perl     \\\n"
+"             -Dsitearch=/usr/lib/perl5/&perl-version-min;/site_perl \\\n"
+"             -Dvendorlib=/usr/share/perl5/vendor_perl \\\n"
+"             -Dvendorarch=/usr/lib/perl5/&perl-version-min;/vendor_perl</userinput>"
+msgstr ""
+"<userinput remap=\"configure\">sh Configure -des                                     \\\n"
+"             -Dprefix=/usr                            \\\n"
+"             -Dvendorprefix=/usr                      \\\n"
+"             -Dprivlib=/usr/share/perl5/core_perl     \\\n"
+"             -Darchlib=/usr/lib/perl5/&perl-version-min;/core_perl  \\\n"
+"             -Dsitelib=/usr/share/perl5/site_perl     \\\n"
+"             -Dsitearch=/usr/lib/perl5/&perl-version-min;/site_perl \\\n"
+"             -Dvendorlib=/usr/share/perl5/vendor_perl \\\n"
+"             -Dvendorarch=/usr/lib/perl5/&perl-version-min;/vendor_perl</userinput>"
 
 #. type: Content of: <sect1><sect2><variablelist><title>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter07/perl.xml:51
+#: /home/xry111/svn-repos/LFS-BOOK/chapter07/perl.xml:59
 msgid "The meaning of the new Configure options:"
 msgstr "新出现的配置选项的含义："
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter07/perl.xml:53
+#: /home/xry111/svn-repos/LFS-BOOK/chapter07/perl.xml:61
 msgid "<parameter>-des</parameter>"
 msgstr "<parameter>-des</parameter>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter07/perl.xml:55
+#: /home/xry111/svn-repos/LFS-BOOK/chapter07/perl.xml:63
 msgid ""
 "This is a combination of three options: -d uses defaults for all items; -e "
 "ensures completion of all tasks; -s silences non-essential output."
@@ -96,29 +115,29 @@ msgstr ""
 "成；-s 使得配置脚本不输出不必要的信息。"
 
 #. type: Content of: <sect1><sect2><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter07/perl.xml:63
+#: /home/xry111/svn-repos/LFS-BOOK/chapter07/perl.xml:71
 msgid "Compile the package:"
 msgstr "编译该软件包："
 
 #. type: Content of: <sect1><sect2><screen>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter07/perl.xml:65
+#: /home/xry111/svn-repos/LFS-BOOK/chapter07/perl.xml:73
 #, no-wrap
 msgid "<userinput remap=\"make\">make</userinput>"
 msgstr "<userinput remap=\"make\">make</userinput>"
 
 #. type: Content of: <sect1><sect2><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter07/perl.xml:67
+#: /home/xry111/svn-repos/LFS-BOOK/chapter07/perl.xml:75
 msgid "Install the package:"
 msgstr "安装该软件包："
 
 #. type: Content of: <sect1><sect2><screen>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter07/perl.xml:69
+#: /home/xry111/svn-repos/LFS-BOOK/chapter07/perl.xml:77
 #, no-wrap
 msgid "<userinput remap=\"install\">make install</userinput>"
 msgstr "<userinput remap=\"make\">make install</userinput>"
 
 #. type: Content of: <sect1><sect2><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter07/perl.xml:76
+#: /home/xry111/svn-repos/LFS-BOOK/chapter07/perl.xml:84
 msgid ""
 "Details on this package are located in <xref linkend=\"contents-perl\" role="
 "\".\"/>"
