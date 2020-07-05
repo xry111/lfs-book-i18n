@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2020-06-23 15:47+0800\n"
+"POT-Creation-Date: 2020-07-05 16:17+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -144,12 +144,47 @@ msgstr ""
 #. type: Content of: <sect1><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/revisedchroot.xml:65
 msgid ""
+"The compiler built in <xref linkend=\"chapter-temporary-tools\"/> and <xref "
+"linkend=\"chapter-chroot-temporary-tools\"/> is still partially installed, "
+"and not needed anymore. Remove it with:"
+msgstr ""
+"在<xref linkend=\"chapter-temporary-tools\"/>和"
+"<xref linkend=\"chapter-chroot-temporary-tools\"/>中构建的编译器仍然有一部分安装在系统上，它现在已经没有存在的意义了。执行命令删除它："
+
+#. type: Content of: <sect1><screen>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/revisedchroot.xml:69
+#, no-wrap
+msgid ""
+"<userinput>find /usr/{bin,lib,libexec,include} \\\n"
+"     -depth                         \\\n"
+"     -name $(uname -m)-lfs-linux-gnu\\* | xargs rm -rf</userinput>"
+msgstr ""
+"<userinput>find /usr/{bin,lib,libexec,include} \\\n"
+"     -depth                         \\\n"
+"     -name $(uname -m)-lfs-linux-gnu\\* | xargs rm -rf</userinput>"
+
+#. type: Content of: <sect1><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/revisedchroot.xml:73
+msgid ""
+"The <filename class=\"directory\">/tools</filename> directory can also be "
+"removed to further gain some place:"
+msgstr ""
+"<filename class=\"directory\">/tools</filename> 也可以被删除，从而获得更多可用空间："
+
+#. type: Content of: <sect1><screen>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/revisedchroot.xml:76
+msgid "<userinput>rm -rf /tools</userinput>"
+msgstr "<userinput>rm -rf /tools</userinput>"
+
+#. type: Content of: <sect1><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/revisedchroot.xml:78
+msgid ""
 "Finally, remove the temporary 'tester' user account created at the beginning "
 "of the previous chapter."
 msgstr "最后，移除上一章开始时创建的临时 'tester' 用户账户。"
 
 #. type: Content of: <sect1><screen>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/revisedchroot.xml:68
+#: /home/xry111/svn-repos/LFS-BOOK/chapter08/revisedchroot.xml:81
 #, no-wrap
 msgid "<userinput>userdel -r tester</userinput>"
 msgstr "<userinput>userdel -r tester</userinput>"
