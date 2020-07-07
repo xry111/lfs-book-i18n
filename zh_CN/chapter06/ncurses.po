@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2020-06-17 12:44+0800\n"
+"POT-Creation-Date: 2020-07-07 14:26+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -84,8 +84,7 @@ msgstr "<userinput remap=\"pre\">sed -i s/mawk// configure</userinput>"
 msgid ""
 "Then, run the following commands to build the <quote>tic</quote> program on "
 "the build host:"
-msgstr ""
-"然后，运行以下命令，在宿主系统构建<quote>tic</quote>程序："
+msgstr "然后，运行以下命令，在宿主系统构建<quote>tic</quote>程序："
 
 #. type: Content of: <sect1><sect2><screen>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter06/ncurses.xml:53
@@ -188,9 +187,9 @@ msgid ""
 msgstr ""
 "该选项使得宽字符库 (例如 <filename class=\"libraryfile\">libncursesw.so."
 "&ncurses-version;</filename>) 被构建，而不构建常规字符库 (例如 <filename "
-"class=\"libraryfile\">libncurses.so.&ncurses-version;</filename>)。宽字符库"
-"在多字节和传统 8 位 locale 中都能工作，而常规字符库只能在 8 位 locale 中工"
-"作。宽字符库和普通字符库在源码层面是兼容的，但二进制不兼容。"
+"class=\"libraryfile\">libncurses.so.&ncurses-version;</filename>)。宽字符库在"
+"多字节和传统 8 位 locale 中都能工作，而常规字符库只能在 8 位 locale 中工作。"
+"宽字符库和普通字符库在源码层面是兼容的，但二进制不兼容。"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter06/ncurses.xml:109
@@ -218,49 +217,85 @@ msgstr "<userinput remap=\"make\">make</userinput>"
 msgid "Install the package:"
 msgstr "安装该软件包："
 
-#.  TODO: check and document 
 #. type: Content of: <sect1><sect2><screen>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter06/ncurses.xml:124
 #, no-wrap
 msgid ""
 "<userinput remap=\"install\">make DESTDIR=$LFS TIC_PATH=$(pwd)/build/progs/tic install\n"
-"ln -s libncursesw.so $LFS/usr/lib/libncurses.so</userinput>"
+"echo \"INPUT(-lncursesw)\" > $LFS/usr/lib/libncurses.so</userinput>"
 msgstr ""
 "<userinput remap=\"install\">make DESTDIR=$LFS TIC_PATH=$(pwd)/build/progs/tic install\n"
-"ln -s libncursesw.so $LFS/usr/lib/libncurses.so</userinput>"
+"echo \"INPUT(-lncursesw)\" > $LFS/usr/lib/libncurses.so</userinput>"
+
+#. type: Content of: <sect1><sect2><variablelist><title>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter06/ncurses.xml:128
+msgid "The meaning of the install options:"
+msgstr "安装选项的含义："
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter06/ncurses.xml:131
+msgid "<parameter>TIC_PATH=$(pwd)/build/progs/tic</parameter>"
+msgstr "<parameter>TIC_PATH=$(pwd)/build/progs/tic</parameter>"
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter06/ncurses.xml:133
+msgid ""
+"We need to pass the path of the just built <command>tic</command> able to "
+"run on the building machine, so that the terminal database can be created "
+"without errors."
+msgstr ""
+"我们需要传递刚刚构建的，可以在宿主系统运行的 <command>tic</command> 程序"
+"的路径，以保证正确创建终端数据库。"
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter06/ncurses.xml:140
+msgid ""
+"<command>echo \"INPUT(-lncursesw)\" > $LFS/usr/lib/libncurses.so</command>"
+msgstr ""
+"<command>echo \"INPUT(-lncursesw)\" > $LFS/usr/lib/libncurses.so</command>"
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter06/ncurses.xml:142
+msgid ""
+"The <filename>libncurses.so</filename> library is needed by a few packages "
+"we will build soon. We create this small linker script, as this is what is "
+"done in <xref linkend=\"chapter-building-system\"/>."
+msgstr ""
+"我们很快将会构建一些需要 <filename>libncurses.so</filename> 库的软件包。"
+"创建这个简短的链接脚本，正如我们在<xref linkend=\"chapter-building-system\"/>"
+"中将要做的那样。"
 
 #. type: Content of: <sect1><sect2><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter06/ncurses.xml:127
+#: /home/xry111/svn-repos/LFS-BOOK/chapter06/ncurses.xml:151
 msgid ""
 "Move the shared libraries to the <filename class=\"directory\">/lib</"
 "filename> directory, where they are expected to reside:"
 msgstr ""
-"将共享库移动到它们应该位于的 "
-"<filename class=\"directory\">/lib</filename> 目录中："
+"将共享库移动到它们应该位于的 <filename class=\"directory\">/lib</filename> 目"
+"录中："
 
 #. type: Content of: <sect1><sect2><screen>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter06/ncurses.xml:131
+#: /home/xry111/svn-repos/LFS-BOOK/chapter06/ncurses.xml:155
 #, no-wrap
 msgid "<userinput remap=\"install\">mv -v $LFS/usr/lib/libncursesw.so.6* $LFS/lib</userinput>"
 msgstr "<userinput remap=\"install\">mv -v $LFS/usr/lib/libncursesw.so.6* $LFS/lib</userinput>"
 
 #. type: Content of: <sect1><sect2><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter06/ncurses.xml:133
+#: /home/xry111/svn-repos/LFS-BOOK/chapter06/ncurses.xml:157
 msgid ""
 "Because the libraries have been moved, one symlink points to a non-existent "
 "file. Recreate it:"
 msgstr ""
-"由于库文件被移动到其他位置，一个符号链接现在指向不存在的文件。"
-"重新生成它："
+"由于库文件被移动到其他位置，一个符号链接现在指向不存在的文件。重新生成它："
 
 #. type: Content of: <sect1><sect2><screen>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter06/ncurses.xml:136
+#: /home/xry111/svn-repos/LFS-BOOK/chapter06/ncurses.xml:160
 #, no-wrap
 msgid "<userinput remap=\"install\">ln -sfv ../../lib/$(readlink $LFS/usr/lib/libncursesw.so) $LFS/usr/lib/libncursesw.so</userinput>"
 msgstr "<userinput remap=\"install\">ln -sfv ../../lib/$(readlink $LFS/usr/lib/libncursesw.so) $LFS/usr/lib/libncursesw.so</userinput>"
 
 #. type: Content of: <sect1><sect2><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter06/ncurses.xml:144
+#: /home/xry111/svn-repos/LFS-BOOK/chapter06/ncurses.xml:168
 msgid ""
 "Details on this package are located in <xref linkend=\"contents-ncurses\" "
 "role=\".\"/>"
