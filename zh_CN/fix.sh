@@ -68,30 +68,38 @@ sed "/releasedate/s/\".*\"/\"${reldate_cn}\"/" -i general.ent
 
 # Some buggy comments produced by po4a are adding extra empty lines.
 # Remove them.
-sed -n '
+sed_cmd='
 1h
 1!{
 	/<screen[^\n]*><!--.*-->\n/!H
 	g
 	/<screen[^\n]*><!--.*-->\n/{
-		s/\(<screen[^\n]*>\)<!--.*-->\n/\1/
+		s/\(<screen[^\n]*>\)\(\(<!--.*-->\)\+\n\)\+/\1/
 		p
 		n
 		h
 	}
 }
 $p
-'   -i \
+'
+
+sed -n "${sed_cmd}" -i \
 	chapter06/ncurses.xml                        \
 	chapter08/glibc.xml                          \
 	chapter08/flex.xml                           \
 	chapter08/ninja.xml                          \
 	chapter08/texinfo.xml                        \
 	chapter08/systemd.xml                        \
+	chapter08/strippingagain.xml                 \
 	chapter09/networkd.xml                       \
 	chapter09/network.xml                        \
 	chapter09/consoled.xml                       \
 	chapter09/usage.xml
+
+# Looks stupid, but I don't know any better way.
+for iter in 1 2 3; do
+	sed -n "${sed_cmd}" -i chapter08/strippingagain.xml
+done
 
 # Apply lfs-l10n.xml patch, if it's not applied
 grep "Simplified Chinese" stylesheets/lfs-xsl/lfs-l10n.xml ||
