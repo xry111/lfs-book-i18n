@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2020-06-17 12:44+0800\n"
+"POT-Creation-Date: 2020-07-25 20:30+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -99,8 +99,8 @@ msgid ""
 "not set up for proper PTY operation.  This issue needs to be resolved before "
 "running the test suites for Binutils and GCC:"
 msgstr ""
-"如果输出不是上面这样，而是下面的消息，就说明环境没有为 PTY 的正常工作设置"
-"好。在运行 Binutils 和 GCC 的测试套件前必须解决这个问题。"
+"如果输出不是上面这样，而是下面的消息，就说明环境没有为 PTY 的正常工作设置好。"
+"在运行 Binutils 和 GCC 的测试套件前必须解决这个问题。"
 
 #. type: Content of: <sect1><sect2><screen>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/binutils.xml:57
@@ -118,8 +118,8 @@ msgid ""
 "Now remove one test that prevents the tests from running to completion, and "
 "fix other tests in the gold test suite, which need to be adjusted for GCC 10:"
 msgstr ""
-"删除一项导致测试套件无法完成的测试，并且修复 gold 测试套件中的一些"
-"需要为 GCC 10 进行调整的其他测试："
+"删除一项导致测试套件无法完成的测试，并且修复 gold 测试套件中的一些需要为 GCC "
+"10 进行调整的其他测试："
 
 #. type: Content of: <sect1><sect2><screen>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/binutils.xml:64
@@ -277,9 +277,9 @@ msgstr ""
 "x86_64 机器上，它将展开为 <filename class=\"directory\">/usr/x86_64-unknown-"
 "linux-gnu </filename>。因为 LFS 是定制系统，不需要 <filename class="
 "\"directory\">/usr</filename> 中的特定目标工具目录。如果系统用于交叉编译 (例"
-"如，在 Intel 机器上编译软件包，生成可以在 PowerPC 机器上执行的代码)，就"
-"会使用 <filename class=\"directory\">$(exec_prefix)/$(target_alias)</"
-"filename> 目录。"
+"如，在 Intel 机器上编译软件包，生成可以在 PowerPC 机器上执行的代码)，就会使"
+"用 <filename class=\"directory\">$(exec_prefix)/$(target_alias)</filename> 目"
+"录。"
 
 #. type: Content of: <sect1><sect2><important><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/binutils.xml:154
@@ -342,8 +342,10 @@ msgstr ""
 
 #. type: Content of: <sect1><sect2><segmentedlist><seglistitem><seg>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/binutils.xml:181
-msgid "libbfd.{a,so} and libopcodes.{a,so}"
-msgstr "libbfd.{a,so} 和 libopcodes.{a,so}"
+msgid ""
+"libbfd.{a,so}, libctf.{a,so}, libctf-nobfd.{a,so}, and libopcodes.{a,so}"
+msgstr ""
+"libbfd.{a,so}, libctf.{a,so}, libctf-nobfd.{a,so}, and libopcodes.{a,so}"
 
 #. type: Content of: <sect1><sect2><segmentedlist><seglistitem><seg>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/binutils.xml:182
@@ -375,8 +377,8 @@ msgid ""
 "the executable to determine which source file and line number are associated "
 "with the address"
 msgstr ""
-"将程序中的地址翻译成文件名和行号；给定一个内存地址以及可执行程序的名字，该"
-"程序使用可执行文件中的调试信息，确定与该地址相关的源代码文件和行号。"
+"将程序中的地址翻译成文件名和行号；给定一个内存地址以及可执行程序的名字，该程"
+"序使用可执行文件中的调试信息，确定与该地址相关的源代码文件和行号。"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/binutils.xml:199
@@ -641,8 +643,8 @@ msgid ""
 "sections while for other types of files, it scans the entire file"
 msgstr ""
 "对于每个给定文件，输出其中长度不小于给定长度 (默认是 4) 的可打印字符序列；对"
-"于目标文件，它默认只输出可加载的已初始化数据段中的字符串，对于其他文件，它"
-"扫描整个文件"
+"于目标文件，它默认只输出可加载的已初始化数据段中的字符串，对于其他文件，它扫"
+"描整个文件"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter08/binutils.xml:374
