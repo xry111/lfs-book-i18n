@@ -60,7 +60,7 @@ sed -e 's/less than/不到/' \
 	-i  packages.ent
 
 reldate=$(grep 'releasedate' general.ent.orig |
-	      sed 's/.*"\(.*\)".*/\1/;s/st\|nd\|rd\|th//');
+             sed 's/.*"\(.*\)".*/\1/;s/\(st\|nd\|rd\|th\),/,/');
 reldate_cn=$(LANG=en_US.UTF-8 \
              date -d "$reldate" "+%Y 年 %m 月 %d 日" \
              2>/dev/null | sed 's@ 0@ @g')
