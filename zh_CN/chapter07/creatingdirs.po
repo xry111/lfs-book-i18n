@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2020-07-22 14:15+0800\n"
+"POT-Creation-Date: 2020-08-05 04:39+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -18,47 +18,80 @@ msgstr "创建目录"
 
 #. type: Content of: <sect1><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter07/creatingdirs.xml:13
-msgid ""
-"It is time to create the full structure in the LFS file system. Create a "
-"standard directory tree by issuing the following commands:"
+msgid "It is time to create the full structure in the LFS file system."
 msgstr ""
-"现在可以在 LFS 文件系统中创建完整的目录结构。执行以下命令，创建一棵标准目录"
-"树："
-
-#. type: Content of: <sect1><screen>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter07/creatingdirs.xml:16
-#, no-wrap
-msgid ""
-"<userinput>mkdir -pv /{bin,boot,etc/{opt,sysconfig},home,lib/firmware,mnt,opt}\n"
-"mkdir -pv /{media/{floppy,cdrom},srv,var}\n"
-"mkdir -pv /usr/{,local/}{bin,include,lib,sbin,src}\n"
-"mkdir -pv /usr/{,local/}share/{color,dict,doc,info,locale,man}\n"
-"mkdir -pv /usr/{,local/}share/{misc,terminfo,zoneinfo}\n"
-"mkdir -pv /usr/{,local/}share/man/man{1..8}\n"
-"install -dv -m 0750 /root\n"
-"install -dv -m 1777 /tmp /var/tmp\n"
-"\n"
-"mkdir -v /var/{log,mail,spool}\n"
-"ln -sv /run /var/run\n"
-"ln -sv /run/lock /var/lock\n"
-"mkdir -pv /var/{opt,cache,lib/{color,misc,locate},local}</userinput>"
-msgstr ""
-"<userinput>mkdir -pv /{bin,boot,etc/{opt,sysconfig},home,lib/firmware,mnt,opt}\n"
-"mkdir -pv /{media/{floppy,cdrom},srv,var}\n"
-"mkdir -pv /usr/{,local/}{bin,include,lib,sbin,src}\n"
-"mkdir -pv /usr/{,local/}share/{color,dict,doc,info,locale,man}\n"
-"mkdir -pv /usr/{,local/}share/{misc,terminfo,zoneinfo}\n"
-"mkdir -pv /usr/{,local/}share/man/man{1..8}\n"
-"install -dv -m 0750 /root\n"
-"install -dv -m 1777 /tmp /var/tmp\n"
-"\n"
-"mkdir -v /var/{log,mail,spool}\n"
-"ln -sv /run /var/run\n"
-"ln -sv /run/lock /var/lock\n"
-"mkdir -pv /var/{opt,cache,lib/{color,misc,locate},local}</userinput>"
+"现在可以在 LFS 文件系统中创建完整的目录结构。"
 
 #. type: Content of: <sect1><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter07/creatingdirs.xml:30
+#: /home/xry111/svn-repos/LFS-BOOK/chapter07/creatingdirs.xml:15
+msgid ""
+"Create some root-level directories that are not in the limited set required "
+"in the previous chapters by issuing the following command:"
+msgstr "首先，执行命令，创建一些位于根目录中的目录，"
+"它们不属于之前章节需要的有限目录结构："
+
+#. type: Content of: <sect1><note><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter07/creatingdirs.xml:18
+msgid ""
+"Some of the directories below have already been created earlier with "
+"explicit instructions or when installing some packages.  They are repeated "
+"below for completeness."
+msgstr ""
+"下面给出的一些目录已经在之前使用命令创建，或者在安装一些软件包时被创建。"
+"这里出于内容完整性的考虑，仍然给出它们。"
+
+#. type: Content of: <sect1><screen>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter07/creatingdirs.xml:22
+#, no-wrap
+msgid "<userinput>mkdir -pv /{boot,home,mnt,opt,srv}</userinput>"
+msgstr "<userinput>mkdir -pv /{boot,home,mnt,opt,srv}</userinput>"
+
+#. type: Content of: <sect1><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter07/creatingdirs.xml:24
+msgid ""
+"Create the required set of subdirectories below the root-level by issuing "
+"the following commands:"
+msgstr ""
+"执行以下命令，为这些直接位于根目录中的目录创建次级目录结构："
+
+#. type: Content of: <sect1><screen>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter07/creatingdirs.xml:27
+#, no-wrap
+msgid ""
+"<userinput>mkdir -pv /etc/{opt,sysconfig}\n"
+"mkdir -pv /lib/firmware\n"
+"mkdir -pv /media/{floppy,cdrom}\n"
+"mkdir -pv /usr/{,local/}{bin,include,lib,sbin,src}\n"
+"mkdir -pv /usr/{,local/}share/{color,dict,doc,info,locale,man}\n"
+"mkdir -pv /usr/{,local/}share/{misc,terminfo,zoneinfo}\n"
+"mkdir -pv /usr/{,local/}share/man/man{1..8}\n"
+"mkdir -pv /var/{cache,local,log,mail,opt,spool}\n"
+"mkdir -pv /var/lib/{color,misc,locate}\n"
+"\n"
+"ln -sfv /run /var/run\n"
+"ln -sfv /run/lock /var/lock\n"
+"\n"
+"install -dv -m 0750 /root\n"
+"install -dv -m 1777 /tmp /var/tmp</userinput>"
+msgstr ""
+"<userinput>mkdir -pv /etc/{opt,sysconfig}\n"
+"mkdir -pv /lib/firmware\n"
+"mkdir -pv /media/{floppy,cdrom}\n"
+"mkdir -pv /usr/{,local/}{bin,include,lib,sbin,src}\n"
+"mkdir -pv /usr/{,local/}share/{color,dict,doc,info,locale,man}\n"
+"mkdir -pv /usr/{,local/}share/{misc,terminfo,zoneinfo}\n"
+"mkdir -pv /usr/{,local/}share/man/man{1..8}\n"
+"mkdir -pv /var/{cache,local,log,mail,opt,spool}\n"
+"mkdir -pv /var/lib/{color,misc,locate}\n"
+"\n"
+"ln -sfv /run /var/run\n"
+"ln -sfv /run/lock /var/lock\n"
+"\n"
+"install -dv -m 0750 /root\n"
+"install -dv -m 1777 /tmp /var/tmp</userinput>"
+
+#. type: Content of: <sect1><para>
+#: /home/xry111/svn-repos/LFS-BOOK/chapter07/creatingdirs.xml:43
 msgid ""
 "Directories are, by default, created with permission mode 755, but this is "
 "not desirable for all directories. In the commands above, two changes are "
@@ -70,7 +103,7 @@ msgstr ""
 "systemitem> 的主目录，另一个是包含临时文件的目录。"
 
 #. type: Content of: <sect1><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter07/creatingdirs.xml:36
+#: /home/xry111/svn-repos/LFS-BOOK/chapter07/creatingdirs.xml:49
 msgid ""
 "The first mode change ensures that not just anybody can enter the <filename "
 "class=\"directory\">/root</filename> directory&mdash;the same as a normal "
@@ -89,12 +122,12 @@ msgstr ""
 "的最高位 (1) 阻止这样做。"
 
 #. type: Content of: <sect1><sect2><title>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter07/creatingdirs.xml:46
+#: /home/xry111/svn-repos/LFS-BOOK/chapter07/creatingdirs.xml:59
 msgid "FHS Compliance Note"
 msgstr "FHS 兼容性注记"
 
 #. type: Content of: <sect1><sect2><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter07/creatingdirs.xml:48
+#: /home/xry111/svn-repos/LFS-BOOK/chapter07/creatingdirs.xml:61
 msgid ""
 "The directory tree is based on the Filesystem Hierarchy Standard (FHS) "
 "(available at <ulink url=\"https://refspecs.linuxfoundation.org/fhs.shtml\"/"

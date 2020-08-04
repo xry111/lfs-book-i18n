@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2020-06-17 12:44+0800\n"
+"POT-Creation-Date: 2020-08-05 04:39+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -72,8 +72,8 @@ msgid ""
 "As in the first build of GCC, the GMP, MPFR, and MPC packages are required. "
 "Unpack the tarballs and move them into the required directory names:"
 msgstr ""
-"就像第一次构建 GCC 时一样，它需要 GMP、MPFR 和 MPC 三个包。解压它们的源码"
-"包，并将它们移动到 GCC 要求的目录名："
+"就像第一次构建 GCC 时一样，它需要 GMP、MPFR 和 MPC 三个包。解压它们的源码包，"
+"并将它们移动到 GCC 要求的目录名："
 
 #. type: Content of: <sect1><sect2><screen>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter06/gcc-pass2.xml:50
@@ -118,17 +118,6 @@ msgstr ""
 "esac</userinput>"
 
 #. type: Content of: <sect1><sect2><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter06/gcc-pass2.xml:66
-msgid "Fix an issue with GCC-10.1 when building with a cross compiler:"
-msgstr "修复 GCC-10.1 在使用交叉编译器构建时出现的问题："
-
-#. type: Content of: <sect1><sect2><screen>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter06/gcc-pass2.xml:69
-#, no-wrap
-msgid "<userinput remap=\"pre\">patch -Np1 -i ../&gcc-cross-patch;</userinput>"
-msgstr "<userinput remap=\"pre\">patch -Np1 -i ../&gcc-cross-patch;</userinput>"
-
-#. type: Content of: <sect1><sect2><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter06/gcc-pass2.xml:71
 msgid "Create a separate build directory again:"
 msgstr "再次创建一个独立的构建目录："
@@ -147,8 +136,7 @@ msgstr ""
 #: /home/xry111/svn-repos/LFS-BOOK/chapter06/gcc-pass2.xml:76
 msgid ""
 "Create a symlink that allows libgcc to be built with posix threads support:"
-msgstr ""
-"创建一个符号链接，以允许 libgcc 在构建时启用 POSIX 线程支持："
+msgstr "创建一个符号链接，以允许 libgcc 在构建时启用 POSIX 线程支持："
 
 #. type: Content of: <sect1><sect2><screen>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter06/gcc-pass2.xml:79
@@ -232,11 +220,11 @@ msgid ""
 "location. This switch is needed to have them find the needed files in "
 "<filename class=\"directory\">$LFS</filename>, and not on the host."
 msgstr ""
-"通常，使用 <parameter>--host</parameter> 即可保证使用交叉编译器构建 GCC，"
-"这个交叉编译器知道它应该在 <filename class=\"directory\">$LFS</filename> "
-"中查找头文件和库。但是，GCC 构建系统使用其他一些工具，它们不知道这个位置。"
-"因此需要该选项告诉它们在 <filename class=\"directory\">$LFS</filename> "
-"中查找需要的文件，而不是在宿主系统中查找。"
+"通常，使用 <parameter>--host</parameter> 即可保证使用交叉编译器构建 GCC，这个"
+"交叉编译器知道它应该在 <filename class=\"directory\">$LFS</filename> 中查找头"
+"文件和库。但是，GCC 构建系统使用其他一些工具，它们不知道这个位置。因此需要该"
+"选项告诉它们在 <filename class=\"directory\">$LFS</filename> 中查找需要的文"
+"件，而不是在宿主系统中查找。"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter06/gcc-pass2.xml:122
@@ -250,8 +238,8 @@ msgid ""
 "native compiler on x86. But here, we build with a cross compiler, so we need "
 "to explicitely set this option."
 msgstr ""
-"该选项在使用 x86 本地编译器构建另一个本地编译器时自动启用。"
-"然而我们使用交叉编译器进行编译，因此必须显式启用它。"
+"该选项在使用 x86 本地编译器构建另一个本地编译器时自动启用。然而我们使用交叉编"
+"译器进行编译，因此必须显式启用它。"
 
 #. type: Content of: <sect1><sect2><para>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter06/gcc-pass2.xml:132
@@ -286,9 +274,9 @@ msgid ""
 "install:"
 msgstr ""
 "最后，还需要创建一个符号链接。许多程序和脚本运行 <command>cc</command> 而不"
-"是 <command>gcc</command>，因为前者能够保证程序的通用性，使它可以在所有 "
-"UNIX 系统上使用，无论是否安装了 GNU C 编译器。运行 <command>cc</command> 可"
-"以将安装哪种 C 编译器的选择权留给系统管理员："
+"是 <command>gcc</command>，因为前者能够保证程序的通用性，使它可以在所有 UNIX "
+"系统上使用，无论是否安装了 GNU C 编译器。运行 <command>cc</command> 可以将安"
+"装哪种 C 编译器的选择权留给系统管理员："
 
 #. type: Content of: <sect1><sect2><screen>
 #: /home/xry111/svn-repos/LFS-BOOK/chapter06/gcc-pass2.xml:147
