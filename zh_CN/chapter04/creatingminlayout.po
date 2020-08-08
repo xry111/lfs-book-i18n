@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2020-08-05 04:39+0800\n"
+"POT-Creation-Date: 2020-08-08 19:28+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -11,12 +11,10 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 
 #. type: Content of: <sect1><title>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter04/creatingminlayout.xml:11
 msgid "Creating a limited directory layout in LFS filesystem"
 msgstr "在 LFS 文件系统中创建有限目录布局"
 
 #. type: Content of: <sect1><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter04/creatingminlayout.xml:13
 msgid ""
 "The first task performed in the LFS partition is to create a limited "
 "directory hierarchy so that programs compiled in <xref linkend=\"chapter-"
@@ -24,13 +22,12 @@ msgid ""
 "so that those temporary programs be overwritten when rebuilding them in "
 "<xref linkend=\"chapter-building-system\"/>."
 msgstr ""
-"在 LFS 分区中需要进行的第一项任务是，创建一个有限的目录树，使得在<xref linkend="
-"\"chapter-temporary-tools\"/>中编译的程序可以被安装到它们的最终位置。这样，在"
-"<xref linkend=\"chapter-building-system\"/>中重新构建它们时，就能直接覆盖这些"
-"临时程序。"
+"在 LFS 分区中需要进行的第一项任务是，创建一个有限的目录树，使得在<xref "
+"linkend=\"chapter-temporary-tools\"/>中编译的程序可以被安装到它们的最终位置。"
+"这样，在<xref linkend=\"chapter-building-system\"/>中重新构建它们时，就能直接"
+"覆盖这些临时程序。"
 
 #. type: Content of: <sect1><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter04/creatingminlayout.xml:19
 msgid ""
 "Create the required directory layout by running the following as <systemitem "
 "class=\"username\">root</systemitem>:"
@@ -39,7 +36,6 @@ msgstr ""
 "需的目录布局："
 
 #. type: Content of: <sect1><screen>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter04/creatingminlayout.xml:22
 #, no-wrap
 msgid ""
 "<userinput>mkdir -pv $LFS/{bin,etc,lib,sbin,usr,var}\n"
@@ -53,7 +49,6 @@ msgstr ""
 "esac</userinput>"
 
 #. type: Content of: <sect1><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter04/creatingminlayout.xml:27
 msgid ""
 "Programs in <xref linkend=\"chapter-temporary-tools\"/> will be compiled "
 "with a cross-compiler (more details in section <xref linkend=\"ch-tools-"
@@ -66,7 +61,6 @@ msgstr ""
 "编译器和其他程序分离，它会被安装在一个专门的目录。执行以下命令创建该目录："
 
 #. type: Content of: <sect1><screen>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter04/creatingminlayout.xml:33
 #, no-wrap
 msgid "<userinput>mkdir -pv $LFS/tools</userinput>"
 msgstr "<userinput>mkdir -pv $LFS/tools</userinput>"

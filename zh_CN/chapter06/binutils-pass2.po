@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2020-06-17 12:44+0800\n"
+"POT-Creation-Date: 2020-08-08 19:28+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -12,13 +12,11 @@ msgstr ""
 "X-Generator: Translate Toolkit 2.2.5\n"
 
 #. type: Content of: <sect1><sect1info><address>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter06/binutils-pass2.xml:14
 #, no-wrap
 msgid "&binutils-url;"
 msgstr "&binutils-url;"
 
 #. type: Content of: <sect1><sect1info>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter06/binutils-pass2.xml:12
 msgid ""
 "<productname>binutils-pass2</productname> <productnumber>&binutils-version;</"
 "productnumber> <placeholder type=\"address\" id=\"0\"/>"
@@ -27,52 +25,42 @@ msgstr ""
 "productnumber> <placeholder type=\"address\" id=\"0\"/>"
 
 #. type: Content of: <sect1><title>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter06/binutils-pass2.xml:17
 msgid "Binutils-&binutils-version; - Pass 2"
 msgstr "Binutils-&binutils-version; - 第二遍"
 
 #. type: Content of: <sect1><indexterm><primary>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter06/binutils-pass2.xml:20
 msgid "Binutils"
 msgstr "Binutils"
 
 #. type: Content of: <sect1><indexterm><secondary>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter06/binutils-pass2.xml:21
 msgid "tools, pass 2"
 msgstr "工具，第二遍"
 
 #. type: Content of: <sect1><sect2><segmentedlist><segtitle>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter06/binutils-pass2.xml:32
 msgid "&buildtime;"
 msgstr "&buildtime;"
 
 #. type: Content of: <sect1><sect2><segmentedlist><segtitle>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter06/binutils-pass2.xml:33
 msgid "&diskspace;"
 msgstr "&diskspace;"
 
 #. type: Content of: <sect1><sect2><segmentedlist><seglistitem><seg>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter06/binutils-pass2.xml:36
 msgid "&binutils-tmpp2-sbu;"
 msgstr "&binutils-tmpp2-sbu;"
 
 #. type: Content of: <sect1><sect2><segmentedlist><seglistitem><seg>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter06/binutils-pass2.xml:37
 msgid "&binutils-tmpp2-du;"
 msgstr "&binutils-tmpp2-du;"
 
 #. type: Content of: <sect1><sect2><title>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter06/binutils-pass2.xml:44
 msgid "Installation of Binutils"
 msgstr "安装 Binutils"
 
 #. type: Content of: <sect1><sect2><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter06/binutils-pass2.xml:46
 msgid "Create a separate build directory again:"
 msgstr "再一次地，创建一个单独的构建目录："
 
 #. type: Content of: <sect1><sect2><screen>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter06/binutils-pass2.xml:48
 #, no-wrap
 msgid ""
 "<userinput remap=\"pre\">mkdir -v build\n"
@@ -82,12 +70,10 @@ msgstr ""
 "cd       build</userinput>"
 
 #. type: Content of: <sect1><sect2><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter06/binutils-pass2.xml:51
 msgid "Prepare Binutils for compilation:"
 msgstr "准备编译 Binutils："
 
 #. type: Content of: <sect1><sect2><screen>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter06/binutils-pass2.xml:53
 #, no-wrap
 msgid ""
 "<userinput remap=\"configure\">../configure                   \\\n"
@@ -109,61 +95,49 @@ msgstr ""
 "    --enable-64-bit-bfd</userinput>"
 
 #. type: Content of: <sect1><sect2><variablelist><title>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter06/binutils-pass2.xml:63
 msgid "The meaning of the new configure options:"
 msgstr "配置选项的含义："
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter06/binutils-pass2.xml:66
 msgid "<parameter>--enable-shared</parameter>"
 msgstr "<parameter>--enable-shared</parameter>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter06/binutils-pass2.xml:68
 msgid ""
 "Builds <filename class=\"libraryfile\">libbfd</filename> as a shared library."
 msgstr "将 <filename class=\"libraryfile\">libbfd</filename> 构建为共享库。"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter06/binutils-pass2.xml:75
 msgid "<parameter>--enable-64-bit-bfd</parameter>"
 msgstr "<parameter>--enable-64-bit-bfd</parameter>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter06/binutils-pass2.xml:77
 msgid ""
 "Enables 64-bit support (on hosts with narrower word sizes).  May not be "
 "needed on 64-bit systems, but does no harm."
 msgstr ""
-"启用 64 位支持 (在那些字长较短的平台上)。"
-"在 64 位系统上可能并不需要，但无害。"
+"启用 64 位支持 (在那些字长较短的平台上)。在 64 位系统上可能并不需要，但无害。"
 
 #. type: Content of: <sect1><sect2><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter06/binutils-pass2.xml:84
 msgid "Compile the package:"
 msgstr "编译该软件包："
 
 #. type: Content of: <sect1><sect2><screen>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter06/binutils-pass2.xml:86
 #, no-wrap
 msgid "<userinput remap=\"make\">make</userinput>"
 msgstr "<userinput remap=\"make\">make</userinput>"
 
 #. type: Content of: <sect1><sect2><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter06/binutils-pass2.xml:88
 msgid "Install the package:"
 msgstr "安装该软件包："
 
 #. type: Content of: <sect1><sect2><screen>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter06/binutils-pass2.xml:90
 #, no-wrap
 msgid "<userinput remap=\"install\">make DESTDIR=$LFS install</userinput>"
 msgstr "<userinput remap=\"install\">make DESTDIR=$LFS install</userinput>"
 
 #. type: Content of: <sect1><sect2><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter06/binutils-pass2.xml:97
 msgid ""
 "Details on this package are located in <xref linkend=\"contents-binutils\" "
 "role=\".\"/>"
-msgstr ""
-"该软件包的更多信息可以在<xref linkend=\"contents-binutils\"/>中找到。"
+msgstr "该软件包的更多信息可以在<xref linkend=\"contents-binutils\"/>中找到。"

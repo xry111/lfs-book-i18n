@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2020-06-17 12:44+0800\n"
+"POT-Creation-Date: 2020-08-08 19:28+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -12,13 +12,11 @@ msgstr ""
 "X-Generator: Translate Toolkit 2.2.5\n"
 
 #. type: Content of: <sect1><sect1info><address>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/coreutils.xml:14
 #, no-wrap
 msgid "&coreutils-url;"
 msgstr "&coreutils-url;"
 
 #. type: Content of: <sect1><sect1info>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/coreutils.xml:12
 msgid ""
 "<productname>coreutils</productname> <productnumber>&coreutils-version;</"
 "productnumber> <placeholder type=\"address\" id=\"0\"/>"
@@ -27,49 +25,40 @@ msgstr ""
 "productnumber> <placeholder type=\"address\" id=\"0\"/>"
 
 #. type: Content of: <sect1><title>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/coreutils.xml:17
 msgid "Coreutils-&coreutils-version;"
 msgstr "Coreutils-&coreutils-version;"
 
 #. type: Content of: <sect1><indexterm><primary>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/coreutils.xml:20
 msgid "Coreutils"
 msgstr "Coreutils"
 
 #. type: Content of: <sect1><sect2><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/coreutils.xml:26
 msgid ""
 "The Coreutils package contains utilities for showing and setting the basic "
 "system characteristics."
 msgstr "Coreutils 软件包包含用于显示和设定系统基本属性的工具。"
 
 #. type: Content of: <sect1><sect2><segmentedlist><segtitle>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/coreutils.xml:30
 msgid "&buildtime;"
 msgstr "&buildtime;"
 
 #. type: Content of: <sect1><sect2><segmentedlist><segtitle>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/coreutils.xml:31
 msgid "&diskspace;"
 msgstr "&diskspace;"
 
 #. type: Content of: <sect1><sect2><segmentedlist><seglistitem><seg>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/coreutils.xml:34
 msgid "&coreutils-fin-sbu;"
 msgstr "&coreutils-fin-sbu;"
 
 #. type: Content of: <sect1><sect2><segmentedlist><seglistitem><seg>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/coreutils.xml:35
 msgid "&coreutils-fin-du;"
 msgstr "&coreutils-fin-du;"
 
 #. type: Content of: <sect1><sect2><title>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/coreutils.xml:42
 msgid "Installation of Coreutils"
 msgstr "安装 Coreutils"
 
 #. type: Content of: <sect1><sect2><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/coreutils.xml:44
 msgid ""
 "POSIX requires that programs from Coreutils recognize character boundaries "
 "correctly even in multibyte locales. The following patch fixes this non-"
@@ -80,13 +69,11 @@ msgstr ""
 "的 bug："
 
 #. type: Content of: <sect1><sect2><screen>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/coreutils.xml:48
 #, no-wrap
 msgid "<userinput remap=\"pre\">patch -Np1 -i ../&coreutils-i18n-patch;</userinput>"
 msgstr "<userinput remap=\"pre\">patch -Np1 -i ../&coreutils-i18n-patch;</userinput>"
 
 #. type: Content of: <sect1><sect2><note><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/coreutils.xml:51
 msgid ""
 "In the past, many bugs were found in this patch. When reporting new bugs to "
 "Coreutils maintainers, please check first if they are reproducible without "
@@ -96,23 +83,19 @@ msgstr ""
 "它们在不使用该补丁的情况下是否还会重现。"
 
 #. type: Content of: <sect1><sect2><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/coreutils.xml:59
 msgid "Suppress a test which on some machines can loop forever:"
 msgstr "阻止一个在某些机器上会无限循环的测试："
 
 #. type: Content of: <sect1><sect2><screen>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/coreutils.xml:61
 #, no-wrap
 msgid "<userinput remap=\"pre\">sed -i '/test.lock/s/^/#/' gnulib-tests/gnulib.mk</userinput>"
 msgstr "<userinput remap=\"pre\">sed -i '/test.lock/s/^/#/' gnulib-tests/gnulib.mk</userinput>"
 
 #. type: Content of: <sect1><sect2><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/coreutils.xml:63
 msgid "Now prepare Coreutils for compilation:"
 msgstr "现在准备编译 Coreutils："
 
 #. type: Content of: <sect1><sect2><screen>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/coreutils.xml:65
 #, no-wrap
 msgid ""
 "<userinput remap=\"configure\">autoreconf -fiv\n"
@@ -126,65 +109,54 @@ msgstr ""
 "            --enable-no-install-program=kill,uptime</userinput>"
 
 #. type: Content of: <sect1><sect2><variablelist><title>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/coreutils.xml:71
 msgid "The meaning of the configure options:"
 msgstr "配置选项的含义："
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/coreutils.xml:74
 msgid "<command>autoreconf</command>"
 msgstr "<command>autoreconf</command>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/coreutils.xml:76
 msgid ""
 "This command updates generated configuration files consistent with the "
 "latest version of automake."
 msgstr "该命令重新生成配置文件，使之与 automake 的最新版本一致。"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/coreutils.xml:83
 msgid "<envar>FORCE_UNSAFE_CONFIGURE=1</envar>"
 msgstr "<envar>FORCE_UNSAFE_CONFIGURE=1</envar>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/coreutils.xml:85
 msgid ""
 "This environment variable allows the package to be built as the root user."
 msgstr "该环境变量允许以 root 用户身份构建该软件包。"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/coreutils.xml:92
 msgid "<parameter>--enable-no-install-program=kill,uptime</parameter>"
 msgstr "<parameter>--enable-no-install-program=kill,uptime</parameter>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/coreutils.xml:94
 msgid ""
 "The purpose of this switch is to prevent Coreutils from installing binaries "
 "that will be installed by other packages later."
 msgstr "这个开关的目的是防止 Coreutils 安装那些被其他软件包安装的二进制程序。"
 
 #. type: Content of: <sect1><sect2><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/coreutils.xml:101
 msgid "Compile the package:"
 msgstr "编译该软件包："
 
 #. type: Content of: <sect1><sect2><screen>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/coreutils.xml:103
 #, no-wrap
 msgid "<userinput remap=\"make\">make</userinput>"
 msgstr "<userinput remap=\"make\">make</userinput>"
 
 #. type: Content of: <sect1><sect2><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/coreutils.xml:105
 msgid ""
 "Skip down to <quote>Install the package</quote> if not running the test "
 "suite."
 msgstr "如果不运行测试套件，直接跳到 <quote>安装该软件包</quote>。"
 
 #. type: Content of: <sect1><sect2><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/coreutils.xml:108
 msgid ""
 "Now the test suite is ready to be run. First, run the tests that are meant "
 "to be run as user <systemitem class=\"username\">root</systemitem>:"
@@ -193,13 +165,11 @@ msgstr ""
 "\">root</systemitem> 用户运行的测试："
 
 #. type: Content of: <sect1><sect2><screen>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/coreutils.xml:111
 #, no-wrap
 msgid "<userinput remap=\"test\">make NON_ROOT_USERNAME=tester check-root</userinput>"
 msgstr "<userinput remap=\"test\">make NON_ROOT_USERNAME=tester check-root</userinput>"
 
 #. type: Content of: <sect1><sect2><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/coreutils.xml:113
 msgid ""
 "We're going to run the remainder of the tests as the <systemitem class="
 "\"username\">tester</systemitem> user. Certain tests require that the user "
@@ -213,63 +183,53 @@ msgstr ""
 "户成为它的成员："
 
 #. type: Content of: <sect1><sect2><screen>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/coreutils.xml:119
 #, no-wrap
 msgid "<userinput remap=\"test\">echo \"dummy:x:102:tester\" &gt;&gt; /etc/group</userinput>"
 msgstr "<userinput remap=\"test\">echo \"dummy:x:102:tester\" &gt;&gt; /etc/group</userinput>"
 
 #. type: Content of: <sect1><sect2><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/coreutils.xml:121
 msgid ""
 "Fix some of the permissions so that the non-root user can compile and run "
 "the tests:"
 msgstr "修正访问权限，使得非 root 用户可以编译和运行测试："
 
 #. type: Content of: <sect1><sect2><screen>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/coreutils.xml:124
+#, no-wrap
 msgid "<userinput remap=\"test\">chown -Rv tester . </userinput>"
 msgstr "<userinput remap=\"test\">chown -Rv tester . </userinput>"
 
 #. type: Content of: <sect1><sect2><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/coreutils.xml:126
 msgid "Now run the tests:"
 msgstr "现在运行测试："
 
 #. type: Content of: <sect1><sect2><screen>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/coreutils.xml:128
 #, no-wrap
 msgid "<userinput remap=\"test\">su tester -c \"PATH=$PATH make RUN_EXPENSIVE_TESTS=yes check\"</userinput>"
 msgstr "<userinput remap=\"test\">su tester -c \"PATH=$PATH make RUN_EXPENSIVE_TESTS=yes check\"</userinput>"
 
 #. type: Content of: <sect1><sect2><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/coreutils.xml:130
 msgid "Remove the temporary group:"
 msgstr "删除临时组："
 
 #. type: Content of: <sect1><sect2><screen>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/coreutils.xml:132
 #, no-wrap
 msgid "<userinput remap=\"test\">sed -i '/dummy/d' /etc/group</userinput>"
 msgstr "<userinput remap=\"test\">sed -i '/dummy/d' /etc/group</userinput>"
 
 #. type: Content of: <sect1><sect2><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/coreutils.xml:133
 msgid "Install the package:"
 msgstr "安装该软件包："
 
 #. type: Content of: <sect1><sect2><screen>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/coreutils.xml:135
 #, no-wrap
 msgid "<userinput remap=\"install\">make install</userinput>"
 msgstr "<userinput remap=\"install\">make install</userinput>"
 
 #. type: Content of: <sect1><sect2><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/coreutils.xml:137
 msgid "Move programs to the locations specified by the FHS:"
 msgstr "将程序移动到 FHS 要求的位置："
 
 #. type: Content of: <sect1><sect2><screen>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/coreutils.xml:139
 #, no-wrap
 msgid ""
 "<userinput remap=\"install\">mv -v /usr/bin/{cat,chgrp,chmod,chown,cp,date,dd,df,echo} /bin\n"
@@ -287,7 +247,6 @@ msgstr ""
 "sed -i 's/\"1\"/\"8\"/' /usr/share/man/man8/chroot.8</userinput>"
 
 #. type: Content of: <sect1><sect2><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/coreutils.xml:146
 msgid ""
 "Some of the scripts in the LFS-Bootscripts package depend on <command>head</"
 "command>, <command>nice</command>, <command>sleep</command>, and "
@@ -297,37 +256,31 @@ msgid ""
 msgstr ""
 "LFS-Bootscripts 包中的部分脚本可能依赖于 <command>head</command>, "
 "<command>nice</command>, <command>sleep</command>, 以及 <command>touch</"
-"command>。由于 <filename class=\"directory\">/usr</filename> 在系统引导的较"
-"早阶段可能不可用，需要将这些程序移动到根分区，以保证 FHS 兼容性："
+"command>。由于 <filename class=\"directory\">/usr</filename> 在系统引导的较早"
+"阶段可能不可用，需要将这些程序移动到根分区，以保证 FHS 兼容性："
 
 #. type: Content of: <sect1><sect2><screen>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/coreutils.xml:153
 #, no-wrap
 msgid "<userinput remap=\"install\">mv -v /usr/bin/{head,nice,sleep,touch} /bin</userinput>"
 msgstr "<userinput remap=\"install\">mv -v /usr/bin/{head,nice,sleep,touch} /bin</userinput>"
 
 #. type: Content of: <sect1><sect2><title>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/coreutils.xml:158
 msgid "Contents of Coreutils"
 msgstr "Coreutils 的内容"
 
 #. type: Content of: <sect1><sect2><segmentedlist><segtitle>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/coreutils.xml:161
 msgid "Installed programs"
 msgstr "安装的程序"
 
 #. type: Content of: <sect1><sect2><segmentedlist><segtitle>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/coreutils.xml:162
 msgid "Installed library"
 msgstr "安装的库"
 
 #. type: Content of: <sect1><sect2><segmentedlist><segtitle>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/coreutils.xml:163
 msgid "Installed directory"
 msgstr "安装的目录"
 
 #. type: Content of: <sect1><sect2><segmentedlist><seglistitem><seg>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/coreutils.xml:166
 msgid ""
 "[, b2sum, base32, base64, basename, basenc, cat, chcon, chgrp, chmod, chown, "
 "chroot, cksum, comm, cp, csplit, cut, date, dd, df, dir, dircolors, dirname, "
@@ -352,171 +305,138 @@ msgstr ""
 "vdir, wc, who, whoami, 以及 yes"
 
 #. type: Content of: <sect1><sect2><segmentedlist><seglistitem><seg>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/coreutils.xml:177
 msgid "libstdbuf.so (in /usr/libexec/coreutils)"
 msgstr "libstdbuf.so (在 /usr/libexec/coreutils 中)"
 
 #. type: Content of: <sect1><sect2><segmentedlist><seglistitem><seg>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/coreutils.xml:178
 msgid "/usr/libexec/coreutils"
 msgstr "/usr/libexec/coreutils"
 
 #. type: Content of: <sect1><sect2><variablelist><bridgehead>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/coreutils.xml:183
 msgid "Short Descriptions"
 msgstr "简要描述"
 
 #. type: Content of: <sect1><sect2><variablelist>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/coreutils.xml:184
 msgid ""
 "<?dbfo list-presentation=\"list\"?> <?dbhtml list-presentation=\"table\"?>"
 msgstr ""
 "<?dbfo list-presentation=\"list\"?> <?dbhtml list-presentation=\"table\"?>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/coreutils.xml:188
 msgid "<command>[</command>"
 msgstr "<command>[</command>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/coreutils.xml:190
 msgid ""
 "Is an actual command, /usr/bin/[, that is a synonym for the <command>test</"
 "command> command."
 msgstr ""
-"这是一个真实存在的命令，/usr/bin/[，它和 <command>test</command> 命令"
-"的功能相同。"
+"这是一个真实存在的命令，/usr/bin/[，它和 <command>test</command> 命令的功能相"
+"同。"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/coreutils.xml:193
 msgid "["
 msgstr "["
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/coreutils.xml:199
 msgid "<command>base32</command>"
 msgstr "<command>base32</command>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/coreutils.xml:201
 msgid ""
 "Encodes and decodes data according to the base32 specification (RFC 4648)"
 msgstr "根据 base32 标准 (RFC 4648) 编码和解码数据"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/coreutils.xml:204
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/coreutils.xml:215
 msgid "base64"
 msgstr "base64"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/coreutils.xml:210
 msgid "<command>base64</command>"
 msgstr "<command>base64</command>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/coreutils.xml:212
 msgid ""
 "Encodes and decodes data according to the base64 specification (RFC 4648)"
 msgstr "根据 base64 标准 (RFC 4648) 编码和解码数据"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/coreutils.xml:221
 msgid "<command>b2sum</command>"
 msgstr "<command>b2sum</command>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/coreutils.xml:223
 msgid "Prints or checks BLAKE2 (512-bit) checksums"
 msgstr "打印或检查 BLAKE2 (512 位) 校验和"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/coreutils.xml:225
 msgid "b2sum"
 msgstr "b2sum"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/coreutils.xml:231
 msgid "<command>basename</command>"
 msgstr "<command>basename</command>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/coreutils.xml:233
 msgid "Strips any path and a given suffix from a file name"
 msgstr "从文件名移除所有路径和一个给定后缀"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/coreutils.xml:235
 msgid "basename"
 msgstr "basename"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/coreutils.xml:241
 msgid "<command>basenc</command>"
 msgstr "<command>basenc</command>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/coreutils.xml:243
 msgid "Encodes or decodes data using various algorithms"
 msgstr "使用一些算法编码或解码数据"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/coreutils.xml:245
 msgid "basenc"
 msgstr "basenc"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/coreutils.xml:251
 msgid "<command>cat</command>"
 msgstr "<command>cat</command>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/coreutils.xml:253
 msgid "Concatenates files to standard output"
 msgstr "将文件合并到标准输出"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/coreutils.xml:255
 msgid "cat"
 msgstr "cat"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/coreutils.xml:261
 msgid "<command>chcon</command>"
 msgstr "<command>chcon</command>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/coreutils.xml:263
 msgid "Changes security context for files and directories"
 msgstr "修改文件和目录的 SELinux 安全上下文"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/coreutils.xml:265
 msgid "chcon"
 msgstr "chcon"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/coreutils.xml:271
 msgid "<command>chgrp</command>"
 msgstr "<command>chgrp</command>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/coreutils.xml:273
 msgid "Changes the group ownership of files and directories"
 msgstr "修改文件和目录所属的组"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/coreutils.xml:275
 msgid "chgrp"
 msgstr "chgrp"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/coreutils.xml:281
 msgid "<command>chmod</command>"
 msgstr "<command>chmod</command>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/coreutils.xml:283
 msgid ""
 "Changes the permissions of each file to the given mode; the mode can be "
 "either a symbolic representation of the changes to make or an octal number "
@@ -526,32 +446,26 @@ msgstr ""
 "进制码"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/coreutils.xml:287
 msgid "chmod"
 msgstr "chmod"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/coreutils.xml:293
 msgid "<command>chown</command>"
 msgstr "<command>chown</command>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/coreutils.xml:295
 msgid "Changes the user and/or group ownership of files and directories"
 msgstr "修改拥有文件的用户或组"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/coreutils.xml:298
 msgid "chown"
 msgstr "chown"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/coreutils.xml:304
 msgid "<command>chroot</command>"
 msgstr "<command>chroot</command>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/coreutils.xml:306
 msgid ""
 "Runs a command with the specified directory as the <filename class="
 "\"directory\">/</filename> directory"
@@ -559,66 +473,54 @@ msgstr ""
 "将给定目录作为 <filename class=\"directory\">/</filename> 目录，运行命令"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/coreutils.xml:309
 msgid "chroot"
 msgstr "chroot"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/coreutils.xml:315
 msgid "<command>cksum</command>"
 msgstr "<command>cksum</command>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/coreutils.xml:317
 msgid ""
 "Prints the Cyclic Redundancy Check (CRC) checksum and the byte counts of "
 "each specified file"
 msgstr "输出每个给定文件的循环冗余检查 (CRC) 校验和及字节数"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/coreutils.xml:320
 msgid "cksum"
 msgstr "cksum"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/coreutils.xml:326
 msgid "<command>comm</command>"
 msgstr "<command>comm</command>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/coreutils.xml:328
 msgid ""
 "Compares two sorted files, outputting in three columns the lines that are "
 "unique and the lines that are common"
 msgstr "比较两个排好序的文件，将两个文件特有的部分和它们共有的部分显示为三列"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/coreutils.xml:331
 msgid "comm"
 msgstr "comm"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/coreutils.xml:337
 msgid "<command>cp</command>"
 msgstr "<command>cp</command>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/coreutils.xml:339
 msgid "Copies files"
 msgstr "复制文件"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/coreutils.xml:341
 msgid "cp"
 msgstr "cp"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/coreutils.xml:347
 msgid "<command>csplit</command>"
 msgstr "<command>csplit</command>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/coreutils.xml:349
 msgid ""
 "Splits a given file into several new files, separating them according to "
 "given patterns or line numbers and outputting the byte count of each new file"
@@ -627,100 +529,82 @@ msgstr ""
 "节数"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/coreutils.xml:353
 msgid "csplit"
 msgstr "csplit"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/coreutils.xml:359
 msgid "<command>cut</command>"
 msgstr "<command>cut</command>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/coreutils.xml:361
 msgid ""
 "Prints sections of lines, selecting the parts according to given fields or "
 "positions"
 msgstr "根据给定的域或位置，打印输入的分节和选定部分"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/coreutils.xml:364
 msgid "cut"
 msgstr "cut"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/coreutils.xml:370
 msgid "<command>date</command>"
 msgstr "<command>date</command>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/coreutils.xml:372
 msgid "Displays the current time in the given format, or sets the system date"
 msgstr "以给定格式显示当前时间，或设定系统时间"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/coreutils.xml:375
 msgid "date"
 msgstr "date"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/coreutils.xml:381
 msgid "<command>dd</command>"
 msgstr "<command>dd</command>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/coreutils.xml:383
 msgid ""
 "Copies a file using the given block size and count, while optionally "
 "performing conversions on it"
 msgstr "以给定块大小和个数复制文件，同时可以进行转换"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/coreutils.xml:386
 msgid "dd"
 msgstr "dd"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/coreutils.xml:392
 msgid "<command>df</command>"
 msgstr "<command>df</command>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/coreutils.xml:394
 msgid ""
 "Reports the amount of disk space available (and used) on all mounted file "
 "systems, or only on the file systems holding the selected files"
 msgstr "报告每个已挂载文件系统 (或包含给定文件的文件系统) 的总大小和可用空间"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/coreutils.xml:398
 msgid "df"
 msgstr "df"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/coreutils.xml:404
 msgid "<command>dir</command>"
 msgstr "<command>dir</command>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/coreutils.xml:406
 msgid ""
 "Lists the contents of each given directory (the same as the <command>ls</"
 "command> command)"
 msgstr "列出给定目录的内容 (和 <command>ls</command> 命令相同)"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/coreutils.xml:409
 msgid "dir"
 msgstr "dir"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/coreutils.xml:415
 msgid "<command>dircolors</command>"
 msgstr "<command>dircolors</command>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/coreutils.xml:417
 msgid ""
 "Outputs commands to set the <envar>LS_COLOR</envar> environment variable to "
 "change the color scheme used by <command>ls</command>"
@@ -729,32 +613,26 @@ msgstr ""
 "command> 的配色方案"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/coreutils.xml:421
 msgid "dircolors"
 msgstr "dircolors"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/coreutils.xml:427
 msgid "<command>dirname</command>"
 msgstr "<command>dirname</command>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/coreutils.xml:429
 msgid "Strips the non-directory suffix from a file name"
 msgstr "从文件名中删掉非目录的后缀"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/coreutils.xml:431
 msgid "dirname"
 msgstr "dirname"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/coreutils.xml:437
 msgid "<command>du</command>"
 msgstr "<command>du</command>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/coreutils.xml:439
 msgid ""
 "Reports the amount of disk space used by the current directory, by each of "
 "the given directories (including all subdirectories) or by each of the given "
@@ -762,1006 +640,811 @@ msgid ""
 msgstr "报告当前目录使用的磁盘空间，给出当前目录下所有子目录和文件占用的空间"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/coreutils.xml:443
 msgid "du"
 msgstr "du"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/coreutils.xml:449
 msgid "<command>echo</command>"
 msgstr "<command>echo</command>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/coreutils.xml:451
 msgid "Displays the given strings"
 msgstr "显示给定字符串"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/coreutils.xml:453
 msgid "echo"
 msgstr "echo"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/coreutils.xml:459
 msgid "<command>env</command>"
 msgstr "<command>env</command>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/coreutils.xml:461
 msgid "Runs a command in a modified environment"
 msgstr "在修改的环境中运行命令"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/coreutils.xml:463
 msgid "env"
 msgstr "env"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/coreutils.xml:469
 msgid "<command>expand</command>"
 msgstr "<command>expand</command>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/coreutils.xml:471
 msgid "Converts tabs to spaces"
 msgstr "将制表符转换成空格"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/coreutils.xml:473
 msgid "expand"
 msgstr "expand"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/coreutils.xml:479
 msgid "<command>expr</command>"
 msgstr "<command>expr</command>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/coreutils.xml:481
 msgid "Evaluates expressions"
 msgstr "计算表达式"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/coreutils.xml:483
 msgid "expr"
 msgstr "expr"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/coreutils.xml:489
 msgid "<command>factor</command>"
 msgstr "<command>factor</command>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/coreutils.xml:491
 msgid "Prints the prime factors of all specified integer numbers"
 msgstr "打印所有给定整数的质因数"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/coreutils.xml:493
 msgid "factor"
 msgstr "factor"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/coreutils.xml:499
 msgid "<command>false</command>"
 msgstr "<command>false</command>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/coreutils.xml:501
 msgid ""
 "Does nothing, unsuccessfully; it always exits with a status code indicating "
 "failure"
 msgstr "什么也不做；总是以失败状态码退出；"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/coreutils.xml:504
 msgid "false"
 msgstr "false"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/coreutils.xml:510
 msgid "<command>fmt</command>"
 msgstr "<command>fmt</command>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/coreutils.xml:512
 msgid "Reformats the paragraphs in the given files"
 msgstr "重新格式化给定文件的段落"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/coreutils.xml:514
 msgid "fmt"
 msgstr "fmt"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/coreutils.xml:520
 msgid "<command>fold</command>"
 msgstr "<command>fold</command>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/coreutils.xml:522
 msgid "Wraps the lines in the given files"
 msgstr "折叠给定文件中的行"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/coreutils.xml:524
 msgid "fold"
 msgstr "fold"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/coreutils.xml:530
 msgid "<command>groups</command>"
 msgstr "<command>groups</command>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/coreutils.xml:532
 msgid "Reports a user's group memberships"
 msgstr "报告用户所属的组"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/coreutils.xml:534
 msgid "groups"
 msgstr "groups"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/coreutils.xml:540
 msgid "<command>head</command>"
 msgstr "<command>head</command>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/coreutils.xml:542
 msgid ""
 "Prints the first ten lines (or the given number of lines)  of each given file"
 msgstr "打印文件的前 10 (或给定行数) 行"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/coreutils.xml:545
 msgid "head"
 msgstr "head"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/coreutils.xml:551
 msgid "<command>hostid</command>"
 msgstr "<command>hostid</command>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/coreutils.xml:553
 msgid "Reports the numeric identifier (in hexadecimal) of the host"
 msgstr "以十六进制格式打印主机数字标识符"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/coreutils.xml:555
 msgid "hostid"
 msgstr "hostid"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/coreutils.xml:561
 msgid "<command>id</command>"
 msgstr "<command>id</command>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/coreutils.xml:563
 msgid ""
 "Reports the effective user ID, group ID, and group memberships of the "
 "current user or specified user"
 msgstr "报告当前用户或给定用户的有效用户 ID、组 ID 和所属的组"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/coreutils.xml:566
 msgid "id"
 msgstr "id"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/coreutils.xml:572
 msgid "<command>install</command>"
 msgstr "<command>install</command>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/coreutils.xml:574
 msgid ""
 "Copies files while setting their permission modes and, if possible, their "
 "owner and group"
 msgstr "复制文件并设定它们的访问权限，以及 (如果可能) 它们的所有者和属组"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/coreutils.xml:577
 msgid "install"
 msgstr "install"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/coreutils.xml:583
 msgid "<command>join</command>"
 msgstr "<command>join</command>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/coreutils.xml:585
 msgid "Joins the lines that have identical join fields from two separate files"
 msgstr "将两个文件中拥有相同域的行合并"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/coreutils.xml:588
 msgid "join"
 msgstr "join"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/coreutils.xml:594
 msgid "<command>link</command>"
 msgstr "<command>link</command>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/coreutils.xml:596
 msgid "Creates a hard link with the given name to a file"
 msgstr "以给定文件名创建硬链接"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/coreutils.xml:598
 msgid "link"
 msgstr "link"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/coreutils.xml:604
 msgid "<command>ln</command>"
 msgstr "<command>ln</command>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/coreutils.xml:606
 msgid "Makes hard links or soft (symbolic) links between files"
 msgstr "在文件之间创建硬链接或软 (符号) 链接"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/coreutils.xml:608
 msgid "ln"
 msgstr "ln"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/coreutils.xml:614
 msgid "<command>logname</command>"
 msgstr "<command>logname</command>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/coreutils.xml:616
 msgid "Reports the current user's login name"
 msgstr "报告当前用户登录名"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/coreutils.xml:618
 msgid "logname"
 msgstr "logname"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/coreutils.xml:624
 msgid "<command>ls</command>"
 msgstr "<command>ls</command>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/coreutils.xml:626
 msgid "Lists the contents of each given directory"
 msgstr "列出给定目录内容"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/coreutils.xml:628
 msgid "ls"
 msgstr "ls"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/coreutils.xml:634
 msgid "<command>md5sum</command>"
 msgstr "<command>md5sum</command>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/coreutils.xml:636
 msgid "Reports or checks Message Digest 5 (MD5) checksums"
 msgstr "报告或检查消息摘要 5 (MD5) 校验和"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/coreutils.xml:638
 msgid "md5sum"
 msgstr "md5sum"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/coreutils.xml:644
 msgid "<command>mkdir</command>"
 msgstr "<command>mkdir</command>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/coreutils.xml:646
 msgid "Creates directories with the given names"
 msgstr "以给定名称创建目录"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/coreutils.xml:648
 msgid "mkdir"
 msgstr "mkdir"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/coreutils.xml:654
 msgid "<command>mkfifo</command>"
 msgstr "<command>mkfifo</command>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/coreutils.xml:656
 msgid ""
 "Creates First-In, First-Outs (FIFOs), a \"named pipe\" in UNIX parlance, "
 "with the given names"
 msgstr "以给定名称创建先进先出表 (FIFO)，在 UNIX 惯用语中又称为 “命名管道”"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/coreutils.xml:659
 msgid "mkfifo"
 msgstr "mkfifo"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/coreutils.xml:665
 msgid "<command>mknod</command>"
 msgstr "<command>mknod</command>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/coreutils.xml:667
 msgid ""
 "Creates device nodes with the given names; a device node is a character "
 "special file, a block special file, or a FIFO"
 msgstr "以给定名称创建设备节点；设备节点可能是字符特殊文件、 块特殊文件或 FIFO"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/coreutils.xml:670
 msgid "mknod"
 msgstr "mknod"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/coreutils.xml:676
 msgid "<command>mktemp</command>"
 msgstr "<command>mktemp</command>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/coreutils.xml:678
 msgid "Creates temporary files in a secure manner; it is used in scripts"
 msgstr "安全地创建临时文件，常用在脚本中"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/coreutils.xml:680
 msgid "mktemp"
 msgstr "mktemp"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/coreutils.xml:686
 msgid "<command>mv</command>"
 msgstr "<command>mv</command>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/coreutils.xml:688
 msgid "Moves or renames files or directories"
 msgstr "移动或重命名文件或目录"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/coreutils.xml:690
 msgid "mv"
 msgstr "mv"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/coreutils.xml:696
 msgid "<command>nice</command>"
 msgstr "<command>nice</command>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/coreutils.xml:698
 msgid "Runs a program with modified scheduling priority"
 msgstr "以修改的调度优先级运行程序"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/coreutils.xml:700
 msgid "nice"
 msgstr "nice"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/coreutils.xml:706
 msgid "<command>nl</command>"
 msgstr "<command>nl</command>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/coreutils.xml:708
 msgid "Numbers the lines from the given files"
 msgstr "标出给定文件的行"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/coreutils.xml:710
 msgid "nl"
 msgstr "nl"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/coreutils.xml:716
 msgid "<command>nohup</command>"
 msgstr "<command>nohup</command>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/coreutils.xml:718
 msgid ""
 "Runs a command immune to hangups, with its output redirected to a log file"
 msgstr "执行命令并使其忽略挂机信号，同时将输出重定向到日志文件"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/coreutils.xml:721
 msgid "nohup"
 msgstr "nohup"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/coreutils.xml:727
 msgid "<command>nproc</command>"
 msgstr "<command>nproc</command>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/coreutils.xml:729
 msgid "Prints the number of processing units available to a process"
 msgstr "打印进程可用的处理单元数目"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/coreutils.xml:732
 msgid "nproc"
 msgstr "nproc"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/coreutils.xml:738
 msgid "<command>numfmt</command>"
 msgstr "<command>numfmt</command>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/coreutils.xml:740
 msgid "Converts numbers to or from human-readable strings"
 msgstr "在数字和人类可读字符串之间互相转换"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/coreutils.xml:742
 msgid "numfmt"
 msgstr "numfmt"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/coreutils.xml:748
 msgid "<command>od</command>"
 msgstr "<command>od</command>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/coreutils.xml:750
 msgid "Dumps files in octal and other formats"
 msgstr "以八进制或其他格式转储文件"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/coreutils.xml:752
 msgid "od"
 msgstr "od"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/coreutils.xml:758
 msgid "<command>paste</command>"
 msgstr "<command>paste</command>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/coreutils.xml:760
 msgid ""
 "Merges the given files, joining sequentially corresponding lines side by "
 "side, separated by tab characters"
 msgstr "合并给定文件，将它们的对应行连接起来，以制表符分割"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/coreutils.xml:763
 msgid "paste"
 msgstr "paste"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/coreutils.xml:769
 msgid "<command>pathchk</command>"
 msgstr "<command>pathchk</command>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/coreutils.xml:771
 msgid "Checks if file names are valid or portable"
 msgstr "检查文件名的有效性和可移植性"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/coreutils.xml:773
 msgid "pathchk"
 msgstr "pathchk"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/coreutils.xml:779
 msgid "<command>pinky</command>"
 msgstr "<command>pinky</command>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/coreutils.xml:781
 msgid ""
 "Is a lightweight finger client; it reports some information about the given "
 "users"
 msgstr "是轻量级 finger 客户端，报告给定用户的一些信息"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/coreutils.xml:784
 msgid "pinky"
 msgstr "pinky"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/coreutils.xml:790
 msgid "<command>pr</command>"
 msgstr "<command>pr</command>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/coreutils.xml:792
 msgid "Paginates and columnates files for printing"
 msgstr "对文件进行分页和分栏以便打印"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/coreutils.xml:794
 msgid "pr"
 msgstr "pr"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/coreutils.xml:800
 msgid "<command>printenv</command>"
 msgstr "<command>printenv</command>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/coreutils.xml:802
 msgid "Prints the environment"
 msgstr "打印环境变量"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/coreutils.xml:804
 msgid "printenv"
 msgstr "printenv"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/coreutils.xml:810
 msgid "<command>printf</command>"
 msgstr "<command>printf</command>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/coreutils.xml:812
 msgid ""
 "Prints the given arguments according to the given format, much like the C "
 "printf function"
 msgstr "以给定格式打印给定参数，很像 C printf 函数"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/coreutils.xml:815
 msgid "printf"
 msgstr "printf"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/coreutils.xml:821
 msgid "<command>ptx</command>"
 msgstr "<command>ptx</command>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/coreutils.xml:823
 msgid ""
 "Produces a permuted index from the contents of the given files, with each "
 "keyword in its context"
 msgstr "用文中的每个关键字，根据给定文件内容生成重排索引"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/coreutils.xml:826
 msgid "ptx"
 msgstr "ptx"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/coreutils.xml:832
 msgid "<command>pwd</command>"
 msgstr "<command>pwd</command>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/coreutils.xml:834
 msgid "Reports the name of the current working directory"
 msgstr "报告当前工作目录名"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/coreutils.xml:836
 msgid "pwd"
 msgstr "pwd"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/coreutils.xml:842
 msgid "<command>readlink</command>"
 msgstr "<command>readlink</command>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/coreutils.xml:844
 msgid "Reports the value of the given symbolic link"
 msgstr "报告给定符号链接的值"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/coreutils.xml:846
 msgid "readlink"
 msgstr "readlink"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/coreutils.xml:852
 msgid "<command>realpath</command>"
 msgstr "<command>realpath</command>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/coreutils.xml:854
 msgid "Prints the resolved path"
 msgstr "打印解析过的目录"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/coreutils.xml:856
 msgid "realpath"
 msgstr "realpath"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/coreutils.xml:862
 msgid "<command>rm</command>"
 msgstr "<command>rm</command>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/coreutils.xml:864
 msgid "Removes files or directories"
 msgstr "删除文件或目录"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/coreutils.xml:866
 msgid "rm"
 msgstr "rm"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/coreutils.xml:872
 msgid "<command>rmdir</command>"
 msgstr "<command>rmdir</command>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/coreutils.xml:874
 msgid "Removes directories if they are empty"
 msgstr "如果目录是空的，删除它们"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/coreutils.xml:876
 msgid "rmdir"
 msgstr "rmdir"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/coreutils.xml:882
 msgid "<command>runcon</command>"
 msgstr "<command>runcon</command>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/coreutils.xml:884
 msgid "Runs a command with specified security context"
 msgstr "以给定 SELinux 安全上下文运行命令"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/coreutils.xml:886
 msgid "runcon"
 msgstr "runcon"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/coreutils.xml:892
 msgid "<command>seq</command>"
 msgstr "<command>seq</command>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/coreutils.xml:894
 msgid ""
 "Prints a sequence of numbers within a given range and with a given increment"
 msgstr "以给定的范围和增量打印等差数列"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/coreutils.xml:897
 msgid "seq"
 msgstr "seq"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/coreutils.xml:903
 msgid "<command>sha1sum</command>"
 msgstr "<command>sha1sum</command>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/coreutils.xml:905
 msgid "Prints or checks 160-bit Secure Hash Algorithm 1 (SHA1)  checksums"
 msgstr "打印或检查 160 位安全散列算法 1  (SHA1) 校验和"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/coreutils.xml:908
 msgid "sha1sum"
 msgstr "sha1sum"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/coreutils.xml:914
 msgid "<command>sha224sum</command>"
 msgstr "<command>sha224sum</command>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/coreutils.xml:916
 msgid "Prints or checks 224-bit Secure Hash Algorithm checksums"
 msgstr "打印或检查 224 位安全散列算法校验和"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/coreutils.xml:918
 msgid "sha224sum"
 msgstr "sha224sum"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/coreutils.xml:924
 msgid "<command>sha256sum</command>"
 msgstr "<command>sha256sum</command>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/coreutils.xml:926
 msgid "Prints or checks 256-bit Secure Hash Algorithm checksums"
 msgstr "打印或检查 256 位安全散列算法校验和"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/coreutils.xml:928
 msgid "sha256sum"
 msgstr "sha256sum"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/coreutils.xml:934
 msgid "<command>sha384sum</command>"
 msgstr "<command>sha384sum</command>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/coreutils.xml:936
 msgid "Prints or checks 384-bit Secure Hash Algorithm checksums"
 msgstr "打印或检查 384 位安全散列算法校验和"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/coreutils.xml:938
 msgid "sha384sum"
 msgstr "sha384sum"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/coreutils.xml:944
 msgid "<command>sha512sum</command>"
 msgstr "<command>sha512sum</command>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/coreutils.xml:946
 msgid "Prints or checks 512-bit Secure Hash Algorithm checksums"
 msgstr "打印或检查 512 位安全散列算法校验和"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/coreutils.xml:948
 msgid "sha512sum"
 msgstr "sha512sum"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/coreutils.xml:954
 msgid "<command>shred</command>"
 msgstr "<command>shred</command>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/coreutils.xml:956
 msgid ""
 "Overwrites the given files repeatedly with complex patterns, making it "
 "difficult to recover the data"
 msgstr "将给定文件多次用复杂模式覆盖，增加恢复数据的难度"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/coreutils.xml:959
 msgid "shred"
 msgstr "shred"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/coreutils.xml:965
 msgid "<command>shuf</command>"
 msgstr "<command>shuf</command>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/coreutils.xml:967
 msgid "Shuffles lines of text"
 msgstr "打乱文件中的行"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/coreutils.xml:969
 msgid "shuf"
 msgstr "shuf"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/coreutils.xml:975
 msgid "<command>sleep</command>"
 msgstr "<command>sleep</command>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/coreutils.xml:977
 msgid "Pauses for the given amount of time"
 msgstr "等待给定时间"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/coreutils.xml:979
 msgid "sleep"
 msgstr "sleep"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/coreutils.xml:985
 msgid "<command>sort</command>"
 msgstr "<command>sort</command>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/coreutils.xml:987
 msgid "Sorts the lines from the given files"
 msgstr "对给定文件的行进行排序"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/coreutils.xml:989
 msgid "sort"
 msgstr "sort"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/coreutils.xml:995
 msgid "<command>split</command>"
 msgstr "<command>split</command>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/coreutils.xml:997
 msgid "Splits the given file into pieces, by size or by number of lines"
 msgstr "根据大小或行数，将指定文件分割成若干部分"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/coreutils.xml:1000
 msgid "split"
 msgstr "split"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/coreutils.xml:1006
 msgid "<command>stat</command>"
 msgstr "<command>stat</command>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/coreutils.xml:1008
 msgid "Displays file or filesystem status"
 msgstr "显示文件或文件系统状态"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/coreutils.xml:1010
 msgid "stat"
 msgstr "stat"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/coreutils.xml:1016
 msgid "<command>stdbuf</command>"
 msgstr "<command>stdbuf</command>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/coreutils.xml:1018
 msgid ""
 "Runs commands with altered buffering operations for its standard streams"
 msgstr "以修改的标准流缓冲操作运行命令"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/coreutils.xml:1021
 msgid "stdbuf"
 msgstr "stdbuf"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/coreutils.xml:1027
 msgid "<command>stty</command>"
 msgstr "<command>stty</command>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/coreutils.xml:1029
 msgid "Sets or reports terminal line settings"
 msgstr "设置或报告终端行设定"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/coreutils.xml:1031
 msgid "stty"
 msgstr "stty"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/coreutils.xml:1037
 msgid "<command>sum</command>"
 msgstr "<command>sum</command>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/coreutils.xml:1039
 msgid "Prints checksum and block counts for each given file"
 msgstr "打印每个指定文件的校验和及块个数"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/coreutils.xml:1041
 msgid "sum"
 msgstr "sum"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/coreutils.xml:1047
 msgid "<command>sync</command>"
 msgstr "<command>sync</command>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/coreutils.xml:1049
 msgid ""
 "Flushes file system buffers; it forces changed blocks to disk and updates "
 "the super block"
 msgstr "刷新文件系统缓冲；它将修改过的块强制写入磁盘，并更新超级块"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/coreutils.xml:1052
 msgid "sync"
 msgstr "sync"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/coreutils.xml:1058
 msgid "<command>tac</command>"
 msgstr "<command>tac</command>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/coreutils.xml:1060
 msgid "Concatenates the given files in reverse"
 msgstr "逆序连接给定文件"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/coreutils.xml:1062
 msgid "tac"
 msgstr "tac"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/coreutils.xml:1068
 msgid "<command>tail</command>"
 msgstr "<command>tail</command>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/coreutils.xml:1070
 msgid ""
 "Prints the last ten lines (or the given number of lines) of each given file"
 msgstr "输出给定文件的最后 10 (或指定行数) 行"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/coreutils.xml:1073
 msgid "tail"
 msgstr "tail"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/coreutils.xml:1079
 msgid "<command>tee</command>"
 msgstr "<command>tee</command>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/coreutils.xml:1081
 msgid ""
 "Reads from standard input while writing both to standard output and to the "
 "given files"
 msgstr "读取标准输入，并将内容同时写入标准输出和给定文件"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/coreutils.xml:1084
 msgid "tee"
 msgstr "tee"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/coreutils.xml:1090
 msgid "<command>test</command>"
 msgstr "<command>test</command>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/coreutils.xml:1092
 msgid "Compares values and checks file types"
 msgstr "比较两个值，或检查文件类型"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/coreutils.xml:1094
 msgid "test"
 msgstr "test"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/coreutils.xml:1100
 msgid "<command>timeout</command>"
 msgstr "<command>timeout</command>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/coreutils.xml:1102
 msgid "Runs a command with a time limit"
 msgstr "在限定时间内运行命令"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/coreutils.xml:1104
 msgid "timeout"
 msgstr "timeout"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/coreutils.xml:1110
 msgid "<command>touch</command>"
 msgstr "<command>touch</command>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/coreutils.xml:1112
 msgid ""
 "Changes file timestamps, setting the access and modification times of the "
 "given files to the current time; files that do not exist are created with "
@@ -1771,253 +1454,204 @@ msgstr ""
 "不存在的文件"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/coreutils.xml:1116
 msgid "touch"
 msgstr "touch"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/coreutils.xml:1122
 msgid "<command>tr</command>"
 msgstr "<command>tr</command>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/coreutils.xml:1124
 msgid ""
 "Translates, squeezes, and deletes the given characters from standard input"
 msgstr "从标准输入变换、压缩或删除给定字符"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/coreutils.xml:1127
 msgid "tr"
 msgstr "tr"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/coreutils.xml:1133
 msgid "<command>true</command>"
 msgstr "<command>true</command>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/coreutils.xml:1135
 msgid ""
 "Does nothing, successfully; it always exits with a status code indicating "
 "success"
 msgstr "什么也不做；总是以成功状态码退出"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/coreutils.xml:1138
 msgid "true"
 msgstr "true"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/coreutils.xml:1144
 msgid "<command>truncate</command>"
 msgstr "<command>truncate</command>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/coreutils.xml:1146
 msgid "Shrinks or expands a file to the specified size"
 msgstr "将文件截断或扩展到指定大小"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/coreutils.xml:1148
 msgid "truncate"
 msgstr "truncate"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/coreutils.xml:1154
 msgid "<command>tsort</command>"
 msgstr "<command>tsort</command>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/coreutils.xml:1156
 msgid ""
 "Performs a topological sort; it writes a completely ordered list according "
 "to the partial ordering in a given file"
 msgstr "进行拓扑排序；根据给定文件的部分顺序信息输出完整的排序列表"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/coreutils.xml:1159
 msgid "tsort"
 msgstr "tsort"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/coreutils.xml:1165
 msgid "<command>tty</command>"
 msgstr "<command>tty</command>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/coreutils.xml:1167
 msgid "Reports the file name of the terminal connected to standard input"
 msgstr "报告标准输入的终端文件名"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/coreutils.xml:1170
 msgid "tty"
 msgstr "tty"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/coreutils.xml:1176
 msgid "<command>uname</command>"
 msgstr "<command>uname</command>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/coreutils.xml:1178
 msgid "Reports system information"
 msgstr "报告系统信息"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/coreutils.xml:1180
 msgid "uname"
 msgstr "uname"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/coreutils.xml:1186
 msgid "<command>unexpand</command>"
 msgstr "<command>unexpand</command>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/coreutils.xml:1188
 msgid "Converts spaces to tabs"
 msgstr "将空格转换成制表符"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/coreutils.xml:1190
 msgid "unexpand"
 msgstr "unexpand"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/coreutils.xml:1196
 msgid "<command>uniq</command>"
 msgstr "<command>uniq</command>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/coreutils.xml:1198
 msgid "Discards all but one of successive identical lines"
 msgstr "在连续的相同行中只保留一行，删除其他所有行"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/coreutils.xml:1200
 msgid "uniq"
 msgstr "uniq"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/coreutils.xml:1206
 msgid "<command>unlink</command>"
 msgstr "<command>unlink</command>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/coreutils.xml:1208
 msgid "Removes the given file"
 msgstr "删除给定文件"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/coreutils.xml:1210
 msgid "unlink"
 msgstr "unlink"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/coreutils.xml:1216
 msgid "<command>users</command>"
 msgstr "<command>users</command>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/coreutils.xml:1218
 msgid "Reports the names of the users currently logged on"
 msgstr "报告当前登录系统的用户名"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/coreutils.xml:1220
 msgid "users"
 msgstr "users"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/coreutils.xml:1226
 msgid "<command>vdir</command>"
 msgstr "<command>vdir</command>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/coreutils.xml:1228
 msgid "Is the same as <command>ls -l</command>"
 msgstr "和 <command>ls -l</command> 相同"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/coreutils.xml:1230
 msgid "vdir"
 msgstr "vdir"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/coreutils.xml:1236
 msgid "<command>wc</command>"
 msgstr "<command>wc</command>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/coreutils.xml:1238
 msgid ""
 "Reports the number of lines, words, and bytes for each given file, as well "
 "as a total line when more than one file is given"
 msgstr "报告给定文件的行数、单词数和字节数"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/coreutils.xml:1241
 msgid "wc"
 msgstr "wc"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/coreutils.xml:1247
 msgid "<command>who</command>"
 msgstr "<command>who</command>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/coreutils.xml:1249
 msgid "Reports who is logged on"
 msgstr "报告当前登录的用户"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/coreutils.xml:1251
 msgid "who"
 msgstr "who"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/coreutils.xml:1257
 msgid "<command>whoami</command>"
 msgstr "<command>whoami</command>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/coreutils.xml:1259
 msgid "Reports the user name associated with the current effective user ID"
 msgstr "报告与当前有效用户 ID 相关的用户名"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/coreutils.xml:1262
 msgid "whoami"
 msgstr "whoami"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/coreutils.xml:1268
 msgid "<command>yes</command>"
 msgstr "<command>yes</command>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/coreutils.xml:1270
 msgid "Repeatedly outputs <quote>y</quote> or a given string until killed"
 msgstr "不停输出 <quote>y</quote> 或给定字符串，直到被杀死"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/coreutils.xml:1273
 msgid "yes"
 msgstr "yes"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/coreutils.xml:1279
 msgid "<filename class=\"libraryfile\">libstdbuf</filename>"
 msgstr "<filename class=\"libraryfile\">libstdbuf</filename>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/coreutils.xml:1281
 msgid "Library used by <command>stdbuf</command>"
 msgstr "<command>stdbuf</command> 使用的库"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/coreutils.xml:1283
 msgid "libstdbuf"
 msgstr "libstdbuf"

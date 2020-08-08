@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2020-06-17 12:44+0800\n"
+"POT-Creation-Date: 2020-08-08 19:28+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -12,13 +12,11 @@ msgstr ""
 "X-Generator: Translate Toolkit 2.2.5\n"
 
 #. type: Content of: <sect1><sect1info><address>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/gdbm.xml:14
 #, no-wrap
 msgid "&gdbm-url;"
 msgstr "&gdbm-url;"
 
 #. type: Content of: <sect1><sect1info>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/gdbm.xml:12
 msgid ""
 "<productname>gdbm</productname> <productnumber>&gdbm-version;</"
 "productnumber> <placeholder type=\"address\" id=\"0\"/>"
@@ -27,17 +25,14 @@ msgstr ""
 "productnumber> <placeholder type=\"address\" id=\"0\"/>"
 
 #. type: Content of: <sect1><title>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/gdbm.xml:17
 msgid "GDBM-&gdbm-version;"
 msgstr "GDBM-&gdbm-version;"
 
 #. type: Content of: <sect1><indexterm><primary>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/gdbm.xml:20
 msgid "GDBM"
 msgstr "GDBM"
 
 #. type: Content of: <sect1><sect2><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/gdbm.xml:26
 msgid ""
 "The GDBM package contains the GNU Database Manager.  It is a library of "
 "database functions that use extensible hashing and works similar to the "
@@ -46,52 +41,43 @@ msgid ""
 "with its data."
 msgstr ""
 "GDBM 软件包包含 GNU 数据库管理器。它是一个使用可扩展散列的数据库函数库，工作"
-"方法和标准 UNIX dbm 类似。该库提供用于存储键值对、通过键搜索和获取数据，以"
-"及删除键和对应数据的原语。"
+"方法和标准 UNIX dbm 类似。该库提供用于存储键值对、通过键搜索和获取数据，以及"
+"删除键和对应数据的原语。"
 
 #. type: Content of: <sect1><sect2><segmentedlist><segtitle>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/gdbm.xml:33
 msgid "&buildtime;"
 msgstr "&buildtime;"
 
 #. type: Content of: <sect1><sect2><segmentedlist><segtitle>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/gdbm.xml:34
 msgid "&diskspace;"
 msgstr "&diskspace;"
 
 #. type: Content of: <sect1><sect2><segmentedlist><seglistitem><seg>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/gdbm.xml:37
 msgid "&gdbm-fin-sbu;"
 msgstr "&gdbm-fin-sbu;"
 
 #. type: Content of: <sect1><sect2><segmentedlist><seglistitem><seg>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/gdbm.xml:38
 msgid "&gdbm-fin-du;"
 msgstr "&gdbm-fin-du;"
 
 #. type: Content of: <sect1><sect2><title>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/gdbm.xml:45
 msgid "Installation of GDBM"
 msgstr "安装 GDBM"
 
 #. type: Content of: <sect1><sect2><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/gdbm.xml:47
 msgid "First, fix an issue first identified by gcc-10:"
 msgstr "首先，修复一个 GCC-10 首先发现的问题："
 
 #. type: Content of: <sect1><sect2><screen>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/gdbm.xml:49
 #, no-wrap
 msgid "<userinput remap=\"pre\">sed -r -i '/^char.*parseopt_program_(doc|args)/d' src/parseopt.c</userinput>"
 msgstr "<userinput remap=\"pre\">sed -r -i '/^char.*parseopt_program_(doc|args)/d' src/parseopt.c</userinput>"
 
 #. type: Content of: <sect1><sect2><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/gdbm.xml:51
 msgid "Prepare GDBM for compilation:"
 msgstr "准备编译 GDBM："
 
 #. type: Content of: <sect1><sect2><screen>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/gdbm.xml:53
 #, no-wrap
 msgid ""
 "<userinput remap=\"configure\">./configure --prefix=/usr    \\\n"
@@ -103,165 +89,134 @@ msgstr ""
 "            --enable-libgdbm-compat</userinput>"
 
 #. type: Content of: <sect1><sect2><variablelist><title>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/gdbm.xml:58
 msgid "The meaning of the configure option:"
 msgstr "配置选项的含义："
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/gdbm.xml:61
 msgid "<envar>--enable-libgdbm-compat</envar>"
 msgstr "<envar>--enable-libgdbm-compat</envar>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/gdbm.xml:63
 msgid ""
 "This switch enables building the libgdbm compatibility library.  Some "
 "packages outside of LFS may require the older DBM routines it provides."
 msgstr ""
-"该选项启用 libgdbm 兼容性库的构建。LFS 之外的一些软件包需要它提供的老"
-"式 DBM 子程序。"
+"该选项启用 libgdbm 兼容性库的构建。LFS 之外的一些软件包需要它提供的老式 DBM "
+"子程序。"
 
 #. type: Content of: <sect1><sect2><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/gdbm.xml:70
 msgid "Compile the package:"
 msgstr "编译该软件包："
 
 #. type: Content of: <sect1><sect2><screen>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/gdbm.xml:72
 #, no-wrap
 msgid "<userinput remap=\"make\">make</userinput>"
 msgstr "<userinput remap=\"make\">make</userinput>"
 
 #. type: Content of: <sect1><sect2><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/gdbm.xml:74
 msgid "To test the results, issue:"
 msgstr "运行以下命令以测试编译结果："
 
 #. type: Content of: <sect1><sect2><screen>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/gdbm.xml:76
 #, no-wrap
 msgid "<userinput remap=\"test\">make check</userinput>"
 msgstr "<userinput remap=\"test\">make check</userinput>"
 
 #. type: Content of: <sect1><sect2><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/gdbm.xml:78
 msgid "Install the package:"
 msgstr "安装该软件包："
 
 #. type: Content of: <sect1><sect2><screen>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/gdbm.xml:80
 #, no-wrap
 msgid "<userinput remap=\"install\">make install</userinput>"
 msgstr "<userinput remap=\"install\">make install</userinput>"
 
 #. type: Content of: <sect1><sect2><title>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/gdbm.xml:85
 msgid "Contents of GDBM"
 msgstr "GDBM 的内容"
 
 #. type: Content of: <sect1><sect2><segmentedlist><segtitle>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/gdbm.xml:88
 msgid "Installed programs"
 msgstr "安装的程序"
 
 #. type: Content of: <sect1><sect2><segmentedlist><segtitle>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/gdbm.xml:89
 msgid "Installed libraries"
 msgstr "安装的库"
 
 #. type: Content of: <sect1><sect2><segmentedlist><seglistitem><seg>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/gdbm.xml:92
 msgid "gdbm_dump, gdbm_load, and gdbmtool"
 msgstr "gdbm_dump, gdbm_load, 以及 gdbmtool"
 
 #. type: Content of: <sect1><sect2><segmentedlist><seglistitem><seg>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/gdbm.xml:93
 msgid "libgdbm.so and libgdbm_compat.so"
 msgstr "libgdbm.so 和 libgdbm_compat.so"
 
 #. type: Content of: <sect1><sect2><variablelist><bridgehead>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/gdbm.xml:98
 msgid "Short Descriptions"
 msgstr "简要描述"
 
 #. type: Content of: <sect1><sect2><variablelist>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/gdbm.xml:99
 msgid ""
 "<?dbfo list-presentation=\"list\"?> <?dbhtml list-presentation=\"table\"?>"
 msgstr ""
 "<?dbfo list-presentation=\"list\"?> <?dbhtml list-presentation=\"table\"?>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/gdbm.xml:103
 msgid "<command>gdbm_dump</command>"
 msgstr "<command>gdbm_dump</command>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/gdbm.xml:105
 msgid "Dumps a GDBM database to a file"
 msgstr "将 GDBM 数据库转储到文件"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/gdbm.xml:107
 msgid "gdbm_dump"
 msgstr "gdbm_dump"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/gdbm.xml:113
 msgid "<command>gdbm_load</command>"
 msgstr "<command>gdbm_load</command>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/gdbm.xml:115
 msgid "Recreates a GDBM database from a dump file"
 msgstr "从转储文件重建 GDBM 数据库"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/gdbm.xml:117
 msgid "gdbm_load"
 msgstr "gdbm_load"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/gdbm.xml:123
 msgid "<command>gdbmtool</command>"
 msgstr "<command>gdbmtool</command>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/gdbm.xml:125
 msgid "Tests and modifies a GDBM database"
 msgstr "测试和修改 GDBM 数据库"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/gdbm.xml:127
 msgid "gdbmtool"
 msgstr "gdbmtool"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/gdbm.xml:133
 msgid "<filename class=\"libraryfile\">libgdbm</filename>"
 msgstr "<filename class=\"libraryfile\">libgdbm</filename>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/gdbm.xml:135
 msgid "Contains functions to manipulate a hashed database"
 msgstr "包含用于操作散列数据库的函数"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/gdbm.xml:137
 msgid "libgdbm"
 msgstr "libgdbm"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/gdbm.xml:143
 msgid "<filename class=\"libraryfile\">libgdbm_compat</filename>"
 msgstr "<filename class=\"libraryfile\">libgdbm_compat</filename>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/gdbm.xml:145
 msgid "Compatibility library containing older DBM functions"
 msgstr "包含老式 DBM 函数的兼容性库"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/gdbm.xml:147
 msgid "libgdbm_compat"
 msgstr "libgdbm_compat"

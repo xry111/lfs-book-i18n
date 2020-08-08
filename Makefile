@@ -7,15 +7,16 @@ ALL_XML_FILES = $(shell find $(LFS_EN) -type f -name '*.xml')
 EXCLUDE_FILES = # empty for now
 XML_FILES = $(filter-out $(EXCLUDE_FILES), $(ALL_XML_FILES))
 PO_FILES = $(patsubst $(LFS_EN)/%.xml, $(MLANG)/%.po, $(XML_FILES))
+PO4A_FLAGS = -f docbook --porefs none
 
 $(MLANG)/chapter01/changelog.po: $(LFS_EN)/chapter01/changelog.xml changelogtranslator.py templatetranslator.py
 	mkdir -pv "$(@D)"
-	po4a-updatepo -f docbook -m $< -p $@
+	po4a-updatepo $(PO4A_FLAGS) -m $< -p $@
 	./changelogtranslator.py $(MLANG)
 
 $(MLANG)/%.po: $(LFS_EN)/%.xml
 	mkdir -pv "$(@D)"
-	po4a-updatepo -f docbook -m $< -p $@
+	po4a-updatepo $(PO4A_FLAGS) -m $< -p $@
 	touch $@
 
 MXML_FILES = $(patsubst $(LFS_EN)/%.xml, %.xml, $(XML_FILES))

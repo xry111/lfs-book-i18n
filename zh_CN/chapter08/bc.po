@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2020-06-21 23:42+0800\n"
+"POT-Creation-Date: 2020-08-08 19:28+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -12,13 +12,11 @@ msgstr ""
 "X-Generator: Translate Toolkit 2.2.5\n"
 
 #. type: Content of: <sect1><sect1info><address>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/bc.xml:14
 #, no-wrap
 msgid "&bc-url;"
 msgstr "&bc-url;"
 
 #. type: Content of: <sect1><sect1info>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/bc.xml:12
 msgid ""
 "<productname>bc</productname> <productnumber>&bc-version;</productnumber> "
 "<placeholder type=\"address\" id=\"0\"/>"
@@ -27,147 +25,119 @@ msgstr ""
 "<placeholder type=\"address\" id=\"0\"/>"
 
 #. type: Content of: <sect1><title>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/bc.xml:17
 msgid "Bc-&bc-version;"
 msgstr "Bc-&bc-version;"
 
 #. type: Content of: <sect1><indexterm><primary>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/bc.xml:20
 msgid "Bc"
 msgstr "Bc"
 
 #. type: Content of: <sect1><sect2><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/bc.xml:26
 msgid ""
 "The Bc package contains an arbitrary precision numeric processing language."
 msgstr "Bc 软件包包含一个任意精度数值处理语言。"
 
 #. type: Content of: <sect1><sect2><segmentedlist><segtitle>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/bc.xml:30
 msgid "&buildtime;"
 msgstr "&buildtime;"
 
 #. type: Content of: <sect1><sect2><segmentedlist><segtitle>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/bc.xml:31
 msgid "&diskspace;"
 msgstr "&diskspace;"
 
 #. type: Content of: <sect1><sect2><segmentedlist><seglistitem><seg>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/bc.xml:34
 msgid "&bc-fin-sbu;"
 msgstr "&bc-fin-sbu;"
 
 #. type: Content of: <sect1><sect2><segmentedlist><seglistitem><seg>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/bc.xml:35
 msgid "&bc-fin-du;"
 msgstr "&bc-fin-du;"
 
 #. type: Content of: <sect1><sect2><title>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/bc.xml:42
 msgid "Installation of Bc"
 msgstr "安装 Bc"
 
 #. type: Content of: <sect1><sect2><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/bc.xml:44
 msgid "Prepare Bc for compilation:"
 msgstr "准备编译 Bc："
 
 #. type: Content of: <sect1><sect2><screen>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/bc.xml:46
 #, no-wrap
 msgid "<userinput remap=\"configure\">PREFIX=/usr CC=gcc CFLAGS=\"-std=c99\" ./configure.sh -G -O3</userinput>"
 msgstr "<userinput remap=\"configure\">PREFIX=/usr CC=gcc CFLAGS=\"-std=c99\" ./configure.sh -G -O3</userinput>"
 
 #. type: Content of: <sect1><sect2><variablelist><title>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/bc.xml:49
 msgid "The meaning of the configure options:"
 msgstr "配置选项的含义："
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/bc.xml:52
 msgid "<parameter>CC=gcc CFLAGS=\"-std=c99\"</parameter>"
 msgstr "<parameter>CC=gcc CFLAGS=\"-std=c99\"</parameter>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/bc.xml:54
 msgid "These parameters specify the compiler and the C standard to use."
 msgstr "该选项指定编译时使用的 C 编译器和标准。"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/bc.xml:59
 msgid "<parameter>-O3</parameter>"
 msgstr "<parameter>-O3</parameter>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/bc.xml:61
 msgid "Specify the optimization to use."
 msgstr "该选项指定编译时使用的优化等级。"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/bc.xml:66
 msgid "<parameter>-G</parameter>"
 msgstr "<parameter>-G</parameter>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/bc.xml:68
 msgid "Omit parts of the test suite that won't work without a GNU bc present."
 msgstr "忽略在没有 GNU bc 存在时无法工作的测试。"
 
 #. type: Content of: <sect1><sect2><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/bc.xml:74
 msgid "Compile the package:"
 msgstr "编译该软件包："
 
 #. type: Content of: <sect1><sect2><screen>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/bc.xml:76
 #, no-wrap
 msgid "<userinput remap=\"make\">make</userinput>"
 msgstr "<userinput remap=\"make\">make</userinput>"
 
 #. type: Content of: <sect1><sect2><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/bc.xml:78
 msgid "To test bc, run:"
 msgstr "为了测试 bc，运行："
 
 #. type: Content of: <sect1><sect2><screen>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/bc.xml:80
 #, no-wrap
 msgid "<userinput remap=\"test\">make test</userinput>"
 msgstr "<userinput remap=\"test\">make test</userinput>"
 
 #. type: Content of: <sect1><sect2><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/bc.xml:83
 msgid "Install the package:"
 msgstr "安装该软件包："
 
 #. type: Content of: <sect1><sect2><screen>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/bc.xml:85
 #, no-wrap
 msgid "<userinput remap=\"install\">make install</userinput>"
 msgstr "<userinput remap=\"install\">make install</userinput>"
 
 #. type: Content of: <sect1><sect2><title>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/bc.xml:90
 msgid "Contents of Bc"
 msgstr "Bc 的内容"
 
 #. type: Content of: <sect1><sect2><segmentedlist><segtitle>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/bc.xml:93
 msgid "Installed programs"
 msgstr "安装的程序"
 
 #. type: Content of: <sect1><sect2><segmentedlist><seglistitem><seg>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/bc.xml:96
 msgid "bc and dc"
 msgstr "bc 和 dc"
 
 #. type: Content of: <sect1><sect2><variablelist><bridgehead>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/bc.xml:101
 msgid "Short Descriptions"
 msgstr "简要描述"
 
 #. type: Content of: <sect1><sect2><variablelist>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/bc.xml:102
 msgid ""
 "<?dbfo list-presentation=\"list\"?> <?dbhtml list-presentation=\"table\"?>"
 msgstr ""
@@ -175,31 +145,25 @@ msgstr ""
 "dbfo list-presentation=\"list\"?> <?dbhtml list-presentation=\"table\"?>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/bc.xml:106
 msgid "<command>bc</command>"
 msgstr "<command>bc</command>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/bc.xml:108
 msgid "A command line calculator"
 msgstr "一个命令行计算器"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/bc.xml:110
 msgid "bc"
 msgstr "bc"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/bc.xml:116
 msgid "<command>dc</command>"
 msgstr "<command>dc</command>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/bc.xml:118
 msgid "A reverse-polish command line calculator"
 msgstr "一个逆波兰式命令行计算器"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/bc.xml:120
 msgid "dc"
 msgstr "dc"

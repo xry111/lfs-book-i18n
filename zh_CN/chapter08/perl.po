@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2020-07-01 03:56+0800\n"
+"POT-Creation-Date: 2020-08-08 19:28+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -12,13 +12,11 @@ msgstr ""
 "X-Generator: Translate Toolkit 2.2.5\n"
 
 #. type: Content of: <sect1><sect1info><address>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/perl.xml:14
 #, no-wrap
 msgid "&perl-url;"
 msgstr "&perl-url;"
 
 #. type: Content of: <sect1><sect1info>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/perl.xml:12
 msgid ""
 "<productname>perl</productname> <productnumber>&perl-version;</"
 "productnumber> <placeholder type=\"address\" id=\"0\"/>"
@@ -27,47 +25,38 @@ msgstr ""
 "productnumber> <placeholder type=\"address\" id=\"0\"/>"
 
 #. type: Content of: <sect1><title>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/perl.xml:17
 msgid "Perl-&perl-version;"
 msgstr "Perl-&perl-version;"
 
 #. type: Content of: <sect1><indexterm><primary>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/perl.xml:20
 msgid "Perl"
 msgstr "Perl"
 
 #. type: Content of: <sect1><sect2><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/perl.xml:26
 msgid "The Perl package contains the Practical Extraction and Report Language."
 msgstr "Perl 软件包包含实用报表提取语言。"
 
 #. type: Content of: <sect1><sect2><segmentedlist><segtitle>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/perl.xml:30
 msgid "&buildtime;"
 msgstr "&buildtime;"
 
 #. type: Content of: <sect1><sect2><segmentedlist><segtitle>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/perl.xml:31
 msgid "&diskspace;"
 msgstr "&diskspace;"
 
 #. type: Content of: <sect1><sect2><segmentedlist><seglistitem><seg>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/perl.xml:34
 msgid "&perl-fin-sbu;"
 msgstr "&perl-fin-sbu;"
 
 #. type: Content of: <sect1><sect2><segmentedlist><seglistitem><seg>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/perl.xml:35
 msgid "&perl-fin-du;"
 msgstr "&perl-fin-du;"
 
 #. type: Content of: <sect1><sect2><title>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/perl.xml:42
 msgid "Installation of Perl"
 msgstr "安装 Perl"
 
 #. type: Content of: <sect1><sect2><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/perl.xml:44
 msgid ""
 "This version of Perl now builds the Compress::Raw::Zlib and Compress::Raw::"
 "BZip2 modules. By default Perl will use an internal copy of the sources for "
@@ -79,7 +68,6 @@ msgstr ""
 "经安装好的库："
 
 #. type: Content of: <sect1><sect2><screen>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/perl.xml:50
 #, no-wrap
 msgid ""
 "<userinput remap=\"pre\">export BUILD_ZLIB=False\n"
@@ -89,7 +77,6 @@ msgstr ""
 "export BUILD_BZIP2=0</userinput>"
 
 #. type: Content of: <sect1><sect2><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/perl.xml:53
 msgid ""
 "To have full control over the way Perl is set up, you can remove the <quote>-"
 "des</quote> options from the following command and hand-pick the way this "
@@ -101,7 +88,6 @@ msgstr ""
 "检测的默认值："
 
 #. type: Content of: <sect1><sect2><screen>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/perl.xml:58
 #, no-wrap
 msgid ""
 "<userinput remap=\"configure\">sh Configure -des                                         \\\n"
@@ -135,17 +121,14 @@ msgstr ""
 "             -Dusethreads</userinput>"
 
 #. type: Content of: <sect1><sect2><variablelist><title>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/perl.xml:74
 msgid "The meaning of the configure options:"
 msgstr "配置选项的含义："
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/perl.xml:77
 msgid "<parameter>-Dvendorprefix=/usr</parameter>"
 msgstr "<parameter>-Dvendorprefix=/usr</parameter>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/perl.xml:79
 msgid ""
 "This ensures <command>perl</command> knows how to tell packages where they "
 "should install their perl modules."
@@ -154,12 +137,10 @@ msgstr ""
 "块。"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/perl.xml:85
 msgid "<parameter>-Dpager=\"/usr/bin/less -isR\"</parameter>"
 msgstr "<parameter>-Dpager=\"/usr/bin/less -isR\"</parameter>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/perl.xml:87
 msgid ""
 "This ensures that <userinput>less</userinput> is used instead of "
 "<userinput>more</userinput>."
@@ -168,7 +149,6 @@ msgstr ""
 "<userinput>more</userinput>。"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/perl.xml:93
 msgid ""
 "<parameter>-Dman1dir=/usr/share/man/man1 -Dman3dir=/usr/share/man/man3</"
 "parameter>"
@@ -177,7 +157,6 @@ msgstr ""
 "parameter>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/perl.xml:96
 msgid ""
 "Since Groff is not installed yet, <command>Configure</command> thinks that "
 "we do not want man pages for Perl.  Issuing these parameters overrides this "
@@ -187,32 +166,26 @@ msgstr ""
 "man 页面。这些参数覆盖这个判断。"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/perl.xml:103
 msgid "<parameter>-Duseshrplib</parameter>"
 msgstr "<parameter>-Duseshrplib</parameter>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/perl.xml:105
 msgid "Build a shared libperl needed by some perl modules."
 msgstr "构建 libperl 共享库，一些 perl 模块需要它。"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/perl.xml:110
 msgid "<parameter>-Dusethreads</parameter>"
 msgstr "<parameter>-Dusethreads</parameter>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/perl.xml:112
 msgid "Build perl with support for threads."
 msgstr "构建带有线程支持的 perl。"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/perl.xml:117
 msgid "<parameter>-Dprivlib,-Darchlib,-Dsitelib,...</parameter>"
 msgstr "<parameter>-Dprivlib,-Darchlib,-Dsitelib,...</parameter>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/perl.xml:119
 msgid ""
 "These settings define where Perl is looking for installed modules. The LFS "
 "editors chose to put them in a directory structure based on the Major.Minor "
@@ -220,40 +193,34 @@ msgid ""
 "Patch levels (&perl-version;) without the need to reinstall all of the "
 "modules again."
 msgstr ""
-"这些选项定义 Perl 查找系统上安装的模块的位置。"
-"LFS 编辑决定将它们存放在以主版本号.次版本号 (如 &perl-version-min;) 格式表示 Perl 版本"
-"的目录结构中，使得可以在升级 Perl 到更新的修订号 "
-"(修订号即类似 &perl-version; 这样的完整版本号中最后一部分) 时，不需要重新安装所有模块。"
+"这些选项定义 Perl 查找系统上安装的模块的位置。LFS 编辑决定将它们存放在以主版"
+"本号.次版本号 (如 &perl-version-min;) 格式表示 Perl 版本的目录结构中，使得可"
+"以在升级 Perl 到更新的修订号 (修订号即类似 &perl-version; 这样的完整版本号中"
+"最后一部分) 时，不需要重新安装所有模块。"
 
 #. type: Content of: <sect1><sect2><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/perl.xml:129
 msgid "Compile the package:"
 msgstr "编译该软件包："
 
 #. type: Content of: <sect1><sect2><screen>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/perl.xml:131
 #, no-wrap
 msgid "<userinput remap=\"make\">make</userinput>"
 msgstr "<userinput remap=\"make\">make</userinput>"
 
 #. type: Content of: <sect1><sect2><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/perl.xml:133
 msgid "To test the results (approximately 11 SBU), issue:"
 msgstr "为了测试编译结果 (需要约 11 SBU)，执行以下命令："
 
 #. type: Content of: <sect1><sect2><screen>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/perl.xml:135
 #, no-wrap
 msgid "<userinput remap=\"test\">make test</userinput>"
 msgstr "<userinput remap=\"test\">make test</userinput>"
 
 #. type: Content of: <sect1><sect2><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/perl.xml:140
 msgid "Install the package and clean up:"
 msgstr "安装该软件包，并清理环境变量："
 
 #. type: Content of: <sect1><sect2><screen>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/perl.xml:142
 #, no-wrap
 msgid ""
 "<userinput remap=\"install\">make install\n"
@@ -263,27 +230,22 @@ msgstr ""
 "unset BUILD_ZLIB BUILD_BZIP2</userinput>"
 
 #. type: Content of: <sect1><sect2><title>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/perl.xml:148
 msgid "Contents of Perl"
 msgstr "Perl 的内容"
 
 #. type: Content of: <sect1><sect2><segmentedlist><segtitle>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/perl.xml:151
 msgid "Installed programs"
 msgstr "安装的程序"
 
 #. type: Content of: <sect1><sect2><segmentedlist><segtitle>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/perl.xml:152
 msgid "Installed libraries"
 msgstr "安装的库"
 
 #. type: Content of: <sect1><sect2><segmentedlist><segtitle>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/perl.xml:153
 msgid "Installed directory"
 msgstr "安装的目录"
 
 #. type: Content of: <sect1><sect2><segmentedlist><seglistitem><seg>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/perl.xml:156
 msgid ""
 "corelist, cpan, enc2xs, encguess, h2ph, h2xs, instmodsh, json_pp, libnetcfg, "
 "perl, perl&perl-version; (hard link to perl), perlbug, perldoc, perlivp, "
@@ -298,17 +260,14 @@ msgstr ""
 "shasum, splain, xsubpp, 以及 zipdetails"
 
 #. type: Content of: <sect1><sect2><segmentedlist><seglistitem><seg>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/perl.xml:162
 msgid "Many which cannot all be listed here"
 msgstr "很多，无法在这里全部列出"
 
 #. type: Content of: <sect1><sect2><segmentedlist><seglistitem><seg>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/perl.xml:163
 msgid "/usr/lib/perl5"
 msgstr "/usr/lib/perl5"
 
 #. type: Content of: <sect1><sect2><variablelist><bridgehead>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/perl.xml:168
 msgid "Short Descriptions"
 msgstr "简要描述"
 
@@ -326,83 +285,68 @@ msgstr "简要描述"
 #.         </listitem>
 #.       </varlistentry>
 #. type: Content of: <sect1><sect2><variablelist>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/perl.xml:169
 msgid ""
 "<?dbfo list-presentation=\"list\"?> <?dbhtml list-presentation=\"table\"?>"
 msgstr ""
 "<?dbfo list-presentation=\"list\"?> <?dbhtml list-presentation=\"table\"?>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/perl.xml:184
 msgid "<command>corelist</command>"
 msgstr "<command>corelist</command>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/perl.xml:186
 msgid "A commandline frontend to Module::CoreList"
 msgstr "Module::CoreList 的命令行前端"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/perl.xml:188
 msgid "corelist"
 msgstr "corelist"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/perl.xml:194
 msgid "<command>cpan</command>"
 msgstr "<command>cpan</command>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/perl.xml:196
 msgid ""
 "Interact with the Comprehensive Perl Archive Network (CPAN)  from the "
 "command line"
 msgstr "通过命令行与 Perl 综合归档网络 (CPAN)  交互"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/perl.xml:199
 msgid "cpan"
 msgstr "cpan"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/perl.xml:205
 msgid "<command>enc2xs</command>"
 msgstr "<command>enc2xs</command>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/perl.xml:207
 msgid ""
 "Builds a Perl extension for the Encode module from either Unicode Character "
 "Mappings or Tcl Encoding Files"
 msgstr "从 Unicode 字符映射或 Tcl 编码文件构建 Encode 模块使用的 Perl 扩展"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/perl.xml:210
 msgid "enc2xs"
 msgstr "enc2xs"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/perl.xml:216
 msgid "<command>encguess</command>"
 msgstr "<command>encguess</command>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/perl.xml:218
 msgid "Guess the encoding type of one or several files"
 msgstr "猜测一些文件的编码格式"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/perl.xml:220
 msgid "encguess"
 msgstr "encguess"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/perl.xml:226
 msgid "<command>h2ph</command>"
 msgstr "<command>h2ph</command>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/perl.xml:228
 msgid ""
 "Converts <filename class=\"extension\">.h</filename> C header files to "
 "<filename class=\"extension\">.ph</filename> Perl header files"
@@ -411,17 +355,14 @@ msgstr ""
 "class=\"extension\">.ph</filename> Perl 头文件"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/perl.xml:232
 msgid "h2ph"
 msgstr "h2ph"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/perl.xml:238
 msgid "<command>h2xs</command>"
 msgstr "<command>h2xs</command>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/perl.xml:240
 msgid ""
 "Converts <filename class=\"extension\">.h</filename> C header files to Perl "
 "extensions"
@@ -429,49 +370,40 @@ msgstr ""
 "将 <filename class=\"extension\">.h</filename> C 头文件转化为 Perl 扩展"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/perl.xml:243
 msgid "h2xs"
 msgstr "h2xs"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/perl.xml:249
 msgid "<command>instmodsh</command>"
 msgstr "<command>instmodsh</command>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/perl.xml:251
 msgid ""
 "Shell script for examining installed Perl modules, and can create a tarball "
 "from an installed module"
 msgstr "用于检验安装好的 Perl 模块的 shell 脚本，可以从安装好的模块创建压缩包"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/perl.xml:254
 msgid "instmodsh"
 msgstr "instmodsh"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/perl.xml:260
 msgid "<command>json_pp</command>"
 msgstr "<command>json_pp</command>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/perl.xml:262
 msgid "Converts data between certain input and output formats"
 msgstr "在特定输入输出格式之间转化数据"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/perl.xml:264
 msgid "json_pp"
 msgstr "json_pp"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/perl.xml:270
 msgid "<command>libnetcfg</command>"
 msgstr "<command>libnetcfg</command>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/perl.xml:272
 msgid ""
 "Can be used to configure the <filename class=\"libraryfile\">libnet</"
 "filename> Perl module"
@@ -479,17 +411,14 @@ msgstr ""
 "可以被用于配置 <filename class=\"libraryfile\">libnet</filename> Perl 模块"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/perl.xml:275
 msgid "libnetcfg"
 msgstr "libnetcfg"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/perl.xml:281
 msgid "<command>perl</command>"
 msgstr "<command>perl</command>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/perl.xml:283
 msgid ""
 "Combines some of the best features of C, <command>sed</command>, "
 "<command>awk</command> and <command>sh</command> into a single swiss-army "
@@ -499,114 +428,93 @@ msgstr ""
 "command> 的最好特性结合成的一门瑞士军刀式语言"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/perl.xml:287
 msgid "perl"
 msgstr "perl"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/perl.xml:293
 msgid "<command>perl&perl-version;</command>"
 msgstr "<command>perl&perl-version;</command>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/perl.xml:295
 msgid "A hard link to <command>perl</command>"
 msgstr "指向 <command>perl</command> 的硬链接"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/perl.xml:297
 msgid "perl&perl-version;"
 msgstr "perl&perl-version;"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/perl.xml:303
 msgid "<command>perlbug</command>"
 msgstr "<command>perlbug</command>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/perl.xml:305
 msgid ""
 "Used to generate bug reports about Perl, or the modules that come with it, "
 "and mail them"
 msgstr "用于创建关于 Perl 或者它附带的模块的 bug 报告，并用邮件发送它们"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/perl.xml:308
 msgid "perlbug"
 msgstr "perlbug"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/perl.xml:314
 msgid "<command>perldoc</command>"
 msgstr "<command>perldoc</command>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/perl.xml:316
 msgid ""
 "Displays a piece of documentation in pod format that is embedded in the Perl "
 "installation tree or in a Perl script"
 msgstr "显示集成在 Perl 安装目录树或某个 Perl 脚本中的一页 pod 格式文档"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/perl.xml:319
 msgid "perldoc"
 msgstr "perldoc"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/perl.xml:325
 msgid "<command>perlivp</command>"
 msgstr "<command>perlivp</command>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/perl.xml:327
 msgid ""
 "The Perl Installation Verification Procedure; it can be used to verify that "
 "Perl and its libraries have been installed correctly"
 msgstr "Perl 安装检验程序；它可以被用于确认 Perl 和它的库都安装正确"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/perl.xml:331
 msgid "perlivp"
 msgstr "perlivp"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/perl.xml:337
 msgid "<command>perlthanks</command>"
 msgstr "<command>perlthanks</command>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/perl.xml:339
 msgid "Used to generate thank you messages to mail to the Perl developers"
 msgstr "用于生成发送给 Perl 开发者的感谢信"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/perl.xml:342
 msgid "perlthanks"
 msgstr "perlthanks"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/perl.xml:348
 msgid "<command>piconv</command>"
 msgstr "<command>piconv</command>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/perl.xml:350
 msgid ""
 "A Perl version of the character encoding converter <command>iconv</command>"
 msgstr "字符编码转换器 <command>iconv</command> 的 Perl 版本"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/perl.xml:353
 msgid "piconv"
 msgstr "piconv"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/perl.xml:359
 msgid "<command>pl2pm</command>"
 msgstr "<command>pl2pm</command>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/perl.xml:361
 msgid ""
 "A rough tool for converting Perl4 <filename class=\"extension\">.pl</"
 "filename> files to Perl5 <filename class=\"extension\">.pm</filename> modules"
@@ -615,219 +523,176 @@ msgstr ""
 "Perl5 <filename class=\"extension\">.pm</filename> 模块的粗糙工具"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/perl.xml:365
 msgid "pl2pm"
 msgstr "pl2pm"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/perl.xml:371
 msgid "<command>pod2html</command>"
 msgstr "<command>pod2html</command>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/perl.xml:373
 msgid "Converts files from pod format to HTML format"
 msgstr "将 pod 格式的文件转换为 HTML 格式"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/perl.xml:375
 msgid "pod2html"
 msgstr "pod2html"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/perl.xml:381
 msgid "<command>pod2man</command>"
 msgstr "<command>pod2man</command>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/perl.xml:383
 msgid "Converts pod data to formatted *roff input"
 msgstr "将 pod 数据转换为格式化的 *roff 输入"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/perl.xml:385
 msgid "pod2man"
 msgstr "pod2man"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/perl.xml:391
 msgid "<command>pod2text</command>"
 msgstr "<command>pod2text</command>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/perl.xml:393
 msgid "Converts pod data to formatted ASCII text"
 msgstr "将 pod 数据转化为格式化的 ASCII 文本"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/perl.xml:395
 msgid "pod2text"
 msgstr "pod2text"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/perl.xml:401
 msgid "<command>pod2usage</command>"
 msgstr "<command>pod2usage</command>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/perl.xml:403
 msgid "Prints usage messages from embedded pod docs in files"
 msgstr "输出文件中嵌入的 pod 文档中的使用方法信息"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/perl.xml:405
 msgid "pod2usage"
 msgstr "pod2usage"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/perl.xml:411
 msgid "<command>podchecker</command>"
 msgstr "<command>podchecker</command>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/perl.xml:413
 msgid "Checks the syntax of pod format documentation files"
 msgstr "检查 pod 格式文档文件的语法"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/perl.xml:415
 msgid "podchecker"
 msgstr "podchecker"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/perl.xml:421
 msgid "<command>podselect</command>"
 msgstr "<command>podselect</command>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/perl.xml:423
 msgid "Displays selected sections of pod documentation"
 msgstr "显示 pod 文档中的指定章节"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/perl.xml:425
 msgid "podselect"
 msgstr "podselect"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/perl.xml:431
 msgid "<command>prove</command>"
 msgstr "<command>prove</command>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/perl.xml:433
 msgid "Command line tool for running tests against the Test::Harness module"
 msgstr "用于运行使用 Test::Harness 模块的测试"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/perl.xml:436
 msgid "prove"
 msgstr "prove"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/perl.xml:453
 msgid "<command>ptar</command>"
 msgstr "<command>ptar</command>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/perl.xml:455
 msgid "A <command>tar</command>-like program written in Perl"
 msgstr "一个 Perl 编写的类似 <command>tar</command> 的程序"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/perl.xml:457
 msgid "ptar"
 msgstr "ptar"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/perl.xml:463
 msgid "<command>ptardiff</command>"
 msgstr "<command>ptardiff</command>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/perl.xml:465
 msgid ""
 "A Perl program that compares an extracted archive with an unextracted one"
 msgstr "一个比较压缩档案和未压缩版本的 Perl 程序"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/perl.xml:468
 msgid "ptardiff"
 msgstr "ptardiff"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/perl.xml:474
 msgid "<command>ptargrep</command>"
 msgstr "<command>ptargrep</command>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/perl.xml:476
 msgid ""
 "A Perl program that applies pattern matching to the contents of files in a "
 "tar archive"
 msgstr "一个在 tar 档案中的文件内容上进行模式匹配的 Perl 程序"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/perl.xml:479
 msgid "ptargrep"
 msgstr "ptargrep"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/perl.xml:485
 msgid "<command>shasum</command>"
 msgstr "<command>shasum</command>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/perl.xml:487
 msgid "Prints or checks SHA checksums"
 msgstr "打印或检查 SHA 校验和"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/perl.xml:489
 msgid "shasum"
 msgstr "shasum"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/perl.xml:495
 msgid "<command>splain</command>"
 msgstr "<command>splain</command>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/perl.xml:497
 msgid "Is used to force verbose warning diagnostics in Perl"
 msgstr "被用于 Perl 的强制性详细警告诊断"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/perl.xml:499
 msgid "splain"
 msgstr "splain"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/perl.xml:505
 msgid "<command>xsubpp</command>"
 msgstr "<command>xsubpp</command>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/perl.xml:507
 msgid "Converts Perl XS code into C code"
 msgstr "将 Perl XS 代码转换为 C 代码"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/perl.xml:509
 msgid "xsubpp"
 msgstr "xsubpp"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/perl.xml:515
 msgid "<command>zipdetails</command>"
 msgstr "<command>zipdetails</command>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/perl.xml:517
 msgid "Displays details about the internal structure of a Zip file"
 msgstr "显示 Zip 文件内部结构的详细信息"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/perl.xml:519
 msgid "zipdetails"
 msgstr "zipdetails"

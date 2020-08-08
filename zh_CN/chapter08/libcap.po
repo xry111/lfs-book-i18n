@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2020-08-05 04:39+0800\n"
+"POT-Creation-Date: 2020-08-08 19:28+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -12,13 +12,11 @@ msgstr ""
 "X-Generator: Translate Toolkit 2.2.5\n"
 
 #. type: Content of: <sect1><sect1info><address>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/libcap.xml:14
 #, no-wrap
 msgid "&libcap-url;"
 msgstr "&libcap-url;"
 
 #. type: Content of: <sect1><sect1info>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/libcap.xml:12
 msgid ""
 "<productname>libcap</productname> <productnumber>&libcap-version;</"
 "productnumber> <placeholder type=\"address\" id=\"0\"/>"
@@ -27,17 +25,14 @@ msgstr ""
 "productnumber> <placeholder type=\"address\" id=\"0\"/>"
 
 #. type: Content of: <sect1><title>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/libcap.xml:17
 msgid "Libcap-&libcap-version;"
 msgstr "Libcap-&libcap-version;"
 
 #. type: Content of: <sect1><indexterm><primary>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/libcap.xml:20
 msgid "Libcap"
 msgstr "Libcap"
 
 #. type: Content of: <sect1><sect2><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/libcap.xml:26
 msgid ""
 "The Libcap package implements the user-space interfaces to the POSIX 1003.1e "
 "capabilities available in Linux kernels. These capabilities are a "
@@ -48,63 +43,52 @@ msgstr ""
 "是 root 用户的最高特权分割成的一组不同权限。"
 
 #. type: Content of: <sect1><sect2><segmentedlist><segtitle>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/libcap.xml:32
 msgid "&buildtime;"
 msgstr "&buildtime;"
 
 #. type: Content of: <sect1><sect2><segmentedlist><segtitle>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/libcap.xml:33
 msgid "&diskspace;"
 msgstr "&diskspace;"
 
 #. type: Content of: <sect1><sect2><segmentedlist><seglistitem><seg>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/libcap.xml:36
 msgid "&libcap-fin-sbu;"
 msgstr "&libcap-fin-sbu;"
 
 #. type: Content of: <sect1><sect2><segmentedlist><seglistitem><seg>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/libcap.xml:37
 msgid "&libcap-fin-du;"
 msgstr "&libcap-fin-du;"
 
 #. type: Content of: <sect1><sect2><title>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/libcap.xml:44
 msgid "Installation of Libcap"
 msgstr "安装 Libcap"
 
 #. type: Content of: <sect1><sect2><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/libcap.xml:46
 msgid "Prevent a static library from being installed:"
 msgstr "防止一个静态库的安装："
 
 #. type: Content of: <sect1><sect2><screen>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/libcap.xml:48
+#, no-wrap
 msgid "<userinput remap=\"pre\">sed -i '/install -m.*STACAPLIBNAME/d' libcap/Makefile</userinput>"
 msgstr "<userinput remap=\"pre\">sed -i '/install -m.*STACAPLIBNAME/d' libcap/Makefile</userinput>"
 
 #. type: Content of: <sect1><sect2><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/libcap.xml:50
 msgid "Compile the package:"
 msgstr "编译该软件包："
 
 #. type: Content of: <sect1><sect2><screen>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/libcap.xml:52
 #, no-wrap
 msgid "<userinput remap=\"make\">make lib=lib</userinput>"
 msgstr "<userinput remap=\"make\">make lib=lib</userinput>"
 
 #. type: Content of: <sect1><sect2><variablelist><title>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/libcap.xml:55
 msgid "The meaning of the make option:"
 msgstr "make 命令选项的含义："
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/libcap.xml:58
 msgid "<parameter>lib=lib</parameter>"
 msgstr "<parameter>lib=lib</parameter>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/libcap.xml:60
 msgid ""
 "This parameter sets the library directory to <filename>/lib</filename> "
 "rather than <filename>/lib64</filename> on x86_64. It has no effect on x86."
@@ -113,23 +97,19 @@ msgstr ""
 "<filename>/lib64</filename>。它在 x86 上没有作用。"
 
 #. type: Content of: <sect1><sect2><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/libcap.xml:68
 msgid "To test the results, issue:"
 msgstr "运行以下命令以测试编译结果："
 
 #. type: Content of: <sect1><sect2><screen>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/libcap.xml:70
 #, no-wrap
 msgid "<userinput remap=\"test\">make test</userinput>"
 msgstr "<userinput remap=\"test\">make test</userinput>"
 
 #. type: Content of: <sect1><sect2><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/libcap.xml:72
 msgid "Install the package and do some cleanup:"
 msgstr "安装该软件包，并进行清理工作："
 
 #. type: Content of: <sect1><sect2><screen>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/libcap.xml:74
 #, no-wrap
 msgid ""
 "<userinput remap=\"install\">make lib=lib PKGCONFIGDIR=/usr/lib/pkgconfig install\n"
@@ -145,131 +125,106 @@ msgstr ""
 "ln -sfv ../../lib/libcap.so.2 /usr/lib/libcap.so</userinput>"
 
 #. type: Content of: <sect1><sect2><title>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/libcap.xml:83
 msgid "Contents of Libcap"
 msgstr "Libcap 的内容"
 
 #. type: Content of: <sect1><sect2><segmentedlist><segtitle>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/libcap.xml:86
 msgid "Installed programs"
 msgstr "安装的程序"
 
 #. type: Content of: <sect1><sect2><segmentedlist><segtitle>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/libcap.xml:87
 msgid "Installed library"
 msgstr "安装的库"
 
 #. type: Content of: <sect1><sect2><segmentedlist><seglistitem><seg>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/libcap.xml:90
 msgid "capsh, getcap, getpcaps, and setcap"
 msgstr "capsh, getcap, getpcaps, 以及 setcap"
 
 #. type: Content of: <sect1><sect2><segmentedlist><seglistitem><seg>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/libcap.xml:91
 msgid "libcap.so and libpsx.a"
 msgstr "libcap.so 和 libpsx.a"
 
 #. type: Content of: <sect1><sect2><variablelist><bridgehead>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/libcap.xml:96
 msgid "Short Descriptions"
 msgstr "简要描述"
 
 #. type: Content of: <sect1><sect2><variablelist>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/libcap.xml:97
 msgid ""
 "<?dbfo list-presentation=\"list\"?> <?dbhtml list-presentation=\"table\"?>"
 msgstr ""
 "<?dbfo list-presentation=\"list\"?> <?dbhtml list-presentation=\"table\"?>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/libcap.xml:101
 msgid "<command>capsh</command>"
 msgstr "<command>capsh</command>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/libcap.xml:103
 msgid "A shell wrapper to explore and constrain capability support"
 msgstr "一个用于演示和限制 Linux 权能字的 shell 封装器"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/libcap.xml:105
 msgid "capsh"
 msgstr "capsh"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/libcap.xml:111
 msgid "<command>getcap</command>"
 msgstr "<command>getcap</command>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/libcap.xml:113
 msgid "Examines file capabilities"
 msgstr "检验文件权能字"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/libcap.xml:115
 msgid "getcap"
 msgstr "getcap"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/libcap.xml:121
 msgid "<command>getpcaps</command>"
 msgstr "<command>getpcaps</command>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/libcap.xml:123
 msgid "Displays the capabilities on the queried process(es)"
 msgstr "查询进程的权能字"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/libcap.xml:125
 msgid "getpcaps"
 msgstr "getpcaps"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/libcap.xml:131
 msgid "<command>setcap</command>"
 msgstr "<command>setcap</command>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/libcap.xml:133
 msgid "Sets file capabilities"
 msgstr "设定文件权能字"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/libcap.xml:135
 msgid "setcap"
 msgstr "setcap"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/libcap.xml:141
 msgid "<filename class=\"libraryfile\">libcap</filename>"
 msgstr "<filename class=\"libraryfile\">libcap</filename>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/libcap.xml:143
 msgid ""
 "Contains the library functions for manipulating POSIX 1003.1e capabilities"
 msgstr "包含操作 POSIX 1003.1e 权能字的库函数"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/libcap.xml:146
 msgid "libcap"
 msgstr "libcap"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/libcap.xml:152
 msgid "<filename class=\"libraryfile\">libpsx</filename>"
 msgstr "<filename class=\"libraryfile\">libpsx</filename>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/libcap.xml:154
 msgid ""
 "Contains functions to support POSIX semantics for syscalls associated with "
 "the pthread library"
 msgstr "包含为 pthread 库相关的系统调用提供 POSIX 语义的函数"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/libcap.xml:157
 msgid "libpsx"
 msgstr "libpsx"

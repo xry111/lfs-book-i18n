@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2020-06-17 12:44+0800\n"
+"POT-Creation-Date: 2020-08-08 19:28+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -12,13 +12,11 @@ msgstr ""
 "X-Generator: Translate Toolkit 2.2.5\n"
 
 #. type: Content of: <sect1><sect1info><address>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter06/bash.xml:14
 #, no-wrap
 msgid "&bash-url;"
 msgstr "&bash-url;"
 
 #. type: Content of: <sect1><sect1info>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter06/bash.xml:12
 msgid ""
 "<productname>bash</productname> <productnumber>&bash-version;</"
 "productnumber> <placeholder type=\"address\" id=\"0\"/>"
@@ -27,52 +25,42 @@ msgstr ""
 "productnumber> <placeholder type=\"address\" id=\"0\"/>"
 
 #. type: Content of: <sect1><title>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter06/bash.xml:17
 msgid "Bash-&bash-version;"
 msgstr "Bash-&bash-version;"
 
 #. type: Content of: <sect1><indexterm><primary>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter06/bash.xml:20
 msgid "Bash"
 msgstr "Bash"
 
 #. type: Content of: <sect1><indexterm><secondary>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter06/bash.xml:21
 msgid "tools"
 msgstr "工具"
 
 #. type: Content of: <sect1><sect2><segmentedlist><segtitle>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter06/bash.xml:32
 msgid "&buildtime;"
 msgstr "&buildtime;"
 
 #. type: Content of: <sect1><sect2><segmentedlist><segtitle>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter06/bash.xml:33
 msgid "&diskspace;"
 msgstr "&diskspace;"
 
 #. type: Content of: <sect1><sect2><segmentedlist><seglistitem><seg>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter06/bash.xml:36
 msgid "&bash-tmp-sbu;"
 msgstr "&bash-tmp-sbu;"
 
 #. type: Content of: <sect1><sect2><segmentedlist><seglistitem><seg>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter06/bash.xml:37
 msgid "&bash-tmp-du;"
 msgstr "&bash-tmp-du;"
 
 #. type: Content of: <sect1><sect2><title>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter06/bash.xml:44
 msgid "Installation of Bash"
 msgstr "安装 Bash"
 
 #. type: Content of: <sect1><sect2><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter06/bash.xml:46
 msgid "Prepare Bash for compilation:"
 msgstr "准备编译 Bash："
 
 #. type: Content of: <sect1><sect2><screen>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter06/bash.xml:48
 #, no-wrap
 msgid ""
 "<userinput remap=\"configure\">./configure --prefix=/usr                   \\\n"
@@ -86,76 +74,64 @@ msgstr ""
 "            --without-bash-malloc</userinput>"
 
 #. type: Content of: <sect1><sect2><variablelist><title>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter06/bash.xml:54
 msgid "The meaning of the configure options:"
 msgstr "配置选项的含义："
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter06/bash.xml:57
 msgid "<parameter>--without-bash-malloc</parameter>"
 msgstr "<parameter>--without-bash-malloc</parameter>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter06/bash.xml:59
 msgid ""
 "This option turns off the use of Bash's memory allocation (<function>malloc</"
 "function>) function which is known to cause segmentation faults. By turning "
 "this option off, Bash will use the <function>malloc</function> functions "
 "from Glibc which are more stable."
 msgstr ""
-"该选项禁用 Bash 自己的内存分配 (<function>malloc</function>) 函数，因为已知"
-"它会导致段错误。这样，Bash 就会使用 Glibc 的更加稳定的 <function>malloc</"
+"该选项禁用 Bash 自己的内存分配 (<function>malloc</function>) 函数，因为已知它"
+"会导致段错误。这样，Bash 就会使用 Glibc 的更加稳定的 <function>malloc</"
 "function> 函数。"
 
 #. type: Content of: <sect1><sect2><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter06/bash.xml:69
 msgid "Compile the package:"
 msgstr "编译该软件包："
 
 #. type: Content of: <sect1><sect2><screen>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter06/bash.xml:71
 #, no-wrap
 msgid "<userinput remap=\"make\">make</userinput>"
 msgstr "<userinput remap=\"make\">make</userinput>"
 
 #. type: Content of: <sect1><sect2><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter06/bash.xml:73
 msgid "Install the package:"
 msgstr "安装该软件包："
 
 #. type: Content of: <sect1><sect2><screen>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter06/bash.xml:75
 #, no-wrap
 msgid "<userinput remap=\"install\">make DESTDIR=$LFS install</userinput>"
 msgstr "<userinput remap=\"install\">make DESTDIR=$LFS install</userinput>"
 
 #. type: Content of: <sect1><sect2><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter06/bash.xml:77
 msgid "Move the excutable to where it is expected:"
 msgstr "将可执行文件移动到正确位置："
 
 #. type: Content of: <sect1><sect2><screen>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter06/bash.xml:79
 #, no-wrap
 msgid "<userinput remap=\"install\">mv $LFS/usr/bin/bash $LFS/bin/bash</userinput>"
 msgstr "<userinput remap=\"install\">mv $LFS/usr/bin/bash $LFS/bin/bash</userinput>"
 
 #. type: Content of: <sect1><sect2><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter06/bash.xml:81
 msgid ""
 "Make a link for the programs that use <command>sh</command> for a shell:"
 msgstr ""
 "为那些使用 <command>sh</command> 命令运行 shell 的程序考虑，创建一个链接："
 
 #. type: Content of: <sect1><sect2><screen>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter06/bash.xml:84
 #, no-wrap
 msgid "<userinput remap=\"install\">ln -sv bash $LFS/bin/sh</userinput>"
 msgstr "<userinput remap=\"install\">ln -sv bash $LFS/bin/sh</userinput>"
 
 # We don't need the additional .
 #. type: Content of: <sect1><sect2><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter06/bash.xml:91
 msgid ""
 "Details on this package are located in <xref linkend=\"contents-bash\" role="
 "\".\"/>"

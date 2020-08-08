@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2020-06-17 12:44+0800\n"
+"POT-Creation-Date: 2020-08-08 19:28+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -12,42 +12,34 @@ msgstr ""
 "X-Generator: Translate Toolkit 2.2.5\n"
 
 #. type: Content of: <sect1><title>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter07/createfiles.xml:11
 msgid "Creating Essential Files and Symlinks"
 msgstr "创建必要的文件和符号链接"
 
 #. type: Content of: <sect1><indexterm><primary>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter07/createfiles.xml:14
 msgid "/etc/passwd"
 msgstr "/etc/passwd"
 
 #. type: Content of: <sect1><indexterm><primary>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter07/createfiles.xml:18
 msgid "/etc/group"
 msgstr "/etc/group"
 
 #. type: Content of: <sect1><indexterm><primary>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter07/createfiles.xml:22
 msgid "/var/run/utmp"
 msgstr "/var/run/utmp"
 
 #. type: Content of: <sect1><indexterm><primary>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter07/createfiles.xml:26
 msgid "/var/log/btmp"
 msgstr "/var/log/btmp"
 
 #. type: Content of: <sect1><indexterm><primary>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter07/createfiles.xml:30
 msgid "/var/log/lastlog"
 msgstr "/var/log/lastlog"
 
 #. type: Content of: <sect1><indexterm><primary>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter07/createfiles.xml:34
 msgid "/var/log/wtmp"
 msgstr "/var/log/wtmp"
 
 #. type: Content of: <sect1><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter07/createfiles.xml:37
 msgid ""
 "Historically, Linux maintains a list of the mounted file systems in the file "
 "<filename>/etc/mtab</filename>. Modern kernels maintain this list internally "
@@ -61,28 +53,24 @@ msgstr ""
 "filename> 的工具，执行以下命令，创建符号链接："
 
 #. type: Content of: <sect1><screen>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter07/createfiles.xml:44
 #, no-wrap
 msgid "<userinput>ln -sv /proc/self/mounts /etc/mtab</userinput>"
 msgstr "<userinput>ln -sv /proc/self/mounts /etc/mtab</userinput>"
 
 #. type: Content of: <sect1><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter07/createfiles.xml:46
 msgid ""
 "Create a basic <filename>/etc/hosts</filename> file to be referenced in some "
 "test suites, and in one of Perl's configuration files as well:"
 msgstr ""
-"创建一个基本的 <filename>/etc/hosts</filename> 文件，"
-"一些测试套件，以及 Perl 的一个配置文件将会使用它："
+"创建一个基本的 <filename>/etc/hosts</filename> 文件，一些测试套件，以及 Perl "
+"的一个配置文件将会使用它："
 
 #. type: Content of: <sect1><screen>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter07/createfiles.xml:50
 #, no-wrap
 msgid "<userinput>echo \"127.0.0.1 localhost $(hostname)\" &gt; /etc/hosts</userinput>"
 msgstr "<userinput>echo \"127.0.0.1 localhost $(hostname)\" &gt; /etc/hosts</userinput>"
 
 #. type: Content of: <sect1><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter07/createfiles.xml:52
 msgid ""
 "In order for user <systemitem class=\"username\">root</systemitem> to be "
 "able to login and for the name <quote>root</quote> to be recognized, there "
@@ -94,14 +82,12 @@ msgstr ""
 "filename> 和 <filename>/etc/groups</filename> 中写入相关的条目。"
 
 #. type: Content of: <sect1><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter07/createfiles.xml:57
 msgid ""
 "Create the <filename>/etc/passwd</filename> file by running the following "
 "command:"
 msgstr "执行以下命令创建 <filename>/etc/passwd</filename> 文件："
 
 #. type: Content of: <sect1><screen>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter07/createfiles.xml:60
 #, no-wrap
 msgid ""
 "<userinput>cat &gt; /etc/passwd &lt;&lt; \"EOF\"\n"
@@ -121,7 +107,6 @@ msgstr ""
 "EOF</userinput>"
 
 #. type: Content of: <sect1><screen>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter07/createfiles.xml:68
 #, no-wrap
 msgid ""
 "<userinput>cat &gt; /etc/passwd &lt;&lt; \"EOF\"\n"
@@ -157,7 +142,6 @@ msgstr ""
 "EOF</userinput>"
 
 #. type: Content of: <sect1><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter07/createfiles.xml:84
 msgid ""
 "The actual password for <systemitem class=\"username\">root</systemitem> "
 "will be set later."
@@ -166,14 +150,12 @@ msgstr ""
 "码。"
 
 #. type: Content of: <sect1><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter07/createfiles.xml:87
 msgid ""
 "Create the <filename>/etc/group</filename> file by running the following "
 "command:"
 msgstr "执行以下命令，创建 <filename>/etc/group</filename> 文件："
 
 #. type: Content of: <sect1><screen>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter07/createfiles.xml:90
 #, no-wrap
 msgid ""
 "<userinput>cat &gt; /etc/group &lt;&lt; \"EOF\"\n"
@@ -231,7 +213,6 @@ msgstr ""
 "EOF</userinput>"
 
 #. type: Content of: <sect1><screen>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter07/createfiles.xml:117
 #, no-wrap
 msgid ""
 "<userinput>cat &gt; /etc/group &lt;&lt; \"EOF\"\n"
@@ -307,7 +288,6 @@ msgstr ""
 "EOF</userinput>"
 
 #. type: Content of: <sect1><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter07/createfiles.xml:153
 msgid ""
 "The created groups are not part of any standard&mdash;they are groups "
 "decided on in part by the requirements of the Udev configuration in Chapter "
@@ -321,27 +301,24 @@ msgid ""
 "the system administrator since well-written programs do not depend on GID "
 "numbers, but rather use the group's name."
 msgstr ""
-"这里创建的用户组并不属于任何标准 —— 它们一部分是为了满足第 9 章中 Udev 配置的需"
-"要，另一部分借鉴了一些 Linux 发行版的通用惯例。另外，某些测试套件需要特定的"
-"用户或组。Linux Standard Base (LSB，可以在 <ulink url=\"http://www."
-"linuxbase.org\"/> 查看) 标准只推荐以组 ID 0 创建用户组 <systemitem class="
-"\"groupname\">root</systemitem>，以及以组 ID 1 创建用户组 <systemitem class="
-"\"groupname\">bin</systemitem>，其他组名和组 ID 由系统管理员自由分配，因为好"
-"的程序不会依赖组 ID 数字，而是使用组名。"
+"这里创建的用户组并不属于任何标准 —— 它们一部分是为了满足第 9 章中 Udev 配置的"
+"需要，另一部分借鉴了一些 Linux 发行版的通用惯例。另外，某些测试套件需要特定的"
+"用户或组。Linux Standard Base (LSB，可以在 <ulink url=\"http://www.linuxbase."
+"org\"/> 查看) 标准只推荐以组 ID 0 创建用户组 <systemitem class=\"groupname"
+"\">root</systemitem>，以及以组 ID 1 创建用户组 <systemitem class=\"groupname"
+"\">bin</systemitem>，其他组名和组 ID 由系统管理员自由分配，因为好的程序不会依"
+"赖组 ID 数字，而是使用组名。"
 
 #. type: Content of: <sect1><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter07/createfiles.xml:165
 msgid ""
 "Some tests in <xref linkend=\"chapter-building-system\"/> need a regular "
 "user. We add this user here and delete this account at the end of that "
 "chapter."
 msgstr ""
-"<xref linkend=\"chapter-building-system\"/>"
-"中的一些测试需要使用一个普通用户。我们这里创建一个用户，"
-"在那一章的末尾再删除该用户。"
+"<xref linkend=\"chapter-building-system\"/>中的一些测试需要使用一个普通用户。"
+"我们这里创建一个用户，在那一章的末尾再删除该用户。"
 
 #. type: Content of: <sect1><screen>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter07/createfiles.xml:169
 #, no-wrap
 msgid ""
 "<userinput>echo \"tester:x:$(ls -n $(tty) | cut -d\" \" -f3):101::/home/tester:/bin/bash\" &gt;&gt; /etc/passwd\n"
@@ -353,25 +330,22 @@ msgstr ""
 "install -o tester -d /home/tester</userinput>"
 
 #. type: Content of: <sect1><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter07/createfiles.xml:173
 msgid ""
 "To remove the <quote>I have no name!</quote> prompt, start a new shell. "
 "Since the <filename>/etc/passwd</filename> and <filename>/etc/group</"
 "filename> files have been created, user name and group name resolution will "
 "now work:"
 msgstr ""
-"为了移除 <quote>I have no name!</quote> 提示符，需要打开一个新 shell。由于"
-"已经创建了文件 <filename>/etc/passwd</filename> 和 <filename>/etc/group</"
+"为了移除 <quote>I have no name!</quote> 提示符，需要打开一个新 shell。由于已"
+"经创建了文件 <filename>/etc/passwd</filename> 和 <filename>/etc/group</"
 "filename>，用户名和组名现在就可以正常解析了："
 
 #. type: Content of: <sect1><screen>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter07/createfiles.xml:179
 #, no-wrap
 msgid "<userinput>exec /bin/bash --login +h</userinput>"
 msgstr "<userinput>exec /bin/bash --login +h</userinput>"
 
 #. type: Content of: <sect1><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter07/createfiles.xml:181
 msgid ""
 "Note the use of the <parameter>+h</parameter> directive. This tells "
 "<command>bash</command> not to use its internal path hashing. Without this "
@@ -382,11 +356,10 @@ msgid ""
 msgstr ""
 "注意这里使用了 <parameter>+h</parameter> 参数。它告诉 <command>bash</"
 "command> 不要使用内部的路径散列机制。如果没有指定该参数，<command>bash</"
-"command> 会记忆它执行过程序的路径。为了在安装新编译好的程序后马上使用它们，"
-"在本章和下一章中总是使用 <parameter>+h</parameter>。"
+"command> 会记忆它执行过程序的路径。为了在安装新编译好的程序后马上使用它们，在"
+"本章和下一章中总是使用 <parameter>+h</parameter>。"
 
 #. type: Content of: <sect1><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter07/createfiles.xml:188
 msgid ""
 "The <command>login</command>, <command>agetty</command>, and <command>init</"
 "command> programs (and others) use a number of log files to record "
@@ -395,12 +368,11 @@ msgid ""
 "Initialize the log files and give them proper permissions:"
 msgstr ""
 "<command>login</command>、<command>agetty</command> 和 <command>init</"
-"command> 等程序使用一些日志文件，以记录登录系统的用户和登录时间等信息。然"
-"而，这些程序不会创建不存在的日志文件。初始化日志文件，并为它们设置合适的访问"
-"权限："
+"command> 等程序使用一些日志文件，以记录登录系统的用户和登录时间等信息。然而，"
+"这些程序不会创建不存在的日志文件。初始化日志文件，并为它们设置合适的访问权"
+"限："
 
 #. type: Content of: <sect1><screen>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter07/createfiles.xml:195
 #, no-wrap
 msgid ""
 "<userinput>touch /var/log/{btmp,lastlog,faillog,wtmp}\n"
@@ -414,7 +386,6 @@ msgstr ""
 "chmod -v 600  /var/log/btmp</userinput>"
 
 #. type: Content of: <sect1><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter07/createfiles.xml:200
 msgid ""
 "The <filename>/var/log/wtmp</filename> file records all logins and logouts. "
 "The <filename>/var/log/lastlog</filename> file records when each user last "
@@ -428,7 +399,6 @@ msgstr ""
 "<filename>/var/log/btmp</filename> 记录所有错误的登录尝试。"
 
 #. type: Content of: <sect1><note><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter07/createfiles.xml:206
 msgid ""
 "The <filename>/run/utmp</filename> file records the users that are currently "
 "logged in.  This file is created dynamically in the boot scripts."

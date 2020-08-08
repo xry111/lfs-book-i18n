@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2020-06-17 12:44+0800\n"
+"POT-Creation-Date: 2020-08-08 19:28+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -12,13 +12,11 @@ msgstr ""
 "X-Generator: Translate Toolkit 2.2.5\n"
 
 #. type: Content of: <sect1><sect1info><address>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter06/m4.xml:14
 #, no-wrap
 msgid "&m4-url;"
 msgstr "&m4-url;"
 
 #. type: Content of: <sect1><sect1info>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter06/m4.xml:12
 msgid ""
 "<productname>m4</productname> <productnumber>&m4-version;</productnumber> "
 "<placeholder type=\"address\" id=\"0\"/>"
@@ -27,52 +25,42 @@ msgstr ""
 "<placeholder type=\"address\" id=\"0\"/>"
 
 #. type: Content of: <sect1><title>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter06/m4.xml:17
 msgid "M4-&m4-version;"
 msgstr "M4-&m4-version;"
 
 #. type: Content of: <sect1><indexterm><primary>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter06/m4.xml:20
 msgid "M4"
 msgstr "M4"
 
 #. type: Content of: <sect1><indexterm><secondary>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter06/m4.xml:21
 msgid "tools"
 msgstr "工具"
 
 #. type: Content of: <sect1><sect2><segmentedlist><segtitle>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter06/m4.xml:32
 msgid "&buildtime;"
 msgstr "&buildtime;"
 
 #. type: Content of: <sect1><sect2><segmentedlist><segtitle>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter06/m4.xml:33
 msgid "&diskspace;"
 msgstr "&diskspace;"
 
 #. type: Content of: <sect1><sect2><segmentedlist><seglistitem><seg>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter06/m4.xml:36
 msgid "&m4-tmp-sbu;"
 msgstr "&m4-tmp-sbu;"
 
 #. type: Content of: <sect1><sect2><segmentedlist><seglistitem><seg>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter06/m4.xml:37
 msgid "&m4-tmp-du;"
 msgstr "&m4-tmp-du;"
 
 #. type: Content of: <sect1><sect2><title>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter06/m4.xml:44
 msgid "Installation of M4"
 msgstr "安装 M4"
 
 #. type: Content of: <sect1><sect2><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter06/m4.xml:46
 msgid "First, make some fixes introduced by glibc-2.28:"
 msgstr "首先，进行 glibc-2.28 要求的一些修补："
 
 #. type: Content of: <sect1><sect2><screen>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter06/m4.xml:48
 #, no-wrap
 msgid ""
 "<userinput remap=\"pre\">sed -i 's/IO_ftrylockfile/IO_EOF_SEEN/' lib/*.c\n"
@@ -82,12 +70,10 @@ msgstr ""
 "echo \"#define _IO_IN_BACKUP 0x100\" >> lib/stdio-impl.h</userinput>"
 
 #. type: Content of: <sect1><sect2><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter06/m4.xml:51
 msgid "Prepare M4 for compilation:"
 msgstr "准备编译 M4："
 
 #. type: Content of: <sect1><sect2><screen>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter06/m4.xml:53
 #, no-wrap
 msgid ""
 "<userinput remap=\"configure\">./configure --prefix=/usr   \\\n"
@@ -99,29 +85,24 @@ msgstr ""
 "            --build=$(build-aux/config.guess)</userinput>"
 
 #. type: Content of: <sect1><sect2><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter06/m4.xml:57
 msgid "Compile the package:"
 msgstr "编译该软件包："
 
 #. type: Content of: <sect1><sect2><screen>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter06/m4.xml:59
 #, no-wrap
 msgid "<userinput remap=\"make\">make</userinput>"
 msgstr "<userinput remap=\"make\">make</userinput>"
 
 #. type: Content of: <sect1><sect2><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter06/m4.xml:61
 msgid "Install the package:"
 msgstr "安装该软件包："
 
 #. type: Content of: <sect1><sect2><screen>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter06/m4.xml:63
 #, no-wrap
 msgid "<userinput remap=\"install\">make DESTDIR=$LFS install</userinput>"
 msgstr "<userinput remap=\"install\">make DESTDIR=$LFS install</userinput>"
 
 #. type: Content of: <sect1><sect2><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter06/m4.xml:69
 msgid ""
 "Details on this package are located in <xref linkend=\"contents-m4\" role=\"."
 "\"/>"

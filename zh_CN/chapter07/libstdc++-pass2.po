@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2020-07-05 16:17+0800\n"
+"POT-Creation-Date: 2020-08-08 19:28+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -11,13 +11,11 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 
 #. type: Content of: <sect1><sect1info><address>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter07/libstdc++-pass2.xml:14
 #, no-wrap
 msgid "&gcc-url;"
 msgstr "&gcc-url;"
 
 #. type: Content of: <sect1><sect1info>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter07/libstdc++-pass2.xml:12
 msgid ""
 "<productname>gcc-libstdc++</productname> <productnumber>&gcc-version;</"
 "productnumber> <placeholder type=\"address\" id=\"0\"/>"
@@ -26,22 +24,18 @@ msgstr ""
 "productnumber> <placeholder type=\"address\" id=\"0\"/>"
 
 #. type: Content of: <sect1><title>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter07/libstdc++-pass2.xml:17
 msgid "Libstdc++ from GCC-&gcc-version;, Pass 2"
 msgstr "GCC-&gcc-version; 中的 Libstdc++，第二遍"
 
 #. type: Content of: <sect1><indexterm><primary>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter07/libstdc++-pass2.xml:20
 msgid "GCC"
 msgstr "GCC"
 
 #. type: Content of: <sect1><indexterm><secondary>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter07/libstdc++-pass2.xml:21
 msgid "tools, libstdc++ pass 2"
 msgstr "工具，第二遍的 Libstdc++"
 
 #. type: Content of: <sect1><sect2><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter07/libstdc++-pass2.xml:27
 msgid ""
 "When building <xref linkend=\"ch-tools-gcc-pass2\"/> we had to defer the "
 "installation of the C++ standard library because no suitable compiler was "
@@ -55,32 +49,26 @@ msgstr ""
 "染。"
 
 #. type: Content of: <sect1><sect2><segmentedlist><segtitle>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter07/libstdc++-pass2.xml:34
 msgid "&buildtime;"
 msgstr "&buildtime;"
 
 #. type: Content of: <sect1><sect2><segmentedlist><segtitle>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter07/libstdc++-pass2.xml:35
 msgid "&diskspace;"
 msgstr "&diskspace;"
 
 #. type: Content of: <sect1><sect2><segmentedlist><seglistitem><seg>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter07/libstdc++-pass2.xml:38
 msgid "&libstdcpp-tmpp2-sbu;"
 msgstr "&libstdcpp-tmpp2-sbu;"
 
 #. type: Content of: <sect1><sect2><segmentedlist><seglistitem><seg>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter07/libstdc++-pass2.xml:39
 msgid "&libstdcpp-tmpp2-du;"
 msgstr "&libstdcpp-tmpp2-du;"
 
 #. type: Content of: <sect1><sect2><title>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter07/libstdc++-pass2.xml:46
 msgid "Installation of Target Libstdc++"
 msgstr "安装目标系统的 Libstdc++"
 
 #. type: Content of: <sect1><sect2><note><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter07/libstdc++-pass2.xml:49
 msgid ""
 "<application>Libstdc++</application> is part of the GCC sources.  You should "
 "first unpack the GCC tarball and change to the <filename>gcc-&gcc-version;</"
@@ -90,23 +78,19 @@ msgstr ""
 "压缩包并切换到解压出来的 <filename>gcc-&gcc-version;</filename> 目录。"
 
 #. type: Content of: <sect1><sect2><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter07/libstdc++-pass2.xml:54
 msgid "Create a link which exists when building libstdc++ in the gcc tree:"
 msgstr "创建一个符号链接，允许在 GCC 源码树中构建 Libstdc++："
 
 #. type: Content of: <sect1><sect2><screen>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter07/libstdc++-pass2.xml:56
 #, no-wrap
 msgid "<userinput remap=\"pre\">ln -s gthr-posix.h libgcc/gthr-default.h</userinput>"
 msgstr "<userinput remap=\"pre\">ln -s gthr-posix.h libgcc/gthr-default.h</userinput>"
 
 #. type: Content of: <sect1><sect2><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter07/libstdc++-pass2.xml:58
 msgid "Create a separate build directory for libstdc++ and enter it:"
 msgstr "为 Libstdc++ 创建一个单独的构建目录，并切换到该目录："
 
 #. type: Content of: <sect1><sect2><screen>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter07/libstdc++-pass2.xml:60
 #, no-wrap
 msgid ""
 "<userinput remap=\"pre\">mkdir -v build\n"
@@ -116,12 +100,10 @@ msgstr ""
 "cd       build</userinput>"
 
 #. type: Content of: <sect1><sect2><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter07/libstdc++-pass2.xml:63
 msgid "Prepare libstdc++ for compilation:"
 msgstr "准备编译 Libstdc++:"
 
 #. type: Content of: <sect1><sect2><screen>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter07/libstdc++-pass2.xml:65
 #, no-wrap
 msgid ""
 "<userinput remap=\"configure\">../libstdc++-v3/configure            \\\n"
@@ -141,73 +123,61 @@ msgstr ""
 "    --disable-libstdcxx-pch</userinput>"
 
 #. type: Content of: <sect1><sect2><variablelist><title>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter07/libstdc++-pass2.xml:74
 msgid "The meaning of the configure options:"
 msgstr "配置选项的含义："
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter07/libstdc++-pass2.xml:77
 msgid "<parameter>CXXFLAGS=\"-g -O2 -D_GNU_SOURCE\"</parameter>"
 msgstr "<parameter>CXXFLAGS=\"-g -O2 -D_GNU_SOURCE\"</parameter>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter07/libstdc++-pass2.xml:79
 msgid ""
 "These flags are passed by the top level Makefile when doing a full build of "
 "GCC."
 msgstr "这些编译开关在构建完整的 GCC 时，由顶层目录 Makefile 传递。"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter07/libstdc++-pass2.xml:85
 msgid "<parameter>--host=$(uname -m)-lfs-linux-gnu</parameter>"
 msgstr "<parameter>--host=$(uname -m)-lfs-linux-gnu</parameter>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter07/libstdc++-pass2.xml:87
 msgid ""
 "We have to mimic what would happen if this package were built as part of a "
 "full compiler build. This switch would be passed to configure by GCC's build "
 "machinery."
 msgstr ""
-"我们需要模拟该软件包作为完整编译器的一部分构建时发生的过程。"
-"在完整构建时，GCC 构建系统会传递该选项。"
+"我们需要模拟该软件包作为完整编译器的一部分构建时发生的过程。在完整构建时，"
+"GCC 构建系统会传递该选项。"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter07/libstdc++-pass2.xml:94
 msgid "<parameter>--disable-libstdcxx-pch</parameter>"
 msgstr "<parameter>--disable-libstdcxx-pch</parameter>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter07/libstdc++-pass2.xml:96
 msgid ""
 "This switch prevents the installation of precompiled include files, which "
 "are not needed at this stage."
 msgstr "这个开关防止安装预编译包含文件，它在当前阶段没有必要。"
 
 #. type: Content of: <sect1><sect2><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter07/libstdc++-pass2.xml:103
 msgid "Compile libstdc++ by running:"
 msgstr "运行以下命令编译 Libstdc++："
 
 #. type: Content of: <sect1><sect2><screen>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter07/libstdc++-pass2.xml:105
 #, no-wrap
 msgid "<userinput remap=\"make\">make</userinput>"
 msgstr "<userinput remap=\"make\">make</userinput>"
 
 #. type: Content of: <sect1><sect2><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter07/libstdc++-pass2.xml:107
 msgid "Install the library:"
 msgstr "安装这个库："
 
 #. type: Content of: <sect1><sect2><screen>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter07/libstdc++-pass2.xml:109
 #, no-wrap
 msgid "<userinput remap=\"install\">make install</userinput>"
 msgstr "<userinput remap=\"install\">make install</userinput>"
 
 #. type: Content of: <sect1><sect2><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter07/libstdc++-pass2.xml:116
 msgid ""
 "Details on this package are located in <xref linkend=\"contents-gcc\" role="
 "\".\"/>"

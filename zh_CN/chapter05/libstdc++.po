@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2020-06-17 12:44+0800\n"
+"POT-Creation-Date: 2020-08-08 19:28+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -12,13 +12,11 @@ msgstr ""
 "X-Generator: Translate Toolkit 2.2.5\n"
 
 #. type: Content of: <sect1><sect1info><address>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter05/libstdc++.xml:14
 #, no-wrap
 msgid "&gcc-url;"
 msgstr "&gcc-url;"
 
 #. type: Content of: <sect1><sect1info>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter05/libstdc++.xml:12
 msgid ""
 "<productname>gcc-libstdc++</productname> <productnumber>&gcc-version;</"
 "productnumber> <placeholder type=\"address\" id=\"0\"/>"
@@ -27,22 +25,18 @@ msgstr ""
 "productnumber> <placeholder type=\"address\" id=\"0\"/>"
 
 #. type: Content of: <sect1><title>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter05/libstdc++.xml:17
 msgid "Libstdc++ from GCC-&gcc-version;, Pass 1"
 msgstr "GCC-&gcc-version; 中的 Libstdc++，第一遍"
 
 #. type: Content of: <sect1><indexterm><primary>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter05/libstdc++.xml:20
 msgid "GCC"
 msgstr "GCC"
 
 #. type: Content of: <sect1><indexterm><secondary>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter05/libstdc++.xml:21
 msgid "tools, libstdc++ pass 1"
 msgstr "工具，第一遍的 Libstdc++"
 
 #. type: Content of: <sect1><sect2><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter05/libstdc++.xml:27
 msgid ""
 "Libstdc++ is the standard C++ library. It is needed to compile C++ code "
 "(part of GCC is written in C++), but we had to defer its installation when "
@@ -50,51 +44,43 @@ msgid ""
 "which was not yet available in the target directory."
 msgstr ""
 "Libstdc++ 是 C++ 标准库。我们需要它才能编译 C++ 代码 (GCC 的一部分用 C++ 编"
-"写)。但在构建<xref linkend=\"ch-tools-gcc-pass1\"/>时我们不得不暂缓安装"
-"它，因为它依赖于当时还没有安装到目标目录的 Glibc。"
+"写)。但在构建<xref linkend=\"ch-tools-gcc-pass1\"/>时我们不得不暂缓安装它，因"
+"为它依赖于当时还没有安装到目标目录的 Glibc。"
 
 #. type: Content of: <sect1><sect2><segmentedlist><segtitle>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter05/libstdc++.xml:36
 msgid "&buildtime;"
 msgstr "&buildtime;"
 
 #. type: Content of: <sect1><sect2><segmentedlist><segtitle>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter05/libstdc++.xml:37
 msgid "&diskspace;"
 msgstr "&diskspace;"
 
 #. type: Content of: <sect1><sect2><segmentedlist><seglistitem><seg>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter05/libstdc++.xml:40
 msgid "&libstdcpp-tmpp1-sbu;"
 msgstr "&libstdcpp-tmpp1-sbu;"
 
 #. type: Content of: <sect1><sect2><segmentedlist><seglistitem><seg>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter05/libstdc++.xml:41
 msgid "&libstdcpp-tmpp1-du;"
 msgstr "&libstdcpp-tmpp1-du;"
 
 #. type: Content of: <sect1><sect2><title>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter05/libstdc++.xml:48
 msgid "Installation of Target Libstdc++"
 msgstr "安装目标系统的 Libstdc++"
 
 #. type: Content of: <sect1><sect2><note><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter05/libstdc++.xml:51
 msgid ""
 "<application>Libstdc++</application> is part of the GCC sources.  You should "
 "first unpack the GCC tarball and change to the <filename>gcc-&gcc-version;</"
 "filename> directory."
 msgstr ""
-"<application>Libstdc++</application> 是 GCC 源代码的一部分。您应该先解压 "
-"GCC 源码包并切换到解压出来的 <filename>gcc-&gcc-version;</filename> 目录。"
+"<application>Libstdc++</application> 是 GCC 源代码的一部分。您应该先解压 GCC "
+"源码包并切换到解压出来的 <filename>gcc-&gcc-version;</filename> 目录。"
 
 #. type: Content of: <sect1><sect2><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter05/libstdc++.xml:56
 msgid "Create a separate build directory for libstdc++ and enter it:"
 msgstr "为 Libstdc++ 创建一个单独的构建目录，并进入它："
 
 #. type: Content of: <sect1><sect2><screen>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter05/libstdc++.xml:58
 #, no-wrap
 msgid ""
 "<userinput remap=\"pre\">mkdir -v build\n"
@@ -104,12 +90,10 @@ msgstr ""
 "cd       build</userinput> "
 
 #. type: Content of: <sect1><sect2><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter05/libstdc++.xml:61
 msgid "Prepare libstdc++ for compilation:"
 msgstr "准备编译 Libstdc++："
 
 #. type: Content of: <sect1><sect2><screen>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter05/libstdc++.xml:63
 #, no-wrap
 msgid ""
 "<userinput remap=\"configure\">../libstdc++-v3/configure           \\\n"
@@ -131,38 +115,32 @@ msgstr ""
 "    --with-gxx-include-dir=/tools/$LFS_TGT/include/c++/&gcc-version;</userinput>"
 
 #. type: Content of: <sect1><sect2><variablelist><title>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter05/libstdc++.xml:73
 msgid "The meaning of the configure options:"
 msgstr "配置选项的含义："
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter05/libstdc++.xml:76
 msgid "<parameter>--host=...</parameter>"
 msgstr "<parameter>--host=...</parameter> "
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter05/libstdc++.xml:78
 msgid ""
 "Specifies the use the cross compiler we have just built instead of the one "
 "in <filename>/usr/bin</filename>."
 msgstr ""
-"指定使用我们刚刚构建的交叉编译器，而不是 <filename>/usr/bin</filename> 中的宿主系"
-"统编译器。"
+"指定使用我们刚刚构建的交叉编译器，而不是 <filename>/usr/bin</filename> 中的宿"
+"主系统编译器。"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter05/libstdc++.xml:84
 msgid "<parameter>--disable-libstdcxx-pch</parameter>"
 msgstr "<parameter>--disable-libstdcxx-pch</parameter> "
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter05/libstdc++.xml:86
 msgid ""
 "This switch prevents the installation of precompiled include files, which "
 "are not needed at this stage."
 msgstr "这个开关防止安装预编译头文件，在这个阶段不需要它们。"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter05/libstdc++.xml:92
 msgid ""
 "<parameter>--with-gxx-include-dir=/tools/$LFS_TGT/include/c++/&gcc-version;</"
 "parameter>"
@@ -171,41 +149,35 @@ msgstr ""
 "parameter>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter05/libstdc++.xml:94
 msgid ""
 "This is the location where the C++ compiler should search for the standard "
 "include files. In a normal build, this information is automatically passed "
 "to the libstdc++ <command>configure</command> options from the top level "
 "directory. In our case, this information must be explicitly given."
 msgstr ""
-"C++ 编译器应该在这个位置搜索标准头文件。在正常的构建过程中，这项信息被顶层目录"
-"构建系统自动传递给 Libstdc++ <command>configure</command> 脚本。然而我们"
-"没有使用顶层构建系统，必须明确给出这项信息。"
+"C++ 编译器应该在这个位置搜索标准头文件。在正常的构建过程中，这项信息被顶层目"
+"录构建系统自动传递给 Libstdc++ <command>configure</command> 脚本。然而我们没"
+"有使用顶层构建系统，必须明确给出这项信息。"
 
 #. type: Content of: <sect1><sect2><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter05/libstdc++.xml:104
 msgid "Compile libstdc++ by running:"
 msgstr "运行以下命令编译 Libstdc++："
 
 #. type: Content of: <sect1><sect2><screen>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter05/libstdc++.xml:106
 #, no-wrap
 msgid "<userinput remap=\"make\">make</userinput>"
 msgstr "<userinput remap=\"make\">make</userinput>"
 
 #. type: Content of: <sect1><sect2><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter05/libstdc++.xml:108
 msgid "Install the library:"
 msgstr "安装这个库："
 
 #. type: Content of: <sect1><sect2><screen>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter05/libstdc++.xml:110
 #, no-wrap
 msgid "<userinput remap=\"install\">make DESTDIR=$LFS install</userinput>"
 msgstr "<userinput remap=\"install\">make DESTDIR=$LFS install</userinput>"
 
 #. type: Content of: <sect1><sect2><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter05/libstdc++.xml:117
 msgid ""
 "Details on this package are located in <xref linkend=\"contents-gcc\" role="
 "\".\"/>"

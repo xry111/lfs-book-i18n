@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2020-08-05 04:39+0800\n"
+"POT-Creation-Date: 2020-08-08 19:28+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -12,13 +12,11 @@ msgstr ""
 "X-Generator: Translate Toolkit 2.2.5\n"
 
 #. type: Content of: <sect1><sect1info><address>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/binutils.xml:14
 #, no-wrap
 msgid "&binutils-url;"
 msgstr "&binutils-url;"
 
 #. type: Content of: <sect1><sect1info>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/binutils.xml:12
 msgid ""
 "<productname>binutils</productname> <productnumber>&binutils-version;</"
 "productnumber> <placeholder type=\"address\" id=\"0\"/>"
@@ -27,73 +25,60 @@ msgstr ""
 "productnumber> <placeholder type=\"address\" id=\"0\"/>"
 
 #. type: Content of: <sect1><title>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/binutils.xml:17
 msgid "Binutils-&binutils-version;"
 msgstr "Binutils-&binutils-version;"
 
 #. type: Content of: <sect1><indexterm><primary>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/binutils.xml:20
 msgid "Binutils"
 msgstr "Binutils"
 
 #. type: Content of: <sect1><sect2><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/binutils.xml:26
 msgid ""
 "The Binutils package contains a linker, an assembler, and other tools for "
 "handling object files."
 msgstr "Binutils 包含汇编器、链接器以及其他用于处理目标文件的工具。"
 
 #. type: Content of: <sect1><sect2><segmentedlist><segtitle>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/binutils.xml:30
 msgid "&buildtime;"
 msgstr "&buildtime;"
 
 #. type: Content of: <sect1><sect2><segmentedlist><segtitle>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/binutils.xml:31
 msgid "&diskspace;"
 msgstr "&diskspace;"
 
 #. type: Content of: <sect1><sect2><segmentedlist><seglistitem><seg>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/binutils.xml:34
 msgid "&binutils-fin-sbu;"
 msgstr "&binutils-fin-sbu;"
 
 #. type: Content of: <sect1><sect2><segmentedlist><seglistitem><seg>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/binutils.xml:35
 msgid "&binutils-fin-du;"
 msgstr "&binutils-fin-du;"
 
 #. type: Content of: <sect1><sect2><title>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/binutils.xml:42
 msgid "Installation of Binutils"
 msgstr "安装 Binutils"
 
 #. type: Content of: <sect1><sect2><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/binutils.xml:44
 msgid ""
 "Verify that the PTYs are working properly inside the chroot environment by "
 "performing a simple test:"
 msgstr "进行简单测试，确认伪终端 (PTY) 在 chroot 环境中能正常工作："
 
 #. type: Content of: <sect1><sect2><screen>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/binutils.xml:47
 #, no-wrap
 msgid "<userinput remap=\"test\">expect -c \"spawn ls\"</userinput>"
 msgstr "<userinput remap=\"test\">expect -c \"spawn ls\"</userinput>"
 
 #. type: Content of: <sect1><sect2><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/binutils.xml:49
 msgid "This command should output the following:"
 msgstr "该命令应该输出："
 
 #. type: Content of: <sect1><sect2><screen>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/binutils.xml:51
 #, no-wrap
 msgid "<computeroutput>spawn ls</computeroutput>"
 msgstr "<computeroutput>spawn ls</computeroutput>"
 
 #. type: Content of: <sect1><sect2><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/binutils.xml:53
 msgid ""
 "If, instead, the output includes the message below, then the environment is "
 "not set up for proper PTY operation.  This issue needs to be resolved before "
@@ -103,7 +88,6 @@ msgstr ""
 "在运行 Binutils 和 GCC 的测试套件前必须解决这个问题。"
 
 #. type: Content of: <sect1><sect2><screen>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/binutils.xml:57
 #, no-wrap
 msgid ""
 "<computeroutput>The system has no more ptys.\n"
@@ -113,25 +97,21 @@ msgstr ""
 "Ask your system administrator to create more.</computeroutput>"
 
 #. type: Content of: <sect1><sect2><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/binutils.xml:60
 msgid "Now remove one test that prevents the tests from running to completion:"
-msgstr ""
-"删除一项导致测试套件无法完成的测试："
+msgstr "删除一项导致测试套件无法完成的测试："
 
 #. type: Content of: <sect1><sect2><screen>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/binutils.xml:63
+#, no-wrap
 msgid "<userinput remap=\"pre\">sed -i '/@\\tincremental_copy/d' gold/testsuite/Makefile.in</userinput>"
 msgstr "<userinput remap=\"pre\">sed -i '/@\\tincremental_copy/d' gold/testsuite/Makefile.in</userinput>"
 
 #. type: Content of: <sect1><sect2><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/binutils.xml:65
 msgid ""
 "The Binutils documentation recommends building Binutils in a dedicated build "
 "directory:"
 msgstr "Binutils 文档推荐在一个专用的构建目录中构建 Binutils："
 
 #. type: Content of: <sect1><sect2><screen>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/binutils.xml:68
 #, no-wrap
 msgid ""
 "<userinput remap=\"pre\">mkdir -v build\n"
@@ -141,12 +121,10 @@ msgstr ""
 "cd       build</userinput>"
 
 #. type: Content of: <sect1><sect2><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/binutils.xml:71
 msgid "Prepare Binutils for compilation:"
 msgstr "准备编译 Binutils："
 
 #. type: Content of: <sect1><sect2><screen>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/binutils.xml:73
 #, no-wrap
 msgid ""
 "<userinput remap=\"configure\">../configure --prefix=/usr       \\\n"
@@ -168,51 +146,42 @@ msgstr ""
 "             --with-system-zlib</userinput>"
 
 #. type: Content of: <sect1><sect2><variablelist><title>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/binutils.xml:82
 msgid "The meaning of the configure parameters:"
 msgstr "配置选项的含义："
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/binutils.xml:85
 msgid "<parameter>--enable-gold</parameter>"
 msgstr "<parameter>--enable-gold</parameter>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/binutils.xml:87
 msgid ""
 "Build the gold linker and install it as ld.gold (along side the default "
 "linker)."
 msgstr "构建 gold 链接器，并且将它 (和默认链接器一起) 安装为 ld.gold。"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/binutils.xml:93
 msgid "<parameter>--enable-ld=default</parameter>"
 msgstr "<parameter>--enable-ld=default</parameter>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/binutils.xml:95
 msgid ""
 "Build the original bfd linker and install it as both ld (the default linker) "
 "and ld.bfd."
 msgstr "构建传统的 bfd 链接器，并且将它安装为 ld (默认链接器) 和 ld.bfd。"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/binutils.xml:101
 msgid "<parameter>--enable-plugins</parameter>"
 msgstr "<parameter>--enable-plugins</parameter>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/binutils.xml:103
 msgid "Enables plugin support for the linker."
 msgstr "启用链接器插件支持。"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/binutils.xml:108
 msgid "<parameter>--enable-64-bit-bfd</parameter>"
 msgstr "<parameter>--enable-64-bit-bfd</parameter>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/binutils.xml:110
 msgid ""
 "Enables 64-bit support (on hosts with narrower word sizes).  May not be "
 "needed on 64-bit systems, but does no harm."
@@ -220,39 +189,32 @@ msgstr ""
 "(在字长较小的宿主平台上) 启用 64 位支持。在 64 位平台上可能不需要，但无害。"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/binutils.xml:116
 msgid "<parameter>--with-system-zlib</parameter>"
 msgstr "<parameter>--with-system-zlib</parameter>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/binutils.xml:118
 msgid ""
 "Use the installed zlib library rather than building the included version."
 msgstr "使用安装好的 zlib 库，而不是构建附带的版本。"
 
 #. type: Content of: <sect1><sect2><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/binutils.xml:125
 msgid "Compile the package:"
 msgstr "编译该软件包："
 
 #. type: Content of: <sect1><sect2><screen>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/binutils.xml:127
 #, no-wrap
 msgid "<userinput remap=\"make\">make tooldir=/usr</userinput>"
 msgstr "<userinput remap=\"make\">make tooldir=/usr</userinput>"
 
 #. type: Content of: <sect1><sect2><variablelist><title>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/binutils.xml:130
 msgid "The meaning of the make parameter:"
 msgstr "make 命令选项的含义："
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/binutils.xml:133
 msgid "<parameter>tooldir=/usr</parameter>"
 msgstr "<parameter>tooldir=/usr</parameter>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/binutils.xml:135
 msgid ""
 "Normally, the tooldir (the directory where the executables will ultimately "
 "be located) is set to <filename class=\"directory\">$(exec_prefix)/"
@@ -274,7 +236,6 @@ msgstr ""
 "录。"
 
 #. type: Content of: <sect1><sect2><important><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/binutils.xml:152
 msgid ""
 "The test suite for Binutils in this section is considered critical.  Do not "
 "skip it under any circumstances."
@@ -282,49 +243,40 @@ msgstr ""
 "本节中，Binutils 的测试套件被认为是十分关键的，在任何情况下都不能跳过。"
 
 #. type: Content of: <sect1><sect2><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/binutils.xml:156
 msgid "Test the results:"
 msgstr "测试编译结果："
 
 #. type: Content of: <sect1><sect2><screen>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/binutils.xml:158
 #, no-wrap
 msgid "<userinput remap=\"test\">make -k check</userinput>"
 msgstr "<userinput remap=\"test\">make -k check</userinput>"
 
 #. type: Content of: <sect1><sect2><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/binutils.xml:162
 msgid "Install the package:"
 msgstr "安装该软件包："
 
 #. type: Content of: <sect1><sect2><screen>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/binutils.xml:164
 #, no-wrap
 msgid "<userinput remap=\"install\">make tooldir=/usr install</userinput>"
 msgstr "<userinput remap=\"install\">make tooldir=/usr install</userinput>"
 
 #. type: Content of: <sect1><sect2><title>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/binutils.xml:169
 msgid "Contents of Binutils"
 msgstr "Binutils 的内容"
 
 #. type: Content of: <sect1><sect2><segmentedlist><segtitle>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/binutils.xml:172
 msgid "Installed programs"
 msgstr "安装的程序"
 
 #. type: Content of: <sect1><sect2><segmentedlist><segtitle>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/binutils.xml:173
 msgid "Installed libraries"
 msgstr "安装的库"
 
 #. type: Content of: <sect1><sect2><segmentedlist><segtitle>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/binutils.xml:174
 msgid "Installed directory"
 msgstr "安装的目录"
 
 #. type: Content of: <sect1><sect2><segmentedlist><seglistitem><seg>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/binutils.xml:177
 msgid ""
 "addr2line, ar, as, c++filt, dwp, elfedit, gprof, ld, ld.bfd, ld.gold, nm, "
 "objcopy, objdump, ranlib, readelf, size, strings, and strip"
@@ -333,36 +285,30 @@ msgstr ""
 "objcopy, objdump, ranlib, readelf, size, strings, 以及 strip"
 
 #. type: Content of: <sect1><sect2><segmentedlist><seglistitem><seg>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/binutils.xml:179
 msgid ""
 "libbfd.{a,so}, libctf.{a,so}, libctf-nobfd.{a,so}, and libopcodes.{a,so}"
 msgstr ""
 "libbfd.{a,so}, libctf.{a,so}, libctf-nobfd.{a,so}, and libopcodes.{a,so}"
 
 #. type: Content of: <sect1><sect2><segmentedlist><seglistitem><seg>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/binutils.xml:180
 msgid "/usr/lib/ldscripts"
 msgstr "/usr/lib/ldscripts"
 
 #. type: Content of: <sect1><sect2><variablelist><bridgehead>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/binutils.xml:185
 msgid "Short Descriptions"
 msgstr "简要描述"
 
 #. type: Content of: <sect1><sect2><variablelist>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/binutils.xml:186
 msgid ""
 "<?dbfo list-presentation=\"list\"?> <?dbhtml list-presentation=\"table\"?>"
 msgstr ""
 "<?dbfo list-presentation=\"list\"?> <?dbhtml list-presentation=\"table\"?>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/binutils.xml:190
 msgid "<command>addr2line</command>"
 msgstr "<command>addr2line</command>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/binutils.xml:192
 msgid ""
 "Translates program addresses to file names and line numbers; given an "
 "address and the name of an executable, it uses the debugging information in "
@@ -373,32 +319,26 @@ msgstr ""
 "序使用可执行文件中的调试信息，确定与该地址相关的源代码文件和行号。"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/binutils.xml:197
 msgid "addr2line"
 msgstr "addr2line"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/binutils.xml:203
 msgid "<command>ar</command>"
 msgstr "<command>ar</command>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/binutils.xml:205
 msgid "Creates, modifies, and extracts from archives"
 msgstr "创建、修改、提取档案文件"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/binutils.xml:207
 msgid "ar"
 msgstr "ar"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/binutils.xml:213
 msgid "<command>as</command>"
 msgstr "<command>as</command>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/binutils.xml:215
 msgid ""
 "An assembler that assembles the output of <command>gcc</command> into object "
 "files"
@@ -406,79 +346,64 @@ msgstr ""
 "一个能够汇编 <command>gcc</command> 输出的汇编代码并生成目标文件的汇编器"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/binutils.xml:218
 msgid "as"
 msgstr "as"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/binutils.xml:224
 msgid "<command>c++filt</command>"
 msgstr "<command>c++filt</command>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/binutils.xml:226
 msgid ""
 "Used by the linker to de-mangle C++ and Java symbols and to keep overloaded "
 "functions from clashing"
 msgstr "被链接器用于 demangle C++ 和 Java 符号，防止重载函数冲突。"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/binutils.xml:229
 msgid "c++filt"
 msgstr "c++filt"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/binutils.xml:235
 msgid "<command>dwp</command>"
 msgstr "<command>dwp</command>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/binutils.xml:237
 msgid "The DWARF packaging utility"
 msgstr "DWARF 封装工具"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/binutils.xml:239
 msgid "dwp"
 msgstr "dwp"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/binutils.xml:245
 msgid "<command>elfedit</command>"
 msgstr "<command>elfedit</command>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/binutils.xml:247
 msgid "Updates the ELF header of ELF files"
 msgstr "更改 ELF 文件的 ELF 头"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/binutils.xml:249
 msgid "elfedit"
 msgstr "elfedit"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/binutils.xml:255
 msgid "<command>gprof</command>"
 msgstr "<command>gprof</command>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/binutils.xml:257
 msgid "Displays call graph profile data"
 msgstr "显示函数调用图性能分析数据"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/binutils.xml:259
 msgid "gprof"
 msgstr "gprof"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/binutils.xml:265
 msgid "<command>ld</command>"
 msgstr "<command>ld</command>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/binutils.xml:267
 msgid ""
 "A linker that combines a number of object and archive files into a single "
 "file, relocating their data and tying up symbol references"
@@ -487,77 +412,62 @@ msgstr ""
 "并绑定符号引用"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/binutils.xml:271
 msgid "ld"
 msgstr "ld"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/binutils.xml:277
 msgid "<command>ld.gold</command>"
 msgstr "<command>ld.gold</command>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/binutils.xml:279
 msgid "A cut down version of ld that only supports the elf object file format"
 msgstr "ld 的一个裁减版，只支持 ELF 目标文件格式"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/binutils.xml:282
 msgid "ld.gold"
 msgstr "ld.gold"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/binutils.xml:288
 msgid "<command>ld.bfd</command>"
 msgstr "<command>ld.bfd</command>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/binutils.xml:290
 msgid "Hard link to <command>ld</command>"
 msgstr "<command>ld</command> 的硬链接"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/binutils.xml:292
 msgid "ld.bfd"
 msgstr "ld.bfd"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/binutils.xml:298
 msgid "<command>nm</command>"
 msgstr "<command>nm</command>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/binutils.xml:300
 msgid "Lists the symbols occurring in a given object file"
 msgstr "列出给定目标文件中的符号"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/binutils.xml:302
 msgid "nm"
 msgstr "nm"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/binutils.xml:308
 msgid "<command>objcopy</command>"
 msgstr "<command>objcopy</command>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/binutils.xml:310
 msgid "Translates one type of object file into another"
 msgstr "将一种目标文件翻译成另一种"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/binutils.xml:312
 msgid "objcopy"
 msgstr "objcopy"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/binutils.xml:318
 msgid "<command>objdump</command>"
 msgstr "<command>objdump</command>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/binutils.xml:320
 msgid ""
 "Displays information about the given object file, with options controlling "
 "the particular information to display; the information shown is useful to "
@@ -567,17 +477,14 @@ msgstr ""
 "工具的程序员很有用"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/binutils.xml:325
 msgid "objdump"
 msgstr "objdump"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/binutils.xml:331
 msgid "<command>ranlib</command>"
 msgstr "<command>ranlib</command>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/binutils.xml:333
 msgid ""
 "Generates an index of the contents of an archive and stores it in the "
 "archive; the index lists all of the symbols defined by archive members that "
@@ -587,47 +494,38 @@ msgstr ""
 "目标文件定义的符号"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/binutils.xml:337
 msgid "ranlib"
 msgstr "ranlib"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/binutils.xml:343
 msgid "<command>readelf</command>"
 msgstr "<command>readelf</command>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/binutils.xml:345
 msgid "Displays information about ELF type binaries"
 msgstr "显示 ELF 格式二进制文件的信息"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/binutils.xml:347
 msgid "readelf"
 msgstr "readelf"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/binutils.xml:353
 msgid "<command>size</command>"
 msgstr "<command>size</command>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/binutils.xml:355
 msgid "Lists the section sizes and the total size for the given object files"
 msgstr "列出给定文件各个段的大小和文件总大小"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/binutils.xml:358
 msgid "size"
 msgstr "size"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/binutils.xml:364
 msgid "<command>strings</command>"
 msgstr "<command>strings</command>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/binutils.xml:366
 msgid ""
 "Outputs, for each given file, the sequences of printable characters that are "
 "of at least the specified length (defaulting to four); for object files, it "
@@ -639,77 +537,62 @@ msgstr ""
 "描整个文件"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/binutils.xml:372
 msgid "strings"
 msgstr "strings"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/binutils.xml:378
 msgid "<command>strip</command>"
 msgstr "<command>strip</command>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/binutils.xml:380
 msgid "Discards symbols from object files"
 msgstr "移除目标文件中的符号"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/binutils.xml:382
 msgid "strip"
 msgstr "strip"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/binutils.xml:388
 msgid "<filename class=\"libraryfile\">libbfd</filename>"
 msgstr "<filename class=\"libraryfile\">libbfd</filename>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/binutils.xml:390
 msgid "The Binary File Descriptor library"
 msgstr "二进制文件描述符库"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/binutils.xml:392
 msgid "libbfd"
 msgstr "libbfd"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/binutils.xml:398
 msgid "<filename class=\"libraryfile\">libctf</filename>"
 msgstr "<filename class=\"libraryfile\">libctf</filename>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/binutils.xml:400
 msgid "The Compat ANSI-C Type Format debugging support library"
 msgstr "紧凑 ANSI-C 类型格式调试支持库"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/binutils.xml:402
 msgid "libctf"
 msgstr "libctf"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/binutils.xml:408
 msgid "<filename class=\"libraryfile\">libctf-nobfd</filename>"
 msgstr "<filename class=\"libraryfile\">libctf-nobfd</filename>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/binutils.xml:410
 msgid "A libctf variant which does not use libbfd functionality"
 msgstr "libctf 的变体，它不需要 libbfd 的功能"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/binutils.xml:412
 msgid "libctf-nobfd"
 msgstr "libctf-nobfd"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/binutils.xml:418
 msgid "<filename class=\"libraryfile\">libopcodes</filename>"
 msgstr "<filename class=\"libraryfile\">libopcodes</filename>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/binutils.xml:420
 msgid ""
 "A library for dealing with opcodes&mdash;the <quote>readable text</quote> "
 "versions of instructions for the processor; it is used for building "
@@ -719,6 +602,5 @@ msgstr ""
 "<command>objdump</command> 等构建工具所使用"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/binutils.xml:425
 msgid "libopcodes"
 msgstr "libopcodes"

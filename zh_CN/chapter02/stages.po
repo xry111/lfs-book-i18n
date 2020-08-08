@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2020-06-23 15:47+0800\n"
+"POT-Creation-Date: 2020-08-08 19:28+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -12,12 +12,10 @@ msgstr ""
 "X-Generator: Translate Toolkit 2.2.5\n"
 
 #. type: Content of: <sect1><title>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter02/stages.xml:11
 msgid "Building LFS in Stages"
 msgstr "分阶段构建 LFS"
 
 #. type: Content of: <sect1><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter02/stages.xml:13
 msgid ""
 "LFS is designed to be built in one session.  That is, the instructions "
 "assume that the system will not be shut down during the process.  That does "
@@ -30,19 +28,16 @@ msgstr ""
 "动后，继续编译 LFS 时，根据构建进度的不同，可能需要再次进行某些操作。"
 
 #. type: Content of: <sect1><sect2><title>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter02/stages.xml:21
 msgid "Chapters&nbsp;1&ndash;4"
 msgstr "第 1&ndash;4 章"
 
 #. type: Content of: <sect1><sect2><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter02/stages.xml:23
 msgid ""
 "These chapters are accomplished on the host system.  When restarting, be "
 "careful of the following:"
 msgstr "这些章节是在宿主系统完成的。在重启后，注意下列事项："
 
 #. type: Content of: <sect1><sect2><itemizedlist><listitem><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter02/stages.xml:28
 msgid ""
 "Procedures done as the root user after Section 2.4 need to have the LFS "
 "environment variable set <emphasis>FOR THE ROOT USER</emphasis>."
@@ -51,18 +46,14 @@ msgstr ""
 "为 root 用户</emphasis>设置好。"
 
 #. type: Content of: <sect1><sect2><title>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter02/stages.xml:36
 msgid "Chapter&nbsp;5&ndash;6"
 msgstr "第 5&ndash;6 章"
 
 #. type: Content of: <sect1><sect2><itemizedlist><listitem><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter02/stages.xml:40
-#: /home/xry111/svn-repos/LFS-BOOK/chapter02/stages.xml:65
 msgid "The /mnt/lfs partition must be mounted."
 msgstr "/mnt/lfs 分区需要重新挂载。"
 
 #. type: Content of: <sect1><sect2><itemizedlist><listitem><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter02/stages.xml:44
 msgid ""
 "Threse two chapters must be done as user <emphasis>lfs</emphasis>.  A "
 "<command>su - lfs</command> needs to be done before any task in these "
@@ -73,7 +64,6 @@ msgstr ""
 "成。在执行第 5 章的任务时，必须先执行 <command>su - lfs</command> 命令。"
 
 #. type: Content of: <sect1><sect2><itemizedlist><listitem><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter02/stages.xml:51
 msgid ""
 "The procedures in <xref linkend='ch-tools-generalinstructions'/> are "
 "critical.  If there is any doubt about installing a package, ensure any "
@@ -85,12 +75,10 @@ msgstr ""
 "重新执行该软件包对应章节的所有命令。"
 
 #. type: Content of: <sect1><sect2><title>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter02/stages.xml:61
 msgid "Chapter&nbsp;7&ndash;10"
 msgstr "第 7&ndash;10 章"
 
 #. type: Content of: <sect1><sect2><itemizedlist><listitem><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter02/stages.xml:69
 msgid ""
 "A few operations, from <quote>Changing Ownership</quote> to <quote>Entering "
 "the Chroot Environment</quote> must be done as the root user, with the LFS "
@@ -100,7 +88,6 @@ msgstr ""
 "须以 root 身份完成，且 LFS 环境变量必须为 root 用户设定。"
 
 #. type: Content of: <sect1><sect2><itemizedlist><listitem><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter02/stages.xml:75
 msgid ""
 "When entering chroot, the LFS environment variable must be set for root. The "
 "LFS variable is not used afterwards."
@@ -108,12 +95,12 @@ msgstr ""
 "在进入 chroot 环境时，LFS 环境变量必须为 root 设置好。之后就不需要 LFS 变量。"
 
 #. type: Content of: <sect1><sect2><itemizedlist><listitem><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter02/stages.xml:80
 msgid ""
 "The virtual file systems must be mounted.  This can be done before or after "
 "entering chroot by changing to a host virtual terminal and, as root, running "
 "the commands in <xref linkend='ch-tools-bindmount'/> and <xref linkend='ch-"
 "tools-kernfsmount'/>."
 msgstr ""
-"虚拟文件系统必须挂载好。在进入 chroot 环境之前，请切换到一个宿主系统的虚拟终端，以 root 身份执行<xref linkend='ch-"
-"tools-bindmount'/>和<xref linkend='ch-tools-kernfsmount'/>中的命令。"
+"虚拟文件系统必须挂载好。在进入 chroot 环境之前，请切换到一个宿主系统的虚拟终"
+"端，以 root 身份执行<xref linkend='ch-tools-bindmount'/>和<xref linkend='ch-"
+"tools-kernfsmount'/>中的命令。"

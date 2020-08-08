@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2020-06-17 12:44+0800\n"
+"POT-Creation-Date: 2020-08-08 19:28+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -12,22 +12,18 @@ msgstr ""
 "X-Generator: Translate Toolkit 2.2.5\n"
 
 #. type: Content of: <sect1><title>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter09/systemd-custom.xml:11
 msgid "Systemd Usage and Configuration"
 msgstr "Systemd 使用和配置"
 
 #. type: Content of: <sect1><indexterm><primary>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter09/systemd-custom.xml:14
 msgid "Systemd Customization"
 msgstr "Systemd 自定义设置"
 
 #. type: Content of: <sect1><sect2><title>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter09/systemd-custom.xml:18
 msgid "Basic Configuration"
 msgstr "基础设置"
 
 #. type: Content of: <sect1><sect2><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter09/systemd-custom.xml:20
 msgid ""
 "The <filename>/etc/systemd/system.conf</filename> file contains a set of "
 "options to control basic systemd operations. The default file has all "
@@ -37,17 +33,15 @@ msgid ""
 "on each configuration option."
 msgstr ""
 "<filename>/etc/systemd/system.conf</filename> 文件包含一组控制 systemd 基本功"
-"能的选项。默认文件中所有条目都被注释掉，并标明了默认值。可以在这里修改日志"
-"级别，以及其他一些基本日志设定。参阅 <filename>systemd-system.conf(5)</"
+"能的选项。默认文件中所有条目都被注释掉，并标明了默认值。可以在这里修改日志级"
+"别，以及其他一些基本日志设定。参阅 <filename>systemd-system.conf(5)</"
 "filename> man 手册页面了解每个选项的详细信息。"
 
 #. type: Content of: <sect1><sect2><title>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter09/systemd-custom.xml:30
 msgid "Disabling Screen Clearing at Boot Time"
 msgstr "禁用引导时自动清屏"
 
 #. type: Content of: <sect1><sect2><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter09/systemd-custom.xml:32
 msgid ""
 "The normal behavior for systemd is to clear the screen at the end of the "
 "boot sequence. If desired, this behavior may be changed by running the "
@@ -57,7 +51,6 @@ msgstr ""
 "令，修改这一行为："
 
 #. type: Content of: <sect1><sect2><screen>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter09/systemd-custom.xml:36
 #, no-wrap
 msgid ""
 "<userinput>mkdir -pv /etc/systemd/system/getty@tty1.service.d\n"
@@ -75,7 +68,6 @@ msgstr ""
 "EOF</userinput>"
 
 #. type: Content of: <sect1><sect2><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter09/systemd-custom.xml:43
 msgid ""
 "The boot messages can always be reviewed by using the <userinput>journalctl -"
 "b</userinput> command as the root user."
@@ -84,12 +76,10 @@ msgstr ""
 "导消息。"
 
 #. type: Content of: <sect1><sect2><title>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter09/systemd-custom.xml:49
 msgid "Disabling tmpfs for /tmp"
 msgstr "禁止将 tmpfs 挂载到 /tmp"
 
 #. type: Content of: <sect1><sect2><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter09/systemd-custom.xml:51
 msgid ""
 "By default, <filename class=\"directory\">/tmp</filename> is created as a "
 "tmpfs. If this is not desired, it can be overridden by executing the "
@@ -99,13 +89,11 @@ msgstr ""
 "系统。如果不希望这样，可以执行以下命令覆盖这一行为："
 
 #. type: Content of: <sect1><sect2><screen>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter09/systemd-custom.xml:55
 #, no-wrap
 msgid "<userinput>ln -sfv /dev/null /etc/systemd/system/tmp.mount</userinput>"
 msgstr "<userinput>ln -sfv /dev/null /etc/systemd/system/tmp.mount</userinput>"
 
 #. type: Content of: <sect1><sect2><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter09/systemd-custom.xml:57
 msgid ""
 "Alternatively, if a a separate partition for <filename class=\"directory\">/"
 "tmp</filename> is desired, specify that partition in a <filename>/etc/fstab</"
@@ -115,44 +103,37 @@ msgstr ""
 "区，在 <filename>/etc/fstab</filename> 中为其添加一个条目。"
 
 #. type: Content of: <sect1><sect2><warning><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter09/systemd-custom.xml:63
 msgid ""
 "Do not create the symbolic link above if a separate partition is used for "
 "<filename class=\"directory\">/tmp</filename>.  This will prevent the root "
 "file system (/) from being remounted r/w and make the system unusable when "
 "booted."
 msgstr ""
-"如果使用了单独的 <filename class=\"directory\">/tmp</filename> 分区，不要创"
-"建上面的符号链接。这会导致根文件系统 (/) 无法重新挂载为可读写，使得系统在引导"
-"后不可用。"
+"如果使用了单独的 <filename class=\"directory\">/tmp</filename> 分区，不要创建"
+"上面的符号链接。这会导致根文件系统 (/) 无法重新挂载为可读写，使得系统在引导后"
+"不可用。"
 
 #. type: Content of: <sect1><sect2><title>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter09/systemd-custom.xml:73
 msgid "Configuring Automatic File Creation and Deletion"
 msgstr "配置文件自动创建和删除"
 
 #. type: Content of: <sect1><sect2><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter09/systemd-custom.xml:75
 msgid "There are several services that create or delete files or directories:"
 msgstr "有一些创建或删除文件、目录的服务："
 
 #. type: Content of: <sect1><sect2><itemizedlist><listitem><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter09/systemd-custom.xml:79
 msgid "systemd-tmpfiles-clean.service"
 msgstr "systemd-tmpfiles-clean.service"
 
 #. type: Content of: <sect1><sect2><itemizedlist><listitem><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter09/systemd-custom.xml:80
 msgid "systemd-tmpfiles-setup-dev.service"
 msgstr "systemd-tmpfiles-setup-dev.service"
 
 #. type: Content of: <sect1><sect2><itemizedlist><listitem><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter09/systemd-custom.xml:81
 msgid "systemd-tmpfiles-setup.service"
 msgstr "systemd-tmpfiles-setup.service"
 
 #. type: Content of: <sect1><sect2><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter09/systemd-custom.xml:84
 msgid ""
 "The system location for the configuration files is <filename>/usr/lib/"
 "tmpfiles.d/*.conf</filename>. The local configuration files are in <filename "
@@ -168,13 +149,11 @@ msgstr ""
 "阅 <filename>tmpfiles.d(5)</filename> man 手册页面，了解配置文件格式的细节。"
 
 #. type: Content of: <sect1><sect2><para><screen>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter09/systemd-custom.xml:101
 #, no-wrap
 msgid "q /tmp 1777 root root 10d"
 msgstr "q /tmp 1777 root root 10d"
 
 #. type: Content of: <sect1><sect2><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter09/systemd-custom.xml:95
 msgid ""
 "Note that the syntax for the <filename>/usr/lib/tmpfiles.d/*.conf</filename> "
 "files can be confusing.  For example, the default deletion of files in the /"
@@ -189,13 +168,12 @@ msgid ""
 msgstr ""
 "注意 <filename>/usr/lib/tmpfiles.d/*.conf</filename> 文件的语法较难理解。例"
 "如，删除 /tmp 目录下文件的默认规则是文件 <filename>/usr/lib/tmpfiles.d/tmp."
-"conf</filename> 的一行：<placeholder type=\"screen\" id=\"0\"/> 类别字段 q "
-"表示创建一个带有配额的子卷，它实际上只适用于 btrfs 文件系统。它引用类别 v，"
-"类别 v 又引用类别 d (目录)。对于类别 d，会在目录不存在时自动创建它，并根据配置文件调整其"
-"权限和所有者。如果 age 参数被指定，该目录中较老的文件会被自动清理。"
+"conf</filename> 的一行：<placeholder type=\"screen\" id=\"0\"/> 类别字段 q 表"
+"示创建一个带有配额的子卷，它实际上只适用于 btrfs 文件系统。它引用类别 v，类"
+"别 v 又引用类别 d (目录)。对于类别 d，会在目录不存在时自动创建它，并根据配置"
+"文件调整其权限和所有者。如果 age 参数被指定，该目录中较老的文件会被自动清理。"
 
 #. type: Content of: <sect1><sect2><para><screen>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter09/systemd-custom.xml:116
 #, no-wrap
 msgid ""
 "<userinput>mkdir -p /etc/tmpfiles.d\n"
@@ -205,23 +183,20 @@ msgstr ""
 "cp /usr/lib/tmpfiles.d/tmp.conf /etc/tmpfiles.d</userinput>"
 
 #. type: Content of: <sect1><sect2><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter09/systemd-custom.xml:112
 msgid ""
 "If the default parameters are not desired, then the file should be copied to "
 "<filename class=\"directory\">/etc/tmpfiles.d</filename> and edited as "
 "desired.  For example: <placeholder type=\"screen\" id=\"0\"/>"
 msgstr ""
 "如果默认参数不符合您的期望，您可以将文件复制到 <filename class=\"directory"
-"\">/etc/tmpfiles.d</filename> 目录，再编辑复制得到的副本。例如："
-"<placeholder type=\"screen\" id=\"0\"/>"
+"\">/etc/tmpfiles.d</filename> 目录，再编辑复制得到的副本。例如：<placeholder "
+"type=\"screen\" id=\"0\"/>"
 
 #. type: Content of: <sect1><sect2><title>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter09/systemd-custom.xml:123
 msgid "Overriding Default Services Behavior"
 msgstr "覆盖系统服务默认行为"
 
 #. type: Content of: <sect1><sect2><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter09/systemd-custom.xml:125
 msgid ""
 "The parameters of a unit can be overriden by creating a directory and a "
 "configuration file in <filename class=\"directory\">/etc/systemd/system</"
@@ -231,7 +206,6 @@ msgstr ""
 "system</filename> 中创建一个包含配置文件的目录而覆盖。例如："
 
 #. type: Content of: <sect1><sect2><screen>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter09/systemd-custom.xml:129
 #, no-wrap
 msgid ""
 "<userinput>mkdir -pv /etc/systemd/system/foobar.service.d\n"
@@ -251,7 +225,6 @@ msgstr ""
 "EOF</userinput>"
 
 #. type: Content of: <sect1><sect2><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter09/systemd-custom.xml:137
 msgid ""
 "See <filename>systemd.unit(5)</filename> manual page for more information. "
 "After creating the configuration file, run <userinput>systemctl daemon-"
@@ -263,12 +236,10 @@ msgstr ""
 "<userinput>systemctl restart foobar</userinput>，激活对服务进行的修改。"
 
 #. type: Content of: <sect1><sect2><title>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter09/systemd-custom.xml:145
 msgid "Debugging the Boot Sequence"
 msgstr "调试引导过程"
 
 #. type: Content of: <sect1><sect2><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter09/systemd-custom.xml:147
 msgid ""
 "Rather than plain shell scripts used in SysVinit or BSD style init systems, "
 "systemd uses a unified format for different types of startup files (or "
@@ -276,12 +247,11 @@ msgid ""
 "control state, and obtain status of unit files. Here are some examples of "
 "frequently used commands:"
 msgstr ""
-"与 SysVinit 或 BSD 风格 init 系统不同，systemd 使用统一格式处理不同种类的引"
-"导文件 (或称为单元)。命令 <command>systemctl</command> 能够启用、禁用单元文"
-"件，或控制、查询单元文件的状态。以下是一些常用的命令："
+"与 SysVinit 或 BSD 风格 init 系统不同，systemd 使用统一格式处理不同种类的引导"
+"文件 (或称为单元)。命令 <command>systemctl</command> 能够启用、禁用单元文件，"
+"或控制、查询单元文件的状态。以下是一些常用的命令："
 
 #. type: Content of: <sect1><sect2><itemizedlist><listitem><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter09/systemd-custom.xml:155
 msgid ""
 "<command>systemctl list-units -t <replaceable>&lt;service&gt;</replaceable> "
 "[--all]</command>: lists loaded unit files of type service."
@@ -290,7 +260,6 @@ msgstr ""
 "[--all]</command>: 列出已加载的服务 (service) 类型单元文件。"
 
 #. type: Content of: <sect1><sect2><itemizedlist><listitem><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter09/systemd-custom.xml:159
 msgid ""
 "<command>systemctl list-units -t <replaceable>&lt;target&gt;</replaceable> "
 "[--all]</command>: lists loaded unit files of type target."
@@ -299,7 +268,6 @@ msgstr ""
 "[--all]</command>: 列出已加载的引导目标 (target) 类型单元文件。"
 
 #. type: Content of: <sect1><sect2><itemizedlist><listitem><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter09/systemd-custom.xml:163
 msgid ""
 "<command>systemctl show -p Wants <replaceable>&lt;multi-user.target&gt;</"
 "replaceable></command>: shows all units that depend on the multi-user "
@@ -311,7 +279,6 @@ msgstr ""
 "(target)是一种和 SysVinit 中运行级别 (runlevel) 地位相同的特殊单元文件。"
 
 #. type: Content of: <sect1><sect2><itemizedlist><listitem><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter09/systemd-custom.xml:169
 msgid ""
 "<command>systemctl status <replaceable>&lt;servicename.service&gt;</"
 "replaceable></command>: shows the status of the servicename service. The ."
@@ -321,16 +288,14 @@ msgid ""
 msgstr ""
 "<command>systemctl status <replaceable>&lt;servicename.service&gt;</"
 "replaceable></command>: 显示名为 servicename 的服务的状态。如果没有同名的其他"
-"类型单元文件，可以省略 .service 后缀。其他类型的单元文件有 .socket 文件 (它"
-"创建一个监听套接字，提供和 inetd/xinetd 类似的功能)。"
+"类型单元文件，可以省略 .service 后缀。其他类型的单元文件有 .socket 文件 (它创"
+"建一个监听套接字，提供和 inetd/xinetd 类似的功能)。"
 
 #. type: Content of: <sect1><sect2><title>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter09/systemd-custom.xml:180
 msgid "Working with the Systemd Journal"
 msgstr "使用 systemd 日志"
 
 #. type: Content of: <sect1><sect2><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter09/systemd-custom.xml:182
 msgid ""
 "Logging on a system booted with systemd is handled with systemd-journald (by "
 "default), rather than a typical unix syslog daemon.  You can also add a "
@@ -340,21 +305,19 @@ msgid ""
 "<command>journalctl</command> is provided.  Here are some examples of "
 "frequently used commands:"
 msgstr ""
-"(默认情况下) 在使用 systemd 引导的系统上，systemd-journald 服务负责处理日"
-"志，它取代了传统的 Unix syslog 守护进程。如果您希望的话，也可以添加一个普通 "
+"(默认情况下) 在使用 systemd 引导的系统上，systemd-journald 服务负责处理日志，"
+"它取代了传统的 Unix syslog 守护进程。如果您希望的话，也可以添加一个普通 "
 "syslog 守护进程，它和 systemd-journald 可以一起工作。systemd-journald 程序将"
 "日志项储存为二进制格式，而不是纯文本日志文件。为了解析日志文件，需要使用 "
 "systemd 提供的 <command>journalctl</command> 命令。下面是该命令的常见用法："
 
 #. type: Content of: <sect1><sect2><itemizedlist><listitem><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter09/systemd-custom.xml:192
 msgid ""
 "<command>journalctl -r</command>: shows all contents of the journal in "
 "reverse chronological order."
 msgstr "<command>journalctl -r</command>：按时间顺序，倒序显示所有日志内容。"
 
 #. type: Content of: <sect1><sect2><itemizedlist><listitem><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter09/systemd-custom.xml:196
 msgid ""
 "<command>journalctl -u <replaceable>UNIT</replaceable></command>: shows the "
 "journal entries associated with the specified UNIT file."
@@ -363,7 +326,6 @@ msgstr ""
 "单元文件 UNIT 关联的日志。"
 
 #. type: Content of: <sect1><sect2><itemizedlist><listitem><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter09/systemd-custom.xml:201
 msgid ""
 "<command>journalctl -b[=ID] -r</command>: shows the journal entries since "
 "last successful boot (or for boot ID) in reverse chronological order."
@@ -372,7 +334,6 @@ msgstr ""
 "编号为 ID 的引导中) 的所有日志。"
 
 #. type: Content of: <sect1><sect2><itemizedlist><listitem><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter09/systemd-custom.xml:206
 msgid ""
 "<command>journalctl -f</command>: provides functionality similar to tail -f "
 "(follow)."
@@ -381,12 +342,10 @@ msgstr ""
 "到屏幕)。"
 
 #. type: Content of: <sect1><sect2><title>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter09/systemd-custom.xml:214
 msgid "Working with Core Dumps"
 msgstr "处理核心转储"
 
 #. type: Content of: <sect1><sect2><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter09/systemd-custom.xml:216
 msgid ""
 "Core dumps are useful to debug crashed programs, especially when a daemon "
 "process crashes. On systemd booted systems the core dumping is handled by "
@@ -396,50 +355,44 @@ msgid ""
 "<command>coredumpctl</command> tool is provided.  Here are some examples of "
 "frequently used commands:"
 msgstr ""
-"核心转储在调试崩溃的程序时非常有用，特别是对于守护进程崩溃的情况。"
-"在 systemd 引导的系统上，核心转储由 <command>systemd-coredump</command> "
-"处理。它会在日志中记录核心转储，并且将核心转储文件本身存储到 "
-"<filename class=\"directory\">/var/lib/systemd/coredump</filename> 中。"
-"如果要获取和处理核心转储文件，可以使用 <command>coredumpctl</command> "
-"工具。下面给出它的常用命令的示例："
+"核心转储在调试崩溃的程序时非常有用，特别是对于守护进程崩溃的情况。在 systemd "
+"引导的系统上，核心转储由 <command>systemd-coredump</command> 处理。它会在日志"
+"中记录核心转储，并且将核心转储文件本身存储到 <filename class=\"directory\">/"
+"var/lib/systemd/coredump</filename> 中。如果要获取和处理核心转储文件，可以使"
+"用 <command>coredumpctl</command> 工具。下面给出它的常用命令的示例："
 
 #. type: Content of: <sect1><sect2><itemizedlist><listitem><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter09/systemd-custom.xml:227
 msgid ""
 "<command>coredumpctl -r</command>: lists all core dumps in reverse "
 "chronological order."
-msgstr "<command>coredumpctl -r</command>：按时间顺序，倒序显示所有核心转储记录。"
+msgstr ""
+"<command>coredumpctl -r</command>：按时间顺序，倒序显示所有核心转储记录。"
 
 #. type: Content of: <sect1><sect2><itemizedlist><listitem><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter09/systemd-custom.xml:231
 msgid ""
 "<command>coredumpctl -1 info</command>: shows the information from the last "
 "core dump."
-msgstr ""
-"<command>coredumpctl -1 info</command>：显示最近一次核心转储的信息。"
+msgstr "<command>coredumpctl -1 info</command>：显示最近一次核心转储的信息。"
 
 #. type: Content of: <sect1><sect2><itemizedlist><listitem><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter09/systemd-custom.xml:235
 msgid ""
 "<command>coredumpctl -1 debug</command>: loads the last core dump into "
 "<ulink url=\"&blfs-book;general/gdb.html\">GDB</ulink>."
 msgstr ""
-"<command>coredumpctl -1 debug</command>：将最后一次核心转储加载到 "
-"<ulink url=\"&blfs-book;general/gdb.html\">GDB</ulink> 中。"
+"<command>coredumpctl -1 debug</command>：将最后一次核心转储加载到 <ulink url="
+"\"&blfs-book;general/gdb.html\">GDB</ulink> 中。"
 
 #. type: Content of: <sect1><sect2><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter09/systemd-custom.xml:241
 msgid ""
 "Core dumps may use a lot of disk space.  The maximum disk space used by core "
 "dumps can be limited by creating a configuration file in <filename class="
 "\"directory\">/etc/systemd/coredump.conf.d</filename>.  For example:"
 msgstr ""
-"核心转储可能使用大量磁盘空间。为了限制核心转储使用的最大磁盘空间，"
-"可以在 <filename class=\"directory\">/etc/systemd/coredump.conf.d"
-"</filename> 中创建一个配置文件。例如："
+"核心转储可能使用大量磁盘空间。为了限制核心转储使用的最大磁盘空间，可以在 "
+"<filename class=\"directory\">/etc/systemd/coredump.conf.d</filename> 中创建"
+"一个配置文件。例如："
 
 #. type: Content of: <sect1><sect2><screen>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter09/systemd-custom.xml:246
 #, no-wrap
 msgid ""
 "<userinput>mkdir -pv /etc/systemd/coredump.conf.d\n"
@@ -457,22 +410,20 @@ msgstr ""
 "EOF</userinput>"
 
 #. type: Content of: <sect1><sect2><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter09/systemd-custom.xml:253
 msgid ""
 "See the <filename>systemd-coredump(8)</filename>, <filename>coredumpctl(1)</"
 "filename>, and <filename>coredump.conf.d(5)</filename> manual pages for more "
 "information."
 msgstr ""
-"参阅 man 手册页面 <filename>systemd-coredump(8)</filename>，<filename>coredumpctl(1)</"
-"filename>，以及 <filename>coredump.conf.d(5)</filename> 了解更多信息。"
+"参阅 man 手册页面 <filename>systemd-coredump(8)</filename>，"
+"<filename>coredumpctl(1)</filename>，以及 <filename>coredump.conf.d(5)</"
+"filename> 了解更多信息。"
 
 #. type: Content of: <sect1><sect2><title>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter09/systemd-custom.xml:260
 msgid "Long Running Processes"
 msgstr "持续运行进程"
 
 #. type: Content of: <sect1><sect2><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter09/systemd-custom.xml:262
 msgid ""
 "Beginning with systemd-230, all user processes are killed when a user "
 "session is ended, even if nohup is used, or the process uses the "
@@ -491,7 +442,6 @@ msgstr ""
 "类驻留进程在用户会话结束后继续运行："
 
 #. type: Content of: <sect1><sect2><itemizedlist><listitem><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter09/systemd-custom.xml:275
 msgid ""
 "<emphasis>Enable process lingering for only selected users</emphasis>: "
 "Normal users have permission to enable process lingering with the command "
@@ -509,16 +459,15 @@ msgid ""
 msgstr ""
 "<emphasis>仅为选定的用户启用进程驻留</emphasis>：普通用户有执行命令 "
 "<command>loginctl enable-linger</command> 启用进程驻留的权限，管理员可以使用"
-"带 <parameter>user</parameter> 参数的该命令，为特定用户启用进程驻留。在启用"
-"进程驻留后，可以使用 <command>systemd-run</command> 命令启动持续运行的进程。"
-"例如，<command>systemd-run --scope --user /usr/bin/screen</command>。如果您"
-"为您的用户启用了进程驻留，则 user@.service 将持续运行，甚至在所有登录会话关"
-"闭后仍然运行，而且会在系统引导时自动启动。这种方法的好处是可以显式地允许或禁"
-"止进程在用户会话结束后继续运行，但却破坏了和 <command>nohup</command> 等工"
-"具，和使用 <function>daemon()</function> 函数的工具的兼容性。"
+"带 <parameter>user</parameter> 参数的该命令，为特定用户启用进程驻留。在启用进"
+"程驻留后，可以使用 <command>systemd-run</command> 命令启动持续运行的进程。例"
+"如，<command>systemd-run --scope --user /usr/bin/screen</command>。如果您为您"
+"的用户启用了进程驻留，则 user@.service 将持续运行，甚至在所有登录会话关闭后仍"
+"然运行，而且会在系统引导时自动启动。这种方法的好处是可以显式地允许或禁止进程"
+"在用户会话结束后继续运行，但却破坏了和 <command>nohup</command> 等工具，和使"
+"用 <function>daemon()</function> 函数的工具的兼容性。"
 
 #. type: Content of: <sect1><sect2><itemizedlist><listitem><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter09/systemd-custom.xml:293
 msgid ""
 "<emphasis>Enable system-wide process lingering</emphasis>: You can set "
 "<parameter>KillUserProcesses=no</parameter> in <filename>/etc/systemd/logind."
@@ -528,11 +477,10 @@ msgid ""
 msgstr ""
 "<emphasis>为整个系统启用进程驻留</emphasis>：您可以在将"
 "<parameter>KillUserProcesses=no</parameter> 设置行加入 <filename>/etc/"
-"systemd/logind.conf</filename>，为所有用户全局地启用进程驻留。它的好处是允"
-"许所有用户继续使用旧方法，但无法进行明确控制。"
+"systemd/logind.conf</filename>，为所有用户全局地启用进程驻留。它的好处是允许"
+"所有用户继续使用旧方法，但无法进行明确控制。"
 
 #. type: Content of: <sect1><sect2><itemizedlist><listitem><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter09/systemd-custom.xml:302
 msgid ""
 "<emphasis>Disable at build-time</emphasis>: You can disable lingering by "
 "default while building systemd by adding the switch <parameter>-Ddefault-"
@@ -542,5 +490,5 @@ msgid ""
 msgstr ""
 "<emphasis>在编译时禁用该功能</emphasis>：您可以在构建 systemd 时传递参数 "
 "<parameter>-Ddefault-kill-user-process=no</parameter> 给 <command>meson</"
-"command>，使得 systemd 默认启用进程驻留。这完全禁用了 systemd 在会话结束时"
-"杀死用户进程的功能。"
+"command>，使得 systemd 默认启用进程驻留。这完全禁用了 systemd 在会话结束时杀"
+"死用户进程的功能。"

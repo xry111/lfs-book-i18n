@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2020-06-23 16:15+0800\n"
+"POT-Creation-Date: 2020-08-08 19:28+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -12,19 +12,16 @@ msgstr ""
 "X-Generator: Translate Toolkit 2.2.5\n"
 
 #. type: Content of: <sect1><title>
-#: /home/xry111/svn-repos/LFS-BOOK/part3intro/generalinstructions.xml:12
 msgid "General Compilation Instructions"
 msgstr "编译过程的一般说明"
 
 #. type: Content of: <sect1><para>
-#: /home/xry111/svn-repos/LFS-BOOK/part3intro/generalinstructions.xml:14
 msgid ""
 "When building packages there are several assumptions made within the "
 "instructions:"
 msgstr "在构建软件包时，本书提供的命令基于下列假设："
 
 #. type: Content of: <sect1><itemizedlist><listitem><para>
-#: /home/xry111/svn-repos/LFS-BOOK/part3intro/generalinstructions.xml:20
 msgid ""
 "Several of the packages are patched before compilation, but only when the "
 "patch is needed to circumvent a problem. A patch is often needed in both "
@@ -41,7 +38,6 @@ msgstr ""
 "心这些警告，补丁还是会成功应用到源码上的。"
 
 #. type: Content of: <sect1><itemizedlist><listitem><para>
-#: /home/xry111/svn-repos/LFS-BOOK/part3intro/generalinstructions.xml:31
 msgid ""
 "During the compilation of most packages, there will be several warnings that "
 "scroll by on the screen. These are normal and can safely be ignored.  These "
@@ -56,20 +52,17 @@ msgstr ""
 "触发警告。"
 
 #. type: Content of: <sect1><itemizedlist><listitem><para>
-#: /home/xry111/svn-repos/LFS-BOOK/part3intro/generalinstructions.xml:40
 msgid ""
 "Check one last time that the <envar>LFS</envar> environment variable is set "
 "up properly:"
 msgstr "最后确认 <envar>LFS</envar> 环境变量是否配置正确："
 
 #. type: Content of: <sect1><itemizedlist><listitem><screen>
-#: /home/xry111/svn-repos/LFS-BOOK/part3intro/generalinstructions.xml:43
 #, no-wrap
 msgid "<userinput>echo $LFS</userinput>"
 msgstr "<userinput>echo $LFS</userinput>"
 
 #. type: Content of: <sect1><itemizedlist><listitem><para>
-#: /home/xry111/svn-repos/LFS-BOOK/part3intro/generalinstructions.xml:45
 msgid ""
 "Make sure the output shows the path to the LFS partition's mount point, "
 "which is <filename class=\"directory\">/mnt/lfs</filename>, using our "
@@ -79,12 +72,10 @@ msgstr ""
 "class=\"directory\">/mnt/lfs</filename>。"
 
 #. type: Content of: <sect1><itemizedlist><listitem><para>
-#: /home/xry111/svn-repos/LFS-BOOK/part3intro/generalinstructions.xml:52
 msgid "Finally, two important items must be emphasized:"
 msgstr "最后强调两个重要事项："
 
 #. type: Content of: <sect1><itemizedlist><listitem><important><para>
-#: /home/xry111/svn-repos/LFS-BOOK/part3intro/generalinstructions.xml:56
 msgid ""
 "The build instructions assume that the <xref linkend='ch-partitioning-"
 "hostreqs'/>, including symbolic links, have been set properly:"
@@ -93,17 +84,14 @@ msgstr ""
 "符号链接，都被正确设置："
 
 #. type: Content of: <sect1><itemizedlist><listitem><important><itemizedlist><listitem><para>
-#: /home/xry111/svn-repos/LFS-BOOK/part3intro/generalinstructions.xml:62
 msgid "<command>bash</command> is the shell in use."
 msgstr "<command>bash</command> 是正在使用的 shell。"
 
 #. type: Content of: <sect1><itemizedlist><listitem><important><itemizedlist><listitem><para>
-#: /home/xry111/svn-repos/LFS-BOOK/part3intro/generalinstructions.xml:65
 msgid "<command>sh</command> is a symbolic link to <command>bash</command>."
 msgstr "<command>sh</command> 是指向 <command>bash</command>的符号链接。"
 
 #. type: Content of: <sect1><itemizedlist><listitem><important><itemizedlist><listitem><para>
-#: /home/xry111/svn-repos/LFS-BOOK/part3intro/generalinstructions.xml:68
 msgid ""
 "<command>/usr/bin/awk</command> is a symbolic link to <command>gawk</"
 "command>."
@@ -111,7 +99,6 @@ msgstr ""
 "<command>/usr/bin/awk</command> 是指向 <command>gawk</command> 的符号链接。"
 
 #. type: Content of: <sect1><itemizedlist><listitem><important><itemizedlist><listitem><para>
-#: /home/xry111/svn-repos/LFS-BOOK/part3intro/generalinstructions.xml:71
 msgid ""
 "<command>/usr/bin/yacc</command> is a symbolic link to <command>bison</"
 "command> or a small script that executes bison."
@@ -120,7 +107,6 @@ msgstr ""
 "或者一个执行 bison 的小脚本。"
 
 #. type: Content of: <sect1><itemizedlist><listitem><important><para>
-#: /home/xry111/svn-repos/LFS-BOOK/part3intro/generalinstructions.xml:79
 msgid "To re-emphasize the build process:"
 msgstr "再次强调构建过程："
 
@@ -129,7 +115,6 @@ msgstr "再次强调构建过程："
 #. not</emphasis> put sources in
 #. 	  <filename class="directory">/mnt/lfs/tools/</filename>. 
 #. type: Content of: <sect1><itemizedlist><listitem><important><orderedlist><listitem><para>
-#: /home/xry111/svn-repos/LFS-BOOK/part3intro/generalinstructions.xml:83
 msgid ""
 "Place all the sources and patches in a directory that will be accessible "
 "from the chroot environment such as <filename class=\"directory\">/mnt/lfs/"
@@ -139,44 +124,36 @@ msgstr ""
 "class=\"directory\">/mnt/lfs/sources/</filename>。"
 
 #. type: Content of: <sect1><itemizedlist><listitem><important><orderedlist><listitem><para>
-#: /home/xry111/svn-repos/LFS-BOOK/part3intro/generalinstructions.xml:90
 msgid "Change to the sources directory."
 msgstr "切换到放着源码包的目录。"
 
 #. type: Content of: <sect1><itemizedlist><listitem><important><orderedlist><listitem><para>
-#: /home/xry111/svn-repos/LFS-BOOK/part3intro/generalinstructions.xml:93
 msgid "For each package:"
 msgstr "对于每个软件包："
 
 #. type: Content of: <sect1><itemizedlist><listitem><important><orderedlist><listitem><orderedlist><listitem><para>
-#: /home/xry111/svn-repos/LFS-BOOK/part3intro/generalinstructions.xml:96
 msgid ""
 "Using the <command>tar</command> program, extract the package to be built.  "
 "In <xref linkend=\"chapter-cross-tools\"/> and <xref linkend=\"chapter-"
 "temporary-tools\"/>, ensure you are the <emphasis>lfs</emphasis> user when "
 "extracting the package."
 msgstr ""
-"使用 <command>tar</command> 程序，解压需要构建的软件包。在"
-"<xref linkend=\"chapter-cross-tools\"/>和"
-"<xref linkend=\"chapter-temporary-tools\"/>中"
-"解压软件包时，确认您以用户 <emphasis>lfs</emphasis> 的身份登录。"
+"使用 <command>tar</command> 程序，解压需要构建的软件包。在<xref linkend="
+"\"chapter-cross-tools\"/>和<xref linkend=\"chapter-temporary-tools\"/>中解压"
+"软件包时，确认您以用户 <emphasis>lfs</emphasis> 的身份登录。"
 
 #. type: Content of: <sect1><itemizedlist><listitem><important><orderedlist><listitem><orderedlist><listitem><para>
-#: /home/xry111/svn-repos/LFS-BOOK/part3intro/generalinstructions.xml:102
 msgid "Change to the directory created when the package was extracted."
 msgstr "切换到解压源码包时产生的目录。"
 
 #. type: Content of: <sect1><itemizedlist><listitem><important><orderedlist><listitem><orderedlist><listitem><para>
-#: /home/xry111/svn-repos/LFS-BOOK/part3intro/generalinstructions.xml:106
 msgid "Follow the book's instructions for building the package."
 msgstr "根据书中的指示构建软件包。"
 
 #. type: Content of: <sect1><itemizedlist><listitem><important><orderedlist><listitem><orderedlist><listitem><para>
-#: /home/xry111/svn-repos/LFS-BOOK/part3intro/generalinstructions.xml:109
 msgid "Change back to the sources directory."
 msgstr "切换回包含所有源码包的目录。"
 
 #. type: Content of: <sect1><itemizedlist><listitem><important><orderedlist><listitem><orderedlist><listitem><para>
-#: /home/xry111/svn-repos/LFS-BOOK/part3intro/generalinstructions.xml:112
 msgid "Delete the extracted source directory unless instructed otherwise."
 msgstr "除非另有说明，删除解压出来的目录。"

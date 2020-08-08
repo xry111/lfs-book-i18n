@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2020-06-17 12:44+0800\n"
+"POT-Creation-Date: 2020-08-08 19:28+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -12,13 +12,11 @@ msgstr ""
 "X-Generator: Translate Toolkit 2.2.5\n"
 
 #. type: Content of: <sect1><sect1info><address>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter06/coreutils.xml:14
 #, no-wrap
 msgid "&coreutils-url;"
 msgstr "&coreutils-url;"
 
 #. type: Content of: <sect1><sect1info>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter06/coreutils.xml:12
 msgid ""
 "<productname>coreutils</productname> <productnumber>&coreutils-version;</"
 "productnumber> <placeholder type=\"address\" id=\"0\"/>"
@@ -27,52 +25,42 @@ msgstr ""
 "productnumber> <placeholder type=\"address\" id=\"0\"/>"
 
 #. type: Content of: <sect1><title>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter06/coreutils.xml:17
 msgid "Coreutils-&coreutils-version;"
 msgstr "Coreutils-&coreutils-version;"
 
 #. type: Content of: <sect1><indexterm><primary>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter06/coreutils.xml:20
 msgid "Coreutils"
 msgstr "Coreutils"
 
 #. type: Content of: <sect1><indexterm><secondary>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter06/coreutils.xml:21
 msgid "tools"
 msgstr "工具"
 
 #. type: Content of: <sect1><sect2><segmentedlist><segtitle>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter06/coreutils.xml:32
 msgid "&buildtime;"
 msgstr "&buildtime;"
 
 #. type: Content of: <sect1><sect2><segmentedlist><segtitle>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter06/coreutils.xml:33
 msgid "&diskspace;"
 msgstr "&diskspace;"
 
 #. type: Content of: <sect1><sect2><segmentedlist><seglistitem><seg>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter06/coreutils.xml:36
 msgid "&coreutils-tmp-sbu;"
 msgstr "&coreutils-tmp-sbu;"
 
 #. type: Content of: <sect1><sect2><segmentedlist><seglistitem><seg>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter06/coreutils.xml:37
 msgid "&coreutils-tmp-du;"
 msgstr "&coreutils-tmp-du;"
 
 #. type: Content of: <sect1><sect2><title>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter06/coreutils.xml:44
 msgid "Installation of Coreutils"
 msgstr "安装 Coreutils"
 
 #. type: Content of: <sect1><sect2><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter06/coreutils.xml:46
 msgid "Prepare Coreutils for compilation:"
 msgstr "准备编译 Coreutils："
 
 #. type: Content of: <sect1><sect2><screen>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter06/coreutils.xml:48
 #, no-wrap
 msgid ""
 "<userinput remap=\"configure\">./configure --prefix=/usr                     \\\n"
@@ -88,17 +76,14 @@ msgstr ""
 "            --enable-no-install-program=kill,uptime</userinput>"
 
 #. type: Content of: <sect1><sect2><variablelist><title>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter06/coreutils.xml:55
 msgid "The meaning of the configure options:"
 msgstr "配置选项的含义："
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter06/coreutils.xml:58
 msgid "<envar>--enable-install-program=hostname</envar>"
 msgstr "<envar>--enable-install-program=hostname</envar>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter06/coreutils.xml:60
 msgid ""
 "This enables the <command>hostname</command> binary to be built and "
 "installed &ndash; it is disabled by default but is required by the Perl test "
@@ -108,40 +93,33 @@ msgstr ""
 "用，但 Perl 测试套件需要它。"
 
 #. type: Content of: <sect1><sect2><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter06/coreutils.xml:67
 msgid "Compile the package:"
 msgstr "编译该软件包："
 
 #. type: Content of: <sect1><sect2><screen>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter06/coreutils.xml:69
 #, no-wrap
 msgid "<userinput remap=\"make\">make</userinput>"
 msgstr "<userinput remap=\"make\">make</userinput>"
 
 #. type: Content of: <sect1><sect2><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter06/coreutils.xml:71
 msgid "Install the package:"
 msgstr "安装该软件包："
 
 #. type: Content of: <sect1><sect2><screen>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter06/coreutils.xml:73
 #, no-wrap
 msgid "<userinput remap=\"install\">make DESTDIR=$LFS install</userinput>"
 msgstr "<userinput remap=\"install\">make DESTDIR=$LFS install</userinput>"
 
 #. type: Content of: <sect1><sect2><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter06/coreutils.xml:82
 msgid ""
 "Move programs to their final expected locations. Although this is not "
 "necessary in this temporary environment, we must do so because some programs "
 "harcode executable locations:"
 msgstr ""
-"将程序移动到它们最终安装时的正确位置。"
-"尽管在临时环境中这不必要，但我们必须这样做，"
-"因为一些程序会硬编码它们的位置："
+"将程序移动到它们最终安装时的正确位置。尽管在临时环境中这不必要，但我们必须这"
+"样做，因为一些程序会硬编码它们的位置："
 
 #. type: Content of: <sect1><sect2><screen>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter06/coreutils.xml:86
 #, no-wrap
 msgid ""
 "<userinput remap=\"install\">mv -v $LFS/usr/bin/{cat,chgrp,chmod,chown,cp,date,dd,df,echo} $LFS/bin\n"
@@ -163,9 +141,7 @@ msgstr ""
 "sed -i 's/\"1\"/\"8\"/'                                           $LFS/usr/share/man/man8/chroot.8</userinput>"
 
 #. type: Content of: <sect1><sect2><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter06/coreutils.xml:100
 msgid ""
 "Details on this package are located in <xref linkend=\"contents-coreutils\" "
 "role=\".\"/>"
-msgstr ""
-"该软件包的详细信息可以在<xref linkend=\"contents-coreutils\"/>中找到。"
+msgstr "该软件包的详细信息可以在<xref linkend=\"contents-coreutils\"/>中找到。"

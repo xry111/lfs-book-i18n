@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2020-06-17 12:44+0800\n"
+"POT-Creation-Date: 2020-08-08 19:28+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -12,13 +12,11 @@ msgstr ""
 "X-Generator: Translate Toolkit 2.2.5\n"
 
 #. type: Content of: <sect1><sect1info><address>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter07/util-linux.xml:14
 #, no-wrap
 msgid "&util-linux-url;"
 msgstr "&util-linux-url;"
 
 #. type: Content of: <sect1><sect1info>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter07/util-linux.xml:12
 msgid ""
 "<productname>util-linux</productname> <productnumber>&util-linux-version;</"
 "productnumber> <placeholder type=\"address\" id=\"0\"/>"
@@ -27,71 +25,57 @@ msgstr ""
 "productnumber> <placeholder type=\"address\" id=\"0\"/>"
 
 #. type: Content of: <sect1><title>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter07/util-linux.xml:17
 msgid "Util-linux-&util-linux-version;"
 msgstr "Util-linux-&util-linux-version;"
 
 #. type: Content of: <sect1><indexterm><primary>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter07/util-linux.xml:20
 msgid "Util-linux"
 msgstr "Util-linux"
 
 #. type: Content of: <sect1><indexterm><secondary>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter07/util-linux.xml:21
 msgid "tools"
 msgstr "工具"
 
 #. type: Content of: <sect1><sect2><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter07/util-linux.xml:27
 msgid "The Util-linux package contains miscellaneous utility programs."
 msgstr "Util-linux 软件包包含一些工具程序。"
 
 #. type: Content of: <sect1><sect2><segmentedlist><segtitle>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter07/util-linux.xml:30
 msgid "&buildtime;"
 msgstr "&buildtime;"
 
 #. type: Content of: <sect1><sect2><segmentedlist><segtitle>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter07/util-linux.xml:31
 msgid "&diskspace;"
 msgstr "&diskspace;"
 
 #. type: Content of: <sect1><sect2><segmentedlist><seglistitem><seg>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter07/util-linux.xml:34
 msgid "&util-linux-tmp-sbu;"
 msgstr "&util-linux-tmp-sbu;"
 
 #. type: Content of: <sect1><sect2><segmentedlist><seglistitem><seg>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter07/util-linux.xml:35
 msgid "&util-linux-tmp-du;"
 msgstr "&util-linux-tmp-du;"
 
 #. type: Content of: <sect1><sect2><title>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter07/util-linux.xml:42
 msgid "Installation of Util-linux"
 msgstr "安装 Util-linux"
 
 #. type: Content of: <sect1><sect2><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter07/util-linux.xml:44
 msgid ""
 "First create a directory to enable storage for the <command>hwclock</"
 "command> program:"
-msgstr ""
-"首先创建一个目录，允许 <command>hwclock</command> 程序存储数据："
+msgstr "首先创建一个目录，允许 <command>hwclock</command> 程序存储数据："
 
 #. type: Content of: <sect1><sect2><screen>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter07/util-linux.xml:47
 #, no-wrap
 msgid "<userinput remap=\"pre\">mkdir -pv /var/lib/hwclock</userinput>"
 msgstr "<userinput remap=\"pre\">mkdir -pv /var/lib/hwclock</userinput>"
 
 #. type: Content of: <sect1><sect2><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter07/util-linux.xml:49
 msgid "Prepare Util-linux for compilation:"
 msgstr "准备编译 Util-linux："
 
 #. type: Content of: <sect1><sect2><screen>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter07/util-linux.xml:51
 #, no-wrap
 msgid ""
 "<userinput remap=\"configure\">./configure ADJTIME_PATH=/var/lib/hwclock/adjtime    \\\n"
@@ -119,81 +103,69 @@ msgstr ""
 "            --without-python</userinput>"
 
 #. type: Content of: <sect1><sect2><variablelist><title>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter07/util-linux.xml:64
 msgid "The meaning of the configure options:"
 msgstr "配置选项的含义："
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter07/util-linux.xml:67
 msgid "<parameter>ADJTIME_PATH=/var/lib/hwclock/adjtime</parameter>"
 msgstr "<parameter>ADJTIME_PATH=/var/lib/hwclock/adjtime</parameter>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter07/util-linux.xml:69
 msgid ""
 "This sets the location of the file recording information about the hardware "
 "clock in accordance to the FHS. This is not stricly needed for this "
 "temporary tool, but it prevents creating a file at another location, which "
 "would not be overwritten or removed when building the final util-linux "
 "package."
-msgstr "该选项根据 FHS 的规则，设定硬件时钟信息记录文件的位置。"
-"对于临时工具，这并不是严格要求的，但是这样可以防止在其他位置创建该文件，"
-"导致这个文件在安装最终的 Util-linux 软件包时不被覆盖或移除。"
+msgstr ""
+"该选项根据 FHS 的规则，设定硬件时钟信息记录文件的位置。对于临时工具，这并不是"
+"严格要求的，但是这样可以防止在其他位置创建该文件，导致这个文件在安装最终的 "
+"Util-linux 软件包时不被覆盖或移除。"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter07/util-linux.xml:78
 msgid "<parameter>--disable-*</parameter>"
 msgstr "<parameter>--disable-*</parameter>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter07/util-linux.xml:80
 msgid ""
 "These switches prevent warnings about building components that require "
 "packages not in LFS or not installed yet."
 msgstr ""
-"这些选项防止产生关于一些组件的警告，这些组件需要一些 LFS 之外，"
-"或当前尚未安装的软件包。"
+"这些选项防止产生关于一些组件的警告，这些组件需要一些 LFS 之外，或当前尚未安装"
+"的软件包。"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter07/util-linux.xml:86
 msgid "<parameter>--without-python</parameter>"
 msgstr "<parameter>--without-python</parameter>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter07/util-linux.xml:88
 msgid ""
 "This switch disables using <application>Python</application>.  It avoids "
 "trying to build unneeded bindings."
 msgstr ""
-"该选项禁用 <application>Python</application>，防止构建系统尝试构建不需要的"
-"语言绑定。"
+"该选项禁用 <application>Python</application>，防止构建系统尝试构建不需要的语"
+"言绑定。"
 
 #. type: Content of: <sect1><sect2><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter07/util-linux.xml:95
 msgid "Compile the package:"
 msgstr "编译该软件包："
 
 #. type: Content of: <sect1><sect2><screen>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter07/util-linux.xml:97
 #, no-wrap
 msgid "<userinput remap=\"make\">make</userinput>"
 msgstr "<userinput remap=\"make\">make</userinput>"
 
 #. type: Content of: <sect1><sect2><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter07/util-linux.xml:99
 msgid "Install the package:"
 msgstr "安装该软件包："
 
 #. type: Content of: <sect1><sect2><screen>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter07/util-linux.xml:101
 #, no-wrap
 msgid "<userinput remap=\"install\">make install</userinput>"
 msgstr "<userinput remap=\"install\">make install</userinput>"
 
 #. type: Content of: <sect1><sect2><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter07/util-linux.xml:108
 msgid ""
 "Details on this package are located in <xref linkend=\"contents-utillinux\" "
 "role=\".\"/>"
-msgstr ""
-"该软件包的详细信息可以在<xref linkend=\"contents-utillinux\"/>中找到。"
+msgstr "该软件包的详细信息可以在<xref linkend=\"contents-utillinux\"/>中找到。"

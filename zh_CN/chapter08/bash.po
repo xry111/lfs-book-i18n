@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2020-06-17 12:44+0800\n"
+"POT-Creation-Date: 2020-08-08 19:28+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -12,13 +12,11 @@ msgstr ""
 "X-Generator: Translate Toolkit 2.2.5\n"
 
 #. type: Content of: <sect1><sect1info><address>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/bash.xml:14
 #, no-wrap
 msgid "&bash-url;"
 msgstr "&bash-url;"
 
 #. type: Content of: <sect1><sect1info>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/bash.xml:12
 msgid ""
 "<productname>bash</productname> <productnumber>&bash-version;</"
 "productnumber> <placeholder type=\"address\" id=\"0\"/>"
@@ -27,63 +25,51 @@ msgstr ""
 "productnumber> <placeholder type=\"address\" id=\"0\"/>"
 
 #. type: Content of: <sect1><title>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/bash.xml:17
 msgid "Bash-&bash-version;"
 msgstr "Bash-&bash-version;"
 
 #. type: Content of: <sect1><indexterm><primary>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/bash.xml:20
 msgid "Bash"
 msgstr "Bash"
 
 #. type: Content of: <sect1><sect2><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/bash.xml:26
 msgid "The Bash package contains the Bourne-Again SHell."
 msgstr "Bash 软件包包含 Bourne-Again SHell。"
 
 #. type: Content of: <sect1><sect2><segmentedlist><segtitle>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/bash.xml:29
 msgid "&buildtime;"
 msgstr "&buildtime;"
 
 #. type: Content of: <sect1><sect2><segmentedlist><segtitle>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/bash.xml:30
 msgid "&diskspace;"
 msgstr "&diskspace;"
 
 #. type: Content of: <sect1><sect2><segmentedlist><seglistitem><seg>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/bash.xml:33
 msgid "&bash-fin-sbu;"
 msgstr "&bash-fin-sbu;"
 
 #. type: Content of: <sect1><sect2><segmentedlist><seglistitem><seg>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/bash.xml:34
 msgid "&bash-fin-du;"
 msgstr "&bash-fin-du;"
 
 #. type: Content of: <sect1><sect2><title>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/bash.xml:41
 msgid "Installation of Bash"
 msgstr "安装 Bash"
 
 #. type: Content of: <sect1><sect2><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/bash.xml:43
 msgid "Incorporate some upstream fixes:"
 msgstr "整合上游进行的一些修复："
 
 #. type: Content of: <sect1><sect2><screen>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/bash.xml:45
 #, no-wrap
 msgid "<userinput remap=\"pre\">patch -Np1 -i ../&bash-fixes-patch;</userinput>"
 msgstr "<userinput remap=\"pre\">patch -Np1 -i ../&bash-fixes-patch;</userinput>"
 
 #. type: Content of: <sect1><sect2><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/bash.xml:47
 msgid "Prepare Bash for compilation:"
 msgstr "准备编译 Bash："
 
 #. type: Content of: <sect1><sect2><screen>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/bash.xml:49
 #, no-wrap
 msgid ""
 "<userinput remap=\"configure\">./configure --prefix=/usr                    \\\n"
@@ -97,17 +83,14 @@ msgstr ""
 "            --with-installed-readline</userinput>"
 
 #. type: Content of: <sect1><sect2><variablelist><title>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/bash.xml:55
 msgid "The meaning of the new configure option:"
 msgstr "配置选项的含义："
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/bash.xml:58
 msgid "<parameter>--with-installed-readline</parameter>"
 msgstr "<parameter>--with-installed-readline</parameter>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/bash.xml:60
 msgid ""
 "This option tells Bash to use the <filename class=\"libraryfile\">readline</"
 "filename> library that is already installed on the system rather than using "
@@ -117,25 +100,21 @@ msgstr ""
 "\">readline</filename> 库，而不是它自己的 readline 版本。"
 
 #. type: Content of: <sect1><sect2><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/bash.xml:69
 msgid "Compile the package:"
 msgstr "编译该软件包："
 
 #. type: Content of: <sect1><sect2><screen>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/bash.xml:71
 #, no-wrap
 msgid "<userinput remap=\"make\">make</userinput>"
 msgstr "<userinput remap=\"make\">make</userinput>"
 
 #. type: Content of: <sect1><sect2><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/bash.xml:73
 msgid ""
 "Skip down to <quote>Install the package</quote> if not running the test "
 "suite."
 msgstr "如果不运行测试套件，跳到 <quote>安装该软件包</quote>。"
 
 #. type: Content of: <sect1><sect2><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/bash.xml:76
 msgid ""
 "To prepare the tests, ensure that the <systemitem class=\"username\">tester</"
 "systemitem> user can write to the sources tree:"
@@ -144,13 +123,11 @@ msgstr ""
 "户可以写入源代码目录："
 
 #. type: Content of: <sect1><sect2><screen>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/bash.xml:78
 #, no-wrap
 msgid "<userinput remap=\"test\">chown -Rv tester .</userinput>"
 msgstr "<userinput remap=\"test\">chown -Rv tester .</userinput>"
 
 #. type: Content of: <sect1><sect2><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/bash.xml:80
 msgid ""
 "Now, run the tests as the <systemitem class=\"username\">tester</systemitem> "
 "user:"
@@ -159,7 +136,6 @@ msgstr ""
 "试："
 
 #. type: Content of: <sect1><sect2><screen>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/bash.xml:83
 #, no-wrap
 msgid ""
 "<userinput remap=\"test\">su tester &lt;&lt; EOF\n"
@@ -171,7 +147,6 @@ msgstr ""
 "EOF</userinput>"
 
 #. type: Content of: <sect1><sect2><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/bash.xml:87
 msgid ""
 "Install the package and move the main executable to <filename "
 "class='directory'>/bin</filename>:"
@@ -180,7 +155,6 @@ msgstr ""
 "filename>："
 
 #. type: Content of: <sect1><sect2><screen>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/bash.xml:90
 #, no-wrap
 msgid ""
 "<userinput remap=\"install\">make install\n"
@@ -190,94 +164,79 @@ msgstr ""
 "mv -vf /usr/bin/bash /bin</userinput>"
 
 #. type: Content of: <sect1><sect2><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/bash.xml:93
 msgid ""
 "Run the newly compiled <command>bash</command> program (replacing the one "
 "that is currently being executed):"
 msgstr "执行新编译的 <command>bash</command> 程序 (替换当前正在执行的版本)："
 
 #. type: Content of: <sect1><sect2><screen>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/bash.xml:96
 #, no-wrap
 msgid "<userinput>exec /bin/bash --login +h</userinput>"
 msgstr "<userinput>exec /bin/bash --login +h</userinput>"
 
 #. type: Content of: <sect1><sect2><note><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/bash.xml:99
 msgid ""
 "The parameters used make the <command>bash</command> process an interactive "
 "login shell and continues to disable hashing so that new programs are found "
 "as they become available."
 msgstr ""
-"上面使用的参数使得 <command>bash</command> 进程是一个可交互的登录 shell，并"
-"且仍然禁用散列功能，这样新程序一旦可用就会被找到。"
+"上面使用的参数使得 <command>bash</command> 进程是一个可交互的登录 shell，并且"
+"仍然禁用散列功能，这样新程序一旦可用就会被找到。"
 
 #. type: Content of: <sect1><sect2><title>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/bash.xml:107
 msgid "Contents of Bash"
 msgstr "Bash 的内容"
 
 #. type: Content of: <sect1><sect2><segmentedlist><segtitle>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/bash.xml:110
 msgid "Installed programs"
 msgstr "安装的程序"
 
 #. type: Content of: <sect1><sect2><segmentedlist><segtitle>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/bash.xml:111
 msgid "Installed directory"
 msgstr "安装的目录"
 
 #. type: Content of: <sect1><sect2><segmentedlist><seglistitem><seg>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/bash.xml:114
 msgid "bash, bashbug, and sh (link to bash)"
 msgstr "bash, bashbug, 以及 sh (到 bash 的链接)"
 
 #. type: Content of: <sect1><sect2><segmentedlist><seglistitem><seg>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/bash.xml:115
 msgid ""
 "/usr/include/bash, /usr/lib/bash, and /usr/share/doc/bash-&bash-version;"
 msgstr ""
 "/usr/include/bash, /usr/lib/bash, 和 /usr/share/doc/bash-&bash-version;"
 
 #. type: Content of: <sect1><sect2><variablelist><bridgehead>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/bash.xml:121
 msgid "Short Descriptions"
 msgstr "简要描述"
 
 #. type: Content of: <sect1><sect2><variablelist>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/bash.xml:122
 msgid ""
 "<?dbfo list-presentation=\"list\"?> <?dbhtml list-presentation=\"table\"?>"
 msgstr ""
 "<?dbfo list-presentation=\"list\"?> <?dbhtml list-presentation=\"table\"?>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/bash.xml:126
 msgid "<command>bash</command>"
 msgstr "<command>bash</command>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/bash.xml:128
 msgid ""
 "A widely-used command interpreter; it performs many types of expansions and "
 "substitutions on a given command line before executing it, thus making this "
 "interpreter a powerful tool"
 msgstr ""
-"一个广泛使用的命令解释器；它在执行命令前对命令行进行多种展开和替换操作，这"
-"些操作使得它成为强大的工具。"
+"一个广泛使用的命令解释器；它在执行命令前对命令行进行多种展开和替换操作，这些"
+"操作使得它成为强大的工具。"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/bash.xml:132
 msgid "bash"
 msgstr "bash"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/bash.xml:138
 msgid "<command>bashbug</command>"
 msgstr "<command>bashbug</command>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/bash.xml:140
 msgid ""
 "A shell script to help the user compose and mail standard formatted bug "
 "reports concerning <command>bash</command>"
@@ -286,17 +245,14 @@ msgstr ""
 "command> 的 bug 报告"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/bash.xml:143
 msgid "bashbug"
 msgstr "bashbug"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/bash.xml:149
 msgid "<command>sh</command>"
 msgstr "<command>sh</command>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/bash.xml:151
 msgid ""
 "A symlink to the <command>bash</command> program; when invoked as "
 "<command>sh</command>, <command>bash</command> tries to mimic the startup "
@@ -304,10 +260,9 @@ msgid ""
 "possible, while conforming to the POSIX standard as well"
 msgstr ""
 "一个指向 <command>bash</command> 程序的符号链接；当以 <command>sh</command> "
-"命令运行时，<command>bash</command> 试图尽可能地模仿 <command>sh</command> "
-"的历史版本，以符合 POSIX 标准"
+"命令运行时，<command>bash</command> 试图尽可能地模仿 <command>sh</command> 的"
+"历史版本，以符合 POSIX 标准"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/bash.xml:157
 msgid "sh"
 msgstr "sh"

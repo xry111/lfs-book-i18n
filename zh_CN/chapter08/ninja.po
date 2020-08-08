@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2020-06-17 12:44+0800\n"
+"POT-Creation-Date: 2020-08-08 19:28+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -12,13 +12,11 @@ msgstr ""
 "X-Generator: Translate Toolkit 2.2.5\n"
 
 #. type: Content of: <sect1><sect1info><address>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/ninja.xml:14
 #, no-wrap
 msgid "&ninja-url;"
 msgstr "&ninja-url;"
 
 #. type: Content of: <sect1><sect1info>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/ninja.xml:12
 msgid ""
 "<productname>ninja</productname> <productnumber>&ninja-version;</"
 "productnumber> <placeholder type=\"address\" id=\"0\"/>"
@@ -27,59 +25,50 @@ msgstr ""
 "productnumber> <placeholder type=\"address\" id=\"0\"/>"
 
 #. type: Content of: <sect1><title>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/ninja.xml:17
 msgid "Ninja-&ninja-version;"
 msgstr "Ninja-&ninja-version;"
 
 #. type: Content of: <sect1><indexterm><primary>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/ninja.xml:20
 msgid "Ninja"
 msgstr "Ninja"
 
 #. type: Content of: <sect1><sect2><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/ninja.xml:26
 msgid "Ninja is a small build system with a focus on speed."
 msgstr "Ninja 是一个注重速度的小型构建系统。"
 
 #. type: Content of: <sect1><sect2><segmentedlist><segtitle>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/ninja.xml:29
 msgid "&buildtime;"
 msgstr "&buildtime;"
 
 #. type: Content of: <sect1><sect2><segmentedlist><segtitle>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/ninja.xml:30
 msgid "&diskspace;"
 msgstr "&diskspace;"
 
 #. type: Content of: <sect1><sect2><segmentedlist><seglistitem><seg>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/ninja.xml:33
 msgid "&ninja-fin-sbu;"
 msgstr "&ninja-fin-sbu;"
 
 #. type: Content of: <sect1><sect2><segmentedlist><seglistitem><seg>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/ninja.xml:34
 msgid "&ninja-fin-du;"
 msgstr "&ninja-fin-du;"
 
 #. type: Content of: <sect1><sect2><tip><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/ninja.xml:39
 msgid ""
 "This section is not strictly required for LFS if not using systemd. On the "
 "other hand, ninja associated to meson makes a powerful build system "
 "combination, which is expected to be used more and more often. It is "
 "required for several packages in <ulink url=\"&blfs-book;\">the BLFS book</"
 "ulink>."
-msgstr "如果不使用 systemd，本节内容不是严格必要的。但是，ninja 和 meson "
-"的组合构成一个强大的构建系统，预期它将被越来越广泛地使用。"
-"<ulink url=\"&blfs-book;\">BLFS 手册</ulink>中的一些软件包需要它。"
+msgstr ""
+"如果不使用 systemd，本节内容不是严格必要的。但是，ninja 和 meson 的组合构成一"
+"个强大的构建系统，预期它将被越来越广泛地使用。<ulink url=\"&blfs-book;"
+"\">BLFS 手册</ulink>中的一些软件包需要它。"
 
 #. type: Content of: <sect1><sect2><title>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/ninja.xml:50
 msgid "Installation of Ninja"
 msgstr "安装 Ninja"
 
 #. type: Content of: <sect1><sect2><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/ninja.xml:52
 msgid ""
 "When run, ninja normally runs a maximum number of processes in parallel.  By "
 "default this is the number of cores on the system plus two.  In some cases "
@@ -88,23 +77,21 @@ msgid ""
 "processes, but some packages embed the execution of ninja and do not pass a -"
 "j parameter."
 msgstr ""
-"在运行时，ninja 一般尽量并行运行更多进程。默认情况下最大进程数是系统 CPU "
-"核心数加 2 得到的值。某些情况下，这样会导致 CPU 过热，或者耗尽系统内存。"
-"如果使用命令行执行 ninja，可以传递 -jN 参数以限制并行进程数，但某些软件包内"
-"嵌了 ninja 的执行过程，且并不传递 -j 参数。"
+"在运行时，ninja 一般尽量并行运行更多进程。默认情况下最大进程数是系统 CPU 核心"
+"数加 2 得到的值。某些情况下，这样会导致 CPU 过热，或者耗尽系统内存。如果使用"
+"命令行执行 ninja，可以传递 -jN 参数以限制并行进程数，但某些软件包内嵌了 "
+"ninja 的执行过程，且并不传递 -j 参数。"
 
 #. Using <command>
 #.  here to make the output bold.  We really don't want
 #.      users setting this now and experience shows that many users blindly
 #.      copy/paste anything in a box. 
 #. type: Content of: <sect1><sect2><para><screen>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/ninja.xml:67
 #, no-wrap
 msgid "export NINJAJOBS=4"
 msgstr "export NINJAJOBS=4"
 
 #. type: Content of: <sect1><sect2><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/ninja.xml:59
 msgid ""
 "Using the <emphasis>optional</emphasis> procedure below allows a user to "
 "limit the number of parallel processes via an environment variable, "
@@ -116,7 +103,6 @@ msgstr ""
 "\"screen\" id=\"0\"/>会限制 ninja 使用 4 个并行进程。"
 
 #. type: Content of: <sect1><sect2><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/ninja.xml:71
 msgid ""
 "If desired, add the capability to use the environment variable NINJAJOBS by "
 "running:"
@@ -124,7 +110,6 @@ msgstr ""
 "如果您希望 Ninja 能够使用环境变量 NINJAJOBS，执行以下命令，添加这一功能："
 
 #. type: Content of: <sect1><sect2><screen>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/ninja.xml:74
 #, no-wrap
 msgid ""
 "<userinput remap=\"pre\">sed -i '/int Guess/a \\\n"
@@ -142,38 +127,31 @@ msgstr ""
 "' src/ninja.cc</userinput>"
 
 #. type: Content of: <sect1><sect2><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/ninja.xml:81
 msgid "Build Ninja with:"
 msgstr "构建 Ninja："
 
 #. type: Content of: <sect1><sect2><screen>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/ninja.xml:83
 #, no-wrap
 msgid "<userinput remap=\"configure\">python3 configure.py --bootstrap</userinput>"
 msgstr "<userinput remap=\"configure\">python3 configure.py --bootstrap</userinput>"
 
 #. type: Content of: <sect1><sect2><variablelist><title>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/ninja.xml:86
 msgid "The meaning of the build option:"
 msgstr "构建选项的含义："
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/ninja.xml:89
 msgid "<parameter>--bootstrap</parameter>"
 msgstr "<parameter>--bootstrap</parameter>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/ninja.xml:91
 msgid "This parameter forces ninja to rebuild itself for the current system."
 msgstr "这个参数强制 ninja 为当前系统重新构建自身。"
 
 #. type: Content of: <sect1><sect2><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/ninja.xml:98
 msgid "To test the results, issue:"
 msgstr "运行以下命令以测试编译结果："
 
 #. type: Content of: <sect1><sect2><screen>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/ninja.xml:100
 #, no-wrap
 msgid ""
 "<userinput remap=\"test\">./ninja ninja_test\n"
@@ -183,12 +161,10 @@ msgstr ""
 "./ninja_test --gtest_filter=-SubprocessTest.SetWithLots</userinput>"
 
 #. type: Content of: <sect1><sect2><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/ninja.xml:103
 msgid "Install the package:"
 msgstr "安装该软件包："
 
 #. type: Content of: <sect1><sect2><screen>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/ninja.xml:105
 #, no-wrap
 msgid ""
 "<userinput remap=\"install\">install -vm755 ninja /usr/bin/\n"
@@ -200,39 +176,31 @@ msgstr ""
 "install -vDm644 misc/zsh-completion  /usr/share/zsh/site-functions/_ninja</userinput>"
 
 #. type: Content of: <sect1><sect2><title>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/ninja.xml:112
 msgid "Contents of Ninja"
 msgstr "Ninja 的内容"
 
 #. type: Content of: <sect1><sect2><segmentedlist><segtitle>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/ninja.xml:115
 msgid "Installed programs"
 msgstr "安装的程序"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/ninja.xml:118
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/ninja.xml:131
 msgid "ninja"
 msgstr "ninja"
 
 #. type: Content of: <sect1><sect2><variablelist><bridgehead>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/ninja.xml:122
 msgid "Short Descriptions"
 msgstr "简要描述"
 
 #. type: Content of: <sect1><sect2><variablelist>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/ninja.xml:123
 msgid ""
 "<?dbfo list-presentation=\"list\"?> <?dbhtml list-presentation=\"table\"?>"
 msgstr ""
 "<?dbfo list-presentation=\"list\"?> <?dbhtml list-presentation=\"table\"?>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/ninja.xml:127
 msgid "<command>ninja</command>"
 msgstr "<command>ninja</command>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/ninja.xml:129
 msgid "is the Ninja build system."
 msgstr "是 ninja 构建系统。"

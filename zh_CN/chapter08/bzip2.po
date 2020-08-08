@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2020-06-19 11:33+0800\n"
+"POT-Creation-Date: 2020-08-08 19:28+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -12,13 +12,11 @@ msgstr ""
 "X-Generator: Translate Toolkit 2.2.5\n"
 
 #. type: Content of: <sect1><sect1info><address>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/bzip2.xml:14
 #, no-wrap
 msgid "&bzip2-url;"
 msgstr "&bzip2-url;"
 
 #. type: Content of: <sect1><sect1info>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/bzip2.xml:12
 msgid ""
 "<productname>bzip2</productname> <productnumber>&bzip2-version;</"
 "productnumber> <placeholder type=\"address\" id=\"0\"/>"
@@ -27,17 +25,14 @@ msgstr ""
 "productnumber> <placeholder type=\"address\" id=\"0\"/>"
 
 #. type: Content of: <sect1><title>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/bzip2.xml:17
 msgid "Bzip2-&bzip2-version;"
 msgstr "Bzip2-&bzip2-version;"
 
 #. type: Content of: <sect1><indexterm><primary>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/bzip2.xml:20
 msgid "Bzip2"
 msgstr "Bzip2"
 
 #. type: Content of: <sect1><sect2><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/bzip2.xml:26
 msgid ""
 "The Bzip2 package contains programs for compressing and decompressing files. "
 "Compressing text files with <command>bzip2</command> yields a much better "
@@ -47,71 +42,58 @@ msgstr ""
 "缩文本文件可以获得比传统的 <command>gzip</command> 优秀许多的压缩比。"
 
 #. type: Content of: <sect1><sect2><segmentedlist><segtitle>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/bzip2.xml:32
 msgid "&buildtime;"
 msgstr "&buildtime;"
 
 #. type: Content of: <sect1><sect2><segmentedlist><segtitle>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/bzip2.xml:33
 msgid "&diskspace;"
 msgstr "&diskspace;"
 
 #. type: Content of: <sect1><sect2><segmentedlist><seglistitem><seg>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/bzip2.xml:36
 msgid "&bzip2-fin-sbu;"
 msgstr "&bzip2-fin-sbu;"
 
 #. type: Content of: <sect1><sect2><segmentedlist><seglistitem><seg>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/bzip2.xml:37
 msgid "&bzip2-fin-du;"
 msgstr "&bzip2-fin-du;"
 
 #. type: Content of: <sect1><sect2><title>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/bzip2.xml:44
 msgid "Installation of Bzip2"
 msgstr "安装 Bzip2"
 
 #. type: Content of: <sect1><sect2><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/bzip2.xml:46
 msgid "Apply a patch that will install the documentation for this package:"
 msgstr "应用一个补丁，以安装该软件包的文档："
 
 #. type: Content of: <sect1><sect2><screen>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/bzip2.xml:48
 #, no-wrap
 msgid "<userinput remap=\"pre\">patch -Np1 -i ../&bzip2-docs-patch;</userinput>"
 msgstr "<userinput remap=\"pre\">patch -Np1 -i ../&bzip2-docs-patch;</userinput>"
 
 #. type: Content of: <sect1><sect2><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/bzip2.xml:50
 msgid ""
 "The following command ensures installation of symbolic links are relative:"
 msgstr "以下命令保证安装的符号链接是相对的："
 
 #. type: Content of: <sect1><sect2><screen>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/bzip2.xml:52
 #, no-wrap
 msgid "<userinput remap=\"pre\">sed -i 's@\\(ln -s -f \\)$(PREFIX)/bin/@\\1@' Makefile</userinput>"
 msgstr "<userinput remap=\"pre\">sed -i 's@\\(ln -s -f \\)$(PREFIX)/bin/@\\1@' Makefile</userinput>"
 
 #. type: Content of: <sect1><sect2><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/bzip2.xml:54
 msgid "Ensure the man pages are installed into the correct location:"
 msgstr "确保 man 页面被安装到正确位置："
 
 #. type: Content of: <sect1><sect2><screen>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/bzip2.xml:56
 #, no-wrap
 msgid "<userinput remap=\"pre\">sed -i \"s@(PREFIX)/man@(PREFIX)/share/man@g\" Makefile</userinput>"
 msgstr "<userinput remap=\"pre\">sed -i \"s@(PREFIX)/man@(PREFIX)/share/man@g\" Makefile</userinput>"
 
 #. type: Content of: <sect1><sect2><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/bzip2.xml:58
 msgid "Prepare Bzip2 for compilation with:"
 msgstr "执行以下命令，准备编译 Bzip2："
 
 #. type: Content of: <sect1><sect2><screen>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/bzip2.xml:60
 #, no-wrap
 msgid ""
 "<userinput remap=\"make\">make -f Makefile-libbz2_so\n"
@@ -121,17 +103,14 @@ msgstr ""
 "make clean</userinput>"
 
 #. type: Content of: <sect1><sect2><variablelist><title>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/bzip2.xml:64
 msgid "The meaning of the make parameter:"
 msgstr "make 命令参数的含义："
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/bzip2.xml:67
 msgid "<parameter>-f Makefile-libbz2_so</parameter>"
 msgstr "<parameter>-f Makefile-libbz2_so</parameter>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/bzip2.xml:69
 msgid ""
 "This will cause Bzip2 to be built using a different <filename>Makefile</"
 "filename> file, in this case the <filename>Makefile-libbz2_so</filename> "
@@ -139,34 +118,29 @@ msgid ""
 "filename> library and links the Bzip2 utilities against it."
 msgstr ""
 "该命令使用一个不同的 <filename>Makefile</filename> 文件构建 Bzip2，对于我们的"
-"例子来说就是使用 <filename>Makefile-libbz2_so</filename> 文件。它创建一个共"
-"享库 <filename class=\"libraryfile\">libbz2.so</filename>，并将 Bzip2 工具链"
-"接到这个库。"
+"例子来说就是使用 <filename>Makefile-libbz2_so</filename> 文件。它创建一个共享"
+"库 <filename class=\"libraryfile\">libbz2.so</filename>，并将 Bzip2 工具链接"
+"到这个库。"
 
 #. type: Content of: <sect1><sect2><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/bzip2.xml:79
 msgid "Compile and test the package:"
 msgstr "编译并测试该软件包："
 
 #. type: Content of: <sect1><sect2><screen>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/bzip2.xml:81
 #, no-wrap
 msgid "<userinput remap=\"make\">make</userinput>"
 msgstr "<userinput remap=\"make\">make</userinput>"
 
 #. type: Content of: <sect1><sect2><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/bzip2.xml:83
 msgid "Install the programs:"
 msgstr "安装软件包中的程序："
 
 #. type: Content of: <sect1><sect2><screen>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/bzip2.xml:85
 #, no-wrap
 msgid "<userinput remap=\"install\">make PREFIX=/usr install</userinput>"
 msgstr "<userinput remap=\"install\">make PREFIX=/usr install</userinput>"
 
 #. type: Content of: <sect1><sect2><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/bzip2.xml:87
 msgid ""
 "Install the shared <command>bzip2</command> binary into the <filename class="
 "\"directory\">/bin</filename> directory, make some necessary symbolic links, "
@@ -176,7 +150,6 @@ msgstr ""
 "\"directory\">/bin</filename> 目录，创建必要的符号链接，并进行清理："
 
 #. type: Content of: <sect1><sect2><screen>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/bzip2.xml:91
 #, no-wrap
 msgid ""
 "<userinput remap=\"install\">cp -v bzip2-shared /bin/bzip2\n"
@@ -194,27 +167,22 @@ msgstr ""
 "ln -sv bzip2 /bin/bzcat</userinput>"
 
 #. type: Content of: <sect1><sect2><title>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/bzip2.xml:101
 msgid "Contents of Bzip2"
 msgstr "Bzip2 的内容"
 
 #. type: Content of: <sect1><sect2><segmentedlist><segtitle>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/bzip2.xml:104
 msgid "Installed programs"
 msgstr "安装的程序"
 
 #. type: Content of: <sect1><sect2><segmentedlist><segtitle>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/bzip2.xml:105
 msgid "Installed libraries"
 msgstr "安装的库"
 
 #. type: Content of: <sect1><sect2><segmentedlist><segtitle>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/bzip2.xml:106
 msgid "Installed directory"
 msgstr "安装的目录"
 
 #. type: Content of: <sect1><sect2><segmentedlist><seglistitem><seg>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/bzip2.xml:109
 msgid ""
 "bunzip2 (link to bzip2), bzcat (link to bzip2), bzcmp (link to bzdiff), "
 "bzdiff, bzegrep (link to bzgrep), bzfgrep (link to bzgrep), bzgrep, bzip2, "
@@ -225,139 +193,112 @@ msgstr ""
 "bzip2recover, bzless (链接到bzmore), 以及 bzmore"
 
 #. type: Content of: <sect1><sect2><segmentedlist><seglistitem><seg>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/bzip2.xml:112
 msgid "libbz2.{a,so}"
 msgstr "libbz2.{a,so}"
 
 #. type: Content of: <sect1><sect2><segmentedlist><seglistitem><seg>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/bzip2.xml:113
 msgid "/usr/share/doc/bzip2-&bzip2-version;"
 msgstr "/usr/share/doc/bzip2-&bzip2-version;"
 
 #. type: Content of: <sect1><sect2><variablelist><bridgehead>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/bzip2.xml:118
 msgid "Short Descriptions"
 msgstr "简要描述"
 
 #. type: Content of: <sect1><sect2><variablelist>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/bzip2.xml:119
 msgid ""
 "<?dbfo list-presentation=\"list\"?> <?dbhtml list-presentation=\"table\"?>"
 msgstr ""
 "<?dbfo list-presentation=\"list\"?> <?dbhtml list-presentation=\"table\"?>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/bzip2.xml:123
 msgid "<command>bunzip2</command>"
 msgstr "<command>bunzip2</command>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/bzip2.xml:125
 msgid "Decompresses bzipped files"
 msgstr "解压缩 bzip 压缩文件"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/bzip2.xml:127
 msgid "bunzip2"
 msgstr "bunzip2"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/bzip2.xml:133
 msgid "<command>bzcat</command>"
 msgstr "<command>bzcat</command>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/bzip2.xml:135
 msgid "Decompresses to standard output"
 msgstr "解压缩到标准输出"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/bzip2.xml:137
 msgid "bzcat"
 msgstr "bzcat"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/bzip2.xml:143
 msgid "<command>bzcmp</command>"
 msgstr "<command>bzcmp</command>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/bzip2.xml:145
 msgid "Runs <command>cmp</command> on bzipped files"
 msgstr "对 bzip 压缩过的文件运行 <command>cmp</command>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/bzip2.xml:147
 msgid "bzcmp"
 msgstr "bzcmp"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/bzip2.xml:153
 msgid "<command>bzdiff</command>"
 msgstr "<command>bzdiff</command>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/bzip2.xml:155
 msgid "Runs <command>diff</command> on bzipped files"
 msgstr "对 bzip 压缩过的文件运行 <command>diff</command>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/bzip2.xml:157
 msgid "bzdiff"
 msgstr "bzdiff"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/bzip2.xml:163
 msgid "<command>bzegrep</command>"
 msgstr "<command>bzegrep</command>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/bzip2.xml:165
 msgid "Runs <command>egrep</command> on bzipped files"
 msgstr "对 bzip 压缩过的文件运行 <command>egrep</command> 命令"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/bzip2.xml:167
 msgid "bzegrep"
 msgstr "bzegrep"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/bzip2.xml:173
 msgid "<command>bzfgrep</command>"
 msgstr "<command>bzfgrep</command>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/bzip2.xml:175
 msgid "Runs <command>fgrep</command> on bzipped files"
 msgstr "对 bzip 压缩过的文件运行 <command>fgrep</command> 命令"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/bzip2.xml:177
 msgid "bzfgrep"
 msgstr "bzfgrep"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/bzip2.xml:183
 msgid "<command>bzgrep</command>"
 msgstr "<command>bzgrep</command>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/bzip2.xml:185
 msgid "Runs <command>grep</command> on bzipped files"
 msgstr "对 bzip 压缩过的文件运行 <command>grep</command> 命令"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/bzip2.xml:187
 msgid "bzgrep"
 msgstr "bzgrep"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/bzip2.xml:193
 msgid "<command>bzip2</command>"
 msgstr "<command>bzip2</command>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/bzip2.xml:195
 msgid ""
 "Compresses files using the Burrows-Wheeler block sorting text compression "
 "algorithm with Huffman coding; the compression rate is better than that "
@@ -369,68 +310,55 @@ msgstr ""
 "command>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/bzip2.xml:200
 msgid "bzip2"
 msgstr "bzip2"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/bzip2.xml:206
 msgid "<command>bzip2recover</command>"
 msgstr "<command>bzip2recover</command>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/bzip2.xml:208
 msgid "Tries to recover data from damaged bzipped files"
 msgstr "试图从损坏的 bzip2 压缩文件中恢复数据"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/bzip2.xml:210
 msgid "bzip2recover"
 msgstr "bzip2recover"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/bzip2.xml:216
 msgid "<command>bzless</command>"
 msgstr "<command>bzless</command>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/bzip2.xml:218
 msgid "Runs <command>less</command> on bzipped files"
 msgstr "对 bzip 压缩过的文件运行 <command>less</command> 命令"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/bzip2.xml:220
 msgid "bzless"
 msgstr "bzless"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/bzip2.xml:226
 msgid "<command>bzmore</command>"
 msgstr "<command>bzmore</command>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/bzip2.xml:228
 msgid "Runs <command>more</command> on bzipped files"
 msgstr "对 bzip 压缩过的文件运行 <command>more</command> 命令"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/bzip2.xml:230
 msgid "bzmore"
 msgstr "bzmore"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/bzip2.xml:236
 msgid "<filename class=\"libraryfile\">libbz2</filename>"
 msgstr "<filename class=\"libraryfile\">libbz2</filename>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/bzip2.xml:238
 msgid ""
 "The library implementing lossless, block-sorting data compression, using the "
 "Burrows-Wheeler algorithm"
 msgstr "这个库实现基于 Burrows-Wheeler 算法的无损块排序数据压缩"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/bzip2.xml:241
 msgid "libbz2"
 msgstr "libbz2"

@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2020-06-17 12:44+0800\n"
+"POT-Creation-Date: 2020-08-08 19:28+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -12,13 +12,11 @@ msgstr ""
 "X-Generator: Translate Toolkit 2.2.5\n"
 
 #. type: Content of: <sect1><sect1info><address>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/man-db.xml:14
 #, no-wrap
 msgid "&man-db-url;"
 msgstr "&man-db-url;"
 
 #. type: Content of: <sect1><sect1info>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/man-db.xml:12
 msgid ""
 "<productname>man-db</productname> <productnumber>&man-db-version;</"
 "productnumber> <placeholder type=\"address\" id=\"0\"/>"
@@ -27,52 +25,42 @@ msgstr ""
 "productnumber> <placeholder type=\"address\" id=\"0\"/>"
 
 #. type: Content of: <sect1><title>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/man-db.xml:17
 msgid "Man-DB-&man-db-version;"
 msgstr "Man-DB-&man-db-version;"
 
 #. type: Content of: <sect1><indexterm><primary>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/man-db.xml:20
 msgid "Man-DB"
 msgstr "Man-DB"
 
 #. type: Content of: <sect1><sect2><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/man-db.xml:26
 msgid "The Man-DB package contains programs for finding and viewing man pages."
 msgstr "Man-DB 软件包包含查找和阅读 man 页面的程序。"
 
 #. type: Content of: <sect1><sect2><segmentedlist><segtitle>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/man-db.xml:30
 msgid "&buildtime;"
 msgstr "&buildtime;"
 
 #. type: Content of: <sect1><sect2><segmentedlist><segtitle>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/man-db.xml:31
 msgid "&diskspace;"
 msgstr "&diskspace;"
 
 #. type: Content of: <sect1><sect2><segmentedlist><seglistitem><seg>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/man-db.xml:34
 msgid "&man-db-fin-sbu;"
 msgstr "&man-db-fin-sbu;"
 
 #. type: Content of: <sect1><sect2><segmentedlist><seglistitem><seg>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/man-db.xml:35
 msgid "&man-db-fin-du;"
 msgstr "&man-db-fin-du;"
 
 #. type: Content of: <sect1><sect2><title>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/man-db.xml:42
 msgid "Installation of Man-DB"
 msgstr "安装 Man-DB"
 
 #. type: Content of: <sect1><sect2><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/man-db.xml:44
 msgid "Prepare Man-DB for compilation:"
 msgstr "准备编译 Man-DB："
 
 #. type: Content of: <sect1><sect2><screen>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/man-db.xml:46
 #, no-wrap
 msgid ""
 "<userinput remap=\"configure\">sed -i '/find/s@/usr@@' init/systemd/man-db.service.in\n"
@@ -98,7 +86,6 @@ msgstr ""
 "            --with-grap=/usr/bin/grap</userinput>"
 
 #. type: Content of: <sect1><sect2><screen>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/man-db.xml:57
 #, no-wrap
 msgid ""
 "<userinput remap=\"configure\">./configure --prefix=/usr                        \\\n"
@@ -124,19 +111,16 @@ msgstr ""
 "            --with-systemdsystemunitdir=</userinput>"
 
 #. type: Content of: <sect1><sect2><variablelist><title>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/man-db.xml:69
 msgid "The meaning of the configure options:"
 msgstr "配置选项的含义："
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/man-db.xml:72
 msgid ""
 "<command>sed -i '/find/s@/usr@@' init/systemd/man-db.service.in</command>"
 msgstr ""
 "<command>sed -i '/find/s@/usr@@' init/systemd/man-db.service.in</command>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/man-db.xml:74
 msgid ""
 "This changes a harcoded path to the <command>find</command> utility, which "
 "we install in <filename class=\"directory\">/bin</filename>."
@@ -145,12 +129,10 @@ msgstr ""
 "<filename class=\"directory\">/bin</filename> 目录。"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/man-db.xml:81
 msgid "<parameter>--disable-setuid</parameter>"
 msgstr "<parameter>--disable-setuid</parameter>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/man-db.xml:83
 msgid ""
 "This disables making the <command>man</command> program setuid to user "
 "<systemitem class=\"username\">man</systemitem>."
@@ -159,24 +141,22 @@ msgstr ""
 "\"username\">man</systemitem>。"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/man-db.xml:89
 msgid "<parameter>--enable-cache-owner=bin</parameter>"
 msgstr "<parameter>--enable-cache-owner=bin</parameter>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/man-db.xml:91
 msgid ""
 "This makes the system-wide cache files be owned by user <systemitem class="
 "\"username\">bin</systemitem>."
-msgstr "该选项使得系统范围的缓存文件所有者为用户 <systemitem class=\"username\">bin</systemitem>。"
+msgstr ""
+"该选项使得系统范围的缓存文件所有者为用户 <systemitem class=\"username\">bin</"
+"systemitem>。"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/man-db.xml:97
 msgid "<parameter>--with-...</parameter>"
 msgstr "<parameter>--with-...</parameter>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/man-db.xml:99
 msgid ""
 "These three parameters are used to set some default programs.  "
 "<command>lynx</command> is a text-based web browser (see BLFS for "
@@ -187,64 +167,54 @@ msgid ""
 "pages. They are not part of LFS or BLFS, but you should be able to install "
 "them yourself after finishing LFS if you wish to do so."
 msgstr ""
-"这三个选项设定一些默认程序。<command>lynx</command> 是基于文本的 web 浏览"
-"器 (安装过程可在 BLFS 中查阅)，<command>vgrind</command> 将程序源代码转换成 "
+"这三个选项设定一些默认程序。<command>lynx</command> 是基于文本的 web 浏览器 "
+"(安装过程可在 BLFS 中查阅)，<command>vgrind</command> 将程序源代码转换成 "
 "Groff 输入，<command>grap</command> 用于在 Groff 文档中画图。"
 "<command>vgrind</command> 和 <command>grap</command> 在阅读 man 手册页面时一"
 "般用不到。它们不是 LFS 或 BLFS 的一部分，但如果需要的话，您应该可以在完成 "
 "LFS 的构建后自行安装它们。"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/man-db.xml:112
 msgid "<parameter>--with-systemd...</parameter>"
 msgstr "<parameter>--with-systemd...</parameter>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/man-db.xml:114
 msgid ""
 "These parameters prevent installing unneeded systemd directories and files."
 msgstr "该选项防止安装不必要的，为 systemd 提供的目录和文件。"
 
 #. type: Content of: <sect1><sect2><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/man-db.xml:121
 msgid "Compile the package:"
 msgstr "编译该软件包："
 
 #. type: Content of: <sect1><sect2><screen>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/man-db.xml:123
 #, no-wrap
 msgid "<userinput remap=\"make\">make</userinput>"
 msgstr "<userinput remap=\"make\">make</userinput>"
 
 #. type: Content of: <sect1><sect2><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/man-db.xml:125
 msgid "To test the results, issue:"
 msgstr "运行以下命令以测试编译结果："
 
 #. type: Content of: <sect1><sect2><screen>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/man-db.xml:127
 #, no-wrap
 msgid "<userinput remap=\"test\">make check</userinput>"
 msgstr "<userinput remap=\"test\">make check</userinput>"
 
 #. type: Content of: <sect1><sect2><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/man-db.xml:129
 msgid "Install the package:"
 msgstr "安装该软件包："
 
 #. type: Content of: <sect1><sect2><screen>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/man-db.xml:131
 #, no-wrap
 msgid "<userinput remap=\"install\">make install</userinput>"
 msgstr "<userinput remap=\"install\">make install</userinput>"
 
 #. type: Content of: <sect1><sect2><title>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/man-db.xml:136
 msgid "Non-English Manual Pages in LFS"
 msgstr "LFS 中的非英文 man 手册页面"
 
 #. type: Content of: <sect1><sect2><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/man-db.xml:138
 msgid ""
 "The following table shows the character set that Man-DB assumes manual pages "
 "installed under <filename class=\"directory\">/usr/share/man/&lt;ll&gt;</"
@@ -256,372 +226,274 @@ msgstr ""
 "判断出这些页面是否为 UTF-8 编码。"
 
 #. type: Content of: <sect1><sect2><table><title>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/man-db.xml:146
 msgid "Expected character encoding of legacy 8-bit manual pages"
 msgstr "传统 8 位 man 手册页面的预期字符编码"
 
 #. type: Content of: <sect1><sect2><table>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/man-db.xml:147
 msgid "<?dbfo table-width=\"6in\" ?>"
 msgstr "<?dbfo table-width=\"6in\" ?>"
 
 #. type: Content of: <sect1><sect2><table><tgroup><thead><row><entry>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/man-db.xml:158
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/man-db.xml:160
 msgid "Language (code)"
 msgstr "语言 (代码)"
 
 #. type: Content of: <sect1><sect2><table><tgroup><thead><row><entry>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/man-db.xml:159
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/man-db.xml:161
 msgid "Encoding"
 msgstr "编码"
 
 #. type: Content of: <sect1><sect2><table><tgroup><tbody><row><entry>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/man-db.xml:167
 msgid "Danish (da)"
 msgstr "丹麦语 (da)"
 
 #. type: Content of: <sect1><sect2><table><tgroup><tbody><row><entry>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/man-db.xml:168
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/man-db.xml:174
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/man-db.xml:180
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/man-db.xml:186
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/man-db.xml:192
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/man-db.xml:198
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/man-db.xml:204
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/man-db.xml:210
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/man-db.xml:216
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/man-db.xml:222
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/man-db.xml:228
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/man-db.xml:234
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/man-db.xml:240
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/man-db.xml:246
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/man-db.xml:252
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/man-db.xml:258
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/man-db.xml:264
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/man-db.xml:270
 msgid "ISO-8859-1"
 msgstr "ISO-8859-1"
 
 #. type: Content of: <sect1><sect2><table><tgroup><tbody><row><entry>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/man-db.xml:169
 msgid "Croatian (hr)"
 msgstr "克罗地亚语 (hr)"
 
 #. type: Content of: <sect1><sect2><table><tgroup><tbody><row><entry>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/man-db.xml:170
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/man-db.xml:176
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/man-db.xml:212
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/man-db.xml:218
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/man-db.xml:230
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/man-db.xml:236
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/man-db.xml:242
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/man-db.xml:288
 msgid "ISO-8859-2"
 msgstr "ISO-8859-2"
 
 #. type: Content of: <sect1><sect2><table><tgroup><tbody><row><entry>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/man-db.xml:173
 msgid "German (de)"
 msgstr "德语 (de)"
 
 #. type: Content of: <sect1><sect2><table><tgroup><tbody><row><entry>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/man-db.xml:175
 msgid "Hungarian (hu)"
 msgstr "匈牙利语 (hu)"
 
 #. type: Content of: <sect1><sect2><table><tgroup><tbody><row><entry>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/man-db.xml:179
 msgid "English (en)"
 msgstr "英语 (en)"
 
 #. type: Content of: <sect1><sect2><table><tgroup><tbody><row><entry>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/man-db.xml:181
 msgid "Japanese (ja)"
 msgstr "日语 (ja)"
 
 #. type: Content of: <sect1><sect2><table><tgroup><tbody><row><entry>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/man-db.xml:182
 msgid "EUC-JP"
 msgstr "EUC-JP"
 
 #. type: Content of: <sect1><sect2><table><tgroup><tbody><row><entry>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/man-db.xml:185
 msgid "Spanish (es)"
 msgstr "西班牙语 (es)"
 
 #. type: Content of: <sect1><sect2><table><tgroup><tbody><row><entry>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/man-db.xml:187
 msgid "Korean (ko)"
 msgstr "朝鲜语 (ko)"
 
 #. type: Content of: <sect1><sect2><table><tgroup><tbody><row><entry>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/man-db.xml:188
 msgid "EUC-KR"
 msgstr "EUC-KR"
 
 #. type: Content of: <sect1><sect2><table><tgroup><tbody><row><entry>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/man-db.xml:191
 msgid "Estonian (et)"
 msgstr "爱沙尼亚语 (et)"
 
 #. type: Content of: <sect1><sect2><table><tgroup><tbody><row><entry>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/man-db.xml:193
 msgid "Lithuanian (lt)"
 msgstr "立陶宛语 (lt)"
 
 #. type: Content of: <sect1><sect2><table><tgroup><tbody><row><entry>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/man-db.xml:194
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/man-db.xml:200
 msgid "ISO-8859-13"
 msgstr "ISO-8859-13"
 
 #. type: Content of: <sect1><sect2><table><tgroup><tbody><row><entry>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/man-db.xml:197
 msgid "Finnish (fi)"
 msgstr "芬兰语 (fi)"
 
 #. type: Content of: <sect1><sect2><table><tgroup><tbody><row><entry>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/man-db.xml:199
 msgid "Latvian (lv)"
 msgstr "拉脱维亚语 (lv)"
 
 #. type: Content of: <sect1><sect2><table><tgroup><tbody><row><entry>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/man-db.xml:203
 msgid "French (fr)"
 msgstr "法语 (fr)"
 
 #. type: Content of: <sect1><sect2><table><tgroup><tbody><row><entry>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/man-db.xml:205
 msgid "Macedonian (mk)"
 msgstr "马其顿语 (mk)"
 
 #. type: Content of: <sect1><sect2><table><tgroup><tbody><row><entry>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/man-db.xml:206
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/man-db.xml:248
 msgid "ISO-8859-5"
 msgstr "ISO-8859-5"
 
 #. type: Content of: <sect1><sect2><table><tgroup><tbody><row><entry>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/man-db.xml:209
 msgid "Irish (ga)"
 msgstr "爱尔兰语 (ga)"
 
 #. type: Content of: <sect1><sect2><table><tgroup><tbody><row><entry>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/man-db.xml:211
 msgid "Polish (pl)"
 msgstr "波兰语 (pl)"
 
 #. type: Content of: <sect1><sect2><table><tgroup><tbody><row><entry>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/man-db.xml:215
 msgid "Galician (gl)"
 msgstr "加利西亚语 (gl)"
 
 #. type: Content of: <sect1><sect2><table><tgroup><tbody><row><entry>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/man-db.xml:217
 msgid "Romanian (ro)"
 msgstr "罗马尼亚语 (ro)"
 
 #. type: Content of: <sect1><sect2><table><tgroup><tbody><row><entry>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/man-db.xml:221
 msgid "Indonesian (id)"
 msgstr "印度尼西亚语 (id)"
 
 #. type: Content of: <sect1><sect2><table><tgroup><tbody><row><entry>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/man-db.xml:223
 msgid "Russian (ru)"
 msgstr "俄语 (ru)"
 
 #. type: Content of: <sect1><sect2><table><tgroup><tbody><row><entry>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/man-db.xml:224
 msgid "KOI8-R"
 msgstr "KOI8-R"
 
 #. type: Content of: <sect1><sect2><table><tgroup><tbody><row><entry>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/man-db.xml:227
 msgid "Icelandic (is)"
 msgstr "冰岛语 (is)"
 
 #. type: Content of: <sect1><sect2><table><tgroup><tbody><row><entry>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/man-db.xml:229
 msgid "Slovak (sk)"
 msgstr "斯洛伐克语 (sk)"
 
 #. type: Content of: <sect1><sect2><table><tgroup><tbody><row><entry>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/man-db.xml:233
 msgid "Italian (it)"
 msgstr "意大利语 (it)"
 
 #. type: Content of: <sect1><sect2><table><tgroup><tbody><row><entry>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/man-db.xml:235
 msgid "Slovenian (sl)"
 msgstr "斯洛文尼亚语 (sl)"
 
 #. type: Content of: <sect1><sect2><table><tgroup><tbody><row><entry>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/man-db.xml:239
 msgid "Norwegian Bokmal (nb)"
 msgstr "挪威巴克摩语 (nb)"
 
 #. type: Content of: <sect1><sect2><table><tgroup><tbody><row><entry>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/man-db.xml:241
 msgid "Serbian Latin (sr@latin)"
 msgstr "拉丁文书写的塞尔维亚语 (sr@latin)"
 
 #. type: Content of: <sect1><sect2><table><tgroup><tbody><row><entry>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/man-db.xml:245
 msgid "Dutch (nl)"
 msgstr "荷兰语 (nl)"
 
 #. type: Content of: <sect1><sect2><table><tgroup><tbody><row><entry>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/man-db.xml:247
 msgid "Serbian (sr)"
 msgstr "塞尔维亚语 (sr)"
 
 #. type: Content of: <sect1><sect2><table><tgroup><tbody><row><entry>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/man-db.xml:251
 msgid "Norwegian Nynorsk (nn)"
 msgstr "挪威尼诺斯克语 (nn)"
 
 #. type: Content of: <sect1><sect2><table><tgroup><tbody><row><entry>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/man-db.xml:253
 msgid "Turkish (tr)"
 msgstr "土耳其语 (tr)"
 
 #. type: Content of: <sect1><sect2><table><tgroup><tbody><row><entry>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/man-db.xml:254
 msgid "ISO-8859-9"
 msgstr "ISO-8859-9"
 
 #. type: Content of: <sect1><sect2><table><tgroup><tbody><row><entry>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/man-db.xml:257
 msgid "Norwegian (no)"
 msgstr "挪威语 (no)"
 
 #. type: Content of: <sect1><sect2><table><tgroup><tbody><row><entry>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/man-db.xml:259
 msgid "Ukrainian (uk)"
 msgstr "乌克兰语 (uk)"
 
 #. type: Content of: <sect1><sect2><table><tgroup><tbody><row><entry>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/man-db.xml:260
 msgid "KOI8-U"
 msgstr "KOI8-U"
 
 #. type: Content of: <sect1><sect2><table><tgroup><tbody><row><entry>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/man-db.xml:263
 msgid "Portuguese (pt)"
 msgstr "葡萄牙语 (pt)"
 
 #. type: Content of: <sect1><sect2><table><tgroup><tbody><row><entry>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/man-db.xml:265
 msgid "Vietnamese (vi)"
 msgstr "越南语 (vi)"
 
 #. type: Content of: <sect1><sect2><table><tgroup><tbody><row><entry>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/man-db.xml:266
 msgid "TCVN5712-1"
 msgstr "TCVN5712-1"
 
 #. type: Content of: <sect1><sect2><table><tgroup><tbody><row><entry>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/man-db.xml:269
 msgid "Swedish (sv)"
 msgstr "瑞典语 (sv)"
 
 #. type: Content of: <sect1><sect2><table><tgroup><tbody><row><entry>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/man-db.xml:271
 msgid "Simplified Chinese (zh_CN)"
 msgstr "简体中文 (zh_CN)"
 
 #. type: Content of: <sect1><sect2><table><tgroup><tbody><row><entry>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/man-db.xml:272
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/man-db.xml:278
 msgid "GBK"
 msgstr "GBK"
 
 #. type: Content of: <sect1><sect2><table><tgroup><tbody><row><entry>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/man-db.xml:275
 msgid "Belarusian (be)"
 msgstr "白俄罗斯语 (be)"
 
 #. type: Content of: <sect1><sect2><table><tgroup><tbody><row><entry>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/man-db.xml:276
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/man-db.xml:282
 msgid "CP1251"
 msgstr "CP1251"
 
 #. type: Content of: <sect1><sect2><table><tgroup><tbody><row><entry>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/man-db.xml:277
 msgid "Simplified Chinese, Singapore (zh_SG)"
 msgstr "简体中文，新加坡 (zh_SG)"
 
 #. type: Content of: <sect1><sect2><table><tgroup><tbody><row><entry>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/man-db.xml:281
 msgid "Bulgarian (bg)"
 msgstr "保加利亚语 (bg)"
 
 #. type: Content of: <sect1><sect2><table><tgroup><tbody><row><entry>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/man-db.xml:283
 msgid "Traditional Chinese, Hong Kong (zh_HK)"
 msgstr "繁体中文，香港特别行政区 (zh_HK)"
 
 #. type: Content of: <sect1><sect2><table><tgroup><tbody><row><entry>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/man-db.xml:284
 msgid "BIG5HKSCS"
 msgstr "BIG5HKSCS"
 
 #. type: Content of: <sect1><sect2><table><tgroup><tbody><row><entry>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/man-db.xml:287
 msgid "Czech (cs)"
 msgstr "捷克语 (cs)"
 
 #. type: Content of: <sect1><sect2><table><tgroup><tbody><row><entry>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/man-db.xml:289
 msgid "Traditional Chinese (zh_TW)"
 msgstr "繁体中文 (zh_TW)"
 
 #. type: Content of: <sect1><sect2><table><tgroup><tbody><row><entry>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/man-db.xml:290
 msgid "BIG5"
 msgstr "BIG5"
 
 #. type: Content of: <sect1><sect2><table><tgroup><tbody><row><entry>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/man-db.xml:293
 msgid "Greek (el)"
 msgstr "希腊文 (el)"
 
 #. type: Content of: <sect1><sect2><table><tgroup><tbody><row><entry>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/man-db.xml:294
 msgid "ISO-8859-7"
 msgstr "ISO-8859-7"
 
 #. type: Content of: <sect1><sect2><note><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/man-db.xml:306
 msgid "Manual pages in languages not in the list are not supported."
 msgstr "用该表之外的语言编写的 man 手册页面不被支持。"
 
 #. type: Content of: <sect1><sect2><title>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/man-db.xml:312
 msgid "Contents of Man-DB"
 msgstr "Man-DB 的内容"
 
 #. type: Content of: <sect1><sect2><segmentedlist><segtitle>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/man-db.xml:315
 msgid "Installed programs"
 msgstr "安装的程序"
 
 #. type: Content of: <sect1><sect2><segmentedlist><segtitle>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/man-db.xml:316
 msgid "Installed libraries"
 msgstr "安装的库"
 
 #. type: Content of: <sect1><sect2><segmentedlist><segtitle>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/man-db.xml:317
 msgid "Installed directories"
 msgstr "安装的目录"
 
 #. type: Content of: <sect1><sect2><segmentedlist><seglistitem><seg>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/man-db.xml:320
 msgid ""
 "accessdb, apropos (link to whatis), catman, lexgrog, man, mandb, manpath, "
 "and whatis"
@@ -630,12 +502,10 @@ msgstr ""
 "及 whatis"
 
 #. type: Content of: <sect1><sect2><segmentedlist><seglistitem><seg>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/man-db.xml:322
 msgid "libman.so and libmandb.so (both in /usr/lib/man-db)"
 msgstr "libman.so 和 libmandb.so (都在 /usr/lib/man-db 中)"
 
 #. type: Content of: <sect1><sect2><segmentedlist><seglistitem><seg>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/man-db.xml:323
 msgid ""
 "/usr/lib/man-db, /usr/libexec/man-db, and /usr/share/doc/man-db-&man-db-"
 "version;"
@@ -644,119 +514,96 @@ msgstr ""
 "version;"
 
 #. type: Content of: <sect1><sect2><variablelist><bridgehead>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/man-db.xml:329
 msgid "Short Descriptions"
 msgstr "简要描述"
 
 #. type: Content of: <sect1><sect2><variablelist>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/man-db.xml:330
 msgid ""
 "<?dbfo list-presentation=\"list\"?> <?dbhtml list-presentation=\"table\"?>"
 msgstr ""
 "<?dbfo list-presentation=\"list\"?> <?dbhtml list-presentation=\"table\"?>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/man-db.xml:334
 msgid "<command>accessdb</command>"
 msgstr "<command>accessdb</command>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/man-db.xml:336
 msgid ""
 "Dumps the <command>whatis</command> database contents in human-readable form"
 msgstr "将 <command>whatis</command> 数据库内容转储为人类可读格式"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/man-db.xml:339
 msgid "accessdb"
 msgstr "accessdb"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/man-db.xml:345
 msgid "<command>apropos</command>"
 msgstr "<command>apropos</command>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/man-db.xml:347
 msgid ""
 "Searches the <command>whatis</command> database and displays the short "
 "descriptions of system commands that contain a given string"
 msgstr ""
-"搜索 <command>whatis</command> 数据库，显示包含给定字符串的系统命令的简要描"
-"述"
+"搜索 <command>whatis</command> 数据库，显示包含给定字符串的系统命令的简要描述"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/man-db.xml:351
 msgid "apropos"
 msgstr "apropos"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/man-db.xml:357
 msgid "<command>catman</command>"
 msgstr "<command>catman</command>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/man-db.xml:359
 msgid "Creates or updates the pre-formatted manual pages"
 msgstr "创建或更新预先格式化的 man 手册页面"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/man-db.xml:361
 msgid "catman"
 msgstr "catman"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/man-db.xml:367
 msgid "<command>lexgrog</command>"
 msgstr "<command>lexgrog</command>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/man-db.xml:369
 msgid "Displays one-line summary information about a given manual page"
 msgstr "显示给定 man 手册页面的单行摘要信息"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/man-db.xml:372
 msgid "lexgrog"
 msgstr "lexgrog"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/man-db.xml:378
 msgid "<command>man</command>"
 msgstr "<command>man</command>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/man-db.xml:380
 msgid "Formats and displays the requested manual page"
 msgstr "格式化并显示请求的 man 手册页面"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/man-db.xml:382
 msgid "man"
 msgstr "man"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/man-db.xml:388
 msgid "<command>mandb</command>"
 msgstr "<command>mandb</command>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/man-db.xml:390
 msgid "Creates or updates the <command>whatis</command> database"
 msgstr "创建或更新 <command>whatis</command> 数据库"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/man-db.xml:392
 msgid "mandb"
 msgstr "mandb"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/man-db.xml:398
 msgid "<command>manpath</command>"
 msgstr "<command>manpath</command>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/man-db.xml:400
 msgid ""
 "Displays the contents of $MANPATH or (if $MANPATH is not set)  a suitable "
 "search path based on the settings in man.conf and the user's environment"
@@ -765,52 +612,41 @@ msgstr ""
 "定的合适搜索路径"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/man-db.xml:404
 msgid "manpath"
 msgstr "manpath"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/man-db.xml:410
 msgid "<command>whatis</command>"
 msgstr "<command>whatis</command>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/man-db.xml:412
 msgid ""
 "Searches the <command>whatis</command> database and displays the short "
 "descriptions of system commands that contain the given keyword as a separate "
 "word"
 msgstr ""
-"搜索 <command>whatis</command> 数据库，显示包含给定关键词的系统命令的简要描"
-"述"
+"搜索 <command>whatis</command> 数据库，显示包含给定关键词的系统命令的简要描述"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/man-db.xml:416
 msgid "whatis"
 msgstr "whatis"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/man-db.xml:422
 msgid "<filename class=\"libraryfile\">libman</filename>"
 msgstr "<filename class=\"libraryfile\">libman</filename>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/man-db.xml:424
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/man-db.xml:434
 msgid "Contains run-time support for <command>man</command>"
 msgstr "包含 <command>man</command> 运行时支持"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/man-db.xml:426
 msgid "libman"
 msgstr "libman"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/man-db.xml:432
 msgid "<filename class=\"libraryfile\">libmandb</filename>"
 msgstr "<filename class=\"libraryfile\">libmandb</filename>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/man-db.xml:436
 msgid "libmandb"
 msgstr "libmandb"

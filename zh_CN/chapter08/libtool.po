@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2020-06-17 12:44+0800\n"
+"POT-Creation-Date: 2020-08-08 19:28+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -12,13 +12,11 @@ msgstr ""
 "X-Generator: Translate Toolkit 2.2.5\n"
 
 #. type: Content of: <sect1><sect1info><address>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/libtool.xml:14
 #, no-wrap
 msgid "&libtool-url;"
 msgstr "&libtool-url;"
 
 #. type: Content of: <sect1><sect1info>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/libtool.xml:12
 msgid ""
 "<productname>libtool</productname> <productnumber>&libtool-version;</"
 "productnumber> <placeholder type=\"address\" id=\"0\"/>"
@@ -27,98 +25,82 @@ msgstr ""
 "productnumber> <placeholder type=\"address\" id=\"0\"/>"
 
 #. type: Content of: <sect1><title>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/libtool.xml:17
 msgid "Libtool-&libtool-version;"
 msgstr "Libtool-&libtool-version;"
 
 #. type: Content of: <sect1><indexterm><primary>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/libtool.xml:20
 msgid "Libtool"
 msgstr "Libtool"
 
 #. type: Content of: <sect1><sect2><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/libtool.xml:26
 msgid ""
 "The Libtool package contains the GNU generic library support script.  It "
 "wraps the complexity of using shared libraries in a consistent, portable "
 "interface."
 msgstr ""
-"Libtool 软件包包含 GNU 通用库支持脚本。它在一个一致、可移植的接口下隐藏了使"
-"用共享库的复杂性。"
+"Libtool 软件包包含 GNU 通用库支持脚本。它在一个一致、可移植的接口下隐藏了使用"
+"共享库的复杂性。"
 
 #. type: Content of: <sect1><sect2><segmentedlist><segtitle>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/libtool.xml:31
 msgid "&buildtime;"
 msgstr "&buildtime;"
 
 #. type: Content of: <sect1><sect2><segmentedlist><segtitle>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/libtool.xml:32
 msgid "&diskspace;"
 msgstr "&diskspace;"
 
 #. type: Content of: <sect1><sect2><segmentedlist><seglistitem><seg>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/libtool.xml:35
 msgid "&libtool-fin-sbu;"
 msgstr "&libtool-fin-sbu;"
 
 #. type: Content of: <sect1><sect2><segmentedlist><seglistitem><seg>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/libtool.xml:36
 msgid "&libtool-fin-du;"
 msgstr "&libtool-fin-du;"
 
 #. type: Content of: <sect1><sect2><title>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/libtool.xml:43
 msgid "Installation of Libtool"
 msgstr "安装 Libtool"
 
 #. type: Content of: <sect1><sect2><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/libtool.xml:45
 msgid "Prepare Libtool for compilation:"
 msgstr "准备编译 Libtool："
 
 #. type: Content of: <sect1><sect2><screen>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/libtool.xml:47
 #, no-wrap
 msgid "<userinput remap=\"configure\">./configure --prefix=/usr</userinput>"
 msgstr "<userinput remap=\"configure\">./configure --prefix=/usr</userinput>"
 
 #. type: Content of: <sect1><sect2><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/libtool.xml:49
 msgid "Compile the package:"
 msgstr "编译该软件包："
 
 #. type: Content of: <sect1><sect2><screen>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/libtool.xml:51
 #, no-wrap
 msgid "<userinput remap=\"make\">make</userinput>"
 msgstr "<userinput remap=\"make\">make</userinput>"
 
 #. (about 11.0 SBU)
 #. type: Content of: <sect1><sect2><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/libtool.xml:53
 msgid "To test the results, issue:"
 msgstr "为了测试编译结果，执行："
 
 #. type: Content of: <sect1><sect2><screen>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/libtool.xml:55
 #, no-wrap
 msgid "<userinput remap=\"test\">make check</userinput>"
 msgstr "<userinput remap=\"test\">make check</userinput>"
 
 #. type: Content of: <sect1><sect2><note><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/libtool.xml:57
 msgid ""
 "The test time for libtool can be reduced significantly on a system with "
 "multiple cores.  To do this, append <command>TESTSUITEFLAGS=-j&lt;N&gt;</"
 "command> to the line above.  For instance, using -j4 can reduce the test "
 "time by over 60 percent."
 msgstr ""
-"在多核系统上，可以显著减少 libtool 的测试时间。为了使用多个核心，在上述命令"
-"中附加 <command>TESTSUITEFLAGS=-j&lt;N&gt;</command> 参数。例如，使用 -j4 可"
-"以减少超过 60% 的测试时间。"
+"在多核系统上，可以显著减少 libtool 的测试时间。为了使用多个核心，在上述命令中"
+"附加 <command>TESTSUITEFLAGS=-j&lt;N&gt;</command> 参数。例如，使用 -j4 可以"
+"减少超过 60% 的测试时间。"
 
 #. type: Content of: <sect1><sect2><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/libtool.xml:63
 msgid ""
 "Five tests are known to fail in the LFS build environment due to a circular "
 "dependency, but all tests pass if rechecked after automake is installed."
@@ -127,106 +109,86 @@ msgstr ""
 "装后都能通过。"
 
 #. type: Content of: <sect1><sect2><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/libtool.xml:67
 msgid "Install the package:"
 msgstr "安装该软件包："
 
 #. type: Content of: <sect1><sect2><screen>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/libtool.xml:69
 #, no-wrap
 msgid "<userinput remap=\"install\">make install</userinput>"
 msgstr "<userinput remap=\"install\">make install</userinput>"
 
 #. type: Content of: <sect1><sect2><title>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/libtool.xml:75
 msgid "Contents of Libtool"
 msgstr "Libtool 的内容"
 
 #. type: Content of: <sect1><sect2><segmentedlist><segtitle>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/libtool.xml:78
 msgid "Installed programs"
 msgstr "安装的程序"
 
 #. type: Content of: <sect1><sect2><segmentedlist><segtitle>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/libtool.xml:79
 msgid "Installed libraries"
 msgstr "安装的库"
 
 #. type: Content of: <sect1><sect2><segmentedlist><segtitle>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/libtool.xml:80
 msgid "Installed directories"
 msgstr "安装的目录"
 
 #. type: Content of: <sect1><sect2><segmentedlist><seglistitem><seg>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/libtool.xml:83
 msgid "libtool and libtoolize"
 msgstr "libtool 和 libtoolize"
 
 #. type: Content of: <sect1><sect2><segmentedlist><seglistitem><seg>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/libtool.xml:84
 msgid "libltdl.so"
 msgstr "libltdl.so"
 
 #. type: Content of: <sect1><sect2><segmentedlist><seglistitem><seg>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/libtool.xml:85
 msgid "/usr/include/libltdl and /usr/share/libtool"
 msgstr "/usr/include/libltdl 和 /usr/share/libtool"
 
 #. type: Content of: <sect1><sect2><variablelist><bridgehead>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/libtool.xml:90
 msgid "Short Descriptions"
 msgstr "简要描述"
 
 #. type: Content of: <sect1><sect2><variablelist>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/libtool.xml:91
 msgid ""
 "<?dbfo list-presentation=\"list\"?> <?dbhtml list-presentation=\"table\"?>"
 msgstr ""
 "<?dbfo list-presentation=\"list\"?> <?dbhtml list-presentation=\"table\"?>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/libtool.xml:95
 msgid "<command>libtool</command>"
 msgstr "<command>libtool</command>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/libtool.xml:97
 msgid "Provides generalized library-building support services"
 msgstr "提供通用化库文件构建支持服务"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/libtool.xml:99
 msgid "libtool"
 msgstr "libtool"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/libtool.xml:105
 msgid "<command>libtoolize</command>"
 msgstr "<command>libtoolize</command>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/libtool.xml:107
 msgid ""
 "Provides a standard way to add <command>libtool</command> support to a "
 "package"
 msgstr "提供为软件包增加 <command>libtool</command> 支持的标准方法"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/libtool.xml:110
 msgid "libtoolize"
 msgstr "libtoolize"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/libtool.xml:116
 msgid "<filename class=\"libraryfile\">libltdl</filename>"
 msgstr "<filename class=\"libraryfile\">libltdl</filename>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/libtool.xml:118
 msgid "Hides the various difficulties of dlopening libraries"
 msgstr "隐藏用 dlopen 加载库时可能遇到的若干困难"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/libtool.xml:120
 msgid "libltdl"
 msgstr "libltdl"

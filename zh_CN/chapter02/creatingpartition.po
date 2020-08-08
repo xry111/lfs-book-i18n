@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2020-06-17 12:44+0800\n"
+"POT-Creation-Date: 2020-08-08 19:28+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -12,12 +12,10 @@ msgstr ""
 "X-Generator: Translate Toolkit 2.2.5\n"
 
 #. type: Content of: <sect1><title>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter02/creatingpartition.xml:11
 msgid "Creating a New Partition"
 msgstr "创建新的分区"
 
 #. type: Content of: <sect1><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter02/creatingpartition.xml:13
 msgid ""
 "Like most other operating systems, LFS is usually installed on a dedicated "
 "partition. The recommended approach to building an LFS system is to use an "
@@ -28,7 +26,6 @@ msgstr ""
 "个可用的空分区，或者在有充足未划分空间的情况下，创建一个新分区。"
 
 #. type: Content of: <sect1><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter02/creatingpartition.xml:18
 msgid ""
 "A minimal system requires a partition of around 10 gigabytes (GB).  This is "
 "enough to store all the source tarballs and compile the packages.  However, "
@@ -49,7 +46,6 @@ msgstr ""
 "收这些空间。"
 
 #. type: Content of: <sect1><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter02/creatingpartition.xml:29
 msgid ""
 "Because there is not always enough Random Access Memory (RAM) available for "
 "compilation processes, it is a good idea to use a small disk partition as "
@@ -66,7 +62,6 @@ msgstr ""
 "LFS 创建一个。"
 
 #. type: Content of: <sect1><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter02/creatingpartition.xml:37
 msgid ""
 "Start a disk partitioning program such as <command>cfdisk</command> or "
 "<command>fdisk</command> with a command line option naming the hard disk on "
@@ -85,7 +80,6 @@ msgstr ""
 "<filename>fdisk(8)</filename> 来学习如何使用分区程序。"
 
 #. type: Content of: <sect1><note><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter02/creatingpartition.xml:46
 msgid ""
 "For experienced users, other partitioning schemes are possible.  The new LFS "
 "system can be on a software <ulink url=\"&blfs-book;postlfs/raid.html"
@@ -102,7 +96,6 @@ msgstr ""
 "的话题。对于初次构建 LFS 的用户来说，不推荐采用这些分区方法。"
 
 #. type: Content of: <sect1><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter02/creatingpartition.xml:55
 msgid ""
 "Remember the designation of the new partition (e.g., <filename class="
 "\"devicefile\">sda5</filename>). This book will refer to this as the LFS "
@@ -116,12 +109,10 @@ msgstr ""
 "到这些代号。"
 
 #. type: Content of: <sect1><sect2><title>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter02/creatingpartition.xml:62
 msgid "Other Partition Issues"
 msgstr "其他分区问题"
 
 #. type: Content of: <sect1><sect2><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter02/creatingpartition.xml:64
 msgid ""
 "Requests for advice on system partitioning are often posted on the LFS "
 "mailing lists. This is a highly subjective topic.  The default for most "
@@ -137,12 +128,10 @@ msgstr ""
 "共享数据，增加系统备份时间，同时导致文件系统结构的不合理分配，浪费磁盘空间。"
 
 #. type: Content of: <sect1><sect2><sect3><title>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter02/creatingpartition.xml:73
 msgid "The Root Partition"
 msgstr "根分区"
 
 #. type: Content of: <sect1><sect2><sect3><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter02/creatingpartition.xml:75
 msgid ""
 "A root LFS partition (not to be confused with the <filename class=\"directory"
 "\">/root</filename> directory) of twenty gigabytes is a good compromise for "
@@ -156,12 +145,10 @@ msgstr ""
 "建 LFS 系统。"
 
 #. type: Content of: <sect1><sect2><sect3><title>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter02/creatingpartition.xml:82
 msgid "The Swap Partition"
 msgstr "交换 (Swap) 分区"
 
 #. type: Content of: <sect1><sect2><sect3><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter02/creatingpartition.xml:84
 msgid ""
 "Most distributions automatically create a swap partition.  Generally the "
 "recommended size of the swap partition is about twice the amount of physical "
@@ -173,18 +160,16 @@ msgstr ""
 "用情况。"
 
 #. type: Content of: <sect1><sect2><sect3><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter02/creatingpartition.xml:90
 msgid ""
 "If you want to use the hibernation feature (suspend-to-disk) of Linux, it "
 "writes out the contents of RAM to the swap partition before turning off the "
 "machine. In this case the size of the swap partition should be at least as "
 "large as the system's installed RAM."
 msgstr ""
-"如果您希望使用 Linux 的休眠功能 (挂起到磁盘)，它会在关机前将内存内容写入"
-"到交换分区。这种情况下，交换分区的大小应该至少和系统内存相同。"
+"如果您希望使用 Linux 的休眠功能 (挂起到磁盘)，它会在关机前将内存内容写入到交"
+"换分区。这种情况下，交换分区的大小应该至少和系统内存相同。"
 
 #. type: Content of: <sect1><sect2><sect3><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter02/creatingpartition.xml:95
 msgid ""
 "Swapping is never good. For mechanical hard drives you can generally tell if "
 "a system is swapping by just listening to disk activity and observing how "
@@ -196,21 +181,19 @@ msgid ""
 "trying to edit a five gigabyte file. If swapping becomes a normal "
 "occurrence, the best solution is to purchase more RAM for your system."
 msgstr ""
-"交换到磁盘从来就不是一件好事。对于机械硬盘，通过听硬盘的工作噪声，同时观察系统的响应"
-"速度，就能说出系统是否在交换。对于 SSD，您无法听到工作噪声，但可以使用"
-"<command>top</command> 或 <command>free</command> 程序查看使用了多少交换空间。"
-"应该尽量避免使用 SSD 设备作为交换分区。一旦发生交换，首先检查是否输入了不合理的命令，"
-"例如试图编辑一个 5GB 的文件。如果交换时常发生，最好的办法是为你的系统添置内"
-"存。"
+"交换到磁盘从来就不是一件好事。对于机械硬盘，通过听硬盘的工作噪声，同时观察系"
+"统的响应速度，就能说出系统是否在交换。对于 SSD，您无法听到工作噪声，但可以使"
+"用<command>top</command> 或 <command>free</command> 程序查看使用了多少交换空"
+"间。应该尽量避免使用 SSD 设备作为交换分区。一旦发生交换，首先检查是否输入了不"
+"合理的命令，例如试图编辑一个 5GB 的文件。如果交换时常发生，最好的办法是为你的"
+"系统添置内存。"
 
 #. type: Content of: <sect1><sect2><sect3><title>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter02/creatingpartition.xml:107
 msgid "The Grub Bios Partition"
 msgstr "Grub Bios 分区"
 
 # "Critical" warning suppressed because in Chinese we have no we to put "EF02" earlier.
 #. type: Content of: <sect1><sect2><sect3><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter02/creatingpartition.xml:109
 msgid ""
 "If the <emphasis>boot disk</emphasis> has been partitioned with a GUID "
 "Partition Table (GPT), then a small, typically 1 MB, partition must be "
@@ -227,7 +210,6 @@ msgstr ""
 "emphasis>。"
 
 #. type: Content of: <sect1><sect2><sect3><note><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter02/creatingpartition.xml:117
 msgid ""
 "The Grub Bios partition must be on the drive that the BIOS uses to boot the "
 "system.  This is not necessarily the same drive where the LFS root partition "
@@ -240,12 +222,10 @@ msgstr ""
 "区。"
 
 #. type: Content of: <sect1><sect2><sect3><title>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter02/creatingpartition.xml:125
 msgid "Convenience Partitions"
 msgstr "常用分区"
 
 #. type: Content of: <sect1><sect2><sect3><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter02/creatingpartition.xml:127
 msgid ""
 "There are several other partitions that are not required, but should be "
 "considered when designing a disk layout.  The following list is not "
@@ -255,7 +235,6 @@ msgstr ""
 "但可以作为一个参考。"
 
 #. type: Content of: <sect1><sect2><sect3><itemizedlist><listitem><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter02/creatingpartition.xml:133
 msgid ""
 "/boot &ndash; Highly recommended.  Use this partition to store kernels and "
 "other booting information.  To minimize potential boot problems with larger "
@@ -267,7 +246,6 @@ msgstr ""
 "绰有余。"
 
 #. type: Content of: <sect1><sect2><sect3><itemizedlist><listitem><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter02/creatingpartition.xml:139
 msgid ""
 "/home &ndash; Highly recommended.  Share your home directory and user "
 "customization across multiple distributions or LFS builds.  The size is "
@@ -277,7 +255,6 @@ msgstr ""
 "home 目录和用户设置。它的尺寸一般很大，取决于硬盘的可用空间。"
 
 #. type: Content of: <sect1><sect2><sect3><itemizedlist><listitem><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter02/creatingpartition.xml:144
 msgid ""
 "/usr &ndash; A separate /usr partition is generally used if providing a "
 "server for a thin client or diskless workstation.  It is normally not needed "
@@ -287,7 +264,6 @@ msgstr ""
 "不需要。为它划分 10GB 足够满足多数系统的要求。"
 
 #. type: Content of: <sect1><sect2><sect3><itemizedlist><listitem><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter02/creatingpartition.xml:149
 msgid ""
 "/opt &ndash; This directory is most useful for BLFS where multiple "
 "installations of large packages like Gnome or KDE can be installed without "
@@ -298,7 +274,6 @@ msgstr ""
 "大量文件塞进 /usr 目录树。如果将它划分为独立分区，5 到 10 GB 一般就足够了。"
 
 #. type: Content of: <sect1><sect2><sect3><itemizedlist><listitem><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter02/creatingpartition.xml:155
 msgid ""
 "/tmp &ndash; A separate /tmp directory is rare, but useful if configuring a "
 "thin client.  This partition, if used, will usually not need to exceed a "
@@ -308,7 +283,6 @@ msgstr ""
 "配了这个分区，大小一般不会超过几个 GB。"
 
 #. type: Content of: <sect1><sect2><sect3><itemizedlist><listitem><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter02/creatingpartition.xml:159
 msgid ""
 "/usr/src &ndash; This partition is very useful for providing a location to "
 "store BLFS source files and share them across LFS builds.  It can also be "
@@ -320,7 +294,6 @@ msgstr ""
 "空间。"
 
 #. type: Content of: <sect1><sect2><sect3><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter02/creatingpartition.xml:167
 msgid ""
 "Any separate partition that you want automatically mounted upon boot needs "
 "to be specified in the <filename>/etc/fstab</filename>.  Details about how "

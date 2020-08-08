@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2020-06-17 12:44+0800\n"
+"POT-Creation-Date: 2020-08-08 19:28+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -12,13 +12,11 @@ msgstr ""
 "X-Generator: Translate Toolkit 2.2.5\n"
 
 #. type: Content of: <sect1><sect1info><address>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/flex.xml:14
 #, no-wrap
 msgid "&flex-url;"
 msgstr "&flex-url;"
 
 #. type: Content of: <sect1><sect1info>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/flex.xml:12
 msgid ""
 "<productname>flex</productname> <productnumber>&flex-version;</"
 "productnumber> <placeholder type=\"address\" id=\"0\"/>"
@@ -27,95 +25,78 @@ msgstr ""
 "productnumber> <placeholder type=\"address\" id=\"0\"/>"
 
 #. type: Content of: <sect1><title>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/flex.xml:17
 msgid "Flex-&flex-version;"
 msgstr "Flex-&flex-version;"
 
 #. type: Content of: <sect1><indexterm><primary>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/flex.xml:20
 msgid "Flex"
 msgstr "Flex"
 
 #. type: Content of: <sect1><sect2><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/flex.xml:26
 msgid ""
 "The Flex package contains a utility for generating programs that recognize "
 "patterns in text."
 msgstr "Flex 软件包包含一个工具，用于生成在文本中识别模式的程序。"
 
 #. type: Content of: <sect1><sect2><segmentedlist><segtitle>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/flex.xml:30
 msgid "&buildtime;"
 msgstr "&buildtime;"
 
 #. type: Content of: <sect1><sect2><segmentedlist><segtitle>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/flex.xml:31
 msgid "&diskspace;"
 msgstr "&diskspace;"
 
 #. type: Content of: <sect1><sect2><segmentedlist><seglistitem><seg>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/flex.xml:34
 msgid "&flex-fin-sbu;"
 msgstr "&flex-fin-sbu;"
 
 #. type: Content of: <sect1><sect2><segmentedlist><seglistitem><seg>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/flex.xml:35
 msgid "&flex-fin-du;"
 msgstr "&flex-fin-du;"
 
 #. type: Content of: <sect1><sect2><title>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/flex.xml:42
 msgid "Installation of Flex"
 msgstr "安装 Flex"
 
 #. type: Content of: <sect1><sect2><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/flex.xml:54
 msgid "Prepare Flex for compilation:"
 msgstr "准备编译 Flex："
 
 #.  <screen>
 #. <userinput remap="configure">HELP2MAN=/tools/bin/true \ 
 #. type: Content of: <sect1><sect2><screen>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/flex.xml:57
 #, no-wrap
 msgid "<userinput remap=\"configure\">./configure --prefix=/usr --docdir=/usr/share/doc/flex-&flex-version;</userinput>"
 msgstr "<userinput remap=\"configure\">./configure --prefix=/usr --docdir=/usr/share/doc/flex-&flex-version;</userinput>"
 
 #. type: Content of: <sect1><sect2><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/flex.xml:59
 msgid "Compile the package:"
 msgstr "编译该软件包："
 
 #. type: Content of: <sect1><sect2><screen>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/flex.xml:61
 #, no-wrap
 msgid "<userinput remap=\"make\">make</userinput>"
 msgstr "<userinput remap=\"make\">make</userinput>"
 
 #. type: Content of: <sect1><sect2><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/flex.xml:63
 msgid "To test the results (about 0.5 SBU), issue:"
 msgstr "如果要测试编译结果 (需要约 0.5 SBU), 执行："
 
 #. type: Content of: <sect1><sect2><screen>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/flex.xml:65
 #, no-wrap
 msgid "<userinput remap=\"test\">make check</userinput>"
 msgstr "<userinput remap=\"test\">make check</userinput>"
 
 #. type: Content of: <sect1><sect2><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/flex.xml:67
 msgid "Install the package:"
 msgstr "安装该软件包："
 
 #. type: Content of: <sect1><sect2><screen>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/flex.xml:69
 #, no-wrap
 msgid "<userinput remap=\"install\">make install</userinput>"
 msgstr "<userinput remap=\"install\">make install</userinput>"
 
 #. type: Content of: <sect1><sect2><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/flex.xml:71
 msgid ""
 "A few programs do not know about <command>flex</command> yet and try to run "
 "its predecessor, <command>lex</command>. To support those programs, create a "
@@ -128,65 +109,53 @@ msgstr ""
 "式："
 
 #. type: Content of: <sect1><sect2><screen>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/flex.xml:77
 #, no-wrap
 msgid "<userinput remap=\"install\">ln -sv flex /usr/bin/lex</userinput>"
 msgstr "<userinput remap=\"install\">ln -sv flex /usr/bin/lex</userinput>"
 
 #. type: Content of: <sect1><sect2><title>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/flex.xml:82
 msgid "Contents of Flex"
 msgstr "Flex 的内容"
 
 #. type: Content of: <sect1><sect2><segmentedlist><segtitle>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/flex.xml:85
 msgid "Installed programs"
 msgstr "安装的程序"
 
 #. type: Content of: <sect1><sect2><segmentedlist><segtitle>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/flex.xml:86
 msgid "Installed libraries"
 msgstr "安装的库"
 
 #. type: Content of: <sect1><sect2><segmentedlist><segtitle>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/flex.xml:87
 msgid "Installed directory"
 msgstr "安装的目录"
 
 #. type: Content of: <sect1><sect2><segmentedlist><seglistitem><seg>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/flex.xml:90
 msgid "flex, flex++ (link to flex), and lex (link to flex)"
 msgstr "flex, flex++ (到 flex 的链接), 以及 lex (到 flex 的链接)"
 
 #. type: Content of: <sect1><sect2><segmentedlist><seglistitem><seg>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/flex.xml:91
 msgid "libfl.so"
 msgstr "libfl.so"
 
 #. type: Content of: <sect1><sect2><segmentedlist><seglistitem><seg>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/flex.xml:92
 msgid "/usr/share/doc/flex-&flex-version;"
 msgstr "/usr/share/doc/flex-&flex-version;"
 
 #. type: Content of: <sect1><sect2><variablelist><bridgehead>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/flex.xml:97
 msgid "Short Descriptions"
 msgstr "简要描述"
 
 #. type: Content of: <sect1><sect2><variablelist>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/flex.xml:98
 msgid ""
 "<?dbfo list-presentation=\"list\"?> <?dbhtml list-presentation=\"table\"?>"
 msgstr ""
 "<?dbfo list-presentation=\"list\"?> <?dbhtml list-presentation=\"table\"?>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/flex.xml:102
 msgid "<command>flex</command>"
 msgstr "<command>flex</command>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/flex.xml:104
 msgid ""
 "A tool for generating programs that recognize patterns in text; it allows "
 "for the versatility to specify the rules for pattern-finding, eradicating "
@@ -196,17 +165,14 @@ msgstr ""
 "则，消除了开发专用程序的需要。"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/flex.xml:108
 msgid "flex"
 msgstr "flex"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/flex.xml:114
 msgid "<command>flex++</command>"
 msgstr "<command>flex++</command>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/flex.xml:116
 msgid ""
 "An extension of flex, is used for generating C++ code and classes. It is a "
 "symbolic link to <command>flex</command>"
@@ -215,17 +181,14 @@ msgstr ""
 "号链接"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/flex.xml:119
 msgid "flex++"
 msgstr "flex++"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/flex.xml:125
 msgid "<command>lex</command>"
 msgstr "<command>lex</command>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/flex.xml:127
 msgid ""
 "A symbolic link that runs <command>flex</command> in <command>lex</command> "
 "emulation mode"
@@ -233,21 +196,17 @@ msgstr ""
 "一个以 <command>lex</command> 仿真模式运行 <command>flex</command> 的符号链接"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/flex.xml:130
 msgid "lex"
 msgstr "lex"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/flex.xml:136
 msgid "<filename class=\"libraryfile\">libfl</filename>"
 msgstr "<filename class=\"libraryfile\">libfl</filename>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/flex.xml:138
 msgid "The <filename class=\"libraryfile\">flex</filename> library"
 msgstr "<filename class=\"libraryfile\">flex</filename> 库"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/flex.xml:140
 msgid "libfl"
 msgstr "libfl"

@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2020-08-06 15:56+0800\n"
+"POT-Creation-Date: 2020-08-08 19:28+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -12,13 +12,11 @@ msgstr ""
 "X-Generator: Translate Toolkit 2.2.5\n"
 
 #. type: Content of: <sect1><sect1info><address>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/openssl.xml:14
 #, no-wrap
 msgid "&openssl-url;"
 msgstr "&openssl-url;"
 
 #. type: Content of: <sect1><sect1info>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/openssl.xml:12
 msgid ""
 "<productname>openssl</productname> <productnumber>&openssl-version;</"
 "productnumber> <placeholder type=\"address\" id=\"0\"/>"
@@ -27,17 +25,14 @@ msgstr ""
 "productnumber> <placeholder type=\"address\" id=\"0\"/>"
 
 #. type: Content of: <sect1><title>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/openssl.xml:17
 msgid "OpenSSL-&openssl-version;"
 msgstr "OpenSSL-&openssl-version;"
 
 #. type: Content of: <sect1><indexterm><primary>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/openssl.xml:20
 msgid "OpenSSL"
 msgstr "OpenSSL"
 
 #. type: Content of: <sect1><sect2><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/openssl.xml:26
 msgid ""
 "The OpenSSL package contains management tools and libraries relating to "
 "cryptography. These are useful for providing cryptographic functions to "
@@ -48,37 +43,30 @@ msgstr ""
 "功能，例如 OpenSSH，电子邮件程序和 Web 浏览器 (以访问 HTTPS 站点)。"
 
 #. type: Content of: <sect1><sect2><segmentedlist><segtitle>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/openssl.xml:32
 msgid "&buildtime;"
 msgstr "&buildtime;"
 
 #. type: Content of: <sect1><sect2><segmentedlist><segtitle>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/openssl.xml:33
 msgid "&diskspace;"
 msgstr "&diskspace;"
 
 #. type: Content of: <sect1><sect2><segmentedlist><seglistitem><seg>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/openssl.xml:36
 msgid "&openssl-fin-sbu;"
 msgstr "&openssl-fin-sbu;"
 
 #. type: Content of: <sect1><sect2><segmentedlist><seglistitem><seg>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/openssl.xml:37
 msgid "&openssl-fin-du;"
 msgstr "&openssl-fin-du;"
 
 #. type: Content of: <sect1><sect2><title>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/openssl.xml:44
 msgid "Installation of OpenSSL"
 msgstr "安装 OpenSSL"
 
 #. type: Content of: <sect1><sect2><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/openssl.xml:46
 msgid "Prepare OpenSSL for compilation:"
 msgstr "准备编译 OpenSSL："
 
 #. type: Content of: <sect1><sect2><screen>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/openssl.xml:48
 #, no-wrap
 msgid ""
 "<userinput remap=\"configure\">./config --prefix=/usr         \\\n"
@@ -94,29 +82,24 @@ msgstr ""
 "         zlib-dynamic</userinput>"
 
 #. type: Content of: <sect1><sect2><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/openssl.xml:54
 msgid "Compile the package:"
 msgstr "编译该软件包："
 
 #. type: Content of: <sect1><sect2><screen>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/openssl.xml:56
 #, no-wrap
 msgid "<userinput remap=\"make\">make</userinput>"
 msgstr "<userinput remap=\"make\">make</userinput>"
 
 #. type: Content of: <sect1><sect2><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/openssl.xml:58
 msgid "To test the results, issue:"
 msgstr "运行以下命令以测试编译结果："
 
 #. type: Content of: <sect1><sect2><screen>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/openssl.xml:60
 #, no-wrap
 msgid "<userinput remap=\"test\">make test</userinput>"
 msgstr "<userinput remap=\"test\">make test</userinput>"
 
 #. type: Content of: <sect1><sect2><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/openssl.xml:62
 msgid ""
 "One test 30-test_afalg.t is known to fail on some kernel configurations (it "
 "apparently assumes certain unspecified crypto options have been selected)."
@@ -125,12 +108,10 @@ msgstr ""
 "的内核配置选项)。"
 
 #. type: Content of: <sect1><sect2><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/openssl.xml:66
 msgid "Install the package:"
 msgstr "安装该软件包："
 
 #. type: Content of: <sect1><sect2><screen>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/openssl.xml:68
 #, no-wrap
 msgid ""
 "<userinput remap=\"install\">sed -i '/INSTALL_LIBS/s/libcrypto.a libssl.a//' Makefile\n"
@@ -140,12 +121,10 @@ msgstr ""
 "make MANSUFFIX=ssl install</userinput>"
 
 #. type: Content of: <sect1><sect2><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/openssl.xml:71
 msgid "If desired, install the documentation:"
 msgstr "如果需要的话，安装文档："
 
 #. type: Content of: <sect1><sect2><screen>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/openssl.xml:73
 #, no-wrap
 msgid ""
 "<userinput remap=\"install\">mv -v /usr/share/doc/openssl /usr/share/doc/openssl-&openssl-version;\n"
@@ -155,37 +134,30 @@ msgstr ""
 "cp -vfr doc/* /usr/share/doc/openssl-&openssl-version;</userinput>"
 
 #. type: Content of: <sect1><sect2><title>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/openssl.xml:79
 msgid "Contents of OpenSSL"
 msgstr "OpenSSL 的内容"
 
 #. type: Content of: <sect1><sect2><segmentedlist><segtitle>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/openssl.xml:82
 msgid "Installed programs"
 msgstr "安装的程序"
 
 #. type: Content of: <sect1><sect2><segmentedlist><segtitle>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/openssl.xml:83
 msgid "Installed libraries"
 msgstr "安装的库"
 
 #. type: Content of: <sect1><sect2><segmentedlist><segtitle>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/openssl.xml:84
 msgid "Installed directories"
 msgstr "安装的目录"
 
 #. type: Content of: <sect1><sect2><segmentedlist><seglistitem><seg>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/openssl.xml:88
 msgid "c_rehash and openssl"
 msgstr "c_rehash 和 openssl"
 
 #. type: Content of: <sect1><sect2><segmentedlist><seglistitem><seg>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/openssl.xml:91
 msgid "libcrypto.so and libssl.so"
 msgstr "libcrypto.so 和 libssl.so"
 
 #. type: Content of: <sect1><sect2><segmentedlist><seglistitem><seg>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/openssl.xml:94
 msgid ""
 "/etc/ssl, /usr/include/openssl, /usr/lib/engines and /usr/share/doc/openssl-"
 "&openssl-version;"
@@ -194,24 +166,20 @@ msgstr ""
 "&openssl-version;"
 
 #. type: Content of: <sect1><sect2><variablelist><bridgehead>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/openssl.xml:103
 msgid "Short Descriptions"
 msgstr "简要描述"
 
 #. type: Content of: <sect1><sect2><variablelist>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/openssl.xml:104
 msgid ""
 "<?dbfo list-presentation=\"list\"?> <?dbhtml list-presentation=\"table\"?>"
 msgstr ""
 "<?dbfo list-presentation=\"list\"?> <?dbhtml list-presentation=\"table\"?>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/openssl.xml:108
 msgid "<command>c_rehash</command>"
 msgstr "<command>c_rehash</command>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/openssl.xml:111
 msgid ""
 "is a <application>Perl</application> script that scans all files in a "
 "directory and adds symbolic links to their hash values."
@@ -220,17 +188,14 @@ msgstr ""
 "们的符号链接，符号链接名为对应文件的散列值。"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/openssl.xml:115
 msgid "c_rehash"
 msgstr "c_rehash"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/openssl.xml:121
 msgid "<command>openssl</command>"
 msgstr "<command>openssl</command>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/openssl.xml:124
 msgid ""
 "is a command-line tool for using the various cryptography functions of "
 "<application>OpenSSL</application>'s crypto library from the shell. It can "
@@ -242,17 +207,14 @@ msgstr ""
 "能。"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/openssl.xml:130
 msgid "openssl"
 msgstr "openssl"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/openssl.xml:136
 msgid "<filename class=\"libraryfile\">libcrypto.so</filename>"
 msgstr "<filename class=\"libraryfile\">libcrypto.so</filename>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/openssl.xml:139
 msgid ""
 "implements a wide range of cryptographic algorithms used in various Internet "
 "standards. The services provided by this library are used by the "
@@ -267,17 +229,14 @@ msgstr ""
 "及其他密码学标准。"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/openssl.xml:148
 msgid "libcrypto.so"
 msgstr "libcrypto.so"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/openssl.xml:154
 msgid "<filename class=\"libraryfile\">libssl.so</filename>"
 msgstr "<filename class=\"libraryfile\">libssl.so</filename>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/openssl.xml:157
 msgid ""
 "implements the Transport Layer Security (TLS v1) protocol.  It provides a "
 "rich API, documentation on which can be found by running <command>man 3 ssl</"
@@ -287,6 +246,5 @@ msgstr ""
 "行 <command>man 3 ssl</command>查阅。"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/openssl.xml:162
 msgid "libssl.so"
 msgstr "libssl.so"

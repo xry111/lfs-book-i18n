@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2020-06-17 12:44+0800\n"
+"POT-Creation-Date: 2020-08-08 19:28+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -12,13 +12,11 @@ msgstr ""
 "X-Generator: Translate Toolkit 2.2.5\n"
 
 #. type: Content of: <sect1><sect1info><address>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter05/gcc-pass1.xml:14
 #, no-wrap
 msgid "&gcc-url;"
 msgstr "&gcc-url;"
 
 #. type: Content of: <sect1><sect1info>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter05/gcc-pass1.xml:12
 msgid ""
 "<productname>gcc-pass1</productname> <productnumber>&gcc-version;</"
 "productnumber> <placeholder type=\"address\" id=\"0\"/>"
@@ -27,59 +25,49 @@ msgstr ""
 "productnumber> <placeholder type=\"address\" id=\"0\"/>"
 
 #. type: Content of: <sect1><title>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter05/gcc-pass1.xml:17
 msgid "GCC-&gcc-version; - Pass 1"
 msgstr "GCC-&gcc-version; - 第一遍"
 
 #. type: Content of: <sect1><indexterm><primary>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter05/gcc-pass1.xml:20
 msgid "GCC"
 msgstr "GCC"
 
 #. type: Content of: <sect1><indexterm><secondary>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter05/gcc-pass1.xml:21
 msgid "tools, pass 1"
 msgstr "工具，第一遍"
 
 #. type: Content of: <sect1><sect2><segmentedlist><segtitle>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter05/gcc-pass1.xml:32
 msgid "&buildtime;"
 msgstr "&buildtime;"
 
 #. type: Content of: <sect1><sect2><segmentedlist><segtitle>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter05/gcc-pass1.xml:33
 msgid "&diskspace;"
 msgstr "&diskspace;"
 
 #. type: Content of: <sect1><sect2><segmentedlist><seglistitem><seg>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter05/gcc-pass1.xml:36
 msgid "&gcc-tmpp1-sbu;"
 msgstr "&gcc-tmpp1-sbu;"
 
 #. type: Content of: <sect1><sect2><segmentedlist><seglistitem><seg>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter05/gcc-pass1.xml:37
 msgid "&gcc-tmpp1-du;"
 msgstr "&gcc-tmpp1-du;"
 
 #. type: Content of: <sect1><sect2><title>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter05/gcc-pass1.xml:44
 msgid "Installation of Cross GCC"
 msgstr "安装交叉工具链中的 GCC"
 
 #. type: Content of: <sect1><sect2><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter05/gcc-pass1.xml:46
 msgid ""
 "GCC requires the GMP, MPFR and MPC packages. As these packages may not be "
 "included in your host distribution, they will be built with GCC.  Unpack "
 "each package into the GCC source directory and rename the resulting "
 "directories so the GCC build procedures will automatically use them:"
 msgstr ""
-"GCC 依赖于 GMP、MPFR 和 MPC 这三个包。由于宿主发行版未必包含它们，我们"
-"将它们和 GCC 一同构建。将它们都解压到 GCC 源码目录中，并重命名解压出的目"
-"录，这样 GCC 构建过程就能自动使用它们："
+"GCC 依赖于 GMP、MPFR 和 MPC 这三个包。由于宿主发行版未必包含它们，我们将它们"
+"和 GCC 一同构建。将它们都解压到 GCC 源码目录中，并重命名解压出的目录，这样 "
+"GCC 构建过程就能自动使用它们："
 
 #. type: Content of: <sect1><sect2><note><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter05/gcc-pass1.xml:52
 msgid ""
 "There are frequent misunderstandings about this chapter.  The procedures are "
 "the same as every other chapter as explained earlier (<xref "
@@ -92,7 +80,6 @@ msgstr ""
 "中，再执行下面的命令。"
 
 #. type: Content of: <sect1><sect2><screen>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter05/gcc-pass1.xml:58
 #, no-wrap
 msgid ""
 "<userinput remap=\"pre\">tar -xf ../mpfr-&mpfr-version;.tar.xz\n"
@@ -110,7 +97,6 @@ msgstr ""
 "mv -v mpc-&mpc-version; mpc</userinput>"
 
 #. type: Content of: <sect1><sect2><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter05/gcc-pass1.xml:65
 msgid ""
 "On x86_64 hosts, set the default directory name for 64-bit libraries to "
 "<quote>lib</quote>:"
@@ -118,7 +104,6 @@ msgstr ""
 "对于 x86_64 平台，还要设置存放 64 位库的默认目录为 <quote>lib</quote>："
 
 #. type: Content of: <sect1><sect2><screen>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter05/gcc-pass1.xml:68
 #, no-wrap
 msgid ""
 "<userinput remap=\"pre\">case $(uname -m) in\n"
@@ -136,13 +121,11 @@ msgstr ""
 "esac</userinput>"
 
 #. type: Content of: <sect1><sect2><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter05/gcc-pass1.xml:75
 msgid ""
 "The GCC documentation recommends building GCC in a dedicated build directory:"
 msgstr "GCC 文档建议在一个专用目录中构建 GCC："
 
 #. type: Content of: <sect1><sect2><screen>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter05/gcc-pass1.xml:78
 #, no-wrap
 msgid ""
 "<userinput remap=\"pre\">mkdir -v build\n"
@@ -152,12 +135,10 @@ msgstr ""
 "cd       build</userinput>"
 
 #. type: Content of: <sect1><sect2><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter05/gcc-pass1.xml:81
 msgid "Prepare GCC for compilation:"
 msgstr "准备编译 GCC："
 
 #. type: Content of: <sect1><sect2><screen>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter05/gcc-pass1.xml:83
 #, no-wrap
 msgid ""
 "<userinput remap=\"configure\">../configure                                       \\\n"
@@ -203,17 +184,14 @@ msgstr ""
 "    --enable-languages=c,c++</userinput>"
 
 #. type: Content of: <sect1><sect2><variablelist><title>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter05/gcc-pass1.xml:104
 msgid "The meaning of the configure options:"
 msgstr "配置选项的含义："
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter05/gcc-pass1.xml:107
 msgid "<parameter>--with-glibc-version=2.11</parameter>"
 msgstr "<parameter>--with-glibc-version=2.11</parameter>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter05/gcc-pass1.xml:109
 msgid ""
 "This option ensures the package will be compatible with the host's version "
 "of glibc.  It is set to the minimum glibc requirement specified in the <xref "
@@ -223,12 +201,10 @@ msgstr ""
 "partitioning-hostreqs\"/>中要求的最小 glibc 版本一致。"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter05/gcc-pass1.xml:116
 msgid "<parameter>--with-newlib</parameter>"
 msgstr "<parameter>--with-newlib</parameter>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter05/gcc-pass1.xml:118
 msgid ""
 "Since a working C library is not yet available, this ensures that the "
 "inhibit_libc constant is defined when building libgcc. This prevents the "
@@ -238,64 +214,55 @@ msgstr ""
 "定义，以防止编译任何需要 libc 支持的代码。"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter05/gcc-pass1.xml:125
 msgid "<parameter>--without-headers</parameter>"
 msgstr "<parameter>--without-headers</parameter>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter05/gcc-pass1.xml:127
 msgid ""
 "When creating a complete cross-compiler, GCC requires standard headers "
 "compatible with the target system. For our purposes these headers will not "
 "be needed. This switch prevents GCC from looking for them."
 msgstr ""
-"在创建完整的交叉编译器时，GCC 需要与目标系统兼容的标准头文件。由于我们的特"
-"殊目的，这些头文件并不必要。这个开关防止 GCC 查找它们。"
+"在创建完整的交叉编译器时，GCC 需要与目标系统兼容的标准头文件。由于我们的特殊"
+"目的，这些头文件并不必要。这个开关防止 GCC 查找它们。"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter05/gcc-pass1.xml:135
 msgid "<parameter>--enable-initfini-array</parameter>"
 msgstr "<parameter>--enable-initfini-array</parameter>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter05/gcc-pass1.xml:137
 msgid ""
 "This switch forces the use of some internal data structures that are needed "
 "but cannot be detected when building a cross compiler."
 msgstr ""
-"这个开关强制启用一些内部数据结构，它们是必要的，但是在构建交叉编译器时，"
-"无法被检测到。"
+"这个开关强制启用一些内部数据结构，它们是必要的，但是在构建交叉编译器时，无法"
+"被检测到。"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter05/gcc-pass1.xml:144
 msgid "<parameter>--disable-shared</parameter>"
 msgstr "<parameter>--disable-shared</parameter>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter05/gcc-pass1.xml:146
 msgid ""
 "This switch forces GCC to link its internal libraries statically. We need "
 "this because the shared libraries require glibc, which is not yet installed "
 "on the target system."
-msgstr "这个开关强制 GCC 静态链接它的内部库。我们必须这样做，"
-"因为动态库需要目标系统中尚未安装的 glibc。"
+msgstr ""
+"这个开关强制 GCC 静态链接它的内部库。我们必须这样做，因为动态库需要目标系统中"
+"尚未安装的 glibc。"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter05/gcc-pass1.xml:153
 msgid "<parameter>--disable-multilib</parameter>"
 msgstr "<parameter>--disable-multilib</parameter>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter05/gcc-pass1.xml:155
 msgid ""
 "On x86_64, LFS does not support a multilib configuration.  This switch is "
 "harmless for x86."
 msgstr ""
-"在 x86_64 平台上，LFS 不支持 multilib 配置。这个开关对于 x86 来说可有可"
-"无。"
+"在 x86_64 平台上，LFS 不支持 multilib 配置。这个开关对于 x86 来说可有可无。"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter05/gcc-pass1.xml:161
 msgid ""
 "<parameter>--disable-decimal-float, --disable-threads, --disable-libatomic, "
 "--disable-libgomp, --disable-libquadmath, --disable-libssp, --disable-"
@@ -306,7 +273,6 @@ msgstr ""
 "libvtv, --disable-libstdcxx</parameter>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter05/gcc-pass1.xml:166
 msgid ""
 "These switches disable support for the decimal floating point extension, "
 "threading, libatomic, libgomp, libquadmath, libssp, libvtv, and the C++ "
@@ -319,41 +285,34 @@ msgstr ""
 "在交叉编译临时 libc 时并不需要它们。"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter05/gcc-pass1.xml:175
 msgid "<parameter>--enable-languages=c,c++</parameter>"
 msgstr "<parameter>--enable-languages=c,c++</parameter>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter05/gcc-pass1.xml:177
 msgid ""
 "This option ensures that only the C and C++ compilers are built.  These are "
 "the only languages needed now."
 msgstr "这个选项保证只构建 C 和 C++ 编译器。目前只需要这两个语言。"
 
 #. type: Content of: <sect1><sect2><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter05/gcc-pass1.xml:184
 msgid "Compile GCC by running:"
 msgstr "执行以下命令编译 GCC："
 
 #. type: Content of: <sect1><sect2><screen>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter05/gcc-pass1.xml:186
 #, no-wrap
 msgid "<userinput remap=\"make\">make</userinput>"
 msgstr "<userinput remap=\"make\">make</userinput>"
 
 #. type: Content of: <sect1><sect2><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter05/gcc-pass1.xml:188
 msgid "Install the package:"
 msgstr "安装该软件包："
 
 #. type: Content of: <sect1><sect2><screen>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter05/gcc-pass1.xml:190
 #, no-wrap
 msgid "<userinput remap=\"install\">make install</userinput>"
 msgstr "<userinput remap=\"install\">make install</userinput>"
 
 #. type: Content of: <sect1><sect2><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter05/gcc-pass1.xml:192
 msgid ""
 "This build of GCC has installed a couple of internal system headers.  "
 "Normally one of them, <filename>limits.h</filename>, would in turn include "
@@ -367,15 +326,16 @@ msgid ""
 "command that is identical to what the GCC build system does in normal "
 "circumstances:"
 msgstr ""
-"刚刚构建的 GCC 安装了若干内部系统头文件。其中的 <filename>limits.h</filename> 一般来说，"
-"应该包含对应的系统头文件 <filename>limits.h</filename>，在我们的 LFS 环境中，就是 "
-"<filename>$LFS/usr/include/limits.h</filename>。然而，在构建 GCC "
-"的时候，<filename>$LFS/usr/include/limits.h</filename> 还不存在，因此 GCC "
-"安装的内部头文件是一个不完整的、自给自足的文件，不包含系统头文件提供的扩展特性。这对于构建临时的 libc 已经足够了，但后续工作将需要完整的内部头文件。"
-"使用以下命令创建一个完整版本的内部头文件，该命令与 GCC 构建系统在一般情况下生成该头文件的命令是一致的："
+"刚刚构建的 GCC 安装了若干内部系统头文件。其中的 <filename>limits.h</"
+"filename> 一般来说，应该包含对应的系统头文件 <filename>limits.h</filename>，"
+"在我们的 LFS 环境中，就是 <filename>$LFS/usr/include/limits.h</filename>。然"
+"而，在构建 GCC 的时候，<filename>$LFS/usr/include/limits.h</filename> 还不存"
+"在，因此 GCC 安装的内部头文件是一个不完整的、自给自足的文件，不包含系统头文件"
+"提供的扩展特性。这对于构建临时的 libc 已经足够了，但后续工作将需要完整的内部"
+"头文件。使用以下命令创建一个完整版本的内部头文件，该命令与 GCC 构建系统在一般"
+"情况下生成该头文件的命令是一致的："
 
 #. type: Content of: <sect1><sect2><screen>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter05/gcc-pass1.xml:204
 #, no-wrap
 msgid ""
 "<userinput remap=\"install\">cd ..\n"
@@ -387,7 +347,6 @@ msgstr ""
 "  `dirname $($LFS_TGT-gcc -print-libgcc-file-name)`/install-tools/include/limits.h</userinput>"
 
 #. type: Content of: <sect1><sect2><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter05/gcc-pass1.xml:212
 msgid ""
 "Details on this package are located in <xref linkend=\"contents-gcc\" role="
 "\".\"/>"

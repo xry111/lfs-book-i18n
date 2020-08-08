@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2020-06-17 12:44+0800\n"
+"POT-Creation-Date: 2020-08-08 19:28+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -12,13 +12,11 @@ msgstr ""
 "X-Generator: Translate Toolkit 2.2.5\n"
 
 #. type: Content of: <sect1><sect1info><address>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/kbd.xml:14
 #, no-wrap
 msgid "&kbd-url;"
 msgstr "&kbd-url;"
 
 #. type: Content of: <sect1><sect1info>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/kbd.xml:12
 msgid ""
 "<productname>kbd</productname> <productnumber>&kbd-version;</productnumber> "
 "<placeholder type=\"address\" id=\"0\"/>"
@@ -27,49 +25,40 @@ msgstr ""
 "<placeholder type=\"address\" id=\"0\"/>"
 
 #. type: Content of: <sect1><title>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/kbd.xml:17
 msgid "Kbd-&kbd-version;"
 msgstr "Kbd-&kbd-version;"
 
 #. type: Content of: <sect1><indexterm><primary>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/kbd.xml:20
 msgid "Kbd"
 msgstr "Kbd"
 
 #. type: Content of: <sect1><sect2><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/kbd.xml:26
 msgid ""
 "The Kbd package contains key-table files, console fonts, and keyboard "
 "utilities."
 msgstr "Kbd 软件包包含按键表文件、控制台字体和键盘工具。"
 
 #. type: Content of: <sect1><sect2><segmentedlist><segtitle>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/kbd.xml:30
 msgid "&buildtime;"
 msgstr "&buildtime;"
 
 #. type: Content of: <sect1><sect2><segmentedlist><segtitle>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/kbd.xml:31
 msgid "&diskspace;"
 msgstr "&diskspace;"
 
 #. type: Content of: <sect1><sect2><segmentedlist><seglistitem><seg>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/kbd.xml:34
 msgid "&kbd-fin-sbu;"
 msgstr "&kbd-fin-sbu;"
 
 #. type: Content of: <sect1><sect2><segmentedlist><seglistitem><seg>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/kbd.xml:35
 msgid "&kbd-fin-du;"
 msgstr "&kbd-fin-du;"
 
 #. type: Content of: <sect1><sect2><title>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/kbd.xml:42
 msgid "Installation of Kbd"
 msgstr "安装 Kbd"
 
 #. type: Content of: <sect1><sect2><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/kbd.xml:44
 msgid ""
 "The behaviour of the backspace and delete keys is not consistent across the "
 "keymaps in the Kbd package. The following patch fixes this issue for i386 "
@@ -79,13 +68,11 @@ msgstr ""
 "映射中的这个问题："
 
 #. type: Content of: <sect1><sect2><screen>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/kbd.xml:48
 #, no-wrap
 msgid "<userinput remap=\"pre\">patch -Np1 -i ../&kbd-backspace-patch;</userinput>"
 msgstr "<userinput remap=\"pre\">patch -Np1 -i ../&kbd-backspace-patch;</userinput>"
 
 #. type: Content of: <sect1><sect2><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/kbd.xml:50
 msgid ""
 "After patching, the backspace key generates the character with code 127, and "
 "the delete key generates a well-known escape sequence."
@@ -93,7 +80,6 @@ msgstr ""
 "在应用补丁后，退格键生成编码为 127 的字符，删除键生成广为人知的 escape 序列。"
 
 #. type: Content of: <sect1><sect2><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/kbd.xml:53
 msgid ""
 "Remove the redundant <command>resizecons</command> program (it requires the "
 "defunct svgalib to provide the video mode files - for normal use "
@@ -105,7 +91,6 @@ msgstr ""
 "其 man 页面。"
 
 #. type: Content of: <sect1><sect2><screen>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/kbd.xml:58
 #, no-wrap
 msgid ""
 "<userinput remap=\"pre\">sed -i '/RESIZECONS_PROGS=/s/yes/no/' configure\n"
@@ -115,68 +100,60 @@ msgstr ""
 "sed -i 's/resizecons.8 //' docs/man/man8/Makefile.in</userinput>"
 
 #. type: Content of: <sect1><sect2><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/kbd.xml:61
 msgid "Prepare Kbd for compilation:"
 msgstr "准备编译 Kbd："
 
 #. type: Content of: <sect1><sect2><screen>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/kbd.xml:63
-#, no-wrap
-msgid "<userinput remap=\"configure\">./configure --prefix=/usr --disable-vlock</userinput>"
+#, fuzzy, no-wrap
+#| msgid "<userinput remap=\"configure\">./configure --prefix=/usr --disable-vlock</userinput>"
+msgid ""
+"<userinput remap=\"configure\">./configure --prefix=/usr    \\\n"
+"            --disable-vlock  \\\n"
+"            --disable-static</userinput>"
 msgstr "<userinput remap=\"configure\">./configure --prefix=/usr --disable-vlock</userinput>"
 
 #. type: Content of: <sect1><sect2><variablelist><title>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/kbd.xml:66
 msgid "The meaning of the configure option:"
 msgstr "配置选项的含义："
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/kbd.xml:69
 msgid "<parameter>--disable-vlock</parameter>"
 msgstr "<parameter>--disable-vlock</parameter>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/kbd.xml:71
 msgid ""
 "This option prevents the vlock utility from being built because it requires "
 "the PAM library, which isn't available in the chroot environment."
 msgstr "该选项防止构建 vlock 工具，因为它需要 chroot 环境中不可用的 PAM 库。"
 
 #. type: Content of: <sect1><sect2><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/kbd.xml:79
 msgid "Compile the package:"
 msgstr "编译该软件包："
 
 #. type: Content of: <sect1><sect2><screen>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/kbd.xml:81
 #, no-wrap
 msgid "<userinput remap=\"make\">make</userinput>"
 msgstr "<userinput remap=\"make\">make</userinput>"
 
 #. type: Content of: <sect1><sect2><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/kbd.xml:83
 msgid "To test the results, issue:"
 msgstr "运行以下命令以测试编译结果："
 
 #. type: Content of: <sect1><sect2><screen>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/kbd.xml:85
 #, no-wrap
 msgid "<userinput remap=\"test\">make check</userinput>"
 msgstr "<userinput remap=\"test\">make check</userinput>"
 
 #. type: Content of: <sect1><sect2><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/kbd.xml:87
 msgid "Install the package:"
 msgstr "安装该软件包："
 
 #. type: Content of: <sect1><sect2><screen>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/kbd.xml:89
 #, no-wrap
 msgid "<userinput remap=\"install\">make install</userinput>"
 msgstr "<userinput remap=\"install\">make install</userinput>"
 
 #. type: Content of: <sect1><sect2><note><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/kbd.xml:92
 msgid ""
 "For some languages (e.g., Belarusian) the Kbd package doesn't provide a "
 "useful keymap where the stock <quote>by</quote> keymap assumes the "
@@ -189,12 +166,10 @@ msgstr ""
 "映射。"
 
 #. type: Content of: <sect1><sect2><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/kbd.xml:98
 msgid "If desired, install the documentation:"
 msgstr "如果需要的话，安装文档："
 
 #. type: Content of: <sect1><sect2><screen>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/kbd.xml:100
 #, no-wrap
 msgid ""
 "<userinput remap=\"install\">mkdir -v            /usr/share/doc/kbd-&kbd-version;\n"
@@ -204,23 +179,25 @@ msgstr ""
 "cp -R -v docs/doc/* /usr/share/doc/kbd-&kbd-version;</userinput>"
 
 #. type: Content of: <sect1><sect2><title>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/kbd.xml:106
 msgid "Contents of Kbd"
 msgstr "Kbd 的内容"
 
 #. type: Content of: <sect1><sect2><segmentedlist><segtitle>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/kbd.xml:109
 msgid "Installed programs"
 msgstr "安装的程序"
 
 #. type: Content of: <sect1><sect2><segmentedlist><segtitle>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/kbd.xml:110
+#, fuzzy
+#| msgid "Installed directories"
+msgid "Installed libraries"
+msgstr "安装的目录"
+
+#. type: Content of: <sect1><sect2><segmentedlist><segtitle>
 msgid "Installed directories"
 msgstr "安装的目录"
 
 #. resizecons,
 #. type: Content of: <sect1><sect2><segmentedlist><seglistitem><seg>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/kbd.xml:113
 msgid ""
 "chvt, deallocvt, dumpkeys, fgconsole, getkeycodes, kbdinfo, kbd_mode, "
 "kbdrate, loadkeys, loadunimap, mapscrn, openvt, psfaddtable (link to "
@@ -235,7 +212,10 @@ msgstr ""
 "showconsolefont, showkey, unicode_start, 以及 unicode_stop"
 
 #. type: Content of: <sect1><sect2><segmentedlist><seglistitem><seg>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/kbd.xml:119
+msgid "libtswrap.so"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><segmentedlist><seglistitem><seg>
 msgid ""
 "/usr/share/consolefonts, /usr/share/consoletrans, /usr/share/keymaps, /usr/"
 "share/doc/kbd-&kbd-version;, and /usr/share/unimaps"
@@ -244,174 +224,140 @@ msgstr ""
 "share/doc/kbd-&kbd-version;, 以及 /usr/share/unimaps"
 
 #. type: Content of: <sect1><sect2><variablelist><bridgehead>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/kbd.xml:125
 msgid "Short Descriptions"
 msgstr "简要描述"
 
 #. type: Content of: <sect1><sect2><variablelist>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/kbd.xml:126
 msgid ""
 "<?dbfo list-presentation=\"list\"?> <?dbhtml list-presentation=\"table\"?>"
 msgstr ""
 "<?dbfo list-presentation=\"list\"?> <?dbhtml list-presentation=\"table\"?>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/kbd.xml:130
 msgid "<command>chvt</command>"
 msgstr "<command>chvt</command>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/kbd.xml:132
 msgid "Changes the foreground virtual terminal"
 msgstr "修改当前虚拟终端"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/kbd.xml:134
 msgid "chvt"
 msgstr "chvt"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/kbd.xml:140
 msgid "<command>deallocvt</command>"
 msgstr "<command>deallocvt</command>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/kbd.xml:142
 msgid "Deallocates unused virtual terminals"
 msgstr "取消未使用的虚拟终端分配"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/kbd.xml:144
 msgid "deallocvt"
 msgstr "deallocvt"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/kbd.xml:150
 msgid "<command>dumpkeys</command>"
 msgstr "<command>dumpkeys</command>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/kbd.xml:152
 msgid "Dumps the keyboard translation tables"
 msgstr "转储键盘转换表"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/kbd.xml:154
 msgid "dumpkeys"
 msgstr "dumpkeys"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/kbd.xml:160
 msgid "<command>fgconsole</command>"
 msgstr "<command>fgconsole</command>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/kbd.xml:162
 msgid "Prints the number of the active virtual terminal"
 msgstr "打印活动虚拟终端的个数"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/kbd.xml:164
 msgid "fgconsole"
 msgstr "fgconsole"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/kbd.xml:170
 msgid "<command>getkeycodes</command>"
 msgstr "<command>getkeycodes</command>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/kbd.xml:172
 msgid "Prints the kernel scancode-to-keycode mapping table"
 msgstr "打印内核扫描码到键码的映射表"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/kbd.xml:174
 msgid "getkeycodes"
 msgstr "getkeycodes"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/kbd.xml:180
 msgid "<command>kbdinfo</command>"
 msgstr "<command>kbdinfo</command>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/kbd.xml:182
 msgid "Obtains information about the status of a console"
 msgstr "获取终端状态信息"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/kbd.xml:184
 msgid "kbdinfo"
 msgstr "kbdinfo"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/kbd.xml:190
 msgid "<command>kbd_mode</command>"
 msgstr "<command>kbd_mode</command>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/kbd.xml:192
 msgid "Reports or sets the keyboard mode"
 msgstr "报告或设置键盘模式"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/kbd.xml:194
 msgid "kbd_mode"
 msgstr "kbd_mode"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/kbd.xml:200
 msgid "<command>kbdrate</command>"
 msgstr "<command>kbdrate</command>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/kbd.xml:202
 msgid "Sets the keyboard repeat and delay rates"
 msgstr "设置键盘重复和延迟率"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/kbd.xml:204
 msgid "kbdrate"
 msgstr "kbdrate"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/kbd.xml:210
 msgid "<command>loadkeys</command>"
 msgstr "<command>loadkeys</command>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/kbd.xml:212
 msgid "Loads the keyboard translation tables"
 msgstr "加载键盘翻译表"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/kbd.xml:214
 msgid "loadkeys"
 msgstr "loadkeys"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/kbd.xml:220
 msgid "<command>loadunimap</command>"
 msgstr "<command>loadunimap</command>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/kbd.xml:222
 msgid "Loads the kernel unicode-to-font mapping table"
 msgstr "加载内核 unicode 到字体的映射表"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/kbd.xml:224
 msgid "loadunimap"
 msgstr "loadunimap"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/kbd.xml:230
 msgid "<command>mapscrn</command>"
 msgstr "<command>mapscrn</command>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/kbd.xml:232
 msgid ""
 "An obsolete program that used to load a user-defined output character "
 "mapping table into the console driver; this is now done by <command>setfont</"
@@ -421,203 +367,164 @@ msgstr ""
 "<command>setfont</command> 完成"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/kbd.xml:236
 msgid "mapscrn"
 msgstr "mapscrn"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/kbd.xml:242
 msgid "<command>openvt</command>"
 msgstr "<command>openvt</command>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/kbd.xml:244
 msgid "Starts a program on a new virtual terminal (VT)"
 msgstr "在新的虚拟终端 (VT) 启动程序"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/kbd.xml:246
 msgid "openvt"
 msgstr "openvt"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/kbd.xml:252
 msgid "<command>psfaddtable</command>"
 msgstr "<command>psfaddtable</command>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/kbd.xml:254
 msgid "Adds a Unicode character table to a console font"
 msgstr "向控制台字体增加 Unicode 字符表"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/kbd.xml:256
 msgid "psfaddtable"
 msgstr "psfaddtable"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/kbd.xml:262
 msgid "<command>psfgettable</command>"
 msgstr "<command>psfgettable</command>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/kbd.xml:264
 msgid "Extracts the embedded Unicode character table from a console font"
 msgstr "提取控制台字体中嵌入的 Unicode 字符表"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/kbd.xml:267
 msgid "psfgettable"
 msgstr "psfgettable"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/kbd.xml:273
 msgid "<command>psfstriptable</command>"
 msgstr "<command>psfstriptable</command>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/kbd.xml:275
 msgid "Removes the embedded Unicode character table from a console font"
 msgstr "删除控制台字体中嵌入的 Unicode 字符表"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/kbd.xml:278
 msgid "psfstriptable"
 msgstr "psfstriptable"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/kbd.xml:284
 msgid "<command>psfxtable</command>"
 msgstr "<command>psfxtable</command>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/kbd.xml:286
 msgid "Handles Unicode character tables for console fonts"
 msgstr "处理控制台字体的 Unicode 字符表"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/kbd.xml:288
 msgid "psfxtable"
 msgstr "psfxtable"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/kbd.xml:294
 msgid "<command>setfont</command>"
 msgstr "<command>setfont</command>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/kbd.xml:296
 msgid ""
 "Changes the Enhanced Graphic Adapter (EGA) and Video Graphics Array (VGA) "
 "fonts on the console"
 msgstr "修改控制台上的增强图形适配器 (EGA) 和视频图像阵列 (VGA) 字体"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/kbd.xml:299
 msgid "setfont"
 msgstr "setfont"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/kbd.xml:305
 msgid "<command>setkeycodes</command>"
 msgstr "<command>setkeycodes</command>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/kbd.xml:307
 msgid ""
 "Loads kernel scancode-to-keycode mapping table entries; this is useful if "
 "there are unusual keys on the keyboard"
 msgstr "加载内核扫描码到键码的映射表项；在键盘上有特殊按键时很有用"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/kbd.xml:310
 msgid "setkeycodes"
 msgstr "setkeycodes"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/kbd.xml:316
 msgid "<command>setleds</command>"
 msgstr "<command>setleds</command>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/kbd.xml:318
 msgid "Sets the keyboard flags and Light Emitting Diodes (LEDs)"
 msgstr "设置键盘标志位和发光二极管 (LED)"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/kbd.xml:320
 msgid "setleds"
 msgstr "setleds"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/kbd.xml:326
 msgid "<command>setmetamode</command>"
 msgstr "<command>setmetamode</command>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/kbd.xml:328
 msgid "Defines the keyboard meta-key handling"
 msgstr "定义键盘转换键 (meta-key) 处理"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/kbd.xml:330
 msgid "setmetamode"
 msgstr "setmetamode"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/kbd.xml:336
 msgid "<command>setvtrgb</command>"
 msgstr "<command>setvtrgb</command>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/kbd.xml:338
 msgid "Sets the console color map in all virtual terminals"
 msgstr "设定所有虚拟终端的控制台颜色映射"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/kbd.xml:340
 msgid "setvtrgb"
 msgstr "setvtrgb"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/kbd.xml:346
 msgid "<command>showconsolefont</command>"
 msgstr "<command>showconsolefont</command>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/kbd.xml:348
 msgid "Shows the current EGA/VGA console screen font"
 msgstr "显示当前 EGA/VGA 控制台屏幕字体"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/kbd.xml:350
 msgid "showconsolefont"
 msgstr "showconsolefont"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/kbd.xml:356
 msgid "<command>showkey</command>"
 msgstr "<command>showkey</command>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/kbd.xml:358
 msgid ""
 "Reports the scancodes, keycodes, and ASCII codes of the keys pressed on the "
 "keyboard"
 msgstr "报告键盘按键的扫描码、键码和 ASCII 编码"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/kbd.xml:361
 msgid "showkey"
 msgstr "showkey"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/kbd.xml:367
 msgid "<command>unicode_start</command>"
 msgstr "<command>unicode_start</command>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/kbd.xml:369
 msgid ""
 "Puts the keyboard and console in UNICODE mode [Don't use this program unless "
 "your keymap file is in the ISO-8859-1 encoding. For other encodings, this "
@@ -627,21 +534,29 @@ msgstr ""
 "ISO-8859-1 编码的。对于其他编码，该工具产生错误结果。]"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/kbd.xml:373
 msgid "unicode_start"
 msgstr "unicode_start"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/kbd.xml:379
 msgid "<command>unicode_stop</command>"
 msgstr "<command>unicode_stop</command>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/kbd.xml:381
 msgid "Reverts keyboard and console from UNICODE mode"
 msgstr "使键盘和控制台退出 UNICODE 模式"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/kbd.xml:383
 msgid "unicode_stop"
 msgstr "unicode_stop"
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
+msgid "<filename class=\"libraryfile\">libtswrap</filename>"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
+msgid "Kbd test wrapper library"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
+msgid "libtswrap"
+msgstr ""

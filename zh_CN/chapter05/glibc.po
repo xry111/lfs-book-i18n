@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2020-06-20 01:54+0800\n"
+"POT-Creation-Date: 2020-08-08 19:28+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -12,13 +12,11 @@ msgstr ""
 "X-Generator: Translate Toolkit 2.2.5\n"
 
 #. type: Content of: <sect1><sect1info><address>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter05/glibc.xml:14
 #, no-wrap
 msgid "&glibc-url;"
 msgstr "&glibc-url;"
 
 #. type: Content of: <sect1><sect1info>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter05/glibc.xml:12
 msgid ""
 "<productname>glibc</productname> <productnumber>&glibc-version;</"
 "productnumber> <placeholder type=\"address\" id=\"0\"/>"
@@ -27,47 +25,38 @@ msgstr ""
 "productnumber> <placeholder type=\"address\" id=\"0\"/>"
 
 #. type: Content of: <sect1><title>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter05/glibc.xml:17
 msgid "Glibc-&glibc-version;"
 msgstr "Glibc-&glibc-version;"
 
 #. type: Content of: <sect1><indexterm><primary>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter05/glibc.xml:20
 msgid "Glibc"
 msgstr "Glibc"
 
 #. type: Content of: <sect1><indexterm><secondary>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter05/glibc.xml:21
 msgid "tools"
 msgstr "工具"
 
 #. type: Content of: <sect1><sect2><segmentedlist><segtitle>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter05/glibc.xml:32
 msgid "&buildtime;"
 msgstr "&buildtime;"
 
 #. type: Content of: <sect1><sect2><segmentedlist><segtitle>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter05/glibc.xml:33
 msgid "&diskspace;"
 msgstr "&diskspace;"
 
 #. type: Content of: <sect1><sect2><segmentedlist><seglistitem><seg>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter05/glibc.xml:36
 msgid "&glibc-tmp-sbu;"
 msgstr "&glibc-tmp-sbu;"
 
 #. type: Content of: <sect1><sect2><segmentedlist><seglistitem><seg>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter05/glibc.xml:37
 msgid "&glibc-tmp-du;"
 msgstr "&glibc-tmp-du;"
 
 #. type: Content of: <sect1><sect2><title>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter05/glibc.xml:44
 msgid "Installation of Glibc"
 msgstr "安装 Glibc"
 
 #. type: Content of: <sect1><sect2><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter05/glibc.xml:46
 msgid ""
 "First, create a symbolic link for LSB compliance. Additionally, for x86_64, "
 "create a compatibility symbolic link required for proper operation of the "
@@ -77,7 +66,6 @@ msgstr ""
 "工作所必须的符号链接："
 
 #. type: Content of: <sect1><sect2><screen>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter05/glibc.xml:50
 #, no-wrap
 msgid ""
 "<userinput remap=\"pre\">case $(uname -m) in\n"
@@ -97,7 +85,6 @@ msgstr ""
 "esac</userinput>"
 
 #. type: Content of: <sect1><sect2><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter05/glibc.xml:58
 msgid ""
 "Some of the Glibc programs use the non-FHS compliant <filename class="
 "\"directory\">/var/db</filename> directory to store their runtime data. "
@@ -109,20 +96,17 @@ msgstr ""
 "的位置存放运行时数据："
 
 #. type: Content of: <sect1><sect2><screen>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter05/glibc.xml:63
 #, no-wrap
 msgid "<userinput remap=\"pre\">patch -Np1 -i ../glibc-&glibc-version;-fhs-1.patch</userinput>"
 msgstr "<userinput remap=\"pre\">patch -Np1 -i ../glibc-&glibc-version;-fhs-1.patch</userinput>"
 
 #. type: Content of: <sect1><sect2><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter05/glibc.xml:65
 msgid ""
 "The Glibc documentation recommends building Glibc in a dedicated build "
 "directory:"
 msgstr "Glibc 文档推荐在一个专用目录中构建 Glibc："
 
 #. type: Content of: <sect1><sect2><screen>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter05/glibc.xml:68
 #, no-wrap
 msgid ""
 "<userinput remap=\"pre\">mkdir -v build\n"
@@ -132,12 +116,10 @@ msgstr ""
 "cd       build</userinput>"
 
 #. type: Content of: <sect1><sect2><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter05/glibc.xml:71
 msgid "Next, prepare Glibc for compilation:"
 msgstr "下面，准备编译 Glibc："
 
 #. type: Content of: <sect1><sect2><screen>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter05/glibc.xml:73
 #, no-wrap
 msgid ""
 "<userinput remap=\"configure\">../configure                             \\\n"
@@ -157,34 +139,30 @@ msgstr ""
 "      libc_cv_slibdir=/lib</userinput>"
 
 #. type: Content of: <sect1><sect2><variablelist><title>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter05/glibc.xml:85
 msgid "The meaning of the configure options:"
 msgstr "配置选项的含义："
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter05/glibc.xml:88
 msgid ""
 "<parameter>--host=$LFS_TGT, --build=$(../scripts/config.guess)</parameter>"
 msgstr ""
 "<parameter>--host=$LFS_TGT, --build=$(../scripts/config.guess)</parameter>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter05/glibc.xml:90
 msgid ""
 "The combined effect of these switches is that Glibc's build system "
 "configures itself to be cross-compiled, using the cross-linker and cross-"
 "compiler in <filename class=\"directory\">$LFS/tools</filename>."
 msgstr ""
 "在它们的共同作用下，Glibc 的构建系统将自身配置为使用 <filename class="
-"\"directory\">$LFS/tools</filename> 中的交叉链接器和交叉编译器，进行交叉编译。"
+"\"directory\">$LFS/tools</filename> 中的交叉链接器和交叉编译器，进行交叉编"
+"译。"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter05/glibc.xml:97
 msgid "<parameter>--enable-kernel=&min-kernel;</parameter>"
 msgstr "<parameter>--enable-kernel=&min-kernel;</parameter>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter05/glibc.xml:99
 msgid ""
 "This tells Glibc to compile the library with support for &min-kernel; and "
 "later Linux kernels.  Workarounds for older kernels are not enabled."
@@ -193,12 +171,10 @@ msgstr ""
 "使用那些为更老内核准备的替代方案。"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter05/glibc.xml:106
 msgid "<parameter>--with-headers=$LFS/usr/include</parameter>"
 msgstr "<parameter>--with-headers=$LFS/usr/include</parameter>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter05/glibc.xml:108
 msgid ""
 "This tells Glibc to compile itself against the headers recently installed to "
 "the $LFS/usr/include directory, so that it knows exactly what features the "
@@ -208,24 +184,20 @@ msgstr ""
 "知道内核拥有哪些特性，并据此对自身进行优化。"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter05/glibc.xml:116
 msgid "<parameter>libc_cv_slibdir=/lib</parameter>"
 msgstr "<parameter>libc_cv_slibdir=/lib</parameter>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter05/glibc.xml:118
 msgid ""
 "This ensures that the library is installed in /lib instead of the default /"
 "lib64 on 64 bit machines."
 msgstr "在 64 位机器上，这保证将库安装到 /lib，而不是默认的 /lib64。"
 
 #. type: Content of: <sect1><sect2><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter05/glibc.xml:125
 msgid "During this stage the following warning might appear:"
 msgstr "在当前阶段，可能出现下列警告："
 
 #. type: Content of: <sect1><sect2><blockquote><screen>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter05/glibc.xml:128
 #, no-wrap
 msgid ""
 "<computeroutput>configure: WARNING:\n"
@@ -241,7 +213,6 @@ msgstr ""
 "*** Check the INSTALL file for required versions.</computeroutput>"
 
 #. type: Content of: <sect1><sect2><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter05/glibc.xml:135
 msgid ""
 "The missing or incompatible <command>msgfmt</command> program is generally "
 "harmless. This <command>msgfmt</command> program is part of the Gettext "
@@ -251,7 +222,6 @@ msgstr ""
 "command> 程序是 Gettext 软件包的一部分，宿主发行版应该提供它。"
 
 #. type: Content of: <sect1><sect2><note><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter05/glibc.xml:139
 msgid ""
 "There have been reports that this package may fail when building as a "
 "\"parallel make\".  If this occurs, rerun the make command with a \"-j1\" "
@@ -261,23 +231,19 @@ msgstr ""
 "新执行 make 命令。"
 
 #. type: Content of: <sect1><sect2><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter05/glibc.xml:143
 msgid "Compile the package:"
 msgstr "编译该软件包："
 
 #. type: Content of: <sect1><sect2><screen>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter05/glibc.xml:145
 #, no-wrap
 msgid "<userinput remap=\"make\">make</userinput>"
 msgstr "<userinput remap=\"make\">make</userinput>"
 
 #. type: Content of: <sect1><sect2><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter05/glibc.xml:147
 msgid "Install the package:"
 msgstr "安装该软件包："
 
 #. type: Content of: <sect1><sect2><warning><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter05/glibc.xml:149
 msgid ""
 "If <envar>LFS</envar> is not properly set, and despite the recommendations, "
 "you are building as root, the next command will install the newly built "
@@ -291,23 +257,19 @@ msgstr ""
 "\"username\">lfs</systemitem> 用户设定好。"
 
 #. type: Content of: <sect1><sect2><screen>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter05/glibc.xml:155
 #, no-wrap
 msgid "<userinput remap=\"install\">make DESTDIR=$LFS install</userinput>"
 msgstr "<userinput remap=\"install\">make DESTDIR=$LFS install</userinput>"
 
 #. type: Content of: <sect1><sect2><variablelist><title>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter05/glibc.xml:158
 msgid "The meaning of the <command>make install</command> option:"
 msgstr "<command>make install</command> 选项的含义："
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter05/glibc.xml:161
 msgid "<parameter>DESTDIR=$LFS</parameter>"
 msgstr "<parameter>DESTDIR=$LFS</parameter>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter05/glibc.xml:163
 msgid ""
 "The <envar>DESTDIR</envar> make variable is used by almost all packages to "
 "define the location where the package should be installed. If it is not set, "
@@ -322,7 +284,6 @@ msgstr ""
 "linkend=\"ch-tools-chroot\"/>之后将成为根目录。"
 
 #. type: Content of: <sect1><sect2><caution><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter05/glibc.xml:176
 msgid ""
 "At this point, it is imperative to stop and ensure that the basic functions "
 "(compiling and linking) of the new toolchain are working as expected. To "
@@ -332,7 +293,6 @@ msgstr ""
 "的那样工作。执行以下命令进行完整性检查："
 
 #. type: Content of: <sect1><sect2><caution><screen>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter05/glibc.xml:180
 #, no-wrap
 msgid ""
 "<userinput>echo 'int main(){}' &gt; dummy.c\n"
@@ -344,7 +304,6 @@ msgstr ""
 "readelf -l a.out | grep '/ld-linux'</userinput>"
 
 #. type: Content of: <sect1><sect2><caution><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter05/glibc.xml:184
 msgid ""
 "If everything is working correctly, there should be no errors, and the "
 "output of the last command will be of the form:"
@@ -352,13 +311,11 @@ msgstr ""
 "如果一切正常，那么应该没有错误消息，而且最后一行命令应该输出下列格式的内容："
 
 #. type: Content of: <sect1><sect2><caution><screen>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter05/glibc.xml:187
 #, no-wrap
 msgid "<computeroutput>[Requesting program interpreter: /lib64/ld-linux-x86-64.so.2]</computeroutput>"
 msgstr "<computeroutput>[Requesting program interpreter: /lib64/ld-linux-x86-64.so.2]</computeroutput>"
 
 #. type: Content of: <sect1><sect2><caution><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter05/glibc.xml:189
 msgid ""
 "Note that for 32-bit machines, the interpreter name will be <filename>/lib/"
 "ld-linux.so.2</filename>."
@@ -367,7 +324,6 @@ msgstr ""
 "filename>。"
 
 #. type: Content of: <sect1><sect2><caution><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter05/glibc.xml:192
 msgid ""
 "If the output is not shown as above or there was no output at all, then "
 "something is wrong. Investigate and retrace the steps to find out where the "
@@ -377,18 +333,15 @@ msgstr ""
 "各个步骤，找到出问题的地方并修正它。在继续构建之前，必须解决这个问题。"
 
 #. type: Content of: <sect1><sect2><caution><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter05/glibc.xml:197
 msgid "Once all is well, clean up the test files:"
 msgstr "检验步骤顺利完成后，清理测试文件："
 
 #. type: Content of: <sect1><sect2><caution><screen>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter05/glibc.xml:199
 #, no-wrap
 msgid "<userinput>rm -v dummy.c a.out</userinput>"
 msgstr "<userinput>rm -v dummy.c a.out</userinput>"
 
 #. type: Content of: <sect1><sect2><note><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter05/glibc.xml:203
 msgid ""
 "Building packages in the next chapter will serve as an additional check that "
 "the toolchain has been built properly. If some package, especially binutils-"
@@ -400,7 +353,6 @@ msgstr ""
 "Binutils，GCC，或者 Glibc 时出了问题。"
 
 #. type: Content of: <sect1><sect2><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter05/glibc.xml:209
 msgid ""
 "Now that our cross-toolchain is complete, finalize the installation of the "
 "limits.h header. For doing so, run a utility provided by the GCC developers:"
@@ -409,13 +361,11 @@ msgstr ""
 "GCC 开发者提供的一个工具："
 
 #. type: Content of: <sect1><sect2><screen>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter05/glibc.xml:213
 #, no-wrap
 msgid "<userinput>$LFS/tools/libexec/gcc/$LFS_TGT/&gcc-version;/install-tools/mkheaders</userinput>"
 msgstr "<userinput>$LFS/tools/libexec/gcc/$LFS_TGT/&gcc-version;/install-tools/mkheaders</userinput>"
 
 #. type: Content of: <sect1><sect2><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter05/glibc.xml:220
 msgid ""
 "Details on this package are located in <xref linkend=\"contents-glibc\" role="
 "\".\"/>"

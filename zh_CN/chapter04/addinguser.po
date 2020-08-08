@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2020-06-17 12:44+0800\n"
+"POT-Creation-Date: 2020-08-08 19:28+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -12,12 +12,10 @@ msgstr ""
 "X-Generator: Translate Toolkit 2.2.5\n"
 
 #. type: Content of: <sect1><title>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter04/addinguser.xml:11
 msgid "Adding the LFS User"
 msgstr "添加 LFS 用户"
 
 #. type: Content of: <sect1><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter04/addinguser.xml:13
 msgid ""
 "When logged in as user <systemitem class=\"username\">root</systemitem>, "
 "making a single mistake can damage or destroy a system. Therefore, the "
@@ -30,15 +28,14 @@ msgid ""
 "following commands to add the new user:"
 msgstr ""
 "在作为 <systemitem class=\"username\">root</systemitem> 用户登录时，一个微小"
-"的错误就可能损坏甚至摧毁整个系统。因此，我们建议在后续两章中，以非特权用户身份编译"
-"软件包。您可以使用自己的系统用户，但为了更容易地建立一个干净的工作环境，最"
-"好创建一个名为 <systemitem class=\"username\">lfs</systemitem> 的新用户，以及"
-"它从属于的一个新组 (组名也是 <systemitem class=\"groupname\">lfs</"
-"systemitem>)，以便我们在安装过程中使用。为了创建新用户，以 <systemitem "
-"class=\"username\">root</systemitem> 身份执行以下命令："
+"的错误就可能损坏甚至摧毁整个系统。因此，我们建议在后续两章中，以非特权用户身"
+"份编译软件包。您可以使用自己的系统用户，但为了更容易地建立一个干净的工作环"
+"境，最好创建一个名为 <systemitem class=\"username\">lfs</systemitem> 的新用"
+"户，以及它从属于的一个新组 (组名也是 <systemitem class=\"groupname\">lfs</"
+"systemitem>)，以便我们在安装过程中使用。为了创建新用户，以 <systemitem class="
+"\"username\">root</systemitem> 身份执行以下命令："
 
 #. type: Content of: <sect1><screen>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter04/addinguser.xml:23
 #, no-wrap
 msgid ""
 "<userinput>groupadd lfs\n"
@@ -48,17 +45,14 @@ msgstr ""
 "useradd -s /bin/bash -g lfs -m -k /dev/null lfs</userinput>"
 
 #. type: Content of: <sect1><variablelist><title>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter04/addinguser.xml:27
 msgid "The meaning of the command line options:"
 msgstr "命令行各选项的含义:"
 
 #. type: Content of: <sect1><variablelist><varlistentry><term>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter04/addinguser.xml:30
 msgid "<parameter>-s /bin/bash</parameter>"
 msgstr "<parameter>-s /bin/bash</parameter>"
 
 #. type: Content of: <sect1><variablelist><varlistentry><listitem><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter04/addinguser.xml:32
 msgid ""
 "This makes <command>bash</command> the default shell for user <systemitem "
 "class=\"username\">lfs</systemitem>."
@@ -67,12 +61,10 @@ msgstr ""
 "systemitem> 的默认 shell。"
 
 #. type: Content of: <sect1><variablelist><varlistentry><term>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter04/addinguser.xml:38
 msgid "<parameter>-g lfs</parameter>"
 msgstr "<parameter>-g lfs</parameter>"
 
 #. type: Content of: <sect1><variablelist><varlistentry><listitem><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter04/addinguser.xml:40
 msgid ""
 "This option adds user <systemitem class=\"username\">lfs</systemitem> to "
 "group <systemitem class=\"groupname\">lfs</systemitem>."
@@ -81,12 +73,10 @@ msgstr ""
 "class=\"groupname\">lfs</systemitem>。"
 
 #. type: Content of: <sect1><variablelist><varlistentry><term>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter04/addinguser.xml:46
 msgid "<parameter>-m</parameter>"
 msgstr "<parameter>-m</parameter>"
 
 #. type: Content of: <sect1><variablelist><varlistentry><listitem><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter04/addinguser.xml:48
 msgid ""
 "This creates a home directory for <systemitem class=\"username\">lfs</"
 "systemitem>."
@@ -94,12 +84,10 @@ msgstr ""
 "为用户 <systemitem class=\"username\">lfs</systemitem> 创建一个主目录。"
 
 #. type: Content of: <sect1><variablelist><varlistentry><term>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter04/addinguser.xml:54
 msgid "<parameter>-k /dev/null</parameter>"
 msgstr "<parameter>-k /dev/null</parameter>"
 
 #. type: Content of: <sect1><variablelist><varlistentry><listitem><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter04/addinguser.xml:56
 msgid ""
 "This parameter prevents possible copying of files from a skeleton directory "
 "(default is <filename class=\"directory\">/etc/skel</filename>)  by changing "
@@ -109,18 +97,15 @@ msgstr ""
 "\">/etc/skel</filename>)  复制文件到新的主目录。"
 
 #. type: Content of: <sect1><variablelist><varlistentry><term>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter04/addinguser.xml:63
 msgid "<parameter>lfs</parameter>"
 msgstr "<parameter>lfs</parameter>"
 
 #. type: Content of: <sect1><variablelist><varlistentry><listitem><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter04/addinguser.xml:65
 msgid "This is the actual name for the created user."
 msgstr "要创建的用户的名称。"
 
 # Critical warning supressed.  Don't know how to translate this keeping the order of XML labels.
 #. type: Content of: <sect1><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter04/addinguser.xml:71
 msgid ""
 "To log in as <systemitem class=\"username\">lfs</systemitem> (as opposed to "
 "switching to user <systemitem class=\"username\">lfs</systemitem> when "
@@ -134,13 +119,11 @@ msgstr ""
 "<systemitem class=\"username\">lfs</systemitem> 设置密码："
 
 #. type: Content of: <sect1><screen>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter04/addinguser.xml:77
 #, no-wrap
 msgid "<userinput>passwd lfs</userinput>"
 msgstr "<userinput>passwd lfs</userinput>"
 
 #. type: Content of: <sect1><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter04/addinguser.xml:79
 msgid ""
 "Grant <systemitem class=\"username\">lfs</systemitem> full access to all "
 "directories under <filename class=\"directory\">$LFS</filename> by making "
@@ -151,7 +134,6 @@ msgstr ""
 "\"username\">lfs</systemitem> 对它们拥有完全访问权："
 
 #. type: Content of: <sect1><screen>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter04/addinguser.xml:83
 #, no-wrap
 msgid ""
 "<userinput>chown -v lfs $LFS/{usr,lib,var,etc,bin,sbin,tools}\n"
@@ -165,22 +147,19 @@ msgstr ""
 "esac</userinput>"
 
 #. type: Content of: <sect1><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter04/addinguser.xml:88
 msgid ""
 "If a separate working directory was created as suggested, give user "
 "<systemitem class=\"username\">lfs</systemitem> ownership of this directory:"
 msgstr ""
-"如果您按照本书的建议，建立了一个单独的工作目录，那么将这个目录的所有者也设"
-"为 <systemitem class=\"username\">lfs</systemitem>："
+"如果您按照本书的建议，建立了一个单独的工作目录，那么将这个目录的所有者也设为 "
+"<systemitem class=\"username\">lfs</systemitem>："
 
 #. type: Content of: <sect1><screen>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter04/addinguser.xml:92
 #, no-wrap
 msgid "<userinput>chown -v lfs $LFS/sources</userinput>"
 msgstr "<userinput>chown -v lfs $LFS/sources</userinput>"
 
 #. type: Content of: <sect1><note><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter04/addinguser.xml:94
 msgid ""
 "In some host systems, the following command does not complete properly and "
 "suspends the login to the lfs user to the background.  If the prompt \"lfs:~$"
@@ -188,27 +167,24 @@ msgid ""
 "will fix the issue."
 msgstr ""
 "在某些宿主系统上，下面的命令不会正确完成，而会将 lfs 用户的登录会话挂起到后"
-"台。如果提示符 “lfs:~$” 没有很快出现，输入 <command>fg</command> 命令以修复"
-"这个问题。"
+"台。如果提示符 “lfs:~$” 没有很快出现，输入 <command>fg</command> 命令以修复这"
+"个问题。"
 
 #. type: Content of: <sect1><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter04/addinguser.xml:99
 msgid ""
 "Next, login as user <systemitem class=\"username\">lfs</systemitem>.  This "
 "can be done via a virtual console, through a display manager, or with the "
 "following substitute/switch user command:"
 msgstr ""
-"下面以 <systemitem class=\"username\">lfs</systemitem> 的身份登录。"
-"可以通过虚拟控制台或者显示管理器登录，也可以使用下面的命令切换用户："
+"下面以 <systemitem class=\"username\">lfs</systemitem> 的身份登录。可以通过虚"
+"拟控制台或者显示管理器登录，也可以使用下面的命令切换用户："
 
 #. type: Content of: <sect1><screen>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter04/addinguser.xml:103
 #, no-wrap
 msgid "<userinput>su - lfs</userinput>"
 msgstr "<userinput>su - lfs</userinput>"
 
 #. type: Content of: <sect1><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter04/addinguser.xml:105
 msgid ""
 "The <quote><parameter>-</parameter></quote> instructs <command>su</command> "
 "to start a login shell as opposed to a non-login shell.  The difference "
@@ -216,5 +192,5 @@ msgid ""
 "<filename>bash(1)</filename> and <command>info bash</command>."
 msgstr ""
 "参数 <quote><parameter>-</parameter></quote> 使得 <command>su</command> 启动"
-"一个登录 shell，而不是非登录 shell。您可以阅读 <filename>bash(1)</"
-"filename> 和 <command>info bash</command> 详细了解它们的区别。"
+"一个登录 shell，而不是非登录 shell。您可以阅读 <filename>bash(1)</filename> "
+"和 <command>info bash</command> 详细了解它们的区别。"

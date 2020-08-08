@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2020-06-17 12:44+0800\n"
+"POT-Creation-Date: 2020-08-08 19:28+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -12,13 +12,11 @@ msgstr ""
 "X-Generator: Translate Toolkit 2.2.5\n"
 
 #. type: Content of: <sect1><sect1info><address>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/findutils.xml:14
 #, no-wrap
 msgid "&findutils-url;"
 msgstr "&findutils-url;"
 
 #. type: Content of: <sect1><sect1info>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/findutils.xml:12
 msgid ""
 "<productname>findutils</productname> <productnumber>&findutils-version;</"
 "productnumber> <placeholder type=\"address\" id=\"0\"/>"
@@ -27,17 +25,14 @@ msgstr ""
 "productnumber> <placeholder type=\"address\" id=\"0\"/>"
 
 #. type: Content of: <sect1><title>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/findutils.xml:17
 msgid "Findutils-&findutils-version;"
 msgstr "Findutils-&findutils-version;"
 
 #. type: Content of: <sect1><indexterm><primary>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/findutils.xml:20
 msgid "Findutils"
 msgstr "Findutils"
 
 #. type: Content of: <sect1><sect2><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/findutils.xml:26
 msgid ""
 "The Findutils package contains programs to find files. These programs are "
 "provided to recursively search through a directory tree and to create, "
@@ -48,53 +43,43 @@ msgstr ""
 "建、维护和搜索文件数据库 (一般比递归搜索快，但在数据库最近没有更新时不可靠)。"
 
 #. type: Content of: <sect1><sect2><segmentedlist><segtitle>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/findutils.xml:32
 msgid "&buildtime;"
 msgstr "&buildtime;"
 
 #. type: Content of: <sect1><sect2><segmentedlist><segtitle>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/findutils.xml:33
 msgid "&diskspace;"
 msgstr "&diskspace;"
 
 #. type: Content of: <sect1><sect2><segmentedlist><seglistitem><seg>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/findutils.xml:36
 msgid "&findutils-fin-sbu;"
 msgstr "&findutils-fin-sbu;"
 
 #. type: Content of: <sect1><sect2><segmentedlist><seglistitem><seg>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/findutils.xml:37
 msgid "&findutils-fin-du;"
 msgstr "&findutils-fin-du;"
 
 #. type: Content of: <sect1><sect2><title>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/findutils.xml:44
 msgid "Installation of Findutils"
 msgstr "安装 Findutils"
 
 #. type: Content of: <sect1><sect2><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/findutils.xml:46
 msgid "Prepare Findutils for compilation:"
 msgstr "准备编译 Findutils："
 
 #. type: Content of: <sect1><sect2><screen>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/findutils.xml:48
 #, no-wrap
 msgid "<userinput remap=\"configure\">./configure --prefix=/usr --localstatedir=/var/lib/locate</userinput>"
 msgstr "<userinput remap=\"configure\">./configure --prefix=/usr --localstatedir=/var/lib/locate</userinput>"
 
 #. type: Content of: <sect1><sect2><variablelist><title>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/findutils.xml:51
 msgid "The meaning of the configure options:"
 msgstr "配置选项的含义："
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/findutils.xml:54
 msgid "<parameter>--localstatedir</parameter>"
 msgstr "<parameter>--localstatedir</parameter>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/findutils.xml:56
 msgid ""
 "This option changes the location of the <command>locate</command> database "
 "to be in <filename class=\"directory\">/var/lib/locate</filename>, which is "
@@ -104,23 +89,19 @@ msgstr ""
 "\"directory\">/var/lib/locate</filename>，以与 FHS 兼容。"
 
 #. type: Content of: <sect1><sect2><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/findutils.xml:64
 msgid "Compile the package:"
 msgstr "编译该软件包："
 
 #. type: Content of: <sect1><sect2><screen>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/findutils.xml:66
 #, no-wrap
 msgid "<userinput remap=\"make\">make</userinput>"
 msgstr "<userinput remap=\"make\">make</userinput>"
 
 #. type: Content of: <sect1><sect2><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/findutils.xml:68
 msgid "To test the results, issue:"
 msgstr "运行以下命令以测试编译结果："
 
 #. type: Content of: <sect1><sect2><screen>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/findutils.xml:70
 #, no-wrap
 msgid ""
 "<userinput remap=\"test\">chown -Rv tester .\n"
@@ -130,18 +111,15 @@ msgstr ""
 "su tester -c \"PATH=$PATH make check\"</userinput>"
 
 #. type: Content of: <sect1><sect2><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/findutils.xml:73
 msgid "Install the package:"
 msgstr "安装该软件包："
 
 #. type: Content of: <sect1><sect2><screen>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/findutils.xml:75
 #, no-wrap
 msgid "<userinput remap=\"install\">make install</userinput>"
 msgstr "<userinput remap=\"install\">make install</userinput>"
 
 #. type: Content of: <sect1><sect2><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/findutils.xml:77
 msgid ""
 "Some of the scripts in the LFS-Bootscripts package depend on <command>find</"
 "command>.  As <filename class=\"directory\">/usr</filename> may not be "
@@ -151,11 +129,10 @@ msgid ""
 msgstr ""
 "LFS-Bootscripts 软件包中的一些引导脚本依赖于 <command>find</command>。由于 "
 "<filename class=\"directory\">/usr</filename> 文件系统在系统启动的早期阶段可"
-"能不可用，该程序必须被放置在根分区。还需要修正 <command>updatedb</command> "
-"脚本中硬编码的路径："
+"能不可用，该程序必须被放置在根分区。还需要修正 <command>updatedb</command> 脚"
+"本中硬编码的路径："
 
 #. type: Content of: <sect1><sect2><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/findutils.xml:84
 msgid ""
 "Some packages in BLFS and beyond expect the <command>find</command> program "
 "in <filename class=\"directory\">/bin</filename>, so make sure it's placed "
@@ -165,7 +142,6 @@ msgstr ""
 "class=\"directory\">/bin</filename> 中，因此要保证它被放置在那里："
 
 #. type: Content of: <sect1><sect2><screen>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/findutils.xml:88
 #, no-wrap
 msgid ""
 "<userinput remap=\"install\">mv -v /usr/bin/find /bin\n"
@@ -175,82 +151,67 @@ msgstr ""
 "sed -i 's|find:=${BINDIR}|find:=/bin|' /usr/bin/updatedb</userinput>"
 
 #. type: Content of: <sect1><sect2><title>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/findutils.xml:94
 msgid "Contents of Findutils"
 msgstr "Findutils 的内容"
 
 #. type: Content of: <sect1><sect2><segmentedlist><segtitle>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/findutils.xml:97
 msgid "Installed programs"
 msgstr "安装的程序"
 
 #. type: Content of: <sect1><sect2><segmentedlist><segtitle>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/findutils.xml:98
 msgid "Installed directory"
 msgstr "安装的目录"
 
 #. type: Content of: <sect1><sect2><segmentedlist><seglistitem><seg>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/findutils.xml:101
 msgid "find, locate, updatedb, and xargs"
 msgstr "find, locate, updatedb, 以及 xargs"
 
 #. type: Content of: <sect1><sect2><segmentedlist><seglistitem><seg>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/findutils.xml:102
 msgid "/var/lib/locate"
 msgstr "/var/lib/locate"
 
 #. type: Content of: <sect1><sect2><variablelist><bridgehead>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/findutils.xml:108
 msgid "Short Descriptions"
 msgstr "简要描述"
 
 #. type: Content of: <sect1><sect2><variablelist>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/findutils.xml:109
 msgid ""
 "<?dbfo list-presentation=\"list\"?> <?dbhtml list-presentation=\"table\"?>"
 msgstr ""
 "<?dbfo list-presentation=\"list\"?> <?dbhtml list-presentation=\"table\"?>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/findutils.xml:113
 msgid "<command>find</command>"
 msgstr "<command>find</command>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/findutils.xml:115
 msgid ""
 "Searches given directory trees for files matching the specified criteria"
 msgstr "在给定目录树中搜索满足给定条件的文件"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/findutils.xml:118
 msgid "find"
 msgstr "find"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/findutils.xml:124
 msgid "<command>locate</command>"
 msgstr "<command>locate</command>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/findutils.xml:126
 msgid ""
 "Searches through a database of file names and reports the names that contain "
 "a given string or match a given pattern"
 msgstr "在文件名数据库中进行搜索，报告包含特定字符串或匹配特定模式的文件名"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/findutils.xml:129
 msgid "locate"
 msgstr "locate"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/findutils.xml:135
 msgid "<command>updatedb</command>"
 msgstr "<command>updatedb</command>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/findutils.xml:137
 msgid ""
 "Updates the <command>locate</command> database; it scans the entire file "
 "system (including other file systems that are currently mounted, unless told "
@@ -260,21 +221,17 @@ msgstr ""
 "文件系统，除非被告知不这样做)，并把找到的所有文件名加入数据库"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/findutils.xml:142
 msgid "updatedb"
 msgstr "updatedb"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/findutils.xml:148
 msgid "<command>xargs</command>"
 msgstr "<command>xargs</command>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/findutils.xml:150
 msgid "Can be used to apply a given command to a list of files"
 msgstr "可以将给定命令作用于一个列表中的所有文件"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/findutils.xml:152
 msgid "xargs"
 msgstr "xargs"

@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2020-06-17 12:44+0800\n"
+"POT-Creation-Date: 2020-08-08 19:28+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -12,13 +12,11 @@ msgstr ""
 "X-Generator: Translate Toolkit 2.2.5\n"
 
 #. type: Content of: <sect1><sect1info><address>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/automake.xml:14
 #, no-wrap
 msgid "&automake-url;"
 msgstr "&automake-url;"
 
 #. type: Content of: <sect1><sect1info>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/automake.xml:12
 msgid ""
 "<productname>automake</productname> <productnumber>&automake-version;</"
 "productnumber> <placeholder type=\"address\" id=\"0\"/>"
@@ -27,82 +25,67 @@ msgstr ""
 "productnumber> <placeholder type=\"address\" id=\"0\"/>"
 
 #. type: Content of: <sect1><title>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/automake.xml:17
 msgid "Automake-&automake-version;"
 msgstr "Automake-&automake-version;"
 
 #. type: Content of: <sect1><indexterm><primary>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/automake.xml:20
 msgid "Automake"
 msgstr "Automake"
 
 #. type: Content of: <sect1><sect2><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/automake.xml:26
 msgid ""
 "The Automake package contains programs for generating Makefiles for use with "
 "Autoconf."
 msgstr "Automake 软件包包含自动生成 Makefile，以便和 Autoconf 一同使用的程序。"
 
 #. type: Content of: <sect1><sect2><segmentedlist><segtitle>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/automake.xml:30
 msgid "&buildtime;"
 msgstr "&buildtime;"
 
 #. type: Content of: <sect1><sect2><segmentedlist><segtitle>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/automake.xml:31
 msgid "&diskspace;"
 msgstr "&diskspace;"
 
 #. type: Content of: <sect1><sect2><segmentedlist><seglistitem><seg>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/automake.xml:34
 msgid "&automake-fin-sbu;"
 msgstr "&automake-fin-sbu;"
 
 #. type: Content of: <sect1><sect2><segmentedlist><seglistitem><seg>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/automake.xml:35
 msgid "&automake-fin-du;"
 msgstr "&automake-fin-du;"
 
 #. type: Content of: <sect1><sect2><title>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/automake.xml:42
 msgid "Installation of Automake"
 msgstr "安装 Automake"
 
 #. type: Content of: <sect1><sect2><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/automake.xml:44
 msgid "Fix a failing test:"
 msgstr "修复一个失败的测试："
 
 #. type: Content of: <sect1><sect2><screen>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/automake.xml:46
 #, no-wrap
 msgid "<userinput remap=\"pre\">sed -i \"s/''/etags/\" t/tags-lisp-space.sh</userinput>"
 msgstr "<userinput remap=\"pre\">sed -i \"s/''/etags/\" t/tags-lisp-space.sh</userinput>"
 
 #. type: Content of: <sect1><sect2><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/automake.xml:48
 msgid "Prepare Automake for compilation:"
 msgstr "准备编译 Automake："
 
 #. type: Content of: <sect1><sect2><screen>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/automake.xml:50
 #, no-wrap
 msgid "<userinput remap=\"configure\">./configure --prefix=/usr --docdir=/usr/share/doc/automake-&automake-version;</userinput>"
 msgstr "<userinput remap=\"configure\">./configure --prefix=/usr --docdir=/usr/share/doc/automake-&automake-version;</userinput>"
 
 #. type: Content of: <sect1><sect2><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/automake.xml:52
 msgid "Compile the package:"
 msgstr "编译该软件包："
 
 #. type: Content of: <sect1><sect2><screen>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/automake.xml:54
 #, no-wrap
 msgid "<userinput remap=\"make\">make</userinput>"
 msgstr "<userinput remap=\"make\">make</userinput>"
 
 #. type: Content of: <sect1><sect2><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/automake.xml:56
 msgid ""
 "Using the -j4 make option speeds up the tests, even on systems with only one "
 "processor, due to internal delays in individual tests.  To test the results, "
@@ -112,39 +95,36 @@ msgstr ""
 "j4 选项加速测试。输入以下命令测试编译结果："
 
 #. type: Content of: <sect1><sect2><screen>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/automake.xml:60
 #, no-wrap
 msgid "<userinput remap=\"test\">make -j4 check</userinput>"
 msgstr "<userinput remap=\"test\">make -j4 check</userinput>"
 
 #. type: Content of: <sect1><sect2><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/automake.xml:62
+msgid "The test t/subobj.sh is known to fail in the LFS environment."
+msgstr ""
+
+#. type: Content of: <sect1><sect2><para>
 msgid "Install the package:"
 msgstr "安装该软件包："
 
 #. type: Content of: <sect1><sect2><screen>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/automake.xml:64
 #, no-wrap
 msgid "<userinput remap=\"install\">make install</userinput>"
 msgstr "<userinput remap=\"install\">make install</userinput>"
 
 #. type: Content of: <sect1><sect2><title>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/automake.xml:70
 msgid "Contents of Automake"
 msgstr "Automake 的内容"
 
 #. type: Content of: <sect1><sect2><segmentedlist><segtitle>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/automake.xml:73
 msgid "Installed programs"
 msgstr "安装的程序"
 
 #. type: Content of: <sect1><sect2><segmentedlist><segtitle>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/automake.xml:74
 msgid "Installed directories"
 msgstr "安装的目录"
 
 #. type: Content of: <sect1><sect2><segmentedlist><seglistitem><seg>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/automake.xml:77
 msgid ""
 "aclocal, aclocal-&am-minor-version; (hard linked with aclocal), automake, "
 "and automake-&am-minor-version; (hard linked with automake)"
@@ -153,7 +133,6 @@ msgstr ""
 "automake-&am-minor-version; (与 automake 互为硬链接)"
 
 #. type: Content of: <sect1><sect2><segmentedlist><seglistitem><seg>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/automake.xml:79
 msgid ""
 "/usr/share/aclocal-&am-minor-version;, /usr/share/automake-&am-minor-"
 "version;, and /usr/share/doc/automake-&automake-version;"
@@ -162,24 +141,20 @@ msgstr ""
 "version;, 以及 /usr/share/doc/automake-&automake-version;"
 
 #. type: Content of: <sect1><sect2><variablelist><bridgehead>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/automake.xml:85
 msgid "Short Descriptions"
 msgstr "简要描述"
 
 #. type: Content of: <sect1><sect2><variablelist>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/automake.xml:86
 msgid ""
 "<?dbfo list-presentation=\"list\"?> <?dbhtml list-presentation=\"table\"?>"
 msgstr ""
 "<?dbfo list-presentation=\"list\"?> <?dbhtml list-presentation=\"table\"?>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/automake.xml:90
 msgid "<command>aclocal</command>"
 msgstr "<command>aclocal</command>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/automake.xml:92
 msgid ""
 "Generates <filename>aclocal.m4</filename> files based on the contents of "
 "<filename>configure.in</filename> files"
@@ -188,32 +163,26 @@ msgstr ""
 "filename>。"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/automake.xml:95
 msgid "aclocal"
 msgstr "aclocal"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/automake.xml:101
 msgid "<command>aclocal-&am-minor-version;</command>"
 msgstr "<command>aclocal-&am-minor-version;</command>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/automake.xml:103
 msgid "A hard link to <command>aclocal</command>"
 msgstr "指向 <command>aclocal</command> 的硬链接"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/automake.xml:105
 msgid "aclocal-&am-minor-version;"
 msgstr "aclocal-&am-minor-version;"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/automake.xml:111
 msgid "<command>automake</command>"
 msgstr "<command>automake</command>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/automake.xml:113
 msgid ""
 "A tool for automatically generating <filename>Makefile.in</filename> files "
 "from <filename>Makefile.am</filename> files [To create all the "
@@ -230,21 +199,17 @@ msgstr ""
 "对应的 <filename>Makefile.in</filename> 文件。]"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/automake.xml:122
 msgid "automake"
 msgstr "automake"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/automake.xml:128
 msgid "<command>automake-&am-minor-version;</command>"
 msgstr "<command>automake-&am-minor-version;</command>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/automake.xml:130
 msgid "A hard link to <command>automake</command>"
 msgstr "指向 <command>automake</command> 的硬链接"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/automake.xml:132
 msgid "automake-&am-minor-version;"
 msgstr "automake-&am-minor-version;"

@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2020-06-17 12:44+0800\n"
+"POT-Creation-Date: 2020-08-08 19:28+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -12,13 +12,11 @@ msgstr ""
 "X-Generator: Translate Toolkit 2.2.5\n"
 
 #. type: Content of: <sect1><sect1info><address>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/eudev.xml:14
 #, no-wrap
 msgid "&eudev-url;"
 msgstr "&eudev-url;"
 
 #. type: Content of: <sect1><sect1info>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/eudev.xml:12
 msgid ""
 "<productname>eudev</productname> <productnumber>&eudev-version;</"
 "productnumber> <placeholder type=\"address\" id=\"0\"/>"
@@ -27,54 +25,43 @@ msgstr ""
 "productnumber> <placeholder type=\"address\" id=\"0\"/>"
 
 #. type: Content of: <sect1><title>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/eudev.xml:17
 msgid "Eudev-&eudev-version;"
 msgstr "Eudev-&eudev-version;"
 
 #. type: Content of: <sect1><sect2><indexterm><primary>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/eudev.xml:20
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/eudev.xml:96
 msgid "Eudev"
 msgstr "Eudev"
 
 #. type: Content of: <sect1><sect2><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/eudev.xml:26
 msgid ""
 "The Eudev package contains programs for dynamic creation of device nodes."
 msgstr "Eudev 软件包包含动态创建设备节点的程序。"
 
 #. type: Content of: <sect1><sect2><segmentedlist><segtitle>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/eudev.xml:30
 msgid "&buildtime;"
 msgstr "&buildtime;"
 
 #. type: Content of: <sect1><sect2><segmentedlist><segtitle>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/eudev.xml:31
 msgid "&diskspace;"
 msgstr "&diskspace;"
 
 #. type: Content of: <sect1><sect2><segmentedlist><seglistitem><seg>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/eudev.xml:34
 msgid "&eudev-fin-sbu;"
 msgstr "&eudev-fin-sbu;"
 
 #. type: Content of: <sect1><sect2><segmentedlist><seglistitem><seg>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/eudev.xml:35
 msgid "&eudev-fin-du;"
 msgstr "&eudev-fin-du;"
 
 #. type: Content of: <sect1><sect2><title>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/eudev.xml:41
 msgid "Installation of Eudev"
 msgstr "安装 Eudev"
 
 #. type: Content of: <sect1><sect2><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/eudev.xml:53
 msgid "Prepare Eudev for compilation:"
 msgstr "准备编译 Eudev："
 
 #. type: Content of: <sect1><sect2><screen>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/eudev.xml:55
 #, no-wrap
 msgid ""
 "<userinput remap=\"configure\">./configure --prefix=/usr           \\\n"
@@ -100,18 +87,15 @@ msgstr ""
 "            --disable-static</userinput>"
 
 #. type: Content of: <sect1><sect2><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/eudev.xml:66
 msgid "Compile the package:"
 msgstr "编译该软件包："
 
 #. type: Content of: <sect1><sect2><screen>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/eudev.xml:68
 #, no-wrap
 msgid "<userinput remap=\"make\">make</userinput>"
 msgstr "<userinput remap=\"make\">make</userinput>"
 
 #. type: Content of: <sect1><sect2><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/eudev.xml:70
 msgid ""
 "Create some directories now that are needed for tests, but will also be used "
 "as a part of installation:"
@@ -119,7 +103,6 @@ msgstr ""
 "创建一些目录，它们目前被用于测试，但之后也会成为安装好的 eudev 的一部分。"
 
 #. type: Content of: <sect1><sect2><screen>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/eudev.xml:73
 #, no-wrap
 msgid ""
 "<userinput remap=\"test\">mkdir -pv /lib/udev/rules.d\n"
@@ -129,35 +112,29 @@ msgstr ""
 "mkdir -pv /etc/udev/rules.d</userinput>"
 
 #. type: Content of: <sect1><sect2><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/eudev.xml:76
 msgid "To test the results, issue:"
 msgstr "运行以下命令以测试编译结果："
 
 #. type: Content of: <sect1><sect2><screen>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/eudev.xml:78
 #, no-wrap
 msgid "<userinput remap=\"test\">make check</userinput>"
 msgstr "<userinput remap=\"test\">make check</userinput>"
 
 #. type: Content of: <sect1><sect2><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/eudev.xml:80
 msgid "Install the package:"
 msgstr "安装该软件包："
 
 #. type: Content of: <sect1><sect2><screen>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/eudev.xml:82
 #, no-wrap
 msgid "<userinput remap=\"install\">make install</userinput>"
 msgstr "<userinput remap=\"install\">make install</userinput>"
 
 #. type: Content of: <sect1><sect2><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/eudev.xml:84
 msgid ""
 "Install some custom rules and support files useful in an LFS environment:"
 msgstr "安装一些在 LFS 环境中很有用的自定义规则和支持文件："
 
 #. type: Content of: <sect1><sect2><screen>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/eudev.xml:87
 #, no-wrap
 msgid ""
 "<userinput remap=\"install\">tar -xvf ../&udev-lfs-version;.tar.xz\n"
@@ -167,22 +144,18 @@ msgstr ""
 "make -f &udev-lfs-version;/Makefile.lfs install</userinput>"
 
 #. type: Content of: <sect1><sect2><title>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/eudev.xml:93
 msgid "Configuring Eudev"
 msgstr "配置 Eudev"
 
 #. type: Content of: <sect1><sect2><indexterm><secondary>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/eudev.xml:97
 msgid "configuring"
 msgstr "configuring"
 
 #. type: Content of: <sect1><sect2><indexterm><primary>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/eudev.xml:101
 msgid "/etc/udev/hwdb.bin"
 msgstr "/etc/udev/hwdb.bin"
 
 #. type: Content of: <sect1><sect2><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/eudev.xml:104
 msgid ""
 "Information about hardware devices is maintained in the <filename class="
 "\"directory\">/etc/udev/hwdb.d</filename> and <filename class=\"directory\">/"
@@ -196,34 +169,28 @@ msgstr ""
 "<filename>/etc/udev/hwdb.bin</filename> 中。初始化该数据库："
 
 #. type: Content of: <sect1><sect2><screen>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/eudev.xml:111
 #, no-wrap
 msgid "<userinput>udevadm hwdb --update</userinput>"
 msgstr "<userinput>udevadm hwdb --update</userinput>"
 
 #. type: Content of: <sect1><sect2><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/eudev.xml:113
 msgid ""
 "This command needs to be run each time the hardware information is updated."
 msgstr "每次硬件信息有更新时，都要运行该命令。"
 
 #. type: Content of: <sect1><sect2><title>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/eudev.xml:119
 msgid "Contents of Eudev"
 msgstr "Eudev 的内容"
 
 #. type: Content of: <sect1><sect2><segmentedlist><segtitle>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/eudev.xml:122
 msgid "Installed programs"
 msgstr "安装的程序"
 
 #. type: Content of: <sect1><sect2><segmentedlist><segtitle>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/eudev.xml:123
 msgid "Installed libraries"
 msgstr "安装的库"
 
 #. type: Content of: <sect1><sect2><segmentedlist><segtitle>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/eudev.xml:124
 msgid "Installed directories"
 msgstr "安装的目录"
 
@@ -231,39 +198,32 @@ msgstr "安装的目录"
 #.          accelerometer, ata_id, cdrom_id, collect, mtd_probe,
 #.          scsi_id, v4l_id,
 #. type: Content of: <sect1><sect2><segmentedlist><seglistitem><seg>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/eudev.xml:129
 msgid "udevadm and udevd"
 msgstr "udevadm 和 udevd"
 
 #. type: Content of: <sect1><sect2><segmentedlist><seglistitem><seg>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/eudev.xml:131
 msgid "libudev.so"
 msgstr "libudev.so"
 
 #. type: Content of: <sect1><sect2><segmentedlist><seglistitem><seg>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/eudev.xml:133
 msgid "/etc/udev, /lib/udev, and /usr/share/doc/udev-&udev-lfs-version;"
 msgstr "/etc/udev, /lib/udev, 以及 /usr/share/doc/udev-&udev-lfs-version;"
 
 #. type: Content of: <sect1><sect2><variablelist><bridgehead>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/eudev.xml:138
 msgid "Short Descriptions"
 msgstr "简要描述"
 
 #. type: Content of: <sect1><sect2><variablelist>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/eudev.xml:139
 msgid ""
 "<?dbfo list-presentation=\"list\"?> <?dbhtml list-presentation=\"table\"?>"
 msgstr ""
 "<?dbfo list-presentation=\"list\"?> <?dbhtml list-presentation=\"table\"?>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/eudev.xml:142
 msgid "<command>udevadm</command>"
 msgstr "<command>udevadm</command>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/eudev.xml:144
 msgid ""
 "Generic udev administration tool: controls the udevd daemon, provides info "
 "from the Udev database, monitors uevents, waits for uevents to finish, tests "
@@ -273,17 +233,14 @@ msgstr ""
 "uevent，等待 uevent 完成，测试 udev 配置，并为指定设备触发 uevent。"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/eudev.xml:149
 msgid "udevadm"
 msgstr "udevadm"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/eudev.xml:155
 msgid "<command>udevd</command>"
 msgstr "<command>udevd</command>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/eudev.xml:157
 msgid ""
 "A daemon that listens for uevents on the netlink socket, creates devices and "
 "runs the configured external programs in response to these uevents"
@@ -292,38 +249,31 @@ msgstr ""
 "外部程序，以响应这些 uevent。"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/eudev.xml:161
 msgid "udevd"
 msgstr "udevd"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/eudev.xml:167
 msgid "<filename class=\"libraryfile\">libudev</filename>"
 msgstr "<filename class=\"libraryfile\">libudev</filename>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/eudev.xml:169
 msgid "A library interface to udev device information"
 msgstr "一个提供 udev 设备信息接口的库"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/eudev.xml:171
 msgid "libudev"
 msgstr "libudev"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/eudev.xml:177
 msgid "<filename class=\"directory\">/etc/udev</filename>"
 msgstr "<filename class=\"directory\">/etc/udev</filename>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/eudev.xml:179
 msgid ""
 "Contains Udev configuration files, device permissions, and rules for device "
 "naming"
 msgstr "包含 udev 配置文件、设备权限设置和设备命名规则"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/eudev.xml:182
 msgid "/etc/udev"
 msgstr "/etc/udev"

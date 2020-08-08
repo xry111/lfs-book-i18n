@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2020-07-05 16:17+0800\n"
+"POT-Creation-Date: 2020-08-08 19:28+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -12,13 +12,11 @@ msgstr ""
 "X-Generator: Translate Toolkit 2.2.5\n"
 
 #. type: Content of: <sect1><sect1info><address>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter07/python.xml:14
 #, no-wrap
 msgid "&python-url;"
 msgstr "&python-url;"
 
 #. type: Content of: <sect1><sect1info>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter07/python.xml:12
 msgid ""
 "<productname>Python</productname> <productnumber>&python-version;</"
 "productnumber> <placeholder type=\"address\" id=\"0\"/>"
@@ -27,47 +25,38 @@ msgstr ""
 "productnumber> <placeholder type=\"address\" id=\"0\"/>"
 
 #. type: Content of: <sect1><title>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter07/python.xml:17
 msgid "Python-&python-version;"
 msgstr "Python-&python-version;"
 
 #. type: Content of: <sect1><indexterm><primary>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter07/python.xml:20
 msgid "Python"
 msgstr "Python"
 
 #. type: Content of: <sect1><indexterm><secondary>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter07/python.xml:21
 msgid "temporary"
 msgstr "临时的"
 
 #. type: Content of: <sect1><sect2><segmentedlist><segtitle>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter07/python.xml:32
 msgid "&buildtime;"
 msgstr "&buildtime;"
 
 #. type: Content of: <sect1><sect2><segmentedlist><segtitle>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter07/python.xml:33
 msgid "&diskspace;"
 msgstr "&diskspace;"
 
 #. type: Content of: <sect1><sect2><segmentedlist><seglistitem><seg>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter07/python.xml:36
 msgid "&python-tmp-sbu;"
 msgstr "&python-tmp-sbu;"
 
 #. type: Content of: <sect1><sect2><segmentedlist><seglistitem><seg>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter07/python.xml:37
 msgid "&python-tmp-du;"
 msgstr "&python-tmp-du;"
 
 #. type: Content of: <sect1><sect2><title>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter07/python.xml:44
 msgid "Installation of Python"
 msgstr "安装 Python"
 
 #. type: Content of: <sect1><sect2><note><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter07/python.xml:47
 msgid ""
 "There are two package files whose name starts with <quote>python</quote>. "
 "The one to extract from is <filename>Python-&python-version;.tar.xz</"
@@ -77,12 +66,10 @@ msgstr ""
 "<filename>Python-&python-version;.tar.xz</filename> (注意首字母是大写的)。"
 
 #. type: Content of: <sect1><sect2><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter07/python.xml:53
 msgid "Prepare Python for compilation:"
 msgstr "准备编译 Python："
 
 #. type: Content of: <sect1><sect2><screen>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter07/python.xml:55
 #, no-wrap
 msgid ""
 "<userinput remap=\"configure\">./configure --prefix=/usr   \\\n"
@@ -94,56 +81,46 @@ msgstr ""
 "            --without-ensurepip</userinput>"
 
 #. type: Content of: <sect1><sect2><variablelist><title>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter07/python.xml:60
 msgid "The meaning of the configure option:"
 msgstr "配置选项的含义："
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter07/python.xml:63
 msgid "<parameter>--enable-shared</parameter>"
 msgstr "<parameter>--enable-shared</parameter>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter07/python.xml:65
 msgid "This switch prevents installation of static libraries."
 msgstr "该选项防止安装静态库。"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter07/python.xml:70
 msgid "<parameter>--without-ensurepip</parameter>"
 msgstr "<parameter>--without-ensurepip</parameter>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter07/python.xml:72
 msgid ""
 "This switch disables the Python package installer, which is not needed at "
 "this stage."
 msgstr "该选项禁止构建 Python 软件包安装器，它在当前阶段没有必要。"
 
 #. type: Content of: <sect1><sect2><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter07/python.xml:79
 msgid "Compile the package:"
 msgstr "编译该软件包："
 
 #. type: Content of: <sect1><sect2><screen>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter07/python.xml:81
 #, no-wrap
 msgid "<userinput remap=\"make\">make</userinput>"
 msgstr "<userinput remap=\"make\">make</userinput>"
 
 #. type: Content of: <sect1><sect2><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter07/python.xml:83
 msgid "Install the package:"
 msgstr "安装该软件包："
 
 #. type: Content of: <sect1><sect2><screen>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter07/python.xml:85
 #, no-wrap
 msgid "<userinput remap=\"install\">make install</userinput>"
 msgstr "<userinput remap=\"install\">make install</userinput>"
 
 #. type: Content of: <sect1><sect2><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter07/python.xml:92
 msgid ""
 "Details on this package are located in <xref linkend=\"contents-python\" "
 "role=\".\"/>"

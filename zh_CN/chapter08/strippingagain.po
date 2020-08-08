@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2020-06-17 12:44+0800\n"
+"POT-Creation-Date: 2020-08-08 19:28+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -12,12 +12,10 @@ msgstr ""
 "X-Generator: Translate Toolkit 2.2.5\n"
 
 #. type: Content of: <sect1><title>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/strippingagain.xml:11
 msgid "Stripping Again"
 msgstr "再次移除调试符号"
 
 #. type: Content of: <sect1><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/strippingagain.xml:13
 msgid ""
 "This section is optional.  If the intended user is not a programmer and does "
 "not plan to do any debugging on the system software, the system size can be "
@@ -25,12 +23,11 @@ msgid ""
 "libraries. This causes no inconvenience other than not being able to debug "
 "the software fully anymore."
 msgstr ""
-"本节是可选的。如果系统不是为程序员设计的，也没有调试系统软件的计划，可以通"
-"过从二进制程序和库移除调试符号，将系统的体积减小约 2 GB。除了无法再调试全"
-"部软件外，这不会造成任何不便。"
+"本节是可选的。如果系统不是为程序员设计的，也没有调试系统软件的计划，可以通过"
+"从二进制程序和库移除调试符号，将系统的体积减小约 2 GB。除了无法再调试全部软件"
+"外，这不会造成任何不便。"
 
 #. type: Content of: <sect1><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/strippingagain.xml:20
 msgid ""
 "Most people who use the commands mentioned below do not experience any "
 "difficulties. However, it is easy to make a typo and render the new system "
@@ -42,7 +39,6 @@ msgstr ""
 "当前状态。"
 
 #. type: Content of: <sect1><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/strippingagain.xml:26
 msgid ""
 "First place the debugging symbols for selected libraries in separate files.  "
 "This debugging information is needed if running regression tests that use "
@@ -51,15 +47,14 @@ msgid ""
 msgstr ""
 "首先将一些库的调试符号保存在单独的文件中。之后在 BLFS 中，如果使用 <ulink "
 "url='&blfs-book;/general/valgrind.html'>valgrind</ulink> 或 <ulink "
-"url='&blfs-book;/general/gdb.html'>gdb</ulink> 运行退化测试，则需要这些调试"
-"信息的存在。"
+"url='&blfs-book;/general/gdb.html'>gdb</ulink> 运行退化测试，则需要这些调试信"
+"息的存在。"
 
 #.  also of interest are libgfortan, libgo, libgomp, and libobjc from GCC 
 #. <screen>
 #. <userinput>save_lib="ld-2.25.so libc-2.25.so libpthread-2.25.so libthread_db-1.0.so"
 #.  libcilkrts.so.&libcilkrts-version;
 #. type: Content of: <sect1><screen>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/strippingagain.xml:36
 #, no-wrap
 msgid ""
 "<userinput>save_lib=\"ld-&glibc-version;.so libc-&glibc-version;.so libpthread-&glibc-version;.so libthread_db-&libthread_db-version;.so\"\n"
@@ -109,12 +104,10 @@ msgstr ""
 "unset LIB save_lib save_usrlib</userinput>"
 
 #. type: Content of: <sect1><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/strippingagain.xml:66
 msgid "Now the binaries and libraries can be stripped:"
 msgstr "现在即可移除程序和库的调试符号："
 
 #. type: Content of: <sect1><screen>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/strippingagain.xml:67
 #, no-wrap
 msgid ""
 "<userinput>find /usr/lib -type f -name \\*.a \\\n"
@@ -136,7 +129,6 @@ msgstr ""
 "    -exec strip --strip-all {} ';'</userinput>"
 
 #. type: Content of: <sect1><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/strippingagain.xml:76
 msgid ""
 "A large number of files will be reported as having their file format not "
 "recognized. These warnings can be safely ignored. These warnings indicate "

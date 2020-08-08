@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2020-06-21 14:05+0800\n"
+"POT-Creation-Date: 2020-08-08 19:28+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -12,13 +12,11 @@ msgstr ""
 "X-Generator: Translate Toolkit 2.2.5\n"
 
 #. type: Content of: <sect1><sect1info><address>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/intltool.xml:14
 #, no-wrap
 msgid "&intltool-url;"
 msgstr "&intltool-url;"
 
 #. type: Content of: <sect1><sect1info>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/intltool.xml:12
 msgid ""
 "<productname>intltool</productname> <productnumber>&intltool-version;</"
 "productnumber> <placeholder type=\"address\" id=\"0\"/>"
@@ -27,108 +25,89 @@ msgstr ""
 "productnumber> <placeholder type=\"address\" id=\"0\"/>"
 
 #. type: Content of: <sect1><title>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/intltool.xml:17
 msgid "Intltool-&intltool-version;"
 msgstr "Intltool-&intltool-version;"
 
 #. type: Content of: <sect1><indexterm><primary>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/intltool.xml:20
 msgid "Intltool"
 msgstr "Intltool"
 
 #. type: Content of: <sect1><sect2><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/intltool.xml:26
 msgid ""
 "The Intltool is an internationalization tool used for extracting "
 "translatable strings from source files."
 msgstr "Intltool 是一个从源代码文件中提取可翻译字符串的国际化工具。"
 
 #. type: Content of: <sect1><sect2><segmentedlist><segtitle>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/intltool.xml:30
 msgid "&buildtime;"
 msgstr "&buildtime;"
 
 #. type: Content of: <sect1><sect2><segmentedlist><segtitle>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/intltool.xml:31
 msgid "&diskspace;"
 msgstr "&diskspace;"
 
 #. type: Content of: <sect1><sect2><segmentedlist><seglistitem><seg>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/intltool.xml:34
 msgid "&intltool-fin-sbu;"
 msgstr "&intltool-fin-sbu;"
 
 #. type: Content of: <sect1><sect2><segmentedlist><seglistitem><seg>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/intltool.xml:35
 msgid "&intltool-fin-du;"
 msgstr "&intltool-fin-du;"
 
 #. type: Content of: <sect1><sect2><title>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/intltool.xml:42
 msgid "Installation of Intltool"
 msgstr "安装 Intltool"
 
 #. type: Content of: <sect1><sect2><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/intltool.xml:44
 msgid "First fix a warning that is caused by perl-5.22 and later:"
 msgstr "首先修复由 perl-5.22 及更新版本导致的警告："
 
 #. type: Content of: <sect1><sect2><screen>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/intltool.xml:46
 #, no-wrap
 msgid "<userinput remap=\"pre\">sed -i 's:\\\\\\${:\\\\\\$\\\\{:' intltool-update.in</userinput>"
 msgstr "<userinput remap=\"pre\">sed -i 's:\\\\\\${:\\\\\\$\\\\{:' intltool-update.in</userinput>"
 
 #. type: Content of: <sect1><sect2><note><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/intltool.xml:48
 msgid ""
 "The above regular expression looks unusual because of all the backslashes.  "
 "What it does is add a backslash before the right brace character in the "
 "sequence '\\${' resulting in '\\$\\{'."
 msgstr ""
-"上面使用的正则表达式由于大量的反斜线，看上去比较奇怪。"
-"它的功能是在序列 '\\${' 的花括号之前增加一个反斜线，得到 '\\$\\{'。"
+"上面使用的正则表达式由于大量的反斜线，看上去比较奇怪。它的功能是在序列 '\\"
+"${' 的花括号之前增加一个反斜线，得到 '\\$\\{'。"
 
 #. type: Content of: <sect1><sect2><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/intltool.xml:52
 msgid "Prepare Intltool for compilation:"
 msgstr "准备编译 Intltool："
 
 #. type: Content of: <sect1><sect2><screen>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/intltool.xml:54
 #, no-wrap
 msgid "<userinput remap=\"configure\">./configure --prefix=/usr</userinput>"
 msgstr "<userinput remap=\"configure\">./configure --prefix=/usr</userinput>"
 
 #. type: Content of: <sect1><sect2><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/intltool.xml:56
 msgid "Compile the package:"
 msgstr "编译该软件包："
 
 #. type: Content of: <sect1><sect2><screen>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/intltool.xml:58
 #, no-wrap
 msgid "<userinput remap=\"make\">make</userinput>"
 msgstr "<userinput remap=\"make\">make</userinput>"
 
 #. type: Content of: <sect1><sect2><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/intltool.xml:60
 msgid "To test the results, issue:"
 msgstr "运行以下命令以测试编译结果："
 
 #. type: Content of: <sect1><sect2><screen>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/intltool.xml:62
 #, no-wrap
 msgid "<userinput remap=\"test\">make check</userinput>"
 msgstr "<userinput remap=\"test\">make check</userinput>"
 
 #. type: Content of: <sect1><sect2><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/intltool.xml:64
 msgid "Install the package:"
 msgstr "安装该软件包："
 
 #. type: Content of: <sect1><sect2><screen>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/intltool.xml:66
 #, no-wrap
 msgid ""
 "<userinput remap=\"install\">make install\n"
@@ -138,22 +117,18 @@ msgstr ""
 "install -v -Dm644 doc/I18N-HOWTO /usr/share/doc/intltool-&intltool-version;/I18N-HOWTO</userinput>"
 
 #. type: Content of: <sect1><sect2><title>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/intltool.xml:72
 msgid "Contents of Intltool"
 msgstr "Intltool 的内容"
 
 #. type: Content of: <sect1><sect2><segmentedlist><segtitle>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/intltool.xml:75
 msgid "Installed programs"
 msgstr "安装的程序"
 
 #. type: Content of: <sect1><sect2><segmentedlist><segtitle>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/intltool.xml:76
 msgid "Installed directories"
 msgstr "安装的目录"
 
 #. type: Content of: <sect1><sect2><segmentedlist><seglistitem><seg>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/intltool.xml:79
 msgid ""
 "intltool-extract, intltool-merge, intltool-prepare, intltool-update, and "
 "intltoolize"
@@ -162,93 +137,75 @@ msgstr ""
 "intltoolize"
 
 #. type: Content of: <sect1><sect2><segmentedlist><seglistitem><seg>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/intltool.xml:81
 msgid "/usr/share/doc/intltool-&intltool-version; and /usr/share/intltool"
 msgstr "/usr/share/doc/intltool-&intltool-version; 和 /usr/share/intltool"
 
 #. type: Content of: <sect1><sect2><variablelist><bridgehead>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/intltool.xml:87
 msgid "Short Descriptions"
 msgstr "简要描述"
 
 #. type: Content of: <sect1><sect2><variablelist>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/intltool.xml:88
 msgid ""
 "<?dbfo list-presentation=\"list\"?> <?dbhtml list-presentation=\"table\"?>"
 msgstr ""
 "<?dbfo list-presentation=\"list\"?> <?dbhtml list-presentation=\"table\"?>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/intltool.xml:92
 msgid "<command>intltoolize</command>"
 msgstr "<command>intltoolize</command>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/intltool.xml:94
 msgid "Prepares a package to use intltool"
 msgstr "准备为软件包应用 intltool"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/intltool.xml:96
 msgid "intltoolize"
 msgstr "intltoolize"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/intltool.xml:102
 msgid "<command>intltool-extract</command>"
 msgstr "<command>intltool-extract</command>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/intltool.xml:104
 msgid "Generates header files that can be read by <command>gettext</command>"
 msgstr "生成可供 <command>gettext</command> 读取的头文件"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/intltool.xml:106
 msgid "intltool-extract"
 msgstr "intltool-extract"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/intltool.xml:112
 msgid "<command>intltool-merge</command>"
 msgstr "<command>intltool-merge</command>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/intltool.xml:114
 msgid "Merges translated strings into various file types"
 msgstr "将翻译好的字符串合并为多种类型的文件"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/intltool.xml:116
 msgid "intltool-merge"
 msgstr "intltool-merge"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/intltool.xml:122
 msgid "<command>intltool-prepare</command>"
 msgstr "<command>intltool-prepare</command>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/intltool.xml:124
 msgid "Updates pot files and merges them with translation files"
 msgstr "更新 pot 文件并将它们和翻译文件合并"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/intltool.xml:126
 msgid "intltool-prepare"
 msgstr "intltool-prepare"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/intltool.xml:132
 msgid "<command>intltool-update</command>"
 msgstr "<command>intltool-update</command>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/intltool.xml:134
 msgid "Updates the po template files and merges them with the translations"
 msgstr "更新 po 模板文件并将它们和翻译文件合并"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/intltool.xml:136
 msgid "intltool-update"
 msgstr "intltool-update"

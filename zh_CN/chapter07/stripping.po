@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2020-06-23 15:47+0800\n"
+"POT-Creation-Date: 2020-08-08 19:28+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -12,29 +12,26 @@ msgstr ""
 "X-Generator: Translate Toolkit 2.2.5\n"
 
 #. type: Content of: <sect1><title>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter07/stripping.xml:11
 msgid "Cleaning up and Saving the Temporary System"
 msgstr "清理和备份临时系统"
 
 #. type: Content of: <sect1><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter07/stripping.xml:13
 msgid ""
 "The libtool .la files are only useful when linking with static libraries. "
 "They are unneeded, and potentially harmful, when using dynamic shared "
 "libraries, specially when using non-autotools build systems.  While still in "
 "chroot, remove those files now:"
 msgstr ""
-"libtool .la 文件仅在链接到静态库时有用。在使用动态共享库时它们没有意义，甚"
-"至有害，特别是对于非 autotools 构建系统。仍然在 chroot 环境中，运行命令中删除它们："
+"libtool .la 文件仅在链接到静态库时有用。在使用动态共享库时它们没有意义，甚至"
+"有害，特别是对于非 autotools 构建系统。仍然在 chroot 环境中，运行命令中删除它"
+"们："
 
 #. type: Content of: <sect1><screen>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter07/stripping.xml:18
 #, no-wrap
 msgid "<userinput>find /usr/{lib,libexec} -name \\*.la -delete</userinput>"
 msgstr "<userinput>find /usr/{lib,libexec} -name \\*.la -delete</userinput>"
 
 #. type: Content of: <sect1><note><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter07/stripping.xml:21
 msgid ""
 "All the remaining steps in this section are optional. Nevertheless, as soon "
 "as you begin installing packages in <xref linkend=\"chapter-building-system"
@@ -42,12 +39,11 @@ msgid ""
 "do a backup of the temporary tools as described below. The other steps are "
 "only needed if you are really short on disk space."
 msgstr ""
-"本节中的其余步骤都是可选的。不过，一旦您开始在<xref linkend=\"chapter-building-"
-"system\"/>中安装软件包，临时工具就会被覆盖。因此，按照下面描述的步骤备份临时"
-"工具可能是个好主意。其余步骤只有在您的磁盘空间非常紧张时才需要执行。"
+"本节中的其余步骤都是可选的。不过，一旦您开始在<xref linkend=\"chapter-"
+"building-system\"/>中安装软件包，临时工具就会被覆盖。因此，按照下面描述的步骤"
+"备份临时工具可能是个好主意。其余步骤只有在您的磁盘空间非常紧张时才需要执行。"
 
 #. type: Content of: <sect1><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter07/stripping.xml:30
 msgid ""
 "The following steps are performed from outside the chroot environment. That "
 "means, you have to leave the chroot environment first before continuing. The "
@@ -57,12 +53,10 @@ msgstr ""
 "境。这样做的主要原因是："
 
 #. type: Content of: <sect1><para><itemizedlist><listitem><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter07/stripping.xml:36
 msgid "make sure that objects are not in use while they are manipulated."
 msgstr "保证在操作时，目标文件不会被使用。"
 
 #. type: Content of: <sect1><para><itemizedlist><listitem><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter07/stripping.xml:42
 msgid ""
 "get access to file system locations outside of the chroot environment to "
 "store/read the backup archive which should not be placed within the "
@@ -72,13 +66,11 @@ msgstr ""
 "<filename class=\"directory\">$LFS</filename> 目录树中，以保证安全。"
 
 #. type: Content of: <sect1><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter07/stripping.xml:53
 msgid ""
 "Leave the chroot environment and unmount the kernel virtual file systems:"
 msgstr "退出 chroot 环境，并解除挂载内核虚拟文件系统："
 
 #. type: Content of: <sect1><note><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter07/stripping.xml:58
 msgid ""
 "All of the following instructions are executed by <systemitem class="
 "\"username\">root</systemitem>. Take extra care about the commands you're "
@@ -99,7 +91,6 @@ msgstr ""
 "量正确设定。<xref linkend='ch-partitioning-aboutlfs'/>已经讨论了这个问题。"
 
 #. type: Content of: <sect1><screen>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter07/stripping.xml:72
 #, no-wrap
 msgid ""
 "<userinput>exit\n"
@@ -111,12 +102,10 @@ msgstr ""
 "umount $LFS/{sys,proc,run}</userinput>"
 
 #. type: Content of: <sect1><sect2><title>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter07/stripping.xml:77
 msgid "Stripping"
 msgstr "移除无用内容"
 
 #. type: Content of: <sect1><sect2><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter07/stripping.xml:79
 msgid ""
 "If the LFS partition is rather small, it is good to know that unnecessary "
 "items can be removed. The executables and libraries built so far contain a "
@@ -126,12 +115,10 @@ msgstr ""
 "可执行文件和库包含大约 90MB 的无用调试符号。"
 
 #. type: Content of: <sect1><sect2><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter07/stripping.xml:84
 msgid "Strip off debugging symbols from binaries:"
 msgstr "从二进制文件移除调试符号："
 
 #. type: Content of: <sect1><sect2><screen>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter07/stripping.xml:85
 #, no-wrap
 msgid ""
 "<userinput>strip --strip-debug $LFS/usr/lib/*\n"
@@ -147,7 +134,6 @@ msgstr ""
 #.     <quote>Binutils pass 2</quote>, since it is the one that knows how to strip
 #.     our cross-compiled programs.
 #. type: Content of: <sect1><sect2><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter07/stripping.xml:89
 msgid ""
 "These commands will skip a number of files reporting that it does not "
 "recognize their file format. Most of these are scripts instead of binaries."
@@ -156,7 +142,6 @@ msgstr ""
 "件，而不是二进制文件。"
 
 #. type: Content of: <sect1><sect2><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter07/stripping.xml:95
 msgid ""
 "Take care <emphasis>NOT</emphasis> to use <parameter>--strip-unneeded</"
 "parameter> on the libraries. The static ones would be destroyed and the "
@@ -166,19 +151,16 @@ msgstr ""
 "parameter> 选项。这会损坏静态库，结果工具链软件包都要重新构建。"
 
 #. type: Content of: <sect1><sect2><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter07/stripping.xml:100
 msgid ""
 "To save more space (slightly more than 35 MB), remove the documentation:"
 msgstr "为了节约更多空间 (略高于 35 MB)，删除文档："
 
 #. type: Content of: <sect1><sect2><screen>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter07/stripping.xml:102
 #, no-wrap
 msgid "<userinput>rm -rf $LFS/usr/share/{info,man,doc}</userinput>"
 msgstr "<userinput>rm -rf $LFS/usr/share/{info,man,doc}</userinput>"
 
 #. type: Content of: <sect1><sect2><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter07/stripping.xml:104
 msgid ""
 "At this point, you should have at least 5 GB of free space on the chroot "
 "partition that can be used to build and install Glibc and GCC in the next "
@@ -191,12 +173,10 @@ msgstr ""
 "问题。您可以使用命令 <command>df -h $LFS</command> 查询磁盘可用空间。"
 
 #. type: Content of: <sect1><sect2><title>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter07/stripping.xml:113
 msgid "Backup"
 msgstr "备份"
 
 #. type: Content of: <sect1><sect2><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter07/stripping.xml:116
 msgid ""
 "Now that the essential tools have been created, its time to think about a "
 "backup. When every check has passed successfully in the previously built "
@@ -214,7 +194,6 @@ msgstr ""
 "时间对已经构建成功的部分进行返工，可以准备一个备份。"
 
 #. type: Content of: <sect1><sect2><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter07/stripping.xml:127
 msgid ""
 "Make sure you have at least 600 MB free disk space (the source tarballs will "
 "be included in the backup archive) in the home directory of user <systemitem "
@@ -224,12 +203,10 @@ msgstr ""
 "600 MB 的可用存储空间 (源代码压缩包也会被包含在备份档案中)。"
 
 #. type: Content of: <sect1><sect2><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter07/stripping.xml:133
 msgid "Create the backup archive by running the following command:"
 msgstr "运行以下命令，创建备份档案："
 
 #. type: Content of: <sect1><sect2><screen>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter07/stripping.xml:136
 #, no-wrap
 msgid ""
 "<userinput>cd $LFS &amp;&amp;\n"
@@ -239,7 +216,6 @@ msgstr ""
 "tar -cJpf $HOME/lfs-temp-tools-&version;.tar.xz .</userinput>"
 
 #. type: Content of: <sect1><sect2><screen>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter07/stripping.xml:139
 #, no-wrap
 msgid ""
 "<userinput>cd $LFS &amp;&amp;\n"
@@ -249,7 +225,6 @@ msgstr ""
 "tar -cJpf $HOME/lfs-temp-tools-&versiond;.tar.xz .</userinput>"
 
 #. type: Content of: <sect1><sect2><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter07/stripping.xml:143
 msgid ""
 "Replace <envar>$HOME</envar> by a directory of your choice if you do not "
 "want to have the backup stored in <systemitem class=\"username\">root</"
@@ -259,12 +234,10 @@ msgstr ""
 "目录中，将 <envar>$HOME</envar> 替换为您选择的其他位置。"
 
 #. type: Content of: <sect1><sect2><title>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter07/stripping.xml:150
 msgid "Restore"
 msgstr "还原"
 
 #. type: Content of: <sect1><sect2><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter07/stripping.xml:153
 msgid ""
 "In case some mistakes have been made and you need to start over, you can use "
 "this backup to restore the temporary tools and save some recovery time.  "
@@ -281,7 +254,6 @@ msgstr ""
 #.  Make the following look different so users don't blindly run the
 #.      restore when they don't need to. 
 #. type: Content of: <sect1><sect2><screen>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter07/stripping.xml:165
 #, no-wrap
 msgid ""
 "<computeroutput>cd $LFS &amp;&amp;\n"
@@ -293,7 +265,6 @@ msgstr ""
 "tar -xpf $HOME/lfs-temp-tools-&version;.tar.xz</computeroutput>"
 
 #. type: Content of: <sect1><sect2><screen>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter07/stripping.xml:169
 #, no-wrap
 msgid ""
 "<computeroutput>cd $LFS &amp;&amp;\n"
@@ -305,14 +276,12 @@ msgstr ""
 "tar -xpf $HOME/lfs-temp-tools-&versiond;.tar.xz</computeroutput>"
 
 #. type: Content of: <sect1><sect2><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter07/stripping.xml:174
 msgid ""
 "Again, double check that the environment has been setup properly and "
 "continue building the rest of the system."
 msgstr "再一次复查环境是否配置正确，即可继续构建系统。"
 
 #. type: Content of: <sect1><sect2><important><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter07/stripping.xml:180
 msgid ""
 "If you left the chroot environment either to strip off debug symbols, create "
 "a backup, or restart building using a restore, remember to mount the kernel "

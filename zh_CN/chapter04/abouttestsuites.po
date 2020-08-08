@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2020-06-17 12:44+0800\n"
+"POT-Creation-Date: 2020-08-08 19:28+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -12,12 +12,10 @@ msgstr ""
 "X-Generator: Translate Toolkit 2.2.5\n"
 
 #. type: Content of: <sect1><title>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter04/abouttestsuites.xml:11
 msgid "About the Test Suites"
 msgstr "关于测试套件"
 
 #. type: Content of: <sect1><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter04/abouttestsuites.xml:13
 msgid ""
 "Most packages provide a test suite. Running the test suite for a newly built "
 "package is a good idea because it can provide a <quote>sanity check</quote> "
@@ -26,13 +24,12 @@ msgid ""
 "developer intended. It does not, however, guarantee that the package is "
 "totally bug free."
 msgstr ""
-"多数软件包提供测试套件，一般来说，为新构建的软件包运行测试套件是个好主意，"
-"这可以进行一次 <quote>完整性检查</quote>，从而确认所有东西编译正确。如果测"
-"试套件中的所有检验项目都能通过，一般就可以证明这个软件包像开发者期望的那样运"
-"行。然而，这并不保证软件包完全没有错误。"
+"多数软件包提供测试套件，一般来说，为新构建的软件包运行测试套件是个好主意，这"
+"可以进行一次 <quote>完整性检查</quote>，从而确认所有东西编译正确。如果测试套"
+"件中的所有检验项目都能通过，一般就可以证明这个软件包像开发者期望的那样运行。"
+"然而，这并不保证软件包完全没有错误。"
 
 #. type: Content of: <sect1><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter04/abouttestsuites.xml:20
 msgid ""
 "Some test suites are more important than others. For example, the test "
 "suites for the core toolchain packages&mdash;GCC, binutils, and glibc&mdash;"
@@ -43,23 +40,21 @@ msgid ""
 msgstr ""
 "某些软件包的测试套件比其他的更为重要。例如，组成核心工具链的几个软件包 "
 "&mdash; GCC、Binutils 和 Glibc 的测试套件就最为重要，因为这些软件包在系统的正"
-"常工作中发挥中心作用。GCC 和 Glibc 的测试套件需要运行很长时间，特别是在较慢"
-"的硬件上，但我们仍然强烈推荐运行它们。"
+"常工作中发挥中心作用。GCC 和 Glibc 的测试套件需要运行很长时间，特别是在较慢的"
+"硬件上，但我们仍然强烈推荐运行它们。"
 
 #. type: Content of: <sect1><note><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter04/abouttestsuites.xml:28
 msgid ""
 "Running the test suites in <xref linkend=\"chapter-cross-tools\"/> and <xref "
 "linkend=\"chapter-temporary-tools\"/> is impossible, since the programs are "
 "compiled with a cross-compiler, so are not supposed to be able to run on the "
 "build host."
 msgstr ""
-"在<xref linkend=\"chapter-cross-tools\"/>和<xref "
-"linkend=\"chapter-temporary-tools\"/>中不可能运行测试套件，"
-"因为这些程序是使用交叉编译器编译的，根本不该在构建它们的宿主系统运行。"
+"在<xref linkend=\"chapter-cross-tools\"/>和<xref linkend=\"chapter-temporary-"
+"tools\"/>中不可能运行测试套件，因为这些程序是使用交叉编译器编译的，根本不该在"
+"构建它们的宿主系统运行。"
 
 #. type: Content of: <sect1><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter04/abouttestsuites.xml:34
 msgid ""
 "A common issue with running the test suites for binutils and GCC is running "
 "out of pseudo terminals (PTYs). This can result in a high number of failing "
@@ -71,11 +66,10 @@ msgstr ""
 "在运行 Binutils 和 GCC 的测试套件时，最普遍发生的问题是伪终端 (PTY) 被耗尽。"
 "这会导致大量测试出现失败结果。这种现象有多种可能原因，但最常见的原因是宿主系"
 "统没有正确设置 <systemitem class=\"filesystem\">devpts</systemitem> 文件系"
-"统。关于这个问题的更多细节在 <ulink url=\"&lfs-root;lfs/faq.html#no-ptys\"/"
-"> 中进行了讨论。"
+"统。关于这个问题的更多细节在 <ulink url=\"&lfs-root;lfs/faq.html#no-ptys\"/> "
+"中进行了讨论。"
 
 #. type: Content of: <sect1><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter04/abouttestsuites.xml:42
 msgid ""
 "Sometimes package test suites will fail, but for reasons which the "
 "developers are aware of and have deemed non-critical. Consult the logs "

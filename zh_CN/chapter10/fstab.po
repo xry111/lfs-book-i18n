@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2020-06-17 12:44+0800\n"
+"POT-Creation-Date: 2020-08-08 19:28+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -12,29 +12,25 @@ msgstr ""
 "X-Generator: Translate Toolkit 2.2.5\n"
 
 #. type: Content of: <sect1><title>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter10/fstab.xml:11
 msgid "Creating the /etc/fstab File"
 msgstr "创建 /etc/fstab 文件"
 
 #. type: Content of: <sect1><indexterm><primary>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter10/fstab.xml:14
 msgid "/etc/fstab"
 msgstr "/etc/fstab"
 
 #. type: Content of: <sect1><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter10/fstab.xml:17
 msgid ""
 "The <filename>/etc/fstab</filename> file is used by some programs to "
 "determine where file systems are to be mounted by default, in which order, "
 "and which must be checked (for integrity errors) prior to mounting. Create a "
 "new file systems table like this:"
 msgstr ""
-"一些程序使用 <filename>/etc/fstab</filename> 文件，以确定哪些文件系统是默认"
-"挂载的，和它们应该按什么顺序挂载，以及哪些文件系统在挂载前必须被检查 (确定是"
-"否有完整性错误)。参考以下命令，创建一个新的文件系统表："
+"一些程序使用 <filename>/etc/fstab</filename> 文件，以确定哪些文件系统是默认挂"
+"载的，和它们应该按什么顺序挂载，以及哪些文件系统在挂载前必须被检查 (确定是否"
+"有完整性错误)。参考以下命令，创建一个新的文件系统表："
 
 #. type: Content of: <sect1><screen>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter10/fstab.xml:22
 #, no-wrap
 msgid ""
 "<userinput>cat &gt; /etc/fstab &lt;&lt; \"EOF\"\n"
@@ -72,7 +68,6 @@ msgstr ""
 "EOF</userinput>"
 
 #. type: Content of: <sect1><screen>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter10/fstab.xml:39
 #, no-wrap
 msgid ""
 "<userinput>cat &gt; /etc/fstab &lt;&lt; \"EOF\"\n"
@@ -100,7 +95,6 @@ msgstr ""
 "EOF</userinput>"
 
 #. type: Content of: <sect1><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter10/fstab.xml:51
 msgid ""
 "Replace <replaceable>&lt;xxx&gt;</replaceable>, <replaceable>&lt;yyy&gt;</"
 "replaceable>, and <replaceable>&lt;fff&gt;</replaceable> with the values "
@@ -117,7 +111,6 @@ msgstr ""
 "息。"
 
 #. type: Content of: <sect1><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter10/fstab.xml:59
 msgid ""
 "Filesystems with MS-DOS or Windows origin (i.e. vfat, ntfs, smbfs, cifs, "
 "iso9660, udf) need a special option, utf8, in order for non-ASCII characters "
@@ -142,32 +135,28 @@ msgstr ""
 "的 locale 字符集设定一致，但改写成内核可以识别的写法。该选项能够正常工作的前"
 "提是，将相关的字符集定义 (在内核配置选项的 File Systems -&gt; Native "
 "Language Support 子菜单中) 编译到内核中，或构建为内核模块。然而，如果使用了 "
-"UTF-8 locale，对应的 <option>iocharset=utf8</option> 会导致文件系统变得大小"
-"写敏感。为了避免这个问题，在使用 UTF-8 locale 时，需要用特殊选项 "
-"<option>utf8</option> 代替 <option>iocharset=utf8</option>。另外，vfat 和 "
-"smbfs 文件系统还需要<quote>codepage</quote>选项，它应该被设定为您的语言在 "
-"MS-DOS 下的代码页编号。例如，为了挂载一个 USB 闪存盘，一个 ru_RU.KOI8-R 用户"
-"应该在 <filename>/etc/fstab</filename> 中对应于闪存盘的行添加下列挂载选项："
+"UTF-8 locale，对应的 <option>iocharset=utf8</option> 会导致文件系统变得大小写"
+"敏感。为了避免这个问题，在使用 UTF-8 locale 时，需要用特殊选项 <option>utf8</"
+"option> 代替 <option>iocharset=utf8</option>。另外，vfat 和 smbfs 文件系统还"
+"需要<quote>codepage</quote>选项，它应该被设定为您的语言在 MS-DOS 下的代码页编"
+"号。例如，为了挂载一个 USB 闪存盘，一个 ru_RU.KOI8-R 用户应该在 <filename>/"
+"etc/fstab</filename> 中对应于闪存盘的行添加下列挂载选项："
 
 #. type: Content of: <sect1><screen>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter10/fstab.xml:77
 #, no-wrap
 msgid "<literal>noauto,user,quiet,showexec,codepage=866,iocharset=koi8r</literal>"
 msgstr "<literal>noauto,user,quiet,showexec,codepage=866,iocharset=koi8r</literal>"
 
 #. type: Content of: <sect1><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter10/fstab.xml:79
 msgid "The corresponding options fragment for ru_RU.UTF-8 users is:"
 msgstr "相应的，ru_RU.UTF-8 用户应该使用下列选项："
 
 #. type: Content of: <sect1><screen>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter10/fstab.xml:81
 #, no-wrap
 msgid "<literal>noauto,user,quiet,showexec,codepage=866,utf8</literal>"
 msgstr "<literal>noauto,user,quiet,showexec,codepage=866,utf8</literal>"
 
 #. type: Content of: <sect1><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter10/fstab.xml:83
 msgid ""
 "Note that using <option>iocharset</option> is the default for "
 "<literal>iso8859-1</literal> (which keeps the file system case insensitive), "
@@ -179,7 +168,6 @@ msgstr ""
 "内核使用 UTF-8 编码转换文件名，这样它们就能在 UTF-8 locale 中被正确解析。"
 
 #. type: Content of: <sect1><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter10/fstab.xml:100
 msgid ""
 "It is also possible to specify default codepage and iocharset values for "
 "some filesystems during kernel configuration. The relevant parameters are "
@@ -191,17 +179,15 @@ msgid ""
 "There is no way to specify these settings for the ntfs filesystem at kernel "
 "compilation time."
 msgstr ""
-"也可以在内核配置中，为一些文件系统指定默认 codepage 和 iocharset 选项值。相"
-"关的配置参数名为<quote>Default NLS Option</quote> "
-"(<option>CONFIG_NLS_DEFAULT</option>)，<quote>Default Remote NLS Option</"
-"quote> (<option>CONFIG_SMB_NLS_DEFAULT</option>)，<quote>Default codepage "
-"for FAT</quote> (<option>CONFIG_FAT_DEFAULT_CODEPAGE</option>)，以及 "
-"<quote>Default iocharset for FAT</quote> "
-"(<option>CONFIG_FAT_DEFAULT_IOCHARSET</option>)。无法在编译内核时为 ntfs 文"
-"件系统指定这些默认值。"
+"也可以在内核配置中，为一些文件系统指定默认 codepage 和 iocharset 选项值。相关"
+"的配置参数名为<quote>Default NLS Option</quote> (<option>CONFIG_NLS_DEFAULT</"
+"option>)，<quote>Default Remote NLS Option</quote> "
+"(<option>CONFIG_SMB_NLS_DEFAULT</option>)，<quote>Default codepage for FAT</"
+"quote> (<option>CONFIG_FAT_DEFAULT_CODEPAGE</option>)，以及 <quote>Default "
+"iocharset for FAT</quote> (<option>CONFIG_FAT_DEFAULT_IOCHARSET</option>)。无"
+"法在编译内核时为 ntfs 文件系统指定这些默认值。"
 
 #. type: Content of: <sect1><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter10/fstab.xml:110
 msgid ""
 "It is possible to make the ext3 filesystem reliable across power failures "
 "for some hard disk types.  To do this, add the <option>barrier=1</option> "
@@ -211,23 +197,20 @@ msgid ""
 "example, if:"
 msgstr ""
 "在某些硬盘上，通过将 <option>barrier=1</option> 挂载选项加入 <filename>/etc/"
-"fstab</filename>，可以使得 ext3 文件系统在发生电源故障时更可靠。为了检查磁"
-"盘驱动器是否支持该选项，在可用的磁盘驱动器上运行 <ulink url=\"&blfs-book;"
+"fstab</filename>，可以使得 ext3 文件系统在发生电源故障时更可靠。为了检查磁盘"
+"驱动器是否支持该选项，在可用的磁盘驱动器上运行 <ulink url=\"&blfs-book;"
 "general/hdparm.html\">hdparm</ulink>。例如："
 
 #. type: Content of: <sect1><screen>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter10/fstab.xml:118
 #, no-wrap
 msgid "<userinput>hdparm -I /dev/sda | grep NCQ</userinput>"
 msgstr "<userinput>hdparm -I /dev/sda | grep NCQ</userinput>"
 
 #. type: Content of: <sect1><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter10/fstab.xml:120
 msgid "returns non-empty output, the option is supported."
 msgstr "如果输出内容不为空，说明该选项可用。"
 
 #. type: Content of: <sect1><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter10/fstab.xml:122
 msgid ""
 "Note: Logical Volume Management (LVM) based partitions cannot use the "
 "<option>barrier</option> option."

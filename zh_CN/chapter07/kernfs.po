@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2020-06-17 12:44+0800\n"
+"POT-Creation-Date: 2020-08-08 19:28+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -12,17 +12,14 @@ msgstr ""
 "X-Generator: Translate Toolkit 2.2.5\n"
 
 #. type: Content of: <sect1><title>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter07/kernfs.xml:11
 msgid "Preparing Virtual Kernel File Systems"
 msgstr "准备虚拟内核文件系统"
 
 #. type: Content of: <sect1><indexterm><primary>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter07/kernfs.xml:14
 msgid "/dev/*"
 msgstr "/dev/*"
 
 #. type: Content of: <sect1><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter07/kernfs.xml:17
 msgid ""
 "Various file systems exported by the kernel are used to communicate to and "
 "from the kernel itself. These file systems are virtual in that no disk space "
@@ -32,24 +29,20 @@ msgstr ""
 "并不占用磁盘空间，其内容保留在内存中。"
 
 #. type: Content of: <sect1><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter07/kernfs.xml:22
 msgid ""
 "Begin by creating directories onto which the file systems will be mounted:"
 msgstr "首先创建这些文件系统的挂载点："
 
 #. type: Content of: <sect1><screen>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter07/kernfs.xml:25
 #, no-wrap
 msgid "<userinput>mkdir -pv $LFS/{dev,proc,sys,run}</userinput>"
 msgstr "<userinput>mkdir -pv $LFS/{dev,proc,sys,run}</userinput>"
 
 #. type: Content of: <sect1><sect2><title>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter07/kernfs.xml:28
 msgid "Creating Initial Device Nodes"
 msgstr "创建初始设备节点"
 
 #. type: Content of: <sect1><sect2><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter07/kernfs.xml:30
 msgid ""
 "When the kernel boots the system, it requires the presence of a few device "
 "nodes, in particular the <filename class=\"devicefile\">console</filename> "
@@ -61,13 +54,11 @@ msgid ""
 msgstr ""
 "在内核引导系统时，它需要一些设备节点，特别是 <filename class=\"devicefile"
 "\">console</filename> 和 <filename class=\"devicefile\">null</filename> 两个"
-"设备。它们需要创建在硬盘上，这样在内核填充 "
-"<systemitem class=\"filesystem\">/dev</systemitem> 前，"
-"或者 Linux 使用 <parameter>init=/bin/bash</parameter> 内核选项启动时，"
-"也能使用它们。运行以下命令创建它们："
+"设备。它们需要创建在硬盘上，这样在内核填充 <systemitem class=\"filesystem\">/"
+"dev</systemitem> 前，或者 Linux 使用 <parameter>init=/bin/bash</parameter> 内"
+"核选项启动时，也能使用它们。运行以下命令创建它们："
 
 #. type: Content of: <sect1><sect2><screen>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter07/kernfs.xml:40
 #, no-wrap
 msgid ""
 "<userinput>mknod -m 600 $LFS/dev/console c 5 1\n"
@@ -77,12 +68,10 @@ msgstr ""
 "mknod -m 666 $LFS/dev/null c 1 3</userinput>"
 
 #. type: Content of: <sect1><sect2><title>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter07/kernfs.xml:46
 msgid "Mounting and Populating /dev"
 msgstr "挂载和填充 /dev"
 
 #. type: Content of: <sect1><sect2><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter07/kernfs.xml:48
 msgid ""
 "The recommended method of populating the <filename class=\"directory\">/dev</"
 "filename> directory with devices is to mount a virtual filesystem (such as "
@@ -100,31 +89,27 @@ msgid ""
 msgstr ""
 "用设备文件填充 <filename class=\"directory\">/dev</filename> 目录的推荐方法是"
 "挂载一个虚拟文件系统 (例如 <systemitem class=\"filesystem\">tmpfs</"
-"systemitem>) 到 <filename class=\"directory\">/dev</filename>，然后在设备被"
-"发现或访问时动态地创建设备文件。这个工作通常由 Udev 在系统引导时完成。然而，"
-"我们的新系统还没有 Udev，也没有被引导过，因此必须手工挂载和填充 <filename "
+"systemitem>) 到 <filename class=\"directory\">/dev</filename>，然后在设备被发"
+"现或访问时动态地创建设备文件。这个工作通常由 Udev 在系统引导时完成。然而，我"
+"们的新系统还没有 Udev，也没有被引导过，因此必须手工挂载和填充 <filename "
 "class=\"directory\">/dev</filename>。这可以通过绑定挂载宿主系统的 <filename "
 "class=\"directory\">/dev</filename> 目录就实现。绑定挂载是一种特殊挂载类型，"
 "它允许在另外的位置创建某个目录或挂载点的映像。运行以下命令进行绑定挂载："
 
 #. type: Content of: <sect1><sect2><screen>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter07/kernfs.xml:63
 #, no-wrap
 msgid "<userinput>mount -v --bind /dev $LFS/dev</userinput>"
 msgstr "<userinput>mount -v --bind /dev $LFS/dev</userinput>"
 
 #. type: Content of: <sect1><sect2><title>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter07/kernfs.xml:68
 msgid "Mounting Virtual Kernel File Systems"
 msgstr "挂载虚拟内核文件系统"
 
 #. type: Content of: <sect1><sect2><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter07/kernfs.xml:70
 msgid "Now mount the remaining virtual kernel filesystems:"
 msgstr "现在挂载其余的虚拟内核文件系统："
 
 #. type: Content of: <sect1><sect2><screen>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter07/kernfs.xml:72
 #, no-wrap
 msgid ""
 "<userinput>mount -v --bind /dev/pts $LFS/dev/pts\n"
@@ -138,18 +123,16 @@ msgstr ""
 "mount -vt tmpfs tmpfs $LFS/run</userinput>"
 
 #. type: Content of: <sect1><sect2><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter07/kernfs.xml:105
 msgid ""
 "In some host systems, <filename>/dev/shm</filename> is a symbolic link to "
 "<filename class=\"directory\">/run/shm</filename>.  The /run tmpfs was "
 "mounted above so in this case only a directory needs to be created."
 msgstr ""
 "在某些宿主系统上，<filename>/dev/shm</filename> 是一个指向 <filename class="
-"\"directory\">/run/shm</filename> 的符号链接。我们已经在 /run 下挂载了 "
-"tmpfs 文件系统，因此在这里只需要创建一个目录。"
+"\"directory\">/run/shm</filename> 的符号链接。我们已经在 /run 下挂载了 tmpfs "
+"文件系统，因此在这里只需要创建一个目录。"
 
 #. type: Content of: <sect1><sect2><screen>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter07/kernfs.xml:110
 #, no-wrap
 msgid ""
 "<userinput>if [ -h $LFS/dev/shm ]; then\n"

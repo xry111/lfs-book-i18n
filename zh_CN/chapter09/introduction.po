@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2020-06-17 12:44+0800\n"
+"POT-Creation-Date: 2020-08-08 19:28+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -12,12 +12,10 @@ msgstr ""
 "X-Generator: Translate Toolkit 2.2.5\n"
 
 #. type: Content of: <sect1><title>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter09/introduction.xml:11
 msgid "Introduction"
 msgstr "概述"
 
 #. type: Content of: <sect1><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter09/introduction.xml:13
 msgid ""
 "Booting a Linux system involves several tasks.  The process must mount both "
 "virtual and real file systems, initialize devices, activate swap, check file "
@@ -27,18 +25,16 @@ msgid ""
 "organized to ensure the tasks are performed in the correct order but, at the "
 "same time, be executed as fast as possible."
 msgstr ""
-"引导 Linux 系统需要完成若干任务。引导过程必须挂载虚拟和真实文件系统、初始化"
-"设备、启用交换、 检查文件系统完整性、挂载所有交换分区或文件、设定系统时钟、 "
-"启用网络、启动系统需要的守护进程，并完成用户自定义的其他工作。引导过程必须被"
-"组织好，以保证这些任务以正确顺序进行，并以尽量快的速度完成。"
+"引导 Linux 系统需要完成若干任务。引导过程必须挂载虚拟和真实文件系统、初始化设"
+"备、启用交换、 检查文件系统完整性、挂载所有交换分区或文件、设定系统时钟、 启"
+"用网络、启动系统需要的守护进程，并完成用户自定义的其他工作。引导过程必须被组"
+"织好，以保证这些任务以正确顺序进行，并以尽量快的速度完成。"
 
 #. type: Content of: <sect1><sect2><title>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter09/introduction.xml:22
 msgid "System V"
 msgstr "System V"
 
 #. type: Content of: <sect1><sect2><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter09/introduction.xml:24
 msgid ""
 "System V is the classic boot process that has been used in Unix and Unix-"
 "like systems such as Linux since about 1983.  It consists of a small "
@@ -50,11 +46,10 @@ msgstr ""
 "System V 是自 1983 年以来就在 Unix 和 Linux 等类 Unix 系统中被广泛应用的经典"
 "引导过程。它包含一个小程序 <command>init</command>，该程序设定 "
 "<command>login</command> (通过 getty)并运行一个脚本。该脚本一般被命名为 "
-"<command>rc</command>，控制一组附加脚本的运行，这些附加脚本完成初始化系统需"
-"要的各项工作。"
+"<command>rc</command>，控制一组附加脚本的运行，这些附加脚本完成初始化系统需要"
+"的各项工作。"
 
 #. type: Content of: <sect1><sect2><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter09/introduction.xml:32
 msgid ""
 "The <command>init</command> program is controlled by the <filename>/etc/"
 "inittab</filename> file and is organized into run levels that can be run by "
@@ -64,7 +59,7 @@ msgstr ""
 "制，被组织为用户可以选择的系统运行级别："
 
 #. type: Content of: <sect1><sect2><literallayout>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter09/introduction.xml:36
+#, no-wrap
 msgid ""
 "0 &mdash; halt\n"
 "1 &mdash; Single user mode\n"
@@ -83,32 +78,26 @@ msgstr ""
 "6 &mdash; 重启系统"
 
 #. type: Content of: <sect1><sect2><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter09/introduction.xml:44
 msgid "The usual default run level is 3 or 5."
 msgstr "通常的默认运行级别是 3 或 5。"
 
 #. type: Content of: <sect1><sect2><bridgehead>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter09/introduction.xml:46
 msgid "Advantages"
 msgstr "优点"
 
 #. type: Content of: <sect1><sect2><itemizedlist><listitem><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter09/introduction.xml:50
 msgid "Established, well understood system."
 msgstr "完备的，已经被详细理解的系统。"
 
 #. type: Content of: <sect1><sect2><itemizedlist><listitem><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter09/introduction.xml:54
 msgid "Easy to customize."
 msgstr "容易定制。"
 
 #. type: Content of: <sect1><sect2><bridgehead>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter09/introduction.xml:60
 msgid "Disadvantages"
 msgstr "缺点"
 
 #. type: Content of: <sect1><sect2><itemizedlist><listitem><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter09/introduction.xml:64
 msgid ""
 "May be slower to boot.  A medium speed base LFS system takes 8-12 seconds "
 "where the boot time is measured from the first kernel message to the login "
@@ -119,7 +108,6 @@ msgstr ""
 "符为止，需要 8-12 秒的引导时间，之后还需要约 2 秒启动网络连接。"
 
 #. type: Content of: <sect1><sect2><itemizedlist><listitem><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter09/introduction.xml:72
 msgid ""
 "Serial processing of boot tasks. This is related to the previous point.  A "
 "delay in any process such as a file system check, will delay the entire boot "
@@ -129,13 +117,11 @@ msgstr ""
 "延整个引导过程。"
 
 #. type: Content of: <sect1><sect2><itemizedlist><listitem><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter09/introduction.xml:78
 msgid ""
 "Does not directly support advanced features like control groups (cgroups), "
 "and per-user fair share scheduling."
 msgstr "不支持控制组 (cgroups)、每用户公平共享调度等高级特性。"
 
 #. type: Content of: <sect1><sect2><itemizedlist><listitem><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter09/introduction.xml:83
 msgid "Adding scripts requires manual, static sequencing decisions."
 msgstr "添加脚本时，需要手动决定它在引导过程中的次序。"

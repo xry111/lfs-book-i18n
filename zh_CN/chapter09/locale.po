@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2020-06-17 12:44+0800\n"
+"POT-Creation-Date: 2020-08-08 19:28+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -12,17 +12,14 @@ msgstr ""
 "X-Generator: Translate Toolkit 2.2.5\n"
 
 #. type: Content of: <sect1><title>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter09/locale.xml:11
 msgid "Configuring the System Locale"
 msgstr "配置系统 Locale"
 
 #. type: Content of: <sect1><indexterm><primary>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter09/locale.xml:14
 msgid "/etc/locale.conf"
 msgstr "/etc/locale.conf"
 
 #. type: Content of: <sect1><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter09/locale.xml:17
 msgid ""
 "The <filename>/etc/locale.conf</filename> file below sets some environment "
 "variables necessary for native language support. Setting them properly "
@@ -32,12 +29,10 @@ msgstr ""
 "环境变量，正确设定它们可以带来以下好处："
 
 #. type: Content of: <sect1><itemizedlist><listitem><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter09/locale.xml:23
 msgid "The output of programs being translated into your native language"
 msgstr "程序输出被翻译成本地语言"
 
 #. type: Content of: <sect1><itemizedlist><listitem><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter09/locale.xml:26
 msgid ""
 "The correct classification of characters into letters, digits and other "
 "classes. This is necessary for <command>bash</command> to properly accept "
@@ -47,22 +42,18 @@ msgstr ""
 "受命令行中的非 ASCII 本地非英文字符来说是必要的"
 
 #. type: Content of: <sect1><itemizedlist><listitem><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter09/locale.xml:31
 msgid "The correct alphabetical sorting order for the country"
 msgstr "根据所在地区惯例排序字母"
 
 #. type: Content of: <sect1><itemizedlist><listitem><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter09/locale.xml:34
 msgid "The appropriate default paper size"
 msgstr "适用于所在地区的默认纸张尺寸"
 
 #. type: Content of: <sect1><itemizedlist><listitem><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter09/locale.xml:37
 msgid "The correct formatting of monetary, time, and date values"
 msgstr "正确格式化货币、时间和日期值"
 
 #. type: Content of: <sect1><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter09/locale.xml:41
 msgid ""
 "Replace <replaceable>&lt;ll&gt;</replaceable> below with the two-letter code "
 "for your desired language (e.g., <quote>en</quote>) and <replaceable>&lt;"
@@ -78,20 +69,17 @@ msgstr ""
 "<quote>@euro</quote> 等可选修饰符。"
 
 #. type: Content of: <sect1><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter09/locale.xml:48
 msgid ""
 "The list of all locales supported by Glibc can be obtained by running the "
 "following command:"
 msgstr "Glibc 支持的所有 locale 可以用以下命令列出："
 
 #. type: Content of: <sect1><screen>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter09/locale.xml:51
 #, no-wrap
 msgid "<userinput>locale -a</userinput>"
 msgstr "<userinput>locale -a</userinput>"
 
 #. type: Content of: <sect1><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter09/locale.xml:53
 msgid ""
 "Charmaps can have a number of aliases, e.g., <quote>ISO-8859-1</quote> is "
 "also referred to as <quote>iso8859-1</quote> and <quote>iso88591</quote>.  "
@@ -104,43 +92,38 @@ msgid ""
 "locale (<quote>en_GB.iso88591</quote> in our example)."
 msgstr ""
 "字符映射可能有多个别名，例如<quote>ISO-8859-1</quote>也可以称为"
-"<quote>iso8859-1</quote>或者<quote>iso88591</quote>。某些程序不能正确处理一"
-"些别名 (例如，只识别<quote>UTF-8</quote>，不能识别<quote>utf8</quote>)，因"
-"此在多数情况下，为了保险起见，最好使用 locale 的规范名称。为了确定规范名称，"
-"执行以下命令，将 <replaceable>&lt;locale 名&gt;</replaceable> 替换成 "
+"<quote>iso8859-1</quote>或者<quote>iso88591</quote>。某些程序不能正确处理一些"
+"别名 (例如，只识别<quote>UTF-8</quote>，不能识别<quote>utf8</quote>)，因此在"
+"多数情况下，为了保险起见，最好使用 locale 的规范名称。为了确定规范名称，执行"
+"以下命令，将 <replaceable>&lt;locale 名&gt;</replaceable> 替换成 "
 "<command>locale -a</command> 对于您希望的 locale 的输出 (以<quote>en_GB."
 "iso88591</quote>为例)。"
 
 #. type: Content of: <sect1><screen>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter09/locale.xml:63
 #, no-wrap
 msgid "<userinput>LC_ALL=<replaceable>&lt;locale name&gt;</replaceable> locale charmap</userinput>"
 msgstr "<userinput>LC_ALL=<replaceable>&lt;locale 名&gt;</replaceable> locale charmap</userinput>"
 
 #. type: Content of: <sect1><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter09/locale.xml:65
 msgid ""
 "For the <quote>en_GB.iso88591</quote> locale, the above command will print:"
 msgstr "对于<quote>en_GB.iso88591</quote>locale，以上命令输出："
 
 #. type: Content of: <sect1><screen>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter09/locale.xml:68
 #, no-wrap
 msgid "<computeroutput>ISO-8859-1</computeroutput>"
 msgstr "<computeroutput>ISO-8859-1</computeroutput>"
 
 #. type: Content of: <sect1><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter09/locale.xml:70
 msgid ""
 "This results in a final locale setting of <quote>en_GB.ISO-8859-1</quote>.  "
 "It is important that the locale found using the heuristic above is tested "
 "prior to it being added to the Bash startup files:"
 msgstr ""
-"这样就最终确定 locale 应设置为<quote>en_GB.ISO-8859-1</quote>。在将以上启发"
-"方法获得的 locale 添加到 Bash 启动文件之前，一定要进行下列测试："
+"这样就最终确定 locale 应设置为<quote>en_GB.ISO-8859-1</quote>。在将以上启发方"
+"法获得的 locale 添加到 Bash 启动文件之前，一定要进行下列测试："
 
 #. type: Content of: <sect1><screen>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter09/locale.xml:74
 #, no-wrap
 msgid ""
 "<userinput>LC_ALL=&lt;locale name&gt; locale language\n"
@@ -154,7 +137,6 @@ msgstr ""
 "LC_ALL=&lt;locale 名&gt; locale int_prefix</userinput>"
 
 #. type: Content of: <sect1><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter09/locale.xml:79
 msgid ""
 "The above commands should print the language name, the character encoding "
 "used by the locale, the local currency, and the prefix to dial before the "
@@ -168,13 +150,11 @@ msgstr ""
 "着您的 locale 在第 6 章中没有安装，或者不被 Glibc 的默认安装支持。"
 
 #. type: Content of: <sect1><screen>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter09/locale.xml:86
 #, no-wrap
 msgid "<computeroutput>locale: Cannot set LC_* to default locale: No such file or directory</computeroutput>"
 msgstr "<computeroutput>locale: Cannot set LC_* to default locale: No such file or directory</computeroutput>"
 
 #. type: Content of: <sect1><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter09/locale.xml:88
 msgid ""
 "If this happens, you should either install the desired locale using the "
 "<command>localedef</command> command, or consider choosing a different "
@@ -185,7 +165,6 @@ msgstr ""
 "locale，或重新选择一个不同的 locale。后文假设 Glibc 没有输出类似错误消息。"
 
 #. type: Content of: <sect1><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter09/locale.xml:94
 msgid ""
 "Some packages beyond LFS may also lack support for your chosen locale. One "
 "example is the X library (part of the X Window System), which outputs the "
@@ -197,13 +176,11 @@ msgstr ""
 "下错误消息："
 
 #. type: Content of: <sect1><screen>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter09/locale.xml:99
 #, no-wrap
 msgid "<computeroutput>Warning: locale not supported by Xlib, locale set to C</computeroutput>"
 msgstr "<computeroutput>Warning: locale not supported by Xlib, locale set to C</computeroutput>"
 
 #. type: Content of: <sect1><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter09/locale.xml:101
 msgid ""
 "In several cases Xlib expects that the character map will be listed in "
 "uppercase notation with canonical dashes. For instance, \"ISO-8859-1\" "
@@ -215,13 +192,12 @@ msgid ""
 "by Xlib."
 msgstr ""
 "某些情况下 Xlib 期望字符映射以带有规范连字符的大写形式给出，例如应该使用 "
-"“ISO-8859-1”而不是“iso88591”。有时也可以通过去除 locale 规范中的字符映射部"
-"分找到合适的规范，可以通过运行 <command>locale charmap</command> 确认。例如，"
-"您需要将“de_DE.ISO-8859-15@euro”替换成“de_DE@euro”，以获得 Xlib 能够识别"
-"的 locale。"
+"“ISO-8859-1”而不是“iso88591”。有时也可以通过去除 locale 规范中的字符映射部分"
+"找到合适的规范，可以通过运行 <command>locale charmap</command> 确认。例如，您"
+"需要将“de_DE.ISO-8859-15@euro”替换成“de_DE@euro”，以获得 Xlib 能够识别的 "
+"locale。"
 
 #. type: Content of: <sect1><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter09/locale.xml:109
 msgid ""
 "Other packages can also function incorrectly (but may not necessarily "
 "display any error messages) if the locale name does not meet their "
@@ -233,7 +209,6 @@ msgstr ""
 "有用的信息。"
 
 #. type: Content of: <sect1><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter09/locale.xml:114
 msgid ""
 "Once the proper locale settings have been determined, create the <filename>/"
 "etc/locale.conf</filename> file:"
@@ -242,7 +217,6 @@ msgstr ""
 "件："
 
 #. type: Content of: <sect1><screen>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter09/locale.xml:117
 #, no-wrap
 msgid ""
 "<userinput>cat &gt; /etc/locale.conf &lt;&lt; \"EOF\"\n"
@@ -254,7 +228,6 @@ msgstr ""
 "EOF</userinput>"
 
 #. type: Content of: <sect1><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter09/locale.xml:121
 msgid ""
 "Note that you can modify <filename>/etc/locale.conf</filename> with the "
 "systemd <command>localectl</command> utility. To use <command>localectl</"
@@ -265,13 +238,11 @@ msgstr ""
 "子中的 <filename>locale.conf</filename>，运行："
 
 #. type: Content of: <sect1><screen>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter09/locale.xml:125
 #, no-wrap
 msgid "<userinput>localectl set-locale LANG=\"<replaceable>&lt;ll&gt;_&lt;CC&gt;.&lt;charmap&gt;&lt;@modifiers&gt;</replaceable>\"</userinput>"
 msgstr "<userinput>localectl set-locale LANG=\"<replaceable>&lt;ll&gt;_&lt;CC&gt;.&lt;charmap&gt;&lt;@modifiers&gt;</replaceable>\"</userinput>"
 
 #. type: Content of: <sect1><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter09/locale.xml:127
 msgid ""
 "You can also specify other language specific environment variables such as "
 "<envar>LANG</envar>, <envar>LC_CTYPE</envar>, <envar>LC_NUMERIC</envar> or "
@@ -285,13 +256,11 @@ msgstr ""
 "envar> 设置为 en_US.UTF-8，<envar>LC_CTYPE</envar> 设置为 en_US："
 
 #. type: Content of: <sect1><screen>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter09/locale.xml:133
 #, no-wrap
 msgid "<userinput>localectl set-locale LANG=\"en_US.UTF-8\" LC_CTYPE=\"en_US\"</userinput>"
 msgstr "<userinput>localectl set-locale LANG=\"en_US.UTF-8\" LC_CTYPE=\"en_US\"</userinput>"
 
 #. type: Content of: <sect1><note><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter09/locale.xml:135
 msgid ""
 "Please note that the <command>localectl</command> command can be used only "
 "on a system booted with systemd."
@@ -299,7 +268,6 @@ msgstr ""
 "请注意 <command>localectl</command> 只能在使用 systemd 引导的系统中使用。"
 
 #. type: Content of: <sect1><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter09/locale.xml:138
 msgid ""
 "The <quote>C</quote> (default) and <quote>en_US</quote> (the recommended one "
 "for United States English users) locales are different. <quote>C</quote> "
@@ -312,9 +280,9 @@ msgid ""
 "<quote>C</quote> locale only if you are certain that you will never need 8-"
 "bit characters."
 msgstr ""
-"<quote>C</quote> (默认 locale) 和<quote>en_US</quote>(推荐美式英语用户使用"
-"的 locale) 是不同的。<quote>C</quote> locale 使用 US-ASCII 7 位字符集，并且将"
-"最高位为 1 的字节视为无效字符。因此，<command>ls</command> 等命令会将它们替换"
-"为问号。另外，如果试图用 Mutt 或 Pine 发送包含这些字符的邮件，会发出不符合 "
-"RFC 标准的消息 (发出邮件的字符集会被标为<quote>未知 8 位</quote>)。因此，您"
-"只能在确信自己永远不会使用 8 位字符时才能使用<quote>C</quote> locale。"
+"<quote>C</quote> (默认 locale) 和<quote>en_US</quote>(推荐美式英语用户使用的 "
+"locale) 是不同的。<quote>C</quote> locale 使用 US-ASCII 7 位字符集，并且将最"
+"高位为 1 的字节视为无效字符。因此，<command>ls</command> 等命令会将它们替换为"
+"问号。另外，如果试图用 Mutt 或 Pine 发送包含这些字符的邮件，会发出不符合 RFC "
+"标准的消息 (发出邮件的字符集会被标为<quote>未知 8 位</quote>)。因此，您只能在"
+"确信自己永远不会使用 8 位字符时才能使用<quote>C</quote> locale。"

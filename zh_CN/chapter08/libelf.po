@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2020-07-09 21:36+0800\n"
+"POT-Creation-Date: 2020-08-08 19:28+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -12,13 +12,11 @@ msgstr ""
 "X-Generator: Translate Toolkit 2.2.5\n"
 
 #. type: Content of: <sect1><sect1info><address>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/libelf.xml:14
 #, no-wrap
 msgid "&elfutils-url;"
 msgstr "&elfutils-url;"
 
 #. type: Content of: <sect1><sect1info>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/libelf.xml:12
 msgid ""
 "<productname>libelf</productname> <productnumber>&elfutils-version;</"
 "productnumber> <placeholder type=\"address\" id=\"0\"/>"
@@ -27,48 +25,39 @@ msgstr ""
 "productnumber> <placeholder type=\"address\" id=\"0\"/>"
 
 #. type: Content of: <sect1><title>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/libelf.xml:17
 msgid "Libelf from Elfutils-&elfutils-version;"
 msgstr "Elfutils-&elfutils-version; 中的 Libelf"
 
 #. type: Content of: <sect1><indexterm><primary>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/libelf.xml:20
 msgid "Libelf"
 msgstr "Libelf"
 
 #. type: Content of: <sect1><sect2><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/libelf.xml:26
 msgid ""
 "Libelf is a library for handling ELF (Executable and Linkable Format)  files."
 msgstr "Libelf 是一个处理 ELF (可执行和可链接格式)  文件的库。"
 
 #. type: Content of: <sect1><sect2><segmentedlist><segtitle>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/libelf.xml:30
 msgid "&buildtime;"
 msgstr "&buildtime;"
 
 #. type: Content of: <sect1><sect2><segmentedlist><segtitle>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/libelf.xml:31
 msgid "&diskspace;"
 msgstr "&diskspace;"
 
 #. type: Content of: <sect1><sect2><segmentedlist><seglistitem><seg>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/libelf.xml:34
 msgid "&elfutils-fin-sbu;"
 msgstr "&elfutils-fin-sbu;"
 
 #. type: Content of: <sect1><sect2><segmentedlist><seglistitem><seg>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/libelf.xml:35
 msgid "&elfutils-fin-du;"
 msgstr "&elfutils-fin-du;"
 
 #. type: Content of: <sect1><sect2><title>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/libelf.xml:42
 msgid "Installation of Libelf"
 msgstr "安装 Libelf"
 
 #. type: Content of: <sect1><sect2><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/libelf.xml:44
 msgid ""
 "Libelf is part of elfutils-&elfutils-version; package. Use the elfutils-"
 "&elfutils-version;.tar.bz2 as the source tarball."
@@ -77,45 +66,37 @@ msgstr ""
 "&elfutils-version;.tar.bz2 作为源代码包。"
 
 #. type: Content of: <sect1><sect2><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/libelf.xml:47
 msgid "Prepare Libelf for compilation:"
 msgstr "准备编译 Libelf："
 
 #. type: Content of: <sect1><sect2><screen>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/libelf.xml:49
 #, no-wrap
 msgid "<userinput remap=\"configure\">./configure --prefix=/usr --disable-debuginfod --libdir=/lib</userinput>"
 msgstr "<userinput remap=\"configure\">./configure --prefix=/usr --disable-debuginfod --libdir=/lib</userinput>"
 
 #. type: Content of: <sect1><sect2><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/libelf.xml:51
 msgid "Compile the package:"
 msgstr "编译该软件包："
 
 #. type: Content of: <sect1><sect2><screen>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/libelf.xml:53
 #, no-wrap
 msgid "<userinput remap=\"make\">make</userinput>"
 msgstr "<userinput remap=\"make\">make</userinput>"
 
 #. type: Content of: <sect1><sect2><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/libelf.xml:55
 msgid "To test the results, issue:"
 msgstr "执行下列命令以测试编译结果："
 
 #. type: Content of: <sect1><sect2><screen>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/libelf.xml:57
 #, no-wrap
 msgid "<userinput remap=\"test\">make check</userinput>"
 msgstr "<userinput remap=\"test\">make check</userinput>"
 
 #. type: Content of: <sect1><sect2><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/libelf.xml:61
 msgid "Install only Libelf:"
 msgstr "只安装 Libelf："
 
 #. type: Content of: <sect1><sect2><screen>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/libelf.xml:63
 #, no-wrap
 msgid ""
 "<userinput remap=\"install\">make -C libelf install\n"
@@ -127,26 +108,21 @@ msgstr ""
 "rm /lib/libelf.a</userinput>"
 
 #. type: Content of: <sect1><sect2><title>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/libelf.xml:70
 msgid "Contents of Libelf"
 msgstr "Libelf 的内容"
 
 #. type: Content of: <sect1><sect2><segmentedlist><segtitle>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/libelf.xml:73
 msgid "Installed Library"
 msgstr "安装的库"
 
 #. type: Content of: <sect1><sect2><segmentedlist><segtitle>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/libelf.xml:74
 msgid "Installed Directory"
 msgstr "安装的目录"
 
 #. type: Content of: <sect1><sect2><segmentedlist><seglistitem><seg>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/libelf.xml:78
 msgid "libelf.so"
 msgstr "libelf.so"
 
 #. type: Content of: <sect1><sect2><segmentedlist><seglistitem><seg>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/libelf.xml:81
 msgid "/usr/include/elfutils"
 msgstr "/usr/include/elfutils"

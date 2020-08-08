@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2020-06-17 12:44+0800\n"
+"POT-Creation-Date: 2020-08-08 19:28+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -12,13 +12,11 @@ msgstr ""
 "X-Generator: Translate Toolkit 2.2.5\n"
 
 #. type: Content of: <sect1><sect1info><address>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/zlib.xml:14
 #, no-wrap
 msgid "&zlib-url;"
 msgstr "&zlib-url;"
 
 #. type: Content of: <sect1><sect1info>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/zlib.xml:12
 msgid ""
 "<productname>zlib</productname> <productnumber>&zlib-version;</"
 "productnumber> <placeholder type=\"address\" id=\"0\"/>"
@@ -27,93 +25,76 @@ msgstr ""
 "productnumber> <placeholder type=\"address\" id=\"0\"/>"
 
 #. type: Content of: <sect1><title>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/zlib.xml:17
 msgid "Zlib-&zlib-version;"
 msgstr "Zlib-&zlib-version;"
 
 #. type: Content of: <sect1><indexterm><primary>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/zlib.xml:20
 msgid "Zlib"
 msgstr "Zlib"
 
 #. type: Content of: <sect1><sect2><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/zlib.xml:26
 msgid ""
 "The Zlib package contains compression and decompression routines used by "
 "some programs."
 msgstr "Zlib 软件包包含一些程序使用的压缩和解压缩子程序。"
 
 #. type: Content of: <sect1><sect2><segmentedlist><segtitle>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/zlib.xml:30
 msgid "&buildtime;"
 msgstr "&buildtime;"
 
 #. type: Content of: <sect1><sect2><segmentedlist><segtitle>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/zlib.xml:31
 msgid "&diskspace;"
 msgstr "&diskspace;"
 
 #. type: Content of: <sect1><sect2><segmentedlist><seglistitem><seg>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/zlib.xml:34
 msgid "&zlib-fin-sbu;"
 msgstr "&zlib-fin-sbu;"
 
 #. type: Content of: <sect1><sect2><segmentedlist><seglistitem><seg>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/zlib.xml:35
 msgid "&zlib-fin-du;"
 msgstr "&zlib-fin-du;"
 
 #. type: Content of: <sect1><sect2><title>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/zlib.xml:42
 msgid "Installation of Zlib"
 msgstr "安装 Zlib"
 
 #. type: Content of: <sect1><sect2><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/zlib.xml:44
 msgid "Prepare Zlib for compilation:"
 msgstr "准备编译 Zlib："
 
 #. type: Content of: <sect1><sect2><screen>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/zlib.xml:46
 #, no-wrap
 msgid "<userinput remap=\"configure\">./configure --prefix=/usr</userinput>"
 msgstr "<userinput remap=\"configure\">./configure --prefix=/usr</userinput>"
 
 #. type: Content of: <sect1><sect2><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/zlib.xml:48
 msgid "Compile the package:"
 msgstr "编译该软件包："
 
 #. type: Content of: <sect1><sect2><screen>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/zlib.xml:50
 #, no-wrap
 msgid "<userinput remap=\"make\">make</userinput>"
 msgstr "<userinput remap=\"make\">make</userinput>"
 
 #. type: Content of: <sect1><sect2><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/zlib.xml:52
 msgid "To test the results, issue:"
 msgstr "运行以下命令以测试编译结果"
 
 #. type: Content of: <sect1><sect2><screen>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/zlib.xml:54
 #, no-wrap
 msgid "<userinput remap=\"test\">make check</userinput>"
 msgstr "<userinput remap=\"test\">make check</userinput>"
 
 #. type: Content of: <sect1><sect2><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/zlib.xml:56
 msgid "Install the package:"
 msgstr "安装该软件包："
 
 #. type: Content of: <sect1><sect2><screen>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/zlib.xml:58
 #, no-wrap
 msgid "<userinput remap=\"install\">make install</userinput>"
 msgstr "<userinput remap=\"install\">make install</userinput>"
 
 #. type: Content of: <sect1><sect2><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/zlib.xml:60
 msgid ""
 "The shared library needs to be moved to <filename class=\"directory\">/lib</"
 "filename>, and as a result the <filename class=\"extension\">.so</filename> "
@@ -125,7 +106,6 @@ msgstr ""
 "\"directory\">/usr/lib</filename> 目录中重建："
 
 #. type: Content of: <sect1><sect2><screen>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/zlib.xml:65
 #, no-wrap
 msgid ""
 "<userinput remap=\"install\">mv -v /usr/lib/libz.so.* /lib\n"
@@ -135,43 +115,35 @@ msgstr ""
 "ln -sfv ../../lib/$(readlink /usr/lib/libz.so) /usr/lib/libz.so</userinput>"
 
 #. type: Content of: <sect1><sect2><title>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/zlib.xml:71
 msgid "Contents of Zlib"
 msgstr "Zlib 的内容"
 
 #. type: Content of: <sect1><sect2><segmentedlist><segtitle>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/zlib.xml:74
 msgid "Installed libraries"
 msgstr "安装的库"
 
 #. type: Content of: <sect1><sect2><segmentedlist><seglistitem><seg>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/zlib.xml:77
 msgid "libz.{a,so}"
 msgstr "libz.{a,so}"
 
 #. type: Content of: <sect1><sect2><variablelist><bridgehead>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/zlib.xml:82
 msgid "Short Descriptions"
 msgstr "简要描述"
 
 #. type: Content of: <sect1><sect2><variablelist>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/zlib.xml:83
 msgid ""
 "<?dbfo list-presentation=\"list\"?> <?dbhtml list-presentation=\"table\"?>"
 msgstr ""
 "<?dbfo list-presentation=\"list\"?> <?dbhtml list-presentation=\"table\"?>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/zlib.xml:87
 msgid "<filename class=\"libraryfile\">libz</filename>"
 msgstr "<filename class=\"libraryfile\">libz</filename>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/zlib.xml:89
 msgid "Contains compression and decompression functions used by some programs"
 msgstr "包含一些程序使用的压缩和解压缩函数"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/zlib.xml:92
 msgid "libz"
 msgstr "libz"

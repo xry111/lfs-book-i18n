@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2020-06-17 12:44+0800\n"
+"POT-Creation-Date: 2020-08-08 19:28+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -12,13 +12,11 @@ msgstr ""
 "X-Generator: Translate Toolkit 2.2.5\n"
 
 #. type: Content of: <sect1><sect1info><address>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter06/make.xml:13
 #, no-wrap
 msgid "&make-url;"
 msgstr "&make-url;"
 
 #. type: Content of: <sect1><sect1info>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter06/make.xml:11
 msgid ""
 "<productname>make</productname> <productnumber>&make-version;</"
 "productnumber> <placeholder type=\"address\" id=\"0\"/>"
@@ -27,52 +25,42 @@ msgstr ""
 "productnumber> <placeholder type=\"address\" id=\"0\"/>"
 
 #. type: Content of: <sect1><title>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter06/make.xml:16
 msgid "Make-&make-version;"
 msgstr "Make-&make-version;"
 
 #. type: Content of: <sect1><indexterm><primary>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter06/make.xml:19
 msgid "Make"
 msgstr "Make"
 
 #. type: Content of: <sect1><indexterm><secondary>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter06/make.xml:20
 msgid "tools"
 msgstr "工具"
 
 #. type: Content of: <sect1><sect2><segmentedlist><segtitle>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter06/make.xml:31
 msgid "&buildtime;"
 msgstr "&buildtime;"
 
 #. type: Content of: <sect1><sect2><segmentedlist><segtitle>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter06/make.xml:32
 msgid "&diskspace;"
 msgstr "&diskspace;"
 
 #. type: Content of: <sect1><sect2><segmentedlist><seglistitem><seg>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter06/make.xml:35
 msgid "&make-tmp-sbu;"
 msgstr "&make-tmp-sbu;"
 
 #. type: Content of: <sect1><sect2><segmentedlist><seglistitem><seg>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter06/make.xml:36
 msgid "&make-tmp-du;"
 msgstr "&make-tmp-du;"
 
 #. type: Content of: <sect1><sect2><title>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter06/make.xml:43
 msgid "Installation of Make"
 msgstr "安装 Make"
 
 #. type: Content of: <sect1><sect2><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter06/make.xml:45
 msgid "Prepare Make for compilation:"
 msgstr "准备编译 Make："
 
 #. type: Content of: <sect1><sect2><screen>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter06/make.xml:47
 #, no-wrap
 msgid ""
 "<userinput remap=\"configure\">./configure --prefix=/usr   \\\n"
@@ -86,49 +74,41 @@ msgstr ""
 "            --build=$(build-aux/config.guess)</userinput>"
 
 #. type: Content of: <sect1><sect2><variablelist><title>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter06/make.xml:53
 msgid "The meaning of the new configure option:"
 msgstr "新出现的配置选项的含义："
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter06/make.xml:56
 msgid "<parameter>--without-guile</parameter>"
 msgstr "<parameter>--without-guile</parameter>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter06/make.xml:58
 msgid ""
 "Although we are cross-compiling, configure tries to use guile from the build "
 "host if it finds it. This makes compilation fail, so this switch prevents "
 "using it."
 msgstr ""
-"尽管我们在进行交叉编译，配置脚本如果找到宿主系统的 guile，"
-"仍然会试图使用它。这导致编译失败，因此使用该选项防止使用 guile。"
+"尽管我们在进行交叉编译，配置脚本如果找到宿主系统的 guile，仍然会试图使用它。"
+"这导致编译失败，因此使用该选项防止使用 guile。"
 
 #. type: Content of: <sect1><sect2><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter06/make.xml:65
 msgid "Compile the package:"
 msgstr "编译该软件包："
 
 #. type: Content of: <sect1><sect2><screen>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter06/make.xml:67
 #, no-wrap
 msgid "<userinput remap=\"make\">make</userinput>"
 msgstr "<userinput remap=\"make\">make</userinput>"
 
 #. type: Content of: <sect1><sect2><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter06/make.xml:69
 msgid "Install the package:"
 msgstr "安装该软件包："
 
 #. type: Content of: <sect1><sect2><screen>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter06/make.xml:71
 #, no-wrap
 msgid "<userinput remap=\"install\">make DESTDIR=$LFS install</userinput>"
 msgstr "<userinput remap=\"install\">make DESTDIR=$LFS install</userinput>"
 
 #. type: Content of: <sect1><sect2><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter06/make.xml:78
 msgid ""
 "Details on this package are located in <xref linkend=\"contents-make\" role="
 "\".\"/>"

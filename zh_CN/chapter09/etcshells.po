@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2020-06-17 12:44+0800\n"
+"POT-Creation-Date: 2020-08-08 19:28+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -12,29 +12,25 @@ msgstr ""
 "X-Generator: Translate Toolkit 2.2.5\n"
 
 #. type: Content of: <sect1><title>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter09/etcshells.xml:17
 msgid "Creating the /etc/shells File"
 msgstr "创建 /etc/shells 文件"
 
 #. type: Content of: <sect1><indexterm><primary>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter09/etcshells.xml:20
 msgid "/etc/shells"
 msgstr "/etc/shells"
 
 #. type: Content of: <sect1><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter09/etcshells.xml:23
 msgid ""
 "The <filename>shells</filename> file contains a list of login shells on the "
 "system. Applications use this file to determine whether a shell is valid. "
 "For each shell a single line should be present, consisting of the shell's "
 "path relative to the root of the directory structure (/)."
 msgstr ""
-"<filename>shells</filename> 文件包含系统登录 shell 的列表，应用程序使用该文"
-"件判断 shell 是否合法。该文件中每行指定一个 shell，包含该 shell 相对于目录树"
-"根 (/) 的路径。"
+"<filename>shells</filename> 文件包含系统登录 shell 的列表，应用程序使用该文件"
+"判断 shell 是否合法。该文件中每行指定一个 shell，包含该 shell 相对于目录树根 "
+"(/) 的路径。"
 
 #. type: Content of: <sect1><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter09/etcshells.xml:29
 msgid ""
 "For example, this file is consulted by <command>chsh</command> to determine "
 "whether an unprivileged user may change the login shell for her own account. "
@@ -45,7 +41,6 @@ msgstr ""
 "录 shell。如果命令没有在 /etc/shell 中找到，就会拒绝修改操作。"
 
 #. type: Content of: <sect1><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter09/etcshells.xml:34
 msgid ""
 "It is a requirement for applications such as <application>GDM</application> "
 "which does not populate the face browser if it can't find <filename>/etc/"
@@ -53,11 +48,10 @@ msgid ""
 "users with shells not included in this file."
 msgstr ""
 "这个文件对某些程序是必要的。例如 <application>GDM</application> 在找不到 "
-"<filename>/etc/shells</filename> 时不会填充登录界面，FTP 守护进程通常禁止那"
-"些使用未在此文件列出的终端的用户登录。"
+"<filename>/etc/shells</filename> 时不会填充登录界面，FTP 守护进程通常禁止那些"
+"使用未在此文件列出的终端的用户登录。"
 
 #. type: Content of: <sect1><screen>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter09/etcshells.xml:40
 #, no-wrap
 msgid ""
 "<userinput>cat &gt; /etc/shells &lt;&lt; \"EOF\"\n"

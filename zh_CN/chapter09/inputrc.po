@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2020-06-17 12:44+0800\n"
+"POT-Creation-Date: 2020-08-08 19:28+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -12,17 +12,14 @@ msgstr ""
 "X-Generator: Translate Toolkit 2.2.5\n"
 
 #. type: Content of: <sect1><title>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter09/inputrc.xml:11
 msgid "Creating the /etc/inputrc File"
 msgstr "创建 /etc/inputrc 文件"
 
 #. type: Content of: <sect1><indexterm><primary>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter09/inputrc.xml:14
 msgid "/etc/inputrc"
 msgstr "/etc/inputrc"
 
 #. type: Content of: <sect1><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter09/inputrc.xml:17
 msgid ""
 "The <filename>inputrc</filename> file is the configuration file for the "
 "readline library, which provides editing capabilities while the user is "
@@ -30,12 +27,11 @@ msgid ""
 "into specific actions.  Readline is used by bash and most other shells as "
 "well as many other applications."
 msgstr ""
-"<filename>inputrc</filename> 文件是 Readline 库的配置文件，该库在用户从终端"
-"输入命令行时提供编辑功能。它的工作原理是将键盘输入翻译为特定动作。"
-"Readline 被 Bash 和大多数其他 shell，以及许多其他程序使用。"
+"<filename>inputrc</filename> 文件是 Readline 库的配置文件，该库在用户从终端输"
+"入命令行时提供编辑功能。它的工作原理是将键盘输入翻译为特定动作。Readline 被 "
+"Bash 和大多数其他 shell，以及许多其他程序使用。"
 
 #. type: Content of: <sect1><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter09/inputrc.xml:23
 msgid ""
 "Most people do not need user-specific functionality so the command below "
 "creates a global <filename>/etc/inputrc</filename> used by everyone who logs "
@@ -44,24 +40,22 @@ msgid ""
 "home directory with the modified mappings."
 msgstr ""
 "多数人不需要 Readline 的用户配置功能，因此以下命令创建全局的 <filename>/etc/"
-"inputrc</filename> 文件，供所有登录用户使用。如果您之后决定对于某个用户覆盖"
-"掉默认值，您可以在该用户的主目录下创建 <filename>.inputrc</filename> 文件，包"
-"含需要修改的映射。"
+"inputrc</filename> 文件，供所有登录用户使用。如果您之后决定对于某个用户覆盖掉"
+"默认值，您可以在该用户的主目录下创建 <filename>.inputrc</filename> 文件，包含"
+"需要修改的映射。"
 
 #. type: Content of: <sect1><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter09/inputrc.xml:29
 msgid ""
 "For more information on how to edit the <filename>inputrc</filename> file, "
 "see <command>info bash</command> under the <emphasis>Readline Init File</"
 "emphasis> section. <command>info readline</command> is also a good source of "
 "information."
 msgstr ""
-"关于更多如何编写 <filename>inputrc</filename> 文件的信息，参考 "
-"<command>info bash</command> 中 <emphasis>Readline Init File</emphasis> 一"
-"节。<command>info readline</command> 也是一个很好的信息源。"
+"关于更多如何编写 <filename>inputrc</filename> 文件的信息，参考 <command>info "
+"bash</command> 中 <emphasis>Readline Init File</emphasis> 一节。"
+"<command>info readline</command> 也是一个很好的信息源。"
 
 #. type: Content of: <sect1><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter09/inputrc.xml:34
 msgid ""
 "Below is a generic global <filename>inputrc</filename> along with comments "
 "to explain what the various options do. Note that comments cannot be on the "
@@ -71,7 +65,6 @@ msgstr ""
 "的注释。注意注释不能和命令写在同一行。执行以下命令创建该文件："
 
 #. type: Content of: <sect1><screen>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter09/inputrc.xml:38
 #, no-wrap
 msgid ""
 "<userinput>cat &gt; /etc/inputrc &lt;&lt; \"EOF\"\n"

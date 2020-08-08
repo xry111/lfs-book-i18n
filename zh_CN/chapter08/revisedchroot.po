@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2020-07-05 22:27+0800\n"
+"POT-Creation-Date: 2020-08-08 19:28+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -12,23 +12,19 @@ msgstr ""
 "X-Generator: Translate Toolkit 2.2.5\n"
 
 #. type: Content of: <sect1><title>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/revisedchroot.xml:11
 msgid "Cleaning Up"
 msgstr "清理系统"
 
 #. type: Content of: <sect1><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/revisedchroot.xml:13
 msgid "Finally, clean up some extra files left around from running tests:"
 msgstr "最后，清理在执行测试的过程中遗留的一些文件："
 
 #. type: Content of: <sect1><screen>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/revisedchroot.xml:15
 #, no-wrap
 msgid "<userinput>rm -rf /tmp/*</userinput>"
 msgstr "<userinput>rm -rf /tmp/*</userinput>"
 
 #. type: Content of: <sect1><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/revisedchroot.xml:17
 msgid ""
 "Now log out and reenter the chroot environment with an updated chroot "
 "command.  From now on, use this updated chroot command any time you need to "
@@ -38,7 +34,6 @@ msgstr ""
 "并重新进入 chroot 环境时，要使用下面的修改过的 chroot 命令："
 
 #. type: Content of: <sect1><screen>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/revisedchroot.xml:21
 #, no-wrap
 msgid ""
 "<userinput>logout\n"
@@ -58,7 +53,6 @@ msgstr ""
 "    /bin/bash --login</userinput>"
 
 #. type: Content of: <sect1><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/revisedchroot.xml:29
 msgid ""
 "Here the <parameter>+h</parameter> option is not used anymore, since all the "
 "previous programs have been replaced: hashing is therefore possible."
@@ -67,7 +61,6 @@ msgstr ""
 "成了最终版本，可以进行散列。"
 
 #. type: Content of: <sect1><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/revisedchroot.xml:33
 msgid ""
 "If the virtual kernel file systems have been unmounted, either manually or "
 "through a reboot, ensure that the virtual kernel file systems are mounted "
@@ -79,7 +72,6 @@ msgstr ""
 "<xref linkend=\"ch-tools-kernfsmount\"/>已经说明了这一过程。"
 
 #. type: Content of: <sect1><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/revisedchroot.xml:39
 msgid ""
 "There were several static libraries that were not suppressed earlier in the "
 "chapter in order to satisfy the regression tests in several packages. These "
@@ -91,7 +83,6 @@ msgstr ""
 "您希望的话，可以现在删除它们："
 
 #. type: Content of: <sect1><screen>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/revisedchroot.xml:44
 #, no-wrap
 msgid ""
 "<userinput>rm -f /usr/lib/lib{bfd,opcodes}.a\n"
@@ -111,7 +102,6 @@ msgstr ""
 "rm -f /usr/lib/libz.a</userinput>"
 
 #. type: Content of: <sect1><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/revisedchroot.xml:52
 msgid ""
 "There are also several files installed in the /usr/lib and /usr/libexec "
 "directories with a file name extention of .la. These are \"libtool archive\" "
@@ -125,13 +115,11 @@ msgstr ""
 "autotools 以外的构建系统时，是不必要，甚至有害的。执行以下命令删除它们："
 
 #. type: Content of: <sect1><screen>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/revisedchroot.xml:59
 #, no-wrap
 msgid "<userinput>find /usr/lib /usr/libexec -name \\*.la -delete</userinput>"
 msgstr "<userinput>find /usr/lib /usr/libexec -name \\*.la -delete</userinput>"
 
 #. type: Content of: <sect1><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/revisedchroot.xml:61
 msgid ""
 "For more information about libtool archive files, see the <ulink url=\"&blfs-"
 "book;/introduction/la-files.html\">BLFS section \"About Libtool Archive (."
@@ -142,7 +130,6 @@ msgstr ""
 "\"</ulink>。"
 
 #. type: Content of: <sect1><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/revisedchroot.xml:65
 msgid ""
 "The compiler built in <xref linkend=\"chapter-temporary-tools\"/> and <xref "
 "linkend=\"chapter-chroot-temporary-tools\"/> is still partially installed, "
@@ -153,12 +140,11 @@ msgstr ""
 "没有存在的意义了。执行命令删除它："
 
 #. type: Content of: <sect1><screen>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/revisedchroot.xml:69
+#, no-wrap
 msgid "<userinput>find /usr -depth -name $(uname -m)-lfs-linux-gnu\\* | xargs rm -rf</userinput>"
 msgstr "<userinput>find /usr -depth -name $(uname -m)-lfs-linux-gnu\\* | xargs rm -rf</userinput>"
 
 #. type: Content of: <sect1><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/revisedchroot.xml:71
 msgid ""
 "The <filename class=\"directory\">/tools</filename> directory can also be "
 "removed to further gain some place:"
@@ -167,20 +153,17 @@ msgstr ""
 "用空间："
 
 #. type: Content of: <sect1><screen>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/revisedchroot.xml:74
 #, no-wrap
 msgid "<userinput>rm -rf /tools</userinput>"
 msgstr "<userinput>rm -rf /tools</userinput>"
 
 #. type: Content of: <sect1><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/revisedchroot.xml:76
 msgid ""
 "Finally, remove the temporary 'tester' user account created at the beginning "
 "of the previous chapter."
 msgstr "最后，移除上一章开始时创建的临时 'tester' 用户账户。"
 
 #. type: Content of: <sect1><screen>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/revisedchroot.xml:79
 #, no-wrap
 msgid "<userinput>userdel -r tester</userinput>"
 msgstr "<userinput>userdel -r tester</userinput>"

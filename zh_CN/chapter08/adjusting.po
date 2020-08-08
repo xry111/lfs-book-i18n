@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2020-06-24 15:59+0800\n"
+"POT-Creation-Date: 2020-08-08 19:28+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -12,22 +12,19 @@ msgstr ""
 "X-Generator: Translate Toolkit 2.2.5\n"
 
 #. type: Content of: <sect1><title>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/adjusting.xml:11
 msgid "Adjusting the Toolchain"
 msgstr "调整工具链"
 
 #. type: Content of: <sect1><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/adjusting.xml:13
 msgid ""
 "Now that the final C libraries have been installed, it is time to adjust the "
 "toolchain so that it will link any newly compiled program against these new "
 "libraries."
 msgstr ""
-"现在最终的 C 运行库已经安装好了，这时就要调整工具链，以便将新编译的任何程序"
-"都链接到新的 C 运行库。"
+"现在最终的 C 运行库已经安装好了，这时就要调整工具链，以便将新编译的任何程序都"
+"链接到新的 C 运行库。"
 
 #. type: Content of: <sect1><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/adjusting.xml:17
 msgid ""
 "First, backup the <filename class=\"directory\">/tools</filename> linker, "
 "and replace it with the adjusted linker we made in chapter 5. We'll also "
@@ -40,7 +37,6 @@ msgstr ""
 "接："
 
 #. type: Content of: <sect1><screen>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/adjusting.xml:22
 #, no-wrap
 msgid ""
 "<userinput>mv -v /tools/bin/{ld,ld-old}\n"
@@ -54,7 +50,6 @@ msgstr ""
 "ln -sv /tools/bin/ld /tools/$(uname -m)-pc-linux-gnu/bin/ld</userinput>"
 
 #. type: Content of: <sect1><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/adjusting.xml:27
 msgid ""
 "the next command amends the GCC specs file to achieve three goals: first "
 "point GCC to the new dynamic linker. Simply deleting all instances of "
@@ -65,12 +60,11 @@ msgid ""
 "accomplishes this:"
 msgstr ""
 "下面修改 GCC 的 specs 文件，使其指向新的动态链接器。把所有的 <quote>/tools</"
-"quote> 删除掉就会留下正确的路径。另外，调整 specs 文件，使得 GCC 知道去哪里"
-"寻找正确的头文件和 Glibc 启动文件。最后，在默认搜索路径之后加入 /usr/include 目录。一个 <command>sed</command> 命令即可完成以"
-"上工作："
+"quote> 删除掉就会留下正确的路径。另外，调整 specs 文件，使得 GCC 知道去哪里寻"
+"找正确的头文件和 Glibc 启动文件。最后，在默认搜索路径之后加入 /usr/include 目"
+"录。一个 <command>sed</command> 命令即可完成以上工作："
 
 #. type: Content of: <sect1><screen>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/adjusting.xml:35
 #, no-wrap
 msgid ""
 "<userinput>gcc -dumpspecs | sed -e 's@/tools@@g'                   \\\n"
@@ -84,14 +78,12 @@ msgstr ""
 "    `dirname $(gcc --print-libgcc-file-name)`/specs</userinput>"
 
 #. type: Content of: <sect1><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/adjusting.xml:40
 msgid ""
 "It is a good idea to visually inspect the specs file to verify the intended "
 "change was actually made."
 msgstr "这时最好浏览一下生成的 specs 文件，以确认确实进行了我们期望的修改。"
 
 #. type: Content of: <sect1><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/adjusting.xml:43
 msgid ""
 "It is imperative at this point to ensure that the basic functions (compiling "
 "and linking) of the adjusted toolchain are working as expected. To do this, "
@@ -101,7 +93,6 @@ msgstr ""
 "样工作。为此，进行下列完整性检查："
 
 #. type: Content of: <sect1><screen>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/adjusting.xml:47
 #, no-wrap
 msgid ""
 "<userinput>echo 'int main(){}' &gt; dummy.c\n"
@@ -113,7 +104,6 @@ msgstr ""
 "readelf -l a.out | grep ': /lib'</userinput>"
 
 #. type: Content of: <sect1><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/adjusting.xml:51
 msgid ""
 "There should be no errors, and the output of the last command will be "
 "(allowing for platform-specific differences in the dynamic linker name):"
@@ -122,13 +112,11 @@ msgstr ""
 "可能不同) 是："
 
 #. type: Content of: <sect1><screen>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/adjusting.xml:55
 #, no-wrap
 msgid "<computeroutput>[Requesting program interpreter: /lib64/ld-linux-x86-64.so.2]</computeroutput>"
 msgstr "<computeroutput>[Requesting program interpreter: /lib64/ld-linux-x86-64.so.2]</computeroutput>"
 
 #. type: Content of: <sect1><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/adjusting.xml:57
 msgid ""
 "Note that on 64-bit systems <filename class=\"directory\">/lib</filename> is "
 "the location of our dynamic linker, but is accessed via a symbolic link in /"
@@ -138,29 +126,23 @@ msgstr ""
 "的位置，但通过 /lib64 中的符号链接访问。"
 
 #. type: Content of: <sect1><note><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/adjusting.xml:61
 msgid "On 32-bit systems the interpreter should be /lib/ld-linux.so.2."
 msgstr "在 32 位系统上，解释器是 /lib/ld-linux.so.2。"
 
 #. type: Content of: <sect1><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/adjusting.xml:64
 msgid "Now make sure that we're setup to use the correct start files:"
 msgstr "下面确认我们的设定能够使用正确的启动文件："
 
 #. type: Content of: <sect1><screen>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/adjusting.xml:66
 #, no-wrap
 msgid "<userinput>grep -o '/usr/lib.*/crt[1in].*succeeded' dummy.log</userinput>"
 msgstr "<userinput>grep -o '/usr/lib.*/crt[1in].*succeeded' dummy.log</userinput>"
 
 #. type: Content of: <sect1><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/adjusting.xml:68
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/adjusting.xml:103
 msgid "The output of the last command should be:"
 msgstr "以上命令应该输出："
 
 #. type: Content of: <sect1><screen>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/adjusting.xml:70
 #, no-wrap
 msgid ""
 "<computeroutput>/usr/lib/../lib/crt1.o succeeded\n"
@@ -172,23 +154,19 @@ msgstr ""
 "/usr/lib/../lib/crtn.o succeeded</computeroutput>"
 
 #. type: Content of: <sect1><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/adjusting.xml:74
 msgid "Verify that the compiler is searching for the correct header files:"
 msgstr "确认编译器能正确查找头文件："
 
 #. type: Content of: <sect1><screen>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/adjusting.xml:77
 #, no-wrap
 msgid "<userinput>grep -B4 '^ /usr/include' dummy.log</userinput>"
 msgstr "<userinput>grep -B4 '^ /usr/include' dummy.log</userinput>"
 
 #. type: Content of: <sect1><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/adjusting.xml:79
 msgid "This command should return the following output:"
 msgstr "该命令应当输出："
 
 #. type: Content of: <sect1><screen>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/adjusting.xml:81
 #, no-wrap
 msgid ""
 "<computeroutput>#include &lt;...&gt; search starts here:\n"
@@ -204,31 +182,26 @@ msgstr ""
 " /usr/include</computeroutput>"
 
 #. type: Content of: <sect1><note><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/adjusting.xml:87
 msgid "On a 32 bit system, x86_64 is replaced with i686."
 msgstr "在 32 位系统上，应该将 x86_64 替换成 i686。"
 
 #. type: Content of: <sect1><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/adjusting.xml:89
 msgid ""
 "Next, verify that the new linker is being used with the correct search paths:"
 msgstr "下一步确认新的链接器使用了正确的搜索路径："
 
 #. type: Content of: <sect1><screen>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/adjusting.xml:91
 #, no-wrap
 msgid "<userinput>grep 'SEARCH.*/usr/lib' dummy.log |sed 's|; |\\n|g'</userinput>"
 msgstr "<userinput>grep 'SEARCH.*/usr/lib' dummy.log |sed 's|; |\\n|g'</userinput>"
 
 #. type: Content of: <sect1><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/adjusting.xml:93
 msgid ""
 "References to paths that have components with '-linux-gnu' should be "
 "ignored, but otherwise the output of the last command should be:"
 msgstr "那些包含 '-linux-gnu' 的路径应该忽略，除此之外，以上命令应该输出："
 
 #. type: Content of: <sect1><screen>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/adjusting.xml:96
 #, no-wrap
 msgid ""
 "<computeroutput>SEARCH_DIR(\"/usr/lib\")\n"
@@ -238,42 +211,35 @@ msgstr ""
 "SEARCH_DIR(\"/lib\")</computeroutput>"
 
 #. type: Content of: <sect1><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/adjusting.xml:99
 msgid "Next make sure that we're using the correct libc:"
 msgstr "之后确认我们使用了正确的 libc："
 
 #. type: Content of: <sect1><screen>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/adjusting.xml:101
 #, no-wrap
 msgid "<userinput>grep \"/lib.*/libc.so.6 \" dummy.log</userinput>"
 msgstr "<userinput>grep \"/lib.*/libc.so.6 \" dummy.log</userinput>"
 
 #. type: Content of: <sect1><screen>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/adjusting.xml:105
 #, no-wrap
 msgid "<computeroutput>attempt to open /lib/libc.so.6 succeeded</computeroutput>"
 msgstr "<computeroutput>attempt to open /lib/libc.so.6 succeeded</computeroutput>"
 
 #. type: Content of: <sect1><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/adjusting.xml:107
 msgid "Make sure GCC is using the correct dynamic linker:"
 msgstr "确认 GCC 使用了正确的动态链接器："
 
 #. type: Content of: <sect1><screen>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/adjusting.xml:109
 #, no-wrap
 msgid "<userinput>grep found dummy.log</userinput>"
 msgstr "<userinput>grep found dummy.log</userinput>"
 
 #. type: Content of: <sect1><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/adjusting.xml:111
 msgid ""
 "The output of the last command should be (allowing for platform-specific "
 "differences in dynamic linker name):"
 msgstr "以上命令应该输出 (不同平台的动态链接器名称可能不同):"
 
 #. type: Content of: <sect1><screen>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/adjusting.xml:114
 #, no-wrap
 msgid "<computeroutput>found ld-linux-x86-64.so.2 at /lib/ld-linux-x86-64.so.2</computeroutput>"
 msgstr "<computeroutput>found ld-linux-x86-64.so.2 at /lib/ld-linux-x86-64.so.2</computeroutput>"
@@ -281,7 +247,6 @@ msgstr "<computeroutput>found ld-linux-x86-64.so.2 at /lib/ld-linux-x86-64.so.2<
 #. The most likely
 #.   reason is that something went wrong with the specs file adjustment.
 #. type: Content of: <sect1><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/adjusting.xml:116
 msgid ""
 "If the output does not appear as shown above or is not received at all, then "
 "something is seriously wrong. Investigate and retrace the steps to find out "
@@ -289,15 +254,14 @@ msgid ""
 "before continuing with the process."
 msgstr ""
 "如果输出和以上描述不符，或者根本没有输出，那么必然有什么地方出了严重错误。检"
-"查并重新跟踪以上步骤，找到问题的原因，并修复它。这里出现的任何问题在继续构建前都必须解决。"
+"查并重新跟踪以上步骤，找到问题的原因，并修复它。这里出现的任何问题在继续构建"
+"前都必须解决。"
 
 #. type: Content of: <sect1><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/adjusting.xml:122
 msgid "Once everything is working correctly, clean up the test files:"
 msgstr "在确认一切工作良好后，删除测试文件："
 
 #. type: Content of: <sect1><screen>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/adjusting.xml:124
 #, no-wrap
 msgid "<userinput>rm -v dummy.c a.out dummy.log</userinput>"
 msgstr "<userinput>rm -v dummy.c a.out dummy.log</userinput>"

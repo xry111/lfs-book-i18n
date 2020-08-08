@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2020-06-23 15:47+0800\n"
+"POT-Creation-Date: 2020-08-08 19:28+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -12,12 +12,10 @@ msgstr ""
 "X-Generator: Translate Toolkit 2.2.5\n"
 
 #. type: Content of: <sect1><title>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter04/settingenviron.xml:11
 msgid "Setting Up the Environment"
 msgstr "配置环境"
 
 #. type: Content of: <sect1><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter04/settingenviron.xml:13
 msgid ""
 "Set up a good working environment by creating two new startup files for the "
 "<command>bash</command> shell. While logged in as user <systemitem class="
@@ -29,7 +27,6 @@ msgstr ""
 "创建一个新的 <filename>.bash_profile</filename>："
 
 #. type: Content of: <sect1><screen>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter04/settingenviron.xml:18
 #, no-wrap
 msgid ""
 "<userinput>cat &gt; ~/.bash_profile &lt;&lt; \"EOF\"\n"
@@ -42,7 +39,6 @@ msgstr ""
 
 # swap two labels
 #. type: Content of: <sect1><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter04/settingenviron.xml:22
 msgid ""
 "When logged on as user <systemitem class=\"username\">lfs</systemitem>, the "
 "initial shell is usually a <emphasis>login</emphasis> shell which reads the "
@@ -66,7 +62,6 @@ msgstr ""
 "量进入编译环境。通过使用以上技巧，我们创建了一个干净环境。"
 
 #. type: Content of: <sect1><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter04/settingenviron.xml:34
 msgid ""
 "The new instance of the shell is a <emphasis>non-login</emphasis> shell, "
 "which does not read, and execute, the conten of <filename>/etc/profile</"
@@ -80,7 +75,6 @@ msgstr ""
 "<filename>.bashrc</filename> 文件："
 
 #. type: Content of: <sect1><screen>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter04/settingenviron.xml:40
 #, no-wrap
 msgid ""
 "<userinput>cat &gt; ~/.bashrc &lt;&lt; \"EOF\"\n"
@@ -108,17 +102,14 @@ msgstr ""
 "EOF</userinput>"
 
 #. type: Content of: <sect1><variablelist><title>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter04/settingenviron.xml:53
 msgid "The meaning of the settings in <filename>.bashrc</filename>"
 msgstr "<filename>.bashrc</filename> 中设定的含义："
 
 #. type: Content of: <sect1><variablelist><varlistentry><term>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter04/settingenviron.xml:56
 msgid "<parameter>set +h</parameter>"
 msgstr "<parameter>set +h</parameter>"
 
 #. type: Content of: <sect1><variablelist><varlistentry><listitem><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter04/settingenviron.xml:58
 msgid ""
 "The <command>set +h</command> command turns off <command>bash</command>'s "
 "hash function. Hashing is ordinarily a useful feature&mdash;<command>bash</"
@@ -140,12 +131,10 @@ msgstr ""
 "的工具，而不是使用之前记忆的另一个目录中的程序。"
 
 #. type: Content of: <sect1><variablelist><varlistentry><term>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter04/settingenviron.xml:73
 msgid "<parameter>umask 022</parameter>"
 msgstr "<parameter>umask 022</parameter>"
 
 #. type: Content of: <sect1><variablelist><varlistentry><listitem><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter04/settingenviron.xml:75
 msgid ""
 "Setting the user file-creation mask (umask) to 022 ensures that newly "
 "created files and directories are only writable by their owner, but are "
@@ -158,23 +147,19 @@ msgstr ""
 "用使用默认模式，则新文件将具有权限码 644，而新目录具有权限码 755)。"
 
 #. type: Content of: <sect1><variablelist><varlistentry><term>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter04/settingenviron.xml:84
 msgid "<parameter>LFS=/mnt/lfs</parameter>"
 msgstr "<parameter>LFS=/mnt/lfs</parameter>"
 
 #. type: Content of: <sect1><variablelist><varlistentry><listitem><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter04/settingenviron.xml:86
 msgid ""
 "The <envar>LFS</envar> variable should be set to the chosen mount point."
 msgstr "<envar>LFS</envar> 环境变量必须被设定为之前选择的挂载点。"
 
 #. type: Content of: <sect1><variablelist><varlistentry><term>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter04/settingenviron.xml:92
 msgid "<parameter>LC_ALL=POSIX</parameter>"
 msgstr "<parameter>LC_ALL=POSIX</parameter>"
 
 #. type: Content of: <sect1><variablelist><varlistentry><listitem><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter04/settingenviron.xml:94
 msgid ""
 "The <envar>LC_ALL</envar> variable controls the localization of certain "
 "programs, making their messages follow the conventions of a specified "
@@ -188,12 +173,10 @@ msgstr ""
 "为完全符合预期，而与宿主的本地化设置无关。"
 
 #. type: Content of: <sect1><variablelist><varlistentry><term>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter04/settingenviron.xml:103
 msgid "<parameter>LFS_TGT=(uname -m)-lfs-linux-gnu</parameter>"
 msgstr "<parameter>LFS_TGT=(uname -m)-lfs-linux-gnu</parameter>"
 
 #. type: Content of: <sect1><variablelist><varlistentry><listitem><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter04/settingenviron.xml:105
 msgid ""
 "The <envar>LFS_TGT</envar> variable sets a non-default, but compatible "
 "machine description for use when building our cross compiler and linker and "
@@ -205,12 +188,10 @@ msgstr ""
 "toolchaintechnotes\" role=\"\"/>包含了关于这个描述符的更多信息。"
 
 #. type: Content of: <sect1><variablelist><varlistentry><term>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter04/settingenviron.xml:113
 msgid "<parameter>PATH=/usr/bin</parameter>"
 msgstr "<parameter>PATH=/usr/bin</parameter>"
 
 #. type: Content of: <sect1><variablelist><varlistentry><listitem><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter04/settingenviron.xml:115
 msgid ""
 "Many modern linux distributions have merged <filename class=\"directory\">/"
 "bin</filename> and <filename class=\"directory\">/usr/bin</filename>. When "
@@ -228,12 +209,10 @@ msgstr ""
 "中。"
 
 #. type: Content of: <sect1><variablelist><varlistentry><term>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter04/settingenviron.xml:127
 msgid "<parameter>if [ ! -L /bin ]; then PATH=/bin:$PATH; fi</parameter>"
 msgstr "<parameter>if [ ! -L /bin ]; then PATH=/bin:$PATH; fi</parameter>"
 
 #. type: Content of: <sect1><variablelist><varlistentry><listitem><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter04/settingenviron.xml:129
 msgid ""
 "If <filename class=\"directory\">/bin</filename> is not a symbolic link, "
 "then it has to be added to the <envar>PATH</envar> variable."
@@ -242,12 +221,10 @@ msgstr ""
 "加到 <envar>PATH</envar> 变量中。"
 
 #. type: Content of: <sect1><variablelist><varlistentry><term>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter04/settingenviron.xml:135
 msgid "<parameter>PATH=$LFS/tools/bin:$PATH</parameter>"
 msgstr "<parameter>PATH=$LFS/tools/bin:$PATH</parameter>"
 
 #. type: Content of: <sect1><variablelist><varlistentry><listitem><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter04/settingenviron.xml:137
 msgid ""
 "By putting <filename class=\"directory\">$LFS/tools/bin</filename> ahead of "
 "the standard <envar>PATH</envar>, the cross-compiler installed at the "
@@ -262,12 +239,10 @@ msgstr ""
 "合，降低了在第 5 章环境中新程序可用时错误地使用宿主系统中旧程序的风险。"
 
 #. type: Content of: <sect1><variablelist><varlistentry><term>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter04/settingenviron.xml:147
 msgid "<parameter>export LFS LC_ALL LFS_TGT PATH</parameter>"
 msgstr "<parameter>export LFS LC_ALL LFS_TGT PATH</parameter>"
 
 #. type: Content of: <sect1><variablelist><varlistentry><listitem><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter04/settingenviron.xml:149
 msgid ""
 "While the above commands have set some variables, in order to make them "
 "visible within any sub-shells, we export them."
@@ -275,7 +250,6 @@ msgstr ""
 "前面的命令设定了一些变量，为了让所有子 shell 都能使用这些变量，需要导出它们。"
 
 #. type: Content of: <sect1><important><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter04/settingenviron.xml:158
 msgid ""
 "Several commercial distributions add a non-documented instantiation of "
 "<filename>/etc/bash.bashrc</filename> to the initialization of "
@@ -289,19 +263,17 @@ msgid ""
 msgstr ""
 "一些商业发行版在 <command>bash</command> 初始化过程中，未做文档说明地增加了 "
 "<filename>/etc/bash.bashrc</filename>。该文件可能修改 <systemitem class="
-"\"username\">lfs</systemitem> 用户的环境，并影响 LFS 关键软件包的构建。为"
-"了保证 <systemitem class=\"username\">lfs</systemitem> 用户环境的纯净，检查 "
+"\"username\">lfs</systemitem> 用户的环境，并影响 LFS 关键软件包的构建。为了保"
+"证 <systemitem class=\"username\">lfs</systemitem> 用户环境的纯净，检查 "
 "<filename>/etc/bash.bashrc</filename> 是否存在，如果它存在就将它移走。以 "
 "<systemitem class=\"username\">root</systemitem> 用户身份，运行："
 
 #. type: Content of: <sect1><important><screen>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter04/settingenviron.xml:169
 #, no-wrap
 msgid "<userinput>[ ! -e /etc/bash.bashrc ] || mv -v /etc/bash.bashrc /etc/bash.bashrc.NOUSE</userinput>"
 msgstr "<userinput>[ ! -e /etc/bash.bashrc ] || mv -v /etc/bash.bashrc /etc/bash.bashrc.NOUSE</userinput>"
 
 #. type: Content of: <sect1><important><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter04/settingenviron.xml:171
 msgid ""
 "After use of the <systemitem class=\"username\">lfs</systemitem> user is "
 "finished at the beginning of <xref linkend=\"chapter-chroot-temporary-tools"
@@ -312,7 +284,6 @@ msgstr ""
 "复原 <filename>/etc/bash.bashrc</filename> 文件。"
 
 #. type: Content of: <sect1><important><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter04/settingenviron.xml:176
 msgid ""
 "Note that the LFS Bash package we will build in <xref linkend=\"ch-system-"
 "bash\"/> is not configured to load or execute <filename>/etc/bash.bashrc</"
@@ -323,7 +294,6 @@ msgstr ""
 "统中没有作用。"
 
 #. type: Content of: <sect1><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter04/settingenviron.xml:182
 msgid ""
 "Finally, to have the environment fully prepared for building the temporary "
 "tools, source the just-created user profile:"
@@ -331,7 +301,6 @@ msgstr ""
 "最后，为了完全准备好编译临时工具的环境，指示 shell 读取刚才创建的配置文件："
 
 #. type: Content of: <sect1><screen>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter04/settingenviron.xml:185
 #, no-wrap
 msgid "<userinput>source ~/.bash_profile</userinput>"
 msgstr "<userinput>source ~/.bash_profile</userinput>"

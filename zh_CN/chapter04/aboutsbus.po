@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2020-06-17 12:44+0800\n"
+"POT-Creation-Date: 2020-08-08 19:28+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -12,12 +12,10 @@ msgstr ""
 "X-Generator: Translate Toolkit 2.2.5\n"
 
 #. type: Content of: <sect1><title>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter04/aboutsbus.xml:11
 msgid "About SBUs"
 msgstr "关于 SBU"
 
 #. type: Content of: <sect1><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter04/aboutsbus.xml:13
 msgid ""
 "Many people would like to know beforehand approximately how long it takes to "
 "compile and install each package. Because Linux From Scratch can be built on "
@@ -27,14 +25,12 @@ msgid ""
 "of providing actual times, the Standard Build Unit (SBU) measure will be "
 "used instead."
 msgstr ""
-"许多人想在编译和安装各个软件包之前，了解这一过程大概需要多少时间。由于 "
-"Linux From Scratch 可以在许多不同系统上构建，我们无法直接给出估计时间。例"
-"如，最大的软件包 (Glibc)  在最快的系统上只要大约 20 分钟就能构建好，而在一些"
-"较慢的系统上需要 3 天！因此，我们不提供实际时间，而是以标准构建单位 (SBU) 衡"
-"量时间。"
+"许多人想在编译和安装各个软件包之前，了解这一过程大概需要多少时间。由于 Linux "
+"From Scratch 可以在许多不同系统上构建，我们无法直接给出估计时间。例如，最大的"
+"软件包 (Glibc)  在最快的系统上只要大约 20 分钟就能构建好，而在一些较慢的系统"
+"上需要 3 天！因此，我们不提供实际时间，而是以标准构建单位 (SBU) 衡量时间。"
 
 #. type: Content of: <sect1><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter04/aboutsbus.xml:22
 msgid ""
 "The SBU measure works as follows. The first package to be compiled from this "
 "book is binutils in <xref linkend=\"chapter-cross-tools\"/>. The time it "
@@ -42,12 +38,11 @@ msgid ""
 "Build Unit or SBU. All other compile times will be expressed relative to "
 "this time."
 msgstr ""
-"下面给出标准构建单位的测量方法。本书中构建的第一个软件包是 <xref linkend=\"chapter-"
-"cross-tools\"/> 中的 Binutils，定义编译它需要的时间为标准构建单位，缩写"
-"为 SBU。其他软件包的编译时间用 SBU 为单位表示。"
+"下面给出标准构建单位的测量方法。本书中构建的第一个软件包是 <xref linkend="
+"\"chapter-cross-tools\"/> 中的 Binutils，定义编译它需要的时间为标准构建单位，"
+"缩写为 SBU。其他软件包的编译时间用 SBU 为单位表示。"
 
 #. type: Content of: <sect1><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter04/aboutsbus.xml:28
 msgid ""
 "For example, consider a package whose compilation time is 4.5 SBUs. This "
 "means that if a system took 10 minutes to compile and install the first pass "
@@ -55,12 +50,11 @@ msgid ""
 "build this example package.  Fortunately, most build times are shorter than "
 "the one for binutils."
 msgstr ""
-"例如，考虑一个编译时间是 4.5 SBU 的软件包。如果在某个系统上，需要 10 分钟来"
-"编译和安装第一轮的 Binutils，那么<emphasis>大概</emphasis>需要 45 分钟才能"
-"构建这个软件包。幸运的是，多数软件包构建时间比 Binutils 少。"
+"例如，考虑一个编译时间是 4.5 SBU 的软件包。如果在某个系统上，需要 10 分钟来编"
+"译和安装第一轮的 Binutils，那么<emphasis>大概</emphasis>需要 45 分钟才能构建"
+"这个软件包。幸运的是，多数软件包构建时间比 Binutils 少。"
 
 #. type: Content of: <sect1><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter04/aboutsbus.xml:34
 msgid ""
 "In general, SBUs are not entirely accurate because they depend on many "
 "factors, including the host system's version of GCC.  They are provided here "
@@ -68,11 +62,10 @@ msgid ""
 "numbers can vary by as much as dozens of minutes in some cases."
 msgstr ""
 "一般来说，SBU 不是完全准确的。这是由于它受到许多因素的影响，包括宿主系统的 "
-"GCC 版本。SBU 只能用来估计安装一个软件包可能需要的时间，估计结果的误差在个"
-"别情况下可能达到几十分钟。"
+"GCC 版本。SBU 只能用来估计安装一个软件包可能需要的时间，估计结果的误差在个别"
+"情况下可能达到几十分钟。"
 
 #. type: Content of: <sect1><note><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter04/aboutsbus.xml:40
 msgid ""
 "For many modern systems with multiple processors (or cores) the compilation "
 "time for a package can be reduced by performing a \"parallel make\" by "
@@ -80,28 +73,26 @@ msgid ""
 "command> program how many processors are available.  For instance, an Intel "
 "i5-6500 CPU can support four simultaneous processes with:"
 msgstr ""
-"对于许多拥有多个处理器 (或处理器核心) 的现代系统，可以显著"
-"缩短软件包的编译时间，设置环境变量或者直接告诉 <command>make</command> 命"
-"令有多少个可用的处理器，即可进行并行构建。例如，一块 Intel i5-6500 CPU "
-"可以支持 4 个同时运行的进程，可以设定："
+"对于许多拥有多个处理器 (或处理器核心) 的现代系统，可以显著缩短软件包的编译时"
+"间，设置环境变量或者直接告诉 <command>make</command> 命令有多少个可用的处理"
+"器，即可进行并行构建。例如，一块 Intel i5-6500 CPU 可以支持 4 个同时运行的进"
+"程，可以设定："
 
 #. type: Content of: <sect1><note><screen>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter04/aboutsbus.xml:46
+#, no-wrap
 msgid "<userinput>export MAKEFLAGS='-j4'</userinput>"
 msgstr "<userinput>export MAKEFLAGS='-j4'</userinput>"
 
 #. type: Content of: <sect1><note><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter04/aboutsbus.xml:48
 msgid "or just building with:"
 msgstr "或者直接用以下命令构建："
 
 #. type: Content of: <sect1><note><screen>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter04/aboutsbus.xml:50
+#, no-wrap
 msgid "<userinput>make -j4</userinput>"
 msgstr "<userinput>make -j4</userinput>"
 
 #. type: Content of: <sect1><note><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter04/aboutsbus.xml:52
 msgid ""
 "When multiple processors are used in this way, the SBU units in the book "
 "will vary even more than they normally would.  In some cases, the make step "
@@ -111,6 +102,6 @@ msgid ""
 "single processor build to properly analyze the error messages."
 msgstr ""
 "用这种方式使用多个处理器时，SBU 值将会发生变化，有时甚至变得比正常值还大。某"
-"些情况下，还会导致 make 命令失败。另外，分析构建过程的的输出也会变得困难，"
-"因为不同进程的输出行会交错在一起。如果在构建过程中出现问题，需要使用单处理器"
-"进行构建，才能更好地分析错误消息。"
+"些情况下，还会导致 make 命令失败。另外，分析构建过程的的输出也会变得困难，因"
+"为不同进程的输出行会交错在一起。如果在构建过程中出现问题，需要使用单处理器进"
+"行构建，才能更好地分析错误消息。"

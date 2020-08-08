@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2020-06-17 12:44+0800\n"
+"POT-Creation-Date: 2020-08-08 19:28+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -12,27 +12,22 @@ msgstr ""
 "X-Generator: Translate Toolkit 2.2.5\n"
 
 #. type: Content of: <sect1><title>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter09/usage.xml:12
 msgid "System V Bootscript Usage and Configuration"
 msgstr "System V 引导脚本使用与配置"
 
 #. type: Content of: <sect1><indexterm><primary>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter09/usage.xml:15
 msgid "Bootscripts"
 msgstr "Bootscripts"
 
 #. type: Content of: <sect1><indexterm><secondary>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter09/usage.xml:16
 msgid "usage"
 msgstr "usage"
 
 #. type: Content of: <sect1><sect2><title>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter09/usage.xml:20
 msgid "How Do the System V Bootscripts Work?"
 msgstr "System V 引导脚本如何工作？"
 
 #. type: Content of: <sect1><sect2><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter09/usage.xml:22
 msgid ""
 "Linux uses a special booting facility named SysVinit that is based on a "
 "concept of <emphasis>run-levels</emphasis>. It can be quite different from "
@@ -47,7 +42,6 @@ msgstr ""
 "些独特的工作方式，但它也遵守被广泛接受的标准。"
 
 #. type: Content of: <sect1><sect2><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter09/usage.xml:28
 msgid ""
 "SysVinit (which will be referred to as <quote>init</quote> from now on)  "
 "works using a run-levels scheme. There are seven (numbered 0 to 6) run-"
@@ -63,7 +57,6 @@ msgstr ""
 "进行的一组操作。默认运行级别是 3，下面是不同运行级别的描述："
 
 #. type: Content of: <sect1><sect2><literallayout>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter09/usage.xml:36
 #, no-wrap
 msgid ""
 "0: halt the computer\n"
@@ -83,31 +76,22 @@ msgstr ""
 "6：重启计算机"
 
 #. type: Content of: <sect1><sect2><title>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter09/usage.xml:47
 msgid "Configuring Sysvinit"
 msgstr "配置 Sysvinit"
 
 #. type: Content of: <sect1><sect2><indexterm><primary>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter09/usage.xml:50
 msgid "Sysvinit"
 msgstr "Sysvinit"
 
 #. type: Content of: <sect1><sect2><indexterm><secondary>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter09/usage.xml:51
-#: /home/xry111/svn-repos/LFS-BOOK/chapter09/usage.xml:245
-#: /home/xry111/svn-repos/LFS-BOOK/chapter09/usage.xml:307
-#: /home/xry111/svn-repos/LFS-BOOK/chapter09/usage.xml:541
-#: /home/xry111/svn-repos/LFS-BOOK/chapter09/usage.xml:557
 msgid "configuring"
 msgstr "配置"
 
 #. type: Content of: <sect1><sect2><indexterm><primary>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter09/usage.xml:55
 msgid "/etc/inittab"
 msgstr "/etc/inittab"
 
 #. type: Content of: <sect1><sect2><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter09/usage.xml:58
 msgid ""
 "During the kernel initialization, the first program that is run is either "
 "specified on the command line or, by default <command>init</command>.  This "
@@ -119,7 +103,6 @@ msgstr ""
 "filename>。执行以下命令创建该文件："
 
 #. type: Content of: <sect1><sect2><screen>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter09/usage.xml:63
 #, no-wrap
 msgid ""
 "<userinput>cat &gt; /etc/inittab &lt;&lt; \"EOF\"\n"
@@ -181,7 +164,6 @@ msgstr ""
 "EOF</userinput>"
 
 #. type: Content of: <sect1><sect2><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter09/usage.xml:92
 msgid ""
 "An explanation of this initialization file is in the man page for "
 "<emphasis>inittab</emphasis>.  For LFS, the key command that is run is "
@@ -193,14 +175,13 @@ msgid ""
 "the initdefault value."
 msgstr ""
 "在 <emphasis>inittab</emphasis> 的 man 页面中可以找到对该初始化文件的解释。对"
-"于 LFS，它指定运行的关键命令是 <command>rc</command>。上面的初始化文件会指"
-"示 <command>rc</command> 先运行 <filename class=\"directory\">/etc/rc.d/rcS."
-"d</filename> 目录中所有文件名以 S 开头的脚本，再运行 <filename class="
-"\"directory\">/etc/rc.d/rc?.d</filename> 目录中所有文件名以 S 开头的脚本。这"
-"里问号表示 initdefault 值指定的默认运行级别。"
+"于 LFS，它指定运行的关键命令是 <command>rc</command>。上面的初始化文件会指示 "
+"<command>rc</command> 先运行 <filename class=\"directory\">/etc/rc.d/rcS.d</"
+"filename> 目录中所有文件名以 S 开头的脚本，再运行 <filename class=\"directory"
+"\">/etc/rc.d/rc?.d</filename> 目录中所有文件名以 S 开头的脚本。这里问号表示 "
+"initdefault 值指定的默认运行级别。"
 
 #. type: Content of: <sect1><sect2><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter09/usage.xml:101
 msgid ""
 "As a convenience, the <command>rc</command> script reads a library of "
 "functions in <filename class=\"directory\">/lib/lsb/init-functions</"
@@ -216,7 +197,6 @@ msgstr ""
 "参数集中到一个文件中，可以将以下各节描述的系统配置文件参数都写入这一个文件，"
 
 #. type: Content of: <sect1><sect2><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter09/usage.xml:109
 msgid ""
 "As a debugging convenience, the functions script also logs all output to "
 "<filename>/run/var/bootlog</filename>.  Since the <filename class=\"directory"
@@ -230,12 +210,10 @@ msgstr ""
 "持久的日志文件 <filename>/var/log/boot.log</filename> 的末尾。"
 
 #. type: Content of: <sect1><sect2><sect3><title>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter09/usage.xml:116
 msgid "Changing Run Levels"
 msgstr "切换运行级别"
 
 #. type: Content of: <sect1><sect2><sect3><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter09/usage.xml:118
 msgid ""
 "Changing run-levels is done with <command>init <replaceable>&lt;runlevel&gt;"
 "</replaceable></command>, where <replaceable>&lt;runlevel&gt;</replaceable> "
@@ -251,7 +229,6 @@ msgstr ""
 "0</command> 和 <command>halt</command> 作用相同。"
 
 #. type: Content of: <sect1><sect2><sect3><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter09/usage.xml:126
 msgid ""
 "There are a number of directories under <filename class=\"directory\">/etc/"
 "rc.d</filename> that look like <filename class=\"directory\">rc?.d</"
@@ -276,7 +253,6 @@ msgstr ""
 "的运行级别要求。"
 
 #. type: Content of: <sect1><sect2><sect3><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter09/usage.xml:138
 msgid ""
 "The real scripts are in <filename class=\"directory\">/etc/rc.d/init.d</"
 "filename>. They do the actual work, and the symlinks all point to them. K "
@@ -299,7 +275,6 @@ msgstr ""
 "参数运行脚本。"
 
 #. type: Content of: <sect1><sect2><sect3><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter09/usage.xml:150
 msgid ""
 "There is one exception to this explanation. Links that start with an "
 "<emphasis>S</emphasis> in the <filename class=\"directory\">rc0.d</filename> "
@@ -316,47 +291,38 @@ msgstr ""
 "动系统或停止系统运行时，不需要启动任何服务，只需要停止整个系统。"
 
 #. type: Content of: <sect1><sect2><sect3><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter09/usage.xml:159
 msgid "These are descriptions of what the arguments make the scripts do:"
 msgstr "下面是脚本接受的不同参数及其解释："
 
 #. type: Content of: <sect1><sect2><sect3><variablelist><varlistentry><term>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter09/usage.xml:165
 msgid "<parameter>start</parameter>"
 msgstr "<parameter>start</parameter>"
 
 #. type: Content of: <sect1><sect2><sect3><variablelist><varlistentry><listitem><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter09/usage.xml:167
 msgid "The service is started."
 msgstr "启动服务。"
 
 #. type: Content of: <sect1><sect2><sect3><variablelist><varlistentry><term>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter09/usage.xml:172
 msgid "<parameter>stop</parameter>"
 msgstr "<parameter>stop</parameter>"
 
 #. type: Content of: <sect1><sect2><sect3><variablelist><varlistentry><listitem><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter09/usage.xml:174
 msgid "The service is stopped."
 msgstr "停止服务。"
 
 #. type: Content of: <sect1><sect2><sect3><variablelist><varlistentry><term>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter09/usage.xml:179
 msgid "<parameter>restart</parameter>"
 msgstr "<parameter>restart</parameter>"
 
 #. type: Content of: <sect1><sect2><sect3><variablelist><varlistentry><listitem><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter09/usage.xml:181
 msgid "The service is stopped and then started again."
 msgstr "停止服务，再重新启动它。"
 
 #. type: Content of: <sect1><sect2><sect3><variablelist><varlistentry><term>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter09/usage.xml:186
 msgid "<parameter>reload</parameter>"
 msgstr "<parameter>reload</parameter>"
 
 #. type: Content of: <sect1><sect2><sect3><variablelist><varlistentry><listitem><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter09/usage.xml:188
 msgid ""
 "The configuration of the service is updated.  This is used after the "
 "configuration file of a service was modified, when the service does not need "
@@ -365,17 +331,14 @@ msgstr ""
 "更新服务配置。当服务的配置文件被修改后，如果不需要重新启动它，就使用该参数。"
 
 #. type: Content of: <sect1><sect2><sect3><variablelist><varlistentry><term>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter09/usage.xml:195
 msgid "<parameter>status</parameter>"
 msgstr "<parameter>status</parameter>"
 
 #. type: Content of: <sect1><sect2><sect3><variablelist><varlistentry><listitem><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter09/usage.xml:197
 msgid "Tells if the service is running and with which PIDs."
 msgstr "报告服务是否正在运行中，如果正在运行，报告其 PID。"
 
 #. type: Content of: <sect1><sect2><sect3><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter09/usage.xml:203
 msgid ""
 "Feel free to modify the way the boot process works (after all, it is your "
 "own LFS system). The files given here are an example of how it can be done."
@@ -384,12 +347,10 @@ msgstr ""
 "只是示例，展示完成引导过程的一种方式。"
 
 #. type: Content of: <sect1><sect2><title>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter09/usage.xml:211
 msgid "Udev Bootscripts"
 msgstr "Udev 引导脚本"
 
 #. type: Content of: <sect1><sect2><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter09/usage.xml:213
 msgid ""
 "The <filename>/etc/rc.d/init.d/udev</filename> initscript starts "
 "<command>udevd</command>, triggers any \"coldplug\" devices that have "
@@ -406,7 +367,6 @@ msgstr ""
 "netlink 套接字，以获取内核发出的 uevent 事件。"
 
 #. type: Content of: <sect1><sect2><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter09/usage.xml:222
 msgid ""
 "The <command>/etc/rc.d/init.d/udev_retry</command> initscript takes care of "
 "re-triggering events for subsystems whose rules may rely on filesystems that "
@@ -425,8 +385,8 @@ msgstr ""
 "触发事件，这些子系统的规则可能依赖于 <command>mountfs</command> 脚本运行时才"
 "会挂载的文件系统 (特别地，独立挂载的 <filename class=\"directory\">/usr</"
 "filename> 和 <filename class=\"directory\">/var</filename> 文件系统会导致这种"
-"现象)。该脚本在 <command>mountfs</command> 脚本之后运行，因此这些规则 (如果"
-"被重新触发) 这一次应该能够成功执行。配置文件 <filename>/etc/sysconfig/"
+"现象)。该脚本在 <command>mountfs</command> 脚本之后运行，因此这些规则 (如果被"
+"重新触发) 这一次应该能够成功执行。配置文件 <filename>/etc/sysconfig/"
 "udev_retry</filename> 文件配置该脚本，其中除注释外的每个单词都被认为是一个需"
 "要重新触发的子系统名。为了找到某个设备的子系统，可以使用命令 "
 "<command>udevadm info --attribute-walk &lt;device&gt;</command>，这里 &lt;"
@@ -434,7 +394,6 @@ msgstr ""
 "rtc。"
 
 #. type: Content of: <sect1><sect2><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter09/usage.xml:236
 msgid ""
 "For information on kernel module loading and udev, see <xref linkend="
 "\"module-loading\"/>."
@@ -442,17 +401,14 @@ msgstr ""
 "参阅<xref linkend=\"module-loading\"/>了解更多关于模块加载和 udev 的信息。"
 
 #. type: Content of: <sect1><sect2><title>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter09/usage.xml:241
 msgid "Configuring the System Clock"
 msgstr "配置系统时钟"
 
 #. type: Content of: <sect1><sect2><indexterm><primary>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter09/usage.xml:244
 msgid "setclock"
 msgstr "setclock"
 
 #. type: Content of: <sect1><sect2><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter09/usage.xml:247
 msgid ""
 "The <command>setclock</command> script reads the time from the hardware "
 "clock, also known as the BIOS or the Complementary Metal Oxide Semiconductor "
@@ -469,7 +425,6 @@ msgstr ""
 "件时钟是否为 UTC 的方法，因此这必须手动设置。"
 
 #. type: Content of: <sect1><sect2><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter09/usage.xml:256
 msgid ""
 "The <command>setclock</command> program is run via <application>udev</"
 "application> when the kernel detects the hardware capability upon boot.  It "
@@ -481,7 +436,6 @@ msgstr ""
 "间写入 CMOS 时钟。"
 
 #. type: Content of: <sect1><sect2><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter09/usage.xml:261
 msgid ""
 "If you cannot remember whether or not the hardware clock is set to UTC, find "
 "out by running the <userinput>hwclock --localtime --show</userinput> "
@@ -499,11 +453,10 @@ msgstr ""
 "表显示的一致，则说明硬件时钟被设定为本地时间。相反，如果 <command>hwclock</"
 "command> 输出的时间不是本地时间，则硬件时钟很可能被设定为 UTC 时间。根据您的"
 "时区，在 <command>hwclock</command> 显示的时间上加减对应的小时数，进行进一步"
-"的验证。例如，如果您现在处于莫斯科时区，即 GMT -0700，在本地时间上加 7 小"
-"时，再进行比较。"
+"的验证。例如，如果您现在处于莫斯科时区，即 GMT -0700，在本地时间上加 7 小时，"
+"再进行比较。"
 
 #. type: Content of: <sect1><sect2><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter09/usage.xml:272
 msgid ""
 "Change the value of the <envar>UTC</envar> variable below to a value of "
 "<parameter>0</parameter> (zero) if the hardware clock is <emphasis>NOT</"
@@ -513,7 +466,6 @@ msgstr ""
 "(零)，表示硬件时钟<emphasis>没有</emphasis>设为 UTC。"
 
 #. type: Content of: <sect1><sect2><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter09/usage.xml:276
 msgid ""
 "Create a new file <filename>/etc/sysconfig/clock</filename> by running the "
 "following:"
@@ -521,7 +473,6 @@ msgstr ""
 "执行以下命令，创建新的 <filename>/etc/sysconfig/clock</filename> 文件："
 
 #. type: Content of: <sect1><sect2><screen>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter09/usage.xml:279
 #, no-wrap
 msgid ""
 "<userinput>cat &gt; /etc/sysconfig/clock &lt;&lt; \"EOF\"\n"
@@ -549,7 +500,6 @@ msgstr ""
 "EOF</userinput>"
 
 #. type: Content of: <sect1><sect2><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter09/usage.xml:291
 msgid ""
 "A good hint explaining how to deal with time on LFS is available at <ulink "
 "url=\"&hints-root;time.txt\"/>. It explains issues such as time zones, UTC, "
@@ -560,7 +510,6 @@ msgstr ""
 "关的问题。"
 
 #. type: Content of: <sect1><sect2><note><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter09/usage.xml:295
 msgid ""
 "The CLOCKPARAMS and UTC paramaters may also be set in the <filename>/etc/"
 "sysconfig/rc.site</filename> file."
@@ -569,17 +518,14 @@ msgstr ""
 "文件中设置。"
 
 #. type: Content of: <sect1><sect2><title>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter09/usage.xml:303
 msgid "Configuring the Linux Console"
 msgstr "配置 Linux 控制台"
 
 #. type: Content of: <sect1><sect2><indexterm><primary>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter09/usage.xml:306
 msgid "console"
 msgstr "console"
 
 #. type: Content of: <sect1><sect2><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter09/usage.xml:310
 msgid ""
 "This section discusses how to configure the <command>console</command> "
 "bootscript that sets up the keyboard map, console font, and console kernel "
@@ -596,7 +542,6 @@ msgstr ""
 "<command>console</command> 脚本什么也不做。"
 
 #. type: Content of: <sect1><sect2><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter09/usage.xml:318
 msgid ""
 "The <command>console</command> script reads the <filename>/etc/sysconfig/"
 "console</filename> file for configuration information.  Decide which keymap "
@@ -618,7 +563,6 @@ msgstr ""
 "面，以确认应该传递给这两个程序的正确参数。"
 
 #. type: Content of: <sect1><sect2><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter09/usage.xml:329
 msgid ""
 "The <filename>/etc/sysconfig/console</filename> file should contain lines of "
 "the form: VARIABLE=\"value\". The following variables are recognized:"
@@ -627,28 +571,24 @@ msgstr ""
 "式都是：变量名=\"值\"。下列变量名会被识别："
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter09/usage.xml:334
 msgid "LOGLEVEL"
 msgstr "LOGLEVEL"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter09/usage.xml:336
 msgid ""
 "This variable specifies the log level for kernel messages sent to the "
 "console as set by <command>dmesg -n</command>. Valid levels are from "
 "\"1\" (no messages) to \"8\". The default level is \"7\"."
 msgstr ""
 "该变量指定被发送到控制台的内核消息日志级别，正如使用 <command>dmesg</"
-"command> 设置的那样。有效的级别是“1” (不输出内核消息) 到“8”之间的某个数。"
-"默认的日志级别是“7”。"
+"command> 设置的那样。有效的级别是“1” (不输出内核消息) 到“8”之间的某个数。默认"
+"的日志级别是“7”。"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter09/usage.xml:343
 msgid "KEYMAP"
 msgstr "KEYMAP"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter09/usage.xml:345
 msgid ""
 "This variable specifies the arguments for the <command>loadkeys</command> "
 "program, typically, the name of keymap to load, e.g., <quote>it</quote>. If "
@@ -667,12 +607,10 @@ msgstr ""
 "指定 (例如 qwerty/es)，以保证加载正确的键映射。"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter09/usage.xml:359
 msgid "KEYMAP_CORRECTIONS"
 msgstr "KEYMAP_CORRECTIONS"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter09/usage.xml:361
 msgid ""
 "This (rarely used) variable specifies the arguments for the second call to "
 "the <command>loadkeys</command> program. This is useful if the stock keymap "
@@ -686,13 +624,11 @@ msgstr ""
 "quote>。"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter09/usage.xml:371
 msgid "FONT"
 msgstr "FONT"
 
 #.  because of the copyright sign 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter09/usage.xml:373
 msgid ""
 "This variable specifies the arguments for the <command>setfont</command> "
 "program. Typically, this includes the font name, <quote>-m</quote>, and the "
@@ -706,34 +642,30 @@ msgid ""
 msgstr ""
 "该变量指定传递给 <command>setfont</command> 程序的参数。通常它包含字体名，"
 "<quote>-m</quote>，以及需要加载的应用程序字符映射名。例如，为了加载 "
-"<quote>lat1-16</quote>字体和<quote>8859-1</quote>应用程序字符映射 (这适用"
-"于美国)，可以将该变量设置为<quote>lat1-16 -m 8859-1</quote>。在 UTF-8 模式"
-"下，内核使用应用程序字符映射将键映射中编组的 8 位键码转化为 UTF-8，因此 “-m” "
-"参数的值应该被设定为键映射中编组的键码编码。"
+"<quote>lat1-16</quote>字体和<quote>8859-1</quote>应用程序字符映射 (这适用于美"
+"国)，可以将该变量设置为<quote>lat1-16 -m 8859-1</quote>。在 UTF-8 模式下，内"
+"核使用应用程序字符映射将键映射中编组的 8 位键码转化为 UTF-8，因此 “-m” 参数的"
+"值应该被设定为键映射中编组的键码编码。"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter09/usage.xml:390
 msgid "UNICODE"
 msgstr "UNICODE"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter09/usage.xml:392
 msgid ""
 "Set this variable to <quote>1</quote>, <quote>yes</quote> or <quote>true</"
 "quote> in order to put the console into UTF-8 mode. This is useful in UTF-8 "
 "based locales and harmful otherwise."
 msgstr ""
-"将该变量设为<quote>1</quote>，<quote>yes</quote>，或者<quote>true</quote>，"
-"可以将控制台设置于 UTF-8 模式。这对于基于 UTF-8 的 locale 很有用，但对于其他 "
+"将该变量设为<quote>1</quote>，<quote>yes</quote>，或者<quote>true</quote>，可"
+"以将控制台设置于 UTF-8 模式。这对于基于 UTF-8 的 locale 很有用，但对于其他 "
 "locale 有害。"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter09/usage.xml:400
 msgid "LEGACY_CHARSET"
 msgstr "LEGACY_CHARSET"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter09/usage.xml:402
 msgid ""
 "For many keyboard layouts, there is no stock Unicode keymap in the Kbd "
 "package. The <command>console</command> bootscript will convert an available "
@@ -745,12 +677,10 @@ msgstr ""
 "用的键映射转换成 UTF-8。"
 
 #. type: Content of: <sect1><sect2><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter09/usage.xml:411
 msgid "Some examples:"
 msgstr "一些例子："
 
 #. type: Content of: <sect1><sect2><itemizedlist><listitem><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter09/usage.xml:416
 msgid ""
 "For a non-Unicode setup, only the KEYMAP and FONT variables are generally "
 "needed. E.g., for a Polish setup, one would use:"
@@ -759,7 +689,6 @@ msgstr ""
 "波兰语配置："
 
 #. type: Content of: <sect1><sect2><itemizedlist><listitem><screen>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter09/usage.xml:418
 #, no-wrap
 msgid ""
 "<userinput>cat &gt; /etc/sysconfig/console &lt;&lt; \"EOF\"\n"
@@ -781,7 +710,6 @@ msgstr ""
 "EOF</userinput>"
 
 #. type: Content of: <sect1><sect2><itemizedlist><listitem><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter09/usage.xml:429
 msgid ""
 "As mentioned above, it is sometimes necessary to adjust a stock keymap "
 "slightly. The following example adds the Euro symbol to the German keymap:"
@@ -790,7 +718,6 @@ msgstr ""
 "号："
 
 #. type: Content of: <sect1><sect2><itemizedlist><listitem><screen>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter09/usage.xml:433
 #, no-wrap
 msgid ""
 "<userinput>cat &gt; /etc/sysconfig/console &lt;&lt; \"EOF\"\n"
@@ -816,7 +743,6 @@ msgstr ""
 "EOF</userinput>"
 
 #. type: Content of: <sect1><sect2><itemizedlist><listitem><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter09/usage.xml:446
 msgid ""
 "The following is a Unicode-enabled example for Bulgarian, where a stock "
 "UTF-8 keymap exists:"
@@ -826,7 +752,6 @@ msgstr ""
 #.  This is what is used by jhalfs for creating the console file: whenever
 #.      you change the following, please inform the jhalfs maintainer(s). 
 #. type: Content of: <sect1><sect2><itemizedlist><listitem><screen>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter09/usage.xml:450
 #, no-wrap
 msgid ""
 "<userinput>cat &gt; /etc/sysconfig/console &lt;&lt; \"EOF\"\n"
@@ -850,7 +775,6 @@ msgstr ""
 "EOF</userinput>"
 
 #. type: Content of: <sect1><sect2><itemizedlist><listitem><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter09/usage.xml:462
 msgid ""
 "Due to the use of a 512-glyph LatArCyrHeb-16 font in the previous example, "
 "bright colors are no longer available on the Linux console unless a "
@@ -865,7 +789,6 @@ msgstr ""
 "字体，配置文件如下："
 
 #. type: Content of: <sect1><sect2><itemizedlist><listitem><screen>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter09/usage.xml:469
 #, no-wrap
 msgid ""
 "<userinput>cat &gt; /etc/sysconfig/console &lt;&lt; \"EOF\"\n"
@@ -889,7 +812,6 @@ msgstr ""
 "EOF</userinput>"
 
 #. type: Content of: <sect1><sect2><itemizedlist><listitem><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter09/usage.xml:481
 msgid ""
 "The following example illustrates keymap autoconversion from ISO-8859-15 to "
 "UTF-8 and enabling dead keys in Unicode mode:"
@@ -898,7 +820,6 @@ msgstr ""
 "下启用了死键："
 
 #. type: Content of: <sect1><sect2><itemizedlist><listitem><screen>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter09/usage.xml:484
 #, no-wrap
 msgid ""
 "<userinput>cat &gt; /etc/sysconfig/console &lt;&lt; \"EOF\"\n"
@@ -926,7 +847,6 @@ msgstr ""
 "EOF</userinput>"
 
 #. type: Content of: <sect1><sect2><itemizedlist><listitem><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter09/usage.xml:498
 msgid ""
 "Some keymaps have dead keys (i.e., keys that don't produce a character by "
 "themselves, but put an accent on the character produced by the next key) or "
@@ -947,12 +867,11 @@ msgstr ""
 "&AElig;</quote>)。Linux-&linux-version; 只有在被组合的不是多字节字符的情况"
 "下，才能正常解析死键和组合规则。这个缺陷不影响欧洲语言的键映射，因为在欧洲语"
 "言中要么是一个音调被附加到不带音调的 ASCII 字符上，要么是两个 ASCII 字符被组"
-"合在一起。然而，在 UTF-8 模式中，以希腊语为例，当某人要在<quote>alpha</"
-"quote>字符上附加音调时,就会出现问题。解决方法是要么不使用 UTF-8，要么安装 X "
-"窗口系统，它处理输入时没有这个限制。"
+"合在一起。然而，在 UTF-8 模式中，以希腊语为例，当某人要在<quote>alpha</quote>"
+"字符上附加音调时,就会出现问题。解决方法是要么不使用 UTF-8，要么安装 X 窗口系"
+"统，它处理输入时没有这个限制。"
 
 #. type: Content of: <sect1><sect2><itemizedlist><listitem><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter09/usage.xml:515
 msgid ""
 "For Chinese, Japanese, Korean, and some other languages, the Linux console "
 "cannot be configured to display the needed characters. Users who need such "
@@ -965,7 +884,6 @@ msgstr ""
 "符的字体，以及合适的输入法 (如 SCIM 支持许多语言的输入)。"
 
 #. type: Content of: <sect1><sect2><note><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter09/usage.xml:527
 msgid ""
 "The <filename>/etc/sysconfig/console</filename> file only controls the Linux "
 "text console localization. It has nothing to do with setting the proper "
@@ -978,17 +896,14 @@ msgstr ""
 "系。在这些情况下，不存在上述的两项限制。"
 
 #. type: Content of: <sect1><sect2><title>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter09/usage.xml:537
 msgid "Creating Files at Boot"
 msgstr "在引导时创建文件"
 
 #. type: Content of: <sect1><sect2><indexterm><primary>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter09/usage.xml:540
 msgid "File creation at boot"
 msgstr "File creation at boot"
 
 #. type: Content of: <sect1><sect2><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter09/usage.xml:544
 msgid ""
 "At times, it is desirable to create files at boot time.  For instance, the "
 "<filename class=\"directory\">/tmp/.ICE-unix</filename> directory is often "
@@ -1002,17 +917,14 @@ msgstr ""
 "释中。"
 
 #. type: Content of: <sect1><sect2><title>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter09/usage.xml:553
 msgid "Configuring the sysklogd Script"
 msgstr "配置 sysklogd 脚本"
 
 #. type: Content of: <sect1><sect2><indexterm><primary>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter09/usage.xml:556
 msgid "sysklogd"
 msgstr "sysklogd"
 
 #. type: Content of: <sect1><sect2><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter09/usage.xml:560
 msgid ""
 "The <filename>sysklogd</filename> script invokes the <command>syslogd</"
 "command> program as a part of System V initialization.  The <parameter>-m 0</"
@@ -1030,28 +942,23 @@ msgstr ""
 "参数，将该变量设定为空："
 
 #. type: Content of: <sect1><sect2><screen>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter09/usage.xml:569
 #, no-wrap
 msgid "SYSKLOGD_PARMS="
 msgstr "SYSKLOGD_PARMS="
 
 #. type: Content of: <sect1><sect2><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter09/usage.xml:571
 msgid "See <userinput>man syslogd</userinput> for more options."
 msgstr "参阅 <userinput>man syslogd</userinput> 了解更多可用选项。"
 
 #. type: Content of: <sect1><sect2><title>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter09/usage.xml:576
 msgid "The rc.site File"
 msgstr "rc.site 文件"
 
 #. type: Content of: <sect1><sect2><indexterm><primary>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter09/usage.xml:579
 msgid "rc.site"
 msgstr "rc.site"
 
 #. type: Content of: <sect1><sect2><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter09/usage.xml:582
 msgid ""
 "The optional <filename>/etc/sysconfig/rc.site</filename> file contains "
 "settings that are automatically set for each SystemV boot script.  It can "
@@ -1066,11 +973,10 @@ msgstr ""
 "引导脚本自动设定的配置。<filename class=\"directory\">/etc/sysconfig/</"
 "filename> 目录中 <filename>hostname</filename>，<filename>console</"
 "filename>，以及 <filename>clock</filename> 文件中的变量值也可以在这里设定。如"
-"果这些分立的文件和 <filename>rc.site</filename> 包含相同的变量名，则分立文件中"
-"的设定被优先使用。"
+"果这些分立的文件和 <filename>rc.site</filename> 包含相同的变量名，则分立文件"
+"中的设定被优先使用。"
 
 #. type: Content of: <sect1><sect2><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter09/usage.xml:591
 msgid ""
 "<filename>rc.site</filename> also contains parameters that can customize "
 "other aspects of the boot process.  Setting the IPROMPT variable will enable "
@@ -1083,18 +989,15 @@ msgstr ""
 
 #.  Use role to fix a pdf generation problem 
 #. type: Content of: <sect1><sect2><screen>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter09/usage.xml:597
 #, no-wrap
 msgid "&site;"
 msgstr "&site;"
 
 #. type: Content of: <sect1><sect2><sect3><title>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter09/usage.xml:600
 msgid "Customizing the Boot and Shutdown Scripts"
 msgstr "自定义引导和关机脚本"
 
 #. type: Content of: <sect1><sect2><sect3><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter09/usage.xml:602
 msgid ""
 "The LFS boot scripts boot and shut down a system in a fairly efficient "
 "manner, but there are a few tweaks that you can make in the rc.site file to "
@@ -1107,7 +1010,6 @@ msgstr ""
 "<filename>/etc/sysconfig/rc.site</filename> 文件。"
 
 #. type: Content of: <sect1><sect2><sect3><itemizedlist><listitem><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter09/usage.xml:610
 msgid ""
 "During the boot script <filename>udev</filename>, there is a call to "
 "<command>udev settle</command> that requires some time to complete. This "
@@ -1122,7 +1024,6 @@ msgstr ""
 "卡，引导过程可能并不需要等待该命令。设定 OMIT_UDEV_SETTLE=y 可以跳过它。"
 
 #. type: Content of: <sect1><sect2><sect3><itemizedlist><listitem><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter09/usage.xml:617
 msgid ""
 "The boot script <filename>udev_retry</filename> also runs <command>udev "
 "settle</command> by default.  This command is only needed by default if the "
@@ -1135,12 +1036,11 @@ msgstr ""
 "引导脚本 <filename>udev_retry</filename> 在默认配置下也会执行 <command>udev "
 "settle</command>。对于默认配置，这仅仅在 <filename class='directory'>/var</"
 "filename> 目录是独立挂载的文件系统时才有必要。原因是，系统时钟需要 "
-"<filename>/var/lib/hwclock/adjtime</filename> 文件。其他的自定义配置也可能导致"
-"存在等待 udev 完成的必要性，但在大多数配置中并没有这种必要。设定 "
+"<filename>/var/lib/hwclock/adjtime</filename> 文件。其他的自定义配置也可能导"
+"致存在等待 udev 完成的必要性，但在大多数配置中并没有这种必要。设定 "
 "OMIT_UDEV_RETRY_SETTLE=y 可以跳过它。"
 
 #. type: Content of: <sect1><sect2><sect3><itemizedlist><listitem><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter09/usage.xml:626
 msgid ""
 "By default, the file system checks are silent.  This can appear to be a "
 "delay during the bootup process.  To turn on the <command>fsck</command> "
@@ -1150,7 +1050,6 @@ msgstr ""
 "VERBOSE_FSCK=y 可以显示 <command>fsck</command> 的输出。"
 
 #. type: Content of: <sect1><sect2><sect3><itemizedlist><listitem><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter09/usage.xml:631
 msgid ""
 "When rebooting, you may want to skip the filesystem check, <command>fsck</"
 "command>, completely.  To do this, either create the file <filename>/"
@@ -1168,7 +1067,6 @@ msgstr ""
 "parameter> 参数代替 <parameter>-f</parameter>。"
 
 #. type: Content of: <sect1><sect2><sect3><itemizedlist><listitem><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter09/usage.xml:640
 msgid ""
 "Setting the variable FASTBOOT=y will disable <command>fsck</command> during "
 "the boot process until it is removed.  This is not recommended on a "
@@ -1178,7 +1076,6 @@ msgstr ""
 "该变量。从长远角度看，不推荐使用它。"
 
 #. type: Content of: <sect1><sect2><sect3><itemizedlist><listitem><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter09/usage.xml:644
 msgid ""
 "Normally, all files in the <filename class='directory'>/tmp</filename> "
 "directory are deleted at boot time.  Depending on the number of files or "
@@ -1190,7 +1087,6 @@ msgstr ""
 "设定变量 SKIPTMPCLEAN=y 可以跳过删除这些文件的引导步骤。"
 
 #. type: Content of: <sect1><sect2><sect3><itemizedlist><listitem><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter09/usage.xml:650
 msgid ""
 "During shutdown, the <command>init</command> program sends a TERM signal to "
 "each program it has started (e.g. agetty), waits for a set time (default 3 "

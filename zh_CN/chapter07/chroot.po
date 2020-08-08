@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2020-06-23 15:47+0800\n"
+"POT-Creation-Date: 2020-08-08 19:28+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -12,12 +12,10 @@ msgstr ""
 "X-Generator: Translate Toolkit 2.2.5\n"
 
 #. type: Content of: <sect1><title>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter07/chroot.xml:11
 msgid "Entering the Chroot Environment"
 msgstr "进入 Chroot 环境"
 
 #. type: Content of: <sect1><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter07/chroot.xml:13
 msgid ""
 "Now that all the packages which are required to build the rest of the needed "
 "tools are on the system, it is time to enter the chroot environment to "
@@ -32,7 +30,6 @@ msgstr ""
 "当前只包含临时工具的 chroot 环境："
 
 #. type: Content of: <sect1><screen>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter07/chroot.xml:21
 #, no-wrap
 msgid ""
 "<userinput>chroot \"$LFS\" /usr/bin/env -i   \\\n"
@@ -50,7 +47,6 @@ msgstr ""
 "    /bin/bash --login +h</userinput>"
 
 #. type: Content of: <sect1><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter07/chroot.xml:28
 msgid ""
 "The <parameter>-i</parameter> option given to the <command>env</command> "
 "command will clear all variables of the chroot environment. After that, only "
@@ -71,7 +67,6 @@ msgstr ""
 "如 <envar>CFLAGS</envar> 或 <envar>CXXFLAGS</envar>，也可以在这里设定。"
 
 #. type: Content of: <sect1><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter07/chroot.xml:39
 msgid ""
 "From this point on, there is no need to use the <envar>LFS</envar> variable "
 "anymore because all work will be restricted to the LFS file system.  This is "
@@ -84,7 +79,6 @@ msgstr ""
 "filename> 现在是根目录 (<filename class=\"directory\">/</filename>)。"
 
 #. type: Content of: <sect1><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter07/chroot.xml:45
 msgid ""
 "Notice that <filename class=\"directory\">/tools/bin</filename> is not in "
 "the <envar>PATH</envar>. This means that the cross toolchain will no longer "
@@ -99,7 +93,6 @@ msgstr ""
 "parameter> 参数给 <command>bash</command> 以关闭散列功能。"
 
 #. type: Content of: <sect1><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter07/chroot.xml:52
 msgid ""
 "Note that the <command>bash</command> prompt will say <computeroutput>I have "
 "no name!</computeroutput> This is normal because the <filename>/etc/passwd</"
@@ -110,7 +103,6 @@ msgstr ""
 "filename> 文件。"
 
 #. type: Content of: <sect1><note><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter07/chroot.xml:57
 msgid ""
 "It is important that all the commands throughout the remainder of this "
 "chapter and the following chapters are run from within the chroot "

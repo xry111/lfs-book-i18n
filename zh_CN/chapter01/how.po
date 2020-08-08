@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2020-06-17 12:44+0800\n"
+"POT-Creation-Date: 2020-08-08 19:28+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -12,12 +12,10 @@ msgstr ""
 "X-Generator: Translate Toolkit 2.2.5\n"
 
 #. type: Content of: <sect1><title>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter01/how.xml:11
 msgid "How to Build an LFS System"
 msgstr "如何构建 LFS 系统"
 
 #. type: Content of: <sect1><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter01/how.xml:13
 msgid ""
 "The LFS system will be built by using an already installed Linux "
 "distribution (such as Debian, OpenMandriva, Fedora, or openSUSE). This "
@@ -28,8 +26,8 @@ msgid ""
 msgstr ""
 "LFS 系统必须在一个已经安装好的 Linux 发行版 (如 Debian、 OpenMandriva、"
 "Fedora 或者 openSUSE) 中构建。这个安装好的 Linux 系统 (称为宿主) 提供包括编译"
-"器、链接器和 shell 在内的必要程序，作为构建新系统的起点。请在安装发行版的过"
-"程中选择<quote>development</quote> (开发) 选项，以使用这些工具。"
+"器、链接器和 shell 在内的必要程序，作为构建新系统的起点。请在安装发行版的过程"
+"中选择<quote>development</quote> (开发) 选项，以使用这些工具。"
 
 #.  the Linux From Scratch LiveCD or 
 #.  The LFS LiveCD works well as a host system,
@@ -41,14 +39,12 @@ msgstr ""
 #.   building a current LFS system.  For more information about the LFS LiveCD or
 #.   to download a copy, visit <ulink url="&livecd-root;"/>. 
 #. type: Content of: <sect1><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter01/how.xml:21
 msgid ""
 "As an alternative to installing a separate distribution onto your machine, "
 "you may wish to use a LiveCD from a commercial distribution."
 msgstr "您也可以选择不安装一个单独的发行版，而是使用某个商业发行版的 LiveCD。"
 
 #. type: Content of: <sect1><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter01/how.xml:38
 msgid ""
 "<xref linkend=\"chapter-partitioning\"/> of this book describes how to "
 "create a new Linux native partition and file system. This is the place where "
@@ -64,44 +60,40 @@ msgstr ""
 "本书的<xref linkend=\"chapter-partitioning\"/>描述了如何创建一个新的 Linux 本"
 "地分区和文件系统，新的 LFS 系统将在该文件系统中被编译和安装。<xref linkend="
 "\"chapter-getting-materials\"/>列举了在构建 LFS 系统的过程中必须下载的软件包"
-"和补丁，并解释了在新文件系统中存储它们的方法。<xref linkend=\"chapter-"
-"final-preps\"/>讨论工作环境的正确配置。请仔细阅读<xref linkend=\"chapter-"
-"final-preps\"/>，因为它解释了您在开始<xref linkend=\"chapter-cross-tools"
-"\"/>及后续章节的工作前必须了解的一些重要问题。"
+"和补丁，并解释了在新文件系统中存储它们的方法。<xref linkend=\"chapter-final-"
+"preps\"/>讨论工作环境的正确配置。请仔细阅读<xref linkend=\"chapter-final-"
+"preps\"/>，因为它解释了您在开始<xref linkend=\"chapter-cross-tools\"/>及后续"
+"章节的工作前必须了解的一些重要问题。"
 
 #. type: Content of: <sect1><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter01/how.xml:49
 msgid ""
 "<xref linkend=\"chapter-cross-tools\"/>, explains the installation of the "
 "initial tool chain, (binutils, gcc, and glibc) using cross compilation "
 "techniques to isolate the new tools from the host system."
 msgstr ""
-"<xref linkend=\"chapter-cross-tools\"/>解释初始工具链 (binutils, gcc,"
-"以及 glibc) 的安装过程，在安装过程中使用交叉编译技术，"
-"将新的工具与宿主系统完全隔离。"
+"<xref linkend=\"chapter-cross-tools\"/>解释初始工具链 (binutils, gcc,以及 "
+"glibc) 的安装过程，在安装过程中使用交叉编译技术，将新的工具与宿主系统完全隔"
+"离。"
 
 #. type: Content of: <sect1><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter01/how.xml:53
 msgid ""
 "<xref linkend=\"chapter-temporary-tools\"/> shows you how to cross-compile "
 "basic utilities using the just built cross-toolchain."
 msgstr ""
-"<xref linkend=\"chapter-temporary-tools\"/>"
-"向您展示如何使用刚刚构建的交叉工具链，交叉编译一些基本工具。"
+"<xref linkend=\"chapter-temporary-tools\"/>向您展示如何使用刚刚构建的交叉工具"
+"链，交叉编译一些基本工具。"
 
 #. type: Content of: <sect1><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter01/how.xml:56
 msgid ""
 "<xref linkend=\"chapter-chroot-temporary-tools\"/> then enters a \"chroot\" "
 "environment and uses the previously built tools to build the additional "
 "tools needed to build and test the final system."
 msgstr ""
-"之后在<xref linkend=\"chapter-chroot-temporary-tools\"/>中，进入一个 \"chroot\" "
-"环境，并使用之前构建的工具，再构建一些额外的工具，"
-"这些额外工具对于构建和测试最终的系统是必要的。"
+"之后在<xref linkend=\"chapter-chroot-temporary-tools\"/>中，进入一个 \"chroot"
+"\" 环境，并使用之前构建的工具，再构建一些额外的工具，这些额外工具对于构建和测"
+"试最终的系统是必要的。"
 
 #. type: Content of: <sect1><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter01/how.xml:60
 msgid ""
 "This effort to isolate the new system from the host distribution may seem "
 "excessive. A full technical explanation as to why this is done is provided "
@@ -112,7 +104,6 @@ msgstr ""
 "要性。"
 
 #. type: Content of: <sect1><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter01/how.xml:64
 msgid ""
 "In <xref linkend=\"chapter-building-system\"/>, The full LFS system is "
 "built. Another advantage provided by the chroot environment is that it "
@@ -120,13 +111,11 @@ msgid ""
 "waiting for package compilations to complete, you can continue using your "
 "computer as normal."
 msgstr ""
-"在<xref linkend=\"chapter-building-system\"/>中，我们将构建完整的 LFS 系"
-"统。使用 chroot 环境的另一项优势是，"
-"在构建 LFS 的过程中，您可以继续使用宿主系统。这样，在等待软件包"
-"编译的过程中，您可以继续正常使用计算机。"
+"在<xref linkend=\"chapter-building-system\"/>中，我们将构建完整的 LFS 系统。"
+"使用 chroot 环境的另一项优势是，在构建 LFS 的过程中，您可以继续使用宿主系统。"
+"这样，在等待软件包编译的过程中，您可以继续正常使用计算机。"
 
 #. type: Content of: <sect1><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter01/how.xml:70
 msgid ""
 "To finish the installation, the basic system configuration is set up in "
 "<xref linkend=\"chapter-config\"/>, and the kernel and boot loader are set "
@@ -135,13 +124,12 @@ msgid ""
 "this book.  After the steps in this book have been implemented, the computer "
 "will be ready to reboot into the new LFS system."
 msgstr ""
-"为了完成安装，我们在<xref linkend=\"chapter-config\"/>中进行系统的基本设"
-"置，在<xref linkend=\"chapter-bootable\"/>中配置内核和引导加载器。最后，"
-"<xref linkend=\"chapter-finalizing\"/>包含在阅读完本书后继续体验 LFS 的相关"
-"信息。在完成本书的所有流程后，重启计算机即可进入新的 LFS 系统。"
+"为了完成安装，我们在<xref linkend=\"chapter-config\"/>中进行系统的基本设置，"
+"在<xref linkend=\"chapter-bootable\"/>中配置内核和引导加载器。最后，<xref "
+"linkend=\"chapter-finalizing\"/>包含在阅读完本书后继续体验 LFS 的相关信息。在"
+"完成本书的所有流程后，重启计算机即可进入新的 LFS 系统。"
 
 #. type: Content of: <sect1><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter01/how.xml:77
 msgid ""
 "This is the process in a nutshell. Detailed information on each step is "
 "discussed in the following chapters and package descriptions.  Items that "

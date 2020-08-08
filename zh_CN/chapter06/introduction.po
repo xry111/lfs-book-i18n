@@ -6,7 +6,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2020-06-17 12:44+0800\n"
+"POT-Creation-Date: 2020-08-08 19:28+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -16,44 +16,39 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 
 #. type: Content of: <sect1><title>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter06/introduction.xml:11
 msgid "Introduction"
 msgstr "概述"
 
 #. type: Content of: <sect1><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter06/introduction.xml:13
 msgid ""
 "This chapter shows how to cross-compile basic utilities using the just built "
 "cross-toolchain. Those utilities are installed into their final location, "
-"but cannot be used yet. Basic tasks still rely on the host's "
-"tools. Nevertheless, the installed libraries are used when linking."
+"but cannot be used yet. Basic tasks still rely on the host's tools. "
+"Nevertheless, the installed libraries are used when linking."
 msgstr ""
-"本章展示如何使用刚刚构建的交叉工具链对基本工具进行交叉编译。"
-"这些工具会被安装到它们的最终位置，但现在还无法使用。"
-"基本操作仍然依赖宿主系统的工具。尽管如此，在链接时会使用刚刚安装的库。"
+"本章展示如何使用刚刚构建的交叉工具链对基本工具进行交叉编译。这些工具会被安装"
+"到它们的最终位置，但现在还无法使用。基本操作仍然依赖宿主系统的工具。尽管如"
+"此，在链接时会使用刚刚安装的库。"
 
 #. type: Content of: <sect1><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter06/introduction.xml:19
 msgid ""
 "Using the utilities will be possible in next chapter after entering the "
 "<quote>chroot</quote> environment. But all the packages built in the present "
 "chapter need to be built before we do that. Therefore we cannot be "
 "independent of the host system yet."
 msgstr ""
-"在下一章，进入<quote>chroot</quote>环境后，就可以使用这些工具。"
-"但是在此之前，我们必须将本章中所有的软件包构建完毕。"
-"因此现在我们还不能脱离宿主系统。"
+"在下一章，进入<quote>chroot</quote>环境后，就可以使用这些工具。但是在此之前，"
+"我们必须将本章中所有的软件包构建完毕。因此现在我们还不能脱离宿主系统。"
 
 #. type: Content of: <sect1><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter06/introduction.xml:24
 msgid ""
 "Once again, let us recall that improper setting of <envar>LFS</envar> "
 "together with building as root, may render your computer unusable.  This "
-"whole chapter must be done as user <systemitem "
-"class=\"username\">lfs</systemitem>, with the enviroment as described in "
-"<xref linkend=\"ch-preps-settingenviron\"/>."
+"whole chapter must be done as user <systemitem class=\"username\">lfs</"
+"systemitem>, with the enviroment as described in <xref linkend=\"ch-preps-"
+"settingenviron\"/>."
 msgstr ""
-"再一次地，请注意如果 <envar>LFS</envar> 环境变量设置错误，"
-"而且使用 root 用户身份构建，可能导致您的电脑完全无法使用。"
-"本章应该以用户 <systemitem class=\"username\">lfs</systemitem> 身份完成，"
-"且环境变量应该如同<xref linkend=\"ch-preps-settingenviron\"/>所述设置。"
+"再一次地，请注意如果 <envar>LFS</envar> 环境变量设置错误，而且使用 root 用户"
+"身份构建，可能导致您的电脑完全无法使用。本章应该以用户 <systemitem class="
+"\"username\">lfs</systemitem> 身份完成，且环境变量应该如同<xref linkend=\"ch-"
+"preps-settingenviron\"/>所述设置。"

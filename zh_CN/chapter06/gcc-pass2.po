@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2020-08-05 04:39+0800\n"
+"POT-Creation-Date: 2020-08-08 19:28+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -12,13 +12,11 @@ msgstr ""
 "X-Generator: Translate Toolkit 2.2.5\n"
 
 #. type: Content of: <sect1><sect1info><address>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter06/gcc-pass2.xml:14
 #, no-wrap
 msgid "&gcc-url;"
 msgstr "&gcc-url;"
 
 #. type: Content of: <sect1><sect1info>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter06/gcc-pass2.xml:12
 msgid ""
 "<productname>gcc-pass2</productname> <productnumber>&gcc-version;</"
 "productnumber> <placeholder type=\"address\" id=\"0\"/>"
@@ -27,47 +25,38 @@ msgstr ""
 "productnumber> <placeholder type=\"address\" id=\"0\"/>"
 
 #. type: Content of: <sect1><title>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter06/gcc-pass2.xml:17
 msgid "GCC-&gcc-version; - Pass 2"
 msgstr "GCC-&gcc-version; - 第二遍"
 
 #. type: Content of: <sect1><indexterm><primary>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter06/gcc-pass2.xml:20
 msgid "GCC"
 msgstr "GCC"
 
 #. type: Content of: <sect1><indexterm><secondary>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter06/gcc-pass2.xml:21
 msgid "tools, pass 2"
 msgstr "工具，第二遍"
 
 #. type: Content of: <sect1><sect2><segmentedlist><segtitle>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter06/gcc-pass2.xml:32
 msgid "&buildtime;"
 msgstr "&buildtime;"
 
 #. type: Content of: <sect1><sect2><segmentedlist><segtitle>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter06/gcc-pass2.xml:33
 msgid "&diskspace;"
 msgstr "&diskspace;"
 
 #. type: Content of: <sect1><sect2><segmentedlist><seglistitem><seg>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter06/gcc-pass2.xml:36
 msgid "&gcc-tmpp2-sbu;"
 msgstr "&gcc-tmpp2-sbu;"
 
 #. type: Content of: <sect1><sect2><segmentedlist><seglistitem><seg>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter06/gcc-pass2.xml:37
 msgid "&gcc-tmpp2-du;"
 msgstr "&gcc-tmpp2-du;"
 
 #. type: Content of: <sect1><sect2><title>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter06/gcc-pass2.xml:44
 msgid "Installation of GCC"
 msgstr "安装 GCC"
 
 #. type: Content of: <sect1><sect2><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter06/gcc-pass2.xml:46
 msgid ""
 "As in the first build of GCC, the GMP, MPFR, and MPC packages are required. "
 "Unpack the tarballs and move them into the required directory names:"
@@ -76,7 +65,6 @@ msgstr ""
 "并将它们移动到 GCC 要求的目录名："
 
 #. type: Content of: <sect1><sect2><screen>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter06/gcc-pass2.xml:50
 #, no-wrap
 msgid ""
 "<userinput remap=\"pre\">tar -xf ../mpfr-&mpfr-version;.tar.xz\n"
@@ -94,7 +82,6 @@ msgstr ""
 "mv -v mpc-&mpc-version; mpc</userinput>"
 
 #. type: Content of: <sect1><sect2><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter06/gcc-pass2.xml:57
 msgid ""
 "If building on x86_64, change the default directory name for 64-bit "
 "libraries to <quote>lib</quote>:"
@@ -102,7 +89,6 @@ msgstr ""
 "如果是在 x86_64 上构建，修改 64 位库文件的默认目录名为 <quote>lib</quote>："
 
 #. type: Content of: <sect1><sect2><screen>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter06/gcc-pass2.xml:60
 #, no-wrap
 msgid ""
 "<userinput remap=\"pre\">case $(uname -m) in\n"
@@ -118,12 +104,10 @@ msgstr ""
 "esac</userinput>"
 
 #. type: Content of: <sect1><sect2><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter06/gcc-pass2.xml:71
 msgid "Create a separate build directory again:"
 msgstr "再次创建一个独立的构建目录："
 
 #. type: Content of: <sect1><sect2><screen>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter06/gcc-pass2.xml:73
 #, no-wrap
 msgid ""
 "<userinput remap=\"pre\">mkdir -v build\n"
@@ -133,13 +117,11 @@ msgstr ""
 "cd       build</userinput>"
 
 #. type: Content of: <sect1><sect2><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter06/gcc-pass2.xml:76
 msgid ""
 "Create a symlink that allows libgcc to be built with posix threads support:"
 msgstr "创建一个符号链接，以允许 libgcc 在构建时启用 POSIX 线程支持："
 
 #. type: Content of: <sect1><sect2><screen>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter06/gcc-pass2.xml:79
 #, no-wrap
 msgid ""
 "<userinput remap=\"pre\">mkdir -pv $LFS_TGT/libgcc\n"
@@ -149,19 +131,16 @@ msgstr ""
 "ln -s ../../../libgcc/gthr-posix.h $LFS_TGT/libgcc/gthr-default.h</userinput>"
 
 #. type: Content of: <sect1><sect2><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter06/gcc-pass2.xml:82
 msgid ""
 "Before starting to build GCC, remember to unset any environment variables "
 "that override the default optimization flags."
 msgstr "在开始构建 GCC 前，记得清除所有覆盖默认优化开关的环境变量。"
 
 #. type: Content of: <sect1><sect2><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter06/gcc-pass2.xml:85
 msgid "Now prepare GCC for compilation:"
 msgstr "现在准备编译 GCC："
 
 #. type: Content of: <sect1><sect2><screen>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter06/gcc-pass2.xml:87
 #, no-wrap
 msgid ""
 "<userinput remap=\"configure\">../configure                                       \\\n"
@@ -201,17 +180,14 @@ msgstr ""
 "    --enable-languages=c,c++</userinput>"
 
 #. type: Content of: <sect1><sect2><variablelist><title>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter06/gcc-pass2.xml:106
 msgid "The meaning of the new configure options:"
 msgstr "配置选项的含义："
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter06/gcc-pass2.xml:109
 msgid "<parameter>-with-build-sysroot=$LFS</parameter>"
 msgstr "<parameter>-with-build-sysroot=$LFS</parameter>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter06/gcc-pass2.xml:111
 msgid ""
 "Normally, using <parameter>--host</parameter> ensures that a cross-compiler "
 "is used for building GCC, and that compiler knows that it has to look for "
@@ -227,12 +203,10 @@ msgstr ""
 "件，而不是在宿主系统中查找。"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter06/gcc-pass2.xml:122
 msgid "<parameter>--enable-initfini-array</parameter>"
 msgstr "<parameter>--enable-initfini-array</parameter>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter06/gcc-pass2.xml:124
 msgid ""
 "This option is automatically enabled when building a native compiler with a "
 "native compiler on x86. But here, we build with a cross compiler, so we need "
@@ -242,29 +216,24 @@ msgstr ""
 "译器进行编译，因此必须显式启用它。"
 
 #. type: Content of: <sect1><sect2><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter06/gcc-pass2.xml:132
 msgid "Compile the package:"
 msgstr "编译该软件包："
 
 #. type: Content of: <sect1><sect2><screen>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter06/gcc-pass2.xml:134
 #, no-wrap
 msgid "<userinput remap=\"make\">make</userinput>"
 msgstr "<userinput remap=\"make\">make</userinput>"
 
 #. type: Content of: <sect1><sect2><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter06/gcc-pass2.xml:136
 msgid "Install the package:"
 msgstr "安装该软件包："
 
 #. type: Content of: <sect1><sect2><screen>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter06/gcc-pass2.xml:138
 #, no-wrap
 msgid "<userinput remap=\"install\">make DESTDIR=$LFS install</userinput>"
 msgstr "<userinput remap=\"install\">make DESTDIR=$LFS install</userinput>"
 
 #. type: Content of: <sect1><sect2><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter06/gcc-pass2.xml:140
 msgid ""
 "As a finishing touch, create a utility symlink. Many programs and scripts "
 "run <command>cc</command> instead of <command>gcc</command>, which is used "
@@ -279,13 +248,11 @@ msgstr ""
 "装哪种 C 编译器的选择权留给系统管理员："
 
 #. type: Content of: <sect1><sect2><screen>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter06/gcc-pass2.xml:147
 #, no-wrap
 msgid "<userinput remap=\"install\">ln -sv gcc $LFS/usr/bin/cc</userinput>"
 msgstr "<userinput remap=\"install\">ln -sv gcc $LFS/usr/bin/cc</userinput>"
 
 #. type: Content of: <sect1><sect2><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter06/gcc-pass2.xml:154
 msgid ""
 "Details on this package are located in <xref linkend=\"contents-gcc\" role="
 "\".\"/>"

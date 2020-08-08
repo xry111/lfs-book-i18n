@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2020-06-17 12:44+0800\n"
+"POT-Creation-Date: 2020-08-08 19:28+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -12,13 +12,11 @@ msgstr ""
 "X-Generator: Translate Toolkit 2.2.5\n"
 
 #. type: Content of: <sect1><sect1info><address>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/check.xml:14
 #, no-wrap
 msgid "&check-url;"
 msgstr "&check-url;"
 
 #. type: Content of: <sect1><sect1info>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/check.xml:12
 msgid ""
 "<productname>check</productname> <productnumber>&check-version;</"
 "productnumber> <placeholder type=\"address\" id=\"0\"/>"
@@ -27,160 +25,133 @@ msgstr ""
 "productnumber> <placeholder type=\"address\" id=\"0\"/>"
 
 #. type: Content of: <sect1><title>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/check.xml:17
 msgid "Check-&check-version;"
 msgstr "Check-&check-version;"
 
 #. type: Content of: <sect1><indexterm><primary>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/check.xml:20
 msgid "Check"
 msgstr "Check"
 
 #. type: Content of: <sect1><sect2><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/check.xml:26
 msgid "Check is a unit testing framework for C."
 msgstr "Check 是一个 C 语言单元测试框架。"
 
 #. type: Content of: <sect1><sect2><segmentedlist><segtitle>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/check.xml:29
 msgid "&buildtime;"
 msgstr "&buildtime;"
 
 #. type: Content of: <sect1><sect2><segmentedlist><segtitle>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/check.xml:30
 msgid "&diskspace;"
 msgstr "&diskspace;"
 
 #. type: Content of: <sect1><sect2><segmentedlist><seglistitem><seg>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/check.xml:33
 msgid "&check-fin-sbu;"
 msgstr "&check-fin-sbu;"
 
 #. type: Content of: <sect1><sect2><segmentedlist><seglistitem><seg>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/check.xml:34
 msgid "&check-fin-du;"
 msgstr "&check-fin-du;"
 
 #. type: Content of: <sect1><sect2><title>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/check.xml:41
 msgid "Installation of Check"
 msgstr "安装 Check"
 
 #. type: Content of: <sect1><sect2><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/check.xml:43
 msgid "Prepare Check for compilation:"
 msgstr "准备编译 Check："
 
 #. type: Content of: <sect1><sect2><screen>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/check.xml:45
-#, no-wrap
-msgid "<userinput remap=\"configure\">./configure --prefix=/usr</userinput>"
+#, fuzzy, no-wrap
+#| msgid "<userinput remap=\"configure\">./configure --prefix=/usr</userinput>"
+msgid "<userinput remap=\"configure\">./configure --prefix=/usr --disable-static</userinput>"
 msgstr "<userinput remap=\"configure\">./configure --prefix=/usr</userinput>"
 
 #. type: Content of: <sect1><sect2><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/check.xml:47
 msgid "Build the package:"
 msgstr "构建该软件包："
 
 #. type: Content of: <sect1><sect2><screen>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/check.xml:49
 #, no-wrap
 msgid "<userinput remap=\"make\">make</userinput>"
 msgstr "<userinput remap=\"make\">make</userinput>"
 
 #. type: Content of: <sect1><sect2><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/check.xml:51
 msgid ""
 "Compilation is now complete.  To run the Check test suite, issue the "
 "following command:"
 msgstr "现在编译已经完成，执行以下命令执行 Check 测试套件："
 
 #. type: Content of: <sect1><sect2><screen>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/check.xml:54
 #, no-wrap
 msgid "<userinput remap=\"test\">make check</userinput>"
 msgstr "<userinput remap=\"test\">make check</userinput>"
 
 #. type: Content of: <sect1><sect2><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/check.xml:56
 msgid ""
 "Note that the Check test suite may take a relatively long (up to 4 SBU) time."
 msgstr "注意 Check 测试套件可能需要相对较长 (可能高达 4 SBU) 的时间。"
 
 #. type: Content of: <sect1><sect2><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/check.xml:59
 msgid "Install the package:"
 msgstr "安装该软件包："
 
 #. type: Content of: <sect1><sect2><screen>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/check.xml:61
 #, no-wrap
 msgid "<userinput remap=\"install\">make docdir=/usr/share/doc/check-&check-version; install</userinput>"
 msgstr "<userinput remap=\"install\">make docdir=/usr/share/doc/check-&check-version; install</userinput>"
 
 #. type: Content of: <sect1><sect2><title>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/check.xml:66
 msgid "Contents of Check"
 msgstr "Check 的内容"
 
 #. type: Content of: <sect1><sect2><segmentedlist><segtitle>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/check.xml:69
 msgid "Installed program"
 msgstr "安装的程序"
 
 #. type: Content of: <sect1><sect2><segmentedlist><segtitle>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/check.xml:70
 msgid "Installed library"
 msgstr "安装的库"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/check.xml:73
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/check.xml:89
 msgid "checkmk"
 msgstr "checkmk"
 
 #. type: Content of: <sect1><sect2><segmentedlist><seglistitem><seg>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/check.xml:74
-msgid "libcheck.{a,so}"
+#, fuzzy
+#| msgid "libcheck.{a,so}"
+msgid "libcheck.so"
 msgstr "libcheck.{a,so}"
 
 #. type: Content of: <sect1><sect2><variablelist><bridgehead>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/check.xml:79
 msgid "Short Descriptions"
 msgstr "简要描述"
 
 #. type: Content of: <sect1><sect2><variablelist>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/check.xml:80
 msgid ""
 "<?dbfo list-presentation=\"list\"?> <?dbhtml list-presentation=\"table\"?>"
 msgstr ""
 "<?dbfo list-presentation=\"list\"?> <?dbhtml list-presentation=\"table\"?>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/check.xml:84
 msgid "<command>checkmk</command>"
 msgstr "<command>checkmk</command>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/check.xml:86
 msgid ""
 "Awk script for generating C unit tests for use with the Check unit testing "
 "framework"
 msgstr ""
-"用于生成 C 语言单元测试的 awk 脚本，生成的单元测试可以和 Check 单元测试框架"
-"一起使用"
+"用于生成 C 语言单元测试的 awk 脚本，生成的单元测试可以和 Check 单元测试框架一"
+"起使用"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/check.xml:95
 msgid "<filename class=\"libraryfile\">libcheck.{a,so}</filename>"
 msgstr "<filename class=\"libraryfile\">libcheck.{a,so}</filename>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/check.xml:97
 msgid "Contains functions that allow Check to be called from a test program"
 msgstr "包含使得测试程序能够调用 Check 的函数"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/check.xml:100
 msgid "libcheck"
 msgstr "libcheck"

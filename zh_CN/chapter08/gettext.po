@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2020-06-17 12:44+0800\n"
+"POT-Creation-Date: 2020-08-08 19:28+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -12,13 +12,11 @@ msgstr ""
 "X-Generator: Translate Toolkit 2.2.5\n"
 
 #. type: Content of: <sect1><sect1info><address>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/gettext.xml:14
 #, no-wrap
 msgid "&gettext-url;"
 msgstr "&gettext-url;"
 
 #. type: Content of: <sect1><sect1info>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/gettext.xml:12
 msgid ""
 "<productname>gettext</productname> <productnumber>&gettext-version;</"
 "productnumber> <placeholder type=\"address\" id=\"0\"/>"
@@ -27,57 +25,47 @@ msgstr ""
 "productnumber> <placeholder type=\"address\" id=\"0\"/>"
 
 #. type: Content of: <sect1><title>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/gettext.xml:17
 msgid "Gettext-&gettext-version;"
 msgstr "Gettext-&gettext-version;"
 
 #. type: Content of: <sect1><indexterm><primary>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/gettext.xml:20
 msgid "Gettext"
 msgstr "Gettext"
 
 #. type: Content of: <sect1><sect2><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/gettext.xml:26
 msgid ""
 "The Gettext package contains utilities for internationalization and "
 "localization. These allow programs to be compiled with NLS (Native Language "
 "Support), enabling them to output messages in the user's native language."
 msgstr ""
-"Gettext 软件包包含国际化和本地化工具，它们允许程序在编译时加入 NLS (本地语言支"
-"持) 功能，使它们能够以用户的本地语言输出消息。"
+"Gettext 软件包包含国际化和本地化工具，它们允许程序在编译时加入 NLS (本地语言"
+"支持) 功能，使它们能够以用户的本地语言输出消息。"
 
 #. type: Content of: <sect1><sect2><segmentedlist><segtitle>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/gettext.xml:32
 msgid "&buildtime;"
 msgstr "&buildtime;"
 
 #. type: Content of: <sect1><sect2><segmentedlist><segtitle>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/gettext.xml:33
 msgid "&diskspace;"
 msgstr "&diskspace;"
 
 #. type: Content of: <sect1><sect2><segmentedlist><seglistitem><seg>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/gettext.xml:36
 msgid "&gettext-fin-sbu;"
 msgstr "&gettext-fin-sbu;"
 
 #. type: Content of: <sect1><sect2><segmentedlist><seglistitem><seg>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/gettext.xml:37
 msgid "&gettext-fin-du;"
 msgstr "&gettext-fin-du;"
 
 #. type: Content of: <sect1><sect2><title>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/gettext.xml:44
 msgid "Installation of Gettext"
 msgstr "安装 Gettext"
 
 #. type: Content of: <sect1><sect2><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/gettext.xml:46
 msgid "Prepare Gettext for compilation:"
 msgstr "准备编译 Gettext："
 
 #. type: Content of: <sect1><sect2><screen>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/gettext.xml:48
 #, no-wrap
 msgid ""
 "<userinput remap=\"configure\">./configure --prefix=/usr    \\\n"
@@ -89,36 +77,30 @@ msgstr ""
 "            --docdir=/usr/share/doc/gettext-&gettext-version;</userinput>"
 
 #. type: Content of: <sect1><sect2><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/gettext.xml:52
 msgid "Compile the package:"
 msgstr "编译该软件包："
 
 #. <screen>
 #. <userinput remap="make">make BISON_LOCALEDIR=/usr/share/locale</userinput></screen>
 #. type: Content of: <sect1><sect2><screen>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/gettext.xml:55
 #, no-wrap
 msgid "<userinput remap=\"make\">make</userinput>"
 msgstr "<userinput remap=\"make\">make</userinput>"
 
 #. type: Content of: <sect1><sect2><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/gettext.xml:72
 msgid "To test the results (this takes a long time, around 3 SBUs), issue:"
 msgstr "输入以下命令以测试编译结果 (需要较长时间, 大约 3 SBU)："
 
 #. type: Content of: <sect1><sect2><screen>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/gettext.xml:75
 #, no-wrap
 msgid "<userinput remap=\"test\">make check</userinput>"
 msgstr "<userinput remap=\"test\">make check</userinput>"
 
 #. type: Content of: <sect1><sect2><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/gettext.xml:77
 msgid "Install the package:"
 msgstr "安装该软件包："
 
 #. type: Content of: <sect1><sect2><screen>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/gettext.xml:79
 #, no-wrap
 msgid ""
 "<userinput remap=\"install\">make install\n"
@@ -128,27 +110,22 @@ msgstr ""
 "chmod -v 0755 /usr/lib/preloadable_libintl.so</userinput>"
 
 #. type: Content of: <sect1><sect2><title>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/gettext.xml:85
 msgid "Contents of Gettext"
 msgstr "Gettext 的内容"
 
 #. type: Content of: <sect1><sect2><segmentedlist><segtitle>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/gettext.xml:88
 msgid "Installed programs"
 msgstr "安装的程序"
 
 #. type: Content of: <sect1><sect2><segmentedlist><segtitle>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/gettext.xml:89
 msgid "Installed libraries"
 msgstr "安装的库"
 
 #. type: Content of: <sect1><sect2><segmentedlist><segtitle>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/gettext.xml:90
 msgid "Installed directories"
 msgstr "安装的目录"
 
 #. type: Content of: <sect1><sect2><segmentedlist><seglistitem><seg>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/gettext.xml:93
 msgid ""
 "autopoint, envsubst, gettext, gettext.sh, gettextize, msgattrib, msgcat, "
 "msgcmp, msgcomm, msgconv, msgen, msgexec, msgfilter, msgfmt, msggrep, "
@@ -160,7 +137,6 @@ msgstr ""
 "xgettext"
 
 #. type: Content of: <sect1><sect2><segmentedlist><seglistitem><seg>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/gettext.xml:97
 msgid ""
 "libasprintf.so, libgettextlib.so, libgettextpo.so, libgettextsrc.so, "
 "libtextstyle.so, and preloadable_libintl.so"
@@ -169,7 +145,6 @@ msgstr ""
 "libtextstyle.so, 以及 preloadable_libintl.so"
 
 #. type: Content of: <sect1><sect2><segmentedlist><seglistitem><seg>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/gettext.xml:99
 msgid ""
 "/usr/lib/gettext, /usr/share/doc/gettext-&gettext-version;, /usr/share/"
 "gettext, and /usr/share/gettext-0.19.8"
@@ -178,137 +153,112 @@ msgstr ""
 "gettext, 以及 /usr/share/gettext-0.19.8"
 
 #. type: Content of: <sect1><sect2><variablelist><bridgehead>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/gettext.xml:105
 msgid "Short Descriptions"
 msgstr "简要描述"
 
 #. type: Content of: <sect1><sect2><variablelist>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/gettext.xml:106
 msgid ""
 "<?dbfo list-presentation=\"list\"?> <?dbhtml list-presentation=\"table\"?>"
 msgstr ""
 "<?dbfo list-presentation=\"list\"?> <?dbhtml list-presentation=\"table\"?>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/gettext.xml:110
 msgid "<command>autopoint</command>"
 msgstr "<command>autopoint</command>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/gettext.xml:112
 msgid "Copies standard Gettext infrastructure files into a source package"
 msgstr "将标准 Gettext 微架构文件复制到源代码包"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/gettext.xml:115
 msgid "autopoint"
 msgstr "autopoint"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/gettext.xml:121
 msgid "<command>envsubst</command>"
 msgstr "<command>envsubst</command>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/gettext.xml:123
 msgid "Substitutes environment variables in shell format strings"
 msgstr "替换 shell 格式化字符串中的环境变量"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/gettext.xml:125
 msgid "envsubst"
 msgstr "envsubst"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/gettext.xml:131
 msgid "<command>gettext</command>"
 msgstr "<command>gettext</command>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/gettext.xml:133
 msgid ""
 "Translates a natural language message into the user's language by looking up "
 "the translation in a message catalog"
 msgstr "通过查询消息目录中的翻译，将中性语言消息翻译成用户的语言"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/gettext.xml:136
 msgid "gettext"
 msgstr "gettext"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/gettext.xml:142
 msgid "<command>gettext.sh</command>"
 msgstr "<command>gettext.sh</command>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/gettext.xml:144
 msgid "Primarily serves as a shell function library for gettext"
 msgstr "主要用于 gettext 的 shell 函数库"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/gettext.xml:146
 msgid "gettext.sh"
 msgstr "gettext.sh"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/gettext.xml:152
 msgid "<command>gettextize</command>"
 msgstr "<command>gettextize</command>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/gettext.xml:154
 msgid ""
 "Copies all standard Gettext files into the given top-level directory of a "
 "package to begin internationalizing it"
 msgstr "将所有标准 Gettext 文件复制到软件包顶层目录中，以开始国际化该软件包"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/gettext.xml:157
 msgid "gettextize"
 msgstr "gettextize"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/gettext.xml:163
 msgid "<command>msgattrib</command>"
 msgstr "<command>msgattrib</command>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/gettext.xml:165
 msgid ""
 "Filters the messages of a translation catalog according to their attributes "
 "and manipulates the attributes"
 msgstr "根据属性过滤翻译目录中的消息，或修改这些属性"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/gettext.xml:168
 msgid "msgattrib"
 msgstr "msgattrib"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/gettext.xml:174
 msgid "<command>msgcat</command>"
 msgstr "<command>msgcat</command>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/gettext.xml:176
 msgid ""
 "Concatenates and merges the given <filename class=\"extension\">.po</"
 "filename> files"
 msgstr "连接并合并给定的 <filename class=\"extension\">.po</filename> 文件"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/gettext.xml:179
 msgid "msgcat"
 msgstr "msgcat"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/gettext.xml:185
 msgid "<command>msgcmp</command>"
 msgstr "<command>msgcmp</command>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/gettext.xml:187
 msgid ""
 "Compares two <filename class=\"extension\">.po</filename> files to check "
 "that both contain the same set of msgid strings"
@@ -317,17 +267,14 @@ msgstr ""
 "含相同的 msgid 字符串集合"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/gettext.xml:190
 msgid "msgcmp"
 msgstr "msgcmp"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/gettext.xml:196
 msgid "<command>msgcomm</command>"
 msgstr "<command>msgcomm</command>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/gettext.xml:198
 msgid ""
 "Finds the messages that are common to the given <filename class=\"extension"
 "\">.po</filename> files"
@@ -335,109 +282,88 @@ msgstr ""
 "找出给定的多个 <filename class=\"extension\">.po</filename> 中的公共消息"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/gettext.xml:201
 msgid "msgcomm"
 msgstr "msgcomm"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/gettext.xml:207
 msgid "<command>msgconv</command>"
 msgstr "<command>msgconv</command>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/gettext.xml:209
 msgid "Converts a translation catalog to a different character encoding"
 msgstr "将翻译目录转换成另一种字符编码"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/gettext.xml:212
 msgid "msgconv"
 msgstr "msgconv"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/gettext.xml:218
 msgid "<command>msgen</command>"
 msgstr "<command>msgen</command>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/gettext.xml:220
 msgid "Creates an English translation catalog"
 msgstr "创建英文翻译目录"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/gettext.xml:222
 msgid "msgen"
 msgstr "msgen"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/gettext.xml:228
 msgid "<command>msgexec</command>"
 msgstr "<command>msgexec</command>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/gettext.xml:230
 msgid "Applies a command to all translations of a translation catalog"
 msgstr "对翻译目录中的所有翻译执行命令"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/gettext.xml:233
 msgid "msgexec"
 msgstr "msgexec"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/gettext.xml:239
 msgid "<command>msgfilter</command>"
 msgstr "<command>msgfilter</command>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/gettext.xml:241
 msgid "Applies a filter to all translations of a translation catalog"
 msgstr "对翻译目录中的所有翻译应用过滤器"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/gettext.xml:244
 msgid "msgfilter"
 msgstr "msgfilter"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/gettext.xml:250
 msgid "<command>msgfmt</command>"
 msgstr "<command>msgfmt</command>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/gettext.xml:252
 msgid "Generates a binary message catalog from a translation catalog"
 msgstr "根据翻译目录创建二进制消息目录"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/gettext.xml:255
 msgid "msgfmt"
 msgstr "msgfmt"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/gettext.xml:261
 msgid "<command>msggrep</command>"
 msgstr "<command>msggrep</command>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/gettext.xml:263
 msgid ""
 "Extracts all messages of a translation catalog that match a given pattern or "
 "belong to some given source files"
 msgstr "找出翻译目录中所有匹配给定模式，或属于给定源代码文件的消息"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/gettext.xml:266
 msgid "msggrep"
 msgstr "msggrep"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/gettext.xml:272
 msgid "<command>msginit</command>"
 msgstr "<command>msginit</command>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/gettext.xml:274
 msgid ""
 "Creates a new <filename class=\"extension\">.po</filename> file, "
 "initializing the meta information with values from the user's environment"
@@ -446,111 +372,90 @@ msgstr ""
 "的值初始化其元信息"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/gettext.xml:278
 msgid "msginit"
 msgstr "msginit"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/gettext.xml:284
 msgid "<command>msgmerge</command>"
 msgstr "<command>msgmerge</command>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/gettext.xml:286
 msgid "Combines two raw translations into a single file"
 msgstr "将两个原始翻译文件组合成一个文件"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/gettext.xml:288
 msgid "msgmerge"
 msgstr "msgmerge"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/gettext.xml:294
 msgid "<command>msgunfmt</command>"
 msgstr "<command>msgunfmt</command>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/gettext.xml:296
 msgid "Decompiles a binary message catalog into raw translation text"
 msgstr "反编译二进制消息目录，生成原始翻译文本"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/gettext.xml:299
 msgid "msgunfmt"
 msgstr "msgunfmt"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/gettext.xml:305
 msgid "<command>msguniq</command>"
 msgstr "<command>msguniq</command>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/gettext.xml:307
 msgid "Unifies duplicate translations in a translation catalog"
 msgstr "去除翻译目录中重复的翻译"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/gettext.xml:309
 msgid "msguniq"
 msgstr "msguniq"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/gettext.xml:315
 msgid "<command>ngettext</command>"
 msgstr "<command>ngettext</command>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/gettext.xml:317
 msgid ""
 "Displays native language translations of a textual message whose grammatical "
 "form depends on a number"
 msgstr "显示某条语法形式依赖于数字的文本消息的母语翻译"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/gettext.xml:320
 msgid "ngettext"
 msgstr "ngettext"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/gettext.xml:326
 msgid "<command>recode-sr-latin</command>"
 msgstr "<command>recode-sr-latin</command>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/gettext.xml:328
 msgid "Recodes Serbian text from Cyrillic to Latin script"
 msgstr "将塞尔维亚语文本从西里尔字符转换为拉丁字符"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/gettext.xml:330
 msgid "recode-sr-latin"
 msgstr "recode-sr-latin"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/gettext.xml:336
 msgid "<command>xgettext</command>"
 msgstr "<command>xgettext</command>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/gettext.xml:338
 msgid ""
 "Extracts the translatable message lines from the given source files to make "
 "the first translation template"
 msgstr "从给定源代码文件中提取可翻译消息，以生成最初的翻译模板"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/gettext.xml:341
 msgid "xgettext"
 msgstr "xgettext"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/gettext.xml:347
 msgid "<filename class=\"libraryfile\">libasprintf</filename>"
 msgstr "<filename class=\"libraryfile\">libasprintf</filename>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/gettext.xml:349
 msgid ""
 "defines the <emphasis>autosprintf</emphasis> class, which makes C formatted "
 "output routines usable in C++ programs, for use with the <emphasis>&lt;"
@@ -562,34 +467,28 @@ msgstr ""
 "iostream&gt;</emphasis> 流一起使用"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/gettext.xml:354
 msgid "libasprintf"
 msgstr "libasprintf"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/gettext.xml:360
 msgid "<filename class=\"libraryfile\">libgettextlib</filename>"
 msgstr "<filename class=\"libraryfile\">libgettextlib</filename>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/gettext.xml:362
 msgid ""
 "a private library containing common routines used by the various Gettext "
 "programs; these are not intended for general use"
 msgstr "一个内部库，包含若干 Gettext 程序的公共子程序；不建议普遍使用"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/gettext.xml:365
 msgid "libgettextlib"
 msgstr "libgettextlib"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/gettext.xml:371
 msgid "<filename class=\"libraryfile\">libgettextpo</filename>"
 msgstr "<filename class=\"libraryfile\">libgettextpo</filename>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/gettext.xml:373
 msgid ""
 "Used to write specialized programs that process <filename class=\"extension"
 "\">.po</filename> files; this library is used when the standard applications "
@@ -603,49 +502,40 @@ msgstr ""
 "<command>msgen</command>) 不能满足要求时使用"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/gettext.xml:380
 msgid "libgettextpo"
 msgstr "libgettextpo"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/gettext.xml:386
 msgid "<filename class=\"libraryfile\">libgettextsrc</filename>"
 msgstr "<filename class=\"libraryfile\">libgettextsrc</filename>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/gettext.xml:388
 msgid ""
 "A private library containing common routines used by the various Gettext "
 "programs; these are not intended for general use"
 msgstr "一个内部库，包含若干 Gettext 程序使用的公共子程序；没有设计为普遍使用"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/gettext.xml:391
 msgid "libgettextsrc"
 msgstr "libgettextsrc"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/gettext.xml:397
 msgid "<filename class=\"libraryfile\">libtextstyle</filename>"
 msgstr "<filename class=\"libraryfile\">libtextstyle</filename>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/gettext.xml:399
 msgid "Text styling library"
 msgstr "文本样式库"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/gettext.xml:401
 msgid "libtextstyle"
 msgstr "libtextstyle"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/gettext.xml:407
 msgid "<filename class=\"libraryfile\">preloadable_libintl</filename>"
 msgstr "<filename class=\"libraryfile\">preloadable_libintl</filename>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/gettext.xml:409
 msgid ""
 "A library, intended to be used by LD_PRELOAD that assists <filename class="
 "\"libraryfile\">libintl</filename> in logging untranslated messages"
@@ -654,6 +544,5 @@ msgstr ""
 "\">libintl</filename> 记录未翻译的消息"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/gettext.xml:413
 msgid "preloadable_libintl"
 msgstr "preloadable_libintl"

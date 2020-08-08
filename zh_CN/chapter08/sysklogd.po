@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2020-06-17 12:44+0800\n"
+"POT-Creation-Date: 2020-08-08 19:28+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -12,13 +12,11 @@ msgstr ""
 "X-Generator: Translate Toolkit 2.2.5\n"
 
 #. type: Content of: <sect1><sect1info><address>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/sysklogd.xml:14
 #, no-wrap
 msgid "&sysklogd-url;"
 msgstr "&sysklogd-url;"
 
 #. type: Content of: <sect1><sect1info>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/sysklogd.xml:12
 msgid ""
 "<productname>sysklogd</productname> <productnumber>&sysklogd-version;</"
 "productnumber> <placeholder type=\"address\" id=\"0\"/>"
@@ -27,18 +25,14 @@ msgstr ""
 "productnumber> <placeholder type=\"address\" id=\"0\"/>"
 
 #. type: Content of: <sect1><title>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/sysklogd.xml:17
 msgid "Sysklogd-&sysklogd-version;"
 msgstr "Sysklogd-&sysklogd-version;"
 
 #. type: Content of: <sect1><sect2><indexterm><primary>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/sysklogd.xml:20
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/sysklogd.xml:66
 msgid "Sysklogd"
 msgstr "Sysklogd"
 
 #. type: Content of: <sect1><sect2><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/sysklogd.xml:26
 msgid ""
 "The sysklogd package contains programs for logging system messages, such as "
 "those given by the kernel when unusual things happen."
@@ -46,32 +40,26 @@ msgstr ""
 "Sysklogd 软件包包含记录系统消息的程序，例如在意外情况发生时内核给出的消息。"
 
 #. type: Content of: <sect1><sect2><segmentedlist><segtitle>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/sysklogd.xml:30
 msgid "&buildtime;"
 msgstr "&buildtime;"
 
 #. type: Content of: <sect1><sect2><segmentedlist><segtitle>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/sysklogd.xml:31
 msgid "&diskspace;"
 msgstr "&diskspace;"
 
 #. type: Content of: <sect1><sect2><segmentedlist><seglistitem><seg>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/sysklogd.xml:34
 msgid "&sysklogd-fin-sbu;"
 msgstr "&sysklogd-fin-sbu;"
 
 #. type: Content of: <sect1><sect2><segmentedlist><seglistitem><seg>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/sysklogd.xml:35
 msgid "&sysklogd-fin-du;"
 msgstr "&sysklogd-fin-du;"
 
 #. type: Content of: <sect1><sect2><title>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/sysklogd.xml:42
 msgid "Installation of Sysklogd"
 msgstr "安装 Sysklogd"
 
 #. type: Content of: <sect1><sect2><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/sysklogd.xml:44
 msgid ""
 "First, fix problems that causes a segmentation fault under some conditions "
 "in klogd and fix an obsolete program construct:"
@@ -80,7 +68,6 @@ msgstr ""
 "构："
 
 #. type: Content of: <sect1><sect2><screen>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/sysklogd.xml:47
 #, no-wrap
 msgid ""
 "<userinput remap=\"pre\">sed -i '/Error loading kernel symbols/{n;n;d}' ksym_mod.c\n"
@@ -90,49 +77,40 @@ msgstr ""
 "sed -i 's/union wait/int/' syslogd.c</userinput>"
 
 #. type: Content of: <sect1><sect2><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/sysklogd.xml:50
 msgid "Compile the package:"
 msgstr "编译该软件包："
 
 #. type: Content of: <sect1><sect2><screen>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/sysklogd.xml:52
 #, no-wrap
 msgid "<userinput remap=\"make\">make</userinput>"
 msgstr "<userinput remap=\"make\">make</userinput>"
 
 #. type: Content of: <sect1><sect2><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/sysklogd.xml:54
 msgid "This package does not come with a test suite."
 msgstr "该软件包不包含测试套件。"
 
 #. type: Content of: <sect1><sect2><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/sysklogd.xml:56
 msgid "Install the package:"
 msgstr "安装该软件包："
 
 #. type: Content of: <sect1><sect2><screen>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/sysklogd.xml:58
 #, no-wrap
 msgid "<userinput remap=\"install\">make BINDIR=/sbin install</userinput>"
 msgstr "<userinput remap=\"install\">make BINDIR=/sbin install</userinput>"
 
 #. type: Content of: <sect1><sect2><title>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/sysklogd.xml:63
 msgid "Configuring Sysklogd"
 msgstr "配置 Sysklogd"
 
 #. type: Content of: <sect1><sect2><indexterm><secondary>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/sysklogd.xml:67
 msgid "configuring"
 msgstr "configuring"
 
 #. type: Content of: <sect1><sect2><indexterm><primary>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/sysklogd.xml:71
 msgid "/etc/syslog.conf"
 msgstr "/etc/syslog.conf"
 
 #. type: Content of: <sect1><sect2><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/sysklogd.xml:74
 msgid ""
 "Create a new <filename>/etc/syslog.conf</filename> file by running the "
 "following:"
@@ -140,7 +118,6 @@ msgstr ""
 "执行以下命令，创建一个新的 <filename>/etc/syslog.conf</filename> 文件："
 
 #. type: Content of: <sect1><sect2><screen>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/sysklogd.xml:77
 #, no-wrap
 msgid ""
 "<userinput>cat &gt; /etc/syslog.conf &lt;&lt; \"EOF\"\n"
@@ -172,54 +149,44 @@ msgstr ""
 "EOF</userinput>"
 
 #. type: Content of: <sect1><sect2><title>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/sysklogd.xml:94
 msgid "Contents of Sysklogd"
 msgstr "Sysklogd 的内容"
 
 #. type: Content of: <sect1><sect2><segmentedlist><segtitle>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/sysklogd.xml:97
 msgid "Installed programs"
 msgstr "安装的程序"
 
 #. type: Content of: <sect1><sect2><segmentedlist><seglistitem><seg>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/sysklogd.xml:100
 msgid "klogd and syslogd"
 msgstr "klogd 和 syslogd"
 
 #. type: Content of: <sect1><sect2><variablelist><bridgehead>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/sysklogd.xml:105
 msgid "Short Descriptions"
 msgstr "简要描述"
 
 #. type: Content of: <sect1><sect2><variablelist>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/sysklogd.xml:106
 msgid ""
 "<?dbfo list-presentation=\"list\"?> <?dbhtml list-presentation=\"table\"?>"
 msgstr ""
 "<?dbfo list-presentation=\"list\"?> <?dbhtml list-presentation=\"table\"?>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/sysklogd.xml:110
 msgid "<command>klogd</command>"
 msgstr "<command>klogd</command>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/sysklogd.xml:112
 msgid "A system daemon for intercepting and logging kernel messages"
 msgstr "一个截获并记录内核消息的系统守护程序"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/sysklogd.xml:114
 msgid "klogd"
 msgstr "klogd"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/sysklogd.xml:120
 msgid "<command>syslogd</command>"
 msgstr "<command>syslogd</command>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/sysklogd.xml:122
 msgid ""
 "Logs the messages that system programs offer for logging [Every logged "
 "message contains at least a date stamp and a hostname, and normally the "
@@ -230,6 +197,5 @@ msgstr ""
 "程序的名字，但这依赖于日志守护进程的信任度设置。]"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/sysklogd.xml:127
 msgid "syslogd"
 msgstr "syslogd"

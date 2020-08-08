@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2020-08-05 04:39+0800\n"
+"POT-Creation-Date: 2020-08-08 19:28+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -12,13 +12,11 @@ msgstr ""
 "X-Generator: Translate Toolkit 2.2.5\n"
 
 #. type: Content of: <sect1><sect1info><address>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/procps.xml:14
 #, no-wrap
 msgid "&procps-ng-url;"
 msgstr "&procps-ng-url;"
 
 #. type: Content of: <sect1><sect1info>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/procps.xml:12
 msgid ""
 "<productname>procps-ng</productname> <productnumber>&procps-ng-version;</"
 "productnumber> <placeholder type=\"address\" id=\"0\"/>"
@@ -27,52 +25,42 @@ msgstr ""
 "productnumber> <placeholder type=\"address\" id=\"0\"/>"
 
 #. type: Content of: <sect1><title>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/procps.xml:17
 msgid "Procps-ng-&procps-ng-version;"
 msgstr "Procps-ng-&procps-ng-version;"
 
 #. type: Content of: <sect1><indexterm><primary>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/procps.xml:20
 msgid "Procps-ng"
 msgstr "Procps-ng"
 
 #. type: Content of: <sect1><sect2><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/procps.xml:26
 msgid "The Procps-ng package contains programs for monitoring processes."
 msgstr "Procps-ng 软件包包含监视进程的程序。"
 
 #. type: Content of: <sect1><sect2><segmentedlist><segtitle>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/procps.xml:29
 msgid "&buildtime;"
 msgstr "&buildtime;"
 
 #. type: Content of: <sect1><sect2><segmentedlist><segtitle>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/procps.xml:30
 msgid "&diskspace;"
 msgstr "&diskspace;"
 
 #. type: Content of: <sect1><sect2><segmentedlist><seglistitem><seg>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/procps.xml:33
 msgid "&procps-ng-fin-sbu;"
 msgstr "&procps-ng-fin-sbu;"
 
 #. type: Content of: <sect1><sect2><segmentedlist><seglistitem><seg>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/procps.xml:34
 msgid "&procps-ng-fin-du;"
 msgstr "&procps-ng-fin-du;"
 
 #. type: Content of: <sect1><sect2><title>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/procps.xml:41
 msgid "Installation of Procps-ng"
 msgstr "安装 Procps-ng"
 
 #. type: Content of: <sect1><sect2><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/procps.xml:43
 msgid "Prepare procps-ng for compilation:"
 msgstr "准备编译 procps-ng："
 
 #. type: Content of: <sect1><sect2><screen>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/procps.xml:45
 #, no-wrap
 msgid ""
 "<userinput remap=\"configure\">./configure --prefix=/usr                            \\\n"
@@ -90,7 +78,6 @@ msgstr ""
 "            --disable-kill</userinput>"
 
 #. type: Content of: <sect1><sect2><screen>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/procps.xml:52
 #, no-wrap
 msgid ""
 "<userinput remap=\"configure\">./configure --prefix=/usr                            \\\n"
@@ -110,17 +97,14 @@ msgstr ""
 "            --with-systemd</userinput>"
 
 #. type: Content of: <sect1><sect2><variablelist><title>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/procps.xml:61
 msgid "The meaning of the configure option:"
 msgstr "配置选项的含义："
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/procps.xml:64
 msgid "<parameter>--disable-kill</parameter>"
 msgstr "<parameter>--disable-kill</parameter>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/procps.xml:66
 msgid ""
 "This switch disables building the <command>kill</command> command that will "
 "be installed by the Util-linux package."
@@ -128,40 +112,33 @@ msgstr ""
 "该选项禁用 <command>kill</command> 命令的构建，Util-linux 软件包将安装它。"
 
 #. type: Content of: <sect1><sect2><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/procps.xml:72
 msgid "Compile the package:"
 msgstr "编译该软件包："
 
 #. type: Content of: <sect1><sect2><screen>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/procps.xml:74
 #, no-wrap
 msgid "<userinput remap=\"make\">make</userinput>"
 msgstr "<userinput remap=\"make\">make</userinput>"
 
 #. type: Content of: <sect1><sect2><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/procps.xml:86
 msgid "To run the test suite, run:"
 msgstr "如果要运行测试套件，执行命令："
 
 #. type: Content of: <sect1><sect2><screen>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/procps.xml:88
 #, no-wrap
 msgid "<userinput remap=\"test\">make check</userinput>"
 msgstr "<userinput remap=\"make\">make check</userinput>"
 
 #. type: Content of: <sect1><sect2><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/procps.xml:90
 msgid "Install the package:"
 msgstr "安装该软件包："
 
 #. type: Content of: <sect1><sect2><screen>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/procps.xml:92
 #, no-wrap
 msgid "<userinput remap=\"install\">make install</userinput>"
 msgstr "<userinput remap=\"install\">make install</userinput>"
 
 #. type: Content of: <sect1><sect2><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/procps.xml:94
 msgid ""
 "Finally, move essential libraries to a location that can be found if "
 "<filename class=\"directory\">/usr</filename> is not mounted."
@@ -170,7 +147,6 @@ msgstr ""
 "时也能访问的位置。"
 
 #. type: Content of: <sect1><sect2><screen>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/procps.xml:97
 #, no-wrap
 msgid ""
 "<userinput remap=\"install\">mv -v /usr/lib/libprocps.so.* /lib\n"
@@ -180,27 +156,22 @@ msgstr ""
 "ln -sfv ../../lib/$(readlink /usr/lib/libprocps.so) /usr/lib/libprocps.so</userinput>"
 
 #. type: Content of: <sect1><sect2><title>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/procps.xml:103
 msgid "Contents of Procps-ng"
 msgstr "Procps-ng 的内容"
 
 #. type: Content of: <sect1><sect2><segmentedlist><segtitle>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/procps.xml:106
 msgid "Installed programs"
 msgstr "安装的程序"
 
 #. type: Content of: <sect1><sect2><segmentedlist><segtitle>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/procps.xml:107
 msgid "Installed library"
 msgstr "安装的库"
 
 #. type: Content of: <sect1><sect2><segmentedlist><segtitle>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/procps.xml:108
 msgid "Installed directories"
 msgstr "安装的目录"
 
 #. type: Content of: <sect1><sect2><segmentedlist><seglistitem><seg>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/procps.xml:111
 msgid ""
 "free, pgrep, pidof, pkill, pmap, ps, pwdx, slabtop, sysctl, tload, top, "
 "uptime, vmstat, w, and watch"
@@ -209,220 +180,178 @@ msgstr ""
 "uptime, vmstat, w, 以及 watch"
 
 #. type: Content of: <sect1><sect2><segmentedlist><seglistitem><seg>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/procps.xml:113
 msgid "libprocps.so"
 msgstr "libprocps.so"
 
 #. type: Content of: <sect1><sect2><segmentedlist><seglistitem><seg>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/procps.xml:114
 msgid "/usr/include/proc and /usr/share/doc/procps-ng-&procps-ng-version;"
 msgstr "/usr/include/proc 和 /usr/share/doc/procps-ng-&procps-ng-version;"
 
 #. type: Content of: <sect1><sect2><variablelist><bridgehead>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/procps.xml:119
 msgid "Short Descriptions"
 msgstr "简要描述"
 
 #. type: Content of: <sect1><sect2><variablelist>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/procps.xml:120
 msgid ""
 "<?dbfo list-presentation=\"list\"?> <?dbhtml list-presentation=\"table\"?>"
 msgstr ""
 "<?dbfo list-presentation=\"list\"?> <?dbhtml list-presentation=\"table\"?>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/procps.xml:124
 msgid "<command>free</command>"
 msgstr "<command>free</command>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/procps.xml:126
 msgid ""
 "Reports the amount of free and used memory (both physical and swap memory) "
 "in the system"
 msgstr "报告系统中可用和已用内存 (包括物理内存和交换空间) 的容量"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/procps.xml:129
 msgid "free"
 msgstr "free"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/procps.xml:135
 msgid "<command>pgrep</command>"
 msgstr "<command>pgrep</command>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/procps.xml:137
 msgid "Looks up processes based on their name and other attributes"
 msgstr "根据名称和其他属性查找进程"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/procps.xml:139
 msgid "pgrep"
 msgstr "pgrep"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/procps.xml:145
 msgid "<command>pidof</command>"
 msgstr "<command>pidof</command>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/procps.xml:147
 msgid "Reports the PIDs of the given programs"
 msgstr "报告给定程序的 PID"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/procps.xml:149
 msgid "pidof"
 msgstr "pidof"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/procps.xml:155
 msgid "<command>pkill</command>"
 msgstr "<command>pkill</command>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/procps.xml:157
 msgid "Signals processes based on their name and other attributes"
 msgstr "根据名称和其他属性向进程发送信号"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/procps.xml:159
 msgid "pkill"
 msgstr "pkill"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/procps.xml:165
 msgid "<command>pmap</command>"
 msgstr "<command>pmap</command>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/procps.xml:167
 msgid "Reports the memory map of the given process"
 msgstr "报告给定进程的内存映射"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/procps.xml:169
 msgid "pmap"
 msgstr "pmap"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/procps.xml:175
 msgid "<command>ps</command>"
 msgstr "<command>ps</command>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/procps.xml:177
 msgid "Lists the current running processes"
 msgstr "列出正在运行的进程"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/procps.xml:179
 msgid "ps"
 msgstr "ps"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/procps.xml:185
 msgid "<command>pwdx</command>"
 msgstr "<command>pwdx</command>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/procps.xml:187
 msgid "Reports the current working directory of a process"
 msgstr "报告一个进程的当前工作目录"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/procps.xml:189
 msgid "pwdx"
 msgstr "pwdx"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/procps.xml:195
 msgid "<command>slabtop</command>"
 msgstr "<command>slabtop</command>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/procps.xml:197
 msgid "Displays detailed kernel slab cache information in real time"
 msgstr "实时显示内核 slab 缓存详细信息"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/procps.xml:199
 msgid "slabtop"
 msgstr "slabtop"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/procps.xml:205
 msgid "<command>sysctl</command>"
 msgstr "<command>sysctl</command>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/procps.xml:207
 msgid "Modifies kernel parameters at run time"
 msgstr "在运行时修改内核参数"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/procps.xml:209
 msgid "sysctl"
 msgstr "sysctl"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/procps.xml:215
 msgid "<command>tload</command>"
 msgstr "<command>tload</command>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/procps.xml:217
 msgid "Prints a graph of the current system load average"
 msgstr "打印当前系统平均负载示意图"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/procps.xml:219
 msgid "tload"
 msgstr "tload"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/procps.xml:225
 msgid "<command>top</command>"
 msgstr "<command>top</command>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/procps.xml:227
 msgid ""
 "Displays a list of the most CPU intensive processes; it provides an ongoing "
 "look at processor activity in real time"
 msgstr "列出 CPU 占用最大的进程列表；它实时地提供处理器活动的连续概况"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/procps.xml:230
 msgid "top"
 msgstr "top"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/procps.xml:236
 msgid "<command>uptime</command>"
 msgstr "<command>uptime</command>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/procps.xml:238
 msgid ""
 "Reports how long the system has been running, how many users are logged on, "
 "and the system load averages"
 msgstr "报告系统运行时间、登录用户数目和系统平均负载"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/procps.xml:241
 msgid "uptime"
 msgstr "uptime"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/procps.xml:247
 msgid "<command>vmstat</command>"
 msgstr "<command>vmstat</command>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/procps.xml:249
 msgid ""
 "Reports virtual memory statistics, giving information about processes, "
 "memory, paging, block Input/Output (IO), traps, and CPU activity"
@@ -430,32 +359,26 @@ msgstr ""
 "报告虚拟内存统计，给出进程、内存、分页、块输入输出 (IO)、 陷阱和 CPU 活动信息"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/procps.xml:253
 msgid "vmstat"
 msgstr "vmstat"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/procps.xml:259
 msgid "<command>w</command>"
 msgstr "<command>w</command>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/procps.xml:261
 msgid "Shows which users are currently logged on, where, and since when"
 msgstr "显示当前登录用户和它们的登录地点、时间"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/procps.xml:264
 msgid "w"
 msgstr "w"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/procps.xml:270
 msgid "<command>watch</command>"
 msgstr "<command>watch</command>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/procps.xml:272
 msgid ""
 "Runs a given command repeatedly, displaying the first screen-full of its "
 "output; this allows a user to watch the output change over time"
@@ -463,22 +386,18 @@ msgstr ""
 "重复执行给定命令，显示其输出的第一页；这使得用户可以观察输出随时间的变化"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/procps.xml:276
 msgid "watch"
 msgstr "watch"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/procps.xml:282
 msgid "<filename class=\"libraryfile\">libprocps</filename>"
 msgstr "<filename class=\"libraryfile\">libprocps</filename>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/procps.xml:284
 msgid "Contains the functions used by most programs in this package"
 msgstr "包含该软件包大多数程序使用的函数"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/procps.xml:287
 msgid "libprocps"
 msgstr "libprocps"
 

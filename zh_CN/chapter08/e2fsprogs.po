@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2020-06-17 12:44+0800\n"
+"POT-Creation-Date: 2020-08-08 19:28+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -12,13 +12,11 @@ msgstr ""
 "X-Generator: Translate Toolkit 2.2.5\n"
 
 #. type: Content of: <sect1><sect1info><address>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/e2fsprogs.xml:14
 #, no-wrap
 msgid "&e2fsprogs-url;"
 msgstr "&e2fsprogs-url;"
 
 #. type: Content of: <sect1><sect1info>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/e2fsprogs.xml:12
 msgid ""
 "<productname>e2fsprogs</productname> <productnumber>&e2fsprogs-version;</"
 "productnumber> <placeholder type=\"address\" id=\"0\"/>"
@@ -27,17 +25,14 @@ msgstr ""
 "productnumber> <placeholder type=\"address\" id=\"0\"/>"
 
 #. type: Content of: <sect1><title>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/e2fsprogs.xml:17
 msgid "E2fsprogs-&e2fsprogs-version;"
 msgstr "E2fsprogs-&e2fsprogs-version;"
 
 #. type: Content of: <sect1><indexterm><primary>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/e2fsprogs.xml:20
 msgid "E2fsprogs"
 msgstr "E2fsprogs"
 
 #. type: Content of: <sect1><sect2><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/e2fsprogs.xml:26
 msgid ""
 "The e2fsprogs package contains the utilities for handling the <systemitem "
 "class=\"filesystem\">ext2</systemitem> file system. It also supports the "
@@ -50,39 +45,32 @@ msgstr ""
 "统。"
 
 #. type: Content of: <sect1><sect2><segmentedlist><segtitle>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/e2fsprogs.xml:33
 msgid "&buildtime;"
 msgstr "&buildtime;"
 
 #. type: Content of: <sect1><sect2><segmentedlist><segtitle>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/e2fsprogs.xml:34
 msgid "&diskspace;"
 msgstr "&diskspace;"
 
 #. type: Content of: <sect1><sect2><segmentedlist><seglistitem><seg>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/e2fsprogs.xml:37
 msgid "&e2fsprogs-fin-sbu;"
 msgstr "&e2fsprogs-fin-sbu;"
 
 #. type: Content of: <sect1><sect2><segmentedlist><seglistitem><seg>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/e2fsprogs.xml:38
 msgid "&e2fsprogs-fin-du;"
 msgstr "&e2fsprogs-fin-du;"
 
 #. type: Content of: <sect1><sect2><title>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/e2fsprogs.xml:45
 msgid "Installation of E2fsprogs"
 msgstr "安装 E2fsprogs"
 
 #. type: Content of: <sect1><sect2><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/e2fsprogs.xml:47
 msgid ""
 "The e2fsprogs documentation recommends that the package be built in a "
 "subdirectory of the source tree:"
 msgstr "E2fsprogs 文档推荐在源代码目录树中的一个子目录内构建该软件包："
 
 #. type: Content of: <sect1><sect2><screen>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/e2fsprogs.xml:50
 #, no-wrap
 msgid ""
 "<userinput remap=\"pre\">mkdir -v build\n"
@@ -92,12 +80,10 @@ msgstr ""
 "cd       build</userinput>"
 
 #. type: Content of: <sect1><sect2><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/e2fsprogs.xml:53
 msgid "Prepare e2fsprogs for compilation:"
 msgstr "准备编译 E2fsprogs："
 
 #. type: Content of: <sect1><sect2><screen>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/e2fsprogs.xml:55
 #, no-wrap
 msgid ""
 "<userinput remap=\"configure\">../configure --prefix=/usr           \\\n"
@@ -119,12 +105,10 @@ msgstr ""
 "             --disable-fsck</userinput>"
 
 #. type: Content of: <sect1><sect2><variablelist><title>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/e2fsprogs.xml:65
 msgid "The meaning of the configure options:"
 msgstr "配置选项的含义："
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/e2fsprogs.xml:68
 msgid ""
 "<parameter>--with-root-prefix=\"\"</parameter> and <parameter>--bindir=/bin</"
 "parameter>"
@@ -133,7 +117,6 @@ msgstr ""
 "parameter>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/e2fsprogs.xml:71
 msgid ""
 "Certain programs (such as the <command>e2fsck</command> program) are "
 "considered essential programs.  When, for example, <filename class="
@@ -143,31 +126,27 @@ msgid ""
 "option is not passed to configure, the programs are installed into the "
 "<filename class=\"directory\">/usr</filename> directory."
 msgstr ""
-"某些程序 (例如 <command>e2fsck</command> 程序) 被认为是关键的。在 "
-"<filename class=\"directory\">/usr</filename> 尚未挂载等情况下，这些程序仍然"
-"必须可用。它们应该放置在 <filename class=\"directory\">/lib</filename> 和 "
-"<filename class=\"directory\">/sbin</filename> 等目录中。如果没有向 "
-"e2fsprogs 配置脚本传递该参数，这些程序会被安装到 <filename class=\"directory"
-"\">/usr</filename> 目录。"
+"某些程序 (例如 <command>e2fsck</command> 程序) 被认为是关键的。在 <filename "
+"class=\"directory\">/usr</filename> 尚未挂载等情况下，这些程序仍然必须可用。"
+"它们应该放置在 <filename class=\"directory\">/lib</filename> 和 <filename "
+"class=\"directory\">/sbin</filename> 等目录中。如果没有向 e2fsprogs 配置脚本"
+"传递该参数，这些程序会被安装到 <filename class=\"directory\">/usr</filename> "
+"目录。"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/e2fsprogs.xml:83
 msgid "<parameter>--enable-elf-shlibs</parameter>"
 msgstr "<parameter>--enable-elf-shlibs</parameter>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/e2fsprogs.xml:85
 msgid ""
 "This creates the shared libraries which some programs in this package use."
 msgstr "该选项表示创建该软件包中一些程序使用的共享库。"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/e2fsprogs.xml:91
 msgid "<parameter>--disable-*</parameter>"
 msgstr "<parameter>--disable-*</parameter>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/e2fsprogs.xml:93
 msgid ""
 "This prevents e2fsprogs from building and installing the <systemitem class="
 "\"library\">libuuid</systemitem> and <systemitem class=\"library\">libblkid</"
@@ -181,62 +160,52 @@ msgstr ""
 "<command>fsck</command> 包装器，因为 Util-linux 会安装更新的版本。"
 
 #. type: Content of: <sect1><sect2><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/e2fsprogs.xml:104
 msgid "Compile the package:"
 msgstr "编译该软件包："
 
 #. type: Content of: <sect1><sect2><screen>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/e2fsprogs.xml:106
 #, no-wrap
 msgid "<userinput remap=\"make\">make</userinput>"
 msgstr "<userinput remap=\"make\">make</userinput>"
 
 #. type: Content of: <sect1><sect2><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/e2fsprogs.xml:108
 msgid "To run the tests, issue:"
 msgstr "执行以下命令，以运行测试："
 
 #. type: Content of: <sect1><sect2><screen>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/e2fsprogs.xml:110
 #, no-wrap
 msgid "<userinput remap=\"test\">make check</userinput>"
 msgstr "<userinput remap=\"test\">make check</userinput>"
 
 #. type: Content of: <sect1><sect2><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/e2fsprogs.xml:119
 msgid ""
 "On a spinning disk, the tests take a little more than 4 SBUs. They can be "
 "much shorter on an SSD (down to about 1.5 SBUs)."
 msgstr ""
-"在机械硬盘上，测试使用的时间略超过 4 SBU。在 SSD 上测试时间短很多 "
-"(只要约 1.5 SBU)。"
+"在机械硬盘上，测试使用的时间略超过 4 SBU。在 SSD 上测试时间短很多 (只要约 "
+"1.5 SBU)。"
 
 #. type: Content of: <sect1><sect2><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/e2fsprogs.xml:121
 msgid "Install the package:"
 msgstr "安装该软件包："
 
 #. type: Content of: <sect1><sect2><screen>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/e2fsprogs.xml:123
 #, no-wrap
 msgid "<userinput remap=\"install\">make install</userinput>"
 msgstr "<userinput remap=\"install\">make install</userinput>"
 
 #. type: Content of: <sect1><sect2><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/e2fsprogs.xml:125
 msgid ""
 "Make the installed static libraries writable so debugging symbols can be "
 "removed later:"
 msgstr "将安装好的静态库变为可写的，以便之后移除调试符号："
 
 #. type: Content of: <sect1><sect2><screen>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/e2fsprogs.xml:128
 #, no-wrap
 msgid "<userinput remap=\"install\">chmod -v u+w /usr/lib/{libcom_err,libe2p,libext2fs,libss}.a</userinput>"
 msgstr "<userinput remap=\"install\">chmod -v u+w /usr/lib/{libcom_err,libe2p,libext2fs,libss}.a</userinput>"
 
 #. type: Content of: <sect1><sect2><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/e2fsprogs.xml:130
 msgid ""
 "This package installs a gzipped <filename class=\"extension\">.info</"
 "filename> file but doesn't update the system-wide <filename>dir</filename> "
@@ -248,7 +217,6 @@ msgstr ""
 "解压该文件，并更新系统 <filename>dir</filename> 文件："
 
 #. type: Content of: <sect1><sect2><screen>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/e2fsprogs.xml:136
 #, no-wrap
 msgid ""
 "<userinput remap=\"install\">gunzip -v /usr/share/info/libext2fs.info.gz\n"
@@ -258,14 +226,12 @@ msgstr ""
 "install-info --dir-file=/usr/share/info/dir /usr/share/info/libext2fs.info</userinput>"
 
 #. type: Content of: <sect1><sect2><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/e2fsprogs.xml:139
 msgid ""
 "If desired, create and install some additional documentation by issuing the "
 "following commands:"
 msgstr "如果需要，执行以下命令创建并安装一些额外的文档："
 
 #. type: Content of: <sect1><sect2><screen>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/e2fsprogs.xml:142
 #, no-wrap
 msgid ""
 "<userinput remap=\"install\">makeinfo -o      doc/com_err.info ../lib/et/com_err.texinfo\n"
@@ -277,27 +243,22 @@ msgstr ""
 "install-info --dir-file=/usr/share/info/dir /usr/share/info/com_err.info</userinput>"
 
 #. type: Content of: <sect1><sect2><title>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/e2fsprogs.xml:148
 msgid "Contents of E2fsprogs"
 msgstr "E2fsprogs 的内容"
 
 #. type: Content of: <sect1><sect2><segmentedlist><segtitle>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/e2fsprogs.xml:151
 msgid "Installed programs"
 msgstr "安装的程序"
 
 #. type: Content of: <sect1><sect2><segmentedlist><segtitle>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/e2fsprogs.xml:152
 msgid "Installed libraries"
 msgstr "安装的库"
 
 #. type: Content of: <sect1><sect2><segmentedlist><segtitle>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/e2fsprogs.xml:153
 msgid "Installed directories"
 msgstr "安装的目录"
 
 #. type: Content of: <sect1><sect2><segmentedlist><seglistitem><seg>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/e2fsprogs.xml:156
 msgid ""
 "badblocks, chattr, compile_et, debugfs, dumpe2fs, e2freefrag, e2fsck, "
 "e2image, e2label, e2mmpstatus, e2scrub, e2scrub_all, e2undo, e4crypt, "
@@ -312,12 +273,10 @@ msgstr ""
 "及 tune2fs"
 
 #. type: Content of: <sect1><sect2><segmentedlist><seglistitem><seg>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/e2fsprogs.xml:162
 msgid "libcom_err.so, libe2p.so, libext2fs.so, and libss.so"
 msgstr "libcom_err.so, libe2p.so, libext2fs.so, 以及 libss.so"
 
 #. type: Content of: <sect1><sect2><segmentedlist><seglistitem><seg>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/e2fsprogs.xml:163
 msgid ""
 "/usr/include/e2p, /usr/include/et, /usr/include/ext2fs, /usr/include/ss, /"
 "usr/lib/e2fsprogs, /usr/share/et, and /usr/share/ss"
@@ -326,39 +285,32 @@ msgstr ""
 "usr/lib/e2fsprogs, /usr/share/et, 以及 /usr/share/ss"
 
 #. type: Content of: <sect1><sect2><variablelist><bridgehead>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/e2fsprogs.xml:170
 msgid "Short Descriptions"
 msgstr "简要描述"
 
 #. type: Content of: <sect1><sect2><variablelist>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/e2fsprogs.xml:171
 msgid ""
 "<?dbfo list-presentation=\"list\"?> <?dbhtml list-presentation=\"table\"?>"
 msgstr ""
 "<?dbfo list-presentation=\"list\"?> <?dbhtml list-presentation=\"table\"?>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/e2fsprogs.xml:175
 msgid "<command>badblocks</command>"
 msgstr "<command>badblocks</command>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/e2fsprogs.xml:177
 msgid "Searches a device (usually a disk partition) for bad blocks"
 msgstr "在一个设备 (一般是磁盘分区) 上搜索坏块"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/e2fsprogs.xml:180
 msgid "badblocks"
 msgstr "badblocks"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/e2fsprogs.xml:186
 msgid "<command>chattr</command>"
 msgstr "<command>chattr</command>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/e2fsprogs.xml:188
 msgid ""
 "Changes the attributes of files on an <systemitem class=\"filesystem\">ext2</"
 "systemitem> file system; it also changes <systemitem class=\"filesystem"
@@ -370,17 +322,14 @@ msgstr ""
 "<systemitem class=\"filesystem\">ext2</systemitem> 文件系统的日志版本"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/e2fsprogs.xml:194
 msgid "chattr"
 msgstr "chattr"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/e2fsprogs.xml:200
 msgid "<command>compile_et</command>"
 msgstr "<command>compile_et</command>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/e2fsprogs.xml:202
 msgid ""
 "An error table compiler; it converts a table of error-code names and "
 "messages into a C source file suitable for use with the <filename class="
@@ -390,17 +339,14 @@ msgstr ""
 "<filename class=\"libraryfile\">com_err</filename> 库一起使用"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/e2fsprogs.xml:206
 msgid "compile_et"
 msgstr "compile_et"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/e2fsprogs.xml:212
 msgid "<command>debugfs</command>"
 msgstr "<command>debugfs</command>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/e2fsprogs.xml:214
 msgid ""
 "A file system debugger; it can be used to examine and change the state of an "
 "<systemitem class=\"filesystem\">ext2</systemitem> file system"
@@ -409,49 +355,40 @@ msgstr ""
 "systemitem> 文件系统的状态"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/e2fsprogs.xml:218
 msgid "debugfs"
 msgstr "debugfs"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/e2fsprogs.xml:224
 msgid "<command>dumpe2fs</command>"
 msgstr "<command>dumpe2fs</command>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/e2fsprogs.xml:226
 msgid ""
 "Prints the super block and blocks group information for the file system "
 "present on a given device"
 msgstr "打印给定设备上文件系统的超级块和块组信息"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/e2fsprogs.xml:229
 msgid "dumpe2fs"
 msgstr "dumpe2fs"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/e2fsprogs.xml:235
 msgid "<command>e2freefrag</command>"
 msgstr "<command>e2freefrag</command>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/e2fsprogs.xml:237
 msgid "Reports free space fragmentation information"
 msgstr "报告可用空间碎片信息"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/e2fsprogs.xml:239
 msgid "e2freefrag"
 msgstr "e2freefrag"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/e2fsprogs.xml:245
 msgid "<command>e2fsck</command>"
 msgstr "<command>e2fsck</command>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/e2fsprogs.xml:247
 msgid ""
 "Is used to check, and optionally repair <systemitem class=\"filesystem"
 "\">ext2</systemitem> file systems and <systemitem class=\"filesystem\">ext3</"
@@ -461,17 +398,14 @@ msgstr ""
 "<systemitem class=\"filesystem\">ext3</systemitem> 文件系统"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/e2fsprogs.xml:251
 msgid "e2fsck"
 msgstr "e2fsck"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/e2fsprogs.xml:257
 msgid "<command>e2image</command>"
 msgstr "<command>e2image</command>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/e2fsprogs.xml:259
 msgid ""
 "Is used to save critical <systemitem class=\"filesystem\">ext2</systemitem> "
 "file system data to a file"
@@ -480,17 +414,14 @@ msgstr ""
 "存到文件"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/e2fsprogs.xml:262
 msgid "e2image"
 msgstr "e2image"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/e2fsprogs.xml:268
 msgid "<command>e2label</command>"
 msgstr "<command>e2label</command>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/e2fsprogs.xml:270
 msgid ""
 "Displays or changes the file system label on the <systemitem class="
 "\"filesystem\">ext2</systemitem> file system present on a given device"
@@ -499,62 +430,50 @@ msgstr ""
 "件系统标签"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/e2fsprogs.xml:274
 msgid "e2label"
 msgstr "e2label"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/e2fsprogs.xml:280
 msgid "<command>e2mmpstatus</command>"
 msgstr "<command>e2mmpstatus</command>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/e2fsprogs.xml:282
 msgid "Checks MMP status of an ext4 filesystem"
 msgstr "检查 ext4 文件系统的 MMP 状态"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/e2fsprogs.xml:284
 msgid "e2mmpstatus"
 msgstr "e2mmpstatus"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/e2fsprogs.xml:290
 msgid "<command>e2scrub</command>"
 msgstr "<command>e2scrub</command>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/e2fsprogs.xml:292
 msgid "Checks the contents of a mounted ext[234] filesystem"
 msgstr "检查某个已挂载的 ext2，ext3 或 ext4 文件系统"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/e2fsprogs.xml:294
 msgid "e2scrub"
 msgstr "e2scrub"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/e2fsprogs.xml:300
 msgid "<command>e2scrub_all</command>"
 msgstr "<command>e2scrub_all</command>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/e2fsprogs.xml:302
 msgid "Checks all mounted ext[234] filesystems for errors"
 msgstr "检查所有已挂载的 ext2，ext3 或 ext4 文件系统"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/e2fsprogs.xml:304
 msgid "e2scrub_all"
 msgstr "e2scrub_all"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/e2fsprogs.xml:310
 msgid "<command>e2undo</command>"
 msgstr "<command>e2undo</command>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/e2fsprogs.xml:312
 msgid ""
 "Replays the undo log undo_log for an ext2/ext3/ext4 filesystem found on a "
 "device [This can be used to undo a failed operation by an e2fsprogs program.]"
@@ -563,62 +482,50 @@ msgstr ""
 "e2fsprogs 程序的失败操作。]"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/e2fsprogs.xml:316
 msgid "e2undo"
 msgstr "e2undo"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/e2fsprogs.xml:322
 msgid "<command>e4crypt</command>"
 msgstr "<command>e4crypt</command>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/e2fsprogs.xml:324
 msgid "Ext4 filesystem encryption utility"
 msgstr "Ext4 文件系统加密工具"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/e2fsprogs.xml:326
 msgid "e4crypt"
 msgstr "e4crypt"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/e2fsprogs.xml:332
 msgid "<command>e4defrag</command>"
 msgstr "<command>e4defrag</command>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/e2fsprogs.xml:334
 msgid "Online defragmenter for ext4 filesystems"
 msgstr "ext4 文件系统在线碎片整理器"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/e2fsprogs.xml:336
 msgid "e4defrag"
 msgstr "e4defrag"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/e2fsprogs.xml:342
 msgid "<command>filefrag</command>"
 msgstr "<command>filefrag</command>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/e2fsprogs.xml:344
 msgid "Reports on how badly fragmented a particular file might be"
 msgstr "报告特定文件碎片化程度"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/e2fsprogs.xml:346
 msgid "filefrag"
 msgstr "filefrag"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/e2fsprogs.xml:352
 msgid "<command>fsck.ext2</command>"
 msgstr "<command>fsck.ext2</command>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/e2fsprogs.xml:354
 msgid ""
 "By default checks <systemitem class=\"filesystem\">ext2</systemitem> file "
 "systems and is a hard link to <command>e2fsck</command>"
@@ -627,17 +534,14 @@ msgstr ""
 "是 <command>e2fsck</command> 的硬链接"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/e2fsprogs.xml:357
 msgid "fsck.ext2"
 msgstr "fsck.ext2"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/e2fsprogs.xml:363
 msgid "<command>fsck.ext3</command>"
 msgstr "<command>fsck.ext3</command>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/e2fsprogs.xml:365
 msgid ""
 "By default checks <systemitem class=\"filesystem\">ext3</systemitem> file "
 "systems and is a hard link to <command>e2fsck</command>"
@@ -646,17 +550,14 @@ msgstr ""
 "是 <command>e2fsck</command> 的硬链接"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/e2fsprogs.xml:368
 msgid "fsck.ext3"
 msgstr "fsck.ext3"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/e2fsprogs.xml:374
 msgid "<command>fsck.ext4</command>"
 msgstr "<command>fsck.ext4</command>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/e2fsprogs.xml:376
 msgid ""
 "By default checks <systemitem class=\"filesystem\">ext4</systemitem> file "
 "systems and is a hard link to <command>e2fsck</command>"
@@ -665,47 +566,38 @@ msgstr ""
 "是 <command>e2fsck</command> 的硬链接"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/e2fsprogs.xml:379
 msgid "fsck.ext4"
 msgstr "fsck.ext4"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/e2fsprogs.xml:385
 msgid "<command>logsave</command>"
 msgstr "<command>logsave</command>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/e2fsprogs.xml:387
 msgid "Saves the output of a command in a log file"
 msgstr "将命令输出保存到日志文件"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/e2fsprogs.xml:389
 msgid "logsave"
 msgstr "logsave"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/e2fsprogs.xml:395
 msgid "<command>lsattr</command>"
 msgstr "<command>lsattr</command>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/e2fsprogs.xml:397
 msgid "Lists the attributes of files on a second extended file system"
 msgstr "列出 ext2 文件系统上的文件属性"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/e2fsprogs.xml:400
 msgid "lsattr"
 msgstr "lsattr"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/e2fsprogs.xml:406
 msgid "<command>mk_cmds</command>"
 msgstr "<command>mk_cmds</command>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/e2fsprogs.xml:408
 msgid ""
 "Converts a table of command names and help messages into a C source file "
 "suitable for use with the <filename class=\"libraryfile\">libss</filename> "
@@ -715,17 +607,14 @@ msgstr ""
 "\"libraryfile\">libss</filename> 子系统库一起使用"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/e2fsprogs.xml:412
 msgid "mk_cmds"
 msgstr "mk_cmds"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/e2fsprogs.xml:418
 msgid "<command>mke2fs</command>"
 msgstr "<command>mke2fs</command>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/e2fsprogs.xml:420
 msgid ""
 "Creates an <systemitem class=\"filesystem\">ext2</systemitem> or <systemitem "
 "class=\"filesystem\">ext3</systemitem> file system on the given device"
@@ -734,17 +623,14 @@ msgstr ""
 "<systemitem class=\"filesystem\">ext3</systemitem> 文件系统"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/e2fsprogs.xml:424
 msgid "mke2fs"
 msgstr "mke2fs"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/e2fsprogs.xml:430
 msgid "<command>mkfs.ext2</command>"
 msgstr "<command>mkfs.ext2</command>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/e2fsprogs.xml:432
 msgid ""
 "By default creates <systemitem class=\"filesystem\">ext2</systemitem> file "
 "systems and is a hard link to <command>mke2fs</command>"
@@ -753,17 +639,14 @@ msgstr ""
 "是 <command>mke2fs</command> 的硬链接"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/e2fsprogs.xml:435
 msgid "mkfs.ext2"
 msgstr "mkfs.ext2"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/e2fsprogs.xml:441
 msgid "<command>mkfs.ext3</command>"
 msgstr "<command>mkfs.ext3</command>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/e2fsprogs.xml:443
 msgid ""
 "By default creates <systemitem class=\"filesystem\">ext3</systemitem> file "
 "systems and is a hard link to <command>mke2fs</command>"
@@ -772,17 +655,14 @@ msgstr ""
 "是 <command>mke2fs</command> 的硬链接"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/e2fsprogs.xml:446
 msgid "mkfs.ext3"
 msgstr "mkfs.ext3"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/e2fsprogs.xml:452
 msgid "<command>mkfs.ext4</command>"
 msgstr "<command>mkfs.ext4</command>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/e2fsprogs.xml:454
 msgid ""
 "By default creates <systemitem class=\"filesystem\">ext4</systemitem> file "
 "systems and is a hard link to <command>mke2fs</command>"
@@ -791,17 +671,14 @@ msgstr ""
 "是 <command>mke2fs</command> 的硬链接"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/e2fsprogs.xml:457
 msgid "mkfs.ext4"
 msgstr "mkfs.ext4"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/e2fsprogs.xml:463
 msgid "<command>mklost+found</command>"
 msgstr "<command>mklost+found</command>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/e2fsprogs.xml:465
 msgid ""
 "Used to create a <filename class=\"directory\">lost+found</filename> "
 "directory on an <systemitem class=\"filesystem\">ext2</systemitem> file "
@@ -813,17 +690,14 @@ msgstr ""
 "磁盘块，以减轻 <command>e2fsck</command> 的负担"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/e2fsprogs.xml:470
 msgid "mklost+found"
 msgstr "mklost+found"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/e2fsprogs.xml:476
 msgid "<command>resize2fs</command>"
 msgstr "<command>resize2fs</command>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/e2fsprogs.xml:478
 msgid ""
 "Can be used to enlarge or shrink an <systemitem class=\"filesystem\">ext2</"
 "systemitem> file system"
@@ -832,17 +706,14 @@ msgstr ""
 "统"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/e2fsprogs.xml:481
 msgid "resize2fs"
 msgstr "resize2fs"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/e2fsprogs.xml:487
 msgid "<command>tune2fs</command>"
 msgstr "<command>tune2fs</command>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/e2fsprogs.xml:489
 msgid ""
 "Adjusts tunable file system parameters on an <systemitem class=\"filesystem"
 "\">ext2</systemitem> file system"
@@ -850,32 +721,26 @@ msgstr ""
 "调整 <systemitem class=\"filesystem\">ext2</systemitem> 文件系统的可调参数"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/e2fsprogs.xml:492
 msgid "tune2fs"
 msgstr "tune2fs"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/e2fsprogs.xml:498
 msgid "<filename class=\"libraryfile\">libcom_err</filename>"
 msgstr "<filename class=\"libraryfile\">libcom_err</filename>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/e2fsprogs.xml:500
 msgid "The common error display routine"
 msgstr "公用错误显示子程序"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/e2fsprogs.xml:502
 msgid "libcom_err"
 msgstr "libcom_err"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/e2fsprogs.xml:508
 msgid "<filename class=\"libraryfile\">libe2p</filename>"
 msgstr "<filename class=\"libraryfile\">libe2p</filename>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/e2fsprogs.xml:510
 msgid ""
 "Used by <command>dumpe2fs</command>, <command>chattr</command>, and "
 "<command>lsattr</command>"
@@ -884,17 +749,14 @@ msgstr ""
 "<command>lsattr</command> 使用"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/e2fsprogs.xml:513
 msgid "libe2p"
 msgstr "libe2p"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/e2fsprogs.xml:519
 msgid "<filename class=\"libraryfile\">libext2fs</filename>"
 msgstr "<filename class=\"libraryfile\">libext2fs</filename>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/e2fsprogs.xml:521
 msgid ""
 "Contains routines to enable user-level programs to manipulate an <systemitem "
 "class=\"filesystem\">ext2</systemitem> file system"
@@ -903,21 +765,17 @@ msgstr ""
 "件系统的子程序"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/e2fsprogs.xml:524
 msgid "libext2fs"
 msgstr "libext2fs"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/e2fsprogs.xml:530
 msgid "<filename class=\"libraryfile\">libss</filename>"
 msgstr "<filename class=\"libraryfile\">libss</filename>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/e2fsprogs.xml:532
 msgid "Used by <command>debugfs</command>"
 msgstr "被 <command>debugfs</command> 使用"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/e2fsprogs.xml:534
 msgid "libss"
 msgstr "libss"

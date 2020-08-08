@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2020-06-17 12:44+0800\n"
+"POT-Creation-Date: 2020-08-08 19:28+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -12,12 +12,10 @@ msgstr ""
 "X-Generator: Translate Toolkit 2.2.5\n"
 
 #. type: Content of: <sect1><title>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter02/aboutlfs.xml:11
 msgid "Setting The $LFS Variable"
 msgstr "设置 $LFS 环境变量"
 
 #. type: Content of: <sect1><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter02/aboutlfs.xml:13
 msgid ""
 "Throughout this book, the environment variable <envar>LFS</envar> will be "
 "used several times. You should ensure that this variable is always defined "
@@ -28,20 +26,18 @@ msgid ""
 "directory will be the mount point for the partition.  Choose a directory "
 "location and set the variable with the following command:"
 msgstr ""
-"在本书中，我们经常使用环境变量 <envar>LFS</envar>。您应该保证，在构建 LFS "
-"的全过程中，该变量都被定义且设置为您构建 LFS 使用的目录 —— 我们使用 "
-"<filename class=\"directory\">/mnt/lfs</filename> 作为例子，但您可以选择其他"
-"目录。如果您在一个独立的分区上构建 LFS，那么这个目录将成为该分区的挂载点。"
-"选择一个目录，然后用以下命令设置环境变量："
+"在本书中，我们经常使用环境变量 <envar>LFS</envar>。您应该保证，在构建 LFS 的"
+"全过程中，该变量都被定义且设置为您构建 LFS 使用的目录 —— 我们使用 <filename "
+"class=\"directory\">/mnt/lfs</filename> 作为例子，但您可以选择其他目录。如果"
+"您在一个独立的分区上构建 LFS，那么这个目录将成为该分区的挂载点。选择一个目"
+"录，然后用以下命令设置环境变量："
 
 #. type: Content of: <sect1><screen>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter02/aboutlfs.xml:23
 #, no-wrap
 msgid "<userinput>export LFS=<replaceable>/mnt/lfs</replaceable></userinput>"
 msgstr "<userinput>export LFS=<replaceable>/mnt/lfs</replaceable></userinput>"
 
 #. type: Content of: <sect1><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter02/aboutlfs.xml:25
 msgid ""
 "Having this variable set is beneficial in that commands such as "
 "<command>mkdir -v $LFS/tools</command> can be typed literally. The shell "
@@ -49,11 +45,10 @@ msgid ""
 "(or whatever the variable was set to) when it processes the command line."
 msgstr ""
 "设置该环境变量的好处是，我们可以直接输入书中的命令，例如 <command>mkdir -v "
-"$LFS/tools</command>。Shell 在解析命令时会自动将 <quote>$LFS</quote> 替换"
-"成 <quote>/mnt/lfs</quote> (或是您设置的其他值)。"
+"$LFS/tools</command>。Shell 在解析命令时会自动将 <quote>$LFS</quote> 替换成 "
+"<quote>/mnt/lfs</quote> (或是您设置的其他值)。"
 
 #. type: Content of: <sect1><caution><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter02/aboutlfs.xml:32
 msgid ""
 "Do not forget to check that <envar>LFS</envar> is set whenever you leave and "
 "reenter the current working environment (such as when doing a <command>su</"
@@ -66,13 +61,11 @@ msgstr ""
 "命令，检查 <envar>LFS</envar> 的设置是否正确："
 
 #. type: Content of: <sect1><caution><screen>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter02/aboutlfs.xml:38
 #, no-wrap
 msgid "<userinput>echo $LFS</userinput>"
 msgstr "<userinput>echo $LFS</userinput>"
 
 #. type: Content of: <sect1><caution><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter02/aboutlfs.xml:40
 msgid ""
 "Make sure the output shows the path to your LFS system's build location, "
 "which is <filename class=\"directory\">/mnt/lfs</filename> if the provided "
@@ -85,7 +78,6 @@ msgstr ""
 "文给出的命令，将 <envar>$LFS</envar> 设置成正确的目录名。"
 
 #. type: Content of: <sect1><note><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter02/aboutlfs.xml:47
 msgid ""
 "One way to ensure that the <envar>LFS</envar> variable is always set is to "
 "edit the <filename>.bash_profile</filename> file in both your personal home "
@@ -102,7 +94,6 @@ msgstr ""
 "bash，以保证每次登录时都执行 <filename>.bash_profile</filename> 中的命令。"
 
 #. type: Content of: <sect1><note><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter02/aboutlfs.xml:56
 msgid ""
 "Another consideration is the method that is used to log into the host "
 "system.  If logging in through a graphical display manager, the user's "
@@ -117,5 +108,5 @@ msgstr ""
 "端，那么 <filename>.bash_profile</filename> 一般不会被虚拟终端执行。此时，应"
 "该将 export 命令加入到您使用的用户和 root 用户的 <filename>.bashrc</"
 "filename> 文件中。另外，如果以非交互模式启动 bash，有的发行版不会执行 "
-"<filename>.bashrc</filename> 中的指令。此时一定要在使用环境变量前添加 "
-"export 命令。"
+"<filename>.bashrc</filename> 中的指令。此时一定要在使用环境变量前添加 export "
+"命令。"

@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2020-06-21 23:42+0800\n"
+"POT-Creation-Date: 2020-08-08 19:28+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -12,13 +12,11 @@ msgstr ""
 "X-Generator: Translate Toolkit 2.2.5\n"
 
 #. type: Content of: <sect1><sect1info><address>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/readline.xml:14
 #, no-wrap
 msgid "&readline-url;"
 msgstr "&readline-url;"
 
 #. type: Content of: <sect1><sect1info>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/readline.xml:12
 msgid ""
 "<productname>readline</productname> <productnumber>&readline-version;</"
 "productnumber> <placeholder type=\"address\" id=\"0\"/>"
@@ -27,49 +25,40 @@ msgstr ""
 "productnumber> <placeholder type=\"address\" id=\"0\"/>"
 
 #. type: Content of: <sect1><title>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/readline.xml:17
 msgid "Readline-&readline-version;"
 msgstr "Readline-&readline-version;"
 
 #. type: Content of: <sect1><indexterm><primary>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/readline.xml:20
 msgid "Readline"
 msgstr "Readline"
 
 #. type: Content of: <sect1><sect2><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/readline.xml:26
 msgid ""
 "The Readline package is a set of libraries that offers command-line editing "
 "and history capabilities."
 msgstr "Readline 软件包包含一些提供命令行编辑和历史记录功能的库。"
 
 #. type: Content of: <sect1><sect2><segmentedlist><segtitle>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/readline.xml:30
 msgid "&buildtime;"
 msgstr "&buildtime;"
 
 #. type: Content of: <sect1><sect2><segmentedlist><segtitle>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/readline.xml:31
 msgid "&diskspace;"
 msgstr "&diskspace;"
 
 #. type: Content of: <sect1><sect2><segmentedlist><seglistitem><seg>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/readline.xml:34
 msgid "&readline-fin-sbu;"
 msgstr "&readline-fin-sbu;"
 
 #. type: Content of: <sect1><sect2><segmentedlist><seglistitem><seg>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/readline.xml:35
 msgid "&readline-fin-du;"
 msgstr "&readline-fin-du;"
 
 #. type: Content of: <sect1><sect2><title>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/readline.xml:42
 msgid "Installation of Readline"
 msgstr "安装 Readline"
 
 #. type: Content of: <sect1><sect2><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/readline.xml:44
 msgid ""
 "Reinstalling Readline will cause the old libraries to be moved to &lt;"
 "libraryname&gt;.old. While this is normally not a problem, in some cases it "
@@ -81,7 +70,6 @@ msgstr ""
 "两条 sed 命令防止这种情况："
 
 #. type: Content of: <sect1><sect2><screen>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/readline.xml:49
 #, no-wrap
 msgid ""
 "<userinput remap=\"pre\">sed -i '/MV.*old/d' Makefile.in\n"
@@ -91,12 +79,10 @@ msgstr ""
 "sed -i '/{OLDSUFF}/c:' support/shlib-install</userinput>"
 
 #. type: Content of: <sect1><sect2><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/readline.xml:52
 msgid "Prepare Readline for compilation:"
 msgstr "准备编译 Readline："
 
 #. type: Content of: <sect1><sect2><screen>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/readline.xml:54
 #, no-wrap
 msgid ""
 "<userinput remap=\"configure\">./configure --prefix=/usr    \\\n"
@@ -110,17 +96,14 @@ msgstr ""
 "            --docdir=/usr/share/doc/readline-&readline-version;</userinput>"
 
 #. type: Content of: <sect1><sect2><variablelist><title>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/readline.xml:60
 msgid "The meaning of the configure option:"
 msgstr "配置选项的含义"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/readline.xml:63
 msgid "<parameter>--with-curses</parameter>"
 msgstr "<parameter>--with-curses</parameter>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/readline.xml:65
 msgid ""
 "This option tells Readline that it can find the termcap library functions in "
 "the curses library, rather than a separate termcap library. It allows "
@@ -130,28 +113,23 @@ msgstr ""
 "termcap 库。这样就能生成正确的 <filename>readline.pc</filename> 文件。"
 
 #. type: Content of: <sect1><sect2><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/readline.xml:74
 msgid "Compile the package:"
 msgstr "编译该软件包："
 
 #. type: Content of: <sect1><sect2><screen>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/readline.xml:76
 #, no-wrap
 msgid "<userinput remap=\"make\">make SHLIB_LIBS=\"-lncursesw\"</userinput>"
 msgstr "<userinput remap=\"make\">make SHLIB_LIBS=\"-lncursesw\"</userinput>"
 
 #. type: Content of: <sect1><sect2><variablelist><title>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/readline.xml:79
 msgid "The meaning of the make option:"
 msgstr "make 命令选项的含义"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/readline.xml:82
 msgid "<parameter>SHLIB_LIBS=\"-lncursesw\"</parameter>"
 msgstr "<parameter>SHLIB_LIBS=\"-lncursesw\"</parameter>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/readline.xml:84
 msgid ""
 "This option forces Readline to link against the <filename class=\"libraryfile"
 "\">libncursesw</filename> library."
@@ -160,30 +138,25 @@ msgstr ""
 "filename> 库。"
 
 #. type: Content of: <sect1><sect2><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/readline.xml:91
 msgid "This package does not come with a test suite."
 msgstr "该软件包不包含测试套件。"
 
 #. type: Content of: <sect1><sect2><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/readline.xml:93
 msgid "Install the package:"
 msgstr "安装该软件包："
 
 #. type: Content of: <sect1><sect2><screen>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/readline.xml:95
 #, no-wrap
 msgid "<userinput remap=\"install\">make SHLIB_LIBS=\"-lncursesw\" install</userinput>"
 msgstr "<userinput remap=\"install\">make SHLIB_LIBS=\"-lncursesw\" install</userinput>"
 
 #. type: Content of: <sect1><sect2><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/readline.xml:97
 msgid ""
 "Now move the dynamic libraries to a more appropriate location and fix up "
 "some permissions and symbolic links:"
 msgstr "下面将动态库移动到更合适的位置，并修正访问权限和符号链接："
 
 #. type: Content of: <sect1><sect2><screen>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/readline.xml:100
 #, no-wrap
 msgid ""
 "<userinput remap=\"install\">mv -v /usr/lib/lib{readline,history}.so.* /lib\n"
@@ -197,81 +170,66 @@ msgstr ""
 "ln -sfv ../../lib/$(readlink /usr/lib/libhistory.so ) /usr/lib/libhistory.so</userinput>"
 
 #. type: Content of: <sect1><sect2><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/readline.xml:105
 msgid "If desired, install the documentation:"
 msgstr "如果您希望的话，可以安装文档："
 
 #. type: Content of: <sect1><sect2><screen>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/readline.xml:107
 #, no-wrap
 msgid "<userinput remap=\"install\">install -v -m644 doc/*.{ps,pdf,html,dvi} /usr/share/doc/readline-&readline-version;</userinput>"
 msgstr "<userinput remap=\"install\">install -v -m644 doc/*.{ps,pdf,html,dvi} /usr/share/doc/readline-&readline-version;</userinput>"
 
 #. type: Content of: <sect1><sect2><title>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/readline.xml:112
 msgid "Contents of Readline"
 msgstr "Readline 的内容"
 
 #. type: Content of: <sect1><sect2><segmentedlist><segtitle>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/readline.xml:115
 msgid "Installed libraries"
 msgstr "安装的库"
 
 #. type: Content of: <sect1><sect2><segmentedlist><segtitle>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/readline.xml:116
 msgid "Installed directories"
 msgstr "安装的目录"
 
 #. type: Content of: <sect1><sect2><segmentedlist><seglistitem><seg>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/readline.xml:119
 msgid "libhistory.so and libreadline.so"
 msgstr "libhistory.so 和 libreadline.so"
 
 #. type: Content of: <sect1><sect2><segmentedlist><seglistitem><seg>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/readline.xml:120
 msgid "/usr/include/readline and /usr/share/doc/readline-&readline-version;"
 msgstr "/usr/include/readline 和 /usr/share/doc/readline-&readline-version;"
 
 #. type: Content of: <sect1><sect2><variablelist><bridgehead>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/readline.xml:126
 msgid "Short Descriptions"
 msgstr "简要描述"
 
 #. type: Content of: <sect1><sect2><variablelist>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/readline.xml:127
 msgid ""
 "<?dbfo list-presentation=\"list\"?> <?dbhtml list-presentation=\"table\"?>"
 msgstr ""
 "<?dbfo list-presentation=\"list\"?> <?dbhtml list-presentation=\"table\"?>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/readline.xml:131
 msgid "<filename class=\"libraryfile\">libhistory</filename>"
 msgstr "<filename class=\"libraryfile\">libhistory</filename>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/readline.xml:133
 msgid "Provides a consistent user interface for recalling lines of history"
 msgstr "提供一个查询之前输入行的一致用户接口"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/readline.xml:136
 msgid "libhistory"
 msgstr "libhistory"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/readline.xml:142
 msgid "<filename class=\"libraryfile\">libreadline</filename>"
 msgstr "<filename class=\"libraryfile\">libreadline</filename>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/readline.xml:144
 msgid ""
 "Provides a set of commands for manipulating text entered in an interactive "
 "session of a program."
 msgstr "提供一组在程序的交互会话中操纵输入的文本的命令。"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/readline.xml:147
 msgid "libreadline"
 msgstr "libreadline"

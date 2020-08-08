@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2020-06-17 12:44+0800\n"
+"POT-Creation-Date: 2020-08-08 19:28+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -12,13 +12,11 @@ msgstr ""
 "X-Generator: Translate Toolkit 2.2.5\n"
 
 #. type: Content of: <sect1><sect1info><address>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/gcc.xml:14
 #, no-wrap
 msgid "&gcc-url;"
 msgstr "&gcc-url;"
 
 #. type: Content of: <sect1><sect1info>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/gcc.xml:12
 msgid ""
 "<productname>gcc</productname> <productnumber>&gcc-version;</productnumber> "
 "<placeholder type=\"address\" id=\"0\"/>"
@@ -27,56 +25,46 @@ msgstr ""
 "<placeholder type=\"address\" id=\"0\"/>"
 
 #. type: Content of: <sect1><title>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/gcc.xml:17
 msgid "GCC-&gcc-version;"
 msgstr "GCC-&gcc-version;"
 
 #. type: Content of: <sect1><indexterm><primary>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/gcc.xml:20
 msgid "GCC"
 msgstr "GCC"
 
 #. type: Content of: <sect1><sect2><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/gcc.xml:26
 msgid ""
 "The GCC package contains the GNU compiler collection, which includes the C "
 "and C++ compilers."
 msgstr "GCC 软件包包含 GNU 编译器集合，其中有 C 和 C++ 编译器。"
 
 #. type: Content of: <sect1><sect2><segmentedlist><segtitle>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/gcc.xml:30
 msgid "&buildtime;"
 msgstr "&buildtime;"
 
 #. type: Content of: <sect1><sect2><segmentedlist><segtitle>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/gcc.xml:31
 msgid "&diskspace;"
 msgstr "&diskspace;"
 
 #. type: Content of: <sect1><sect2><segmentedlist><seglistitem><seg>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/gcc.xml:34
 msgid "&gcc-fin-sbu;"
 msgstr "&gcc-fin-sbu;"
 
 #. type: Content of: <sect1><sect2><segmentedlist><seglistitem><seg>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/gcc.xml:35
 msgid "&gcc-fin-du;"
 msgstr "&gcc-fin-du;"
 
 #. type: Content of: <sect1><sect2><title>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/gcc.xml:42
 msgid "Installation of GCC"
 msgstr "安装 GCC"
 
 #. type: Content of: <sect1><sect2><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/gcc.xml:44
 msgid ""
 "If building on x86_64, change the default directory name for 64-bit "
 "libraries to <quote>lib</quote>:"
 msgstr "在 x86_64 上构建时，修改存放 64 位库的默认路径为 <quote>lib</quote>:"
 
 #. type: Content of: <sect1><sect2><screen>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/gcc.xml:47
 #, no-wrap
 msgid ""
 "<userinput remap=\"pre\">case $(uname -m) in\n"
@@ -94,13 +82,11 @@ msgstr ""
 "esac</userinput>"
 
 #. type: Content of: <sect1><sect2><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/gcc.xml:54
 msgid ""
 "The GCC documentation recommends building GCC in a dedicated build directory:"
 msgstr "GCC 文档推荐在专用的构建目录中构建 GCC："
 
 #. type: Content of: <sect1><sect2><screen>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/gcc.xml:56
 #, no-wrap
 msgid ""
 "<userinput remap=\"pre\">mkdir -v build\n"
@@ -110,12 +96,10 @@ msgstr ""
 "cd       build</userinput>"
 
 #. type: Content of: <sect1><sect2><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/gcc.xml:59
 msgid "Prepare GCC for compilation:"
 msgstr "准备编译 GCC："
 
 #. type: Content of: <sect1><sect2><screen>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/gcc.xml:61
 #, no-wrap
 msgid ""
 "<userinput remap=\"configure\">../configure --prefix=/usr            \\\n"
@@ -133,7 +117,6 @@ msgstr ""
 "             --with-system-zlib</userinput>"
 
 #. type: Content of: <sect1><sect2><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/gcc.xml:68
 msgid ""
 "Note that for other programming languages there are some prerequisites that "
 "are not yet available. See the <ulink url=\"&blfs-book;general/gcc.html"
@@ -144,57 +127,48 @@ msgstr ""
 "general/gcc.html\">BLFS 手册</ulink>，以了解如何构建 GCC 支持的所有语言。"
 
 #. type: Content of: <sect1><sect2><variablelist><title>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/gcc.xml:74
 msgid "The meaning of the new configure parameters:"
 msgstr "新的配置选项的含义："
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/gcc.xml:77
 msgid "<parameter>LD=ld</parameter>"
 msgstr "<parameter>LD=ld</parameter>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/gcc.xml:79
 msgid ""
 "This parameter makes the configure script use the ld installed by the "
 "binutils built earlier in this chapter, rather than the cross-built version "
 "which would otherwise be used."
 msgstr ""
-"该选项使得配置脚本使用之前在本章中构建的 ld，而没有该选项时会使用交叉编译"
-"构建的版本。"
+"该选项使得配置脚本使用之前在本章中构建的 ld，而没有该选项时会使用交叉编译构建"
+"的版本。"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/gcc.xml:86
 msgid "<parameter>--with-system-zlib</parameter>"
 msgstr "<parameter>--with-system-zlib</parameter>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/gcc.xml:88
 msgid ""
 "This switch tells GCC to link to the system installed copy of the zlib "
 "library, rather than its own internal copy."
 msgstr "该选项使得 GCC 链接到系统安装的 Zlib 库，而不是它自带的 Zlib 副本。"
 
 #. type: Content of: <sect1><sect2><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/gcc.xml:94
 msgid "Compile the package:"
 msgstr "编译该软件包："
 
 #. type: Content of: <sect1><sect2><screen>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/gcc.xml:96
 #, no-wrap
 msgid "<userinput remap=\"make\">make</userinput>"
 msgstr "<userinput remap=\"make\">make</userinput>"
 
 #. type: Content of: <sect1><sect2><important><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/gcc.xml:99
 msgid ""
 "In this section, the test suite for GCC is considered critical. Do not skip "
 "it under any circumstance."
 msgstr "本节中 GCC 的测试套件被认为是关键的，无论如何不能跳过。"
 
 #. type: Content of: <sect1><sect2><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/gcc.xml:103
 msgid ""
 "One set of tests in the GCC test suite is known to exhaust the default "
 "stack, so increase the stack size prior to running the tests:"
@@ -202,19 +176,16 @@ msgstr ""
 "已知 GCC 测试套件中的一组测试可能耗尽默认栈空间，因此运行测试前要增加栈空间："
 
 #. type: Content of: <sect1><sect2><screen>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/gcc.xml:106
 #, no-wrap
 msgid "<userinput remap=\"test\">ulimit -s 32768</userinput>"
 msgstr "<userinput remap=\"test\">ulimit -s 32768</userinput>"
 
 #. type: Content of: <sect1><sect2><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/gcc.xml:108
 msgid "Test the results as a non-privileged user, but do not stop at errors:"
 msgstr "以非特权用户身份测试编译结果，但出错时继续执行其他测试："
 
 #. type: Content of: <sect1><sect2><screen>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/gcc.xml:110
-#, , no-wrap
+#, no-wrap
 msgid ""
 "<userinput remap=\"test\">chown -Rv tester . \n"
 "su tester -c \"PATH=$PATH make -k check\"</userinput>"
@@ -223,18 +194,15 @@ msgstr ""
 "su tester -c \"PATH=$PATH make -k check\"</userinput>"
 
 #. type: Content of: <sect1><sect2><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/gcc.xml:113
 msgid "To receive a summary of the test suite results, run:"
 msgstr "输入以下命令查看测试结果的摘要："
 
 #. type: Content of: <sect1><sect2><screen>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/gcc.xml:115
 #, no-wrap
 msgid "<userinput remap=\"test\">../contrib/test_summary</userinput>"
 msgstr "<userinput remap=\"test\">../contrib/test_summary</userinput>"
 
 #. type: Content of: <sect1><sect2><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/gcc.xml:117
 msgid ""
 "For only the summaries, pipe the output through <userinput>grep -A7 Summ</"
 "userinput>."
@@ -242,7 +210,6 @@ msgstr ""
 "如果只想看摘要，将输出用管道送至 <userinput>grep -A7 Summ</userinput>。"
 
 #. type: Content of: <sect1><sect2><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/gcc.xml:120
 msgid ""
 "Results can be compared with those located at <ulink url=\"&test-results;\"/"
 "> and <ulink url=\"https://gcc.gnu.org/ml/gcc-testresults/\"/>."
@@ -251,31 +218,33 @@ msgstr ""
 "org/ml/gcc-testresults/\"/> 的结果进行比较。"
 
 #. type: Content of: <sect1><sect2><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/gcc.xml:124
 msgid ""
 "Six tests related to get_time are known to fail.  These are apparently "
 "related to the en_HK locale."
-msgstr ""
-"已知有 6 个关于 get_time 的测试会失败。它们似乎与 en_HK locale 有关。"
+msgstr "已知有 6 个关于 get_time 的测试会失败。它们似乎与 en_HK locale 有关。"
 
 #. type: Content of: <sect1><sect2><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/gcc.xml:132
+msgid ""
+"Additionally the following tests related to the following files are kown to "
+"fail with glibc-2.32: asan_test.C, co-ret-17-void-ret-coro.C, pr95519-05-gro."
+"C, pr80166.c."
+msgstr ""
+
+#. type: Content of: <sect1><sect2><para>
 msgid ""
 "A few unexpected failures cannot always be avoided. The GCC developers are "
 "usually aware of these issues, but have not resolved them yet.  Unless the "
 "test results are vastly different from those at the above URL, it is safe to "
 "continue."
 msgstr ""
-"少量意外的失败有时无法避免，GCC 开发者一般知道这类问题，但尚未解决它们。我"
-"们可以继续安全地构建系统，除非测试结果和以上 URL 的结果截然不同。"
+"少量意外的失败有时无法避免，GCC 开发者一般知道这类问题，但尚未解决它们。我们"
+"可以继续安全地构建系统，除非测试结果和以上 URL 的结果截然不同。"
 
 #. type: Content of: <sect1><sect2><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/gcc.xml:146
 msgid "Install the package and remove an unneeded directory:"
 msgstr "安装该软件包，并移除一个不需要的目录："
 
 #. type: Content of: <sect1><sect2><screen>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/gcc.xml:148
 #, no-wrap
 msgid ""
 "<userinput remap=\"install\">make install\n"
@@ -285,19 +254,17 @@ msgstr ""
 "rm -rf /usr/lib/gcc/$(gcc -dumpmachine)/&gcc-version;/include-fixed/bits/</userinput>"
 
 #. type: Content of: <sect1><sect2><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/gcc.xml:151
 msgid ""
 "The GCC build directory is owned by <systemitem class=\"username\"> tester</"
 "systemitem> now and the ownership of the installed header directory (and its "
 "content) will be incorrect.  Change the ownership to <systemitem class="
 "\"username\">root</systemitem> user and group:"
 msgstr ""
-"GCC 构建目录目前属于用户 <systemitem class=\"username\">tester</"
-"systemitem>，这会导致安装的头文件目录 (及其内容) 具有不正确的所有权。将所"
-"有者修改为 <systemitem class=\"username\">root</systemitem> 用户和组："
+"GCC 构建目录目前属于用户 <systemitem class=\"username\">tester</systemitem>，"
+"这会导致安装的头文件目录 (及其内容) 具有不正确的所有权。将所有者修改为 "
+"<systemitem class=\"username\">root</systemitem> 用户和组："
 
 #. type: Content of: <sect1><sect2><screen>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/gcc.xml:156
 #, no-wrap
 msgid ""
 "<userinput remap=\"install\">chown -v -R root:root \\\n"
@@ -307,7 +274,6 @@ msgstr ""
 "    /usr/lib/gcc/*linux-gnu/&gcc-version;/include{,-fixed}</userinput>"
 
 #. type: Content of: <sect1><sect2><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/gcc.xml:159
 msgid ""
 "Create a symlink required by the <ulink url=\"https://refspecs."
 "linuxfoundation.org/FHS_3.0/fhs/ch03s09.html\">FHS</ulink> for \"historical"
@@ -317,20 +283,17 @@ msgstr ""
 "ch03s09.html\">FHS</ulink> 因 “历史原因” 要求的符号链接。"
 
 #. type: Content of: <sect1><sect2><screen>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/gcc.xml:163
 #, no-wrap
 msgid "<userinput remap=\"install\">ln -sv ../usr/bin/cpp /lib</userinput>"
 msgstr "<userinput remap=\"install\">ln -sv ../usr/bin/cpp /lib</userinput>"
 
 #. type: Content of: <sect1><sect2><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/gcc.xml:170
 msgid ""
 "Add a compatibility symlink to enable building programs with Link Time "
 "Optimization (LTO):"
 msgstr "创建一个兼容性符号链接，以支持在构建程序时使用链接时优化 (LTO)："
 
 #. type: Content of: <sect1><sect2><screen>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/gcc.xml:173
 #, no-wrap
 msgid ""
 "<userinput remap=\"install\">install -v -dm755 /usr/lib/bfd-plugins\n"
@@ -342,7 +305,6 @@ msgstr ""
 "        /usr/lib/bfd-plugins/</userinput>"
 
 #. type: Content of: <sect1><sect2><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/gcc.xml:177
 msgid ""
 "Now that our final toolchain is in place, it is important to again ensure "
 "that compiling and linking will work as expected. We do this by performing "
@@ -352,7 +314,6 @@ msgstr ""
 "作。我们通过进行一些完整性检查，进行确认："
 
 #. type: Content of: <sect1><sect2><screen>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/gcc.xml:205
 #, no-wrap
 msgid ""
 "<computeroutput>/usr/lib/gcc/x86_64-pc-linux-gnu/&gcc-version;/../../../../lib/crt1.o succeeded\n"
@@ -364,7 +325,6 @@ msgstr ""
 "/usr/lib/gcc/x86_64-pc-linux-gnu/&gcc-version;/../../../../lib/crtn.o succeeded</computeroutput>"
 
 #. type: Content of: <sect1><sect2><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/gcc.xml:209
 msgid ""
 "Depending on your machine architecture, the above may differ slightly.  The "
 "difference will be the name of the directory after <filename class="
@@ -379,13 +339,11 @@ msgstr ""
 "们应该位于 <filename class=\"directory\">/usr/lib</filename> 目录中。"
 
 #. type: Content of: <sect1><sect2><screen>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/gcc.xml:220
 #, no-wrap
 msgid "<userinput>grep -B4 '^ /usr/include' dummy.log</userinput>"
 msgstr "<userinput>grep -B4 '^ /usr/include' dummy.log</userinput>"
 
 #. type: Content of: <sect1><sect2><screen>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/gcc.xml:226
 #, no-wrap
 msgid ""
 "<computeroutput>#include &lt;...&gt; search starts here:\n"
@@ -401,7 +359,6 @@ msgstr ""
 " /usr/include</computeroutput>"
 
 #. type: Content of: <sect1><sect2><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/gcc.xml:232
 msgid ""
 "Again, the directory named after your target triplet may be different than "
 "the above, depending on your system architecture."
@@ -409,7 +366,6 @@ msgstr ""
 "同样要注意，以您的目标三元组命名的目录由于您体系结构的不同，可能和以上不同。"
 
 #. type: Content of: <sect1><sect2><screen>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/gcc.xml:247
 #, no-wrap
 msgid ""
 "<computeroutput>SEARCH_DIR(\"/usr/x86_64-pc-linux-gnu/lib64\")\n"
@@ -431,14 +387,12 @@ msgstr ""
 "SEARCH_DIR(\"/usr/lib\");</computeroutput>"
 
 #. type: Content of: <sect1><sect2><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/gcc.xml:256
 msgid ""
 "A 32-bit system may see a few different directories. For example, here is "
 "the output from an i686 machine:"
 msgstr "在 32 位系统上可能显示一些不同的目录。例如，下面是 i686 机器上的输出："
 
 #. type: Content of: <sect1><sect2><screen>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/gcc.xml:259
 #, no-wrap
 msgid ""
 "<computeroutput>SEARCH_DIR(\"/usr/i686-pc-linux-gnu/lib32\")\n"
@@ -460,12 +414,10 @@ msgstr ""
 "SEARCH_DIR(\"/usr/lib\");</computeroutput>"
 
 #. type: Content of: <sect1><sect2><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/gcc.xml:312
 msgid "Finally, move a misplaced file:"
 msgstr "最后移动一个位置不正确的文件："
 
 #. type: Content of: <sect1><sect2><screen>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/gcc.xml:314
 #, no-wrap
 msgid ""
 "<userinput remap=\"install\">mkdir -pv /usr/share/gdb/auto-load/usr/lib\n"
@@ -475,27 +427,22 @@ msgstr ""
 "mv -v /usr/lib/*gdb.py /usr/share/gdb/auto-load/usr/lib</userinput>"
 
 #. type: Content of: <sect1><sect2><title>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/gcc.xml:320
 msgid "Contents of GCC"
 msgstr "GCC 的内容"
 
 #. type: Content of: <sect1><sect2><segmentedlist><segtitle>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/gcc.xml:323
 msgid "Installed programs"
 msgstr "安装的程序"
 
 #. type: Content of: <sect1><sect2><segmentedlist><segtitle>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/gcc.xml:324
 msgid "Installed libraries"
 msgstr "安装的库"
 
 #. type: Content of: <sect1><sect2><segmentedlist><segtitle>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/gcc.xml:325
 msgid "Installed directories"
 msgstr "安装的目录"
 
 #. type: Content of: <sect1><sect2><segmentedlist><seglistitem><seg>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/gcc.xml:328
 msgid ""
 "c++, cc (link to gcc), cpp, g++, gcc, gcc-ar, gcc-nm, gcc-ranlib, gcov, gcov-"
 "dump, and gcov-tool"
@@ -504,7 +451,6 @@ msgstr ""
 "gcov-dump, 以及 gcov-tool"
 
 #. type: Content of: <sect1><sect2><segmentedlist><seglistitem><seg>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/gcc.xml:331
 msgid ""
 "libasan.{a,so}, libatomic.{a,so}, libcc1.so, libgcc.a, libgcc_eh.a, libgcc_s."
 "so, libgcov.a, libgomp.{a,so}, libitm.{a,so}, liblsan.{a,so}, liblto_plugin."
@@ -517,7 +463,6 @@ msgstr ""
 "libstdc++fs.a, libsupc++.a, libtsan.{a,so}, 以及 libubsan.{a,so}"
 
 #. type: Content of: <sect1><sect2><segmentedlist><seglistitem><seg>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/gcc.xml:338
 msgid ""
 "/usr/include/c++, /usr/lib/gcc, /usr/libexec/gcc, and /usr/share/gcc-&gcc-"
 "version;"
@@ -526,93 +471,74 @@ msgstr ""
 "version;"
 
 #. type: Content of: <sect1><sect2><variablelist><bridgehead>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/gcc.xml:344
 msgid "Short Descriptions"
 msgstr "简要描述"
 
 #. type: Content of: <sect1><sect2><variablelist>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/gcc.xml:345
 msgid ""
 "<?dbfo list-presentation=\"list\"?> <?dbhtml list-presentation=\"table\"?>"
 msgstr ""
 "<?dbfo list-presentation=\"list\"?> <?dbhtml list-presentation=\"table\"?>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/gcc.xml:349
 msgid "<command>c++</command>"
 msgstr "<command>c++</command>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/gcc.xml:351
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/gcc.xml:382
 msgid "The C++ compiler"
 msgstr "C++ 编译器"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/gcc.xml:353
 msgid "c++"
 msgstr "c++"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/gcc.xml:359
 msgid "<command>cc</command>"
 msgstr "<command>cc</command>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/gcc.xml:361
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/gcc.xml:392
 msgid "The C compiler"
 msgstr "C 编译器"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/gcc.xml:363
 msgid "cc"
 msgstr "cc"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/gcc.xml:369
 msgid "<command>cpp</command>"
 msgstr "<command>cpp</command>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/gcc.xml:371
 msgid ""
 "The C preprocessor; it is used by the compiler to expand the #include, "
 "#define, and similar statements in the source files"
 msgstr "C 预处理器，编译器使用它展开源文件中的 #include、#define 及类似指令"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/gcc.xml:374
 msgid "cpp"
 msgstr "cpp"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/gcc.xml:380
 msgid "<command>g++</command>"
 msgstr "<command>g++</command>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/gcc.xml:384
 msgid "g++"
 msgstr "g++"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/gcc.xml:390
 msgid "<command>gcc</command>"
 msgstr "<command>gcc</command>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/gcc.xml:394
 msgid "gcc"
 msgstr "gcc"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/gcc.xml:400
 msgid "<command>gcc-ar</command>"
 msgstr "<command>gcc-ar</command>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/gcc.xml:402
 msgid ""
 "A wrapper around <command>ar</command> that adds a plugin to the command "
 "line. This program is only used to add \"link time optimization\" and is not "
@@ -622,17 +548,14 @@ msgstr ""
 "于提供链接时优化功能，对于默认的构建选项来说没有作用。"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/gcc.xml:407
 msgid "gc-ar"
 msgstr "gc-ar"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/gcc.xml:413
 msgid "<command>gcc-nm</command>"
 msgstr "<command>gcc-nm</command>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/gcc.xml:415
 msgid ""
 "A wrapper around <command>nm</command> that adds a plugin to the command "
 "line. This program is only used to add \"link time optimization\" and is not "
@@ -642,17 +565,14 @@ msgstr ""
 "于提供链接时优化功能，对于默认的构建选项来说没有作用。"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/gcc.xml:420
 msgid "gc-nm"
 msgstr "gc-nm"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/gcc.xml:426
 msgid "<command>gcc-ranlib</command>"
 msgstr "<command>gcc-ranlib</command>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/gcc.xml:428
 msgid ""
 "A wrapper around <command>ranlib</command> that adds a plugin to the command "
 "line. This program is only used to add \"link time optimization\" and is not "
@@ -662,285 +582,230 @@ msgstr ""
 "被用于提供链接时优化功能，对于默认的构建选项来说没有作用。"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/gcc.xml:433
 msgid "gc-ranlib"
 msgstr "gc-ranlib"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/gcc.xml:439
 msgid "<command>gcov</command>"
 msgstr "<command>gcov</command>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/gcc.xml:441
 msgid ""
 "A coverage testing tool; it is used to analyze programs to determine where "
 "optimizations will have the most effect"
 msgstr "一个覆盖率测试工具；用于分析程序并确定在哪里优化最有效"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/gcc.xml:444
 msgid "gcov"
 msgstr "gcov"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/gcc.xml:450
 msgid "<command>gcov-dump</command>"
 msgstr "<command>gcov-dump</command>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/gcc.xml:452
 msgid "Offline gcda and gcno profile dump tool"
 msgstr "离线 gcda 和 gcno 性能剖析数据显示工具"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/gcc.xml:454
 msgid "gcov-dump"
 msgstr "gcov-dump"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/gcc.xml:460
 msgid "<command>gcov-tool</command>"
 msgstr "<command>gcov-tool</command>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/gcc.xml:462
 msgid "Offline gcda profile processing tool"
 msgstr "离线 gcda 性能剖析预处理工具"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/gcc.xml:464
 msgid "gcov-tool"
 msgstr "gcov-tool"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/gcc.xml:470
 msgid "<filename class=\"libraryfile\">libasan</filename>"
 msgstr "<filename class=\"libraryfile\">libasan</filename>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/gcc.xml:472
 msgid "The Address Sanitizer runtime library"
 msgstr "地址完整性检查库"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/gcc.xml:474
 msgid "libasan"
 msgstr "libasan"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/gcc.xml:480
 msgid "<filename class=\"libraryfile\">libatomic</filename>"
 msgstr "<filename class=\"libraryfile\">libatomic</filename>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/gcc.xml:482
 msgid "GCC atomic built-in runtime library"
 msgstr "GCC 内建原子操作运行库"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/gcc.xml:484
 msgid "libatomic"
 msgstr "libatomic"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/gcc.xml:490
 msgid "<filename class=\"libraryfile\">libcc1</filename>"
 msgstr "<filename class=\"libraryfile\">libcc1</filename>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/gcc.xml:492
 msgid "The C preprocessing library"
 msgstr "C 预处理库"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/gcc.xml:494
 msgid "libcc1"
 msgstr "libcc1"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/gcc.xml:500
 msgid "<filename class=\"libraryfile\">libgcc</filename>"
 msgstr "<filename class=\"libraryfile\">libgcc</filename>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/gcc.xml:502
 msgid "Contains run-time support for <command>gcc</command>"
 msgstr "包含 <command>gcc</command> 的运行时支持"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/gcc.xml:504
 msgid "libgcc"
 msgstr "libgcc"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/gcc.xml:510
 msgid "<filename class=\"libraryfile\">libgcov</filename>"
 msgstr "<filename class=\"libraryfile\">libgcov</filename>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/gcc.xml:512
 msgid ""
 "This library is linked in to a program when GCC is instructed to enable "
 "profiling"
 msgstr "在 GCC 被指示启动性能剖析时，这个库被链接到程序中"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/gcc.xml:515
 msgid "libgcov"
 msgstr "libgcov"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/gcc.xml:521
 msgid "<filename class=\"libraryfile\">libgomp</filename>"
 msgstr "<filename class=\"libraryfile\">libgomp</filename>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/gcc.xml:523
 msgid ""
 "GNU implementation of the OpenMP API for multi-platform shared-memory "
 "parallel programming in C/C++ and Fortran"
 msgstr "OpenMP API 的 GNU 实现，用于 C/C++ 和 Fortran 的跨平台共享内存并行编程"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/gcc.xml:526
 msgid "libgomp"
 msgstr "libgomp"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/gcc.xml:532
 msgid "<filename class=\"libraryfile\">liblsan</filename>"
 msgstr "<filename class=\"libraryfile\">liblsan</filename>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/gcc.xml:534
 msgid "The Leak Sanitizer runtime library"
 msgstr "内存泄露清理检查库"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/gcc.xml:536
 msgid "liblsan"
 msgstr "liblsan"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/gcc.xml:542
 msgid "<filename class=\"libraryfile\">liblto_plugin</filename>"
 msgstr "<filename class=\"libraryfile\">liblto_plugin</filename>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/gcc.xml:544
 msgid ""
 "GCC's Link Time Optimization (LTO) plugin allows GCC to perform "
 "optimizations across compilation units"
 msgstr "GCC 的链接时优化 (LTO) 插件，使得 GCC 可以进行跨越编译单元的优化"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/gcc.xml:547
 msgid "liblto_plugin"
 msgstr "liblto_plugin"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/gcc.xml:553
 msgid "<filename class=\"libraryfile\">libquadmath</filename>"
 msgstr "<filename class=\"libraryfile\">libquadmath</filename>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/gcc.xml:555
 msgid "GCC Quad Precision Math Library API"
 msgstr "GCC 四精度数学 API 库"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/gcc.xml:557
 msgid "libquadmath"
 msgstr "libquadmath"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/gcc.xml:563
 msgid "<filename class=\"libraryfile\">libssp</filename>"
 msgstr "<filename class=\"libraryfile\">libssp</filename>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/gcc.xml:565
 msgid ""
 "Contains routines supporting GCC's stack-smashing protection functionality"
 msgstr "包含 GCC 的栈溢出保护功能支持子程序"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/gcc.xml:568
 msgid "libssp"
 msgstr "libssp"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/gcc.xml:574
 msgid "<filename class=\"libraryfile\">libstdc++</filename>"
 msgstr "<filename class=\"libraryfile\">libstdc++</filename>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/gcc.xml:576
 msgid "The standard C++ library"
 msgstr "C++ 标准库"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/gcc.xml:578
 msgid "libstdc++"
 msgstr "libstdc++"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/gcc.xml:584
 msgid "<filename class=\"libraryfile\">libstdc++fs</filename>"
 msgstr "<filename class=\"libraryfile\">libstdc++fs</filename>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/gcc.xml:586
 msgid "ISO/IEC TS 18822:2015 Filesystem library"
 msgstr "ISO/IEC TS 18822:2015 文件系统库"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/gcc.xml:588
 msgid "libstdc++fs"
 msgstr "libstdc++fs"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/gcc.xml:594
 msgid "<filename class=\"libraryfile\">libsupc++</filename>"
 msgstr "<filename class=\"libraryfile\">libsupc++</filename>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/gcc.xml:596
 msgid "Provides supporting routines for the C++ programming language"
 msgstr "包含 C++ 编程语言支持子程序"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/gcc.xml:599
 msgid "libsupc++"
 msgstr "libsupc++"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/gcc.xml:605
 msgid "<filename class=\"libraryfile\">libtsan</filename>"
 msgstr "<filename class=\"libraryfile\">libtsan</filename>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/gcc.xml:607
 msgid "The Thread Sanitizer runtime library"
 msgstr "线程完整性检查库"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/gcc.xml:609
 msgid "libtsan"
 msgstr "libtsan"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/gcc.xml:615
 msgid "<filename class=\"libraryfile\">libubsan</filename>"
 msgstr "<filename class=\"libraryfile\">libubsan</filename>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/gcc.xml:617
 msgid "The Undefined Behavior Sanitizer runtime library"
 msgstr "未定义行为清理检查库"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
-#: /home/xry111/svn-repos/LFS-BOOK/chapter08/gcc.xml:619
 msgid "libubsan"
 msgstr "libubsan"
