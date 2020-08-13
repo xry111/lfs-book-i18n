@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2020-08-08 19:28+0800\n"
+"POT-Creation-Date: 2020-08-13 18:05+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -59,16 +59,6 @@ msgid "Installation of systemd"
 msgstr "安装 systemd"
 
 #. type: Content of: <sect1><sect2><para>
-msgid "First, apply a patch to fix the build with GCC-10 and fix a segfault:"
-msgstr ""
-"首先，应用一个补丁，修复使用 GCC-10 编译时出现的问题，并修复一个段错误："
-
-#. type: Content of: <sect1><sect2><screen>
-#, no-wrap
-msgid "<userinput remap=\"pre\">patch -Np1 -i ../systemd-&systemd-version;-gcc_10-fixes-2.patch</userinput>"
-msgstr "<userinput remap=\"pre\">patch -Np1 -i ../systemd-&systemd-version;-gcc_10-fixes-2.patch</userinput>"
-
-#. type: Content of: <sect1><sect2><para>
 msgid ""
 "Create a symlink to work around the xsltproc command not being installed:"
 msgstr "创建一个符号链接，绕过本书不会安装的 xsltproc："
@@ -93,8 +83,8 @@ msgstr "删除在 chroot 环境中无法构建的测试："
 
 #. type: Content of: <sect1><sect2><screen>
 #, no-wrap
-msgid "<userinput remap=\"pre\">sed '179,$ d' -i src/resolve/meson.build</userinput>"
-msgstr "<userinput remap=\"pre\">sed '179,$ d' -i src/resolve/meson.build</userinput>"
+msgid "<userinput remap=\"pre\">sed '177,$ d' -i src/resolve/meson.build</userinput>"
+msgstr "<userinput remap=\"pre\">sed '177,$ d' -i src/resolve/meson.build</userinput>"
 
 #. type: Content of: <sect1><sect2><para>
 msgid ""
@@ -417,20 +407,23 @@ msgstr ""
 "(在 /lib/systemd 中), 以及 libudev.so"
 
 #. type: Content of: <sect1><sect2><segmentedlist><seglistitem><seg>
+#, fuzzy
 msgid ""
 "/etc/binfmt.d, /etc/init.d, /etc/kernel, /etc/modules-load.d, /etc/sysctl."
 "d, /etc/systemd, /etc/tmpfiles.d, /etc/udev, /etc/xdg/systemd, /lib/"
 "systemd, /lib/udev, /usr/include/systemd, /usr/lib/binfmt.d, /usr/lib/"
-"kernel, /usr/lib/modules-load.d, /usr/lib/sysctl.d, /usr/lib/systemd, /usr/"
-"lib/tmpfiles.d, /usr/share/doc/systemd-&systemd-version;, /usr/share/"
-"factory, /usr/share/systemd, /var/lib/systemd, and /var/log/journal"
+"environment.d, /usr/lib/kernel, /usr/lib/modules-load.d, /usr/lib/sysctl.d, /"
+"usr/lib/systemd, /usr/lib/tmpfiles.d, /usr/share/doc/systemd-&systemd-"
+"version;, /usr/share/factory, /usr/share/systemd, /var/lib/systemd, and /var/"
+"log/journal"
 msgstr ""
 "/etc/binfmt.d, /etc/init.d, /etc/kernel, /etc/modules-load.d, /etc/sysctl."
 "d, /etc/systemd, /etc/tmpfiles.d, /etc/udev, /etc/xdg/systemd, /lib/"
 "systemd, /lib/udev, /usr/include/systemd, /usr/lib/binfmt.d, /usr/lib/"
-"kernel, /usr/lib/modules-load.d, /usr/lib/sysctl.d, /usr/lib/systemd, /usr/"
-"lib/tmpfiles.d, /usr/share/doc/systemd-&systemd-version;, /usr/share/"
-"factory, /usr/share/systemd, /var/lib/systemd, 以及 /var/log/journal"
+"environment.d, /usr/lib/kernel, /usr/lib/modules-load.d, /usr/lib/sysctl.d, /"
+"usr/lib/systemd, /usr/lib/tmpfiles.d, /usr/share/doc/systemd-&systemd-"
+"version;, /usr/share/factory, /usr/share/systemd, /var/lib/systemd, 以及 /var/"
+"log/journal"
 
 #. type: Content of: <sect1><sect2><variablelist><bridgehead>
 msgid "Short Descriptions"
