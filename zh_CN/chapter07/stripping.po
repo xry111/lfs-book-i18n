@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2020-08-08 19:28+0800\n"
+"POT-Creation-Date: 2020-08-20 01:17+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -23,13 +23,25 @@ msgid ""
 "chroot, remove those files now:"
 msgstr ""
 "libtool .la 文件仅在链接到静态库时有用。在使用动态共享库时它们没有意义，甚至"
-"有害，特别是对于非 autotools 构建系统。仍然在 chroot 环境中，运行命令中删除它"
+"有害，特别是对于非 autotools 构建系统。仍然在 chroot 环境中，运行命令删除它"
 "们："
 
 #. type: Content of: <sect1><screen>
 #, no-wrap
 msgid "<userinput>find /usr/{lib,libexec} -name \\*.la -delete</userinput>"
 msgstr "<userinput>find /usr/{lib,libexec} -name \\*.la -delete</userinput>"
+
+#. type: Content of: <sect1><para>
+msgid ""
+"Remove the documentation of the temporary tools, to prevent them from ending "
+"up in the final system, and save about 35 MB:"
+msgstr ""
+"删除临时工具的文档，以防止它们进入最终构建的系统，并节省大约 35 MB："
+
+#. type: Content of: <sect1><screen>
+#, no-wrap
+msgid "<userinput>rm -rf /usr/share/{info,man,doc}/*</userinput>"
+msgstr "<userinput>rm -rf /usr/share/{info,man,doc}/*</userinput>"
 
 #. type: Content of: <sect1><note><para>
 msgid ""
@@ -149,16 +161,6 @@ msgid ""
 msgstr ""
 "注意<emphasis>不要</emphasis>对库文件使用 <parameter>--strip-unneeded</"
 "parameter> 选项。这会损坏静态库，结果工具链软件包都要重新构建。"
-
-#. type: Content of: <sect1><sect2><para>
-msgid ""
-"To save more space (slightly more than 35 MB), remove the documentation:"
-msgstr "为了节约更多空间 (略高于 35 MB)，删除文档："
-
-#. type: Content of: <sect1><sect2><screen>
-#, no-wrap
-msgid "<userinput>rm -rf $LFS/usr/share/{info,man,doc}</userinput>"
-msgstr "<userinput>rm -rf $LFS/usr/share/{info,man,doc}</userinput>"
 
 #. type: Content of: <sect1><sect2><para>
 msgid ""
