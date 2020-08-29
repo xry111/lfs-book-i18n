@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2020-08-13 19:01+0800\n"
+"POT-Creation-Date: 2020-08-30 02:41+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -86,17 +86,69 @@ msgstr ""
 
 #. type: Content of: <sect1><sect2><para>
 msgid ""
-"Configure the kernel via a menu-driven interface. For general information on "
-"kernel configuration see <ulink url=\"&hints-root;kernel-configuration.txt\"/"
-">.  BLFS has some information regarding particular kernel configuration "
-"requirements of packages outside of LFS at <ulink url=\"&blfs-book;longindex."
-"html#kernel-config-index\"/>.  Additional information about configuring and "
-"building the kernel can be found at <ulink url=\"http://www.kroah.com/lkn/\"/"
-">"
+"There are several ways to configure the kernel options. Usually, This is "
+"done through a menu-driven interface, for example:"
 msgstr ""
-"下面通过菜单界面配置内核，阅读 <ulink url=\"&hints-root;kernel-configuration."
-"txt\"/> 了解关于内核配置的一般信息。BLFS 的某些软件包需要特定内核配置，阅读 "
-"<ulink url=\"&blfs-book;longindex.html#kernel-config-index\"/> 了解它们。另外"
+"有多种配置内核选项的方法。例如，通常我们通过目录驱动的界面完成这一工作："
+
+#. type: Content of: <sect1><sect2><screen>
+#, no-wrap
+msgid "<userinput>make menuconfig</userinput>"
+msgstr "<userinput>make menuconfig</userinput>"
+
+#. type: Content of: <sect1><sect2><variablelist><title>
+msgid "The meaning of optional make environment variables:"
+msgstr "以上命令中可选的 make 环境变量及含义："
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
+msgid "<parameter>LANG=&lt;host_LANG_value&gt; LC_ALL=</parameter>"
+msgstr "<parameter>LANG=&lt;host_LANG_value&gt; LC_ALL=</parameter>"
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
+msgid ""
+"This establishes the locale setting to the one used on the host.  This may "
+"be needed for a proper menuconfig ncurses interface line drawing on a UTF-8 "
+"linux text console."
+msgstr ""
+"它们根据宿主使用的 locale 建立 locale 设定。在 UTF-8 Linux 文本终端下，有时必"
+"须这样做才能正确绘制基于 ncurses 的配置菜单接口。"
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
+msgid ""
+"If used, be sure to replace <replaceable>&lt;host_LANG_value&gt;</"
+"replaceable> by the value of the <envar>$LANG</envar> variable from your "
+"host.  You can alternatively use instead the host's value of <envar>$LC_ALL</"
+"envar> or <envar>$LC_CTYPE</envar>."
+msgstr ""
+"在这种情况下，一定要将 <replaceable>&lt;host_LANG_value&gt; </replaceable> 替"
+"换成宿主环境中的 <envar>$LANG</envar> 变量值。您也可以使用宿主环境中 <envar>"
+"$LC_ALL</envar> 或 <envar>$LC_CTYPE</envar> 的值代替。"
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
+msgid "<command>make menuconfig</command>"
+msgstr "<command>make menuconfig</command>"
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
+msgid ""
+"This launches an ncurses menu-driven interface. For other (graphical) "
+"interfaces, type <command>make help</command>."
+msgstr ""
+"这会启动 ncurses 目录驱动的界面。如果希望了解其他 (图形) 界面，可以输入 "
+"<command>make help</command>。"
+
+#. type: Content of: <sect1><sect2><para>
+msgid ""
+"For general information on kernel configuration see <ulink url=\"&hints-root;"
+"kernel-configuration.txt\"/>.  BLFS has some information regarding "
+"particular kernel configuration requirements of packages outside of LFS at "
+"<ulink url=\"&blfs-book;longindex.html#kernel-config-index\"/>.  Additional "
+"information about configuring and building the kernel can be found at <ulink "
+"url=\"http://www.kroah.com/lkn/\"/>"
+msgstr ""
+"阅读 <ulink url=\"&hints-root;kernel-configuration."
+"txt\"/> 了解关于内核配置的一般信息。BLFS 包含一些关于 LFS 之外的软件包需要的"
+"特定内核配置的信息，位于"
+"<ulink url=\"&blfs-book;longindex.html#kernel-config-index\"/> 。另外"
 "在 <ulink url=\"http://www.kroah.com/lkn/\"/> 也有一些关于配置和构建内核的信"
 "息。"
 
@@ -267,39 +319,6 @@ msgstr ""
 "该选项会使内核自动创建设备节点，即使 Udev 没有运行。Udev 之后才在这些设备节点"
 "的基础上运行，管理它们的访问权限并为它们建立符号链接。所有 Udev/Eudev 用户都"
 "需要启用该选项。"
-
-#. type: Content of: <sect1><sect2><screen>
-#, no-wrap
-msgid "<userinput>make menuconfig</userinput>"
-msgstr "<userinput>make menuconfig</userinput>"
-
-#. type: Content of: <sect1><sect2><variablelist><title>
-msgid "The meaning of optional make environment variables:"
-msgstr "以上命令中可选的 make 环境变量及含义："
-
-#. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
-msgid "<parameter>LANG=&lt;host_LANG_value&gt; LC_ALL=</parameter>"
-msgstr "<parameter>LANG=&lt;host_LANG_value&gt; LC_ALL=</parameter>"
-
-#. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
-msgid ""
-"This establishes the locale setting to the one used on the host.  This may "
-"be needed for a proper menuconfig ncurses interface line drawing on a UTF-8 "
-"linux text console."
-msgstr ""
-"它们根据宿主使用的 locale 建立 locale 设定。在 UTF-8 Linux 文本终端下，有时必"
-"须这样做才能正确绘制基于 ncurses 的配置菜单接口。"
-
-#. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
-msgid ""
-"If used, be sure to replace <replaceable>&lt;host_LANG_value&gt;</"
-"replaceable> by the value of the <envar>$LANG</envar> variable from your "
-"host.  You can alternatively use instead the host's value of <envar>$LC_ALL</"
-"envar> or <envar>$LC_CTYPE</envar>."
-msgstr ""
-"在这种情况下，一定要将 <replaceable>&lt;host_LANG_value&gt; </replaceable> 替"
-"换成宿主环境中的 <envar>$LANG</envar> 变量值。您也可以使用宿主环境中 <envar>"
-"$LC_ALL</envar> 或 <envar>$LC_CTYPE</envar> 的值代替。"
 
 #. type: Content of: <sect1><sect2><para>
 msgid ""
