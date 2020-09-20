@@ -27,9 +27,13 @@ jobs:
       - name: Generate Translated XML Files
         run: make booksrc
       - name: Generate Translated Book (sysv)
-        run: make REV=sysv BASEDIR=$HOME/lfs-sysv html nochunks pdf
+        run: |
+          make REV=sysv html nochunks pdf
+          mv zh_CN/book/render $HOME/lfs-sysv
       - name: Generate Translated Book (systemd)
-        run: make REV=systemd BASEDIR=$HOME/lfs-systemd html nochunks pdf
+        run: |
+          make REV=systemd html nochunks pdf
+          mv zh_CN/book/render $HOME/lfs-systemd
       - name: Upload Artifacts
         uses: actions/upload-artifact@v2
         with:
