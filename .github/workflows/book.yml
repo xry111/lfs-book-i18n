@@ -21,7 +21,7 @@ jobs:
       - name: Configure
         run: |
           echo 'MLANG=zh_CN' > local.mk
-          echo 'LFS_EN=$HOME/lfs-en' >> local.mk
+          echo 'LFS_EN=$(HOME)/lfs-en' >> local.mk
       - name: Update po Files
         run: make pofiles
       - name: Generate Translated XML Files
