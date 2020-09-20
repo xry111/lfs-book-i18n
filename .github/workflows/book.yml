@@ -29,15 +29,15 @@ jobs:
       - name: Generate Translated Book (sysv)
         run: |
           make REV=sysv html nochunks pdf
-          mv zh_CN/book/render $HOME/lfs-sysv
+          mv zh_CN/book/render lfs-sysv
       - name: Generate Translated Book (systemd)
         run: |
           make REV=systemd html nochunks pdf
-          mv zh_CN/book/render $HOME/lfs-systemd
+          mv zh_CN/book/render lfs-systemd
       - name: Upload Artifacts
         uses: actions/upload-artifact@v2
         with:
           name: book
           path: |
-            $HOME/lfs-sysv 
-            $HOME/lfs-systemd
+            lfs-sysv 
+            lfs-systemd
