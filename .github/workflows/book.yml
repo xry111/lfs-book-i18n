@@ -9,27 +9,27 @@ jobs:
   build:
     name: Build the book
     runs-on: ubuntu-latest
-  steps:
-    - name: Prepare
-      run: sudo apt install po4a python3-polib libxml2 xsltproc docbook-xml docbook-xsl tidy fop gettext subversion
-    - name: Checkout
-      uses: actions/checkout@v2
-      with:
-        fetch-depth: 0
-    - name: English Book SVN Checkout
-      run: svn co http://svn.linuxfromscratch.org/lfs/trunk/BOOK $HOME/lfs-en
-    - name: Update po Files
-      run: make MLANG=zh_CN pofiles LFS_EN=$HOME/lfs-en
-    - name: Generate Translated XML Files
-      run: make MLANG=zh_CN booksrc MLANG=zh_CN
-    - name: Generate Translated Book (sysv)
-      run: make MLANG=zh_CN REV=sysv BASEDIR=$HOME/lfs-sysv html nochunks pdf
-    - name: Generate Translated Book (systemd)
-      run: make MLANG=zh_CN REV=systemd BASRDIR=$HOME/lfs-systemd html nochunks pdf
-    - name: Upload Artifacts
-      uses: actions/upload-artifact@v2
-      with:
-        name: book
-        path: |
-          $HOME/lfs-sysv 
-          $HOME/lfs-systemd
+    steps:
+      - name: Prepare
+        run: sudo apt install po4a python3-polib libxml2 xsltproc docbook-xml docbook-xsl tidy fop gettext subversion
+      - name: Checkout
+        uses: actions/checkout@v2
+        with:
+          fetch-depth: 0
+      - name: English Book SVN Checkout
+        run: svn co http://svn.linuxfromscratch.org/lfs/trunk/BOOK $HOME/lfs-en
+      - name: Update po Files
+        run: make MLANG=zh_CN pofiles LFS_EN=$HOME/lfs-en
+      - name: Generate Translated XML Files
+        run: make MLANG=zh_CN booksrc MLANG=zh_CN
+      - name: Generate Translated Book (sysv)
+        run: make MLANG=zh_CN REV=sysv BASEDIR=$HOME/lfs-sysv html nochunks pdf
+      - name: Generate Translated Book (systemd)
+        run: make MLANG=zh_CN REV=systemd BASRDIR=$HOME/lfs-systemd html nochunks pdf
+      - name: Upload Artifacts
+        uses: actions/upload-artifact@v2
+        with:
+          name: book
+          path: |
+            $HOME/lfs-sysv 
+            $HOME/lfs-systemd
