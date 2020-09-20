@@ -18,14 +18,18 @@ jobs:
           fetch-depth: 0
       - name: English Book SVN Checkout
         run: svn co http://svn.linuxfromscratch.org/lfs/trunk/BOOK $HOME/lfs-en
+      - name: Configure
+        run: |
+          echo 'MLANG=zh_CN' > local.mk
+          echo 'LFS_EN=$HOME/lfs-en' >> local.mk
       - name: Update po Files
-        run: make MLANG=zh_CN pofiles LFS_EN=$HOME/lfs-en
+        run: make pofiles
       - name: Generate Translated XML Files
-        run: make MLANG=zh_CN booksrc MLANG=zh_CN
+        run: make booksrc
       - name: Generate Translated Book (sysv)
-        run: make MLANG=zh_CN REV=sysv BASEDIR=$HOME/lfs-sysv html nochunks pdf
+        run: make REV=sysv BASEDIR=$HOME/lfs-sysv html nochunks pdf
       - name: Generate Translated Book (systemd)
-        run: make MLANG=zh_CN REV=systemd BASRDIR=$HOME/lfs-systemd html nochunks pdf
+        run: make REV=systemd BASEDIR=$HOME/lfs-systemd html nochunks pdf
       - name: Upload Artifacts
         uses: actions/upload-artifact@v2
         with:
