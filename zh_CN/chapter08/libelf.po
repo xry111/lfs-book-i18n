@@ -1,9 +1,7 @@
 msgid ""
 msgstr ""
-"X-Pootle-Revision: 9999999\n"
-"X-Pootle-Path: /zh_CN/lfs/chapter08/libelf.po\n"
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2020-08-08 19:28+0800\n"
+"POT-Creation-Date: 2020-09-20 12:59+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -11,6 +9,8 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"X-Pootle-Revision: 9999999\n"
+"X-Pootle-Path: /zh_CN/lfs/chapter08/libelf.po\n"
 "X-Generator: Translate Toolkit 2.2.5\n"
 
 #. type: Content of: <sect1><sect1info><address>
@@ -73,8 +73,16 @@ msgstr "准备编译 Libelf："
 
 #. type: Content of: <sect1><sect2><screen>
 #, no-wrap
-msgid "<userinput remap=\"configure\">./configure --prefix=/usr --disable-debuginfod --libdir=/lib</userinput>"
-msgstr "<userinput remap=\"configure\">./configure --prefix=/usr --disable-debuginfod --libdir=/lib</userinput>"
+msgid ""
+"<userinput remap=\"configure\">./configure --prefix=/usr                \\\n"
+"            --disable-debuginfod         \\\n"
+"            --enable-libdebuginfod=dummy \\\n"
+"            --libdir=/lib</userinput>"
+msgstr ""
+"<userinput remap=\"configure\">./configure --prefix=/usr                \\\n"
+"            --disable-debuginfod         \\\n"
+"            --enable-libdebuginfod=dummy \\\n"
+"            --libdir=/lib</userinput>"
 
 #. type: Content of: <sect1><sect2><para>
 msgid "Compile the package:"
