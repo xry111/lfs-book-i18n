@@ -11,7 +11,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Prepare
-        run: sudo apt install po4a python3-polib libxml2 xsltproc docbook-xml docbook-xsl tidy fop gettext subversion
+        run: sudo apt install po4a python3-polib libxml2-utils xsltproc docbook-xml docbook-xsl tidy fop gettext subversion
       - name: Checkout
         uses: actions/checkout@v2
         with:
