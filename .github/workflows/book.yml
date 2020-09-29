@@ -49,8 +49,10 @@ jobs:
         uses: webfactory/ssh-agent@v0.4.0
         with:
           ssh-private-key: ${{ secrets.SSH_PRIVATE_KEY }}
-      - name: Upload
+      - name: Upload Generated Book to the Server
         run: |
           cat .known_hosts >> $HOME/.ssh/known_hosts
+          ssh "lfsbook@mengyan1223.wang" rm -rf "/var/www/xry111/lfs/zh_CN/development"
+          ssh "lfsbook@mengyan1223.wang" rm -rf "/var/www/xry111/lfs/zh_CN/systemd"
           scp -r lfs-sysv "lfsbook@mengyan1223.wang:/var/www/xry111/lfs/zh_CN/development"
           scp -r lfs-systemd "lfsbook@mengyan1223.wang:/var/www/xry111/lfs/zh_CN/systemd"
