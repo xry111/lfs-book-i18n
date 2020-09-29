@@ -45,3 +45,12 @@ jobs:
           path: |
             lfs-sysv 
             lfs-systemd
+      - name: Set up SSH key
+        uses: webfactory/ssh-agent@v0.4.0
+        with:
+          ssh-private-key: ${{ secrets.SSH_PRIVATE_KEY }}
+      - name: Upload
+        run: |
+          cat .known_hosts >> $HOME/.ssh/known_hosts
+          scp -r lfs-sysv "lfsbook@mengyan1223.wang:/var/www/xry111/lfs/zh_CN/development"
+          scp -r lfs-systemd "lfsbook@mengyan1223.wang:/var/www/xry111/lfs/zh_CN/systemd"
