@@ -83,7 +83,7 @@ LFS_EN=$(HOME)/lfs_en
 
 ## 参与翻译
 
-如果对翻译有任何修改意见，致信 `xry111@mengyan1223.wang`。
+如果对翻译有任何修改意见，请在 GitHub 仓库创建 Issue。
 
 如果希望长期参与翻译，致信 `xry111@mengyan1223.wang` 提出，
-以获得一个用于创建 Issue 和 PR 的帐号。
+以获得仓库的相关访问权限。
