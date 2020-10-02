@@ -1,9 +1,7 @@
 msgid ""
 msgstr ""
-"X-Pootle-Revision: 9999999\n"
-"X-Pootle-Path: /zh_CN/lfs/chapter08/python.po\n"
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2020-08-08 19:28+0800\n"
+"POT-Creation-Date: 2020-10-02 15:38+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -11,6 +9,8 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"X-Pootle-Revision: 9999999\n"
+"X-Pootle-Path: /zh_CN/lfs/chapter08/python.po\n"
 "X-Generator: Translate Toolkit 2.2.5\n"
 
 #. type: Content of: <sect1><sect1info><address>
@@ -128,14 +128,22 @@ msgid "<userinput remap=\"make\">make</userinput>"
 msgstr "<userinput remap=\"make\">make</userinput>"
 
 #. type: Content of: <sect1><sect2><para>
+msgid "To test the results, issue:"
+msgstr "运行命令以测试编译结果："
+
+#. type: Content of: <sect1><sect2><screen>
+#, no-wrap
+msgid "<userinput remap=\"test\">make test</userinput>"
+msgstr "<userinput remap=\"make\">make test</userinput>"
+
+#. type: Content of: <sect1><sect2><para>
 msgid ""
-"To test the results, issue <command>make test</command>.  Some tests "
-"requiring a network connection or additional packages are skipped.  The test "
-"named test_normalization fails because network configuration is not "
-"completed yet.  For more comprehensive results, the test can be rerun when "
-"Python 3 is reinstalled in BLFS."
+"Some tests requiring a network connection or additional packages are "
+"skipped.  The test named test_normalization fails because network "
+"configuration is not completed yet.  For more comprehensive results, the "
+"test can be rerun when Python 3 is reinstalled in BLFS."
 msgstr ""
-"运行 <command>make test</command> 以测试编译结果。一些需要网络连接或额外软件"
+"一些需要网络连接或额外软件"
 "包的测试会被跳过。名为 test_normalization 的测试会由于网络配置不完整而失败。"
 "如果需要更全面的测试结果，可以在 BLFS 中重新安装 Python 3 时再次进行测试。"
 
