@@ -30,7 +30,7 @@ jobs:
         if: github.event_name == 'push'
         run: ./setenv.sh "${GITHUB_REF}"
       - name: English Book SVN Checkout
-        run: svn co http://svn.linuxfromscratch.org/lfs/trunk/$SVN_BRANCH $HOME/lfs-en
+        run: svn co http://svn.linuxfromscratch.org/lfs/$SVN_BRANCH $HOME/lfs-en
       - name: Configure
         run: |
           echo 'MLANG=zh_CN' > local.mk
