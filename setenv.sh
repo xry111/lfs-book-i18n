@@ -27,12 +27,12 @@ case "${branch}" in
 	*-rc*)
 		sysv="${branch}"
 		sysd="$(echo \"${branch}\" | sed 's@-@-systemd-@')"
-		svn_branch="${branch}"
+		svn_branch="tags/${branch}"
 		;;
 	*)
 		sysv="${branch}"
 		sysd="${branch}-systemd"
-		svn_branch="${branch}"
+		svn_branch="tags/${branch}"
 		;;
 esac
 
