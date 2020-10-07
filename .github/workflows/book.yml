@@ -21,8 +21,16 @@ jobs:
           GITHUB_CONTEXT: ${{ toJson(github) }}
         run:
           echo "$GITHUB_CONTEXT"
+      - name: Set Environment for Pull Requests
+        if: github.event_name != 'push'
+        run: |
+          echo "UPLOAD=no" >> $GITHUB_ENV
+          echo "SVN_BRANCH=trunk/BOOK" >> $GITHUB_ENV
+      - name: Set Environment for Push
+        if: github.event_name == 'push'
+        run: ./setenv.sh "${GITHUB_REF}"
       - name: English Book SVN Checkout
-        run: svn co http://svn.linuxfromscratch.org/lfs/trunk/BOOK $HOME/lfs-en
+        run: svn co http://svn.linuxfromscratch.org/lfs/trunk/$SVN_BRANCH $HOME/lfs-en
       - name: Configure
         run: |
           echo 'MLANG=zh_CN' > local.mk
@@ -54,12 +62,6 @@ jobs:
         uses: webfactory/ssh-agent@v0.4.0
         with:
           ssh-private-key: ${{ secrets.SSH_PRIVATE_KEY }}
-      - name: Skip Upload for Pull Requests
-        if: github.event_name != 'push'
-        run: echo "UPLOAD=no" >> $GITHUB_ENV
-      - name: Determine Upload Target for Push
-        if: github.event_name == 'push'
-        run: ./upload_target.sh "${GITHUB_REF}"
       - name: Upload Generated Book to the Server
         if: env.UPLOAD == 'yes'
         run: |
