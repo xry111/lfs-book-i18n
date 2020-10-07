@@ -1,0 +1,67 @@
+name: Book
+
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+
+jobs:
+  build:
+    name: Build the book
+    runs-on: ubuntu-latest
+    steps:
+      - name: Prepare
+        run: sudo apt install po4a python3-polib libxml2-utils xsltproc docbook-xml docbook-xsl tidy fop gettext subversion
+      - name: Checkout
+        uses: actions/checkout@v2
+        with:
+          fetch-depth: 0
+      - name: Set Environment for Pull Requests
+        if: github.event_name != 'push'
+        run: |
+          echo "UPLOAD=no" >> $GITHUB_ENV
+          echo "SVN_BRANCH=trunk/BOOK" >> $GITHUB_ENV
+      - name: Set Environment for Push
+        if: github.event_name == 'push'
+        run: ./setenv.sh "${GITHUB_REF}"
+      - name: English Book SVN Checkout
+        run: svn co http://svn.linuxfromscratch.org/lfs/$SVN_BRANCH $HOME/lfs-en
+      - name: Configure
+        run: |
+          echo 'MLANG=zh_CN' > local.mk
+          echo 'LFS_EN=$(HOME)/lfs-en' >> local.mk
+      - name: Update po Files
+        run: make pofiles
+      - name: Generate Translated XML Files
+        run: make booksrc
+      - name: Generate Translated Book (sysv)
+        run: |
+          make REV=sysv html nochunks pdf
+          mv zh_CN/book/render lfs-sysv
+          mv zh_CN/book/nochunks/* lfs-sysv
+          mv zh_CN/book/pdf/* lfs-sysv
+      - name: Generate Translated Book (systemd)
+        run: |
+          make REV=systemd html nochunks pdf
+          mv zh_CN/book/render lfs-systemd
+          mv zh_CN/book/nochunks/* lfs-systemd
+          mv zh_CN/book/pdf/* lfs-systemd
+      - name: Upload Artifacts
+        uses: actions/upload-artifact@v2
+        with:
+          name: book
+          path: |
+            lfs-sysv 
+            lfs-systemd
+      - name: Set up SSH key
+        uses: webfactory/ssh-agent@v0.4.0
+        with:
+          ssh-private-key: ${{ secrets.SSH_PRIVATE_KEY }}
+      - name: Upload Generated Book to the Server
+        if: env.UPLOAD == 'yes'
+        run: |
+          cat .known_hosts >> $HOME/.ssh/known_hosts
+          echo ssh "lfsbook@mengyan1223.wang" rm -rf "/var/www/xry111/lfs/zh_CN/${SYSV}"
+          echo ssh "lfsbook@mengyan1223.wang" rm -rf "/var/www/xry111/lfs/zh_CN/${SYSD}"
+          echo scp -r lfs-sysv "lfsbook@mengyan1223.wang:/var/www/xry111/lfs/zh_CN/${SYSV}"
+          echo scp -r lfs-systemd "lfsbook@mengyan1223.wang:/var/www/xry111/lfs/zh_CN/${SYSD}"
