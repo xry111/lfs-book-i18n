@@ -55,10 +55,10 @@ jobs:
         with:
           ssh-private-key: ${{ secrets.SSH_PRIVATE_KEY }}
       - name: Skip Upload for Pull Requests
-        if: github.event_name != "push"
+        if: github.event_name != 'push'
         run: echo "UPLOAD=no" >> $GITHUB_ENV
       - name: Determine Upload Target for Push
-        if: github.event_name == "push"
+        if: github.event_name == 'push'
         run: ./upload_target.sh "${GITHUB_REF}"
       - name: Upload Generated Book to the Server
         if: env.UPLOAD == "yes"
