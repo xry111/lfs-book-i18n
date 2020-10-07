@@ -61,7 +61,7 @@ jobs:
         if: github.event_name == 'push'
         run: ./upload_target.sh "${GITHUB_REF}"
       - name: Upload Generated Book to the Server
-        if: env.UPLOAD == "yes"
+        if: env.UPLOAD == 'yes'
         run: |
           cat .known_hosts >> $HOME/.ssh/known_hosts
           echo ssh "lfsbook@mengyan1223.wang" rm -rf "/var/www/xry111/lfs/zh_CN/${sysv}"
