@@ -61,7 +61,7 @@ jobs:
         if: env.UPLOAD == 'yes'
         run: |
           cat .known_hosts >> $HOME/.ssh/known_hosts
-          echo ssh "lfsbook@mengyan1223.wang" rm -rf "/var/www/xry111/lfs/zh_CN/${SYSV}"
-          echo ssh "lfsbook@mengyan1223.wang" rm -rf "/var/www/xry111/lfs/zh_CN/${SYSD}"
-          echo scp -r lfs-sysv "lfsbook@mengyan1223.wang:/var/www/xry111/lfs/zh_CN/${SYSV}"
-          echo scp -r lfs-systemd "lfsbook@mengyan1223.wang:/var/www/xry111/lfs/zh_CN/${SYSD}"
+          ssh "lfsbook@mengyan1223.wang" rm -rf "/var/www/xry111/lfs/zh_CN/${SYSV}"
+          ssh "lfsbook@mengyan1223.wang" rm -rf "/var/www/xry111/lfs/zh_CN/${SYSD}"
+          scp -r lfs-sysv "lfsbook@mengyan1223.wang:/var/www/xry111/lfs/zh_CN/${SYSV}"
+          scp -r lfs-systemd "lfsbook@mengyan1223.wang:/var/www/xry111/lfs/zh_CN/${SYSD}"
