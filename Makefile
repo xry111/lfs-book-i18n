@@ -1,13 +1,17 @@
 SHELL := /bin/bash
 default: html
 
-LFS_EN = /home/xry111/svn-repos/LFS-BOOK
+LFS_EN = $(HOME)/svn-repos/LFS-BOOK
 MLANG=zh_CN
 ALL_XML_FILES = $(shell find $(LFS_EN) -type f -name '*.xml')
 EXCLUDE_FILES = # empty for now
 XML_FILES = $(filter-out $(EXCLUDE_FILES), $(ALL_XML_FILES))
 PO_FILES = $(patsubst $(LFS_EN)/%.xml, $(MLANG)/%.po, $(XML_FILES))
 PO4A_FLAGS = -f docbook --porefs none
+
+ifneq (,$(wildcard ./local.mk))
+include local.mk
+endif
 
 $(MLANG)/chapter01/changelog.po: $(LFS_EN)/chapter01/changelog.xml changelogtranslator.py templatetranslator.py
 	mkdir -pv "$(@D)"
