@@ -16,6 +16,8 @@ jobs:
         uses: actions/checkout@v2
         with:
           fetch-depth: 0
+      - name: Check for Untranslated or Fuzzy Strings
+        run: ./check-translations.sh
       - name: Set Environment for Pull Requests
         if: github.event_name != 'push'
         run: |
