@@ -10,6 +10,7 @@ case "$1" in
 		;;
 esac
 
+upload=yes
 branch="$(echo $1 | sed 's@^refs/heads/@@')"
 svn_branch="trunk/BOOK"
 
@@ -17,8 +18,7 @@ echo "${branch}"
 
 case "${branch}" in
 	*/*)
-		echo "UPLOAD=no" >> $GITHUB_ENV
-		exit 0
+		upload=no
 		;;
 	master)
 		sysv="development"
@@ -36,7 +36,7 @@ case "${branch}" in
 		;;
 esac
 
-echo "UPLOAD=yes" >> $GITHUB_ENV
+echo "UPLOAD=${upload}" >> $GITHUB_ENV
 echo "SYSV=${sysv}" >> $GITHUB_ENV
 echo "SYSD=${sysd}" >> $GITHUB_ENV
 echo "SVN_BRANCH=${svn_branch}" >> $GITHUB_ENV
