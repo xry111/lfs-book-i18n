@@ -1,9 +1,7 @@
 msgid ""
 msgstr ""
-"X-Pootle-Revision: 9999999\n"
-"X-Pootle-Path: /zh_CN/lfs/chapter08/systemd.po\n"
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2020-08-30 02:41+0800\n"
+"POT-Creation-Date: 2020-12-05 05:11+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -11,6 +9,8 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"X-Pootle-Revision: 9999999\n"
+"X-Pootle-Path: /zh_CN/lfs/chapter08/systemd.po\n"
 "X-Generator: Translate Toolkit 2.2.5\n"
 
 #. type: Content of: <sect1><sect1info><address>
@@ -61,6 +61,15 @@ msgid "Installation of systemd"
 msgstr "安装 systemd"
 
 #. type: Content of: <sect1><sect2><para>
+msgid "First, apply a patch to fix some regressions:"
+msgstr "首先，应用一个补丁，修复一些退化问题："
+
+#. type: Content of: <sect1><sect2><screen>
+#, no-wrap
+msgid "<userinput remap=\"pre\">patch -Np1 -i ../systemd-&systemd-version;-upstream_fixes-1.patch</userinput>"
+msgstr "<userinput remap=\"pre\">patch -Np1 -i ../systemd-&systemd-version;-upstream_fixes-1.patch</userinput>"
+
+#. type: Content of: <sect1><sect2><para>
 msgid ""
 "Create a symlink to work around the xsltproc command not being installed:"
 msgstr "创建一个符号链接，绕过本书不会安装的 xsltproc："
@@ -85,8 +94,8 @@ msgstr "删除在 chroot 环境中无法构建的测试："
 
 #. type: Content of: <sect1><sect2><screen>
 #, no-wrap
-msgid "<userinput remap=\"pre\">sed '177,$ d' -i src/resolve/meson.build</userinput>"
-msgstr "<userinput remap=\"pre\">sed '177,$ d' -i src/resolve/meson.build</userinput>"
+msgid "<userinput remap=\"pre\">sed '181,$ d' -i src/resolve/meson.build</userinput>"
+msgstr "<userinput remap=\"pre\">sed '181,$ d' -i src/resolve/meson.build</userinput>"
 
 #. type: Content of: <sect1><sect2><para>
 msgid ""
@@ -134,6 +143,7 @@ msgid ""
 "      -Dhomed=false                 \\\n"
 "      -Duserdb=false                \\\n"
 "      -Dman=true                    \\\n"
+"      -Dmode=release                \\\n"
 "      -Ddocdir=/usr/share/doc/systemd-&systemd-version; \\\n"
 "      ..</userinput>"
 msgstr ""
@@ -163,6 +173,7 @@ msgstr ""
 "      -Dhomed=false                 \\\n"
 "      -Duserdb=false                \\\n"
 "      -Dman=true                    \\\n"
+"      -Dmode=release                \\\n"
 "      -Ddocdir=/usr/share/doc/systemd-&systemd-version; \\\n"
 "      ..</userinput>"
 
@@ -279,6 +290,14 @@ msgid ""
 "Remove two daemons that have dependencies that do not fit the scope of LFS."
 msgstr "移除两个守护程序，它们的依赖项超出了 LFS 的范围。"
 
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
+msgid "<parameter>-Dmode=release</parameter>"
+msgstr "<parameter>-Dmode=release</parameter>"
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
+msgid "Disable some features considered experimental by upstream."
+msgstr "禁用一些上游开发者认为尚处于实验阶段的功能。"
+
 #. type: Content of: <sect1><sect2><para>
 msgid "Compile the package:"
 msgstr "编译该软件包："
@@ -378,13 +397,13 @@ msgid ""
 "systemctl), resolvconf (symlink to resolvectl), resolvectl, runlevel "
 "(symlink to systemctl), shutdown (symlink to systemctl), systemctl, systemd-"
 "analyze, systemd-ask-password, systemd-cat, systemd-cgls, systemd-cgtop, "
-"systemd-delta, systemd-detect-virt, systemd-escape, systemd-hwdb, systemd-"
-"id128, systemd-inhibit, systemd-machine-id-setup, systemd-mount, systemd-"
-"notify, systemd-nspawn, systemd-path, systemd-repart, systemd-resolve "
-"(symlink to resolvectl), systemd-run, systemd-socket-activate, systemd-stdio-"
-"bridge, systemd-tmpfiles, systemd-tty-ask-password-agent, systemd-umount "
-"(symlink to systemd-mount), telinit (symlink to systemctl), timedatectl, and "
-"udevadm"
+"systemd-delta, systemd-detect-virt, systemd-dissect, systemd-escape, systemd-"
+"hwdb, systemd-id128, systemd-inhibit, systemd-machine-id-setup, systemd-"
+"mount, systemd-notify, systemd-nspawn, systemd-path, systemd-repart, systemd-"
+"resolve (symlink to resolvectl), systemd-run, systemd-socket-activate, "
+"systemd-stdio-bridge, systemd-tmpfiles, systemd-tty-ask-password-agent, "
+"systemd-umount (symlink to systemd-mount), telinit (symlink to systemctl), "
+"timedatectl, and udevadm"
 msgstr ""
 "bootctl, busctl, coredumpctl, halt (到 systemctl 的符号链接), hostnamectl, "
 "init, journalctl, kernel-install, localectl, loginctl, machinectl, "
@@ -392,13 +411,13 @@ msgstr ""
 "systemctl 的符号链接), resolvconf (到 resolvectl 的符号链接), resolvectl, "
 "runlevel (到 systemctl 的符号链接), shutdown (到 systemctl 的符号链接), "
 "systemctl, systemd-analyze, systemd-ask-password, systemd-cat, systemd-cgls, "
-"systemd-cgtop, systemd-delta, systemd-detect-virt, systemd-escape, systemd-"
-"hwdb, systemd-id128, systemd-inhibit, systemd-machine-id-setup, systemd-"
-"mount, systemd-notify, systemd-nspawn, systemd-path, systemd-repart, systemd-"
-"resolve (到 resolvectl 的符号链接), systemd-run, systemd-socket-activate, "
-"systemd-stdio-bridge, systemd-tmpfiles, systemd-tty-ask-password-agent, "
-"systemd-umount (到 systemd-mount 的符号链接), telinit (到 systemctl 的符号链"
-"接), timedatectl, 以及 udevadm"
+"systemd-cgtop, systemd-delta, systemd-detect-virt, systemd-dissect, systemd-"
+"escape, systemd-hwdb, systemd-id128, systemd-inhibit, systemd-machine-id-"
+"setup, systemd-mount, systemd-notify, systemd-nspawn, systemd-path, systemd-"
+"repart, systemd-resolve (到 resolvectl 的符号链接), systemd-run, systemd-"
+"socket-activate, systemd-stdio-bridge, systemd-tmpfiles, systemd-tty-ask-"
+"password-agent, systemd-umount (到 systemd-mount 的符号链接), telinit (到 "
+"systemctl 的符号链接), timedatectl, 以及 udevadm"
 
 #. type: Content of: <sect1><sect2><segmentedlist><seglistitem><seg>
 msgid ""
@@ -818,6 +837,18 @@ msgstr "确定系统是否在虚拟化环境中运行，并据此调节 udev。"
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 msgid "systemd-detect-virt"
 msgstr "systemd-detect-virt"
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
+msgid "<command>systemd-dissect</command>"
+msgstr "<command>systemd-dissect</command>"
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
+msgid "Is used to inspect OS disk images."
+msgstr "用于检查 OS 磁盘映像"
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
+msgid "systemd-dissect"
+msgstr "systemd-dissect"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 msgid "<command>systemd-escape</command>"
