@@ -1,9 +1,7 @@
 msgid ""
 msgstr ""
-"X-Pootle-Revision: 9999999\n"
-"X-Pootle-Path: /zh_CN/lfs/chapter08/bash.po\n"
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2020-08-08 19:28+0800\n"
+"POT-Creation-Date: 2020-12-15 15:33+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -11,6 +9,8 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"X-Pootle-Revision: 9999999\n"
+"X-Pootle-Path: /zh_CN/lfs/chapter08/bash.po\n"
 "X-Generator: Translate Toolkit 2.2.5\n"
 
 #. type: Content of: <sect1><sect1info><address>
@@ -59,13 +59,13 @@ msgid "Installation of Bash"
 msgstr "安装 Bash"
 
 #. type: Content of: <sect1><sect2><para>
-msgid "Incorporate some upstream fixes:"
-msgstr "整合上游进行的一些修复："
+msgid "First, fix a race condition if using multiple cores:"
+msgstr "首先，修复使用多个处理器核心构建时的竞争条件："
 
 #. type: Content of: <sect1><sect2><screen>
 #, no-wrap
-msgid "<userinput remap=\"pre\">patch -Np1 -i ../&bash-fixes-patch;</userinput>"
-msgstr "<userinput remap=\"pre\">patch -Np1 -i ../&bash-fixes-patch;</userinput>"
+msgid "<userinput remap=\"pre\">sed -i  '/^bashline.o:.*shmbchar.h/a bashline.o: ${DEFDIR}/builtext.h' Makefile.in</userinput>"
+msgstr "<userinput remap=\"pre\">sed -i  '/^bashline.o:.*shmbchar.h/a bashline.o: ${DEFDIR}/builtext.h' Makefile.in</userinput>"
 
 #. type: Content of: <sect1><sect2><para>
 msgid "Prepare Bash for compilation:"
