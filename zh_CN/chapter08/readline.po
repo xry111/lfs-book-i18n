@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2020-12-08 03:48+0800\n"
+"POT-Creation-Date: 2021-01-01 19:27+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -155,19 +155,17 @@ msgstr "<userinput remap=\"install\">make SHLIB_LIBS=\"-lncursesw\" install</use
 #. type: Content of: <sect1><sect2><para>
 msgid ""
 "Now move the dynamic libraries to a more appropriate location and fix up "
-"some permissions and symbolic links:"
-msgstr "下面将动态库移动到更合适的位置，并修正访问权限和符号链接："
+"symbolic links:"
+msgstr "下面将动态库移动到更合适的位置，并修复符号链接："
 
 #. type: Content of: <sect1><sect2><screen>
 #, no-wrap
 msgid ""
 "<userinput remap=\"install\">mv -v /usr/lib/lib{readline,history}.so.* /lib\n"
-"chmod -v u+w /lib/lib{readline,history}.so.*\n"
 "ln -sfv ../../lib/$(readlink /usr/lib/libreadline.so) /usr/lib/libreadline.so\n"
 "ln -sfv ../../lib/$(readlink /usr/lib/libhistory.so ) /usr/lib/libhistory.so</userinput>"
 msgstr ""
 "<userinput remap=\"install\">mv -v /usr/lib/lib{readline,history}.so.* /lib\n"
-"chmod -v u+w /lib/lib{readline,history}.so.*\n"
 "ln -sfv ../../lib/$(readlink /usr/lib/libreadline.so) /usr/lib/libreadline.so\n"
 "ln -sfv ../../lib/$(readlink /usr/lib/libhistory.so ) /usr/lib/libhistory.so</userinput>"
 
