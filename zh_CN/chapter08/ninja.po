@@ -1,9 +1,7 @@
 msgid ""
 msgstr ""
-"X-Pootle-Revision: 9999999\n"
-"X-Pootle-Path: /zh_CN/lfs/chapter08/ninja.po\n"
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2020-08-08 19:28+0800\n"
+"POT-Creation-Date: 2021-01-14 09:16+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -11,6 +9,8 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"X-Pootle-Revision: 9999999\n"
+"X-Pootle-Path: /zh_CN/lfs/chapter08/ninja.po\n"
 "X-Generator: Translate Toolkit 2.2.5\n"
 
 #. type: Content of: <sect1><sect1info><address>
@@ -84,10 +84,6 @@ msgstr ""
 "命令行执行 ninja，可以传递 -jN 参数以限制并行进程数，但某些软件包内嵌了 "
 "ninja 的执行过程，且并不传递 -j 参数。"
 
-#. Using <command>
-#.  here to make the output bold.  We really don't want
-#.      users setting this now and experience shows that many users blindly
-#.      copy/paste anything in a box. 
 #. type: Content of: <sect1><sect2><para><screen>
 #, no-wrap
 msgid "export NINJAJOBS=4"
@@ -97,11 +93,12 @@ msgstr "export NINJAJOBS=4"
 msgid ""
 "Using the <emphasis>optional</emphasis> procedure below allows a user to "
 "limit the number of parallel processes via an environment variable, "
-"NINJAJOBS.  <command>For example</command>, setting: <placeholder type="
-"\"screen\" id=\"0\"/> will limit ninja to four parallel processes."
+"NINJAJOBS.  <emphasis role=\"bold\">For example</emphasis>, setting: "
+"<placeholder type=\"screen\" id=\"0\"/> will limit ninja to four parallel "
+"processes."
 msgstr ""
 "应用下面这个<emphasis>可选的</emphasis>修改，用户即可通过一个环境变量 "
-"NINJAJOBS 限制并行进程数量。<command>例如</command>设置：<placeholder type="
+"NINJAJOBS 限制并行进程数量。<emphasis role=\"bold\">例如</emphasis>设置：<placeholder type="
 "\"screen\" id=\"0\"/>会限制 ninja 使用 4 个并行进程。"
 
 #. type: Content of: <sect1><sect2><para>
