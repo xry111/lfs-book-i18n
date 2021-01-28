@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2020-12-01 19:40+0800\n"
+"POT-Creation-Date: 2021-01-28 13:14+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -79,8 +79,8 @@ msgstr "编译该软件包："
 
 #. type: Content of: <sect1><sect2><screen>
 #, no-wrap
-msgid "<userinput remap=\"make\">make lib=lib</userinput>"
-msgstr "<userinput remap=\"make\">make lib=lib</userinput>"
+msgid "<userinput remap=\"make\">make prefix=/usr lib=lib</userinput>"
+msgstr "<userinput remap=\"make\">make prefix=/usr lib=lib</userinput>"
 
 #. type: Content of: <sect1><sect2><variablelist><title>
 msgid "The meaning of the make option:"
@@ -92,11 +92,12 @@ msgstr "<parameter>lib=lib</parameter>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 msgid ""
-"This parameter sets the library directory to <filename>/lib</filename> "
-"rather than <filename>/lib64</filename> on x86_64. It has no effect on x86."
+"This parameter sets the library directory to <filename>/usr/lib</filename> "
+"rather than <filename>/usr/lib64</filename> on x86_64. It has no effect on "
+"x86."
 msgstr ""
-"在 x86_64 上，该参数将库文件目录设定为 <filename>/lib</filename>，而不是 "
-"<filename>/lib64</filename>。它在 x86 上没有作用。"
+"在 x86_64 上，该参数将库文件目录设定为 <filename>/usr/lib</filename>，而不是 "
+"<filename>/usr/lib64</filename>。它在 x86 上没有作用。"
 
 #. type: Content of: <sect1><sect2><para>
 msgid "To test the results, issue:"
@@ -108,24 +109,26 @@ msgid "<userinput remap=\"test\">make test</userinput>"
 msgstr "<userinput remap=\"test\">make test</userinput>"
 
 #. type: Content of: <sect1><sect2><para>
-msgid "Install the package and do some cleanup:"
-msgstr "安装该软件包，并进行清理工作："
+msgid ""
+"Install the package and make sure the essential libraries are in the correct "
+"directory:"
+msgstr "安装该软件包，并确保必要的库位于正确的目录中："
 
 #. type: Content of: <sect1><sect2><screen>
 #, no-wrap
 msgid ""
-"<userinput remap=\"install\">make lib=lib PKGCONFIGDIR=/usr/lib/pkgconfig install\n"
+"<userinput remap=\"install\">make prefix=/usr lib=lib install\n"
 "for libname in cap psx; do\n"
-"    chmod -v 755 /lib/lib${libname}.so.&libcap-version;\n"
-"    rm -v /lib/lib${libname}.so\n"
+"    mv -v /usr/lib/lib${libname}.so.* /lib\n"
 "    ln -sfv ../../lib/lib${libname}.so.2 /usr/lib/lib${libname}.so\n"
+"    chmod -v 755 /lib/lib${libname}.so.&libcap-version;\n"
 "done</userinput>"
 msgstr ""
-"<userinput remap=\"install\">make lib=lib PKGCONFIGDIR=/usr/lib/pkgconfig install\n"
+"<userinput remap=\"install\">make prefix=/usr lib=lib install\n"
 "for libname in cap psx; do\n"
-"    chmod -v 755 /lib/lib${libname}.so.&libcap-version;\n"
-"    rm -v /lib/lib${libname}.so\n"
+"    mv -v /usr/lib/lib${libname}.so.* /lib\n"
 "    ln -sfv ../../lib/lib${libname}.so.2 /usr/lib/lib${libname}.so\n"
+"    chmod -v 755 /lib/lib${libname}.so.&libcap-version;\n"
 "done</userinput>"
 
 #. type: Content of: <sect1><sect2><title>
