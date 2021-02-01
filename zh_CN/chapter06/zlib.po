@@ -1,0 +1,100 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"POT-Creation-Date: 2021-02-01 09:13+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: zh_CN\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Pootle-Revision: 9999999\n"
+"X-Pootle-Path: /zh_CN/lfs/chapter08/zlib.po\n"
+"X-Generator: Translate Toolkit 2.2.5\n"
+
+#. type: Content of: <sect1><sect1info><address>
+#, no-wrap
+msgid "&zlib-url;"
+msgstr "&zlib-url;"
+
+#. type: Content of: <sect1><sect1info>
+msgid ""
+"<productname>zlib</productname> <productnumber>&zlib-version;</"
+"productnumber> <placeholder type=\"address\" id=\"0\"/>"
+msgstr ""
+"<productname>zlib</productname> <productnumber>&zlib-version;</"
+"productnumber> <placeholder type=\"address\" id=\"0\"/>"
+
+#. type: Content of: <sect1><title>
+msgid "Zlib-&zlib-version;"
+msgstr "Zlib-&zlib-version;"
+
+#. type: Content of: <sect1><indexterm><primary>
+msgid "Zlib"
+msgstr "Zlib"
+
+#. type: Content of: <sect1><sect2><para>
+msgid ""
+"The Zlib package contains compression and decompression routines used by "
+"some programs."
+msgstr "Zlib 软件包包含一些程序使用的压缩和解压缩子程序。"
+
+#. type: Content of: <sect1><sect2><segmentedlist><segtitle>
+msgid "&buildtime;"
+msgstr "&buildtime;"
+
+#. type: Content of: <sect1><sect2><segmentedlist><segtitle>
+msgid "&diskspace;"
+msgstr "&diskspace;"
+
+#. type: Content of: <sect1><sect2><segmentedlist><seglistitem><seg>
+msgid "&zlib-fin-sbu;"
+msgstr "&zlib-fin-sbu;"
+
+#. type: Content of: <sect1><sect2><segmentedlist><seglistitem><seg>
+msgid "&zlib-fin-du;"
+msgstr "&zlib-fin-du;"
+
+#. type: Content of: <sect1><sect2><title>
+msgid "Installation of Zlib"
+msgstr "安装 Zlib"
+
+#. type: Content of: <sect1><sect2><para>
+msgid "Prepare Zlib for compilation:"
+msgstr "准备编译 Zlib："
+
+#. type: Content of: <sect1><sect2><screen>
+#, no-wrap
+msgid "<userinput remap=\"configure\">./configure --prefix=/usr</userinput>"
+msgstr "<userinput remap=\"configure\">./configure --prefix=/usr</userinput>"
+
+#. type: Content of: <sect1><sect2><para>
+msgid "Compile the package:"
+msgstr "编译该软件包："
+
+#. type: Content of: <sect1><sect2><screen>
+#, no-wrap
+msgid "<userinput remap=\"make\">make</userinput>"
+msgstr "<userinput remap=\"make\">make</userinput>"
+
+#. type: Content of: <sect1><sect2><para>
+msgid "Install the package:"
+msgstr "安装该软件包："
+
+#. type: Content of: <sect1><sect2><screen>
+#, no-wrap
+msgid ""
+"<userinput remap=\"install\">make DESTDIR=$LFS install\n"
+"mv -v $LFS/usr/lib/libz.so.* $LFS/lib\n"
+"ln -sfv ../../lib/$(readlink $LFS/usr/lib/libz.so) $LFS/usr/lib/libz.so</userinput>"
+msgstr ""
+"<userinput remap=\"install\">make DESTDIR=$LFS install\n"
+"mv -v $LFS/usr/lib/libz.so.* $LFS/lib\n"
+"ln -sfv ../../lib/$(readlink $LFS/usr/lib/libz.so) $LFS/usr/lib/libz.so</userinput>"
+
+#. type: Content of: <sect1><sect2><para>
+msgid ""
+"Details on this package are located in <xref linkend=\"contents-zlib\" role="
+"\".\"/>"
+msgstr "该软件包的详细信息可以在<xref linkend=\"contents-zlib\"/>中找到。"
