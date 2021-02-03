@@ -1,9 +1,7 @@
 msgid ""
 msgstr ""
-"X-Pootle-Revision: 9999999\n"
-"X-Pootle-Path: /zh_CN/lfs/chapter06/file.po\n"
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2020-08-08 19:28+0800\n"
+"POT-Creation-Date: 2021-02-03 18:19+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -11,6 +9,8 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"X-Pootle-Revision: 9999999\n"
+"X-Pootle-Path: /zh_CN/lfs/chapter06/file.po\n"
 "X-Generator: Translate Toolkit 2.2.5\n"
 
 #. type: Content of: <sect1><sect1info><address>
@@ -59,13 +59,37 @@ msgid "Installation of File"
 msgstr "安装 File"
 
 #. type: Content of: <sect1><sect2><para>
+msgid ""
+"The <command>file</command> command on the build host needs to be same "
+"version as the one we are building in order to create the signature file. "
+"Run the following commands to build it:"
+msgstr ""
+"宿主系统 <command>file</command> 命令的版本必须和正在构建的软件包相同，"
+"才能在构建过程中创建必要的签名数据文件。运行以下命令，为宿主系统构建它："
+
+#. type: Content of: <sect1><sect2><screen>
+#, no-wrap
+msgid ""
+"<userinput remap=\"pre\">mkdir build\n"
+"pushd build\n"
+"  ../configure\n"
+"  make\n"
+"popd</userinput>"
+msgstr ""
+"<userinput remap=\"pre\">mkdir build\n"
+"pushd build\n"
+"  ../configure\n"
+"  make\n"
+"popd</userinput>"
+
+#. type: Content of: <sect1><sect2><para>
 msgid "Prepare File for compilation:"
 msgstr "准备编译 File："
 
 #. type: Content of: <sect1><sect2><screen>
 #, no-wrap
-msgid "<userinput remap=\"configure\">./configure --prefix=/usr --host=$LFS_TGT</userinput>"
-msgstr "<userinput remap=\"configure\">./configure --prefix=/usr --host=$LFS_TGT</userinput>"
+msgid "<userinput remap=\"configure\">./configure --prefix=/usr --host=$LFS_TGT --build=$(./config.guess)</userinput>"
+msgstr "<userinput remap=\"configure\">./configure --prefix=/usr --host=$LFS_TGT --build=$(./config.guess)</userinput>"
 
 #. type: Content of: <sect1><sect2><para>
 msgid "Compile the package:"
@@ -73,8 +97,9 @@ msgstr "编译该软件包："
 
 #. type: Content of: <sect1><sect2><screen>
 #, no-wrap
-msgid "<userinput remap=\"make\">make</userinput>"
-msgstr "<userinput remap=\"make\">make</userinput>"
+#| msgid "<userinput remap=\"make\">make</userinput>"
+msgid "<userinput remap=\"make\">make FILE_COMPILE=$(pwd)/build/src/file</userinput>"
+msgstr "<userinput remap=\"make\">make FILE_COMPILE=$(pwd)/build/src/file</userinput>"
 
 #. type: Content of: <sect1><sect2><para>
 msgid "Install the package:"

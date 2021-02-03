@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2020-10-15 23:28+0800\n"
+"POT-Creation-Date: 2021-02-03 09:35+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -199,28 +199,14 @@ msgstr ""
 "执行以下命令进行测试："
 
 #.  Use remap="make" here to work around a jhalfs issue. 
-#. type: Content of: <sect1><sect2><screen>
-#, no-wrap
-msgid ""
-"<userinput remap=\"make\">case $(uname -m) in\n"
-"  i?86)   ln -sfnv $PWD/elf/ld-linux.so.2        /lib ;;\n"
-"  x86_64) ln -sfnv $PWD/elf/ld-linux-x86-64.so.2 /lib ;;\n"
-"esac</userinput>"
-msgstr ""
-"<userinput remap=\"make\">case $(uname -m) in\n"
-"  i?86)   ln -sfnv $PWD/elf/ld-linux.so.2        /lib ;;\n"
-"  x86_64) ln -sfnv $PWD/elf/ld-linux-x86-64.so.2 /lib ;;\n"
-"esac</userinput>"
-
-#. type: Content of: <sect1><sect2><note><para>
-msgid ""
-"The symbolic link above is needed to run the tests at this stage of building "
-"in the chroot environment.  It will be overwritten in the install phase "
-"below."
-msgstr ""
-"我们需要上面的符号链接，以便在当前的 chroot 构建环境中运行测试套件。后续的安"
-"装过程将会覆盖它。"
-
+#. <screen>
+#. <userinput remap="make">case $(uname -m) in
+#.   i?86)   ln -sfnv $PWD/elf/ld-linux.so.2        /lib ;;
+#.   x86_64) ln -sfnv $PWD/elf/ld-linux-x86-64.so.2 /lib ;;
+#. esac</userinput></screen>
+#.     <note><para>The symbolic link above is needed to run the tests at this
+#.     stage of building in the chroot environment.  It will be overwritten
+#.     in the install phase below.</para></note>
 #. type: Content of: <sect1><sect2><screen>
 #, no-wrap
 msgid "<userinput remap=\"test\">make check</userinput>"
@@ -247,6 +233,13 @@ msgid ""
 "environment."
 msgstr ""
 "已知 <emphasis>misc/tst-ttyname</emphasis> 在 LFS chroot 环境中会失败。"
+
+#. type: Content of: <sect1><sect2><itemizedlist><listitem><para>
+msgid ""
+"<emphasis>elf/tst-cpu-features-cpuinfo</emphasis> may fail on some "
+"architectures."
+msgstr ""
+"已知 <emphasis>elf/tst-cpu-features-cpuinfo</emphasis> 在一些架构会失败。"
 
 #. type: Content of: <sect1><sect2><itemizedlist><listitem><para>
 msgid ""

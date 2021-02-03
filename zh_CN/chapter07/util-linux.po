@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2021-01-13 16:44+0800\n"
+"POT-Creation-Date: 2021-02-03 18:19+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -64,9 +64,14 @@ msgstr "安装 Util-linux"
 
 #. type: Content of: <sect1><sect2><para>
 msgid ""
-"First create a directory to enable storage for the <command>hwclock</"
-"command> program:"
-msgstr "首先创建一个目录，允许 <command>hwclock</command> 程序存储数据："
+"The FHS recommends using the <filename class=\"directory\">/var/lib/hwclock</"
+"filename> directory instead of the usual <filename class=\"directory\">/etc</"
+"filename> directory as the location for the <filename>adjtime</filename> "
+"file. Create this directory with:"
+msgstr ""
+"FHS 建议使用 <filename class=\"directory\">/var/lib/hwclock</filename> 目"
+"录，而非一般的 <filename class=\"directory\">/etc</filename> 目录作为 "
+"<filename>adjtime</filename> 文件的位置。首先创建该目录："
 
 #. type: Content of: <sect1><sect2><screen>
 #, no-wrap
@@ -159,8 +164,8 @@ msgid ""
 "This switch sets the location of the socket used by <command>uuidd</command> "
 "and <filename class=\"libraryfile\">libuuid</filename> correctly."
 msgstr ""
-"该选项正确设定 <command>uuidd</command> 和 <filename class=\"libraryfile\">"
-"libuuid</filename> 使用的套接字的位置。"
+"该选项正确设定 <command>uuidd</command> 和 <filename class=\"libraryfile"
+"\">libuuid</filename> 使用的套接字的位置。"
 
 #. type: Content of: <sect1><sect2><para>
 msgid "Compile the package:"

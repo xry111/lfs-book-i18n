@@ -1,9 +1,7 @@
 msgid ""
 msgstr ""
-"X-Pootle-Revision: 9999999\n"
-"X-Pootle-Path: /zh_CN/lfs/chapter08/zlib.po\n"
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2020-08-08 19:28+0800\n"
+"POT-Creation-Date: 2021-02-03 18:19+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -11,6 +9,8 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"X-Pootle-Revision: 9999999\n"
+"X-Pootle-Path: /zh_CN/lfs/chapter08/zlib.po\n"
 "X-Generator: Translate Toolkit 2.2.5\n"
 
 #. type: Content of: <sect1><sect1info><address>
@@ -116,6 +116,15 @@ msgstr ""
 "<userinput remap=\"install\">mv -v /usr/lib/libz.so.* /lib\n"
 "ln -sfv ../../lib/$(readlink /usr/lib/libz.so) /usr/lib/libz.so</userinput>"
 
+#. type: Content of: <sect1><sect2><para>
+msgid "Remove an useless static library:"
+msgstr "删除无用的静态库："
+
+#. type: Content of: <sect1><sect2><screen>
+#, no-wrap
+msgid "<userinput remap=\"install\">rm -fv /usr/lib/libz.a</userinput>"
+msgstr "<userinput remap=\"install\">rm -fv /usr/lib/libz.a</userinput>"
+
 #. type: Content of: <sect1><sect2><title>
 msgid "Contents of Zlib"
 msgstr "Zlib 的内容"
@@ -125,8 +134,8 @@ msgid "Installed libraries"
 msgstr "安装的库"
 
 #. type: Content of: <sect1><sect2><segmentedlist><seglistitem><seg>
-msgid "libz.{a,so}"
-msgstr "libz.{a,so}"
+msgid "libz.so"
+msgstr "libz.so"
 
 #. type: Content of: <sect1><sect2><variablelist><bridgehead>
 msgid "Short Descriptions"

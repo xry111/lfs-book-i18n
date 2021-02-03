@@ -1,9 +1,7 @@
 msgid ""
 msgstr ""
-"X-Pootle-Revision: 9999999\n"
-"X-Pootle-Path: /zh_CN/lfs/chapter08/ncurses.po\n"
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2020-08-08 19:28+0800\n"
+"POT-Creation-Date: 2021-02-03 18:19+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -11,6 +9,8 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"X-Pootle-Revision: 9999999\n"
+"X-Pootle-Path: /zh_CN/lfs/chapter08/ncurses.po\n"
 "X-Generator: Translate Toolkit 2.2.5\n"
 
 #. type: Content of: <sect1><sect1info><address>
@@ -59,15 +59,6 @@ msgstr "&ncurses-fin-du;"
 #. type: Content of: <sect1><sect2><title>
 msgid "Installation of Ncurses"
 msgstr "安装 Ncurses"
-
-#. type: Content of: <sect1><sect2><para>
-msgid "Don't install a static library that is not handled by configure:"
-msgstr "输入以下命令，使构建系统不安装一个 configure 脚本未处理的静态库："
-
-#. type: Content of: <sect1><sect2><screen>
-#, no-wrap
-msgid "<userinput remap=\"pre\">sed -i '/LIBTOOL_INSTALL/d' c++/Makefile.in</userinput>"
-msgstr "<userinput remap=\"pre\">sed -i '/LIBTOOL_INSTALL/d' c++/Makefile.in</userinput>"
 
 #. type: Content of: <sect1><sect2><para>
 msgid "Prepare Ncurses for compilation:"
@@ -228,6 +219,15 @@ msgstr ""
 "ln -sfv libncurses.so      /usr/lib/libcurses.so</userinput>"
 
 #. type: Content of: <sect1><sect2><para>
+msgid "Remove a static library that is not handled by configure:"
+msgstr "删除一个 configure 脚本未处理的静态库："
+
+#. type: Content of: <sect1><sect2><screen>
+#, no-wrap
+msgid "<userinput remap=\"install\">rm -fv /usr/lib/libncurses++w.a</userinput>"
+msgstr "<userinput remap=\"install\">rm -fv /usr/lib/libncurses++w.a</userinput>"
+
+#. type: Content of: <sect1><sect2><para>
 msgid "If desired, install the Ncurses documentation:"
 msgstr "如果需要的话，安装 Ncurses 文档："
 
@@ -304,11 +304,11 @@ msgstr ""
 #. type: Content of: <sect1><sect2><segmentedlist><seglistitem><seg>
 msgid ""
 "libcursesw.so (symlink and linker script to libncursesw.so), libformw.so, "
-"libmenuw.so, libncursesw.so, libncurses++w.a, libpanelw.so, and their non-"
-"wide-character counterparts without \"w\" in the library names."
+"libmenuw.so, libncursesw.so, libpanelw.so, and their non-wide-character "
+"counterparts without \"w\" in the library names."
 msgstr ""
 "libcursesw.so (指向 libncursesw.so 的符号链接和链接脚本), libformw.so, "
-"libmenuw.so, libncursesw.so, libncurses++w.a, libpanelw.so, 以及它们的库名称"
+"libmenuw.so, libncursesw.so, libpanelw.so, 以及它们的库名称"
 "没有 “w” 的非宽字符替代品。"
 
 #. type: Content of: <sect1><sect2><segmentedlist><seglistitem><seg>
@@ -536,3 +536,5 @@ msgstr "包含实现面板的函数"
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 msgid "libpanelw"
 msgstr "libpanelw"
+
+#, no-wrap

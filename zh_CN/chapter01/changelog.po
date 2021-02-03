@@ -2,7 +2,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2021-02-01 09:13+0800\n"
+"POT-Creation-Date: 2021-02-03 11:20+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -38,6 +38,66 @@ msgstr "下面是本书自上一版本发布以来的更新日志。"
 #. type: Content of: <sect1><itemizedlist><title>
 msgid "Changelog Entries:"
 msgstr "更新日志记录："
+
+#. type: Content of: <sect1><itemizedlist><listitem><itemizedlist><para>
+msgid "2021-02-02"
+msgstr "2021 年 2 月 2 日"
+
+#. type: Content of:
+#. <sect1><itemizedlist><listitem><itemizedlist><listitem><para>
+msgid ""
+"[pierre] - Move tcl, expect, and dejagnu just before binutils in chapter 8: "
+"this allows to build them against chapter 8 glibc."
+msgstr ""
+"[pierre] — 在第 8 章中，将 tcl, expect, 以及 dejagnu 移动到 binutils 之前的位置，以使用第 8 章的 "
+"glibc 构建它们。"
+
+#. type: Content of:
+#. <sect1><itemizedlist><listitem><itemizedlist><listitem><para>
+msgid ""
+"[pierre] - To allow building with newer version of glibc than the host "
+"distribution, build a \"file\" executable for the host before cross-"
+"compiling it."
+msgstr ""
+"[pierre] — 为了能够在构建中使用比宿主发行版更新的 glibc 版本，"
+"在交叉编译 \"file\" 之前为宿主系统构建它。"
+
+#. type: Content of:
+#. <sect1><itemizedlist><listitem><itemizedlist><listitem><para>
+msgid ""
+"[pierre] - Replace the relinked libctf (which may incorrectly link against "
+"libz from the host distribution) with the one that was linked during "
+"\"make\" in binutils-pass2."
+msgstr ""
+"[pierre] — 在第二遍的 binutils 中，使用在 \"make\" 步骤链接的库文件，"
+"替换在安装过程中重新链接的 libctf (它可能错误地链接到宿主发行版的 libz)"
+
+#. type: Content of:
+#. <sect1><itemizedlist><listitem><itemizedlist><listitem><para>
+msgid ""
+"[bdubbs] - Update to bc-3.2.6. Fixes <ulink url=\"&lfs-ticket-"
+"root;4800\">#4800</ulink>."
+msgstr ""
+"[bdubbs] — 更新到 bc-3.2.6。修复 <ulink url=\"&lfs-ticket-"
+"root;4800\">#4800</ulink>。"
+
+#. type: Content of:
+#. <sect1><itemizedlist><listitem><itemizedlist><listitem><para>
+msgid ""
+"[bdubbs] - Update to glibc-2.33. Fixes <ulink url=\"&lfs-ticket-"
+"root;4799\">#4799</ulink>."
+msgstr ""
+"[bdubbs] — 更新到 glibc-2.33。修复 <ulink url=\"&lfs-ticket-"
+"root;4799\">#4799</ulink>。"
+
+#. type: Content of:
+#. <sect1><itemizedlist><listitem><itemizedlist><listitem><para>
+msgid ""
+"[bdubbs] - Minor change to mountfs boot script. Fixes <ulink url=\"&lfs-"
+"ticket-root;4798\">#4798</ulink>."
+msgstr ""
+"[bdubbs] — 微调 mountfs 引导脚本。修复 <ulink url=\"&lfs-ticket-"
+"root;4798\">#4798</ulink>。"
 
 #. type: Content of: <sect1><itemizedlist><listitem><itemizedlist><para>
 msgid "2021-02-01"
