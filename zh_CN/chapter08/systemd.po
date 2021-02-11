@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2021-01-28 13:14+0800\n"
+"POT-Creation-Date: 2021-02-10 22:54+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -326,6 +326,15 @@ msgid "<userinput remap=\"install\">rm -f /usr/bin/xsltproc</userinput>"
 msgstr "<userinput remap=\"install\">rm -f /usr/bin/xsltproc</userinput>"
 
 #. type: Content of: <sect1><sect2><para>
+msgid "Remove an useless directory:"
+msgstr "删除不必要的目录："
+
+#. type: Content of: <sect1><sect2><screen>
+#, no-wrap
+msgid "<userinput remap=\"install\">rm -rf /usr/lib/pam.d</userinput>"
+msgstr "<userinput remap=\"install\">rm -rf /usr/lib/pam.d</userinput>"
+
+#. type: Content of: <sect1><sect2><para>
 msgid ""
 "Create the <filename>/etc/machine-id</filename> file needed by "
 "<command>systemd-journald</command>:"
@@ -360,18 +369,6 @@ msgstr ""
 #, no-wrap
 msgid "<userinput remap=\"adjust\">systemctl disable systemd-time-wait-sync.service</userinput>"
 msgstr "<userinput remap=\"adjust\">systemctl disable systemd-time-wait-sync.service</userinput>"
-
-#. type: Content of: <sect1><sect2><para>
-msgid ""
-"Prevent systemd from resetting the maximum PID value which causes some "
-"problems with packages and units in BLFS:"
-msgstr ""
-"防止 systemd 重设最大 PID 值，它会导致 BLFS 中一些软件包和单元出现问题："
-
-#. type: Content of: <sect1><sect2><screen>
-#, no-wrap
-msgid "<userinput remap=\"adjust\">rm -f /usr/lib/sysctl.d/50-pid-max.conf</userinput>"
-msgstr "<userinput remap=\"adjust\">rm -f /usr/lib/sysctl.d/50-pid-max.conf</userinput>"
 
 #. type: Content of: <sect1><sect2><title>
 msgid "Contents of systemd"

@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2021-02-03 18:19+0800\n"
+"POT-Creation-Date: 2021-02-10 22:54+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -64,23 +64,49 @@ msgid ""
 "version as the one we are building in order to create the signature file. "
 "Run the following commands to build it:"
 msgstr ""
-"宿主系统 <command>file</command> 命令的版本必须和正在构建的软件包相同，"
-"才能在构建过程中创建必要的签名数据文件。运行以下命令，为宿主系统构建它："
+"宿主系统 <command>file</command> 命令的版本必须和正在构建的软件包相同，才能在"
+"构建过程中创建必要的签名数据文件。运行以下命令，为宿主系统构建它："
 
 #. type: Content of: <sect1><sect2><screen>
 #, no-wrap
 msgid ""
 "<userinput remap=\"pre\">mkdir build\n"
 "pushd build\n"
-"  ../configure\n"
+"  ../configure --disable-bzlib      \\\n"
+"               --disable-libseccomp \\\n"
+"               --disable-xzlib      \\\n"
+"               --disable-zlib\n"
 "  make\n"
 "popd</userinput>"
 msgstr ""
 "<userinput remap=\"pre\">mkdir build\n"
 "pushd build\n"
-"  ../configure\n"
+"  ../configure --disable-bzlib      \\\n"
+"               --disable-libseccomp \\\n"
+"               --disable-xzlib      \\\n"
+"               --disable-zlib\n"
 "  make\n"
 "popd</userinput>"
+
+#. type: Content of: <sect1><sect2><variablelist><title>
+msgid "The meaning of the new configure option:"
+msgstr "新的配置选项的含义："
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
+msgid "<parameter>--disable-*</parameter>"
+msgstr "<parameter>--disable-*</parameter>"
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
+msgid ""
+"The configuration script attempts to use some packages from the host "
+"distribution if the corresponding library files exist.  It may cause "
+"compilation failure if a library file exists, but the corresponding header "
+"files do not.  These options prevent using these unneeded capabilities from "
+"the host."
+msgstr ""
+"如果相关的库文件存在，配置脚本企图使用宿主发行版的一些软件包。"
+"当库文件存在，但对应的头文件不存在时，这会导致编译失败。"
+"该选项防止使用这些来自宿主系统的非必要功能。"
 
 #. type: Content of: <sect1><sect2><para>
 msgid "Prepare File for compilation:"
@@ -97,7 +123,6 @@ msgstr "编译该软件包："
 
 #. type: Content of: <sect1><sect2><screen>
 #, no-wrap
-#| msgid "<userinput remap=\"make\">make</userinput>"
 msgid "<userinput remap=\"make\">make FILE_COMPILE=$(pwd)/build/src/file</userinput>"
 msgstr "<userinput remap=\"make\">make FILE_COMPILE=$(pwd)/build/src/file</userinput>"
 

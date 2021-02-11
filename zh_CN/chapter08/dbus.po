@@ -1,9 +1,7 @@
 msgid ""
 msgstr ""
-"X-Pootle-Revision: 9999999\n"
-"X-Pootle-Path: /zh_CN/lfs/chapter08/dbus.po\n"
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2020-08-08 19:28+0800\n"
+"POT-Creation-Date: 2021-02-10 22:54+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -11,6 +9,8 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"X-Pootle-Revision: 9999999\n"
+"X-Pootle-Path: /zh_CN/lfs/chapter08/dbus.po\n"
 "X-Generator: Translate Toolkit 2.2.5\n"
 
 #. type: Content of: <sect1><sect1info><address>
@@ -77,25 +77,28 @@ msgstr "准备编译 D-Bus："
 #. type: Content of: <sect1><sect2><screen>
 #, no-wrap
 msgid ""
-"<userinput remap=\"configure\">./configure --prefix=/usr                       \\\n"
-"            --sysconfdir=/etc                   \\\n"
-"            --localstatedir=/var                \\\n"
-"            --disable-static                    \\\n"
-"            --disable-doxygen-docs              \\\n"
-"            --disable-xml-docs                  \\\n"
+"<userinput remap=\"configure\">./configure --prefix=/usr                        \\\n"
+"            --sysconfdir=/etc                    \\\n"
+"            --localstatedir=/var                 \\\n"
+"            --disable-static                     \\\n"
+"            --disable-doxygen-docs               \\\n"
+"            --disable-xml-docs                   \\\n"
 "            --docdir=/usr/share/doc/dbus-&dbus-version; \\\n"
-"            --with-console-auth-dir=/run/console</userinput>"
+"            --with-console-auth-dir=/run/console \\\n"
+"            --with-system-pid-file=/run/dbus/pid \\\n"
+"            --with-system-socket=/run/dbus/system_bus_socket</userinput>"
 msgstr ""
-"<userinput remap=\"configure\">./configure --prefix=/usr                       \\\n"
-"            --sysconfdir=/etc                   \\\n"
-"            --localstatedir=/var                \\\n"
-"            --disable-static                    \\\n"
-"            --disable-doxygen-docs              \\\n"
-"            --disable-xml-docs                  \\\n"
+"<userinput remap=\"configure\">./configure --prefix=/usr                        \\\n"
+"            --sysconfdir=/etc                    \\\n"
+"            --localstatedir=/var                 \\\n"
+"            --disable-static                     \\\n"
+"            --disable-doxygen-docs               \\\n"
+"            --disable-xml-docs                   \\\n"
 "            --docdir=/usr/share/doc/dbus-&dbus-version; \\\n"
-"            --with-console-auth-dir=/run/console</userinput>"
+"            --with-console-auth-dir=/run/console \\\n"
+"            --with-system-pid-file=/run/dbus/pid \\\n"
+"            --with-system-socket=/run/dbus/system_bus_socket</userinput>"
 
-#. type: Content of: <sect1><sect2><variablelist><title>
 msgid "The meaning of the configure options:"
 msgstr "配置选项的含义："
 
@@ -106,6 +109,24 @@ msgstr "<parameter>--with-console-auth-dir=/run/console</parameter>"
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 msgid "This specifies the location of the ConsoleKit authorization directory."
 msgstr "该选项指定 ConsoleKit 认证目录位置。"
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
+msgid ""
+"<parameter>--with-system-pid-file=/run/dbus/pid</parameter> and <parameter>--"
+"with-system-socket=/run/dbus/system_bus_socket</parameter>"
+msgstr ""
+"<parameter>--with-system-pid-file=/run/dbus/pid</parameter> 和 <parameter>--"
+"with-system-socket=/run/dbus/system_bus_socket</parameter>"
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
+msgid ""
+"These set the location of the PID file and the system bus socket to be in "
+"<filename class=\"directory\">/run</filename>, instead of deprecated "
+"<filename class=\"directory\">/var/run</filename>."
+msgstr ""
+"将 PID 文件和系统总线套接字的位置设定在 "
+"<filename class=\"directory\">/run</filename> 中，而非过时的 "
+"<filename class=\"directory\">/var/run</filename>。"
 
 #. type: Content of: <sect1><sect2><para>
 msgid "Compile the package:"
@@ -166,15 +187,6 @@ msgstr ""
 #, no-wrap
 msgid "<userinput remap=\"install\">ln -sfv /etc/machine-id /var/lib/dbus</userinput>"
 msgstr "<userinput remap=\"install\">ln -sfv /etc/machine-id /var/lib/dbus</userinput>"
-
-#. type: Content of: <sect1><sect2><para>
-msgid "Move the socket file to /run instead of the deprecated /var/run:"
-msgstr "将 socket 文件从过时的 /var/run 移动到 /run："
-
-#. type: Content of: <sect1><sect2><screen>
-#, no-wrap
-msgid "<userinput remap=\"install\">sed -i 's:/var/run:/run:' /lib/systemd/system/dbus.socket</userinput>"
-msgstr "<userinput remap=\"install\">sed -i 's:/var/run:/run:' /lib/systemd/system/dbus.socket</userinput>"
 
 #. type: Content of: <sect1><sect2><title>
 msgid "Contents of D-Bus"
