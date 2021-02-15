@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2021-02-03 09:35+0800\n"
+"POT-Creation-Date: 2021-02-15 14:09+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -173,6 +173,21 @@ msgid ""
 "This variable sets the correct library for all systems.  We do not want "
 "lib64 to be used."
 msgstr "这个变量纠正库文件安装位置。我们不希望使用 lib64 目录。"
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
+msgid "<option>libc_cv_include_x86_isa_level=no</option>"
+msgstr "<option>libc_cv_include_x86_isa_level=no</option>"
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
+msgid ""
+"This disables <quote>x86 ISA needed</quote> property in Glibc libraries.  "
+"Use it <emphasis role=\"bold\">if</emphasis> you are building Glibc with "
+"<option>-march</option> option in <envar>CFLAGS</envar>, to workaround an "
+"issue in Glibc-2.33 breaking it."
+msgstr "该选项防止在 Glibc 库中使用 <quote>x86 ISA needed</quote> 属性。"
+"<emphasis role=\"bold\">如果</emphasis>要在构建 Glibc 时将 "
+"<option>-march</option> 选项加入到 <envar>CFLAGS</envar>，"
+"则需要使用该选项，绕过 Glibc-2.33 中的一个问题。"
 
 #. type: Content of: <sect1><sect2><para>
 msgid "Compile the package:"

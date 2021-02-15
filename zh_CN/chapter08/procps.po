@@ -1,9 +1,7 @@
 msgid ""
 msgstr ""
-"X-Pootle-Revision: 9999999\n"
-"X-Pootle-Path: /zh_CN/lfs/chapter08/procps.po\n"
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2020-08-08 19:28+0800\n"
+"POT-Creation-Date: 2021-02-15 14:31+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -11,6 +9,8 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"X-Pootle-Revision: 9999999\n"
+"X-Pootle-Path: /zh_CN/lfs/chapter08/procps.po\n"
 "X-Generator: Translate Toolkit 2.2.5\n"
 
 #. type: Content of: <sect1><sect1info><address>
@@ -37,6 +37,15 @@ msgstr "Procps-ng"
 #. type: Content of: <sect1><sect2><para>
 msgid "The Procps-ng package contains programs for monitoring processes."
 msgstr "Procps-ng 软件包包含监视进程的程序。"
+
+#. type: Content of: <sect1><sect2><note><para>
+msgid ""
+"This package extracts to the directory <filename class=\"directory"
+"\">procps-3.3.17</filename>, not the expected <filename class=\"directory"
+"\">procps-ng-3.3.17</filename>."
+msgstr ""
+"该软件包解压到 <filename class=\"directory\">procps-3.3.17</filename> "
+"目录，而不是通常的 <filename class=\"directory\">procps-ng-3.3.17</filename>。"
 
 #. type: Content of: <sect1><sect2><segmentedlist><segtitle>
 msgid "&buildtime;"
@@ -130,6 +139,13 @@ msgstr "如果要运行测试套件，执行命令："
 #, no-wrap
 msgid "<userinput remap=\"test\">make check</userinput>"
 msgstr "<userinput remap=\"make\">make check</userinput>"
+
+#. type: Content of: <sect1><sect2><para>
+msgid ""
+"Four tests related to pkill are known to fail due to a problem with tests "
+"that were not updated."
+msgstr ""
+"已知四项与 pkill 相关的测试可能失败，这是因为一些测试文件未被及时更新。"
 
 #. type: Content of: <sect1><sect2><para>
 msgid "Install the package:"
@@ -272,6 +288,18 @@ msgstr "列出正在运行的进程"
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 msgid "ps"
 msgstr "ps"
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
+msgid "<command>pwait</command>"
+msgstr "<command>pwait</command>"
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
+msgid "Waits for a process to finish before executing."
+msgstr "在继续执行之前，等待进程结束"
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
+msgid "pwait"
+msgstr "pwait"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 msgid "<command>pwdx</command>"

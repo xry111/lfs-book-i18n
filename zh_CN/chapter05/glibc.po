@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2020-12-26 23:53+0800\n"
+"POT-Creation-Date: 2021-02-15 14:09+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -195,6 +195,21 @@ msgid ""
 "lib64 on 64 bit machines."
 msgstr "在 64 位机器上，这保证将库安装到 /lib，而不是默认的 /lib64。"
 
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
+msgid "<option>libc_cv_include_x86_isa_level=no</option>"
+msgstr "<option>libc_cv_include_x86_isa_level=no</option>"
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
+msgid ""
+"This disables <quote>x86 ISA needed</quote> property in Glibc libraries.  "
+"Use it <emphasis role=\"bold\">if</emphasis> you are building Glibc with "
+"<option>-march</option> option in <envar>CFLAGS</envar>, to workaround an "
+"issue in Glibc-2.33 breaking it."
+msgstr "该选项防止在 Glibc 库中使用 <quote>x86 ISA needed</quote> 属性。"
+"<emphasis role=\"bold\">如果</emphasis>要在构建 Glibc 时将 "
+"<option>-march</option> 选项加入到 <envar>CFLAGS</envar>，"
+"则需要使用该选项，绕过 Glibc-2.33 中的一个问题。"
+
 #. type: Content of: <sect1><sect2><para>
 msgid "During this stage the following warning might appear:"
 msgstr "在当前阶段，可能出现下列警告："
@@ -253,11 +268,11 @@ msgid ""
 "most likely will render it unusable. So double check that the environment is "
 "correctly set, before running the following command."
 msgstr ""
-"如果 <envar>LFS</envar> 没有正确设定，而且您不顾本书的建议，"
-"以 <systemitem class=\"username\">root</systemitem> 用户的身份进"
-"行构建，下面的命令会将新构建的 glibc 安装到您的宿主系统中，这很可能导致宿主系"
-"统完全无法使用。因此，请再次检查该环境变量是否已经为 <systemitem class="
-"\"username\">lfs</systemitem> 用户设定好。"
+"如果 <envar>LFS</envar> 没有正确设定，而且您不顾本书的建议，以 <systemitem "
+"class=\"username\">root</systemitem> 用户的身份进行构建，下面的命令会将新构建"
+"的 glibc 安装到您的宿主系统中，这很可能导致宿主系统完全无法使用。因此，请再次"
+"检查该环境变量是否已经为 <systemitem class=\"username\">lfs</systemitem> 用户"
+"设定好。"
 
 #. type: Content of: <sect1><sect2><screen>
 #, no-wrap
