@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2021-02-15 14:09+0800\n"
+"POT-Creation-Date: 2021-02-16 13:35+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -529,10 +529,10 @@ msgstr "<command>init</command>"
 msgid ""
 "Is the first process to be started when the kernel has initialized the "
 "hardware which takes over the boot process and starts all processes "
-"according to its configuration files. In this case, it starts systemd."
+"according to its configuration files. In this case, it starts systemd"
 msgstr ""
 "在内核初始化硬件后第一个启动的进程，它接管引导过程，并根据它的配置文件启动所"
-"有进程。在本例中，它启动 systemd。"
+"有进程。在本例中，它启动 systemd"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 msgid "init"
@@ -557,10 +557,10 @@ msgstr "<command>kernel-install</command>"
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 msgid ""
 "Is used to add and remove kernel and initramfs images to and from /boot. In "
-"LFS, this is done manually."
+"LFS, this is done manually"
 msgstr ""
 "用于在 /boot 中添加或删除内核和 initramfs 映像文件。在 LFS 中，这项工作是手工"
-"完成的。"
+"完成的"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 msgid "kernel-install"
@@ -679,10 +679,10 @@ msgstr "<command>resolvectl</command>"
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 msgid ""
 "Sends control commands to the network name resolution manager, or resolves "
-"domain names, IPv4 and IPv6 addresses, DNS records, and services."
+"domain names, IPv4 and IPv6 addresses, DNS records, and services"
 msgstr ""
 "向网络名称解析管理器发送控制命令，或解析域名，IPv4 和 IPv6 地址，DNS 记录，以"
-"及服务。"
+"及服务"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 msgid "resolvectl"
@@ -767,7 +767,7 @@ msgstr "<command>systemd-cat</command>"
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 msgid ""
 "Is used to connect the STDOUT and STDERR outputs of a process with the "
-"systemd journal."
+"systemd journal"
 msgstr "用于将进程的标准输出和错误输出重定向到系统日志"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
@@ -828,8 +828,8 @@ msgstr "<command>systemd-detect-virt</command>"
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 msgid ""
 "Detects whether the system is being run in a virtual environment, and "
-"adjusts udev accordingly."
-msgstr "确定系统是否在虚拟化环境中运行，并据此调节 udev。"
+"adjusts udev accordingly"
+msgstr "确定系统是否在虚拟化环境中运行，并据此调节 udev"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 msgid "systemd-detect-virt"
@@ -840,7 +840,7 @@ msgid "<command>systemd-dissect</command>"
 msgstr "<command>systemd-dissect</command>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
-msgid "Is used to inspect OS disk images."
+msgid "Is used to inspect OS disk images"
 msgstr "用于检查 OS 磁盘映像"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
@@ -891,10 +891,10 @@ msgstr "<command>systemd-inhibit</command>"
 msgid ""
 "Is used to execute a program with a shutdown, sleep or idle inhibitor lock "
 "taken, preventing an action such as a system shutdown until the process is "
-"completed."
+"completed"
 msgstr ""
 "用于在关机、休眠或待机抑制锁被锁定的情况下运行程序，在进程结束前防止关闭系统"
-"等动作。"
+"等动作"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 msgid "systemd-inhibit"
@@ -922,8 +922,8 @@ msgid "<command>systemd-mount</command>"
 msgstr "<command>systemd-mount</command>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
-msgid "Is used to temporarily mount or automount disks."
-msgstr "一个用于临时挂载或自动挂载驱动器的工具。"
+msgid "Is used to temporarily mount or automount disks"
+msgstr "一个用于临时挂载或自动挂载驱动器的工具"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 msgid "systemd-mount"
@@ -973,10 +973,10 @@ msgstr "<command>systemd-repart</command>"
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 msgid ""
 "Is used to grow and add partitions to a partition table when systemd is used "
-"in an OS image (e.g. a container)."
+"in an OS image (e.g. a container)"
 msgstr ""
 "在 systemd 被作为 OS 映像使用 (例如在容器中) 时，用于在分区表中添加分区或增长"
-"分区大小。"
+"分区大小"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 msgid "systemd-repart"
@@ -1003,10 +1003,10 @@ msgstr "<command>systemd-run</command>"
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 msgid ""
 "Is used to create and start a transient .service or a .scope unit and run "
-"the specified command in it. This is useful for validating systemd units."
+"the specified command in it. This is useful for validating systemd units"
 msgstr ""
 "用于创建一个临时的 .service 或 .scope 单元，并在其中运行指定命令。这对于验证 "
-"systemd 单元很有用。"
+"systemd 单元很有用"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 msgid "systemd-run"
@@ -1019,8 +1019,8 @@ msgstr "<command>systemd-socket-activate</command>"
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 msgid ""
 "Is used to listen on socket devices and launch a process upon a successful "
-"connection to the socket."
-msgstr "用于监听 socket 服务，并在 socket 成功连接时启动进程。"
+"connection to the socket"
+msgstr "用于监听 socket 服务，并在 socket 成功连接时启动进程"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 msgid "systemd-socket-activate"
