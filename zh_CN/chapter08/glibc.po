@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2021-02-15 14:09+0800\n"
+"POT-Creation-Date: 2021-02-19 15:14+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -79,6 +79,19 @@ msgstr ""
 #, no-wrap
 msgid "<userinput remap=\"pre\">patch -Np1 -i ../&glibc-fhs-patch;</userinput>"
 msgstr "<userinput remap=\"pre\">patch -Np1 -i ../&glibc-fhs-patch;</userinput>"
+
+#. type: Content of: <sect1><sect2><para>
+msgid "Fix a bug that causes issues with chrooted applications:"
+msgstr "修复导致 chroot 环境中应用程序出现故障的问题："
+
+#. type: Content of: <sect1><sect2><screen>
+#, no-wrap
+msgid ""
+"<userinput remap=\"pre\">sed -e '402a\\      *result = local->data.services[database_index];' \\\n"
+"    -i nss/nss_database.c</userinput>"
+msgstr ""
+"<userinput remap=\"pre\">sed -e '402a\\      *result = local->data.services[database_index];' \\\n"
+"    -i nss/nss_database.c</userinput>"
 
 #. type: Content of: <sect1><sect2><para>
 msgid ""
@@ -184,10 +197,11 @@ msgid ""
 "Use it <emphasis role=\"bold\">if</emphasis> you are building Glibc with "
 "<option>-march</option> option in <envar>CFLAGS</envar>, to workaround an "
 "issue in Glibc-2.33 breaking it."
-msgstr "该选项防止在 Glibc 库中使用 <quote>x86 ISA needed</quote> 属性。"
-"<emphasis role=\"bold\">如果</emphasis>要在构建 Glibc 时将 "
-"<option>-march</option> 选项加入到 <envar>CFLAGS</envar>，"
-"则需要使用该选项，绕过 Glibc-2.33 中的一个问题。"
+msgstr ""
+"该选项防止在 Glibc 库中使用 <quote>x86 ISA needed</quote> 属性。<emphasis "
+"role=\"bold\">如果</emphasis>要在构建 Glibc 时将 <option>-march</option> 选项"
+"加入到 <envar>CFLAGS</envar>，则需要使用该选项，绕过 Glibc-2.33 中的一个问"
+"题。"
 
 #. type: Content of: <sect1><sect2><para>
 msgid "Compile the package:"
