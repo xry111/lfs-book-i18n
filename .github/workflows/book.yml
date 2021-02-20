@@ -13,7 +13,11 @@ jobs:
       - name: Prepare
         run: |
           sudo apt update
-          sudo apt install po4a python3-polib libxml2-utils xsltproc docbook-xml docbook-xsl tidy fop gettext subversion
+          sudo apt install python3-polib libxml2-utils xsltproc docbook-xml docbook-xsl tidy fop gettext subversion
+      - name: Install po4a-0.62
+        run: |
+          wget 'https://bf.mengyan1223.wang/assets/po4a/po4a_0.62-xry111-1_all.deb'
+          sudo apt install ./po4a_0.62-xry111-1_all.deb
       - name: Checkout
         uses: actions/checkout@v2
         with:
