@@ -11,39 +11,6 @@ sed -e '/output-encoding:/s|latin1|utf8|' -i tidy.conf
 
 sed -e 's|<book>|<book lang="zh_cn">|' -i index.xml
 
-sed -e '/xreflabel/s|Chapter.nbsp.1 - Mailing Lists|第 1 章 - 邮件列表|' \
-	-e '/xreflabel/s|Chapter.nbsp.1 - Mirror sites|第 1 章 - 镜像站|'    \
-	-i chapter01/resources.xml
-
-sed -e '/xreflabel/s|Chapter.nbsp.\([0-9]\+\)|第 \1 章|' \
-	-i chapter*/chapter*.xml
-
-sed -e '/xreflabel/s|Host System Requirements|宿主系统需求|' \
-	-i chapter02/hostreqs.xml
-
-sed -e '/xreflabel/s|General Compilation Instructions|编译过程的一般说明|' \
-	-i part3intro/generalinstructions.xml
-
-sed -e '/xreflabel/s|Toolchain Technical Notes|工具链技术说明|' \
-	-i part3intro/toolchaintechnotes.xml
-
-sed -e '/xreflabel/s|Package build instructions|软件包构建说明|' \
-	-i part3intro/generalinstructions.xml
-
-sed -e '/xreflabel/s|"gcc-pass1"|"第一遍的 GCC"|' \
-	-i chapter05/gcc-pass1.xml
-
-sed -e '/xreflabel/s|"gcc-pass2"|"第二遍的 GCC"|' \
-	-i chapter06/gcc-pass2.xml
-
-sed -e '/xreflabel/s|Appendix|附录|' -i \
-	appendices/acknowledgments.xml      \
-	appendices/acronymlist.xml          \
-	appendices/dependencies.xml         \
-	appendices/license.xml              \
-	appendices/scripts.xml              \
-	appendices/udev-rules.xml
-
 sed -e 's/Approximate build time/估计构建时间/'               \
 	-e 's/Required disk space/需要硬盘空间/'                  \
 	-e 's/Installation depends on/安装依赖于/'                \
