@@ -2,6 +2,8 @@ name: Book
 
 on:
   push:
+    tags:
+      - '!**'
   pull_request:
   workflow_dispatch:
 
