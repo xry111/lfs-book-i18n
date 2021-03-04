@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2021-02-19 15:14+0800\n"
+"POT-Creation-Date: 2021-03-04 23:27+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -62,6 +62,15 @@ msgstr "&python-fin-du;"
 #. type: Content of: <sect1><sect2><title>
 msgid "Installation of Python 3"
 msgstr "安装 Python 3"
+
+#. type: Content of: <sect1><sect2><para>
+msgid "First, a header file needs to be fixed:"
+msgstr "首先，需要修复一个头文件："
+
+#. type: Content of: <sect1><sect2><screen>
+#, no-wrap
+msgid "<userinput remap=\"pre\">sed 's|cpython/||' -i Include/cpython/pystate.h</userinput>"
+msgstr "<userinput remap=\"pre\">sed 's|cpython/||' -i Include/cpython/pystate.h</userinput>"
 
 #. type: Content of: <sect1><sect2><para>
 msgid "Prepare Python for compilation:"
@@ -143,8 +152,9 @@ msgid ""
 "comprehensive results, the tests can be rerun when Python 3 is reinstalled "
 "in BLFS."
 msgstr ""
-"一些需要网络连接或额外软件包的测试会被跳过。已知名为 test_unicodedata 的测试会失败。如果需要更全面的测试结果，可以在 BLFS 中重新安装 "
-"Python 3 时再次进行测试。"
+"一些需要网络连接或额外软件包的测试会被跳过。已知名为 test_unicodedata 的测试"
+"会失败。如果需要更全面的测试结果，可以在 BLFS 中重新安装 Python 3 时再次进行"
+"测试。"
 
 #. type: Content of: <sect1><sect2><para>
 msgid "Install the package:"
