@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2021-02-21 09:16+0800\n"
+"POT-Creation-Date: 2021-03-15 13:48+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -59,19 +59,6 @@ msgid "Installation of GRUB"
 msgstr "安装 GRUB"
 
 #. type: Content of: <sect1><sect2><para>
-msgid "First, fix an issue introduced by binutils-2.36:"
-msgstr "首先，修复一项由 binutils-2.36 引入的问题："
-
-#. type: Content of: <sect1><sect2><screen>
-#, no-wrap
-msgid ""
-"<userinput remap=\"pre\">sed \"s/gold-version/&amp; -R .note.gnu.property/\" \\\n"
-"    -i Makefile.in grub-core/Makefile.in</userinput>"
-msgstr ""
-"<userinput remap=\"pre\">sed \"s/gold-version/&amp; -R .note.gnu.property/\" \\\n"
-"    -i Makefile.in grub-core/Makefile.in</userinput>"
-
-#. type: Content of: <sect1><sect2><para>
 msgid "Prepare GRUB for compilation:"
 msgstr "准备编译 GRUB："
 
@@ -124,8 +111,13 @@ msgid "<userinput remap=\"make\">make</userinput>"
 msgstr "<userinput remap=\"make\">make</userinput>"
 
 #. type: Content of: <sect1><sect2><para>
-msgid "This package does not come with a test suite."
-msgstr "该软件包不包含测试套件。"
+msgid ""
+"The test suite for this packages is not recommended.  Most of the tests "
+"depend on packages that are not available in the limited LFS environment. To "
+"run the tests anyway, run <command>make check</command>."
+msgstr ""
+"不推荐运行该软件包的测试套件。许多测试依赖于在 LFS 的有限环境中不存在的软件包。"
+"如果一定要进行测试，运行 <command>make check</command>。"
 
 #. type: Content of: <sect1><sect2><para>
 msgid "Install the package:"
@@ -145,8 +137,8 @@ msgid ""
 "Using GRUB to make your LFS system bootable will be discussed in <xref "
 "linkend=\"ch-bootable-grub\"/>."
 msgstr ""
-"使用 GRUB 引导您的 LFS 系统的方法将在<xref linkend=\"ch-bootable-grub\"/>中"
-"讨论。"
+"使用 GRUB 引导您的 LFS 系统的方法将在<xref linkend=\"ch-bootable-grub\"/>中讨"
+"论。"
 
 #. type: Content of: <sect1><sect2><title>
 msgid "Contents of GRUB"
@@ -498,3 +490,17 @@ msgstr "将 syslinux 配置文件转换为 grub.cfg 格式"
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 msgid "grub-syslinux2cfg"
 msgstr "grub-syslinux2cfg"
+
+#~ msgid "First, fix an issue introduced by binutils-2.36:"
+#~ msgstr "首先，修复一项由 binutils-2.36 引入的问题："
+
+#, no-wrap
+#~ msgid ""
+#~ "<userinput remap=\"pre\">sed \"s/gold-version/&amp; -R .note.gnu.property/\" \\\n"
+#~ "    -i Makefile.in grub-core/Makefile.in</userinput>"
+#~ msgstr ""
+#~ "<userinput remap=\"pre\">sed \"s/gold-version/&amp; -R .note.gnu.property/\" \\\n"
+#~ "    -i Makefile.in grub-core/Makefile.in</userinput>"
+
+#~ msgid "This package does not come with a test suite."
+#~ msgstr "该软件包不包含测试套件。"
