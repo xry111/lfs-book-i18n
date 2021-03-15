@@ -7,7 +7,7 @@ ALL_XML_FILES = $(shell find $(LFS_EN) -type f -name '*.xml')
 EXCLUDE_FILES = # empty for now
 XML_FILES = $(filter-out $(EXCLUDE_FILES), $(ALL_XML_FILES))
 PO_FILES = $(patsubst $(LFS_EN)/%.xml, $(MLANG)/%.po, $(XML_FILES))
-PO4A_FLAGS = -f docbook --porefs none
+PO4A_FLAGS = -f docbook --porefs none --msgmerge-opt "--backup=off"
 
 ifneq (,$(wildcard ./local.mk))
 include local.mk
