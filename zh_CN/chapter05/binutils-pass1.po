@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2021-02-20 08:46+0800\n"
+"POT-Creation-Date: 2021-03-18 00:39+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -199,8 +199,26 @@ msgstr "安装该软件包："
 
 #. type: Content of: <sect1><sect2><screen>
 #, no-wrap
-msgid "<userinput remap=\"install\">make install</userinput>"
-msgstr "<userinput remap=\"install\">make install</userinput>"
+msgid "<userinput remap=\"install\">make install -j1</userinput>"
+msgstr "<userinput remap=\"install\">make install -j1</userinput>"
+
+#. type: Content of: <sect1><sect2><variablelist><title>
+msgid "The meaning of the make parameter:"
+msgstr "make 命令参数的含义："
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
+msgid "<parameter>-j1</parameter>"
+msgstr "<parameter>-j1</parameter>"
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
+msgid ""
+"An issue in the building system may cause the installation to fail with "
+"<option>-j N</option> in <envar>MAKEFLAGS</envar>.  Override it to "
+"workaround this issue."
+msgstr ""
+"如果 <envar>MAKEFLAGS</envar> 中包含了 <option>-j N</option>，"
+"构建系统中的一个问题可能导致安装过程失败。"
+"该选项覆盖其设置，以绕过这个问题。"
 
 #. type: Content of: <sect1><sect2><para>
 msgid ""

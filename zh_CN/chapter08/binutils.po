@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2021-03-11 13:41+0800\n"
+"POT-Creation-Date: 2021-03-18 00:39+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -230,12 +230,11 @@ msgid ""
 msgstr ""
 "一般来说，工具目录 (最终存放该软件包中可执行文件的目录) 被设定为 <filename "
 "class=\"directory\">$(exec_prefix)/$(target_alias)</filename>。例如，在 "
-"x86_64 机器上，它将展开为 <filename class=\"directory\">/usr/x86_64-pc-"
-"linux-gnu</filename>。因为 LFS 是定制系统，不需要 <filename class=\"directory"
-"\">/usr</filename> 中的特定目标工具目录。如果系统用于交叉编译 (例如，在 "
-"Intel 机器上编译软件包，生成可以在 PowerPC 机器上执行的代码)，就会使用 "
-"<filename class=\"directory\">$(exec_prefix)/$(target_alias)</filename> 目"
-"录。"
+"x86_64 机器上，它将展开为 <filename class=\"directory\">/usr/x86_64-pc-linux-"
+"gnu</filename>。因为 LFS 是定制系统，不需要 <filename class=\"directory\">/"
+"usr</filename> 中的特定目标工具目录。如果系统用于交叉编译 (例如，在 Intel 机"
+"器上编译软件包，生成可以在 PowerPC 机器上执行的代码)，就会使用 <filename "
+"class=\"directory\">$(exec_prefix)/$(target_alias)</filename> 目录。"
 
 #. type: Content of: <sect1><sect2><important><para>
 msgid ""
@@ -263,8 +262,8 @@ msgstr "安装该软件包："
 
 #. type: Content of: <sect1><sect2><screen>
 #, no-wrap
-msgid "<userinput remap=\"install\">make tooldir=/usr install</userinput>"
-msgstr "<userinput remap=\"install\">make tooldir=/usr install</userinput>"
+msgid "<userinput remap=\"install\">make tooldir=/usr install -j1</userinput>"
+msgstr "<userinput remap=\"install\">make tooldir=/usr install -j1</userinput>"
 
 #. type: Content of: <sect1><sect2><para>
 msgid "Remove useless static libraries:"
