@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2021-02-20 08:46+0800\n"
+"POT-Creation-Date: 2021-03-28 23:11+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -95,6 +95,29 @@ msgstr "安装该软件包："
 #, no-wrap
 msgid "<userinput remap=\"install\">make install</userinput>"
 msgstr "<userinput remap=\"install\">make install</userinput>"
+
+#. type: Content of: <sect1><sect2><para>
+msgid ""
+"<command>/bin/more</command> from util-linux will link to <filename class="
+"\"libraryfile\">libmagic.so</filename>, so the shared library should be "
+"moved to <filename class=\"directory\">/lib</filename>, and as a result the "
+"<filename class=\"extension\">.so</filename> file in <filename class="
+"\"directory\">/usr/lib</filename> will need to be recreated:"
+msgstr ""
+"Util-linux 中的 <command>/bin/more</command> 会链接到 <filename class="
+"\"libraryfile\">libmagic.so</filename>，因此需要将共享库移动到 "
+"<filename class=\"directory\">/lib</filename>，"
+"<filename class=\"extension\">.so</filename> 符号链接也需要在 <filename class="
+"\"directory\">/usr/lib</filename> 中重建："
+
+#. type: Content of: <sect1><sect2><screen>
+#, no-wrap
+msgid ""
+"<userinput remap=\"install\">mv -v /usr/lib/libmagic.so.* /lib\n"
+"ln -sfv ../../lib/$(readlink /usr/lib/libmagic.so) /usr/lib/libmagic.so</userinput>"
+msgstr ""
+"<userinput remap=\"install\">mv -v /usr/lib/libmagic.so.* /lib\n"
+"ln -sfv ../../lib/$(readlink /usr/lib/libmagic.so) /usr/lib/libmagic.so</userinput>"
 
 #. type: Content of: <sect1><sect2><title>
 msgid "Contents of File"
