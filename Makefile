@@ -1,7 +1,7 @@
 SHELL := /bin/bash
 default: html
 
-LFS_EN = $(HOME)/svn-repos/LFS-BOOK
+LFS_EN = ./lfs-en
 MLANG=zh_CN
 ALL_XML_FILES = $(shell find $(LFS_EN) -type f -name '*.xml')
 EXCLUDE_FILES = # empty for now

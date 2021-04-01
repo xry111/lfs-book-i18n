@@ -17,7 +17,7 @@ jobs:
       - name: Prepare
         run: |
           sudo apt update
-          sudo apt install python3-polib libxml2-utils xsltproc docbook-xml docbook-xsl tidy fop gettext subversion
+          sudo apt install python3-polib libxml2-utils xsltproc docbook-xml docbook-xsl tidy fop gettext
       - name: Install po4a-0.62
         run: |
           wget 'https://bf.mengyan1223.wang/assets/po4a/po4a_0.62-xry111-1_all.deb'
@@ -36,12 +36,9 @@ jobs:
       - name: Set Environment for Push
         if: github.event_name == 'push'
         run: ./setenv.sh "${GITHUB_REF}"
-      - name: English Book SVN Checkout
-        run: svn co svn://svn.linuxfromscratch.org/lfs/$SVN_BRANCH $HOME/lfs-en
       - name: Configure
         run: |
           echo 'MLANG=zh_CN' > local.mk
-          echo 'LFS_EN=$(HOME)/lfs-en' >> local.mk
       - name: Update po Files
         run: make pofiles
       - name: Generate Translated XML Files
