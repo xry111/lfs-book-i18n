@@ -25,6 +25,7 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v2
         with:
+          submodules: recursive
           fetch-depth: 0
       - name: Check for Untranslated or Fuzzy Strings
         run: ./check-translations.sh
