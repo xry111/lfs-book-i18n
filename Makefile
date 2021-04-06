@@ -1,7 +1,7 @@
 SHELL := /bin/bash
 default: html
 
-LFS_EN = $(HOME)/svn-repos/LFS-BOOK
+LFS_EN = ./lfs-en
 MLANG=zh_CN
 ALL_XML_FILES = $(shell find $(LFS_EN) -type f -name '*.xml')
 EXCLUDE_FILES = # empty for now
@@ -47,7 +47,8 @@ pdf: booksrc
 	make -C $(MLANG)/book REV=$(REV) BASEDIR=pdf pdf
 
 ORIG_FILES = $(MLANG)/book/general.ent.orig \
-			 $(MLANG)/book/Makefile.orig
+			 $(MLANG)/book/Makefile.orig    \
+			 $(MLANG)/book/git-version.sh.orig
 
 booksrc: $(MBOOK_FILES) $(PATCHES) $(ORIG_FILES)
 	[ ! -e $(MLANG)/fix.sh ] || (pushd $(MLANG)/book; sh ../fix.sh; popd)
@@ -69,3 +70,7 @@ $(MLANG)/book/Makefile.orig: $(LFS_EN)/Makefile
 	mkdir -pv "$(@D)"
 	cp -v $< $@
 
+$(MLANG)/book/git-version.sh.orig: $(LFS_EN)/git-version.sh
+	mkdir -pv "$(@D)"
+	cp -v $< $@
+	sed "2i export GIT_DIR=$(PWD)/lfs-en/.git" -i $@
