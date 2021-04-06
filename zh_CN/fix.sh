@@ -2,6 +2,9 @@
 
 # fix some English and ASCII specific stuff which can not be handled by po4a
 
+# Set a UTF-8 locale, to prevent errors.
+export LANG=en_US.utf8
+
 # This should be handled by po4a, but if some pages are not done yet
 # we will need to do it manually.
 sed -e '/encoding=/s|ISO-8859-1|UTF-8|' -i $(find -name \*.xml)
@@ -29,10 +32,16 @@ sed -e 's/less than/不到/' \
 
 reldate=$(grep 'releasedate' general.ent.orig |
              sed 's/.*"\(.*\)".*/\1/;s/\(st\|nd\|rd\|th\),/,/');
-reldate_cn=$(LANG=en_US.UTF-8 \
-             date -d "$reldate" "+%Y 年 %m 月 %d 日" \
+reldate_cn=$(date -d "$reldate" "+%Y 年 %m 月 %d 日" \
              2>/dev/null | sed 's@ 0@ @g')
 sed "/releasedate/s/\".*\"/\"${reldate_cn}\"/" -i general.ent
+
+# Edit git-version.sh
+cp -v git-version.sh.orig git-version.sh
+sed '/full_date=/ i month_zh_cn=$(date -d "$commit_date" "+%m" | sed "s/^0//")' \
+	-i git-version.sh
+sed '/full_date=/ s@".*"@"$year 年 $month_zh_cn 月 $day 日"@' \
+	-i git-version.sh
 
 # Some buggy comments produced by po4a are adding extra empty lines.
 # Remove them.
