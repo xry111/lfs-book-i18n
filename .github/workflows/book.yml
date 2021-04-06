@@ -33,7 +33,6 @@ jobs:
         if: github.event_name != 'push'
         run: |
           echo "UPLOAD=no" >> $GITHUB_ENV
-          echo "SVN_BRANCH=trunk/BOOK" >> $GITHUB_ENV
       - name: Set Environment for Push
         if: github.event_name == 'push'
         run: ./setenv.sh "${GITHUB_REF}"
