@@ -33,31 +33,21 @@ contribute other translations, please mail to `xry111@mengyan1223.wang`
 * [JDK](http://www.linuxfromscratch.org/blfs/view/svn/general/openjdk.html)
 * [FOP](http://www.linuxfromscratch.org/blfs/view/svn/pst/fop.html)
 
-本仓库只包含翻译，因此需要通过 SVN 签出原始的 LFS 手册 XML 文件：
+克隆本仓库，并将英文原版 LFS 手册作为 Git submodule 一并检出：
 
 ```
-svn co http://svn.linuxfromscratch.org/lfs/trunk/BOOK /local/path/to/lfs/en
-```
-
-上面的例子会签出最新的开发版 LFS 手册。
-**如果**需要生成稳定版手册，则签出对应的版本 (以 10.0 为例)：
-
-```
-svn co http://svn.linuxfromscratch.org/lfs/tags/10.0 /local/path/to/lfs/en
-```
-
-然后克隆出本仓库：
-
-```
-git clone https://git.mengyan1223.wang/xry111/lfs-book-i18n
+git clone https://git.mengyan1223.wang/xry111/lfs-book-i18n --recurse-submodules
 cd lfs-book-i18n
 ```
 
 **如果**需要生成稳定版手册，切换到对应的分支：
 
 ```
-git checkout 10.0
+git checkout 10.1 --recurse-submodules
 ```
+
+注意：10.1 和之前版本的英文原版手册使用 SVN 进行版本控制。
+如果需要生成它们，请参阅对应分支中的 `README.md` 文件。
 
 之后即可生成手册：
 
@@ -74,11 +64,10 @@ make html nochunks pdf REV=sysv LFS_EN=/local/path/to/lfs/en
 的流量。
 
 如果您长期使用翻译项目，则可以在仓库中创建文件 `local.mk`，
-设定 `REV` 和 `LFS_EN` 的值，即可避免每次输入。如：
+设定 `REV` 的值，即可避免每次输入。如：
 
 ```
 REV=systemd
-LFS_EN=$(HOME)/lfs_en
 ```
 
 ## 参与翻译
