@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2020-12-05 04:58+0800\n"
+"POT-Creation-Date: 2021-04-09 20:23+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -256,36 +256,13 @@ msgstr ""
 
 #. type: Content of: <sect1><sect2><note><para>
 msgid ""
-"If your host hardware is using UEFI, then the 'make defconfig' above should "
-"automatically add in some EFI-related kernel options."
+"If your host hardware is using UEFI and you wish to boot the LFS system with "
+"it, you should adjust some kernel configuration following <ulink url=\"&blfs-"
+"book;postlfs/grub-setup.html#uefi-kernel\"> the BLFS page</ulink>."
 msgstr ""
-"如果您的硬件平台使用 UEFI，则 “make defconfig” 命令也会自动加入一些 EFI 相关"
-"的内核选项。"
-
-#. type: Content of: <sect1><sect2><note><para>
-msgid ""
-"In order to allow your LFS kernel to be booted from within your host's UEFI "
-"boot environment, your kernel must have this option selected:"
-msgstr ""
-"为了允许从宿主系统的 UEFI 引导环境引导 LFS 内核，您必须选择一个内核选项："
-
-#. type: Content of: <sect1><sect2><note><screen>
-#, no-wrap
-msgid ""
-"Processor type and features  ---&gt;\n"
-"   [*]   EFI stub support  [CONFIG_EFI_STUB]"
-msgstr ""
-"Processor type and features  ---&gt;\n"
-"   [*]   EFI stub support  [CONFIG_EFI_STUB]"
-
-#. type: Content of: <sect1><sect2><note><para>
-msgid ""
-"A fuller description of managing UEFI environments from within LFS is "
-"covered by the lfs-uefi.txt hint at <ulink url=\"&hints-root;lfs-uefi.txt\"/"
-">."
-msgstr ""
-"在 LFS 中管理 UEFI 环境的较完整说明包含在 lfs-uefi.txt 中，它位于 <ulink url="
-"\"&hints-root;lfs-uefi.txt\"/>。"
+"如果您的硬件支持 UEFI，且您希望通过 UEFI 引导 LFS 系统，"
+"则您需要按照 <ulink url=\"&blfs-book;postlfs/grub-setup.html#uefi-kernel\">"
+"BLFS 页面</ulink> 的说明，调整一些内核配置选项。"
 
 #. type: Content of: <sect1><sect2><variablelist><title>
 msgid "The rationale for the above configuration items:"

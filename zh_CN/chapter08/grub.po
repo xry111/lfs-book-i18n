@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2021-03-15 13:48+0800\n"
+"POT-Creation-Date: 2021-04-09 20:22+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -57,6 +57,17 @@ msgstr "&grub-fin-du;"
 #. type: Content of: <sect1><sect2><title>
 msgid "Installation of GRUB"
 msgstr "安装 GRUB"
+
+#. type: Content of: <sect1><sect2><note><para>
+msgid ""
+"If your system has UEFI support and you wish to boot LFS with UEFI, you can "
+"skip this package in LFS, and install GRUB with UEFI support (and its "
+"dependencies) following <ulink url=\"&blfs-book;postlfs/grub-efi.html\">the "
+"BLFS page</ulink> at the end of this chapter."
+msgstr ""
+"如果您的系统支持 UEFI，且您希望通过 UEFI 引导 LFS，您可以跳过这个 LFS 软件包，"
+"并在本章结束时，按照 <ulink url=\"&blfs-book;postlfs/grub-efi.html\">BLFS 页面</ulink>"
+"中的说明，安装支持 UEFI 的 GRUB。"
 
 #. type: Content of: <sect1><sect2><para>
 msgid "Prepare GRUB for compilation:"
@@ -116,8 +127,8 @@ msgid ""
 "depend on packages that are not available in the limited LFS environment. To "
 "run the tests anyway, run <command>make check</command>."
 msgstr ""
-"不推荐运行该软件包的测试套件。许多测试依赖于在 LFS 的有限环境中不存在的软件包。"
-"如果一定要进行测试，运行 <command>make check</command>。"
+"不推荐运行该软件包的测试套件。许多测试依赖于在 LFS 的有限环境中不存在的软件"
+"包。如果一定要进行测试，运行 <command>make check</command>。"
 
 #. type: Content of: <sect1><sect2><para>
 msgid "Install the package:"
@@ -490,17 +501,3 @@ msgstr "将 syslinux 配置文件转换为 grub.cfg 格式"
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 msgid "grub-syslinux2cfg"
 msgstr "grub-syslinux2cfg"
-
-#~ msgid "First, fix an issue introduced by binutils-2.36:"
-#~ msgstr "首先，修复一项由 binutils-2.36 引入的问题："
-
-#, no-wrap
-#~ msgid ""
-#~ "<userinput remap=\"pre\">sed \"s/gold-version/&amp; -R .note.gnu.property/\" \\\n"
-#~ "    -i Makefile.in grub-core/Makefile.in</userinput>"
-#~ msgstr ""
-#~ "<userinput remap=\"pre\">sed \"s/gold-version/&amp; -R .note.gnu.property/\" \\\n"
-#~ "    -i Makefile.in grub-core/Makefile.in</userinput>"
-
-#~ msgid "This package does not come with a test suite."
-#~ msgstr "该软件包不包含测试套件。"

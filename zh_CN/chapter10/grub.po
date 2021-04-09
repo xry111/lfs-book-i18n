@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2021-02-20 08:46+0800\n"
+"POT-Creation-Date: 2021-04-09 20:23+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -29,6 +29,17 @@ msgstr ""
 #. type: Content of: <sect1><title>
 msgid "Using GRUB to Set Up the Boot Process"
 msgstr "使用 GRUB 设定引导过程"
+
+#. type: Content of: <sect1><note><para>
+msgid ""
+"If your system has UEFI support and you wish to boot LFS with UEFI, you "
+"should skip this page, and config GRUB with UEFI support using the "
+"instructions provided in <ulink url=\"&blfs-book;postlfs/grub-setup.html"
+"\">the BLFS page</ulink>."
+msgstr ""
+"如果您的系统支持 UEFI，且您希望通过 UEFI 引导 LFS，您应该跳过本页，"
+"并按照 <ulink url=\"&blfs-book;postlfs/grub-setup.html\">BLFS 页面</ulink>"
+"中的说明，配置支持 UEFI 的 GRUB。"
 
 #. type: Content of: <sect1><sect2><title>
 msgid "Introduction"
@@ -71,21 +82,6 @@ msgstr ""
 "<userinput>cd /tmp \n"
 "grub-mkrescue --output=grub-img.iso \n"
 "xorriso -as cdrecord -v dev=/dev/cdrw blank=as_needed grub-img.iso</userinput>"
-
-#. type: Content of: <sect1><sect2><note><para>
-msgid ""
-"To boot LFS on host systems that have UEFI enabled, the kernel needs to have "
-"been built with the CONFIG_EFI_STUB capability described in the previous "
-"section.  However, LFS can be booted using GRUB2 without such an addition. "
-"To do this, the UEFI Mode and Secure Boot capabilities in the host system's "
-"BIOS need to be turned off.  For details, see <ulink url=\"&hints-root;lfs-"
-"uefi.txt\"> the lfs-uefi.txt hint</ulink> at &hints-root;lfs-uefi.txt."
-msgstr ""
-"为了在使用 UEFI 的宿主系统上引导 LFS，在构建内核时，需要启用 CONFIG_EFI_STUB "
-"功能，正如上一节所述。不过，可以使用 GRUB2 在没有该功能的情况下引导 LFS，前提"
-"是在系统 BIOS 设定中关闭 UEFI 模式和安全引导 (Secure Boot) 功能。关于在 UEFI "
-"环境下引导 LFS 的的详细信息，可以参阅 <ulink url=\"&hints-root;lfs-uefi.txt"
-"\">lfs-uefi.txt hint</ulink>，它位于 &hints-root;lfs-uefi.txt。"
 
 #. type: Content of: <sect1><sect2><title>
 msgid "GRUB Naming Conventions"
