@@ -35,16 +35,22 @@ pofiles: $(PO_FILES)
 
 html: booksrc
 	rm -rf $(MLANG)/book/render # without this tidy may be stupidly slow
-	make -j1 -C $(MLANG)/book REV=$(REV) BASEDIR=render
+	tmpdir=$$(mktemp -d); \
+	make -j1 -C $(MLANG)/book REV=$(REV) BASEDIR=render RENDERTMP=$$tmpdir; \
+	rm -rf $$tmpdir
 
 nochunks: booksrc
 	rm -rf $(MLANG)/book/nochunks
-	make -j1 -C $(MLANG)/book REV=$(REV) BASEDIR=nochunks nochunks
+	tmpdir=$$(mktemp -d); \
+	make -j1 -C $(MLANG)/book REV=$(REV) BASEDIR=nochunks RENDERTMP=$$tmpdir nochunks; \
+	rm -rf $$tmpdir
 
 pdf: booksrc
 	rm -rf $(MLANG)/book/pdf
 	pushd $(MLANG)/book; sh ../fetch_fonts.sh; popd
-	make -j1 -C $(MLANG)/book REV=$(REV) BASEDIR=pdf pdf
+	tmpdir=$$(mktemp -d); \
+	make -j1 -C $(MLANG)/book REV=$(REV) BASEDIR=pdf RENDERTMP=$$tmpdir pdf; \
+	rm -rf $$tmpdir
 
 ORIG_FILES = $(MLANG)/book/general.ent.orig \
 			 $(MLANG)/book/Makefile.orig    \
