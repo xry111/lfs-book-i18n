@@ -18,7 +18,6 @@ jobs:
         run: |
           sudo apt update
           sudo apt install python3-polib libxml2-utils xsltproc docbook-xml docbook-xsl tidy fop gettext
-          echo "MAKEFLAGS=-j2" >> $GITHUB_ENV
       - name: Install po4a-0.62
         run: |
           wget 'https://bf.mengyan1223.wang/assets/po4a/po4a_0.62-xry111-1_all.deb'
