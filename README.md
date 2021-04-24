@@ -22,16 +22,16 @@ contribute other translations, please mail to `xry111@mengyan1223.wang`
 
 * [po4a](https://po4a.org/) (>= 0.62)
 * [polib](https://pypi.org/project/polib/)
-* [libxml2](http://www.linuxfromscratch.org/blfs/view/svn/general/libxml2.html)
-* [libxslt](http://www.linuxfromscratch.org/blfs/view/svn/general/libxslt.html)
-* [DocBook DTD](http://www.linuxfromscratch.org/blfs/view/svn/pst/xml.html)
-* [DocBook XSL Stylesheets](http://www.linuxfromscratch.org/blfs/view/svn/pst/docbook-xsl.html)
-* [HTMLTidy](http://www.linuxfromscratch.org/blfs/view/svn/general/tidy-html5.html)
+* [libxml2](https://www.linuxfromscratch.org/blfs/view/svn/general/libxml2.html)
+* [libxslt](https://www.linuxfromscratch.org/blfs/view/svn/general/libxslt.html)
+* [DocBook DTD](https://www.linuxfromscratch.org/blfs/view/svn/pst/xml.html)
+* [DocBook XSL Stylesheets](https://www.linuxfromscratch.org/blfs/view/svn/pst/docbook-xsl.html)
+* [HTMLTidy](https://www.linuxfromscratch.org/blfs/view/svn/general/tidy-html5.html)
 
 如果需要生成 PDF 格式的手册，还需要安装：
 
-* [JDK](http://www.linuxfromscratch.org/blfs/view/svn/general/openjdk.html)
-* [FOP](http://www.linuxfromscratch.org/blfs/view/svn/pst/fop.html)
+* [JDK](https://www.linuxfromscratch.org/blfs/view/svn/general/openjdk.html)
+* [FOP](https://www.linuxfromscratch.org/blfs/view/svn/pst/fop.html)
 
 克隆本仓库，并将英文原版 LFS 手册作为 Git submodule 一并检出：
 
