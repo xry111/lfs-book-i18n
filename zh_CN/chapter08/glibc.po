@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2021-02-19 15:14+0800\n"
+"POT-Creation-Date: 2021-04-29 14:28+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -469,11 +469,21 @@ msgstr "<userinput remap=\"locale-full\">make localedata/install-locales</userin
 msgid ""
 "Then use the <command>localedef</command> command to create and install "
 "locales not listed in the <filename>glibc-&glibc-version;/localedata/"
-"SUPPORTED</filename> file in the unlikely case you need them."
+"SUPPORTED</filename> file when you need them. For instance, the following "
+"two locales are needed for some tests later in this chapter:"
 msgstr ""
 "如果需要，再使用 <command>localedef</command> 命令创建和安装 <filename>glibc-"
-"&glibc-version;/localedata/SUPPORTED</filename> 中没有列出的 locale，当然您不"
-"太可能需要它们。"
+"&glibc-version;/localedata/SUPPORTED</filename> 中没有列出的 locale。"
+"例如，本章中后续的一些测试可能需要安装两个 locale："
+
+#. type: Content of: <sect1><sect2><screen>
+#, no-wrap
+msgid ""
+"<userinput remap=\"locale-full\">localedef -i POSIX -f UTF-8 C.UTF-8 2> /dev/null || true\n"
+"localedef -i ja_JP -f SHIFT_JIS ja_JP.SIJS 2> /dev/null || true</userinput>"
+msgstr ""
+"<userinput remap=\"locale-full\">localedef -i POSIX -f UTF-8 C.UTF-8 2> /dev/null || true\n"
+"localedef -i ja_JP -f SHIFT_JIS ja_JP.SIJS 2> /dev/null || true</userinput>"
 
 #. type: Content of: <sect1><sect2><note><para>
 msgid ""

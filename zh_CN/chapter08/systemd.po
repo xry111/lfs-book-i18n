@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2021-03-06 03:44+0800\n"
+"POT-Creation-Date: 2021-04-29 14:28+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -68,9 +68,8 @@ msgstr ""
 "首先，应用一个补丁，修复一些退化问题，以及在较新版本内核上的功能性问题："
 
 #. type: Content of: <sect1><sect2><screen>
-#, no-wrap
-msgid "<userinput remap=\"pre\">patch -Np1 -i ../systemd-&systemd-version;-upstream_fixes-2.patch</userinput>"
-msgstr "<userinput remap=\"pre\">patch -Np1 -i ../systemd-&systemd-version;-upstream_fixes-2.patch</userinput>"
+msgid "<userinput remap=\"pre\">patch -Np1 -i ../systemd-&systemd-version;-upstream_fixes-3.patch</userinput>"
+msgstr "<userinput remap=\"pre\">patch -Np1 -i ../systemd-&systemd-version;-upstream_fixes-3.patch</userinput>"
 
 #. type: Content of: <sect1><sect2><para>
 msgid "Remove tests that cannot be built in chroot:"
@@ -99,6 +98,7 @@ msgid "Prepare systemd for compilation:"
 msgstr "准备安装 systemd："
 
 #. type: Content of: <sect1><sect2><screen>
+#, no-wrap
 msgid ""
 "<userinput remap=\"configure\">mkdir -p build\n"
 "cd       build\n"
@@ -282,8 +282,8 @@ msgid ""
 "Prevent the generation of man pages to avoid extra dependencies.  We will "
 "install pre-generated man pages for systemd from a tarball later."
 msgstr ""
-"防止 man 页面的生成，以避免额外的依赖项。"
-"后续会从压缩包中安装预先生成的 man 页面。"
+"防止 man 页面的生成，以避免额外的依赖项。后续会从压缩包中安装预先生成的 man "
+"页面。"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 msgid "<parameter>-Dmode=release</parameter>"
