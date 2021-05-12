@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2021-03-26 23:39+0800\n"
+"POT-Creation-Date: 2021-05-12 17:13+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -86,17 +86,6 @@ msgstr ""
 "    ;;\n"
 "esac</userinput>"
 
-#. type: Content of: <sect1><sect2><note><para>
-msgid ""
-"The above command is correct.  The <command>ln</command> command has a few "
-"syntactic versions, so be sure to check <command>info coreutils ln</command> "
-"and <filename>ln(1)</filename> before reporting what you may think is an "
-"error."
-msgstr ""
-"以上命令是正确的。<command>ln</command> 命令的语法有一些变式，"
-"因此在报告你认为的错误之前，请先阅读 <command>info coreutils ln</command> "
-"和 <filename>ln(1)</filename>。"
-
 #. type: Content of: <sect1><sect2><para>
 msgid ""
 "Some of the Glibc programs use the non-FHS compliant <filename class="
@@ -112,6 +101,15 @@ msgstr ""
 #, no-wrap
 msgid "<userinput remap=\"pre\">patch -Np1 -i ../glibc-&glibc-version;-fhs-1.patch</userinput>"
 msgstr "<userinput remap=\"pre\">patch -Np1 -i ../glibc-&glibc-version;-fhs-1.patch</userinput>"
+
+#. type: Content of: <sect1><sect2><para>
+msgid "Fix a build issue with gcc-11.1:"
+msgstr "修复使用 gcc-11.1 构建时出现的问题："
+
+#. type: Content of: <sect1><sect2><screen>
+#, no-wrap
+msgid "<userinput remap=\"pre\">sed 's/amx_/amx-/' -i sysdeps/x86/tst-cpu-features-supports.c</userinput>"
+msgstr "<userinput remap=\"pre\">sed 's/amx_/amx-/' -i sysdeps/x86/tst-cpu-features-supports.c</userinput>"
 
 #. type: Content of: <sect1><sect2><para>
 msgid ""
@@ -141,7 +139,7 @@ msgid ""
 "      --build=$(../scripts/config.guess) \\\n"
 "      --enable-kernel=&min-kernel;                \\\n"
 "      --with-headers=$LFS/usr/include    \\\n"
-"      libc_cv_slibdir=/lib</userinput>"
+"      libc_cv_slibdir=/usr/lib</userinput>"
 msgstr ""
 "<userinput remap=\"configure\">../configure                             \\\n"
 "      --prefix=/usr                      \\\n"
@@ -149,7 +147,7 @@ msgstr ""
 "      --build=$(../scripts/config.guess) \\\n"
 "      --enable-kernel=&min-kernel;                \\\n"
 "      --with-headers=$LFS/usr/include    \\\n"
-"      libc_cv_slibdir=/lib</userinput>"
+"      libc_cv_slibdir=/usr/lib</userinput>"
 
 #. type: Content of: <sect1><sect2><variablelist><title>
 msgid "The meaning of the configure options:"
@@ -197,14 +195,14 @@ msgstr ""
 "知道内核拥有哪些特性，并据此对自身进行优化。"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
-msgid "<parameter>libc_cv_slibdir=/lib</parameter>"
-msgstr "<parameter>libc_cv_slibdir=/lib</parameter>"
+msgid "<parameter>libc_cv_slibdir=/usr/lib</parameter>"
+msgstr "<parameter>libc_cv_slibdir=/usr/lib</parameter>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 msgid ""
-"This ensures that the library is installed in /lib instead of the default /"
-"lib64 on 64 bit machines."
-msgstr "在 64 位机器上，这保证将库安装到 /lib，而不是默认的 /lib64。"
+"This ensures that the library is installed in /usr/lib instead of the "
+"default /lib64 on 64 bit machines."
+msgstr "在 64 位机器上，这保证将库安装到 /usr/lib，而不是默认的 /lib64。"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 msgid "<option>libc_cv_include_x86_isa_level=no</option>"

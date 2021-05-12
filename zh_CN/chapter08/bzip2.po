@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2021-02-03 18:29+0800\n"
+"POT-Creation-Date: 2021-05-12 17:13+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -143,30 +143,30 @@ msgid "<userinput remap=\"install\">make PREFIX=/usr install</userinput>"
 msgstr "<userinput remap=\"install\">make PREFIX=/usr install</userinput>"
 
 #. type: Content of: <sect1><sect2><para>
-msgid ""
-"Install the shared <command>bzip2</command> binary into the <filename class="
-"\"directory\">/bin</filename> directory, make some necessary symbolic links, "
-"and clean up:"
-msgstr ""
-"安装链接到共享库的 <command>bzip2</command> 二进制程序到 <filename class="
-"\"directory\">/bin</filename> 目录，创建必要的符号链接，并进行清理："
+msgid "Install the shared library:"
+msgstr "安装共享库："
 
 #. type: Content of: <sect1><sect2><screen>
 #, no-wrap
 msgid ""
-"<userinput remap=\"install\">cp -v bzip2-shared /bin/bzip2\n"
-"cp -av libbz2.so* /lib\n"
-"ln -sv ../../lib/libbz2.so.1.0 /usr/lib/libbz2.so\n"
-"rm -v /usr/bin/{bunzip2,bzcat,bzip2}\n"
-"ln -sv bzip2 /bin/bunzip2\n"
-"ln -sv bzip2 /bin/bzcat</userinput>"
+"<userinput remap=\"install\">cp -av libbz2.so.* /usr/lib\n"
+"ln -sv libbz2.so.&bzip2-version; /usr/lib/libbz2.so</userinput>"
 msgstr ""
-"<userinput remap=\"install\">cp -v bzip2-shared /bin/bzip2\n"
-"cp -av libbz2.so* /lib\n"
-"ln -sv ../../lib/libbz2.so.1.0 /usr/lib/libbz2.so\n"
-"rm -v /usr/bin/{bunzip2,bzcat,bzip2}\n"
-"ln -sv bzip2 /bin/bunzip2\n"
-"ln -sv bzip2 /bin/bzcat</userinput>"
+"<userinput remap=\"install\">cp -av libbz2.so.* /usr/lib\n"
+"ln -sv libbz2.so.&bzip2-version; /usr/lib/libbz2.so</userinput>"
+
+#. type: Content of: <sect1><sect2><para>
+msgid ""
+"Install the shared <command>bzip2</command> binary into the <filename class="
+"\"directory\">/bin</filename> directory:"
+msgstr ""
+"安装链接到共享库的 <command>bzip2</command> 二进制程序到 <filename class="
+"\"directory\">/bin</filename> 目录："
+
+#. type: Content of: <sect1><sect2><screen>
+#, no-wrap
+msgid "<userinput remap=\"install\">cp -v bzip2-shared /bin/bzip2</userinput>"
+msgstr "<userinput remap=\"install\">cp -v bzip2-shared /bin/bzip2</userinput>"
 
 #. type: Content of: <sect1><sect2><para>
 msgid "Remove an useless static library:"
@@ -373,3 +373,5 @@ msgstr "这个库实现基于 Burrows-Wheeler 算法的无损块排序数据压�
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 msgid "libbz2"
 msgstr "libbz2"
+
+#, no-wrap

@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2021-02-16 13:35+0800\n"
+"POT-Creation-Date: 2021-05-12 17:13+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -151,23 +151,6 @@ msgstr "安装该软件包："
 #, no-wrap
 msgid "<userinput remap=\"install\">make SHLIB_LIBS=\"-lncursesw\" install</userinput>"
 msgstr "<userinput remap=\"install\">make SHLIB_LIBS=\"-lncursesw\" install</userinput>"
-
-#. type: Content of: <sect1><sect2><para>
-msgid ""
-"Now move the dynamic libraries to a more appropriate location and fix up "
-"symbolic links:"
-msgstr "下面将动态库移动到更合适的位置，并修复符号链接："
-
-#. type: Content of: <sect1><sect2><screen>
-#, no-wrap
-msgid ""
-"<userinput remap=\"install\">mv -v /usr/lib/lib{readline,history}.so.* /lib\n"
-"ln -sfv ../../lib/$(readlink /usr/lib/libreadline.so) /usr/lib/libreadline.so\n"
-"ln -sfv ../../lib/$(readlink /usr/lib/libhistory.so ) /usr/lib/libhistory.so</userinput>"
-msgstr ""
-"<userinput remap=\"install\">mv -v /usr/lib/lib{readline,history}.so.* /lib\n"
-"ln -sfv ../../lib/$(readlink /usr/lib/libreadline.so) /usr/lib/libreadline.so\n"
-"ln -sfv ../../lib/$(readlink /usr/lib/libhistory.so ) /usr/lib/libhistory.so</userinput>"
 
 #. type: Content of: <sect1><sect2><para>
 msgid "If desired, install the documentation:"

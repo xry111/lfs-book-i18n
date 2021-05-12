@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2021-04-29 14:28+0800\n"
+"POT-Creation-Date: 2021-05-13 02:01+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -61,15 +61,13 @@ msgid "Installation of systemd"
 msgstr "安装 systemd"
 
 #. type: Content of: <sect1><sect2><para>
-msgid ""
-"First, apply a patch to fix some regressions and fix functionality with "
-"future versions of the kernel:"
-msgstr ""
-"首先，应用一个补丁，修复一些退化问题，以及在较新版本内核上的功能性问题："
+msgid "First, apply a patch to fix some build issues:"
+msgstr "首先，应用一个补丁，修复构建过程中的问题："
 
 #. type: Content of: <sect1><sect2><screen>
-msgid "<userinput remap=\"pre\">patch -Np1 -i ../systemd-&systemd-version;-upstream_fixes-3.patch</userinput>"
-msgstr "<userinput remap=\"pre\">patch -Np1 -i ../systemd-&systemd-version;-upstream_fixes-3.patch</userinput>"
+#, no-wrap
+msgid "<userinput remap=\"pre\">patch -Np1 -i ../systemd-&systemd-version;-upstream_fixes-1.patch</userinput>"
+msgstr "<userinput remap=\"pre\">patch -Np1 -i ../systemd-&systemd-version;-upstream_fixes-1.patch</userinput>"
 
 #. type: Content of: <sect1><sect2><para>
 msgid "Remove tests that cannot be built in chroot:"
@@ -77,8 +75,8 @@ msgstr "删除在 chroot 环境中无法构建的测试："
 
 #. type: Content of: <sect1><sect2><screen>
 #, no-wrap
-msgid "<userinput remap=\"pre\">sed '181,$ d' -i src/resolve/meson.build</userinput>"
-msgstr "<userinput remap=\"pre\">sed '181,$ d' -i src/resolve/meson.build</userinput>"
+msgid "<userinput remap=\"pre\">sed '177,$ d' -i src/resolve/meson.build</userinput>"
+msgstr "<userinput remap=\"pre\">sed '177,$ d' -i src/resolve/meson.build</userinput>"
 
 #. type: Content of: <sect1><sect2><para>
 msgid ""
@@ -112,15 +110,8 @@ msgid ""
 "      -Ddefault-dnssec=no           \\\n"
 "      -Dfirstboot=false             \\\n"
 "      -Dinstall-tests=false         \\\n"
-"      -Dkmod-path=/bin/kmod         \\\n"
 "      -Dldconfig=false              \\\n"
-"      -Dmount-path=/bin/mount       \\\n"
-"      -Drootprefix=                 \\\n"
-"      -Drootlibdir=/lib             \\\n"
-"      -Dsplit-usr=true              \\\n"
-"      -Dsulogin-path=/sbin/sulogin  \\\n"
 "      -Dsysusers=false              \\\n"
-"      -Dumount-path=/bin/umount     \\\n"
 "      -Db_lto=false                 \\\n"
 "      -Drpmmacrosdir=no             \\\n"
 "      -Dhomed=false                 \\\n"
@@ -142,15 +133,8 @@ msgstr ""
 "      -Ddefault-dnssec=no           \\\n"
 "      -Dfirstboot=false             \\\n"
 "      -Dinstall-tests=false         \\\n"
-"      -Dkmod-path=/bin/kmod         \\\n"
 "      -Dldconfig=false              \\\n"
-"      -Dmount-path=/bin/mount       \\\n"
-"      -Drootprefix=                 \\\n"
-"      -Drootlibdir=/lib             \\\n"
-"      -Dsplit-usr=true              \\\n"
-"      -Dsulogin-path=/sbin/sulogin  \\\n"
 "      -Dsysusers=false              \\\n"
-"      -Dumount-path=/bin/umount     \\\n"
 "      -Db_lto=false                 \\\n"
 "      -Drpmmacrosdir=no             \\\n"
 "      -Dhomed=false                 \\\n"
@@ -163,16 +147,6 @@ msgstr ""
 #. type: Content of: <sect1><sect2><variablelist><title>
 msgid "The meaning of the meson options:"
 msgstr "meson 选项的含义："
-
-#. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
-msgid "<parameter>-D*-path=*</parameter>"
-msgstr "<parameter>-D*-path=*</parameter>"
-
-#. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
-msgid ""
-"These switches provide the location of binaries needed by systemd at runtime "
-"that have not yet been installed."
-msgstr "这些开关提供了 systemd 在运行时需要，但尚未安装的二进制程序的位置。"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 msgid "<parameter>-Ddefault-dnssec=no</parameter>"
@@ -217,28 +191,6 @@ msgstr ""
 "这个开关防止一个 systemd 单元的安装，它在引导时运行 <command>ldconfig</"
 "command>，这对于 LFS 等源代码发行版来说没有意义，还会增加引导时间。如果您需要"
 "这个功能，可以删除这个开关。"
-
-#. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
-msgid "<parameter>-Droot*</parameter>"
-msgstr "<parameter>-Droot*</parameter>"
-
-#. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
-msgid ""
-"These switches ensure that core programs and shared libraries are installed "
-"in subdirectories of the root partition."
-msgstr "这个开关保证核心程序和共享库被安装到根分区下的子目录中。"
-
-#. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
-msgid "<parameter>-Dsplit-usr=true</parameter>"
-msgstr "<parameter>-Dsplit-usr=true</parameter>"
-
-#. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
-msgid ""
-"This switch ensures that systemd will work on systems where /bin, /lib and /"
-"sbin directories are not symlinks to their /usr counterparts."
-msgstr ""
-"这个开关确保 systemd 能够在 /bin、/lib 和 /sbin 目录不是指向 /usr 中对应目录"
-"的符号链接的情况下工作。"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 msgid "<parameter>-Dsysusers=false</parameter>"
@@ -385,55 +337,56 @@ msgstr "安装的目录"
 msgid ""
 "bootctl, busctl, coredumpctl, halt (symlink to systemctl), hostnamectl, "
 "init, journalctl, kernel-install, localectl, loginctl, machinectl, "
-"networkctl, portablectl, poweroff (symlink to systemctl), reboot (symlink to "
-"systemctl), resolvconf (symlink to resolvectl), resolvectl, runlevel "
-"(symlink to systemctl), shutdown (symlink to systemctl), systemctl, systemd-"
-"analyze, systemd-ask-password, systemd-cat, systemd-cgls, systemd-cgtop, "
-"systemd-delta, systemd-detect-virt, systemd-dissect, systemd-escape, systemd-"
-"hwdb, systemd-id128, systemd-inhibit, systemd-machine-id-setup, systemd-"
-"mount, systemd-notify, systemd-nspawn, systemd-path, systemd-repart, systemd-"
-"resolve (symlink to resolvectl), systemd-run, systemd-socket-activate, "
-"systemd-stdio-bridge, systemd-tmpfiles, systemd-tty-ask-password-agent, "
-"systemd-umount (symlink to systemd-mount), telinit (symlink to systemctl), "
-"timedatectl, and udevadm"
+"networkctl, oomctl, portablectl, poweroff (symlink to systemctl), reboot "
+"(symlink to systemctl), resolvconf (symlink to resolvectl), resolvectl, "
+"runlevel (symlink to systemctl), shutdown (symlink to systemctl), systemctl, "
+"systemd-analyze, systemd-ask-password, systemd-cat, systemd-cgls, systemd-"
+"cgtop, systemd-cryptenroll, systemd-delta, systemd-detect-virt, systemd-"
+"dissect, systemd-escape, systemd-hwdb, systemd-id128, systemd-inhibit, "
+"systemd-machine-id-setup, systemd-mount, systemd-notify, systemd-nspawn, "
+"systemd-path, systemd-repart, systemd-resolve (symlink to resolvectl), "
+"systemd-run, systemd-socket-activate, systemd-stdio-bridge, systemd-sysext, "
+"systemd-tmpfiles, systemd-tty-ask-password-agent, systemd-umount (symlink to "
+"systemd-mount), telinit (symlink to systemctl), timedatectl, and udevadm"
 msgstr ""
 "bootctl, busctl, coredumpctl, halt (到 systemctl 的符号链接), hostnamectl, "
 "init, journalctl, kernel-install, localectl, loginctl, machinectl, "
-"networkctl, portablectl, poweroff (到 systemctl 的符号链接), reboot (到 "
-"systemctl 的符号链接), resolvconf (到 resolvectl 的符号链接), resolvectl, "
-"runlevel (到 systemctl 的符号链接), shutdown (到 systemctl 的符号链接), "
-"systemctl, systemd-analyze, systemd-ask-password, systemd-cat, systemd-cgls, "
-"systemd-cgtop, systemd-delta, systemd-detect-virt, systemd-dissect, systemd-"
-"escape, systemd-hwdb, systemd-id128, systemd-inhibit, systemd-machine-id-"
-"setup, systemd-mount, systemd-notify, systemd-nspawn, systemd-path, systemd-"
-"repart, systemd-resolve (到 resolvectl 的符号链接), systemd-run, systemd-"
-"socket-activate, systemd-stdio-bridge, systemd-tmpfiles, systemd-tty-ask-"
-"password-agent, systemd-umount (到 systemd-mount 的符号链接), telinit (到 "
-"systemctl 的符号链接), timedatectl, 以及 udevadm"
+"networkctl, oomctl, portablectl, poweroff (到 systemctl 的符号链接), reboot "
+"(到 systemctl 的符号链接), resolvconf (到 resolvectl 的符号链接), "
+"resolvectl, runlevel (到 systemctl 的符号链接), shutdown (到 systemctl 的符号"
+"链接), systemctl, systemd-analyze, systemd-ask-password, systemd-cat, "
+"systemd-cgls, systemd-cgtop, systemd-cryptenroll, systemd-delta, systemd-"
+"detect-virt, systemd-dissect, systemd-escape, systemd-hwdb, systemd-id128, "
+"systemd-inhibit, systemd-machine-id-setup, systemd-mount, systemd-notify, "
+"systemd-nspawn, systemd-path, systemd-repart, systemd-resolve (到 resolvectl "
+"的符号链接), systemd-run, systemd-socket-activate, systemd-stdio-bridge, "
+"systemd-sysext, systemd-tmpfiles, systemd-tty-ask-password-agent, systemd-"
+"umount (到 systemd-mount 的符号链接), telinit (到 systemctl 的符号链接), "
+"timedatectl, 以及 udevadm"
 
 #. type: Content of: <sect1><sect2><segmentedlist><seglistitem><seg>
 msgid ""
 "libnss_myhostname.so.2, libnss_mymachines.so.2, libnss_resolve.so.2, "
 "libnss_systemd.so.2, libsystemd.so, libsystemd-shared-&systemd-version;.so "
-"(in /lib/systemd), and libudev.so"
+"(in /usr/lib/systemd), and libudev.so"
 msgstr ""
 "libnss_myhostname.so.2, libnss_mymachines.so.2, libnss_resolve.so.2, "
 "libnss_systemd.so.2, libsystemd.so, libsystemd-shared-&systemd-version;.so "
-"(在 /lib/systemd 中), 以及 libudev.so"
+"(在 /usr/lib/systemd 中), 以及 libudev.so"
 
 #. type: Content of: <sect1><sect2><segmentedlist><seglistitem><seg>
 msgid ""
 "/etc/binfmt.d, /etc/init.d, /etc/kernel, /etc/modules-load.d, /etc/sysctl."
-"d, /etc/systemd, /etc/tmpfiles.d, /etc/udev, /etc/xdg/systemd, /lib/"
-"systemd, /lib/udev, /usr/include/systemd, /usr/lib/binfmt.d, /usr/lib/"
+"d, /etc/systemd, /etc/tmpfiles.d, /etc/udev, /etc/xdg/systemd, /usr/lib/"
+"systemd, /usr/lib/udev, /usr/include/systemd, /usr/lib/binfmt.d, /usr/lib/"
 "environment.d, /usr/lib/kernel, /usr/lib/modules-load.d, /usr/lib/sysctl.d, /"
 "usr/lib/systemd, /usr/lib/tmpfiles.d, /usr/share/doc/systemd-&systemd-"
 "version;, /usr/share/factory, /usr/share/systemd, /var/lib/systemd, and /var/"
 "log/journal"
 msgstr ""
 "/etc/binfmt.d, /etc/init.d, /etc/kernel, /etc/modules-load.d, /etc/sysctl."
-"d, /etc/systemd, /etc/tmpfiles.d, /etc/udev, /etc/xdg/systemd, /lib/"
-"systemd, /lib/udev, /usr/include/systemd, /usr/lib/binfmt.d, /usr/lib/"
+"d, /etc/systemd, /etc/tmpfiles.d, /etc/udev, /etc/xdg/systemd, /usr/lib/"
+"systemd, /usr/lib/udev, /usr/include/systemd, /usr/lib/binfmt.d, /usr/lib/"
 "environment.d, /usr/lib/kernel, /usr/lib/modules-load.d, /usr/lib/sysctl.d, /"
 "usr/lib/systemd, /usr/lib/tmpfiles.d, /usr/share/doc/systemd-&systemd-"
 "version;, /usr/share/factory, /usr/share/systemd, /var/lib/systemd, 以及 /"
@@ -614,6 +567,18 @@ msgstr "用于探查和配置 systemd-networkd 管理的网络连接状态"
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 msgid "networkctl"
 msgstr "networkctl"
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
+msgid "<command>oomctl</command>"
+msgstr "<command>oomctl</command>"
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
+msgid "Controls the systemd Out Of Memory daemon"
+msgstr "控制 systemd 处理内存不足问题的守护进程"
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
+msgid "oomctl"
+msgstr "oomctl"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 msgid "<command>portablectl</command>"
@@ -798,6 +763,20 @@ msgstr ""
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 msgid "systemd-cgtop"
 msgstr "systemd-cgtop"
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
+msgid "<command>systemd-cryptenroll</command>"
+msgstr "<command>systemd-cryptenroll</command>"
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
+msgid ""
+"Is used to enroll or remove a system from full disk encryption, as well as "
+"set and query private keys and recovery keys"
+msgstr "用于启用或禁用系统全盘加密，也可以设定或查询私钥和恢复密钥"
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
+msgid "systemd-cryptenroll"
+msgstr "systemd-cryptenroll"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 msgid "<command>systemd-delta</command>"
@@ -1020,6 +999,18 @@ msgstr "用于监听 socket 服务，并在 socket 成功连接时启动进程"
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 msgid "systemd-socket-activate"
 msgstr "systemd-socket-activate"
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
+msgid "<command>systemd-sysext</command>"
+msgstr "<command>systemd-sysext</command>"
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
+msgid "Activates system extension images"
+msgstr "启用系统扩展镜像"
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
+msgid "systemd-sysext"
+msgstr "systemd-sysext"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 msgid "<command>systemd-tmpfiles</command>"

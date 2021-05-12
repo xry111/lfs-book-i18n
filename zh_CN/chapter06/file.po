@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2021-03-28 23:11+0800\n"
+"POT-Creation-Date: 2021-05-12 17:13+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -134,22 +134,6 @@ msgstr "安装该软件包："
 #, no-wrap
 msgid "<userinput remap=\"install\">make DESTDIR=$LFS install</userinput>"
 msgstr "<userinput remap=\"install\">make DESTDIR=$LFS install</userinput>"
-
-#. type: Content of: <sect1><sect2><para>
-msgid ""
-"Move a shared library into its final location in the LFS system, and "
-"recreate the symlink for it:"
-msgstr ""
-"将一个共享库移动到 LFS 系统中的最终位置，并为其重建符号链接："
-
-#. type: Content of: <sect1><sect2><screen>
-#, no-wrap
-msgid ""
-"<userinput remap=\"install\">mv -v $LFS/usr/lib/libmagic.so.* $LFS/lib\n"
-"ln -sfv ../../lib/$(readlink /usr/lib/libmagic.so) $LFS/usr/lib/libmagic.so</userinput>"
-msgstr ""
-"<userinput remap=\"install\">mv -v $LFS/usr/lib/libmagic.so.* $LFS/lib\n"
-"ln -sfv ../../lib/$(readlink /usr/lib/libmagic.so) $LFS/usr/lib/libmagic.so</userinput>"
 
 #. type: Content of: <sect1><sect2><para>
 msgid ""

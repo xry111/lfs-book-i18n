@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2021-02-20 08:46+0800\n"
+"POT-Creation-Date: 2021-05-12 17:13+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -154,26 +154,6 @@ msgstr "安装该软件包："
 #, no-wrap
 msgid "<userinput remap=\"install\">make install</userinput>"
 msgstr "<userinput remap=\"install\">make install</userinput>"
-
-#. type: Content of: <sect1><sect2><para>
-msgid ""
-"The shared library needs to be moved to <filename class=\"directory\">/lib</"
-"filename>, and as a result the <filename class=\"extension\">.so</filename> "
-"file in <filename class=\"directory\">/usr/lib</filename> will need to be "
-"recreated:"
-msgstr ""
-"需要将共享库移动到 <filename class=\"directory\">/lib</filename>，因此 "
-"<filename class=\"directory\">/usr/lib</filename> 中的 <filename class="
-"\"extension\">.so</filename> 符号链接需要重新建立："
-
-#. type: Content of: <sect1><sect2><screen>
-#, no-wrap
-msgid ""
-"<userinput remap=\"install\">mv -v /usr/lib/libdbus-1.so.* /lib\n"
-"ln -sfv ../../lib/$(readlink /usr/lib/libdbus-1.so) /usr/lib/libdbus-1.so</userinput>"
-msgstr ""
-"<userinput remap=\"install\">mv -v /usr/lib/libdbus-1.so.* /lib\n"
-"ln -sfv ../../lib/$(readlink /usr/lib/libdbus-1.so) /usr/lib/libdbus-1.so</userinput>"
 
 #. type: Content of: <sect1><sect2><para>
 msgid ""

@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2021-02-03 18:19+0800\n"
+"POT-Creation-Date: 2021-05-12 17:13+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -154,29 +154,6 @@ msgstr "<userinput remap=\"install\">make install</userinput>"
 
 #. type: Content of: <sect1><sect2><para>
 msgid ""
-"Move the shared libraries to the <filename class=\"directory\">/lib</"
-"filename> directory, where they are expected to reside:"
-msgstr ""
-"将共享库移动到期望的 <filename class=\"directory\">/lib</filename> 目录："
-
-#. type: Content of: <sect1><sect2><screen>
-#, no-wrap
-msgid "<userinput remap=\"install\">mv -v /usr/lib/libncursesw.so.6* /lib</userinput>"
-msgstr "<userinput remap=\"install\">mv -v /usr/lib/libncursesw.so.6* /lib</userinput>"
-
-#. type: Content of: <sect1><sect2><para>
-msgid ""
-"Because the libraries have been moved, one symlink points to a non-existent "
-"file. Recreate it:"
-msgstr "由于共享库被移走了，一个符号链接指向了不存在的文件。重新创建它："
-
-#. type: Content of: <sect1><sect2><screen>
-#, no-wrap
-msgid "<userinput remap=\"install\">ln -sfv ../../lib/$(readlink /usr/lib/libncursesw.so) /usr/lib/libncursesw.so</userinput>"
-msgstr "<userinput remap=\"install\">ln -sfv ../../lib/$(readlink /usr/lib/libncursesw.so) /usr/lib/libncursesw.so</userinput>"
-
-#. type: Content of: <sect1><sect2><para>
-msgid ""
 "Many applications still expect the linker to be able to find non-wide-"
 "character Ncurses libraries. Trick such applications into linking with wide-"
 "character libraries by means of symlinks and linker scripts:"
@@ -308,8 +285,8 @@ msgid ""
 "counterparts without \"w\" in the library names."
 msgstr ""
 "libcursesw.so (指向 libncursesw.so 的符号链接和链接脚本), libformw.so, "
-"libmenuw.so, libncursesw.so, libpanelw.so, 以及它们的库名称"
-"没有 “w” 的非宽字符替代品。"
+"libmenuw.so, libncursesw.so, libpanelw.so, 以及它们的库名称没有 “w” 的非宽字"
+"符替代品。"
 
 #. type: Content of: <sect1><sect2><segmentedlist><seglistitem><seg>
 msgid ""
@@ -536,5 +513,3 @@ msgstr "包含实现面板的函数"
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 msgid "libpanelw"
 msgstr "libpanelw"
-
-#, no-wrap

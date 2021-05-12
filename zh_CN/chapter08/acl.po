@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2021-02-20 08:46+0800\n"
+"POT-Creation-Date: 2021-05-12 17:13+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -71,28 +71,11 @@ msgstr "准备编译 Acl："
 #, no-wrap
 msgid ""
 "<userinput remap=\"configure\">./configure --prefix=/usr         \\\n"
-"            --bindir=/bin         \\\n"
 "            --disable-static      \\\n"
-"            --libexecdir=/usr/lib \\\n"
-"            --docdir=/usr/share/doc/acl-&acl-version;</userinput>"
-msgstr ""
-"<userinput remap=\"configure\">./configure --prefix=/usr         \\\n"
-"            --bindir=/bin         \\\n"
-"            --disable-static      \\\n"
-"            --libexecdir=/usr/lib \\\n"
-"            --docdir=/usr/share/doc/acl-&acl-version;</userinput>"
-
-#. type: Content of: <sect1><sect2><screen>
-#, no-wrap
-msgid ""
-"<userinput remap=\"configure\">./configure --prefix=/usr         \\\n"
-"            --disable-static      \\\n"
-"            --libexecdir=/usr/lib \\\n"
 "            --docdir=/usr/share/doc/acl-&acl-version;</userinput>"
 msgstr ""
 "<userinput remap=\"configure\">./configure --prefix=/usr         \\\n"
 "            --disable-static      \\\n"
-"            --libexecdir=/usr/lib \\\n"
 "            --docdir=/usr/share/doc/acl-&acl-version;</userinput>"
 
 #. type: Content of: <sect1><sect2><para>
@@ -125,26 +108,6 @@ msgstr "安装该软件包："
 #, no-wrap
 msgid "<userinput remap=\"install\">make install</userinput>"
 msgstr "<userinput remap=\"install\">make install</userinput>"
-
-#. type: Content of: <sect1><sect2><para>
-msgid ""
-"The shared library needs to be moved to <filename class=\"directory\">/lib</"
-"filename>, and as a result the <filename class=\"extension\">.so</filename> "
-"file in <filename class=\"directory\">/usr/lib</filename> will need to be "
-"recreated:"
-msgstr ""
-"共享库需要被移动到 <filename class=\"directory\">/lib</filename> 目录，因此 "
-"<filename class=\"directory\">/usr/lib</filename> 中的 <filename class="
-"\"extension\">.so</filename> 符号链接需要重新建立："
-
-#. type: Content of: <sect1><sect2><screen>
-#, no-wrap
-msgid ""
-"<userinput remap=\"install\">mv -v /usr/lib/libacl.so.* /lib\n"
-"ln -sfv ../../lib/$(readlink /usr/lib/libacl.so) /usr/lib/libacl.so</userinput>"
-msgstr ""
-"<userinput remap=\"install\">mv -v /usr/lib/libacl.so.* /lib\n"
-"ln -sfv ../../lib/$(readlink /usr/lib/libacl.so) /usr/lib/libacl.so</userinput>"
 
 #. type: Content of: <sect1><sect2><title>
 msgid "Contents of Acl"

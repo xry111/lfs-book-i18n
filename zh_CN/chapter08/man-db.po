@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2021-02-20 08:46+0800\n"
+"POT-Creation-Date: 2021-05-12 17:13+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -63,11 +63,8 @@ msgid "Prepare Man-DB for compilation:"
 msgstr "准备编译 Man-DB："
 
 #. type: Content of: <sect1><sect2><screen>
-#, no-wrap
 msgid ""
-"<userinput remap=\"configure\">sed -i '/find/s@/usr@@' init/systemd/man-db.service.in\n"
-"\n"
-"./configure --prefix=/usr                        \\\n"
+"<userinput remap=\"configure\">./configure --prefix=/usr                        \\\n"
 "            --docdir=/usr/share/doc/man-db-&man-db-version; \\\n"
 "            --sysconfdir=/etc                    \\\n"
 "            --disable-setuid                     \\\n"
@@ -76,9 +73,7 @@ msgid ""
 "            --with-vgrind=/usr/bin/vgrind        \\\n"
 "            --with-grap=/usr/bin/grap</userinput>"
 msgstr ""
-"<userinput remap=\"configure\">sed -i '/find/s@/usr@@' init/systemd/man-db.service.in\n"
-"\n"
-"./configure --prefix=/usr                        \\\n"
+"<userinput remap=\"configure\">./configure --prefix=/usr                        \\\n"
 "            --docdir=/usr/share/doc/man-db-&man-db-version; \\\n"
 "            --sysconfdir=/etc                    \\\n"
 "            --disable-setuid                     \\\n"
@@ -115,20 +110,6 @@ msgstr ""
 #. type: Content of: <sect1><sect2><variablelist><title>
 msgid "The meaning of the configure options:"
 msgstr "配置选项的含义："
-
-#. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
-msgid ""
-"<command>sed -i '/find/s@/usr@@' init/systemd/man-db.service.in</command>"
-msgstr ""
-"<command>sed -i '/find/s@/usr@@' init/systemd/man-db.service.in</command>"
-
-#. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
-msgid ""
-"This changes a harcoded path to the <command>find</command> utility, which "
-"we install in <filename class=\"directory\">/bin</filename>."
-msgstr ""
-"修改硬编码的，指向 <command>find</command> 工具的路径，它被我们安装到 "
-"<filename class=\"directory\">/bin</filename> 目录。"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 msgid "<parameter>--disable-setuid</parameter>"

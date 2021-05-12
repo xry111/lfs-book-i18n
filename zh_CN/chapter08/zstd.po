@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2021-01-01 08:34+0800\n"
+"POT-Creation-Date: 2021-05-12 17:13+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -91,26 +91,13 @@ msgid "<userinput remap=\"install\">make prefix=/usr install</userinput>"
 msgstr "<userinput remap=\"install\">make prefix=/usr install</userinput>"
 
 #. type: Content of: <sect1><sect2><para>
-msgid ""
-"Remove the static library and move the shared library to <filename class="
-"\"directory\">/lib</filename>. Also, the <filename class=\"extension\">.so</"
-"filename> file in <filename class=\"directory\">/usr/lib</filename> will "
-"need to be recreated:"
-msgstr ""
-"删除静态库，并将共享库移动到 <filename class=\"directory\">/lib</filename>。"
-"另外，<filename class=\"extension\">.so</filename> 符号链接也要在 <filename "
-"class=\"directory\">/usr/lib</filename> 中重建："
+msgid "Remove the static library:"
+msgstr "删除静态库："
 
 #. type: Content of: <sect1><sect2><screen>
 #, no-wrap
-msgid ""
-"<userinput remap=\"install\">rm -v /usr/lib/libzstd.a\n"
-"mv -v /usr/lib/libzstd.so.* /lib\n"
-"ln -sfv ../../lib/$(readlink /usr/lib/libzstd.so) /usr/lib/libzstd.so</userinput>"
-msgstr ""
-"<userinput remap=\"install\">rm -v /usr/lib/libzstd.a\n"
-"mv -v /usr/lib/libzstd.so.* /lib\n"
-"ln -sfv ../../lib/$(readlink /usr/lib/libzstd.so) /usr/lib/libzstd.so</userinput>"
+msgid "<userinput remap=\"install\">rm -v /usr/lib/libzstd.a</userinput>"
+msgstr "<userinput remap=\"install\">rm -v /usr/lib/libzstd.a</userinput>"
 
 #. type: Content of: <sect1><sect2><title>
 msgid "Contents of Zstd"

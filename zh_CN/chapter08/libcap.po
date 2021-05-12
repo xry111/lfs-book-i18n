@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2021-01-28 13:14+0800\n"
+"POT-Creation-Date: 2021-05-12 17:13+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -109,27 +109,22 @@ msgid "<userinput remap=\"test\">make test</userinput>"
 msgstr "<userinput remap=\"test\">make test</userinput>"
 
 #. type: Content of: <sect1><sect2><para>
-msgid ""
-"Install the package and make sure the essential libraries are in the correct "
-"directory:"
-msgstr "安装该软件包，并确保必要的库位于正确的目录中："
+msgid "Install the package:"
+msgstr "安装该软件包："
 
 #. type: Content of: <sect1><sect2><screen>
 #, no-wrap
-msgid ""
-"<userinput remap=\"install\">make prefix=/usr lib=lib install\n"
-"for libname in cap psx; do\n"
-"    mv -v /usr/lib/lib${libname}.so.* /lib\n"
-"    ln -sfv ../../lib/lib${libname}.so.2 /usr/lib/lib${libname}.so\n"
-"    chmod -v 755 /lib/lib${libname}.so.&libcap-version;\n"
-"done</userinput>"
-msgstr ""
-"<userinput remap=\"install\">make prefix=/usr lib=lib install\n"
-"for libname in cap psx; do\n"
-"    mv -v /usr/lib/lib${libname}.so.* /lib\n"
-"    ln -sfv ../../lib/lib${libname}.so.2 /usr/lib/lib${libname}.so\n"
-"    chmod -v 755 /lib/lib${libname}.so.&libcap-version;\n"
-"done</userinput>"
+msgid "<userinput remap=\"install\">make prefix=/usr lib=lib install</userinput>"
+msgstr "<userinput remap=\"install\">make prefix=/usr lib=lib install</userinput>"
+
+#. type: Content of: <sect1><sect2><para>
+msgid "Adjust the permission of the shared libraries:"
+msgstr "调整共享库的权限模式："
+
+#. type: Content of: <sect1><sect2><screen>
+#, no-wrap
+msgid "<userinput remap=\"install\">chmod -v 755 /usr/lib/lib{cap,psx}.so.&libcap-version;</userinput>"
+msgstr "<userinput remap=\"install\">chmod -v 755 /usr/lib/lib{cap,psx}.so.&libcap-version;</userinput>"
 
 #. type: Content of: <sect1><sect2><title>
 msgid "Contents of Libcap"

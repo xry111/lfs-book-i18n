@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2021-02-20 08:46+0800\n"
+"POT-Creation-Date: 2021-05-12 17:13+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -67,24 +67,12 @@ msgstr "准备编译 Eudev："
 #, no-wrap
 msgid ""
 "<userinput remap=\"configure\">./configure --prefix=/usr           \\\n"
-"            --bindir=/sbin          \\\n"
-"            --sbindir=/sbin         \\\n"
-"            --libdir=/usr/lib       \\\n"
 "            --sysconfdir=/etc       \\\n"
-"            --libexecdir=/lib       \\\n"
-"            --with-rootprefix=      \\\n"
-"            --with-rootlibdir=/lib  \\\n"
 "            --enable-manpages       \\\n"
 "            --disable-static</userinput>"
 msgstr ""
 "<userinput remap=\"configure\">./configure --prefix=/usr           \\\n"
-"            --bindir=/sbin          \\\n"
-"            --sbindir=/sbin         \\\n"
-"            --libdir=/usr/lib       \\\n"
 "            --sysconfdir=/etc       \\\n"
-"            --libexecdir=/lib       \\\n"
-"            --with-rootprefix=      \\\n"
-"            --with-rootlibdir=/lib  \\\n"
 "            --enable-manpages       \\\n"
 "            --disable-static</userinput>"
 
@@ -107,10 +95,10 @@ msgstr ""
 #. type: Content of: <sect1><sect2><screen>
 #, no-wrap
 msgid ""
-"<userinput remap=\"test\">mkdir -pv /lib/udev/rules.d\n"
+"<userinput remap=\"test\">mkdir -pv /usr/lib/udev/rules.d\n"
 "mkdir -pv /etc/udev/rules.d</userinput>"
 msgstr ""
-"<userinput remap=\"test\">mkdir -pv /lib/udev/rules.d\n"
+"<userinput remap=\"test\">mkdir -pv /usr/lib/udev/rules.d\n"
 "mkdir -pv /etc/udev/rules.d</userinput>"
 
 #. type: Content of: <sect1><sect2><para>
@@ -161,12 +149,12 @@ msgstr "/etc/udev/hwdb.bin"
 msgid ""
 "Information about hardware devices is maintained in the <filename class="
 "\"directory\">/etc/udev/hwdb.d</filename> and <filename class=\"directory\">/"
-"lib/udev/hwdb.d</filename> directories.  <application>Eudev</application> "
-"needs that information to be compiled into a binary database <filename>/etc/"
-"udev/hwdb.bin</filename>. Create the initial database:"
+"usr/lib/udev/hwdb.d</filename> directories.  <application>Eudev</"
+"application> needs that information to be compiled into a binary database "
+"<filename>/etc/udev/hwdb.bin</filename>. Create the initial database:"
 msgstr ""
 "硬件设备的相关信息被维护在 <filename class=\"directory\">/etc/udev/hwdb.d</"
-"filename> 和 <filename class=\"directory\">/lib/udev/hwdb.d</filename> 目录"
+"filename> 和 <filename class=\"directory\">/usr/lib/udev/hwdb.d</filename> 目录"
 "中。<application>Eudev</application> 需要将这些信息编译到二进制数据库 "
 "<filename>/etc/udev/hwdb.bin</filename> 中。初始化该数据库："
 
@@ -196,7 +184,7 @@ msgstr "安装的库"
 msgid "Installed directories"
 msgstr "安装的目录"
 
-#.  These are in /lib/udev and not to be called by the user:
+#.  These are in /usr/lib/udev and not to be called by the user:
 #.          accelerometer, ata_id, cdrom_id, collect, mtd_probe,
 #.          scsi_id, v4l_id,
 #. type: Content of: <sect1><sect2><segmentedlist><seglistitem><seg>
@@ -208,8 +196,8 @@ msgid "libudev.so"
 msgstr "libudev.so"
 
 #. type: Content of: <sect1><sect2><segmentedlist><seglistitem><seg>
-msgid "/etc/udev, /lib/udev, and /usr/share/doc/udev-&udev-lfs-version;"
-msgstr "/etc/udev, /lib/udev, 以及 /usr/share/doc/udev-&udev-lfs-version;"
+msgid "/etc/udev, /usr/lib/udev, and /usr/share/doc/udev-&udev-lfs-version;"
+msgstr "/etc/udev, /usr/lib/udev, 以及 /usr/share/doc/udev-&udev-lfs-version;"
 
 #. type: Content of: <sect1><sect2><variablelist><bridgehead>
 msgid "Short Descriptions"

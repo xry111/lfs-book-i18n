@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2021-03-10 12:42+0800\n"
+"POT-Creation-Date: 2021-05-12 17:13+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -241,37 +241,13 @@ msgstr "将程序移动到 FHS 要求的位置："
 #. type: Content of: <sect1><sect2><screen>
 #, no-wrap
 msgid ""
-"<userinput remap=\"install\">mv -v /usr/bin/{cat,chgrp,chmod,chown,cp,date,dd,df,echo} /bin\n"
-"mv -v /usr/bin/{false,ln,ls,mkdir,mknod,mv,pwd,rm} /bin\n"
-"mv -v /usr/bin/{rmdir,stty,sync,true,uname} /bin\n"
-"mv -v /usr/bin/chroot /usr/sbin\n"
+"<userinput remap=\"install\">mv -v /usr/bin/chroot /usr/sbin\n"
 "mv -v /usr/share/man/man1/chroot.1 /usr/share/man/man8/chroot.8\n"
 "sed -i 's/\"1\"/\"8\"/' /usr/share/man/man8/chroot.8</userinput>"
 msgstr ""
-"<userinput remap=\"install\">mv -v /usr/bin/{cat,chgrp,chmod,chown,cp,date,dd,df,echo} /bin\n"
-"mv -v /usr/bin/{false,ln,ls,mkdir,mknod,mv,pwd,rm} /bin\n"
-"mv -v /usr/bin/{rmdir,stty,sync,true,uname} /bin\n"
-"mv -v /usr/bin/chroot /usr/sbin\n"
+"<userinput remap=\"install\">mv -v /usr/bin/chroot /usr/sbin\n"
 "mv -v /usr/share/man/man1/chroot.1 /usr/share/man/man8/chroot.8\n"
 "sed -i 's/\"1\"/\"8\"/' /usr/share/man/man8/chroot.8</userinput>"
-
-#. type: Content of: <sect1><sect2><para>
-msgid ""
-"Some of the scripts in the LFS-Bootscripts package depend on <command>head</"
-"command>, <command>nice</command>, <command>sleep</command>, and "
-"<command>touch</command>.  As <filename class=\"directory\">/usr</filename> "
-"may not be available during the early and late stages of booting, those "
-"binaries need to be on the root partition to maintain FHS compliance:"
-msgstr ""
-"LFS-Bootscripts 包中的部分脚本可能依赖于 <command>head</command>, "
-"<command>nice</command>, <command>sleep</command>, 以及 <command>touch</"
-"command>。由于 <filename class=\"directory\">/usr</filename> 在系统引导的较早"
-"阶段可能不可用，需要将这些程序移动到根分区，以保证 FHS 兼容性："
-
-#. type: Content of: <sect1><sect2><screen>
-#, no-wrap
-msgid "<userinput remap=\"install\">mv -v /usr/bin/{head,nice,sleep,touch} /bin</userinput>"
-msgstr "<userinput remap=\"install\">mv -v /usr/bin/{head,nice,sleep,touch} /bin</userinput>"
 
 #. type: Content of: <sect1><sect2><title>
 msgid "Contents of Coreutils"

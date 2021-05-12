@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2021-02-20 08:46+0800\n"
+"POT-Creation-Date: 2021-05-12 17:13+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -232,31 +232,6 @@ msgstr ""
 "我们很快将会构建一些需要 <filename>libncurses.so</filename> 库的软件包。创建"
 "这个简短的链接脚本，正如我们在<xref linkend=\"chapter-building-system\"/>中将"
 "要做的那样。"
-
-#. type: Content of: <sect1><sect2><para>
-msgid ""
-"Move the shared libraries to the <filename class=\"directory\">/lib</"
-"filename> directory, where they are expected to reside:"
-msgstr ""
-"将共享库移动到它们应该位于的 <filename class=\"directory\">/lib</filename> 目"
-"录中："
-
-#. type: Content of: <sect1><sect2><screen>
-#, no-wrap
-msgid "<userinput remap=\"install\">mv -v $LFS/usr/lib/libncursesw.so.6* $LFS/lib</userinput>"
-msgstr "<userinput remap=\"install\">mv -v $LFS/usr/lib/libncursesw.so.6* $LFS/lib</userinput>"
-
-#. type: Content of: <sect1><sect2><para>
-msgid ""
-"Because the libraries have been moved, one symlink points to a non-existent "
-"file. Recreate it:"
-msgstr ""
-"由于库文件被移动到其他位置，一个符号链接现在指向不存在的文件。重新生成它："
-
-#. type: Content of: <sect1><sect2><screen>
-#, no-wrap
-msgid "<userinput remap=\"install\">ln -sfv ../../lib/$(readlink $LFS/usr/lib/libncursesw.so) $LFS/usr/lib/libncursesw.so</userinput>"
-msgstr "<userinput remap=\"install\">ln -sfv ../../lib/$(readlink $LFS/usr/lib/libncursesw.so) $LFS/usr/lib/libncursesw.so</userinput>"
 
 #. type: Content of: <sect1><sect2><para>
 msgid ""

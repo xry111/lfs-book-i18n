@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2021-02-20 08:46+0800\n"
+"POT-Creation-Date: 2021-05-12 17:13+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -121,37 +121,6 @@ msgstr "安装该软件包："
 msgid "<userinput remap=\"install\">make install</userinput>"
 msgstr "<userinput remap=\"install\">make install</userinput>"
 
-#. type: Content of: <sect1><sect2><para>
-msgid ""
-"Some of the scripts in the LFS-Bootscripts package depend on <command>find</"
-"command>.  As <filename class=\"directory\">/usr</filename> may not be "
-"available during the early stages of booting, this program needs to be on "
-"the root partition.  The <command>updatedb</command> script also needs to be "
-"modified to correct an explicit path:"
-msgstr ""
-"LFS-Bootscripts 软件包中的一些引导脚本依赖于 <command>find</command>。由于 "
-"<filename class=\"directory\">/usr</filename> 文件系统在系统启动的早期阶段可"
-"能不可用，该程序必须被放置在根分区。还需要修正 <command>updatedb</command> 脚"
-"本中硬编码的路径："
-
-#. type: Content of: <sect1><sect2><para>
-msgid ""
-"Some packages in BLFS and beyond expect the <command>find</command> program "
-"in <filename class=\"directory\">/bin</filename>, so make sure it's placed "
-"there:"
-msgstr ""
-"BLFS 及 BLFS 之外的一些软件包预期 <command>find</command> 程序在 <filename "
-"class=\"directory\">/bin</filename> 中，因此要保证它被放置在那里："
-
-#. type: Content of: <sect1><sect2><screen>
-#, no-wrap
-msgid ""
-"<userinput remap=\"install\">mv -v /usr/bin/find /bin\n"
-"sed -i 's|find:=${BINDIR}|find:=/bin|' /usr/bin/updatedb</userinput>"
-msgstr ""
-"<userinput remap=\"install\">mv -v /usr/bin/find /bin\n"
-"sed -i 's|find:=${BINDIR}|find:=/bin|' /usr/bin/updatedb</userinput>"
-
 #. type: Content of: <sect1><sect2><title>
 msgid "Contents of Findutils"
 msgstr "Findutils 的内容"
@@ -237,3 +206,7 @@ msgstr "可以将给定命令作用于一个列表中的所有文件"
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 msgid "xargs"
 msgstr "xargs"
+
+
+
+#, no-wrap
