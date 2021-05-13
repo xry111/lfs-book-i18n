@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2021-04-27 22:24+0800\n"
+"POT-Creation-Date: 2021-05-13 14:14+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -70,17 +70,19 @@ msgstr "准备编译 Python："
 #. type: Content of: <sect1><sect2><screen>
 #, no-wrap
 msgid ""
-"<userinput remap=\"configure\">./configure --prefix=/usr       \\\n"
-"            --enable-shared     \\\n"
-"            --with-system-expat \\\n"
-"            --with-system-ffi   \\\n"
-"            --with-ensurepip=yes</userinput>"
+"<userinput remap=\"configure\">./configure --prefix=/usr        \\\n"
+"            --enable-shared      \\\n"
+"            --with-system-expat  \\\n"
+"            --with-system-ffi    \\\n"
+"            --with-ensurepip=yes \\\n"
+"            --enable-optimizations</userinput>"
 msgstr ""
 "<userinput remap=\"configure\">./configure --prefix=/usr       \\\n"
 "            --enable-shared     \\\n"
 "            --with-system-expat \\\n"
 "            --with-system-ffi   \\\n"
-"            --with-ensurepip=yes</userinput>"
+"            --with-ensurepip=yes \\\n"
+"            --enable-optimizations</userinput>"
 
 #. type: Content of: <sect1><sect2><variablelist><title>
 msgid "The meaning of the configure options:"
@@ -118,6 +120,14 @@ msgstr ""
 "该选项启用 <command>pip</command> 和 <command>setuptools</command> 包管理程序"
 "的构建。"
 
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
+msgid "<parameter>--enable-optimizations</parameter>"
+msgstr "<parameter>--with-ensurepip=yes</parameter>"
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
+msgid "This switch enables stable, but expensive, optimizations."
+msgstr "该选项启用稳定，但在编译期成本较高的优化。"
+
 #. type: Content of: <sect1><sect2><para>
 msgid "Compile the package:"
 msgstr "编译该软件包："
@@ -128,24 +138,15 @@ msgid "<userinput remap=\"make\">make</userinput>"
 msgstr "<userinput remap=\"make\">make</userinput>"
 
 #. type: Content of: <sect1><sect2><para>
-msgid "To test the results, issue:"
-msgstr "运行命令以测试编译结果："
-
-#. type: Content of: <sect1><sect2><screen>
-#, no-wrap
-msgid "<userinput remap=\"test\">make test</userinput>"
-msgstr "<userinput remap=\"test\">make test</userinput>"
-
-#. type: Content of: <sect1><sect2><para>
 msgid ""
-"Some tests requiring a network connection or additional packages are "
-"skipped. The tests test_unicodedata and test_curses tests are known to fail. "
-"For more comprehensive results, the tests can be rerun when Python 3 is "
-"reinstalled in BLFS."
+"Running the tests at this point is not recommended.  The tests are known to "
+"hang indefinitely in the partial LFS environment.  If desired, the tests can "
+"be rerun at the end of this chapter or when Python 3 is reinstalled in "
+"BLFS.  To run the tests anyway, issue <command>make test</command>."
 msgstr ""
-"一些需要网络连接或额外软件包的测试会被跳过。已知名为 test_unicodedata 和 test_curses 的测试"
-"会失败。如果需要更全面的测试结果，可以在 BLFS 中重新安装 Python 3 时再次进行"
-"测试。"
+"不建议在此时运行测试。在不完整的 LFS 环境中，测试可能会永远陷入等待状态。"
+"如果希望运行测试，可以在本章结束时，或者在 BLFS 中重新安装 Python 3 时再"
+"运行测试。如果一定要进行测试，运行 <command>make test</command>。"
 
 #. type: Content of: <sect1><sect2><para>
 msgid "Install the package:"
