@@ -79,4 +79,6 @@ $(MLANG)/book/Makefile.orig: $(LFS_EN)/Makefile
 $(MLANG)/book/git-version.sh.orig: $(LFS_EN)/git-version.sh
 	mkdir -pv "$(@D)"
 	cp -v $< $@
-	sed "2i export GIT_DIR=$(PWD)/lfs-en/.git" -i $@
+	sed -e "2i export GIT_DIR=$(PWD)/lfs-en/.git" \
+	    -e "s/\[ .*trunk.* \]/true/"                \
+	    -i $@
