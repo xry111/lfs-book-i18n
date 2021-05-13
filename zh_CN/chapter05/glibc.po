@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2021-05-12 17:13+0800\n"
+"POT-Creation-Date: 2021-05-13 23:48+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -310,6 +310,16 @@ msgstr ""
 "定它，默认值为根 (<filename class=\"directory\">/</filename>) 目录。这里我们"
 "指定将软件包安装到 <filename class=\"directory\">$LFS</filename>，它在<xref "
 "linkend=\"ch-tools-chroot\"/>之后将成为根目录。"
+
+#. type: Content of: <sect1><sect2><para>
+msgid ""
+"Fix hardcoded path to the executable loader in <command>ldd</command> script:"
+msgstr "改正 <command>ldd</command> 脚本中硬编码的可执行文件加载器路径："
+
+#. type: Content of: <sect1><sect2><screen>
+#, no-wrap
+msgid "<userinput remap=\"install\">sed '/RTLDLIST=/s@/usr@@g' -i $LFS/usr/bin/ldd</userinput>"
+msgstr "<userinput remap=\"install\">sed '/RTLDLIST=/s@/usr@@g' -i $LFS/usr/bin/ldd</userinput>"
 
 #. type: Content of: <sect1><sect2><caution><para>
 msgid ""
