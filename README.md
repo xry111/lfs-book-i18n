@@ -36,7 +36,7 @@ contribute other translations, please mail to `xry111@mengyan1223.wang`
 克隆本仓库，并将英文原版 LFS 手册作为 Git submodule 一并检出：
 
 ```
-git clone https://git.mengyan1223.wang/xry111/lfs-book-i18n --recurse-submodules
+git clone https://github.com/xry111/lfs-book-i18n --recurse-submodules
 cd lfs-book-i18n
 ```
 
