@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2021-02-16 13:35+0800\n"
+"POT-Creation-Date: 2021-05-16 02:56+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -141,6 +141,33 @@ msgstr "如果需要的话，安装一些额外的文档："
 #, no-wrap
 msgid "<userinput remap=\"install\">cp -vfr doc/* /usr/share/doc/openssl-&openssl-version;</userinput>"
 msgstr "<userinput remap=\"install\">cp -vfr doc/* /usr/share/doc/openssl-&openssl-version;</userinput>"
+
+#. type: Content of: <sect1><sect2><note><para>
+msgid ""
+"You should update OpenSSL when a new version which fixes vulnerabilities is "
+"announced. The releases run in series, with a letter for each release after "
+"the initial release (e.g. 1.1.1, 1.1.1a, 1.1.1b, etc). Because LFS installs "
+"only the shared libraries, there is no need to recompile packages which link "
+"to <filename class=\"libraryfile\">libcrypto.so</filename> or <filename "
+"class=\"libraryfile\">libssl.so</filename> <emphasis>when upgrading in the "
+"same series.</emphasis>"
+msgstr ""
+"一旦新版的 OpenSSL 被发布，且它包含对安全缺陷的修复，就应该更新 OpenSSL。"
+"OpenSSL 的版本分为多个序列，每个版本序列中除了首个发布版本以外，"
+"其余版本以一个英文字母进行区分 (例如，1.1.1, 1.1.1a, 1.1.1b, 等等)。"
+"由于 LFS 只安装共享库，没有必要重新编译链接到 "
+"<filename class=\"libraryfile\">libcrypto.so</filename> 或者 <filename "
+"class=\"libraryfile\">libssl.so</filename> 的软件包，"
+"<emphasis>前提是更新后的版本和原版本在同一个版本序列中</emphasis>。"
+
+#. type: Content of: <sect1><sect2><note><para>
+msgid ""
+"However, any running programs linked to those libraries need to be stopped "
+"and restarted. Read the related entries in <xref linkend='pkgmgmt-upgrade-"
+"issues'/> for details."
+msgstr ""
+"然而，需要重新启动链接到这两个库的，正在运行的程序。"
+"详见 <xref linkend='pkgmgmt-upgrade-issues'/> 中的相关条目。"
 
 #. type: Content of: <sect1><sect2><title>
 msgid "Contents of OpenSSL"
