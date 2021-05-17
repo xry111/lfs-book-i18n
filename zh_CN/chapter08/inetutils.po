@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2021-05-12 17:13+0800\n"
+"POT-Creation-Date: 2021-05-17 23:30+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -66,6 +66,7 @@ msgstr "准备编译 Inetutils："
 #, no-wrap
 msgid ""
 "<userinput remap=\"configure\">./configure --prefix=/usr        \\\n"
+"            --bindir=/usr/bin    \\\n"
 "            --localstatedir=/var \\\n"
 "            --disable-logger     \\\n"
 "            --disable-whois      \\\n"
@@ -76,6 +77,7 @@ msgid ""
 "            --disable-servers</userinput>"
 msgstr ""
 "<userinput remap=\"configure\">./configure --prefix=/usr        \\\n"
+"            --bindir=/usr/bin    \\\n"
 "            --localstatedir=/var \\\n"
 "            --disable-logger     \\\n"
 "            --disable-whois      \\\n"
@@ -187,8 +189,8 @@ msgstr "将一个程序移动到正确的位置："
 
 #. type: Content of: <sect1><sect2><screen>
 #, no-wrap
-msgid "<userinput remap=\"install\">mv -v /{,s}bin/ifconfig</userinput>"
-msgstr "<userinput remap=\"install\">mv -v /{,s}bin/ifconfig</userinput>"
+msgid "<userinput remap=\"install\">mv -v /usr/{,s}bin/ifconfig</userinput>"
+msgstr "<userinput remap=\"install\">mv -v /usr/{,s}bin/ifconfig</userinput>"
 
 #. type: Content of: <sect1><sect2><title>
 msgid "Contents of Inetutils"

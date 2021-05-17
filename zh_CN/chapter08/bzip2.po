@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2021-05-12 17:13+0800\n"
+"POT-Creation-Date: 2021-05-17 23:30+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -158,15 +158,25 @@ msgstr ""
 #. type: Content of: <sect1><sect2><para>
 msgid ""
 "Install the shared <command>bzip2</command> binary into the <filename class="
-"\"directory\">/bin</filename> directory:"
+"\"directory\">/usr/bin</filename> directory, and replace two copies of "
+"<command>bzip2</command> with symlinks:"
 msgstr ""
 "安装链接到共享库的 <command>bzip2</command> 二进制程序到 <filename class="
-"\"directory\">/bin</filename> 目录："
+"\"directory\">/bin</filename> 目录，并将两个和 <command>bzip2</command> "
+"完全相同的文件替换成符号链接："
 
 #. type: Content of: <sect1><sect2><screen>
 #, no-wrap
-msgid "<userinput remap=\"install\">cp -v bzip2-shared /bin/bzip2</userinput>"
-msgstr "<userinput remap=\"install\">cp -v bzip2-shared /bin/bzip2</userinput>"
+msgid ""
+"<userinput remap=\"install\">cp -v bzip2-shared /usr/bin/bzip2\n"
+"for i in /usr/bin/{bzcat,bunzip2}; do\n"
+"  ln -sfv bzip2 $i\n"
+"done</userinput>"
+msgstr ""
+"<userinput remap=\"install\">cp -v bzip2-shared /usr/bin/bzip2\n"
+"for i in /usr/bin/{bzcat,bunzip2}; do\n"
+"  ln -sfv bzip2 $i\n"
+"done</userinput>"
 
 #. type: Content of: <sect1><sect2><para>
 msgid "Remove an useless static library:"
@@ -373,5 +383,3 @@ msgstr "这个库实现基于 Burrows-Wheeler 算法的无损块排序数据压�
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 msgid "libbz2"
 msgstr "libbz2"
-
-#, no-wrap
