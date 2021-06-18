@@ -52,7 +52,7 @@ git checkout 10.1 --recurse-submodules
 之后即可生成手册：
 
 ```
-make html nochunks pdf REV=sysv LFS_EN=/local/path/to/lfs/en
+make html nochunks pdf REV=sysv
 ```
 
 生成的手册将位于 `zh_CN/book/render` 中。
