@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2021-05-12 17:13+0800\n"
+"POT-Creation-Date: 2021-06-23 22:19+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -117,8 +117,14 @@ msgid "<userinput remap=\"test\">make check</userinput>"
 msgstr "<userinput remap=\"test\">make check</userinput>"
 
 #. type: Content of: <sect1><sect2><para>
-msgid "One test, capabilities: binary store/restore, is known to fail."
-msgstr "已知一项名为 capabilities: binary store/restore 的测试会失败。"
+msgid ""
+"One test, capabilities: binary store/restore, is known to fail if it is run "
+"(LFS lacks selinux), but will be skipped if the host kernel does not support "
+"extended attributes on the filesystem used for building LFS."
+msgstr ""
+"一项名为 capabilities: binary store/restore 的测试在运行时会失败，"
+"然而如果宿主系统的内核在构建 LFS 使用的文件系统上不支持扩展属性，"
+"该测试会被跳过。"
 
 #. type: Content of: <sect1><sect2><para>
 msgid "Install the package:"
