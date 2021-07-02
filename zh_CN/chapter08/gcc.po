@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2021-06-30 11:53+0800\n"
+"POT-Creation-Date: 2021-07-02 15:22+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -59,6 +59,18 @@ msgstr "&gcc-fin-du;"
 #. type: Content of: <sect1><sect2><title>
 msgid "Installation of GCC"
 msgstr "安装 GCC"
+
+#. type: Content of: <sect1><sect2><para>
+msgid ""
+"First, apply a patch to fix some regressions and to cope with the removal of "
+"an obsolete kernel header in linux-5.13:"
+msgstr ""
+"首先，应用补丁以修复一些退化问题，并解除对于 linux-5.13 中移除的过时内核头文件的依赖："
+
+#. type: Content of: <sect1><sect2><screen>
+#, no-wrap
+msgid "<userinput remap=\"pre\">patch -Np1 -i ../gcc-&gcc-version;-upstream_fixes-1.patch</userinput>"
+msgstr "<userinput remap=\"pre\">patch -Np1 -i ../gcc-&gcc-version;-upstream_fixes-1.patch</userinput>"
 
 #. type: Content of: <sect1><sect2><para>
 msgid ""
@@ -236,8 +248,8 @@ msgid ""
 "to fail.  These are all because the locale definitions in glibc have changed "
 "but libstdc++ does not currently support those changes."
 msgstr ""
-"在 libstdc++ 测试中，一项 numpuct 测试和六项与 get_time 有关的测试会失败。"
-"这是由于 glibc 更新了 locale 定义，但是 libstdc++ 尚不支持这些变化。"
+"在 libstdc++ 测试中，一项 numpuct 测试和六项与 get_time 有关的测试会失败。这"
+"是由于 glibc 更新了 locale 定义，但是 libstdc++ 尚不支持这些变化。"
 
 #. type: Content of: <sect1><sect2><para>
 msgid ""
