@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2021-02-20 08:46+0800\n"
+"POT-Creation-Date: 2021-07-07 20:06+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -66,19 +66,33 @@ msgid "Installation of DejaGNU"
 msgstr "安装 DejaGNU"
 
 #. type: Content of: <sect1><sect2><para>
+msgid ""
+"The upstream recommends building DejaGNU in a dedicated build directory:"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><screen>
+#, no-wrap
+msgid ""
+"<userinput remap=\"pre\">mkdir -v build\n"
+"cd       build</userinput>"
+msgstr ""
+"<userinput remap=\"pre\">mkdir -v build\n"
+"cd       build</userinput>"
+
+#. type: Content of: <sect1><sect2><para>
 msgid "Prepare DejaGNU for compilation:"
 msgstr "准备编译 DejaGNU："
 
 #. type: Content of: <sect1><sect2><screen>
 #, no-wrap
 msgid ""
-"<userinput remap=\"configure\">./configure --prefix=/usr\n"
-"makeinfo --html --no-split -o doc/dejagnu.html doc/dejagnu.texi\n"
-"makeinfo --plaintext       -o doc/dejagnu.txt  doc/dejagnu.texi</userinput>"
+"<userinput remap=\"configure\">../configure --prefix=/usr\n"
+"makeinfo --html --no-split -o doc/dejagnu.html ../doc/dejagnu.texi\n"
+"makeinfo --plaintext       -o doc/dejagnu.txt  ../doc/dejagnu.texi</userinput>"
 msgstr ""
-"<userinput remap=\"configure\">./configure --prefix=/usr\n"
-"makeinfo --html --no-split -o doc/dejagnu.html doc/dejagnu.texi\n"
-"makeinfo --plaintext       -o doc/dejagnu.txt  doc/dejagnu.texi</userinput>"
+"<userinput remap=\"configure\">../configure --prefix=/usr\n"
+"makeinfo --html --no-split -o doc/dejagnu.html ../doc/dejagnu.texi\n"
+"makeinfo --plaintext       -o doc/dejagnu.txt  ../doc/dejagnu.texi</userinput>"
 
 #. type: Content of: <sect1><sect2><para>
 msgid "Build and install the package:"
