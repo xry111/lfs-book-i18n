@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2021-06-04 21:05+0800\n"
+"POT-Creation-Date: 2021-07-09 12:55+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -61,26 +61,22 @@ msgid "Installation of systemd"
 msgstr "安装 systemd"
 
 #. type: Content of: <sect1><sect2><para>
-msgid "First, apply a patch to fix some build issues:"
-msgstr "首先，应用一个补丁，修复构建过程中的问题："
-
-#. type: Content of: <sect1><sect2><screen>
-#, no-wrap
-msgid "<userinput remap=\"pre\">patch -Np1 -i ../systemd-&systemd-version;-upstream_fixes-1.patch</userinput>"
-msgstr "<userinput remap=\"pre\">patch -Np1 -i ../systemd-&systemd-version;-upstream_fixes-1.patch</userinput>"
-
-#. type: Content of: <sect1><sect2><para>
 msgid ""
-"Remove an unneeded group, <systemitem class=\"groupname\">render</"
-"systemitem>, from the default udev rules:"
+"Remove two unneeded groups, <systemitem class=\"groupname\">render</"
+"systemitem> and <systemitem class=\"groupname\">sgx</systemitem>, from the "
+"default udev rules:"
 msgstr ""
 "从默认的 udev 规则中删除不必要的组 <systemitem class=\"groupname\">render</"
-"systemitem>："
+"systemitem> 和 <systemitem class=\"groupname\">sgx</systemitem>："
 
 #. type: Content of: <sect1><sect2><screen>
 #, no-wrap
-msgid "<userinput remap=\"pre\">sed -i 's/GROUP=\"render\"/GROUP=\"video\"/' rules.d/50-udev-default.rules.in</userinput>"
-msgstr "<userinput remap=\"pre\">sed -i 's/GROUP=\"render\"/GROUP=\"video\"/' rules.d/50-udev-default.rules.in</userinput>"
+msgid ""
+"<userinput remap=\"pre\"> sed -i -e 's/GROUP=\"render\"/GROUP=\"video\"/' \\\n"
+"        -e 's/GROUP=\"sgx\", //' rules.d/50-udev-default.rules.in</userinput>"
+msgstr ""
+"<userinput remap=\"pre\"> sed -i -e 's/GROUP=\"render\"/GROUP=\"video\"/' \\\n"
+"        -e 's/GROUP=\"sgx\", //' rules.d/50-udev-default.rules.in</userinput>"
 
 #. type: Content of: <sect1><sect2><para>
 msgid "Prepare systemd for compilation:"
@@ -148,8 +144,8 @@ msgid ""
 "This switch overrides the default buildtype (<quote>debug</quote>), which "
 "would produce unoptimized binaries."
 msgstr ""
-"这个开关覆盖默认的构建模式 (<quote>debug</quote>)，"
-"因为该模式会生成未优化的二进制代码。"
+"这个开关覆盖默认的构建模式 (<quote>debug</quote>)，因为该模式会生成未优化的二"
+"进制代码。"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 msgid "<parameter>-Ddefault-dnssec=no</parameter>"
@@ -1122,3 +1118,10 @@ msgstr "用于访问 udev 设备信息的库"
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 msgid "libudev"
 msgstr "libudev"
+
+#~ msgid "First, apply a patch to fix some build issues:"
+#~ msgstr "首先，应用一个补丁，修复构建过程中的问题："
+
+#, no-wrap
+#~ msgid "<userinput remap=\"pre\">patch -Np1 -i ../systemd-&systemd-version;-upstream_fixes-1.patch</userinput>"
+#~ msgstr "<userinput remap=\"pre\">patch -Np1 -i ../systemd-&systemd-version;-upstream_fixes-1.patch</userinput>"
