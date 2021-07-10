@@ -17,6 +17,7 @@ sed -e 's|<book>|<book lang="zh_cn">|' -i index.xml
 sed -e 's/Approximate build time/估计构建时间/'               \
 	-e 's/Required disk space/需要硬盘空间/'                  \
 	-e 's/Installation depends on/安装依赖于/'                \
+	-e 's/Required at runtime/运行时依赖于/'                  \
 	-e 's/Test suite depends on/测试依赖于/'                  \
 	-e 's/Must be installed before/必须在下列软件包之前安装/' \
 	-e 's/Optional dependencies/可选依赖项/'                  \

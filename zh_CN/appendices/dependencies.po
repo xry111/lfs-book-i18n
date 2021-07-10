@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Linux From Scratch 11.0\n"
 "Report-Msgid-Bugs-To: lfs-dev@lists.linuxfromscratch.org\n"
-"POT-Creation-Date: 2021-07-09 13:40+0800\n"
+"POT-Creation-Date: 2021-07-10 23:10+0800\n"
 "PO-Revision-Date: 2021-07-09 13:42+0800\n"
 "Last-Translator: Xi Ruoyao <xry111@mengyan1223.wang>\n"
 "Language-Team: None <noreply@mengyan1223.wang>\n"
@@ -43,11 +43,13 @@ msgstr ""
 
 #. type: Content of: <appendix><para>
 msgid ""
-"For each package we build, we have listed three, and sometimes four, types "
-"of dependencies.  The first lists what other packages need to be available "
-"in order to compile and install the package in question. The second lists "
-"what packages, in addition to those on the first list, need to be available "
-"in order to run the test suites. The third list of dependencies are packages "
+"For each package that is built, there are three, and sometimes up to five "
+"types of dependencies listed below. The first lists what other packages need "
+"to be available in order to compile and install the package in question.  "
+"The second lists the packages that must be available when any programs or "
+"libraries from the package are used at runtime. The third lists what "
+"packages, in addition to those on the first list, need to be available in "
+"order to run the test suites. The fourth list of dependencies are packages "
 "that require this package to be built and installed in its final location "
 "before they are built and installed. In most cases, this is because these "
 "packages will hard code paths to binaries within their scripts. If not built "
@@ -55,9 +57,11 @@ msgid ""
 "placed inside scripts installed to the final system. This is obviously not "
 "desirable."
 msgstr ""
-"对于我们构建的每个软件包，我们都列出了三种甚至四种依赖关系。第一种列出了编译"
-"和安装该软件包需要的其他软件包。第二种列出了不属于第一种情况，但在运行该软件"
-"包测试套件时需要的其他软件包。第三种列出了在构建和安装前，需要该软件包已经构"
+"对于我们构建的每个软件包，我们都列出了三到五种依赖关系。第一种列出了编译"
+"和安装该软件包需要的其他软件包。"
+"第二种列出了在运行该软件包提供的程序或库时必要的软件包。"
+"第三种列出了不属于第一种情况，但在运行该软件"
+"包测试套件时需要的软件包。第四种列出了在构建和安装前，需要该软件包已经构"
 "建并安装到最终位置的其他软件包。多数情况下，这是因为它们会在脚本中硬编码指向"
 "二进制程序的路径。如果不按照特定顺序构建，则最终的系统中某个脚本可能包含路"
 "径 /tools/bin/[二进制程序]，这显然是我们不希望的。"
@@ -65,13 +69,13 @@ msgstr ""
 #. type: Content of: <appendix><para>
 msgid ""
 "The last list of dependencies are optional packages that are not addressed "
-"in LFS, but could be useful to the user.  These packages may have additional "
-"mandatory or optional dependencies of their own.  For these dependencies, "
-"the recommended practice is to install them after completion of the LFS book "
-"and then go back and rebuild the LFS package.  In several cases, re-"
-"installation is addressed in BLFS."
+"in LFS, but could be useful to the user. These packages may have additional "
+"mandatory or optional dependencies of their own. For these dependencies, the "
+"recommended practice is to install them after completion of the LFS book and "
+"then go back and rebuild the LFS package. In several cases, re-installation "
+"is addressed in BLFS."
 msgstr ""
-"第四种列出的依赖关系是 LFS 中没有提到的可选软件包，但它们对用户可能很有用。这"
+"最后一种依赖关系是 LFS 中没有提到的可选软件包，但它们对用户可能很有用。这"
 "些软件包本身可能还有必要或可选的依赖关系。对于这些依赖关系，推荐的方法是在完"
 "成 LFS 手册后，安装可选依赖项，再重新构建相关的 LFS 软件包。BLFS 提到了几个软"
 "件包的重新安装方法。"
@@ -91,6 +95,14 @@ msgid ""
 msgstr ""
 "Attr, Bash, Binutils, Coreutils, GCC, Gettext, Grep, M4, Make, Perl, Sed, 以"
 "及 Texinfo"
+
+#. type: Content of: <appendix><segmentedlist><segtitle>
+msgid "&runtime;"
+msgstr "&runtime;"
+
+#. type: Content of: <appendix><segmentedlist><seglistitem><seg>
+msgid "Attr and Glibc"
+msgstr "Attr 和 Glibc"
 
 #. type: Content of: <appendix><segmentedlist><segtitle>
 msgid "&testsuites;"
@@ -122,11 +134,15 @@ msgstr "Attr"
 
 #. type: Content of: <appendix><segmentedlist><seglistitem><seg>
 msgid ""
-"Bash, Binutils, Coreutils, GCC, Gettext, Grep, M4, Make, Perl, Sed, and "
-"Texinfo"
+"Bash, Binutils, Coreutils, GCC, Gettext, Glibc, Grep, M4, Make, Perl, Sed, "
+"and Texinfo"
 msgstr ""
-"Bash, Binutils, Coreutils, GCC, Gettext, Grep, M4, Make, Perl, Sed, 以及 "
-"Texinfo"
+"Bash, Binutils, Coreutils, GCC, Gettext, Glibc, Grep, M4, Make, Perl, Sed, "
+"以及 Texinfo"
+
+#. type: Content of: <appendix><segmentedlist><seglistitem><seg>
+msgid "Glibc"
+msgstr "Glibc"
 
 #. type: Content of: <appendix><segmentedlist><seglistitem><seg>
 msgid "Acl and Libcap"
@@ -141,6 +157,10 @@ msgid "Bash, Coreutils, Grep, M4, Make, Perl, Sed, and Texinfo"
 msgstr "Bash, Coreutils, Grep, M4, Make, Perl, Sed, 以及 Texinfo"
 
 #. type: Content of: <appendix><segmentedlist><seglistitem><seg>
+msgid "Bash, Coreutils, Grep, M4, Make, Sed, and Texinfo"
+msgstr "Bash, Coreutils, Grep, M4, Make, Sed, 以及 Texinfo"
+
+#. type: Content of: <appendix><segmentedlist><seglistitem><seg>
 msgid "Automake, Diffutils, Findutils, GCC, and Libtool"
 msgstr "Automake, Diffutils, Findutils, GCC, 以及 Libtool"
 
@@ -149,14 +169,18 @@ msgid "Automake"
 msgstr "Automake"
 
 #. type: Content of: <appendix><segmentedlist><seglistitem><seg>
-msgid "Emacs"
-msgstr "Emacs"
+msgid "<ulink url=\"&blfs-book;postlfs/emacs.html\">Emacs</ulink>"
+msgstr "<ulink url=\"&blfs-book;postlfs/emacs.html\">Emacs</ulink>"
 
 #. type: Content of: <appendix><segmentedlist><seglistitem><seg>
 msgid ""
 "Autoconf, Bash, Coreutils, Gettext, Grep, M4, Make, Perl, Sed, and Texinfo"
 msgstr ""
 "Autoconf, Bash, Coreutils, Gettext, Grep, M4, Make, Perl, Sed, 以及 Texinfo"
+
+#. type: Content of: <appendix><segmentedlist><seglistitem><seg>
+msgid "Bash, Coreutils, Grep, M4, Sed, and Texinfo"
+msgstr "Bash, Coreutils, Grep, M4, Sed, 以及 Texinfo"
 
 #. type: Content of: <appendix><segmentedlist><seglistitem><seg>
 msgid ""
@@ -178,13 +202,17 @@ msgstr ""
 "Bash, Binutils, Bison, Coreutils, Diffutils, Gawk, GCC, Glibc, Grep, Make, "
 "Ncurses, Patch, Readline, Sed, 以及 Texinfo"
 
+#. type: Content of: <appendix><segmentedlist><seglistitem><seg>
+msgid "Glibc, Ncurses, and Readline"
+msgstr "Glibc, Ncurses, 以及 Readline"
+
 #. type: Content of: <appendix><bridgehead>
 msgid "Shadow"
 msgstr "Shadow"
 
 #. type: Content of: <appendix><segmentedlist><seglistitem><seg>
-msgid "Xorg"
-msgstr "Xorg"
+msgid "<ulink url=\"&blfs-book;x/installing.html\">Xorg</ulink>"
+msgstr "<ulink url=\"&blfs-book;x/installing.html\">Xorg</ulink>"
 
 #. type: Content of: <appendix><bridgehead>
 msgid "Bc"
@@ -198,9 +226,9 @@ msgstr "Bash, Binutils, Coreutils, GCC, Glibc, Grep, 以及 Make"
 msgid "Gawk"
 msgstr "Gawk"
 
-#. type: Content of: <appendix><bridgehead>
-msgid "Linux Kernel"
-msgstr "Linux Kernel"
+#. type: Content of: <appendix><segmentedlist><seglistitem><seg>
+msgid "Linux"
+msgstr "Linux"
 
 #. type: Content of: <appendix><bridgehead>
 msgid "Binutils"
@@ -215,12 +243,16 @@ msgstr ""
 "Make, Perl, Sed, Texinfo, 以及 Zlib"
 
 #. type: Content of: <appendix><segmentedlist><seglistitem><seg>
+msgid "Glibc and Zlib"
+msgstr "Glibc 和 Zlib"
+
+#. type: Content of: <appendix><segmentedlist><seglistitem><seg>
 msgid "DejaGNU and Expect"
 msgstr "DejaGNU 和 Expect"
 
 #. type: Content of: <appendix><segmentedlist><seglistitem><seg>
-msgid "Debuginfod"
-msgstr "Debuginfod"
+msgid "<ulink url=\"https://sourceware.org/elfutils/\">Elfutils</ulink>"
+msgstr "<ulink url=\"https://sourceware.org/elfutils/\">Elfutils</ulink>"
 
 #. type: Content of: <appendix><bridgehead>
 msgid "Bison"
@@ -242,8 +274,8 @@ msgid "Kbd and Tar"
 msgstr "Kbd 和 Tar"
 
 #. type: Content of: <appendix><segmentedlist><seglistitem><seg>
-msgid "Doxygen (test suite)"
-msgstr "Doxygen (测试套件)"
+msgid "<ulink url=\"&blfs-book;general/doxygen.html\">Doxygen</ulink>"
+msgstr "<ulink url=\"&blfs-book;general/doxygen.html\">Doxygen</ulink>"
 
 #. type: Content of: <appendix><bridgehead>
 msgid "Bzip2"
@@ -262,8 +294,12 @@ msgid "Check"
 msgstr "Check"
 
 #. type: Content of: <appendix><segmentedlist><seglistitem><seg>
-msgid "GCC, Grep, Make, Sed, and Texinfo"
-msgstr "GCC, Grep, Make, Sed, 以及 Texinfo"
+msgid "Gawk, GCC, Grep, Make, Sed, and Texinfo"
+msgstr "Gawk, GCC, Grep, Make, Sed, 以及 Texinfo"
+
+#. type: Content of: <appendix><segmentedlist><seglistitem><seg>
+msgid "Bash and Gawk"
+msgstr "Bash 和 Gawk"
 
 #. type: Content of: <appendix><segmentedlist><seglistitem><seg>
 msgid "Coreutils"
@@ -286,16 +322,24 @@ msgid "Bash, Diffutils, Eudev, Findutils, and Man-DB"
 msgstr "Bash, Diffutils, Findutils, 以及 Man-DB"
 
 #. type: Content of: <appendix><segmentedlist><seglistitem><seg>
-msgid "Perl Expect and IO:Tty modules (for test suite)"
-msgstr "Perl 模块 Expect 和 IO:Tty (测试套件)"
+msgid ""
+"<ulink url=\"https://metacpan.org/pod/Expect\">Expect.pm</ulink> and <ulink "
+"url=\"https://metacpan.org/pod/IO::Tty\">IO::Tty</ulink>"
+msgstr ""
+"<ulink url=\"https://metacpan.org/pod/Expect\">Expect.pm</ulink> 和 <ulink "
+"url=\"https://metacpan.org/pod/IO::Tty\">IO::Tty</ulink>"
 
 #. type: Content of: <appendix><segmentedlist><seglistitem><seg>
 msgid "DejaGNU"
 msgstr "DejaGNU"
 
 #. type: Content of: <appendix><segmentedlist><seglistitem><seg>
-msgid "Bash, Coreutils, Diffutils, GCC, Grep, Make, Sed, and Texinfo"
-msgstr "Bash, Coreutils, Diffutils, GCC, Grep, Make, Sed, 以及 Texinfo"
+msgid "Bash, Coreutils, Diffutils, Expect, GCC, Grep, Make, Sed, and Texinfo"
+msgstr "Bash, Coreutils, Diffutils, Expect, GCC, Grep, Make, Sed, 以及 Texinfo"
+
+#. type: Content of: <appendix><segmentedlist><seglistitem><seg>
+msgid "Expect and Bash"
+msgstr "Expect 和 Bash"
 
 #. type: Content of: <appendix><segmentedlist><seglistitem><seg>
 msgid "Diffutils"
@@ -326,6 +370,10 @@ msgstr ""
 "Sed, Texinfo, 以及 Util-linux"
 
 #. type: Content of: <appendix><segmentedlist><seglistitem><seg>
+msgid "Glibc and Util-linux"
+msgstr "Glibc 和 Util-linux"
+
+#. type: Content of: <appendix><segmentedlist><seglistitem><seg>
 msgid "Procps-ng and Psmisc"
 msgstr "Procps-ng 和 Psmisc"
 
@@ -340,6 +388,10 @@ msgid ""
 msgstr ""
 "Bash, Binutils, Coreutils, Gawk, GCC, Glibc, Grep, Gperf, Make, Sed, 以及 "
 "Util-linux"
+
+#. type: Content of: <appendix><segmentedlist><seglistitem><seg>
+msgid "Glibc, Kmod, Xz, Util-linux, and Zlib."
+msgstr "Glibc, Kmod, Xz, Util-linux, 以及 Zlib"
 
 #. type: Content of: <appendix><bridgehead>
 msgid "Expat"
@@ -366,8 +418,12 @@ msgstr ""
 "及 Tcl"
 
 #. type: Content of: <appendix><segmentedlist><seglistitem><seg>
-msgid "<ulink url=\"&blfs-root;view/stable/general/tk.html\">tk</ulink>"
-msgstr "<ulink url=\"&blfs-root;view/stable/general/tk.html\">tk</ulink>"
+msgid "Glibc and Tcl"
+msgstr "Glibc 和 Tcl"
+
+#. type: Content of: <appendix><segmentedlist><seglistitem><seg>
+msgid "<ulink url=\"&blfs-book;general/tk.html\">Tk</ulink>"
+msgstr "<ulink url=\"&blfs-book;general/tk.html\">Tk</ulink>"
 
 #. type: Content of: <appendix><segmentedlist><seglistitem><seg>
 msgid ""
@@ -378,12 +434,12 @@ msgstr ""
 "Sed, Xz, 以及 Zlib"
 
 #. type: Content of: <appendix><segmentedlist><seglistitem><seg>
-msgid ""
-"<ulink url=\"&blfs-root;/view/stable/general/libseccomp.html\">Libseccomp</"
-"ulink>"
-msgstr ""
-"<ulink url=\"&blfs-root;/view/stable/general/libseccomp.html\">Libseccomp</"
-"ulink>"
+msgid "Glibc, Bzip2, Xz, and Zlib"
+msgstr "Glibc, Bzip2, Xz, 以及 Zlib"
+
+#. type: Content of: <appendix><segmentedlist><seglistitem><seg>
+msgid "<ulink url=\"&blfs-book;general/libseccomp.html\">libseccomp</ulink>"
+msgstr "<ulink url=\"&blfs-book;general/libseccomp.html\">libseccomp</ulink>"
 
 #. type: Content of: <appendix><bridgehead>
 msgid "Findutils"
@@ -394,6 +450,10 @@ msgid ""
 "Bash, Binutils, Coreutils, GCC, Gettext, Glibc, Grep, Make, Sed, and Texinfo"
 msgstr ""
 "Bash, Binutils, Coreutils, GCC, Gettext, Glibc, Grep, Make, Sed, 以及 Texinfo"
+
+#. type: Content of: <appendix><segmentedlist><seglistitem><seg>
+msgid "Bash and Glibc"
+msgstr "Bash 和 Glibc"
 
 #. type: Content of: <appendix><segmentedlist><seglistitem><seg>
 msgid "DejaGNU, Diffutils, and Expect"
@@ -412,6 +472,10 @@ msgstr ""
 "以及 Texinfo"
 
 #. type: Content of: <appendix><segmentedlist><seglistitem><seg>
+msgid "Bash, Glibc, and M4"
+msgstr "Bash, Glibc, 以及 M4"
+
+#. type: Content of: <appendix><segmentedlist><seglistitem><seg>
 msgid "Bison and Gawk"
 msgstr "Bison 和 Gawk"
 
@@ -428,8 +492,12 @@ msgstr ""
 "Patch, Readline, Sed, 以及 Texinfo"
 
 #. type: Content of: <appendix><segmentedlist><seglistitem><seg>
-msgid "libsigsegv"
-msgstr "libsigsegv"
+msgid "Bash, Glibc, and Mpfr"
+msgstr "Bash, Glibc, 以及 Mpfr"
+
+#. type: Content of: <appendix><segmentedlist><seglistitem><seg>
+msgid "<ulink url=\"&blfs-book;general/libsigsegv.html\">libsigsegv</ulink>"
+msgstr "<ulink url=\"&blfs-book;general/libsigsegv.html\">libsigsegv</ulink>"
 
 #. type: Content of: <appendix><segmentedlist><seglistitem><seg>
 msgid "GCC"
@@ -442,6 +510,10 @@ msgid ""
 msgstr ""
 "Bash, Binutils, Coreutils, Diffutils, Findutils, Gawk, GCC, Gettext, Glibc, "
 "GMP, Grep, M4, Make, MPC, MPFR, Patch, Perl, Sed, Tar, Texinfo, 以及 Zstd"
+
+#. type: Content of: <appendix><segmentedlist><seglistitem><seg>
+msgid "Bash, Binutils, Glibc, Mpc, and Python"
+msgstr "Bash, Binutils, Glibc, Mpc, 以及 Python"
 
 #. type: Content of: <appendix><segmentedlist><seglistitem><seg>
 msgid "DejaGNU, Expect, and Shadow"
@@ -463,6 +535,10 @@ msgstr "GDBM"
 msgid "Bash, Binutils, Coreutils, Diffutils, GCC, Grep, Make, and Sed"
 msgstr "Bash, Binutils, Coreutils, Diffutils, GCC, Grep, Make, 以及 Sed"
 
+#. type: Content of: <appendix><segmentedlist><seglistitem><seg>
+msgid "Bash, Glibc, and Readline"
+msgstr "Bash, Glibc, 以及 Readline"
+
 #. type: Content of: <appendix><bridgehead>
 msgid "Gettext"
 msgstr "Gettext"
@@ -476,16 +552,16 @@ msgstr ""
 "Texinfo"
 
 #. type: Content of: <appendix><segmentedlist><seglistitem><seg>
+msgid "Acl, Bash, Gcc, and Glibc"
+msgstr "Acl, Bash, Gcc, 以及 Glibc"
+
+#. type: Content of: <appendix><segmentedlist><seglistitem><seg>
 msgid "Diffutils, Perl, and Tcl"
 msgstr "Diffutils, Perl, 以及 Tcl"
 
 #. type: Content of: <appendix><segmentedlist><seglistitem><seg>
 msgid "Automake and Bison"
 msgstr "Automake 和 Bison"
-
-#. type: Content of: <appendix><bridgehead>
-msgid "Glibc"
-msgstr "Glibc"
 
 #. type: Content of: <appendix><segmentedlist><seglistitem><seg>
 msgid ""
@@ -506,6 +582,10 @@ msgid ""
 msgstr ""
 "Bash, Binutils, Coreutils, Diffutils, Gawk, GCC, Glibc, Grep, M4, Make, Sed, "
 "以及 Texinfo"
+
+#. type: Content of: <appendix><segmentedlist><seglistitem><seg>
+msgid "GCC and Glibc"
+msgstr "GCC 和 Glibc"
 
 #. type: Content of: <appendix><segmentedlist><seglistitem><seg>
 msgid "MPFR and GCC"
@@ -540,8 +620,12 @@ msgid "Man-DB"
 msgstr "Man-DB"
 
 #. type: Content of: <appendix><segmentedlist><seglistitem><seg>
-msgid "Pcre and libsigsegv"
-msgstr "Pcre 和 libsigsegv"
+msgid ""
+"<ulink url=\"&blfs-book;general/pcre.html\">PCRE</ulink> and <ulink url="
+"\"&blfs-book;general/libsigsegv.html\">libsigsegv</ulink>"
+msgstr ""
+"<ulink url=\"&blfs-book;general/pcre.html\">PCRE</ulink> 和 <ulink url="
+"\"&blfs-book;general/libsigsegv.html\">libsigsegv</ulink>"
 
 #. type: Content of: <appendix><bridgehead>
 msgid "Groff"
@@ -556,6 +640,10 @@ msgstr ""
 "以及 Texinfo"
 
 #. type: Content of: <appendix><segmentedlist><seglistitem><seg>
+msgid "GCC, Glibc, and Perl"
+msgstr "GCC, Glibc, 以及 Perl"
+
+#. type: Content of: <appendix><segmentedlist><seglistitem><seg>
 msgid "No test suite available"
 msgstr "没有可用的测试套件"
 
@@ -564,8 +652,12 @@ msgid "Man-DB and Perl"
 msgstr "Man-DB 和 Perl"
 
 #. type: Content of: <appendix><segmentedlist><seglistitem><seg>
-msgid "Ghostscript and uchardet"
-msgstr "Ghostscript 和 uchardet"
+msgid ""
+"<ulink url=\"&blfs-book;pst/gs.html\">ghostscript</ulink> and <ulink url="
+"\"&blfs-book;general/uchardet.html\">Uchardet</ulink>"
+msgstr ""
+"<ulink url=\"&blfs-book;pst/gs.html\">ghostscript</ulink> 和 <ulink url="
+"\"&blfs-book;general/uchardet.html\">Uchardet</ulink>"
 
 #. type: Content of: <appendix><bridgehead>
 msgid "GRUB"
@@ -578,6 +670,10 @@ msgid ""
 msgstr ""
 "Bash, Binutils, Bison, Coreutils, Diffutils, GCC, Gettext, Glibc, Grep, "
 "Make, Ncurses, Sed, Texinfo, 以及 Xz"
+
+#. type: Content of: <appendix><segmentedlist><seglistitem><seg>
+msgid "Bash, GCC, Gettext, Glibc, Xz, and Sed."
+msgstr "Bash, GCC, Gettext, Glibc, Xz, 以及 Sed."
 
 #. type: Content of: <appendix><segmentedlist><seglistitem><seg>
 msgid "Gzip"
@@ -595,10 +691,6 @@ msgstr "Diffutils 和 Less"
 msgid "Iana-Etc"
 msgstr "Iana-Etc"
 
-#. type: Content of: <appendix><segmentedlist><seglistitem><seg>
-msgid "Coreutils, Gawk, and Make"
-msgstr "Coreutils, Gawk, 以及 Make"
-
 #. type: Content of: <appendix><bridgehead>
 msgid "Inetutils"
 msgstr "Inetutils"
@@ -610,6 +702,10 @@ msgid ""
 msgstr ""
 "Bash, Binutils, Coreutils, GCC, Glibc, Grep, Make, Ncurses, Patch, Sed, "
 "Texinfo, 以及 Zlib"
+
+#. type: Content of: <appendix><segmentedlist><seglistitem><seg>
+msgid "GCC, Glibc, Ncurses, and Readline"
+msgstr "GCC, Glibc, Ncurses, 以及 Readline"
 
 #. type: Content of: <appendix><bridgehead>
 msgid "Tar"
@@ -623,21 +719,33 @@ msgstr "Intltool"
 msgid "Bash, Gawk, Glibc, Make, Perl, Sed, and XML::Parser"
 msgstr "Bash, Gawk, Glibc, Make, Perl, Sed, 以及 XML::Parser"
 
+#. type: Content of: <appendix><segmentedlist><seglistitem><seg>
+msgid "Autoconf, Automake, Bash, Glibc, Grep, Perl, and Sed"
+msgstr "Autoconf, Automake, Bash, Glibc, Grep, Perl, 以及 Sed"
+
 #. type: Content of: <appendix><bridgehead>
 msgid "IProute2"
 msgstr "IProute2"
 
 #. type: Content of: <appendix><segmentedlist><seglistitem><seg>
 msgid ""
-"Bash, Bison, Coreutils, Flex, GCC, Glibc, Make, Libcap, Libelf, and Linux "
-"API Headers"
+"Bash, Bison, Coreutils, Flex, GCC, Glibc, Make, Libcap, Libelf, Linux API "
+"Headers, and Zlib"
 msgstr ""
-"Bash, Bison, Coreutils, Flex, GCC, Glibc, Make, Libcap, Libelf, 以及 Linux "
-"API 头文件"
+"Bash, Bison, Coreutils, Flex, GCC, Glibc, Make, Libcap, Libelf, Linux "
+"API 头文件, 以及 Zlib"
 
 #. type: Content of: <appendix><segmentedlist><seglistitem><seg>
-msgid "Berkeley DB and Iptables"
-msgstr "Berkeley DB 和 Iptables"
+msgid "Bash, Coreutils, Glibc, Libcap, Libelf, and Zlib"
+msgstr "Bash, Coreutils, Glibc, Libcap, Libelf, 以及 Zlib"
+
+#. type: Content of: <appendix><segmentedlist><seglistitem><seg>
+msgid ""
+"<ulink url=\"&blfs-book;server/db.html\">Berkeley DB</ulink> and <ulink url="
+"\"&blfs-book;postlfs/iptables.html\">iptables</ulink>"
+msgstr ""
+"<ulink url=\"&blfs-book;server/db.html\">Berkeley DB</ulink> 和 <ulink url="
+"\"&blfs-book;postlfs/iptables.html\">iptables</ulink>"
 
 #. type: Content of: <appendix><segmentedlist><seglistitem><seg>
 msgid "Jinja2"
@@ -664,16 +772,24 @@ msgstr ""
 "Make, Patch, 以及 Sed"
 
 #. type: Content of: <appendix><segmentedlist><seglistitem><seg>
+msgid "Bash, Coreutils, and Glibc"
+msgstr "Bash, Coreutils, 以及 Glibc"
+
+#. type: Content of: <appendix><segmentedlist><seglistitem><seg>
 msgid "Kmod"
 msgstr "Kmod"
 
 #. type: Content of: <appendix><segmentedlist><seglistitem><seg>
 msgid ""
 "Bash, Binutils, Bison, Coreutils, Flex, GCC, Gettext, Glibc, Gzip, Make, Pkg-"
-"config, Sed, Xz-Utils, and Zlib"
+"config, Sed, Xz, and Zlib"
 msgstr ""
 "Bash, Binutils, Bison, Coreutils, Flex, GCC, Gettext, Glibc, Gzip, Make, Pkg-"
-"config, Sed, Xz-Utils, 以及 Zlib"
+"config, Sed, Xz, 以及 Zlib"
+
+#. type: Content of: <appendix><segmentedlist><seglistitem><seg>
+msgid "Glibc, Xz, and Zlib"
+msgstr "Glibc, Xz, 以及 Zlib"
 
 #. type: Content of: <appendix><bridgehead>
 msgid "Less"
@@ -688,8 +804,12 @@ msgstr ""
 "Sed"
 
 #. type: Content of: <appendix><segmentedlist><seglistitem><seg>
-msgid "Pcre"
-msgstr "Pcre"
+msgid "Glibc and Ncurses"
+msgstr "Glibc 和 Ncurses"
+
+#. type: Content of: <appendix><segmentedlist><seglistitem><seg>
+msgid "<ulink url=\"&blfs-book;general/pcre.html\">PCRE</ulink>"
+msgstr "<ulink url=\"&blfs-book;general/pcre.html\">PCRE</ulink>"
 
 #. type: Content of: <appendix><bridgehead>
 msgid "Libcap"
@@ -704,16 +824,16 @@ msgid "IProute2 and Shadow"
 msgstr "IProute2 和 Shadow"
 
 #. type: Content of: <appendix><segmentedlist><seglistitem><seg>
-msgid "Linux-PAM"
-msgstr "Linux-PAM"
+msgid "<ulink url=\"&blfs-book;postlfs/linux-pam.html\">Linux-PAM</ulink>"
+msgstr "<ulink url=\"&blfs-book;postlfs/linux-pam.html\">Linux-PAM</ulink>"
 
 #. type: Content of: <appendix><bridgehead>
 msgid "Libelf"
 msgstr "Libelf"
 
 #. type: Content of: <appendix><segmentedlist><seglistitem><seg>
-msgid "IProute2 and Linux Kernel"
-msgstr "IProute2 和 Linux Kernel"
+msgid "IProute2 and Linux"
+msgstr "IProute2 和 Linux"
 
 #. type: Content of: <appendix><bridgehead>
 msgid "Libffi"
@@ -748,6 +868,14 @@ msgid "Libtool"
 msgstr "Libtool"
 
 #. type: Content of: <appendix><segmentedlist><seglistitem><seg>
+msgid ""
+"Autoconf, Automake, Bash, Binutils, Coreutils, File, GCC, Glibc, Grep, Make, "
+"and Sed"
+msgstr "Bash, Binutils, Coreutils, GCC, Glibc, Grep, Make, 以及 Sed"
+"Autoconf, Automake, Bash, Binutils, Coreutils, File, GCC, Glibc, Grep, Make, "
+"以及 Sed"
+
+#. type: Content of: <appendix><segmentedlist><seglistitem><seg>
 msgid "Autoconf, Automake, and Findutils"
 msgstr "Autoconf, Automake, 以及 Findutils"
 
@@ -758,6 +886,18 @@ msgid ""
 msgstr ""
 "Bash, Bc, Binutils, Coreutils, Diffutils, Findutils, GCC, Glibc, Grep, Gzip, "
 "Kmod, Libelf, Make, Ncurses, OpenSSL, Perl, 以及 Sed"
+
+#. type: Content of: <appendix><bridgehead>
+msgid "Linux API Headers"
+msgstr "Linux API 头文件"
+
+#. type: Content of: <appendix><segmentedlist><seglistitem><seg>
+msgid ""
+"Bash, Binutils, Coreutils, Findutils, GCC, Glibc, Grep, Gzip, Make, Perl, "
+"and Sed"
+msgstr ""
+"Bash, Binutils, Coreutils, Findutils, GCC, Glibc, Grep, Gzip, Make, Perl, "
+"以及 Sed"
 
 #. type: Content of: <appendix><bridgehead>
 msgid "M4"
@@ -776,12 +916,20 @@ msgid "Perl and Procps-ng"
 msgstr "Perl 和 Procps-ng"
 
 #. type: Content of: <appendix><segmentedlist><seglistitem><seg>
+msgid "<ulink url=\"&blfs-book;general/guile.html\">Guile</ulink>"
+msgstr "<ulink url=\"&blfs-book;general/guile.html\">Guile</ulink>"
+
+#. type: Content of: <appendix><segmentedlist><seglistitem><seg>
 msgid ""
 "Bash, Binutils, Bzip2, Coreutils, Flex, GCC, GDBM, Gettext, Glibc, Grep, "
 "Groff, Gzip, Less, Libpipeline, Make, Sed, and Xz"
 msgstr ""
 "Bash, Binutils, Bzip2, Coreutils, Flex, GCC, GDBM, Gettext, Glibc, Grep, "
 "Groff, Gzip, Less, Libpipeline, Make, Sed, 以及 Xz"
+
+#. type: Content of: <appendix><segmentedlist><seglistitem><seg>
+msgid "Bash, GDBM, Groff, Glibc, Gzip, Less, Libpipeline, and Zlib"
+msgstr "Bash, GDBM, Groff, Glibc, Gzip, Less, Libpipeline, 以及 Zlib"
 
 #. type: Content of: <appendix><bridgehead>
 msgid "Util-linux"
@@ -819,6 +967,10 @@ msgstr ""
 "Bash, Binutils, Coreutils, Diffutils, Gawk, GCC, Glibc, Grep, GMP, Make, "
 "MPFR, Sed, 以及 Texinfo"
 
+#. type: Content of: <appendix><segmentedlist><seglistitem><seg>
+msgid "Glibc, GMP, and MPFR"
+msgstr "Glibc, GMP, 以及 MPFR"
+
 #. type: Content of: <appendix><bridgehead>
 msgid "MPFR"
 msgstr "MPFR"
@@ -830,6 +982,10 @@ msgid ""
 msgstr ""
 "Bash, Binutils, Coreutils, Diffutils, Gawk, GCC, Glibc, Grep, GMP, Make, "
 "Sed, 以及 Texinfo"
+
+#. type: Content of: <appendix><segmentedlist><seglistitem><seg>
+msgid "Glibc and GMP"
+msgstr "Glibc 和 GMP"
 
 #. type: Content of: <appendix><segmentedlist><seglistitem><seg>
 msgid "Gawk and GCC"
@@ -864,8 +1020,16 @@ msgid "Binutils, Coreutils, GCC, and Python"
 msgstr "Binutils, Coreutils, GCC, 以及 Python"
 
 #. type: Content of: <appendix><segmentedlist><seglistitem><seg>
-msgid "Asciidoc, Doxygen, Emacs, and re2c"
-msgstr "Asciidoc, Doxygen, Emacs, 以及 re2c"
+msgid ""
+"<ulink url=\"&blfs-book;general/asciidoc.html\">Asciidoc</ulink>, <ulink url="
+"\"&blfs-book;general/doxygen.html\">Doxygen</ulink>, <ulink url=\"&blfs-book;"
+"postlfs/emacs.html\">Emacs</ulink>, and <ulink url=\"https://re2c.org/"
+"\">re2c</ulink>"
+msgstr ""
+"<ulink url=\"&blfs-book;general/asciidoc.html\">Asciidoc</ulink>, <ulink url="
+"\"&blfs-book;general/doxygen.html\">Doxygen</ulink>, <ulink url=\"&blfs-book;"
+"postlfs/emacs.html\">Emacs</ulink>, 以及 <ulink url=\"https://re2c.org/"
+"\">re2c</ulink>"
 
 #. type: Content of: <appendix><bridgehead>
 msgid "Openssl"
@@ -876,8 +1040,8 @@ msgid "Binutils, Coreutils, GCC, Make, and Perl"
 msgstr "Binutils, Coreutils, Gcc, Make, 以及 Perl"
 
 #. type: Content of: <appendix><segmentedlist><seglistitem><seg>
-msgid "Linux"
-msgstr "Linux"
+msgid "Glibc and Perl"
+msgstr "Glibc 和 Perl"
 
 #. type: Content of: <appendix><bridgehead>
 msgid "Patch"
@@ -888,8 +1052,12 @@ msgid "Bash, Binutils, Coreutils, GCC, Glibc, Grep, Make, and Sed"
 msgstr "Bash, Binutils, Coreutils, GCC, Glibc, Grep, Make, 以及 Sed"
 
 #. type: Content of: <appendix><segmentedlist><seglistitem><seg>
-msgid "Ed"
-msgstr "Ed"
+msgid "Glibc and Patch"
+msgstr "Glibc 和 Patch"
+
+#. type: Content of: <appendix><segmentedlist><seglistitem><seg>
+msgid "<ulink url=\"&blfs-book;postlfs/ed.html\">Ed</ulink>"
+msgstr "<ulink url=\"&blfs-book;postlfs/ed.html\">Ed</ulink>"
 
 #. type: Content of: <appendix><segmentedlist><seglistitem><seg>
 msgid ""
@@ -900,8 +1068,16 @@ msgstr ""
 "及 Zlib"
 
 #. type: Content of: <appendix><segmentedlist><seglistitem><seg>
+msgid "GDBM and Glibc"
+msgstr "GDBM 和 Glibc"
+
+#. type: Content of: <appendix><segmentedlist><seglistitem><seg>
 msgid "Iana-Etc and Procps-ng"
 msgstr "Iana-Etc 和 Procps-ng"
+
+#. type: Content of: <appendix><segmentedlist><seglistitem><seg>
+msgid "<ulink url=\"&blfs-book;server/db.html\">Berkeley DB</ulink>"
+msgstr "<ulink url=\"&blfs-book;server/db.html\">Berkeley DB</ulink>"
 
 #. type: Content of: <appendix><bridgehead>
 msgid "Pkg-config"
@@ -933,18 +1109,28 @@ msgstr ""
 #. type: Content of: <appendix><segmentedlist><seglistitem><seg>
 msgid ""
 "Bash, Binutils, Coreutils, Expat, GCC, Gdbm, Gettext, Glibc, Grep, Libffi, "
-"Make, Ncurses, Sed, and Util-linux"
+"Make, Ncurses, OpenSSL, Sed, and Util-linux"
 msgstr ""
 "Bash, Binutils, Coreutils, Expat, GCC, Gdbm, Gettext, Glibc, Grep, Libffi, "
-"Make, Ncurses, Sed, 以及 Util-linux"
+"Make, Ncurses, OpenSSL, Sed, 以及 Util-linux"
+
+#. type: Content of: <appendix><segmentedlist><seglistitem><seg>
+msgid "Bzip2, Expat, Gdbm, Glibc, Libffi, Ncurses, OpenSSL, and Zlib"
+msgstr "Bzip2, Expat, Gdbm, Glibc, Libffi, Ncurses, OpenSSL, 以及 Zlib"
 
 #. type: Content of: <appendix><segmentedlist><seglistitem><seg>
 msgid "GDB and Valgrind"
 msgstr "GDB 和 Valgrind"
 
 #. type: Content of: <appendix><segmentedlist><seglistitem><seg>
-msgid "Berkeley DB, OpenSSL, SQLite, and Tk"
-msgstr "Berkeley DB, OpenSSL, SQLite, 以及 Tk"
+msgid ""
+"<ulink url=\"&blfs-book;server/db.html\">Berkeley DB</ulink>, <ulink url="
+"\"&blfs-book;server/sqlite.html\"> SQLite</ulink>, and <ulink url=\"&blfs-"
+"book;general/tk.html\">Tk</ulink>"
+msgstr ""
+"<ulink url=\"&blfs-book;server/db.html\">Berkeley DB</ulink>, <ulink url="
+"\"&blfs-book;server/sqlite.html\"> SQLite</ulink>, 以及 <ulink url=\"&blfs-"
+"book;general/tk.html\">Tk</ulink>"
 
 #. type: Content of: <appendix><bridgehead>
 msgid "Readline"
@@ -958,13 +1144,13 @@ msgstr ""
 "Bash, Binutils, Coreutils, Gawk, GCC, Glibc, Grep, Make, Ncurses, Patch, "
 "Sed, 以及 Texinfo"
 
-#. type: Content of: <appendix><segmentedlist><seglistitem><seg>
-msgid "Bash and Gawk"
-msgstr "Bash 和 Gawk"
-
 #. type: Content of: <appendix><bridgehead>
 msgid "Sed"
 msgstr "Sed"
+
+#. type: Content of: <appendix><segmentedlist><seglistitem><seg>
+msgid "Acl, Attr, and Glibc"
+msgstr "Acl, Attr, 以及 Glibc"
 
 #. type: Content of: <appendix><segmentedlist><seglistitem><seg>
 msgid "Diffutils and Gawk"
@@ -983,8 +1169,12 @@ msgstr ""
 "Gettext, Glibc, Grep, Libcap, Make, 以及 Sed"
 
 #. type: Content of: <appendix><segmentedlist><seglistitem><seg>
-msgid "Cracklib and PAM"
-msgstr "Cracklib 和 PAM"
+msgid ""
+"<ulink url=\"&blfs-book;postlfs/cracklib.html\">CrackLib</ulink> and <ulink "
+"url=\"&blfs-book;postlfs/linux-pam.html\">Linux-PAM</ulink>"
+msgstr ""
+"<ulink url=\"&blfs-book;postlfs/cracklib.html\">CrackLib</ulink> 和 <ulink "
+"url=\"&blfs-book;postlfs/linux-pam.html\">Linux-PAM</ulink>"
 
 #. type: Content of: <appendix><bridgehead>
 msgid "Sysklogd"
@@ -1003,12 +1193,76 @@ msgstr ""
 "Gperf, Grep, Intltool, Jinja2, Libcap, Meson, Sed, 以及 Util-linux"
 
 #. type: Content of: <appendix><segmentedlist><seglistitem><seg>
+msgid "Acl, Attr, Glibc, Libcap, and Util-linux"
+msgstr "Acl, Attr, Glibc, Libcap, 以及 Util-linux"
+
+#. type: Content of: <appendix><segmentedlist><seglistitem><seg>
 msgid ""
-"Many, see <ulink url=\"&blfs-root;view/systemd/general/systemd.html\">BLFS "
-"systemd page</ulink>"
+"<ulink url=\"&blfs-book;postlfs/btrfs-progs.html\">btrfs-progs</ulink>, "
+"<ulink url=\"&blfs-book;basicnet/curl.html\">cURL</ulink>, <ulink url="
+"\"&blfs-book;postlfs/cryptsetup.html\">cryptsetup</ulink>, <ulink url="
+"\"&blfs-book;pst/docbook.html\">docbook-xml</ulink>, <ulink url=\"&blfs-book;"
+"pst/docbook-xsl.html\">docbook-xsl-nons</ulink>, <ulink url=\"https://"
+"sourceware.org/elfutils/\">elfutils</ulink>, <ulink url=\"&blfs-book;general/"
+"git.html\">Git</ulink>, <ulink url=\"https://sourceforge.net/projects/gnu-"
+"efi/\">gnu-efi</ulink>, <ulink url=\"&blfs-book;postlfs/gnutls.html"
+"\">GnuTLS</ulink>, <ulink url=\"&blfs-book;postlfs/iptables.html\">iptables</"
+"ulink>, <ulink url=\"https://www.kernel.org/pub/linux/utils/kernel/kexec/\"> "
+"kexec-tools</ulink>, <ulink url=\"https://developers.yubico.com/libfido2/"
+"\">libfido2</ulink>, <ulink url=\"&blfs-book;general/libgcrypt.html"
+"\">libgcrypt</ulink>, <ulink url=\"&blfs-book;general/libidn2.html"
+"\">libidn2</ulink>, <ulink url=\"https://www.gnu.org/software/libmicrohttpd/"
+"\"> Libmicrohttpd</ulink>, <ulink url=\"&blfs-book;postlfs/libpwquality.html"
+"\">libpwquality</ulink>, <ulink url=\"&blfs-book;general/libseccomp.html"
+"\">libseccomp</ulink>, <ulink url=\"&blfs-book;general/libxkbcommon.html"
+"\">libxkbcommon</ulink>, <ulink url=\"&blfs-book;general/libxslt.html"
+"\">libxslt</ulink>, <ulink url=\"&blfs-book;postlfs/linux-pam.html\">Linux-"
+"PAM</ulink>, <ulink url=\"&blfs-book;general/python-modules.html#lxml"
+"\">lxml</ulink>, <ulink url=\"http://lz4.github.io/lz4/\">LZ4</ulink>, "
+"<ulink url=\"&blfs-book;postlfs/make-ca.html\">make-ca</ulink>, <ulink url="
+"\"&blfs-book;general/pcre2.html\">PCRE2</ulink>, <ulink url=\"&blfs-book;"
+"postlfs/polkit.html\">Polkit</ulink>, <ulink url=\"&blfs-book;postlfs/qemu."
+"html\">qemu</ulink>, <ulink url=\"&blfs-book;general/qrencode.html"
+"\">qrencode</ulink>, <ulink url=\"https://sourceforge.net/projects/"
+"linuxquota/\"> quota-tools</ulink>, <ulink url=\"&blfs-book;basicnet/rsync."
+"html\">rsync</ulink>, <ulink url=\"https://pypi.python.org/pypi/Sphinx"
+"\">Sphinx</ulink>, <ulink url=\"https://tpm2-tss.readthedocs.io/en/latest/"
+"\"> tpm2-tss</ulink>, <ulink url=\"&blfs-book;general/valgrind.html"
+"\">Valgrind</ulink>, and <ulink url=\"&blfs-book;postlfs/zsh.html\">zsh</"
+"ulink>"
 msgstr ""
-"很多，参见 <ulink url=\"&blfs-root;view/systemd/general/systemd.html\">BLFS "
-"systemd 页面</ulink>"
+"<ulink url=\"&blfs-book;postlfs/btrfs-progs.html\">btrfs-progs</ulink>, "
+"<ulink url=\"&blfs-book;basicnet/curl.html\">cURL</ulink>, <ulink url="
+"\"&blfs-book;postlfs/cryptsetup.html\">cryptsetup</ulink>, <ulink url="
+"\"&blfs-book;pst/docbook.html\">docbook-xml</ulink>, <ulink url=\"&blfs-book;"
+"pst/docbook-xsl.html\">docbook-xsl-nons</ulink>, <ulink url=\"https://"
+"sourceware.org/elfutils/\">elfutils</ulink>, <ulink url=\"&blfs-book;general/"
+"git.html\">Git</ulink>, <ulink url=\"https://sourceforge.net/projects/gnu-"
+"efi/\">gnu-efi</ulink>, <ulink url=\"&blfs-book;postlfs/gnutls.html"
+"\">GnuTLS</ulink>, <ulink url=\"&blfs-book;postlfs/iptables.html\">iptables</"
+"ulink>, <ulink url=\"https://www.kernel.org/pub/linux/utils/kernel/kexec/\"> "
+"kexec-tools</ulink>, <ulink url=\"https://developers.yubico.com/libfido2/"
+"\">libfido2</ulink>, <ulink url=\"&blfs-book;general/libgcrypt.html"
+"\">libgcrypt</ulink>, <ulink url=\"&blfs-book;general/libidn2.html"
+"\">libidn2</ulink>, <ulink url=\"https://www.gnu.org/software/libmicrohttpd/"
+"\"> Libmicrohttpd</ulink>, <ulink url=\"&blfs-book;postlfs/libpwquality.html"
+"\">libpwquality</ulink>, <ulink url=\"&blfs-book;general/libseccomp.html"
+"\">libseccomp</ulink>, <ulink url=\"&blfs-book;general/libxkbcommon.html"
+"\">libxkbcommon</ulink>, <ulink url=\"&blfs-book;general/libxslt.html"
+"\">libxslt</ulink>, <ulink url=\"&blfs-book;postlfs/linux-pam.html\">Linux-"
+"PAM</ulink>, <ulink url=\"&blfs-book;general/python-modules.html#lxml"
+"\">lxml</ulink>, <ulink url=\"http://lz4.github.io/lz4/\">LZ4</ulink>, "
+"<ulink url=\"&blfs-book;postlfs/make-ca.html\">make-ca</ulink>, <ulink url="
+"\"&blfs-book;general/pcre2.html\">PCRE2</ulink>, <ulink url=\"&blfs-book;"
+"postlfs/polkit.html\">Polkit</ulink>, <ulink url=\"&blfs-book;postlfs/qemu."
+"html\">qemu</ulink>, <ulink url=\"&blfs-book;general/qrencode.html"
+"\">qrencode</ulink>, <ulink url=\"https://sourceforge.net/projects/"
+"linuxquota/\"> quota-tools</ulink>, <ulink url=\"&blfs-book;basicnet/rsync."
+"html\">rsync</ulink>, <ulink url=\"https://pypi.python.org/pypi/Sphinx"
+"\">Sphinx</ulink>, <ulink url=\"https://tpm2-tss.readthedocs.io/en/latest/"
+"\"> tpm2-tss</ulink>, <ulink url=\"&blfs-book;general/valgrind.html"
+"\">Valgrind</ulink>, 以及 <ulink url=\"&blfs-book;postlfs/zsh.html\">zsh</"
+"ulink>"
 
 #. type: Content of: <appendix><bridgehead>
 msgid "Sysvinit"
@@ -1025,6 +1279,10 @@ msgid ""
 msgstr ""
 "Acl, Attr, Bash, Binutils, Bison, Coreutils, GCC, Gettext, Glibc, Grep, "
 "Inetutils, Make, Sed, 以及 Texinfo"
+
+#. type: Content of: <appendix><segmentedlist><seglistitem><seg>
+msgid "Acl, Attr, Bzip2, Glibc, Gzip, and Xz"
+msgstr "Acl, Attr, Bzip2, Glibc, Gzip, 以及 Xz"
 
 #. type: Content of: <appendix><segmentedlist><seglistitem><seg>
 msgid "Autoconf, Diffutils, Findutils, Gawk, and Gzip"
@@ -1053,16 +1311,20 @@ msgstr ""
 #. type: Content of: <appendix><segmentedlist><seglistitem><seg>
 msgid ""
 "Bash, Binutils, Coreutils, Diffutils, Eudev, Findutils, Gawk, GCC, Gettext, "
-"Glibc, Grep, Make, Ncurses, Sed, and Zlib"
+"Glibc, Grep, Libcap, Make, Ncurses, Sed, and Zlib"
 msgstr ""
 "Bash, Binutils, Coreutils, Diffutils, Eudev, Findutils, Gawk, GCC, Gettext, "
-"Glibc, Grep, Make, Ncurses, Sed, 以及 Zlib"
+"Glibc, Grep, Libcap, Make, Ncurses, Sed, 以及 Zlib"
+
+#. type: Content of: <appendix><segmentedlist><seglistitem><seg>
+msgid "Glibc, Libcap, Ncurses, Readline, and Zlib"
+msgstr "Glibc, Libcap, Ncurses, Readline, 以及 Zlib"
 
 #. type: Content of: <appendix><segmentedlist><seglistitem><seg>
 msgid ""
-"<ulink url=\"https://people.redhat.com/sgrubb/libcap-ng/\">Libcap-ng</ulink>"
+"<ulink url=\"&blfs-book;postlfs/smartmontools.html\">smartmontools</ulink>"
 msgstr ""
-"<ulink url=\"https://people.redhat.com/sgrubb/libcap-ng/\">Libcap-ng</ulink>"
+"<ulink url=\"&blfs-book;postlfs/smartmontools.html\">smartmontools</ulink>"
 
 #. type: Content of: <appendix><bridgehead>
 msgid "Vim"
@@ -1077,8 +1339,20 @@ msgstr ""
 "Ncurses, 以及 Sed"
 
 #. type: Content of: <appendix><segmentedlist><seglistitem><seg>
-msgid "Xorg, GTK+2, LessTif, Python, Tcl, Ruby, and GPM"
-msgstr "Xorg, GTK+2, LessTif, Python, Tcl, Ruby, 以及 GPM"
+msgid "Acl, Attr, Glibc, Python, Ncurses, and Tcl"
+msgstr "Acl, Attr, Glibc, Python, Ncurses, 以及 Tcl"
+
+#. type: Content of: <appendix><segmentedlist><seglistitem><seg>
+msgid ""
+"<ulink url=\"&blfs-book;x/installing.html\">Xorg</ulink>, <ulink url=\"&blfs-"
+"book;x/gtk2.html\">GTK+2</ulink>, <ulink url=\"http://lesstif.sourceforge."
+"net/\">LessTif</ulink>, <ulink url=\"&blfs-book;general/ruby.html\">Ruby</"
+"ulink>, and <ulink url=\"&blfs-book;general/gpm.html\">GPM</ulink>"
+msgstr ""
+"<ulink url=\"&blfs-book;x/installing.html\">Xorg</ulink>, <ulink url=\"&blfs-"
+"book;x/gtk2.html\">GTK+2</ulink>, <ulink url=\"http://lesstif.sourceforge."
+"net/\">LessTif</ulink>, <ulink url=\"&blfs-book;general/ruby.html\">Ruby</"
+"ulink>, 以及 <ulink url=\"&blfs-book;general/gpm.html\">GPM</ulink>"
 
 #. type: Content of: <appendix><bridgehead>
 msgid "XML::Parser"
@@ -1087,6 +1361,10 @@ msgstr "XML::Parser"
 #. type: Content of: <appendix><segmentedlist><seglistitem><seg>
 msgid "Bash, Binutils, Coreutils, Expat, GCC, Glibc, Make, and Perl"
 msgstr "Bash, Binutils, Coreutils, Expat, GCC, Glibc, Make, 以及 Perl"
+
+#. type: Content of: <appendix><segmentedlist><seglistitem><seg>
+msgid "Expat, Glibc, and Perl"
+msgstr "Expat, Glibc, 以及 Perl"
 
 #. type: Content of: <appendix><bridgehead>
 msgid "Xz"
