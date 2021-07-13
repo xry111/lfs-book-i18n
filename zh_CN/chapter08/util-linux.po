@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2021-06-16 15:24+0800\n"
+"POT-Creation-Date: 2021-07-13 12:46+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -174,6 +174,20 @@ msgstr ""
 #, no-wrap
 msgid "<userinput>bash tests/run.sh --srcdir=$PWD --builddir=$PWD</userinput>"
 msgstr "<userinput>bash tests/run.sh --srcdir=$PWD --builddir=$PWD</userinput>"
+
+#. type: Content of: <sect1><sect2><note><para>
+msgid ""
+"There is one test that depends on the configuration of the kernel.  If "
+"CONFIG_USER_NS or CONFIG_PID_NS are not set, the tests will hang forever.  "
+"To work around the problem, delete one test:"
+msgstr ""
+"一项测试依赖于特定内核配置。如果 CONFIG_USER_NS 或 CONFIG_PID_NS "
+"没有设定，该测试会陷入无限等待状态。删除这项测试，以绕过这个问题："
+
+#. type: Content of: <sect1><sect2><note><screen>
+#, no-wrap
+msgid "<userinput remap=\"test\">rm tests/ts/lsns/ioctl_ns</userinput>"
+msgstr "<userinput remap=\"test\">rm tests/ts/lsns/ioctl_ns</userinput>"
 
 #. type: Content of: <sect1><sect2><screen>
 #, no-wrap
