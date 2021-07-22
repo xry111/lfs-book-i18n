@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2021-06-30 11:38+0800\n"
+"POT-Creation-Date: 2021-07-22 23:34+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -116,6 +116,20 @@ msgid ""
 msgstr ""
 "<userinput remap=\"pre\">mkdir -v build\n"
 "cd       build</userinput>"
+
+#. type: Content of: <sect1><sect2><para>
+msgid ""
+"Ensure that the <command>ldconfig</command> and <command>sln</command> "
+"utilites are installed into <filename class=\"directory\">/usr/sbin</"
+"filename>:"
+msgstr ""
+"确保将 <command>ldconfig</command> 和 <command>sln</command> 工具安装到 "
+"<filename class=\"directory\">/usr/sbin</filename> 目录中："
+
+#. type: Content of: <sect1><sect2><screen>
+#, no-wrap
+msgid "<userinput remap=\"pre\">echo \"rootsbindir=/usr/sbin\" &gt; configparms</userinput>"
+msgstr "<userinput remap=\"pre\">echo \"rootsbindir=/usr/sbin\" &gt; configparms</userinput>"
 
 #. type: Content of: <sect1><sect2><para>
 msgid "Prepare Glibc for compilation:"
@@ -405,6 +419,7 @@ msgstr ""
 "需的最小 locale 集合："
 
 #. type: Content of: <sect1><sect2><screen>
+#, no-wrap
 msgid ""
 "<userinput remap=\"locale-test\">mkdir -pv /usr/lib/locale\n"
 "localedef -i POSIX -f UTF-8 C.UTF-8 2> /dev/null || true\n"
