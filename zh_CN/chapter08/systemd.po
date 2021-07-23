@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2021-07-09 12:55+0800\n"
+"POT-Creation-Date: 2021-07-24 00:31+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -59,6 +59,15 @@ msgstr "&systemd-fin-du;"
 #. type: Content of: <sect1><sect2><title>
 msgid "Installation of systemd"
 msgstr "安装 systemd"
+
+#. type: Content of: <sect1><sect2><para>
+msgid "First, apply a patch to fix a security vulnerability:"
+msgstr "首先，应用补丁以修复一项安全问题："
+
+#. type: Content of: <sect1><sect2><screen>
+#, no-wrap
+msgid "<userinput remap=\"pre\">patch -Np1 -i ../systemd-&systemd-version;-upstream_fixes-1.patch</userinput>"
+msgstr "<userinput remap=\"pre\">patch -Np1 -i ../systemd-&systemd-version;-upstream_fixes-1.patch</userinput>"
 
 #. type: Content of: <sect1><sect2><para>
 msgid ""
@@ -1118,10 +1127,3 @@ msgstr "用于访问 udev 设备信息的库"
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 msgid "libudev"
 msgstr "libudev"
-
-#~ msgid "First, apply a patch to fix some build issues:"
-#~ msgstr "首先，应用一个补丁，修复构建过程中的问题："
-
-#, no-wrap
-#~ msgid "<userinput remap=\"pre\">patch -Np1 -i ../systemd-&systemd-version;-upstream_fixes-1.patch</userinput>"
-#~ msgstr "<userinput remap=\"pre\">patch -Np1 -i ../systemd-&systemd-version;-upstream_fixes-1.patch</userinput>"
