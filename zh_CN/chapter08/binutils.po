@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2021-06-23 22:19+0800\n"
+"POT-Creation-Date: 2021-07-26 21:28+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -97,6 +97,23 @@ msgid ""
 msgstr ""
 "<computeroutput>The system has no more ptys.\n"
 "Ask your system administrator to create more.</computeroutput>"
+
+#. type: Content of: <sect1><sect2><para>
+msgid ""
+"An error in the building system causes the shipped man pages to be empty.  "
+"Workaround the issue and remove the shipped man pages, so the man pages will "
+"be regenerated correctly:"
+msgstr ""
+"构建系统中的一处错误导致软件包附带的 man 页面为空。"
+"绕过这个问题并删除附带的 man 页面，这样 man 页面就会被正确地重新生成："
+
+#. type: Content of: <sect1><sect2><screen>
+msgid ""
+"<userinput remap=\"pre\">sed -i '63d' etc/texi2pod.pl\n"
+"find -name \\*.1 -delete</userinput>"
+msgstr ""
+"<userinput remap=\"pre\">sed -i '63d' etc/texi2pod.pl\n"
+"find -name \\*.1 -delete</userinput>"
 
 #. type: Content of: <sect1><sect2><para>
 msgid "Now remove one test that prevents the tests from running to completion:"
