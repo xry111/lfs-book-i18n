@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2021-07-26 21:28+0800\n"
+"POT-Creation-Date: 2021-07-28 01:34+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -149,6 +149,17 @@ msgstr "如果您选择构建有 Cracklib 支持的 Shadow，执行以下命令�
 #, no-wrap
 msgid "<userinput>sed -i 's:DICTPATH.*:DICTPATH\\t/lib/cracklib/pw_dict:' etc/login.defs</userinput>"
 msgstr "<userinput>sed -i 's:DICTPATH.*:DICTPATH\\t/lib/cracklib/pw_dict:' etc/login.defs</userinput>"
+
+#. type: Content of: <sect1><sect2><para>
+msgid ""
+"Fix a simple programming error by modifying a file with following command:"
+msgstr ""
+"使用以下命令修改文件，修复程序中的一处低级错误："
+
+#. type: Content of: <sect1><sect2><screen>
+#, no-wrap
+msgid "<userinput remap=\"pre\">sed -e \"224s/rounds/min_rounds/\" -i libmisc/salt.c</userinput>"
+msgstr "<userinput remap=\"pre\">sed -e \"224s/rounds/min_rounds/\" -i libmisc/salt.c</userinput>"
 
 #. type: Content of: <sect1><sect2><para>
 msgid "Prepare Shadow for compilation:"
