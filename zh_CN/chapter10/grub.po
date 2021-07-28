@@ -1,17 +1,23 @@
+# Linux From Scratch GRUB 配置页面的中文翻译
+# This file is distributed under the same license as the Linux From Scratch
+# book.
+# Xi Ruoyao <xry111@mengyan1223.wang>, 2021
+#
 msgid ""
 msgstr ""
-"Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2021-04-09 20:23+0800\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
+"Project-Id-Version: Linux From Scratch 11.0\n"
+"Report-Msgid-Bugs-To: lfs-dev@lists.linuxfromscratch.org\n"
+"POT-Creation-Date: 2021-07-28 12:51+0800\n"
+"PO-Revision-Date: 2021-07-28 12:54+0800\n"
+"Last-Translator: Xi Ruoyao <xry111@mengyan1223.wang>\n"
+"Language-Team: None <noreply@mengyan1223.wang>\n"
 "Language: zh_CN\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"X-Bugs: https://github.com/xry111/lfs-book-i18n/issues\n"
 "X-Pootle-Revision: 9999999\n"
 "X-Pootle-Path: /zh_CN/lfs/chapter10/grub.po\n"
-"X-Generator: Translate Toolkit 2.2.5\n"
 
 #. type: Content of: <sect1><sect1info><address>
 #, no-wrap
@@ -37,9 +43,9 @@ msgid ""
 "instructions provided in <ulink url=\"&blfs-book;postlfs/grub-setup.html"
 "\">the BLFS page</ulink>."
 msgstr ""
-"如果您的系统支持 UEFI，且您希望通过 UEFI 引导 LFS，您应该跳过本页，"
-"并按照 <ulink url=\"&blfs-book;postlfs/grub-setup.html\">BLFS 页面</ulink>"
-"中的说明，配置支持 UEFI 的 GRUB。"
+"如果您的系统支持 UEFI，且您希望通过 UEFI 引导 LFS，您应该跳过本页，并按照 "
+"<ulink url=\"&blfs-book;postlfs/grub-setup.html\">BLFS 页面</ulink>中的说明，"
+"配置支持 UEFI 的 GRUB。"
 
 #. type: Content of: <sect1><sect2><title>
 msgid "Introduction"
@@ -193,12 +199,14 @@ msgstr "<userinput>grub-install /dev/sda</userinput>"
 msgid ""
 "If the system has been booted using UEFI, <command>grub-install</command> "
 "will try to install files for the <emphasis>x86_64-efi</emphasis> target, "
-"but those files have not been installed in chapter 6. If this is the case, "
-"add <option>--target i386-pc</option> to the command above."
+"but those files have not been installed in <xref linkend=\"chapter-building-"
+"system\"/>.  If this is the case, add <option>--target i386-pc</option> to "
+"the command above."
 msgstr ""
 "如果系统是使用 UEFI 引导的，<command>grub-install</command> 会试图为 "
-"<emphasis>x86_64-efi</emphasis> 目标安装文件，但它们并未在第 6 章中安装。如果"
-"出现了这类问题，请在以上命令中添加 <option>--target i386-pc</option> 选项。"
+"<emphasis>x86_64-efi</emphasis> 目标安装文件，但它们并未在 <xref linkend="
+"\"chapter-building-system\"/> 中安装。如果出现了这类问题，请在以上命令中添加 "
+"<option>--target i386-pc</option> 选项。"
 
 #. type: Content of: <sect1><sect2><title>
 msgid "Creating the GRUB Configuration File"

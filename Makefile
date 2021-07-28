@@ -7,7 +7,9 @@ ALL_XML_FILES = $(shell find $(LFS_EN) -type f -name '*.xml')
 EXCLUDE_FILES = # empty for now
 XML_FILES = $(filter-out $(EXCLUDE_FILES), $(ALL_XML_FILES))
 PO_FILES = $(patsubst $(LFS_EN)/%.xml, $(MLANG)/%.po, $(XML_FILES))
-PO4A_FLAGS = -f docbook --porefs none --msgmerge-opt "--backup=off"
+PO4A_FLAGS = -f docbook --porefs none --msgmerge-opt "--backup=off" \
+			 --package-name="Linux From Scratch" \
+			 --package-version="11.0"
 
 ifneq (,$(wildcard ./local.mk))
 include local.mk

@@ -1,17 +1,23 @@
+# Linux From Scratch 临时工具中 python 页面的中文翻译
+# This file is distributed under the same license as the Linux From Scratch 
+# book.
+# Xi Ruoyao <xry111@mengyan1223.wang>, 2021
+#
 msgid ""
 msgstr ""
-"Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2021-02-20 08:46+0800\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
+"Project-Id-Version: Linux From Scratch 11.0\n"
+"Report-Msgid-Bugs-To: lfs-dev@lists.linuxfromscratch.org\n"
+"POT-Creation-Date: 2021-07-28 12:51+0800\n"
+"PO-Revision-Date: 2021-07-28 12:52+0800\n"
+"Last-Translator: Xi Ruoyao <xry111@mengyan1223.wang>\n"
+"Language-Team: None <noreply@mengyan1223.wang>\n"
 "Language: zh_CN\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"X-Bugs: https://github.com/xry111/lfs-book-i18n/issues\n"
 "X-Pootle-Revision: 9999999\n"
 "X-Pootle-Path: /zh_CN/lfs/chapter07/python.po\n"
-"X-Generator: Translate Toolkit 2.2.5\n"
 
 #. type: Content of: <sect1><sect1info><address>
 #, no-wrap
@@ -112,6 +118,22 @@ msgstr "编译该软件包："
 #, no-wrap
 msgid "<userinput remap=\"make\">make</userinput>"
 msgstr "<userinput remap=\"make\">make</userinput>"
+
+#. type: Content of: <sect1><sect2><note><para>
+msgid ""
+"Some Python 3 modules can't be built now because the dependencies are not "
+"installed yet. The building system still attempts to build them however, so "
+"the compilation of some files will fail and the compiler message may seem to "
+"indicate <quote>fatal error</quote>.  The message should be ignored.  Just "
+"make sure the toplevel <command>make</command> command has not failed.  The "
+"optional modules are not needed now and they will be built in <xref linkend="
+"\"chapter-building-system\"/>."
+msgstr ""
+"一些 Python 3 模块目前无法构建，这是因为它们的依赖项尚未安装。然而，构建系统"
+"仍会尝试构建它们，因此一些文件会编译失败，编译器的消息可能看上去是 "
+"<quote>fatal error</quote> (致命错误)。这类消息应该被忽略。只需要确认最外层"
+"的 <command>make</command> 命令执行成功即可。目前不需要这些可选的模块，它们将"
+"在 <xref linkend=\"chapter-building-system\"/> 中被构建。"
 
 #. type: Content of: <sect1><sect2><para>
 msgid "Install the package:"
