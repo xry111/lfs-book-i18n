@@ -1,17 +1,23 @@
+# Linux From Scratch 临时工具调试符号移除页面的中文翻译
+# This file is distributed under the same license as the Linux From Scratch
+# book.
+# Xi Ruoyao <xry111@mengyan1223.wang>, 2021
+#
 msgid ""
 msgstr ""
-"Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2021-02-20 08:46+0800\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
+"Project-Id-Version: Linux From Scratch 11.0\n"
+"Report-Msgid-Bugs-To: lfs-dev@lists.linuxfromscratch.org\n"
+"POT-Creation-Date: 2021-07-28 19:06+0800\n"
+"PO-Revision-Date: 2021-07-28 19:12+0800\n"
+"Last-Translator: Xi Ruoyao <xry111@mengyan1223.wang>\n"
+"Language-Team: None <noreply@mengyan1223.wang>\n"
 "Language: zh_CN\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"X-Bugs: https://github.com/xry111/lfs-book-i18n/issues\n"
 "X-Pootle-Revision: 9999999\n"
 "X-Pootle-Path: /zh_CN/lfs/chapter07/stripping.po\n"
-"X-Generator: Translate Toolkit 2.2.5\n"
 
 #. type: Content of: <sect1><title>
 msgid "Cleaning up and Saving the Temporary System"
@@ -134,13 +140,13 @@ msgstr "从二进制文件移除调试符号："
 #. type: Content of: <sect1><sect2><screen>
 #, no-wrap
 msgid ""
-"<userinput>strip --strip-debug $LFS/usr/lib/*\n"
-"strip --strip-unneeded $LFS/usr/{,s}bin/*\n"
-"strip --strip-unneeded $LFS/tools/bin/*</userinput>"
+"<userinput>$LFS_TGT-strip --strip-unneeded $LFS/usr/lib/*\n"
+"$LFS_TGT-strip --strip-unneeded $LFS/usr/{,s}bin/*\n"
+"$LFS_TGT-strip --strip-unneeded $LFS/tools/bin/*</userinput>"
 msgstr ""
-"<userinput>strip --strip-debug $LFS/usr/lib/*\n"
-"strip --strip-unneeded $LFS/usr/{,s}bin/*\n"
-"strip --strip-unneeded $LFS/tools/bin/*</userinput>"
+"<userinput>$LFS_TGT-strip --strip-unneeded $LFS/usr/lib/*\n"
+"$LFS_TGT-strip --strip-unneeded $LFS/usr/{,s}bin/*\n"
+"$LFS_TGT-strip --strip-unneeded $LFS/tools/bin/*</userinput>"
 
 #. Note that we use the <command>
 #. strip</command> program built in
@@ -153,15 +159,6 @@ msgid ""
 msgstr ""
 "以上命令会跳过一些文件，并报告说无法识别它们的格式。这些文件大多数都是脚本文"
 "件，而不是二进制文件。"
-
-#. type: Content of: <sect1><sect2><para>
-msgid ""
-"Take care <emphasis>NOT</emphasis> to use <parameter>--strip-unneeded</"
-"parameter> on the libraries. The static ones would be destroyed and the "
-"toolchain packages would need to be built all over again."
-msgstr ""
-"注意<emphasis>不要</emphasis>对库文件使用 <parameter>--strip-unneeded</"
-"parameter> 选项。这会损坏静态库，结果工具链软件包都要重新构建。"
 
 #. type: Content of: <sect1><sect2><para>
 msgid ""
