@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2021-07-26 21:28+0800\n"
+"POT-Creation-Date: 2021-08-02 21:09+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -104,10 +104,11 @@ msgid ""
 "Workaround the issue and remove the shipped man pages, so the man pages will "
 "be regenerated correctly:"
 msgstr ""
-"构建系统中的一处错误导致软件包附带的 man 页面为空。"
-"绕过这个问题并删除附带的 man 页面，这样 man 页面就会被正确地重新生成："
+"构建系统中的一处错误导致软件包附带的 man 页面为空。绕过这个问题并删除附带的 "
+"man 页面，这样 man 页面就会被正确地重新生成："
 
 #. type: Content of: <sect1><sect2><screen>
+#, no-wrap
 msgid ""
 "<userinput remap=\"pre\">sed -i '63d' etc/texi2pod.pl\n"
 "find -name \\*.1 -delete</userinput>"
@@ -270,12 +271,8 @@ msgid "<userinput remap=\"test\">make -k check</userinput>"
 msgstr "<userinput remap=\"test\">make -k check</userinput>"
 
 #. type: Content of: <sect1><sect2><para>
-msgid "Seven gold tests are known to fail with gcc-11.1.0"
-msgstr "已知七项 gold 测试在使用 gcc-11.1.0 构建时会失败。"
-
-#. type: Content of: <sect1><sect2><para>
-msgid "Four ld tests named <quote>Run property ...</quote> are known to fail."
-msgstr "已知四项名为 <quote>Run property ...</quote> 的 ld 测试会失败。"
+msgid "Four tests related to zlib are known to fail."
+msgstr "已知四项和 zlib 相关的测试可能失败。"
 
 #. type: Content of: <sect1><sect2><para>
 msgid "Install the package:"
