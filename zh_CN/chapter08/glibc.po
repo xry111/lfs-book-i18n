@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2021-07-22 23:34+0800\n"
+"POT-Creation-Date: 2021-08-04 00:27+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -79,28 +79,6 @@ msgstr ""
 #, no-wrap
 msgid "<userinput remap=\"pre\">patch -Np1 -i ../&glibc-fhs-patch;</userinput>"
 msgstr "<userinput remap=\"pre\">patch -Np1 -i ../&glibc-fhs-patch;</userinput>"
-
-#. type: Content of: <sect1><sect2><para>
-msgid "Fix a bug that causes issues with chrooted applications:"
-msgstr "修复导致 chroot 环境中应用程序出现故障的问题："
-
-#. type: Content of: <sect1><sect2><screen>
-#, no-wrap
-msgid ""
-"<userinput remap=\"pre\">sed -e '402a\\      *result = local->data.services[database_index];' \\\n"
-"    -i nss/nss_database.c</userinput>"
-msgstr ""
-"<userinput remap=\"pre\">sed -e '402a\\      *result = local->data.services[database_index];' \\\n"
-"    -i nss/nss_database.c</userinput>"
-
-#. type: Content of: <sect1><sect2><para>
-msgid "Fix a build issue with gcc-11.1:"
-msgstr "修复使用 gcc-11.1 构建时出现的问题："
-
-#. type: Content of: <sect1><sect2><screen>
-#, no-wrap
-msgid "<userinput remap=\"pre\">sed 's/amx_/amx-/' -i sysdeps/x86/tst-cpu-features-supports.c</userinput>"
-msgstr "<userinput remap=\"pre\">sed 's/amx_/amx-/' -i sysdeps/x86/tst-cpu-features-supports.c</userinput>"
 
 #. type: Content of: <sect1><sect2><para>
 msgid ""
@@ -210,22 +188,6 @@ msgid ""
 "lib64 to be used."
 msgstr "这个变量纠正库文件安装位置。我们不希望使用 lib64 目录。"
 
-#. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
-msgid "<option>libc_cv_include_x86_isa_level=no</option>"
-msgstr "<option>libc_cv_include_x86_isa_level=no</option>"
-
-#. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
-msgid ""
-"This disables <quote>x86 ISA needed</quote> property in Glibc libraries.  "
-"Use it <emphasis role=\"bold\">if</emphasis> you are building Glibc with "
-"<option>-march</option> option in <envar>CFLAGS</envar>, to workaround an "
-"issue in Glibc-2.33 breaking it."
-msgstr ""
-"该选项防止在 Glibc 库中使用 <quote>x86 ISA needed</quote> 属性。<emphasis "
-"role=\"bold\">如果</emphasis>要在构建 Glibc 时将 <option>-march</option> 选项"
-"加入到 <envar>CFLAGS</envar>，则需要使用该选项，绕过 Glibc-2.33 中的一个问"
-"题。"
-
 #. type: Content of: <sect1><sect2><para>
 msgid "Compile the package:"
 msgstr "编译该软件包："
@@ -285,14 +247,6 @@ msgid ""
 "environment."
 msgstr ""
 "已知 <emphasis>misc/tst-ttyname</emphasis> 在 LFS chroot 环境中会失败。"
-
-#. type: Content of: <sect1><sect2><itemizedlist><listitem><para>
-msgid ""
-"<emphasis>elf/tst-cpu-features-cpuinfo</emphasis> will fail on non-intel "
-"CPUs with this version of glibc."
-msgstr ""
-"已知该版本的 glibc 中，<emphasis>elf/tst-cpu-features-cpuinfo</emphasis> 在一"
-"些非 Intel CPU 上会失败。"
 
 #. type: Content of: <sect1><sect2><itemizedlist><listitem><para>
 msgid ""
@@ -868,19 +822,19 @@ msgstr ""
 
 #. type: Content of: <sect1><sect2><segmentedlist><seglistitem><seg>
 msgid ""
-"ld-&glibc-version;.so, libBrokenLocale.{a,so}, libSegFault.so, libanl.{a,"
-"so}, libc.{a,so}, libc_nonshared.a, libcrypt.{a,so}, libdl.{a,so}, libg.a, "
-"libm.{a,so}, libmcheck.a, libmemusage.so, libmvec.{a,so}, libnsl.{a,so}, "
-"libnss_compat.so, libnss_dns.so, libnss_files.so, libnss_hesiod.so, "
-"libpcprofile.so, libpthread.{a,so}, libpthread_nonshared.a, libresolv.{a,"
-"so}, librt.{a,so}, libthread_db.so, and libutil.{a,so}"
+"ld-linux-x86-64.so.2, ld-linux.so.2, libBrokenLocale.{a,so}, libSegFault.so, "
+"libanl.{a,so}, libc.{a,so}, libc_nonshared.a, libcrypt.{a,so}, libdl.{a,"
+"so.2}, libg.a, libm.{a,so}, libmcheck.a, libmemusage.so, libmvec.{a,so}, "
+"libnsl.so.1, libnss_compat.so, libnss_dns.so, libnss_files.so, libnss_hesiod."
+"so, libpcprofile.so, libpthread.{a,so.0}, libresolv.{a,so}, librt.{a,so.1}, "
+"libthread_db.so, and libutil.{a,so.1}"
 msgstr ""
-"ld-&glibc-version;.so, libBrokenLocale.{a,so}, libSegFault.so, libanl.{a,"
-"so}, libc.{a,so}, libc_nonshared.a, libcrypt.{a,so}, libdl.{a,so}, libg.a, "
-"libm.{a,so}, libmcheck.a, libmemusage.so, libmvec.{a,so}, libnsl.{a,so}, "
-"libnss_compat.so, libnss_dns.so, libnss_files.so, libnss_hesiod.so, "
-"libpcprofile.so, libpthread.{a,so}, libpthread_nonshared.a, libresolv.{a,"
-"so}, librt.{a,so}, libthread_db.so, 以及 libutil.{a,so}"
+"ld-linux-x86-64.so.2, ld-linux.so.2, libBrokenLocale.{a,so}, libSegFault.so, "
+"libanl.{a,so}, libc.{a,so}, libc_nonshared.a, libcrypt.{a,so}, libdl.{a,"
+"so.2}, libg.a, libm.{a,so}, libmcheck.a, libmemusage.so, libmvec.{a,so}, "
+"libnsl.so.1, libnss_compat.so, libnss_dns.so, libnss_files.so, libnss_hesiod."
+"so, libpcprofile.so, libpthread.{a,so.0}, libresolv.{a,so}, librt.{a,so.1}, "
+"libthread_db.so, 以及 libutil.{a,so.1}"
 
 #. type: Content of: <sect1><sect2><segmentedlist><seglistitem><seg>
 msgid ""
@@ -1198,8 +1152,8 @@ msgid "zic"
 msgstr "zic"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
-msgid "<filename class=\"libraryfile\">ld-&glibc-version;.so</filename>"
-msgstr "<filename class=\"libraryfile\">ld-&glibc-version;.so</filename>"
+msgid "<filename class=\"libraryfile\">ld-*.so</filename>"
+msgstr "<filename class=\"libraryfile\">ld-*.so</filename>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 msgid "The helper program for shared library executables"
@@ -1281,8 +1235,13 @@ msgid "<filename class=\"libraryfile\">libdl</filename>"
 msgstr "<filename class=\"libraryfile\">libdl</filename>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
-msgid "The dynamic linking interface library"
-msgstr "动态链接接口库"
+msgid ""
+"Dummy library containing no functions. Previously was the dynamic linking "
+"interface library, whose functions are now in <filename class=\"libraryfile"
+"\">libc</filename>"
+msgstr ""
+"没有功能的空库。曾经是动态链接接口库，但其功能已经并入 <filename class="
+"\"libraryfile\">libc</filename>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 msgid "libdl"
@@ -1345,8 +1304,8 @@ msgid "<filename class=\"libraryfile\">libnsl</filename>"
 msgstr "<filename class=\"libraryfile\">libnsl</filename>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
-msgid "The network services library"
-msgstr "网络服务库"
+msgid "The network services library, now deprecated"
+msgstr "网络服务库，已经弃用"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 msgid "libnsl"
@@ -1384,8 +1343,14 @@ msgid "<filename class=\"libraryfile\">libpthread</filename>"
 msgstr "<filename class=\"libraryfile\">libpthread</filename>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
-msgid "The POSIX threads library"
-msgstr "POSIX 线程库"
+msgid ""
+"Dummy library containing no functions. Previously contained functions "
+"providing most of the interfaces specified by the POSIX.1b Realtime "
+"Extension, now the functions are in <filename class=\"libraryfile\">libc</"
+"filename>"
+msgstr ""
+"没有功能的空库。曾经包含 POSIX.1b 实时扩展要求的多数接口函数，但这些函数现已"
+"并入 <filename class=\"libraryfile\">libc</filename>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 msgid "libpthread"
@@ -1438,9 +1403,12 @@ msgstr "<filename class=\"libraryfile\">libutil</filename>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 msgid ""
-"Contains code for <quote>standard</quote> functions used in many different "
-"Unix utilities"
-msgstr "包含许多 Unix 工具使用的 <quote>标准</quote> 函数"
+"Dummy library containing no functions. Previously contained code for "
+"<quote>standard</quote> functions used in many different Unix utilities. "
+"These functions are now in <filename class=\"libraryfile\">libc</filename>"
+msgstr ""
+"没有功能的空库。曾经包含一些 Unix 工具使用的<quote>标准</quote>函数。"
+"这些函数已经并入 <filename class=\"libraryfile\">libc</filename>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 msgid "libutil"

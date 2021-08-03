@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2021-07-22 23:34+0800\n"
+"POT-Creation-Date: 2021-08-04 00:17+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -101,15 +101,6 @@ msgstr ""
 #, no-wrap
 msgid "<userinput remap=\"pre\">patch -Np1 -i ../glibc-&glibc-version;-fhs-1.patch</userinput>"
 msgstr "<userinput remap=\"pre\">patch -Np1 -i ../glibc-&glibc-version;-fhs-1.patch</userinput>"
-
-#. type: Content of: <sect1><sect2><para>
-msgid "Fix a build issue with gcc-11.1:"
-msgstr "修复使用 gcc-11.1 构建时出现的问题："
-
-#. type: Content of: <sect1><sect2><screen>
-#, no-wrap
-msgid "<userinput remap=\"pre\">sed 's/amx_/amx-/' -i sysdeps/x86/tst-cpu-features-supports.c</userinput>"
-msgstr "<userinput remap=\"pre\">sed 's/amx_/amx-/' -i sysdeps/x86/tst-cpu-features-supports.c</userinput>"
 
 #. type: Content of: <sect1><sect2><para>
 msgid ""
@@ -217,22 +208,6 @@ msgid ""
 "This ensures that the library is installed in /usr/lib instead of the "
 "default /lib64 on 64 bit machines."
 msgstr "在 64 位机器上，这保证将库安装到 /usr/lib，而不是默认的 /lib64。"
-
-#. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
-msgid "<option>libc_cv_include_x86_isa_level=no</option>"
-msgstr "<option>libc_cv_include_x86_isa_level=no</option>"
-
-#. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
-msgid ""
-"This disables <quote>x86 ISA needed</quote> property in Glibc libraries.  "
-"Use it <emphasis role=\"bold\">if</emphasis> you are building Glibc with "
-"<option>-march</option> option in <envar>CFLAGS</envar>, to workaround an "
-"issue in Glibc-2.33 breaking it."
-msgstr ""
-"该选项防止在 Glibc 库中使用 <quote>x86 ISA needed</quote> 属性。<emphasis "
-"role=\"bold\">如果</emphasis>要在构建 Glibc 时将 <option>-march</option> 选项"
-"加入到 <envar>CFLAGS</envar>，则需要使用该选项，绕过 Glibc-2.33 中的一个问"
-"题。"
 
 #. type: Content of: <sect1><sect2><para>
 msgid "During this stage the following warning might appear:"
@@ -422,3 +397,24 @@ msgid ""
 "Details on this package are located in <xref linkend=\"contents-glibc\" role="
 "\".\"/>"
 msgstr "该软件包的详细信息可以在<xref linkend=\"contents-glibc\"/>中找到。"
+
+#~ msgid "Fix a build issue with gcc-11.1:"
+#~ msgstr "修复使用 gcc-11.1 构建时出现的问题："
+
+#, no-wrap
+#~ msgid "<userinput remap=\"pre\">sed 's/amx_/amx-/' -i sysdeps/x86/tst-cpu-features-supports.c</userinput>"
+#~ msgstr "<userinput remap=\"pre\">sed 's/amx_/amx-/' -i sysdeps/x86/tst-cpu-features-supports.c</userinput>"
+
+#~ msgid "<option>libc_cv_include_x86_isa_level=no</option>"
+#~ msgstr "<option>libc_cv_include_x86_isa_level=no</option>"
+
+#~ msgid ""
+#~ "This disables <quote>x86 ISA needed</quote> property in Glibc libraries.  "
+#~ "Use it <emphasis role=\"bold\">if</emphasis> you are building Glibc with "
+#~ "<option>-march</option> option in <envar>CFLAGS</envar>, to workaround an "
+#~ "issue in Glibc-2.33 breaking it."
+#~ msgstr ""
+#~ "该选项防止在 Glibc 库中使用 <quote>x86 ISA needed</quote> 属性。<emphasis "
+#~ "role=\"bold\">如果</emphasis>要在构建 Glibc 时将 <option>-march</option> "
+#~ "选项加入到 <envar>CFLAGS</envar>，则需要使用该选项，绕过 Glibc-2.33 中的一"
+#~ "个问题。"
