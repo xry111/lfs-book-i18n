@@ -1,17 +1,23 @@
+# Linux From Scratch libffi 页面的中文翻译
+# This file is distributed under the same license as the Linux From Scratch
+# book.
+# Xi Ruoyao <xry111@mengyan1223.wang>, 2021
+#
 msgid ""
 msgstr ""
-"Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2021-02-16 13:35+0800\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
+"Project-Id-Version: Linux From Scratch 11.0\n"
+"Report-Msgid-Bugs-To: lfs-dev@lists.linuxfromscratch.org\n"
+"POT-Creation-Date: 2021-08-07 12:33+0800\n"
+"PO-Revision-Date: 2021-08-07 12:38+0800\n"
+"Last-Translator: Xi Ruoyao <xry111@mengyan1223.wang>\n"
+"Language-Team: None <noreply@mengyan1223.wang>\n"
 "Language: zh_CN\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"X-Bugs: https://github.com/xry111/lfs-book-i18n/issues\n"
 "X-Pootle-Revision: 9999999\n"
 "X-Pootle-Path: /zh_CN/lfs/chapter08/libffi.po\n"
-"X-Generator: Translate Toolkit 2.2.5\n"
 
 #. type: Content of: <sect1><sect1info><address>
 #, no-wrap
@@ -80,8 +86,16 @@ msgstr "准备编译 libffi："
 
 #. type: Content of: <sect1><sect2><screen>
 #, no-wrap
-msgid "<userinput remap=\"configure\">./configure --prefix=/usr --disable-static --with-gcc-arch=native</userinput>"
-msgstr "<userinput remap=\"configure\">./configure --prefix=/usr --disable-static --with-gcc-arch=native</userinput>"
+msgid ""
+"<userinput remap=\"configure\">./configure --prefix=/usr          \\\n"
+"            --disable-static       \\\n"
+"            --with-gcc-arch=native \\\n"
+"            --disable-exec-static-tramp</userinput>"
+msgstr ""
+"<userinput remap=\"configure\">./configure --prefix=/usr          \\\n"
+"            --disable-static       \\\n"
+"            --with-gcc-arch=native \\\n"
+"            --disable-exec-static-tramp</userinput>"
 
 #. type: Content of: <sect1><sect2><variablelist><title>
 msgid "The meaning of the configure option:"
@@ -106,6 +120,21 @@ msgstr ""
 "的系统中，需要使用目标系统架构作为该选项的参数值。关于不同系统架构的信息，参"
 "阅 <ulink url='https://gcc.gnu.org/onlinedocs/gcc-&gcc-version;/gcc/x86-"
 "Options.html'>gcc 手册中提供的的 x86 选项</ulink>。"
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
+msgid "<parameter>--disable-exec-static-tramp</parameter>"
+msgstr "<parameter>--disable-exec-static-tramp</parameter>"
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
+msgid ""
+"Disable static trampoline support.  It's a new security feature in libffi, "
+"but some BLFS packages (notably <application>GJS</application> and "
+"<application>gobject-introspection</application>) have not been adapted for "
+"it."
+msgstr ""
+"禁用静态蹦床函数支持。这是 libffi 的一项新的安全特性，但一些 BLFS 软件包 "
+"(特别是 <application>GJS</application> 和 "
+"<application>gobject-introspection</application>) 尚未适配该特性。"
 
 #. type: Content of: <sect1><sect2><para>
 msgid "Compile the package:"
