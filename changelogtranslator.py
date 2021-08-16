@@ -26,6 +26,9 @@ tt.append(re.compile('\[([^\]]+)\] - Updated? to ([^ ]+) \(([^ ]+) module\). +Fi
 tt.append(re.compile('\[([^\]]+)\] - Updated? to ([^ ]+) \(security fix\). +Fixes (<ulink [^>]+> *#[0-9]+ *</ulink>).?$', re.MULTILINE|re.DOTALL),
 	{'fr': '[#1] — Mise à jour vers #2 (mise à jour de sécurité). Corrige #3',
          'zh_CN': '[#1] — 更新到 #2 (修复安全问题)。修复 #3。'})
+tt.append(re.compile('\[([^\]]+)\] - Updated? to ([^ ]+). +Addresses (<ulink [^>]+> *#[0-9]+ *</ulink>).?$', re.MULTILINE|re.DOTALL),
+	{'fr': '[#1] — Mise à jour vers #2. Traiter #3',
+         'zh_CN': '[#1] — 更新到 #2。处理 #3。'})
 tt.append(re.compile('(20[0-9]{2})-(0?)([0-9]+)-(0?)([0-9]+)'),
 	{'fr': '#4#5-#2#3-#1',
          'zh_CN': '#1 年 #3 月 #5 日'})
