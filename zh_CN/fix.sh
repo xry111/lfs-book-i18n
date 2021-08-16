@@ -69,7 +69,7 @@ sed -n "${sed_cmd}" -i \
 	chapter08/ninja.xml                          \
 	chapter08/texinfo.xml                        \
 	chapter08/systemd.xml                        \
-	chapter08/strippingagain.xml                 \
+	chapter08/stripping.xml                      \
 	chapter09/networkd.xml                       \
 	chapter09/network.xml                        \
 	chapter09/consoled.xml                       \
@@ -77,7 +77,7 @@ sed -n "${sed_cmd}" -i \
 
 # Looks stupid, but I don't know any better way.
 for iter in 1 2 3; do
-	sed -n "${sed_cmd}" -i chapter08/strippingagain.xml
+	sed -n "${sed_cmd}" -i chapter08/stripping.xml
 done
 
 # Apply lfs-l10n.xml patch, if it's not applied
