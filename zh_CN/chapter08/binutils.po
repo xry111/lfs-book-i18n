@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Linux From Scratch 11.0\n"
 "Report-Msgid-Bugs-To: lfs-dev@lists.linuxfromscratch.org\n"
-"POT-Creation-Date: 2021-08-16 11:38+0800\n"
+"POT-Creation-Date: 2021-08-18 17:20+0800\n"
 "PO-Revision-Date: 2021-08-16 11:42+0800\n"
 "Last-Translator: Xi Ruoyao <xry111@mengyan1223.wang>\n"
 "Language-Team: None <noreply@mengyan1223.wang>\n"
@@ -109,8 +109,7 @@ msgid ""
 "Upstream has made a patch to fix a problem building some packages.  Apply "
 "that now:"
 msgstr ""
-"上游开发者提供了一个补丁，它能修复在构建一些软件包时出现的问题。"
-"应用该补丁："
+"上游开发者提供了一个补丁，它能修复在构建一些软件包时出现的问题。应用该补丁："
 
 #. type: Content of: <sect1><sect2><screen>
 #, no-wrap
@@ -134,15 +133,6 @@ msgid ""
 msgstr ""
 "<userinput remap=\"pre\">sed -i '63d' etc/texi2pod.pl\n"
 "find -name \\*.1 -delete</userinput>"
-
-#. type: Content of: <sect1><sect2><para>
-msgid "Now remove one test that prevents the tests from running to completion:"
-msgstr "删除一项导致测试套件无法完成的测试："
-
-#. type: Content of: <sect1><sect2><screen>
-#, no-wrap
-msgid "<userinput remap=\"pre\">sed -i '/@\\tincremental_copy/d' gold/testsuite/Makefile.in</userinput>"
-msgstr "<userinput remap=\"pre\">sed -i '/@\\tincremental_copy/d' gold/testsuite/Makefile.in</userinput>"
 
 #. type: Content of: <sect1><sect2><para>
 msgid ""
@@ -653,3 +643,11 @@ msgstr ""
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 msgid "libopcodes"
 msgstr "libopcodes"
+
+#~ msgid ""
+#~ "Now remove one test that prevents the tests from running to completion:"
+#~ msgstr "删除一项导致测试套件无法完成的测试："
+
+#, no-wrap
+#~ msgid "<userinput remap=\"pre\">sed -i '/@\\tincremental_copy/d' gold/testsuite/Makefile.in</userinput>"
+#~ msgstr "<userinput remap=\"pre\">sed -i '/@\\tincremental_copy/d' gold/testsuite/Makefile.in</userinput>"
