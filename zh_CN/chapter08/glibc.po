@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Linux From Scratch 11.0\n"
 "Report-Msgid-Bugs-To: lfs-dev@lists.linuxfromscratch.org\n"
-"POT-Creation-Date: 2021-08-16 11:38+0800\n"
-"PO-Revision-Date: 2021-08-16 11:40+0800\n"
+"POT-Creation-Date: 2021-08-21 11:31+0800\n"
+"PO-Revision-Date: 2021-08-21 11:33+0800\n"
 "Last-Translator: Xi Ruoyao <xry111@mengyan1223.wang>\n"
 "Language-Team: None <noreply@mengyan1223.wang>\n"
 "Language: zh_CN\n"
@@ -69,6 +69,19 @@ msgstr "&glibc-fin-du;"
 #. type: Content of: <sect1><sect2><title>
 msgid "Installation of Glibc"
 msgstr "安装 Glibc"
+
+#. type: Content of: <sect1><sect2><para>
+msgid "First, fix a security problem identified upstream:"
+msgstr "首先，修复上游开发者发现的一项安全问题："
+
+#. type: Content of: <sect1><sect2><screen>
+#, no-wrap
+msgid ""
+"<userinput remap=\"pre\">sed -e '/NOTIFY_REMOVED)/s/)/ \\&amp;\\&amp; data.attr != NULL)/' \\\n"
+"    -i sysdeps/unix/sysv/linux/mq_notify.c</userinput>"
+msgstr ""
+"<userinput remap=\"pre\">sed -e '/NOTIFY_REMOVED)/s/)/ \\&amp;\\&amp; data.attr != NULL)/' \\\n"
+"    -i sysdeps/unix/sysv/linux/mq_notify.c</userinput>"
 
 #. type: Content of: <sect1><sect2><para>
 msgid ""
@@ -239,9 +252,9 @@ msgid ""
 "ignored. This is a list of the most common issues seen for recent versions "
 "of LFS:"
 msgstr ""
-"您可能看到一些失败结果。Glibc 的测试套件和宿主系统之间有某种依赖关系。"
-"在 4200 多项测试中，如果只有几项测试失败，一般可以忽略它们。"
-"下面列出在一些版本的 LFS 上发现的，最常见的问题："
+"您可能看到一些失败结果。Glibc 的测试套件和宿主系统之间有某种依赖关系。在 "
+"4200 多项测试中，如果只有几项测试失败，一般可以忽略它们。下面列出在一些版本"
+"的 LFS 上发现的，最常见的问题："
 
 #. type: Content of: <sect1><sect2><itemizedlist><listitem><para>
 msgid ""
