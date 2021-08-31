@@ -1,17 +1,23 @@
+# Linux From Scratch OpenSSL 页面的中文翻译
+# This file is distributed under the same license as the Linux From Scratch
+# book.
+# Xi Ruoyao <xry111@mengyan1223.wang>, 2021
+#
 msgid ""
 msgstr ""
-"Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2021-05-16 02:56+0800\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
+"Project-Id-Version: Linux From Scratch 11.0\n"
+"Report-Msgid-Bugs-To: lfs-dev@lists.linuxfromscratch.org\n"
+"POT-Creation-Date: 2021-08-31 16:45+0800\n"
+"PO-Revision-Date: 2021-08-31 16:47+0800\n"
+"Last-Translator: Xi Ruoyao <xry111@mengyan1223.wang>\n"
+"Language-Team: None <noreply@mengyan1223.wang>\n"
 "Language: zh_CN\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"X-Bugs: https://github.com/xry111/lfs-book-i18n/issues\n"
 "X-Pootle-Revision: 9999999\n"
 "X-Pootle-Path: /zh_CN/lfs/chapter08/openssl.po\n"
-"X-Generator: Translate Toolkit 2.2.5\n"
 
 #. type: Content of: <sect1><sect1info><address>
 #, no-wrap
@@ -103,11 +109,12 @@ msgstr "<userinput remap=\"test\">make test</userinput>"
 
 #. type: Content of: <sect1><sect2><para>
 msgid ""
-"One test 30-test_afalg.t is known to fail on some kernel configurations (it "
-"apparently assumes certain unspecified crypto options have been selected)."
+"One test, 30-test_afalg.t, is known to fail on some kernel configurations "
+"(depending on inconsistent values of CONFIG_CRYPTO_USER_API* settings.) If "
+"it fails, it can safely be ignored."
 msgstr ""
-"一项名为 30-test_afalg.t 的测试在某些内核配置下会失败 (它假定选择了一些未说明"
-"的内核配置选项)。"
+"一项名为 30-test_afalg.t 的测试在某些 (CONFIG_CRYPTO_USER_API* 设定不一致的) "
+"内核配置下会失败。如果它失败，可以放心地忽略它。"
 
 #. type: Content of: <sect1><sect2><para>
 msgid "Install the package:"
@@ -153,12 +160,11 @@ msgid ""
 "same series.</emphasis>"
 msgstr ""
 "一旦新版的 OpenSSL 被发布，且它包含对安全缺陷的修复，就应该更新 OpenSSL。"
-"OpenSSL 的版本分为多个序列，每个版本序列中除了首个发布版本以外，"
-"其余版本以一个英文字母进行区分 (例如，1.1.1, 1.1.1a, 1.1.1b, 等等)。"
-"由于 LFS 只安装共享库，没有必要重新编译链接到 "
-"<filename class=\"libraryfile\">libcrypto.so</filename> 或者 <filename "
-"class=\"libraryfile\">libssl.so</filename> 的软件包，"
-"<emphasis>前提是更新后的版本和原版本在同一个版本序列中</emphasis>。"
+"OpenSSL 的版本分为多个序列，每个版本序列中除了首个发布版本以外，其余版本以一"
+"个英文字母进行区分 (例如，1.1.1, 1.1.1a, 1.1.1b, 等等)。由于 LFS 只安装共享"
+"库，没有必要重新编译链接到 <filename class=\"libraryfile\">libcrypto.so</"
+"filename> 或者 <filename class=\"libraryfile\">libssl.so</filename> 的软件"
+"包，<emphasis>前提是更新后的版本和原版本在同一个版本序列中</emphasis>。"
 
 #. type: Content of: <sect1><sect2><note><para>
 msgid ""
@@ -166,8 +172,8 @@ msgid ""
 "and restarted. Read the related entries in <xref linkend='pkgmgmt-upgrade-"
 "issues'/> for details."
 msgstr ""
-"然而，需要重新启动链接到这两个库的，正在运行的程序。"
-"详见<xref linkend='pkgmgmt-upgrade-issues'/>中的相关条目。"
+"然而，需要重新启动链接到这两个库的，正在运行的程序。详见<xref "
+"linkend='pkgmgmt-upgrade-issues'/>中的相关条目。"
 
 #. type: Content of: <sect1><sect2><title>
 msgid "Contents of OpenSSL"
