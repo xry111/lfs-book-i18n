@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2021-07-28 12:12+0800\n"
+"POT-Creation-Date: 2021-09-15 15:18+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -181,10 +181,10 @@ msgstr ""
 #. type: Content of: <sect1><sect2><itemizedlist><listitem><screen>
 #, no-wrap
 msgid ""
-"<userinput role=\"nodump\">grep -l  -e '<replaceable>libfoo</replaceable>.*deleted' /proc/*/maps |\n"
+"<userinput>grep -l  -e '<replaceable>libfoo</replaceable>.*deleted' /proc/*/maps |\n"
 "   tr -cd 0-9\\\\n | xargs -r ps u</userinput>"
 msgstr ""
-"<userinput role=\"nodump\">grep -l  -e '<replaceable>libfoo</replaceable>.*deleted' /proc/*/maps |\n"
+"<userinput>grep -l  -e '<replaceable>libfoo</replaceable>.*deleted' /proc/*/maps |\n"
 "   tr -cd 0-9\\\\n | xargs -r ps u</userinput>"
 
 #. type: Content of: <sect1><sect2><itemizedlist><listitem><para>
@@ -216,9 +216,9 @@ msgstr ""
 "崩溃。正确的，不会导致进程崩溃的更新程序或共享库的方法是：先删除旧版本，再将"
 "新版本安装到位。<application>Coreutils</application> 提供的 "
 "<command>install</command> 命令就是这样进行更新的，多数软件包使用该命令安装程"
-"序和库。这意味着在更新软件包时通常不会遇到这个问题。然而，一些软件包 (如 BLFS 中的 Mozilla "
-"JS) 的安装过程会简单覆盖已经存在的文件并导致进程崩溃，因此在进行更新前，最好"
-"保存工作并关闭不需要的，正在运行的进程。"
+"序和库。这意味着在更新软件包时通常不会遇到这个问题。然而，一些软件包 (如 "
+"BLFS 中的 Mozilla JS) 的安装过程会简单覆盖已经存在的文件并导致进程崩溃，因此"
+"在进行更新前，最好保存工作并关闭不需要的，正在运行的进程。"
 
 #. type: Content of: <sect1><sect2><title>
 msgid "Package Management Techniques"

@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2021-08-02 21:03+0800\n"
+"POT-Creation-Date: 2021-09-15 15:18+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -246,13 +246,29 @@ msgid "<userinput remap=\"install\">ln -sfv tclsh&tcl-major-version; /usr/bin/tc
 msgstr "<userinput remap=\"install\">ln -sfv tclsh&tcl-major-version; /usr/bin/tclsh</userinput>"
 
 #. type: Content of: <sect1><sect2><para>
-msgid "Finally, rename a man page that conflicts with a Perl man page:"
-msgstr "最后，重命名一个与 Perl man 页面文件名冲突的 man 页面："
+msgid "Rename a man page that conflicts with a Perl man page:"
+msgstr "重命名一个与 Perl man 页面文件名冲突的 man 页面："
 
 #. type: Content of: <sect1><sect2><screen>
 #, no-wrap
 msgid "<userinput remap=\"install\">mv /usr/share/man/man3/{Thread,Tcl_Thread}.3</userinput>"
 msgstr "<userinput remap=\"install\">mv /usr/share/man/man3/{Thread,Tcl_Thread}.3</userinput>"
+
+#. type: Content of: <sect1><sect2><para>
+msgid ""
+"If you downloaded the optional documentation, install it by issuing the "
+"following commands:"
+msgstr ""
+"如果下载了可选的文档压缩包，执行命令以安装文档："
+
+#. type: Content of: <sect1><sect2><screen>
+#, no-wrap
+msgid ""
+"<userinput remap=\"install\">mkdir -v -p /usr/share/doc/tcl-&tcl-version; \n"
+"cp -v -r  ../html/* /usr/share/doc/tcl-&tcl-version;</userinput>"
+msgstr ""
+"<userinput remap=\"install\">mkdir -v -p /usr/share/doc/tcl-&tcl-version; \n"
+"cp -v -r  ../html/* /usr/share/doc/tcl-&tcl-version;</userinput>"
 
 #. type: Content of: <sect1><sect2><title>
 msgid "Contents of Tcl"
