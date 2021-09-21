@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2021-07-28 12:12+0800\n"
+"POT-Creation-Date: 2021-09-21 17:37+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -264,10 +264,12 @@ msgstr "<userinput>localectl set-locale LANG=\"en_US.UTF-8\" LC_CTYPE=\"en_US\"<
 
 #. type: Content of: <sect1><note><para>
 msgid ""
-"Please note that the <command>localectl</command> command can be used only "
-"on a system booted with systemd."
+"Please note that the <command>localectl</command> command doesn't work in "
+"the chroot environment.  It can only be used after the LFS system is booted "
+"with systemd."
 msgstr ""
-"请注意 <command>localectl</command> 只能在使用 systemd 引导的系统中使用。"
+"请注意 <command>localectl</command> 命令在 chroot 环境无法工作。"
+"只有在使用 systemd 引导 LFS 系统后才能使用它。"
 
 #. type: Content of: <sect1><para>
 msgid ""

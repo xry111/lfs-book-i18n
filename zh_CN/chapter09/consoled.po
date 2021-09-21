@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2021-02-20 08:46+0800\n"
+"POT-Creation-Date: 2021-09-21 17:37+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -138,9 +138,12 @@ msgstr "<userinput>localectl set-keymap MAP</userinput>"
 
 #. type: Content of: <sect1><note><para>
 msgid ""
-"Please note that the <command>localectl</command> command can be used only "
-"on a system booted with systemd."
-msgstr "请注意 <command>localectl</command> 只能在 systemd 引导的系统上使用。"
+"Please note that the <command>localectl</command> command doesn't work in "
+"the chroot environment.  It can only be used after the LFS system is booted "
+"with systemd."
+msgstr ""
+"请注意 <command>localectl</command> 命令在 chroot 环境无法工作。"
+"只有在使用 systemd 引导 LFS 系统后才能使用它。"
 
 #. type: Content of: <sect1><para>
 msgid ""
