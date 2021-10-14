@@ -1,4 +1,4 @@
-name: Book
+name: Build and Publish the Book
 
 on:
   push:
@@ -10,14 +10,15 @@ on:
   workflow_dispatch:
 
 jobs:
-  build:
-    name: Build the book
+  xml-translation:
+    name: Translate XML (zh_CN)
     runs-on: ubuntu-latest
     steps:
       - name: Prepare
         run: |
           sudo apt update
-          sudo apt install python3-polib libxml2-utils xsltproc docbook-xml docbook-xsl tidy fop gettext
+          sudo apt install gettext python3-polib
+          echo "MAKEFLAGS=-j2" >> $GITHUB_ENV
       - name: Install po4a-0.62
         run: |
           wget 'https://bf.mengyan1223.wang/assets/po4a/po4a_0.62-xry111-1_all.deb'
@@ -27,50 +28,396 @@ jobs:
         with:
           submodules: recursive
           fetch-depth: 0
-      - name: Check for Untranslated or Fuzzy Strings
-        run: ./check-translations.sh
-      - name: Set Environment for Pull Requests
-        if: github.event_name != 'push'
-        run: |
-          echo "UPLOAD=no" >> $GITHUB_ENV
-      - name: Set Environment for Push
-        if: github.event_name == 'push'
-        run: ./setenv.sh "${GITHUB_REF}"
-      - name: Configure
-        run: |
-          echo 'MLANG=zh_CN' > local.mk
       - name: Update po Files
         run: make pofiles
-      - name: Generate Translated XML Files
-        run: make booksrc
-      - name: Generate Translated Book (sysv)
+      - name: Check for Untranslated or Fuzzy Strings
+        run: ./check-translations.sh
+      - name: Create Translated XML Files
         run: |
-          make REV=sysv html nochunks pdf
-          mv zh_CN/book/render lfs-sysv
-          mv zh_CN/book/nochunks/* lfs-sysv
-          mv zh_CN/book/pdf/* lfs-sysv
-      - name: Generate Translated Book (systemd)
+          echo 'MLANG=zh_CN' > local.mk
+          make booksrc
+          make -C zh_CN/book version
+          echo "#!/bin/sh" > zh_CN/book/git-version.sh
+          echo "exit 0" >> zh_CN/book/git-version.sh
+          chmod -v 755 zh_CN/book/git-version.sh
+          tar -C zh_CN -cf book.tar book
+      - name: Upload Translated XML Files
+        uses: actions/upload-artifact@v2
+        with:
+          name: lfs-xml-zh_CN
+          path: book.tar
+      - name: Prepare Auxilary Files
         run: |
-          make REV=systemd html nochunks pdf
-          mv zh_CN/book/render lfs-systemd
-          mv zh_CN/book/nochunks/* lfs-systemd
-          mv zh_CN/book/pdf/* lfs-systemd
+          mkdir $HOME/aux-files
+          cp setenv.sh $HOME/aux-files
+          cp .known_hosts $HOME/aux-files
+      - name: Upload Auxilary Files
+        uses: actions/upload-artifact@v2
+        with:
+          name: aux-files
+          path: ~/aux-files
+
+  build-sysv-html:
+    needs: xml-translation
+    name: Build Chunked HTML (sysv, zh_CN)
+    runs-on: ubuntu-latest
+    steps:
+      - name: Prepare
+        run: |
+          sudo apt update
+          sudo apt install xsltproc libxml2-utils docbook-xml docbook-xsl tidy
+      - name: Fetch XML
+        uses: actions/download-artifact@v2
+        with:
+          name: lfs-xml-zh_CN
+          path: ~/lfs-xml-zh_CN
+      - name: Untar XML
+        run: |
+          tar -C ~/lfs-xml-zh_CN --strip-components=1 -xf ~/lfs-xml-zh_CN/book.tar
+      - name: Generate Translated Book
+        run: |
+          make REV=sysv book -C ~/lfs-xml-zh_CN BASEDIR=~/lfs-sysv-zh_CN
+          tar -C $HOME -cJf lfs-sysv-zh_CN.tar.xz lfs-sysv-zh_CN
       - name: Upload Artifacts
         uses: actions/upload-artifact@v2
         with:
-          name: book
-          path: |
-            lfs-sysv 
-            lfs-systemd
-      - name: Set up SSH key
+          name: lfs-sysv-zh_CN-html
+          path: lfs-sysv-zh_CN.tar.xz
+
+  upload-sysv-html:
+    needs: build-sysv-html
+    name: Upload Chunked HTML (sysv, zh_CN)
+    runs-on: ubuntu-latest
+    steps:
+      - name: Prepare SSH Key
         uses: webfactory/ssh-agent@v0.4.1
         with:
           ssh-private-key: ${{ secrets.SSH_PRIVATE_KEY }}
-      - name: Upload Generated Book to the Server
-        if: env.UPLOAD == 'yes'
+      - name: Fetch the Book
+        uses: actions/download-artifact@v2
+        with:
+          name: lfs-sysv-zh_CN-html
+          path: ~/lfs-sysv-zh_CN-html
+      - name: Fetch Auxilary Files
+        uses: actions/download-artifact@v2
+        with:
+          name: aux-files
+          path: ~/aux-files
+      - name: Set SSH Host Key
+        run:
+          cat ~/aux-files/.known_hosts >> ~/.ssh/known_hosts
+      - name: Set Environment (Push)
+        if: github.event_name == 'push'
+        run: sh ~/aux-files/setenv.sh "${GITHUB_REF}"
+      - name: Set Environment (Pull Request)
+        if: github.event_name != 'push'
+        run: echo "UPLOAD=no" >> $GITHUB_ENV
+      - name: Upload the Book
         run: |
-          cat .known_hosts >> $HOME/.ssh/known_hosts
-          ssh "lfsbook@mengyan1223.wang" rm -rf "/var/www/xry111/lfs/zh_CN/${SYSV}"
-          ssh "lfsbook@mengyan1223.wang" rm -rf "/var/www/xry111/lfs/zh_CN/${SYSD}"
-          scp -r lfs-sysv "lfsbook@mengyan1223.wang:/var/www/xry111/lfs/zh_CN/${SYSV}"
-          scp -r lfs-systemd "lfsbook@mengyan1223.wang:/var/www/xry111/lfs/zh_CN/${SYSD}"
+          scp ~/lfs-sysv-zh_CN-html/lfs-sysv-zh_CN.tar.xz "lfsbook@mengyan1223.wang:/tmp/lfs-sysv-zh_CN.tar.xz"
+          ssh "lfsbook@mengyan1223.wang" "/usr/local/bin/update-lfs" "/tmp/lfs-sysv-zh_CN.tar.xz" "/var/www/xry111/lfs/zh_CN/${SYSV}"
+
+  build-systemd-html:
+    needs: xml-translation
+    name: Build Chunked HTML (systemd, zh_CN)
+    runs-on: ubuntu-latest
+    steps:
+      - name: Prepare
+        run: |
+          sudo apt update
+          sudo apt install xsltproc libxml2-utils docbook-xml docbook-xsl tidy
+      - name: Fetch XML
+        uses: actions/download-artifact@v2
+        with:
+          name: lfs-xml-zh_CN
+          path: ~/lfs-xml-zh_CN
+      - name: Untar XML
+        run: |
+          tar -C ~/lfs-xml-zh_CN --strip-components=1 -xf ~/lfs-xml-zh_CN/book.tar
+      - name: Generate Translated Book
+        run: |
+          make REV=systemd book -C ~/lfs-xml-zh_CN BASEDIR=~/lfs-systemd-zh_CN
+          tar -C $HOME -cJf lfs-systemd-zh_CN.tar.xz lfs-systemd-zh_CN
+      - name: Upload Artifacts
+        uses: actions/upload-artifact@v2
+        with:
+          name: lfs-systemd-zh_CN-html
+          path: lfs-systemd-zh_CN.tar.xz
+
+  upload-systemd-html:
+    needs: build-systemd-html
+    name: Upload Chunked HTML (systemd, zh_CN)
+    runs-on: ubuntu-latest
+    steps:
+      - name: Prepare SSH Key
+        uses: webfactory/ssh-agent@v0.4.1
+        with:
+          ssh-private-key: ${{ secrets.SSH_PRIVATE_KEY }}
+      - name: Fetch the Book
+        uses: actions/download-artifact@v2
+        with:
+          name: lfs-systemd-zh_CN-html
+          path: ~/lfs-systemd-zh_CN-html
+      - name: Fetch Auxilary Files
+        uses: actions/download-artifact@v2
+        with:
+          name: aux-files
+          path: ~/aux-files
+      - name: Set SSH Host Key
+        run:
+          cat ~/aux-files/.known_hosts >> ~/.ssh/known_hosts
+      - name: Set Environment (Push)
+        if: github.event_name == 'push'
+        run: sh ~/aux-files/setenv.sh "${GITHUB_REF}"
+      - name: Set Environment (Pull Request)
+        if: github.event_name != 'push'
+        run: echo "UPLOAD=no" >> $GITHUB_ENV
+      - name: Upload the Book
+        run: |
+          scp ~/lfs-systemd-zh_CN-html/lfs-systemd-zh_CN.tar.xz "lfsbook@mengyan1223.wang:/tmp/lfs-systemd-zh_CN.tar.xz"
+          ssh "lfsbook@mengyan1223.wang" "/usr/local/bin/update-lfs" "/tmp/lfs-systemd-zh_CN.tar.xz" "/var/www/xry111/lfs/zh_CN/${SYSD}"
+
+  build-sysv-nochunks:
+    needs: xml-translation
+    name: Build Single Page HTML (sysv, zh_CN)
+    runs-on: ubuntu-latest
+    steps:
+      - name: Prepare
+        run: |
+          sudo apt update
+          sudo apt install xsltproc libxml2-utils docbook-xml docbook-xsl tidy
+      - name: Fetch XML
+        uses: actions/download-artifact@v2
+        with:
+          name: lfs-xml-zh_CN
+          path: ~/lfs-xml-zh_CN
+      - name: Untar XML
+        run: |
+          tar -C ~/lfs-xml-zh_CN --strip-components=1 -xf ~/lfs-xml-zh_CN/book.tar
+      - name: Generate Translated Book
+        run: |
+          make REV=sysv nochunks -C ~/lfs-xml-zh_CN BASEDIR=~/lfs-sysv-zh_CN
+      - name: Upload Artifacts
+        uses: actions/upload-artifact@v2
+        with:
+          name: lfs-sysv-zh_CN-nochunks
+          path: ~/lfs-sysv-zh_CN/LFS-BOOK.html
+
+  # attention: upload-sysv-{nochunks,pdf} must be scheduled after
+  # upload-sysv-html, because the latter will delete and recreate the
+  # directory containing the book.  For systemd, likewise.
+  upload-sysv-nochunks:
+    needs: [build-sysv-nochunks, upload-sysv-html]
+    name: Upload Single Page HTML (sysv, zh_CN)
+    runs-on: ubuntu-latest
+    steps:
+      - name: Prepare SSH Key
+        uses: webfactory/ssh-agent@v0.4.1
+        with:
+          ssh-private-key: ${{ secrets.SSH_PRIVATE_KEY }}
+      - name: Fetch the Book
+        uses: actions/download-artifact@v2
+        with:
+          name: lfs-sysv-zh_CN-nochunks
+          path: ~/lfs-sysv-zh_CN-nochunks
+      - name: Fetch Auxilary Files
+        uses: actions/download-artifact@v2
+        with:
+          name: aux-files
+          path: ~/aux-files
+      - name: Set SSH Host Key
+        run:
+          cat ~/aux-files/.known_hosts >> ~/.ssh/known_hosts
+      - name: Set Environment (Push)
+        if: github.event_name == 'push'
+        run: sh ~/aux-files/setenv.sh "${GITHUB_REF}"
+      - name: Set Environment (Pull Request)
+        if: github.event_name != 'push'
+        run: echo "UPLOAD=no" >> $GITHUB_ENV
+      - name: Upload the Book
+        run: |
+          scp ~/lfs-sysv-zh_CN-nochunks/LFS-BOOK.html "lfsbook@mengyan1223.wang:/var/www/xry111/lfs/zh_CN/${SYSV}"
+
+  build-systemd-nochunks:
+    needs: xml-translation
+    name: Build Single Page HTML (systemd, zh_CN)
+    runs-on: ubuntu-latest
+    steps:
+      - name: Prepare
+        run: |
+          sudo apt update
+          sudo apt install xsltproc libxml2-utils docbook-xml docbook-xsl tidy
+      - name: Fetch XML
+        uses: actions/download-artifact@v2
+        with:
+          name: lfs-xml-zh_CN
+          path: ~/lfs-xml-zh_CN
+      - name: Untar XML
+        run: |
+          tar -C ~/lfs-xml-zh_CN --strip-components=1 -xf ~/lfs-xml-zh_CN/book.tar
+      - name: Generate Translated Book
+        run: |
+          make REV=systemd nochunks -C ~/lfs-xml-zh_CN BASEDIR=~/lfs-systemd-zh_CN
+      - name: Upload Artifacts
+        uses: actions/upload-artifact@v2
+        with:
+          name: lfs-systemd-zh_CN-nochunks
+          path: ~/lfs-systemd-zh_CN/LFS-SYSD-BOOK.html
+
+  upload-systemd-nochunks:
+    needs: [build-systemd-nochunks, upload-systemd-html]
+    name: Upload Single Page HTML (systemd, zh_CN)
+    runs-on: ubuntu-latest
+    steps:
+      - name: Prepare SSH Key
+        uses: webfactory/ssh-agent@v0.4.1
+        with:
+          ssh-private-key: ${{ secrets.SSH_PRIVATE_KEY }}
+      - name: Fetch the Book
+        uses: actions/download-artifact@v2
+        with:
+          name: lfs-systemd-zh_CN-nochunks
+          path: ~/lfs-systemd-zh_CN-nochunks
+      - name: Fetch Auxilary Files
+        uses: actions/download-artifact@v2
+        with:
+          name: aux-files
+          path: ~/aux-files
+      - name: Set SSH Host Key
+        run:
+          cat ~/aux-files/.known_hosts >> ~/.ssh/known_hosts
+      - name: Set Environment (Push)
+        if: github.event_name == 'push'
+        run: sh ~/aux-files/setenv.sh "${GITHUB_REF}"
+      - name: Set Environment (Pull Request)
+        if: github.event_name != 'push'
+        run: echo "UPLOAD=no" >> $GITHUB_ENV
+      - name: Upload the Book
+        run: |
+          scp ~/lfs-systemd-zh_CN-nochunks/LFS-SYSD-BOOK.html "lfsbook@mengyan1223.wang:/var/www/xry111/lfs/zh_CN/${SYSD}"
+
+  build-sysv-pdf:
+    needs: xml-translation
+    name: Build PDF (sysv, zh_CN)
+    runs-on: ubuntu-latest
+    steps:
+      - name: Prepare
+        run: |
+          sudo apt update
+          sudo apt install xsltproc libxml2-utils docbook-xml docbook-xsl fop
+      - name: Fetch XML
+        uses: actions/download-artifact@v2
+        with:
+          name: lfs-xml-zh_CN
+          path: ~/lfs-xml-zh_CN
+      - name: Untar XML
+        run: |
+          tar -C ~/lfs-xml-zh_CN --strip-components=1 -xf ~/lfs-xml-zh_CN/book.tar
+      - name: Fetch Fonts
+        run: |
+          wget https://bf.mengyan1223.wang/lfs/fonts/fonts-zh_CN-20211015.tar.xz
+          install -v -dm755 ~/lfs-xml-zh_CN/fonts
+          tar xf fonts-zh_CN-20211015.tar.xz -C ~/lfs-xml-zh_CN/fonts
+      - name: Generate Translated Book
+        run: |
+          make REV=sysv pdf -C ~/lfs-xml-zh_CN BASEDIR=~/lfs-sysv-zh_CN
+      - name: Upload Artifacts
+        uses: actions/upload-artifact@v2
+        with:
+          name: lfs-sysv-zh_CN-pdf
+          path: ~/lfs-sysv-zh_CN/LFS-BOOK.pdf
+
+  upload-sysv-pdf:
+    needs: [build-sysv-pdf, upload-sysv-html]
+    name: Upload PDF (sysv, zh_CN)
+    runs-on: ubuntu-latest
+    steps:
+      - name: Prepare SSH Key
+        uses: webfactory/ssh-agent@v0.4.1
+        with:
+          ssh-private-key: ${{ secrets.SSH_PRIVATE_KEY }}
+      - name: Fetch the Book
+        uses: actions/download-artifact@v2
+        with:
+          name: lfs-sysv-zh_CN-pdf
+          path: ~/lfs-sysv-zh_CN-pdf
+      - name: Fetch Auxilary Files
+        uses: actions/download-artifact@v2
+        with:
+          name: aux-files
+          path: ~/aux-files
+      - name: Set SSH Host Key
+        run:
+          cat ~/aux-files/.known_hosts >> ~/.ssh/known_hosts
+      - name: Set Environment (Push)
+        if: github.event_name == 'push'
+        run: sh ~/aux-files/setenv.sh "${GITHUB_REF}"
+      - name: Set Environment (Pull Request)
+        if: github.event_name != 'push'
+        run: echo "UPLOAD=no" >> $GITHUB_ENV
+      - name: Upload the Book
+        run: |
+          scp ~/lfs-sysv-zh_CN-pdf/LFS-BOOK.pdf "lfsbook@mengyan1223.wang:/var/www/xry111/lfs/zh_CN/${SYSV}"
+
+  build-systemd-pdf:
+    needs: xml-translation
+    name: Build PDF (systemd, zh_CN)
+    runs-on: ubuntu-latest
+    steps:
+      - name: Prepare
+        run: |
+          sudo apt update
+          sudo apt install xsltproc libxml2-utils docbook-xml docbook-xsl fop
+      - name: Fetch XML
+        uses: actions/download-artifact@v2
+        with:
+          name: lfs-xml-zh_CN
+          path: ~/lfs-xml-zh_CN
+      - name: Untar XML
+        run: |
+          tar -C ~/lfs-xml-zh_CN --strip-components=1 -xf ~/lfs-xml-zh_CN/book.tar
+      - name: Fetch Fonts
+        run: |
+          wget https://bf.mengyan1223.wang/lfs/fonts/fonts-zh_CN-20211015.tar.xz
+          install -v -dm755 ~/lfs-xml-zh_CN/fonts
+          tar xf fonts-zh_CN-20211015.tar.xz -C ~/lfs-xml-zh_CN/fonts
+      - name: Generate Translated Book
+        run: |
+          make REV=systemd pdf -C ~/lfs-xml-zh_CN BASEDIR=~/lfs-systemd-zh_CN
+      - name: Upload Artifacts
+        uses: actions/upload-artifact@v2
+        with:
+          name: lfs-systemd-zh_CN-pdf
+          path: ~/lfs-systemd-zh_CN/LFS-SYSD-BOOK.pdf
+
+  upload-systemd-pdf:
+    needs: [build-systemd-pdf, upload-systemd-html]
+    name: Upload PDF (systemd, zh_CN)
+    runs-on: ubuntu-latest
+    steps:
+      - name: Prepare SSH Key
+        uses: webfactory/ssh-agent@v0.4.1
+        with:
+          ssh-private-key: ${{ secrets.SSH_PRIVATE_KEY }}
+      - name: Fetch the Book
+        uses: actions/download-artifact@v2
+        with:
+          name: lfs-systemd-zh_CN-pdf
+          path: ~/lfs-systemd-zh_CN-pdf
+      - name: Fetch Auxilary Files
+        uses: actions/download-artifact@v2
+        with:
+          name: aux-files
+          path: ~/aux-files
+      - name: Set SSH Host Key
+        run:
+          cat ~/aux-files/.known_hosts >> ~/.ssh/known_hosts
+      - name: Set Environment (Push)
+        if: github.event_name == 'push'
+        run: sh ~/aux-files/setenv.sh "${GITHUB_REF}"
+      - name: Set Environment (Pull Request)
+        if: github.event_name != 'push'
+        run: echo "UPLOAD=no" >> $GITHUB_ENV
+      - name: Upload the Book
+        run: |
+          scp ~/lfs-systemd-zh_CN-pdf/LFS-SYSD-BOOK.pdf "lfsbook@mengyan1223.wang:/var/www/xry111/lfs/zh_CN/${SYSD}"
