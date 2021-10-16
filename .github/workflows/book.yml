@@ -37,9 +37,7 @@ jobs:
           echo 'MLANG=zh_CN' > local.mk
           make booksrc
           make -C zh_CN/book version
-          echo "#!/bin/sh" > zh_CN/book/git-version.sh
-          echo "exit 0" >> zh_CN/book/git-version.sh
-          chmod -v 755 zh_CN/book/git-version.sh
+          sed '/git.status/,$ d' -i zh_CN/book/git-version.sh
           tar -C zh_CN -cf book.tar book
       - name: Upload Translated XML Files
         uses: actions/upload-artifact@v2
