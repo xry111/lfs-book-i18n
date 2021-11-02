@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2021-07-24 00:31+0800\n"
+"POT-Creation-Date: 2021-11-02 21:46+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -81,11 +81,20 @@ msgstr ""
 #. type: Content of: <sect1><sect2><screen>
 #, no-wrap
 msgid ""
-"<userinput remap=\"pre\"> sed -i -e 's/GROUP=\"render\"/GROUP=\"video\"/' \\\n"
+"<userinput remap=\"pre\">sed -i -e 's/GROUP=\"render\"/GROUP=\"video\"/' \\\n"
 "        -e 's/GROUP=\"sgx\", //' rules.d/50-udev-default.rules.in</userinput>"
 msgstr ""
-"<userinput remap=\"pre\"> sed -i -e 's/GROUP=\"render\"/GROUP=\"video\"/' \\\n"
+"<userinput remap=\"pre\">sed -i -e 's/GROUP=\"render\"/GROUP=\"video\"/' \\\n"
 "        -e 's/GROUP=\"sgx\", //' rules.d/50-udev-default.rules.in</userinput>"
+
+#. type: Content of: <sect1><sect2><para>
+msgid "Fix a meson problem:"
+msgstr "修复一项与 meson 相关的问题："
+
+#. type: Content of: <sect1><sect2><screen>
+#, no-wrap
+msgid "<userinput remap=\"pre\">sed -i 's/+ want_libfuzzer.*$/and want_libfuzzer/' meson.build</userinput>"
+msgstr "<userinput remap=\"pre\">sed -i 's/+ want_libfuzzer.*$/and want_libfuzzer/' meson.build</userinput>"
 
 #. type: Content of: <sect1><sect2><para>
 msgid "Prepare systemd for compilation:"

@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Linux From Scratch 11.0\n"
 "Report-Msgid-Bugs-To: lfs-dev@lists.linuxfromscratch.org\n"
-"POT-Creation-Date: 2021-10-13 19:43+0800\n"
-"PO-Revision-Date: 2021-09-02 15:18+0800\n"
+"POT-Creation-Date: 2021-11-02 21:01+0800\n"
+"PO-Revision-Date: 2021-11-02 21:27+0800\n"
 "Last-Translator: Xi Ruoyao <xry111@mengyan1223.wang>\n"
 "Language-Team: None <noreply@mengyan1223.wang>\n"
 "Language: zh_CN\n"
@@ -44,10 +44,9 @@ msgid ""
 "ulink> will allow you to easily view the BLFS book in one virtual terminal, "
 "while building packages in another."
 msgstr ""
-"字符模式浏览器，例如 <ulink url='&blfs-book;basicnet/lynx."
-"html'>Lynx</ulink>"
-"，这样您可以在一个虚拟终端中阅读 BLFS 手册，"
-"同时在另一个虚拟终端构建软件包。"
+"字符模式浏览器，例如 <ulink url='&blfs-book;basicnet/lynx.html'>Lynx</"
+"ulink>，这样您可以在一个虚拟终端中阅读 BLFS 手册，同时在另一个虚拟终端构建软"
+"件包。"
 
 #. type: Content of: <sect1><itemizedlist><listitem><para>
 msgid ""
@@ -56,17 +55,17 @@ msgid ""
 "system to verify SSL certificates provided by remote servers (for example, a "
 "website using HTTPS)."
 msgstr ""
-"<ulink url='&blfs-book;postlfs/make-ca.html'>make-ca</ulink> "
-"软件包允许您设置本机信任的根证书，使得系统能够验证远程"
-"服务器 (例如，使用 HTTPS 的网站) 提供的 SSL 证书。"
+"<ulink url='&blfs-book;postlfs/make-ca.html'>make-ca</ulink> 软件包允许您设置"
+"本机信任的根证书，使得系统能够验证远程服务器 (例如，使用 HTTPS 的网站) 提供"
+"的 SSL 证书。"
 
 #. type: Content of: <sect1><itemizedlist><listitem><para>
 msgid ""
 "The <ulink url='&blfs-book;general/gpm.html'>GPM</ulink> package will allow "
 "you to perform copy/paste actions in your virtual terminals."
 msgstr ""
-"<ulink url='&blfs-book;general/gpm.html'>GPM</ulink> "
-"软件包允许您在虚拟终端中进行复制粘贴操作。"
+"<ulink url='&blfs-book;general/gpm.html'>GPM</ulink> 软件包允许您在虚拟终端中"
+"进行复制粘贴操作。"
 
 #. type: Content of: <sect1><itemizedlist><listitem><para>
 msgid ""
@@ -85,9 +84,8 @@ msgid ""
 "useful for building packages as a non-root user and easily installing the "
 "resulting packages in your new system."
 msgstr ""
-"可以安装 <ulink url='&blfs-book;postlfs/sudo.html'>sudo</ulink>，"
-"这样就能使用非 root 用户构建软件包，再很容易地切换到 "
-"root 身份进行安装。"
+"可以安装 <ulink url='&blfs-book;postlfs/sudo.html'>sudo</ulink>，这样就能使用"
+"非 root 用户构建软件包，再很容易地切换到 root 身份进行安装。"
 
 #. type: Content of: <sect1><itemizedlist><listitem><para>
 msgid ""
@@ -95,24 +93,24 @@ msgid ""
 "comfortable GUI environment, install <ulink url='&blfs-book;postlfs/openssh."
 "html'>openssh</ulink>."
 msgstr ""
-"如果您想从具有舒适的 GUI 环境的远程计算机访问新系统，安装 <ulink "
-"url='&blfs-book;postlfs/openssh.html'>openssh</ulink>。"
+"如果您想从具有舒适的 GUI 环境的远程计算机访问新系统，安装 <ulink url='&blfs-"
+"book;postlfs/openssh.html'>openssh</ulink>。"
 
 #. type: Content of: <sect1><itemizedlist><listitem><para>
 msgid ""
 "To make fetching files over the internet easier, install <ulink url='&blfs-"
 "book;basicnet/wget.html'>wget</ulink>."
 msgstr ""
-"为了更方便地从网络下载文件，安装 <ulink url='&blfs-book;"
-"basicnet/wget.html'>wget</ulink>。"
+"为了更方便地从网络下载文件，安装 <ulink url='&blfs-book;basicnet/wget."
+"html'>wget</ulink>。"
 
 #. type: Content of: <sect1><itemizedlist><listitem><para>
 msgid ""
 "To connect to a wireless access point for networking, install <ulink "
 "url='&blfs-book;basicnet/wpa_supplicant.html'>wpa_supplicant</ulink>."
 msgstr ""
-"如果需要连接无线网络，安装 <ulink url='&blfs-book;basicnet/"
-"wpa_supplicant.html'>wpa_supplicant</ulink>。"
+"如果需要连接无线网络，安装 <ulink url='&blfs-book;basicnet/wpa_supplicant."
+"html'>wpa_supplicant</ulink>。"
 
 #. type: Content of: <sect1><itemizedlist><listitem><para>
 msgid ""
@@ -177,13 +175,51 @@ msgid "<userinput>logout</userinput>"
 msgstr "<userinput>logout</userinput>"
 
 #. type: Content of: <sect1><para>
-msgid "Unmount the LFS file system hierarchy:"
-msgstr "解除 LFS 各级文件系统的挂载："
+msgid "Then unmount the virtual file systems:"
+msgstr "解除虚拟文件系统的挂载："
 
 #. type: Content of: <sect1><screen>
 #, no-wrap
-msgid "<userinput>umount -Rv $LFS</userinput>"
-msgstr "<userinput>umount -Rv $LFS</userinput>"
+msgid ""
+"<userinput>umount -v $LFS/dev/pts\n"
+"umount -v $LFS/dev\n"
+"umount -v $LFS/run\n"
+"umount -v $LFS/proc\n"
+"umount -v $LFS/sys</userinput>"
+msgstr ""
+"<userinput>umount -v $LFS/dev/pts\n"
+"umount -v $LFS/dev\n"
+"umount -v $LFS/run\n"
+"umount -v $LFS/proc\n"
+"umount -v $LFS/sys</userinput>"
+
+#. type: Content of: <sect1><para>
+msgid ""
+"If multiple partitions were created, unmount the other partitions before "
+"unmounting the main one, like this:"
+msgstr ""
+"如果为 LFS 创建了其他的分区，需要在解除挂载 LFS 分区之前，先解除挂载它们，"
+"例如："
+
+#. type: Content of: <sect1><screen>
+#, no-wrap
+msgid ""
+"<userinput>umount -v $LFS/usr\n"
+"umount -v $LFS/home\n"
+"umount -v $LFS</userinput>"
+msgstr ""
+"<userinput>umount -v $LFS/usr\n"
+"umount -v $LFS/home\n"
+"umount -v $LFS</userinput>"
+
+#. type: Content of: <sect1><para>
+msgid "Unmount the LFS file system itself:"
+msgstr "解除 LFS 文件系统的挂载："
+
+#. type: Content of: <sect1><screen>
+#, no-wrap
+msgid "<userinput>umount -v $LFS</userinput>"
+msgstr "<userinput>umount -v $LFS</userinput>"
 
 #. type: Content of: <sect1><para>
 msgid "Now, reboot the system with:"
