@@ -83,6 +83,7 @@ jobs:
           path: lfs-sysv-zh_CN.tar.xz
 
   upload-sysv-html:
+    if: github.event_name == 'push'
     needs: build-sysv-html
     name: Upload Chunked HTML (sysv, zh_CN)
     runs-on: ubuntu-latest
@@ -104,12 +105,8 @@ jobs:
       - name: Set SSH Host Key
         run:
           cat ~/aux-files/.known_hosts >> ~/.ssh/known_hosts
-      - name: Set Environment (Push)
-        if: github.event_name == 'push'
+      - name: Set Environment
         run: sh ~/aux-files/setenv.sh "${GITHUB_REF}"
-      - name: Set Environment (Pull Request)
-        if: github.event_name != 'push'
-        run: echo "UPLOAD=no" >> $GITHUB_ENV
       - name: Upload the Book
         run: |
           scp ~/lfs-sysv-zh_CN-html/lfs-sysv-zh_CN.tar.xz "lfsbook@mengyan1223.wang:/tmp/lfs-sysv-zh_CN.tar.xz"
@@ -143,6 +140,7 @@ jobs:
           path: lfs-systemd-zh_CN.tar.xz
 
   upload-systemd-html:
+    if: github.event_name == 'push'
     needs: build-systemd-html
     name: Upload Chunked HTML (systemd, zh_CN)
     runs-on: ubuntu-latest
@@ -164,12 +162,8 @@ jobs:
       - name: Set SSH Host Key
         run:
           cat ~/aux-files/.known_hosts >> ~/.ssh/known_hosts
-      - name: Set Environment (Push)
-        if: github.event_name == 'push'
+      - name: Set Environment
         run: sh ~/aux-files/setenv.sh "${GITHUB_REF}"
-      - name: Set Environment (Pull Request)
-        if: github.event_name != 'push'
-        run: echo "UPLOAD=no" >> $GITHUB_ENV
       - name: Upload the Book
         run: |
           scp ~/lfs-systemd-zh_CN-html/lfs-systemd-zh_CN.tar.xz "lfsbook@mengyan1223.wang:/tmp/lfs-systemd-zh_CN.tar.xz"
@@ -205,6 +199,7 @@ jobs:
   # upload-sysv-html, because the latter will delete and recreate the
   # directory containing the book.  For systemd, likewise.
   upload-sysv-nochunks:
+    if: github.event_name == 'push'
     needs: [build-sysv-nochunks, upload-sysv-html]
     name: Upload Single Page HTML (sysv, zh_CN)
     runs-on: ubuntu-latest
@@ -226,12 +221,8 @@ jobs:
       - name: Set SSH Host Key
         run:
           cat ~/aux-files/.known_hosts >> ~/.ssh/known_hosts
-      - name: Set Environment (Push)
-        if: github.event_name == 'push'
+      - name: Set Environment
         run: sh ~/aux-files/setenv.sh "${GITHUB_REF}"
-      - name: Set Environment (Pull Request)
-        if: github.event_name != 'push'
-        run: echo "UPLOAD=no" >> $GITHUB_ENV
       - name: Upload the Book
         run: |
           scp ~/lfs-sysv-zh_CN-nochunks/LFS-BOOK.html "lfsbook@mengyan1223.wang:/var/www/xry111/lfs/zh_CN/${SYSV}"
@@ -263,6 +254,7 @@ jobs:
           path: ~/lfs-systemd-zh_CN/LFS-SYSD-BOOK.html
 
   upload-systemd-nochunks:
+    if: github.event_name == 'push'
     needs: [build-systemd-nochunks, upload-systemd-html]
     name: Upload Single Page HTML (systemd, zh_CN)
     runs-on: ubuntu-latest
@@ -284,12 +276,8 @@ jobs:
       - name: Set SSH Host Key
         run:
           cat ~/aux-files/.known_hosts >> ~/.ssh/known_hosts
-      - name: Set Environment (Push)
-        if: github.event_name == 'push'
+      - name: Set Environment
         run: sh ~/aux-files/setenv.sh "${GITHUB_REF}"
-      - name: Set Environment (Pull Request)
-        if: github.event_name != 'push'
-        run: echo "UPLOAD=no" >> $GITHUB_ENV
       - name: Upload the Book
         run: |
           scp ~/lfs-systemd-zh_CN-nochunks/LFS-SYSD-BOOK.html "lfsbook@mengyan1223.wang:/var/www/xry111/lfs/zh_CN/${SYSD}"
@@ -326,6 +314,7 @@ jobs:
           path: ~/lfs-sysv-zh_CN/LFS-BOOK.pdf
 
   upload-sysv-pdf:
+    if: github.event_name == 'push'
     needs: [build-sysv-pdf, upload-sysv-html]
     name: Upload PDF (sysv, zh_CN)
     runs-on: ubuntu-latest
@@ -347,12 +336,8 @@ jobs:
       - name: Set SSH Host Key
         run:
           cat ~/aux-files/.known_hosts >> ~/.ssh/known_hosts
-      - name: Set Environment (Push)
-        if: github.event_name == 'push'
+      - name: Set Environment
         run: sh ~/aux-files/setenv.sh "${GITHUB_REF}"
-      - name: Set Environment (Pull Request)
-        if: github.event_name != 'push'
-        run: echo "UPLOAD=no" >> $GITHUB_ENV
       - name: Upload the Book
         run: |
           scp ~/lfs-sysv-zh_CN-pdf/LFS-BOOK.pdf "lfsbook@mengyan1223.wang:/var/www/xry111/lfs/zh_CN/${SYSV}"
@@ -389,6 +374,7 @@ jobs:
           path: ~/lfs-systemd-zh_CN/LFS-SYSD-BOOK.pdf
 
   upload-systemd-pdf:
+    if: github.event_name == 'push'
     needs: [build-systemd-pdf, upload-systemd-html]
     name: Upload PDF (systemd, zh_CN)
     runs-on: ubuntu-latest
@@ -411,11 +397,7 @@ jobs:
         run:
           cat ~/aux-files/.known_hosts >> ~/.ssh/known_hosts
       - name: Set Environment (Push)
-        if: github.event_name == 'push'
         run: sh ~/aux-files/setenv.sh "${GITHUB_REF}"
-      - name: Set Environment (Pull Request)
-        if: github.event_name != 'push'
-        run: echo "UPLOAD=no" >> $GITHUB_ENV
       - name: Upload the Book
         run: |
           scp ~/lfs-systemd-zh_CN-pdf/LFS-SYSD-BOOK.pdf "lfsbook@mengyan1223.wang:/var/www/xry111/lfs/zh_CN/${SYSD}"
