@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2021-05-12 17:13+0800\n"
+"POT-Creation-Date: 2021-12-15 16:25+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -70,12 +70,28 @@ msgstr "准备编译 Findutils："
 
 #. type: Content of: <sect1><sect2><screen>
 #, no-wrap
-msgid "<userinput remap=\"configure\">./configure --prefix=/usr --localstatedir=/var/lib/locate</userinput>"
-msgstr "<userinput remap=\"configure\">./configure --prefix=/usr --localstatedir=/var/lib/locate</userinput>"
+msgid ""
+"<userinput remap=\"configure\">case $(uname -m) in\n"
+"    i?86)   TIME_T_32_BIT_OK=yes ./configure --prefix=/usr --localstatedir=/var/lib/locate ;;\n"
+"    x86_64) ./configure --prefix=/usr --localstatedir=/var/lib/locate ;;\n"
+"esac</userinput>"
+msgstr ""
+"<userinput remap=\"configure\">case $(uname -m) in\n"
+"    i?86)   TIME_T_32_BIT_OK=yes ./configure --prefix=/usr --localstatedir=/var/lib/locate ;;\n"
+"    x86_64) ./configure --prefix=/usr --localstatedir=/var/lib/locate ;;\n"
+"esac</userinput>"
 
 #. type: Content of: <sect1><sect2><variablelist><title>
 msgid "The meaning of the configure options:"
 msgstr "配置选项的含义："
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
+msgid "<command>TIME_32_BIT_OK=yes</command>"
+msgstr "<command>TIME_32_BIT_OK=yes</command>"
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
+msgid "This setting is needed for building on a 32 bit system."
+msgstr "该设定对于在 32 位系统中构建该软件包是必要的。"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 msgid "<parameter>--localstatedir</parameter>"
@@ -207,6 +223,6 @@ msgstr "可以将给定命令作用于一个列表中的所有文件"
 msgid "xargs"
 msgstr "xargs"
 
-
-
 #, no-wrap
+#~ msgid "<userinput remap=\"configure\">./configure --prefix=/usr --localstatedir=/var/lib/locate</userinput>"
+#~ msgstr "<userinput remap=\"configure\">./configure --prefix=/usr --localstatedir=/var/lib/locate</userinput>"
