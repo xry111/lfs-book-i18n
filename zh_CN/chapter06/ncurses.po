@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2021-05-12 17:13+0800\n"
+"POT-Creation-Date: 2021-12-26 02:56+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -108,6 +108,7 @@ msgid ""
 "            --without-debug              \\\n"
 "            --without-ada                \\\n"
 "            --without-normal             \\\n"
+"            --disable-stripping          \\\n"
 "            --enable-widec</userinput>"
 msgstr ""
 "<userinput remap=\"configure\">./configure --prefix=/usr                \\\n"
@@ -119,6 +120,7 @@ msgstr ""
 "            --without-debug              \\\n"
 "            --without-ada                \\\n"
 "            --without-normal             \\\n"
+"            --disable-stripping          \\\n"
 "            --enable-widec</userinput>"
 
 #. type: Content of: <sect1><sect2><variablelist><title>
@@ -149,6 +151,19 @@ msgid ""
 msgstr ""
 "这保证不构建 Ncurses 的 Ada 编译器支持，宿主环境可能有 Ada 编译器，但进入 "
 "<command>chroot</command> 环境后 Ada 编译器就不再可用。"
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
+msgid "<parameter>--disable-stripping</parameter>"
+msgstr "<parameter>--disable-stripping</parameter>"
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
+msgid ""
+"This switch prevents the building system from stripping the programs using "
+"<command>strip</command> program from the host.  Using host tools on cross-"
+"compiled program can cause failure."
+msgstr ""
+"该选项防止构建过程使用宿主系统的 <command>strip</command> 移除调试符号。"
+"对交叉编译产生的程序使用宿主工具可能导致构建失败。"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 msgid "<parameter>--enable-widec</parameter>"
