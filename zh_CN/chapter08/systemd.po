@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2021-11-15 23:36+0800\n"
+"POT-Creation-Date: 2021-12-31 21:12+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -61,15 +61,6 @@ msgid "Installation of systemd"
 msgstr "安装 systemd"
 
 #. type: Content of: <sect1><sect2><para>
-msgid "First, apply a patch to fix a security vulnerability:"
-msgstr "首先，应用补丁以修复一项安全问题："
-
-#. type: Content of: <sect1><sect2><screen>
-#, no-wrap
-msgid "<userinput remap=\"pre\">patch -Np1 -i ../systemd-&systemd-version;-upstream_fixes-1.patch</userinput>"
-msgstr "<userinput remap=\"pre\">patch -Np1 -i ../systemd-&systemd-version;-upstream_fixes-1.patch</userinput>"
-
-#. type: Content of: <sect1><sect2><para>
 msgid ""
 "Remove two unneeded groups, <systemitem class=\"groupname\">render</"
 "systemitem> and <systemitem class=\"groupname\">sgx</systemitem>, from the "
@@ -86,25 +77,6 @@ msgid ""
 msgstr ""
 "<userinput remap=\"pre\">sed -i -e 's/GROUP=\"render\"/GROUP=\"video\"/' \\\n"
 "        -e 's/GROUP=\"sgx\", //' rules.d/50-udev-default.rules.in</userinput>"
-
-#. type: Content of: <sect1><sect2><para>
-msgid "Fix a meson problem:"
-msgstr "修复一项与 meson 相关的问题："
-
-#. type: Content of: <sect1><sect2><screen>
-#, no-wrap
-msgid "<userinput remap=\"pre\">sed -i 's/+ want_libfuzzer.*$/and want_libfuzzer/' meson.build</userinput>"
-msgstr "<userinput remap=\"pre\">sed -i 's/+ want_libfuzzer.*$/and want_libfuzzer/' meson.build</userinput>"
-
-#. type: Content of: <sect1><sect2><para>
-msgid ""
-"Fix a problem when building with kernel headers from Linux-5.14 and later:"
-msgstr "修复使用来自 Linux-5.14 或更新版本的版本内核头文件构建时出现的问题："
-
-#. type: Content of: <sect1><sect2><screen>
-#, no-wrap
-msgid "<userinput remap=\"pre\">sed -i '/ARPHRD_CAN/a#define ARPHRD_MCTP        290' src/basic/linux/if_arp.h</userinput>"
-msgstr "<userinput remap=\"pre\">sed -i '/ARPHRD_CAN/a#define ARPHRD_MCTP        290' src/basic/linux/if_arp.h</userinput>"
 
 #. type: Content of: <sect1><sect2><para>
 msgid "Prepare systemd for compilation:"
@@ -343,6 +315,16 @@ msgstr ""
 #, no-wrap
 msgid "<userinput remap=\"adjust\">systemctl disable systemd-time-wait-sync.service</userinput>"
 msgstr "<userinput remap=\"adjust\">systemctl disable systemd-time-wait-sync.service</userinput>"
+
+#. type: Content of: <sect1><sect2><para>
+msgid ""
+"Fix a regression in a systemd unit that causes a delay when switching TTYs:"
+msgstr "修复 systemd 单元中一项在切换 TTY 时产生延迟的退化问题："
+
+#. type: Content of: <sect1><sect2><screen>
+#, no-wrap
+msgid "<userinput remap=\"adjust\">sed -i 's/idle/simple/' /usr/lib/systemd/system/getty@.service</userinput>"
+msgstr "<userinput remap=\"adjust\">sed -i 's/idle/simple/' /usr/lib/systemd/system/getty@.service</userinput>"
 
 #. type: Content of: <sect1><sect2><title>
 msgid "Contents of systemd"
@@ -1146,3 +1128,26 @@ msgstr "用于访问 udev 设备信息的库"
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 msgid "libudev"
 msgstr "libudev"
+
+#~ msgid "First, apply a patch to fix a security vulnerability:"
+#~ msgstr "首先，应用补丁以修复一项安全问题："
+
+#, no-wrap
+#~ msgid "<userinput remap=\"pre\">patch -Np1 -i ../systemd-&systemd-version;-upstream_fixes-1.patch</userinput>"
+#~ msgstr "<userinput remap=\"pre\">patch -Np1 -i ../systemd-&systemd-version;-upstream_fixes-1.patch</userinput>"
+
+#~ msgid "Fix a meson problem:"
+#~ msgstr "修复一项与 meson 相关的问题："
+
+#, no-wrap
+#~ msgid "<userinput remap=\"pre\">sed -i 's/+ want_libfuzzer.*$/and want_libfuzzer/' meson.build</userinput>"
+#~ msgstr "<userinput remap=\"pre\">sed -i 's/+ want_libfuzzer.*$/and want_libfuzzer/' meson.build</userinput>"
+
+#~ msgid ""
+#~ "Fix a problem when building with kernel headers from Linux-5.14 and later:"
+#~ msgstr ""
+#~ "修复使用来自 Linux-5.14 或更新版本的版本内核头文件构建时出现的问题："
+
+#, no-wrap
+#~ msgid "<userinput remap=\"pre\">sed -i '/ARPHRD_CAN/a#define ARPHRD_MCTP        290' src/basic/linux/if_arp.h</userinput>"
+#~ msgstr "<userinput remap=\"pre\">sed -i '/ARPHRD_CAN/a#define ARPHRD_MCTP        290' src/basic/linux/if_arp.h</userinput>"

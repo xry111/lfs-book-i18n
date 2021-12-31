@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2021-07-28 01:34+0800\n"
+"POT-Creation-Date: 2021-12-31 21:12+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -58,6 +58,20 @@ msgstr "&shadow-fin-du;"
 #. type: Content of: <sect1><sect2><title>
 msgid "Installation of Shadow"
 msgstr "安装 Shadow"
+
+#. type: Content of: <sect1><sect2><para>
+msgid ""
+"First, apply a fix to prevent a segmentation fault when running "
+"<command>useradd</command>:"
+msgstr ""
+"首先，修补代码，以防止在使用 <command>useradd</command> 时发生段错误："
+
+#.  Hardcoding the patch version because it has been merged upstream and
+#.      the patch will be unnecessary when the next version is released. 
+#. type: Content of: <sect1><sect2><screen>
+#, no-wrap
+msgid "<userinput remap=\"pre\">patch -Np1 -i ../shadow-4.10-useradd_segfault-1.patch</userinput>"
+msgstr "<userinput remap=\"pre\">patch -Np1 -i ../shadow-4.10-useradd_segfault-1.patch</userinput>"
 
 #. type: Content of: <sect1><sect2><note><para>
 msgid ""
@@ -153,8 +167,7 @@ msgstr "<userinput>sed -i 's:DICTPATH.*:DICTPATH\\t/lib/cracklib/pw_dict:' etc/l
 #. type: Content of: <sect1><sect2><para>
 msgid ""
 "Fix a simple programming error by modifying a file with following command:"
-msgstr ""
-"使用以下命令修改文件，修复程序中的一处低级错误："
+msgstr "使用以下命令修改文件，修复程序中的一处低级错误："
 
 #. type: Content of: <sect1><sect2><screen>
 #, no-wrap
