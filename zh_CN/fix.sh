@@ -69,6 +69,7 @@ sed -n "${sed_cmd}" -i \
 	chapter08/ninja.xml                          \
 	chapter08/texinfo.xml                        \
 	chapter08/systemd.xml                        \
+	chapter08/shadow.xml                         \
 	chapter08/stripping.xml                      \
 	chapter09/networkd.xml                       \
 	chapter09/network.xml                        \
