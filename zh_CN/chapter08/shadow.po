@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2022-01-05 01:13+0800\n"
+"POT-Creation-Date: 2022-01-16 00:50+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -58,19 +58,6 @@ msgstr "&shadow-fin-du;"
 #. type: Content of: <sect1><sect2><title>
 msgid "Installation of Shadow"
 msgstr "安装 Shadow"
-
-#. type: Content of: <sect1><sect2><para>
-msgid ""
-"First, apply a fix to prevent a segmentation fault when running "
-"<command>useradd</command>:"
-msgstr "首先，修补代码，以防止在使用 <command>useradd</command> 时发生段错误："
-
-#.  Hardcoding the patch version because it has been merged upstream and
-#.      the patch will be unnecessary when the next version is released. 
-#. type: Content of: <sect1><sect2><screen>
-#, no-wrap
-msgid "<userinput remap=\"pre\">patch -Np1 -i ../shadow-4.10-useradd_segfault-1.patch</userinput>"
-msgstr "<userinput remap=\"pre\">patch -Np1 -i ../shadow-4.10-useradd_segfault-1.patch</userinput>"
 
 #. type: Content of: <sect1><sect2><note><para>
 msgid ""
@@ -164,16 +151,6 @@ msgid "<userinput>sed -i 's:DICTPATH.*:DICTPATH\\t/lib/cracklib/pw_dict:' etc/lo
 msgstr "<userinput>sed -i 's:DICTPATH.*:DICTPATH\\t/lib/cracklib/pw_dict:' etc/login.defs</userinput>"
 
 #. type: Content of: <sect1><sect2><para>
-msgid ""
-"Fix a simple programming error by modifying a file with following command:"
-msgstr "使用以下命令修改文件，修复程序中的一处低级错误："
-
-#. type: Content of: <sect1><sect2><screen>
-#, no-wrap
-msgid "<userinput remap=\"pre\">sed -e \"224s/rounds/min_rounds/\" -i libmisc/salt.c</userinput>"
-msgstr "<userinput remap=\"pre\">sed -e \"224s/rounds/min_rounds/\" -i libmisc/salt.c</userinput>"
-
-#. type: Content of: <sect1><sect2><para>
 msgid "Prepare Shadow for compilation:"
 msgstr "准备编译 Shadow："
 
@@ -199,11 +176,11 @@ msgstr "<command>touch /usr/bin/passwd</command>"
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 msgid ""
 "The file <filename>/usr/bin/passwd</filename> needs to exist because its "
-"location is harcoded in some programs, and the default location if it does "
-"not exist is not right."
+"location is hardcoded in some programs, and if it does not exist, the "
+"default location is not right."
 msgstr ""
 "我们需要保证 <filename>/usr/bin/passwd</filename> 存在，因为它的位置会被硬编"
-"码到一些程序中，如果它不存在的话，会使用错误的默认位置。"
+"码到一些程序中，且如果它不存在的话，会使用错误的默认位置。"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 msgid "<parameter>--with-group-name-max-length=32</parameter>"
@@ -339,15 +316,16 @@ msgid ""
 "This parameter sets the beginning of the group numbers used in the "
 "<filename>/etc/group</filename> file. The particular value 999 comes from "
 "the <parameter>--gid</parameter> parameter above.  You can modify it to "
-"anything you desire. Note that <command>useradd</command> will never reuse a "
-"UID or GID. If the number identified in this parameter is used, it will use "
-"the next available number after this. Note also that if you don't have a "
-"group with an ID equal to this number on your system the first time you use "
+"anything you desire.  Note that <command>useradd</command> will never reuse "
+"a UID or GID.  If the number identified in this parameter is used, it will "
+"use the next available number. Note also that if you don't have a group with "
+"an ID equal to this number on your system the first time you use "
 "<command>useradd</command> without the <parameter>-g</parameter> parameter, "
-"you'll get a message displayed on the terminal that says: "
+"you will get a message displayed on the terminal that says: "
 "<computeroutput>useradd: unknown GID 999</computeroutput>, although the "
-"account is correctly created. That is why we have earlier created the group "
-"<systemitem class=\"groupname\">users</systemitem> with this group ID."
+"account is correctly created. That is why we have created the group "
+"<systemitem class=\"groupname\">users</systemitem> with this group ID in "
+"<xref linkend='ch-tools-createfiles'/>."
 msgstr ""
 "该参数设定 /etc/group 文件中使用的第一个组编号。这里的值 999 是在上面的 "
 "<parameter>--gid</parameter> 参数中给定的。您可以将它修改为您希望的任何值。注"
@@ -356,7 +334,7 @@ msgstr ""
 "<parameter>-g</parameter> 参数的 <command>useradd</command> 命令时没有编号 "
 "999 的组，您就会在终端看到一条消息：<computeroutput>useradd: unknown GID "
 "999</computeroutput>，不过新的用户账号仍会被正常创建。为了防止这种现象的出"
-"现，我们之前已经用编号 999 创建了 "
+"现，我们在<xref linkend='ch-tools-createfiles'/>中已经用编号 999 创建了 "
 "<systemitem class=\"groupname\">users</systemitem> 组。"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
@@ -410,17 +388,17 @@ msgstr "安装的目录"
 
 #. type: Content of: <sect1><sect2><segmentedlist><seglistitem><seg>
 msgid ""
-"chage, chfn, chgpasswd, chpasswd, chsh, expiry, faillog, gpasswd, groupadd, "
-"groupdel, groupmems, groupmod, grpck, grpconv, grpunconv, lastlog, login, "
-"logoutd, newgidmap, newgrp, newuidmap, newusers, nologin, passwd, pwck, "
-"pwconv, pwunconv, sg (link to newgrp), su, useradd, userdel, usermod, vigr "
-"(link to vipw), and vipw"
+"chage, chfn, chgpasswd, chpasswd, chsh, expiry, faillog, getsubids, gpasswd, "
+"groupadd, groupdel, groupmems, groupmod, grpck, grpconv, grpunconv, lastlog, "
+"login, logoutd, newgidmap, newgrp, newuidmap, newusers, nologin, passwd, "
+"pwck, pwconv, pwunconv, sg (link to newgrp), su, useradd, userdel, usermod, "
+"vigr (link to vipw), and vipw"
 msgstr ""
-"chage, chfn, chgpasswd, chpasswd, chsh, expiry, faillog, gpasswd, groupadd, "
-"groupdel, groupmems, groupmod, grpck, grpconv, grpunconv, lastlog, login, "
-"logoutd, newgidmap, newgrp, newuidmap, newusers, nologin, passwd, pwck, "
-"pwconv, pwunconv, sg (到 newgrp 的链接), su, useradd, userdel, usermod, vigr "
-"(到 vipw 的链接), 以及 vipw"
+"chage, chfn, chgpasswd, chpasswd, chsh, expiry, faillog, getsubids, gpasswd, "
+"groupadd, groupdel, groupmems, groupmod, grpck, grpconv, grpunconv, lastlog, "
+"login, logoutd, newgidmap, newgrp, newuidmap, newusers, nologin, passwd, "
+"pwck, pwconv, pwunconv, sg (到 newgrp 的链接), su, useradd, userdel, "
+"usermod, vigr (到 vipw 的链接), 以及 vipw"
 
 #. type: Content of: <sect1><sect2><segmentedlist><seglistitem><seg>
 msgid "/etc/default"
@@ -522,6 +500,18 @@ msgstr "检查失败登录日志，设定锁定账户的最大失败次数，或
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 msgid "faillog"
 msgstr "faillog"
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
+msgid "<command>getsubids</command>"
+msgstr "<command>getsubids</command>"
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
+msgid "Is used to list the subordinate id ranges for a user"
+msgstr "用于列出一个用户的辅助 ID 范围"
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
+msgid "getsubids"
+msgstr "getsubids"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 msgid "<command>gpasswd</command>"
