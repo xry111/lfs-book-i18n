@@ -30,14 +30,10 @@ class TemplateTranslator:
 		#if m and ("fuzzy" in entry.flags or not entry.msgstr):
 		if m:
 			msgstr = template
-			try:
-				msgstr = msgstr.replace("#1", m.group(1))
-				msgstr = msgstr.replace('#2', m.group(2))
-				msgstr = msgstr.replace('#3', m.group(3))
-				msgstr = msgstr.replace('#4', m.group(4))
-				msgstr = msgstr.replace('#5', m.group(5))
-			except:
-				x=1
+			g = m.groups()
+			for i in range(len(g)):
+				if g[i] is not None:
+					msgstr = msgstr.replace('#{}'.format(i + 1), g[i])
 			entry.msgstr = msgstr
 			if "fuzzy" in entry.flags:
 				entry.flags.remove("fuzzy")
