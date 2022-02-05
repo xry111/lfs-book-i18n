@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Linux From Scratch 11.0\n"
 "Report-Msgid-Bugs-To: lfs-dev@lists.linuxfromscratch.org\n"
-"POT-Creation-Date: 2022-01-28 02:38+0800\n"
+"POT-Creation-Date: 2022-02-05 22:01+0800\n"
 "PO-Revision-Date: 2021-07-28 12:48+0800\n"
 "Last-Translator: Xi Ruoyao <xry111@mengyan1223.wang>\n"
 "Language-Team: None <noreply@mengyan1223.wang>\n"
@@ -76,7 +76,9 @@ msgstr "准备安装 Util-linux："
 #, no-wrap
 msgid ""
 "<userinput remap=\"configure\">./configure ADJTIME_PATH=/var/lib/hwclock/adjtime   \\\n"
+"            --bindir=/usr/bin    \\\n"
 "            --libdir=/usr/lib    \\\n"
+"            --sbindir=/usr/sbin  \\\n"
 "            --docdir=/usr/share/doc/util-linux-&util-linux-version; \\\n"
 "            --disable-chfn-chsh  \\\n"
 "            --disable-login      \\\n"
@@ -92,7 +94,9 @@ msgid ""
 "            runstatedir=/run</userinput>"
 msgstr ""
 "<userinput remap=\"configure\">./configure ADJTIME_PATH=/var/lib/hwclock/adjtime   \\\n"
+"            --bindir=/usr/bin    \\\n"
 "            --libdir=/usr/lib    \\\n"
+"            --sbindir=/usr/sbin  \\\n"
 "            --docdir=/usr/share/doc/util-linux-&util-linux-version; \\\n"
 "            --disable-chfn-chsh  \\\n"
 "            --disable-login      \\\n"
@@ -111,7 +115,9 @@ msgstr ""
 #, no-wrap
 msgid ""
 "<userinput remap=\"configure\">./configure ADJTIME_PATH=/var/lib/hwclock/adjtime   \\\n"
+"            --bindir=/usr/bin    \\\n"
 "            --libdir=/usr/lib    \\\n"
+"            --sbindir=/usr/sbin  \\\n"
 "            --docdir=/usr/share/doc/util-linux-&util-linux-version; \\\n"
 "            --disable-chfn-chsh  \\\n"
 "            --disable-login      \\\n"
@@ -125,7 +131,9 @@ msgid ""
 "            runstatedir=/run</userinput>"
 msgstr ""
 "<userinput remap=\"configure\">./configure ADJTIME_PATH=/var/lib/hwclock/adjtime   \\\n"
+"            --bindir=/usr/bin    \\\n"
 "            --libdir=/usr/lib    \\\n"
+"            --sbindir=/usr/sbin  \\\n"
 "            --docdir=/usr/share/doc/util-linux-&util-linux-version; \\\n"
 "            --disable-chfn-chsh  \\\n"
 "            --disable-login      \\\n"
@@ -233,31 +241,31 @@ msgstr "安装的目录"
 msgid ""
 "addpart, agetty, blkdiscard, blkid, blkzone, blockdev, cal, cfdisk, chcpu, "
 "chmem, choom, chrt, col, colcrt, colrm, column, ctrlaltdel, delpart, dmesg, "
-"eject, fallocate, fdformat, fdisk, fincore, findfs, findmnt, flock, fsck, "
-"fsck.cramfs, fsck.minix, fsfreeze, fstrim, getopt, hexdump, hwclock, i386, "
-"ionice, ipcmk, ipcrm, ipcs, isosize, kill, last, lastb (link to last), "
-"ldattach, linux32, linux64, logger, look, losetup, lsblk, lscpu, lsipc, "
+"eject, fallocate, fdisk, fincore, findfs, findmnt, flock, fsck, fsck.cramfs, "
+"fsck.minix, fsfreeze, fstrim, getopt, hexdump, hwclock, i386, ionice, ipcmk, "
+"ipcrm, ipcs, irqtop, isosize, kill, last, lastb (link to last), ldattach, "
+"linux32, linux64, logger, look, losetup, lsblk, lscpu, lsipc, lsirq, "
 "lslocks, lslogins, lsmem, lsns, mcookie, mesg, mkfs, mkfs.bfs, mkfs.cramfs, "
 "mkfs.minix, mkswap, more, mount, mountpoint, namei, nsenter, partx, "
 "pivot_root, prlimit, readprofile, rename, renice, resizepart, rev, rfkill, "
-"rtcwake, script, scriptreplay, setarch, setsid, setterm, sfdisk, sulogin, "
-"swaplabel, swapoff (link to swapon), swapon, switch_root, taskset, ul, "
-"umount, uname26, unshare, utmpdump, uuidd, uuidgen, uuidparse, wall, wdctl, "
-"whereis, wipefs, x86_64, and zramctl"
+"rtcwake, script, scriptlive, scriptreplay, setarch, setsid, setterm, sfdisk, "
+"sulogin, swaplabel, swapoff (link to swapon), swapon, switch_root, taskset, "
+"uclampset, ul, umount, uname26, unshare, utmpdump, uuidd, uuidgen, "
+"uuidparse, wall, wdctl, whereis, wipefs, x86_64, and zramctl"
 msgstr ""
 "addpart, agetty, blkdiscard, blkid, blkzone, blockdev, cal, cfdisk, chcpu, "
 "chmem, choom, chrt, col, colcrt, colrm, column, ctrlaltdel, delpart, dmesg, "
-"eject, fallocate, fdformat, fdisk, fincore, findfs, findmnt, flock, fsck, "
-"fsck.cramfs, fsck.minix, fsfreeze, fstrim, getopt, hexdump, hwclock, i386, "
-"ionice, ipcmk, ipcrm, ipcs, isosize, kill, last, lastb (到 last 的链接), "
-"ldattach, linux32, linux64, logger, look, losetup, lsblk, lscpu, lsipc, "
+"eject, fallocate, fdisk, fincore, findfs, findmnt, flock, fsck, fsck.cramfs, "
+"fsck.minix, fsfreeze, fstrim, getopt, hexdump, hwclock, i386, ionice, ipcmk, "
+"ipcrm, ipcs, irqtop, isosize, kill, last, lastb (link to last), ldattach, "
+"linux32, linux64, logger, look, losetup, lsblk, lscpu, lsipc, lsirq, "
 "lslocks, lslogins, lsmem, lsns, mcookie, mesg, mkfs, mkfs.bfs, mkfs.cramfs, "
 "mkfs.minix, mkswap, more, mount, mountpoint, namei, nsenter, partx, "
-"pivot_root, prlimit, readprofile, rename, renice, resizepart, rev, "
-"rfkill, rtcwake, script, scriptreplay, setarch, setsid, setterm, sfdisk, "
-"sulogin, swaplabel, swapoff (到 swapon 的链接), swapon, switch_root, "
-"taskset, ul, umount, uname26, unshare, utmpdump, uuidd, uuidgen, uuidparse, "
-"wall, wdctl, whereis, wipefs, x86_64, 以及 zramctl"
+"pivot_root, prlimit, readprofile, rename, renice, resizepart, rev, rfkill, "
+"rtcwake, script, scriptlive, scriptreplay, setarch, setsid, setterm, sfdisk, "
+"sulogin, swaplabel, swapoff (link to swapon), swapon, switch_root, taskset, "
+"uclampset, ul, umount, uname26, unshare, utmpdump, uuidd, uuidgen, "
+"uuidparse, wall, wdctl, whereis, wipefs, x86_64, 以及 zramctl"
 
 #. type: Content of: <sect1><sect2><segmentedlist><seglistitem><seg>
 msgid "libblkid.so, libfdisk.so, libmount.so, libsmartcols.so, and libuuid.so"
@@ -543,18 +551,6 @@ msgid "fallocate"
 msgstr "fallocate"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
-msgid "<command>fdformat</command>"
-msgstr "<command>fdformat</command>"
-
-#. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
-msgid "Low-level formats a floppy disk"
-msgstr "低级格式化软盘"
-
-#. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
-msgid "fdformat"
-msgstr "fdformat"
-
-#. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 msgid "<command>fdisk</command>"
 msgstr "<command>fdisk</command>"
 
@@ -777,6 +773,21 @@ msgid "ipcs"
 msgstr "ipcs"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
+msgid "<command>irqtop</command>"
+msgstr "<command>irqtop</command>"
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
+msgid ""
+"Displays kernel interrupt counter information in <filename>top(1)</filename> "
+"style view"
+msgstr ""
+"以 <filename>top(1)</filename> 风格显示内核中断计数信息"
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
+msgid "irqtop"
+msgstr "irqtop"
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 msgid "<command>isosize</command>"
 msgstr "<command>isosize</command>"
 
@@ -931,6 +942,18 @@ msgstr "打印系统当前部署的 IPC 设施的信息"
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 msgid "lsipc"
 msgstr "lsipc"
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
+msgid "<command>lsirq</command>"
+msgstr "<command>lsirq</command>"
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
+msgid "Displays kernel interrupt counter information"
+msgstr "显示内核中断计数信息"
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
+msgid "lsirq"
+msgstr "lsirq"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 msgid "<command>lslocks</command>"
@@ -1263,6 +1286,18 @@ msgid "script"
 msgstr "script"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
+msgid "<command>scriptlive</command>"
+msgstr "<command>scriptlive</command>"
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
+msgid "Re-run session typescripts using timing information"
+msgstr "根据计时信息重新运行会话打字机文档"
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
+msgid "scriptlive"
+msgstr "scriptlive"
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 msgid "<command>scriptreplay</command>"
 msgstr "<command>scriptreplay</command>"
 
@@ -1392,22 +1427,6 @@ msgid "switch_root"
 msgstr "switch_root"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
-msgid "<command>tailf</command>"
-msgstr "<command>tailf</command>"
-
-#. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
-msgid ""
-"Tracks the growth of a log file; displays the last 10 lines of a log file, "
-"then continues displaying any new entries in the log file as they are created"
-msgstr ""
-"跟踪日志文件的增长；显示日志文件的最后 10 行，并在日志文件有新记录时继续显示"
-"它们"
-
-#. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
-msgid "tailf"
-msgstr "tailf"
-
-#. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 msgid "<command>taskset</command>"
 msgstr "<command>taskset</command>"
 
@@ -1418,6 +1437,19 @@ msgstr "获取或设置进程 CPU 亲和性"
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 msgid "taskset"
 msgstr "taskset"
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
+msgid "<command>uclampset</command>"
+msgstr "<command>uclampset</command>"
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
+msgid ""
+"Manipulate the utilization clamping attributes of the system or a process"
+msgstr "操纵进程资源占用限位属性"
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
+msgid "uclampset"
+msgstr "uclampset"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 msgid "<command>ul</command>"
@@ -1654,3 +1686,26 @@ msgstr "包含为对象生成唯一标识符，使它在本地系统以外也可
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 msgid "libuuid"
 msgstr "libuuid"
+
+#~ msgid "<command>fdformat</command>"
+#~ msgstr "<command>fdformat</command>"
+
+#~ msgid "Low-level formats a floppy disk"
+#~ msgstr "低级格式化软盘"
+
+#~ msgid "fdformat"
+#~ msgstr "fdformat"
+
+#~ msgid "<command>tailf</command>"
+#~ msgstr "<command>tailf</command>"
+
+#~ msgid ""
+#~ "Tracks the growth of a log file; displays the last 10 lines of a log "
+#~ "file, then continues displaying any new entries in the log file as they "
+#~ "are created"
+#~ msgstr ""
+#~ "跟踪日志文件的增长；显示日志文件的最后 10 行，并在日志文件有新记录时继续显"
+#~ "示它们"
+
+#~ msgid "tailf"
+#~ msgstr "tailf"

@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2022-01-16 00:32+0800\n"
+"POT-Creation-Date: 2022-02-05 22:31+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -64,8 +64,9 @@ msgstr "安装 systemd"
 msgid ""
 "First, apply a patch to fix a security vulnerability and regressions with "
 "hostnames and idle units:"
-msgstr "首先，应用补丁以修复一项安全问题，以及和主机名与 idle "
-"类型单元相关的一些退化问题："
+msgstr ""
+"首先，应用补丁以修复一项安全问题，以及和主机名与 idle 类型单元相关的一些退化"
+"问题："
 
 #. type: Content of: <sect1><sect2><screen>
 #, no-wrap
@@ -100,7 +101,6 @@ msgid ""
 "<userinput remap=\"configure\">mkdir -p build\n"
 "cd       build\n"
 "\n"
-"LANG=en_US.UTF-8                    \\\n"
 "meson --prefix=/usr                 \\\n"
 "      --sysconfdir=/etc             \\\n"
 "      --localstatedir=/var          \\\n"
@@ -123,7 +123,6 @@ msgstr ""
 "<userinput remap=\"configure\">mkdir -p build\n"
 "cd       build\n"
 "\n"
-"LANG=en_US.UTF-8                    \\\n"
 "meson --prefix=/usr                 \\\n"
 "      --sysconfdir=/etc             \\\n"
 "      --localstatedir=/var          \\\n"
@@ -211,11 +210,13 @@ msgstr "<parameter>-Dsysusers=false</parameter>"
 msgid ""
 "This switch prevents installation of systemd services responsible for "
 "setting up the <filename>/etc/group</filename> and <filename>/etc/passwd</"
-"filename> files. Both files were created earlier in this chapter."
+"filename> files. Both files were created in the previous chapter. This "
+"daemon is not useful on an LFS system since user accounts are manually "
+"created."
 msgstr ""
 "这个开关防止 systemd 安装负责设定 <filename>/etc/group</filename> 和 "
 "<filename>/etc/passwd</filename> 文件的服务。我们在上一章已经创建了这两个文"
-"件。"
+"件。这个守护进程在 LFS 系统中没有意义，因为我们已经手动创建了用户账户。"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 msgid "<parameter>-Drpmmacrosdir=no</parameter>"
@@ -262,8 +263,8 @@ msgstr "编译该软件包："
 
 #. type: Content of: <sect1><sect2><screen>
 #, no-wrap
-msgid "<userinput remap=\"make\">LANG=en_US.UTF-8 ninja</userinput>"
-msgstr "<userinput remap=\"make\">LANG=en_US.UTF-8 ninja</userinput>"
+msgid "<userinput remap=\"make\">ninja</userinput>"
+msgstr "<userinput remap=\"make\">ninja</userinput>"
 
 #. type: Content of: <sect1><sect2><para>
 msgid "Install the package:"
@@ -271,8 +272,8 @@ msgstr "安装该软件包："
 
 #. type: Content of: <sect1><sect2><screen>
 #, no-wrap
-msgid "<userinput remap=\"install\">LANG=en_US.UTF-8 ninja install</userinput>"
-msgstr "<userinput remap=\"install\">LANG=en_US.UTF-8 ninja install</userinput>"
+msgid "<userinput remap=\"install\">ninja install</userinput>"
+msgstr "<userinput remap=\"install\">ninja install</userinput>"
 
 #. type: Content of: <sect1><sect2><para>
 msgid "Install the man pages:"

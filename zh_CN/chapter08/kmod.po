@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2021-05-22 16:46+0800\n"
+"POT-Creation-Date: 2022-02-05 22:01+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -68,12 +68,14 @@ msgstr "准备编译 Kmod："
 msgid ""
 "<userinput remap=\"configure\">./configure --prefix=/usr          \\\n"
 "            --sysconfdir=/etc      \\\n"
+"            --with-openssl         \\\n"
 "            --with-xz              \\\n"
 "            --with-zstd            \\\n"
 "            --with-zlib</userinput>"
 msgstr ""
 "<userinput remap=\"configure\">./configure --prefix=/usr          \\\n"
 "            --sysconfdir=/etc      \\\n"
+"            --with-openssl         \\\n"
 "            --with-xz              \\\n"
 "            --with-zstd            \\\n"
 "            --with-zlib</userinput>"
@@ -83,12 +85,24 @@ msgid "The meaning of the configure options:"
 msgstr "配置选项的含义："
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
-msgid "<parameter>--with-xz, --with-zlib, --with-zstd</parameter>"
-msgstr "<parameter>--with-xz, --with-zlib, --with-zstd</parameter>"
+msgid "<parameter>--with-openssl</parameter>"
+msgstr "<parameter>--with-openssl</parameter>"
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
+msgid "This option enables Kmod to handle PKCS7 signatures for kernel modules."
+msgstr "该选项允许 Kmod 处理内核模块的 PKCS7 数字签名。"
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
+msgid ""
+"<parameter>--with-xz</parameter>, <parameter>--with-zlib</parameter>, and "
+"<parameter>--with-zstd</parameter>"
+msgstr ""
+"<parameter>--with-xz</parameter>，<parameter>--with-zlib</parameter>，以及 "
+"<parameter>--with-zstd</parameter>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 msgid "These options enable Kmod to handle compressed kernel modules."
-msgstr "它们允许 Kmod 处理压缩过的内核模块。"
+msgstr "这些选项允许 Kmod 处理压缩过的内核模块。"
 
 #. type: Content of: <sect1><sect2><para>
 msgid "Compile the package:"
@@ -101,12 +115,12 @@ msgstr "<userinput remap=\"make\">make</userinput>"
 
 #. type: Content of: <sect1><sect2><para>
 msgid ""
-"This package does not come with a test suite that can be run in the LFS "
-"chroot environment.  At a minimum the git program is required and several "
-"tests will not run outside of a git repository."
+"The test suite of this package requires raw kernel headers (not the "
+"<quote>sanitized</quote> kernel headers installed earlier), which are beyond "
+"the scope of LFS."
 msgstr ""
-"该软件包不包含能在 LFS chroot 环境下运行的测试套件。测试套件至少需要 git 程序"
-"的支持，且有些测试在 git 仓库外不会运行。"
+"该软件包的测试套件需要内核的原始头文件 (不是之前安装的 <quote>净化的</quote> "
+"内核头文件)，原始头文件超出了 LFS 的范畴。"
 
 #. type: Content of: <sect1><sect2><para>
 msgid ""
@@ -117,7 +131,7 @@ msgstr ""
 "包) 兼容的符号链接："
 
 #. type: Content of: <sect1><sect2><screen>
-#, , no-wrap
+#, no-wrap
 msgid ""
 "<userinput remap=\"install\">make install\n"
 "\n"
@@ -276,3 +290,11 @@ msgstr "这个库被其他程序用于加载和卸载内核模块"
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 msgid "libkmod"
 msgstr "libkmod"
+
+#~ msgid ""
+#~ "This package does not come with a test suite that can be run in the LFS "
+#~ "chroot environment.  At a minimum the git program is required and several "
+#~ "tests will not run outside of a git repository."
+#~ msgstr ""
+#~ "该软件包不包含能在 LFS chroot 环境下运行的测试套件。测试套件至少需要 git "
+#~ "程序的支持，且有些测试在 git 仓库外不会运行。"

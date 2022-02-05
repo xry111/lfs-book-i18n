@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2021-11-02 21:01+0800\n"
+"POT-Creation-Date: 2022-02-05 22:12+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -25,53 +25,6 @@ msgstr "最后，清理在执行测试的过程中遗留的一些文件："
 #, no-wrap
 msgid "<userinput>rm -rf /tmp/*</userinput>"
 msgstr "<userinput>rm -rf /tmp/*</userinput>"
-
-#. type: Content of: <sect1><para>
-msgid ""
-"Now log out and reenter the chroot environment with an updated chroot "
-"command.  From now on, use this updated chroot command any time you need to "
-"reenter the chroot environment after exiting:"
-msgstr ""
-"现在需要登出，并使用新的 chroot 命令行重新进入 chroot 环境。从现在起，在退出"
-"并重新进入 chroot 环境时，要使用下面的修改过的 chroot 命令："
-
-#. type: Content of: <sect1><screen>
-#, no-wrap
-msgid ""
-"<userinput>logout\n"
-"\n"
-"chroot \"$LFS\" /usr/bin/env -i          \\\n"
-"    HOME=/root TERM=\"$TERM\"            \\\n"
-"    PS1='(lfs chroot) \\u:\\w\\$ '        \\\n"
-"    PATH=/usr/bin:/usr/sbin            \\\n"
-"    /usr/bin/bash --login</userinput>"
-msgstr ""
-"<userinput>logout\n"
-"\n"
-"chroot \"$LFS\" /usr/bin/env -i          \\\n"
-"    HOME=/root TERM=\"$TERM\"            \\\n"
-"    PS1='(lfs chroot) \\u:\\w\\$ '        \\\n"
-"    PATH=/usr/bin:/usr/sbin            \\\n"
-"    /usr/bin/bash --login</userinput>"
-
-#. type: Content of: <sect1><para>
-msgid ""
-"Here the <parameter>+h</parameter> option is not used anymore, since all the "
-"previous programs have been replaced: hashing is therefore possible."
-msgstr ""
-"这里不再使用 <parameter>+h</parameter> 选项，因为所有之前安装的程序都已经替换"
-"成了最终版本，可以进行散列。"
-
-#. type: Content of: <sect1><para>
-msgid ""
-"If the virtual kernel file systems have been unmounted, either manually or "
-"through a reboot, ensure that the virtual kernel file systems are mounted "
-"when reentering the chroot. This process was explained in <xref linkend=\"ch-"
-"tools-bindmount\"/> and <xref linkend=\"ch-tools-kernfsmount\"/>."
-msgstr ""
-"如果解除了虚拟内核文件系统的挂载，必须通过手动或重启系统的方式重新挂载它们，"
-"保证在进入 chroot 时它们已经挂载好。<xref linkend=\"ch-tools-bindmount\"/>和"
-"<xref linkend=\"ch-tools-kernfsmount\"/>已经说明了这一过程。"
 
 #. type: Content of: <sect1><para>
 msgid ""
