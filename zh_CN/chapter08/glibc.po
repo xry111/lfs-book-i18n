@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Linux From Scratch 11.0\n"
 "Report-Msgid-Bugs-To: lfs-dev@lists.linuxfromscratch.org\n"
-"POT-Creation-Date: 2022-02-05 22:01+0800\n"
+"POT-Creation-Date: 2022-02-11 19:56+0800\n"
 "PO-Revision-Date: 2021-08-21 11:33+0800\n"
 "Last-Translator: Xi Ruoyao <xry111@mengyan1223.wang>\n"
 "Language-Team: None <noreply@mengyan1223.wang>\n"
@@ -796,24 +796,24 @@ msgstr "安装的目录"
 
 #. type: Content of: <sect1><sect2><segmentedlist><seglistitem><seg>
 msgid ""
-"catchsegv, gencat, getconf, getent, iconv, iconvconfig, ldconfig, ldd, "
-"lddlibc4, locale, localedef, makedb, mtrace, nscd, pcprofiledump, pldd, sln, "
-"sotruss, sprof, tzselect, xtrace, zdump, and zic"
+"gencat, getconf, getent, iconv, iconvconfig, ldconfig, ldd, lddlibc4, "
+"locale, localedef, makedb, mtrace, nscd, pcprofiledump, pldd, sln, sotruss, "
+"sprof, tzselect, xtrace, zdump, and zic"
 msgstr ""
-"catchsegv, gencat, getconf, getent, iconv, iconvconfig, ldconfig, ldd, "
+"gencat, getconf, getent, iconv, iconvconfig, ldconfig, ldd, "
 "lddlibc4, locale, localedef, makedb, mtrace, nscd, pcprofiledump, pldd, sln, "
 "sotruss, sprof, tzselect, xtrace, zdump, 以及 zic"
 
 #. type: Content of: <sect1><sect2><segmentedlist><seglistitem><seg>
 msgid ""
-"ld-linux-x86-64.so.2, ld-linux.so.2, libBrokenLocale.{a,so}, libSegFault.so, "
-"libanl.{a,so}, libc.{a,so}, libc_nonshared.a, libcrypt.{a,so}, libdl.{a,"
-"so.2}, libg.a, libm.{a,so}, libmcheck.a, libmemusage.so, libmvec.{a,so}, "
-"libnsl.so.1, libnss_compat.so, libnss_dns.so, libnss_files.so, libnss_hesiod."
-"so, libpcprofile.so, libpthread.{a,so.0}, libresolv.{a,so}, librt.{a,so.1}, "
+"ld-linux-x86-64.so.2, ld-linux.so.2, libBrokenLocale.{a,so}, libanl.{a,so}, "
+"libc.{a,so}, libc_nonshared.a, libcrypt.{a,so}, libdl.{a,so.2}, libg.a, libm."
+"{a,so}, libmcheck.a, libmemusage.so, libmvec.{a,so}, libnsl.so.1, "
+"libnss_compat.so, libnss_dns.so, libnss_files.so, libnss_hesiod.so, "
+"libpcprofile.so, libpthread.{a,so.0}, libresolv.{a,so}, librt.{a,so.1}, "
 "libthread_db.so, and libutil.{a,so.1}"
 msgstr ""
-"ld-linux-x86-64.so.2, ld-linux.so.2, libBrokenLocale.{a,so}, libSegFault.so, "
+"ld-linux-x86-64.so.2, ld-linux.so.2, libBrokenLocale.{a,so}, "
 "libanl.{a,so}, libc.{a,so}, libc_nonshared.a, libcrypt.{a,so}, libdl.{a,"
 "so.2}, libg.a, libm.{a,so}, libmcheck.a, libmemusage.so, libmvec.{a,so}, "
 "libnsl.so.1, libnss_compat.so, libnss_dns.so, libnss_files.so, libnss_hesiod."
@@ -847,20 +847,6 @@ msgid ""
 "<?dbfo list-presentation=\"list\"?> <?dbhtml list-presentation=\"table\"?>"
 msgstr ""
 "<?dbfo list-presentation=\"list\"?> <?dbhtml list-presentation=\"table\"?>"
-
-#. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
-msgid "<command>catchsegv</command>"
-msgstr "<command>catchsegv</command>"
-
-#. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
-msgid ""
-"Can be used to create a stack trace when a program terminates with a "
-"segmentation fault"
-msgstr "在程序因为段错误而终止时创建栈跟踪"
-
-#. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
-msgid "catchsegv"
-msgstr "catchsegv"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 msgid "<command>gencat</command>"
@@ -954,8 +940,12 @@ msgid "<command>lddlibc4</command>"
 msgstr "<command>lddlibc4</command>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
-msgid "Assists <command>ldd</command> with object files"
-msgstr "辅助 <command>ldd</command> 处理目标文件"
+msgid ""
+"Assists <command>ldd</command> with object files.  It does not exist on "
+"newer architectures like x86_64"
+msgstr ""
+"辅助 <command>ldd</command> 处理目标文件。"
+"它在 x86_64 等较新的架构上不存在"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 msgid "lddlibc4"
@@ -1164,19 +1154,6 @@ msgstr ""
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 msgid "libBrokenLocale"
 msgstr "libBrokenLocale"
-
-#. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
-msgid "<filename class=\"libraryfile\">libSegFault</filename>"
-msgstr "<filename class=\"libraryfile\">libSegFault</filename>"
-
-#. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
-msgid ""
-"The segmentation fault signal handler, used by <command>catchsegv</command>"
-msgstr "<command>catchsegv</command> 使用的段错误信号处理程序"
-
-#. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
-msgid "libSegFault"
-msgstr "libSegFault"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 msgid "<filename class=\"libraryfile\">libanl</filename>"

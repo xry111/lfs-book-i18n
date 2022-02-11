@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Linux From Scratch 11.0\n"
 "Report-Msgid-Bugs-To: lfs-dev@lists.linuxfromscratch.org\n"
-"POT-Creation-Date: 2022-02-04 17:59+0800\n"
+"POT-Creation-Date: 2022-02-11 19:56+0800\n"
 "PO-Revision-Date: 2021-08-16 11:42+0800\n"
 "Last-Translator: Xi Ruoyao <xry111@mengyan1223.wang>\n"
 "Language-Team: None <noreply@mengyan1223.wang>\n"
@@ -103,36 +103,6 @@ msgid ""
 msgstr ""
 "<computeroutput>The system has no more ptys.\n"
 "Ask your system administrator to create more.</computeroutput>"
-
-#. type: Content of: <sect1><sect2><para>
-msgid ""
-"Upstream has made a patch to fix a problem building some packages.  Apply "
-"that now:"
-msgstr ""
-"上游开发者提供了一个补丁，它能修复在构建一些软件包时出现的问题。应用该补丁："
-
-#. type: Content of: <sect1><sect2><screen>
-#, no-wrap
-msgid "<userinput remap=\"pre\">patch -Np1 -i ../&binutils-upstream-patch;</userinput>"
-msgstr "<userinput remap=\"pre\">patch -Np1 -i ../&binutils-upstream-patch;</userinput>"
-
-#. type: Content of: <sect1><sect2><para>
-msgid ""
-"An error in the building system causes the shipped man pages to be empty.  "
-"Workaround the issue and remove the shipped man pages, so the man pages will "
-"be regenerated correctly:"
-msgstr ""
-"构建系统中的一处错误导致软件包附带的 man 页面为空。绕过这个问题并删除附带的 "
-"man 页面，这样 man 页面就会被正确地重新生成："
-
-#. type: Content of: <sect1><sect2><screen>
-#, no-wrap
-msgid ""
-"<userinput remap=\"pre\">sed -i '63d' etc/texi2pod.pl\n"
-"find -name \\*.1 -delete</userinput>"
-msgstr ""
-"<userinput remap=\"pre\">sed -i '63d' etc/texi2pod.pl\n"
-"find -name \\*.1 -delete</userinput>"
 
 #. type: Content of: <sect1><sect2><para>
 msgid ""
@@ -643,3 +613,30 @@ msgstr ""
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 msgid "libopcodes"
 msgstr "libopcodes"
+
+#~ msgid ""
+#~ "Upstream has made a patch to fix a problem building some packages.  Apply "
+#~ "that now:"
+#~ msgstr ""
+#~ "上游开发者提供了一个补丁，它能修复在构建一些软件包时出现的问题。应用该补"
+#~ "丁："
+
+#, no-wrap
+#~ msgid "<userinput remap=\"pre\">patch -Np1 -i ../&binutils-upstream-patch;</userinput>"
+#~ msgstr "<userinput remap=\"pre\">patch -Np1 -i ../&binutils-upstream-patch;</userinput>"
+
+#~ msgid ""
+#~ "An error in the building system causes the shipped man pages to be "
+#~ "empty.  Workaround the issue and remove the shipped man pages, so the man "
+#~ "pages will be regenerated correctly:"
+#~ msgstr ""
+#~ "构建系统中的一处错误导致软件包附带的 man 页面为空。绕过这个问题并删除附带"
+#~ "的 man 页面，这样 man 页面就会被正确地重新生成："
+
+#, no-wrap
+#~ msgid ""
+#~ "<userinput remap=\"pre\">sed -i '63d' etc/texi2pod.pl\n"
+#~ "find -name \\*.1 -delete</userinput>"
+#~ msgstr ""
+#~ "<userinput remap=\"pre\">sed -i '63d' etc/texi2pod.pl\n"
+#~ "find -name \\*.1 -delete</userinput>"
