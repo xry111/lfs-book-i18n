@@ -14,6 +14,8 @@ sed -e '/output-encoding:/s|latin1|utf8|' -i tidy.conf
 
 sed -e 's|<book>|<book lang="zh_cn">|' -i index.xml
 
+cp general.ent.orig general.ent
+
 sed -e 's/Approximate build time/估计构建时间/'               \
 	-e 's/Required disk space/需要硬盘空间/'                  \
 	-e 's/Installation depends on/安装依赖于/'                \
@@ -31,11 +33,11 @@ sed -e 's/less than/不到/' \
 	-e 's/\([0-9.]* SBU\) on a spinning disk, \(.* SBU\) on an SSD/机械硬盘上 \1，固态硬盘上 \2/' \
 	-i  packages.ent
 
-reldate=$(grep 'releasedate' general.ent.orig |
+reldate=$(grep '% reldate' general.ent.orig |
              sed 's/.*"\(.*\)".*/\1/;s/\(st\|nd\|rd\|th\),/,/');
 reldate_cn=$(date -d "$reldate" "+%Y 年 %m 月 %d 日" \
              2>/dev/null | sed 's@ 0@ @g')
-sed "/releasedate/s/\".*\"/\"${reldate_cn}\"/" -i general.ent
+sed "/% reldate/s/\".*\"/\"${reldate_cn}\"/" -i general.ent
 
 # Edit git-version.sh
 cp -v git-version.sh.orig git-version.sh
