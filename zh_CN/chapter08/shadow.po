@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2022-01-16 00:50+0800\n"
+"POT-Creation-Date: 2022-02-18 13:55+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -159,10 +159,12 @@ msgstr "准备编译 Shadow："
 msgid ""
 "<userinput remap=\"configure\">touch /usr/bin/passwd\n"
 "./configure --sysconfdir=/etc \\\n"
+"            --disable-static  \\\n"
 "            --with-group-name-max-length=32</userinput>"
 msgstr ""
 "<userinput remap=\"configure\">touch /usr/bin/passwd\n"
 "./configure --sysconfdir=/etc \\\n"
+"            --disable-static  \\\n"
 "            --with-group-name-max-length=32</userinput>"
 
 #. type: Content of: <sect1><sect2><variablelist><title>
@@ -386,6 +388,10 @@ msgstr "安装的程序"
 msgid "Installed directory"
 msgstr "安装的目录"
 
+#. type: Content of: <sect1><sect2><segmentedlist><segtitle>
+msgid "Installed libraries"
+msgstr "安装的库"
+
 #. type: Content of: <sect1><sect2><segmentedlist><seglistitem><seg>
 msgid ""
 "chage, chfn, chgpasswd, chpasswd, chsh, expiry, faillog, getsubids, gpasswd, "
@@ -403,6 +409,10 @@ msgstr ""
 #. type: Content of: <sect1><sect2><segmentedlist><seglistitem><seg>
 msgid "/etc/default"
 msgstr "/etc/default"
+
+#. type: Content of: <sect1><sect2><segmentedlist><seglistitem><seg>
+msgid "libsubid.so"
+msgstr "libsubid.so"
 
 #. type: Content of: <sect1><sect2><variablelist><bridgehead>
 msgid "Short Descriptions"
@@ -872,3 +882,15 @@ msgstr ""
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 msgid "vipw"
 msgstr "vipw"
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
+msgid "<filename class='libraryfile'>libsubid</filename>"
+msgstr "<filename class='libraryfile'>libsubid</filename>"
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
+msgid "library for process subordinate id ranges for users"
+msgstr "用于处理用户的辅助 ID 范围的库"
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
+msgid "libsubid"
+msgstr "libsubid"

@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Linux From Scratch 11.0\n"
 "Report-Msgid-Bugs-To: lfs-dev@lists.linuxfromscratch.org\n"
-"POT-Creation-Date: 2022-02-16 14:24+0800\n"
+"POT-Creation-Date: 2022-02-18 13:55+0800\n"
 "PO-Revision-Date: 2021-08-21 11:33+0800\n"
 "Last-Translator: Xi Ruoyao <xry111@mengyan1223.wang>\n"
 "Language-Team: None <noreply@mengyan1223.wang>\n"
@@ -809,17 +809,17 @@ msgstr ""
 #. type: Content of: <sect1><sect2><segmentedlist><seglistitem><seg>
 msgid ""
 "ld-linux-x86-64.so.2, ld-linux.so.2, libBrokenLocale.{a,so}, libanl.{a,so}, "
-"libc.{a,so}, libc_nonshared.a, libcrypt.{a,so}, libdl.{a,so.2}, libg.a, libm."
-"{a,so}, libmcheck.a, libmemusage.so, libmvec.{a,so}, libnsl.so.1, "
-"libnss_compat.so, libnss_dns.so, libnss_files.so, libnss_hesiod.so, "
-"libpcprofile.so, libpthread.{a,so.0}, libresolv.{a,so}, librt.{a,so.1}, "
+"libc.{a,so}, libc_nonshared.a, libc_malloc_debug.so, libcrypt.{a,so}, libdl."
+"{a,so.2}, libg.a, libm.{a,so}, libmcheck.a, libmemusage.so, libmvec.{a,so}, "
+"libnsl.so.1, libnss_compat.so, libnss_dns.so, libnss_files.so, libnss_hesiod."
+"so, libpcprofile.so, libpthread.{a,so.0}, libresolv.{a,so}, librt.{a,so.1}, "
 "libthread_db.so, and libutil.{a,so.1}"
 msgstr ""
 "ld-linux-x86-64.so.2, ld-linux.so.2, libBrokenLocale.{a,so}, libanl.{a,so}, "
-"libc.{a,so}, libc_nonshared.a, libcrypt.{a,so}, libdl.{a,so.2}, libg.a, libm."
-"{a,so}, libmcheck.a, libmemusage.so, libmvec.{a,so}, libnsl.so.1, "
-"libnss_compat.so, libnss_dns.so, libnss_files.so, libnss_hesiod.so, "
-"libpcprofile.so, libpthread.{a,so.0}, libresolv.{a,so}, librt.{a,so.1}, "
+"libc.{a,so}, libc_nonshared.a, libc_malloc_debug.so, libcrypt.{a,so}, libdl."
+"{a,so.2}, libg.a, libm.{a,so}, libmcheck.a, libmemusage.so, libmvec.{a,so}, "
+"libnsl.so.1, libnss_compat.so, libnss_dns.so, libnss_files.so, libnss_hesiod."
+"so, libpcprofile.so, libpthread.{a,so.0}, libresolv.{a,so}, librt.{a,so.1}, "
 "libthread_db.so, 以及 libutil.{a,so.1}"
 
 #. type: Content of: <sect1><sect2><segmentedlist><seglistitem><seg>
@@ -1181,6 +1181,18 @@ msgid "libc"
 msgstr "libc"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
+msgid "<filename class=\"libraryfile\">libc_malloc_debug</filename>"
+msgstr "<filename class=\"libraryfile\">libc_malloc_debug</filename>"
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
+msgid "Turns on memory allocation checking when preloaded"
+msgstr "预加载该库时启用内存分配检查"
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
+msgid "libc_malloc_debug"
+msgstr "libc_malloc_debug"
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 msgid "<filename class=\"libraryfile\">libcrypt</filename>"
 msgstr "<filename class=\"libraryfile\">libcrypt</filename>"
 
@@ -1236,6 +1248,22 @@ msgid "libm"
 msgstr "libm"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
+msgid "<filename class=\"libraryfile\">libmvec</filename>"
+msgstr "<filename class=\"libraryfile\">libmvec</filename>"
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
+msgid ""
+"The vector math library, linked in as needed when <filename "
+"class='libraryfile'>libm</filename> is used"
+msgstr ""
+"向量数学库，在使用 <filename class='libraryfile'>libm</filename> "
+"时自动按需链接。"
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
+msgid "libmvec"
+msgstr "libmvec"
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 msgid "<filename class=\"libraryfile\">libmcheck</filename>"
 msgstr "<filename class=\"libraryfile\">libmcheck</filename>"
 
@@ -1274,19 +1302,23 @@ msgid "libnsl"
 msgstr "libnsl"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
-msgid "<filename class=\"libraryfile\">libnss</filename>"
-msgstr "<filename class=\"libraryfile\">libnss</filename>"
+msgid "<filename class=\"libraryfile\">libnss_*</filename>"
+msgstr "<filename class=\"libraryfile\">libnss_*</filename>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 msgid ""
-"The Name Service Switch libraries, containing functions for resolving host "
-"names, user names, group names, aliases, services, protocols, etc."
+"The Name Service Switch modules, containing functions for resolving host "
+"names, user names, group names, aliases, services, protocols, etc.  Loaded "
+"by <filename class='libraryfile'>libc</filename> according to the "
+"configuration in <filename>/etc/nsswitch.conf</filename>"
 msgstr ""
-"命名服务开关库，包含用于解析域名、用户名、组名、代号、服务、协议等的函数。"
+"命名服务开关模块，包含用于解析域名、用户名、组名、代号、服务、协议等的函数。"
+"由 <filename class='libraryfile'>libc</filename> 根据 "
+"<filename>/etc/nsswitch.conf</filename> 的配置进行加载。"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
-msgid "libnss"
-msgstr "libnss"
+msgid "libnss_*"
+msgstr "libnss_*"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 msgid "<filename class=\"libraryfile\">libpcprofile</filename>"
