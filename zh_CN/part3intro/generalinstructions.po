@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2021-02-20 08:46+0800\n"
+"POT-Creation-Date: 2022-02-23 00:42+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -147,6 +147,17 @@ msgstr ""
 "使用 <command>tar</command> 程序，解压需要构建的软件包。在<xref linkend="
 "\"chapter-cross-tools\"/>和<xref linkend=\"chapter-temporary-tools\"/>中解压"
 "软件包时，确认您以用户 <emphasis>lfs</emphasis> 的身份登录。"
+
+#. type: Content of: <sect1><itemizedlist><listitem><important><orderedlist><listitem><orderedlist><listitem><para>
+msgid ""
+"All methods to get the source code tree being built in-position, except "
+"extracting the package tarball, are not supported. Notably, using "
+"<command>cp -R</command> to copy the source code tree somewhere else can "
+"destroy links and timestamps in the sources tree and cause building failure."
+msgstr ""
+"除了解压源码包外，任何将源代码目录树置入工作目录的方法均不受支持。"
+"特别需要注意的是，使用 <command>cp -R</command> "
+"从其他位置复制源代码目录树会破坏其中的链接和时间戳，导致构建失败。"
 
 #. type: Content of: <sect1><itemizedlist><listitem><important><orderedlist><listitem><orderedlist><listitem><para>
 msgid "Change to the directory created when the package was extracted."
