@@ -24,7 +24,7 @@ contribute other translations, please mail to `xry111@mengyan1223.wang`
 * [polib](https://pypi.org/project/polib/)
 * [libxml2](https://www.linuxfromscratch.org/blfs/view/svn/general/libxml2.html)
 * [libxslt](https://www.linuxfromscratch.org/blfs/view/svn/general/libxslt.html)
-* [DocBook DTD](https://www.linuxfromscratch.org/blfs/view/svn/pst/xml.html)
+* [DocBook 4.5 XML DTD](https://www.linuxfromscratch.org/blfs/view/svn/pst/docbook.html)
 * [DocBook XSL Stylesheets](https://www.linuxfromscratch.org/blfs/view/svn/pst/docbook-xsl.html)
 * [HTMLTidy](https://www.linuxfromscratch.org/blfs/view/svn/general/tidy-html5.html)
 
