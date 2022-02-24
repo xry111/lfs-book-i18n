@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2022-02-21 12:29+0800\n"
+"POT-Creation-Date: 2022-02-24 15:58+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -86,10 +86,10 @@ msgstr ""
 #, no-wrap
 msgid ""
 "<userinput remap=\"pre\">sed -i -e 's/GROUP=\"render\"/GROUP=\"video\"/' \\\n"
-"        -e 's/GROUP=\"sgx\", //' rules.d/50-udev-default.rules.in</userinput>"
+"       -e 's/GROUP=\"sgx\", //' rules.d/50-udev-default.rules.in</userinput>"
 msgstr ""
 "<userinput remap=\"pre\">sed -i -e 's/GROUP=\"render\"/GROUP=\"video\"/' \\\n"
-"        -e 's/GROUP=\"sgx\", //' rules.d/50-udev-default.rules.in</userinput>"
+"       -e 's/GROUP=\"sgx\", //' rules.d/50-udev-default.rules.in</userinput>"
 
 #. type: Content of: <sect1><sect2><para>
 msgid "Prepare systemd for compilation:"
@@ -314,20 +314,6 @@ msgstr "设定启动目标单元的基本结构："
 #, no-wrap
 msgid "<userinput remap=\"adjust\">systemctl preset-all</userinput>"
 msgstr "<userinput remap=\"adjust\">systemctl preset-all</userinput>"
-
-#. type: Content of: <sect1><sect2><para>
-msgid ""
-"Disable a service that is known to cause problems with systems that use a "
-"network configuration other than what is provided by systemd-networkd:"
-msgstr ""
-"已知一个服务单元会导致并非由 systemd-networkd 提供网络配置的系统出现问题，禁"
-"用它："
-
-#.  Observed halting startup with dhcpcd handling the primary NIC 
-#. type: Content of: <sect1><sect2><screen>
-#, no-wrap
-msgid "<userinput remap=\"adjust\">systemctl disable systemd-time-wait-sync.service</userinput>"
-msgstr "<userinput remap=\"adjust\">systemctl disable systemd-time-wait-sync.service</userinput>"
 
 #. type: Content of: <sect1><sect2><title>
 msgid "Contents of systemd"
