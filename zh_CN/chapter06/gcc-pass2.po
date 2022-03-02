@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2021-02-20 08:46+0800\n"
+"POT-Creation-Date: 2022-03-03 02:52+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -110,6 +110,36 @@ msgstr ""
 "esac</userinput>"
 
 #. type: Content of: <sect1><sect2><para>
+msgid "Fix an issue causing failure cross-compiling libstdc++:"
+msgstr "修复导致交叉编译 libstdc++ 失败的问题："
+
+#. type: Content of: <sect1><sect2><screen>
+#, no-wrap
+msgid ""
+"<userinput remap=\"pre\">sed 's/gnu++17/&amp; -nostdinc++/' \\\n"
+"    -i libstdc++-v3/src/c++17/Makefile.in</userinput>"
+msgstr ""
+"<userinput remap=\"pre\">sed 's/gnu++17/&amp; -nostdinc++/' \\\n"
+"    -i libstdc++-v3/src/c++17/Makefile.in</userinput>"
+
+#. type: Content of: <sect1><sect2><para>
+msgid ""
+"Override the building rule of libgcc and libstdc++ headers, to allow "
+"building these libraries with POSIX threads support:"
+msgstr ""
+"覆盖 libgcc 和 libstdc++ 头文件的构建规则，以允许在构建它们时启用 "
+"POSIX 线程支持："
+
+#. type: Content of: <sect1><sect2><screen>
+#, no-wrap
+msgid ""
+"<userinput remap=\"pre\">sed '/thread_header =/s/@.*@/gthr-posix.h/' \\\n"
+"    -i libgcc/Makefile.in libstdc++-v3/include/Makefile.in</userinput>"
+msgstr ""
+"<userinput remap=\"pre\">sed '/thread_header =/s/@.*@/gthr-posix.h/' \\\n"
+"    -i libgcc/Makefile.in libstdc++-v3/include/Makefile.in</userinput>"
+
+#. type: Content of: <sect1><sect2><para>
 msgid "Create a separate build directory again:"
 msgstr "再次创建一个独立的构建目录："
 
@@ -121,20 +151,6 @@ msgid ""
 msgstr ""
 "<userinput remap=\"pre\">mkdir -v build\n"
 "cd       build</userinput>"
-
-#. type: Content of: <sect1><sect2><para>
-msgid ""
-"Create a symlink that allows libgcc to be built with posix threads support:"
-msgstr "创建一个符号链接，以允许 libgcc 在构建时启用 POSIX 线程支持："
-
-#. type: Content of: <sect1><sect2><screen>
-#, no-wrap
-msgid ""
-"<userinput remap=\"pre\">mkdir -pv $LFS_TGT/libgcc\n"
-"ln -s ../../../libgcc/gthr-posix.h $LFS_TGT/libgcc/gthr-default.h</userinput>"
-msgstr ""
-"<userinput remap=\"pre\">mkdir -pv $LFS_TGT/libgcc\n"
-"ln -s ../../../libgcc/gthr-posix.h $LFS_TGT/libgcc/gthr-default.h</userinput>"
 
 #. type: Content of: <sect1><sect2><para>
 msgid ""
@@ -152,8 +168,9 @@ msgid ""
 "<userinput remap=\"configure\">../configure                                       \\\n"
 "    --build=$(../config.guess)                     \\\n"
 "    --host=$LFS_TGT                                \\\n"
+"    --target=$LFS_TGT                              \\\n"
+"    LDFLAGS_FOR_TARGET=-L$PWD/$LFS_TGT/libgcc      \\\n"
 "    --prefix=/usr                                  \\\n"
-"    CC_FOR_TARGET=$LFS_TGT-gcc                     \\\n"
 "    --with-build-sysroot=$LFS                      \\\n"
 "    --enable-initfini-array                        \\\n"
 "    --disable-nls                                  \\\n"
@@ -164,14 +181,14 @@ msgid ""
 "    --disable-libquadmath                          \\\n"
 "    --disable-libssp                               \\\n"
 "    --disable-libvtv                               \\\n"
-"    --disable-libstdcxx                            \\\n"
 "    --enable-languages=c,c++</userinput>"
 msgstr ""
 "<userinput remap=\"configure\">../configure                                       \\\n"
 "    --build=$(../config.guess)                     \\\n"
 "    --host=$LFS_TGT                                \\\n"
+"    --target=$LFS_TGT                              \\\n"
+"    LDFLAGS_FOR_TARGET=-L$PWD/$LFS_TGT/libgcc      \\\n"
 "    --prefix=/usr                                  \\\n"
-"    CC_FOR_TARGET=$LFS_TGT-gcc                     \\\n"
 "    --with-build-sysroot=$LFS                      \\\n"
 "    --enable-initfini-array                        \\\n"
 "    --disable-nls                                  \\\n"
@@ -182,7 +199,6 @@ msgstr ""
 "    --disable-libquadmath                          \\\n"
 "    --disable-libssp                               \\\n"
 "    --disable-libvtv                               \\\n"
-"    --disable-libstdcxx                            \\\n"
 "    --enable-languages=c,c++</userinput>"
 
 #. type: Content of: <sect1><sect2><variablelist><title>
@@ -190,8 +206,8 @@ msgid "The meaning of the new configure options:"
 msgstr "配置选项的含义："
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
-msgid "<parameter>-with-build-sysroot=$LFS</parameter>"
-msgstr "<parameter>-with-build-sysroot=$LFS</parameter>"
+msgid "<parameter>--with-build-sysroot=$LFS</parameter>"
+msgstr "<parameter>--with-build-sysroot=$LFS</parameter>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 msgid ""
@@ -207,6 +223,45 @@ msgstr ""
 "文件和库。但是，GCC 构建系统使用其他一些工具，它们不知道这个位置。因此需要该"
 "选项告诉它们在 <filename class=\"directory\">$LFS</filename> 中查找需要的文"
 "件，而不是在宿主系统中查找。"
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
+msgid "<parameter>--target=$LFS_TGT</parameter>"
+msgstr "<parameter>--target=$LFS_TGT</parameter>"
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
+msgid ""
+"As we are cross-compiling GCC, it's impossible to build target libraries "
+"(<filename class=\"libraryfile\">libgcc</filename> and <filename class="
+"\"libraryfile\">libstdc++</filename>) with the compiled GCC binaries because "
+"these binaries won't run on the host distro.  GCC building system will "
+"attempt to use the C and C++ compilers on the host distro as a workaround by "
+"default.  It's not supported to build GCC target libraries with a different "
+"version of GCC, so using host compilers may cause building failure.  This "
+"parameter ensures to build the libraries with GCC pass 1 and prevent the "
+"issue."
+msgstr ""
+"由于我们正在交叉编译 GCC，此时不可能用编译得到的 GCC 二进制程序构建用于"
+"目标系统的运行库 (<filename class=\"libraryfile\">libgcc</filename> 和 "
+"<filename class=\"libraryfile\">libstdc++</filename>)，这是因为交叉编译"
+"得到的二进制程序无法在宿主系统运行。GCC 构建系统在默认情况下会试图使用"
+"宿主系统提供的 C 和 C++ 编译器来绕过这个问题。但是，由于 GCC 的运行库"
+"未必能用不同版本的 GCC 构建，使用宿主系统的编译器可能导致构建失败。"
+"该选项保证使用第一遍构建的 GCC 编译运行库，以防止出现此问题。"
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
+msgid "<parameter>LDFLAGS_FOR_TARGET=...</parameter>"
+msgstr "<parameter>LDFLAGS_FOR_TARGET=...</parameter>"
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
+msgid ""
+"Allow <filename class=\"libraryfile\">libstdc++</filename> to use shared "
+"<filename class=\"libraryfile\">libgcc</filename> being built in this pass, "
+"instead of the static version built in GCC pass 1. This is needed for "
+"supporting C++ exception handling."
+msgstr ""
+"允许 <filename class=\"libraryfile\">libstdc++</filename> 使用即将构建的 "
+"<filename class=\"libraryfile\">libgcc</filename> 共享库，"
+"而不是第一遍构建 GCC 时得到的静态库。这对于 C++ 异常处理支持是必要的。"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 msgid "<parameter>--enable-initfini-array</parameter>"

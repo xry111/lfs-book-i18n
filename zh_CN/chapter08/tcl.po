@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2022-02-28 01:03+0800\n"
+"POT-Creation-Date: 2022-03-03 02:52+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -105,37 +105,12 @@ msgid ""
 "<userinput remap=\"configure\">SRCDIR=$(pwd)\n"
 "cd unix\n"
 "./configure --prefix=/usr           \\\n"
-"            --mandir=/usr/share/man \\\n"
-"            $([ \"$(uname -m)\" = x86_64 ] &amp;&amp; echo --enable-64bit)</userinput>"
+"            --mandir=/usr/share/man</userinput>"
 msgstr ""
 "<userinput remap=\"configure\">SRCDIR=$(pwd)\n"
 "cd unix\n"
 "./configure --prefix=/usr           \\\n"
-"            --mandir=/usr/share/man \\\n"
-"            $([ \"$(uname -m)\" = x86_64 ] &amp;&amp; echo --enable-64bit)</userinput>"
-
-#. type: Content of: <sect1><sect2><variablelist><title>
-msgid "The meaning of the configure options:"
-msgstr "配置选项的含义："
-
-#. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
-msgid ""
-"<parameter>$([ \"$(uname -m)\" = x86_64 ] &amp;&amp; echo --enable-64bit)</"
-"parameter>"
-msgstr ""
-"<parameter>$([ \"$(uname -m)\" = x86_64 ] &amp;&amp; echo --enable-64bit)</"
-"parameter>"
-
-#. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
-msgid ""
-"The construct <parameter>$(&lt;shell command&gt;)</parameter> is replaced by "
-"the output of the shell command.  Here this output is empty if running on a "
-"32 bit machine, and is <parameter>--enable-64bit</parameter> if running on a "
-"64 bit machine."
-msgstr ""
-"<parameter>$(&lt;shell 命令&gt;)</parameter> 会被 shell 替换为 shell 命令的输"
-"出。这里，如果在 32 位机器上，输出是空的，而如果在 64 位机器上，输出是 "
-"<parameter>--enable-64bit</parameter>。"
+"            --mandir=/usr/share/man</userinput>"
 
 #. type: Content of: <sect1><sect2><para>
 msgid "Build the package:"

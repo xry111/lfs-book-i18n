@@ -1,14 +1,14 @@
 # Linux From Scratch GCC 页面的中文翻译
 # This file is distributed under the same license as the Linux From Scratch
 # book.
-# Xi Ruoyao <xry111@mengyan1223.wang>, 2021
+# Xi Ruoyao <xry111@mengyan1223.wang>, 2021-2022
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: Linux From Scratch 11.0\n"
+"Project-Id-Version: Linux From Scratch 11.1\n"
 "Report-Msgid-Bugs-To: lfs-dev@lists.linuxfromscratch.org\n"
-"POT-Creation-Date: 2022-02-18 13:55+0800\n"
-"PO-Revision-Date: 2021-11-02 21:12+0800\n"
+"POT-Creation-Date: 2022-03-03 02:52+0800\n"
+"PO-Revision-Date: 2022-03-03 03:00+0800\n"
 "Last-Translator: Xi Ruoyao <xry111@mengyan1223.wang>\n"
 "Language-Team: None <noreply@mengyan1223.wang>\n"
 "Language: zh_CN\n"
@@ -353,7 +353,44 @@ msgid ""
 "some sanity checks:"
 msgstr ""
 "现在最终的工具链已经就位，重要的是再次确认编译和链接像我们期望的一样正常工"
-"作。我们通过进行一些完整性检查，进行确认："
+"作。为此，进行下列完整性检查："
+
+#. type: Content of: <sect1><sect2><screen>
+#, no-wrap
+msgid ""
+"<userinput>echo 'int main(){}' &gt; dummy.c\n"
+"cc dummy.c -v -Wl,--verbose &amp;&gt; dummy.log\n"
+"readelf -l a.out | grep ': /lib'</userinput>"
+msgstr ""
+"<userinput>echo 'int main(){}' &gt; dummy.c\n"
+"cc dummy.c -v -Wl,--verbose &amp;&gt; dummy.log\n"
+"readelf -l a.out | grep ': /lib'</userinput>"
+
+#. type: Content of: <sect1><sect2><para>
+msgid ""
+"There should be no errors, and the output of the last command will be "
+"(allowing for platform-specific differences in the dynamic linker name):"
+msgstr ""
+"上述命令不应该出现错误，最后一行命令输出的结果应该 (不同平台的动态链接器名称"
+"可能不同) 是："
+
+#. type: Content of: <sect1><sect2><screen>
+#, no-wrap
+msgid "<computeroutput>[Requesting program interpreter: /lib64/ld-linux-x86-64.so.2]</computeroutput>"
+msgstr "<computeroutput>[Requesting program interpreter: /lib64/ld-linux-x86-64.so.2]</computeroutput>"
+
+#. type: Content of: <sect1><sect2><para>
+msgid "Now make sure that we're setup to use the correct start files:"
+msgstr "下面确认我们的设定能够使用正确的启动文件："
+
+#. type: Content of: <sect1><sect2><screen>
+#, no-wrap
+msgid "<userinput>grep -o '/usr/lib.*/crt[1in].*succeeded' dummy.log</userinput>"
+msgstr "<userinput>grep -o '/usr/lib.*/crt[1in].*succeeded' dummy.log</userinput>"
+
+#. type: Content of: <sect1><sect2><para>
+msgid "The output of the last command should be:"
+msgstr "以上命令应该输出："
 
 #. type: Content of: <sect1><sect2><screen>
 #, no-wrap
@@ -380,10 +417,18 @@ msgstr ""
 "<command>gcc</command> 应该找到所有三个 <filename>crt*.o</filename> 文件，它"
 "们应该位于 <filename class=\"directory\">/usr/lib</filename> 目录中。"
 
+#. type: Content of: <sect1><sect2><para>
+msgid "Verify that the compiler is searching for the correct header files:"
+msgstr "确认编译器能正确查找头文件："
+
 #. type: Content of: <sect1><sect2><screen>
 #, no-wrap
 msgid "<userinput>grep -B4 '^ /usr/include' dummy.log</userinput>"
 msgstr "<userinput>grep -B4 '^ /usr/include' dummy.log</userinput>"
+
+#. type: Content of: <sect1><sect2><para>
+msgid "This command should return the following output:"
+msgstr "该命令应当输出："
 
 #. type: Content of: <sect1><sect2><screen>
 #, no-wrap
@@ -406,6 +451,22 @@ msgid ""
 "the above, depending on your system architecture."
 msgstr ""
 "同样要注意，以您的目标三元组命名的目录由于您体系结构的不同，可能和以上不同。"
+
+#. type: Content of: <sect1><sect2><para>
+msgid ""
+"Next, verify that the new linker is being used with the correct search paths:"
+msgstr "下一步确认新的链接器使用了正确的搜索路径："
+
+#. type: Content of: <sect1><sect2><screen>
+#, no-wrap
+msgid "<userinput>grep 'SEARCH.*/usr/lib' dummy.log |sed 's|; |\\n|g'</userinput>"
+msgstr "<userinput>grep 'SEARCH.*/usr/lib' dummy.log |sed 's|; |\\n|g'</userinput>"
+
+#. type: Content of: <sect1><sect2><para>
+msgid ""
+"References to paths that have components with '-linux-gnu' should be "
+"ignored, but otherwise the output of the last command should be:"
+msgstr "那些包含 '-linux-gnu' 的路径应该忽略，除此之外，以上命令应该输出："
 
 #. type: Content of: <sect1><sect2><screen>
 #, no-wrap
@@ -454,6 +515,59 @@ msgstr ""
 "SEARCH_DIR(\"/usr/local/lib\")\n"
 "SEARCH_DIR(\"/lib\")\n"
 "SEARCH_DIR(\"/usr/lib\");</computeroutput>"
+
+#. type: Content of: <sect1><sect2><para>
+msgid "Next make sure that we're using the correct libc:"
+msgstr "之后确认我们使用了正确的 libc："
+
+#. type: Content of: <sect1><sect2><screen>
+#, no-wrap
+msgid "<userinput>grep \"/lib.*/libc.so.6 \" dummy.log</userinput>"
+msgstr "<userinput>grep \"/lib.*/libc.so.6 \" dummy.log</userinput>"
+
+#. type: Content of: <sect1><sect2><screen>
+#, no-wrap
+msgid "<computeroutput>attempt to open /usr/lib/libc.so.6 succeeded</computeroutput>"
+msgstr "<computeroutput>attempt to open /usr/lib/libc.so.6 succeeded</computeroutput>"
+
+#. type: Content of: <sect1><sect2><para>
+msgid "Make sure GCC is using the correct dynamic linker:"
+msgstr "确认 GCC 使用了正确的动态链接器："
+
+#. type: Content of: <sect1><sect2><screen>
+#, no-wrap
+msgid "<userinput>grep found dummy.log</userinput>"
+msgstr "<userinput>grep found dummy.log</userinput>"
+
+#. type: Content of: <sect1><sect2><para>
+msgid ""
+"The output of the last command should be (allowing for platform-specific "
+"differences in dynamic linker name):"
+msgstr "以上命令应该输出 (不同平台的动态链接器名称可能不同):"
+
+#. type: Content of: <sect1><sect2><screen>
+#, no-wrap
+msgid "<computeroutput>found ld-linux-x86-64.so.2 at /usr/lib/ld-linux-x86-64.so.2</computeroutput>"
+msgstr "<computeroutput>found ld-linux-x86-64.so.2 at /usr/lib/ld-linux-x86-64.so.2</computeroutput>"
+
+msgid ""
+"If the output does not appear as shown above or is not received at all, then "
+"something is seriously wrong. Investigate and retrace the steps to find out "
+"where the problem is and correct it.  Any issues will need to be resolved "
+"before continuing with the process."
+msgstr ""
+"如果输出和以上描述不符，或者根本没有输出，那么必然有什么地方出了严重错误。检"
+"查并重新跟踪以上步骤，找到问题的原因，并修复它。这里出现的任何问题在继续构建"
+"前都必须解决。"
+
+#. type: Content of: <sect1><sect2><para>
+msgid "Once everything is working correctly, clean up the test files:"
+msgstr "在确认一切工作良好后，删除测试文件："
+
+#. type: Content of: <sect1><sect2><screen>
+#, no-wrap
+msgid "<userinput>rm -v dummy.c a.out dummy.log</userinput>"
+msgstr "<userinput>rm -v dummy.c a.out dummy.log</userinput>"
 
 #. type: Content of: <sect1><sect2><para>
 msgid "Finally, move a misplaced file:"
@@ -785,8 +899,7 @@ msgstr "<filename class=\"libraryfile\">liblto_plugin</filename>"
 msgid ""
 "GCC's LTO plugin allows binutils to process object files produced by GCC "
 "with LTO enabled"
-msgstr ""
-"GCC 的 LTO 插件，允许 binutils 处理 GCC 在启用 LTO 时生成的目标文件"
+msgstr "GCC 的 LTO 插件，允许 binutils 处理 GCC 在启用 LTO 时生成的目标文件"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 msgid "liblto_plugin"
