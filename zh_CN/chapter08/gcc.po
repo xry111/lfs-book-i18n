@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Linux From Scratch 11.1\n"
 "Report-Msgid-Bugs-To: lfs-dev@lists.linuxfromscratch.org\n"
-"POT-Creation-Date: 2022-03-03 02:52+0800\n"
+"POT-Creation-Date: 2022-03-05 16:51+0800\n"
 "PO-Revision-Date: 2022-03-03 03:00+0800\n"
 "Last-Translator: Xi Ruoyao <xry111@mengyan1223.wang>\n"
 "Language-Team: None <noreply@mengyan1223.wang>\n"
@@ -312,10 +312,10 @@ msgstr ""
 #, no-wrap
 msgid ""
 "<userinput remap=\"install\">chown -v -R root:root \\\n"
-"    /usr/lib/gcc/*linux-gnu/&gcc-version;/include{,-fixed}</userinput>"
+"    /usr/lib/gcc/$(gcc -dumpmachine)/&gcc-version;/include{,-fixed}</userinput>"
 msgstr ""
 "<userinput remap=\"install\">chown -v -R root:root \\\n"
-"    /usr/lib/gcc/*linux-gnu/&gcc-version;/include{,-fixed}</userinput>"
+"    /usr/lib/gcc/$(gcc -dumpmachine)/&gcc-version;/include{,-fixed}</userinput>"
 
 #. type: Content of: <sect1><sect2><para>
 msgid ""
@@ -550,6 +550,9 @@ msgstr "以上命令应该输出 (不同平台的动态链接器名称可能不�
 msgid "<computeroutput>found ld-linux-x86-64.so.2 at /usr/lib/ld-linux-x86-64.so.2</computeroutput>"
 msgstr "<computeroutput>found ld-linux-x86-64.so.2 at /usr/lib/ld-linux-x86-64.so.2</computeroutput>"
 
+#. The most likely
+#.   reason is that something went wrong with the specs file adjustment.
+#. type: Content of: <sect1><sect2><para>
 msgid ""
 "If the output does not appear as shown above or is not received at all, then "
 "something is seriously wrong. Investigate and retrace the steps to find out "
