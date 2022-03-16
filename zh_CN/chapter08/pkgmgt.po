@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2021-09-15 15:18+0800\n"
+"POT-Creation-Date: 2022-03-16 15:54+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -197,6 +197,18 @@ msgstr ""
 "如果正在使用 <application>OpenSSH</application> 访问系统，且它链接到了被更新"
 "的库，则需要重启 <command>sshd</command> 服务，登出并重新登录，然后再次运行上"
 "述命令，确认没有进程使用被删除的库文件。"
+
+#. type: Content of: <sect1><sect2><itemizedlist><listitem><para>
+msgid ""
+"If the <command>systemd</command> daemon (running as PID 1) is linked to the "
+"updated library, you can restart it without reboot by running "
+"<command>systemctl daemon-reexec</command> as the <systemitem "
+"class='username'>root</systemitem> user."
+msgstr ""
+"如果 <command>systemd</command> 守护进程 (以 PID 1 运行) 链接到了被更新的库，"
+"可以在不重启系统的前提下重启它：以 <systemitem class='username'>root"
+"</systemitem> 用户身份，运行 <command>systemctl daemon-reexec</command> "
+"命令即可。"
 
 #. type: Content of: <sect1><sect2><itemizedlist><listitem><para>
 msgid ""
