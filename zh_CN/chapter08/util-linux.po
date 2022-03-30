@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Linux From Scratch 11.0\n"
 "Report-Msgid-Bugs-To: lfs-dev@lists.linuxfromscratch.org\n"
-"POT-Creation-Date: 2022-02-16 14:24+0800\n"
+"POT-Creation-Date: 2022-03-31 05:14+0800\n"
 "PO-Revision-Date: 2021-07-28 12:48+0800\n"
 "Last-Translator: Xi Ruoyao <xry111@mengyan1223.wang>\n"
 "Language-Team: None <noreply@mengyan1223.wang>\n"
@@ -207,6 +207,14 @@ msgid ""
 msgstr ""
 "<userinput remap=\"test\">chown -Rv tester .\n"
 "su tester -c \"make -k check\"</userinput>"
+
+#. type: Content of: <sect1><sect2><para>
+msgid ""
+"The <emphasis>hardlink</emphasis> tests will fail if the host's kernel does "
+"not have the option CONFIG_CRYPTO_USER_API_HASH set."
+msgstr ""
+"如果宿主系统内核没有启用配置选项 CONFIG_CRYPTO_USER_API_HASH，"
+"则 <emphasis>hardlink</emphasis> 测试会失败。"
 
 #. type: Content of: <sect1><sect2><para>
 msgid "Install the package:"
