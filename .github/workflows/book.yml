@@ -24,7 +24,7 @@ jobs:
           wget 'https://bf.mengyan1223.wang/assets/po4a/po4a_0.62-xry111-1_all.deb'
           sudo apt install ./po4a_0.62-xry111-1_all.deb
       - name: Checkout
-        uses: actions/checkout@v2
+        uses: actions/checkout@v3
         with:
           submodules: recursive
           fetch-depth: 0
