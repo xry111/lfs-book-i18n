@@ -40,7 +40,7 @@ jobs:
           sed '/git.status/,$ d' -i zh_CN/book/git-version.sh
           tar -C zh_CN -cf book.tar book
       - name: Upload Translated XML Files
-        uses: actions/upload-artifact@v2
+        uses: actions/upload-artifact@v3
         with:
           name: lfs-xml-zh_CN
           path: book.tar
@@ -50,7 +50,7 @@ jobs:
           cp setenv.sh $HOME/aux-files
           cp .known_hosts $HOME/aux-files
       - name: Upload Auxilary Files
-        uses: actions/upload-artifact@v2
+        uses: actions/upload-artifact@v3
         with:
           name: aux-files
           path: ~/aux-files
@@ -77,7 +77,7 @@ jobs:
           make REV=sysv book -C ~/lfs-xml-zh_CN BASEDIR=~/lfs-sysv-zh_CN
           tar -C $HOME -cJf lfs-sysv-zh_CN.tar.xz lfs-sysv-zh_CN
       - name: Upload Artifacts
-        uses: actions/upload-artifact@v2
+        uses: actions/upload-artifact@v3
         with:
           name: lfs-sysv-zh_CN-html
           path: lfs-sysv-zh_CN.tar.xz
@@ -134,7 +134,7 @@ jobs:
           make REV=systemd book -C ~/lfs-xml-zh_CN BASEDIR=~/lfs-systemd-zh_CN
           tar -C $HOME -cJf lfs-systemd-zh_CN.tar.xz lfs-systemd-zh_CN
       - name: Upload Artifacts
-        uses: actions/upload-artifact@v2
+        uses: actions/upload-artifact@v3
         with:
           name: lfs-systemd-zh_CN-html
           path: lfs-systemd-zh_CN.tar.xz
@@ -190,7 +190,7 @@ jobs:
         run: |
           make REV=sysv nochunks -C ~/lfs-xml-zh_CN BASEDIR=~/lfs-sysv-zh_CN
       - name: Upload Artifacts
-        uses: actions/upload-artifact@v2
+        uses: actions/upload-artifact@v3
         with:
           name: lfs-sysv-zh_CN-nochunks
           path: ~/lfs-sysv-zh_CN/LFS-BOOK.html
@@ -248,7 +248,7 @@ jobs:
         run: |
           make REV=systemd nochunks -C ~/lfs-xml-zh_CN BASEDIR=~/lfs-systemd-zh_CN
       - name: Upload Artifacts
-        uses: actions/upload-artifact@v2
+        uses: actions/upload-artifact@v3
         with:
           name: lfs-systemd-zh_CN-nochunks
           path: ~/lfs-systemd-zh_CN/LFS-SYSD-BOOK.html
@@ -308,7 +308,7 @@ jobs:
         run: |
           make REV=sysv pdf -C ~/lfs-xml-zh_CN BASEDIR=~/lfs-sysv-zh_CN
       - name: Upload Artifacts
-        uses: actions/upload-artifact@v2
+        uses: actions/upload-artifact@v3
         with:
           name: lfs-sysv-zh_CN-pdf
           path: ~/lfs-sysv-zh_CN/LFS-BOOK.pdf
@@ -368,7 +368,7 @@ jobs:
         run: |
           make REV=systemd pdf -C ~/lfs-xml-zh_CN BASEDIR=~/lfs-systemd-zh_CN
       - name: Upload Artifacts
-        uses: actions/upload-artifact@v2
+        uses: actions/upload-artifact@v3
         with:
           name: lfs-systemd-zh_CN-pdf
           path: ~/lfs-systemd-zh_CN/LFS-SYSD-BOOK.pdf
