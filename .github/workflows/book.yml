@@ -65,7 +65,7 @@ jobs:
           sudo apt update
           sudo apt install xsltproc libxml2-utils docbook-xml docbook-xsl tidy
       - name: Fetch XML
-        uses: actions/download-artifact@v2
+        uses: actions/download-artifact@v3
         with:
           name: lfs-xml-zh_CN
           path: ~/lfs-xml-zh_CN
@@ -93,12 +93,12 @@ jobs:
         with:
           ssh-private-key: ${{ secrets.SSH_PRIVATE_KEY }}
       - name: Fetch the Book
-        uses: actions/download-artifact@v2
+        uses: actions/download-artifact@v3
         with:
           name: lfs-sysv-zh_CN-html
           path: ~/lfs-sysv-zh_CN-html
       - name: Fetch Auxilary Files
-        uses: actions/download-artifact@v2
+        uses: actions/download-artifact@v3
         with:
           name: aux-files
           path: ~/aux-files
@@ -122,7 +122,7 @@ jobs:
           sudo apt update
           sudo apt install xsltproc libxml2-utils docbook-xml docbook-xsl tidy
       - name: Fetch XML
-        uses: actions/download-artifact@v2
+        uses: actions/download-artifact@v3
         with:
           name: lfs-xml-zh_CN
           path: ~/lfs-xml-zh_CN
@@ -150,12 +150,12 @@ jobs:
         with:
           ssh-private-key: ${{ secrets.SSH_PRIVATE_KEY }}
       - name: Fetch the Book
-        uses: actions/download-artifact@v2
+        uses: actions/download-artifact@v3
         with:
           name: lfs-systemd-zh_CN-html
           path: ~/lfs-systemd-zh_CN-html
       - name: Fetch Auxilary Files
-        uses: actions/download-artifact@v2
+        uses: actions/download-artifact@v3
         with:
           name: aux-files
           path: ~/aux-files
@@ -179,7 +179,7 @@ jobs:
           sudo apt update
           sudo apt install xsltproc libxml2-utils docbook-xml docbook-xsl tidy
       - name: Fetch XML
-        uses: actions/download-artifact@v2
+        uses: actions/download-artifact@v3
         with:
           name: lfs-xml-zh_CN
           path: ~/lfs-xml-zh_CN
@@ -209,12 +209,12 @@ jobs:
         with:
           ssh-private-key: ${{ secrets.SSH_PRIVATE_KEY }}
       - name: Fetch the Book
-        uses: actions/download-artifact@v2
+        uses: actions/download-artifact@v3
         with:
           name: lfs-sysv-zh_CN-nochunks
           path: ~/lfs-sysv-zh_CN-nochunks
       - name: Fetch Auxilary Files
-        uses: actions/download-artifact@v2
+        uses: actions/download-artifact@v3
         with:
           name: aux-files
           path: ~/aux-files
@@ -237,7 +237,7 @@ jobs:
           sudo apt update
           sudo apt install xsltproc libxml2-utils docbook-xml docbook-xsl tidy
       - name: Fetch XML
-        uses: actions/download-artifact@v2
+        uses: actions/download-artifact@v3
         with:
           name: lfs-xml-zh_CN
           path: ~/lfs-xml-zh_CN
@@ -264,12 +264,12 @@ jobs:
         with:
           ssh-private-key: ${{ secrets.SSH_PRIVATE_KEY }}
       - name: Fetch the Book
-        uses: actions/download-artifact@v2
+        uses: actions/download-artifact@v3
         with:
           name: lfs-systemd-zh_CN-nochunks
           path: ~/lfs-systemd-zh_CN-nochunks
       - name: Fetch Auxilary Files
-        uses: actions/download-artifact@v2
+        uses: actions/download-artifact@v3
         with:
           name: aux-files
           path: ~/aux-files
@@ -292,7 +292,7 @@ jobs:
           sudo apt update
           sudo apt install xsltproc libxml2-utils docbook-xml docbook-xsl fop
       - name: Fetch XML
-        uses: actions/download-artifact@v2
+        uses: actions/download-artifact@v3
         with:
           name: lfs-xml-zh_CN
           path: ~/lfs-xml-zh_CN
@@ -324,12 +324,12 @@ jobs:
         with:
           ssh-private-key: ${{ secrets.SSH_PRIVATE_KEY }}
       - name: Fetch the Book
-        uses: actions/download-artifact@v2
+        uses: actions/download-artifact@v3
         with:
           name: lfs-sysv-zh_CN-pdf
           path: ~/lfs-sysv-zh_CN-pdf
       - name: Fetch Auxilary Files
-        uses: actions/download-artifact@v2
+        uses: actions/download-artifact@v3
         with:
           name: aux-files
           path: ~/aux-files
@@ -352,7 +352,7 @@ jobs:
           sudo apt update
           sudo apt install xsltproc libxml2-utils docbook-xml docbook-xsl fop
       - name: Fetch XML
-        uses: actions/download-artifact@v2
+        uses: actions/download-artifact@v3
         with:
           name: lfs-xml-zh_CN
           path: ~/lfs-xml-zh_CN
@@ -384,12 +384,12 @@ jobs:
         with:
           ssh-private-key: ${{ secrets.SSH_PRIVATE_KEY }}
       - name: Fetch the Book
-        uses: actions/download-artifact@v2
+        uses: actions/download-artifact@v3
         with:
           name: lfs-systemd-zh_CN-pdf
           path: ~/lfs-systemd-zh_CN-pdf
       - name: Fetch Auxilary Files
-        uses: actions/download-artifact@v2
+        uses: actions/download-artifact@v3
         with:
           name: aux-files
           path: ~/aux-files
