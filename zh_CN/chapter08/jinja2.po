@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Linux From Scratch 11.0\n"
 "Report-Msgid-Bugs-To: lfs-dev@lists.linuxfromscratch.org\n"
-"POT-Creation-Date: 2022-03-26 23:06+0800\n"
+"POT-Creation-Date: 2022-04-18 12:24+0800\n"
 "PO-Revision-Date: 2021-07-09 13:45+0800\n"
 "Last-Translator: Xi Ruoyao <xry111@mengyan1223.wang>\n"
 "Language-Team: None <noreply@mengyan1223.wang>\n"
@@ -67,26 +67,33 @@ msgid "Installation of Jinja2"
 msgstr "安装 Jinja2"
 
 #. type: Content of: <sect1><sect2><para>
+msgid "Build the package:"
+msgstr "构建该软件包："
+
+#. type: Content of: <sect1><sect2><screen>
+#, no-wrap
+msgid "<userinput remap=\"install\">pip3 wheel -w dist --no-build-isolation --no-deps $PWD</userinput>"
+msgstr "<userinput remap=\"install\">pip3 wheel -w dist --no-build-isolation --no-deps $PWD</userinput>"
+
+#. type: Content of: <sect1><sect2><para>
 msgid "Install the package:"
 msgstr "安装该软件包："
 
 #. type: Content of: <sect1><sect2><screen>
 #, no-wrap
-msgid "<userinput remap=\"install\">python3 setup.py install --optimize=1</userinput>"
-msgstr "<userinput remap=\"install\">python3 setup.py install --optimize=1</userinput>"
+msgid "<userinput remap=\"install\">pip3 install --no-index --find-links dist Jinja2</userinput>"
+msgstr "<userinput remap=\"install\">pip3 install --no-index --find-links dist Jinja2</userinput>"
 
 #. type: Content of: <sect1><sect2><title>
 msgid "Contents of Jinja2"
 msgstr "Jinja2 的内容"
 
 #. type: Content of: <sect1><sect2><segmentedlist><segtitle>
-msgid "Installed directories"
+msgid "Installed directory"
 msgstr "安装的目录"
 
 #. type: Content of: <sect1><sect2><segmentedlist><seglistitem><seg>
 msgid ""
-"/usr/lib/python&python-minor;/site-packages/Jinja2-&jinja2-version;-"
-"py&python-minor;.egg"
+"/usr/lib/python&python-minor;/site-packages/Jinja2-&jinja2-version;.dist-info"
 msgstr ""
-"/usr/lib/python&python-minor;/site-packages/Jinja2-&jinja2-version;-"
-"py&python-minor;.egg"
+"/usr/lib/python&python-minor;/site-packages/Jinja2-&jinja2-version;.dist-info"

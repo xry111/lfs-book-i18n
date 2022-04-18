@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Linux From Scratch 11.0\n"
 "Report-Msgid-Bugs-To: lfs-dev@lists.linuxfromscratch.org\n"
-"POT-Creation-Date: 2022-03-16 21:01+0800\n"
+"POT-Creation-Date: 2022-04-18 12:24+0800\n"
 "PO-Revision-Date: 2021-07-09 13:31+0800\n"
 "Last-Translator: Xi Ruoyao <xry111@mengyan1223.wang>\n"
 "Language-Team: None <noreply@mengyan1223.wang>\n"
@@ -71,8 +71,8 @@ msgstr "输入以下命令，编译 MarkupSafe："
 
 #. type: Content of: <sect1><sect2><screen>
 #, no-wrap
-msgid "<userinput remap=\"make\">python3 setup.py build</userinput>"
-msgstr "<userinput remap=\"make\">python3 setup.py build</userinput>"
+msgid "<userinput remap=\"make\">pip3 wheel -w dist --no-build-isolation --no-deps $PWD</userinput>"
+msgstr "<userinput remap=\"make\">pip3 wheel -w dist --no-build-isolation --no-deps $PWD</userinput>"
 
 #. type: Content of: <sect1><sect2><para>
 msgid "This package does not come with a test suite."
@@ -84,8 +84,8 @@ msgstr "安装该软件包："
 
 #. type: Content of: <sect1><sect2><screen>
 #, no-wrap
-msgid "<userinput remap=\"install\">python3 setup.py install --optimize=1</userinput>"
-msgstr "<userinput remap=\"install\">python3 setup.py install --optimize=1</userinput>"
+msgid "<userinput remap=\"install\">pip3 install --no-index --find-links dist Markupsafe</userinput>"
+msgstr "<userinput remap=\"install\">pip3 install --no-index --find-links dist Markupsafe</userinput>"
 
 #. type: Content of: <sect1><sect2><title>
 msgid "Contents of MarkupSafe"
@@ -97,8 +97,8 @@ msgstr "安装的目录"
 
 #. type: Content of: <sect1><sect2><segmentedlist><seglistitem><seg>
 msgid ""
-"/usr/lib/python&python-minor;/site-packages/MarkupSafe-&markupsafe-version;-"
-"py&python-minor;-linux-<replaceable>&lt;arch&gt;</replaceable>.egg"
+"/usr/lib/python&python-minor;/site-packages/MarkupSafe-&markupsafe-version;."
+"dist-info"
 msgstr ""
-"/usr/lib/python&python-minor;/site-packages/MarkupSafe-&markupsafe-version;-"
-"py&python-minor;-linux-<replaceable>&lt;arch&gt;</replaceable>.egg"
+"/usr/lib/python&python-minor;/site-packages/MarkupSafe-&markupsafe-version;."
+"dist-info"

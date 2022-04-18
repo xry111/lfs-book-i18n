@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2022-03-03 02:52+0800\n"
+"POT-Creation-Date: 2022-04-18 13:01+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -79,8 +79,8 @@ msgstr "执行以下命令编译 Meson："
 
 #. type: Content of: <sect1><sect2><screen>
 #, no-wrap
-msgid "<userinput remap=\"make\">python3 setup.py build</userinput>"
-msgstr "<userinput remap=\"make\">python3 setup.py build</userinput>"
+msgid "<userinput remap=\"make\">pip3 wheel -w dist --no-build-isolation --no-deps $PWD</userinput>"
+msgstr "<userinput remap=\"make\">pip3 wheel -w dist --no-build-isolation --no-deps $PWD</userinput>"
 
 #. type: Content of: <sect1><sect2><para>
 msgid "The test suite requires some packages out of the scope of LFS."
@@ -93,13 +93,11 @@ msgstr "安装该软件包："
 #. type: Content of: <sect1><sect2><screen>
 #, no-wrap
 msgid ""
-"<userinput remap=\"install\">python3 setup.py install --root=dest\n"
-"cp -rv dest/* /\n"
+"<userinput remap=\"install\">pip3 install --no-index --find-links dist meson\n"
 "install -vDm644 data/shell-completions/bash/meson /usr/share/bash-completion/completions/meson\n"
 "install -vDm644 data/shell-completions/zsh/_meson /usr/share/zsh/site-functions/_meson</userinput>"
 msgstr ""
-"<userinput remap=\"install\">python3 setup.py install --root=dest\n"
-"cp -rv dest/* /\n"
+"<userinput remap=\"install\">pip3 install --no-index --find-links dist meson\n"
 "install -vDm644 data/shell-completions/bash/meson /usr/share/bash-completion/completions/meson\n"
 "install -vDm644 data/shell-completions/zsh/_meson /usr/share/zsh/site-functions/_meson</userinput>"
 
@@ -108,20 +106,25 @@ msgid "The meaning of the install parameters:"
 msgstr "安装选项的含义："
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
-msgid "<parameter>--root=dest</parameter>"
-msgstr "<parameter>--root=dest</parameter>"
+msgid "<parameter>-w dist</parameter>"
+msgstr "<parameter>-w dist</parameter>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 msgid ""
-"By default <command>python3 setup.py install</command> installs various "
-"files (such as man pages) into Python Eggs.  With a specified root location, "
-"<command>setup.py</command> installs these files into a standard hierarchy.  "
-"Then the hierarchy can just be copied to the standard location."
-msgstr ""
-"默认情况下 <command>python3 setup.py install</command> 将若干文件 (如 man 页"
-"面) 安装到 Python Eggs 中。在指定了根目录位置时，<command>setup.py</command> "
-"将这些文件安装到符合标准的目录树中。我们即可直接复制该目录树，使得这些文件位"
-"于标准指定的位置。"
+"Put the created wheels into the <filename class='directory'>dist</filename> "
+"directory."
+msgstr "将生成的 wheel 包置入 <filename class='directory'>dist</filename> "
+"目录。"
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
+msgid "<parameter>--find-links dist</parameter>"
+msgstr "<parameter>--find-links dist</parameter>"
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
+msgid ""
+"Install wheels from the <filename class='directory'>dist</filename> "
+"directory."
+msgstr "从 <filename class='directory'>dist</filename> 目录安装 wheel 包。"
 
 #. type: Content of: <sect1><sect2><title>
 msgid "Contents of Meson"
@@ -141,11 +144,11 @@ msgstr "meson"
 
 #. type: Content of: <sect1><sect2><segmentedlist><seglistitem><seg>
 msgid ""
-"/usr/lib/python&python-minor;/site-packages/meson-&meson-version;-py&python-"
-"minor;.egg-info and /usr/lib/python&python-minor;/site-packages/mesonbuild"
+"/usr/lib/python&python-minor;/site-packages/meson-&meson-version;.dist-info "
+"and /usr/lib/python&python-minor;/site-packages/mesonbuild"
 msgstr ""
-"/usr/lib/python&python-minor;/site-packages/meson-&meson-version;-py&python-"
-"minor;.egg-info 和 /usr/lib/python&python-minor;/site-packages/mesonbuild"
+"/usr/lib/python&python-minor;/site-packages/meson-&meson-version;.dist-info "
+"和 /usr/lib/python&python-minor;/site-packages/mesonbuild"
 
 #. type: Content of: <sect1><sect2><variablelist><bridgehead>
 msgid "Short Descriptions"

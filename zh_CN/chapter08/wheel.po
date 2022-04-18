@@ -1,0 +1,144 @@
+# LFS wheel 安装页面的中文翻译。
+# Copyright (C) 2022 Xi Ruoyao
+# This file is distributed under the same license as the Linux From Scratch package.
+# Xi Ruoyao <xry111@mengyan1223.wang>, 2022.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Linux From Scratch 11.0\n"
+"POT-Creation-Date: 2022-04-18 13:01+0800\n"
+"PO-Revision-Date: 2022-04-18 13:04+0800\n"
+"Last-Translator: Xi Ruoyao <xry111@mengyan1223.wang>\n"
+"Language-Team: None <noreply@mengyan1223.wang>\n"
+"Language: zh_CN\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Bugs: https://github.com/xry111/lfs-book-i18n/issues\n"
+"X-Pootle-Revision: 9999999\n"
+"X-Pootle-Path: /zh_CN/lfs/chapter08/wheel.po\n"
+
+#. type: Content of: <sect1><sect1info><address>
+#, no-wrap
+msgid "&wheel-url;"
+msgstr "&wheel-url;"
+
+#. type: Content of: <sect1><sect1info>
+msgid ""
+"<productname>wheel</productname> <productnumber>&wheel-version;</"
+"productnumber> <placeholder type=\"address\" id=\"0\"/>"
+msgstr ""
+"<productname>wheel</productname> <productnumber>&wheel-version;</"
+"productnumber> <placeholder type=\"address\" id=\"0\"/>"
+
+#. type: Content of: <sect1><title>
+msgid "wheel-&wheel-version;"
+msgstr "wheel-&wheel-version;"
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
+msgid "wheel"
+msgstr "wheel"
+
+#. type: Content of: <sect1><sect2><para>
+msgid ""
+"Wheel is a Python library that is the reference implementation of the Python "
+"wheel packaging standard."
+msgstr "Wheel 是 Python wheel 软件包标准格式的参考实现。"
+
+#. type: Content of: <sect1><sect2><segmentedlist><segtitle>
+msgid "&buildtime;"
+msgstr "&buildtime;"
+
+#. type: Content of: <sect1><sect2><segmentedlist><segtitle>
+msgid "&diskspace;"
+msgstr "&diskspace;"
+
+#. type: Content of: <sect1><sect2><segmentedlist><seglistitem><seg>
+msgid "&wheel-fin-sbu;"
+msgstr "&wheel-fin-sbu;"
+
+#. type: Content of: <sect1><sect2><segmentedlist><seglistitem><seg>
+msgid "&wheel-fin-du;"
+msgstr "&wheel-fin-du;"
+
+#. type: Content of: <sect1><sect2><title>
+msgid "Installation of Wheel"
+msgstr "安装 Wheel"
+
+#. type: Content of: <sect1><sect2><para>
+msgid "Install wheel with the following command:"
+msgstr "使用以下命令安装 wheel："
+
+#. type: Content of: <sect1><sect2><screen>
+#, no-wrap
+msgid "<userinput remap=\"install\">pip3 install --no-index $PWD</userinput>"
+msgstr "<userinput remap=\"install\">pip3 install --no-index $PWD</userinput>"
+
+#. type: Content of: <sect1><sect2><variablelist><title>
+msgid "The meaning of the pip3 options:"
+msgstr "pip3 选项的含义："
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
+msgid "<command>install</command>"
+msgstr "<command>install</command>"
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
+msgid "Install the package."
+msgstr "安装软件包。"
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
+msgid "<parameter>--no-index</parameter>"
+msgstr "<parameter>--no-index</parameter>"
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
+msgid ""
+"Prevent pip from fetching files from the online package repository (PyPI). "
+"If packages are installed in the correct order, then it won't need to fetch "
+"any files in the first place, but this option adds some safety in case of "
+"user error."
+msgstr ""
+"防止 pip 从在线软件包仓库 (PyPI) 获取文件。如果按正确的顺序安装软件包，则 "
+"pip 完全不会尝试获取文件，但是在用户不小心犯下错误时，该选项可以作为一项保险"
+"措施。"
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
+msgid "<parameter>$PWD</parameter>"
+msgstr "<parameter>$PWD</parameter>"
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
+msgid "Look for files to install in the current working directory."
+msgstr "在当前工作目录查找要安装的文件。"
+
+#. type: Content of: <sect1><sect2><title>
+msgid "Contents of Wheel"
+msgstr "Wheel 的内容"
+
+#. type: Content of: <sect1><sect2><segmentedlist><segtitle>
+msgid "Installed program"
+msgstr "安装的程序"
+
+#. type: Content of: <sect1><sect2><segmentedlist><segtitle>
+msgid "Installed directory"
+msgstr "安装的目录"
+
+#. type: Content of: <sect1><sect2><segmentedlist><seglistitem><seg>
+msgid "/usr/lib/python&python-minor;/site-packages/wheel"
+msgstr "/usr/lib/python&python-minor;/site-packages/wheel"
+
+#. type: Content of: <sect1><sect2><variablelist><bridgehead>
+msgid "Short Descriptions"
+msgstr "简要描述"
+
+#. type: Content of: <sect1><sect2><variablelist>
+msgid ""
+"<?dbfo list-presentation=\"list\"?> <?dbhtml list-presentation=\"table\"?>"
+msgstr ""
+"<?dbfo list-presentation=\"list\"?> <?dbhtml list-presentation=\"table\"?>"
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
+msgid "<command>wheel</command>"
+msgstr "<command>wheel</command>"
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
+msgid "is an utility to unpack, pack, or convert wheel packages"
+msgstr "是用于解包、包装，或者转换 wheel 软件包的工具"
