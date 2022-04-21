@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Linux From Scratch 11.0\n"
 "Report-Msgid-Bugs-To: lfs-dev@lists.linuxfromscratch.org\n"
-"POT-Creation-Date: 2022-04-18 12:24+0800\n"
+"POT-Creation-Date: 2022-04-21 14:25+0800\n"
 "PO-Revision-Date: 2021-07-28 19:09+0800\n"
 "Last-Translator: Xi Ruoyao <xry111@mengyan1223.wang>\n"
 "Language-Team: None <noreply@mengyan1223.wang>\n"
@@ -22,6 +22,32 @@ msgstr ""
 #. type: Content of: <sect1><title>
 msgid "All Packages"
 msgstr "全部软件包"
+
+#. type: Content of: <sect1><note><para>
+msgid ""
+"Read the <ulink url='&secadv;'>security advisories</ulink> before "
+"downloading packages to figure out if a newer version of any package should "
+"be used to avoid security vulnerabilities."
+msgstr ""
+"在下载软件包之前，阅读 <ulink url='&secadv;'>security advisories</ulink> "
+"以了解是否应该对某个软件包使用较新的版本，以避免安全缺陷。"
+
+#. type: Content of: <sect1><note><para>
+msgid ""
+"The upstreams may remove old releases, especially when these releases "
+"contain a security vulnerability.  If one URL below is not reachable, you "
+"should read the security advisories first to figure out if a newer version "
+"(with the vulnerability fixed) should be used.  If not, try to download the "
+"removed package from a mirror.  Although it's possible to download an old "
+"release from a mirror even if this release has been removed because of a "
+"vulnerability, it's not recommended to use a release known to be vulnerable "
+"for building your system."
+msgstr ""
+"上游可能移除旧的发布版本，特别是在这些旧版本存在安全缺陷的情况下。"
+"如果下面列出的某个 URL 无法访问，应该首先阅读安全公告，以确认是否应该"
+"使用更新的 (已经修复安全缺陷的) 版本。如果情况并非如此，可以尝试从镜像站"
+"下载被移除的软件包。尽管即使在某个发布版本因为安全缺陷被移除时，仍然可能"
+"通过镜像站下载它，我们不推荐在构建系统时使用已知有安全缺陷的软件包版本。"
 
 #. type: Content of: <sect1><para>
 msgid "Download or otherwise obtain the following packages:"
@@ -310,20 +336,6 @@ msgstr "下载地址：<ulink url=\"&expat-url;\"/>"
 #. type: Content of: <sect1><variablelist><varlistentry><listitem><para>
 msgid "MD5 sum: <literal>&expat-md5;</literal>"
 msgstr "MD5 校验和：<literal>&expat-md5;</literal>"
-
-#. type: Content of: <sect1><variablelist><varlistentry><listitem><note><para>
-msgid ""
-"The upstream may remove tarballs of the specific releases of "
-"<application>Expat</application> when these releases contain a security "
-"vulnerability.  You should refer to <ulink url='&lfs-root;lfs/"
-"advisories/'>LFS security advisories</ulink> to figure out which version "
-"(with the vulnerability fixed) should be used.  You may download the "
-"vulnerable version from a mirror, but it's not recommended."
-msgstr ""
-"在 <application>Expat</application> 的一些发布版本存在安全缺陷时，上游可能移"
-"除其压缩包。此时，您应该参考 <ulink url='&lfs-root;lfs/advisories/'>LFS 安全"
-"公告</ulink>以确定应该使用哪个 (已经修复安全问题的) 版本。您或许能从镜像站下"
-"载有缺陷的版本，但是我们不推荐这样做。"
 
 #. type: Content of: <sect1><variablelist><varlistentry><term>
 msgid "Expect (&expect-version;) - <token>&expect-size;</token>:"

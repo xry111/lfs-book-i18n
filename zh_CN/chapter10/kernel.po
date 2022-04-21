@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2022-03-23 16:39+0800\n"
+"POT-Creation-Date: 2022-04-21 14:25+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -191,8 +191,7 @@ msgstr ""
 "      [*] Support for frame buffer devices ----\n"
 "  Generic Driver Options  ---&gt;\n"
 "   [ ] Support for uevent helper [CONFIG_UEVENT_HELPER]\n"
-"   [*] Maintain a devtmpfs filesystem to mount at /dev [CONFIG_DEVTMPFS]"
-"   [*]   Automount devtmpfs at /dev, after the kernel mounted the rootfs [CONFIG_DEVTMPFS_MOUNT]"
+"   [*] Maintain a devtmpfs filesystem to mount at /dev [CONFIG_DEVTMPFS]   [*]   Automount devtmpfs at /dev, after the kernel mounted the rootfs [CONFIG_DEVTMPFS_MOUNT]"
 
 #. type: Content of: <sect1><sect2><note><screen>
 #, no-wrap
@@ -346,8 +345,8 @@ msgid ""
 "This will mount the kernel view of the devices on /dev upon switching to "
 "root filesystem just before starting init."
 msgstr ""
-"该选项使得内核在切换到根文件系统之后，执行 init 前，将内核获知的设备信息"
-"挂载到 /dev。"
+"该选项使得内核在切换到根文件系统之后，执行 init 前，将内核获知的设备信息挂载"
+"到 /dev。"
 
 #. type: Content of: <sect1><sect2><para>
 msgid ""
@@ -420,12 +419,12 @@ msgstr ""
 msgid ""
 "If the host system has a separate /boot partition, the files copied below "
 "should go there. The easiest way to do that is to bind /boot on the host "
-"(outside chroot) to /mnt/lfs/boot before proceeding.  As the root user in "
+"(outside chroot) to /mnt/lfs/boot before proceeding.  As the &root; user in "
 "the <emphasis>host system</emphasis>:"
 msgstr ""
 "如果宿主系统有单独的 /boot 分区，需要将这些文件拷贝到该分区中。最简单的方法是"
 "将宿主系统的 /boot (在 chroot 之外) 绑定到 /mnt/lfs/boot 再拷贝文件，在"
-"<emphasis>宿主系统</emphasis>中，以 root 身份执行："
+"<emphasis>宿主系统</emphasis>中，以 &root; 身份执行："
 
 #. type: Content of: <sect1><sect2><caution><screen>
 #, no-wrap
