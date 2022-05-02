@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Linux From Scratch 11.1\n"
 "Report-Msgid-Bugs-To: lfs-dev@lists.linuxfromscratch.org\n"
-"POT-Creation-Date: 2022-03-05 16:51+0800\n"
+"POT-Creation-Date: 2022-05-02 15:05+0800\n"
 "PO-Revision-Date: 2022-03-03 03:00+0800\n"
 "Last-Translator: Xi Ruoyao <xry111@mengyan1223.wang>\n"
 "Language-Team: None <noreply@mengyan1223.wang>\n"
@@ -65,25 +65,6 @@ msgstr "&gcc-fin-du;"
 #. type: Content of: <sect1><sect2><title>
 msgid "Installation of GCC"
 msgstr "安装 GCC"
-
-#. type: Content of: <sect1><sect2><para>
-msgid ""
-"At first, fix an issue breaking <filename class=\"libraryfile\">libasan.a</"
-"filename> building this package with Glibc-2.34 or later:"
-msgstr ""
-"首先，修复在使用 Glibc-2.34 或更新版本的系统上构建该软件包时导致 <filename "
-"class=\"libraryfile\">libasan.a</filename> 无法使用的问题："
-
-#. type: Content of: <sect1><sect2><screen>
-#, no-wrap
-msgid ""
-"<userinput remap=\"pre\">sed -e '/static.*SIGSTKSZ/d' \\\n"
-"    -e 's/return kAltStackSize/return SIGSTKSZ * 4/' \\\n"
-"    -i libsanitizer/sanitizer_common/sanitizer_posix_libcdep.cpp</userinput>"
-msgstr ""
-"<userinput remap=\"pre\">sed -e '/static.*SIGSTKSZ/d' \\\n"
-"    -e 's/return kAltStackSize/return SIGSTKSZ * 4/' \\\n"
-"    -i libsanitizer/sanitizer_common/sanitizer_posix_libcdep.cpp</userinput>"
 
 #. type: Content of: <sect1><sect2><para>
 msgid ""
@@ -252,18 +233,6 @@ msgstr ""
 #. type: Content of: <sect1><sect2><para>
 msgid "Eight tests related to analyzer are known to fail."
 msgstr "已知八项与 analyzer 相关的测试会失败。"
-
-#. type: Content of: <sect1><sect2><para>
-msgid "One test named <filename>asan_test.C</filename> is known to fail."
-msgstr "已知一项名为 <filename>asan_test.C</filename> 的测试会失败。"
-
-#. type: Content of: <sect1><sect2><para>
-msgid ""
-"In libstdc++, one test named <filename>49745.cc</filename> is known to fail "
-"because the header dependencies in glibc have changed."
-msgstr ""
-"在 libstdc++ 中，已知一项名为 <filename>49745.cc</filename> 的测试由于 Glibc "
-"中头文件依赖关系的变化而失败。"
 
 #. type: Content of: <sect1><sect2><para>
 msgid ""
