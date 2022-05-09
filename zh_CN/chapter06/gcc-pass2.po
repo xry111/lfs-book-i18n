@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2022-03-03 02:52+0800\n"
+"POT-Creation-Date: 2022-05-09 22:15+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -110,25 +110,12 @@ msgstr ""
 "esac</userinput>"
 
 #. type: Content of: <sect1><sect2><para>
-msgid "Fix an issue causing failure cross-compiling libstdc++:"
-msgstr "修复导致交叉编译 libstdc++ 失败的问题："
-
-#. type: Content of: <sect1><sect2><screen>
-#, no-wrap
-msgid ""
-"<userinput remap=\"pre\">sed 's/gnu++17/&amp; -nostdinc++/' \\\n"
-"    -i libstdc++-v3/src/c++17/Makefile.in</userinput>"
-msgstr ""
-"<userinput remap=\"pre\">sed 's/gnu++17/&amp; -nostdinc++/' \\\n"
-"    -i libstdc++-v3/src/c++17/Makefile.in</userinput>"
-
-#. type: Content of: <sect1><sect2><para>
 msgid ""
 "Override the building rule of libgcc and libstdc++ headers, to allow "
 "building these libraries with POSIX threads support:"
 msgstr ""
-"覆盖 libgcc 和 libstdc++ 头文件的构建规则，以允许在构建它们时启用 "
-"POSIX 线程支持："
+"覆盖 libgcc 和 libstdc++ 头文件的构建规则，以允许在构建它们时启用 POSIX 线程"
+"支持："
 
 #. type: Content of: <sect1><sect2><screen>
 #, no-wrap
@@ -240,13 +227,13 @@ msgid ""
 "parameter ensures to build the libraries with GCC pass 1 and prevent the "
 "issue."
 msgstr ""
-"由于我们正在交叉编译 GCC，此时不可能用编译得到的 GCC 二进制程序构建用于"
-"目标系统的运行库 (<filename class=\"libraryfile\">libgcc</filename> 和 "
-"<filename class=\"libraryfile\">libstdc++</filename>)，这是因为交叉编译"
-"得到的二进制程序无法在宿主系统运行。GCC 构建系统在默认情况下会试图使用"
-"宿主系统提供的 C 和 C++ 编译器来绕过这个问题。但是，由于 GCC 的运行库"
-"未必能用不同版本的 GCC 构建，使用宿主系统的编译器可能导致构建失败。"
-"该选项保证使用第一遍构建的 GCC 编译运行库，以防止出现此问题。"
+"由于我们正在交叉编译 GCC，此时不可能用编译得到的 GCC 二进制程序构建用于目标系"
+"统的运行库 (<filename class=\"libraryfile\">libgcc</filename> 和 <filename "
+"class=\"libraryfile\">libstdc++</filename>)，这是因为交叉编译得到的二进制程序"
+"无法在宿主系统运行。GCC 构建系统在默认情况下会试图使用宿主系统提供的 C 和 C+"
+"+ 编译器来绕过这个问题。但是，由于 GCC 的运行库未必能用不同版本的 GCC 构建，"
+"使用宿主系统的编译器可能导致构建失败。该选项保证使用第一遍构建的 GCC 编译运行"
+"库，以防止出现此问题。"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 msgid "<parameter>LDFLAGS_FOR_TARGET=...</parameter>"
@@ -260,8 +247,8 @@ msgid ""
 "supporting C++ exception handling."
 msgstr ""
 "允许 <filename class=\"libraryfile\">libstdc++</filename> 使用即将构建的 "
-"<filename class=\"libraryfile\">libgcc</filename> 共享库，"
-"而不是第一遍构建 GCC 时得到的静态库。这对于 C++ 异常处理支持是必要的。"
+"<filename class=\"libraryfile\">libgcc</filename> 共享库，而不是第一遍构建 "
+"GCC 时得到的静态库。这对于 C++ 异常处理支持是必要的。"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 msgid "<parameter>--enable-initfini-array</parameter>"

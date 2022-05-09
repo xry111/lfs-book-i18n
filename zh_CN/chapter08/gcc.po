@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Linux From Scratch 11.1\n"
 "Report-Msgid-Bugs-To: lfs-dev@lists.linuxfromscratch.org\n"
-"POT-Creation-Date: 2022-05-02 15:05+0800\n"
+"POT-Creation-Date: 2022-05-09 22:15+0800\n"
 "PO-Revision-Date: 2022-03-03 03:00+0800\n"
 "Last-Translator: Xi Ruoyao <xry111@mengyan1223.wang>\n"
 "Language-Team: None <noreply@mengyan1223.wang>\n"
@@ -231,17 +231,13 @@ msgstr ""
 "org/ml/gcc-testresults/\"/> 的结果进行比较。"
 
 #. type: Content of: <sect1><sect2><para>
-msgid "Eight tests related to analyzer are known to fail."
-msgstr "已知八项与 analyzer 相关的测试会失败。"
-
-#. type: Content of: <sect1><sect2><para>
 msgid ""
-"In libstdc++, one numpunct test and six tests related to get_time are known "
-"to fail.  These are all because the locale definitions in glibc have changed "
-"but libstdc++ does not currently support those changes."
+"In g++, four tests related to PR100400 are known to be reported as both "
+"XPASS and FAIL.  It's because the test file for this known issue is not well "
+"written."
 msgstr ""
-"在 libstdc++ 测试中，一项 numpuct 测试和六项与 get_time 有关的测试会失败。这"
-"是由于 glibc 更新了 locale 定义，但是 libstdc++ 尚不支持这些变化。"
+"在 g++ 测试中，四项与 PR100400 有关的测试会被同时报告为 XPASS "
+"(意外通过) 和 FAIL (失败)。这是因为与该问题相关的测试文件编写存在瑕疵。"
 
 #. type: Content of: <sect1><sect2><para>
 msgid ""
@@ -254,17 +250,13 @@ msgstr ""
 "可以继续安全地构建系统，除非测试结果和以上 URL 的结果截然不同。"
 
 #. type: Content of: <sect1><sect2><para>
-msgid "Install the package and remove an unneeded directory:"
-msgstr "安装该软件包，并移除一个不需要的目录："
+msgid "Install the package:"
+msgstr "安装该软件包："
 
 #. type: Content of: <sect1><sect2><screen>
 #, no-wrap
-msgid ""
-"<userinput remap=\"install\">make install\n"
-"rm -rf /usr/lib/gcc/$(gcc -dumpmachine)/&gcc-version;/include-fixed/bits/</userinput>"
-msgstr ""
-"<userinput remap=\"install\">make install\n"
-"rm -rf /usr/lib/gcc/$(gcc -dumpmachine)/&gcc-version;/include-fixed/bits/</userinput>"
+msgid "<userinput remap=\"install\">make install</userinput>"
+msgstr "<userinput remap=\"install\">make install</userinput>"
 
 #. type: Content of: <sect1><sect2><para>
 msgid ""
