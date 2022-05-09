@@ -4,12 +4,12 @@
 (因为理论上可以将其他语言的翻译也塞到本仓库中)，
 但现在只有中文，因此本 README 文件的其余部分也只有中文。
 如果您想贡献其他语言的翻译，请 (用中文或英文) 致信
-`xry111@mengyan1223.wang`。
+`xry111@xry111.site`。
 
 Though this repository is named `lfs-book-i18n` (theoratically we can add
 more translations into it), now only Chinese translation is here.  So the
 remaining part of this file would also be Chinese-only.  If you wish to
-contribute other translations, please mail to `xry111@mengyan1223.wang`
+contribute other translations, please mail to `xry111@xry111.site`
 (in English or Chinese).
 
 ## 使用方法
@@ -74,5 +74,5 @@ REV=systemd
 
 如果对翻译有任何修改意见，请在 GitHub 仓库创建 Issue。
 
-如果希望长期参与翻译，致信 `xry111@mengyan1223.wang` 提出，
+如果希望长期参与翻译，致信 `xry111@xry111.site` 提出，
 以获得仓库的相关访问权限。

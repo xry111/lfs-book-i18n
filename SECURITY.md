@@ -31,4 +31,4 @@ configuration), report to the editors and maintainers listed in
 to disclose a security issue without approval from the managing editor.
 
 For security issues introduced by a mistranslation in this repo (unlikely
-but it may happen), report to <xry111@mengyan1223.wang>.
+but it may happen), report to <xry111@xry111.site>.
