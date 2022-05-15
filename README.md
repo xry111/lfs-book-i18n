@@ -15,7 +15,7 @@ contribute other translations, please mail to `xry111@xry111.site`
 ## 使用方法
 
 如果您只需要阅读手册，
-访问[主页](https://bf.mengyan1223.wang/lfs/zh_CN/)即可。
+访问[主页](https://lfs.xry111.site/zh_CN/)即可。
 如果您希望自己从翻译文件生成手册，或者修改翻译文件，继续阅读。
 
 首先安装依赖项：

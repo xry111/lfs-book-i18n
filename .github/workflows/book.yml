@@ -301,7 +301,7 @@ jobs:
           tar -C ~/lfs-xml-zh_CN --strip-components=1 -xf ~/lfs-xml-zh_CN/book.tar
       - name: Fetch Fonts
         run: |
-          wget https://bf.mengyan1223.wang/lfs/fonts/fonts-zh_CN-20220315.tar.xz
+          wget https://lfs.xry111.site/fonts/fonts-zh_CN-20220315.tar.xz
           install -v -dm755 ~/lfs-xml-zh_CN/fonts
           tar xf fonts-zh_CN-20220315.tar.xz -C ~/lfs-xml-zh_CN/fonts
       - name: Generate Translated Book
@@ -361,7 +361,7 @@ jobs:
           tar -C ~/lfs-xml-zh_CN --strip-components=1 -xf ~/lfs-xml-zh_CN/book.tar
       - name: Fetch Fonts
         run: |
-          wget https://bf.mengyan1223.wang/lfs/fonts/fonts-zh_CN-20220315.tar.xz
+          wget https://lfs.xry111.site/fonts/fonts-zh_CN-20220315.tar.xz
           install -v -dm755 ~/lfs-xml-zh_CN/fonts
           tar xf fonts-zh_CN-20220315.tar.xz -C ~/lfs-xml-zh_CN/fonts
       - name: Generate Translated Book
