@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2021-12-26 02:56+0800\n"
+"POT-Creation-Date: 2022-05-28 20:23+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -162,8 +162,8 @@ msgid ""
 "<command>strip</command> program from the host.  Using host tools on cross-"
 "compiled program can cause failure."
 msgstr ""
-"该选项防止构建过程使用宿主系统的 <command>strip</command> 移除调试符号。"
-"对交叉编译产生的程序使用宿主工具可能导致构建失败。"
+"该选项防止构建过程使用宿主系统的 <command>strip</command> 移除调试符号。对交"
+"叉编译产生的程序使用宿主工具可能导致构建失败。"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 msgid "<parameter>--enable-widec</parameter>"
@@ -214,6 +214,17 @@ msgid ""
 msgstr ""
 "<userinput remap=\"install\">make DESTDIR=$LFS TIC_PATH=$(pwd)/build/progs/tic install\n"
 "echo \"INPUT(-lncursesw)\" > $LFS/usr/lib/libncurses.so</userinput>"
+
+#. type: Content of: <sect1><sect2><para>
+msgid ""
+"Remove an unneeded static library not handled by <command>configure</"
+"command>:"
+msgstr "移除 <command>configure</command> 未处理的，不必要的静态库："
+
+#. type: Content of: <sect1><sect2><screen>
+#, no-wrap
+msgid "<userinput remap=\"install\">rm -v $LFS/usr/lib/libncurses++w.a</userinput>"
+msgstr "<userinput remap=\"install\">rm -v $LFS/usr/lib/libncurses++w.a</userinput>"
 
 #. type: Content of: <sect1><sect2><variablelist><title>
 msgid "The meaning of the install options:"
