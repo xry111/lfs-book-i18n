@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2022-04-01 01:47+0800\n"
+"POT-Creation-Date: 2022-05-29 12:53+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -62,32 +62,6 @@ msgstr "安装 systemd"
 
 #. type: Content of: <sect1><sect2><para>
 msgid ""
-"First, apply a patch to fix a security vulnerability and regressions with "
-"hostnames and idle units:"
-msgstr ""
-"首先，应用补丁以修复一项安全问题，以及和主机名与 idle 类型单元相关的一些退化"
-"问题："
-
-#. type: Content of: <sect1><sect2><screen>
-#, no-wrap
-msgid "<userinput remap=\"pre\">patch -Np1 -i ../systemd-&systemd-version;-upstream_fixes-1.patch</userinput>"
-msgstr "<userinput remap=\"pre\">patch -Np1 -i ../systemd-&systemd-version;-upstream_fixes-1.patch</userinput>"
-
-#. type: Content of: <sect1><sect2><para>
-msgid ""
-"Now, apply a patch to fix a problem with the linux kernel's headers in "
-"version 5.17 and later:"
-msgstr ""
-"然后，应用补丁以修复使用 Linux 5.17 或更新版本的内核头文件进行构建时出现"
-"的问题："
-
-#. type: Content of: <sect1><sect2><screen>
-#, no-wrap
-msgid "<userinput remap=\"pre\">patch -Np1 -i ../systemd-&systemd-version;-kernel_5.17_fixes-1.patch</userinput>"
-msgstr "<userinput remap=\"pre\">patch -Np1 -i ../systemd-&systemd-version;-kernel_5.17_fixes-1.patch</userinput>"
-
-#. type: Content of: <sect1><sect2><para>
-msgid ""
 "Remove two unneeded groups, <systemitem class=\"groupname\">render</"
 "systemitem> and <systemitem class=\"groupname\">sgx</systemitem>, from the "
 "default udev rules:"
@@ -115,21 +89,18 @@ msgid ""
 "cd       build\n"
 "\n"
 "meson --prefix=/usr                 \\\n"
-"      --sysconfdir=/etc             \\\n"
-"      --localstatedir=/var          \\\n"
 "      --buildtype=release           \\\n"
-"      -Dblkid=true                  \\\n"
 "      -Ddefault-dnssec=no           \\\n"
 "      -Dfirstboot=false             \\\n"
 "      -Dinstall-tests=false         \\\n"
 "      -Dldconfig=false              \\\n"
 "      -Dsysusers=false              \\\n"
-"      -Db_lto=false                 \\\n"
 "      -Drpmmacrosdir=no             \\\n"
 "      -Dhomed=false                 \\\n"
 "      -Duserdb=false                \\\n"
 "      -Dman=false                   \\\n"
 "      -Dmode=release                \\\n"
+"      -Dpamconfdir=no               \\\n"
 "      -Ddocdir=/usr/share/doc/systemd-&systemd-version; \\\n"
 "      ..</userinput>"
 msgstr ""
@@ -137,21 +108,18 @@ msgstr ""
 "cd       build\n"
 "\n"
 "meson --prefix=/usr                 \\\n"
-"      --sysconfdir=/etc             \\\n"
-"      --localstatedir=/var          \\\n"
 "      --buildtype=release           \\\n"
-"      -Dblkid=true                  \\\n"
 "      -Ddefault-dnssec=no           \\\n"
 "      -Dfirstboot=false             \\\n"
 "      -Dinstall-tests=false         \\\n"
 "      -Dldconfig=false              \\\n"
 "      -Dsysusers=false              \\\n"
-"      -Db_lto=false                 \\\n"
 "      -Drpmmacrosdir=no             \\\n"
 "      -Dhomed=false                 \\\n"
 "      -Duserdb=false                \\\n"
 "      -Dman=false                   \\\n"
 "      -Dmode=release                \\\n"
+"      -Dpamconfdir=no               \\\n"
 "      -Ddocdir=/usr/share/doc/systemd-&systemd-version; \\\n"
 "      ..</userinput>"
 
@@ -270,6 +238,15 @@ msgstr "<parameter>-Dmode=release</parameter>"
 msgid "Disable some features considered experimental by upstream."
 msgstr "禁用一些上游开发者认为尚处于实验阶段的功能。"
 
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
+msgid "<parameter>-Dpamconfdir=no</parameter>"
+msgstr "<parameter>-Dpamconfdir=no</parameter>"
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
+msgid ""
+"Prevent the installation of a PAM configuration file not functional on LFS."
+msgstr "防止安装在 LFS 系统无法正常工作的 PAM 配置文件。"
+
 #. type: Content of: <sect1><sect2><para>
 msgid "Compile the package:"
 msgstr "编译该软件包："
@@ -292,19 +269,12 @@ msgstr "<userinput remap=\"install\">ninja install</userinput>"
 msgid "Install the man pages:"
 msgstr "安装 man 页面："
 
+#.  Please make sure systemd man pages tarball has a common leading
+#.          component in the path.  
 #. type: Content of: <sect1><sect2><screen>
 #, no-wrap
-msgid "<userinput remap=\"install\">tar -xf ../../systemd-man-pages-&systemd-man-version;.tar.xz -C /usr/share/man</userinput>"
-msgstr "<userinput remap=\"install\">tar -xf ../../systemd-man-pages-&systemd-man-version;.tar.xz -C /usr/share/man</userinput>"
-
-#. type: Content of: <sect1><sect2><para>
-msgid "Remove a useless directory:"
-msgstr "删除不必要的目录："
-
-#. type: Content of: <sect1><sect2><screen>
-#, no-wrap
-msgid "<userinput remap=\"install\">rm -rf /usr/lib/pam.d</userinput>"
-msgstr "<userinput remap=\"install\">rm -rf /usr/lib/pam.d</userinput>"
+msgid "<userinput remap=\"install\">tar -xf ../../systemd-man-pages-&systemd-man-version;.tar.xz --strip-components=1 -C /usr/share/man</userinput>"
+msgstr "<userinput remap=\"install\">tar -xf ../../systemd-man-pages-&systemd-man-version;.tar.xz --strip-components=1 -C /usr/share/man</userinput>"
 
 #. type: Content of: <sect1><sect2><para>
 msgid ""
