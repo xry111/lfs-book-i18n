@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2022-02-28 01:03+0800\n"
+"POT-Creation-Date: 2022-05-29 14:29+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -46,6 +46,22 @@ msgstr ""
 "网络配置守护进程，它能够用于基础网络配置。另外，自 213 版本起，可以用 "
 "<command>systemd-resolved</command> 代替静态 <filename>/etc/resolv.conf</"
 "filename> 文件处理域名解析。这两个服务在默认情况下都是启用的。"
+
+#. type: Content of: <sect1><sect2><note><para>
+msgid ""
+"If you will not use <command>systemd-networkd</command> for network "
+"configuration (for example, when the system is not connected to network, or "
+"you want to use another utility like NetworkManager for network "
+"configuration), disable a service to prevent an error message during boot:"
+msgstr ""
+"如果您不会使用 <command>systemd-networkd</command> 进行网络配置 (例如，"
+"系统根本没有连接网络，或者您希望使用另外的，NetworkManager 之类的工具进行"
+"网络配置)，禁用一项服务，以防止系统引导时出现错误消息："
+
+#. type: Content of: <sect1><sect2><note><screen>
+#, no-wrap
+msgid "<userinput>systemctl disable systemd-networkd-wait-online</userinput>"
+msgstr "<userinput>systemctl disable systemd-networkd-wait-online</userinput>"
 
 #. type: Content of: <sect1><sect2><para>
 msgid ""

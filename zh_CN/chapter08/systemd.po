@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2022-05-29 12:53+0800\n"
+"POT-Creation-Date: 2022-05-29 14:29+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -297,6 +297,20 @@ msgstr "设定启动目标单元的基本结构："
 #, no-wrap
 msgid "<userinput remap=\"adjust\">systemctl preset-all</userinput>"
 msgstr "<userinput remap=\"adjust\">systemctl preset-all</userinput>"
+
+#. type: Content of: <sect1><sect2><para>
+msgid ""
+"Disable a service for upgrading binary distros.  It's useless for a basic "
+"Linux system built from source, and it will report an error if it's enabled "
+"but not configured:"
+msgstr ""
+"禁用用于升级二进制发行版的服务。它对于从源码构建的，基本的 Linux 系统来说"
+"没有意义，而且如果它被启用但未正确配置，会产生错误消息："
+
+#. type: Content of: <sect1><sect2><screen>
+#, no-wrap
+msgid "<userinput remap=\"adjust\">systemctl disable systemd-sysupdate</userinput>"
+msgstr "<userinput remap=\"adjust\">systemctl disable systemd-sysupdate</userinput>"
 
 #. type: Content of: <sect1><sect2><title>
 msgid "Contents of systemd"
