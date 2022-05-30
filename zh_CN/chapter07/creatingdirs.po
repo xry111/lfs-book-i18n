@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2021-05-12 17:13+0800\n"
+"POT-Creation-Date: 2022-05-30 20:00+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -21,6 +21,15 @@ msgstr "创建目录"
 msgid "It is time to create the full structure in the LFS file system."
 msgstr "现在可以在 LFS 文件系统中创建完整的目录结构。"
 
+#. type: Content of: <sect1><note><para>
+msgid ""
+"Some of the directories mentioned in this section may be already created "
+"earlier with explicit instructions or when installing some packages.  They "
+"are repeated below for completeness."
+msgstr ""
+"本节提到的一些目录已经在之前使用命令创建，或者在安装一些软件包时被创建。这里"
+"出于内容完整性的考虑，仍然给出它们。"
+
 #. type: Content of: <sect1><para>
 msgid ""
 "Create some root-level directories that are not in the limited set required "
@@ -28,15 +37,6 @@ msgid ""
 msgstr ""
 "首先，执行命令，创建一些位于根目录中的目录，它们不属于之前章节需要的有限目录"
 "结构："
-
-#. type: Content of: <sect1><note><para>
-msgid ""
-"Some of the directories below have already been created earlier with "
-"explicit instructions or when installing some packages.  They are repeated "
-"below for completeness."
-msgstr ""
-"下面给出的一些目录已经在之前使用命令创建，或者在安装一些软件包时被创建。这里"
-"出于内容完整性的考虑，仍然给出它们。"
 
 #. type: Content of: <sect1><screen>
 #, no-wrap
@@ -93,8 +93,8 @@ msgid ""
 "made&mdash;one to the home directory of user <systemitem class=\"username"
 "\">root</systemitem>, and another to the directories for temporary files."
 msgstr ""
-"默认情况下，新创建的目录具有权限模式 755，但这并不适合所有目录。在以上命令中，"
-"两个目录的访问权限被修改 —— 一个是 <systemitem class=\"username\">root</"
+"默认情况下，新创建的目录具有权限模式 755，但这并不适合所有目录。在以上命令"
+"中，两个目录的访问权限被修改 —— 一个是 <systemitem class=\"username\">root</"
 "systemitem> 的主目录，另一个是包含临时文件的目录。"
 
 #. type: Content of: <sect1><para>
@@ -109,11 +109,11 @@ msgid ""
 "bit mask."
 msgstr ""
 "第一个修改能保证不是所有人都能进入 <filename class=\"directory\">/root</"
-"filename> —— 一般用户也可以为他/她的主目录设置同样的 0750 权限模式。第二个修改"
-"保证任何用户都可写入 <filename class=\"directory\">/tmp</filename> 和 "
+"filename> —— 一般用户也可以为他/她的主目录设置同样的 0750 权限模式。第二个修"
+"改保证任何用户都可写入 <filename class=\"directory\">/tmp</filename> 和 "
 "<filename class=\"directory\">/var/tmp</filename> 目录，但不能从中删除其他用"
-"户的文件，因为所谓的 <quote>粘滞位</quote> (sticky bit)，即八进制权限模式 1777 "
-"的最高位 (1) 阻止这样做。"
+"户的文件，因为所谓的 <quote>粘滞位</quote> (sticky bit)，即八进制权限模式 "
+"1777 的最高位 (1) 阻止这样做。"
 
 #. type: Content of: <sect1><sect2><title>
 msgid "FHS Compliance Note"
