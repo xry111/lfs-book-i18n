@@ -83,7 +83,7 @@ jobs:
           path: lfs-sysv-zh_CN.tar.xz
 
   upload-sysv-html:
-    if: github.event_name == 'push'
+    if: github.event_name != 'pull_request'
     needs: build-sysv-html
     name: Upload Chunked HTML (sysv, zh_CN)
     runs-on: ubuntu-latest
@@ -140,7 +140,7 @@ jobs:
           path: lfs-systemd-zh_CN.tar.xz
 
   upload-systemd-html:
-    if: github.event_name == 'push'
+    if: github.event_name != 'pull_request'
     needs: build-systemd-html
     name: Upload Chunked HTML (systemd, zh_CN)
     runs-on: ubuntu-latest
@@ -199,7 +199,7 @@ jobs:
   # upload-sysv-html, because the latter will delete and recreate the
   # directory containing the book.  For systemd, likewise.
   upload-sysv-nochunks:
-    if: github.event_name == 'push'
+    if: github.event_name != 'pull_request'
     needs: [build-sysv-nochunks, upload-sysv-html]
     name: Upload Single Page HTML (sysv, zh_CN)
     runs-on: ubuntu-latest
@@ -254,7 +254,7 @@ jobs:
           path: ~/lfs-systemd-zh_CN/LFS-SYSD-BOOK.html
 
   upload-systemd-nochunks:
-    if: github.event_name == 'push'
+    if: github.event_name != 'pull_request'
     needs: [build-systemd-nochunks, upload-systemd-html]
     name: Upload Single Page HTML (systemd, zh_CN)
     runs-on: ubuntu-latest
@@ -314,7 +314,7 @@ jobs:
           path: ~/lfs-sysv-zh_CN/LFS-BOOK.pdf
 
   upload-sysv-pdf:
-    if: github.event_name == 'push'
+    if: github.event_name != 'pull_request'
     needs: [build-sysv-pdf, upload-sysv-html]
     name: Upload PDF (sysv, zh_CN)
     runs-on: ubuntu-latest
@@ -374,7 +374,7 @@ jobs:
           path: ~/lfs-systemd-zh_CN/LFS-SYSD-BOOK.pdf
 
   upload-systemd-pdf:
-    if: github.event_name == 'push'
+    if: github.event_name != 'pull_request'
     needs: [build-systemd-pdf, upload-systemd-html]
     name: Upload PDF (systemd, zh_CN)
     runs-on: ubuntu-latest
