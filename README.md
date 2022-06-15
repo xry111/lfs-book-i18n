@@ -43,7 +43,7 @@ cd lfs-book-i18n
 **如果**需要生成稳定版手册，切换到对应的分支：
 
 ```
-git checkout 10.1 --recurse-submodules
+git checkout 11.1 --recurse-submodules
 ```
 
 注意：10.1 和之前版本的英文原版手册使用 SVN 进行版本控制。
