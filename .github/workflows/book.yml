@@ -54,7 +54,7 @@ jobs:
   build-sysv-html:
     needs: xml-translation
     name: Build Chunked HTML (sysv, zh_CN)
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-22.04
     steps:
       - name: Prepare
         run: |
@@ -82,7 +82,7 @@ jobs:
     if: github.event_name != 'pull_request'
     needs: build-sysv-html
     name: Upload Chunked HTML (sysv, zh_CN)
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-22.04
     steps:
       - name: Prepare SSH Key
         uses: webfactory/ssh-agent@v0.5.4
@@ -111,7 +111,7 @@ jobs:
   build-systemd-html:
     needs: xml-translation
     name: Build Chunked HTML (systemd, zh_CN)
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-22.04
     steps:
       - name: Prepare
         run: |
@@ -139,7 +139,7 @@ jobs:
     if: github.event_name != 'pull_request'
     needs: build-systemd-html
     name: Upload Chunked HTML (systemd, zh_CN)
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-22.04
     steps:
       - name: Prepare SSH Key
         uses: webfactory/ssh-agent@v0.5.4
@@ -168,7 +168,7 @@ jobs:
   build-sysv-nochunks:
     needs: xml-translation
     name: Build Single Page HTML (sysv, zh_CN)
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-22.04
     steps:
       - name: Prepare
         run: |
@@ -198,7 +198,7 @@ jobs:
     if: github.event_name != 'pull_request'
     needs: [build-sysv-nochunks, upload-sysv-html]
     name: Upload Single Page HTML (sysv, zh_CN)
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-22.04
     steps:
       - name: Prepare SSH Key
         uses: webfactory/ssh-agent@v0.5.4
@@ -226,7 +226,7 @@ jobs:
   build-systemd-nochunks:
     needs: xml-translation
     name: Build Single Page HTML (systemd, zh_CN)
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-22.04
     steps:
       - name: Prepare
         run: |
@@ -253,7 +253,7 @@ jobs:
     if: github.event_name != 'pull_request'
     needs: [build-systemd-nochunks, upload-systemd-html]
     name: Upload Single Page HTML (systemd, zh_CN)
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-22.04
     steps:
       - name: Prepare SSH Key
         uses: webfactory/ssh-agent@v0.5.4
@@ -281,7 +281,7 @@ jobs:
   build-sysv-pdf:
     needs: xml-translation
     name: Build PDF (sysv, zh_CN)
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-22.04
     steps:
       - name: Prepare
         run: |
@@ -313,7 +313,7 @@ jobs:
     if: github.event_name != 'pull_request'
     needs: [build-sysv-pdf, upload-sysv-html]
     name: Upload PDF (sysv, zh_CN)
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-22.04
     steps:
       - name: Prepare SSH Key
         uses: webfactory/ssh-agent@v0.5.4
@@ -341,7 +341,7 @@ jobs:
   build-systemd-pdf:
     needs: xml-translation
     name: Build PDF (systemd, zh_CN)
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-22.04
     steps:
       - name: Prepare
         run: |
@@ -373,7 +373,7 @@ jobs:
     if: github.event_name != 'pull_request'
     needs: [build-systemd-pdf, upload-systemd-html]
     name: Upload PDF (systemd, zh_CN)
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-22.04
     steps:
       - name: Prepare SSH Key
         uses: webfactory/ssh-agent@v0.5.4
