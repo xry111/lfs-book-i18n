@@ -105,8 +105,8 @@ jobs:
         run: sh ~/aux-files/setenv.sh "${GITHUB_REF}"
       - name: Upload the Book
         run: |
-          scp ~/lfs-sysv-zh_CN-html/lfs-sysv-zh_CN.tar.xz "lfsbook@mengyan1223.wang:/tmp/lfs-sysv-zh_CN.tar.xz"
-          ssh "lfsbook@mengyan1223.wang" "/usr/local/bin/update-lfs" "/tmp/lfs-sysv-zh_CN.tar.xz" "/var/www/xry111/lfs/zh_CN/${SYSV}"
+          scp ~/lfs-sysv-zh_CN-html/lfs-sysv-zh_CN.tar.xz "lfsbook@xry111.site:/tmp/lfs-sysv-zh_CN.tar.xz"
+          ssh "lfsbook@xry111.site" "/usr/local/bin/update-lfs" "/tmp/lfs-sysv-zh_CN.tar.xz" "/var/www/xry111/lfs/zh_CN/${SYSV}"
 
   build-systemd-html:
     needs: xml-translation
@@ -162,8 +162,8 @@ jobs:
         run: sh ~/aux-files/setenv.sh "${GITHUB_REF}"
       - name: Upload the Book
         run: |
-          scp ~/lfs-systemd-zh_CN-html/lfs-systemd-zh_CN.tar.xz "lfsbook@mengyan1223.wang:/tmp/lfs-systemd-zh_CN.tar.xz"
-          ssh "lfsbook@mengyan1223.wang" "/usr/local/bin/update-lfs" "/tmp/lfs-systemd-zh_CN.tar.xz" "/var/www/xry111/lfs/zh_CN/${SYSD}"
+          scp ~/lfs-systemd-zh_CN-html/lfs-systemd-zh_CN.tar.xz "lfsbook@xry111.site:/tmp/lfs-systemd-zh_CN.tar.xz"
+          ssh "lfsbook@xry111.site" "/usr/local/bin/update-lfs" "/tmp/lfs-systemd-zh_CN.tar.xz" "/var/www/xry111/lfs/zh_CN/${SYSD}"
 
   build-sysv-nochunks:
     needs: xml-translation
@@ -221,7 +221,7 @@ jobs:
         run: sh ~/aux-files/setenv.sh "${GITHUB_REF}"
       - name: Upload the Book
         run: |
-          scp ~/lfs-sysv-zh_CN-nochunks/LFS-BOOK.html "lfsbook@mengyan1223.wang:/var/www/xry111/lfs/zh_CN/${SYSV}"
+          scp ~/lfs-sysv-zh_CN-nochunks/LFS-BOOK.html "lfsbook@xry111.site:/var/www/xry111/lfs/zh_CN/${SYSV}"
 
   build-systemd-nochunks:
     needs: xml-translation
@@ -276,7 +276,7 @@ jobs:
         run: sh ~/aux-files/setenv.sh "${GITHUB_REF}"
       - name: Upload the Book
         run: |
-          scp ~/lfs-systemd-zh_CN-nochunks/LFS-SYSD-BOOK.html "lfsbook@mengyan1223.wang:/var/www/xry111/lfs/zh_CN/${SYSD}"
+          scp ~/lfs-systemd-zh_CN-nochunks/LFS-SYSD-BOOK.html "lfsbook@xry111.site:/var/www/xry111/lfs/zh_CN/${SYSD}"
 
   build-sysv-pdf:
     needs: xml-translation
@@ -336,7 +336,7 @@ jobs:
         run: sh ~/aux-files/setenv.sh "${GITHUB_REF}"
       - name: Upload the Book
         run: |
-          scp ~/lfs-sysv-zh_CN-pdf/LFS-BOOK.pdf "lfsbook@mengyan1223.wang:/var/www/xry111/lfs/zh_CN/${SYSV}"
+          scp ~/lfs-sysv-zh_CN-pdf/LFS-BOOK.pdf "lfsbook@xry111.site:/var/www/xry111/lfs/zh_CN/${SYSV}"
 
   build-systemd-pdf:
     needs: xml-translation
@@ -396,4 +396,4 @@ jobs:
         run: sh ~/aux-files/setenv.sh "${GITHUB_REF}"
       - name: Upload the Book
         run: |
-          scp ~/lfs-systemd-zh_CN-pdf/LFS-SYSD-BOOK.pdf "lfsbook@mengyan1223.wang:/var/www/xry111/lfs/zh_CN/${SYSD}"
+          scp ~/lfs-systemd-zh_CN-pdf/LFS-SYSD-BOOK.pdf "lfsbook@xry111.site:/var/www/xry111/lfs/zh_CN/${SYSD}"
