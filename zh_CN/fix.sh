@@ -46,8 +46,7 @@ sed '/full_date=/ i month_zh_cn=$(date -d "$commit_date" "+%m" | sed "s/^0//")' 
 sed '/full_date=/ s@".*"@"$year 年 $month_zh_cn 月 $day 日"@' \
 	-i git-version.sh
 
-# Some buggy comments produced by po4a are adding extra empty lines.
-# Remove them.
+# Fixup for https://github.com/mquinson/po4a/issues/295
 sed_cmd='
 1h
 1!{
@@ -80,7 +79,7 @@ sed -n "${sed_cmd}" -i \
 
 # Looks stupid, but I don't know any better way.
 for iter in 1 2 3; do
-	sed -n "${sed_cmd}" -i chapter08/stripping.xml
+	sed -n "${sed_cmd}" -i chapter08/{glibc,stripping}.xml
 done
 
 # Apply lfs-l10n.xml patch, if it's not applied
