@@ -12,17 +12,13 @@ on:
 jobs:
   xml-translation:
     name: Translate XML (zh_CN)
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-22.04
     steps:
       - name: Prepare
         run: |
           sudo apt update
-          sudo apt install gettext python3-polib
+          sudo apt install gettext python3-polib po4a
           echo "MAKEFLAGS=-j2" >> $GITHUB_ENV
-      - name: Install po4a-0.62
-        run: |
-          wget 'https://bf.mengyan1223.wang/assets/po4a/po4a_0.62-xry111-1_all.deb'
-          sudo apt install ./po4a_0.62-xry111-1_all.deb
       - name: Checkout
         uses: actions/checkout@v3
         with:
