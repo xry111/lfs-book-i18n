@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2021-03-26 23:39+0800\n"
+"POT-Creation-Date: 2022-06-22 19:00+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -65,8 +65,8 @@ msgstr "准备编译 Bc："
 
 #. type: Content of: <sect1><sect2><screen>
 #, no-wrap
-msgid "<userinput remap=\"configure\">CC=gcc ./configure --prefix=/usr -G -O3</userinput>"
-msgstr "<userinput remap=\"configure\">CC=gcc ./configure --prefix=/usr -G -O3</userinput>"
+msgid "<userinput remap=\"configure\">CC=gcc ./configure --prefix=/usr -G -O3 -r</userinput>"
+msgstr "<userinput remap=\"configure\">CC=gcc ./configure --prefix=/usr -G -O3 -r</userinput>"
 
 #. type: Content of: <sect1><sect2><variablelist><title>
 msgid "The meaning of the configure options:"
@@ -81,6 +81,14 @@ msgid "This parameter specifies the compiler to use."
 msgstr "该选项指定编译时使用的编译器。"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
+msgid "<parameter>-G</parameter>"
+msgstr "<parameter>-G</parameter>"
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
+msgid "Omit parts of the test suite that won't work without a GNU bc present."
+msgstr "忽略在没有 GNU bc 存在时无法工作的测试。"
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 msgid "<parameter>-O3</parameter>"
 msgstr "<parameter>-O3</parameter>"
 
@@ -89,12 +97,15 @@ msgid "Specify the optimization to use."
 msgstr "该选项指定编译时使用的优化等级。"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
-msgid "<parameter>-G</parameter>"
-msgstr "<parameter>-G</parameter>"
+msgid "<parameter>-r</parameter>"
+msgstr "<parameter>-r</parameter>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
-msgid "Omit parts of the test suite that won't work without a GNU bc present."
-msgstr "忽略在没有 GNU bc 存在时无法工作的测试。"
+msgid ""
+"Enable the use of <application>Readline</application> to improve the line "
+"editing feature of bc."
+msgstr ""
+"允许 bc 使用 <application>Readline</application>，以增强命令行编辑功能。"
 
 #. type: Content of: <sect1><sect2><para>
 msgid "Compile the package:"
