@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2022-05-28 20:23+0800\n"
+"POT-Creation-Date: 2022-06-30 20:03+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -105,9 +105,10 @@ msgid ""
 "            --mandir=/usr/share/man      \\\n"
 "            --with-manpage-format=normal \\\n"
 "            --with-shared                \\\n"
+"            --without-normal             \\\n"
+"            --with-cxx-shared            \\\n"
 "            --without-debug              \\\n"
 "            --without-ada                \\\n"
-"            --without-normal             \\\n"
 "            --disable-stripping          \\\n"
 "            --enable-widec</userinput>"
 msgstr ""
@@ -117,9 +118,10 @@ msgstr ""
 "            --mandir=/usr/share/man      \\\n"
 "            --with-manpage-format=normal \\\n"
 "            --with-shared                \\\n"
+"            --without-normal             \\\n"
+"            --with-cxx-shared            \\\n"
 "            --without-debug              \\\n"
 "            --without-ada                \\\n"
-"            --without-normal             \\\n"
 "            --disable-stripping          \\\n"
 "            --enable-widec</userinput>"
 
@@ -138,6 +140,42 @@ msgid ""
 msgstr ""
 "这防止 Ncurses 安装压缩的手册页面，否则在宿主发行版使用压缩的手册页面时，"
 "Ncurses 可能这样做。"
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
+msgid "<parameter>--with-shared</parameter>"
+msgstr "<parameter>--with-shared</parameter>"
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
+msgid "This makes Ncurses build and install shared C libraries."
+msgstr "该选项使得 Ncurses 将 C 函数库构建并安装为共享库。"
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
+msgid "<parameter>--without-normal</parameter>"
+msgstr "<parameter>--without-normal</parameter>"
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
+msgid "This prevents Ncurses building and installing static C libraries."
+msgstr "该选项禁止将 C 函数库构建和安装为静态库。"
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
+msgid "<parameter>--without-debug</parameter>"
+msgstr "<parameter>--without-debug</parameter>"
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
+msgid "This prevents Ncurses building and installing debug libraries."
+msgstr "该选项禁止构建和安装用于调试的库。"
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
+msgid "<parameter>--with-cxx-shared</parameter>"
+msgstr "<parameter>--with-cxx-shared</parameter>"
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
+msgid ""
+"This makes Ncurses build and install shared C++ bindings. It also prevents "
+"it building and installing static C++ bindings."
+msgstr ""
+"该选项使得 Ncurses 将 C++ 绑定构建并安装为共享库，同时防止构建和安装静态的 "
+"C++ 绑定库。"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 msgid "<parameter>--without-ada</parameter>"
@@ -185,14 +223,6 @@ msgstr ""
 "多字节和传统 8 位 locale 中都能工作，而常规字符库只能在 8 位 locale 中工作。"
 "宽字符库和普通字符库在源码层面是兼容的，但二进制不兼容。"
 
-#. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
-msgid "<parameter>--without-normal</parameter>"
-msgstr "<parameter>--without-normal</parameter>"
-
-#. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
-msgid "This switch disables building and installing most static libraries."
-msgstr "该选项禁止多数静态库的构建和安装。"
-
 #. type: Content of: <sect1><sect2><para>
 msgid "Compile the package:"
 msgstr "编译该软件包："
@@ -214,17 +244,6 @@ msgid ""
 msgstr ""
 "<userinput remap=\"install\">make DESTDIR=$LFS TIC_PATH=$(pwd)/build/progs/tic install\n"
 "echo \"INPUT(-lncursesw)\" > $LFS/usr/lib/libncurses.so</userinput>"
-
-#. type: Content of: <sect1><sect2><para>
-msgid ""
-"Remove an unneeded static library not handled by <command>configure</"
-"command>:"
-msgstr "移除 <command>configure</command> 未处理的，不必要的静态库："
-
-#. type: Content of: <sect1><sect2><screen>
-#, no-wrap
-msgid "<userinput remap=\"install\">rm -v $LFS/usr/lib/libncurses++w.a</userinput>"
-msgstr "<userinput remap=\"install\">rm -v $LFS/usr/lib/libncurses++w.a</userinput>"
 
 #. type: Content of: <sect1><sect2><variablelist><title>
 msgid "The meaning of the install options:"

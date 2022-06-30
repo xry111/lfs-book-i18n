@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2021-12-15 16:25+0800\n"
+"POT-Creation-Date: 2022-06-30 20:03+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -72,6 +72,7 @@ msgid ""
 "            --with-shared           \\\n"
 "            --without-debug         \\\n"
 "            --without-normal        \\\n"
+"            --with-cxx-shared       \\\n"
 "            --enable-pc-files       \\\n"
 "            --enable-widec          \\\n"
 "            --with-pkg-config-libdir=/usr/lib/pkgconfig</userinput>"
@@ -81,6 +82,7 @@ msgstr ""
 "            --with-shared           \\\n"
 "            --without-debug         \\\n"
 "            --without-normal        \\\n"
+"            --with-cxx-shared       \\\n"
 "            --enable-pc-files       \\\n"
 "            --enable-widec          \\\n"
 "            --with-pkg-config-libdir=/usr/lib/pkgconfig</userinput>"
@@ -88,6 +90,50 @@ msgstr ""
 #. type: Content of: <sect1><sect2><variablelist><title>
 msgid "The meaning of the new configure options:"
 msgstr "新的配置选项的含义："
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
+msgid "<parameter>--with-shared</parameter>"
+msgstr "<parameter>--with-shared</parameter>"
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
+msgid "This makes Ncurses build and install shared C libraries."
+msgstr "该选项禁止将 C 函数库构建和安装为静态库。"
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
+msgid "<parameter>--without-normal</parameter>"
+msgstr "<parameter>--without-normal</parameter>"
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
+msgid "This prevents Ncurses building and installing static C libraries."
+msgstr "该选项禁止构建系统编译并安装多数静态库。"
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
+msgid "<parameter>--without-debug</parameter>"
+msgstr "<parameter>--without-debug</parameter>"
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
+msgid "This prevents Ncurses building and installing debug libraries."
+msgstr "该选项禁止构建和安装用于调试的库。"
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
+msgid "<parameter>--with-cxx-shared</parameter>"
+msgstr "<parameter>--with-cxx-shared</parameter>"
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
+msgid ""
+"This makes Ncurses build and install shared C++ bindings. It also prevents "
+"it building and installing static C++ bindings."
+msgstr ""
+"该选项使得 Ncurses 将 C++ 绑定构建并安装为共享库，同时防止构建和安装静态的 "
+"C++ 绑定库。"
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
+msgid "<parameter>--enable-pc-files</parameter>"
+msgstr "<parameter>--enable-pc-files</parameter>"
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
+msgid "This switch generates and installs .pc files for pkg-config."
+msgstr "该参数使得构建系统生成并安装 pkg-config 使用的 .pc 文件。"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 msgid "<parameter>--enable-widec</parameter>"
@@ -108,22 +154,6 @@ msgstr ""
 "class=\"libraryfile\">libncurses.so.&ncurses-version;</filename>)。宽字符库在"
 "多字节和传统 8 位 locale 中都能工作，而常规字符库只能在 8 位 locale 中工作。"
 "宽字符库和普通字符库在源码层面是兼容的，但二进制不兼容。"
-
-#. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
-msgid "<parameter>--enable-pc-files</parameter>"
-msgstr "<parameter>--enable-pc-files</parameter>"
-
-#. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
-msgid "This switch generates and installs .pc files for pkg-config."
-msgstr "该参数使得构建系统生成并安装 pkg-config 使用的 .pc 文件。"
-
-#. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
-msgid "<parameter>--without-normal</parameter>"
-msgstr "<parameter>--without-normal</parameter>"
-
-#. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
-msgid "This switch disables building and installing most static libraries."
-msgstr "该选项禁止构建系统编译并安装多数静态库。"
 
 #. type: Content of: <sect1><sect2><para>
 msgid "Compile the package:"
@@ -154,11 +184,10 @@ msgid ""
 "correctly using <command>install</command> command.  A useless static "
 "archive which is not handled by <command>configure</command> is also removed:"
 msgstr ""
-"安装该软件包会直接覆盖文件 <filename class=\"libraryfile"
-"\">libncursesw.so.&ncurses-version;</filename>。"
-"这可能导致正在使用该库文件中的代码和数据的 shell 进程发生崩溃。"
-"因此，需要使用 <literal>DESTDIR</literal> 进行安装，并正确地使用 "
-"<command>install</command> 命令安装库文件。同时，移除 "
+"安装该软件包会直接覆盖文件 <filename class=\"libraryfile\">libncursesw.so."
+"&ncurses-version;</filename>。这可能导致正在使用该库文件中的代码和数据的 "
+"shell 进程发生崩溃。因此，需要使用 <literal>DESTDIR</literal> 进行安装，并正"
+"确地使用 <command>install</command> 命令安装库文件。同时，移除 "
 "<command>configure</command> 脚本未处理的一个静态库："
 
 #. type: Content of: <sect1><sect2><screen>
@@ -166,12 +195,12 @@ msgstr ""
 msgid ""
 "<userinput remap=\"install\">make DESTDIR=$PWD/dest install\n"
 "install -vm755 dest/usr/lib/libncursesw.so.&ncurses-version; /usr/lib\n"
-"rm -v  dest/usr/lib/{libncursesw.so.&ncurses-version;,libncurses++w.a}\n"
+"rm -v  dest/usr/lib/libncursesw.so.&ncurses-version;\n"
 "cp -av dest/* /</userinput>"
 msgstr ""
 "<userinput remap=\"install\">make DESTDIR=$PWD/dest install\n"
 "install -vm755 dest/usr/lib/libncursesw.so.&ncurses-version; /usr/lib\n"
-"rm -v  dest/usr/lib/{libncursesw.so.&ncurses-version;,libncurses++w.a}\n"
+"rm -v  dest/usr/lib/libncursesw.so.&ncurses-version;\n"
 "cp -av dest/* /</userinput>"
 
 #. type: Content of: <sect1><sect2><para>
