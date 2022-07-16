@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Linux From Scratch 11.0\n"
 "Report-Msgid-Bugs-To: lfs-dev@lists.linuxfromscratch.org\n"
-"POT-Creation-Date: 2022-07-02 00:53+0800\n"
+"POT-Creation-Date: 2022-07-16 13:59+0800\n"
 "PO-Revision-Date: 2021-08-31 16:47+0800\n"
 "Last-Translator: Xi Ruoyao <xry111@mengyan1223.wang>\n"
 "Language-Team: None <noreply@mengyan1223.wang>\n"
@@ -69,20 +69,6 @@ msgstr "&openssl-fin-du;"
 #. type: Content of: <sect1><sect2><title>
 msgid "Installation of OpenSSL"
 msgstr "安装 OpenSSL"
-
-#. type: Content of: <sect1><sect2><para>
-msgid ""
-"First fix a problem with some advanced arcitectures with avx512 capability:"
-msgstr "首先，修复在一些较新的，拥有 avx512 的架构上运行时出现的问题："
-
-#. type: Content of: <sect1><sect2><screen>
-#, no-wrap
-msgid ""
-"<userinput remap=\"pre\">sed -e '/bn_reduce.*m1/i\\    factor_size /= sizeof(BN_ULONG) * 8;' \\\n"
-"    -i crypto/bn/rsaz_exp_x2.c</userinput>"
-msgstr ""
-"<userinput remap=\"pre\">sed -e '/bn_reduce.*m1/i\\    factor_size /= sizeof(BN_ULONG) * 8;' \\\n"
-"    -i crypto/bn/rsaz_exp_x2.c</userinput>"
 
 #. type: Content of: <sect1><sect2><para>
 msgid "Prepare OpenSSL for compilation:"
