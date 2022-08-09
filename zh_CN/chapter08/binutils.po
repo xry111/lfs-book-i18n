@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Linux From Scratch 11.0\n"
 "Report-Msgid-Bugs-To: lfs-dev@lists.linuxfromscratch.org\n"
-"POT-Creation-Date: 2022-06-21 19:58+0800\n"
+"POT-Creation-Date: 2022-08-09 22:27+0800\n"
 "PO-Revision-Date: 2021-08-16 11:42+0800\n"
 "Last-Translator: Xi Ruoyao <xry111@mengyan1223.wang>\n"
 "Language-Team: None <noreply@mengyan1223.wang>\n"
@@ -105,20 +105,6 @@ msgstr ""
 "Ask your system administrator to create more.</computeroutput>"
 
 #. type: Content of: <sect1><sect2><para>
-msgid ""
-"Upstream has made a patch to fix a problem when using binutils for building "
-"some BLFS packages with Link Time Optimization (LTO)  enabled.  Apply that "
-"now:"
-msgstr ""
-"上游开发者提供了一个补丁，以修复在使用 binutils 并启用链接时优化 (LTO) 的情况"
-"下构建一些 BLFS 软件包时出现的问题。现在需要应用该补丁："
-
-#. type: Content of: <sect1><sect2><screen>
-#, no-wrap
-msgid "<userinput remap=\"pre\">patch -Np1 -i ../&binutils-lto-patch;</userinput>"
-msgstr "<userinput remap=\"pre\">patch -Np1 -i ../&binutils-lto-patch;</userinput>"
-
-#. type: Content of: <sect1><sect2><para>
 msgid "Now make a fix identified upstream that affects building some packages:"
 msgstr "现在进行上游发现的一项代码修补，解决可能影响构建一些软件包的问题："
 
@@ -154,6 +140,7 @@ msgstr "准备编译 Binutils："
 #, no-wrap
 msgid ""
 "<userinput remap=\"configure\">../configure --prefix=/usr       \\\n"
+"             --sysconfdir=/etc   \\\n"
 "             --enable-gold       \\\n"
 "             --enable-ld=default \\\n"
 "             --enable-plugins    \\\n"
@@ -163,6 +150,7 @@ msgid ""
 "             --with-system-zlib</userinput>"
 msgstr ""
 "<userinput remap=\"configure\">../configure --prefix=/usr       \\\n"
+"             --sysconfdir=/etc   \\\n"
 "             --enable-gold       \\\n"
 "             --enable-ld=default \\\n"
 "             --enable-plugins    \\\n"
@@ -282,8 +270,8 @@ msgid ""
 "<parameter>CONFIG_IA32_EMULATION</parameter> is disabled in the kernel "
 "configuration of the host system."
 msgstr ""
-"已知一项名为 <filename>pr17704a_test</filename> 的测试在宿主系统的内核配置"
-"禁用 <parameter>CONFIG_IA32_EMULATION</parameter> 时会失败。"
+"已知一项名为 <filename>pr17704a_test</filename> 的测试在宿主系统的内核配置禁"
+"用 <parameter>CONFIG_IA32_EMULATION</parameter> 时会失败。"
 
 #. type: Content of: <sect1><sect2><para>
 msgid "Install the package:"
@@ -321,11 +309,11 @@ msgstr "安装的目录"
 
 #. type: Content of: <sect1><sect2><segmentedlist><seglistitem><seg>
 msgid ""
-"addr2line, ar, as, c++filt, dwp, elfedit, gprof, ld, ld.bfd, ld.gold, nm, "
-"objcopy, objdump, ranlib, readelf, size, strings, and strip"
+"addr2line, ar, as, c++filt, dwp, elfedit, gprof, gprofng, ld, ld.bfd, ld."
+"gold, nm, objcopy, objdump, ranlib, readelf, size, strings, and strip"
 msgstr ""
-"addr2line, ar, as, c++filt, dwp, elfedit, gprof, ld, ld.bfd, ld.gold, nm, "
-"objcopy, objdump, ranlib, readelf, size, strings, 以及 strip"
+"addr2line, ar, as, c++filt, dwp, elfedit, gprof, gprofng, ld, ld.bfd, ld."
+"gold, nm, objcopy, objdump, ranlib, readelf, size, strings, 以及 strip"
 
 #. type: Content of: <sect1><sect2><segmentedlist><seglistitem><seg>
 msgid "libbfd.so, libctf.so, libctf-nobfd.so, and libopcodes.so"
@@ -439,6 +427,18 @@ msgstr "显示函数调用图性能分析数据"
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 msgid "gprof"
 msgstr "gprof"
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
+msgid "<command>gprofng</command>"
+msgstr "<command>gprofng</command>"
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
+msgid "Gather and analyze performance data"
+msgstr "收集和分析性能数据"
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
+msgid "gprofng"
+msgstr "gprofng"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 msgid "<command>ld</command>"
