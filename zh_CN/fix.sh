@@ -99,7 +99,10 @@ cp -v Makefile.orig Makefile
 sed -e '/xa9/d' -i Makefile
 
 # Copy fonts to tmp dir, and let fop to use our custom config
-sed '/fop -q/i \\tmkdir -pv $(RENDERTMP)/fonts; cp -v fonts/* $(RENDERTMP)/fonts' -i Makefile
+sed '/fop -q/i \\trm -rfv $(RENDERTMP)/fonts; ln -sv $(CURDIR)/fonts $(RENDERTMP)/fonts' -i Makefile
 
 cp ../fop.xml .
 sed 's|fop -q|& -c fop.xml|' -i Makefile
+
+cp ../fonts.mk ../noto-cjk-commit .
+echo 'include fonts.mk' >> Makefile
