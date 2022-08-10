@@ -104,5 +104,5 @@ sed '/fop -q/i \\trm -rfv $(RENDERTMP)/fonts; ln -sv $(CURDIR)/fonts $(RENDERTMP
 cp ../fop.xml .
 sed 's|fop -q|& -c fop.xml|' -i Makefile
 
-cp ../fonts.mk ../noto-cjk-commit .
+cp ../fonts.mk ../noto-cjk-commit ../source-han-mono-commit .
 echo 'include fonts.mk' >> Makefile

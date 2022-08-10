@@ -12,6 +12,6 @@
   <xsl:param name="slide.font.family">Noto Sans CJK SC</xsl:param>
   <xsl:param name="slide.title.font.family">Noto Sans CJK SC</xsl:param>
   <xsl:param name="title.font.family">Noto Sans CJK SC</xsl:param>
-  <xsl:param name="monospace.font.family">Noto Sans Mono CJK SC</xsl:param>
+  <xsl:param name="monospace.font.family">Source Han Mono SC</xsl:param>
 
 </xsl:stylesheet>
