@@ -49,7 +49,6 @@ nochunks: booksrc
 
 pdf: booksrc
 	rm -rf $(MLANG)/book/pdf
-	pushd $(MLANG)/book; sh ../fetch_fonts.sh; popd
 	tmpdir=$$(mktemp -d); \
 	make -j1 -C $(MLANG)/book REV=$(REV) BASEDIR=pdf RENDERTMP=$$tmpdir pdf; \
 	rm -rf $$tmpdir
