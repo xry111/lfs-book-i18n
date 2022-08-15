@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Linux From Scratch 11.0\n"
 "Report-Msgid-Bugs-To: lfs-dev@lists.linuxfromscratch.org\n"
-"POT-Creation-Date: 2022-08-09 22:27+0800\n"
+"POT-Creation-Date: 2022-08-15 19:30+0800\n"
 "PO-Revision-Date: 2021-08-16 11:42+0800\n"
 "Last-Translator: Xi Ruoyao <xry111@mengyan1223.wang>\n"
 "Language-Team: None <noreply@mengyan1223.wang>\n"
@@ -103,19 +103,6 @@ msgid ""
 msgstr ""
 "<computeroutput>The system has no more ptys.\n"
 "Ask your system administrator to create more.</computeroutput>"
-
-#. type: Content of: <sect1><sect2><para>
-msgid "Now make a fix identified upstream that affects building some packages:"
-msgstr "现在进行上游发现的一项代码修补，解决可能影响构建一些软件包的问题："
-
-#. type: Content of: <sect1><sect2><screen>
-#, no-wrap
-msgid ""
-"<userinput remap=\"pre\">sed -e '/R_386_TLS_LE /i \\   || (TYPE) == R_386_TLS_IE \\\\' \\\n"
-"    -i ./bfd/elfxx-x86.h</userinput>"
-msgstr ""
-"<userinput remap=\"pre\">sed -e '/R_386_TLS_LE /i \\   || (TYPE) == R_386_TLS_IE \\\\' \\\n"
-"    -i ./bfd/elfxx-x86.h</userinput>"
 
 #. type: Content of: <sect1><sect2><para>
 msgid ""
@@ -263,15 +250,6 @@ msgstr "测试编译结果："
 #, no-wrap
 msgid "<userinput remap=\"test\">make -k check</userinput>"
 msgstr "<userinput remap=\"test\">make -k check</userinput>"
-
-#. type: Content of: <sect1><sect2><para>
-msgid ""
-"One gold test, <filename>pr17704a_test</filename>, is known to fail if "
-"<parameter>CONFIG_IA32_EMULATION</parameter> is disabled in the kernel "
-"configuration of the host system."
-msgstr ""
-"已知一项名为 <filename>pr17704a_test</filename> 的测试在宿主系统的内核配置禁"
-"用 <parameter>CONFIG_IA32_EMULATION</parameter> 时会失败。"
 
 #. type: Content of: <sect1><sect2><para>
 msgid "Install the package:"
