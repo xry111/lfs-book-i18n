@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2022-08-09 22:06+0800\n"
+"POT-Creation-Date: 2022-08-20 15:01+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -154,6 +154,17 @@ msgstr "安装该软件包："
 #, no-wrap
 msgid "<userinput remap=\"install\">make DESTDIR=$LFS install</userinput>"
 msgstr "<userinput remap=\"install\">make DESTDIR=$LFS install</userinput>"
+
+#. type: Content of: <sect1><sect2><para>
+msgid ""
+"Remove the libtool archive files because they are harmful for cross "
+"compilation, and remove unnecessary static libraries:"
+msgstr "移除对交叉编译有害的 libtool 档案文件，同时移除不必要的静态库："
+
+#. type: Content of: <sect1><sect2><screen>
+#, no-wrap
+msgid "<userinput remap=\"install\">rm -v $LFS/usr/lib/lib{bfd,ctf,ctf-nobfd,opcodes}.{a,la}</userinput>"
+msgstr "<userinput remap=\"install\">rm -v $LFS/usr/lib/lib{bfd,ctf,ctf-nobfd,opcodes}.{a,la}</userinput>"
 
 #. type: Content of: <sect1><sect2><para>
 msgid ""
