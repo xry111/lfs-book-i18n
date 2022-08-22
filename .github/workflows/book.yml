@@ -389,7 +389,7 @@ jobs:
           scp ~/lfs-systemd-zh_CN-pdf/LFS-SYSD-BOOK.pdf "lfsbook@xry111.site:/var/www/xry111/lfs/zh_CN/${SYSD}"
   make_release:
     if: github.event_name != 'pull_request' && github.ref_type == 'tag'
-    permission:
+    permissions:
       contents: write
     needs:
       - build-sysv-html
@@ -447,4 +447,4 @@ jobs:
         with:
           files: ~/release/*.*
           name: Linux From Scratch ${{ env.VERSION }}
-        prerelease: ${{ contains(github.ref, 'rc') }}
+          prerelease: ${{ contains(github.ref, 'rc') }}
