@@ -5,13 +5,13 @@ on:
     branches:
       - '*'
     tags:
-      - '!**'
+      - '*'
   pull_request:
   workflow_dispatch:
 
 jobs:
   xml-translation:
-    name: Translate XML (zh_CN)
+    name: Translate XML
     runs-on: ubuntu-22.04
     steps:
       - name: Prepare
@@ -53,7 +53,7 @@ jobs:
 
   build-sysv-html:
     needs: xml-translation
-    name: Build Chunked HTML (sysv, zh_CN)
+    name: Build Chunked HTML (sysv)
     runs-on: ubuntu-22.04
     steps:
       - name: Prepare
@@ -79,9 +79,9 @@ jobs:
           path: lfs-sysv-zh_CN.tar.xz
 
   upload-sysv-html:
-    if: github.event_name != 'pull_request'
+    if: github.event_name != 'pull_request' && github.ref_type == 'branch'
     needs: build-sysv-html
-    name: Upload Chunked HTML (sysv, zh_CN)
+    name: Upload Chunked HTML (sysv)
     runs-on: ubuntu-22.04
     steps:
       - name: Prepare SSH Key
@@ -110,7 +110,7 @@ jobs:
 
   build-systemd-html:
     needs: xml-translation
-    name: Build Chunked HTML (systemd, zh_CN)
+    name: Build Chunked HTML (systemd)
     runs-on: ubuntu-22.04
     steps:
       - name: Prepare
@@ -136,9 +136,9 @@ jobs:
           path: lfs-systemd-zh_CN.tar.xz
 
   upload-systemd-html:
-    if: github.event_name != 'pull_request'
+    if: github.event_name != 'pull_request' && github.ref_type == 'branch'
     needs: build-systemd-html
-    name: Upload Chunked HTML (systemd, zh_CN)
+    name: Upload Chunked HTML (systemd)
     runs-on: ubuntu-22.04
     steps:
       - name: Prepare SSH Key
@@ -167,7 +167,7 @@ jobs:
 
   build-sysv-nochunks:
     needs: xml-translation
-    name: Build Single Page HTML (sysv, zh_CN)
+    name: Build Single Page HTML (sysv)
     runs-on: ubuntu-22.04
     steps:
       - name: Prepare
@@ -195,9 +195,9 @@ jobs:
   # upload-sysv-html, because the latter will delete and recreate the
   # directory containing the book.  For systemd, likewise.
   upload-sysv-nochunks:
-    if: github.event_name != 'pull_request'
+    if: github.event_name != 'pull_request' && github.ref_type == 'branch'
     needs: [build-sysv-nochunks, upload-sysv-html]
-    name: Upload Single Page HTML (sysv, zh_CN)
+    name: Upload Single Page HTML (sysv)
     runs-on: ubuntu-22.04
     steps:
       - name: Prepare SSH Key
@@ -225,7 +225,7 @@ jobs:
 
   build-systemd-nochunks:
     needs: xml-translation
-    name: Build Single Page HTML (systemd, zh_CN)
+    name: Build Single Page HTML (systemd)
     runs-on: ubuntu-22.04
     steps:
       - name: Prepare
@@ -250,9 +250,9 @@ jobs:
           path: ~/lfs-systemd-zh_CN/LFS-SYSD-BOOK.html
 
   upload-systemd-nochunks:
-    if: github.event_name != 'pull_request'
+    if: github.event_name != 'pull_request' && github.ref_type == 'branch'
     needs: [build-systemd-nochunks, upload-systemd-html]
-    name: Upload Single Page HTML (systemd, zh_CN)
+    name: Upload Single Page HTML (systemd)
     runs-on: ubuntu-22.04
     steps:
       - name: Prepare SSH Key
@@ -280,7 +280,7 @@ jobs:
 
   build-sysv-pdf:
     needs: xml-translation
-    name: Build PDF (sysv, zh_CN)
+    name: Build PDF (sysv)
     runs-on: ubuntu-22.04
     steps:
       - name: Prepare
@@ -305,9 +305,9 @@ jobs:
           path: ~/lfs-sysv-zh_CN/LFS-BOOK.pdf
 
   upload-sysv-pdf:
-    if: github.event_name != 'pull_request'
+    if: github.event_name != 'pull_request' && github.ref_type == 'branch'
     needs: [build-sysv-pdf, upload-sysv-html]
-    name: Upload PDF (sysv, zh_CN)
+    name: Upload PDF (sysv)
     runs-on: ubuntu-22.04
     steps:
       - name: Prepare SSH Key
@@ -335,7 +335,7 @@ jobs:
 
   build-systemd-pdf:
     needs: xml-translation
-    name: Build PDF (systemd, zh_CN)
+    name: Build PDF (systemd)
     runs-on: ubuntu-22.04
     steps:
       - name: Prepare
@@ -360,9 +360,9 @@ jobs:
           path: ~/lfs-systemd-zh_CN/LFS-SYSD-BOOK.pdf
 
   upload-systemd-pdf:
-    if: github.event_name != 'pull_request'
+    if: github.event_name != 'pull_request' && github.ref_type == 'branch'
     needs: [build-systemd-pdf, upload-systemd-html]
-    name: Upload PDF (systemd, zh_CN)
+    name: Upload PDF (systemd)
     runs-on: ubuntu-22.04
     steps:
       - name: Prepare SSH Key
@@ -382,8 +382,69 @@ jobs:
       - name: Set SSH Host Key
         run:
           cat ~/aux-files/.known_hosts >> ~/.ssh/known_hosts
-      - name: Set Environment (Push)
+      - name: Set Environment
         run: sh ~/aux-files/setenv.sh "${GITHUB_REF}"
       - name: Upload the Book
         run: |
           scp ~/lfs-systemd-zh_CN-pdf/LFS-SYSD-BOOK.pdf "lfsbook@xry111.site:/var/www/xry111/lfs/zh_CN/${SYSD}"
+  make_release:
+    if: github.event_name != 'pull_request' && github.ref_type == 'tag'
+    permission:
+      contents: write
+    needs:
+      - build-sysv-html
+      - build-sysv-nochunks
+      - build-sysv-pdf
+      - build-systemd-html
+      - build-systemd-nochunks
+      - build-systemd-pdf
+    name: Create Release
+    runs-on: ubuntu-22.04
+    steps:
+      - name: Determine Version
+        env: TAG=${{ github.ref }}
+        run: echo VERSION=$(echo $TAG | sed 's/^v//') >> $GITHUB_ENV
+      - name: Fetch Chunked HTML (sysv)
+        uses: actions/download-artifact@v3
+        with:
+          name: lfs-sysv-zh_CN-html
+          path: ~/release
+      - name: Fetch Single Page HTML (sysv)
+        uses: actions/download-artifact@v3
+        with:
+          name: lfs-sysv-zh_CN-nochunks
+          path: ~/release
+      - name: Fetch PDF (sysv)
+        uses: actions/download-artifact@v3
+        with:
+          name: lfs-sysv-zh_CN-pdf
+          path: ~/release
+      - name: Fetch Chunked HTML (systemd)
+        uses: actions/download-artifact@v3
+        with:
+          name: lfs-systemd-zh_CN-html
+          path: ~/release
+      - name: Fetch Single Page HTML (systemd)
+        uses: actions/download-artifact@v3
+        with:
+          name: lfs-systemd-zh_CN-nochunks
+          path: ~/release
+      - name: Fetch PDF (systemd)
+        uses: actions/download-artifact@v3
+        with:
+          name: lfs-systemd-zh_CN-pdf
+          path: ~/release
+      - name: Rename artifacts
+        run: |
+          mv ~/release/lfs-{,${VERSION-}}sysv-zh_CN.tar.xz
+          mv ~/release/lfs-{,${VERSION-}}systemd-zh_CN.tar.xz
+          mv ~/release/{LFS-BOOK.html,lfs-${VERSION}-sysv-zh_CN.html}
+          mv ~/release/{LFS-SYSD-BOOK.html,lfs-${VERSION}-systemd-zh_CN.html}
+          mv ~/release/{LFS-BOOK.pdf,lfs-${VERSION}-systemd-zh_CN.pdf}
+          mv ~/release/{LFS-SYSD-BOOK.pdf,lfs-${VERSION}-systemd-zh_CN.pdf}
+      - name: Release
+        uses: softprops/action-gh-release@v1
+        with:
+          files: ~/release/*.*
+          name: Linux From Scratch ${{ env.VERSION }}
+        prerelease: ${{ contains(github.ref, 'rc') }}
