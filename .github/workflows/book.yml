@@ -402,49 +402,52 @@ jobs:
     runs-on: ubuntu-22.04
     steps:
       - name: Determine Version
-        env: TAG=${{ github.ref }}
+        env:
+          TAG: ${{ github.ref_name }}
         run: echo VERSION=$(echo $TAG | sed 's/^v//') >> $GITHUB_ENV
       - name: Fetch Chunked HTML (sysv)
         uses: actions/download-artifact@v3
         with:
           name: lfs-sysv-zh_CN-html
-          path: ~/release
+          path: ${{ runner.temp }}/release
       - name: Fetch Single Page HTML (sysv)
         uses: actions/download-artifact@v3
         with:
           name: lfs-sysv-zh_CN-nochunks
-          path: ~/release
+          path: ${{ runner.temp }}/release
       - name: Fetch PDF (sysv)
         uses: actions/download-artifact@v3
         with:
           name: lfs-sysv-zh_CN-pdf
-          path: ~/release
+          path: ${{ runner.temp }}/release
       - name: Fetch Chunked HTML (systemd)
         uses: actions/download-artifact@v3
         with:
           name: lfs-systemd-zh_CN-html
-          path: ~/release
+          path: ${{ runner.temp }}/release
       - name: Fetch Single Page HTML (systemd)
         uses: actions/download-artifact@v3
         with:
           name: lfs-systemd-zh_CN-nochunks
-          path: ~/release
+          path: ${{ runner.temp }}/release
       - name: Fetch PDF (systemd)
         uses: actions/download-artifact@v3
         with:
           name: lfs-systemd-zh_CN-pdf
-          path: ~/release
+          path: ${{ runner.temp }}/release
       - name: Rename artifacts
+        env:
+          DIR: ${{ runner.temp }}/release
         run: |
-          mv ~/release/lfs-{,${VERSION-}}sysv-zh_CN.tar.xz
-          mv ~/release/lfs-{,${VERSION-}}systemd-zh_CN.tar.xz
-          mv ~/release/{LFS-BOOK.html,lfs-${VERSION}-sysv-zh_CN.html}
-          mv ~/release/{LFS-SYSD-BOOK.html,lfs-${VERSION}-systemd-zh_CN.html}
-          mv ~/release/{LFS-BOOK.pdf,lfs-${VERSION}-systemd-zh_CN.pdf}
-          mv ~/release/{LFS-SYSD-BOOK.pdf,lfs-${VERSION}-systemd-zh_CN.pdf}
+          mv $DIR/lfs-{sysv,${VERSION}}-zh_CN.tar.xz
+          mv $DIR/lfs-{,${VERSION}-}systemd-zh_CN.tar.xz
+          mv $DIR/{LFS-BOOK.html,lfs-${VERSION}-zh_CN.html}
+          mv $DIR/{LFS-SYSD-BOOK.html,lfs-${VERSION}-systemd-zh_CN.html}
+          mv $DIR/{LFS-BOOK.pdf,lfs-${VERSION}-zh_CN.pdf}
+          mv $DIR/{LFS-SYSD-BOOK.pdf,lfs-${VERSION}-systemd-zh_CN.pdf}
       - name: Release
         uses: softprops/action-gh-release@v1
         with:
-          files: ~/release/*.*
+          files: ${{ runner.temp }}/release/*.*
           name: Linux From Scratch ${{ env.VERSION }}
-          prerelease: ${{ contains(github.ref, 'rc') }}
+          prerelease: ${{ contains(github.ref_name, 'rc') }}
