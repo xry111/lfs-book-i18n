@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2022-05-09 22:15+0800\n"
+"POT-Creation-Date: 2022-08-25 15:44+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -266,6 +266,29 @@ msgstr ""
 
 #. type: Content of: <sect1><sect2><note><para>
 msgid ""
+"Enable some additional features if you are building a 64-bit system.  If you "
+"are using menuconfig, enable them in the order of <parameter>CONFIG_PCI_MSI</"
+"parameter> first, then <parameter>CONFIG_IRQ_REMAP</parameter>, at last "
+"<parameter>CONFIG_X86_X2APIC</parameter> because an option only shows up "
+"after its dependencies are selected."
+msgstr ""
+
+#. type: Content of: <sect1><sect2><note><screen>
+#, no-wrap
+msgid ""
+"Processor type and features ---&gt;\n"
+"  [*] Support x2apic [CONFIG_X86_X2APIC]\n"
+"Memory Management options  ---&gt;\n"
+"  [ ] Enable userfaultfd() system call [CONFIG_USERFAULTFD]\n"
+"Device Drivers ---&gt;\n"
+"  [*] PCI Support ---&gt; [CONFIG_PCI]\n"
+"    [*] Message Signaled Interrupts (MSI and MSI-X) [CONFIG_PCI_MSI]\n"
+"  [*] IOMMU Hardware Support ---&gt; [CONFIG_IOMMU_SUPPORT]\n"
+"    [*] Support for Interrupt Remapping [CONFIG_IRQ_REMAP]"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><note><para>
+msgid ""
 "While \"The IPv6 Protocol\" is not strictly required, it is highly "
 "recommended by the systemd developers."
 msgstr ""
@@ -362,6 +385,36 @@ msgid ""
 msgstr ""
 "该选项使得内核在切换到根文件系统之后，执行 init 前，将内核获知的设备信息挂载"
 "到 /dev。"
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
+msgid "<parameter>Support x2apic</parameter>"
+msgstr "<parameter>Support x2apic</parameter>"
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
+msgid ""
+"Support running the interrupt controller of 64-bit x86 processors in x2APIC "
+"mode.  x2APIC may be enabled by firmware on 64-bit x86 systems, and a kernel "
+"without this option enabled will panic on boot if x2APIC is enabled by "
+"firmware.  This option has has no effect, but also does no harm if x2APIC is "
+"disabled by the firmware."
+msgstr ""
+"支持以 x2APIC 模式运行 64 位 x86 处理器的中断控制器。"
+"64 位 x86 系统的固件可能启用了 x2APIC，此时未启用该选项的内核在引导时会"
+"发生内核恐慌。该选项在固件禁用 x2APIC 时没有作用，但无害。"
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
+msgid "<parameter>Enable userfaultfd() system call</parameter>"
+msgstr "<parameter>Enable userfaultfd() system call</parameter>"
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
+msgid ""
+"If this option is enabled, a security vulnerability not resolved in Linux-"
+"&linux-version; yet will be exploitable.  Disable this option to avoid the "
+"vulnerability.  This system call is not used by any part of LFS or BLFS."
+msgstr ""
+"如果启用该选项，则会暴露一项在 Linux-&linux-version; 中尚未解决的安全缺陷。"
+"禁用该选项以避免安全缺陷。userfaultfd() 系统调用并未被 LFS 或 BLFS 中的"
+"任何组件使用。"
 
 #. type: Content of: <sect1><sect2><para>
 msgid ""
