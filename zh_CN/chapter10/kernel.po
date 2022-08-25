@@ -272,6 +272,11 @@ msgid ""
 "<parameter>CONFIG_X86_X2APIC</parameter> because an option only shows up "
 "after its dependencies are selected."
 msgstr ""
+"如果在构建 64 位系统，还需要启用一些特性。如果使用 menuconfig 进行配置，"
+"需要首先启用 <parameter>CONFIG_PCI_MSI</parameter>，然后启用 "
+"<parameter>CONFIG_IRQ_REMAP</parameter>，最后启用 "
+"<parameter>CONFIG_X86_X2APIC</parameter>，"
+"这是因为只有选定了一个选项的所有依赖项后，该选项才会出现。"
 
 #. type: Content of: <sect1><sect2><note><screen>
 #, no-wrap
@@ -286,6 +291,15 @@ msgid ""
 "  [*] IOMMU Hardware Support ---&gt; [CONFIG_IOMMU_SUPPORT]\n"
 "    [*] Support for Interrupt Remapping [CONFIG_IRQ_REMAP]"
 msgstr ""
+"Processor type and features ---&gt;\n"
+"  [*] Support x2apic [CONFIG_X86_X2APIC]\n"
+"Memory Management options  ---&gt;\n"
+"  [ ] Enable userfaultfd() system call [CONFIG_USERFAULTFD]\n"
+"Device Drivers ---&gt;\n"
+"  [*] PCI Support ---&gt; [CONFIG_PCI]\n"
+"    [*] Message Signaled Interrupts (MSI and MSI-X) [CONFIG_PCI_MSI]\n"
+"  [*] IOMMU Hardware Support ---&gt; [CONFIG_IOMMU_SUPPORT]\n"
+"    [*] Support for Interrupt Remapping [CONFIG_IRQ_REMAP]"
 
 #. type: Content of: <sect1><sect2><note><para>
 msgid ""
