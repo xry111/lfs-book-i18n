@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2022-06-30 20:03+0800\n"
+"POT-Creation-Date: 2022-09-14 00:15+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -124,8 +124,8 @@ msgid ""
 "This makes Ncurses build and install shared C++ bindings. It also prevents "
 "it building and installing static C++ bindings."
 msgstr ""
-"该选项使得 Ncurses 将 C++ 绑定构建并安装为共享库，同时防止构建和安装静态的 "
-"C++ 绑定库。"
+"该选项使得 Ncurses 将 C++ 绑定构建并安装为共享库，同时防止构建和安装静态的 C+"
+"+ 绑定库。"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 msgid "<parameter>--enable-pc-files</parameter>"
@@ -181,14 +181,12 @@ msgid ""
 "\">libncursesw.so.&ncurses-version;</filename> in-place.  It may crash the "
 "shell process which is using code and data from the library file.  Install "
 "the package with <literal>DESTDIR</literal>, and replace the library file "
-"correctly using <command>install</command> command.  A useless static "
-"archive which is not handled by <command>configure</command> is also removed:"
+"correctly using <command>install</command> command:"
 msgstr ""
 "安装该软件包会直接覆盖文件 <filename class=\"libraryfile\">libncursesw.so."
 "&ncurses-version;</filename>。这可能导致正在使用该库文件中的代码和数据的 "
 "shell 进程发生崩溃。因此，需要使用 <literal>DESTDIR</literal> 进行安装，并正"
-"确地使用 <command>install</command> 命令安装库文件。同时，移除 "
-"<command>configure</command> 脚本未处理的一个静态库："
+"确地使用 <command>install</command> 命令安装库文件："
 
 #. type: Content of: <sect1><sect2><screen>
 #, no-wrap
@@ -323,12 +321,12 @@ msgstr ""
 #. type: Content of: <sect1><sect2><segmentedlist><seglistitem><seg>
 msgid ""
 "libcursesw.so (symlink and linker script to libncursesw.so), libformw.so, "
-"libmenuw.so, libncursesw.so, libpanelw.so, and their non-wide-character "
-"counterparts without \"w\" in the library names."
+"libmenuw.so, libncursesw.so, libncurses++w.so, libpanelw.so, and their non-"
+"wide-character counterparts without \"w\" in the library names."
 msgstr ""
 "libcursesw.so (指向 libncursesw.so 的符号链接和链接脚本), libformw.so, "
-"libmenuw.so, libncursesw.so, libpanelw.so, 以及它们的库名称没有 “w” 的非宽字"
-"符替代品。"
+"libmenuw.so, libncursesw.so, libncurses++w.so, libpanelw.so, "
+"以及它们的库名称没有 “w” 的非宽字符替代品。"
 
 #. type: Content of: <sect1><sect2><segmentedlist><seglistitem><seg>
 msgid ""
@@ -519,6 +517,18 @@ msgstr ""
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 msgid "libncursesw"
 msgstr "libncursesw"
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
+msgid "<filename class=\"libraryfile\">libncurses++w</filename>"
+msgstr "<filename class=\"libraryfile\">libncurses++w</filename>"
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
+msgid "Contains C++ binding for other libraries in this package"
+msgstr "包含该软件包中其他库的 C++ 语言绑定"
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
+msgid "libncurses++w"
+msgstr "libncurses++w"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 msgid "<filename class=\"libraryfile\">libformw</filename>"

@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Linux From Scratch 11.1\n"
 "Report-Msgid-Bugs-To: lfs-dev@lists.linuxfromscratch.org\n"
-"POT-Creation-Date: 2022-09-11 13:58+0800\n"
+"POT-Creation-Date: 2022-09-14 00:06+0800\n"
 "PO-Revision-Date: 2022-03-03 03:00+0800\n"
 "Last-Translator: Xi Ruoyao <xry111@mengyan1223.wang>\n"
 "Language-Team: None <noreply@mengyan1223.wang>\n"
@@ -390,8 +390,8 @@ msgstr "下面确认我们的设定能够使用正确的启动文件："
 
 #. type: Content of: <sect1><sect2><screen>
 #, no-wrap
-msgid "<userinput>grep -o '/usr/lib.*/crt[1in].*succeeded' dummy.log</userinput>"
-msgstr "<userinput>grep -o '/usr/lib.*/crt[1in].*succeeded' dummy.log</userinput>"
+msgid "<userinput>grep -E -o '/usr/lib.*/S?crt[1in].*succeeded' dummy.log</userinput>"
+msgstr "<userinput>grep -E -o '/usr/lib.*/S?crt[1in].*succeeded' dummy.log</userinput>"
 
 #. type: Content of: <sect1><sect2><para>
 msgid "The output of the last command should be:"
@@ -400,11 +400,11 @@ msgstr "以上命令应该输出："
 #. type: Content of: <sect1><sect2><screen>
 #, no-wrap
 msgid ""
-"<computeroutput>/usr/lib/gcc/x86_64-pc-linux-gnu/&gcc-version;/../../../../lib/crt1.o succeeded\n"
+"<computeroutput>/usr/lib/gcc/x86_64-pc-linux-gnu/&gcc-version;/../../../../lib/Scrt1.o succeeded\n"
 "/usr/lib/gcc/x86_64-pc-linux-gnu/&gcc-version;/../../../../lib/crti.o succeeded\n"
 "/usr/lib/gcc/x86_64-pc-linux-gnu/&gcc-version;/../../../../lib/crtn.o succeeded</computeroutput>"
 msgstr ""
-"<computeroutput>/usr/lib/gcc/x86_64-pc-linux-gnu/&gcc-version;/../../../../lib/crt1.o succeeded\n"
+"<computeroutput>/usr/lib/gcc/x86_64-pc-linux-gnu/&gcc-version;/../../../../lib/Scrt1.o succeeded\n"
 "/usr/lib/gcc/x86_64-pc-linux-gnu/&gcc-version;/../../../../lib/crti.o succeeded\n"
 "/usr/lib/gcc/x86_64-pc-linux-gnu/&gcc-version;/../../../../lib/crtn.o succeeded</computeroutput>"
 
@@ -931,8 +931,11 @@ msgstr "<filename class=\"libraryfile\">libssp</filename>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 msgid ""
-"Contains routines supporting GCC's stack-smashing protection functionality"
-msgstr "包含 GCC 的栈溢出保护功能支持子程序"
+"Contains routines supporting GCC's stack-smashing protection functionality.  "
+"Normally it's unused because glibc also provides those routines"
+msgstr ""
+"包含 GCC 的栈溢出保护功能支持子程序。一般不使用它，"
+"因为 Glibc 也提供这些子程序。"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 msgid "libssp"
