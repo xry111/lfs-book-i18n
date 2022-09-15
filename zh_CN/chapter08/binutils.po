@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Linux From Scratch 11.0\n"
 "Report-Msgid-Bugs-To: lfs-dev@lists.linuxfromscratch.org\n"
-"POT-Creation-Date: 2022-09-12 00:01+0800\n"
+"POT-Creation-Date: 2022-09-15 11:40+0800\n"
 "PO-Revision-Date: 2021-08-16 11:42+0800\n"
 "Last-Translator: Xi Ruoyao <xry111@mengyan1223.wang>\n"
 "Language-Team: None <noreply@mengyan1223.wang>\n"
@@ -258,9 +258,9 @@ msgid ""
 "option> options are passed to GCC. There is also a known failure in the "
 "<command>as</command> tests."
 msgstr ""
-"十二项 <command>gold</command> 测试由于 GCC 使用了 "
-"<option>--enable-default-pie</option> 和 <option>--enable-default-ssp</"
-"option> 选项而失败。另外已知一项 <command>as</command> 测试可能失败。"
+"十二项 <command>gold</command> 测试由于 GCC 使用了 <option>--enable-default-"
+"pie</option> 和 <option>--enable-default-ssp</option> 选项而失败。另外已知一"
+"项 <command>as</command> 测试可能失败。"
 
 #. type: Content of: <sect1><sect2><para>
 msgid "Install the package:"
@@ -272,13 +272,17 @@ msgid "<userinput remap=\"install\">make tooldir=/usr install</userinput>"
 msgstr "<userinput remap=\"install\">make tooldir=/usr install</userinput>"
 
 #. type: Content of: <sect1><sect2><para>
-msgid "Remove useless static libraries:"
-msgstr "删除无用的静态库："
+msgid "Remove useless static libraries and an empty man page:"
+msgstr "删除无用的静态库以及一个空的 man 页面："
 
 #. type: Content of: <sect1><sect2><screen>
 #, no-wrap
-msgid "<userinput remap=\"install\">rm -fv /usr/lib/lib{bfd,ctf,ctf-nobfd,opcodes}.a</userinput>"
-msgstr "<userinput remap=\"install\">rm -fv /usr/lib/lib{bfd,ctf,ctf-nobfd,opcodes}.a</userinput>"
+msgid ""
+"<userinput remap=\"install\">rm -fv /usr/lib/lib{bfd,ctf,ctf-nobfd,opcodes}.a\n"
+"rm -fv /usr/share/man/man1/gprofng.1</userinput>"
+msgstr ""
+"<userinput remap=\"install\">rm -fv /usr/lib/lib{bfd,ctf,ctf-nobfd,opcodes}.a\n"
+"rm -fv /usr/share/man/man1/gprofng.1</userinput>"
 
 #. type: Content of: <sect1><sect2><title>
 msgid "Contents of Binutils"

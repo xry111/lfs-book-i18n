@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2021-10-14 19:19+0800\n"
+"POT-Creation-Date: 2022-09-15 11:40+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -66,6 +66,15 @@ msgstr "首先，确保不安装某些不需要的文件："
 #, no-wrap
 msgid "<userinput remap=\"pre\">sed -i 's/extras//' Makefile.in</userinput>"
 msgstr "<userinput remap=\"pre\">sed -i 's/extras//' Makefile.in</userinput>"
+
+#. type: Content of: <sect1><sect2><para>
+msgid "Now fix a programming error identified upstream:"
+msgstr "修复上游发现的代码错误："
+
+#. type: Content of: <sect1><sect2><screen>
+#, no-wrap
+msgid "<userinput remap=\"pre\">sed -i -i '241i UPREF(m);' interpret.h</userinput>"
+msgstr "<userinput remap=\"pre\">sed -i -i '241i UPREF(m);' interpret.h</userinput>"
 
 #. type: Content of: <sect1><sect2><para>
 msgid "Prepare Gawk for compilation:"
