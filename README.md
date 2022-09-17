@@ -20,6 +20,7 @@ contribute other translations, please mail to `xry111@xry111.site`
 
 首先安装依赖项：
 
+* GNU Make (>= 4.3)
 * [po4a](https://po4a.org/) (>= 0.62)
 * [polib](https://pypi.org/project/polib/)
 * [libxml2](https://www.linuxfromscratch.org/blfs/view/svn/general/libxml2.html)
