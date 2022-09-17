@@ -6,8 +6,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Linux From Scratch 11.0\n"
-"Report-Msgid-Bugs-To: lfs-dev@lists.linuxfromscratch.org\n"
-"POT-Creation-Date: 2022-04-21 14:25+0800\n"
+"Report-Msgid-Bugs-To: lfs-dev@linuxfromscratch.org\n"
+"POT-Creation-Date: 2022-09-17 18:28+0800\n"
 "PO-Revision-Date: 2021-07-28 19:09+0800\n"
 "Last-Translator: Xi Ruoyao <xry111@mengyan1223.wang>\n"
 "Language-Team: None <noreply@mengyan1223.wang>\n"
@@ -20,19 +20,22 @@ msgstr ""
 "X-Pootle-Path: /zh_CN/lfs/chapter03/packages.po\n"
 
 #. type: Content of: <sect1><title>
+#: lfs-en/chapter03/packages.xml
 msgid "All Packages"
 msgstr "全部软件包"
 
 #. type: Content of: <sect1><note><para>
+#: lfs-en/chapter03/packages.xml
 msgid ""
 "Read the <ulink url='&secadv;'>security advisories</ulink> before "
 "downloading packages to figure out if a newer version of any package should "
 "be used to avoid security vulnerabilities."
 msgstr ""
-"在下载软件包之前，阅读<ulink url='&secadv;'>安全公告</ulink>"
-"以了解是否应该对某个软件包使用较新的版本，以避免安全缺陷。"
+"在下载软件包之前，阅读<ulink url='&secadv;'>安全公告</ulink>以了解是否应该对"
+"某个软件包使用较新的版本，以避免安全缺陷。"
 
 #. type: Content of: <sect1><note><para>
+#: lfs-en/chapter03/packages.xml
 msgid ""
 "The upstreams may remove old releases, especially when these releases "
 "contain a security vulnerability.  If one URL below is not reachable, you "
@@ -43,677 +46,844 @@ msgid ""
 "vulnerability, it's not recommended to use a release known to be vulnerable "
 "for building your system."
 msgstr ""
-"上游可能移除旧的发布版本，特别是在这些旧版本存在安全缺陷的情况下。"
-"如果下面列出的某个 URL 无法访问，应该首先阅读安全公告，以确认是否应该"
-"使用更新的 (已经修复安全缺陷的) 版本。如果情况并非如此，可以尝试从镜像站"
-"下载被移除的软件包。尽管即使在某个发布版本因为安全缺陷被移除时，仍然可能"
-"通过镜像站下载它，我们不推荐在构建系统时使用已知有安全缺陷的软件包版本。"
+"上游可能移除旧的发布版本，特别是在这些旧版本存在安全缺陷的情况下。如果下面列"
+"出的某个 URL 无法访问，应该首先阅读安全公告，以确认是否应该使用更新的 (已经修"
+"复安全缺陷的) 版本。如果情况并非如此，可以尝试从镜像站下载被移除的软件包。尽"
+"管即使在某个发布版本因为安全缺陷被移除时，仍然可能通过镜像站下载它，我们不推"
+"荐在构建系统时使用已知有安全缺陷的软件包版本。"
 
 #. type: Content of: <sect1><para>
+#: lfs-en/chapter03/packages.xml
 msgid "Download or otherwise obtain the following packages:"
 msgstr "下载或者用其他方法获取下列软件包。"
 
 #. type: Content of: <sect1><variablelist><varlistentry><term>
+#: lfs-en/chapter03/packages.xml
 msgid "Acl (&acl-version;) - <token>&acl-size;</token>:"
 msgstr "Acl (&acl-version;) - <token>&acl-size;</token>："
 
 #. type: Content of: <sect1><variablelist><varlistentry><listitem><para>
+#: lfs-en/chapter03/packages.xml
 msgid "Home page: <ulink url=\"&acl-home;\"/>"
 msgstr "主页：<ulink url=\"&acl-home;\"/>"
 
 #. type: Content of: <sect1><variablelist><varlistentry><listitem><para>
+#: lfs-en/chapter03/packages.xml
 msgid "Download: <ulink url=\"&acl-url;\"/>"
 msgstr "下载地址：<ulink url=\"&acl-url;\"/>"
 
 #. type: Content of: <sect1><variablelist><varlistentry><listitem><para>
+#: lfs-en/chapter03/packages.xml
 msgid "MD5 sum: <literal>&acl-md5;</literal>"
 msgstr "MD5 校验和：<literal>&acl-md5;</literal>"
 
 #. type: Content of: <sect1><variablelist><varlistentry><term>
+#: lfs-en/chapter03/packages.xml
 msgid "Attr (&attr-version;) - <token>&attr-size;</token>:"
 msgstr "Attr (&attr-version;) - <token>&attr-size;</token>："
 
 #. type: Content of: <sect1><variablelist><varlistentry><listitem><para>
+#: lfs-en/chapter03/packages.xml
 msgid "Home page: <ulink url=\"&attr-home;\"/>"
 msgstr "主页：<ulink url=\"&attr-home;\"/>"
 
 #. type: Content of: <sect1><variablelist><varlistentry><listitem><para>
+#: lfs-en/chapter03/packages.xml
 msgid "Download: <ulink url=\"&attr-url;\"/>"
 msgstr "下载地址：<ulink url=\"&attr-url;\"/>"
 
 #. type: Content of: <sect1><variablelist><varlistentry><listitem><para>
+#: lfs-en/chapter03/packages.xml
 msgid "MD5 sum: <literal>&attr-md5;</literal>"
 msgstr "MD5 校验和：<literal>&attr-md5;</literal>"
 
 #. type: Content of: <sect1><variablelist><varlistentry><term>
+#: lfs-en/chapter03/packages.xml
 msgid "Autoconf (&autoconf-version;) - <token>&autoconf-size;</token>:"
 msgstr "Autoconf (&autoconf-version;) - <token>&autoconf-size;</token>:"
 
 #. type: Content of: <sect1><variablelist><varlistentry><listitem><para>
+#: lfs-en/chapter03/packages.xml
 msgid "Home page: <ulink url=\"&autoconf-home;\"/>"
 msgstr "主页：<ulink url=\"&autoconf-home;\"/>"
 
 #. type: Content of: <sect1><variablelist><varlistentry><listitem><para>
+#: lfs-en/chapter03/packages.xml
 msgid "Download: <ulink url=\"&autoconf-url;\"/>"
 msgstr "下载地址：<ulink url=\"&autoconf-url;\"/>"
 
 #. type: Content of: <sect1><variablelist><varlistentry><listitem><para>
+#: lfs-en/chapter03/packages.xml
 msgid "MD5 sum: <literal>&autoconf-md5;</literal>"
 msgstr "MD5 校验和：<literal>&autoconf-md5;</literal>"
 
 #. type: Content of: <sect1><variablelist><varlistentry><term>
+#: lfs-en/chapter03/packages.xml
 msgid "Automake (&automake-version;) - <token>&automake-size;</token>:"
 msgstr "Automake (&automake-version;) - <token>&automake-size;</token>:"
 
 #. type: Content of: <sect1><variablelist><varlistentry><listitem><para>
+#: lfs-en/chapter03/packages.xml
 msgid "Home page: <ulink url=\"&automake-home;\"/>"
 msgstr "主页：<ulink url=\"&automake-home;\"/>"
 
 #. type: Content of: <sect1><variablelist><varlistentry><listitem><para>
+#: lfs-en/chapter03/packages.xml
 msgid "Download: <ulink url=\"&automake-url;\"/>"
 msgstr "下载地址：<ulink url=\"&automake-url;\"/>"
 
 #. type: Content of: <sect1><variablelist><varlistentry><listitem><para>
+#: lfs-en/chapter03/packages.xml
 msgid "MD5 sum: <literal>&automake-md5;</literal>"
 msgstr "MD5 校验和：<literal>&automake-md5;</literal>"
 
 #. type: Content of: <sect1><variablelist><varlistentry><listitem><para>
+#: lfs-en/chapter03/packages.xml
 msgid "SHA256 sum: <literal>&automake-sha256;</literal>"
 msgstr "SHA256 校验和：<literal>&automake-sha256;</literal>"
 
 #. type: Content of: <sect1><variablelist><varlistentry><term>
+#: lfs-en/chapter03/packages.xml
 msgid "Bash (&bash-version;) - <token>&bash-size;</token>:"
 msgstr "Bash (&bash-version;) - <token>&bash-size;</token>:"
 
 #. type: Content of: <sect1><variablelist><varlistentry><listitem><para>
+#: lfs-en/chapter03/packages.xml
 msgid "Home page: <ulink url=\"&bash-home;\"/>"
 msgstr "主页：<ulink url=\"&bash-home;\"/>"
 
 #. type: Content of: <sect1><variablelist><varlistentry><listitem><para>
+#: lfs-en/chapter03/packages.xml
 msgid "Download: <ulink url=\"&bash-url;\"/>"
 msgstr "下载地址：<ulink url=\"&bash-url;\"/>"
 
 #. type: Content of: <sect1><variablelist><varlistentry><listitem><para>
+#: lfs-en/chapter03/packages.xml
 msgid "MD5 sum: <literal>&bash-md5;</literal>"
 msgstr "MD5 校验和：<literal>&bash-md5;</literal>"
 
 #. type: Content of: <sect1><variablelist><varlistentry><term>
+#: lfs-en/chapter03/packages.xml
 msgid "Bc (&bc-version;) - <token>&bc-size;</token>:"
 msgstr "Bc (&bc-version;) - <token>&bc-size;</token>:"
 
 #. type: Content of: <sect1><variablelist><varlistentry><listitem><para>
+#: lfs-en/chapter03/packages.xml
 msgid "Home page: <ulink url=\"&bc-home;\"/>"
 msgstr "主页：<ulink url=\"&bc-home;\"/>"
 
 #. type: Content of: <sect1><variablelist><varlistentry><listitem><para>
+#: lfs-en/chapter03/packages.xml
 msgid "Download: <ulink url=\"&bc-url;\"/>"
 msgstr "下载地址：<ulink url=\"&bc-url;\"/>"
 
 #. type: Content of: <sect1><variablelist><varlistentry><listitem><para>
+#: lfs-en/chapter03/packages.xml
 msgid "MD5 sum: <literal>&bc-md5;</literal>"
 msgstr "MD5 校验和：<literal>&bc-md5;</literal>"
 
 #. type: Content of: <sect1><variablelist><varlistentry><term>
+#: lfs-en/chapter03/packages.xml
 msgid "Binutils (&binutils-version;) - <token>&binutils-size;</token>:"
 msgstr "Binutils (&binutils-version;) - <token>&binutils-size;</token>:"
 
 #. type: Content of: <sect1><variablelist><varlistentry><listitem><para>
+#: lfs-en/chapter03/packages.xml
 msgid "Home page: <ulink url=\"&binutils-home;\"/>"
 msgstr "主页：<ulink url=\"&binutils-home;\"/>"
 
 #. type: Content of: <sect1><variablelist><varlistentry><listitem><para>
+#: lfs-en/chapter03/packages.xml
 msgid "Download: <ulink url=\"&binutils-url;\"/>"
 msgstr "下载地址：<ulink url=\"&binutils-url;\"/>"
 
 #. type: Content of: <sect1><variablelist><varlistentry><listitem><para>
+#: lfs-en/chapter03/packages.xml
 msgid "MD5 sum: <literal>&binutils-md5;</literal>"
 msgstr "MD5 校验和：<literal>&binutils-md5;</literal>"
 
 #. type: Content of: <sect1><variablelist><varlistentry><term>
+#: lfs-en/chapter03/packages.xml
 msgid "Bison (&bison-version;) - <token>&bison-size;</token>:"
 msgstr "Bison (&bison-version;) - <token>&bison-size;</token>:"
 
 #. type: Content of: <sect1><variablelist><varlistentry><listitem><para>
+#: lfs-en/chapter03/packages.xml
 msgid "Home page: <ulink url=\"&bison-home;\"/>"
 msgstr "主页：<ulink url=\"&bison-home;\"/>"
 
 #. type: Content of: <sect1><variablelist><varlistentry><listitem><para>
+#: lfs-en/chapter03/packages.xml
 msgid "Download: <ulink url=\"&bison-url;\"/>"
 msgstr "下载地址：<ulink url=\"&bison-url;\"/>"
 
 #. type: Content of: <sect1><variablelist><varlistentry><listitem><para>
+#: lfs-en/chapter03/packages.xml
 msgid "MD5 sum: <literal>&bison-md5;</literal>"
 msgstr "MD5 校验和：<literal>&bison-md5;</literal>"
 
 #. type: Content of: <sect1><variablelist><varlistentry><term>
+#: lfs-en/chapter03/packages.xml
 msgid "Bzip2 (&bzip2-version;) - <token>&bzip2-size;</token>:"
 msgstr "Bzip2 (&bzip2-version;) - <token>&bzip2-size;</token>:"
 
 #. type: Content of: <sect1><variablelist><varlistentry><listitem><para>
+#: lfs-en/chapter03/packages.xml
 msgid "Download: <ulink url=\"&bzip2-url;\"/>"
 msgstr "下载地址：<ulink url=\"&bzip2-url;\"/>"
 
 #. type: Content of: <sect1><variablelist><varlistentry><listitem><para>
+#: lfs-en/chapter03/packages.xml
 msgid "MD5 sum: <literal>&bzip2-md5;</literal>"
 msgstr "MD5 校验和：<literal>&bzip2-md5;</literal>"
 
 #. type: Content of: <sect1><variablelist><varlistentry><term>
+#: lfs-en/chapter03/packages.xml
 msgid "Check (&check-version;) - <token>&check-size;</token>:"
 msgstr "Check (&check-version;) - <token>&check-size;</token>:"
 
 #. type: Content of: <sect1><variablelist><varlistentry><listitem><para>
+#: lfs-en/chapter03/packages.xml
 msgid "Home page: <ulink url=\"&check-home;\"/>"
 msgstr "主页：<ulink url=\"&check-home;\"/>"
 
 #. type: Content of: <sect1><variablelist><varlistentry><listitem><para>
+#: lfs-en/chapter03/packages.xml
 msgid "Download: <ulink url=\"&check-url;\"/>"
 msgstr "下载地址：<ulink url=\"&check-url;\"/>"
 
 #. type: Content of: <sect1><variablelist><varlistentry><listitem><para>
+#: lfs-en/chapter03/packages.xml
 msgid "MD5 sum: <literal>&check-md5;</literal>"
 msgstr "MD5 校验和：<literal>&check-md5;</literal>"
 
 #. type: Content of: <sect1><variablelist><varlistentry><term>
+#: lfs-en/chapter03/packages.xml
 msgid "Coreutils (&coreutils-version;) - <token>&coreutils-size;</token>:"
 msgstr "Coreutils (&coreutils-version;) - <token>&coreutils-size;</token>:"
 
 #. type: Content of: <sect1><variablelist><varlistentry><listitem><para>
+#: lfs-en/chapter03/packages.xml
 msgid "Home page: <ulink url=\"&coreutils-home;\"/>"
 msgstr "主页：<ulink url=\"&coreutils-home;\"/>"
 
 #. type: Content of: <sect1><variablelist><varlistentry><listitem><para>
+#: lfs-en/chapter03/packages.xml
 msgid "Download: <ulink url=\"&coreutils-url;\"/>"
 msgstr "下载地址：<ulink url=\"&coreutils-url;\"/>"
 
 #. type: Content of: <sect1><variablelist><varlistentry><listitem><para>
+#: lfs-en/chapter03/packages.xml
 msgid "MD5 sum: <literal>&coreutils-md5;</literal>"
 msgstr "MD5 校验和：<literal>&coreutils-md5;</literal>"
 
 #. type: Content of: <sect1><variablelist><varlistentry><term>
+#: lfs-en/chapter03/packages.xml
 msgid "D-Bus (&dbus-version;) - <token>&dbus-size;</token>:"
 msgstr "D-Bus (&dbus-version;) - <token>&dbus-size;</token>:"
 
 #. type: Content of: <sect1><variablelist><varlistentry><listitem><para>
+#: lfs-en/chapter03/packages.xml
 msgid "Home page: <ulink url=\"&dbus-home;\"/>"
 msgstr "主页：<ulink url=\"&dbus-home;\"/>"
 
 #. type: Content of: <sect1><variablelist><varlistentry><listitem><para>
+#: lfs-en/chapter03/packages.xml
 msgid "Download: <ulink url=\"&dbus-url;\"/>"
 msgstr "下载地址：<ulink url=\"&dbus-url;\"/>"
 
 #. type: Content of: <sect1><variablelist><varlistentry><listitem><para>
+#: lfs-en/chapter03/packages.xml
 msgid "MD5 sum: <literal>&dbus-md5;</literal>"
 msgstr "MD5 校验和：<literal>&dbus-md5;</literal>"
 
 #. type: Content of: <sect1><variablelist><varlistentry><term>
+#: lfs-en/chapter03/packages.xml
 msgid "DejaGNU (&dejagnu-version;) - <token>&dejagnu-size;</token>:"
 msgstr "DejaGNU (&dejagnu-version;) - <token>&dejagnu-size;</token>:"
 
 #. type: Content of: <sect1><variablelist><varlistentry><listitem><para>
+#: lfs-en/chapter03/packages.xml
 msgid "Home page: <ulink url=\"&dejagnu-home;\"/>"
 msgstr "主页：<ulink url=\"&dejagnu-home;\"/>"
 
 #. type: Content of: <sect1><variablelist><varlistentry><listitem><para>
+#: lfs-en/chapter03/packages.xml
 msgid "Download: <ulink url=\"&dejagnu-url;\"/>"
 msgstr "下载地址：<ulink url=\"&dejagnu-url;\"/>"
 
 #. type: Content of: <sect1><variablelist><varlistentry><listitem><para>
+#: lfs-en/chapter03/packages.xml
 msgid "MD5 sum: <literal>&dejagnu-md5;</literal>"
 msgstr "MD5 校验和：<literal>&dejagnu-md5;</literal>"
 
 #. type: Content of: <sect1><variablelist><varlistentry><term>
+#: lfs-en/chapter03/packages.xml
 msgid "Diffutils (&diffutils-version;) - <token>&diffutils-size;</token>:"
 msgstr "Diffutils (&diffutils-version;) - <token>&diffutils-size;</token>:"
 
 #. type: Content of: <sect1><variablelist><varlistentry><listitem><para>
+#: lfs-en/chapter03/packages.xml
 msgid "Home page: <ulink url=\"&diffutils-home;\"/>"
 msgstr "主页：<ulink url=\"&diffutils-home;\"/>"
 
 #. type: Content of: <sect1><variablelist><varlistentry><listitem><para>
+#: lfs-en/chapter03/packages.xml
 msgid "Download: <ulink url=\"&diffutils-url;\"/>"
 msgstr "下载地址：<ulink url=\"&diffutils-url;\"/>"
 
 #. type: Content of: <sect1><variablelist><varlistentry><listitem><para>
+#: lfs-en/chapter03/packages.xml
 msgid "MD5 sum: <literal>&diffutils-md5;</literal>"
 msgstr "MD5 校验和：<literal>&diffutils-md5;</literal>"
 
 #. type: Content of: <sect1><variablelist><varlistentry><term>
+#: lfs-en/chapter03/packages.xml
 msgid "E2fsprogs (&e2fsprogs-version;) - <token>&e2fsprogs-size;</token>:"
 msgstr "E2fsprogs (&e2fsprogs-version;) - <token>&e2fsprogs-size;</token>:"
 
 #. type: Content of: <sect1><variablelist><varlistentry><listitem><para>
+#: lfs-en/chapter03/packages.xml
 msgid "Home page: <ulink url=\"&e2fsprogs-home;\"/>"
 msgstr "主页：<ulink url=\"&e2fsprogs-home;\"/>"
 
 #. type: Content of: <sect1><variablelist><varlistentry><listitem><para>
+#: lfs-en/chapter03/packages.xml
 msgid "Download: <ulink url=\"&e2fsprogs-url;\"/>"
 msgstr "下载地址：<ulink url=\"&e2fsprogs-url;\"/>"
 
 #. type: Content of: <sect1><variablelist><varlistentry><listitem><para>
+#: lfs-en/chapter03/packages.xml
 msgid "MD5 sum: <literal>&e2fsprogs-md5;</literal>"
 msgstr "MD5 校验和：<literal>&e2fsprogs-md5;</literal>"
 
 #. type: Content of: <sect1><variablelist><varlistentry><term>
+#: lfs-en/chapter03/packages.xml
 msgid "Elfutils (&elfutils-version;) - <token>&elfutils-size;</token>:"
 msgstr "Elfutils (&elfutils-version;) - <token>&elfutils-size;</token>:"
 
 #. type: Content of: <sect1><variablelist><varlistentry><listitem><para>
+#: lfs-en/chapter03/packages.xml
 msgid "Home page: <ulink url=\"&elfutils-home;\"/>"
 msgstr "主页：<ulink url=\"&elfutils-home;\"/>"
 
 #. type: Content of: <sect1><variablelist><varlistentry><listitem><para>
+#: lfs-en/chapter03/packages.xml
 msgid "Download: <ulink url=\"&elfutils-url;\"/>"
 msgstr "下载地址：<ulink url=\"&elfutils-url;\"/>"
 
 #. type: Content of: <sect1><variablelist><varlistentry><listitem><para>
+#: lfs-en/chapter03/packages.xml
 msgid "MD5 sum: <literal>&elfutils-md5;</literal>"
 msgstr "MD5 校验和：<literal>&elfutils-md5;</literal>"
 
 #. type: Content of: <sect1><variablelist><varlistentry><term>
+#: lfs-en/chapter03/packages.xml
 msgid "Eudev (&eudev-version;) - <token>&eudev-size;</token>:"
 msgstr "Eudev (&eudev-version;) - <token>&eudev-size;</token>:"
 
 #. type: Content of: <sect1><variablelist><varlistentry><listitem><para>
+#: lfs-en/chapter03/packages.xml
 msgid "Download: <ulink url=\"&eudev-url;\"/>"
 msgstr "下载地址：<ulink url=\"&eudev-url;\"/>"
 
 #. type: Content of: <sect1><variablelist><varlistentry><listitem><para>
+#: lfs-en/chapter03/packages.xml
 msgid "MD5 sum: <literal>&eudev-md5;</literal>"
 msgstr "MD5 校验和：<literal>&eudev-md5;</literal>"
 
 #. type: Content of: <sect1><variablelist><varlistentry><term>
+#: lfs-en/chapter03/packages.xml
 msgid "Expat (&expat-version;) - <token>&expat-size;</token>:"
 msgstr "Expat (&expat-version;) - <token>&expat-size;</token>:"
 
 #. type: Content of: <sect1><variablelist><varlistentry><listitem><para>
+#: lfs-en/chapter03/packages.xml
 msgid "Home page: <ulink url=\"&expat-home;\"/>"
 msgstr "主页：<ulink url=\"&expat-home;\"/>"
 
 #. type: Content of: <sect1><variablelist><varlistentry><listitem><para>
+#: lfs-en/chapter03/packages.xml
 msgid "Download: <ulink url=\"&expat-url;\"/>"
 msgstr "下载地址：<ulink url=\"&expat-url;\"/>"
 
 #. type: Content of: <sect1><variablelist><varlistentry><listitem><para>
+#: lfs-en/chapter03/packages.xml
 msgid "MD5 sum: <literal>&expat-md5;</literal>"
 msgstr "MD5 校验和：<literal>&expat-md5;</literal>"
 
 #. type: Content of: <sect1><variablelist><varlistentry><term>
+#: lfs-en/chapter03/packages.xml
 msgid "Expect (&expect-version;) - <token>&expect-size;</token>:"
 msgstr "Expect (&expect-version;) - <token>&expect-size;</token>:"
 
 #. type: Content of: <sect1><variablelist><varlistentry><listitem><para>
+#: lfs-en/chapter03/packages.xml
 msgid "Home page: <ulink url=\"&expect-home;\"/>"
 msgstr "主页：<ulink url=\"&expect-home;\"/>"
 
 #. type: Content of: <sect1><variablelist><varlistentry><listitem><para>
+#: lfs-en/chapter03/packages.xml
 msgid "Download: <ulink url=\"&expect-url;\"/>"
 msgstr "下载地址：<ulink url=\"&expect-url;\"/>"
 
 #. type: Content of: <sect1><variablelist><varlistentry><listitem><para>
+#: lfs-en/chapter03/packages.xml
 msgid "MD5 sum: <literal>&expect-md5;</literal>"
 msgstr "MD5 校验和：<literal>&expect-md5;</literal>"
 
 #. type: Content of: <sect1><variablelist><varlistentry><term>
+#: lfs-en/chapter03/packages.xml
 msgid "File (&file-version;) - <token>&file-size;</token>:"
 msgstr "File (&file-version;) - <token>&file-size;</token>:"
 
 #. type: Content of: <sect1><variablelist><varlistentry><listitem><para>
+#: lfs-en/chapter03/packages.xml
 msgid "Home page: <ulink url=\"&file-home;\"/>"
 msgstr "主页：<ulink url=\"&file-home;\"/>"
 
 #. type: Content of: <sect1><variablelist><varlistentry><listitem><para>
+#: lfs-en/chapter03/packages.xml
 msgid "Download: <ulink url=\"&file-url;\"/>"
 msgstr "下载地址：<ulink url=\"&file-url;\"/>"
 
 #. type: Content of: <sect1><variablelist><varlistentry><listitem><para>
+#: lfs-en/chapter03/packages.xml
 msgid "MD5 sum: <literal>&file-md5;</literal>"
 msgstr "MD5 校验和：<literal>&file-md5;</literal>"
 
 #. type: Content of: <sect1><variablelist><varlistentry><term>
+#: lfs-en/chapter03/packages.xml
 msgid "Findutils (&findutils-version;) - <token>&findutils-size;</token>:"
 msgstr "Findutils (&findutils-version;) - <token>&findutils-size;</token>:"
 
 #. type: Content of: <sect1><variablelist><varlistentry><listitem><para>
+#: lfs-en/chapter03/packages.xml
 msgid "Home page: <ulink url=\"&findutils-home;\"/>"
 msgstr "主页：<ulink url=\"&findutils-home;\"/>"
 
 #. type: Content of: <sect1><variablelist><varlistentry><listitem><para>
+#: lfs-en/chapter03/packages.xml
 msgid "Download: <ulink url=\"&findutils-url;\"/>"
 msgstr "下载地址：<ulink url=\"&findutils-url;\"/>"
 
 #. type: Content of: <sect1><variablelist><varlistentry><listitem><para>
+#: lfs-en/chapter03/packages.xml
 msgid "MD5 sum: <literal>&findutils-md5;</literal>"
 msgstr "MD5 校验和：<literal>&findutils-md5;</literal>"
 
 #. type: Content of: <sect1><variablelist><varlistentry><term>
+#: lfs-en/chapter03/packages.xml
 msgid "Flex (&flex-version;) - <token>&flex-size;</token>:"
 msgstr "Flex (&flex-version;) - <token>&flex-size;</token>:"
 
 #. type: Content of: <sect1><variablelist><varlistentry><listitem><para>
+#: lfs-en/chapter03/packages.xml
 msgid "Home page: <ulink url=\"&flex-home;\"/>"
 msgstr "主页：<ulink url=\"&flex-home;\"/>"
 
 #. type: Content of: <sect1><variablelist><varlistentry><listitem><para>
+#: lfs-en/chapter03/packages.xml
 msgid "Download: <ulink url=\"&flex-url;\"/>"
 msgstr "下载地址：<ulink url=\"&flex-url;\"/>"
 
 #. type: Content of: <sect1><variablelist><varlistentry><listitem><para>
+#: lfs-en/chapter03/packages.xml
 msgid "MD5 sum: <literal>&flex-md5;</literal>"
 msgstr "MD5 校验和：<literal>&flex-md5;</literal>"
 
 #. type: Content of: <sect1><variablelist><varlistentry><term>
+#: lfs-en/chapter03/packages.xml
 msgid "Gawk (&gawk-version;) - <token>&gawk-size;</token>:"
 msgstr "Gawk (&gawk-version;) - <token>&gawk-size;</token>:"
 
 #. type: Content of: <sect1><variablelist><varlistentry><listitem><para>
+#: lfs-en/chapter03/packages.xml
 msgid "Home page: <ulink url=\"&gawk-home;\"/>"
 msgstr "主页：<ulink url=\"&gawk-home;\"/>"
 
 #. type: Content of: <sect1><variablelist><varlistentry><listitem><para>
+#: lfs-en/chapter03/packages.xml
 msgid "Download: <ulink url=\"&gawk-url;\"/>"
 msgstr "下载地址：<ulink url=\"&gawk-url;\"/>"
 
 #. type: Content of: <sect1><variablelist><varlistentry><listitem><para>
+#: lfs-en/chapter03/packages.xml
 msgid "MD5 sum: <literal>&gawk-md5;</literal>"
 msgstr "MD5 校验和：<literal>&gawk-md5;</literal>"
 
 #. type: Content of: <sect1><variablelist><varlistentry><term>
+#: lfs-en/chapter03/packages.xml
 msgid "GCC (&gcc-version;) - <token>&gcc-size;</token>:"
 msgstr "GCC (&gcc-version;) - <token>&gcc-size;</token>:"
 
 #. type: Content of: <sect1><variablelist><varlistentry><listitem><para>
+#: lfs-en/chapter03/packages.xml
 msgid "Home page: <ulink url=\"&gcc-home;\"/>"
 msgstr "主页：<ulink url=\"&gcc-home;\"/>"
 
 #. type: Content of: <sect1><variablelist><varlistentry><listitem><para>
+#: lfs-en/chapter03/packages.xml
 msgid "Download: <ulink url=\"&gcc-url;\"/>"
 msgstr "下载地址：<ulink url=\"&gcc-url;\"/>"
 
 #. type: Content of: <sect1><variablelist><varlistentry><listitem><para>
+#: lfs-en/chapter03/packages.xml
 msgid "MD5 sum: <literal>&gcc-md5;</literal>"
 msgstr "MD5 校验和：<literal>&gcc-md5;</literal>"
 
 #. type: Content of: <sect1><variablelist><varlistentry><listitem><para>
+#: lfs-en/chapter03/packages.xml
 msgid "SHA256 sum: <literal>&gcc-sha256;</literal>"
 msgstr "SHA256 校验和：<literal>&gcc-sha256;</literal>"
 
 #. type: Content of: <sect1><variablelist><varlistentry><term>
+#: lfs-en/chapter03/packages.xml
 msgid "GDBM (&gdbm-version;) - <token>&gdbm-size;</token>:"
 msgstr "GDBM (&gdbm-version;) - <token>&gdbm-size;</token>:"
 
 #. type: Content of: <sect1><variablelist><varlistentry><listitem><para>
+#: lfs-en/chapter03/packages.xml
 msgid "Home page: <ulink url=\"&gdbm-home;\"/>"
 msgstr "主页：<ulink url=\"&gdbm-home;\"/>"
 
 #. type: Content of: <sect1><variablelist><varlistentry><listitem><para>
+#: lfs-en/chapter03/packages.xml
 msgid "Download: <ulink url=\"&gdbm-url;\"/>"
 msgstr "下载地址：<ulink url=\"&gdbm-url;\"/>"
 
 #. type: Content of: <sect1><variablelist><varlistentry><listitem><para>
+#: lfs-en/chapter03/packages.xml
 msgid "MD5 sum: <literal>&gdbm-md5;</literal>"
 msgstr "MD5 校验和：<literal>&gdbm-md5;</literal>"
 
 #. type: Content of: <sect1><variablelist><varlistentry><term>
+#: lfs-en/chapter03/packages.xml
 msgid "Gettext (&gettext-version;) - <token>&gettext-size;</token>:"
 msgstr "Gettext (&gettext-version;) - <token>&gettext-size;</token>:"
 
 #. type: Content of: <sect1><variablelist><varlistentry><listitem><para>
+#: lfs-en/chapter03/packages.xml
 msgid "Home page: <ulink url=\"&gettext-home;\"/>"
 msgstr "主页：<ulink url=\"&gettext-home;\"/>"
 
 #. type: Content of: <sect1><variablelist><varlistentry><listitem><para>
+#: lfs-en/chapter03/packages.xml
 msgid "Download: <ulink url=\"&gettext-url;\"/>"
 msgstr "下载地址：<ulink url=\"&gettext-url;\"/>"
 
 #. type: Content of: <sect1><variablelist><varlistentry><listitem><para>
+#: lfs-en/chapter03/packages.xml
 msgid "MD5 sum: <literal>&gettext-md5;</literal>"
 msgstr "MD5 校验和：<literal>&gettext-md5;</literal>"
 
 #. type: Content of: <sect1><variablelist><varlistentry><term>
+#: lfs-en/chapter03/packages.xml
 msgid "Glibc (&glibc-version;) - <token>&glibc-size;</token>:"
 msgstr "Glibc (&glibc-version;) - <token>&glibc-size;</token>:"
 
 #. type: Content of: <sect1><variablelist><varlistentry><listitem><para>
+#: lfs-en/chapter03/packages.xml
 msgid "Home page: <ulink url=\"&glibc-home;\"/>"
 msgstr "主页：<ulink url=\"&glibc-home;\"/>"
 
 #. type: Content of: <sect1><variablelist><varlistentry><listitem><para>
+#: lfs-en/chapter03/packages.xml
 msgid "Download: <ulink url=\"&glibc-url;\"/>"
 msgstr "下载地址：<ulink url=\"&glibc-url;\"/>"
 
 #. type: Content of: <sect1><variablelist><varlistentry><listitem><para>
+#: lfs-en/chapter03/packages.xml
 msgid "MD5 sum: <literal>&glibc-md5;</literal>"
 msgstr "MD5 校验和：<literal>&glibc-md5;</literal>"
 
 #. type: Content of: <sect1><variablelist><varlistentry><term>
+#: lfs-en/chapter03/packages.xml
 msgid "GMP (&gmp-version;) - <token>&gmp-size;</token>:"
 msgstr "GMP (&gmp-version;) - <token>&gmp-size;</token>:"
 
 #. type: Content of: <sect1><variablelist><varlistentry><listitem><para>
+#: lfs-en/chapter03/packages.xml
 msgid "Home page: <ulink url=\"&gmp-home;\"/>"
 msgstr "主页：<ulink url=\"&gmp-home;\"/>"
 
 #. type: Content of: <sect1><variablelist><varlistentry><listitem><para>
+#: lfs-en/chapter03/packages.xml
 msgid "Download: <ulink url=\"&gmp-url;\"/>"
 msgstr "下载地址：<ulink url=\"&gmp-url;\"/>"
 
 #. type: Content of: <sect1><variablelist><varlistentry><listitem><para>
+#: lfs-en/chapter03/packages.xml
 msgid "MD5 sum: <literal>&gmp-md5;</literal>"
 msgstr "MD5 校验和：<literal>&gmp-md5;</literal>"
 
 #. type: Content of: <sect1><variablelist><varlistentry><term>
+#: lfs-en/chapter03/packages.xml
 msgid "Gperf (&gperf-version;) - <token>&gperf-size;</token>:"
 msgstr "Gperf (&gperf-version;) - <token>&gperf-size;</token>:"
 
 #. type: Content of: <sect1><variablelist><varlistentry><listitem><para>
+#: lfs-en/chapter03/packages.xml
 msgid "Home page: <ulink url=\"&gperf-home;\"/>"
 msgstr "主页：<ulink url=\"&gperf-home;\"/>"
 
 #. type: Content of: <sect1><variablelist><varlistentry><listitem><para>
+#: lfs-en/chapter03/packages.xml
 msgid "Download: <ulink url=\"&gperf-url;\"/>"
 msgstr "下载地址：<ulink url=\"&gperf-url;\"/>"
 
 #. type: Content of: <sect1><variablelist><varlistentry><listitem><para>
+#: lfs-en/chapter03/packages.xml
 msgid "MD5 sum: <literal>&gperf-md5;</literal>"
 msgstr "MD5 校验和：<literal>&gperf-md5;</literal>"
 
 #. type: Content of: <sect1><variablelist><varlistentry><term>
+#: lfs-en/chapter03/packages.xml
 msgid "Grep (&grep-version;) - <token>&grep-size;</token>:"
 msgstr "Grep (&grep-version;) - <token>&grep-size;</token>:"
 
 #. type: Content of: <sect1><variablelist><varlistentry><listitem><para>
+#: lfs-en/chapter03/packages.xml
 msgid "Home page: <ulink url=\"&grep-home;\"/>"
 msgstr "主页：<ulink url=\"&grep-home;\"/>"
 
 #. type: Content of: <sect1><variablelist><varlistentry><listitem><para>
+#: lfs-en/chapter03/packages.xml
 msgid "Download: <ulink url=\"&grep-url;\"/>"
 msgstr "下载地址：<ulink url=\"&grep-url;\"/>"
 
 #. type: Content of: <sect1><variablelist><varlistentry><listitem><para>
+#: lfs-en/chapter03/packages.xml
 msgid "MD5 sum: <literal>&grep-md5;</literal>"
 msgstr "MD5 校验和：<literal>&grep-md5;</literal>"
 
 #. type: Content of: <sect1><variablelist><varlistentry><term>
+#: lfs-en/chapter03/packages.xml
 msgid "Groff (&groff-version;) - <token>&groff-size;</token>:"
 msgstr "Groff (&groff-version;) - <token>&groff-size;</token>:"
 
 #. type: Content of: <sect1><variablelist><varlistentry><listitem><para>
+#: lfs-en/chapter03/packages.xml
 msgid "Home page: <ulink url=\"&groff-home;\"/>"
 msgstr "主页：<ulink url=\"&groff-home;\"/>"
 
 #. type: Content of: <sect1><variablelist><varlistentry><listitem><para>
+#: lfs-en/chapter03/packages.xml
 msgid "Download: <ulink url=\"&groff-url;\"/>"
 msgstr "下载地址：<ulink url=\"&groff-url;\"/>"
 
 #. type: Content of: <sect1><variablelist><varlistentry><listitem><para>
+#: lfs-en/chapter03/packages.xml
 msgid "MD5 sum: <literal>&groff-md5;</literal>"
 msgstr "MD5 校验和：<literal>&groff-md5;</literal>"
 
 #. type: Content of: <sect1><variablelist><varlistentry><term>
+#: lfs-en/chapter03/packages.xml
 msgid "GRUB (&grub-version;) - <token>&grub-size;</token>:"
 msgstr "GRUB (&grub-version;) - <token>&grub-size;</token>:"
 
 #. type: Content of: <sect1><variablelist><varlistentry><listitem><para>
+#: lfs-en/chapter03/packages.xml
 msgid "Home page: <ulink url=\"&grub-home;\"/>"
 msgstr "主页：<ulink url=\"&grub-home;\"/>"
 
 #. type: Content of: <sect1><variablelist><varlistentry><listitem><para>
+#: lfs-en/chapter03/packages.xml
 msgid "Download: <ulink url=\"&grub-url;\"/>"
 msgstr "下载地址：<ulink url=\"&grub-url;\"/>"
 
 #. type: Content of: <sect1><variablelist><varlistentry><listitem><para>
+#: lfs-en/chapter03/packages.xml
 msgid "MD5 sum: <literal>&grub-md5;</literal>"
 msgstr "MD5 校验和：<literal>&grub-md5;</literal>"
 
 #. type: Content of: <sect1><variablelist><varlistentry><term>
+#: lfs-en/chapter03/packages.xml
 msgid "Gzip (&gzip-version;) - <token>&gzip-size;</token>:"
 msgstr "Gzip (&gzip-version;) - <token>&gzip-size;</token>:"
 
 #. type: Content of: <sect1><variablelist><varlistentry><listitem><para>
+#: lfs-en/chapter03/packages.xml
 msgid "Home page: <ulink url=\"&gzip-home;\"/>"
 msgstr "主页：<ulink url=\"&gzip-home;\"/>"
 
 #. type: Content of: <sect1><variablelist><varlistentry><listitem><para>
+#: lfs-en/chapter03/packages.xml
 msgid "Download: <ulink url=\"&gzip-url;\"/>"
 msgstr "下载地址：<ulink url=\"&gzip-url;\"/>"
 
 #. type: Content of: <sect1><variablelist><varlistentry><listitem><para>
+#: lfs-en/chapter03/packages.xml
 msgid "MD5 sum: <literal>&gzip-md5;</literal>"
 msgstr "MD5 校验和：<literal>&gzip-md5;</literal>"
 
 #. type: Content of: <sect1><variablelist><varlistentry><term>
+#: lfs-en/chapter03/packages.xml
 msgid "Iana-Etc (&iana-etc-version;) - <token>&iana-etc-size;</token>:"
 msgstr "Iana-Etc (&iana-etc-version;) - <token>&iana-etc-size;</token>:"
 
 #. type: Content of: <sect1><variablelist><varlistentry><listitem><para>
+#: lfs-en/chapter03/packages.xml
 msgid "Home page: <ulink url=\"&iana-etc-home;\"/>"
 msgstr "主页：<ulink url=\"&iana-etc-home;\"/>"
 
 #. type: Content of: <sect1><variablelist><varlistentry><listitem><para>
+#: lfs-en/chapter03/packages.xml
 msgid "Download: <ulink url=\"&iana-etc-url;\"/>"
 msgstr "下载地址：<ulink url=\"&iana-etc-url;\"/>"
 
 #. type: Content of: <sect1><variablelist><varlistentry><listitem><para>
+#: lfs-en/chapter03/packages.xml
 msgid "MD5 sum: <literal>&iana-etc-md5;</literal>"
 msgstr "MD5 校验和：<literal>&iana-etc-md5;</literal>"
 
 #. type: Content of: <sect1><variablelist><varlistentry><term>
+#: lfs-en/chapter03/packages.xml
 msgid "Inetutils (&inetutils-version;) - <token>&inetutils-size;</token>:"
 msgstr "Inetutils (&inetutils-version;) - <token>&inetutils-size;</token>:"
 
 #. type: Content of: <sect1><variablelist><varlistentry><listitem><para>
+#: lfs-en/chapter03/packages.xml
 msgid "Home page: <ulink url=\"&inetutils-home;\"/>"
 msgstr "主页：<ulink url=\"&inetutils-home;\"/>"
 
 #. type: Content of: <sect1><variablelist><varlistentry><listitem><para>
+#: lfs-en/chapter03/packages.xml
 msgid "Download: <ulink url=\"&inetutils-url;\"/>"
 msgstr "下载地址：<ulink url=\"&inetutils-url;\"/>"
 
 #. type: Content of: <sect1><variablelist><varlistentry><listitem><para>
+#: lfs-en/chapter03/packages.xml
 msgid "MD5 sum: <literal>&inetutils-md5;</literal>"
 msgstr "MD5 校验和：<literal>&inetutils-md5;</literal>"
 
 #. type: Content of: <sect1><variablelist><varlistentry><listitem><para>
+#: lfs-en/chapter03/packages.xml
 msgid "SHA256 sum: <literal>&inetutils-sha256;</literal>"
 msgstr "SHA256 校验和：<literal>&inetutils-sha256;</literal>"
 
 #. type: Content of: <sect1><variablelist><varlistentry><term>
+#: lfs-en/chapter03/packages.xml
 msgid "Intltool (&intltool-version;) - <token>&intltool-size;</token>:"
 msgstr "Intltool (&intltool-version;) - <token>&intltool-size;</token>:"
 
 #. type: Content of: <sect1><variablelist><varlistentry><listitem><para>
+#: lfs-en/chapter03/packages.xml
 msgid "Home page: <ulink url=\"&intltool-home;\"/>"
 msgstr "主页：<ulink url=\"&intltool-home;\"/>"
 
 #. type: Content of: <sect1><variablelist><varlistentry><listitem><para>
+#: lfs-en/chapter03/packages.xml
 msgid "Download: <ulink url=\"&intltool-url;\"/>"
 msgstr "下载地址：<ulink url=\"&intltool-url;\"/>"
 
 #. type: Content of: <sect1><variablelist><varlistentry><listitem><para>
+#: lfs-en/chapter03/packages.xml
 msgid "MD5 sum: <literal>&intltool-md5;</literal>"
 msgstr "MD5 校验和：<literal>&intltool-md5;</literal>"
 
 #. type: Content of: <sect1><variablelist><varlistentry><term>
+#: lfs-en/chapter03/packages.xml
 msgid "IPRoute2 (&iproute2-version;) - <token>&iproute2-size;</token>:"
 msgstr "IPRoute2 (&iproute2-version;) - <token>&iproute2-size;</token>:"
 
 #. type: Content of: <sect1><variablelist><varlistentry><listitem><para>
+#: lfs-en/chapter03/packages.xml
 msgid "Home page: <ulink url=\"&iproute2-home;\"/>"
 msgstr "主页：<ulink url=\"&iproute2-home;\"/>"
 
 #. type: Content of: <sect1><variablelist><varlistentry><listitem><para>
+#: lfs-en/chapter03/packages.xml
 msgid "Download: <ulink url=\"&iproute2-url;\"/>"
 msgstr "下载地址：<ulink url=\"&iproute2-url;\"/>"
 
 #. type: Content of: <sect1><variablelist><varlistentry><listitem><para>
+#: lfs-en/chapter03/packages.xml
 msgid "MD5 sum: <literal>&iproute2-md5;</literal>"
 msgstr "MD5 校验和：<literal>&iproute2-md5;</literal>"
 
 #. type: Content of: <sect1><variablelist><varlistentry><term>
+#: lfs-en/chapter03/packages.xml
 msgid "Jinja2 (&jinja2-version;) - <token>&jinja2-size;</token>:"
 msgstr "Jinja2 (&jinja2-version;) - <token>&jinja2-size;</token>:"
 
 #. type: Content of: <sect1><variablelist><varlistentry><listitem><para>
+#: lfs-en/chapter03/packages.xml
 msgid "Home page: <ulink url=\"&jinja2-home;\"/>"
 msgstr "主页：<ulink url=\"&jinja2-home;\"/>"
 
 #. type: Content of: <sect1><variablelist><varlistentry><listitem><para>
+#: lfs-en/chapter03/packages.xml
 msgid "Download: <ulink url=\"&jinja2-url;\"/>"
 msgstr "下载地址：<ulink url=\"&jinja2-url;\"/>"
 
 #. type: Content of: <sect1><variablelist><varlistentry><listitem><para>
+#: lfs-en/chapter03/packages.xml
 msgid "MD5 sum: <literal>&jinja2-md5;</literal>"
 msgstr "MD5 校验和：<literal>&jinja2-md5;</literal>"
 
 #. type: Content of: <sect1><variablelist><varlistentry><term>
+#: lfs-en/chapter03/packages.xml
 msgid "Kbd (&kbd-version;) - <token>&kbd-size;</token>:"
 msgstr "Kbd (&kbd-version;) - <token>&kbd-size;</token>:"
 
 #. type: Content of: <sect1><variablelist><varlistentry><listitem><para>
+#: lfs-en/chapter03/packages.xml
 msgid "Home page: <ulink url=\"&kbd-home;\"/>"
 msgstr "主页：<ulink url=\"&kbd-home;\"/>"
 
 #. type: Content of: <sect1><variablelist><varlistentry><listitem><para>
+#: lfs-en/chapter03/packages.xml
 msgid "Download: <ulink url=\"&kbd-url;\"/>"
 msgstr "下载地址：<ulink url=\"&kbd-url;\"/>"
 
 #. type: Content of: <sect1><variablelist><varlistentry><listitem><para>
+#: lfs-en/chapter03/packages.xml
 msgid "MD5 sum: <literal>&kbd-md5;</literal>"
 msgstr "MD5 校验和：<literal>&kbd-md5;</literal>"
 
 #. type: Content of: <sect1><variablelist><varlistentry><term>
+#: lfs-en/chapter03/packages.xml
 msgid "Kmod (&kmod-version;) - <token>&kmod-size;</token>:"
 msgstr "Kmod (&kmod-version;) - <token>&kmod-size;</token>:"
 
 #. type: Content of: <sect1><variablelist><varlistentry><listitem><para>
+#: lfs-en/chapter03/packages.xml
 msgid "Home page: <ulink url=\"&kmod-home;\"/>"
 msgstr "主页：<ulink url=\"&kmod-home;\"/>"
 
 #. type: Content of: <sect1><variablelist><varlistentry><listitem><para>
+#: lfs-en/chapter03/packages.xml
 msgid "Download: <ulink url=\"&kmod-url;\"/>"
 msgstr "下载地址：<ulink url=\"&kmod-url;\"/>"
 
 #. type: Content of: <sect1><variablelist><varlistentry><listitem><para>
+#: lfs-en/chapter03/packages.xml
 msgid "MD5 sum: <literal>&kmod-md5;</literal>"
 msgstr "MD5 校验和：<literal>&kmod-md5;</literal>"
 
 #. type: Content of: <sect1><variablelist><varlistentry><term>
+#: lfs-en/chapter03/packages.xml
 msgid "Less (&less-version;) - <token>&less-size;</token>:"
 msgstr "Less (&less-version;) - <token>&less-size;</token>:"
 
 #. type: Content of: <sect1><variablelist><varlistentry><listitem><para>
+#: lfs-en/chapter03/packages.xml
 msgid "Home page: <ulink url=\"&less-home;\"/>"
 msgstr "主页：<ulink url=\"&less-home;\"/>"
 
 #. type: Content of: <sect1><variablelist><varlistentry><listitem><para>
+#: lfs-en/chapter03/packages.xml
 msgid "Download: <ulink url=\"&less-url;\"/>"
 msgstr "下载地址：<ulink url=\"&less-url;\"/>"
 
 #. type: Content of: <sect1><variablelist><varlistentry><listitem><para>
+#: lfs-en/chapter03/packages.xml
 msgid "MD5 sum: <literal>&less-md5;</literal>"
 msgstr "MD5 校验和：<literal>&less-md5;</literal>"
 
 #. type: Content of: <sect1><variablelist><varlistentry><term>
+#: lfs-en/chapter03/packages.xml
 msgid ""
 "LFS-Bootscripts (&lfs-bootscripts-version;) - <token>&lfs-bootscripts-size;</"
 "token>:"
@@ -722,102 +892,126 @@ msgstr ""
 "token>:"
 
 #. type: Content of: <sect1><variablelist><varlistentry><listitem><para>
+#: lfs-en/chapter03/packages.xml
 msgid "Home page: <ulink url=\"&lfs-bootscripts-home;\"/>"
 msgstr "主页：<ulink url=\"&lfs-bootscripts-home;\"/>"
 
 #. type: Content of: <sect1><variablelist><varlistentry><listitem><para>
+#: lfs-en/chapter03/packages.xml
 msgid "Download: <ulink url=\"&lfs-bootscripts-url;\"/>"
 msgstr "下载地址：<ulink url=\"&lfs-bootscripts-url;\"/>"
 
 #. type: Content of: <sect1><variablelist><varlistentry><listitem><para>
+#: lfs-en/chapter03/packages.xml
 msgid "MD5 sum: <literal>&lfs-bootscripts-md5;</literal>"
 msgstr "MD5 校验和：<literal>&lfs-bootscripts-md5;</literal>"
 
 #. type: Content of: <sect1><variablelist><varlistentry><term>
+#: lfs-en/chapter03/packages.xml
 msgid "Libcap (&libcap-version;) - <token>&libcap-size;</token>:"
 msgstr "Libcap (&libcap-version;) - <token>&libcap-size;</token>:"
 
 #. type: Content of: <sect1><variablelist><varlistentry><listitem><para>
+#: lfs-en/chapter03/packages.xml
 msgid "Home page: <ulink url=\"&libcap-home;\"/>"
 msgstr "主页：<ulink url=\"&libcap-home;\"/>"
 
 #. type: Content of: <sect1><variablelist><varlistentry><listitem><para>
+#: lfs-en/chapter03/packages.xml
 msgid "Download: <ulink url=\"&libcap-url;\"/>"
 msgstr "下载地址：<ulink url=\"&libcap-url;\"/>"
 
 #. type: Content of: <sect1><variablelist><varlistentry><listitem><para>
+#: lfs-en/chapter03/packages.xml
 msgid "MD5 sum: <literal>&libcap-md5;</literal>"
 msgstr "MD5 校验和：<literal>&libcap-md5;</literal>"
 
 #. type: Content of: <sect1><variablelist><varlistentry><term>
+#: lfs-en/chapter03/packages.xml
 msgid "Libffi (&libffi-version;) - <token>&libffi-size;</token>:"
 msgstr "Libffi (&libffi-version;) - <token>&libffi-size;</token>:"
 
 #. type: Content of: <sect1><variablelist><varlistentry><listitem><para>
+#: lfs-en/chapter03/packages.xml
 msgid "Home page: <ulink url=\"&libffi-home;\"/>"
 msgstr "主页：<ulink url=\"&libffi-home;\"/>"
 
 #. type: Content of: <sect1><variablelist><varlistentry><listitem><para>
+#: lfs-en/chapter03/packages.xml
 msgid "Download: <ulink url=\"&libffi-url;\"/>"
 msgstr "下载地址：<ulink url=\"&libffi-url;\"/>"
 
 #. type: Content of: <sect1><variablelist><varlistentry><listitem><para>
+#: lfs-en/chapter03/packages.xml
 msgid "MD5 sum: <literal>&libffi-md5;</literal>"
 msgstr "MD5 校验和：<literal>&libffi-md5;</literal>"
 
 #. type: Content of: <sect1><variablelist><varlistentry><term>
+#: lfs-en/chapter03/packages.xml
 msgid ""
 "Libpipeline (&libpipeline-version;) - <token>&libpipeline-size;</token>:"
 msgstr ""
 "Libpipeline (&libpipeline-version;) - <token>&libpipeline-size;</token>:"
 
 #. type: Content of: <sect1><variablelist><varlistentry><listitem><para>
+#: lfs-en/chapter03/packages.xml
 msgid "Home page: <ulink url=\"&libpipeline-home;\"/>"
 msgstr "主页：<ulink url=\"&libpipeline-home;\"/>"
 
 #. type: Content of: <sect1><variablelist><varlistentry><listitem><para>
+#: lfs-en/chapter03/packages.xml
 msgid "Download: <ulink url=\"&libpipeline-url;\"/>"
 msgstr "下载地址：<ulink url=\"&libpipeline-url;\"/>"
 
 #. type: Content of: <sect1><variablelist><varlistentry><listitem><para>
+#: lfs-en/chapter03/packages.xml
 msgid "MD5 sum: <literal>&libpipeline-md5;</literal>"
 msgstr "MD5 校验和：<literal>&libpipeline-md5;</literal>"
 
 #. type: Content of: <sect1><variablelist><varlistentry><term>
+#: lfs-en/chapter03/packages.xml
 msgid "Libtool (&libtool-version;) - <token>&libtool-size;</token>:"
 msgstr "Libtool (&libtool-version;) - <token>&libtool-size;</token>:"
 
 #. type: Content of: <sect1><variablelist><varlistentry><listitem><para>
+#: lfs-en/chapter03/packages.xml
 msgid "Home page: <ulink url=\"&libtool-home;\"/>"
 msgstr "主页：<ulink url=\"&libtool-home;\"/>"
 
 #. type: Content of: <sect1><variablelist><varlistentry><listitem><para>
+#: lfs-en/chapter03/packages.xml
 msgid "Download: <ulink url=\"&libtool-url;\"/>"
 msgstr "下载地址：<ulink url=\"&libtool-url;\"/>"
 
 #. type: Content of: <sect1><variablelist><varlistentry><listitem><para>
+#: lfs-en/chapter03/packages.xml
 msgid "MD5 sum: <literal>&libtool-md5;</literal>"
 msgstr "MD5 校验和：<literal>&libtool-md5;</literal>"
 
 #. type: Content of: <sect1><variablelist><varlistentry><term>
+#: lfs-en/chapter03/packages.xml
 msgid "Linux (&linux-version;) - <token>&linux-size;</token>:"
 msgstr "Linux (&linux-version;) - <token>&linux-size;</token>:"
 
 #. type: Content of: <sect1><variablelist><varlistentry><listitem><para>
+#: lfs-en/chapter03/packages.xml
 msgid "Home page: <ulink url=\"&linux-home;\"/>"
 msgstr "主页：<ulink url=\"&linux-home;\"/>"
 
 #. type: Content of: <sect1><variablelist><varlistentry><listitem><para>
+#: lfs-en/chapter03/packages.xml
 msgid "Download: <ulink url=\"&linux-url;\"/>"
 msgstr "下载地址：<ulink url=\"&linux-url;\"/>"
 
 #. type: Content of: <sect1><variablelist><varlistentry><listitem><para>
+#: lfs-en/chapter03/packages.xml
 msgid "MD5 sum: <literal>&linux-md5;</literal>"
 msgstr "MD5 校验和：<literal>&linux-md5;</literal>"
 
 #. &linux-major-version;.&linux-minor-version;.x
 #. should
 #. type: Content of: <sect1><variablelist><varlistentry><listitem><note><para>
+#: lfs-en/chapter03/packages.xml
 msgid ""
 "The Linux kernel is updated relatively often, many times due to discoveries "
 "of security vulnerabilities.  The latest available stable kernel version may "
@@ -827,6 +1021,7 @@ msgstr ""
 "确说明，应该使用内核的最新稳定版本。"
 
 #. type: Content of: <sect1><variablelist><varlistentry><listitem><note><para>
+#: lfs-en/chapter03/packages.xml
 msgid ""
 "For users with limited speed or expensive bandwidth who wish to update the "
 "Linux kernel, a baseline version of the package and patches can be "
@@ -837,385 +1032,480 @@ msgstr ""
 "可以节省内核修订号更新时的下载时间和网费。"
 
 #. type: Content of: <sect1><variablelist><varlistentry><term>
+#: lfs-en/chapter03/packages.xml
 msgid "M4 (&m4-version;) - <token>&m4-size;</token>:"
 msgstr "M4 (&m4-version;) - <token>&m4-size;</token>:"
 
 #. type: Content of: <sect1><variablelist><varlistentry><listitem><para>
+#: lfs-en/chapter03/packages.xml
 msgid "Home page: <ulink url=\"&m4-home;\"/>"
 msgstr "主页：<ulink url=\"&m4-home;\"/>"
 
 #. type: Content of: <sect1><variablelist><varlistentry><listitem><para>
+#: lfs-en/chapter03/packages.xml
 msgid "Download: <ulink url=\"&m4-url;\"/>"
 msgstr "下载地址：<ulink url=\"&m4-url;\"/>"
 
 #. type: Content of: <sect1><variablelist><varlistentry><listitem><para>
+#: lfs-en/chapter03/packages.xml
 msgid "MD5 sum: <literal>&m4-md5;</literal>"
 msgstr "MD5 校验和：<literal>&m4-md5;</literal>"
 
 #. type: Content of: <sect1><variablelist><varlistentry><term>
+#: lfs-en/chapter03/packages.xml
 msgid "Make (&make-version;) - <token>&make-size;</token>:"
 msgstr "Make (&make-version;) - <token>&make-size;</token>:"
 
 #. type: Content of: <sect1><variablelist><varlistentry><listitem><para>
+#: lfs-en/chapter03/packages.xml
 msgid "Home page: <ulink url=\"&make-home;\"/>"
 msgstr "主页：<ulink url=\"&make-home;\"/>"
 
 #. type: Content of: <sect1><variablelist><varlistentry><listitem><para>
+#: lfs-en/chapter03/packages.xml
 msgid "Download: <ulink url=\"&make-url;\"/>"
 msgstr "下载地址：<ulink url=\"&make-url;\"/>"
 
 #. type: Content of: <sect1><variablelist><varlistentry><listitem><para>
+#: lfs-en/chapter03/packages.xml
 msgid "MD5 sum: <literal>&make-md5;</literal>"
 msgstr "MD5 校验和：<literal>&make-md5;</literal>"
 
 #. type: Content of: <sect1><variablelist><varlistentry><term>
+#: lfs-en/chapter03/packages.xml
 msgid "Man-DB (&man-db-version;) - <token>&man-db-size;</token>:"
 msgstr "Man-DB (&man-db-version;) - <token>&man-db-size;</token>:"
 
 #. type: Content of: <sect1><variablelist><varlistentry><listitem><para>
+#: lfs-en/chapter03/packages.xml
 msgid "Home page: <ulink url=\"&man-db-home;\"/>"
 msgstr "主页：<ulink url=\"&man-db-home;\"/>"
 
 #. type: Content of: <sect1><variablelist><varlistentry><listitem><para>
+#: lfs-en/chapter03/packages.xml
 msgid "Download: <ulink url=\"&man-db-url;\"/>"
 msgstr "下载地址：<ulink url=\"&man-db-url;\"/>"
 
 #. type: Content of: <sect1><variablelist><varlistentry><listitem><para>
+#: lfs-en/chapter03/packages.xml
 msgid "MD5 sum: <literal>&man-db-md5;</literal>"
 msgstr "MD5 校验和：<literal>&man-db-md5;</literal>"
 
 #. type: Content of: <sect1><variablelist><varlistentry><term>
+#: lfs-en/chapter03/packages.xml
 msgid "Man-pages (&man-pages-version;) - <token>&man-pages-size;</token>:"
 msgstr "Man-pages (&man-pages-version;) - <token>&man-pages-size;</token>:"
 
 #. type: Content of: <sect1><variablelist><varlistentry><listitem><para>
+#: lfs-en/chapter03/packages.xml
 msgid "Home page: <ulink url=\"&man-pages-home;\"/>"
 msgstr "主页：<ulink url=\"&man-pages-home;\"/>"
 
 #. type: Content of: <sect1><variablelist><varlistentry><listitem><para>
+#: lfs-en/chapter03/packages.xml
 msgid "Download: <ulink url=\"&man-pages-url;\"/>"
 msgstr "下载地址：<ulink url=\"&man-pages-url;\"/>"
 
 #. type: Content of: <sect1><variablelist><varlistentry><listitem><para>
+#: lfs-en/chapter03/packages.xml
 msgid "MD5 sum: <literal>&man-pages-md5;</literal>"
 msgstr "MD5 校验和：<literal>&man-pages-md5;</literal>"
 
 #. type: Content of: <sect1><variablelist><varlistentry><term>
+#: lfs-en/chapter03/packages.xml
 msgid "MarkupSafe (&markupsafe-version;) - <token>&markupsafe-size;</token>:"
 msgstr "MarkupSafe (&markupsafe-version;) - <token>&markupsafe-size;</token>:"
 
 #. type: Content of: <sect1><variablelist><varlistentry><listitem><para>
+#: lfs-en/chapter03/packages.xml
 msgid "Home page: <ulink url=\"&markupsafe-home;\"/>"
 msgstr "主页：<ulink url=\"&markupsafe-home;\"/>"
 
 #. type: Content of: <sect1><variablelist><varlistentry><listitem><para>
+#: lfs-en/chapter03/packages.xml
 msgid "Download: <ulink url=\"&markupsafe-url;\"/>"
 msgstr "下载地址：<ulink url=\"&markupsafe-url;\"/>"
 
 #. type: Content of: <sect1><variablelist><varlistentry><listitem><para>
+#: lfs-en/chapter03/packages.xml
 msgid "MD5 sum: <literal>&markupsafe-md5;</literal>"
 msgstr "MD5 校验和：<literal>&markupsafe-md5;</literal>"
 
 #. type: Content of: <sect1><variablelist><varlistentry><term>
+#: lfs-en/chapter03/packages.xml
 msgid "Meson (&meson-version;) - <token>&meson-size;</token>:"
 msgstr "Meson (&meson-version;) - <token>&meson-size;</token>:"
 
 #. type: Content of: <sect1><variablelist><varlistentry><listitem><para>
+#: lfs-en/chapter03/packages.xml
 msgid "Home page: <ulink url=\"&meson-home;\"/>"
 msgstr "主页：<ulink url=\"&meson-home;\"/>"
 
 #. type: Content of: <sect1><variablelist><varlistentry><listitem><para>
+#: lfs-en/chapter03/packages.xml
 msgid "Download: <ulink url=\"&meson-url;\"/>"
 msgstr "下载地址：<ulink url=\"&meson-url;\"/>"
 
 #. type: Content of: <sect1><variablelist><varlistentry><listitem><para>
+#: lfs-en/chapter03/packages.xml
 msgid "MD5 sum: <literal>&meson-md5;</literal>"
 msgstr "MD5 校验和：<literal>&meson-md5;</literal>"
 
 #. type: Content of: <sect1><variablelist><varlistentry><term>
+#: lfs-en/chapter03/packages.xml
 msgid "MPC (&mpc-version;) - <token>&mpc-size;</token>:"
 msgstr "MPC (&mpc-version;) - <token>&mpc-size;</token>:"
 
 #. type: Content of: <sect1><variablelist><varlistentry><listitem><para>
+#: lfs-en/chapter03/packages.xml
 msgid "Home page: <ulink url=\"&mpc-home;\"/>"
 msgstr "主页：<ulink url=\"&mpc-home;\"/>"
 
 #. type: Content of: <sect1><variablelist><varlistentry><listitem><para>
+#: lfs-en/chapter03/packages.xml
 msgid "Download: <ulink url=\"&mpc-url;\"/>"
 msgstr "下载地址：<ulink url=\"&mpc-url;\"/>"
 
 #. type: Content of: <sect1><variablelist><varlistentry><listitem><para>
+#: lfs-en/chapter03/packages.xml
 msgid "MD5 sum: <literal>&mpc-md5;</literal>"
 msgstr "MD5 校验和：<literal>&mpc-md5;</literal>"
 
 #. type: Content of: <sect1><variablelist><varlistentry><term>
+#: lfs-en/chapter03/packages.xml
 msgid "MPFR (&mpfr-version;) - <token>&mpfr-size;</token>:"
 msgstr "MPFR (&mpfr-version;) - <token>&mpfr-size;</token>:"
 
 #. type: Content of: <sect1><variablelist><varlistentry><listitem><para>
+#: lfs-en/chapter03/packages.xml
 msgid "Home page: <ulink url=\"&mpfr-home;\"/>"
 msgstr "主页：<ulink url=\"&mpfr-home;\"/>"
 
 #. type: Content of: <sect1><variablelist><varlistentry><listitem><para>
+#: lfs-en/chapter03/packages.xml
 msgid "Download: <ulink url=\"&mpfr-url;\"/>"
 msgstr "下载地址：<ulink url=\"&mpfr-url;\"/>"
 
 #. type: Content of: <sect1><variablelist><varlistentry><listitem><para>
+#: lfs-en/chapter03/packages.xml
 msgid "MD5 sum: <literal>&mpfr-md5;</literal>"
 msgstr "MD5 校验和：<literal>&mpfr-md5;</literal>"
 
 #. type: Content of: <sect1><variablelist><varlistentry><term>
+#: lfs-en/chapter03/packages.xml
 msgid "Ncurses (&ncurses-version;) - <token>&ncurses-size;</token>:"
 msgstr "Ncurses (&ncurses-version;) - <token>&ncurses-size;</token>:"
 
 #. type: Content of: <sect1><variablelist><varlistentry><listitem><para>
+#: lfs-en/chapter03/packages.xml
 msgid "Home page: <ulink url=\"&ncurses-home;\"/>"
 msgstr "主页：<ulink url=\"&ncurses-home;\"/>"
 
 #. type: Content of: <sect1><variablelist><varlistentry><listitem><para>
+#: lfs-en/chapter03/packages.xml
 msgid "Download: <ulink url=\"&ncurses-url;\"/>"
 msgstr "下载地址：<ulink url=\"&ncurses-url;\"/>"
 
 #. type: Content of: <sect1><variablelist><varlistentry><listitem><para>
+#: lfs-en/chapter03/packages.xml
 msgid "MD5 sum: <literal>&ncurses-md5;</literal>"
 msgstr "MD5 校验和：<literal>&ncurses-md5;</literal>"
 
 #. type: Content of: <sect1><variablelist><varlistentry><term>
+#: lfs-en/chapter03/packages.xml
 msgid "Ninja (&ninja-version;) - <token>&ninja-size;</token>:"
 msgstr "Ninja (&ninja-version;) - <token>&ninja-size;</token>:"
 
 #. type: Content of: <sect1><variablelist><varlistentry><listitem><para>
+#: lfs-en/chapter03/packages.xml
 msgid "Home page: <ulink url=\"&ninja-home;\"/>"
 msgstr "主页：<ulink url=\"&ninja-home;\"/>"
 
 #. type: Content of: <sect1><variablelist><varlistentry><listitem><para>
+#: lfs-en/chapter03/packages.xml
 msgid "Download: <ulink url=\"&ninja-url;\"/>"
 msgstr "下载地址：<ulink url=\"&ninja-url;\"/>"
 
 #. type: Content of: <sect1><variablelist><varlistentry><listitem><para>
+#: lfs-en/chapter03/packages.xml
 msgid "MD5 sum: <literal>&ninja-md5;</literal>"
 msgstr "MD5 校验和：<literal>&ninja-md5;</literal>"
 
 #. type: Content of: <sect1><variablelist><varlistentry><term>
+#: lfs-en/chapter03/packages.xml
 msgid "OpenSSL (&openssl-version;) - <token>&openssl-size;</token>:"
 msgstr "OpenSSL (&openssl-version;) - <token>&openssl-size;</token>:"
 
 #. type: Content of: <sect1><variablelist><varlistentry><listitem><para>
+#: lfs-en/chapter03/packages.xml
 msgid "Home page: <ulink url=\"&openssl-home;\"/>"
 msgstr "主页：<ulink url=\"&openssl-home;\"/>"
 
 #. type: Content of: <sect1><variablelist><varlistentry><listitem><para>
+#: lfs-en/chapter03/packages.xml
 msgid "Download: <ulink url=\"&openssl-url;\"/>"
 msgstr "下载地址：<ulink url=\"&openssl-url;\"/>"
 
 #. type: Content of: <sect1><variablelist><varlistentry><listitem><para>
+#: lfs-en/chapter03/packages.xml
 msgid "MD5 sum: <literal>&openssl-md5;</literal>"
 msgstr "MD5 校验和：<literal>&openssl-md5;</literal>"
 
 #. type: Content of: <sect1><variablelist><varlistentry><term>
+#: lfs-en/chapter03/packages.xml
 msgid "Patch (&patch-version;) - <token>&patch-size;</token>:"
 msgstr "Patch (&patch-version;) - <token>&patch-size;</token>:"
 
 #. type: Content of: <sect1><variablelist><varlistentry><listitem><para>
+#: lfs-en/chapter03/packages.xml
 msgid "Home page: <ulink url=\"&patch-home;\"/>"
 msgstr "主页：<ulink url=\"&patch-home;\"/>"
 
 #. type: Content of: <sect1><variablelist><varlistentry><listitem><para>
+#: lfs-en/chapter03/packages.xml
 msgid "Download: <ulink url=\"&patch-url;\"/>"
 msgstr "下载地址：<ulink url=\"&patch-url;\"/>"
 
 #. type: Content of: <sect1><variablelist><varlistentry><listitem><para>
+#: lfs-en/chapter03/packages.xml
 msgid "MD5 sum: <literal>&patch-md5;</literal>"
 msgstr "MD5 校验和：<literal>&patch-md5;</literal>"
 
 #. type: Content of: <sect1><variablelist><varlistentry><term>
+#: lfs-en/chapter03/packages.xml
 msgid "Perl (&perl-version;) - <token>&perl-size;</token>:"
 msgstr "Perl (&perl-version;) - <token>&perl-size;</token>:"
 
 #. type: Content of: <sect1><variablelist><varlistentry><listitem><para>
+#: lfs-en/chapter03/packages.xml
 msgid "Home page: <ulink url=\"&perl-home;\"/>"
 msgstr "主页：<ulink url=\"&perl-home;\"/>"
 
 #. type: Content of: <sect1><variablelist><varlistentry><listitem><para>
+#: lfs-en/chapter03/packages.xml
 msgid "Download: <ulink url=\"&perl-url;\"/>"
 msgstr "下载地址：<ulink url=\"&perl-url;\"/>"
 
 #. type: Content of: <sect1><variablelist><varlistentry><listitem><para>
+#: lfs-en/chapter03/packages.xml
 msgid "MD5 sum: <literal>&perl-md5;</literal>"
 msgstr "MD5 校验和：<literal>&perl-md5;</literal>"
 
 #. type: Content of: <sect1><variablelist><varlistentry><term>
+#: lfs-en/chapter03/packages.xml
 msgid "Pkg-config (&pkgconfig-version;) - <token>&pkgconfig-size;</token>:"
 msgstr "Pkg-config (&pkgconfig-version;) - <token>&pkgconfig-size;</token>:"
 
 #. type: Content of: <sect1><variablelist><varlistentry><listitem><para>
+#: lfs-en/chapter03/packages.xml
 msgid "Home page: <ulink url=\"&pkgconfig-home;\"/>"
 msgstr "主页：<ulink url=\"&pkgconfig-home;\"/>"
 
 #. type: Content of: <sect1><variablelist><varlistentry><listitem><para>
+#: lfs-en/chapter03/packages.xml
 msgid "Download: <ulink url=\"&pkgconfig-url;\"/>"
 msgstr "下载地址：<ulink url=\"&pkgconfig-url;\"/>"
 
 #. type: Content of: <sect1><variablelist><varlistentry><listitem><para>
+#: lfs-en/chapter03/packages.xml
 msgid "MD5 sum: <literal>&pkgconfig-md5;</literal>"
 msgstr "MD5 校验和：<literal>&pkgconfig-md5;</literal>"
 
 #. type: Content of: <sect1><variablelist><varlistentry><term>
+#: lfs-en/chapter03/packages.xml
 msgid "Procps (&procps-ng-version;) - <token>&procps-ng-size;</token>:"
 msgstr "Procps (&procps-ng-version;) - <token>&procps-ng-size;</token>:"
 
 #. type: Content of: <sect1><variablelist><varlistentry><listitem><para>
+#: lfs-en/chapter03/packages.xml
 msgid "Home page: <ulink url=\"&procps-ng-home;\"/>"
 msgstr "主页：<ulink url=\"&procps-ng-home;\"/>"
 
 #. type: Content of: <sect1><variablelist><varlistentry><listitem><para>
+#: lfs-en/chapter03/packages.xml
 msgid "Download: <ulink url=\"&procps-ng-url;\"/>"
 msgstr "下载地址：<ulink url=\"&procps-ng-url;\"/>"
 
 #. type: Content of: <sect1><variablelist><varlistentry><listitem><para>
+#: lfs-en/chapter03/packages.xml
 msgid "MD5 sum: <literal>&procps-ng-md5;</literal>"
 msgstr "MD5 校验和：<literal>&procps-ng-md5;</literal>"
 
 #. type: Content of: <sect1><variablelist><varlistentry><term>
+#: lfs-en/chapter03/packages.xml
 msgid "Psmisc (&psmisc-version;) - <token>&psmisc-size;</token>:"
 msgstr "Psmisc (&psmisc-version;) - <token>&psmisc-size;</token>:"
 
 #. type: Content of: <sect1><variablelist><varlistentry><listitem><para>
+#: lfs-en/chapter03/packages.xml
 msgid "Home page: <ulink url=\"&psmisc-home;\"/>"
 msgstr "主页：<ulink url=\"&psmisc-home;\"/>"
 
 #. type: Content of: <sect1><variablelist><varlistentry><listitem><para>
+#: lfs-en/chapter03/packages.xml
 msgid "Download: <ulink url=\"&psmisc-url;\"/>"
 msgstr "下载地址：<ulink url=\"&psmisc-url;\"/>"
 
 #. type: Content of: <sect1><variablelist><varlistentry><listitem><para>
+#: lfs-en/chapter03/packages.xml
 msgid "MD5 sum: <literal>&psmisc-md5;</literal>"
 msgstr "MD5 校验和：<literal>&psmisc-md5;</literal>"
 
 #. type: Content of: <sect1><variablelist><varlistentry><term>
+#: lfs-en/chapter03/packages.xml
 msgid "Python (&python-version;) - <token>&python-size;</token>:"
 msgstr "Python (&python-version;) - <token>&python-size;</token>:"
 
 #. type: Content of: <sect1><variablelist><varlistentry><listitem><para>
+#: lfs-en/chapter03/packages.xml
 msgid "Home page: <ulink url=\"&python-home;\"/>"
 msgstr "主页：<ulink url=\"&python-home;\"/>"
 
 #. type: Content of: <sect1><variablelist><varlistentry><listitem><para>
+#: lfs-en/chapter03/packages.xml
 msgid "Download: <ulink url=\"&python-url;\"/>"
 msgstr "下载地址：<ulink url=\"&python-url;\"/>"
 
 #. type: Content of: <sect1><variablelist><varlistentry><listitem><para>
+#: lfs-en/chapter03/packages.xml
 msgid "MD5 sum: <literal>&python-md5;</literal>"
 msgstr "MD5 校验和：<literal>&python-md5;</literal>"
 
 #. type: Content of: <sect1><variablelist><varlistentry><term>
+#: lfs-en/chapter03/packages.xml
 msgid ""
 "Python Documentation (&python-version;) - <token>&python-docs-size;</token>:"
 msgstr "Python 文档 (&python-version;) - <token>&python-docs-size;</token>:"
 
 #. type: Content of: <sect1><variablelist><varlistentry><listitem><para>
+#: lfs-en/chapter03/packages.xml
 msgid "Download: <ulink url=\"&python-docs-url;\"/>"
 msgstr "下载地址：<ulink url=\"&python-docs-url;\"/>"
 
 #. type: Content of: <sect1><variablelist><varlistentry><listitem><para>
+#: lfs-en/chapter03/packages.xml
 msgid "MD5 sum: <literal>&python-docs-md5;</literal>"
 msgstr "MD5 校验和：<literal>&python-docs-md5;</literal>"
 
 #. type: Content of: <sect1><variablelist><varlistentry><term>
+#: lfs-en/chapter03/packages.xml
 msgid "Readline (&readline-version;) - <token>&readline-size;</token>:"
 msgstr "Readline (&readline-version;) - <token>&readline-size;</token>:"
 
 #. type: Content of: <sect1><variablelist><varlistentry><listitem><para>
+#: lfs-en/chapter03/packages.xml
 msgid "Home page: <ulink url=\"&readline-home;\"/>"
 msgstr "主页：<ulink url=\"&readline-home;\"/>"
 
 #. type: Content of: <sect1><variablelist><varlistentry><listitem><para>
+#: lfs-en/chapter03/packages.xml
 msgid "Download: <ulink url=\"&readline-url;\"/>"
 msgstr "下载地址：<ulink url=\"&readline-url;\"/>"
 
 #. type: Content of: <sect1><variablelist><varlistentry><listitem><para>
+#: lfs-en/chapter03/packages.xml
 msgid "MD5 sum: <literal>&readline-md5;</literal>"
 msgstr "MD5 校验和：<literal>&readline-md5;</literal>"
 
 #. type: Content of: <sect1><variablelist><varlistentry><term>
+#: lfs-en/chapter03/packages.xml
 msgid "Sed (&sed-version;) - <token>&sed-size;</token>:"
 msgstr "Sed (&sed-version;) - <token>&sed-size;</token>:"
 
 #. type: Content of: <sect1><variablelist><varlistentry><listitem><para>
+#: lfs-en/chapter03/packages.xml
 msgid "Home page: <ulink url=\"&sed-home;\"/>"
 msgstr "主页：<ulink url=\"&sed-home;\"/>"
 
 #. type: Content of: <sect1><variablelist><varlistentry><listitem><para>
+#: lfs-en/chapter03/packages.xml
 msgid "Download: <ulink url=\"&sed-url;\"/>"
 msgstr "下载地址：<ulink url=\"&sed-url;\"/>"
 
 #. type: Content of: <sect1><variablelist><varlistentry><listitem><para>
+#: lfs-en/chapter03/packages.xml
 msgid "MD5 sum: <literal>&sed-md5;</literal>"
 msgstr "MD5 校验和：<literal>&sed-md5;</literal>"
 
 #. type: Content of: <sect1><variablelist><varlistentry><term>
+#: lfs-en/chapter03/packages.xml
 msgid "Shadow (&shadow-version;) - <token>&shadow-size;</token>:"
 msgstr "Shadow (&shadow-version;) - <token>&shadow-size;</token>:"
 
 #. type: Content of: <sect1><variablelist><varlistentry><listitem><para>
+#: lfs-en/chapter03/packages.xml
 msgid "Home page: <ulink url=\"&shadow-home;\"/>"
 msgstr "主页：<ulink url=\"&shadow-home;\"/>"
 
 #. type: Content of: <sect1><variablelist><varlistentry><listitem><para>
+#: lfs-en/chapter03/packages.xml
 msgid "Download: <ulink url=\"&shadow-url;\"/>"
 msgstr "下载地址：<ulink url=\"&shadow-url;\"/>"
 
 #. type: Content of: <sect1><variablelist><varlistentry><listitem><para>
+#: lfs-en/chapter03/packages.xml
 msgid "MD5 sum: <literal>&shadow-md5;</literal>"
 msgstr "MD5 校验和：<literal>&shadow-md5;</literal>"
 
 #. type: Content of: <sect1><variablelist><varlistentry><term>
+#: lfs-en/chapter03/packages.xml
 msgid "Sysklogd (&sysklogd-version;) - <token>&sysklogd-size;</token>:"
 msgstr "Sysklogd (&sysklogd-version;) - <token>&sysklogd-size;</token>:"
 
 #. type: Content of: <sect1><variablelist><varlistentry><listitem><para>
+#: lfs-en/chapter03/packages.xml
 msgid "Home page: <ulink url=\"&sysklogd-home;\"/>"
 msgstr "主页：<ulink url=\"&sysklogd-home;\"/>"
 
 #. type: Content of: <sect1><variablelist><varlistentry><listitem><para>
+#: lfs-en/chapter03/packages.xml
 msgid "Download: <ulink url=\"&sysklogd-url;\"/>"
 msgstr "下载地址：<ulink url=\"&sysklogd-url;\"/>"
 
 #. type: Content of: <sect1><variablelist><varlistentry><listitem><para>
+#: lfs-en/chapter03/packages.xml
 msgid "MD5 sum: <literal>&sysklogd-md5;</literal>"
 msgstr "MD5 校验和：<literal>&sysklogd-md5;</literal>"
 
 #. type: Content of: <sect1><variablelist><varlistentry><term>
+#: lfs-en/chapter03/packages.xml
 msgid "Systemd (&systemd-version;) - <token>&systemd-size;</token>:"
 msgstr "Systemd (&systemd-version;) - <token>&systemd-size;</token>:"
 
 #. type: Content of: <sect1><variablelist><varlistentry><listitem><para>
+#: lfs-en/chapter03/packages.xml
 msgid "Home page: <ulink url=\"&systemd-home;\"/>"
 msgstr "主页：<ulink url=\"&systemd-home;\"/>"
 
 #. type: Content of: <sect1><variablelist><varlistentry><listitem><para>
+#: lfs-en/chapter03/packages.xml
 msgid "Download: <ulink url=\"&systemd-url;\"/>"
 msgstr "下载地址：<ulink url=\"&systemd-url;\"/>"
 
 #. type: Content of: <sect1><variablelist><varlistentry><listitem><para>
+#: lfs-en/chapter03/packages.xml
 msgid "MD5 sum: <literal>&systemd-md5;</literal>"
 msgstr "MD5 校验和：<literal>&systemd-md5;</literal>"
 
 #. type: Content of: <sect1><variablelist><varlistentry><term>
+#: lfs-en/chapter03/packages.xml
 msgid ""
 "Systemd Man Pages(&systemd-version;) - <token>&systemd-man-size;</token>:"
 msgstr ""
 "Systemd Man 页面 (&systemd-version;) - <token>&systemd-man-size;</token>:"
 
 #. type: Content of: <sect1><variablelist><varlistentry><listitem><para>
+#: lfs-en/chapter03/packages.xml
 msgid "Download: <ulink url=\"&systemd-man-url;\"/>"
 msgstr "下载地址：<ulink url=\"&systemd-man-url;\"/>"
 
 #. type: Content of: <sect1><variablelist><varlistentry><listitem><para>
+#: lfs-en/chapter03/packages.xml
 msgid "MD5 sum: <literal>&systemd-man-md5;</literal>"
 msgstr "MD5 校验和：<literal>&systemd-man-md5;</literal>"
 
 #. type: Content of: <sect1><variablelist><varlistentry><listitem><note><para>
+#: lfs-en/chapter03/packages.xml
 msgid ""
 "The Linux From Scratch team generates its own tarball of the man pages using "
 "the systemd source. This is done in order to avoid unnecessary dependencies."
@@ -1224,143 +1514,178 @@ msgstr ""
 "必要的依赖项。"
 
 #. type: Content of: <sect1><variablelist><varlistentry><term>
+#: lfs-en/chapter03/packages.xml
 msgid "Sysvinit (&sysvinit-version;) - <token>&sysvinit-size;</token>:"
 msgstr "Sysvinit (&sysvinit-version;) - <token>&sysvinit-size;</token>:"
 
 #. type: Content of: <sect1><variablelist><varlistentry><listitem><para>
+#: lfs-en/chapter03/packages.xml
 msgid "Home page: <ulink url=\"&sysvinit-home;\"/>"
 msgstr "主页：<ulink url=\"&sysvinit-home;\"/>"
 
 #. type: Content of: <sect1><variablelist><varlistentry><listitem><para>
+#: lfs-en/chapter03/packages.xml
 msgid "Download: <ulink url=\"&sysvinit-url;\"/>"
 msgstr "下载地址：<ulink url=\"&sysvinit-url;\"/>"
 
 #. type: Content of: <sect1><variablelist><varlistentry><listitem><para>
+#: lfs-en/chapter03/packages.xml
 msgid "MD5 sum: <literal>&sysvinit-md5;</literal>"
 msgstr "MD5 校验和：<literal>&sysvinit-md5;</literal>"
 
 #. type: Content of: <sect1><variablelist><varlistentry><term>
+#: lfs-en/chapter03/packages.xml
 msgid "Tar (&tar-version;) - <token>&tar-size;</token>:"
 msgstr "Tar (&tar-version;) - <token>&tar-size;</token>:"
 
 #. type: Content of: <sect1><variablelist><varlistentry><listitem><para>
+#: lfs-en/chapter03/packages.xml
 msgid "Home page: <ulink url=\"&tar-home;\"/>"
 msgstr "主页：<ulink url=\"&tar-home;\"/>"
 
 #. type: Content of: <sect1><variablelist><varlistentry><listitem><para>
+#: lfs-en/chapter03/packages.xml
 msgid "Download: <ulink url=\"&tar-url;\"/>"
 msgstr "下载地址：<ulink url=\"&tar-url;\"/>"
 
 #. type: Content of: <sect1><variablelist><varlistentry><listitem><para>
+#: lfs-en/chapter03/packages.xml
 msgid "MD5 sum: <literal>&tar-md5;</literal>"
 msgstr "MD5 校验和：<literal>&tar-md5;</literal>"
 
 #. type: Content of: <sect1><variablelist><varlistentry><term>
+#: lfs-en/chapter03/packages.xml
 msgid "Tcl (&tcl-version;) - <token>&tcl-size;</token>:"
 msgstr "Tcl (&tcl-version;) - <token>&tcl-size;</token>:"
 
 #. type: Content of: <sect1><variablelist><varlistentry><listitem><para>
+#: lfs-en/chapter03/packages.xml
 msgid "Home page: <ulink url=\"&tcl-home;\"/>"
 msgstr "主页：<ulink url=\"&tcl-home;\"/>"
 
 #. type: Content of: <sect1><variablelist><varlistentry><listitem><para>
+#: lfs-en/chapter03/packages.xml
 msgid "Download: <ulink url=\"&tcl-url;\"/>"
 msgstr "下载地址：<ulink url=\"&tcl-url;\"/>"
 
 #. type: Content of: <sect1><variablelist><varlistentry><listitem><para>
+#: lfs-en/chapter03/packages.xml
 msgid "MD5 sum: <literal>&tcl-md5;</literal>"
 msgstr "MD5 校验和：<literal>&tcl-md5;</literal>"
 
 #. type: Content of: <sect1><variablelist><varlistentry><term>
+#: lfs-en/chapter03/packages.xml
 msgid "Tcl Documentation (&tcl-version;) - <token>&tcl-docs-size;</token>:"
 msgstr "Tcl 文档 (&tcl-version;) - <token>&tcl-docs-size;</token>:"
 
 #. type: Content of: <sect1><variablelist><varlistentry><listitem><para>
+#: lfs-en/chapter03/packages.xml
 msgid "Download: <ulink url=\"&tcl-docs-url;\"/>"
 msgstr "下载地址：<ulink url=\"&tcl-docs-url;\"/>"
 
 #. type: Content of: <sect1><variablelist><varlistentry><listitem><para>
+#: lfs-en/chapter03/packages.xml
 msgid "MD5 sum: <literal>&tcl-docs-md5;</literal>"
 msgstr "MD5 校验和：<literal>&tcl-docs-md5;</literal>"
 
 #. type: Content of: <sect1><variablelist><varlistentry><term>
+#: lfs-en/chapter03/packages.xml
 msgid "Texinfo (&texinfo-version;) - <token>&texinfo-size;</token>:"
 msgstr "Texinfo (&texinfo-version;) - <token>&texinfo-size;</token>:"
 
 #. type: Content of: <sect1><variablelist><varlistentry><listitem><para>
+#: lfs-en/chapter03/packages.xml
 msgid "Home page: <ulink url=\"&texinfo-home;\"/>"
 msgstr "主页：<ulink url=\"&texinfo-home;\"/>"
 
 #. type: Content of: <sect1><variablelist><varlistentry><listitem><para>
+#: lfs-en/chapter03/packages.xml
 msgid "Download: <ulink url=\"&texinfo-url;\"/>"
 msgstr "下载地址：<ulink url=\"&texinfo-url;\"/>"
 
 #. type: Content of: <sect1><variablelist><varlistentry><listitem><para>
+#: lfs-en/chapter03/packages.xml
 msgid "MD5 sum: <literal>&texinfo-md5;</literal>"
 msgstr "MD5 校验和：<literal>&texinfo-md5;</literal>"
 
 #. type: Content of: <sect1><variablelist><varlistentry><term>
+#: lfs-en/chapter03/packages.xml
 msgid "Time Zone Data (&tzdata-version;) - <token>&tzdata-size;</token>:"
 msgstr "Time Zone Data (&tzdata-version;) - <token>&tzdata-size;</token>:"
 
 #. type: Content of: <sect1><variablelist><varlistentry><listitem><para>
+#: lfs-en/chapter03/packages.xml
 msgid "Home page: <ulink url=\"&tzdata-home;\"/>"
 msgstr "主页：<ulink url=\"&tzdata-home;\"/>"
 
 #. type: Content of: <sect1><variablelist><varlistentry><listitem><para>
+#: lfs-en/chapter03/packages.xml
 msgid "Download: <ulink url=\"&tzdata-url;\"/>"
 msgstr "下载地址：<ulink url=\"&tzdata-url;\"/>"
 
 #. type: Content of: <sect1><variablelist><varlistentry><listitem><para>
+#: lfs-en/chapter03/packages.xml
 msgid "MD5 sum: <literal>&tzdata-md5;</literal>"
 msgstr "MD5 校验和：<literal>&tzdata-md5;</literal>"
 
 #. type: Content of: <sect1><variablelist><varlistentry><term>
+#: lfs-en/chapter03/packages.xml
 msgid "Udev-lfs Tarball (&udev-lfs-version;) - <token>&udev-lfs-size;</token>:"
 msgstr ""
 "Udev-lfs Tarball (&udev-lfs-version;) - <token>&udev-lfs-size;</token>:"
 
 #. type: Content of: <sect1><variablelist><varlistentry><listitem><para>
+#: lfs-en/chapter03/packages.xml
 msgid "Download: <ulink url=\"&udev-lfs-url;\"/>"
 msgstr "下载地址：<ulink url=\"&udev-lfs-url;\"/>"
 
 #. type: Content of: <sect1><variablelist><varlistentry><listitem><para>
+#: lfs-en/chapter03/packages.xml
 msgid "MD5 sum: <literal>&udev-lfs-md5;</literal>"
 msgstr "MD5 校验和：<literal>&udev-lfs-md5;</literal>"
 
 #. type: Content of: <sect1><variablelist><varlistentry><term>
+#: lfs-en/chapter03/packages.xml
 msgid "Util-linux (&util-linux-version;) - <token>&util-linux-size;</token>:"
 msgstr "Util-linux (&util-linux-version;) - <token>&util-linux-size;</token>:"
 
 #. type: Content of: <sect1><variablelist><varlistentry><listitem><para>
+#: lfs-en/chapter03/packages.xml
 msgid "Home page: <ulink url=\"&util-linux-home;\"/>"
 msgstr "主页：<ulink url=\"&util-linux-home;\"/>"
 
 #. type: Content of: <sect1><variablelist><varlistentry><listitem><para>
+#: lfs-en/chapter03/packages.xml
 msgid "Download: <ulink url=\"&util-linux-url;\"/>"
 msgstr "下载地址：<ulink url=\"&util-linux-url;\"/>"
 
 #. type: Content of: <sect1><variablelist><varlistentry><listitem><para>
+#: lfs-en/chapter03/packages.xml
 msgid "MD5 sum: <literal>&util-linux-md5;</literal>"
 msgstr "MD5 校验和：<literal>&util-linux-md5;</literal>"
 
 #. type: Content of: <sect1><variablelist><varlistentry><term>
+#: lfs-en/chapter03/packages.xml
 msgid "Vim (&vim-version;) - <token>&vim-size;</token>:"
 msgstr "Vim (&vim-version;) - <token>&vim-size;</token>:"
 
 #. type: Content of: <sect1><variablelist><varlistentry><listitem><para>
+#: lfs-en/chapter03/packages.xml
 msgid "Home page: <ulink url=\"&vim-home;\"/>"
 msgstr "主页：<ulink url=\"&vim-home;\"/>"
 
 #. type: Content of: <sect1><variablelist><varlistentry><listitem><para>
+#: lfs-en/chapter03/packages.xml
 msgid "Download: <ulink url=\"&vim-url;\"/>"
 msgstr "下载地址：<ulink url=\"&vim-url;\"/>"
 
 #. type: Content of: <sect1><variablelist><varlistentry><listitem><para>
+#: lfs-en/chapter03/packages.xml
 msgid "MD5 sum: <literal>&vim-md5;</literal>"
 msgstr "MD5 校验和：<literal>&vim-md5;</literal>"
 
 #. type: Content of: <sect1><variablelist><varlistentry><listitem><note><para>
+#: lfs-en/chapter03/packages.xml
 msgid ""
 "The version of vim changes daily. To get the latest version, go to <ulink "
 "url=\"https://github.com/vim/vim/releases\"> https://github.com/vim/vim/"
@@ -1370,85 +1695,106 @@ msgstr ""
 "com/vim/vim/releases\"> https://github.com/vim/vim/tags</ulink>。"
 
 #. type: Content of: <sect1><variablelist><varlistentry><term>
+#: lfs-en/chapter03/packages.xml
 msgid "Wheel (&wheel-version;) - <token>&wheel-size;</token>:"
 msgstr "Wheel (&wheel-version;) - <token>&wheel-size;</token>:"
 
 #. type: Content of: <sect1><variablelist><varlistentry><listitem><para>
+#: lfs-en/chapter03/packages.xml
 msgid "Home page: <ulink url=\"&wheel-home;\"/>"
 msgstr "主页：<ulink url=\"&wheel-home;\"/>"
 
 #. type: Content of: <sect1><variablelist><varlistentry><listitem><para>
+#: lfs-en/chapter03/packages.xml
 msgid "Download: <ulink url=\"&wheel-url;\"/>"
 msgstr "下载地址：<ulink url=\"&wheel-url;\"/>"
 
 #. type: Content of: <sect1><variablelist><varlistentry><listitem><para>
+#: lfs-en/chapter03/packages.xml
 msgid "MD5 sum: <literal>&wheel-md5;</literal>"
 msgstr "MD5 校验和：<literal>&wheel-md5;</literal>"
 
 #. type: Content of: <sect1><variablelist><varlistentry><term>
+#: lfs-en/chapter03/packages.xml
 msgid "XML::Parser (&xml-parser-version;) - <token>&xml-parser-size;</token>:"
 msgstr "XML::Parser (&xml-parser-version;) - <token>&xml-parser-size;</token>:"
 
 #. type: Content of: <sect1><variablelist><varlistentry><listitem><para>
+#: lfs-en/chapter03/packages.xml
 msgid "Home page: <ulink url=\"&xml-parser-home;\"/>"
 msgstr "主页：<ulink url=\"&xml-parser-home;\"/>"
 
 #. type: Content of: <sect1><variablelist><varlistentry><listitem><para>
+#: lfs-en/chapter03/packages.xml
 msgid "Download: <ulink url=\"&xml-parser-url;\"/>"
 msgstr "下载地址：<ulink url=\"&xml-parser-url;\"/>"
 
 #. type: Content of: <sect1><variablelist><varlistentry><listitem><para>
+#: lfs-en/chapter03/packages.xml
 msgid "MD5 sum: <literal>&xml-parser-md5;</literal>"
 msgstr "MD5 校验和：<literal>&xml-parser-md5;</literal>"
 
 #. type: Content of: <sect1><variablelist><varlistentry><term>
+#: lfs-en/chapter03/packages.xml
 msgid "Xz Utils (&xz-version;) - <token>&xz-size;</token>:"
 msgstr "Xz Utils (&xz-version;) - <token>&xz-size;</token>:"
 
 #. type: Content of: <sect1><variablelist><varlistentry><listitem><para>
+#: lfs-en/chapter03/packages.xml
 msgid "Home page: <ulink url=\"&xz-home;\"/>"
 msgstr "主页：<ulink url=\"&xz-home;\"/>"
 
 #. type: Content of: <sect1><variablelist><varlistentry><listitem><para>
+#: lfs-en/chapter03/packages.xml
 msgid "Download: <ulink url=\"&xz-url;\"/>"
 msgstr "下载地址：<ulink url=\"&xz-url;\"/>"
 
 #. type: Content of: <sect1><variablelist><varlistentry><listitem><para>
+#: lfs-en/chapter03/packages.xml
 msgid "MD5 sum: <literal>&xz-md5;</literal>"
 msgstr "MD5 校验和：<literal>&xz-md5;</literal>"
 
 #. type: Content of: <sect1><variablelist><varlistentry><term>
+#: lfs-en/chapter03/packages.xml
 msgid "Zlib (&zlib-version;) - <token>&zlib-size;</token>:"
 msgstr "Zlib (&zlib-version;) - <token>&zlib-size;</token>:"
 
 #. type: Content of: <sect1><variablelist><varlistentry><listitem><para>
+#: lfs-en/chapter03/packages.xml
 msgid "Home page: <ulink url=\"&zlib-home;\"/>"
 msgstr "主页：<ulink url=\"&zlib-home;\"/>"
 
 #. type: Content of: <sect1><variablelist><varlistentry><listitem><para>
+#: lfs-en/chapter03/packages.xml
 msgid "Download: <ulink url=\"&zlib-url;\"/>"
 msgstr "下载地址：<ulink url=\"&zlib-url;\"/>"
 
 #. type: Content of: <sect1><variablelist><varlistentry><listitem><para>
+#: lfs-en/chapter03/packages.xml
 msgid "MD5 sum: <literal>&zlib-md5;</literal>"
 msgstr "MD5 校验和：<literal>&zlib-md5;</literal>"
 
 #. type: Content of: <sect1><variablelist><varlistentry><term>
+#: lfs-en/chapter03/packages.xml
 msgid "Zstd (&zstd-version;) - <token>&zstd-size;</token>:"
 msgstr "Zstd (&zstd-version;) - <token>&zstd-size;</token>:"
 
 #. type: Content of: <sect1><variablelist><varlistentry><listitem><para>
+#: lfs-en/chapter03/packages.xml
 msgid "Home page: <ulink url=\"&zstd-home;\"/>"
 msgstr "主页：<ulink url=\"&zstd-home;\"/>"
 
 #. type: Content of: <sect1><variablelist><varlistentry><listitem><para>
+#: lfs-en/chapter03/packages.xml
 msgid "Download: <ulink url=\"&zstd-url;\"/>"
 msgstr "下载地址：<ulink url=\"&zstd-url;\"/>"
 
 #. type: Content of: <sect1><variablelist><varlistentry><listitem><para>
+#: lfs-en/chapter03/packages.xml
 msgid "MD5 sum: <literal>&zstd-md5;</literal>"
 msgstr "MD5 校验和：<literal>&zstd-md5;</literal>"
 
 #. type: Content of: <sect1><para>
+#: lfs-en/chapter03/packages.xml
 msgid "Total size of these packages: about <returnvalue/>"
 msgstr "以上软件包的总大小：约 <returnvalue/>"

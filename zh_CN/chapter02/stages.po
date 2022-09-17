@@ -1,7 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2022-04-21 14:25+0800\n"
+"Report-Msgid-Bugs-To: lfs-dev@linuxfromscratch.org\n"
+"POT-Creation-Date: 2022-09-17 18:28+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -14,10 +15,12 @@ msgstr ""
 "X-Generator: Translate Toolkit 2.2.5\n"
 
 #. type: Content of: <sect1><title>
+#: lfs-en/chapter02/stages.xml
 msgid "Building LFS in Stages"
 msgstr "分阶段构建 LFS"
 
 #. type: Content of: <sect1><para>
+#: lfs-en/chapter02/stages.xml
 msgid ""
 "LFS is designed to be built in one session.  That is, the instructions "
 "assume that the system will not be shut down during the process.  That does "
@@ -30,16 +33,19 @@ msgstr ""
 "动后，继续编译 LFS 时，根据构建进度的不同，可能需要再次进行某些操作。"
 
 #. type: Content of: <sect1><sect2><title>
+#: lfs-en/chapter02/stages.xml
 msgid "Chapters&nbsp;1&ndash;4"
 msgstr "第 1&ndash;4 章"
 
 #. type: Content of: <sect1><sect2><para>
+#: lfs-en/chapter02/stages.xml
 msgid ""
 "These chapters are accomplished on the host system.  When restarting, be "
 "careful of the following:"
 msgstr "这些章节是在宿主系统完成的。在重启后，注意下列事项："
 
 #. type: Content of: <sect1><sect2><itemizedlist><listitem><para>
+#: lfs-en/chapter02/stages.xml
 msgid ""
 "Procedures done as the <systemitem class=\"username\">root</systemitem> user "
 "after Section 2.4 need to have the LFS environment variable set "
@@ -49,14 +55,17 @@ msgstr ""
 "执行的步骤要求 LFS 环境变量已经<emphasis>为 root 用户</emphasis>设置好。"
 
 #. type: Content of: <sect1><sect2><title>
+#: lfs-en/chapter02/stages.xml
 msgid "Chapter&nbsp;5&ndash;6"
 msgstr "第 5&ndash;6 章"
 
 #. type: Content of: <sect1><sect2><itemizedlist><listitem><para>
+#: lfs-en/chapter02/stages.xml
 msgid "The /mnt/lfs partition must be mounted."
 msgstr "/mnt/lfs 分区需要重新挂载。"
 
 #. type: Content of: <sect1><sect2><itemizedlist><listitem><para>
+#: lfs-en/chapter02/stages.xml
 msgid ""
 "These two chapters <emphasis>must</emphasis> be done as user <systemitem "
 "class=\"username\">lfs</systemitem>.  A <command>su - lfs</command> needs to "
@@ -70,6 +79,7 @@ msgstr ""
 "使用。"
 
 #. type: Content of: <sect1><sect2><itemizedlist><listitem><para>
+#: lfs-en/chapter02/stages.xml
 msgid ""
 "The procedures in <xref linkend='ch-tools-generalinstructions'/> are "
 "critical.  If there is any doubt about installing a package, ensure any "
@@ -81,10 +91,12 @@ msgstr ""
 "重新执行该软件包对应章节的所有命令。"
 
 #. type: Content of: <sect1><sect2><title>
+#: lfs-en/chapter02/stages.xml
 msgid "Chapter&nbsp;7&ndash;10"
 msgstr "第 7&ndash;10 章"
 
 #. type: Content of: <sect1><sect2><itemizedlist><listitem><para>
+#: lfs-en/chapter02/stages.xml
 msgid ""
 "A few operations, from <quote>Changing Ownership</quote> to <quote>Entering "
 "the Chroot Environment</quote> must be done as the <systemitem class="
@@ -96,6 +108,7 @@ msgstr ""
 "量必须为 &root; 用户设定。"
 
 #. type: Content of: <sect1><sect2><itemizedlist><listitem><para>
+#: lfs-en/chapter02/stages.xml
 msgid ""
 "When entering chroot, the LFS environment variable must be set for "
 "<systemitem class=\"username\">root</systemitem>. The LFS variable is not "
@@ -105,6 +118,7 @@ msgstr ""
 "\">root</systemitem> 设置好。之后就不需要 LFS 变量。"
 
 #. type: Content of: <sect1><sect2><itemizedlist><listitem><para>
+#: lfs-en/chapter02/stages.xml
 msgid ""
 "The virtual file systems must be mounted.  This can be done before or after "
 "entering chroot by changing to a host virtual terminal and, as <systemitem "

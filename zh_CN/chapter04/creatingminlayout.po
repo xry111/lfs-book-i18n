@@ -1,7 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2021-11-12 00:41+0800\n"
+"Report-Msgid-Bugs-To: lfs-dev@linuxfromscratch.org\n"
+"POT-Creation-Date: 2022-09-17 18:28+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -13,10 +14,12 @@ msgstr ""
 "X-Pootle-Path: /zh_CN/lfs/chapter04/creatingminlayout.po\n"
 
 #. type: Content of: <sect1><title>
+#: lfs-en/chapter04/creatingminlayout.xml
 msgid "Creating a limited directory layout in LFS filesystem"
 msgstr "在 LFS 文件系统中创建有限目录布局"
 
 #. type: Content of: <sect1><para>
+#: lfs-en/chapter04/creatingminlayout.xml
 msgid ""
 "The first task performed in the LFS partition is to create a limited "
 "directory hierarchy so that programs compiled in <xref linkend=\"chapter-"
@@ -32,6 +35,7 @@ msgstr ""
 "直接覆盖这些临时程序。"
 
 #. type: Content of: <sect1><para>
+#: lfs-en/chapter04/creatingminlayout.xml
 msgid ""
 "Create the required directory layout by running the following as <systemitem "
 "class=\"username\">root</systemitem>:"
@@ -40,6 +44,7 @@ msgstr ""
 "需的目录布局："
 
 #. type: Content of: <sect1><screen>
+#: lfs-en/chapter04/creatingminlayout.xml
 #, no-wrap
 msgid ""
 "<userinput>mkdir -pv $LFS/{etc,var} $LFS/usr/{bin,lib,sbin}\n"
@@ -63,6 +68,7 @@ msgstr ""
 "esac</userinput>"
 
 #. type: Content of: <sect1><para>
+#: lfs-en/chapter04/creatingminlayout.xml
 msgid ""
 "Programs in <xref linkend=\"chapter-temporary-tools\"/> will be compiled "
 "with a cross-compiler (more details in section <xref linkend=\"ch-tools-"
@@ -75,6 +81,7 @@ msgstr ""
 "译器和其他程序分离，它会被安装在一个专门的目录。执行以下命令创建该目录："
 
 #. type: Content of: <sect1><screen>
+#: lfs-en/chapter04/creatingminlayout.xml
 #, no-wrap
 msgid "<userinput>mkdir -pv $LFS/tools</userinput>"
 msgstr "<userinput>mkdir -pv $LFS/tools</userinput>"

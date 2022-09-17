@@ -1,7 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2020-12-26 23:53+0800\n"
+"Report-Msgid-Bugs-To: lfs-dev@linuxfromscratch.org\n"
+"POT-Creation-Date: 2022-09-17 18:28+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -13,11 +14,19 @@ msgstr ""
 "X-Pootle-Path: /zh_CN/lfs/chapter02/aboutlfs.po\n"
 "X-Generator: Translate Toolkit 2.2.5\n"
 
+#. type: Content of: <sect1><caution><screen>
+#: lfs-en/part3intro/generalinstructions.xml lfs-en/chapter02/aboutlfs.xml
+#, no-wrap
+msgid "<userinput>echo $LFS</userinput>"
+msgstr "<userinput>echo $LFS</userinput>"
+
 #. type: Content of: <sect1><title>
+#: lfs-en/chapter02/aboutlfs.xml
 msgid "Setting The $LFS Variable"
 msgstr "设置 $LFS 环境变量"
 
 #. type: Content of: <sect1><para>
+#: lfs-en/chapter02/aboutlfs.xml
 msgid ""
 "Throughout this book, the environment variable <envar>LFS</envar> will be "
 "used several times. You should ensure that this variable is always defined "
@@ -35,11 +44,13 @@ msgstr ""
 "录，然后用以下命令设置环境变量："
 
 #. type: Content of: <sect1><screen>
+#: lfs-en/chapter02/aboutlfs.xml
 #, no-wrap
 msgid "<userinput>export LFS=<replaceable>/mnt/lfs</replaceable></userinput>"
 msgstr "<userinput>export LFS=<replaceable>/mnt/lfs</replaceable></userinput>"
 
 #. type: Content of: <sect1><para>
+#: lfs-en/chapter02/aboutlfs.xml
 msgid ""
 "Having this variable set is beneficial in that commands such as "
 "<command>mkdir -v $LFS/tools</command> can be typed literally. The shell "
@@ -51,6 +62,7 @@ msgstr ""
 "<quote>/mnt/lfs</quote> (或是您设置的其他值)。"
 
 #. type: Content of: <sect1><caution><para>
+#: lfs-en/chapter02/aboutlfs.xml
 msgid ""
 "Do not forget to check that <envar>LFS</envar> is set whenever you leave and "
 "reenter the current working environment (such as when doing a <command>su</"
@@ -62,12 +74,8 @@ msgstr ""
 "<systemitem class=\"username\">root</systemitem> 或者其他用户时。) 请执行以下"
 "命令，检查 <envar>LFS</envar> 的设置是否正确："
 
-#. type: Content of: <sect1><caution><screen>
-#, no-wrap
-msgid "<userinput>echo $LFS</userinput>"
-msgstr "<userinput>echo $LFS</userinput>"
-
 #. type: Content of: <sect1><caution><para>
+#: lfs-en/chapter02/aboutlfs.xml
 msgid ""
 "Make sure the output shows the path to your LFS system's build location, "
 "which is <filename class=\"directory\">/mnt/lfs</filename> if the provided "
@@ -80,6 +88,7 @@ msgstr ""
 "文给出的命令，将 <envar>$LFS</envar> 设置成正确的目录名。"
 
 #. type: Content of: <sect1><note><para>
+#: lfs-en/chapter02/aboutlfs.xml
 msgid ""
 "One way to ensure that the <envar>LFS</envar> variable is always set is to "
 "edit the <filename>.bash_profile</filename> file in both your personal home "
@@ -96,6 +105,7 @@ msgstr ""
 "bash，以保证每次登录时都执行 <filename>.bash_profile</filename> 中的命令。"
 
 #. type: Content of: <sect1><note><para>
+#: lfs-en/chapter02/aboutlfs.xml
 msgid ""
 "Another consideration is the method that is used to log into the host "
 "system.  If logging in through a graphical display manager, the user's "
@@ -109,8 +119,7 @@ msgid ""
 msgstr ""
 "另外还要考虑登录宿主系统的方式，如果您使用图形显示管理器登录，再启动虚拟终"
 "端，那么 <filename>.bash_profile</filename> 一般不会被虚拟终端执行。此时，应"
-"该将 export 命令加入到您使用的用户和 "
-"<systemitem class=\"username\">root</systemitem> 用户的 <filename>.bashrc</"
-"filename> 文件中。另外，一些发行版的 <filename>.bashrc</filename> 中加入了检"
-"测交互性的命令，使其在非交互 bash 的启动过程中不执行其余命令。此时必须将 "
-"export 命令添加到交互性检测之前。"
+"该将 export 命令加入到您使用的用户和 <systemitem class=\"username\">root</"
+"systemitem> 用户的 <filename>.bashrc</filename> 文件中。另外，一些发行版的 "
+"<filename>.bashrc</filename> 中加入了检测交互性的命令，使其在非交互 bash 的启"
+"动过程中不执行其余命令。此时必须将 export 命令添加到交互性检测之前。"

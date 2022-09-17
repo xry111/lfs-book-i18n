@@ -6,8 +6,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Linux From Scratch 11.0\n"
-"Report-Msgid-Bugs-To: lfs-dev@lists.linuxfromscratch.org\n"
-"POT-Creation-Date: 2022-02-21 12:29+0800\n"
+"Report-Msgid-Bugs-To: lfs-dev@linuxfromscratch.org\n"
+"POT-Creation-Date: 2022-09-17 18:28+0800\n"
 "PO-Revision-Date: 2021-09-08 14:05+0800\n"
 "Last-Translator: Xi Ruoyao <xry111@mengyan1223.wang>\n"
 "Language-Team: None <noreply@mengyan1223.wang>\n"
@@ -20,10 +20,12 @@ msgstr ""
 "X-Pootle-Revision: 9999999\n"
 
 #. type: Attribute 'xreflabel' of: <sect1><bridgehead>
+#: lfs-en/chapter02/hostreqs.xml
 msgid "Host System Requirements"
 msgstr "宿主系统需求"
 
 #. type: Content of: <sect1><para>
+#: lfs-en/chapter02/hostreqs.xml
 msgid ""
 "Your host system should have the following software with the minimum "
 "versions indicated. This should not be an issue for most modern Linux "
@@ -39,12 +41,14 @@ msgstr ""
 "件包，一定要安装它们。"
 
 #. type: Content of: <sect1><para>
+#: lfs-en/chapter02/hostreqs.xml
 msgid ""
 "Earlier versions of the listed software packages may work, but have not been "
 "tested."
 msgstr "比下列最低版本更古老的版本可能正常工作，但作者没有进行测试。"
 
 #. type: Content of: <sect1><itemizedlist><listitem><para>
+#: lfs-en/chapter02/hostreqs.xml
 msgid ""
 "<emphasis role=\"strong\">Bash-3.2</emphasis> (/bin/sh should be a symbolic "
 "or hard link to bash)"
@@ -53,14 +57,16 @@ msgstr ""
 "接或硬连接)"
 
 #. type: Content of: <sect1><itemizedlist><listitem><para>
+#: lfs-en/chapter02/hostreqs.xml
 msgid ""
 "<emphasis role=\"strong\">Binutils-2.13.1</emphasis> (Versions greater than "
 "&binutils-version; are not recommended as they have not been tested)"
 msgstr ""
-"<emphasis role=\"strong\">Binutils-2.13.1</emphasis> (比 &binutils-version; 更"
-"新的版本未经测试，不推荐使用)"
+"<emphasis role=\"strong\">Binutils-2.13.1</emphasis> (比 &binutils-version; "
+"更新的版本未经测试，不推荐使用)"
 
 #. type: Content of: <sect1><itemizedlist><listitem><para>
+#: lfs-en/chapter02/hostreqs.xml
 msgid ""
 "<emphasis role=\"strong\">Bison-2.7</emphasis> (/usr/bin/yacc should be a "
 "link to bison or small script that executes bison)"
@@ -69,18 +75,22 @@ msgstr ""
 "的链接，或者是一个执行 bison 的小脚本)"
 
 #. type: Content of: <sect1><itemizedlist><listitem><para>
+#: lfs-en/chapter02/hostreqs.xml
 msgid "<emphasis role=\"strong\">Coreutils-6.9</emphasis>"
 msgstr "<emphasis role=\"strong\">Coreutils-6.9</emphasis>"
 
 #. type: Content of: <sect1><itemizedlist><listitem><para>
+#: lfs-en/chapter02/hostreqs.xml
 msgid "<emphasis role=\"strong\">Diffutils-2.8.1</emphasis>"
 msgstr "<emphasis role=\"strong\">Diffutils-2.8.1</emphasis>"
 
 #. type: Content of: <sect1><itemizedlist><listitem><para>
+#: lfs-en/chapter02/hostreqs.xml
 msgid "<emphasis role=\"strong\">Findutils-4.2.31</emphasis>"
 msgstr "<emphasis role=\"strong\">Findutils-4.2.31</emphasis>"
 
 #. type: Content of: <sect1><itemizedlist><listitem><para>
+#: lfs-en/chapter02/hostreqs.xml
 msgid ""
 "<emphasis role=\"strong\">Gawk-4.0.1</emphasis> (/usr/bin/awk should be a "
 "link to gawk)"
@@ -89,6 +99,7 @@ msgstr ""
 "的链接)"
 
 #. type: Content of: <sect1><itemizedlist><listitem><para>
+#: lfs-en/chapter02/hostreqs.xml
 msgid ""
 "<emphasis role=\"strong\">GCC-4.8</emphasis> including the C++ compiler, "
 "<command>g++</command> (Versions greater than &gcc-version; are not "
@@ -97,23 +108,26 @@ msgid ""
 "programs"
 msgstr ""
 "<emphasis role=\"strong\">GCC-4.8</emphasis>，包括 C++ 编译器 <command>g++</"
-"command> (比 &gcc-version; 更新的版本未经测试，不推荐使用)。"
-"C 和 C++ 标准库 (包括头文件) 也必须可用，"
-"这样 C++ 编译器才能构建宿主环境的程序"
+"command> (比 &gcc-version; 更新的版本未经测试，不推荐使用)。C 和 C++ 标准库 "
+"(包括头文件) 也必须可用，这样 C++ 编译器才能构建宿主环境的程序"
 
 #. type: Content of: <sect1><itemizedlist><listitem><para>
+#: lfs-en/chapter02/hostreqs.xml
 msgid "<emphasis role=\"strong\">Grep-2.5.1a</emphasis>"
 msgstr "<emphasis role=\"strong\">Grep-2.5.1a</emphasis>"
 
 #. type: Content of: <sect1><itemizedlist><listitem><para>
+#: lfs-en/chapter02/hostreqs.xml
 msgid "<emphasis role=\"strong\">Gzip-1.3.12</emphasis>"
 msgstr "<emphasis role=\"strong\">Gzip-1.3.12</emphasis>"
 
 #. type: Content of: <sect1><itemizedlist><listitem><para>
+#: lfs-en/chapter02/hostreqs.xml
 msgid "<emphasis role=\"strong\">Linux Kernel-&min-kernel;</emphasis>"
 msgstr "<emphasis role=\"strong\">Linux Kernel-&min-kernel;</emphasis>"
 
 #. type: Content of: <sect1><itemizedlist><listitem><para>
+#: lfs-en/chapter02/hostreqs.xml
 msgid ""
 "The reason for the kernel version requirement is that we specify that "
 "version when building <application>glibc</application> in <xref linkend="
@@ -125,6 +139,7 @@ msgstr ""
 "时开发者推荐的配置选项。udev 也要求一定的内核版本。"
 
 #. type: Content of: <sect1><itemizedlist><listitem><para>
+#: lfs-en/chapter02/hostreqs.xml
 msgid ""
 "If the host kernel is earlier than &min-kernel; you will need to replace the "
 "kernel with a more up to date version. There are two ways you can go about "
@@ -142,42 +157,52 @@ msgstr ""
 "linkend=\"chapter-bootable\"/>中。"
 
 #. type: Content of: <sect1><itemizedlist><listitem><para>
+#: lfs-en/chapter02/hostreqs.xml
 msgid "<emphasis role=\"strong\">M4-1.4.10</emphasis>"
 msgstr "<emphasis role=\"strong\">M4-1.4.10</emphasis>"
 
 #. type: Content of: <sect1><itemizedlist><listitem><para>
+#: lfs-en/chapter02/hostreqs.xml
 msgid "<emphasis role=\"strong\">Make-4.0</emphasis>"
 msgstr "<emphasis role=\"strong\">Make-4.0</emphasis>"
 
 #. type: Content of: <sect1><itemizedlist><listitem><para>
+#: lfs-en/chapter02/hostreqs.xml
 msgid "<emphasis role=\"strong\">Patch-2.5.4</emphasis>"
 msgstr "<emphasis role=\"strong\">Patch-2.5.4</emphasis>"
 
 #. type: Content of: <sect1><itemizedlist><listitem><para>
+#: lfs-en/chapter02/hostreqs.xml
 msgid "<emphasis role=\"strong\">Perl-5.8.8</emphasis>"
 msgstr "<emphasis role=\"strong\">Perl-5.8.8</emphasis>"
 
 #. type: Content of: <sect1><itemizedlist><listitem><para>
+#: lfs-en/chapter02/hostreqs.xml
 msgid "<emphasis role=\"strong\">Python-3.4</emphasis>"
 msgstr "<emphasis role=\"strong\">Python-3.4</emphasis>"
 
 #. type: Content of: <sect1><itemizedlist><listitem><para>
+#: lfs-en/chapter02/hostreqs.xml
 msgid "<emphasis role=\"strong\">Sed-4.1.5</emphasis>"
 msgstr "<emphasis role=\"strong\">Sed-4.1.5</emphasis>"
 
 #. type: Content of: <sect1><itemizedlist><listitem><para>
+#: lfs-en/chapter02/hostreqs.xml
 msgid "<emphasis role=\"strong\">Tar-1.22</emphasis>"
 msgstr "<emphasis role=\"strong\">Tar-1.22</emphasis>"
 
 #. type: Content of: <sect1><itemizedlist><listitem><para>
+#: lfs-en/chapter02/hostreqs.xml
 msgid "<emphasis role=\"strong\">Texinfo-4.7</emphasis>"
 msgstr "<emphasis role=\"strong\">Texinfo-4.7</emphasis>"
 
 #. type: Content of: <sect1><itemizedlist><listitem><para>
+#: lfs-en/chapter02/hostreqs.xml
 msgid "<emphasis role=\"strong\">Xz-5.0.0</emphasis>"
 msgstr "<emphasis role=\"strong\">Xz-5.0.0</emphasis>"
 
 #. type: Content of: <sect1><important><para>
+#: lfs-en/chapter02/hostreqs.xml
 msgid ""
 "Note that the symlinks mentioned above are required to build an LFS system "
 "using the instructions contained within this book. Symlinks that point to "
@@ -191,6 +216,7 @@ msgstr ""
 "补丁，才能在这类宿主环境成功构建。"
 
 #. type: Content of: <sect1><para>
+#: lfs-en/chapter02/hostreqs.xml
 msgid ""
 "To see whether your host system has all the appropriate versions, and the "
 "ability to compile programs, run the following:"
@@ -198,6 +224,7 @@ msgstr ""
 "为了确定您的宿主系统拥有每个软件的合适版本，且能够编译程序，请运行下列脚本。"
 
 #. type: Content of: <sect1><screen>
+#: lfs-en/chapter02/hostreqs.xml
 #, no-wrap
 msgid ""
 "<userinput>cat &gt; version-check.sh &lt;&lt; \"EOF\"\n"

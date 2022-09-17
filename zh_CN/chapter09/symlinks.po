@@ -1,7 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2021-05-12 17:13+0800\n"
+"Report-Msgid-Bugs-To: lfs-dev@linuxfromscratch.org\n"
+"POT-Creation-Date: 2022-09-17 18:28+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -14,14 +15,17 @@ msgstr ""
 "X-Generator: Translate Toolkit 2.2.5\n"
 
 #. type: Content of: <sect1><title>
+#: lfs-en/chapter09/symlinks.xml
 msgid "Managing Devices"
 msgstr "管理设备"
 
 #. type: Content of: <sect1><sect2><title>
+#: lfs-en/chapter09/symlinks.xml
 msgid "Network Devices"
 msgstr "网络设备"
 
 #. type: Content of: <sect1><sect2><para>
+#: lfs-en/chapter09/symlinks.xml
 msgid ""
 "Udev, by default, names network devices according to Firmware/BIOS data or "
 "physical characteristics like the bus, slot, or MAC address.  The purpose of "
@@ -40,6 +44,7 @@ msgstr ""
 "序可能会颠倒。"
 
 #. type: Content of: <sect1><sect2><para>
+#: lfs-en/chapter09/symlinks.xml
 msgid ""
 "In the new naming scheme, typical network device names would then be "
 "something like enp5s0 or wlp3s0.  If this naming convention is not desired, "
@@ -49,10 +54,12 @@ msgstr ""
 "这种命名惯例，可以采用传统或自定义命名架构。"
 
 #. type: Content of: <sect1><sect2><sect3><title>
+#: lfs-en/chapter09/symlinks.xml
 msgid "Disabling Persistent Naming on the Kernel Command Line"
 msgstr "在内核命令行中禁用一致性命名"
 
 #. type: Content of: <sect1><sect2><sect3><para>
+#: lfs-en/chapter09/symlinks.xml
 msgid ""
 "The traditional naming scheme using eth0, eth1, etc can be restored by "
 "adding <userinput>net.ifnames=0</userinput> on the kernel command line.  "
@@ -69,10 +76,12 @@ msgstr ""
 "linkend=\"grub-cfg\"/>。"
 
 #. type: Content of: <sect1><sect2><sect3><title>
+#: lfs-en/chapter09/symlinks.xml
 msgid "Creating Custom Udev Rules"
 msgstr "创建自定义 Udev 规则"
 
 #. type: Content of: <sect1><sect2><sect3><para>
+#: lfs-en/chapter09/symlinks.xml
 msgid ""
 "The naming scheme can be customized by creating custom udev rules.  A script "
 "has been included that generates the initial rules.  Generate these rules by "
@@ -82,11 +91,13 @@ msgstr ""
 "行以下命令生成初始规则："
 
 #. type: Content of: <sect1><sect2><sect3><screen>
+#: lfs-en/chapter09/symlinks.xml
 #, no-wrap
 msgid "<userinput>bash /usr/lib/udev/init-net-rules.sh</userinput>"
 msgstr "<userinput>bash /usr/lib/udev/init-net-rules.sh</userinput>"
 
 #. type: Content of: <sect1><sect2><sect3><para>
+#: lfs-en/chapter09/symlinks.xml
 msgid ""
 "Now, inspect the <filename>/etc/udev/rules.d/70-persistent-net.rules</"
 "filename> file, to find out which name was assigned to which network device:"
@@ -95,11 +106,13 @@ msgstr ""
 "确认网络设备与命名的对应关系："
 
 #. type: Content of: <sect1><sect2><sect3><screen>
+#: lfs-en/chapter09/symlinks.xml
 #, no-wrap
 msgid "<userinput>cat /etc/udev/rules.d/70-persistent-net.rules</userinput>"
 msgstr "<userinput>cat /etc/udev/rules.d/70-persistent-net.rules</userinput>"
 
 #. type: Content of: <sect1><sect2><sect3><note><para>
+#: lfs-en/chapter09/symlinks.xml
 msgid ""
 "In some cases such as when MAC addresses have been assigned to a network "
 "card manually or in a virtual environment such as Qemu or Xen, the network "
@@ -111,6 +124,7 @@ msgstr ""
 "本方法。"
 
 #. type: Content of: <sect1><sect2><sect3><para>
+#: lfs-en/chapter09/symlinks.xml
 msgid ""
 "The file begins with a comment block followed by two lines for each NIC. The "
 "first line for each NIC is a commented description showing its hardware IDs "
@@ -127,6 +141,7 @@ msgstr ""
 "的设备名。"
 
 #. type: Content of: <sect1><sect2><sect3><para>
+#: lfs-en/chapter09/symlinks.xml
 msgid ""
 "All udev rules are made up of several keys, separated by commas and optional "
 "whitespace. This rule's keys and an explanation of each of them are as "
@@ -136,6 +151,7 @@ msgstr ""
 "键值和对它们的解释："
 
 #. type: Content of: <sect1><sect2><sect3><itemizedlist><listitem><para>
+#: lfs-en/chapter09/symlinks.xml
 msgid ""
 "<literal>SUBSYSTEM==\"net\"</literal> - This tells udev to ignore devices "
 "that are not network cards."
@@ -143,6 +159,7 @@ msgstr ""
 "<literal>SUBSYSTEM==\"net\"</literal> - 告诉 udev 忽略除网卡以外的设备。"
 
 #. type: Content of: <sect1><sect2><sect3><itemizedlist><listitem><para>
+#: lfs-en/chapter09/symlinks.xml
 msgid ""
 "<literal>ACTION==\"add\"</literal> - This tells udev to ignore this rule for "
 "a uevent that isn't an add (\"remove\" and \"change\" uevents also happen, "
@@ -152,6 +169,7 @@ msgstr ""
 "(也存在“删除”或“修改”类型的 uevent，但在这种情况下不需要重命名网络接口)。"
 
 #. type: Content of: <sect1><sect2><sect3><itemizedlist><listitem><para>
+#: lfs-en/chapter09/symlinks.xml
 msgid ""
 "<literal>DRIVERS==\"?*\"</literal> - This exists so that udev will ignore "
 "VLAN or bridge sub-interfaces (because these sub-interfaces do not have "
@@ -162,12 +180,14 @@ msgstr ""
 "没有驱动程序)。它们必须被忽略，否则其命名会与父设备冲突。"
 
 #. type: Content of: <sect1><sect2><sect3><itemizedlist><listitem><para>
+#: lfs-en/chapter09/symlinks.xml
 msgid ""
 "<literal>ATTR{address}</literal> - The value of this key is the NIC's MAC "
 "address."
 msgstr "<literal>ATTR{address}</literal> - 该键的值是 NIC 的 MAC 地址。"
 
 #. type: Content of: <sect1><sect2><sect3><itemizedlist><listitem><para>
+#: lfs-en/chapter09/symlinks.xml
 msgid ""
 "<literal>ATTR{type}==\"1\"</literal> - This ensures the rule only matches "
 "the primary interface in the case of certain wireless drivers which create "
@@ -180,12 +200,14 @@ msgstr ""
 "了防止命名冲突。"
 
 #. type: Content of: <sect1><sect2><sect3><itemizedlist><listitem><para>
+#: lfs-en/chapter09/symlinks.xml
 msgid ""
 "<literal>NAME</literal> - The value of this key is the name that udev will "
 "assign to this interface."
 msgstr "<literal>NAME</literal> - 该键的值是 udev 将赋予该网络接口的命名。"
 
 #. type: Content of: <sect1><sect2><sect3><para>
+#: lfs-en/chapter09/symlinks.xml
 msgid ""
 "The value of <literal>NAME</literal> is the important part. Make sure you "
 "know which name has been assigned to each of your network cards before "
@@ -197,10 +219,12 @@ msgstr ""
 "<literal>NAME</literal> 的值。"
 
 #. type: Content of: <sect1><sect2><title>
+#: lfs-en/chapter09/symlinks.xml
 msgid "CD-ROM symlinks"
 msgstr "CD-ROM 符号链接"
 
 #. type: Content of: <sect1><sect2><para>
+#: lfs-en/chapter09/symlinks.xml
 msgid ""
 "Some software that you may want to install later (e.g., various media "
 "players) expect the <filename class=\"symlink\">/dev/cdrom</filename> and "
@@ -219,6 +243,7 @@ msgstr ""
 "脚本提供的两种操作模式中的哪一种。"
 
 #. type: Content of: <sect1><sect2><para>
+#: lfs-en/chapter09/symlinks.xml
 msgid ""
 "First, the script can operate in <quote>by-path</quote> mode (used by "
 "default for USB and FireWire devices), where the rules it creates depend on "
@@ -238,6 +263,7 @@ msgstr ""
 "据设备类型选用其中一个) 从硬件中读取。"
 
 #. type: Content of: <sect1><sect2><para>
+#: lfs-en/chapter09/symlinks.xml
 msgid ""
 "There are advantages to each approach; the correct approach to use will "
 "depend on what kinds of device changes may happen. If you expect the "
@@ -257,12 +283,14 @@ msgstr ""
 "path</quote> 模式。"
 
 #. type: Content of: <sect1><sect2><para>
+#: lfs-en/chapter09/symlinks.xml
 msgid ""
 "If either type of change is possible with your drive, then choose a mode "
 "based on the type of change you expect to happen more often."
 msgstr "如果两种变化都可能发生，则根据您预期较常发生的变化选择模式。"
 
 #. type: Content of: <sect1><sect2><important><para>
+#: lfs-en/chapter09/symlinks.xml
 msgid ""
 "External devices (for example, a USB-connected CD drive)  should not use by-"
 "path persistence, because each time the device is plugged into a new "
@@ -275,6 +303,7 @@ msgstr ""
 "设备的 udev 规则，都会导致这个问题，并不仅限于 CD 或 DVD 设备。"
 
 #. type: Content of: <sect1><sect2><para>
+#: lfs-en/chapter09/symlinks.xml
 msgid ""
 "If you wish to see the values that the udev scripts will use, then for the "
 "appropriate CD-ROM device, find the corresponding directory under <filename "
@@ -288,11 +317,13 @@ msgstr ""
 "这样的命令："
 
 #. type: Content of: <sect1><sect2><screen>
+#: lfs-en/chapter09/symlinks.xml
 #, no-wrap
 msgid "<userinput>udevadm test /sys/block/hdd</userinput>"
 msgstr "<userinput>udevadm test /sys/block/hdd</userinput>"
 
 #. type: Content of: <sect1><sect2><para>
+#: lfs-en/chapter09/symlinks.xml
 msgid ""
 "Look at the lines containing the output of various *_id programs.  The "
 "<quote>by-id</quote> mode will use the ID_SERIAL value if it exists and is "
@@ -304,6 +335,7 @@ msgstr ""
 "quote> 模式会使用 ID_PATH 的值。"
 
 #. type: Content of: <sect1><sect2><para>
+#: lfs-en/chapter09/symlinks.xml
 msgid ""
 "If the default mode is not suitable for your situation, then the following "
 "modification can be made to the <filename>/etc/udev/rules.d/83-cdrom-"
@@ -316,6 +348,7 @@ msgstr ""
 "个)："
 
 #. type: Content of: <sect1><sect2><screen>
+#: lfs-en/chapter09/symlinks.xml
 #, no-wrap
 msgid ""
 "<userinput>sed -e 's/\"write_cd_rules\"/\"write_cd_rules <replaceable>mode</replaceable>\"/' \\\n"
@@ -325,6 +358,7 @@ msgstr ""
 "    -i /etc/udev/rules.d/83-cdrom-symlinks.rules</userinput>"
 
 #. type: Content of: <sect1><sect2><para>
+#: lfs-en/chapter09/symlinks.xml
 msgid ""
 "Note that it is not necessary to create the rules files or symlinks at this "
 "time because you have bind-mounted the host's <filename class=\"directory\">/"
@@ -337,6 +371,7 @@ msgstr ""
 "接。只要在第一次引导 LFS 系统后创建规则和符号链接即可。"
 
 #. type: Content of: <sect1><sect2><para>
+#: lfs-en/chapter09/symlinks.xml
 msgid ""
 "However, if you have multiple CD-ROM devices, then the symlinks generated at "
 "that time may point to different devices than they point to on your host "
@@ -355,10 +390,12 @@ msgstr ""
 "您的需要一致。"
 
 #. type: Content of: <sect1><sect2><title>
+#: lfs-en/chapter09/symlinks.xml
 msgid "Dealing with duplicate devices"
 msgstr "处理重复设备"
 
 #. type: Content of: <sect1><sect2><para>
+#: lfs-en/chapter09/symlinks.xml
 msgid ""
 "As explained in <xref linkend=\"ch-config-udev\"/>, the order in which "
 "devices with the same function appear in <filename class=\"directory\">/dev</"
@@ -381,6 +418,7 @@ msgstr ""
 "\">BLFS</ulink> 中找到。"
 
 #. type: Content of: <sect1><sect2><para>
+#: lfs-en/chapter09/symlinks.xml
 msgid ""
 "For each of your devices that is likely to have this problem (even if the "
 "problem doesn't exist in your current Linux distribution), find the "
@@ -399,15 +437,18 @@ msgstr ""
 "(通常是厂商和产品 ID，或者序列号)："
 
 #. type: Content of: <sect1><sect2><screen>
+#: lfs-en/chapter09/symlinks.xml
 #, no-wrap
 msgid "<userinput>udevadm info -a -p /sys/class/video4linux/video0</userinput>"
 msgstr "<userinput>udevadm info -a -p /sys/class/video4linux/video0</userinput>"
 
 #. type: Content of: <sect1><sect2><para>
+#: lfs-en/chapter09/symlinks.xml
 msgid "Then write rules that create the symlinks, e.g.:"
 msgstr "然后编写创建符号链接的规则，例如："
 
 #. type: Content of: <sect1><sect2><screen>
+#: lfs-en/chapter09/symlinks.xml
 #, no-wrap
 msgid ""
 "<userinput>cat &gt; /etc/udev/rules.d/83-duplicate_devs.rules &lt;&lt; \"EOF\"\n"
@@ -427,6 +468,7 @@ msgstr ""
 "EOF</userinput>"
 
 #. type: Content of: <sect1><sect2><para>
+#: lfs-en/chapter09/symlinks.xml
 msgid ""
 "The result is that <filename>/dev/video0</filename> and <filename>/dev/"
 "video1</filename> devices still refer randomly to the tuner and the web "

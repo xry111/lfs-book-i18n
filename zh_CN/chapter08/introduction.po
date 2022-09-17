@@ -1,7 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2021-09-21 17:37+0800\n"
+"Report-Msgid-Bugs-To: lfs-dev@linuxfromscratch.org\n"
+"POT-Creation-Date: 2022-09-17 18:28+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -14,14 +15,23 @@ msgstr ""
 "X-Generator: Translate Toolkit 2.2.5\n"
 
 #. type: Content of: <sect1><title>
+#: lfs-en/chapter03/introduction.xml lfs-en/chapter04/introduction.xml
+#: lfs-en/chapter06/introduction.xml lfs-en/part3intro/introduction.xml
+#: lfs-en/chapter01/chapter01.xml lfs-en/chapter05/introduction.xml
+#: lfs-en/chapter07/introduction.xml lfs-en/index.xml
+#: lfs-en/chapter08/introduction.xml lfs-en/chapter10/grub.xml
+#: lfs-en/chapter10/introduction.xml lfs-en/chapter02/introduction.xml
+#: lfs-en/chapter09/introductiond.xml lfs-en/chapter09/introduction.xml
 msgid "Introduction"
 msgstr "概述"
 
 #. type: Content of: <sect1><para>
+#: lfs-en/chapter08/introduction.xml
 msgid "In this chapter, we start constructing the LFS system in earnest."
 msgstr "在本章中，我们将真正开始构造 LFS 系统。"
 
 #. type: Content of: <sect1><para>
+#: lfs-en/chapter08/introduction.xml
 msgid ""
 "The installation of this software is straightforward. Although in many cases "
 "the installation instructions could be made shorter and more generic, we "
@@ -35,6 +45,7 @@ msgstr ""
 "原理的关键就是要知道每个包的作用，以及您 (或者系统)  为什么需要它。"
 
 #. type: Content of: <sect1><para>
+#: lfs-en/chapter08/introduction.xml
 msgid ""
 "We do not recommend using optimizations.  They can make a program run "
 "slightly faster, but they may also cause compilation difficulties and "
@@ -61,6 +72,7 @@ msgstr ""
 "这样，得到的系统仍然会运行得很快，而且会很稳定。"
 
 #. type: Content of: <sect1><para>
+#: lfs-en/chapter08/introduction.xml
 msgid ""
 "Before the installation instructions, each installation page provides "
 "information about the package, including a concise description of what it "
@@ -74,6 +86,7 @@ msgstr ""
 "包提供的所有程序和库的清单 (以及对它们的简要描述)。"
 
 #. type: Content of: <sect1><note><para>
+#: lfs-en/chapter08/introduction.xml
 msgid ""
 "The SBU values and required disk space includes test suite data for all "
 "applicable packages in <xref linkend=\"chapter-building-system\"/>. SBU "
@@ -84,10 +97,12 @@ msgstr ""
 "据仅使用单个 CPU 核心 (-j1) 进行操作时测得的时间计算。"
 
 #. type: Content of: <sect1><sect2><title>
+#: lfs-en/chapter08/introduction.xml
 msgid "About libraries"
 msgstr "关于库"
 
 #. type: Content of: <sect1><sect2><para>
+#: lfs-en/chapter08/introduction.xml
 msgid ""
 "In general, the LFS editors discourage building and installing static "
 "libraries.  The original purpose for most static libraries has been made "
@@ -105,6 +120,7 @@ msgstr ""
 "新链接)。"
 
 #. type: Content of: <sect1><sect2><para>
+#: lfs-en/chapter08/introduction.xml
 msgid ""
 "In the procedures in this chapter, we remove or disable installation of most "
 "static libraries. Usually this is done by passing a <option>--disable-"
@@ -119,11 +135,11 @@ msgstr ""
 "态库对于一般的软件包构建过程仍然很关键，就不能禁用静态库。"
 
 #. type: Content of: <sect1><sect2><para>
+#: lfs-en/chapter08/introduction.xml
 msgid ""
 "For a more complete discussion of libraries, see the discussion <ulink url="
 "\"&blfs-book;introduction/libraries.html\"> Libraries: Static or shared?</"
 "ulink> in the BLFS book."
 msgstr ""
 "关于库的更详细讨论，可以参阅 BLFS 手册中的 <ulink url=\"&blfs-book;"
-"introduction/libraries.html\">Libraries: Static or shared?</"
-"ulink> 一节。"
+"introduction/libraries.html\">Libraries: Static or shared?</ulink> 一节。"

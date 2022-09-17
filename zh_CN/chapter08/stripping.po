@@ -6,8 +6,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Linux From Scratch 11.0\n"
-"Report-Msgid-Bugs-To: lfs-dev@lists.linuxfromscratch.org\n"
-"POT-Creation-Date: 2022-08-22 11:09+0800\n"
+"Report-Msgid-Bugs-To: lfs-dev@linuxfromscratch.org\n"
+"POT-Creation-Date: 2022-09-17 18:28+0800\n"
 "PO-Revision-Date: 2021-01-20 21:26+0800\n"
 "Last-Translator: Xi Ruoyao <xry111@mengyan1223.wang>\n"
 "Language-Team: None <noreply@mengyan1223.wang>\n"
@@ -20,10 +20,12 @@ msgstr ""
 "X-Pootle-Path: /zh_CN/lfs/chapter08/util-linux.po\n"
 
 #. type: Content of: <sect1><title>
+#: lfs-en/chapter08/stripping.xml
 msgid "Stripping"
 msgstr "移除调试符号"
 
 #. type: Content of: <sect1><para>
+#: lfs-en/chapter08/stripping.xml
 msgid ""
 "This section is optional.  If the intended user is not a programmer and does "
 "not plan to do any debugging on the system software, the system size can be "
@@ -32,10 +34,11 @@ msgid ""
 "inconvenience other than not being able to debug the software fully anymore."
 msgstr ""
 "本节是可选的。如果系统不是为程序员设计的，也没有调试系统软件的计划，可以通过"
-"从二进制程序和库移除调试符号和不必要的符号表项，将系统的体积减小约 2 GB。"
-"除了无法再调试全部软件外，这不会造成任何不便。"
+"从二进制程序和库移除调试符号和不必要的符号表项，将系统的体积减小约 2 GB。除了"
+"无法再调试全部软件外，这不会造成任何不便。"
 
 #. type: Content of: <sect1><para>
+#: lfs-en/chapter08/stripping.xml
 msgid ""
 "Most people who use the commands mentioned below do not experience any "
 "difficulties. However, it is easy to make a typo and render the new system "
@@ -47,6 +50,7 @@ msgstr ""
 "当前状态。"
 
 #. type: Content of: <sect1><para>
+#: lfs-en/chapter08/stripping.xml
 msgid ""
 "A <command>strip</command> command with <parameter>--strip-unneeded</"
 "parameter> option removes all debug symbols from a binary or library.  And, "
@@ -54,12 +58,12 @@ msgid ""
 "libraries) or dynamic linker (for dynamic-linked binaries and shared "
 "libraries)."
 msgstr ""
-"附带 <parameter>--strip-unneeded</parameter> 选项的 "
-"<command>strip</command> 命令从程序或库中移除所有调试符号。另外，它同时会"
-"移除所有链接器 (对于静态库) 或动态链接器 (对于动态链接的程序和共享库) "
-"不需要的符号表项。"
+"附带 <parameter>--strip-unneeded</parameter> 选项的 <command>strip</command> "
+"命令从程序或库中移除所有调试符号。另外，它同时会移除所有链接器 (对于静态库) "
+"或动态链接器 (对于动态链接的程序和共享库) 不需要的符号表项。"
 
 #. type: Content of: <sect1><para>
+#: lfs-en/chapter08/stripping.xml
 msgid ""
 "The debugging symbols for selected libraries are placed in separate files.  "
 "This debugging information is needed if running regression tests that use "
@@ -72,6 +76,7 @@ msgstr ""
 "息的存在。"
 
 #. type: Content of: <sect1><para>
+#: lfs-en/chapter08/stripping.xml
 msgid ""
 "Note that <command>strip</command> will overwrite the binary or library file "
 "it is processing.  This can crash the processes using code or data from the "
@@ -93,6 +98,7 @@ msgstr ""
 "因。"
 
 #. type: Content of: <sect1><note><para>
+#: lfs-en/chapter08/stripping.xml
 msgid ""
 "The ELF loader's name is ld-linux-x86-64.so.2 on 64-bit systems and ld-linux."
 "so.2 on 32-bit systems.  The construct below selects the correct name for "
@@ -107,6 +113,7 @@ msgstr ""
 #. <screen>
 #. <userinput>save_lib="ld-2.25.so libc-2.25.so libpthread-2.25.so libthread_db-1.0.so"
 #. type: Content of: <sect1><screen>
+#: lfs-en/chapter08/stripping.xml
 #, no-wrap
 msgid ""
 "<userinput>save_usrlib=\"$(cd /usr/lib; ls ld-linux*[^g])\n"
@@ -222,6 +229,7 @@ msgstr ""
 "</userinput>"
 
 #. type: Content of: <sect1><para>
+#: lfs-en/chapter08/stripping.xml
 msgid ""
 "A large number of files will be reported as having their file format not "
 "recognized. These warnings can be safely ignored. They indicate that those "

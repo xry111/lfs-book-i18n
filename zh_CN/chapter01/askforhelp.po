@@ -1,7 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2021-10-13 19:51+0800\n"
+"Report-Msgid-Bugs-To: lfs-dev@linuxfromscratch.org\n"
+"POT-Creation-Date: 2022-09-17 18:28+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -14,10 +15,12 @@ msgstr ""
 "X-Generator: Translate Toolkit 2.2.5\n"
 
 #. type: Content of: <sect1><title>
+#: lfs-en/chapter01/askforhelp.xml
 msgid "Help"
 msgstr "如何求助"
 
 #. type: Content of: <sect1><para>
+#: lfs-en/chapter01/askforhelp.xml
 msgid ""
 "If an issue or a question is encountered while working through this book, "
 "please check the FAQ page at <ulink url=\"&faq-root;#generalfaq\"/>.  "
@@ -32,6 +35,7 @@ msgstr ""
 "<ulink url=\"&hints-root;errors.txt\"/>。"
 
 #. type: Content of: <sect1><para>
+#: lfs-en/chapter01/askforhelp.xml
 msgid ""
 "If you cannot find your problem listed in the FAQ, search the mailing lists "
 "at <ulink url=\"&lfs-root;search.html\"/>."
@@ -40,6 +44,7 @@ msgstr ""
 "列表中搜索。"
 
 #. type: Content of: <sect1><para>
+#: lfs-en/chapter01/askforhelp.xml
 msgid ""
 "We also have a wonderful LFS community that is willing to offer assistance "
 "through the mailing lists and IRC (see the <xref linkend=\"ch-intro-resources"
@@ -58,40 +63,49 @@ msgstr ""
 "如果您的研究得不到结果，请您在求助时附带下面列出的全部相关信息。"
 
 #. type: Content of: <sect1><sect2><title>
+#: lfs-en/chapter01/askforhelp.xml
 msgid "Things to Mention"
 msgstr "需要提供的信息"
 
 #. type: Content of: <sect1><sect2><para>
+#: lfs-en/chapter01/askforhelp.xml
 msgid ""
 "Apart from a brief explanation of the problem being experienced, the "
 "essential things to include in any request for help are:"
 msgstr "除了简要描述您遇到的问题外，您应该在求助邮件中附带下列必要信息。"
 
 #. type: Content of: <sect1><sect2><itemizedlist><listitem><para>
+#: lfs-en/chapter01/askforhelp.xml
 msgid "The version of the book being used (in this case &version;)"
 msgstr "LFS 手册的版本 (您正在阅读的版本是 &version;)"
 
 #. type: Content of: <sect1><sect2><itemizedlist><listitem><para>
+#: lfs-en/chapter01/askforhelp.xml
 msgid "The host distribution and version being used to create LFS"
 msgstr "构建 LFS 时使用的宿主发行版名称和版本"
 
 #. type: Content of: <sect1><sect2><itemizedlist><listitem><para>
+#: lfs-en/chapter01/askforhelp.xml
 msgid "The output from the <xref linkend='version-check'/> script"
 msgstr "<xref linkend='version-check'/>脚本的输出"
 
 #. type: Content of: <sect1><sect2><itemizedlist><listitem><para>
+#: lfs-en/chapter01/askforhelp.xml
 msgid "The package or section the problem was encountered in"
 msgstr "出现问题的软件包或书内章节"
 
 #. type: Content of: <sect1><sect2><itemizedlist><listitem><para>
+#: lfs-en/chapter01/askforhelp.xml
 msgid "The exact error message or symptom being received"
 msgstr "程序输出的原始错误消息，或者出现的症状"
 
 #. type: Content of: <sect1><sect2><itemizedlist><listitem><para>
+#: lfs-en/chapter01/askforhelp.xml
 msgid "Note whether you have deviated from the book at all"
 msgstr "您是否进行了超出本书内容的操作"
 
 #. type: Content of: <sect1><sect2><note><para>
+#: lfs-en/chapter01/askforhelp.xml
 msgid ""
 "Deviating from this book does <emphasis>not</emphasis> mean that we will not "
 "help you. After all, LFS is about personal preference.  Being upfront about "
@@ -103,10 +117,12 @@ msgstr ""
 "测和确定问题的可能原因。"
 
 #. type: Content of: <sect1><sect2><title>
+#: lfs-en/chapter01/askforhelp.xml
 msgid "Configure Script Problems"
 msgstr "配置脚本的问题"
 
 #. type: Content of: <sect1><sect2><para>
+#: lfs-en/chapter01/askforhelp.xml
 msgid ""
 "If something goes wrong while running the <command>configure</command> "
 "script, review the <filename>config.log</filename> file. This file may "
@@ -120,10 +136,12 @@ msgstr ""
 "emphasis> 的部分。"
 
 #. type: Content of: <sect1><sect2><title>
+#: lfs-en/chapter01/askforhelp.xml
 msgid "Compilation Problems"
 msgstr "编译错误"
 
 #. type: Content of: <sect1><sect2><para>
+#: lfs-en/chapter01/askforhelp.xml
 msgid ""
 "Both the screen output and the contents of various files are useful in "
 "determining the cause of compilation problems. The screen output from the "
@@ -138,6 +156,7 @@ msgstr ""
 "command> 的屏幕输出中截取的一段："
 
 #. type: Content of: <sect1><sect2><screen>
+#: lfs-en/chapter01/askforhelp.xml
 #, no-wrap
 msgid ""
 "<computeroutput>gcc -DALIASPATH=\\\"/mnt/lfs/usr/share/locale:.\\\"\n"
@@ -179,15 +198,18 @@ msgstr ""
 "make: *** [all-recursive-am] Error 2</computeroutput>"
 
 #. type: Content of: <sect1><sect2><para>
+#: lfs-en/chapter01/askforhelp.xml
 msgid "In this case, many people would just include the bottom section:"
 msgstr "对于本例来说，许多人会只附带靠下的一行："
 
 #. type: Content of: <sect1><sect2><screen>
+#: lfs-en/chapter01/askforhelp.xml
 #, no-wrap
 msgid "<computeroutput>make [2]: *** [make] Error 1</computeroutput>"
 msgstr "<computeroutput>make [2]: *** [make] Error 1</computeroutput>"
 
 #. type: Content of: <sect1><sect2><para>
+#: lfs-en/chapter01/askforhelp.xml
 msgid ""
 "This is not enough information to properly diagnose the problem because it "
 "only notes that something went wrong, not <emphasis>what</emphasis> went "
@@ -200,6 +222,7 @@ msgstr ""
 "的。"
 
 #. type: Content of: <sect1><sect2><para>
+#: lfs-en/chapter01/askforhelp.xml
 msgid ""
 "An excellent article about asking for help on the Internet is available "
 "online at <ulink url=\"http://catb.org/~esr/faqs/smart-questions.html\"/>. "

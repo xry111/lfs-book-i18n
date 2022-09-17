@@ -1,7 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2022-02-05 22:12+0800\n"
+"Report-Msgid-Bugs-To: lfs-dev@linuxfromscratch.org\n"
+"POT-Creation-Date: 2022-09-17 18:28+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -14,19 +15,23 @@ msgstr ""
 "X-Generator: Translate Toolkit 2.2.5\n"
 
 #. type: Content of: <sect1><title>
+#: lfs-en/chapter08/cleanup.xml
 msgid "Cleaning Up"
 msgstr "清理系统"
 
 #. type: Content of: <sect1><para>
+#: lfs-en/chapter08/cleanup.xml
 msgid "Finally, clean up some extra files left around from running tests:"
 msgstr "最后，清理在执行测试的过程中遗留的一些文件："
 
 #. type: Content of: <sect1><screen>
+#: lfs-en/chapter08/cleanup.xml
 #, no-wrap
 msgid "<userinput>rm -rf /tmp/*</userinput>"
 msgstr "<userinput>rm -rf /tmp/*</userinput>"
 
 #. type: Content of: <sect1><para>
+#: lfs-en/chapter08/cleanup.xml
 msgid ""
 "There are also several files installed in the /usr/lib and /usr/libexec "
 "directories with a file name extension of .la. These are \"libtool archive\" "
@@ -40,11 +45,13 @@ msgstr ""
 "autotools 以外的构建系统时，是不必要，甚至有害的。执行以下命令删除它们："
 
 #. type: Content of: <sect1><screen>
+#: lfs-en/chapter08/cleanup.xml
 #, no-wrap
 msgid "<userinput>find /usr/lib /usr/libexec -name \\*.la -delete</userinput>"
 msgstr "<userinput>find /usr/lib /usr/libexec -name \\*.la -delete</userinput>"
 
 #. type: Content of: <sect1><para>
+#: lfs-en/chapter08/cleanup.xml
 msgid ""
 "For more information about libtool archive files, see the <ulink url=\"&blfs-"
 "book;introduction/la-files.html\">BLFS section \"About Libtool Archive (.la) "
@@ -55,6 +62,7 @@ msgstr ""
 "\"</ulink>。"
 
 #. type: Content of: <sect1><para>
+#: lfs-en/chapter08/cleanup.xml
 msgid ""
 "The compiler built in <xref linkend=\"chapter-temporary-tools\"/> and <xref "
 "linkend=\"chapter-chroot-temporary-tools\"/> is still partially installed "
@@ -65,17 +73,20 @@ msgstr ""
 "没有存在的意义了。执行命令删除它："
 
 #. type: Content of: <sect1><screen>
+#: lfs-en/chapter08/cleanup.xml
 #, no-wrap
 msgid "<userinput>find /usr -depth -name $(uname -m)-lfs-linux-gnu\\* | xargs rm -rf</userinput>"
 msgstr "<userinput>find /usr -depth -name $(uname -m)-lfs-linux-gnu\\* | xargs rm -rf</userinput>"
 
 #. type: Content of: <sect1><para>
+#: lfs-en/chapter08/cleanup.xml
 msgid ""
 "Finally, remove the temporary 'tester' user account created at the beginning "
 "of the previous chapter."
 msgstr "最后，移除上一章开始时创建的临时 'tester' 用户账户。"
 
 #. type: Content of: <sect1><screen>
+#: lfs-en/chapter08/cleanup.xml
 #, no-wrap
 msgid "<userinput>userdel -r tester</userinput>"
 msgstr "<userinput>userdel -r tester</userinput>"

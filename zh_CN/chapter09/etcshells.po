@@ -1,7 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2021-02-20 08:46+0800\n"
+"Report-Msgid-Bugs-To: lfs-dev@linuxfromscratch.org\n"
+"POT-Creation-Date: 2022-09-17 18:28+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -14,14 +15,17 @@ msgstr ""
 "X-Generator: Translate Toolkit 2.2.5\n"
 
 #. type: Content of: <sect1><title>
+#: lfs-en/chapter09/etcshells.xml
 msgid "Creating the /etc/shells File"
 msgstr "创建 /etc/shells 文件"
 
 #. type: Content of: <sect1><indexterm><primary>
+#: lfs-en/chapter09/etcshells.xml
 msgid "/etc/shells"
 msgstr "/etc/shells"
 
 #. type: Content of: <sect1><para>
+#: lfs-en/chapter09/etcshells.xml
 msgid ""
 "The <filename>shells</filename> file contains a list of login shells on the "
 "system. Applications use this file to determine whether a shell is valid. "
@@ -33,6 +37,7 @@ msgstr ""
 "(/) 的路径。"
 
 #. type: Content of: <sect1><para>
+#: lfs-en/chapter09/etcshells.xml
 msgid ""
 "For example, this file is consulted by <command>chsh</command> to determine "
 "whether an unprivileged user may change the login shell for her own account. "
@@ -43,6 +48,7 @@ msgstr ""
 "录 shell。如果命令没有在 /etc/shell 中找到，就会拒绝修改操作。"
 
 #. type: Content of: <sect1><para>
+#: lfs-en/chapter09/etcshells.xml
 msgid ""
 "It is a requirement for applications such as <application>GDM</application> "
 "which does not populate the face browser if it can't find <filename>/etc/"
@@ -54,6 +60,7 @@ msgstr ""
 "使用未在此文件列出的终端的用户登录。"
 
 #. type: Content of: <sect1><screen>
+#: lfs-en/chapter09/etcshells.xml
 #, no-wrap
 msgid ""
 "<userinput>cat &gt; /etc/shells &lt;&lt; \"EOF\"\n"

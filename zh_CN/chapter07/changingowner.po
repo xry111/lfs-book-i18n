@@ -1,7 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2021-02-20 08:46+0800\n"
+"Report-Msgid-Bugs-To: lfs-dev@linuxfromscratch.org\n"
+"POT-Creation-Date: 2022-09-17 18:28+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -13,10 +14,12 @@ msgstr ""
 "X-Pootle-Path: /zh_CN/lfs/chapter07/changingowner.po\n"
 
 #. type: Content of: <sect1><title>
+#: lfs-en/chapter07/changingowner.xml
 msgid "Changing Ownership"
 msgstr "改变所有者"
 
 #. type: Content of: <sect1><note><para>
+#: lfs-en/chapter07/changingowner.xml
 msgid ""
 "The commands in the remainder of this book must be performed while logged in "
 "as user <systemitem class=\"username\">root</systemitem> and no longer as "
@@ -30,6 +33,7 @@ msgstr ""
 "<systemitem class=\"username\">root</systemitem> 用户的环境中设定好。"
 
 #. type: Content of: <sect1><para>
+#: lfs-en/chapter07/changingowner.xml
 msgid ""
 "Currently, the whole directory hierarchy in <filename class=\"directory\">"
 "$LFS</filename> is owned by the user <systemitem class=\"username\">lfs</"
@@ -49,6 +53,7 @@ msgstr ""
 "文件的所有者，从而产生恶意操作这些文件的可能。"
 
 #. type: Content of: <sect1><para>
+#: lfs-en/chapter07/changingowner.xml
 msgid ""
 "To address this issue, change the ownership of the <filename class="
 "\"directory\">$LFS/*</filename> directories to user <systemitem class="
@@ -59,6 +64,7 @@ msgstr ""
 "systemitem>："
 
 #. type: Content of: <sect1><screen>
+#: lfs-en/chapter07/changingowner.xml
 #, no-wrap
 msgid ""
 "<userinput>chown -R root:root $LFS/{usr,lib,var,etc,bin,sbin,tools}\n"

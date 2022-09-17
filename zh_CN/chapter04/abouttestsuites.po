@@ -1,7 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2021-02-20 08:46+0800\n"
+"Report-Msgid-Bugs-To: lfs-dev@linuxfromscratch.org\n"
+"POT-Creation-Date: 2022-09-17 18:28+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -14,10 +15,12 @@ msgstr ""
 "X-Generator: Translate Toolkit 2.2.5\n"
 
 #. type: Content of: <sect1><title>
+#: lfs-en/chapter04/abouttestsuites.xml
 msgid "About the Test Suites"
 msgstr "关于测试套件"
 
 #. type: Content of: <sect1><para>
+#: lfs-en/chapter04/abouttestsuites.xml
 msgid ""
 "Most packages provide a test suite. Running the test suite for a newly built "
 "package is a good idea because it can provide a <quote>sanity check</quote> "
@@ -32,6 +35,7 @@ msgstr ""
 "然而，这并不保证软件包完全没有错误。"
 
 #. type: Content of: <sect1><para>
+#: lfs-en/chapter04/abouttestsuites.xml
 msgid ""
 "Some test suites are more important than others. For example, the test "
 "suites for the core toolchain packages&mdash;GCC, binutils, and glibc&mdash;"
@@ -46,6 +50,7 @@ msgstr ""
 "硬件上，但我们仍然强烈推荐运行它们。"
 
 #. type: Content of: <sect1><note><para>
+#: lfs-en/chapter04/abouttestsuites.xml
 msgid ""
 "Running the test suites in <xref linkend=\"chapter-cross-tools\"/> and <xref "
 "linkend=\"chapter-temporary-tools\"/> is impossible, since the programs are "
@@ -57,6 +62,7 @@ msgstr ""
 "构建它们的宿主系统运行。"
 
 #. type: Content of: <sect1><para>
+#: lfs-en/chapter04/abouttestsuites.xml
 msgid ""
 "A common issue with running the test suites for binutils and GCC is running "
 "out of pseudo terminals (PTYs). This can result in a high number of failing "
@@ -72,6 +78,7 @@ msgstr ""
 "中进行了讨论。"
 
 #. type: Content of: <sect1><para>
+#: lfs-en/chapter04/abouttestsuites.xml
 msgid ""
 "Sometimes package test suites will fail, but for reasons which the "
 "developers are aware of and have deemed non-critical. Consult the logs "

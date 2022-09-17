@@ -6,8 +6,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Linux From Scratch 11.0\n"
-"Report-Msgid-Bugs-To: lfs-dev@lists.linuxfromscratch.org\n"
-"POT-Creation-Date: 2022-04-21 14:25+0800\n"
+"Report-Msgid-Bugs-To: lfs-dev@linuxfromscratch.org\n"
+"POT-Creation-Date: 2022-09-17 18:28+0800\n"
 "PO-Revision-Date: 2021-09-08 14:00+0800\n"
 "Last-Translator: Xi Ruoyao <xry111@mengyan1223.wang>\n"
 "Language-Team: None <noreply@mengyan1223.wang>\n"
@@ -20,14 +20,17 @@ msgstr ""
 "X-Pootle-Path: /zh_CN/lfs/chapter07/cleanup.po\n"
 
 #. type: Content of: <sect1><title>
+#: lfs-en/chapter07/cleanup.xml
 msgid "Cleaning up and Saving the Temporary System"
 msgstr "清理和备份临时系统"
 
 #. type: Content of: <sect1><sect2><title>
+#: lfs-en/chapter07/cleanup.xml
 msgid "Cleaning"
 msgstr "清理"
 
 #. type: Content of: <sect1><sect2><para>
+#: lfs-en/chapter07/cleanup.xml
 msgid ""
 "First, remove the currently installed documentation to prevent them from "
 "ending up in the final system, and to save about 35 MB:"
@@ -35,11 +38,13 @@ msgstr ""
 "首先，删除临时工具的文档，以防止它们进入最终构建的系统，并节省大约 35 MB："
 
 #. type: Content of: <sect1><sect2><screen>
+#: lfs-en/chapter07/cleanup.xml
 #, no-wrap
 msgid "<userinput>rm -rf /usr/share/{info,man,doc}/*</userinput>"
 msgstr "<userinput>rm -rf /usr/share/{info,man,doc}/*</userinput>"
 
 #. type: Content of: <sect1><sect2><para>
+#: lfs-en/chapter07/cleanup.xml
 msgid ""
 "Second, the libtool .la files are only useful when linking with static "
 "libraries. They are unneeded and potentially harmful when using dynamic "
@@ -51,11 +56,13 @@ msgstr ""
 "chroot 环境中运行命令，删除它们："
 
 #. type: Content of: <sect1><sect2><screen>
+#: lfs-en/chapter07/cleanup.xml
 #, no-wrap
 msgid "<userinput>find /usr/{lib,libexec} -name \\*.la -delete</userinput>"
 msgstr "<userinput>find /usr/{lib,libexec} -name \\*.la -delete</userinput>"
 
 #. type: Content of: <sect1><sect2><para>
+#: lfs-en/chapter07/cleanup.xml
 msgid ""
 "The current system size is now about 3 GB, however the /tools directory is "
 "no longer needed. It uses about 1 GB of disk space.  Delete it now:"
@@ -64,15 +71,18 @@ msgstr ""
 "使用约 1 GB 存储空间。现在删除它："
 
 #. type: Content of: <sect1><sect2><screen>
+#: lfs-en/chapter07/cleanup.xml
 #, no-wrap
 msgid "<userinput>rm -rf /tools</userinput>"
 msgstr "<userinput>rm -rf /tools</userinput>"
 
 #. type: Content of: <sect1><sect2><title>
+#: lfs-en/chapter07/cleanup.xml
 msgid "Backup"
 msgstr "备份"
 
 #. type: Content of: <sect1><sect2><para>
+#: lfs-en/chapter07/cleanup.xml
 msgid ""
 "At this point the essential programs and libraries have been created and "
 "your current LFS system is in a good state. Your system can now be backed up "
@@ -89,6 +99,7 @@ msgstr ""
 "临时工具。为了避免浪费时间对已经构建成功的部分进行返工，可以准备一个备份。"
 
 #. type: Content of: <sect1><sect2><note><para>
+#: lfs-en/chapter07/cleanup.xml
 msgid ""
 "All the remaining steps in this section are optional. Nevertheless, as soon "
 "as you begin installing packages in <xref linkend=\"chapter-building-system"
@@ -100,6 +111,7 @@ msgstr ""
 "备份临时工具可能是个好主意。"
 
 #. type: Content of: <sect1><sect2><para>
+#: lfs-en/chapter07/cleanup.xml
 msgid ""
 "The following steps are performed from outside the chroot environment. That "
 "means, you have to leave the chroot environment first before continuing. The "
@@ -114,15 +126,18 @@ msgstr ""
 "安全。"
 
 #. type: Content of: <sect1><sect2><para>
+#: lfs-en/chapter07/cleanup.xml
 msgid "If you have decided to make a backup, leave the chroot environment:"
 msgstr "现在，如果您决定进行备份，离开 chroot 环境："
 
 #. type: Content of: <sect1><sect2><screen>
+#: lfs-en/chapter07/cleanup.xml
 #, no-wrap
 msgid "<userinput>exit</userinput>"
 msgstr "<userinput>exit</userinput>"
 
 #. type: Content of: <sect1><sect2><important><para>
+#: lfs-en/chapter07/cleanup.xml
 msgid ""
 "All of the following instructions are executed by <systemitem class="
 "\"username\">root</systemitem> on your host system.  Take extra care about "
@@ -139,6 +154,7 @@ msgstr ""
 "class=\"username\">root</systemitem> 设定。"
 
 #. type: Content of: <sect1><sect2><important><para>
+#: lfs-en/chapter07/cleanup.xml
 msgid ""
 "Whenever commands are to be executed by <systemitem class=\"username\">root</"
 "systemitem>, make sure you have set <envar>LFS</envar>."
@@ -147,14 +163,17 @@ msgstr ""
 "行命令，一定要确认 <envar>LFS</envar> 变量已经正确设定。"
 
 #. type: Content of: <sect1><sect2><important><para>
+#: lfs-en/chapter07/cleanup.xml
 msgid "This has been discussed in <xref linkend='ch-partitioning-aboutlfs'/>."
 msgstr "<xref linkend='ch-partitioning-aboutlfs'/>已经讨论了这个问题。"
 
 #. type: Content of: <sect1><sect2><para>
+#: lfs-en/chapter07/cleanup.xml
 msgid "Before making a backup, unmount the virtual file systems:"
 msgstr "在进行备份之前，解除内核虚拟文件系统的挂载："
 
 #. type: Content of: <sect1><sect2><screen>
+#: lfs-en/chapter07/cleanup.xml
 #, no-wrap
 msgid ""
 "<userinput>umount $LFS/dev/pts\n"
@@ -164,6 +183,7 @@ msgstr ""
 "umount $LFS/{sys,proc,run,dev}</userinput>"
 
 #. type: Content of: <sect1><sect2><para>
+#: lfs-en/chapter07/cleanup.xml
 msgid ""
 "Make sure you have at least 1 GB free disk space (the source tarballs will "
 "be included in the backup archive) on the filesystem containing directory "
@@ -173,6 +193,7 @@ msgstr ""
 "统中，有至少 1 GB 的可用存储空间 (源代码压缩包也会被包含在备份档案中)。"
 
 #. type: Content of: <sect1><sect2><para>
+#: lfs-en/chapter07/cleanup.xml
 msgid ""
 "Note that the instructions below specify the home directory of the host "
 "system's <systemitem class=\"username\">root</systemitem> user, which is "
@@ -182,6 +203,7 @@ msgstr ""
 "systemitem> 用户的主目录，它通常在根文件系统中。"
 
 #. type: Content of: <sect1><sect2><para>
+#: lfs-en/chapter07/cleanup.xml
 msgid ""
 "Replace <envar>$HOME</envar> by a directory of your choice if you do not "
 "want to have the backup stored in <systemitem class=\"username\">root</"
@@ -191,10 +213,12 @@ msgstr ""
 "<systemitem class=\"username\">root</systemitem> 的主目录中："
 
 #. type: Content of: <sect1><sect2><para>
+#: lfs-en/chapter07/cleanup.xml
 msgid "Create the backup archive by running the following command:"
 msgstr "运行以下命令，创建备份档案："
 
 #. type: Content of: <sect1><sect2><note><para>
+#: lfs-en/chapter07/cleanup.xml
 msgid ""
 "Because the backup archive is compressed, it takes a relatively long time "
 "(over 10 minutes) even on a reasonably fast system."
@@ -203,6 +227,7 @@ msgstr ""
 "(可能超过 10 分钟)。"
 
 #. type: Content of: <sect1><sect2><screen>
+#: lfs-en/chapter07/cleanup.xml
 #, no-wrap
 msgid ""
 "<userinput>cd $LFS\n"
@@ -212,6 +237,7 @@ msgstr ""
 "tar -cJpf $HOME/lfs-temp-tools-&version;.tar.xz .</userinput>"
 
 #. type: Content of: <sect1><sect2><note><para>
+#: lfs-en/chapter07/cleanup.xml
 msgid ""
 "If continuing to chapter 8, don't forget to reenter the chroot environment "
 "as explained in the <quote>Important</quote> box below."
@@ -220,10 +246,12 @@ msgstr ""
 "忘记重新进入 chroot 环境。"
 
 #. type: Content of: <sect1><sect2><title>
+#: lfs-en/chapter07/cleanup.xml
 msgid "Restore"
 msgstr "还原"
 
 #. type: Content of: <sect1><sect2><para>
+#: lfs-en/chapter07/cleanup.xml
 msgid ""
 "In case some mistakes have been made and you need to start over, you can use "
 "this backup to restore the system and save some recovery time.  Since the "
@@ -238,6 +266,7 @@ msgstr ""
 "envar> 设定正确后，运行以下命令从备份档案进行还原："
 
 #. type: Content of: <sect1><sect2><warning><para>
+#: lfs-en/chapter07/cleanup.xml
 msgid ""
 "The following commands are extremely dangerous.  If you run <command>rm -"
 "rf ./*</command> as the &root; user and you do not change to the $LFS "
@@ -245,10 +274,11 @@ msgid ""
 "&root; user, it will destroy your entire host system.  YOU ARE WARNED."
 msgstr ""
 "下面的命令非常危险。如果您在没有切换到 $LFS 目录或 <envar>LFS</envar> 环境变"
-"量没有为 &root; 用户正确设定的情况下运行了 <command>rm -rf ./*</command> 命令，"
-"它会完全摧毁宿主系统。后果自负。"
+"量没有为 &root; 用户正确设定的情况下运行了 <command>rm -rf ./*</command> 命"
+"令，它会完全摧毁宿主系统。后果自负。"
 
 #. type: Content of: <sect1><sect2><screen>
+#: lfs-en/chapter07/cleanup.xml
 #, no-wrap
 msgid ""
 "<computeroutput>cd $LFS\n"
@@ -260,12 +290,14 @@ msgstr ""
 "tar -xpf $HOME/lfs-temp-tools-&version;.tar.xz</computeroutput>"
 
 #. type: Content of: <sect1><sect2><para>
+#: lfs-en/chapter07/cleanup.xml
 msgid ""
 "Again, double check that the environment has been setup properly and "
 "continue building the rest of the system."
 msgstr "再一次复查环境是否配置正确，即可继续构建系统。"
 
 #. type: Content of: <sect1><sect2><important><para>
+#: lfs-en/chapter07/cleanup.xml
 msgid ""
 "If you left the chroot environment to create a backup or restart building "
 "using a restore, remember to check that the virtual filesystems are still "

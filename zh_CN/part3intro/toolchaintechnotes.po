@@ -1,7 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2022-02-12 22:03+0800\n"
+"Report-Msgid-Bugs-To: lfs-dev@linuxfromscratch.org\n"
+"POT-Creation-Date: 2022-09-17 18:28+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -14,10 +15,12 @@ msgstr ""
 "X-Generator: Translate Toolkit 2.2.5\n"
 
 #. type: Content of: <sect1><title>
+#: lfs-en/part3intro/toolchaintechnotes.xml
 msgid "Toolchain Technical Notes"
 msgstr "工具链技术说明"
 
 #. type: Content of: <sect1><para>
+#: lfs-en/part3intro/toolchaintechnotes.xml
 msgid ""
 "This section explains some of the rationale and technical details behind the "
 "overall build method. It is not essential to immediately understand "
@@ -30,6 +33,7 @@ msgstr ""
 "随时可以回来翻阅本节。"
 
 #. type: Content of: <sect1><para>
+#: lfs-en/part3intro/toolchaintechnotes.xml
 msgid ""
 "The overall goal of <xref linkend=\"chapter-cross-tools\"/> and <xref "
 "linkend=\"chapter-temporary-tools\"/> is to produce a temporary area that "
@@ -47,6 +51,7 @@ msgstr ""
 "被精心设计，以尽量降低新读者可能面临的风险，同时提供尽可能多的教育价值。"
 
 #. type: Content of: <sect1><para>
+#: lfs-en/part3intro/toolchaintechnotes.xml
 msgid ""
 "The build process is based on the process of <emphasis>cross-compilation</"
 "emphasis>. Cross-compilation is normally used for building a compiler and "
@@ -62,10 +67,12 @@ msgstr ""
 "产生的程序都不可能依赖于宿主环境。"
 
 #. type: Content of: <sect1><sect2><title>
+#: lfs-en/part3intro/toolchaintechnotes.xml
 msgid "About Cross-Compilation"
 msgstr "关于交叉编译"
 
 #. type: Content of: <sect1><sect2><note><para>
+#: lfs-en/part3intro/toolchaintechnotes.xml
 msgid ""
 "The LFS book is not, and does not contain a general tutorial to build a "
 "cross (or native) toolchain. Don't use the command in the book for a cross "
@@ -77,6 +84,7 @@ msgstr ""
 "外的用途。"
 
 #. type: Content of: <sect1><sect2><para>
+#: lfs-en/part3intro/toolchaintechnotes.xml
 msgid ""
 "Cross-compilation involves some concepts that deserve a section on their "
 "own. Although this section may be omitted in a first reading, coming back to "
@@ -86,14 +94,17 @@ msgstr ""
 "在之后重新阅读本节，能够使得您更完整地理解构建过程。"
 
 #. type: Content of: <sect1><sect2><para>
+#: lfs-en/part3intro/toolchaintechnotes.xml
 msgid "Let us first define some terms used in this context:"
 msgstr "首先我们定义讨论交叉编译时常用的术语："
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
+#: lfs-en/part3intro/toolchaintechnotes.xml
 msgid "build"
 msgstr "build"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
+#: lfs-en/part3intro/toolchaintechnotes.xml
 msgid ""
 "is the machine where we build programs. Note that this machine is referred "
 "to as the <quote>host</quote> in other sections."
@@ -102,10 +113,12 @@ msgstr ""
 "quote>(宿主)。"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
+#: lfs-en/part3intro/toolchaintechnotes.xml
 msgid "host"
 msgstr "host"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
+#: lfs-en/part3intro/toolchaintechnotes.xml
 msgid ""
 "is the machine/system where the built programs will run. Note that this use "
 "of <quote>host</quote> is not the same as in other sections."
@@ -114,10 +127,12 @@ msgstr ""
 "的“宿主”(host) 一词不同。"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
+#: lfs-en/part3intro/toolchaintechnotes.xml
 msgid "target"
 msgstr "target"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
+#: lfs-en/part3intro/toolchaintechnotes.xml
 msgid ""
 "is only used for compilers. It is the machine the compiler produces code "
 "for. It may be different from both build and host."
@@ -126,6 +141,7 @@ msgstr ""
 "同。"
 
 #. type: Content of: <sect1><sect2><para>
+#: lfs-en/part3intro/toolchaintechnotes.xml
 msgid ""
 "As an example, let us imagine the following scenario (sometimes referred to "
 "as <quote>Canadian Cross</quote>): we may have a compiler on a slow machine "
@@ -140,62 +156,77 @@ msgstr ""
 "码。如果要为 C 构建编译器，可以通过三个阶段完成："
 
 #. type: Content of: <sect1><sect2><informaltable><tgroup><thead><row><entry>
+#: lfs-en/part3intro/toolchaintechnotes.xml
 msgid "Stage"
 msgstr "阶段"
 
 #. type: Content of: <sect1><sect2><informaltable><tgroup><thead><row><entry>
+#: lfs-en/part3intro/toolchaintechnotes.xml
 msgid "Build"
 msgstr "Build"
 
 #. type: Content of: <sect1><sect2><informaltable><tgroup><thead><row><entry>
+#: lfs-en/part3intro/toolchaintechnotes.xml
 msgid "Host"
 msgstr "Host"
 
 #. type: Content of: <sect1><sect2><informaltable><tgroup><thead><row><entry>
+#: lfs-en/part3intro/toolchaintechnotes.xml
 msgid "Target"
 msgstr "Target"
 
 #. type: Content of: <sect1><sect2><informaltable><tgroup><thead><row><entry>
+#: lfs-en/part3intro/toolchaintechnotes.xml
 msgid "Action"
 msgstr "操作描述"
 
 #. type: Content of: <sect1><sect2><informaltable><tgroup><tbody><row><entry>
+#: lfs-en/part3intro/toolchaintechnotes.xml
 msgid "1"
 msgstr "1"
 
 #. type: Content of: <sect1><sect2><informaltable><tgroup><tbody><row><entry>
+#: lfs-en/part3intro/toolchaintechnotes.xml
 msgid "A"
 msgstr "A"
 
 #. type: Content of: <sect1><sect2><informaltable><tgroup><tbody><row><entry>
+#: lfs-en/part3intro/toolchaintechnotes.xml
 msgid "B"
 msgstr "B"
 
 #. type: Content of: <sect1><sect2><informaltable><tgroup><tbody><row><entry>
+#: lfs-en/part3intro/toolchaintechnotes.xml
 msgid "build cross-compiler cc1 using ccA on machine A"
 msgstr "在机器 A 上，使用 ccA 构建交叉编译器 cc1"
 
 #. type: Content of: <sect1><sect2><informaltable><tgroup><tbody><row><entry>
+#: lfs-en/part3intro/toolchaintechnotes.xml
 msgid "2"
 msgstr "2"
 
 #. type: Content of: <sect1><sect2><informaltable><tgroup><tbody><row><entry>
+#: lfs-en/part3intro/toolchaintechnotes.xml
 msgid "C"
 msgstr "C"
 
 #. type: Content of: <sect1><sect2><informaltable><tgroup><tbody><row><entry>
+#: lfs-en/part3intro/toolchaintechnotes.xml
 msgid "build cross-compiler cc2 using cc1 on machine A"
 msgstr "在机器 A 上，使用 cc1 构建交叉编译器 cc2"
 
 #. type: Content of: <sect1><sect2><informaltable><tgroup><tbody><row><entry>
+#: lfs-en/part3intro/toolchaintechnotes.xml
 msgid "3"
 msgstr "3"
 
 #. type: Content of: <sect1><sect2><informaltable><tgroup><tbody><row><entry>
+#: lfs-en/part3intro/toolchaintechnotes.xml
 msgid "build compiler ccC using cc2 on machine B"
 msgstr "在机器 B 上，使用 cc2 构建交叉编译器 ccC"
 
 #. type: Content of: <sect1><sect2><para>
+#: lfs-en/part3intro/toolchaintechnotes.xml
 msgid ""
 "Then, all the other programs needed by machine C can be compiled using cc2 "
 "on the fast machine B. Note that unless B can run programs produced for C, "
@@ -207,14 +238,17 @@ msgstr ""
 "如，如果要测试 ccC，我们可以增加第四个阶段："
 
 #. type: Content of: <sect1><sect2><informaltable><tgroup><tbody><row><entry>
+#: lfs-en/part3intro/toolchaintechnotes.xml
 msgid "4"
 msgstr "4"
 
 #. type: Content of: <sect1><sect2><informaltable><tgroup><tbody><row><entry>
+#: lfs-en/part3intro/toolchaintechnotes.xml
 msgid "rebuild and test ccC using itself on machine C"
 msgstr "在机器 C 上，用 ccC 重新构建它本身，并测试"
 
 #. type: Content of: <sect1><sect2><para>
+#: lfs-en/part3intro/toolchaintechnotes.xml
 msgid ""
 "In the example above, only cc1 and cc2 are cross-compilers, that is, they "
 "produce code for a machine different from the one they are run on.  The "
@@ -226,10 +260,12 @@ msgstr ""
 "称为<emphasis>本地</emphasis>编译器。"
 
 #. type: Content of: <sect1><sect2><title>
+#: lfs-en/part3intro/toolchaintechnotes.xml
 msgid "Implementation of Cross-Compilation for LFS"
 msgstr "LFS 的交叉编译实现"
 
 #. type: Content of: <sect1><sect2><note><para>
+#: lfs-en/part3intro/toolchaintechnotes.xml
 msgid ""
 "Almost all the build systems use names of the form cpu-vendor-kernel-os "
 "referred to as the machine triplet. An astute reader may wonder why a "
@@ -255,6 +291,7 @@ msgstr ""
 "该是 <emphasis>x86_64-pc-linux-gnu</emphasis>。"
 
 #. type: Content of: <sect1><sect2><note><para>
+#: lfs-en/part3intro/toolchaintechnotes.xml
 msgid ""
 "Also be aware of the name of the platform's dynamic linker, often referred "
 "to as the dynamic loader (not to be confused with the standard linker "
@@ -281,6 +318,7 @@ msgstr ""
 "<filename>shlib-versions</filename> 文件中找到。"
 
 #. type: Content of: <sect1><sect2><para>
+#: lfs-en/part3intro/toolchaintechnotes.xml
 msgid ""
 "In order to fake a cross compilation in LFS, the name of the host triplet is "
 "slightly adjusted by changing the &quot;vendor&quot; field in the "
@@ -299,26 +337,32 @@ msgstr ""
 "的库。前两个阶段是必要的，第三个阶段可以用于测试："
 
 #. type: Content of: <sect1><sect2><informaltable><tgroup><tbody><row><entry>
+#: lfs-en/part3intro/toolchaintechnotes.xml
 msgid "pc"
 msgstr "pc"
 
 #. type: Content of: <sect1><sect2><informaltable><tgroup><tbody><row><entry>
+#: lfs-en/part3intro/toolchaintechnotes.xml
 msgid "lfs"
 msgstr "lfs"
 
 #. type: Content of: <sect1><sect2><informaltable><tgroup><tbody><row><entry>
+#: lfs-en/part3intro/toolchaintechnotes.xml
 msgid "build cross-compiler cc1 using cc-pc on pc"
 msgstr "在 pc 上使用 cc-pc 构建交叉编译器 cc1"
 
 #. type: Content of: <sect1><sect2><informaltable><tgroup><tbody><row><entry>
+#: lfs-en/part3intro/toolchaintechnotes.xml
 msgid "build compiler cc-lfs using cc1 on pc"
 msgstr "在 pc 上使用 cc1 构建 cc-lfs"
 
 #. type: Content of: <sect1><sect2><informaltable><tgroup><tbody><row><entry>
+#: lfs-en/part3intro/toolchaintechnotes.xml
 msgid "rebuild and test cc-lfs using itself on lfs"
 msgstr "在 lfs 上使用 cc-lfs 重新构建并测试它本身"
 
 #. type: Content of: <sect1><sect2><para>
+#: lfs-en/part3intro/toolchaintechnotes.xml
 msgid ""
 "In the above table, <quote>on pc</quote> means the commands are run on a "
 "machine using the already installed distribution. <quote>On lfs</quote> "
@@ -328,6 +372,7 @@ msgstr ""
 "<quote>在 lfs 上</quote> 意味着命令在 chroot 环境中执行。"
 
 #. type: Content of: <sect1><sect2><para>
+#: lfs-en/part3intro/toolchaintechnotes.xml
 msgid ""
 "Now, there is more about cross-compiling: the C language is not just a "
 "compiler, but also defines a standard library. In this book, the GNU C "
@@ -353,6 +398,7 @@ msgstr ""
 "libstdc++。但是这种方法构建的 libstdc++ 和 libgcc 一样，会缺失一些功能。"
 
 #. type: Content of: <sect1><sect2><para>
+#: lfs-en/part3intro/toolchaintechnotes.xml
 msgid ""
 "This is not the end of the story: the conclusion of the preceding paragraph "
 "is that cc1 is unable to build a fully functional libstdc++, but this is the "
@@ -370,10 +416,12 @@ msgstr ""
 "统) 库的风险。因此我们必须在进入 chroot 后再次构建 libstdc++。"
 
 #. type: Content of: <sect1><sect2><title>
+#: lfs-en/part3intro/toolchaintechnotes.xml
 msgid "Other procedural details"
 msgstr "构建过程的其他细节"
 
 #. type: Content of: <sect1><sect2><para>
+#: lfs-en/part3intro/toolchaintechnotes.xml
 msgid ""
 "The cross-compiler will be installed in a separate <filename class="
 "\"directory\">$LFS/tools</filename> directory, since it will not be part of "
@@ -383,6 +431,7 @@ msgstr ""
 "filename> 目录，因为它不属于最终构建的系统。"
 
 #. type: Content of: <sect1><sect2><para>
+#: lfs-en/part3intro/toolchaintechnotes.xml
 msgid ""
 "Binutils is installed first because the <command>configure</command> runs of "
 "both GCC and Glibc perform various feature tests on the assembler and linker "
@@ -400,6 +449,7 @@ msgstr ""
 "件的失败可以将这类错误凸显出来。"
 
 #. type: Content of: <sect1><sect2><para>
+#: lfs-en/part3intro/toolchaintechnotes.xml
 msgid ""
 "Binutils installs its assembler and linker in two locations, <filename class="
 "\"directory\">$LFS/tools/bin</filename> and <filename class=\"directory\">"
@@ -426,6 +476,7 @@ msgstr ""
 "成功打开的文件。"
 
 #. type: Content of: <sect1><sect2><para>
+#: lfs-en/part3intro/toolchaintechnotes.xml
 msgid ""
 "The next package installed is GCC. An example of what can be seen during its "
 "run of <command>configure</command> is:"
@@ -434,6 +485,7 @@ msgstr ""
 "下面这样的输出："
 
 #. type: Content of: <sect1><sect2><screen>
+#: lfs-en/part3intro/toolchaintechnotes.xml
 #, no-wrap
 msgid ""
 "<computeroutput>checking what assembler to use... /mnt/lfs/tools/i686-lfs-linux-gnu/bin/as\n"
@@ -443,6 +495,7 @@ msgstr ""
 "checking what linker to use... /mnt/lfs/tools/i686-lfs-linux-gnu/bin/ld</computeroutput>"
 
 #. type: Content of: <sect1><sect2><para>
+#: lfs-en/part3intro/toolchaintechnotes.xml
 msgid ""
 "This is important for the reasons mentioned above. It also demonstrates that "
 "GCC's configure script does not search the PATH directories to find which "
@@ -457,6 +510,7 @@ msgstr ""
 "行以下命令：<command>$LFS_TGT-gcc -print-prog-name=ld</command>。"
 
 #. type: Content of: <sect1><sect2><para>
+#: lfs-en/part3intro/toolchaintechnotes.xml
 msgid ""
 "Detailed information can be obtained from <command>gcc</command> by passing "
 "it the <parameter>-v</parameter> command line option while compiling a dummy "
@@ -470,6 +524,7 @@ msgstr ""
 "径和顺序。"
 
 #. type: Content of: <sect1><sect2><para>
+#: lfs-en/part3intro/toolchaintechnotes.xml
 msgid ""
 "Next installed are sanitized Linux API headers. These allow the standard C "
 "library (Glibc) to interface with features that the Linux kernel will "
@@ -479,6 +534,7 @@ msgstr ""
 "Linux 内核提供的各种特性交互。"
 
 #. type: Content of: <sect1><sect2><para>
+#: lfs-en/part3intro/toolchaintechnotes.xml
 msgid ""
 "The next package installed is Glibc. The most important considerations for "
 "building Glibc are the compiler, binary tools, and kernel headers. The "
@@ -512,6 +568,7 @@ msgstr ""
 "常不依赖于工具链默认值。"
 
 #. type: Content of: <sect1><sect2><para>
+#: lfs-en/part3intro/toolchaintechnotes.xml
 msgid ""
 "As said above, the standard C++ library is compiled next, followed in <xref "
 "linkend=\"chapter-temporary-tools\"/> by all the programs that need "
@@ -524,6 +581,7 @@ msgstr ""
 "<envar>DESTDIR</envar> 变量，将它安装到 LFS 文件系统中。"
 
 #. type: Content of: <sect1><sect2><para>
+#: lfs-en/part3intro/toolchaintechnotes.xml
 msgid ""
 "At the end of <xref linkend=\"chapter-temporary-tools\"/> the native lfs "
 "compiler is installed. First binutils-pass2 is built, with the same "
@@ -543,6 +601,7 @@ msgstr ""
 "中指定 <parameter>CC_FOR_TARGET=$LFS_TGT-gcc</parameter>。"
 
 #. type: Content of: <sect1><sect2><para>
+#: lfs-en/part3intro/toolchaintechnotes.xml
 msgid ""
 "Upon entering the chroot environment in <xref linkend=\"chapter-chroot-"
 "temporary-tools\"/>, the first task is to install libstdc++. Then temporary "

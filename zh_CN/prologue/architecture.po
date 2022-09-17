@@ -1,7 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2021-04-23 19:02+0800\n"
+"Report-Msgid-Bugs-To: lfs-dev@linuxfromscratch.org\n"
+"POT-Creation-Date: 2022-09-17 18:28+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -14,10 +15,12 @@ msgstr ""
 "X-Generator: Translate Toolkit 2.2.5\n"
 
 #. type: Content of: <sect1><title>
+#: lfs-en/prologue/architecture.xml
 msgid "LFS Target Architectures"
 msgstr "LFS 的目标架构"
 
 #. type: Content of: <sect1><para>
+#: lfs-en/prologue/architecture.xml
 msgid ""
 "The primary target architectures of LFS are the AMD/Intel x86 (32-bit)  and "
 "x86_64 (64-bit) CPUs.  On the other hand, the instructions in this book are "
@@ -37,6 +40,7 @@ msgstr ""
 "Intel 计算机上正常运行，并作为 LFS 的构建环境。"
 
 #. type: Content of: <sect1><para>
+#: lfs-en/prologue/architecture.xml
 msgid ""
 "For building LFS, the gain of building on a 64-bit system compared to a 32-"
 "bit system is minimal.  For example, in a test build of LFS-9.1 on a Core "
@@ -48,6 +52,7 @@ msgstr ""
 "据为："
 
 #. type: Content of: <sect1><screen>
+#: lfs-en/prologue/architecture.xml
 #, no-wrap
 msgid ""
 "<computeroutput>Architecture Build Time     Build Size\n"
@@ -59,6 +64,7 @@ msgstr ""
 "64 位       233.2 分钟     4.4 GB</computeroutput>"
 
 #. type: Content of: <sect1><para>
+#: lfs-en/prologue/architecture.xml
 msgid ""
 "As you can see, on the same hardware, the 64-bit build is only 3% faster and "
 "is 22% larger than the 32-bit build. If you plan to use LFS as a LAMP "
@@ -74,6 +80,7 @@ msgstr ""
 "系统。"
 
 #. type: Content of: <sect1><para>
+#: lfs-en/prologue/architecture.xml
 msgid ""
 "The default 64-bit build that results from LFS is considered a <quote>pure</"
 "quote> 64-bit system. That is, it supports 64-bit executables only. Building "
@@ -90,5 +97,5 @@ msgstr ""
 "用程序编译两次，一次编译为 32 位，另一次编译为 64 位。本书不提供这方面的内"
 "容，因为本书的教学目的是提供简洁的基本 Linux 系统的构建方法，讨论 multilib 会"
 "和这一目标发生冲突。一些 LFS/BLFS 编辑维护了 LFS 的 multilib 版本，可以在 "
-"<ulink url=\"https://www.linuxfromscratch.org/~thomas/multilib/index.html\"/> "
-"查阅。但这是一个比较复杂的主题。"
+"<ulink url=\"https://www.linuxfromscratch.org/~thomas/multilib/index.html\"/"
+"> 查阅。但这是一个比较复杂的主题。"

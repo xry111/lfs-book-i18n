@@ -1,7 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2022-02-05 22:01+0800\n"
+"Report-Msgid-Bugs-To: lfs-dev@linuxfromscratch.org\n"
+"POT-Creation-Date: 2022-09-17 18:28+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -14,10 +15,12 @@ msgstr ""
 "X-Generator: Translate Toolkit 2.2.5\n"
 
 #. type: Content of: <sect1><title>
+#: lfs-en/chapter04/settingenviron.xml
 msgid "Setting Up the Environment"
 msgstr "配置环境"
 
 #. type: Content of: <sect1><para>
+#: lfs-en/chapter04/settingenviron.xml
 msgid ""
 "Set up a good working environment by creating two new startup files for the "
 "<command>bash</command> shell. While logged in as user <systemitem class="
@@ -29,6 +32,7 @@ msgstr ""
 "创建一个新的 <filename>.bash_profile</filename>："
 
 #. type: Content of: <sect1><screen>
+#: lfs-en/chapter04/settingenviron.xml
 #, no-wrap
 msgid ""
 "<userinput>cat &gt; ~/.bash_profile &lt;&lt; \"EOF\"\n"
@@ -41,6 +45,7 @@ msgstr ""
 
 # swap two labels
 #. type: Content of: <sect1><para>
+#: lfs-en/chapter04/settingenviron.xml
 msgid ""
 "When logged on as user <systemitem class=\"username\">lfs</systemitem>, the "
 "initial shell is usually a <emphasis>login</emphasis> shell which reads the "
@@ -64,6 +69,7 @@ msgstr ""
 "量进入编译环境。通过使用以上技巧，我们创建了一个干净环境。"
 
 #. type: Content of: <sect1><para>
+#: lfs-en/chapter04/settingenviron.xml
 msgid ""
 "The new instance of the shell is a <emphasis>non-login</emphasis> shell, "
 "which does not read, and execute, the contents of <filename>/etc/profile</"
@@ -77,6 +83,7 @@ msgstr ""
 "<filename>.bashrc</filename> 文件："
 
 #. type: Content of: <sect1><screen>
+#: lfs-en/chapter04/settingenviron.xml
 #, no-wrap
 msgid ""
 "<userinput>cat &gt; ~/.bashrc &lt;&lt; \"EOF\"\n"
@@ -106,14 +113,17 @@ msgstr ""
 "EOF</userinput>"
 
 #. type: Content of: <sect1><variablelist><title>
+#: lfs-en/chapter04/settingenviron.xml
 msgid "The meaning of the settings in <filename>.bashrc</filename>"
 msgstr "<filename>.bashrc</filename> 中设定的含义："
 
 #. type: Content of: <sect1><variablelist><varlistentry><term>
+#: lfs-en/chapter04/settingenviron.xml
 msgid "<parameter>set +h</parameter>"
 msgstr "<parameter>set +h</parameter>"
 
 #. type: Content of: <sect1><variablelist><varlistentry><listitem><para>
+#: lfs-en/chapter04/settingenviron.xml
 msgid ""
 "The <command>set +h</command> command turns off <command>bash</command>'s "
 "hash function. Hashing is ordinarily a useful feature&mdash;<command>bash</"
@@ -135,14 +145,16 @@ msgstr ""
 "功能，使得 shell 在运行程序时总是搜索 <envar>PATH</envar>。这样，一旦"
 "<filename class=\"directory\">$LFS/tools/bin</filename> 中有新的工具可用，"
 "shell 就能够找到它们，而不是使用之前记忆在散列表中，由宿主发行版提供的 "
-"<filename class='directory'>/usr/bin</filename> 或 "
-"<filename class='directory'>/bin</filename> 中的工具。"
+"<filename class='directory'>/usr/bin</filename> 或 <filename "
+"class='directory'>/bin</filename> 中的工具。"
 
 #. type: Content of: <sect1><variablelist><varlistentry><term>
+#: lfs-en/chapter04/settingenviron.xml
 msgid "<parameter>umask 022</parameter>"
 msgstr "<parameter>umask 022</parameter>"
 
 #. type: Content of: <sect1><variablelist><varlistentry><listitem><para>
+#: lfs-en/chapter04/settingenviron.xml
 msgid ""
 "Setting the user file-creation mask (umask) to 022 ensures that newly "
 "created files and directories are only writable by their owner, but are "
@@ -155,19 +167,23 @@ msgstr ""
 "用使用默认模式，则新文件将具有权限模式 644，而新目录具有权限模式 755)。"
 
 #. type: Content of: <sect1><variablelist><varlistentry><term>
+#: lfs-en/chapter04/settingenviron.xml
 msgid "<parameter>LFS=/mnt/lfs</parameter>"
 msgstr "<parameter>LFS=/mnt/lfs</parameter>"
 
 #. type: Content of: <sect1><variablelist><varlistentry><listitem><para>
+#: lfs-en/chapter04/settingenviron.xml
 msgid ""
 "The <envar>LFS</envar> variable should be set to the chosen mount point."
 msgstr "<envar>LFS</envar> 环境变量必须被设定为之前选择的挂载点。"
 
 #. type: Content of: <sect1><variablelist><varlistentry><term>
+#: lfs-en/chapter04/settingenviron.xml
 msgid "<parameter>LC_ALL=POSIX</parameter>"
 msgstr "<parameter>LC_ALL=POSIX</parameter>"
 
 #. type: Content of: <sect1><variablelist><varlistentry><listitem><para>
+#: lfs-en/chapter04/settingenviron.xml
 msgid ""
 "The <envar>LC_ALL</envar> variable controls the localization of certain "
 "programs, making their messages follow the conventions of a specified "
@@ -181,10 +197,12 @@ msgstr ""
 "为完全符合预期，而与宿主的本地化设置无关。"
 
 #. type: Content of: <sect1><variablelist><varlistentry><term>
+#: lfs-en/chapter04/settingenviron.xml
 msgid "<parameter>LFS_TGT=(uname -m)-lfs-linux-gnu</parameter>"
 msgstr "<parameter>LFS_TGT=(uname -m)-lfs-linux-gnu</parameter>"
 
 #. type: Content of: <sect1><variablelist><varlistentry><listitem><para>
+#: lfs-en/chapter04/settingenviron.xml
 msgid ""
 "The <envar>LFS_TGT</envar> variable sets a non-default, but compatible "
 "machine description for use when building our cross compiler and linker and "
@@ -196,10 +214,12 @@ msgstr ""
 "toolchaintechnotes\" role=\"\"/>包含了关于这个描述符的更多信息。"
 
 #. type: Content of: <sect1><variablelist><varlistentry><term>
+#: lfs-en/chapter04/settingenviron.xml
 msgid "<parameter>PATH=/usr/bin</parameter>"
 msgstr "<parameter>PATH=/usr/bin</parameter>"
 
 #. type: Content of: <sect1><variablelist><varlistentry><listitem><para>
+#: lfs-en/chapter04/settingenviron.xml
 msgid ""
 "Many modern linux distributions have merged <filename class=\"directory\">/"
 "bin</filename> and <filename class=\"directory\">/usr/bin</filename>. When "
@@ -217,10 +237,12 @@ msgstr ""
 "中。"
 
 #. type: Content of: <sect1><variablelist><varlistentry><term>
+#: lfs-en/chapter04/settingenviron.xml
 msgid "<parameter>if [ ! -L /bin ]; then PATH=/bin:$PATH; fi</parameter>"
 msgstr "<parameter>if [ ! -L /bin ]; then PATH=/bin:$PATH; fi</parameter>"
 
 #. type: Content of: <sect1><variablelist><varlistentry><listitem><para>
+#: lfs-en/chapter04/settingenviron.xml
 msgid ""
 "If <filename class=\"directory\">/bin</filename> is not a symbolic link, "
 "then it has to be added to the <envar>PATH</envar> variable."
@@ -229,10 +251,12 @@ msgstr ""
 "加到 <envar>PATH</envar> 变量中。"
 
 #. type: Content of: <sect1><variablelist><varlistentry><term>
+#: lfs-en/chapter04/settingenviron.xml
 msgid "<parameter>PATH=$LFS/tools/bin:$PATH</parameter>"
 msgstr "<parameter>PATH=$LFS/tools/bin:$PATH</parameter>"
 
 #. type: Content of: <sect1><variablelist><varlistentry><listitem><para>
+#: lfs-en/chapter04/settingenviron.xml
 msgid ""
 "By putting <filename class=\"directory\">$LFS/tools/bin</filename> ahead of "
 "the standard <envar>PATH</envar>, the cross-compiler installed at the "
@@ -247,10 +271,12 @@ msgstr ""
 "合，降低了在第 5 章环境中新程序可用时错误地使用宿主系统中旧程序的风险。"
 
 #. type: Content of: <sect1><variablelist><varlistentry><term>
+#: lfs-en/chapter04/settingenviron.xml
 msgid "<parameter>CONFIG_SITE=$LFS/usr/share/config.site</parameter>"
 msgstr "<parameter>CONFIG_SITE=$LFS/usr/share/config.site</parameter>"
 
 #. type: Content of: <sect1><variablelist><varlistentry><listitem><para>
+#: lfs-en/chapter04/settingenviron.xml
 msgid ""
 "In <xref linkend=\"chapter-cross-tools\"/> and <xref linkend=\"chapter-"
 "temporary-tools\"/>, if this variable is not set, <command>configure</"
@@ -264,10 +290,12 @@ msgstr ""
 "置信息。覆盖这一默认路径，避免宿主系统可能造成的污染。"
 
 #. type: Content of: <sect1><variablelist><varlistentry><term>
+#: lfs-en/chapter04/settingenviron.xml
 msgid "<parameter>export ...</parameter>"
 msgstr "<parameter>export ...</parameter>"
 
 #. type: Content of: <sect1><variablelist><varlistentry><listitem><para>
+#: lfs-en/chapter04/settingenviron.xml
 msgid ""
 "While the above commands have set some variables, in order to make them "
 "visible within any sub-shells, we export them."
@@ -275,6 +303,7 @@ msgstr ""
 "前面的命令设定了一些变量，为了让所有子 shell 都能使用这些变量，需要导出它们。"
 
 #. type: Content of: <sect1><important><para>
+#: lfs-en/chapter04/settingenviron.xml
 msgid ""
 "Several commercial distributions add a non-documented instantiation of "
 "<filename>/etc/bash.bashrc</filename> to the initialization of "
@@ -294,11 +323,13 @@ msgstr ""
 "<systemitem class=\"username\">root</systemitem> 用户身份，运行："
 
 #. type: Content of: <sect1><important><screen>
+#: lfs-en/chapter04/settingenviron.xml
 #, no-wrap
 msgid "<userinput>[ ! -e /etc/bash.bashrc ] || mv -v /etc/bash.bashrc /etc/bash.bashrc.NOUSE</userinput>"
 msgstr "<userinput>[ ! -e /etc/bash.bashrc ] || mv -v /etc/bash.bashrc /etc/bash.bashrc.NOUSE</userinput>"
 
 #. type: Content of: <sect1><important><para>
+#: lfs-en/chapter04/settingenviron.xml
 msgid ""
 "After use of the <systemitem class=\"username\">lfs</systemitem> user is "
 "finished at the beginning of <xref linkend=\"chapter-chroot-temporary-tools"
@@ -309,6 +340,7 @@ msgstr ""
 "话) 可以复原 <filename>/etc/bash.bashrc</filename> 文件。"
 
 #. type: Content of: <sect1><important><para>
+#: lfs-en/chapter04/settingenviron.xml
 msgid ""
 "Note that the LFS Bash package we will build in <xref linkend=\"ch-system-"
 "bash\"/> is not configured to load or execute <filename>/etc/bash.bashrc</"
@@ -319,6 +351,7 @@ msgstr ""
 "统中没有作用。"
 
 #. type: Content of: <sect1><para>
+#: lfs-en/chapter04/settingenviron.xml
 msgid ""
 "Finally, to have the environment fully prepared for building the temporary "
 "tools, source the just-created user profile:"
@@ -326,6 +359,7 @@ msgstr ""
 "最后，为了完全准备好编译临时工具的环境，指示 shell 读取刚才创建的配置文件："
 
 #. type: Content of: <sect1><screen>
+#: lfs-en/chapter04/settingenviron.xml
 #, no-wrap
 msgid "<userinput>source ~/.bash_profile</userinput>"
 msgstr "<userinput>source ~/.bash_profile</userinput>"

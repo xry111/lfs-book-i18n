@@ -1,7 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2022-04-21 14:25+0800\n"
+"Report-Msgid-Bugs-To: lfs-dev@linuxfromscratch.org\n"
+"POT-Creation-Date: 2022-09-17 18:28+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -13,10 +14,18 @@ msgstr ""
 "X-Pootle-Path: /zh_CN/lfs/chapter07/introduction.po\n"
 
 #. type: Content of: <sect1><title>
+#: lfs-en/chapter03/introduction.xml lfs-en/chapter04/introduction.xml
+#: lfs-en/chapter06/introduction.xml lfs-en/part3intro/introduction.xml
+#: lfs-en/chapter01/chapter01.xml lfs-en/chapter05/introduction.xml
+#: lfs-en/chapter07/introduction.xml lfs-en/index.xml
+#: lfs-en/chapter08/introduction.xml lfs-en/chapter10/grub.xml
+#: lfs-en/chapter10/introduction.xml lfs-en/chapter02/introduction.xml
+#: lfs-en/chapter09/introductiond.xml lfs-en/chapter09/introduction.xml
 msgid "Introduction"
 msgstr "概述"
 
 #. type: Content of: <sect1><para>
+#: lfs-en/chapter07/introduction.xml
 msgid ""
 "This chapter shows how to build the last missing bits of the temporary "
 "system: the tools needed by the build machinery of various packages.  Now "
@@ -29,6 +38,7 @@ msgstr ""
 "进行构建，它与宿主系统 (除正在运行的内核外) 完全隔离。"
 
 #. type: Content of: <sect1><para>
+#: lfs-en/chapter07/introduction.xml
 msgid ""
 "For proper operation of the isolated environment, some communication with "
 "the running kernel must be established. This is done through the so-called "
@@ -42,6 +52,7 @@ msgstr ""
 "载好。"
 
 #. type: Content of: <sect1><para>
+#: lfs-en/chapter07/introduction.xml
 msgid ""
 "Until <xref linkend=\"ch-tools-chroot\"/>, the commands must be run as "
 "<systemitem class=\"username\">root</systemitem>, with the <envar>LFS</"
@@ -52,6 +63,6 @@ msgid ""
 msgstr ""
 "从现在开始，直到<xref linkend=\"ch-tools-chroot\"/>，所有命令必须以 "
 "<systemitem class=\"username\">root</systemitem> 用户身份执行，且 "
-"<envar>LFS</envar> 变量必须正确设定。在进入 chroot 之后，仍然以 &root; 身份执行"
-"所有命令，但幸运的是此时无法访问您构建 LFS 的计算机的宿主系统。不过仍然要小"
+"<envar>LFS</envar> 变量必须正确设定。在进入 chroot 之后，仍然以 &root; 身份执"
+"行所有命令，但幸运的是此时无法访问您构建 LFS 的计算机的宿主系统。不过仍然要小"
 "心，因为错误的命令很容易摧毁整个 LFS 系统。"

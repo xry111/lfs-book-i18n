@@ -1,34 +1,21 @@
 SHELL := /bin/bash
 default: html
 
-LFS_EN = ./lfs-en
-MLANG=zh_CN
-ALL_XML_FILES = $(shell find $(LFS_EN) -type f -name '*.xml')
-EXCLUDE_FILES = # empty for now
-XML_FILES = $(filter-out $(EXCLUDE_FILES), $(ALL_XML_FILES))
+LFS_EN = lfs-en
+MLANG = zh_CN
+CMD_FIND_XML = find $(LFS_EN) -type f -name '*.xml' ! -name 'lfs-l10n.xml'
+XML_FILES = $(shell $(CMD_FIND_XML))
 PO_FILES = $(patsubst $(LFS_EN)/%.xml, $(MLANG)/%.po, $(XML_FILES))
-PO4A_FLAGS = -f docbook --porefs none --msgmerge-opt "--backup=off" \
-			 --package-name="Linux From Scratch" \
-			 --package-version="11.0"
 
-ifneq (,$(wildcard ./local.mk))
-include local.mk
-endif
+-include local.mk
 
-$(MLANG)/chapter01/changelog.po: $(LFS_EN)/chapter01/changelog.xml changelogtranslator.py templatetranslator.py
-	mkdir -pv "$(@D)"
-	po4a-updatepo $(PO4A_FLAGS) -m $< -p $@
+$(PO_FILES): $(XML_FILES) mkpo4acfg.py
+	$(CMD_FIND_XML) | ./mkpo4acfg.py > po4a.cfg
+	po4a --no-translations po4a.cfg
 	./changelogtranslator.py $(MLANG)
 
-$(MLANG)/%.po: $(LFS_EN)/%.xml
-	mkdir -pv "$(@D)"
-	po4a-updatepo $(PO4A_FLAGS) -m $< -p $@
-	touch $@
-
-MXML_FILES = $(patsubst $(LFS_EN)/%.xml, %.xml, $(XML_FILES))
-BOOK_FILES = $(patsubst $(LFS_EN)/%, %, $(shell find $(LFS_EN) -type f -not -path "$(LFS_EN)/.svn/*" -not -path "$(LFS_EN)/render/*"))
-KEEP_FILES = $(filter-out $(MXML_FILES), KEEP_FILES)
-
+MXML_FILES = $(patsubst $(LFS_EN)/%.xml, $(MLANG)/book/%.xml, $(XML_FILES))
+BOOK_FILES = $(patsubst $(LFS_EN)/%, %, $(shell find $(LFS_EN) -type f -not -path "$(LFS_EN)/.git"))
 MBOOK_FILES = $(patsubst %, $(MLANG)/book/%, $(BOOK_FILES))
 
 .PHONY: html booksrc nochunks pdf pofiles
@@ -57,13 +44,12 @@ ORIG_FILES = $(MLANG)/book/general.ent.orig \
 			 $(MLANG)/book/Makefile.orig    \
 			 $(MLANG)/book/git-version.sh.orig
 
-booksrc: $(MBOOK_FILES) $(PATCHES) $(ORIG_FILES)
+booksrc: $(MBOOK_FILES) $(ORIG_FILES)
 	[ ! -e $(MLANG)/fix.sh ] || (pushd $(MLANG)/book; sh ../fix.sh; popd)
 
-$(MLANG)/book/%.xml: $(LFS_EN)/%.xml $(MLANG)/%.po
-	mkdir -pv "$(@D)"
-	po4a-translate -f docbook -m $< -p $(filter-out $<, $^) -l $@
-	[ -e $@ ] || cp -v $< $@
+$(MXML_FILES): $(XML_FILES) $(PO_FILES) mkpo4acfg.py
+	$(CMD_FIND_XML) | ./mkpo4acfg.py > po4a.cfg
+	po4a po4a.cfg
 
 $(MLANG)/book/%: $(LFS_EN)/%
 	mkdir -pv "$(@D)"

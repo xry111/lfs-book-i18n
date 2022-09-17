@@ -1,7 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2022-03-08 15:12+0800\n"
+"Report-Msgid-Bugs-To: lfs-dev@linuxfromscratch.org\n"
+"POT-Creation-Date: 2022-09-17 18:28+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -14,14 +15,17 @@ msgstr ""
 "X-Generator: Translate Toolkit 2.2.5\n"
 
 #. type: Content of: <sect1><title>
+#: lfs-en/chapter07/kernfs.xml
 msgid "Preparing Virtual Kernel File Systems"
 msgstr "准备虚拟内核文件系统"
 
 #. type: Content of: <sect1><indexterm><primary>
+#: lfs-en/chapter07/kernfs.xml
 msgid "/dev/*"
 msgstr "/dev/*"
 
 #. type: Content of: <sect1><para>
+#: lfs-en/chapter07/kernfs.xml
 msgid ""
 "Various file systems exported by the kernel are used to communicate to and "
 "from the kernel itself. These file systems are virtual in that no disk space "
@@ -31,20 +35,24 @@ msgstr ""
 "并不占用磁盘空间，其内容保留在内存中。"
 
 #. type: Content of: <sect1><para>
+#: lfs-en/chapter07/kernfs.xml
 msgid ""
 "Begin by creating directories onto which the file systems will be mounted:"
 msgstr "首先创建这些文件系统的挂载点："
 
 #. type: Content of: <sect1><screen>
+#: lfs-en/chapter07/kernfs.xml
 #, no-wrap
 msgid "<userinput>mkdir -pv $LFS/{dev,proc,sys,run}</userinput>"
 msgstr "<userinput>mkdir -pv $LFS/{dev,proc,sys,run}</userinput>"
 
 #. type: Content of: <sect1><sect2><title>
+#: lfs-en/chapter07/kernfs.xml
 msgid "Mounting and Populating /dev"
 msgstr "挂载和填充 /dev"
 
 #. type: Content of: <sect1><sect2><para>
+#: lfs-en/chapter07/kernfs.xml
 msgid ""
 "During a normal boot, the kernel automatically mounts the <systemitem class="
 "\"filesystem\">devtmpfs</systemitem> filesystem on the <filename class="
@@ -60,27 +68,32 @@ msgid ""
 "to achieve this:"
 msgstr ""
 "在正常的引导过程中，内核自动挂载 <systemitem class=\"filesystem\">devtmpfs</"
-"systemitem> 到 <filename class=\"directory\">/dev</filename>，并允许在设备被发"
-"现或访问时动态地创建设备节点。设备节点通常由内核和 Udev 在系统引导时创建。然而，我"
-"们的新系统还没有 Udev，也没有经过引导过程，因此必须手工挂载和填充 <filename "
-"class=\"directory\">/dev</filename>。这可以通过绑定挂载宿主系统的 <filename "
-"class=\"directory\">/dev</filename> 目录来实现。绑定挂载是一种特殊挂载类型，"
-"它允许在另外的位置创建某个目录或挂载点的映像。运行以下命令进行绑定挂载："
+"systemitem> 到 <filename class=\"directory\">/dev</filename>，并允许在设备被"
+"发现或访问时动态地创建设备节点。设备节点通常由内核和 Udev 在系统引导时创建。"
+"然而，我们的新系统还没有 Udev，也没有经过引导过程，因此必须手工挂载和填充 "
+"<filename class=\"directory\">/dev</filename>。这可以通过绑定挂载宿主系统的 "
+"<filename class=\"directory\">/dev</filename> 目录来实现。绑定挂载是一种特殊"
+"挂载类型，它允许在另外的位置创建某个目录或挂载点的映像。运行以下命令进行绑定"
+"挂载："
 
 #. type: Content of: <sect1><sect2><screen>
+#: lfs-en/chapter07/kernfs.xml
 #, no-wrap
 msgid "<userinput>mount -v --bind /dev $LFS/dev</userinput>"
 msgstr "<userinput>mount -v --bind /dev $LFS/dev</userinput>"
 
 #. type: Content of: <sect1><sect2><title>
+#: lfs-en/chapter07/kernfs.xml
 msgid "Mounting Virtual Kernel File Systems"
 msgstr "挂载虚拟内核文件系统"
 
 #. type: Content of: <sect1><sect2><para>
+#: lfs-en/chapter07/kernfs.xml
 msgid "Now mount the remaining virtual kernel filesystems:"
 msgstr "现在挂载其余的虚拟内核文件系统："
 
 #. type: Content of: <sect1><sect2><screen>
+#: lfs-en/chapter07/kernfs.xml
 #, no-wrap
 msgid ""
 "<userinput>mount -v --bind /dev/pts $LFS/dev/pts\n"
@@ -94,6 +107,7 @@ msgstr ""
 "mount -vt tmpfs tmpfs $LFS/run</userinput>"
 
 #. type: Content of: <sect1><sect2><para>
+#: lfs-en/chapter07/kernfs.xml
 msgid ""
 "In some host systems, <filename>/dev/shm</filename> is a symbolic link to "
 "<filename class=\"directory\">/run/shm</filename>.  The /run tmpfs was "
@@ -104,6 +118,7 @@ msgstr ""
 "文件系统，因此在这里只需要创建一个目录。"
 
 #. type: Content of: <sect1><sect2><screen>
+#: lfs-en/chapter07/kernfs.xml
 #, no-wrap
 msgid ""
 "<userinput>if [ -h $LFS/dev/shm ]; then\n"

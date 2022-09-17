@@ -1,7 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2021-05-12 17:13+0800\n"
+"Report-Msgid-Bugs-To: lfs-dev@linuxfromscratch.org\n"
+"POT-Creation-Date: 2022-09-17 18:28+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -14,10 +15,12 @@ msgstr ""
 "X-Generator: Translate Toolkit 2.2.5\n"
 
 #. type: Content of: <sect1><title>
+#: lfs-en/chapter02/mounting.xml
 msgid "Mounting the New Partition"
 msgstr "挂载新的分区"
 
 #. type: Content of: <sect1><para>
+#: lfs-en/chapter02/mounting.xml
 msgid ""
 "Now that a file system has been created, the partition needs to be made "
 "accessible. In order to do this, the partition needs to be mounted at a "
@@ -30,10 +33,12 @@ msgstr ""
 "定的目录中。"
 
 #. type: Content of: <sect1><para>
+#: lfs-en/chapter02/mounting.xml
 msgid "Create the mount point and mount the LFS file system by running:"
 msgstr "输入以下命令以创建挂载点，并挂载 LFS 文件系统："
 
 #. type: Content of: <sect1><screen>
+#: lfs-en/chapter02/mounting.xml
 #, no-wrap
 msgid ""
 "<userinput>mkdir -pv $LFS\n"
@@ -43,12 +48,14 @@ msgstr ""
 "mount -v -t ext4 /dev/<replaceable>&lt;xxx&gt;</replaceable> $LFS</userinput>"
 
 #. type: Content of: <sect1><para>
+#: lfs-en/chapter02/mounting.xml
 msgid ""
 "Replace <replaceable>&lt;xxx&gt;</replaceable> with the designation of the "
 "LFS partition."
 msgstr "将 <replaceable>&lt;xxx&gt;</replaceable> 替换成 LFS 分区的代号。"
 
 #. type: Content of: <sect1><para>
+#: lfs-en/chapter02/mounting.xml
 msgid ""
 "If using multiple partitions for LFS (e.g., one for <filename class="
 "\"directory\">/</filename> and another for <filename class=\"directory\">/"
@@ -59,6 +66,7 @@ msgstr ""
 "们都需要被挂载："
 
 #. type: Content of: <sect1><screen>
+#: lfs-en/chapter02/mounting.xml
 #, no-wrap
 msgid ""
 "<userinput>mkdir -pv $LFS\n"
@@ -72,6 +80,7 @@ msgstr ""
 "mount -v -t ext4 /dev/<replaceable>&lt;yyy&gt;</replaceable> $LFS/home</userinput>"
 
 #. type: Content of: <sect1><para>
+#: lfs-en/chapter02/mounting.xml
 msgid ""
 "Replace <replaceable>&lt;xxx&gt;</replaceable> and <replaceable>&lt;yyy&gt;</"
 "replaceable> with the appropriate partition names."
@@ -80,6 +89,7 @@ msgstr ""
 "replaceable> 替换成对应的分区代号。"
 
 #. type: Content of: <sect1><para>
+#: lfs-en/chapter02/mounting.xml
 msgid ""
 "Ensure that this new partition is not mounted with permissions that are too "
 "restrictive (such as the <option>nosuid</option> or <option>nodev</option> "
@@ -94,11 +104,13 @@ msgstr ""
 "option> 或者 <option>nosuid</option> 被设置了，就必须重新挂载分区。"
 
 #. type: Content of: <sect1><warning><para><screen>
+#: lfs-en/chapter02/mounting.xml
 #, no-wrap
 msgid "/dev/<replaceable>&lt;xxx&gt;</replaceable>  /mnt/lfs ext4   defaults      1     1"
 msgstr "/dev/<replaceable>&lt;xxx&gt;</replaceable>  /mnt/lfs ext4   defaults      1     1"
 
 #. type: Content of: <sect1><warning><para>
+#: lfs-en/chapter02/mounting.xml
 msgid ""
 "The above instructions assume that you will not be restarting your computer "
 "throughout the LFS process.  If you shut down your system, you will either "
@@ -113,6 +125,7 @@ msgstr ""
 "用了多个分区，它们都需要添加到 fstab 中。"
 
 #. type: Content of: <sect1><para>
+#: lfs-en/chapter02/mounting.xml
 msgid ""
 "If you are using a <systemitem class=\"filesystem\">swap</systemitem> "
 "partition, ensure that it is enabled using the <command>swapon</command> "
@@ -122,11 +135,13 @@ msgstr ""
 "<command>swapon</command> 命令启用它："
 
 #. type: Content of: <sect1><screen>
+#: lfs-en/chapter02/mounting.xml
 #, no-wrap
 msgid "<userinput>/sbin/swapon -v /dev/<replaceable>&lt;zzz&gt;</replaceable></userinput>"
 msgstr "<userinput>/sbin/swapon -v /dev/<replaceable>&lt;zzz&gt;</replaceable></userinput>"
 
 #. type: Content of: <sect1><para>
+#: lfs-en/chapter02/mounting.xml
 msgid ""
 "Replace <replaceable>&lt;zzz&gt;</replaceable> with the name of the "
 "<systemitem class=\"filesystem\">swap</systemitem> partition."
@@ -135,6 +150,7 @@ msgstr ""
 "\"filesystem\">swap</systemitem> 分区的名称。"
 
 #. type: Content of: <sect1><para>
+#: lfs-en/chapter02/mounting.xml
 msgid ""
 "Now that there is an established place to work, it is time to download the "
 "packages."

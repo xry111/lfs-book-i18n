@@ -1,7 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2021-02-20 08:46+0800\n"
+"Report-Msgid-Bugs-To: lfs-dev@linuxfromscratch.org\n"
+"POT-Creation-Date: 2022-09-17 18:28+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -14,14 +15,17 @@ msgstr ""
 "X-Generator: Translate Toolkit 2.2.5\n"
 
 #. type: Content of: <sect1><title>
+#: lfs-en/chapter10/fstab.xml
 msgid "Creating the /etc/fstab File"
 msgstr "创建 /etc/fstab 文件"
 
-#. type: Content of: <sect1><indexterm><primary>
+#. type: Content of: <sect1><itemizedlist><listitem><itemizedlist><listitem><para>
+#: lfs-en/chapter10/fstab.xml lfs-en/chapter11/reboot.xml
 msgid "/etc/fstab"
 msgstr "/etc/fstab"
 
 #. type: Content of: <sect1><para>
+#: lfs-en/chapter10/fstab.xml
 msgid ""
 "The <filename>/etc/fstab</filename> file is used by some programs to "
 "determine where file systems are to be mounted by default, in which order, "
@@ -33,6 +37,7 @@ msgstr ""
 "有完整性错误)。参考以下命令，创建一个新的文件系统表："
 
 #. type: Content of: <sect1><screen>
+#: lfs-en/chapter10/fstab.xml
 #, no-wrap
 msgid ""
 "<userinput>cat &gt; /etc/fstab &lt;&lt; \"EOF\"\n"
@@ -70,6 +75,7 @@ msgstr ""
 "EOF</userinput>"
 
 #. type: Content of: <sect1><screen>
+#: lfs-en/chapter10/fstab.xml
 #, no-wrap
 msgid ""
 "<userinput>cat &gt; /etc/fstab &lt;&lt; \"EOF\"\n"
@@ -97,6 +103,7 @@ msgstr ""
 "EOF</userinput>"
 
 #. type: Content of: <sect1><para>
+#: lfs-en/chapter10/fstab.xml
 msgid ""
 "Replace <replaceable>&lt;xxx&gt;</replaceable>, <replaceable>&lt;yyy&gt;</"
 "replaceable>, and <replaceable>&lt;fff&gt;</replaceable> with the values "
@@ -113,6 +120,7 @@ msgstr ""
 "息。"
 
 #. type: Content of: <sect1><para>
+#: lfs-en/chapter10/fstab.xml
 msgid ""
 "Filesystems with MS-DOS or Windows origin (i.e. vfat, ntfs, smbfs, cifs, "
 "iso9660, udf) need a special option, utf8, in order for non-ASCII characters "
@@ -145,20 +153,24 @@ msgstr ""
 "etc/fstab</filename> 中对应于闪存盘的行添加下列挂载选项："
 
 #. type: Content of: <sect1><screen>
+#: lfs-en/chapter10/fstab.xml
 #, no-wrap
 msgid "<literal>noauto,user,quiet,showexec,codepage=866,iocharset=koi8r</literal>"
 msgstr "<literal>noauto,user,quiet,showexec,codepage=866,iocharset=koi8r</literal>"
 
 #. type: Content of: <sect1><para>
+#: lfs-en/chapter10/fstab.xml
 msgid "The corresponding options fragment for ru_RU.UTF-8 users is:"
 msgstr "相应的，ru_RU.UTF-8 用户应该使用下列选项："
 
 #. type: Content of: <sect1><screen>
+#: lfs-en/chapter10/fstab.xml
 #, no-wrap
 msgid "<literal>noauto,user,quiet,showexec,codepage=866,utf8</literal>"
 msgstr "<literal>noauto,user,quiet,showexec,codepage=866,utf8</literal>"
 
 #. type: Content of: <sect1><para>
+#: lfs-en/chapter10/fstab.xml
 msgid ""
 "Note that using <option>iocharset</option> is the default for "
 "<literal>iso8859-1</literal> (which keeps the file system case insensitive), "
@@ -170,6 +182,7 @@ msgstr ""
 "内核使用 UTF-8 编码转换文件名，这样它们就能在 UTF-8 locale 中被正确解析。"
 
 #. type: Content of: <sect1><para>
+#: lfs-en/chapter10/fstab.xml
 msgid ""
 "It is also possible to specify default codepage and iocharset values for "
 "some filesystems during kernel configuration. The relevant parameters are "
@@ -190,6 +203,7 @@ msgstr ""
 "法在编译内核时为 ntfs 文件系统指定这些默认值。"
 
 #. type: Content of: <sect1><para>
+#: lfs-en/chapter10/fstab.xml
 msgid ""
 "It is possible to make the ext3 filesystem reliable across power failures "
 "for some hard disk types.  To do this, add the <option>barrier=1</option> "
@@ -204,15 +218,18 @@ msgstr ""
 "general/hdparm.html\">hdparm</ulink>。例如："
 
 #. type: Content of: <sect1><screen>
+#: lfs-en/chapter10/fstab.xml
 #, no-wrap
 msgid "<userinput>hdparm -I /dev/sda | grep NCQ</userinput>"
 msgstr "<userinput>hdparm -I /dev/sda | grep NCQ</userinput>"
 
 #. type: Content of: <sect1><para>
+#: lfs-en/chapter10/fstab.xml
 msgid "returns non-empty output, the option is supported."
 msgstr "如果输出内容不为空，说明该选项可用。"
 
 #. type: Content of: <sect1><para>
+#: lfs-en/chapter10/fstab.xml
 msgid ""
 "Note: Logical Volume Management (LVM) based partitions cannot use the "
 "<option>barrier</option> option."

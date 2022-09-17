@@ -1,7 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2022-08-29 13:19+0800\n"
+"Report-Msgid-Bugs-To: lfs-dev@linuxfromscratch.org\n"
+"POT-Creation-Date: 2022-09-17 18:28+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -14,10 +15,12 @@ msgstr ""
 "X-Generator: Translate Toolkit 2.2.5\n"
 
 #. type: Content of: <sect1><title>
+#: lfs-en/chapter02/creatingpartition.xml
 msgid "Creating a New Partition"
 msgstr "创建新的分区"
 
 #. type: Content of: <sect1><para>
+#: lfs-en/chapter02/creatingpartition.xml
 msgid ""
 "Like most other operating systems, LFS is usually installed on a dedicated "
 "partition. The recommended approach to building an LFS system is to use an "
@@ -28,6 +31,7 @@ msgstr ""
 "个可用的空分区，或者在有充足未划分空间的情况下，创建一个新分区。"
 
 #. type: Content of: <sect1><para>
+#: lfs-en/chapter02/creatingpartition.xml
 msgid ""
 "A minimal system requires a partition of around 10 gigabytes (GB).  This is "
 "enough to store all the source tarballs and compile the packages.  However, "
@@ -48,6 +52,7 @@ msgstr ""
 "收这些空间。"
 
 #. type: Content of: <sect1><para>
+#: lfs-en/chapter02/creatingpartition.xml
 msgid ""
 "Because there is not always enough Random Access Memory (RAM) available for "
 "compilation processes, it is a good idea to use a small disk partition as "
@@ -64,6 +69,7 @@ msgstr ""
 "LFS 创建一个。"
 
 #. type: Content of: <sect1><para>
+#: lfs-en/chapter02/creatingpartition.xml
 msgid ""
 "Start a disk partitioning program such as <command>cfdisk</command> or "
 "<command>fdisk</command> with a command line option naming the hard disk on "
@@ -82,6 +88,7 @@ msgstr ""
 "<filename>fdisk(8)</filename> 来学习如何使用分区程序。"
 
 #. type: Content of: <sect1><note><para>
+#: lfs-en/chapter02/creatingpartition.xml
 msgid ""
 "For experienced users, other partitioning schemes are possible.  The new LFS "
 "system can be on a software <ulink url=\"&blfs-book;postlfs/raid.html"
@@ -98,6 +105,7 @@ msgstr ""
 "的话题。对于初次构建 LFS 的用户来说，不推荐采用这些分区方法。"
 
 #. type: Content of: <sect1><para>
+#: lfs-en/chapter02/creatingpartition.xml
 msgid ""
 "Remember the designation of the new partition (e.g., <filename class="
 "\"devicefile\">sda5</filename>). This book will refer to this as the LFS "
@@ -111,10 +119,12 @@ msgstr ""
 "到这些代号。"
 
 #. type: Content of: <sect1><sect2><title>
+#: lfs-en/chapter02/creatingpartition.xml
 msgid "Other Partition Issues"
 msgstr "其他分区问题"
 
 #. type: Content of: <sect1><sect2><para>
+#: lfs-en/chapter02/creatingpartition.xml
 msgid ""
 "Requests for advice on system partitioning are often posted on the LFS "
 "mailing lists. This is a highly subjective topic.  The default for most "
@@ -130,10 +140,12 @@ msgstr ""
 "共享数据，增加系统备份时间，同时导致文件系统结构的不合理分配，浪费磁盘空间。"
 
 #. type: Content of: <sect1><sect2><sect3><title>
+#: lfs-en/chapter02/creatingpartition.xml
 msgid "The Root Partition"
 msgstr "根分区"
 
 #. type: Content of: <sect1><sect2><sect3><para>
+#: lfs-en/chapter02/creatingpartition.xml
 msgid ""
 "A root LFS partition (not to be confused with the <filename class=\"directory"
 "\">/root</filename> directory) of twenty gigabytes is a good compromise for "
@@ -147,10 +159,12 @@ msgstr ""
 "建 LFS 系统。"
 
 #. type: Content of: <sect1><sect2><sect3><title>
+#: lfs-en/chapter02/creatingpartition.xml
 msgid "The Swap Partition"
 msgstr "交换 (Swap) 分区"
 
 #. type: Content of: <sect1><sect2><sect3><para>
+#: lfs-en/chapter02/creatingpartition.xml
 msgid ""
 "Most distributions automatically create a swap partition.  Generally the "
 "recommended size of the swap partition is about twice the amount of physical "
@@ -162,6 +176,7 @@ msgstr ""
 "用情况。"
 
 #. type: Content of: <sect1><sect2><sect3><para>
+#: lfs-en/chapter02/creatingpartition.xml
 msgid ""
 "If you want to use the hibernation feature (suspend-to-disk) of Linux, it "
 "writes out the contents of RAM to the swap partition before turning off the "
@@ -172,6 +187,7 @@ msgstr ""
 "换分区。这种情况下，交换分区的大小应该至少和系统内存相同。"
 
 #. type: Content of: <sect1><sect2><sect3><para>
+#: lfs-en/chapter02/creatingpartition.xml
 msgid ""
 "Swapping is never good. For mechanical hard drives you can generally tell if "
 "a system is swapping by just listening to disk activity and observing how "
@@ -191,11 +207,13 @@ msgstr ""
 "为你的系统添置内存。"
 
 #. type: Content of: <sect1><sect2><sect3><title>
+#: lfs-en/chapter02/creatingpartition.xml
 msgid "The Grub Bios Partition"
 msgstr "Grub Bios 分区"
 
 # "Critical" warning suppressed because in Chinese we have no we to put "EF02" earlier.
 #. type: Content of: <sect1><sect2><sect3><para>
+#: lfs-en/chapter02/creatingpartition.xml
 msgid ""
 "If the <emphasis>boot disk</emphasis> has been partitioned with a GUID "
 "Partition Table (GPT), then a small, typically 1 MB, partition must be "
@@ -212,6 +230,7 @@ msgstr ""
 "emphasis>。"
 
 #. type: Content of: <sect1><sect2><sect3><note><para>
+#: lfs-en/chapter02/creatingpartition.xml
 msgid ""
 "The Grub Bios partition must be on the drive that the BIOS uses to boot the "
 "system.  This is not necessarily the same drive where the LFS root partition "
@@ -224,10 +243,12 @@ msgstr ""
 "区。"
 
 #. type: Content of: <sect1><sect2><sect3><title>
+#: lfs-en/chapter02/creatingpartition.xml
 msgid "Convenience Partitions"
 msgstr "常用分区"
 
 #. type: Content of: <sect1><sect2><sect3><para>
+#: lfs-en/chapter02/creatingpartition.xml
 msgid ""
 "There are several other partitions that are not required, but should be "
 "considered when designing a disk layout.  The following list is not "
@@ -237,6 +258,7 @@ msgstr ""
 "但可以作为一个参考。"
 
 #. type: Content of: <sect1><sect2><sect3><itemizedlist><listitem><para>
+#: lfs-en/chapter02/creatingpartition.xml
 msgid ""
 "/boot &ndash; Highly recommended.  Use this partition to store kernels and "
 "other booting information.  To minimize potential boot problems with larger "
@@ -248,16 +270,17 @@ msgstr ""
 "绰绰有余。"
 
 #. type: Content of: <sect1><sect2><sect3><itemizedlist><listitem><para>
+#: lfs-en/chapter02/creatingpartition.xml
 msgid ""
 "/boot/efi &ndash; The EFI System Partition, which is needed for booting the "
 "system with UEFI.  Read <ulink url=\"&blfs-book;postlfs/grub-setup.html"
 "\">the BLFS page</ulink> for details."
 msgstr ""
-"/boot/efi &ndash; EFI 系统分区，在使用 UEFI 引导系统时是必要的。"
-"阅读 <ulink url=\"&blfs-book;postlfs/grub-setup.html"
-"\">BLFS 页面</ulink> 以获得详细信息。"
+"/boot/efi &ndash; EFI 系统分区，在使用 UEFI 引导系统时是必要的。阅读 <ulink "
+"url=\"&blfs-book;postlfs/grub-setup.html\">BLFS 页面</ulink> 以获得详细信息。"
 
 #. type: Content of: <sect1><sect2><sect3><itemizedlist><listitem><para>
+#: lfs-en/chapter02/creatingpartition.xml
 msgid ""
 "/home &ndash; Highly recommended.  Share your home directory and user "
 "customization across multiple distributions or LFS builds.  The size is "
@@ -267,6 +290,7 @@ msgstr ""
 "home 目录和用户设置。它的尺寸一般很大，取决于硬盘的可用空间。"
 
 #. type: Content of: <sect1><sect2><sect3><itemizedlist><listitem><para>
+#: lfs-en/chapter02/creatingpartition.xml
 msgid ""
 "/usr &ndash; In LFS, <filename class=\"directory\">/bin</filename>, "
 "<filename class=\"directory\">/lib</filename>, and <filename class="
@@ -296,6 +320,7 @@ msgstr ""
 "<filename class=\"directory\">/usr</filename> 分区的系统。"
 
 #. type: Content of: <sect1><sect2><sect3><itemizedlist><listitem><para>
+#: lfs-en/chapter02/creatingpartition.xml
 msgid ""
 "/opt &ndash; This directory is most useful for BLFS where multiple "
 "installations of large packages like Gnome or KDE can be installed without "
@@ -306,6 +331,7 @@ msgstr ""
 "大量文件塞进 /usr 目录树。如果将它划分为独立分区，5 到 10 GB 一般就足够了。"
 
 #. type: Content of: <sect1><sect2><sect3><itemizedlist><listitem><para>
+#: lfs-en/chapter02/creatingpartition.xml
 msgid ""
 "/tmp &ndash; A separate /tmp directory is rare, but useful if configuring a "
 "thin client.  This partition, if used, will usually not need to exceed a "
@@ -315,6 +341,7 @@ msgstr ""
 "配了这个分区，大小一般不会超过几个 GB。"
 
 #. type: Content of: <sect1><sect2><sect3><itemizedlist><listitem><para>
+#: lfs-en/chapter02/creatingpartition.xml
 msgid ""
 "/usr/src &ndash; This partition is very useful for providing a location to "
 "store BLFS source files and share them across LFS builds.  It can also be "
@@ -326,6 +353,7 @@ msgstr ""
 "空间。"
 
 #. type: Content of: <sect1><sect2><sect3><para>
+#: lfs-en/chapter02/creatingpartition.xml
 msgid ""
 "Any separate partition that you want automatically mounted upon boot needs "
 "to be specified in the <filename>/etc/fstab</filename>.  Details about how "

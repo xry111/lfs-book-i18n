@@ -1,7 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2021-09-21 17:37+0800\n"
+"Report-Msgid-Bugs-To: lfs-dev@linuxfromscratch.org\n"
+"POT-Creation-Date: 2022-09-17 18:28+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -13,27 +14,16 @@ msgstr ""
 "X-Pootle-Path: /zh_CN/lfs/chapter09/clock.po\n"
 "X-Generator: Translate Toolkit 2.2.5\n"
 
-#. type: Content of: <sect1><title>
-msgid "Configuring the system clock"
-msgstr "配置系统时钟"
-
-#. type: Content of: <sect1><indexterm><primary>
-msgid "clock"
-msgstr "clock"
-
-#. type: Content of: <sect1><indexterm><secondary>
+#. type: Content of: <sect1><sect2><indexterm><secondary>
+#: lfs-en/chapter08/sysklogd.xml lfs-en/chapter08/eudev.xml
+#: lfs-en/chapter08/shadow.xml lfs-en/chapter09/consoled.xml
+#: lfs-en/chapter09/usage.xml lfs-en/chapter09/networkd.xml
+#: lfs-en/chapter09/clock.xml lfs-en/chapter09/network.xml
 msgid "configuring"
 msgstr "配置"
 
 #. type: Content of: <sect1><para>
-msgid ""
-"This section discusses how to configure the <command>systemd-timedated</"
-"command> system service, which configures the system clock and timezone."
-msgstr ""
-"本节讨论如何配置 <command>systemd-timedated</command> 系统服务，它的作用是配"
-"置系统时钟和时区。"
-
-#. type: Content of: <sect1><para>
+#: lfs-en/chapter09/usage.xml lfs-en/chapter09/clock.xml
 msgid ""
 "If you cannot remember whether or not the hardware clock is set to UTC, find "
 "out by running the <userinput>hwclock --localtime --show</userinput> "
@@ -54,7 +44,27 @@ msgstr ""
 "的验证。例如，如果您现在处于莫斯科时区，即 GMT -0700，在本地时间上加 7 小时，"
 "再进行比较。"
 
+#. type: Content of: <sect1><title>
+#: lfs-en/chapter09/clock.xml
+msgid "Configuring the system clock"
+msgstr "配置系统时钟"
+
+#. type: Content of: <sect1><indexterm><primary>
+#: lfs-en/chapter09/clock.xml
+msgid "clock"
+msgstr "clock"
+
 #. type: Content of: <sect1><para>
+#: lfs-en/chapter09/clock.xml
+msgid ""
+"This section discusses how to configure the <command>systemd-timedated</"
+"command> system service, which configures the system clock and timezone."
+msgstr ""
+"本节讨论如何配置 <command>systemd-timedated</command> 系统服务，它的作用是配"
+"置系统时钟和时区。"
+
+#. type: Content of: <sect1><para>
+#: lfs-en/chapter09/clock.xml
 msgid ""
 "<command>systemd-timedated</command> reads <filename>/etc/adjtime</"
 "filename>, and depending on the contents of the file, sets the clock to "
@@ -64,6 +74,7 @@ msgstr ""
 "并根据其内容将硬件时钟设定为 UTC 或本地时间。"
 
 #. type: Content of: <sect1><para>
+#: lfs-en/chapter09/clock.xml
 msgid ""
 "Create the <filename>/etc/adjtime</filename> file with the following "
 "contents if your hardware clock is set to local time:"
@@ -72,6 +83,7 @@ msgstr ""
 "filename> 文件："
 
 #. type: Content of: <sect1><screen>
+#: lfs-en/chapter09/clock.xml
 #, no-wrap
 msgid ""
 "<userinput>cat &gt; /etc/adjtime &lt;&lt; \"EOF\"\n"
@@ -87,6 +99,7 @@ msgstr ""
 "EOF</userinput>"
 
 #. type: Content of: <sect1><para>
+#: lfs-en/chapter09/clock.xml
 msgid ""
 "If <filename>/etc/adjtime</filename> isn't present at first boot, "
 "<command>systemd-timedated</command> will assume that hardware clock is set "
@@ -96,6 +109,7 @@ msgstr ""
 "timedated</command> 会假设硬件时钟使用 UTC，并据此调整该文件。"
 
 #. type: Content of: <sect1><para>
+#: lfs-en/chapter09/clock.xml
 msgid ""
 "You can also use the <command>timedatectl</command> utility to tell "
 "<command>systemd-timedated</command> if your hardware clock is set to UTC or "
@@ -105,61 +119,73 @@ msgstr ""
 "timedated</command> 您的硬件时钟是 UTC 还是本地时间："
 
 #. type: Content of: <sect1><screen>
+#: lfs-en/chapter09/clock.xml
 #, no-wrap
 msgid "<userinput>timedatectl set-local-rtc 1</userinput>"
 msgstr "<userinput>timedatectl set-local-rtc 1</userinput>"
 
 #. type: Content of: <sect1><para>
+#: lfs-en/chapter09/clock.xml
 msgid ""
 "<command>timedatectl</command> can also be used to change system time and "
 "time zone."
 msgstr "<command>timedatectl</command> 也能修改系统时间和时区。"
 
 #. type: Content of: <sect1><para>
+#: lfs-en/chapter09/clock.xml
 msgid "To change your current system time, issue:"
 msgstr "如果要修改系统时间，执行以下命令："
 
 #. type: Content of: <sect1><screen>
+#: lfs-en/chapter09/clock.xml
 #, no-wrap
 msgid "<userinput>timedatectl set-time YYYY-MM-DD HH:MM:SS</userinput>"
 msgstr "<userinput>timedatectl set-time YYYY-MM-DD HH:MM:SS</userinput>"
 
 #. type: Content of: <sect1><para>
+#: lfs-en/chapter09/clock.xml
 msgid "The hardware clock will also be updated accordingly."
 msgstr "硬件时钟也会同时被更新。"
 
 #. type: Content of: <sect1><para>
+#: lfs-en/chapter09/clock.xml
 msgid "To change your current time zone, issue:"
 msgstr "要修改当前时区，执行以下命令："
 
 #. type: Content of: <sect1><screen>
+#: lfs-en/chapter09/clock.xml
 #, no-wrap
 msgid "<userinput>timedatectl set-timezone TIMEZONE</userinput>"
 msgstr "<userinput>timedatectl set-timezone TIMEZONE</userinput>"
 
 #. type: Content of: <sect1><para>
+#: lfs-en/chapter09/clock.xml
 msgid "You can get a list of available time zones by running:"
 msgstr "您可以通过运行以下命令查看可用的时区列表："
 
 #. type: Content of: <sect1><screen>
+#: lfs-en/chapter09/clock.xml
 #, no-wrap
 msgid "<userinput>timedatectl list-timezones</userinput>"
 msgstr "<userinput>timedatectl list-timezones</userinput>"
 
 #. type: Content of: <sect1><note><para>
+#: lfs-en/chapter09/clock.xml
 msgid ""
 "Please note that the <command>timedatectl</command> command doesn't work in "
 "the chroot environment.  It can only be used after the LFS system is booted "
 "with systemd."
 msgstr ""
-"请注意 <command>timedatectl</command> 命令在 chroot 环境无法工作。"
-"只有在使用 systemd 引导 LFS 系统后才能使用它。"
+"请注意 <command>timedatectl</command> 命令在 chroot 环境无法工作。只有在使用 "
+"systemd 引导 LFS 系统后才能使用它。"
 
 #. type: Content of: <sect1><sect2><title>
+#: lfs-en/chapter09/clock.xml
 msgid "Network Time Synchronization"
 msgstr "网络时钟同步"
 
 #. type: Content of: <sect1><sect2><para>
+#: lfs-en/chapter09/clock.xml
 msgid ""
 "Starting with version 213, systemd ships a daemon called <command>systemd-"
 "timesyncd</command> which can be used to synchronize the system time with "
@@ -169,6 +195,7 @@ msgstr ""
 "的守护程序，可以用于将系统时间与远程 NTP 服务器同步。"
 
 #. type: Content of: <sect1><sect2><para>
+#: lfs-en/chapter09/clock.xml
 msgid ""
 "The daemon is not intended as a replacement for the well established NTP "
 "daemon, but as a client only implementation of the SNTP protocol which can "
@@ -178,6 +205,7 @@ msgstr ""
 "议的客户端，可以用于一些不太复杂的任务，或是资源紧张的系统。"
 
 #. type: Content of: <sect1><sect2><para>
+#: lfs-en/chapter09/clock.xml
 msgid ""
 "Starting with systemd version 216, the <command>systemd-timesyncd</command> "
 "daemon is enabled by default. If you want to disable it, issue the following "
@@ -187,11 +215,13 @@ msgstr ""
 "启用。如果希望禁用它，执行以下命令："
 
 #. type: Content of: <sect1><sect2><screen>
+#: lfs-en/chapter09/clock.xml
 #, no-wrap
 msgid "<userinput>systemctl disable systemd-timesyncd</userinput>"
 msgstr "<userinput>systemctl disable systemd-timesyncd</userinput>"
 
 #. type: Content of: <sect1><sect2><para>
+#: lfs-en/chapter09/clock.xml
 msgid ""
 "The <filename>/etc/systemd/timesyncd.conf</filename> file can be used to "
 "change the NTP servers that <command>systemd-timesyncd</command> "
@@ -201,6 +231,7 @@ msgstr ""
 "<command>systemd-timesyncd</command> 使用的服务器。"
 
 #. type: Content of: <sect1><sect2><para>
+#: lfs-en/chapter09/clock.xml
 msgid ""
 "Please note that when system clock is set to Local Time, <command>systemd-"
 "timesyncd</command> won't update hardware clock."

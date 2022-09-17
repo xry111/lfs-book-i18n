@@ -1,7 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2020-12-26 23:53+0800\n"
+"Report-Msgid-Bugs-To: lfs-dev@linuxfromscratch.org\n"
+"POT-Creation-Date: 2022-09-17 18:28+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -13,10 +14,18 @@ msgstr ""
 "X-Pootle-Path: /zh_CN/lfs/chapter06/introduction.po\n"
 
 #. type: Content of: <sect1><title>
+#: lfs-en/chapter03/introduction.xml lfs-en/chapter04/introduction.xml
+#: lfs-en/chapter06/introduction.xml lfs-en/part3intro/introduction.xml
+#: lfs-en/chapter01/chapter01.xml lfs-en/chapter05/introduction.xml
+#: lfs-en/chapter07/introduction.xml lfs-en/index.xml
+#: lfs-en/chapter08/introduction.xml lfs-en/chapter10/grub.xml
+#: lfs-en/chapter10/introduction.xml lfs-en/chapter02/introduction.xml
+#: lfs-en/chapter09/introductiond.xml lfs-en/chapter09/introduction.xml
 msgid "Introduction"
 msgstr "概述"
 
 #. type: Content of: <sect1><para>
+#: lfs-en/chapter06/introduction.xml
 msgid ""
 "This chapter shows how to cross-compile basic utilities using the just built "
 "cross-toolchain. Those utilities are installed into their final location, "
@@ -28,6 +37,7 @@ msgstr ""
 "此，在链接时会使用刚刚安装的库。"
 
 #. type: Content of: <sect1><para>
+#: lfs-en/chapter06/introduction.xml
 msgid ""
 "Using the utilities will be possible in next chapter after entering the "
 "<quote>chroot</quote> environment. But all the packages built in the present "
@@ -38,6 +48,7 @@ msgstr ""
 "我们必须将本章中所有的软件包构建完毕。因此现在我们还不能脱离宿主系统。"
 
 #. type: Content of: <sect1><para>
+#: lfs-en/chapter06/introduction.xml
 msgid ""
 "Once again, let us recall that improper setting of <envar>LFS</envar> "
 "together with building as <systemitem class=\"username\">root</systemitem>, "
@@ -46,7 +57,7 @@ msgid ""
 "described in <xref linkend=\"ch-preps-settingenviron\"/>."
 msgstr ""
 "再一次地，请注意如果 <envar>LFS</envar> 环境变量设置错误，而且使用 "
-"<systemitem class=\"username\">root</systemitem> 用户的身份进行"
-"构建，可能导致您的电脑完全无法使用。本章应该以用户 <systemitem class="
-"\"username\">lfs</systemitem> 身份完成，且环境变量应该如同<xref linkend=\"ch-"
-"preps-settingenviron\"/>所述设置。"
+"<systemitem class=\"username\">root</systemitem> 用户的身份进行构建，可能导致"
+"您的电脑完全无法使用。本章应该以用户 <systemitem class=\"username\">lfs</"
+"systemitem> 身份完成，且环境变量应该如同<xref linkend=\"ch-preps-"
+"settingenviron\"/>所述设置。"

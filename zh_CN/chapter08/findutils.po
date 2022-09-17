@@ -1,7 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2021-12-15 16:25+0800\n"
+"Report-Msgid-Bugs-To: lfs-dev@linuxfromscratch.org\n"
+"POT-Creation-Date: 2022-09-17 18:28+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -14,11 +15,13 @@ msgstr ""
 "X-Generator: Translate Toolkit 2.2.5\n"
 
 #. type: Content of: <sect1><sect1info><address>
+#: lfs-en/chapter06/findutils.xml lfs-en/chapter08/findutils.xml
 #, no-wrap
 msgid "&findutils-url;"
 msgstr "&findutils-url;"
 
 #. type: Content of: <sect1><sect1info>
+#: lfs-en/chapter06/findutils.xml lfs-en/chapter08/findutils.xml
 msgid ""
 "<productname>findutils</productname> <productnumber>&findutils-version;</"
 "productnumber> <placeholder type=\"address\" id=\"0\"/>"
@@ -27,14 +30,450 @@ msgstr ""
 "productnumber> <placeholder type=\"address\" id=\"0\"/>"
 
 #. type: Content of: <sect1><title>
+#: lfs-en/chapter06/findutils.xml lfs-en/chapter08/findutils.xml
 msgid "Findutils-&findutils-version;"
 msgstr "Findutils-&findutils-version;"
 
-#. type: Content of: <sect1><indexterm><primary>
+#. type: Content of: <sect1><itemizedlist><listitem><para>
+#: lfs-en/chapter06/findutils.xml lfs-en/chapter08/findutils.xml
+#: lfs-en/appendices/dependencies.xml lfs-en/prologue/why.xml
 msgid "Findutils"
 msgstr "Findutils"
 
+#. type: Content of: <sect1><sect2><segmentedlist><segtitle>
+#: lfs-en/chapter06/findutils.xml lfs-en/chapter06/file.xml
+#: lfs-en/chapter06/grep.xml lfs-en/chapter06/sed.xml lfs-en/chapter06/m4.xml
+#: lfs-en/chapter06/bash.xml lfs-en/chapter06/coreutils.xml
+#: lfs-en/chapter06/tar.xml lfs-en/chapter06/binutils-pass2.xml
+#: lfs-en/chapter06/diffutils.xml lfs-en/chapter06/gzip.xml
+#: lfs-en/chapter06/ncurses.xml lfs-en/chapter06/make.xml
+#: lfs-en/chapter06/xz.xml lfs-en/chapter06/gcc-pass2.xml
+#: lfs-en/chapter06/patch.xml lfs-en/chapter06/gawk.xml
+#: lfs-en/chapter05/libstdc++.xml lfs-en/chapter05/gcc-pass1.xml
+#: lfs-en/chapter05/linux-headers.xml lfs-en/chapter05/binutils-pass1.xml
+#: lfs-en/chapter05/glibc.xml lfs-en/chapter07/bison.xml
+#: lfs-en/chapter07/texinfo.xml lfs-en/chapter07/python.xml
+#: lfs-en/chapter07/perl.xml lfs-en/chapter07/gettext.xml
+#: lfs-en/chapter07/util-linux.xml lfs-en/chapter08/pkgconfig.xml
+#: lfs-en/chapter08/findutils.xml lfs-en/chapter08/file.xml
+#: lfs-en/chapter08/intltool.xml lfs-en/chapter08/grep.xml
+#: lfs-en/chapter08/libtool.xml lfs-en/chapter08/wheel.xml
+#: lfs-en/chapter08/sed.xml lfs-en/chapter08/expect.xml lfs-en/chapter08/bc.xml
+#: lfs-en/chapter08/xml-parser.xml lfs-en/chapter08/sysklogd.xml
+#: lfs-en/chapter08/attr.xml lfs-en/chapter08/psmisc.xml
+#: lfs-en/chapter08/gcc.xml lfs-en/chapter08/m4.xml lfs-en/chapter08/bash.xml
+#: lfs-en/chapter08/gmp.xml lfs-en/chapter08/systemd.xml
+#: lfs-en/chapter08/mpc.xml lfs-en/chapter08/coreutils.xml
+#: lfs-en/chapter08/tar.xml lfs-en/chapter08/kbd.xml lfs-en/chapter08/kmod.xml
+#: lfs-en/chapter08/iproute2.xml lfs-en/chapter08/bison.xml
+#: lfs-en/chapter08/expat.xml lfs-en/chapter08/readline.xml
+#: lfs-en/chapter08/acl.xml lfs-en/chapter08/diffutils.xml
+#: lfs-en/chapter08/sysvinit.xml lfs-en/chapter08/ninja.xml
+#: lfs-en/chapter08/eudev.xml lfs-en/chapter08/autoconf.xml
+#: lfs-en/chapter08/texinfo.xml lfs-en/chapter08/zlib.xml
+#: lfs-en/chapter08/libpipeline.xml lfs-en/chapter08/openssl.xml
+#: lfs-en/chapter08/mpfr.xml lfs-en/chapter08/libelf.xml
+#: lfs-en/chapter08/automake.xml lfs-en/chapter08/inetutils.xml
+#: lfs-en/chapter08/python.xml lfs-en/chapter08/tcl.xml
+#: lfs-en/chapter08/perl.xml lfs-en/chapter08/markupsafe.xml
+#: lfs-en/chapter08/gzip.xml lfs-en/chapter08/less.xml
+#: lfs-en/chapter08/jinja2.xml lfs-en/chapter08/man-pages.xml
+#: lfs-en/chapter08/iana-etc.xml lfs-en/chapter08/ncurses.xml
+#: lfs-en/chapter08/make.xml lfs-en/chapter08/flex.xml lfs-en/chapter08/xz.xml
+#: lfs-en/chapter08/grub.xml lfs-en/chapter08/check.xml
+#: lfs-en/chapter08/e2fsprogs.xml lfs-en/chapter08/libffi.xml
+#: lfs-en/chapter08/binutils.xml lfs-en/chapter08/gdbm.xml
+#: lfs-en/chapter08/bzip2.xml lfs-en/chapter08/zstd.xml
+#: lfs-en/chapter08/gettext.xml lfs-en/chapter08/procps.xml
+#: lfs-en/chapter08/vim.xml lfs-en/chapter08/meson.xml
+#: lfs-en/chapter08/glibc.xml lfs-en/chapter08/dbus.xml
+#: lfs-en/chapter08/dejagnu.xml lfs-en/chapter08/patch.xml
+#: lfs-en/chapter08/shadow.xml lfs-en/chapter08/util-linux.xml
+#: lfs-en/chapter08/libcap.xml lfs-en/chapter08/gawk.xml
+#: lfs-en/chapter08/gperf.xml lfs-en/chapter08/man-db.xml
+#: lfs-en/chapter08/groff.xml lfs-en/chapter10/kernel.xml
+#: lfs-en/chapter09/bootscripts.xml
+msgid "&buildtime;"
+msgstr "&buildtime;"
+
+#. type: Content of: <sect1><sect2><segmentedlist><segtitle>
+#: lfs-en/chapter06/findutils.xml lfs-en/chapter06/file.xml
+#: lfs-en/chapter06/grep.xml lfs-en/chapter06/sed.xml lfs-en/chapter06/m4.xml
+#: lfs-en/chapter06/bash.xml lfs-en/chapter06/coreutils.xml
+#: lfs-en/chapter06/tar.xml lfs-en/chapter06/binutils-pass2.xml
+#: lfs-en/chapter06/diffutils.xml lfs-en/chapter06/gzip.xml
+#: lfs-en/chapter06/ncurses.xml lfs-en/chapter06/make.xml
+#: lfs-en/chapter06/xz.xml lfs-en/chapter06/gcc-pass2.xml
+#: lfs-en/chapter06/patch.xml lfs-en/chapter06/gawk.xml
+#: lfs-en/chapter05/libstdc++.xml lfs-en/chapter05/gcc-pass1.xml
+#: lfs-en/chapter05/linux-headers.xml lfs-en/chapter05/binutils-pass1.xml
+#: lfs-en/chapter05/glibc.xml lfs-en/chapter07/bison.xml
+#: lfs-en/chapter07/texinfo.xml lfs-en/chapter07/python.xml
+#: lfs-en/chapter07/perl.xml lfs-en/chapter07/gettext.xml
+#: lfs-en/chapter07/util-linux.xml lfs-en/chapter08/pkgconfig.xml
+#: lfs-en/chapter08/findutils.xml lfs-en/chapter08/file.xml
+#: lfs-en/chapter08/intltool.xml lfs-en/chapter08/grep.xml
+#: lfs-en/chapter08/libtool.xml lfs-en/chapter08/wheel.xml
+#: lfs-en/chapter08/sed.xml lfs-en/chapter08/expect.xml lfs-en/chapter08/bc.xml
+#: lfs-en/chapter08/xml-parser.xml lfs-en/chapter08/sysklogd.xml
+#: lfs-en/chapter08/attr.xml lfs-en/chapter08/psmisc.xml
+#: lfs-en/chapter08/gcc.xml lfs-en/chapter08/m4.xml lfs-en/chapter08/bash.xml
+#: lfs-en/chapter08/gmp.xml lfs-en/chapter08/systemd.xml
+#: lfs-en/chapter08/mpc.xml lfs-en/chapter08/coreutils.xml
+#: lfs-en/chapter08/tar.xml lfs-en/chapter08/kbd.xml lfs-en/chapter08/kmod.xml
+#: lfs-en/chapter08/iproute2.xml lfs-en/chapter08/bison.xml
+#: lfs-en/chapter08/expat.xml lfs-en/chapter08/readline.xml
+#: lfs-en/chapter08/acl.xml lfs-en/chapter08/diffutils.xml
+#: lfs-en/chapter08/sysvinit.xml lfs-en/chapter08/ninja.xml
+#: lfs-en/chapter08/eudev.xml lfs-en/chapter08/autoconf.xml
+#: lfs-en/chapter08/texinfo.xml lfs-en/chapter08/zlib.xml
+#: lfs-en/chapter08/libpipeline.xml lfs-en/chapter08/openssl.xml
+#: lfs-en/chapter08/mpfr.xml lfs-en/chapter08/libelf.xml
+#: lfs-en/chapter08/automake.xml lfs-en/chapter08/inetutils.xml
+#: lfs-en/chapter08/python.xml lfs-en/chapter08/tcl.xml
+#: lfs-en/chapter08/perl.xml lfs-en/chapter08/markupsafe.xml
+#: lfs-en/chapter08/gzip.xml lfs-en/chapter08/less.xml
+#: lfs-en/chapter08/jinja2.xml lfs-en/chapter08/man-pages.xml
+#: lfs-en/chapter08/iana-etc.xml lfs-en/chapter08/ncurses.xml
+#: lfs-en/chapter08/make.xml lfs-en/chapter08/flex.xml lfs-en/chapter08/xz.xml
+#: lfs-en/chapter08/grub.xml lfs-en/chapter08/check.xml
+#: lfs-en/chapter08/e2fsprogs.xml lfs-en/chapter08/libffi.xml
+#: lfs-en/chapter08/binutils.xml lfs-en/chapter08/gdbm.xml
+#: lfs-en/chapter08/bzip2.xml lfs-en/chapter08/zstd.xml
+#: lfs-en/chapter08/gettext.xml lfs-en/chapter08/procps.xml
+#: lfs-en/chapter08/vim.xml lfs-en/chapter08/meson.xml
+#: lfs-en/chapter08/glibc.xml lfs-en/chapter08/dbus.xml
+#: lfs-en/chapter08/dejagnu.xml lfs-en/chapter08/patch.xml
+#: lfs-en/chapter08/shadow.xml lfs-en/chapter08/util-linux.xml
+#: lfs-en/chapter08/libcap.xml lfs-en/chapter08/gawk.xml
+#: lfs-en/chapter08/gperf.xml lfs-en/chapter08/man-db.xml
+#: lfs-en/chapter08/groff.xml lfs-en/chapter10/kernel.xml
+#: lfs-en/chapter09/bootscripts.xml
+msgid "&diskspace;"
+msgstr "&diskspace;"
+
+#. type: Content of: <sect1><sect2><title>
+#: lfs-en/chapter06/findutils.xml lfs-en/chapter08/findutils.xml
+msgid "Installation of Findutils"
+msgstr "安装 Findutils"
+
 #. type: Content of: <sect1><sect2><para>
+#: lfs-en/chapter06/findutils.xml lfs-en/chapter08/findutils.xml
+msgid "Prepare Findutils for compilation:"
+msgstr "准备编译 Findutils："
+
+#. type: Content of: <sect1><sect2><para>
+#: lfs-en/chapter06/findutils.xml lfs-en/chapter06/file.xml
+#: lfs-en/chapter06/grep.xml lfs-en/chapter06/sed.xml lfs-en/chapter06/m4.xml
+#: lfs-en/chapter06/bash.xml lfs-en/chapter06/coreutils.xml
+#: lfs-en/chapter06/tar.xml lfs-en/chapter06/binutils-pass2.xml
+#: lfs-en/chapter06/diffutils.xml lfs-en/chapter06/gzip.xml
+#: lfs-en/chapter06/ncurses.xml lfs-en/chapter06/make.xml
+#: lfs-en/chapter06/xz.xml lfs-en/chapter06/gcc-pass2.xml
+#: lfs-en/chapter06/patch.xml lfs-en/chapter06/gawk.xml
+#: lfs-en/chapter05/glibc.xml lfs-en/chapter07/bison.xml
+#: lfs-en/chapter07/texinfo.xml lfs-en/chapter07/python.xml
+#: lfs-en/chapter07/perl.xml lfs-en/chapter07/gettext.xml
+#: lfs-en/chapter07/util-linux.xml lfs-en/chapter08/pkgconfig.xml
+#: lfs-en/chapter08/findutils.xml lfs-en/chapter08/file.xml
+#: lfs-en/chapter08/intltool.xml lfs-en/chapter08/grep.xml
+#: lfs-en/chapter08/libtool.xml lfs-en/chapter08/bc.xml
+#: lfs-en/chapter08/xml-parser.xml lfs-en/chapter08/sysklogd.xml
+#: lfs-en/chapter08/attr.xml lfs-en/chapter08/psmisc.xml
+#: lfs-en/chapter08/gcc.xml lfs-en/chapter08/m4.xml lfs-en/chapter08/bash.xml
+#: lfs-en/chapter08/systemd.xml lfs-en/chapter08/coreutils.xml
+#: lfs-en/chapter08/tar.xml lfs-en/chapter08/kbd.xml lfs-en/chapter08/kmod.xml
+#: lfs-en/chapter08/iproute2.xml lfs-en/chapter08/bison.xml
+#: lfs-en/chapter08/expat.xml lfs-en/chapter08/readline.xml
+#: lfs-en/chapter08/acl.xml lfs-en/chapter08/diffutils.xml
+#: lfs-en/chapter08/sysvinit.xml lfs-en/chapter08/eudev.xml
+#: lfs-en/chapter08/autoconf.xml lfs-en/chapter08/texinfo.xml
+#: lfs-en/chapter08/zlib.xml lfs-en/chapter08/libpipeline.xml
+#: lfs-en/chapter08/openssl.xml lfs-en/chapter08/libelf.xml
+#: lfs-en/chapter08/automake.xml lfs-en/chapter08/inetutils.xml
+#: lfs-en/chapter08/python.xml lfs-en/chapter08/perl.xml
+#: lfs-en/chapter08/gzip.xml lfs-en/chapter08/less.xml
+#: lfs-en/chapter08/ncurses.xml lfs-en/chapter08/make.xml
+#: lfs-en/chapter08/flex.xml lfs-en/chapter08/xz.xml lfs-en/chapter08/grub.xml
+#: lfs-en/chapter08/e2fsprogs.xml lfs-en/chapter08/libffi.xml
+#: lfs-en/chapter08/binutils.xml lfs-en/chapter08/gdbm.xml
+#: lfs-en/chapter08/zstd.xml lfs-en/chapter08/gettext.xml
+#: lfs-en/chapter08/procps.xml lfs-en/chapter08/vim.xml
+#: lfs-en/chapter08/glibc.xml lfs-en/chapter08/dbus.xml
+#: lfs-en/chapter08/patch.xml lfs-en/chapter08/shadow.xml
+#: lfs-en/chapter08/util-linux.xml lfs-en/chapter08/libcap.xml
+#: lfs-en/chapter08/gawk.xml lfs-en/chapter08/gperf.xml
+#: lfs-en/chapter08/man-db.xml
+msgid "Compile the package:"
+msgstr "编译该软件包："
+
+#. type: Content of: <sect1><sect2><screen>
+#: lfs-en/chapter06/findutils.xml lfs-en/chapter06/grep.xml
+#: lfs-en/chapter06/sed.xml lfs-en/chapter06/m4.xml lfs-en/chapter06/bash.xml
+#: lfs-en/chapter06/coreutils.xml lfs-en/chapter06/tar.xml
+#: lfs-en/chapter06/binutils-pass2.xml lfs-en/chapter06/diffutils.xml
+#: lfs-en/chapter06/gzip.xml lfs-en/chapter06/ncurses.xml
+#: lfs-en/chapter06/make.xml lfs-en/chapter06/xz.xml
+#: lfs-en/chapter06/gcc-pass2.xml lfs-en/chapter06/patch.xml
+#: lfs-en/chapter06/gawk.xml lfs-en/chapter05/libstdc++.xml
+#: lfs-en/chapter05/gcc-pass1.xml lfs-en/chapter05/binutils-pass1.xml
+#: lfs-en/chapter05/glibc.xml lfs-en/chapter07/bison.xml
+#: lfs-en/chapter07/texinfo.xml lfs-en/chapter07/python.xml
+#: lfs-en/chapter07/perl.xml lfs-en/chapter07/gettext.xml
+#: lfs-en/chapter07/util-linux.xml lfs-en/chapter08/pkgconfig.xml
+#: lfs-en/chapter08/findutils.xml lfs-en/chapter08/file.xml
+#: lfs-en/chapter08/intltool.xml lfs-en/chapter08/grep.xml
+#: lfs-en/chapter08/libtool.xml lfs-en/chapter08/expect.xml
+#: lfs-en/chapter08/bc.xml lfs-en/chapter08/xml-parser.xml
+#: lfs-en/chapter08/sysklogd.xml lfs-en/chapter08/attr.xml
+#: lfs-en/chapter08/psmisc.xml lfs-en/chapter08/gcc.xml lfs-en/chapter08/m4.xml
+#: lfs-en/chapter08/bash.xml lfs-en/chapter08/coreutils.xml
+#: lfs-en/chapter08/tar.xml lfs-en/chapter08/kbd.xml lfs-en/chapter08/kmod.xml
+#: lfs-en/chapter08/bison.xml lfs-en/chapter08/expat.xml
+#: lfs-en/chapter08/acl.xml lfs-en/chapter08/diffutils.xml
+#: lfs-en/chapter08/sysvinit.xml lfs-en/chapter08/eudev.xml
+#: lfs-en/chapter08/autoconf.xml lfs-en/chapter08/texinfo.xml
+#: lfs-en/chapter08/zlib.xml lfs-en/chapter08/libpipeline.xml
+#: lfs-en/chapter08/openssl.xml lfs-en/chapter08/libelf.xml
+#: lfs-en/chapter08/automake.xml lfs-en/chapter08/inetutils.xml
+#: lfs-en/chapter08/python.xml lfs-en/chapter08/perl.xml
+#: lfs-en/chapter08/gzip.xml lfs-en/chapter08/less.xml
+#: lfs-en/chapter08/ncurses.xml lfs-en/chapter08/make.xml
+#: lfs-en/chapter08/flex.xml lfs-en/chapter08/xz.xml lfs-en/chapter08/grub.xml
+#: lfs-en/chapter08/check.xml lfs-en/chapter08/e2fsprogs.xml
+#: lfs-en/chapter08/libffi.xml lfs-en/chapter08/gdbm.xml
+#: lfs-en/chapter08/bzip2.xml lfs-en/chapter08/gettext.xml
+#: lfs-en/chapter08/procps.xml lfs-en/chapter08/vim.xml
+#: lfs-en/chapter08/glibc.xml lfs-en/chapter08/dbus.xml
+#: lfs-en/chapter08/patch.xml lfs-en/chapter08/shadow.xml
+#: lfs-en/chapter08/util-linux.xml lfs-en/chapter08/gawk.xml
+#: lfs-en/chapter08/gperf.xml lfs-en/chapter08/man-db.xml
+#: lfs-en/chapter08/groff.xml lfs-en/chapter10/kernel.xml
+#, no-wrap
+msgid "<userinput remap=\"make\">make</userinput>"
+msgstr "<userinput remap=\"make\">make</userinput>"
+
+#. type: Content of: <sect1><sect2><para>
+#: lfs-en/chapter06/findutils.xml lfs-en/chapter06/file.xml
+#: lfs-en/chapter06/grep.xml lfs-en/chapter06/sed.xml lfs-en/chapter06/m4.xml
+#: lfs-en/chapter06/bash.xml lfs-en/chapter06/coreutils.xml
+#: lfs-en/chapter06/tar.xml lfs-en/chapter06/binutils-pass2.xml
+#: lfs-en/chapter06/diffutils.xml lfs-en/chapter06/gzip.xml
+#: lfs-en/chapter06/ncurses.xml lfs-en/chapter06/make.xml
+#: lfs-en/chapter06/xz.xml lfs-en/chapter06/gcc-pass2.xml
+#: lfs-en/chapter06/patch.xml lfs-en/chapter06/gawk.xml
+#: lfs-en/chapter05/gcc-pass1.xml lfs-en/chapter05/binutils-pass1.xml
+#: lfs-en/chapter05/glibc.xml lfs-en/chapter07/bison.xml
+#: lfs-en/chapter07/texinfo.xml lfs-en/chapter07/python.xml
+#: lfs-en/chapter07/perl.xml lfs-en/chapter07/util-linux.xml
+#: lfs-en/chapter08/pkgconfig.xml lfs-en/chapter08/findutils.xml
+#: lfs-en/chapter08/file.xml lfs-en/chapter08/intltool.xml
+#: lfs-en/chapter08/grep.xml lfs-en/chapter08/libtool.xml
+#: lfs-en/chapter08/expect.xml lfs-en/chapter08/bc.xml
+#: lfs-en/chapter08/xml-parser.xml lfs-en/chapter08/sysklogd.xml
+#: lfs-en/chapter08/attr.xml lfs-en/chapter08/psmisc.xml
+#: lfs-en/chapter08/gcc.xml lfs-en/chapter08/m4.xml lfs-en/chapter08/bash.xml
+#: lfs-en/chapter08/systemd.xml lfs-en/chapter08/coreutils.xml
+#: lfs-en/chapter08/tar.xml lfs-en/chapter08/kbd.xml
+#: lfs-en/chapter08/iproute2.xml lfs-en/chapter08/bison.xml
+#: lfs-en/chapter08/expat.xml lfs-en/chapter08/readline.xml
+#: lfs-en/chapter08/acl.xml lfs-en/chapter08/diffutils.xml
+#: lfs-en/chapter08/sysvinit.xml lfs-en/chapter08/ninja.xml
+#: lfs-en/chapter08/eudev.xml lfs-en/chapter08/autoconf.xml
+#: lfs-en/chapter08/texinfo.xml lfs-en/chapter08/zlib.xml
+#: lfs-en/chapter08/libpipeline.xml lfs-en/chapter08/openssl.xml
+#: lfs-en/chapter08/automake.xml lfs-en/chapter08/inetutils.xml
+#: lfs-en/chapter08/python.xml lfs-en/chapter08/tcl.xml
+#: lfs-en/chapter08/markupsafe.xml lfs-en/chapter08/gzip.xml
+#: lfs-en/chapter08/less.xml lfs-en/chapter08/jinja2.xml
+#: lfs-en/chapter08/make.xml lfs-en/chapter08/flex.xml lfs-en/chapter08/xz.xml
+#: lfs-en/chapter08/grub.xml lfs-en/chapter08/check.xml
+#: lfs-en/chapter08/e2fsprogs.xml lfs-en/chapter08/libffi.xml
+#: lfs-en/chapter08/binutils.xml lfs-en/chapter08/gdbm.xml
+#: lfs-en/chapter08/zstd.xml lfs-en/chapter08/gettext.xml
+#: lfs-en/chapter08/procps.xml lfs-en/chapter08/vim.xml
+#: lfs-en/chapter08/meson.xml lfs-en/chapter08/glibc.xml
+#: lfs-en/chapter08/dbus.xml lfs-en/chapter08/patch.xml
+#: lfs-en/chapter08/shadow.xml lfs-en/chapter08/util-linux.xml
+#: lfs-en/chapter08/libcap.xml lfs-en/chapter08/gawk.xml
+#: lfs-en/chapter08/gperf.xml lfs-en/chapter08/man-db.xml
+#: lfs-en/chapter08/groff.xml lfs-en/chapter09/bootscripts.xml
+msgid "Install the package:"
+msgstr "安装该软件包："
+
+#. type: Content of: <sect1><sect2><variablelist><title>
+#: lfs-en/chapter06/bash.xml lfs-en/chapter06/coreutils.xml
+#: lfs-en/chapter05/libstdc++.xml lfs-en/chapter05/gcc-pass1.xml
+#: lfs-en/chapter05/binutils-pass1.xml lfs-en/chapter05/glibc.xml
+#: lfs-en/chapter07/util-linux.xml lfs-en/chapter08/findutils.xml
+#: lfs-en/chapter08/expect.xml lfs-en/chapter08/bc.xml
+#: lfs-en/chapter08/coreutils.xml lfs-en/chapter08/kmod.xml
+#: lfs-en/chapter08/inetutils.xml lfs-en/chapter08/python.xml
+#: lfs-en/chapter08/perl.xml lfs-en/chapter08/less.xml
+#: lfs-en/chapter08/e2fsprogs.xml lfs-en/chapter08/glibc.xml
+#: lfs-en/chapter08/dbus.xml lfs-en/chapter08/man-db.xml
+msgid "The meaning of the configure options:"
+msgstr "配置选项的含义："
+
+#. type: Content of: <sect1><sect2><screen>
+#: lfs-en/chapter05/gcc-pass1.xml lfs-en/chapter05/binutils-pass1.xml
+#: lfs-en/chapter07/bison.xml lfs-en/chapter07/texinfo.xml
+#: lfs-en/chapter07/python.xml lfs-en/chapter07/perl.xml
+#: lfs-en/chapter07/util-linux.xml lfs-en/chapter08/pkgconfig.xml
+#: lfs-en/chapter08/findutils.xml lfs-en/chapter08/file.xml
+#: lfs-en/chapter08/grep.xml lfs-en/chapter08/libtool.xml
+#: lfs-en/chapter08/bc.xml lfs-en/chapter08/xml-parser.xml
+#: lfs-en/chapter08/attr.xml lfs-en/chapter08/psmisc.xml
+#: lfs-en/chapter08/gcc.xml lfs-en/chapter08/m4.xml lfs-en/chapter08/bash.xml
+#: lfs-en/chapter08/coreutils.xml lfs-en/chapter08/kbd.xml
+#: lfs-en/chapter08/bison.xml lfs-en/chapter08/expat.xml
+#: lfs-en/chapter08/acl.xml lfs-en/chapter08/diffutils.xml
+#: lfs-en/chapter08/sysvinit.xml lfs-en/chapter08/eudev.xml
+#: lfs-en/chapter08/autoconf.xml lfs-en/chapter08/texinfo.xml
+#: lfs-en/chapter08/zlib.xml lfs-en/chapter08/libpipeline.xml
+#: lfs-en/chapter08/automake.xml lfs-en/chapter08/inetutils.xml
+#: lfs-en/chapter08/python.xml lfs-en/chapter08/tcl.xml
+#: lfs-en/chapter08/gzip.xml lfs-en/chapter08/less.xml
+#: lfs-en/chapter08/make.xml lfs-en/chapter08/flex.xml lfs-en/chapter08/xz.xml
+#: lfs-en/chapter08/e2fsprogs.xml lfs-en/chapter08/libffi.xml
+#: lfs-en/chapter08/gdbm.xml lfs-en/chapter08/procps.xml
+#: lfs-en/chapter08/vim.xml lfs-en/chapter08/glibc.xml
+#: lfs-en/chapter08/dbus.xml lfs-en/chapter08/patch.xml
+#: lfs-en/chapter08/util-linux.xml lfs-en/chapter08/gawk.xml
+#: lfs-en/chapter08/gperf.xml lfs-en/chapter08/man-db.xml
+#: lfs-en/chapter08/groff.xml lfs-en/chapter09/bootscripts.xml
+#, no-wrap
+msgid "<userinput remap=\"install\">make install</userinput>"
+msgstr "<userinput remap=\"install\">make install</userinput>"
+
+#. type: Content of: <sect1><sect2><variablelist><bridgehead>
+#: lfs-en/chapter05/linux-headers.xml lfs-en/chapter08/pkgconfig.xml
+#: lfs-en/chapter08/findutils.xml lfs-en/chapter08/file.xml
+#: lfs-en/chapter08/intltool.xml lfs-en/chapter08/grep.xml
+#: lfs-en/chapter08/libtool.xml lfs-en/chapter08/wheel.xml
+#: lfs-en/chapter08/sed.xml lfs-en/chapter08/expect.xml lfs-en/chapter08/bc.xml
+#: lfs-en/chapter08/xml-parser.xml lfs-en/chapter08/sysklogd.xml
+#: lfs-en/chapter08/attr.xml lfs-en/chapter08/psmisc.xml
+#: lfs-en/chapter08/gcc.xml lfs-en/chapter08/m4.xml lfs-en/chapter08/bash.xml
+#: lfs-en/chapter08/gmp.xml lfs-en/chapter08/systemd.xml
+#: lfs-en/chapter08/mpc.xml lfs-en/chapter08/coreutils.xml
+#: lfs-en/chapter08/tar.xml lfs-en/chapter08/kbd.xml lfs-en/chapter08/kmod.xml
+#: lfs-en/chapter08/iproute2.xml lfs-en/chapter08/bison.xml
+#: lfs-en/chapter08/expat.xml lfs-en/chapter08/readline.xml
+#: lfs-en/chapter08/acl.xml lfs-en/chapter08/diffutils.xml
+#: lfs-en/chapter08/sysvinit.xml lfs-en/chapter08/ninja.xml
+#: lfs-en/chapter08/eudev.xml lfs-en/chapter08/autoconf.xml
+#: lfs-en/chapter08/texinfo.xml lfs-en/chapter08/zlib.xml
+#: lfs-en/chapter08/libpipeline.xml lfs-en/chapter08/openssl.xml
+#: lfs-en/chapter08/mpfr.xml lfs-en/chapter08/libelf.xml
+#: lfs-en/chapter08/automake.xml lfs-en/chapter08/inetutils.xml
+#: lfs-en/chapter08/python.xml lfs-en/chapter08/tcl.xml
+#: lfs-en/chapter08/perl.xml lfs-en/chapter08/gzip.xml
+#: lfs-en/chapter08/less.xml lfs-en/chapter08/man-pages.xml
+#: lfs-en/chapter08/iana-etc.xml lfs-en/chapter08/ncurses.xml
+#: lfs-en/chapter08/make.xml lfs-en/chapter08/flex.xml lfs-en/chapter08/xz.xml
+#: lfs-en/chapter08/grub.xml lfs-en/chapter08/check.xml
+#: lfs-en/chapter08/e2fsprogs.xml lfs-en/chapter08/libffi.xml
+#: lfs-en/chapter08/binutils.xml lfs-en/chapter08/gdbm.xml
+#: lfs-en/chapter08/bzip2.xml lfs-en/chapter08/zstd.xml
+#: lfs-en/chapter08/gettext.xml lfs-en/chapter08/procps.xml
+#: lfs-en/chapter08/vim.xml lfs-en/chapter08/meson.xml
+#: lfs-en/chapter08/glibc.xml lfs-en/chapter08/dbus.xml
+#: lfs-en/chapter08/dejagnu.xml lfs-en/chapter08/patch.xml
+#: lfs-en/chapter08/shadow.xml lfs-en/chapter08/util-linux.xml
+#: lfs-en/chapter08/libcap.xml lfs-en/chapter08/gawk.xml
+#: lfs-en/chapter08/gperf.xml lfs-en/chapter08/man-db.xml
+#: lfs-en/chapter08/groff.xml lfs-en/chapter10/kernel.xml
+#: lfs-en/chapter09/bootscripts.xml
+msgid "Short Descriptions"
+msgstr "简要描述"
+
+# #-#-#-#-#  perl.po (PACKAGE VERSION)  #-#-#-#-#
+#
+#
+#
+#. type: Content of: <sect1><sect2><variablelist>
+#: lfs-en/chapter05/linux-headers.xml lfs-en/chapter08/pkgconfig.xml
+#: lfs-en/chapter08/findutils.xml lfs-en/chapter08/file.xml
+#: lfs-en/chapter08/intltool.xml lfs-en/chapter08/grep.xml
+#: lfs-en/chapter08/libtool.xml lfs-en/chapter08/wheel.xml
+#: lfs-en/chapter08/sed.xml lfs-en/chapter08/expect.xml lfs-en/chapter08/bc.xml
+#: lfs-en/chapter08/xml-parser.xml lfs-en/chapter08/sysklogd.xml
+#: lfs-en/chapter08/attr.xml lfs-en/chapter08/psmisc.xml
+#: lfs-en/chapter08/gcc.xml lfs-en/chapter08/m4.xml lfs-en/chapter08/bash.xml
+#: lfs-en/chapter08/gmp.xml lfs-en/chapter08/systemd.xml
+#: lfs-en/chapter08/mpc.xml lfs-en/chapter08/coreutils.xml
+#: lfs-en/chapter08/tar.xml lfs-en/chapter08/kbd.xml lfs-en/chapter08/kmod.xml
+#: lfs-en/chapter08/iproute2.xml lfs-en/chapter08/bison.xml
+#: lfs-en/chapter08/expat.xml lfs-en/chapter08/readline.xml
+#: lfs-en/chapter08/acl.xml lfs-en/chapter08/diffutils.xml
+#: lfs-en/chapter08/sysvinit.xml lfs-en/chapter08/ninja.xml
+#: lfs-en/chapter08/eudev.xml lfs-en/chapter08/autoconf.xml
+#: lfs-en/chapter08/texinfo.xml lfs-en/chapter08/zlib.xml
+#: lfs-en/chapter08/libpipeline.xml lfs-en/chapter08/openssl.xml
+#: lfs-en/chapter08/mpfr.xml lfs-en/chapter08/libelf.xml
+#: lfs-en/chapter08/automake.xml lfs-en/chapter08/inetutils.xml
+#: lfs-en/chapter08/python.xml lfs-en/chapter08/tcl.xml
+#: lfs-en/chapter08/perl.xml lfs-en/chapter08/gzip.xml
+#: lfs-en/chapter08/less.xml lfs-en/chapter08/man-pages.xml
+#: lfs-en/chapter08/iana-etc.xml lfs-en/chapter08/ncurses.xml
+#: lfs-en/chapter08/make.xml lfs-en/chapter08/flex.xml lfs-en/chapter08/xz.xml
+#: lfs-en/chapter08/grub.xml lfs-en/chapter08/check.xml
+#: lfs-en/chapter08/e2fsprogs.xml lfs-en/chapter08/libffi.xml
+#: lfs-en/chapter08/binutils.xml lfs-en/chapter08/gdbm.xml
+#: lfs-en/chapter08/bzip2.xml lfs-en/chapter08/zstd.xml
+#: lfs-en/chapter08/gettext.xml lfs-en/chapter08/procps.xml
+#: lfs-en/chapter08/vim.xml lfs-en/chapter08/meson.xml
+#: lfs-en/chapter08/glibc.xml lfs-en/chapter08/dbus.xml
+#: lfs-en/chapter08/dejagnu.xml lfs-en/chapter08/patch.xml
+#: lfs-en/chapter08/shadow.xml lfs-en/chapter08/util-linux.xml
+#: lfs-en/chapter08/libcap.xml lfs-en/chapter08/gawk.xml
+#: lfs-en/chapter08/gperf.xml lfs-en/chapter08/man-db.xml
+#: lfs-en/chapter08/groff.xml lfs-en/appendices/acronymlist.xml
+#: lfs-en/chapter10/kernel.xml lfs-en/prologue/standards.xml
+#: lfs-en/chapter09/bootscripts.xml
+msgid ""
+"<?dbfo list-presentation=\"list\"?> <?dbhtml list-presentation=\"table\"?>"
+msgstr ""
+"<?dbfo list-presentation=\"list\"?> <?dbhtml list-presentation=\"table\"?>"
+
+#. type: Content of: <sect1><sect2><para>
+#: lfs-en/chapter08/pkgconfig.xml lfs-en/chapter08/findutils.xml
+#: lfs-en/chapter08/file.xml lfs-en/chapter08/intltool.xml
+#: lfs-en/chapter08/grep.xml lfs-en/chapter08/libtool.xml
+#: lfs-en/chapter08/sed.xml lfs-en/chapter08/expect.xml
+#: lfs-en/chapter08/xml-parser.xml lfs-en/chapter08/m4.xml
+#: lfs-en/chapter08/mpc.xml lfs-en/chapter08/tar.xml lfs-en/chapter08/kbd.xml
+#: lfs-en/chapter08/expat.xml lfs-en/chapter08/diffutils.xml
+#: lfs-en/chapter08/ninja.xml lfs-en/chapter08/eudev.xml
+#: lfs-en/chapter08/autoconf.xml lfs-en/chapter08/texinfo.xml
+#: lfs-en/chapter08/zlib.xml lfs-en/chapter08/libpipeline.xml
+#: lfs-en/chapter08/openssl.xml lfs-en/chapter08/libelf.xml
+#: lfs-en/chapter08/inetutils.xml lfs-en/chapter08/tcl.xml
+#: lfs-en/chapter08/gzip.xml lfs-en/chapter08/make.xml lfs-en/chapter08/xz.xml
+#: lfs-en/chapter08/libffi.xml lfs-en/chapter08/gdbm.xml
+#: lfs-en/chapter08/zstd.xml lfs-en/chapter08/dejagnu.xml
+#: lfs-en/chapter08/patch.xml lfs-en/chapter08/libcap.xml
+#: lfs-en/chapter08/gawk.xml lfs-en/chapter08/man-db.xml
+msgid "To test the results, issue:"
+msgstr "运行命令以测试编译结果："
+
+#. type: Content of: <sect1><sect2><segmentedlist><segtitle>
+#: lfs-en/chapter08/pkgconfig.xml lfs-en/chapter08/findutils.xml
+#: lfs-en/chapter08/sed.xml lfs-en/chapter08/bash.xml lfs-en/chapter08/gmp.xml
+#: lfs-en/chapter08/coreutils.xml lfs-en/chapter08/tar.xml
+#: lfs-en/chapter08/bison.xml lfs-en/chapter08/expat.xml
+#: lfs-en/chapter08/autoconf.xml lfs-en/chapter08/mpfr.xml
+#: lfs-en/chapter08/perl.xml lfs-en/chapter08/markupsafe.xml
+#: lfs-en/chapter08/jinja2.xml lfs-en/chapter08/flex.xml
+#: lfs-en/chapter08/binutils.xml lfs-en/chapter08/bzip2.xml
+#: lfs-en/chapter08/vim.xml lfs-en/chapter08/meson.xml
+#: lfs-en/chapter08/shadow.xml lfs-en/chapter08/gperf.xml
+msgid "Installed directory"
+msgstr "安装的目录"
+
+#. type: Content of: <sect1><sect2><para>
+#: lfs-en/chapter08/findutils.xml
 msgid ""
 "The Findutils package contains programs to find files. These programs are "
 "provided to recursively search through a directory tree and to create, "
@@ -44,31 +483,18 @@ msgstr ""
 "Findutils 软件包包含用于查找文件的程序。这些程序能够递归地搜索目录树，以及创"
 "建、维护和搜索文件数据库 (一般比递归搜索快，但在数据库最近没有更新时不可靠)。"
 
-#. type: Content of: <sect1><sect2><segmentedlist><segtitle>
-msgid "&buildtime;"
-msgstr "&buildtime;"
-
-#. type: Content of: <sect1><sect2><segmentedlist><segtitle>
-msgid "&diskspace;"
-msgstr "&diskspace;"
-
 #. type: Content of: <sect1><sect2><segmentedlist><seglistitem><seg>
+#: lfs-en/chapter08/findutils.xml
 msgid "&findutils-fin-sbu;"
 msgstr "&findutils-fin-sbu;"
 
 #. type: Content of: <sect1><sect2><segmentedlist><seglistitem><seg>
+#: lfs-en/chapter08/findutils.xml
 msgid "&findutils-fin-du;"
 msgstr "&findutils-fin-du;"
 
-#. type: Content of: <sect1><sect2><title>
-msgid "Installation of Findutils"
-msgstr "安装 Findutils"
-
-#. type: Content of: <sect1><sect2><para>
-msgid "Prepare Findutils for compilation:"
-msgstr "准备编译 Findutils："
-
 #. type: Content of: <sect1><sect2><screen>
+#: lfs-en/chapter08/findutils.xml
 #, no-wrap
 msgid ""
 "<userinput remap=\"configure\">case $(uname -m) in\n"
@@ -81,23 +507,23 @@ msgstr ""
 "    x86_64) ./configure --prefix=/usr --localstatedir=/var/lib/locate ;;\n"
 "esac</userinput>"
 
-#. type: Content of: <sect1><sect2><variablelist><title>
-msgid "The meaning of the configure options:"
-msgstr "配置选项的含义："
-
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
+#: lfs-en/chapter08/findutils.xml
 msgid "<command>TIME_32_BIT_OK=yes</command>"
 msgstr "<command>TIME_32_BIT_OK=yes</command>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
+#: lfs-en/chapter08/findutils.xml
 msgid "This setting is needed for building on a 32 bit system."
 msgstr "该设定对于在 32 位系统中构建该软件包是必要的。"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
+#: lfs-en/chapter08/findutils.xml
 msgid "<parameter>--localstatedir</parameter>"
 msgstr "<parameter>--localstatedir</parameter>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
+#: lfs-en/chapter08/findutils.xml
 msgid ""
 "This option changes the location of the <command>locate</command> database "
 "to be in <filename class=\"directory\">/var/lib/locate</filename>, which is "
@@ -106,20 +532,8 @@ msgstr ""
 "该选项将 <command>locate</command> 数据库的位置改为 <filename class="
 "\"directory\">/var/lib/locate</filename>，以与 FHS 兼容。"
 
-#. type: Content of: <sect1><sect2><para>
-msgid "Compile the package:"
-msgstr "编译该软件包："
-
 #. type: Content of: <sect1><sect2><screen>
-#, no-wrap
-msgid "<userinput remap=\"make\">make</userinput>"
-msgstr "<userinput remap=\"make\">make</userinput>"
-
-#. type: Content of: <sect1><sect2><para>
-msgid "To test the results, issue:"
-msgstr "运行以下命令以测试编译结果："
-
-#. type: Content of: <sect1><sect2><screen>
+#: lfs-en/chapter08/findutils.xml lfs-en/chapter08/sed.xml
 #, no-wrap
 msgid ""
 "<userinput remap=\"test\">chown -Rv tester .\n"
@@ -128,77 +542,91 @@ msgstr ""
 "<userinput remap=\"test\">chown -Rv tester .\n"
 "su tester -c \"PATH=$PATH make check\"</userinput>"
 
-#. type: Content of: <sect1><sect2><para>
-msgid "Install the package:"
-msgstr "安装该软件包："
-
-#. type: Content of: <sect1><sect2><screen>
-#, no-wrap
-msgid "<userinput remap=\"install\">make install</userinput>"
-msgstr "<userinput remap=\"install\">make install</userinput>"
-
 #. type: Content of: <sect1><sect2><title>
+#: lfs-en/chapter08/findutils.xml
 msgid "Contents of Findutils"
 msgstr "Findutils 的内容"
 
 #. type: Content of: <sect1><sect2><segmentedlist><segtitle>
+#: lfs-en/chapter08/findutils.xml lfs-en/chapter08/file.xml
+#: lfs-en/chapter08/intltool.xml lfs-en/chapter08/grep.xml
+#: lfs-en/chapter08/libtool.xml lfs-en/chapter08/bc.xml
+#: lfs-en/chapter08/sysklogd.xml lfs-en/chapter08/attr.xml
+#: lfs-en/chapter08/psmisc.xml lfs-en/chapter08/gcc.xml
+#: lfs-en/chapter08/bash.xml lfs-en/chapter08/systemd.xml
+#: lfs-en/chapter08/coreutils.xml lfs-en/chapter08/tar.xml
+#: lfs-en/chapter08/kbd.xml lfs-en/chapter08/kmod.xml
+#: lfs-en/chapter08/iproute2.xml lfs-en/chapter08/bison.xml
+#: lfs-en/chapter08/acl.xml lfs-en/chapter08/diffutils.xml
+#: lfs-en/chapter08/sysvinit.xml lfs-en/chapter08/ninja.xml
+#: lfs-en/chapter08/eudev.xml lfs-en/chapter08/autoconf.xml
+#: lfs-en/chapter08/texinfo.xml lfs-en/chapter08/openssl.xml
+#: lfs-en/chapter08/automake.xml lfs-en/chapter08/inetutils.xml
+#: lfs-en/chapter08/tcl.xml lfs-en/chapter08/perl.xml lfs-en/chapter08/gzip.xml
+#: lfs-en/chapter08/less.xml lfs-en/chapter08/ncurses.xml
+#: lfs-en/chapter08/flex.xml lfs-en/chapter08/xz.xml lfs-en/chapter08/grub.xml
+#: lfs-en/chapter08/e2fsprogs.xml lfs-en/chapter08/binutils.xml
+#: lfs-en/chapter08/gdbm.xml lfs-en/chapter08/bzip2.xml
+#: lfs-en/chapter08/zstd.xml lfs-en/chapter08/gettext.xml
+#: lfs-en/chapter08/procps.xml lfs-en/chapter08/vim.xml
+#: lfs-en/chapter08/meson.xml lfs-en/chapter08/glibc.xml
+#: lfs-en/chapter08/dbus.xml lfs-en/chapter08/shadow.xml
+#: lfs-en/chapter08/util-linux.xml lfs-en/chapter08/libcap.xml
+#: lfs-en/chapter08/gawk.xml lfs-en/chapter08/man-db.xml
+#: lfs-en/chapter08/groff.xml
 msgid "Installed programs"
 msgstr "安装的程序"
 
-#. type: Content of: <sect1><sect2><segmentedlist><segtitle>
-msgid "Installed directory"
-msgstr "安装的目录"
-
 #. type: Content of: <sect1><sect2><segmentedlist><seglistitem><seg>
+#: lfs-en/chapter08/findutils.xml
 msgid "find, locate, updatedb, and xargs"
 msgstr "find, locate, updatedb, 以及 xargs"
 
 #. type: Content of: <sect1><sect2><segmentedlist><seglistitem><seg>
+#: lfs-en/chapter08/findutils.xml
 msgid "/var/lib/locate"
 msgstr "/var/lib/locate"
 
-#. type: Content of: <sect1><sect2><variablelist><bridgehead>
-msgid "Short Descriptions"
-msgstr "简要描述"
-
-#. type: Content of: <sect1><sect2><variablelist>
-msgid ""
-"<?dbfo list-presentation=\"list\"?> <?dbhtml list-presentation=\"table\"?>"
-msgstr ""
-"<?dbfo list-presentation=\"list\"?> <?dbhtml list-presentation=\"table\"?>"
-
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
+#: lfs-en/chapter08/findutils.xml
 msgid "<command>find</command>"
 msgstr "<command>find</command>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
+#: lfs-en/chapter08/findutils.xml
 msgid ""
 "Searches given directory trees for files matching the specified criteria"
 msgstr "在给定目录树中搜索满足给定条件的文件"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
+#: lfs-en/chapter08/findutils.xml
 msgid "find"
 msgstr "find"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
+#: lfs-en/chapter08/findutils.xml
 msgid "<command>locate</command>"
 msgstr "<command>locate</command>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
+#: lfs-en/chapter08/findutils.xml
 msgid ""
 "Searches through a database of file names and reports the names that contain "
 "a given string or match a given pattern"
 msgstr "在文件名数据库中进行搜索，报告包含特定字符串或匹配特定模式的文件名"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
+#: lfs-en/chapter08/findutils.xml
 msgid "locate"
 msgstr "locate"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
+#: lfs-en/chapter08/findutils.xml
 msgid "<command>updatedb</command>"
 msgstr "<command>updatedb</command>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
+#: lfs-en/chapter08/findutils.xml
 msgid ""
 "Updates the <command>locate</command> database; it scans the entire file "
 "system (including other file systems that are currently mounted, unless told "
@@ -208,17 +636,21 @@ msgstr ""
 "文件系统，除非被告知不这样做)，并把找到的所有文件名加入数据库"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
+#: lfs-en/chapter08/findutils.xml
 msgid "updatedb"
 msgstr "updatedb"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
+#: lfs-en/chapter08/findutils.xml
 msgid "<command>xargs</command>"
 msgstr "<command>xargs</command>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
+#: lfs-en/chapter08/findutils.xml
 msgid "Can be used to apply a given command to a list of files"
 msgstr "可以将给定命令作用于一个列表中的所有文件"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
+#: lfs-en/chapter08/findutils.xml
 msgid "xargs"
 msgstr "xargs"

@@ -6,8 +6,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Linux From Scratch 11.0\n"
-"Report-Msgid-Bugs-To: lfs-dev@lists.linuxfromscratch.org\n"
-"POT-Creation-Date: 2022-08-29 13:19+0800\n"
+"Report-Msgid-Bugs-To: lfs-dev@linuxfromscratch.org\n"
+"POT-Creation-Date: 2022-09-17 18:28+0800\n"
 "PO-Revision-Date: 2021-09-08 14:04+0800\n"
 "Last-Translator: Xi Ruoyao <xry111@mengyan1223.wang>\n"
 "Language-Team: None <noreply@mengyan1223.wang>\n"
@@ -19,12 +19,25 @@ msgstr ""
 "X-Pootle-Revision: 9999999\n"
 "X-Pootle-Path: /zh_CN/lfs/chapter10/grub.po\n"
 
+#. type: Content of: <sect1><title>
+#: lfs-en/chapter03/introduction.xml lfs-en/chapter04/introduction.xml
+#: lfs-en/chapter06/introduction.xml lfs-en/part3intro/introduction.xml
+#: lfs-en/chapter01/chapter01.xml lfs-en/chapter05/introduction.xml
+#: lfs-en/chapter07/introduction.xml lfs-en/index.xml
+#: lfs-en/chapter08/introduction.xml lfs-en/chapter10/grub.xml
+#: lfs-en/chapter10/introduction.xml lfs-en/chapter02/introduction.xml
+#: lfs-en/chapter09/introductiond.xml lfs-en/chapter09/introduction.xml
+msgid "Introduction"
+msgstr "概述"
+
 #. type: Content of: <sect1><sect1info><address>
+#: lfs-en/chapter08/grub.xml lfs-en/chapter10/grub.xml
 #, no-wrap
 msgid "&grub-url;"
 msgstr "&grub-url;"
 
 #. type: Content of: <sect1><sect1info>
+#: lfs-en/chapter08/grub.xml lfs-en/chapter10/grub.xml
 msgid ""
 "<productname>grub</productname> <productnumber>&grub-version;</"
 "productnumber> <placeholder type=\"address\" id=\"0\"/>"
@@ -33,10 +46,12 @@ msgstr ""
 "productnumber> <placeholder type=\"address\" id=\"0\"/>"
 
 #. type: Content of: <sect1><title>
+#: lfs-en/chapter10/grub.xml
 msgid "Using GRUB to Set Up the Boot Process"
 msgstr "使用 GRUB 设定引导过程"
 
 #. type: Content of: <sect1><note><para>
+#: lfs-en/chapter10/grub.xml
 msgid ""
 "If your system has UEFI support and you wish to boot LFS with UEFI, you "
 "should skip this page, and config GRUB with UEFI support using the "
@@ -47,11 +62,8 @@ msgstr ""
 "<ulink url=\"&blfs-book;postlfs/grub-setup.html\">BLFS 页面</ulink>中的说明，"
 "配置支持 UEFI 的 GRUB。"
 
-#. type: Content of: <sect1><sect2><title>
-msgid "Introduction"
-msgstr "概述"
-
 #. type: Content of: <sect1><sect2><warning><para>
+#: lfs-en/chapter10/grub.xml
 msgid ""
 "Configuring GRUB incorrectly can render your system inoperable without an "
 "alternate boot device such as a CD-ROM or bootable USB drive. This section "
@@ -64,6 +76,7 @@ msgstr ""
 "LFS。"
 
 #. type: Content of: <sect1><sect2><para>
+#: lfs-en/chapter10/grub.xml
 msgid ""
 "Ensure that an emergency boot disk is ready to <quote>rescue</quote> the "
 "computer if the computer becomes unusable (un-bootable).  If you do not "
@@ -79,6 +92,7 @@ msgstr ""
 "\">libisoburn</ulink> 软件包："
 
 #. type: Content of: <sect1><sect2><screen>
+#: lfs-en/chapter10/grub.xml
 #, no-wrap
 msgid ""
 "<userinput>cd /tmp\n"
@@ -90,10 +104,12 @@ msgstr ""
 "xorriso -as cdrecord -v dev=/dev/cdrw blank=as_needed grub-img.iso</userinput>"
 
 #. type: Content of: <sect1><sect2><title>
+#: lfs-en/chapter10/grub.xml
 msgid "GRUB Naming Conventions"
 msgstr "GRUB 命名惯例"
 
 #. type: Content of: <sect1><sect2><para>
+#: lfs-en/chapter10/grub.xml
 msgid ""
 "GRUB uses its own naming structure for drives and partitions in the form of "
 "<emphasis>(hdn,m)</emphasis>, where <emphasis>n</emphasis> is the hard drive "
@@ -121,10 +137,12 @@ msgstr ""
 "驱动器，则第二个硬盘驱动器仍然名为 <emphasis>hd1</emphasis>。"
 
 #. type: Content of: <sect1><sect2><title>
+#: lfs-en/chapter10/grub.xml
 msgid "Setting Up the Configuration"
 msgstr "设定 GRUB 配置"
 
 #. type: Content of: <sect1><sect2><para>
+#: lfs-en/chapter10/grub.xml
 msgid ""
 "GRUB works by writing data to the first physical track of the hard disk.  "
 "This area is not part of any file system.  The programs there access GRUB "
@@ -135,6 +153,7 @@ msgstr ""
 "查找模块。"
 
 #. type: Content of: <sect1><sect2><para>
+#: lfs-en/chapter10/grub.xml
 msgid ""
 "The location of the boot partition is a choice of the user that affects the "
 "configuration.  One recommendation is to have a separate small (suggested "
@@ -157,12 +176,14 @@ msgstr ""
 "<filename>/etc/fstab</filename>。"
 
 #. type: Content of: <sect1><sect2><para>
+#: lfs-en/chapter10/grub.xml
 msgid ""
 "Using the current lfs partition will also work, but configuration for "
 "multiple systems is more difficult."
 msgstr "直接使用 LFS 分区也是可以的，但这样在配置多系统启动时比较麻烦。"
 
 #. type: Content of: <sect1><sect2><para>
+#: lfs-en/chapter10/grub.xml
 msgid ""
 "Using the above information, determine the appropriate designator for the "
 "root partition (or boot partition, if a separate one is used). For the "
@@ -174,6 +195,7 @@ msgstr ""
 "\">sda2</filename>。"
 
 #. type: Content of: <sect1><sect2><para>
+#: lfs-en/chapter10/grub.xml
 msgid ""
 "Install the GRUB files into <filename class=\"directory\">/boot/grub</"
 "filename> and set up the boot track:"
@@ -182,6 +204,7 @@ msgstr ""
 "引导磁道："
 
 #. type: Content of: <sect1><sect2><warning><para>
+#: lfs-en/chapter10/grub.xml
 msgid ""
 "The following command will overwrite the current boot loader. Do not run the "
 "command if this is not desired, for example, if using a third party boot "
@@ -191,11 +214,13 @@ msgstr ""
 "您使用第三方启动引导器管理主引导记录 (MBR)。"
 
 #. type: Content of: <sect1><sect2><screen>
+#: lfs-en/chapter10/grub.xml
 #, no-wrap
 msgid "<userinput>grub-install /dev/sda</userinput>"
 msgstr "<userinput>grub-install /dev/sda</userinput>"
 
 #. type: Content of: <sect1><sect2><note><para>
+#: lfs-en/chapter10/grub.xml
 msgid ""
 "If the system has been booted using UEFI, <command>grub-install</command> "
 "will try to install files for the <emphasis>x86_64-efi</emphasis> target, "
@@ -209,14 +234,17 @@ msgstr ""
 "<option>--target i386-pc</option> 选项。"
 
 #. type: Content of: <sect1><sect2><title>
+#: lfs-en/chapter10/grub.xml
 msgid "Creating the GRUB Configuration File"
 msgstr "创建 GRUB 配置文件"
 
 #. type: Content of: <sect1><sect2><para>
+#: lfs-en/chapter10/grub.xml
 msgid "Generate <filename>/boot/grub/grub.cfg</filename>:"
 msgstr "生成 <filename>/boot/grub/grub.cfg</filename>："
 
 #. type: Content of: <sect1><sect2><screen>
+#: lfs-en/chapter10/grub.xml
 #, no-wrap
 msgid ""
 "<userinput>cat &gt; /boot/grub/grub.cfg &lt;&lt; \"EOF\"\n"
@@ -246,6 +274,7 @@ msgstr ""
 "EOF</userinput>"
 
 #. type: Content of: <sect1><sect2><note><para>
+#: lfs-en/chapter10/grub.xml
 msgid ""
 "From <application>GRUB</application>'s perspective, the kernel files are "
 "relative to the partition used.  If you used a separate /boot partition, "
@@ -258,6 +287,7 @@ msgstr ""
 "删除 /boot，然后修改 <emphasis>set root</emphasis> 行，指向 /boot 分区。"
 
 #. type: Content of: <sect1><sect2><note><para>
+#: lfs-en/chapter10/grub.xml
 msgid ""
 "The GRUB designator for a partition may change if you added or removed some "
 "disks (including removable disks like USB thumb devices).  The change may "
@@ -273,20 +303,20 @@ msgid ""
 "literal> with <literal>root=PARTUUID=<replaceable>&lt;UUID of the partition "
 "where LFS is built&gt;</replaceable></literal>."
 msgstr ""
-"如果新增或移除了一些存储设备 (包括 USB 闪存盘等可移动存储设备)，则 GRUB "
-"赋予分区的编号可能发生改变。这可能导致引导失败，因为 "
-"<filename>grub.cfg</filename> 仍然在使用<quote>旧的</quote>编号。"
-"如果希望避免这种问题，可以使用分区和文件系统的 UUID 指定分区，"
-"以代替 GRUB 编号。运行 <command>lsblk -o UUID,PARTUUID,PATH,MOUNTPOINT</"
-"command> 以显示文件系统 (在 <literal>UUID</literal> 列) 和分区 (在 "
-"<literal>PARTUUID</literal> 列) 的 UUID。之后将 "
-"<literal>set root=(hdx,y)</literal> 替换为 <literal>search --set=root "
-"--fs-uuid <replaceable>&lt;内核所在文件系统的 UUID </replaceable>"
-"</literal>，并将 <literal>root=/dev/sda2</literal> 替换为 "
-"<literal>root=PARTUUID=<replaceable>&lt;构建 LFS 使用的分区的 UUID"
-"</replaceable></literal>。"
+"如果新增或移除了一些存储设备 (包括 USB 闪存盘等可移动存储设备)，则 GRUB 赋予"
+"分区的编号可能发生改变。这可能导致引导失败，因为 <filename>grub.cfg</"
+"filename> 仍然在使用<quote>旧的</quote>编号。如果希望避免这种问题，可以使用分"
+"区和文件系统的 UUID 指定分区，以代替 GRUB 编号。运行 <command>lsblk -o UUID,"
+"PARTUUID,PATH,MOUNTPOINT</command> 以显示文件系统 (在 <literal>UUID</"
+"literal> 列) 和分区 (在 <literal>PARTUUID</literal> 列) 的 UUID。之后将 "
+"<literal>set root=(hdx,y)</literal> 替换为 <literal>search --set=root --fs-"
+"uuid <replaceable>&lt;内核所在文件系统的 UUID </replaceable></literal>，并将 "
+"<literal>root=/dev/sda2</literal> 替换为 "
+"<literal>root=PARTUUID=<replaceable>&lt;构建 LFS 使用的分区的 UUID</"
+"replaceable></literal>。"
 
 #. type: Content of: <sect1><sect2><note><para>
+#: lfs-en/chapter10/grub.xml
 msgid ""
 "Note that the UUID of a partition and the UUID of the filesystem in this "
 "partition is completely different.  Some online resources may instruct you "
@@ -295,13 +325,14 @@ msgid ""
 "partition UUID&gt;</replaceable></literal>, but doing so will require an "
 "initramfs which is beyond the scope of LFS."
 msgstr ""
-"注意分区的 UUID 和该分区中文件系统的 UUID 是完全不同的。"
-"一些在线资料可能建议使用 <literal>root=UUID=<replaceable>"
-"&lt;文件系统 UUID&gt;</replaceable></literal> 代替"
-"<literal>root=PARTUUID=<replaceable>&lt;分区 UUID&gt;</replaceable>"
-"</literal>，但是这种方法依赖于 initramfs，而 initramfs 超出了 LFS 的范畴。"
+"注意分区的 UUID 和该分区中文件系统的 UUID 是完全不同的。一些在线资料可能建议"
+"使用 <literal>root=UUID=<replaceable>&lt;文件系统 UUID&gt;</replaceable></"
+"literal> 代替<literal>root=PARTUUID=<replaceable>&lt;分区 UUID&gt;</"
+"replaceable></literal>，但是这种方法依赖于 initramfs，而 initramfs 超出了 "
+"LFS 的范畴。"
 
 #. type: Content of: <sect1><sect2><note><para>
+#: lfs-en/chapter10/grub.xml
 msgid ""
 "The name of the device node for a partition in <filename class='directory'>/"
 "dev</filename> may also change (more unlikely than GRUB designator change "
@@ -310,14 +341,14 @@ msgid ""
 "replaceable></literal>, in <filename>/etc/fstab</filename>, to avoid a "
 "potential boot failure in case the device node name has changed."
 msgstr ""
-"<filename class='directory'>/dev</filename> 中分区对应的设备节点名也可能"
-"发生改变 (尽管和 GRUB 分区编号的变化相比较为少见)。"
-"在 <filename>/etc/fstab</filename> 中，也可以将 "
-"<literal>/dev/sda1</literal> 这样的设备节点路径改为 "
-"<literal>PARTUUID=<replaceable>&lt;分区 UUID&gt;</replaceable></literal>，"
-"从而避免设备节点命名发生改变时可能导致的引导失败。"
+"<filename class='directory'>/dev</filename> 中分区对应的设备节点名也可能发生"
+"改变 (尽管和 GRUB 分区编号的变化相比较为少见)。在 <filename>/etc/fstab</"
+"filename> 中，也可以将 <literal>/dev/sda1</literal> 这样的设备节点路径改为 "
+"<literal>PARTUUID=<replaceable>&lt;分区 UUID&gt;</replaceable></literal>，从"
+"而避免设备节点命名发生改变时可能导致的引导失败。"
 
 #. type: Content of: <sect1><sect2><para>
+#: lfs-en/chapter10/grub.xml
 msgid ""
 "GRUB is an extremely powerful program and it provides a tremendous number of "
 "options for booting from a wide variety of devices, operating systems, and "
@@ -330,6 +361,7 @@ msgstr ""
 "了本书的范围，不予讨论。"
 
 #. type: Content of: <sect1><sect2><caution><para>
+#: lfs-en/chapter10/grub.xml
 msgid ""
 "There is a command, <application>grub-mkconfig</application>, that can write "
 "a configuration file automatically.  It uses a set of scripts in /etc/grub."

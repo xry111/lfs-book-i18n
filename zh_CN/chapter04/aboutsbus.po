@@ -1,7 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2021-02-20 08:46+0800\n"
+"Report-Msgid-Bugs-To: lfs-dev@linuxfromscratch.org\n"
+"POT-Creation-Date: 2022-09-17 18:28+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -14,10 +15,12 @@ msgstr ""
 "X-Generator: Translate Toolkit 2.2.5\n"
 
 #. type: Content of: <sect1><title>
+#: lfs-en/chapter04/aboutsbus.xml
 msgid "About SBUs"
 msgstr "关于 SBU"
 
 #. type: Content of: <sect1><para>
+#: lfs-en/chapter04/aboutsbus.xml
 msgid ""
 "Many people would like to know beforehand approximately how long it takes to "
 "compile and install each package. Because Linux From Scratch can be built on "
@@ -33,6 +36,7 @@ msgstr ""
 "上需要 3 天！因此，我们不提供实际时间，而是以标准构建单位 (SBU) 衡量时间。"
 
 #. type: Content of: <sect1><para>
+#: lfs-en/chapter04/aboutsbus.xml
 msgid ""
 "The SBU measure works as follows. The first package to be compiled from this "
 "book is binutils in <xref linkend=\"chapter-cross-tools\"/>. The time it "
@@ -45,6 +49,7 @@ msgstr ""
 "缩写为 SBU。其他软件包的编译时间用 SBU 为单位表示。"
 
 #. type: Content of: <sect1><para>
+#: lfs-en/chapter04/aboutsbus.xml
 msgid ""
 "For example, consider a package whose compilation time is 4.5 SBUs. This "
 "means that if a system took 10 minutes to compile and install the first pass "
@@ -57,6 +62,7 @@ msgstr ""
 "这个软件包。幸运的是，多数软件包构建时间比 Binutils 少。"
 
 #. type: Content of: <sect1><para>
+#: lfs-en/chapter04/aboutsbus.xml
 msgid ""
 "In general, SBUs are not entirely accurate because they depend on many "
 "factors, including the host system's version of GCC.  They are provided here "
@@ -68,6 +74,7 @@ msgstr ""
 "情况下可能达到几十分钟。"
 
 #. type: Content of: <sect1><note><para>
+#: lfs-en/chapter04/aboutsbus.xml
 msgid ""
 "For many modern systems with multiple processors (or cores) the compilation "
 "time for a package can be reduced by performing a \"parallel make\" by "
@@ -81,20 +88,24 @@ msgstr ""
 "程，可以设定："
 
 #. type: Content of: <sect1><note><screen>
+#: lfs-en/chapter04/aboutsbus.xml
 #, no-wrap
 msgid "<userinput>export MAKEFLAGS='-j4'</userinput>"
 msgstr "<userinput>export MAKEFLAGS='-j4'</userinput>"
 
 #. type: Content of: <sect1><note><para>
+#: lfs-en/chapter04/aboutsbus.xml
 msgid "or just building with:"
 msgstr "或者直接用以下命令构建："
 
 #. type: Content of: <sect1><note><screen>
+#: lfs-en/chapter04/aboutsbus.xml
 #, no-wrap
 msgid "<userinput>make -j4</userinput>"
 msgstr "<userinput>make -j4</userinput>"
 
 #. type: Content of: <sect1><note><para>
+#: lfs-en/chapter04/aboutsbus.xml
 msgid ""
 "When multiple processors are used in this way, the SBU units in the book "
 "will vary even more than they normally would.  In some cases, the make step "

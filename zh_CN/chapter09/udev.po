@@ -1,7 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2022-09-06 23:45+0800\n"
+"Report-Msgid-Bugs-To: lfs-dev@linuxfromscratch.org\n"
+"POT-Creation-Date: 2022-09-17 18:28+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -13,19 +14,23 @@ msgstr ""
 "X-Pootle-Path: /zh_CN/lfs/chapter09/udev.po\n"
 "X-Generator: Translate Toolkit 2.2.5\n"
 
+#. type: Content of: <sect1><indexterm><secondary>
+#: lfs-en/chapter09/usage.xml lfs-en/chapter09/udev.xml
+msgid "usage"
+msgstr "用法"
+
 #. type: Content of: <sect1><title>
+#: lfs-en/chapter09/udev.xml
 msgid "Overview of Device and Module Handling"
 msgstr "设备和模块管理概述"
 
 #. type: Content of: <sect1><indexterm><primary>
+#: lfs-en/chapter09/udev.xml
 msgid "Udev"
 msgstr "Udev"
 
-#. type: Content of: <sect1><indexterm><secondary>
-msgid "usage"
-msgstr "用法"
-
 #. type: Content of: <sect1><para>
+#: lfs-en/chapter09/udev.xml
 msgid ""
 "In <xref linkend=\"chapter-building-system\"/>, we installed the udev "
 "package when <phrase revision=\"sysv\">eudev</phrase> <phrase revision="
@@ -39,6 +44,7 @@ msgstr ""
 "曾经使用过的设备管理方式。"
 
 #. type: Content of: <sect1><para>
+#: lfs-en/chapter09/udev.xml
 msgid ""
 "Linux systems in general traditionally used a static device creation method, "
 "whereby a great many device nodes were created under <filename class="
@@ -56,6 +62,7 @@ msgstr ""
 "<command>mknod</command> 命令。"
 
 #. type: Content of: <sect1><para>
+#: lfs-en/chapter09/udev.xml
 msgid ""
 "Using the udev method, only those devices which are detected by the kernel "
 "get device nodes created for them. Because these device nodes will be "
@@ -70,10 +77,12 @@ msgstr ""
 "系统内存)。设备节点不需要太多空间，它们使用的系统内存可以忽略不计。"
 
 #. type: Content of: <sect1><sect2><title>
+#: lfs-en/chapter09/udev.xml
 msgid "History"
 msgstr "历史"
 
 #. type: Content of: <sect1><sect2><para>
+#: lfs-en/chapter09/udev.xml
 msgid ""
 "In February 2000, a new filesystem called <systemitem class=\"filesystem"
 "\">devfs</systemitem> was merged into the 2.3.46 kernel and was made "
@@ -87,6 +96,7 @@ msgstr ""
 "核心开发者的大力支持。"
 
 #. type: Content of: <sect1><sect2><para>
+#: lfs-en/chapter09/udev.xml
 msgid ""
 "The main problem with the approach adopted by <systemitem class=\"filesystem"
 "\">devfs</systemitem> was the way it handled device detection, creation, and "
@@ -109,6 +119,7 @@ msgstr ""
 "6 月被从内核中移除。"
 
 #. type: Content of: <sect1><sect2><para>
+#: lfs-en/chapter09/udev.xml
 msgid ""
 "With the development of the unstable 2.5 kernel tree, later released as the "
 "2.6 series of stable kernels, a new virtual filesystem called <systemitem "
@@ -126,14 +137,17 @@ msgstr ""
 "<systemitem class=\"filesystem\">devfs</systemitem> 的用户空间替代品。"
 
 #. type: Content of: <sect1><sect2><title>
+#: lfs-en/chapter09/udev.xml
 msgid "Udev Implementation"
 msgstr "Udev 实现"
 
 #. type: Content of: <sect1><sect2><sect3><title>
+#: lfs-en/chapter09/udev.xml
 msgid "Sysfs"
 msgstr "Sysfs"
 
 #. type: Content of: <sect1><sect2><sect3><para>
+#: lfs-en/chapter09/udev.xml
 msgid ""
 "The <systemitem class=\"filesystem\">sysfs</systemitem> filesystem was "
 "mentioned briefly above. One may wonder how <systemitem class=\"filesystem"
@@ -159,10 +173,12 @@ msgstr ""
 "Udev 就能够使用这些数据对设备进行处理 (包括修改设备节点)。"
 
 #. type: Content of: <sect1><sect2><sect3><title>
+#: lfs-en/chapter09/udev.xml
 msgid "Device Node Creation"
 msgstr "设备节点的创建"
 
 #. type: Content of: <sect1><sect2><sect3><para>
+#: lfs-en/chapter09/udev.xml
 msgid ""
 "Device files are created by the kernel by the <systemitem class=\"filesystem"
 "\">devtmpfs</systemitem> filesystem.  Any driver that wishes to register a "
@@ -179,6 +195,7 @@ msgstr ""
 "\">/dev</filename> 时，设备节点将被以固定的名称、访问权限和所有者首次创建。"
 
 #. type: Content of: <sect1><sect2><sect3><para>
+#: lfs-en/chapter09/udev.xml
 msgid ""
 "A short time later, the kernel will send a uevent to <command> udevd</"
 "command>.  Based on the rules specified in the files within the <filename "
@@ -197,6 +214,7 @@ msgstr ""
 "<command>udevd</command> 数据库条目 (名称)。"
 
 #. type: Content of: <sect1><sect2><sect3><para>
+#: lfs-en/chapter09/udev.xml
 msgid ""
 "The rules in these three directories are numbered and all three directories "
 "are merged together. If <command>udevd</command> can't find a rule for the "
@@ -209,10 +227,12 @@ msgstr ""
 "<systemitem class=\"filesystem\">devtmpfs</systemitem> 最早使用的配置。"
 
 #. type: Content of: <sect1><sect2><sect3><title>
+#: lfs-en/chapter09/udev.xml
 msgid "Module Loading"
 msgstr "模块加载"
 
 #. type: Content of: <sect1><sect2><sect3><para>
+#: lfs-en/chapter09/udev.xml
 msgid ""
 "Device drivers compiled as modules may have aliases built into them.  "
 "Aliases are visible in the output of the <command>modinfo</command> program "
@@ -245,6 +265,7 @@ msgstr ""
 "别名与这个字符串匹配的模块。"
 
 #. type: Content of: <sect1><sect2><sect3><para>
+#: lfs-en/chapter09/udev.xml
 msgid ""
 "In this example, this means that, in addition to <emphasis>snd-fm801</"
 "emphasis>, the obsolete (and unwanted)  <emphasis>forte</emphasis> driver "
@@ -256,16 +277,19 @@ msgstr ""
 "动程序的方法。"
 
 #. type: Content of: <sect1><sect2><sect3><para>
+#: lfs-en/chapter09/udev.xml
 msgid ""
 "The kernel itself is also able to load modules for network protocols, "
 "filesystems, and NLS support on demand."
 msgstr "内核本身也能够在需要时为网络协议，文件系统，以及 NLS 支持加载模块。"
 
 #. type: Content of: <sect1><sect2><sect3><title>
+#: lfs-en/chapter09/udev.xml
 msgid "Handling Hotpluggable/Dynamic Devices"
 msgstr "处理热插拔/动态设备"
 
 #. type: Content of: <sect1><sect2><sect3><para>
+#: lfs-en/chapter09/udev.xml
 msgid ""
 "When you plug in a device, such as a Universal Serial Bus (USB) MP3 player, "
 "the kernel recognizes that the device is now connected and generates a "
@@ -277,20 +301,24 @@ msgstr ""
 "面描述的一样，处理该 uevent 事件。"
 
 #. type: Content of: <sect1><sect2><title>
+#: lfs-en/chapter09/udev.xml
 msgid "Problems with Loading Modules and Creating Devices"
 msgstr "加载模块和创建设备时的问题"
 
 #. type: Content of: <sect1><sect2><para>
+#: lfs-en/chapter09/udev.xml
 msgid ""
 "There are a few possible problems when it comes to automatically creating "
 "device nodes."
 msgstr "在自动创建设备节点时，可能出现一些问题。"
 
 #. type: Content of: <sect1><sect2><sect3><title>
+#: lfs-en/chapter09/udev.xml
 msgid "A kernel module is not loaded automatically"
 msgstr "内核模块没有自动加载"
 
 #. type: Content of: <sect1><sect2><sect3><para>
+#: lfs-en/chapter09/udev.xml
 msgid ""
 "Udev will only load a module if it has a bus-specific alias and the bus "
 "driver properly exports the necessary aliases to <systemitem class="
@@ -305,6 +333,7 @@ msgstr ""
 "写正确的 INPUT，IDE，PCI，USB，SCSI，SERIO，以及 FireWire 驱动程序。"
 
 #. type: Content of: <sect1><sect2><sect3><para>
+#: lfs-en/chapter09/udev.xml
 msgid ""
 "To determine if the device driver you require has the necessary support for "
 "udev, run <command>modinfo</command> with the module name as the argument.  "
@@ -318,6 +347,7 @@ msgstr ""
 "<filename>modalias</filename> 文件。"
 
 #. type: Content of: <sect1><sect2><sect3><para>
+#: lfs-en/chapter09/udev.xml
 msgid ""
 "If the <filename>modalias</filename> file exists in <systemitem class="
 "\"filesystem\">sysfs</systemitem>, the driver supports the device and can "
@@ -331,6 +361,7 @@ msgstr ""
 "个问题日后被解决。"
 
 #. type: Content of: <sect1><sect2><sect3><para>
+#: lfs-en/chapter09/udev.xml
 msgid ""
 "If there is no <filename>modalias</filename> file in the relevant directory "
 "under <filename class=\"directory\">/sys/bus</filename>, this means that the "
@@ -344,6 +375,7 @@ msgstr ""
 "题在日后被解决。"
 
 #. type: Content of: <sect1><sect2><sect3><para>
+#: lfs-en/chapter09/udev.xml
 msgid ""
 "Udev is not intended to load <quote>wrapper</quote> drivers such as "
 "<emphasis>snd-pcm-oss</emphasis> and non-hardware drivers such as "
@@ -353,12 +385,14 @@ msgstr ""
 "oss</emphasis> 等，或 <emphasis>loop</emphasis> 等非硬件驱动程序。"
 
 #. type: Content of: <sect1><sect2><sect3><title>
+#: lfs-en/chapter09/udev.xml
 msgid ""
 "A kernel module is not loaded automatically, and udev is not intended to "
 "load it"
 msgstr "内核模块没有自动加载，且 Udev 不尝试加载它"
 
 #. type: Content of: <sect1><sect2><sect3><para>
+#: lfs-en/chapter09/udev.xml
 msgid ""
 "If the <quote>wrapper</quote> module only enhances the functionality "
 "provided by some other module (e.g., <emphasis>snd-pcm-oss</emphasis> "
@@ -377,11 +411,13 @@ msgstr ""
 "filename> 中。例如："
 
 #. type: Content of: <sect1><sect2><sect3><screen>
+#: lfs-en/chapter09/udev.xml
 #, no-wrap
 msgid "<literal>softdep snd-pcm post: snd-pcm-oss</literal>"
 msgstr "<literal>softdep snd-pcm post: snd-pcm-oss</literal>"
 
 #. type: Content of: <sect1><sect2><sect3><para>
+#: lfs-en/chapter09/udev.xml
 msgid ""
 "Note that the <quote>softdep</quote> command also allows <literal>pre:</"
 "literal> dependencies, or a mixture of both <literal>pre:</literal> and "
@@ -395,6 +431,7 @@ msgstr ""
 "quote>语法和功能的信息。"
 
 #. type: Content of: <sect1><sect2><sect3><para>
+#: lfs-en/chapter09/udev.xml
 msgid ""
 "If the module in question is not a wrapper and is useful by itself, "
 "configure the <command>modules</command> bootscript to load this module on "
@@ -408,10 +445,12 @@ msgstr ""
 "也可以被添加到这里，但对于包装器来说这不是最好的方案。"
 
 #. type: Content of: <sect1><sect2><sect3><title>
+#: lfs-en/chapter09/udev.xml
 msgid "Udev loads some unwanted module"
 msgstr "Udev 加载了不希望的模块"
 
 #. type: Content of: <sect1><sect2><sect3><para>
+#: lfs-en/chapter09/udev.xml
 msgid ""
 "Either don't build the module, or blacklist it in a <filename>/etc/modprobe."
 "d/blacklist.conf</filename> file as done with the <emphasis>forte</emphasis> "
@@ -421,11 +460,13 @@ msgstr ""
 "件中禁用它。以 <emphasis>forte</emphasis> 为例，下面一行禁用了该模块："
 
 #. type: Content of: <sect1><sect2><sect3><screen>
+#: lfs-en/chapter09/udev.xml
 #, no-wrap
 msgid "<literal>blacklist forte</literal>"
 msgstr "<literal>blacklist forte</literal>"
 
 #. type: Content of: <sect1><sect2><sect3><para>
+#: lfs-en/chapter09/udev.xml
 msgid ""
 "Blacklisted modules can still be loaded manually with the explicit "
 "<command>modprobe</command> command."
@@ -433,10 +474,12 @@ msgstr ""
 "被禁用的模块仍然可以通过直接执行 <command>modprobe</command> 手动加载。"
 
 #. type: Content of: <sect1><sect2><sect3><title>
+#: lfs-en/chapter09/udev.xml
 msgid "Udev creates a device incorrectly, or makes a wrong symlink"
 msgstr "Udev 创建了错误的设备或错误的符号链接"
 
 #. type: Content of: <sect1><sect2><sect3><para>
+#: lfs-en/chapter09/udev.xml
 msgid ""
 "This usually happens if a rule unexpectedly matches a device. For example, a "
 "poorly-written rule can match both a SCSI disk (as desired)  and the "
@@ -449,10 +492,12 @@ msgstr ""
 "规则，并通过 <command>udevadm info</command> 的帮助，将它进一步细化。"
 
 #. type: Content of: <sect1><sect2><sect3><title>
+#: lfs-en/chapter09/udev.xml
 msgid "Udev rule works unreliably"
 msgstr "Udev 规则工作不可靠"
 
 #. type: Content of: <sect1><sect2><sect3><para>
+#: lfs-en/chapter09/udev.xml
 msgid ""
 "This may be another manifestation of the previous problem. If not, and your "
 "rule uses <systemitem class=\"filesystem\">sysfs</systemitem> attributes, it "
@@ -472,10 +517,12 @@ msgstr ""
 "开发邮件列表。"
 
 #. type: Content of: <sect1><sect2><sect3><title>
+#: lfs-en/chapter09/udev.xml
 msgid "Udev does not create a device"
 msgstr "Udev 没有创建设备"
 
 #. type: Content of: <sect1><sect2><sect3><para>
+#: lfs-en/chapter09/udev.xml
 msgid ""
 "Further text assumes that the driver is built statically into the kernel or "
 "already loaded as a module, and that you have already checked that udev "
@@ -485,6 +532,7 @@ msgstr ""
 "确认 Udev 没有创建命名错误的设备。"
 
 #. type: Content of: <sect1><sect2><sect3><para>
+#: lfs-en/chapter09/udev.xml
 msgid ""
 "Udev has no information needed to create a device node if a kernel driver "
 "does not export its data to <systemitem class=\"filesystem\">sysfs</"
@@ -505,10 +553,12 @@ msgstr ""
 "command> 会自动完成复制。"
 
 #. type: Content of: <sect1><sect2><sect3><title>
+#: lfs-en/chapter09/udev.xml
 msgid "Device naming order changes randomly after rebooting"
 msgstr "重启后设备命名顺序随机变化"
 
 #. type: Content of: <sect1><sect2><sect3><para>
+#: lfs-en/chapter09/udev.xml
 msgid ""
 "This is due to the fact that udev, by design, handles uevents and loads "
 "modules in parallel, and thus in an unpredictable order. This will never be "
@@ -526,14 +576,17 @@ msgstr ""
 "config-symlinks\"/>和<xref linkend=\"ch-config-network\"/>中的例子。"
 
 #. type: Content of: <sect1><sect2><title>
+#: lfs-en/chapter09/udev.xml
 msgid "Useful Reading"
 msgstr "扩展阅读"
 
 #. type: Content of: <sect1><sect2><para>
+#: lfs-en/chapter09/udev.xml
 msgid "Additional helpful documentation is available at the following sites:"
 msgstr "以下链接包含了一些额外的帮助文档："
 
 #. type: Content of: <sect1><sect2><itemizedlist><listitem><para>
+#: lfs-en/chapter09/udev.xml
 msgid ""
 "A Userspace Implementation of <systemitem class=\"filesystem\">devfs</"
 "systemitem> <ulink url=\"http://www.kroah.com/linux/talks/"
@@ -544,6 +597,7 @@ msgstr ""
 "ols_2003_udev_paper/Reprint-Kroah-Hartman-OLS2003.pdf\"/>"
 
 #. type: Content of: <sect1><sect2><itemizedlist><listitem><para>
+#: lfs-en/chapter09/udev.xml
 msgid ""
 "The <systemitem class=\"filesystem\">sysfs</systemitem> Filesystem <ulink "
 "url=\"https://www.kernel.org/pub/linux/kernel/people/mochel/doc/papers/"

@@ -1,7 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2022-09-06 23:45+0800\n"
+"Report-Msgid-Bugs-To: lfs-dev@linuxfromscratch.org\n"
+"POT-Creation-Date: 2022-09-17 18:28+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -13,19 +14,27 @@ msgstr ""
 "X-Pootle-Path: /zh_CN/lfs/chapter09/consoled.po\n"
 "X-Generator: Translate Toolkit 2.2.5\n"
 
-#. type: Content of: <sect1><title>
-msgid "Configuring the Linux Console"
-msgstr "配置 Linux 控制台"
-
-#. type: Content of: <sect1><indexterm><primary>
-msgid "console"
-msgstr "console"
-
-#. type: Content of: <sect1><indexterm><secondary>
+#. type: Content of: <sect1><sect2><indexterm><secondary>
+#: lfs-en/chapter08/sysklogd.xml lfs-en/chapter08/eudev.xml
+#: lfs-en/chapter08/shadow.xml lfs-en/chapter09/consoled.xml
+#: lfs-en/chapter09/usage.xml lfs-en/chapter09/networkd.xml
+#: lfs-en/chapter09/clock.xml lfs-en/chapter09/network.xml
 msgid "configuring"
 msgstr "配置"
 
+#. type: Content of: <sect1><sect2><title>
+#: lfs-en/chapter09/consoled.xml lfs-en/chapter09/usage.xml
+msgid "Configuring the Linux Console"
+msgstr "配置 Linux 控制台"
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
+#: lfs-en/chapter09/consoled.xml lfs-en/chapter09/usage.xml
+#: lfs-en/chapter09/bootscripts.xml
+msgid "console"
+msgstr "console"
+
 #. type: Content of: <sect1><para>
+#: lfs-en/chapter09/consoled.xml
 msgid ""
 "This section discusses how to configure the <command>systemd-vconsole-setup</"
 "command> system service, which configures the virtual console font and "
@@ -35,6 +44,7 @@ msgstr ""
 "置虚拟控制台字体和控制台键盘映射。"
 
 #. type: Content of: <sect1><para>
+#: lfs-en/chapter09/consoled.xml
 msgid ""
 "The <command>systemd-vconsole-setup</command> service reads the <filename>/"
 "etc/vconsole.conf</filename> file for configuration information. Decide "
@@ -48,11 +58,12 @@ msgstr ""
 "<command>systemd-vconsole-setup</command> 服务从 <filename>/etc/vconsole."
 "conf</filename> 文件中读取配置信息。它根据配置确定使用的键映射和控制台字体。"
 "一些与特定语言相关的 HOWTO 文档可以帮助您进行配置，参阅 <ulink url=\"https://"
-"tldp.org/HOWTO/HOWTO-INDEX/other-lang.html\"/>。浏览 <command>localectl "
-"list-keymaps</command> 输出的可用控制台键映射列表。在 <filename class="
-"\"directory\">/usr/share/consolefonts</filename> 目录中寻找可用的控制台字体。"
+"tldp.org/HOWTO/HOWTO-INDEX/other-lang.html\"/>。浏览 <command>localectl list-"
+"keymaps</command> 输出的可用控制台键映射列表。在 <filename class=\"directory"
+"\">/usr/share/consolefonts</filename> 目录中寻找可用的控制台字体。"
 
 #. type: Content of: <sect1><para>
+#: lfs-en/chapter09/consoled.xml
 msgid ""
 "The <filename>/etc/vconsole.conf</filename> file should contain lines of the "
 "form: VARIABLE=\"value\". The following variables are recognized:"
@@ -60,51 +71,62 @@ msgstr ""
 "<filename>/etc/vconsole.conf</filename> 文件的每一行都应该符合格式：变量名="
 "\"值\"，"
 
-#. type: Content of: <sect1><variablelist><varlistentry><term>
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
+#: lfs-en/chapter09/consoled.xml lfs-en/chapter09/usage.xml
 msgid "KEYMAP"
 msgstr "KEYMAP"
 
 #. type: Content of: <sect1><variablelist><varlistentry><listitem><para>
+#: lfs-en/chapter09/consoled.xml
 msgid ""
 "This variable specifies the key mapping table for the keyboard. If unset, it "
 "defaults to <literal>us</literal>."
 msgstr "该变量指定键盘的键映射表。如果没有设定，默认为 <literal>us</literal>。"
 
 #. type: Content of: <sect1><variablelist><varlistentry><term>
+#: lfs-en/chapter09/consoled.xml
 msgid "KEYMAP_TOGGLE"
 msgstr "KEYMAP_TOGGLE"
 
 #. type: Content of: <sect1><variablelist><varlistentry><listitem><para>
+#: lfs-en/chapter09/consoled.xml
 msgid ""
 "This variable can be used to configure a second toggle keymap and is unset "
 "by default."
 msgstr "该变量可以用于配置第二切换键盘映射，没有默认设定值。"
 
-#. type: Content of: <sect1><variablelist><varlistentry><term>
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
+#: lfs-en/chapter09/consoled.xml lfs-en/chapter09/usage.xml
 msgid "FONT"
 msgstr "FONT"
 
 #. type: Content of: <sect1><variablelist><varlistentry><listitem><para>
+#: lfs-en/chapter09/consoled.xml
 msgid "This variable specifies the font used by the virtual console."
 msgstr "该变量指定虚拟控制台使用的字体。"
 
 #. type: Content of: <sect1><variablelist><varlistentry><term>
+#: lfs-en/chapter09/consoled.xml
 msgid "FONT_MAP"
 msgstr "FONT_MAP"
 
 #. type: Content of: <sect1><variablelist><varlistentry><listitem><para>
+#: lfs-en/chapter09/consoled.xml
 msgid "This variable specifies the console map to be used."
 msgstr "该变量指定控制台字体映射。"
 
 #. type: Content of: <sect1><variablelist><varlistentry><term>
+#: lfs-en/chapter09/consoled.xml
 msgid "FONT_UNIMAP"
 msgstr "FONT_UNIMAP"
 
 #. type: Content of: <sect1><variablelist><varlistentry><listitem><para>
+#: lfs-en/chapter09/consoled.xml
 msgid "This variable specifies the Unicode font map."
 msgstr "该变量指定 Unicode 字体映射。"
 
 #. type: Content of: <sect1><para>
+#: lfs-en/chapter09/consoled.xml
 msgid "An example for a German keyboard and console is given below:"
 msgstr "下面的例子可以用于德文键盘和控制台："
 
@@ -112,6 +134,7 @@ msgstr "下面的例子可以用于德文键盘和控制台："
 #.      Whenever you want to change the following, please inform the jhalfs
 #.      maintainer(s). 
 #. type: Content of: <sect1><screen>
+#: lfs-en/chapter09/consoled.xml
 #, no-wrap
 msgid ""
 "<userinput>cat &gt; /etc/vconsole.conf &lt;&lt; \"EOF\"\n"
@@ -125,6 +148,7 @@ msgstr ""
 "EOF</userinput>"
 
 #. type: Content of: <sect1><para>
+#: lfs-en/chapter09/consoled.xml
 msgid ""
 "You can change KEYMAP value at runtime by using the <command>localectl</"
 "command> utility:"
@@ -132,11 +156,13 @@ msgstr ""
 "在系统运行时，可以使用 <command>localectl</command> 工具修改 KEYMAP 变量值："
 
 #. type: Content of: <sect1><screen>
+#: lfs-en/chapter09/consoled.xml
 #, no-wrap
 msgid "<userinput>localectl set-keymap MAP</userinput>"
 msgstr "<userinput>localectl set-keymap MAP</userinput>"
 
 #. type: Content of: <sect1><note><para>
+#: lfs-en/chapter09/consoled.xml lfs-en/chapter09/locale.xml
 msgid ""
 "Please note that the <command>localectl</command> command doesn't work in "
 "the chroot environment.  It can only be used after the LFS system is booted "
@@ -146,6 +172,7 @@ msgstr ""
 "systemd 引导 LFS 系统后才能使用它。"
 
 #. type: Content of: <sect1><para>
+#: lfs-en/chapter09/consoled.xml
 msgid ""
 "You can also use <command>localectl</command> utility with the corresponding "
 "parameters to change X11 keyboard layout, model, variant and options:"
@@ -154,11 +181,13 @@ msgstr ""
 "型，变体和选项设置："
 
 #. type: Content of: <sect1><screen>
+#: lfs-en/chapter09/consoled.xml
 #, no-wrap
 msgid "<userinput>localectl set-x11-keymap LAYOUT [MODEL] [VARIANT] [OPTIONS]</userinput>"
 msgstr "<userinput>localectl set-x11-keymap 布局 [模型] [变体] [选项]</userinput>"
 
 #. type: Content of: <sect1><para>
+#: lfs-en/chapter09/consoled.xml
 msgid ""
 "To list possible values for <command>localectl set-x11-keymap</command> "
 "parameters, run <command>localectl</command> with parameters listed below:"
@@ -167,38 +196,47 @@ msgstr ""
 "用下列参数运行 <command>localectl</command> 命令："
 
 #. type: Content of: <sect1><variablelist><varlistentry><term>
+#: lfs-en/chapter09/consoled.xml
 msgid "list-x11-keymap-models"
 msgstr "list-x11-keymap-models"
 
 #. type: Content of: <sect1><variablelist><varlistentry><listitem><para>
+#: lfs-en/chapter09/consoled.xml
 msgid "Shows known X11 keyboard mapping models."
 msgstr "列出已知的 X11 键盘映射模型。"
 
 #. type: Content of: <sect1><variablelist><varlistentry><term>
+#: lfs-en/chapter09/consoled.xml
 msgid "list-x11-keymap-layouts"
 msgstr "list-x11-keymap-layouts"
 
 #. type: Content of: <sect1><variablelist><varlistentry><listitem><para>
+#: lfs-en/chapter09/consoled.xml
 msgid "Shows known X11 keyboard mapping layouts."
 msgstr "列出已知的 X11 键盘映射布局。"
 
 #. type: Content of: <sect1><variablelist><varlistentry><term>
+#: lfs-en/chapter09/consoled.xml
 msgid "list-x11-keymap-variants"
 msgstr "list-x11-keymap-variants"
 
 #. type: Content of: <sect1><variablelist><varlistentry><listitem><para>
+#: lfs-en/chapter09/consoled.xml
 msgid "Shows known X11 keyboard mapping variants."
 msgstr "列出已知的 X11 键盘映射变体。"
 
 #. type: Content of: <sect1><variablelist><varlistentry><term>
+#: lfs-en/chapter09/consoled.xml
 msgid "list-x11-keymap-options"
 msgstr "list-x11-keymap-options"
 
 #. type: Content of: <sect1><variablelist><varlistentry><listitem><para>
+#: lfs-en/chapter09/consoled.xml
 msgid "Shows known X11 keyboard mapping options."
 msgstr "列出已知的 X11 键盘映射选项。"
 
 #. type: Content of: <sect1><note><para>
+#: lfs-en/chapter09/consoled.xml
 msgid ""
 "Using any of the parameters listed above requires the XKeyboard-Config "
 "package from BLFS."

@@ -1,7 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2022-05-15 09:41+0800\n"
+"Report-Msgid-Bugs-To: lfs-dev@linuxfromscratch.org\n"
+"POT-Creation-Date: 2022-09-17 18:28+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -14,10 +15,18 @@ msgstr ""
 "X-Generator: Translate Toolkit 2.2.5\n"
 
 #. type: Content of: <sect1><title>
+#: lfs-en/chapter03/introduction.xml lfs-en/chapter04/introduction.xml
+#: lfs-en/chapter06/introduction.xml lfs-en/part3intro/introduction.xml
+#: lfs-en/chapter01/chapter01.xml lfs-en/chapter05/introduction.xml
+#: lfs-en/chapter07/introduction.xml lfs-en/index.xml
+#: lfs-en/chapter08/introduction.xml lfs-en/chapter10/grub.xml
+#: lfs-en/chapter10/introduction.xml lfs-en/chapter02/introduction.xml
+#: lfs-en/chapter09/introductiond.xml lfs-en/chapter09/introduction.xml
 msgid "Introduction"
 msgstr "概述"
 
 #. type: Content of: <sect1><para>
+#: lfs-en/chapter09/introduction.xml
 msgid ""
 "Booting a Linux system involves several tasks.  The process must mount both "
 "virtual and real file systems, initialize devices, activate swap, check file "
@@ -33,10 +42,12 @@ msgstr ""
 "好，以保证这些任务以正确顺序进行，并以尽量快的速度完成。"
 
 #. type: Content of: <sect1><sect2><title>
+#: lfs-en/chapter09/introduction.xml
 msgid "System V"
 msgstr "System V"
 
 #. type: Content of: <sect1><sect2><para>
+#: lfs-en/chapter09/introduction.xml
 msgid ""
 "System V is the classic boot process that has been used in Unix and Unix-"
 "like systems such as Linux since about 1983.  It consists of a small "
@@ -52,6 +63,7 @@ msgstr ""
 "的各项工作。"
 
 #. type: Content of: <sect1><sect2><para>
+#: lfs-en/chapter09/introduction.xml
 msgid ""
 "The <command>init</command> program is controlled by the <filename>/etc/"
 "inittab</filename> file and is organized into run levels that can be run by "
@@ -61,6 +73,7 @@ msgstr ""
 "制，被组织为用户可以选择的系统运行级别："
 
 #. type: Content of: <sect1><sect2><literallayout>
+#: lfs-en/chapter09/introduction.xml
 #, no-wrap
 msgid ""
 "0 &mdash; halt\n"
@@ -80,26 +93,32 @@ msgstr ""
 "6 &mdash; 重启系统"
 
 #. type: Content of: <sect1><sect2><para>
+#: lfs-en/chapter09/introduction.xml
 msgid "The usual default run level is 3 or 5."
 msgstr "通常的默认运行级别是 3 或 5。"
 
 #. type: Content of: <sect1><sect2><bridgehead>
+#: lfs-en/chapter09/introduction.xml
 msgid "Advantages"
 msgstr "优点"
 
 #. type: Content of: <sect1><sect2><itemizedlist><listitem><para>
+#: lfs-en/chapter09/introduction.xml
 msgid "Established, well understood system."
 msgstr "完备的，已经被详细理解的系统。"
 
 #. type: Content of: <sect1><sect2><itemizedlist><listitem><para>
+#: lfs-en/chapter09/introduction.xml
 msgid "Easy to customize."
 msgstr "容易定制。"
 
 #. type: Content of: <sect1><sect2><bridgehead>
+#: lfs-en/chapter09/introduction.xml
 msgid "Disadvantages"
 msgstr "缺点"
 
 #. type: Content of: <sect1><sect2><itemizedlist><listitem><para>
+#: lfs-en/chapter09/introduction.xml
 msgid ""
 "May be slower to boot.  A medium speed base LFS system takes 8-12 seconds "
 "where the boot time is measured from the first kernel message to the login "
@@ -110,6 +129,7 @@ msgstr ""
 "符为止，需要 8-12 秒的引导时间，之后还需要约 2 秒启动网络连接。"
 
 #. type: Content of: <sect1><sect2><itemizedlist><listitem><para>
+#: lfs-en/chapter09/introduction.xml
 msgid ""
 "Serial processing of boot tasks. This is related to the previous point.  A "
 "delay in any process such as a file system check, will delay the entire boot "
@@ -119,11 +139,13 @@ msgstr ""
 "延整个引导过程。"
 
 #. type: Content of: <sect1><sect2><itemizedlist><listitem><para>
+#: lfs-en/chapter09/introduction.xml
 msgid ""
 "Does not directly support advanced features like control groups (cgroups), "
 "and per-user fair share scheduling."
 msgstr "不支持控制组 (cgroups)、每用户公平共享调度等高级特性。"
 
 #. type: Content of: <sect1><sect2><itemizedlist><listitem><para>
+#: lfs-en/chapter09/introduction.xml
 msgid "Adding scripts requires manual, static sequencing decisions."
 msgstr "添加脚本时，需要手动决定它在引导过程中的次序。"
