@@ -5,11 +5,13 @@ LFS_EN = lfs-en
 MLANG = zh_CN
 CMD_FIND_XML = find $(LFS_EN) -type f -name '*.xml' ! -name 'lfs-l10n.xml'
 XML_FILES = $(shell $(CMD_FIND_XML))
+POT_DIRS = $(sort $(patsubst $(LFS_EN)/%, pot/%, $(dir $(XML_FILES))))
 PO_FILES = $(patsubst $(LFS_EN)/%.xml, $(MLANG)/%.po, $(XML_FILES))
 
 -include local.mk
 
 $(PO_FILES): $(XML_FILES) mkpo4acfg.py changelogtranslator.py
+	mkdir -pv $(POT_DIRS)
 	$(CMD_FIND_XML) | ./mkpo4acfg.py > po4a.cfg
 	po4a --no-translations po4a.cfg
 	./changelogtranslator.py $(MLANG)
@@ -48,6 +50,7 @@ booksrc: $(MBOOK_FILES) $(ORIG_FILES)
 	[ ! -e $(MLANG)/fix.sh ] || (pushd $(MLANG)/book; sh ../fix.sh; popd)
 
 $(MXML_FILES): $(XML_FILES) $(PO_FILES) mkpo4acfg.py
+	mkdir -pv $(POT_DIRS)
 	$(CMD_FIND_XML) | ./mkpo4acfg.py > po4a.cfg
 	po4a po4a.cfg
 
