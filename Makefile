@@ -9,7 +9,7 @@ PO_FILES = $(patsubst $(LFS_EN)/%.xml, $(MLANG)/%.po, $(XML_FILES))
 
 -include local.mk
 
-$(PO_FILES): $(XML_FILES) mkpo4acfg.py
+$(PO_FILES): $(XML_FILES) mkpo4acfg.py changelogtranslator.py
 	$(CMD_FIND_XML) | ./mkpo4acfg.py > po4a.cfg
 	po4a --no-translations po4a.cfg
 	./changelogtranslator.py $(MLANG)
