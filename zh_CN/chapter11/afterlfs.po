@@ -1,0 +1,392 @@
+# Chinese translations for Linux From Scratch package
+# Copyright (C) 2022 Gerard Beekmans
+# This file is distributed under the same license as the Linux From Scratch package.
+# Xi Ruoyao, 2022.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Linux From Scratch 11.3\n"
+"Report-Msgid-Bugs-To: lfs-dev@linuxfromscratch.org\n"
+"POT-Creation-Date: 2022-09-18 00:18+0800\n"
+"PO-Revision-Date: 2022-09-17 20:37+0800\n"
+"Last-Translator: Xi Ruoyao <xry111@xry111.site>\n"
+"Language-Team: none\n"
+"Language: zh_CN\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#. type: Content of: <sect1><title>
+#: lfs-en/chapter11/afterlfs.xml
+msgid "Getting Started After LFS"
+msgstr "开始使用新构建的 LFS"
+
+#. type: Content of: <sect1><sect2><title>
+#: lfs-en/chapter11/afterlfs.xml
+msgid "Deciding what to do next"
+msgstr "决定在新系统中做什么"
+
+#. type: Content of: <sect1><sect2><para>
+#: lfs-en/chapter11/afterlfs.xml
+msgid ""
+"Now that LFS is complete and you have a bootable system, what do you do? The "
+"next step is to decide how to use it. Generally, there are two broad "
+"categories to consider: workstation or server. Indeed, these categories are "
+"not mutually exclusive. The applications needed for each category can be "
+"combined onto a single system, but let's look at them separately for now."
+msgstr ""
+"现在 LFS 已经构建完成，而且可以引导。那么，要在新的系统中做什么呢？首先要确定"
+"准备使用新的系统达成什么目的。通常来说，计算机系统可以分成两大类：工作站和服"
+"务器。当然，这两类系统并不是完全互斥的。用于这两类系统的应用程序完全可以安装"
+"在同一个系统上，但是我们首先分别考虑这两类系统。"
+
+#. type: Content of: <sect1><sect2><para>
+#: lfs-en/chapter11/afterlfs.xml
+msgid ""
+"A server is the simpler category. Generally this consists of a web server "
+"such as the <ulink url=\"&blfs-book;server/apache.html\">Apache HTTP Server</"
+"ulink> and a database server such as <ulink url=\"&blfs-book;server/mariadb."
+"html\">MariaDB</ulink>.  However other services are possible. The operating "
+"system embedded in a single use device falls into this category."
+msgstr ""
+"服务器是较为简单的一类系统。通常它需要包含一个网页服务程序，例如 <ulink url="
+"\"&blfs-book;server/apache.html\">Apache HTTP 服务器</ulink>，和一个数据库服"
+"务器，例如 <ulink url=\"&blfs-book;server/mariadb.html\">MariaDB</ulink>。当"
+"然，服务器也可能提供其他服务，嵌入式系统也可以视为服务器。"
+
+#. type: Content of: <sect1><sect2><para>
+#: lfs-en/chapter11/afterlfs.xml
+msgid ""
+"On the other hand, a workstation is much more complex. It generally requires "
+"a graphical user environment such as <ulink url=\"&blfs-book;lxde/lxde.html"
+"\">LXDE</ulink>, <ulink url=\"&blfs-book;xfce/xfce.html\">XFCE</ulink>, "
+"<ulink url=\"&blfs-book;kde/kde.html\">KDE</ulink>, or <ulink url=\"&blfs-"
+"book;gnome/gnome.html\">Gnome</ulink> based on a basic <ulink url=\"&blfs-"
+"book;x/installing.html\">graphical environment</ulink> and several graphical "
+"based applications such as the <ulink url=\"&blfs-book;xsoft/firefox.html"
+"\">Firefox web browser</ulink>, <ulink url=\"&blfs-book;xsoft/thunderbird."
+"html\">Thunderbird email client</ulink>, or <ulink url=\"&blfs-book;xsoft/"
+"libreoffice.html\">LibreOffice office suite</ulink>.  These applications "
+"require many (several hundred depending on desired capabilities) more "
+"packages of support applications and libraries."
+msgstr ""
+"另一方面，工作站系统较为复杂。它通常需要一个图形用户环境，例如 <ulink url="
+"\"&blfs-book;lxde/lxde.html\">LXDE</ulink>，<ulink url=\"&blfs-book;xfce/"
+"xfce.html\">XFCE</ulink>，<ulink url=\"&blfs-book;kde/kde.html\">KDE</"
+"ulink>，或者 <ulink url=\"&blfs-book;gnome/gnome.html\">Gnome</ulink>，这些用"
+"户环境又基于基本的<ulink url=\"&blfs-book;x/installing.html\">图形环境</"
+"ulink>和其他图形界面应用，例如 <ulink url=\"&blfs-book;xsoft/firefox.html"
+"\">Firefox 浏览器</ulink>，<ulink url=\"&blfs-book;xsoft/thunderbird.html"
+"\">Thunderbird 邮件客户端</ulink>，或<ulink url=\"&blfs-book;xsoft/"
+"libreoffice.html\">LibreOffice 办公套件</ulink>。这些应用需要很多 (如果需要比"
+"较完备的功能，可能需要几百个) 额外的软件包中的应用和库的支持。"
+
+#. type: Content of: <sect1><sect2><para>
+#: lfs-en/chapter11/afterlfs.xml
+msgid ""
+"In addition to the above, there is a set of applications that are suitable "
+"for all systems for system management. These applications are all in the "
+"BLFS book. Not all packages are needed in all environments. For example "
+"<ulink url=\"&blfs-book;basicnet/dhcpcd.html\">dhcpcd</ulink>, is not "
+"appropriate for a server and <ulink url=\"&blfs-book;basicnet/wireless_tools."
+"html\">wireless_tools</ulink>, are normally only useful for a laptop system. "
+"If you are not sure if a package presented here is needed or not, it can "
+"either be installed now or later as the need arises."
+msgstr ""
+"另外，一些应用提供系统管理功能，它们适用于所有系统。这些应用的安装方法都在 "
+"BLFS 手册中给出。其中，并非所有软件包在所有环境下都必须安装。例如，<ulink "
+"url=\"&blfs-book;basicnet/dhcpcd.html\">dhcpcd</ulink> 对于服务器并不合适，"
+"<ulink url=\"&blfs-book;basicnet/wireless_tools.html\">wireless_tools</"
+"ulink> 通常只用于笔记本电脑。如果不确定是否需要某个软件包，可以暂时不安装它，"
+"在发现确实需要时再安装。"
+
+#. type: Content of: <sect1><sect2><title>
+#: lfs-en/chapter11/afterlfs.xml
+msgid "Working in a basic LFS environment"
+msgstr "在基本的 LFS 环境中工作"
+
+#. type: Content of: <sect1><sect2><para>
+#: lfs-en/chapter11/afterlfs.xml
+msgid ""
+"When you initially boot into LFS, you have all the internal tools to build "
+"additional packages. Unfortunately, the user environment is quite sparse.  "
+"There are a couple of ways to improve this:"
+msgstr ""
+"一旦启动 LFS 系统，就可以使用它提供的工具构建更多软件包。然而，基本 LFS 系统"
+"的交互环境十分简略，可以使用一些方法改善工作环境："
+
+#. type: Content of: <sect1><sect2><sect3><title>
+#: lfs-en/chapter11/afterlfs.xml
+msgid "Work from the LFS host in chroot"
+msgstr "从 LFS 宿主系统中通过 chroot 进行操作"
+
+#. type: Content of: <sect1><sect2><sect3><para>
+#: lfs-en/chapter11/afterlfs.xml
+msgid ""
+"This method provides a complete graphical environment where a full featured "
+"browser and copy/paste capabilites are available. This method allows using "
+"applications like the host's version of wget to download package sources to "
+"a location available when working in the chroot envirnment."
+msgstr ""
+"这种方法能够提供完整的图形环境，包括功能完整的网页浏览器，而且可以进行复制/粘"
+"贴操作。而且可以使用宿主系统的 wget 等应用程序下载软件包，并将其放入 chroot "
+"环境能够访问的位置。"
+
+#. type: Content of: <sect1><sect2><sect3><para>
+#: lfs-en/chapter11/afterlfs.xml
+msgid ""
+"In order to properly build packages in chroot, you will also need to "
+"remember to mount the virtual file systems if they are not already mounted. "
+"One way to do this is to create a script on the <emphasis role=\"bold"
+"\">HOST</emphasis> system:"
+msgstr ""
+"为了在 chroot 环境中正常构建软件包，如果虚拟文件系统尚未挂载，需要挂载它们。"
+"为此，可以在<emphasis role='bold'>宿主</emphasis>系统中创建一个脚本："
+
+#. type: Content of: <sect1><sect2><sect3><screen>
+#: lfs-en/chapter11/afterlfs.xml
+#, no-wrap
+msgid ""
+"<command>cat &gt; ~/mount-virt.sh &lt;&lt; \"EOF\"\n"
+"#!/bin/bash\n"
+"\n"
+"function mountbind\n"
+"{\n"
+"   if ! mountpoint $LFS/$1 >/dev/null; then\n"
+"     $SUDO mount --bind /$1 $LFS/$1\n"
+"     echo $LFS/$1 mounted\n"
+"   else\n"
+"     echo $LFS/$1 already mounted\n"
+"   fi\n"
+"}\n"
+"\n"
+"function mounttype\n"
+"{\n"
+"   if ! mountpoint $LFS/$1 >/dev/null; then\n"
+"     $SUDO mount -t $2 $3 $4 $5 $LFS/$1\n"
+"     echo $LFS/$1 mounted\n"
+"   else\n"
+"     echo $LFS/$1 already mounted\n"
+"   fi\n"
+"}\n"
+"\n"
+"if [ $EUID -ne 0 ]; then\n"
+"  SUDO=sudo\n"
+"else\n"
+"  SUDO=\"\"\n"
+"fi\n"
+"\n"
+"if [ x$LFS == x ]; then\n"
+"  echo \"LFS not set\"\n"
+"  exit 1\n"
+"fi\n"
+"\n"
+"mountbind dev\n"
+"mounttype dev/pts devpts devpts -o gid=5,mode=620\n"
+"mounttype proc    proc   proc\n"
+"mounttype sys     sysfs  sysfs\n"
+"mounttype run     tmpfs  run\n"
+"mkdir $LFS/run/shm\n"
+"#mountbind usr/src\n"
+"#mountbind boot\n"
+"#mountbind home\n"
+"EOF</command>"
+msgstr ""
+"<command>cat &gt; ~/mount-virt.sh &lt;&lt; \"EOF\"\n"
+"#!/bin/bash\n"
+"\n"
+"function mountbind\n"
+"{\n"
+"   if ! mountpoint $LFS/$1 >/dev/null; then\n"
+"     $SUDO mount --bind /$1 $LFS/$1\n"
+"     echo $LFS/$1 mounted\n"
+"   else\n"
+"     echo $LFS/$1 already mounted\n"
+"   fi\n"
+"}\n"
+"\n"
+"function mounttype\n"
+"{\n"
+"   if ! mountpoint $LFS/$1 >/dev/null; then\n"
+"     $SUDO mount -t $2 $3 $4 $5 $LFS/$1\n"
+"     echo $LFS/$1 mounted\n"
+"   else\n"
+"     echo $LFS/$1 already mounted\n"
+"   fi\n"
+"}\n"
+"\n"
+"if [ $EUID -ne 0 ]; then\n"
+"  SUDO=sudo\n"
+"else\n"
+"  SUDO=\"\"\n"
+"fi\n"
+"\n"
+"if [ x$LFS == x ]; then\n"
+"  echo \"LFS not set\"\n"
+"  exit 1\n"
+"fi\n"
+"\n"
+"mountbind dev\n"
+"mounttype dev/pts devpts devpts -o gid=5,mode=620\n"
+"mounttype proc    proc   proc\n"
+"mounttype sys     sysfs  sysfs\n"
+"mounttype run     tmpfs  run\n"
+"mkdir $LFS/run/shm\n"
+"#mountbind usr/src\n"
+"#mountbind boot\n"
+"#mountbind home\n"
+"EOF</command>"
+
+#. type: Content of: <sect1><sect2><sect3><para>
+#: lfs-en/chapter11/afterlfs.xml
+msgid ""
+"Note that the last three commands in the script are commented out. These are "
+"useful if those directories are mounted as separate partitions on the host "
+"system and will be mounted when booting the completed LFS/BLFS system."
+msgstr ""
+"注意脚本中的后三条命令被注释掉了。如果它们涉及的目录是宿主系统中的挂载点，而"
+"且在 LFS/BLFS 系统中也会同样挂载它们，可以使用这些命令。"
+
+#. type: Content of: <sect1><sect2><sect3><para>
+#: lfs-en/chapter11/afterlfs.xml
+msgid ""
+"The script can be run with <command>bash ~/mount-virt.sh</command> as either "
+"a regular user (recommended) or as &root;. If run as a regular user, sudo is "
+"required on the host system."
+msgstr ""
+"可以用普通用户 (推荐) 或者 &root; 身份，执行 <command>bash ~/mount-virt.sh</"
+"command> 以运行该脚本。如果是以普通用户身份运行它，宿主系统需要安装 sudo。"
+
+#. type: Content of: <sect1><sect2><sect3><para>
+#: lfs-en/chapter11/afterlfs.xml
+msgid ""
+"Another issue pointed out by the script is where to store downloaded package "
+"files. This location is arbitrary. It can be in a regular user's home "
+"directory such as ~/sources or in a global location like /usr/src. Our "
+"recommendation is not to mix BLFS sources and LFS sources in (from the "
+"chroot environment) /sources. In any case, the packages must be accessible "
+"inside the chroot environment."
+msgstr ""
+"另外，该脚本给出了一些可能用于存放下载的软件包文件的位置。存放位置可以是任意"
+"的。例如，可以存放在某个用户的主目录中，例如 ~/sources，或者使用一个所有用户"
+"可访问的位置，如 /usr/src。我们建议不要将 BLFS 使用的源代码包和 LFS 使用的源"
+"代码包混合存放在 /sources (chroot 环境中的路径) 中。无论如何，必须使用 "
+"chroot 环境中能够访问的位置。"
+
+#. type: Content of: <sect1><sect2><sect3><para>
+#: lfs-en/chapter11/afterlfs.xml
+msgid ""
+"A last convenience feature presented here is to streamline the process of "
+"entering the chroot environment. This can be done with an alias placed in a "
+"user's ~/.bashrc file on the host system:"
+msgstr ""
+"最后，可以编码进入 chroot 环境的过程，以更方便地完成这一工作。可以在宿主系统"
+"中用户的 ~/.bashrc 文件中加入命令别名设定："
+
+#. type: Content of: <sect1><sect2><sect3><screen>
+#: lfs-en/chapter11/afterlfs.xml
+#, no-wrap
+msgid ""
+"<command>alias lfs='sudo /usr/sbin/chroot /mnt/lfs /usr/bin/env -i HOME=/root TERM=\"$TERM\" PS1=\"\\u:\\w\\\\\\\\$ \"\n"
+"PATH=/bin:/usr/bin:/sbin:/usr/sbin /bin/bash --login'</command>"
+msgstr ""
+"<command>alias lfs='sudo /usr/sbin/chroot /mnt/lfs /usr/bin/env -i HOME=/root TERM=\"$TERM\" PS1=\"\\u:\\w\\\\\\\\$ \"\n"
+"PATH=/bin:/usr/bin:/sbin:/usr/sbin /bin/bash --login'</command>"
+
+#. type: Content of: <sect1><sect2><sect3><para>
+#: lfs-en/chapter11/afterlfs.xml
+msgid ""
+"This alias is a little tricky because of the quoting and levels of backslash "
+"characters. It must be all on a single line. The above command has been "
+"split in two for presentation purposes."
+msgstr ""
+"别名设定看上去比较复杂，这是由于引号和反斜线符号的嵌套使用。为了美观，上面给"
+"出的命令分成了两行，但实际输入该命令时必须将其写在一行内。"
+
+#. type: Content of: <sect1><sect2><sect3><title>
+#: lfs-en/chapter11/afterlfs.xml
+msgid "Work remotely via ssh"
+msgstr "使用 ssh 远程工作"
+
+#. type: Content of: <sect1><sect2><sect3><para>
+#: lfs-en/chapter11/afterlfs.xml
+msgid ""
+"This method also provides a full graphical environment, but first requires "
+"installing <ulink url=\"&blfs-book;postlfs/openssh.html\">sshd</ulink> and "
+"<ulink url=\"&blfs-book;basicnet/wget.html\">wget</ulink> on the LFS system, "
+"usually in chroot. It also requires a second computer. This method has the "
+"advantage of being simple by not requiring the complexity of the chroot "
+"environment. It also uses your LFS built kernel for all additional packages "
+"and still provides a complete system for installing packages."
+msgstr ""
+"这种方法同样允许使用完整的图形环境，但首先需要在 LFS 系统上安装 <ulink "
+"url='&blfs-book;postlfs/openssh.html'>sshd</ulink> 和<ulink url='&blfs-book;"
+"postlfs/openssh.html'>wget</ulink> (通常可以在 chroot 中安装它们)。另外，这种"
+"方法需要第二台计算机。这种方法相比于使用 chroot 环境更简单。而且，它在构建软"
+"件包时使用为 LFS 系统构建的内核，却仍然能够像使用 chroot 一样在一个完整的系统"
+"上工作。"
+
+#. type: Content of: <sect1><sect2><sect3><title>
+#: lfs-en/chapter11/afterlfs.xml
+msgid "Work from the LFS command line"
+msgstr "使用 LFS 系统的命令行工作"
+
+#. type: Content of: <sect1><sect2><sect3><para>
+#: lfs-en/chapter11/afterlfs.xml
+msgid ""
+"This method requires installing <ulink url=\"&blfs-book;general/libtasn1.html"
+"\">libtasn1</ulink>, <ulink url=\"&blfs-book;postlfs/p11-kit.html\">p11-kit</"
+"ulink>, <ulink url=\"&blfs-book;postlfs/make-ca.html\">make-ca</ulink>, "
+"<ulink url=\"&blfs-book;basicnet/wget.html\">wget</ulink>, <ulink url="
+"\"&blfs-book;general/gpm.html\">gpm</ulink>, and <ulink url=\"&blfs-book;"
+"basicnet/links.html\">links</ulink> (or <ulink url=\"&blfs-book;basicnet/"
+"lynx.html\">lynx</ulink>)  in chroot and then rebooting into the new LFS "
+"system. At this point the default system has six virtual consoles. Switching "
+"consoles is as easy as using the <keycombo> <keycap>Alt</keycap> <keycap>Fx</"
+"keycap> </keycombo> key combinations where <keycap>Fx</keycap> is between "
+"<keycap>F1</keycap> and <keycap>F6</keycap>.  The <keycombo> <keycap>Alt</"
+"keycap> <keycap function='left'/> </keycombo> and <keycombo> <keycap>Alt</"
+"keycap> <keycap function='right'/> </keycombo> combinations also will change "
+"the console."
+msgstr ""
+"这种方法需要先使用 chroot 安装 <ulink url=\"&blfs-book;general/libtasn1.html"
+"\">libtasn1</ulink>，<ulink url=\"&blfs-book;postlfs/p11-kit.html\">p11-kit</"
+"ulink>，<ulink url=\"&blfs-book;postlfs/make-ca.html\">make-ca</ulink>，"
+"<ulink url=\"&blfs-book;basicnet/wget.html\">wget</ulink>，<ulink url="
+"\"&blfs-book;general/gpm.html\">gpm</ulink>，以及 <ulink url=\"&blfs-book;"
+"basicnet/links.html\">links</ulink> (或者 <ulink url=\"&blfs-book;basicnet/"
+"lynx.html\">lynx</ulink>)，然后重启计算机，进入新的 LFS 系统。 LFS 系统默认有"
+"六个虚拟控制台。可以使用 <keycombo> <keycap>Alt</keycap> <keycap>Fx</keycap> "
+"</keycombo> 组合键切换控制台，其中 <keycap>Fx</keycap> 是 <keycap>F1</"
+"keycap> 到 <keycap>F6</keycap> 之间的键。<keycombo> <keycap>Alt</keycap> "
+"<keycap function='left'/> </keycombo> 和 <keycombo> <keycap>Alt</keycap> "
+"<keycap function='right'/> </keycombo> 组合键也可以切换控制台。"
+
+#. type: Content of: <sect1><sect2><sect3><para>
+#: lfs-en/chapter11/afterlfs.xml
+msgid ""
+"At this point you can log into two different virtual consoles and run the "
+"links or lynx browser in one console and bash in the other. GPM then allows "
+"copying commands from the browser with the left mouse button, switching "
+"consoles, and pasting into the other console."
+msgstr ""
+"此时，可以在两个不同的虚拟控制台登录，在其中一个运行 links 或 lynx 浏览器，另"
+"一个运行 bash。GPM 允许使用鼠标左键选择并复制浏览器中的命令，然后可以切换终"
+"端，将命令粘贴到另一个终端中运行。"
+
+#. type: Content of: <sect1><sect2><sect3><note><para>
+#: lfs-en/chapter11/afterlfs.xml
+msgid ""
+"As a side note, switching of virtual consoles can also be done from an X "
+"Window instance with the <keycombo> <keycap>Ctrl</keycap> <keycap>Alt</"
+"keycap> <keycap>Fx</keycap> </keycombo> key combination, but the mouse copy "
+"operation does not work between the graphical interface and a virtual "
+"console. You can return to the X Window display with the <keycombo> "
+"<keycap>Ctrl</keycap> <keycap>Alt</keycap> <keycap>Fx</keycap> </keycombo> "
+"combination, where <keycap>Fx</keycap> may be <keycap>F7</keycap>."
+msgstr ""
+"顺带一提，从 X 窗口环境也可以用<keycombo> <keycap>Ctrl</keycap> <keycap>Alt</"
+"keycap> <keycap>Fx</keycap> </keycombo> 组合键切换虚拟终端，但是不能在图形接"
+"口和虚拟终端之间进行复制操作。也可以用 <keycombo> <keycap>Ctrl</keycap> "
+"<keycap>Alt</keycap> <keycap>Fx</keycap> </keycombo> 组合键返回窗口环境，其"
+"中 <keycap>Fx</keycap> 可能是 <keycap>F7</keycap>。"
