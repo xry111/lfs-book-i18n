@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: lfs-dev@linuxfromscratch.org\n"
-"POT-Creation-Date: 2022-09-17 18:28+0800\n"
+"POT-Creation-Date: 2022-09-17 20:07+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -569,6 +569,17 @@ msgstr "&eudev-fin-du;"
 #: lfs-en/chapter08/eudev.xml
 msgid "Installation of Eudev"
 msgstr "安装 Eudev"
+
+#. type: Content of: <sect1><sect2><para>
+#: lfs-en/chapter08/eudev.xml
+msgid "First fix the location of udev rules in the .pc file:"
+msgstr "首先，修复 .pc 文件记录的 udev 规则位置："
+
+#. type: Content of: <sect1><sect2><screen>
+#: lfs-en/chapter08/eudev.xml
+#, no-wrap
+msgid "<userinput remap=\"pre\">sed -i '/udevdir/a udev_dir=${udevdir}' src/udev/udev.pc.in</userinput>"
+msgstr "<userinput remap=\"pre\">sed -i '/udevdir/a udev_dir=${udevdir}' src/udev/udev.pc.in</userinput>"
 
 #. type: Content of: <sect1><sect2><para>
 #: lfs-en/chapter08/eudev.xml

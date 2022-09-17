@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Linux From Scratch 11.0\n"
 "Report-Msgid-Bugs-To: lfs-dev@linuxfromscratch.org\n"
-"POT-Creation-Date: 2022-09-17 18:28+0800\n"
+"POT-Creation-Date: 2022-09-17 20:07+0800\n"
 "PO-Revision-Date: 2021-08-16 11:42+0800\n"
 "Last-Translator: Xi Ruoyao <xry111@mengyan1223.wang>\n"
 "Language-Team: None <noreply@mengyan1223.wang>\n"
@@ -456,11 +456,6 @@ msgstr "测试编译结果："
 msgid "The meaning of the make parameter:"
 msgstr "make 命令参数的含义："
 
-#. type: Content of: <sect1><sect2><para>
-#: lfs-en/chapter08/e2fsprogs.xml lfs-en/chapter08/binutils.xml
-msgid "Remove useless static libraries:"
-msgstr "删除无用的静态库："
-
 #. type: Content of: <sect1><sect1info>
 #: lfs-en/chapter08/binutils.xml
 msgid ""
@@ -663,11 +658,20 @@ msgstr ""
 msgid "<userinput remap=\"install\">make tooldir=/usr install</userinput>"
 msgstr "<userinput remap=\"install\">make tooldir=/usr install</userinput>"
 
+#. type: Content of: <sect1><sect2><para>
+#: lfs-en/chapter08/binutils.xml
+msgid "Remove useless static libraries and an empty man page:"
+msgstr "删除无用的静态库以及一个空的 man 页面："
+
 #. type: Content of: <sect1><sect2><screen>
 #: lfs-en/chapter08/binutils.xml
 #, no-wrap
-msgid "<userinput remap=\"install\">rm -fv /usr/lib/lib{bfd,ctf,ctf-nobfd,opcodes}.a</userinput>"
-msgstr "<userinput remap=\"install\">rm -fv /usr/lib/lib{bfd,ctf,ctf-nobfd,opcodes}.a</userinput>"
+msgid ""
+"<userinput remap=\"install\">rm -fv /usr/lib/lib{bfd,ctf,ctf-nobfd,opcodes}.a\n"
+"rm -fv /usr/share/man/man1/gprofng.1</userinput>"
+msgstr ""
+"<userinput remap=\"install\">rm -fv /usr/lib/lib{bfd,ctf,ctf-nobfd,opcodes}.a\n"
+"rm -fv /usr/share/man/man1/gprofng.1</userinput>"
 
 #. type: Content of: <sect1><sect2><title>
 #: lfs-en/chapter08/binutils.xml
