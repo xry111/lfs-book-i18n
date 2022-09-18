@@ -2,9 +2,9 @@
 
 import sys
 
-print(r'''\
-[po4a_langs] zh_CN
-[po4a_paths] pot/$master.pot $lang:$lang/$master.po
+print('[po4a_langs]', sys.argv[1])
+
+print(r'''[po4a_paths] pot/$master.pot $lang:$lang/$master.po
 [options] --porefs file
 [options] --keep 0
 [options] --package-name "\"Linux From Scratch\""

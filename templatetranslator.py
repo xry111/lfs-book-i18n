@@ -43,7 +43,7 @@ class TemplateTranslator:
 		if not os.path.exists(realname):
 			print(realname, 'does not exist.')
 			return
-		po = polib.pofile(realname)
+		po = polib.pofile(realname, wrapwidth = 76)
 		for entry in po:
 			for reg in self.regexps:
 				if language in reg[1]:

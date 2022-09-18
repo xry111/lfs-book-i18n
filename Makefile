@@ -3,18 +3,30 @@ default: html
 
 LFS_EN = lfs-en
 MLANG = zh_CN
-CMD_FIND_XML = find $(LFS_EN) -type f -name '*.xml' ! -name 'lfs-l10n.xml'
+CMD_FIND_XML = find $(LFS_EN) -type f -name '*.xml' \
+               ! \( -name 'lfs-l10n.xml' -or -name 'changelog.xml' \)
 XML_FILES = $(shell $(CMD_FIND_XML))
 POT_DIRS = $(sort $(patsubst $(LFS_EN)/%, pot/%, $(dir $(XML_FILES))))
 PO_FILES = $(patsubst $(LFS_EN)/%.xml, $(MLANG)/%.po, $(XML_FILES))
+MKPO4ACFG = ./mkpo4acfg.py $(MLANG)
 
 -include local.mk
 
-$(PO_FILES) &: $(XML_FILES) mkpo4acfg.py changelogtranslator.py
+$(PO_FILES) &: $(XML_FILES) mkpo4acfg.py
 	mkdir -pv $(POT_DIRS)
-	$(CMD_FIND_XML) | ./mkpo4acfg.py > po4a.cfg
+	$(CMD_FIND_XML) | $(MKPO4ACFG) > po4a.cfg
 	po4a --no-translations po4a.cfg
+
+$(MLANG)/chapter01/changelog.po: lfs-en/chapter01/changelog.xml \
+                                 changelogtranslator.py         \
+                                 templatetranslator.py
+	mkdir -pv pot/chapter01
+	echo lfs-en/chapter01/changelog.xml | $(MKPO4ACFG) > po4a-changelog.cfg
+	po4a --no-translations po4a-changelog.cfg
 	./changelogtranslator.py $(MLANG)
+	# Run again. polib does not agree with po4a on line wrappings
+	# in the .po file, so we need to settle it down.
+	po4a --no-translations --force po4a-changelog.cfg
 
 MXML_FILES = $(patsubst $(LFS_EN)/%.xml, $(MLANG)/book/%.xml, $(XML_FILES))
 BOOK_FILES = $(patsubst $(LFS_EN)/%, %, $(shell find $(LFS_EN) -type f -not -path "$(LFS_EN)/.git"))
@@ -22,7 +34,7 @@ MBOOK_FILES = $(patsubst %, $(MLANG)/book/%, $(BOOK_FILES))
 
 .PHONY: html booksrc nochunks pdf pofiles
 
-pofiles: $(PO_FILES)
+pofiles: $(PO_FILES) $(MLANG)/chapter01/changelog.po
 
 html: booksrc
 	rm -rf $(MLANG)/book/render # without this tidy may be stupidly slow
@@ -51,8 +63,14 @@ booksrc: $(MBOOK_FILES) $(ORIG_FILES)
 
 $(MXML_FILES) &: $(XML_FILES) $(PO_FILES) mkpo4acfg.py
 	mkdir -pv $(POT_DIRS)
-	$(CMD_FIND_XML) | ./mkpo4acfg.py > po4a.cfg
+	$(CMD_FIND_XML) | $(MKPO4ACFG) > po4a.cfg
 	po4a po4a.cfg
+
+$(MLANG)/book/chapter01/changelog.xml: $(LFS_EN)/chapter01/changelog.xml \
+                                       $(MLANG)/chapter01/changelog.po
+	mkdir -pv pot/chapter01
+	echo lfs-en/chapter01/changelog.xml | $(MKPO4ACFG) > po4a-changelog.cfg
+	po4a po4a-changelog.cfg
 
 $(MLANG)/book/%: $(LFS_EN)/%
 	mkdir -pv "$(@D)"
