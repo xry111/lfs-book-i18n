@@ -90,3 +90,43 @@ $(MLANG)/book/git-version.sh.orig: $(LFS_EN)/git-version.sh
 	sed -e "2i export GIT_DIR=$(PWD)/lfs-en/.git" \
 	    -e "s/\[ .*trunk.* \]/true/"                \
 	    -i $@
+
+# The following targets are used for checking any unintentionally command
+# changes.
+
+KNOWN_DIFF = chapter09/*-symlinks \
+             chapter09/*-network  \
+             chapter09/*-profile  \
+             chapter09/*-console  \
+             chapter09/*-locale   \
+             chapter10/*-fstab
+
+cmd/en/sysv/stamp: $(XML_FILES)
+	make -C lfs-en DUMPDIR="$(PWD)/$(@D)" REV=sysv dump-commands
+	cd $(@D); rm -f $(KNOWN_DIFF)
+	touch $@
+
+cmd/en/systemd/stamp: $(XML_FILES)
+	make -C lfs-en DUMPDIR="$(PWD)/$(@D)" REV=systemd dump-commands
+	cd $(@D); rm -f $(KNOWN_DIFF)
+	touch $@
+
+cmd/$(MLANG)/sysv/stamp: $(MXML_FILES)
+	make -C $(MLANG)/book DUMPDIR="$(PWD)/$(@D)" REV=sysv dump-commands
+	cd $(@D); rm -f $(KNOWN_DIFF)
+	touch $@
+
+cmd/$(MLANG)/systemd/stamp: $(MXML_FILES)
+	make -C $(MLANG)/book DUMPDIR="$(PWD)/$(@D)" REV=systemd dump-commands
+	cd $(@D); rm -f $(KNOWN_DIFF)
+	touch $@
+
+.PHONY: check-cmd check-cmd-sysv check-cmd-systemd
+
+check-cmd-sysv: cmd/en/sysv/stamp cmd/$(MLANG)/sysv/stamp
+	diff $(^D) -Naur
+
+check-cmd-systemd: cmd/en/systemd/stamp cmd/$(MLANG)/systemd/stamp
+	diff $(^D) -Naur
+
+check-cmd: check-cmd-sysv check-cmd-systemd
