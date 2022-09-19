@@ -9,7 +9,7 @@ print(r'''[po4a_paths] pot/$master.pot $lang:$lang/$master.po
 [options] --keep 0
 [options] --package-name "\"Linux From Scratch\""
 [options] --package-version 11.3
-[options] --msgid-bugs-address lfs-dev@linuxfromscratch.org
+[options] --msgid-bugs-address lfs-dev@lists.linuxfromscratch.org
 [options] --copyright-holder "\"Gerard Beekmans\""''')
 
 pfx = 'lfs-en/'
