@@ -1,17 +1,17 @@
-# Linux From Scratch 临时工具清理页面的中文翻译
-# This file is distributed under the same license as the Linux From Scratch
-# book.
-# Xi Ruoyao <xry111@mengyan1223.wang>, 2021
+# Chinese translations for Linux From Scratch package
+# Copyright (C) 2022 Gerard Beekmans
+# This file is distributed under the same license as the Linux From Scratch package.
+# Xi Ruoyao, 2021-2022.
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: Linux From Scratch 11.0\n"
+"Project-Id-Version: Linux From Scratch 11.3\n"
 "Report-Msgid-Bugs-To: lfs-dev@linuxfromscratch.org\n"
-"POT-Creation-Date: 2022-09-17 18:28+0800\n"
-"PO-Revision-Date: 2021-09-08 14:00+0800\n"
-"Last-Translator: Xi Ruoyao <xry111@mengyan1223.wang>\n"
-"Language-Team: None <noreply@mengyan1223.wang>\n"
-"Language: zh_CN\n"
+"POT-Creation-Date: 2022-09-19 14:15+0800\n"
+"PO-Revision-Date: 2021-09-19 14:21+0800\n"
+"Last-Translator: Xi Ruoyao <xry111@xry111.site>\n"
+"Language-Team: noneLanguage: zh_CN\n"
+"Language: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -46,14 +46,14 @@ msgstr "<userinput>rm -rf /usr/share/{info,man,doc}/*</userinput>"
 #. type: Content of: <sect1><sect2><para>
 #: lfs-en/chapter07/cleanup.xml
 msgid ""
-"Second, the libtool .la files are only useful when linking with static "
-"libraries. They are unneeded and potentially harmful when using dynamic "
-"shared libraries, especially when using non-autotools build systems.  While "
-"still in chroot, remove those files now:"
+"Second, on a modern Linux system, the libtool .la files are only useful for "
+"libltdl.  No libraries in LFS are expected to be loaded by libltdl, and it's "
+"known that some .la files can cause BLFS packages fail to build.  Remove "
+"those files now:"
 msgstr ""
-"其次，libtool .la 文件仅在链接到静态库时有用。在使用动态共享库时它们没有意"
-"义，甚至可能有害，特别是在使用非 autotools 构建系统时容易产生问题。继续在 "
-"chroot 环境中运行命令，删除它们："
+"其次，在现代 Linux 系统中，libtool 的 .la 文件仅用于 libltdl。LFS 中没有库被"
+"设计为通过 libltdl 加载，而且已知一些 .la 文件会导致 BLFS 软件包构建失败。现"
+"在删除这些文件："
 
 #. type: Content of: <sect1><sect2><screen>
 #: lfs-en/chapter07/cleanup.xml
