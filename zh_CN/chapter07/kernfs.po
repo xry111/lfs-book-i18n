@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: lfs-dev@lists.linuxfromscratch.org\n"
-"POT-Creation-Date: 2022-09-17 18:28+0800\n"
+"POT-Creation-Date: 2022-09-21 17:47+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -117,14 +117,29 @@ msgstr ""
 "\"directory\">/run/shm</filename> 的符号链接。我们已经在 /run 下挂载了 tmpfs "
 "文件系统，因此在这里只需要创建一个目录。"
 
+#. type: Content of: <sect1><sect2><para>
+#: lfs-en/chapter07/kernfs.xml
+msgid ""
+"In other cases <filename>/dev/shm</filename> is a mountpoint for a tmpfs. In "
+"that case the mount of /dev above will only create /dev/shm in the chroot "
+"environment as a directory. In this situation we explicitly mount a tmpfs,"
+msgstr ""
+"在其他宿主系统上，<filename>/dev/shm</filename> 是一个 tmpfs 的挂载点。此时，"
+"绑定挂载 /dev 只会在 chroot 环境中生成 /dev/shm 目录。因此，需要显式挂载一个 "
+"tmpfs："
+
 #. type: Content of: <sect1><sect2><screen>
 #: lfs-en/chapter07/kernfs.xml
 #, no-wrap
 msgid ""
 "<userinput>if [ -h $LFS/dev/shm ]; then\n"
 "  mkdir -pv $LFS/$(readlink $LFS/dev/shm)\n"
+"else\n"
+"  mount -t tmpfs -o nosuid,nodev tmpfs $LFS/dev/shm\n"
 "fi</userinput>"
 msgstr ""
 "<userinput>if [ -h $LFS/dev/shm ]; then\n"
 "  mkdir -pv $LFS/$(readlink $LFS/dev/shm)\n"
+"else\n"
+"  mount -t tmpfs -o nosuid,nodev tmpfs $LFS/dev/shm\n"
 "fi</userinput>"
