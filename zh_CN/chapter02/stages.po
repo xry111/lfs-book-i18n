@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: lfs-dev@lists.linuxfromscratch.org\n"
-"POT-Creation-Date: 2022-09-17 18:28+0800\n"
+"POT-Creation-Date: 2022-09-23 01:50+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -56,7 +56,7 @@ msgstr ""
 
 #. type: Content of: <sect1><sect2><title>
 #: lfs-en/chapter02/stages.xml
-msgid "Chapter&nbsp;5&ndash;6"
+msgid "Chapters&nbsp;5&ndash;6"
 msgstr "第 5&ndash;6 章"
 
 #. type: Content of: <sect1><sect2><itemizedlist><listitem><para>
@@ -68,9 +68,9 @@ msgstr "/mnt/lfs 分区需要重新挂载。"
 #: lfs-en/chapter02/stages.xml
 msgid ""
 "These two chapters <emphasis>must</emphasis> be done as user <systemitem "
-"class=\"username\">lfs</systemitem>.  A <command>su - lfs</command> needs to "
-"be done before any task in these chapters. Failing to do that, you are at "
-"risk of installing packages to the host, and potentially rendering it "
+"class=\"username\">lfs</systemitem>.  A <command>su - lfs</command> command "
+"must be issued before any task in these chapters. If you don't do that, you "
+"are at risk of installing packages to the host, and potentially rendering it "
 "unusable."
 msgstr ""
 "这两章的步骤<emphasis>必须</emphasis>由用户 <systemitem class=\"username"
@@ -84,7 +84,7 @@ msgid ""
 "The procedures in <xref linkend='ch-tools-generalinstructions'/> are "
 "critical.  If there is any doubt about installing a package, ensure any "
 "previously expanded tarballs are removed, then re-extract the package files, "
-"and complete all instructions in that section."
+"and complete all the instructions in that section."
 msgstr ""
 "<xref linkend='ch-tools-generalinstructions'/>中的过程是关键的。如果在安装软"
 "件包时感觉不对劲，确认之前解压的源码包已经被删除，然后重新解压源码包的文件，"
@@ -92,14 +92,14 @@ msgstr ""
 
 #. type: Content of: <sect1><sect2><title>
 #: lfs-en/chapter02/stages.xml
-msgid "Chapter&nbsp;7&ndash;10"
+msgid "Chapters&nbsp;7&ndash;10"
 msgstr "第 7&ndash;10 章"
 
 #. type: Content of: <sect1><sect2><itemizedlist><listitem><para>
 #: lfs-en/chapter02/stages.xml
 msgid ""
 "A few operations, from <quote>Changing Ownership</quote> to <quote>Entering "
-"the Chroot Environment</quote> must be done as the <systemitem class="
+"the Chroot Environment</quote>, must be done as the <systemitem class="
 "\"username\">root</systemitem> user, with the LFS environment variable set "
 "for the &root; user."
 msgstr ""
@@ -112,10 +112,10 @@ msgstr ""
 msgid ""
 "When entering chroot, the LFS environment variable must be set for "
 "<systemitem class=\"username\">root</systemitem>. The LFS variable is not "
-"used afterwards."
+"used after entering the chroot environment."
 msgstr ""
 "在进入 chroot 环境时，LFS 环境变量必须为 <systemitem class=\"username"
-"\">root</systemitem> 设置好。之后就不需要 LFS 变量。"
+"\">root</systemitem> 设置好。在进入 chroot 环境后就不需要 LFS 变量。"
 
 #. type: Content of: <sect1><sect2><itemizedlist><listitem><para>
 #: lfs-en/chapter02/stages.xml
