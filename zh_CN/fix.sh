@@ -67,6 +67,7 @@ sed -n "${sed_cmd}" -i \
 	chapter08/glibc.xml                          \
 	chapter08/flex.xml                           \
 	chapter08/autoconf.xml                       \
+	chapter08/gettext.xml                        \
 	chapter08/ninja.xml                          \
 	chapter08/texinfo.xml                        \
 	chapter08/systemd.xml                        \

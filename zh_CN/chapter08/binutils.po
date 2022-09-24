@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Linux From Scratch 11.0\n"
 "Report-Msgid-Bugs-To: lfs-dev@lists.linuxfromscratch.org\n"
-"POT-Creation-Date: 2022-09-19 14:32+0800\n"
+"POT-Creation-Date: 2022-09-24 17:25+0800\n"
 "PO-Revision-Date: 2021-08-16 11:42+0800\n"
 "Last-Translator: Xi Ruoyao <xry111@xry111.site>\n"
 "Language-Team: noneLanguage: zh_CN\n"
@@ -640,17 +640,21 @@ msgid ""
 msgstr ""
 "本节中，Binutils 的测试套件被认为是十分关键的，在任何情况下都不能跳过。"
 
+#.  Caused by egrep deprecation.  Note that we don't "patch" temp grep.
+#.          And it seems unworthy to add a sed into temp grep just for one test
+#.          failure.  (I don't really agree to "patch" grep in the first place,
+#.          anyway.) 
 #. type: Content of: <sect1><sect2><para>
 #: lfs-en/chapter08/binutils.xml
 msgid ""
 "Twelve tests fail in the <command>gold</command> testsuite when the "
 "<option>--enable-default-pie</option> and <option>--enable-default-ssp</"
-"option> options are passed to GCC. There is also a known failure in the "
-"<command>as</command> tests."
+"option> options are passed to GCC.  The test named <filename>ar with "
+"versioned solib</filename> is also known to fail."
 msgstr ""
 "十二项 <command>gold</command> 测试由于 GCC 使用了 <option>--enable-default-"
 "pie</option> 和 <option>--enable-default-ssp</option> 选项而失败。另外已知一"
-"项 <command>as</command> 测试可能失败。"
+"项名为 <filename>ar with versioned solib</filename> 的测试会失败。"
 
 #. type: Content of: <sect1><sect2><screen>
 #: lfs-en/chapter08/binutils.xml

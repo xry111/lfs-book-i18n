@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: lfs-dev@lists.linuxfromscratch.org\n"
-"POT-Creation-Date: 2022-09-17 18:28+0800\n"
+"POT-Creation-Date: 2022-09-24 18:57+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -22,19 +22,19 @@ msgstr "挂载新的分区"
 #. type: Content of: <sect1><para>
 #: lfs-en/chapter02/mounting.xml
 msgid ""
-"Now that a file system has been created, the partition needs to be made "
-"accessible. In order to do this, the partition needs to be mounted at a "
-"chosen mount point. For the purposes of this book, it is assumed that the "
-"file system is mounted under the directory specified by the <envar>LFS</"
-"envar> environment variable as described in the previous section."
+"Now that a file system has been created, the partition must be mounted so "
+"the host system can access it. This book assumes that the file system is "
+"mounted at the directory specified by the <envar>LFS</envar> environment "
+"variable described in the previous section."
 msgstr ""
-"我们已经在分区上建立了文件系统，为了访问分区，我们需要把分区挂载到选定的挂载"
-"点上。正如前一节所述，本书假设将文件系统挂载到 <envar>LFS</envar> 环境变量指"
-"定的目录中。"
+"我们已经在分区上建立了文件系统，为了从宿主系统访问分区，我们需要把分区挂载到"
+"选定的挂载点上。正如前一节所述，本书假设将文件系统挂载到 <envar>LFS</envar> "
+"环境变量指定的目录中。"
 
 #. type: Content of: <sect1><para>
 #: lfs-en/chapter02/mounting.xml
-msgid "Create the mount point and mount the LFS file system by running:"
+msgid ""
+"Create the mount point and mount the LFS file system with these commands:"
 msgstr "输入以下命令以创建挂载点，并挂载 LFS 文件系统："
 
 #. type: Content of: <sect1><screen>
@@ -48,18 +48,19 @@ msgstr ""
 "mount -v -t ext4 /dev/<replaceable>&lt;xxx&gt;</replaceable> $LFS</userinput>"
 
 #. type: Content of: <sect1><para>
-#: lfs-en/chapter02/mounting.xml
+#: lfs-en/chapter02/mounting.xml lfs-en/chapter02/creatingfilesystem.xml
 msgid ""
-"Replace <replaceable>&lt;xxx&gt;</replaceable> with the designation of the "
-"LFS partition."
-msgstr "将 <replaceable>&lt;xxx&gt;</replaceable> 替换成 LFS 分区的代号。"
+"Replace <replaceable>&lt;xxx&gt;</replaceable> with the name of the LFS "
+"partition."
+msgstr ""
+"命令中 <replaceable>&lt;xxx&gt;</replaceable> 应该替换成 LFS 分区的名称。"
 
 #. type: Content of: <sect1><para>
 #: lfs-en/chapter02/mounting.xml
 msgid ""
-"If using multiple partitions for LFS (e.g., one for <filename class="
+"If you are using multiple partitions for LFS (e.g., one for <filename class="
 "\"directory\">/</filename> and another for <filename class=\"directory\">/"
-"home</filename>), mount them using:"
+"home</filename>), mount them like this:"
 msgstr ""
 "如果为 LFS 创建了多个分区 (例如一个作为 <filename class=\"directory\">/</"
 "filename>，另一个作为 <filename class=\"directory\">/home</filename>)，那么它"
@@ -95,7 +96,7 @@ msgid ""
 "restrictive (such as the <option>nosuid</option> or <option>nodev</option> "
 "options). Run the <command>mount</command> command without any parameters to "
 "see what options are set for the mounted LFS partition. If <option>nosuid</"
-"option> and/or <option>nodev</option> are set, the partition will need to be "
+"option> and/or <option>nodev</option> are set, the partition must be "
 "remounted."
 msgstr ""
 "请确认在挂载新分区时没有使用过于严格的安全限制 (比如 <option>nosuid</option> "
@@ -112,17 +113,18 @@ msgstr "/dev/<replaceable>&lt;xxx&gt;</replaceable>  /mnt/lfs ext4   defaults   
 #. type: Content of: <sect1><warning><para>
 #: lfs-en/chapter02/mounting.xml
 msgid ""
-"The above instructions assume that you will not be restarting your computer "
+"The above instructions assume that you will not restart your computer "
 "throughout the LFS process.  If you shut down your system, you will either "
-"need to remount the LFS partition each time you restart the build process or "
-"modify your host system's /etc/fstab file to automatically remount it upon "
-"boot.  For example: <placeholder type=\"screen\" id=\"0\"/> If you use "
-"additional optional partitions, be sure to add them also."
+"need to remount the LFS partition each time you restart the build process, "
+"or modify the host system's &fstab; file to automatically remount it when "
+"you reboot. For example, you might add this line to your &fstab; file: "
+"<placeholder type=\"screen\" id=\"0\"/> If you use additional optional "
+"partitions, be sure to add them also."
 msgstr ""
 "上面的命令假设您在构建 LFS 的过程中不会重启计算机。如果您关闭了系统，那么您要"
-"么在继续构建过程时重新挂载分区，要么修改宿主系统的 /etc/fstab 文件，使得系统"
-"在引导时自动挂载它们。例如：<placeholder type=\"screen\" id=\"0\"/> 如果您使"
-"用了多个分区，它们都需要添加到 fstab 中。"
+"么在继续构建过程时重新挂载分区，要么修改宿主系统的 &fstab; 文件，使得系统在引"
+"导时自动挂载它们。例如，可以将这一行添加到 &fstab; 文件中：<placeholder type="
+"\"screen\" id=\"0\"/> 如果您使用了多个分区，它们都需要添加到 fstab 中。"
 
 #. type: Content of: <sect1><para>
 #: lfs-en/chapter02/mounting.xml
@@ -152,6 +154,6 @@ msgstr ""
 #. type: Content of: <sect1><para>
 #: lfs-en/chapter02/mounting.xml
 msgid ""
-"Now that there is an established place to work, it is time to download the "
-"packages."
-msgstr "现在我们准备好了工作环境，可以下载软件包了。"
+"Now that the new LFS partition is open for business, it's time to download "
+"the packages."
+msgstr "现在我们准备新的 LFS 分区，可以下载软件包了。"

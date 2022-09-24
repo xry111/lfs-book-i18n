@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: lfs-dev@lists.linuxfromscratch.org\n"
-"POT-Creation-Date: 2022-09-17 18:28+0800\n"
+"POT-Creation-Date: 2022-09-24 18:57+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -14,6 +14,14 @@ msgstr ""
 "X-Pootle-Path: /zh_CN/lfs/chapter02/creatingfilesystem.po\n"
 "X-Generator: Translate Toolkit 2.2.5\n"
 
+#. type: Content of: <sect1><para>
+#: lfs-en/chapter02/mounting.xml lfs-en/chapter02/creatingfilesystem.xml
+msgid ""
+"Replace <replaceable>&lt;xxx&gt;</replaceable> with the name of the LFS "
+"partition."
+msgstr ""
+"命令中 <replaceable>&lt;xxx&gt;</replaceable> 应该替换成 LFS 分区的名称。"
+
 #. type: Content of: <sect1><title>
 #: lfs-en/chapter02/creatingfilesystem.xml
 msgid "Creating a File System on the Partition"
@@ -22,15 +30,33 @@ msgstr "在分区上建立文件系统"
 #. type: Content of: <sect1><para>
 #: lfs-en/chapter02/creatingfilesystem.xml
 msgid ""
-"Now that a blank partition has been set up, the file system can be created.  "
+"A partition is just a range of sectors on a disk drive, delimited by "
+"boundaries set in a partition table. Before the operating system can use a "
+"partition to store any files, the partition must be formatted to contain a "
+"file system, typically consisting of a label, directory blocks, data blocks, "
+"and an indexing scheme to locate a particular file on demand. The file "
+"system also helps the OS keep track of free space on the partition, reserve "
+"the needed sectors when a new file is created or an existing file is "
+"extended, and recycle the free data segments created when files are deleted. "
+"It may also provide support for data redundancy, and for error recovery."
+msgstr ""
+"分区只是由分区表中记录的边界确定的一段扇区。在操作系统使用分区存储文件之前，"
+"必须格式化该分区，以在分区中建立一个文件系统。文件系统通常包含标签，目录块，"
+"数据块，用于定位文件的索引结构等。文件系统也帮助操作系统记录分区中的可用空"
+"间，在创建文件或增大已有文件的大小时保留需要的扇区，并回收利用已删除的文件的"
+"数据空间。一些文件系统还提供数据冗余和错误恢复功能。"
+
+#. type: Content of: <sect1><para>
+#: lfs-en/chapter02/creatingfilesystem.xml
+msgid ""
 "LFS can use any file system recognized by the Linux kernel, but the most "
-"common types are ext3 and ext4.  The choice of file system can be complex "
-"and depends on the characteristics of the files and the size of the "
+"common types are ext3 and ext4.  The choice of the right file system can be "
+"complex; it depends on the characteristics of the files and the size of the "
 "partition.  For example:"
 msgstr ""
-"现在我们建立好了空白分区，可以在分区上建立文件系统。LFS 可以使用 Linux 内核能"
-"够识别的任何文件系统，最常见的是 ext3 和 ext4。文件系统的选型是一个复杂的问"
-"题，要综合考虑分区的大小，以及其中所存储文件的特征。例如："
+"LFS 可以使用 Linux 内核能够识别的任何文件系统，但最常用的是 ext3 和 ext4。文"
+"件系统的选型是一个复杂的问题，要综合考虑分区的大小，以及其中所存储文件的特"
+"征。例如："
 
 #. type: Content of: <sect1><variablelist><varlistentry><term>
 #: lfs-en/chapter02/creatingfilesystem.xml
@@ -66,31 +92,31 @@ msgstr "ext4"
 #. type: Content of: <sect1><variablelist><varlistentry><listitem><para>
 #: lfs-en/chapter02/creatingfilesystem.xml
 msgid ""
-"is the latest version of the ext file system family of partition types.  It "
-"provides several new capabilities including nano-second timestamps, creation "
-"and use of very large files (16 TB), and speed improvements."
+"is the latest version of the ext family of file systems.  It provides "
+"several new capabilities including nano-second timestamps, creation and use "
+"of very large files (up to 16 TB), and speed improvements."
 msgstr ""
-"是 ext 文件系统家族的最新成员，它具有纳秒精度时间戳、超大 (16 TB) 文件支持等"
-"新功能，速度也更快。"
+"是 ext 文件系统家族的最新成员，它支持纳秒精度时间戳、创建或使用超大文件 (最"
+"大 16 TB) 支持等新功能，速度也更快。"
 
 #. type: Content of: <sect1><para>
 #: lfs-en/chapter02/creatingfilesystem.xml
 msgid ""
 "Other file systems, including FAT32, NTFS, ReiserFS, JFS, and XFS are useful "
-"for specialized purposes.  More information about these file systems can be "
-"found at <ulink url=\"https://en.wikipedia.org/wiki/"
+"for specialized purposes. More information about these file systems, and "
+"many others, can be found at <ulink url=\"https://en.wikipedia.org/wiki/"
 "Comparison_of_file_systems\"/>."
 msgstr ""
 "其他文件系统，包括 FAT32, NTFS, ReiserFS, JFS 和 XFS 在特定场合也很有用。关于"
-"这些文件系统的更多信息，可以在 <ulink url=\"https://en.wikipedia.org/wiki/"
-"Comparison_of_file_systems\"/> 找到。"
+"它们和其他文件系统的更多信息可以在 <ulink url=\"https://en.wikipedia.org/"
+"wiki/Comparison_of_file_systems\"/> 找到。"
 
 #. type: Content of: <sect1><para>
 #: lfs-en/chapter02/creatingfilesystem.xml
 msgid ""
-"LFS assumes that the root file system (/) is of type ext4.  To create an "
+"LFS assumes that the root file system (/) is of type ext4. To create an "
 "<systemitem class=\"filesystem\">ext4</systemitem> file system on the LFS "
-"partition, run the following:"
+"partition, issue the following command:"
 msgstr ""
 "LFS 假设根文件系统 (/) 采用 ext4 文件系统。输入以下命令在 LFS 分区创建一个 "
 "<systemitem class=\"filesystem\">ext4</systemitem> 文件系统："
@@ -100,14 +126,6 @@ msgstr ""
 #, no-wrap
 msgid "<userinput>mkfs -v -t ext4 /dev/<replaceable>&lt;xxx&gt;</replaceable></userinput>"
 msgstr "<userinput>mkfs -v -t ext4 /dev/<replaceable>&lt;xxx&gt;</replaceable></userinput>"
-
-#. type: Content of: <sect1><para>
-#: lfs-en/chapter02/creatingfilesystem.xml
-msgid ""
-"Replace <replaceable>&lt;xxx&gt;</replaceable> with the name of the LFS "
-"partition."
-msgstr ""
-"命令中 <replaceable>&lt;xxx&gt;</replaceable> 应该替换成 LFS 分区的名称。"
 
 #. type: Content of: <sect1><para>
 #: lfs-en/chapter02/creatingfilesystem.xml
