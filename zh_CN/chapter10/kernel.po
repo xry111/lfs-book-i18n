@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: lfs-dev@lists.linuxfromscratch.org\n"
-"POT-Creation-Date: 2022-09-23 01:24+0800\n"
+"POT-Creation-Date: 2022-09-27 10:09+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -877,20 +877,32 @@ msgstr ""
 #. type: Content of: <sect1><sect2><caution><para>
 #: lfs-en/chapter10/kernel.xml
 msgid ""
-"If the host system has a separate /boot partition, the files copied below "
-"should go there. The easiest way to do that is to bind /boot on the host "
-"(outside chroot) to /mnt/lfs/boot before proceeding.  As the &root; user in "
-"the <emphasis>host system</emphasis>:"
+"If you've decided to use a separate &boot-dir; partition for the LFS system "
+"(maybe sharing a &boot-dir; partition with the host distro) , the files "
+"copied below should go there. The easiest way to do that is to create the "
+"entry for &boot-dir; in &fstab; first (read the previous section for "
+"details), then issue the following command as the &root; user in the "
+"<emphasis>chroot environment</emphasis>:"
 msgstr ""
-"如果宿主系统有单独的 /boot 分区，需要将这些文件拷贝到该分区中。最简单的方法是"
-"将宿主系统的 /boot (在 chroot 之外) 绑定到 /mnt/lfs/boot 再拷贝文件，在"
-"<emphasis>宿主系统</emphasis>中，以 &root; 身份执行："
+"如果要使用单独的 &boot-dir; 分区 (包括和宿主发行版共用一个 &boot-dir; 分区的"
+"情况)，需要将这些文件拷贝到该分区中。最简单的方法是首先在 &fstab; 中加入 "
+"&boot-dir; 分区的条目 (详见前一节)，然后在 <emphasis>chroot 环境</emphasis>中"
+"以 &root; 身份执行以下命令："
 
 #. type: Content of: <sect1><sect2><caution><screen>
 #: lfs-en/chapter10/kernel.xml
 #, no-wrap
-msgid "<userinput>mount --bind /boot /mnt/lfs/boot</userinput>"
-msgstr "<userinput>mount --bind /boot /mnt/lfs/boot</userinput>"
+msgid "<userinput>mount /boot</userinput>"
+msgstr "<userinput>mount /boot</userinput>"
+
+#. type: Content of: <sect1><sect2><caution><para>
+#: lfs-en/chapter10/kernel.xml
+msgid ""
+"The path to the device node is omitted in the command because "
+"<command>mount</command> can read it from &fstab;."
+msgstr ""
+"该命令中省略了指向设备节点的路径，因为 <command>mount</command> 可以从 "
+"&fstab; 中读取它。"
 
 #. type: Content of: <sect1><sect2><para>
 #: lfs-en/chapter10/kernel.xml
