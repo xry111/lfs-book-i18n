@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: lfs-dev@lists.linuxfromscratch.org\n"
-"POT-Creation-Date: 2022-09-24 18:57+0800\n"
+"POT-Creation-Date: 2022-09-29 17:41+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -30,6 +30,19 @@ msgstr ""
 "我们已经在分区上建立了文件系统，为了从宿主系统访问分区，我们需要把分区挂载到"
 "选定的挂载点上。正如前一节所述，本书假设将文件系统挂载到 <envar>LFS</envar> "
 "环境变量指定的目录中。"
+
+#. type: Content of: <sect1><para>
+#: lfs-en/chapter02/mounting.xml
+msgid ""
+"Strictly speaking, one cannot \"mount a partition\". One mounts the "
+"<emphasis>file system</emphasis> embedded in that partition. But since a "
+"single partition can't contain more than one file system, people often speak "
+"of the partition and the associated file system as if they were one and the "
+"same."
+msgstr ""
+"严格来说，我们不能“挂载一个分区”。我们挂载的是该分区中的<emphasis>文件系统</"
+"emphasis>。但是，由于一个分区最多只包含一个文件系统，人们经常不加区分地用“分"
+"区”代表分区中的文件系统。"
 
 #. type: Content of: <sect1><para>
 #: lfs-en/chapter02/mounting.xml

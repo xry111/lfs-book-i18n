@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Linux From Scratch 11.0\n"
 "Report-Msgid-Bugs-To: lfs-dev@lists.linuxfromscratch.org\n"
-"POT-Creation-Date: 2022-09-23 01:24+0800\n"
+"POT-Creation-Date: 2022-09-29 17:41+0800\n"
 "PO-Revision-Date: 2021-11-05 23:31+0800\n"
 "Last-Translator: Xi Ruoyao <xry111@xry111.site>\n"
 "Language-Team: noneLanguage: zh_CN\n"
@@ -44,6 +44,24 @@ msgstr "Gawk-&gawk-version;"
 #: lfs-en/chapter01/whatsnew.xml
 msgid "What's new since the last release"
 msgstr "自上次发布以来的更新"
+
+#. type: Content of: <sect1><para>
+#: lfs-en/chapter01/whatsnew.xml
+msgid ""
+"In 11.3 release, <parameter>--enable-default-pie</parameter> and "
+"<parameter>--enable-default-ssp</parameter> are enabled for GCC.  They can "
+"mitigate some type of malicious attacks but they cannot provide a full "
+"protection.  In case if you are reading a programming textbook, you may need "
+"to disable PIE and SSP with GCC options <parameter>-fno-pie -no-pie -fno-"
+"stack-protection</parameter> because some textbooks assume they were "
+"disabled by default."
+msgstr ""
+"从 LFS 11.3 起，在构建 GCC 时启用 <parameter>--enable-default-pie</"
+"parameter> 和 <parameter>--enable-default-ssp</parameter>。它们能预防一些特定"
+"类型的恶意攻击，但不能提供完整的安全性保证。如果您正在阅读一本程序设计教科"
+"书，您可能需要使用 GCC 选项 <parameter>-fno-pie -no-pie -fno-stack-"
+"protection</parameter> 禁用 PIE 和 SSP，这是因为一些教科书假设它们在默认情况"
+"下未被启用。"
 
 #. type: Content of: <sect1><para>
 #: lfs-en/chapter01/whatsnew.xml

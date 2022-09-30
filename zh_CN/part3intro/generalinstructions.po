@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: lfs-dev@lists.linuxfromscratch.org\n"
-"POT-Creation-Date: 2022-09-17 18:28+0800\n"
+"POT-Creation-Date: 2022-09-30 16:11+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -21,37 +21,36 @@ msgstr "编译过程的一般说明"
 
 #. type: Content of: <sect1><para>
 #: lfs-en/part3intro/generalinstructions.xml
-msgid ""
-"When building packages there are several assumptions made within the "
-"instructions:"
-msgstr "在构建软件包时，本书提供的命令基于下列假设："
+msgid "Here are some things you should know about building each package:"
+msgstr "下面是在构建每个软件包时都要注意的事项："
 
 #. type: Content of: <sect1><itemizedlist><listitem><para>
 #: lfs-en/part3intro/generalinstructions.xml
 msgid ""
-"Several of the packages are patched before compilation, but only when the "
-"patch is needed to circumvent a problem. A patch is often needed in both "
-"this and the following chapters, but sometimes in only one location.  "
-"Therefore, do not be concerned if instructions for a downloaded patch seem "
-"to be missing.  Warning messages about <emphasis>offset</emphasis> or "
-"<emphasis>fuzz</emphasis> may also be encountered when applying a patch. Do "
-"not worry about these warnings, as the patch was still successfully applied."
+"Several packages are patched before compilation, but only when the patch is "
+"needed to circumvent a problem. A patch is often needed in both the current "
+"and the following chapters, but sometimes, when the same package is built "
+"more than once, the patch is not needed right away.  Therefore, do not be "
+"concerned if instructions for a downloaded patch seem to be missing.  "
+"Warning messages about <emphasis>offset</emphasis> or <emphasis>fuzz</"
+"emphasis> may also be encountered when applying a patch. Do not worry about "
+"these warnings; the patch was still successfully applied."
 msgstr ""
 "某些软件包在编译前需要打补丁，然而补丁只在绕过特定问题时才需要。补丁常常在本"
-"章和下一章都要使用，然而有时只在其中一章使用。因此，如果发现本书给出的步骤中"
-"没有使用某个下载好的补丁，这是正常的，不必担心。在应用补丁时可能会出现关于 "
-"<emphasis>offset</emphasis> 或者 <emphasis>fuzz</emphasis> 的警告信息。不用担"
-"心这些警告，补丁还是会成功应用到源码上的。"
+"章和下一章都要使用，但有时，对于多次构建的软件包，在初次构建时可能并不需要补"
+"丁。因此，如果发现本书给出的步骤中没有使用某个下载好的补丁，这是正常的，不必"
+"担心。在应用补丁时可能会出现关于 <emphasis>offset</emphasis> 或者 "
+"<emphasis>fuzz</emphasis> 的警告信息。不用担心这些警告，补丁还是会成功应用到"
+"源码上的。"
 
 #. type: Content of: <sect1><itemizedlist><listitem><para>
 #: lfs-en/part3intro/generalinstructions.xml
 msgid ""
-"During the compilation of most packages, there will be several warnings that "
-"scroll by on the screen. These are normal and can safely be ignored.  These "
-"warnings are as they appear&mdash;warnings about deprecated, but not "
-"invalid, use of the C or C++ syntax. C standards change fairly often, and "
-"some packages still use the older standard. This is not a problem, but does "
-"prompt the warning."
+"During the compilation of most packages, some warnings will scroll by on the "
+"screen. These are normal and can safely be ignored.  These warnings are "
+"usually about deprecated, but not invalid, use of the C or C++ syntax. C "
+"standards change fairly often, and some packages have not yet been updated. "
+"This is not a serious problem, but it does cause the warnings to appear."
 msgstr ""
 "在编译大多数软件包时，屏幕上都会出现一些警告。这是正常的，可以放心地忽略。这"
 "些警告就像它们描述的那样，是关于一些过时的，但并不是错误的 C 或 C++ 语法。C "
@@ -117,15 +116,15 @@ msgstr ""
 #: lfs-en/part3intro/generalinstructions.xml
 msgid ""
 "<command>/usr/bin/yacc</command> is a symbolic link to <command>bison</"
-"command> or a small script that executes bison."
+"command>, or to a small script that executes bison."
 msgstr ""
 "<command>/usr/bin/yacc</command> 是指向 <command>bison</command> 的符号链接，"
 "或者一个执行 bison 的小脚本。"
 
 #. type: Content of: <sect1><itemizedlist><listitem><important><para>
 #: lfs-en/part3intro/generalinstructions.xml
-msgid "To re-emphasize the build process:"
-msgstr "再次强调构建过程："
+msgid "Here is a synopsis of the build process."
+msgstr "下面给出软件包构建过程的概要。"
 
 #.  Do
 #.           <emphasis>
@@ -135,7 +134,7 @@ msgstr "再次强调构建过程："
 #: lfs-en/part3intro/generalinstructions.xml
 msgid ""
 "Place all the sources and patches in a directory that will be accessible "
-"from the chroot environment such as <filename class=\"directory\">/mnt/lfs/"
+"from the chroot environment, such as <filename class=\"directory\">/mnt/lfs/"
 "sources/</filename>."
 msgstr ""
 "把所有的源码包和补丁放在一个能够从 chroot 环境访问的目录，例如 <filename "
@@ -143,8 +142,11 @@ msgstr ""
 
 #. type: Content of: <sect1><itemizedlist><listitem><important><orderedlist><listitem><para>
 #: lfs-en/part3intro/generalinstructions.xml
-msgid "Change to the sources directory."
-msgstr "切换到放着源码包的目录。"
+msgid ""
+"Change to the <filename class=\"directory\">/mnt/lfs/sources/</filename> "
+"directory."
+msgstr ""
+"切换到 <filename class=\"directory\">/mnt/lfs/sources/</filename> 目录。"
 
 #. type: Attribute 'xreflabel' of: <sect1><itemizedlist><listitem><important><orderedlist><listitem>
 #: lfs-en/part3intro/generalinstructions.xml
@@ -171,14 +173,14 @@ msgstr ""
 #. type: Content of: <sect1><itemizedlist><listitem><important><orderedlist><listitem><orderedlist><listitem><para>
 #: lfs-en/part3intro/generalinstructions.xml
 msgid ""
-"All methods to get the source code tree being built in-position, except "
-"extracting the package tarball, are not supported. Notably, using "
-"<command>cp -R</command> to copy the source code tree somewhere else can "
-"destroy links and timestamps in the sources tree and cause building failure."
+"Do not use any method except the <command>tar</command> command to extract "
+"the source code. Notably, using the <command>cp -R</command> command to copy "
+"the source code tree somewhere else can destroy links and timestamps in the "
+"source tree, and cause the build to fail."
 msgstr ""
-"除了解压源码包外，任何将源代码目录树置入工作目录的方法均不受支持。特别需要注"
-"意的是，使用 <command>cp -R</command> 从其他位置复制源代码目录树会破坏其中的"
-"链接和时间戳，导致构建失败。"
+"除了使用 <command>tar</command> 命令解压源码包外，不要使用其他任何将源代码目"
+"录树置入工作目录的方法。特别需要注意的是，使用 <command>cp -R</command> 从其"
+"他位置复制源代码目录树会破坏其中的链接和时间戳，并导致构建失败。"
 
 #. type: Content of: <sect1><itemizedlist><listitem><important><orderedlist><listitem><orderedlist><listitem><para>
 #: lfs-en/part3intro/generalinstructions.xml
@@ -187,13 +189,13 @@ msgstr "切换到解压源码包时产生的目录。"
 
 #. type: Content of: <sect1><itemizedlist><listitem><important><orderedlist><listitem><orderedlist><listitem><para>
 #: lfs-en/part3intro/generalinstructions.xml
-msgid "Follow the book's instructions for building the package."
-msgstr "根据书中的指示构建软件包。"
+msgid "Follow the instructions for building the package."
+msgstr "根据指示构建软件包。"
 
 #. type: Content of: <sect1><itemizedlist><listitem><important><orderedlist><listitem><orderedlist><listitem><para>
 #: lfs-en/part3intro/generalinstructions.xml
-msgid "Change back to the sources directory."
-msgstr "切换回包含所有源码包的目录。"
+msgid "Change back to the sources directory when the build is complete."
+msgstr "构建完成后，切换回包含所有源码包的目录。"
 
 #. type: Content of: <sect1><itemizedlist><listitem><important><orderedlist><listitem><orderedlist><listitem><para>
 #: lfs-en/part3intro/generalinstructions.xml
