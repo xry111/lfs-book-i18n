@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: lfs-dev@lists.linuxfromscratch.org\n"
-"POT-Creation-Date: 2022-09-17 18:28+0800\n"
+"POT-Creation-Date: 2022-10-01 11:51+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -540,6 +540,24 @@ msgstr "&autoconf-fin-du;"
 #: lfs-en/chapter08/autoconf.xml
 msgid "Installation of Autoconf"
 msgstr "安装 Autoconf"
+
+#. type: Content of: <sect1><sect2><para>
+#: lfs-en/chapter08/autoconf.xml
+msgid ""
+"First, fix several problems with the tests caused by bash-5.2 and later:"
+msgstr "首先修复由 bash-5.2 及更新版本导致的一些问题："
+
+#. type: Content of: <sect1><sect2><screen>
+#: lfs-en/chapter08/autoconf.xml
+#, no-wrap
+msgid ""
+"<userinput remap=\"pre\">sed -e 's/SECONDS|/&amp;SHLVL|/'               \\\n"
+"    -e '/BASH_ARGV=/a\\        /^SHLVL=/ d' \\\n"
+"    -i.orig tests/local.at</userinput>"
+msgstr ""
+"<userinput remap=\"pre\">sed -e 's/SECONDS|/&amp;SHLVL|/'               \\\n"
+"    -e '/BASH_ARGV=/a\\        /^SHLVL=/ d' \\\n"
+"    -i.orig tests/local.at</userinput>"
 
 #. type: Content of: <sect1><sect2><para>
 #: lfs-en/chapter08/autoconf.xml
