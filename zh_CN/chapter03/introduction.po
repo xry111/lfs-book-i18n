@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: lfs-dev@lists.linuxfromscratch.org\n"
-"POT-Creation-Date: 2022-09-24 17:25+0800\n"
+"POT-Creation-Date: 2022-10-02 19:17+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -203,3 +203,25 @@ msgid ""
 "This check can be used after retrieving the needed files with any of the "
 "methods listed above."
 msgstr "使用上面的各种方法获取文件后，都可以执行这项检查。"
+
+#. type: Content of: <sect1><para>
+#: lfs-en/chapter03/introduction.xml
+msgid ""
+"If the packages and patches are downloaded as a non-&root; user, these files "
+"will be owned by the user.  The file system records the owner by its UID, "
+"and the UID of a normal user in the host distro is not assigned in LFS.  So "
+"the files will be left owned by an unnamed UID in the final LFS system.  If "
+"you won't assign the same UID for your user in the LFS system, change the "
+"owners of these files to &root; now to avoid this issue:"
+msgstr ""
+"如果以非 &root; 用户身份下载了软件包和补丁，则下载的文件会属于该用户。文件系"
+"统使用 UID 记录文件所有者，而宿主系统中普通用户的 UID 在 LFS 中未被分配。因"
+"此，这些文件保留到最终的 LFS 系统后，会属于一个没有命名的 UID 。如果您不准备"
+"在 LFS 系统中为您的用户分配相同的 UID，现在就将这些文件的所有者改为 &root;，"
+"以避免这一问题："
+
+#. type: Content of: <sect1><screen>
+#: lfs-en/chapter03/introduction.xml
+#, no-wrap
+msgid "<userinput>chown root:root $LFS/sources/*</userinput>"
+msgstr "<userinput>chown root:root $LFS/sources/*</userinput>"
