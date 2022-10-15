@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: lfs-dev@lists.linuxfromscratch.org\n"
-"POT-Creation-Date: 2022-09-17 18:28+0800\n"
+"POT-Creation-Date: 2022-10-15 09:55+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -265,6 +265,12 @@ msgstr "<userinput remap=\"make\">make</userinput>"
 msgid "Install the package:"
 msgstr "安装该软件包："
 
+#. type: Content of: <sect1><title>
+#: lfs-en/chapter01/whatsnew.xml lfs-en/chapter07/gettext.xml
+#: lfs-en/chapter08/gettext.xml
+msgid "Gettext-&gettext-version;"
+msgstr "Gettext-&gettext-version;"
+
 #. type: Content of: <sect1><sect2><segmentedlist><segtitle>
 #: lfs-en/chapter05/linux-headers.xml lfs-en/chapter08/intltool.xml
 #: lfs-en/chapter08/libtool.xml lfs-en/chapter08/wheel.xml
@@ -389,11 +395,6 @@ msgid ""
 msgstr ""
 "<productname>gettext</productname> <productnumber>&gettext-version;</"
 "productnumber> <placeholder type=\"address\" id=\"0\"/>"
-
-#. type: Content of: <sect1><title>
-#: lfs-en/chapter07/gettext.xml lfs-en/chapter08/gettext.xml
-msgid "Gettext-&gettext-version;"
-msgstr "Gettext-&gettext-version;"
 
 #. type: Content of: <sect1><itemizedlist><listitem><para>
 #: lfs-en/chapter07/gettext.xml lfs-en/chapter08/gettext.xml
@@ -701,8 +702,8 @@ msgstr "<command>msgcomm</command>"
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: lfs-en/chapter08/gettext.xml
 msgid ""
-"Finds the messages that are common to the given <filename class=\"extension"
-"\">.po</filename> files"
+"Finds the messages that are common to the given <filename "
+"class=\"extension\">.po</filename> files"
 msgstr ""
 "找出给定的多个 <filename class=\"extension\">.po</filename> 中的公共消息"
 
@@ -963,11 +964,11 @@ msgstr "<filename class=\"libraryfile\">libgettextpo</filename>"
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: lfs-en/chapter08/gettext.xml
 msgid ""
-"Used to write specialized programs that process <filename class=\"extension"
-"\">.po</filename> files; this library is used when the standard applications "
-"shipped with Gettext (such as <command>msgcomm</command>, <command>msgcmp</"
-"command>, <command>msgattrib</command>, and <command>msgen</command>) will "
-"not suffice"
+"Used to write specialized programs that process <filename "
+"class=\"extension\">.po</filename> files; this library is used when the "
+"standard applications shipped with Gettext (such as <command>msgcomm</"
+"command>, <command>msgcmp</command>, <command>msgattrib</command>, and "
+"<command>msgen</command>) will not suffice"
 msgstr ""
 "用于编写处理 <filename class=\"extension\">.po</filename> 文件的专用程序；这"
 "个库在 Gettext 发行的标准程序 (如 <command>msgcomm</command>, "
@@ -1019,11 +1020,11 @@ msgstr "<filename class=\"libraryfile\">preloadable_libintl</filename>"
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: lfs-en/chapter08/gettext.xml
 msgid ""
-"A library, intended to be used by LD_PRELOAD that assists <filename class="
-"\"libraryfile\">libintl</filename> in logging untranslated messages"
+"A library, intended to be used by LD_PRELOAD that assists <filename "
+"class=\"libraryfile\">libintl</filename> in logging untranslated messages"
 msgstr ""
-"一个被设计为由 LD_PRELOAD 预加载的库，帮助 <filename class=\"libraryfile"
-"\">libintl</filename> 记录未翻译的消息"
+"一个被设计为由 LD_PRELOAD 预加载的库，帮助 <filename "
+"class=\"libraryfile\">libintl</filename> 记录未翻译的消息"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: lfs-en/chapter08/gettext.xml

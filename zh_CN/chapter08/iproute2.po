@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: lfs-dev@lists.linuxfromscratch.org\n"
-"POT-Creation-Date: 2022-09-17 18:28+0800\n"
+"POT-Creation-Date: 2022-10-15 09:55+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -219,6 +219,11 @@ msgstr "编译该软件包："
 msgid "Install the package:"
 msgstr "安装该软件包："
 
+#. type: Content of: <sect1><title>
+#: lfs-en/chapter01/whatsnew.xml lfs-en/chapter08/iproute2.xml
+msgid "IPRoute2-&iproute2-version;"
+msgstr "IPRoute2-&iproute2-version;"
+
 #. type: Content of: <sect1><sect2><segmentedlist><segtitle>
 #: lfs-en/chapter05/linux-headers.xml lfs-en/chapter08/intltool.xml
 #: lfs-en/chapter08/libtool.xml lfs-en/chapter08/wheel.xml
@@ -381,11 +386,6 @@ msgstr ""
 "<productname>iproute2</productname> <productnumber>&iproute2-version;</"
 "productnumber> <placeholder type=\"address\" id=\"0\"/>"
 
-#. type: Content of: <sect1><title>
-#: lfs-en/chapter08/iproute2.xml
-msgid "IPRoute2-&iproute2-version;"
-msgstr "IPRoute2-&iproute2-version;"
-
 #. type: Content of: <sect1><indexterm><primary>
 #: lfs-en/chapter08/iproute2.xml
 msgid "IPRoute2"
@@ -427,8 +427,8 @@ msgstr ""
 "该软件包中的 <command>arpd</command> 程序依赖于 LFS 不安装的 Berkeley DB，因"
 "此不会被构建。然而，用于 <command>arpd</command> 的一个目录和它的 man 页面仍"
 "会被安装。运行以下命令以防止它们的安装。如果需要使用 <command>arpd</command> "
-"二进制程序，参考 BLFS 手册中的 Berkeley DB 编译说明，它位于 <ulink url="
-"\"&blfs-book;server/db.html\"/>。"
+"二进制程序，参考 BLFS 手册中的 Berkeley DB 编译说明，它位于 <ulink "
+"url=\"&blfs-book;server/db.html\"/>。"
 
 #. type: Content of: <sect1><sect2><screen>
 #: lfs-en/chapter08/iproute2.xml

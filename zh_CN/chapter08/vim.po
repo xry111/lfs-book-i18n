@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: lfs-dev@lists.linuxfromscratch.org\n"
-"POT-Creation-Date: 2022-09-17 18:28+0800\n"
+"POT-Creation-Date: 2022-10-15 09:55+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -265,6 +265,11 @@ msgstr "<userinput remap=\"make\">make</userinput>"
 msgid "Install the package:"
 msgstr "安装该软件包："
 
+#. type: Content of: <sect1><title>
+#: lfs-en/chapter01/whatsnew.xml lfs-en/chapter08/vim.xml
+msgid "Vim-&vim-version;"
+msgstr "Vim-&vim-version;"
+
 #. type: Content of: <sect1><sect2><screen>
 #: lfs-en/chapter05/gcc-pass1.xml lfs-en/chapter05/binutils-pass1.xml
 #: lfs-en/chapter07/bison.xml lfs-en/chapter07/texinfo.xml
@@ -466,11 +471,6 @@ msgstr ""
 "<productname>vim</productname> <productnumber>&vim-version;</productnumber> "
 "<placeholder type=\"address\" id=\"0\"/>"
 
-#. type: Content of: <sect1><title>
-#: lfs-en/chapter08/vim.xml
-msgid "Vim-&vim-version;"
-msgstr "Vim-&vim-version;"
-
 #. type: Content of: <sect1><itemizedlist><listitem><para>
 #: lfs-en/chapter08/vim.xml lfs-en/appendices/dependencies.xml
 #: lfs-en/prologue/why.xml
@@ -504,8 +504,8 @@ msgid ""
 "refer to <ulink url=\"&blfs-book;postlfs/editors.html\"/> for suggested "
 "installation instructions."
 msgstr ""
-"如果您喜爱其他编辑器 —— 例如 Emacs、Joe、或者 Nano —— 参考 <ulink url="
-"\"&blfs-book;postlfs/editors.html\"/> 中建议的安装说明。"
+"如果您喜爱其他编辑器 —— 例如 Emacs、Joe、或者 Nano —— 参考 <ulink "
+"url=\"&blfs-book;postlfs/editors.html\"/> 中建议的安装说明。"
 
 #. type: Content of: <sect1><sect2><title>
 #: lfs-en/chapter08/vim.xml
@@ -518,8 +518,8 @@ msgid ""
 "First, change the default location of the <filename>vimrc</filename> "
 "configuration file to <filename class=\"directory\">/etc</filename>:"
 msgstr ""
-"首先，修改 <filename>vimrc</filename> 配置文件的默认位置为 <filename class="
-"\"directory\">/etc</filename>："
+"首先，修改 <filename>vimrc</filename> 配置文件的默认位置为 <filename "
+"class=\"directory\">/etc</filename>："
 
 #. type: Content of: <sect1><sect2><screen>
 #: lfs-en/chapter08/vim.xml
@@ -535,8 +535,8 @@ msgstr "准备编译 Vim："
 #. type: Content of: <sect1><sect2><para>
 #: lfs-en/chapter08/vim.xml
 msgid ""
-"To prepare the tests, ensure that user <systemitem class=\"username"
-"\">tester</systemitem> can write to the source tree:"
+"To prepare the tests, ensure that user <systemitem "
+"class=\"username\">tester</systemitem> can write to the source tree:"
 msgstr ""
 "为了准备运行测试套件，需要使得 <systemitem class=\"username\">tester</"
 "systemitem> 用户拥有写入源代码目录树的权限："
@@ -597,11 +597,11 @@ msgstr ""
 #. type: Content of: <sect1><sect2><para>
 #: lfs-en/chapter08/vim.xml
 msgid ""
-"By default, vim's documentation is installed in <filename class=\"directory"
-"\">/usr/share/vim</filename>. The following symlink allows the documentation "
-"to be accessed via <filename class=\"directory\">/usr/share/doc/vim-&vim-"
-"version;</filename>, making it consistent with the location of documentation "
-"for other packages:"
+"By default, vim's documentation is installed in <filename "
+"class=\"directory\">/usr/share/vim</filename>. The following symlink allows "
+"the documentation to be accessed via <filename class=\"directory\">/usr/"
+"share/doc/vim-&vim-version;</filename>, making it consistent with the "
+"location of documentation for other packages:"
 msgstr ""
 "默认情况下，Vim 的文档安装在 <filename class=\"directory\">/usr/share/vim</"
 "filename> 中。下面创建符号链接，使得可以通过 <filename class=\"directory\">/"
