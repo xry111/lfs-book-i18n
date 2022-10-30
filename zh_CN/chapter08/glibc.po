@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Linux From Scratch 11.0\n"
 "Report-Msgid-Bugs-To: lfs-dev@lists.linuxfromscratch.org\n"
-"POT-Creation-Date: 2022-10-15 09:55+0800\n"
+"POT-Creation-Date: 2022-10-30 22:30+0800\n"
 "PO-Revision-Date: 2021-08-21 11:33+0800\n"
 "Last-Translator: Xi Ruoyao <xry111@xry111.site>\n"
 "Language-Team: noneLanguage: zh_CN\n"
@@ -480,18 +480,6 @@ msgstr "安装 Glibc"
 #. type: Content of: <sect1><sect2><para>
 #: lfs-en/chapter05/glibc.xml lfs-en/chapter08/glibc.xml
 msgid ""
-"Some of the Glibc programs use the non-FHS compliant <filename "
-"class=\"directory\">/var/db</filename> directory to store their runtime "
-"data. Apply the following patch to make such programs store their runtime "
-"data in the FHS-compliant locations:"
-msgstr ""
-"一些 Glibc 程序使用与 FHS 不兼容的 <filename class=\"directory\">/var/db</"
-"filename> 目录存放它们的运行时数据。应用一个补丁，使得这些程序在 FHS 兼容的位"
-"置存放运行时数据："
-
-#. type: Content of: <sect1><sect2><para>
-#: lfs-en/chapter05/glibc.xml lfs-en/chapter08/glibc.xml
-msgid ""
 "The Glibc documentation recommends building Glibc in a dedicated build "
 "directory:"
 msgstr "Glibc 文档推荐在一个新建的目录中构建 Glibc："
@@ -511,12 +499,6 @@ msgstr "<parameter>--enable-kernel=&min-kernel;</parameter>"
 #: lfs-en/chapter05/glibc.xml lfs-en/chapter08/glibc.xml
 msgid "<parameter>libc_cv_slibdir=/usr/lib</parameter>"
 msgstr "<parameter>libc_cv_slibdir=/usr/lib</parameter>"
-
-#. type: Content of: <sect1><sect2><para>
-#: lfs-en/chapter05/glibc.xml lfs-en/chapter08/glibc.xml
-msgid ""
-"Fix hardcoded path to the executable loader in <command>ldd</command> script:"
-msgstr "改正 <command>ldd</command> 脚本中硬编码的可执行文件加载器路径："
 
 #. type: Content of: <sect1><sect2><screen>
 #: lfs-en/chapter08/pkgconfig.xml lfs-en/chapter08/file.xml
@@ -606,6 +588,18 @@ msgstr "&glibc-fin-sbu;"
 #: lfs-en/chapter08/glibc.xml
 msgid "&glibc-fin-du;"
 msgstr "&glibc-fin-du;"
+
+#. type: Content of: <sect1><sect2><para>
+#: lfs-en/chapter08/glibc.xml
+msgid ""
+"Some of the Glibc programs use the non-FHS compliant <filename "
+"class=\"directory\">/var/db</filename> directory to store their runtime "
+"data. Apply the following patch to make such programs store their runtime "
+"data in the FHS-compliant locations:"
+msgstr ""
+"一些 Glibc 程序使用与 FHS 不兼容的 <filename class=\"directory\">/var/db</"
+"filename> 目录存放它们的运行时数据。应用一个补丁，使得这些程序在 FHS 兼容的位"
+"置存放运行时数据："
 
 #. type: Content of: <sect1><sect2><screen>
 #: lfs-en/chapter08/glibc.xml
@@ -794,6 +788,12 @@ msgstr "修改 Makefile，跳过一个在 LFS 的不完整环境中会失败的�
 #, no-wrap
 msgid "<userinput remap=\"install\">sed '/test-installation/s@$(PERL)@echo not running@' -i ../Makefile</userinput>"
 msgstr "<userinput remap=\"install\">sed '/test-installation/s@$(PERL)@echo not running@' -i ../Makefile</userinput>"
+
+#. type: Content of: <sect1><sect2><para>
+#: lfs-en/chapter08/glibc.xml
+msgid ""
+"Fix hardcoded path to the executable loader in <command>ldd</command> script:"
+msgstr "改正 <command>ldd</command> 脚本中硬编码的可执行文件加载器路径："
 
 #. type: Content of: <sect1><sect2><screen>
 #: lfs-en/chapter08/glibc.xml

@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: lfs-dev@lists.linuxfromscratch.org\n"
-"POT-Creation-Date: 2022-10-15 09:55+0800\n"
+"POT-Creation-Date: 2022-10-30 22:30+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -261,12 +261,12 @@ msgstr "工具，第一遍的 Libstdc++"
 msgid ""
 "Libstdc++ is the standard C++ library. It is needed to compile C++ code "
 "(part of GCC is written in C++), but we had to defer its installation when "
-"we built <xref linkend=\"ch-tools-gcc-pass1\"/> because it depends on glibc, "
-"which was not yet available in the target directory."
+"we built <xref linkend=\"ch-tools-gcc-pass1\"/> because Libstdc++ depends on "
+"Glibc, which was not yet available in the target directory."
 msgstr ""
 "Libstdc++ 是 C++ 标准库。我们需要它才能编译 C++ 代码 (GCC 的一部分用 C++ 编"
 "写)。但在构建<xref linkend=\"ch-tools-gcc-pass1\"/>时我们不得不暂缓安装它，因"
-"为它依赖于当时还没有安装到目标目录的 Glibc。"
+"为 Libstdc++ 依赖于当时还没有安装到目标目录的 Glibc。"
 
 #. type: Content of: <sect1><sect2><segmentedlist><seglistitem><seg>
 #: lfs-en/chapter05/libstdc++.xml
@@ -295,12 +295,12 @@ msgstr ""
 
 #. type: Content of: <sect1><sect2><para>
 #: lfs-en/chapter05/libstdc++.xml
-msgid "Create a separate build directory for libstdc++ and enter it:"
+msgid "Create a separate build directory for Libstdc++ and enter it:"
 msgstr "为 Libstdc++ 创建一个单独的构建目录，并进入它："
 
 #. type: Content of: <sect1><sect2><para>
 #: lfs-en/chapter05/libstdc++.xml
-msgid "Prepare libstdc++ for compilation:"
+msgid "Prepare Libstdc++ for compilation:"
 msgstr "准备编译 Libstdc++："
 
 #. type: Content of: <sect1><sect2><screen>
@@ -333,11 +333,11 @@ msgstr "<parameter>--host=...</parameter> "
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: lfs-en/chapter05/libstdc++.xml
 msgid ""
-"Specifies that the cross compiler we have just built should be used instead "
+"Specifies that the cross-compiler we have just built should be used instead "
 "of the one in <filename>/usr/bin</filename>."
 msgstr ""
-"指定使用我们刚刚构建的交叉编译器，而不是 <filename>/usr/bin</filename> 中的宿"
-"主系统编译器。"
+"指定使用我们刚刚构建的交叉编译器，而不是 <filename>/usr/bin</filename> 中编译"
+"器。"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: lfs-en/chapter05/libstdc++.xml
@@ -364,22 +364,22 @@ msgstr ""
 #: lfs-en/chapter05/libstdc++.xml
 msgid ""
 "This specifies the installation directory for include files.  Because "
-"libstdc++ is the standard C++ library for LFS, this directory should match "
+"Libstdc++ is the standard C++ library for LFS, this directory should match "
 "the location where the C++ compiler (<command>$LFS_TGT-g++</command>) would "
 "search for the standard C++ include files. In a normal build, this "
-"information is automatically passed to the libstdc++ <command>configure</"
+"information is automatically passed to the Libstdc++ <command>configure</"
 "command> options from the top level directory. In our case, this information "
 "must be explicitly given.  The C++ compiler will prepend the sysroot path "
-"<filename class=\"directory\">$LFS</filename> (specified building GCC pass "
-"1) to the include file search path, so it will actually search in <filename "
-"class=\"directory\">$LFS/tools/$LFS_TGT/include/c++/&gcc-version;</"
+"<filename class=\"directory\">$LFS</filename> (specified when building GCC-"
+"pass1) to the include file search path, so it will actually search in "
+"<filename class=\"directory\">$LFS/tools/$LFS_TGT/include/c++/&gcc-version;</"
 "filename>.  The combination of the <parameter>DESTDIR</parameter> variable "
 "(in the <command>make install</command> command below)  and this switch "
-"ensures to install the headers there."
+"causes the headers to be installed there."
 msgstr ""
-"该选项指定包含文件的安装路径。因为 libstdc++ 是 LFS 的 C++ 标准库，这个安装路"
+"该选项指定包含文件的安装路径。因为 Libstdc++ 是 LFS 的 C++ 标准库，这个安装路"
 "径应该与 C++ 编译器 (<command>$LFS_TGT-g++</command>) 搜索 C++ 标准头的位置一"
-"致。在正常的构建过程中，这项信息被构建系统由顶层目录自动传递给 libstdc++ "
+"致。在正常的构建过程中，这项信息被构建系统由顶层目录自动传递给 Libstdc++ "
 "<command>configure</command> 脚本。但我们没有使用顶层目录构建系统，因此需要明"
 "确指定该选项。C++ 编译器会将 sysroot 路径 <filename "
 "class=\"directory\">$LFS</filename> (我们在构建第一遍的 GCC 时指定了它) 附加"
@@ -390,7 +390,7 @@ msgstr ""
 
 #. type: Content of: <sect1><sect2><para>
 #: lfs-en/chapter05/libstdc++.xml
-msgid "Compile libstdc++ by running:"
+msgid "Compile Libstdc++ by running:"
 msgstr "运行以下命令编译 Libstdc++："
 
 #. type: Content of: <sect1><sect2><para>
@@ -401,7 +401,7 @@ msgstr "安装这个库："
 #. type: Content of: <sect1><sect2><para>
 #: lfs-en/chapter05/libstdc++.xml
 msgid ""
-"Remove the libtool archive files because they are harmful for cross "
+"Remove the libtool archive files because they are harmful for cross-"
 "compilation:"
 msgstr "移除对交叉编译有害的 libtool 档案文件："
 
