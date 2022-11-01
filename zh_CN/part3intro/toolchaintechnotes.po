@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: lfs-dev@lists.linuxfromscratch.org\n"
-"POT-Creation-Date: 2022-10-30 22:48+0800\n"
+"POT-Creation-Date: 2022-11-01 11:12+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -446,13 +446,14 @@ msgstr ""
 #: lfs-en/part3intro/toolchaintechnotes.xml
 msgid ""
 "The upshot of the preceding paragraph is that cc1 is unable to build a fully "
-"functional libstdc++, but this is the only compiler available for building "
-"the C/C++ libraries during stage 2. Of course, the compiler built by stage "
-"2, cc-lfs, would be able to build those libraries, but:"
+"functional libstdc++ with the degraded libgcc, but cc1 is the only compiler "
+"available for building the C/C++ libraries during stage 2. Of course, the "
+"compiler built by stage 2, cc-lfs, would be able to build those libraries, "
+"but:"
 msgstr ""
-"上面一段的结论是 cc1 无法构建功能完整的 libstdc++，但这是我们在阶段 2 构建 C/"
-"C++ 库时唯一可用的编译器。当然，在阶段 2 中构建的编译器 cc-lfs 能构建这些库，"
-"但是："
+"上面一段的结论是 cc1 无法使用功能降级的 libgcc 构建功能完整的 libstdc++，但这"
+"是我们在阶段 2 构建 C/C++ 库时唯一可用的编译器。当然，在阶段 2 中构建的编译"
+"器 cc-lfs 能构建这些库，但是："
 
 #. type: Content of: <sect1><sect2><itemizedlist><listitem><para>
 #: lfs-en/part3intro/toolchaintechnotes.xml
@@ -478,8 +479,15 @@ msgstr ""
 
 #. type: Content of: <sect1><sect2><para>
 #: lfs-en/part3intro/toolchaintechnotes.xml
-msgid "So we have to re-build libstdc++ later as a part of gcc stage 2."
-msgstr "因此我们必须在第二阶段构建 gcc 的同时，再次构建 libstdc++。"
+msgid ""
+"So when we build gcc stage 2, we instruct the building system to rebuild "
+"libgcc and libstdc++ with cc1, but link libstdc++ to the newly rebuilt "
+"libgcc instead of the degraded build.  Then the rebuilt libstdc++ will be "
+"fully functional."
+msgstr ""
+"因此在第二阶段构建 gcc 时，我们指示构建系统使用 cc1 再次构建 libgcc 和 "
+"libstdc++，但是将 libstdc++ 链接到刚刚重新构建的 libgcc，而不是 cc1 附带的降"
+"级版本。这样重新构建的 libstdc++ 就会具有完整的功能。"
 
 #. type: Content of: <sect1><sect2><para>
 #: lfs-en/part3intro/toolchaintechnotes.xml
