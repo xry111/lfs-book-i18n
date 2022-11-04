@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: lfs-dev@lists.linuxfromscratch.org\n"
-"POT-Creation-Date: 2022-09-19 14:32+0800\n"
+"POT-Creation-Date: 2022-11-04 11:39+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -476,6 +476,27 @@ msgstr ""
 "如果您的系统支持 UEFI，且您希望通过 UEFI 引导 LFS，您可以跳过这个 LFS 软件"
 "包，并在本章结束时，按照 <ulink url=\"&blfs-book;postlfs/grub-efi."
 "html\">BLFS 页面</ulink>中的说明，安装支持 UEFI 的 GRUB。"
+
+#. type: Content of: <sect1><sect2><warning><para>
+#: lfs-en/chapter08/grub.xml
+msgid "Unset any environment variables which may affect the build:"
+msgstr "移除所有可能影响构建的环境变量："
+
+#. type: Content of: <sect1><sect2><warning><screen>
+#: lfs-en/chapter08/grub.xml
+#, no-wrap
+msgid "<userinput remap='pre'>unset {C,CPP,CXX,LD}FLAGS</userinput>"
+msgstr "<userinput remap='pre'>unset {C,CPP,CXX,LD}FLAGS</userinput>"
+
+#. type: Content of: <sect1><sect2><warning><para>
+#: lfs-en/chapter08/grub.xml
+msgid ""
+"Don't try <quote>tuning</quote> this package with custom compilation flags: "
+"this package is a bootloader, with low-level operations in the source code "
+"which is likely to be broken by some aggressive optimizations."
+msgstr ""
+"不要尝试使用自定义的编译选项<quote>优化</quote>该软件包：该软件包是一个引导加"
+"载器，其源代码包含低级操作，这些操作可能被一些激进的优化所破坏。"
 
 #. type: Content of: <sect1><sect2><para>
 #: lfs-en/chapter08/grub.xml

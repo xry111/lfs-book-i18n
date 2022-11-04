@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: lfs-dev@lists.linuxfromscratch.org\n"
-"POT-Creation-Date: 2022-10-15 09:55+0800\n"
+"POT-Creation-Date: 2022-11-04 11:39+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -466,7 +466,7 @@ msgstr "<parameter>--without-ada</parameter>"
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: lfs-en/chapter06/ncurses.xml
 msgid ""
-"This ensures that Ncurses does not build support for the Ada compiler which "
+"This ensures that Ncurses does not build support for the Ada compiler, which "
 "may be present on the host but will not be available once we enter the "
 "<command>chroot</command> environment."
 msgstr ""
@@ -481,12 +481,12 @@ msgstr "<parameter>--disable-stripping</parameter>"
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: lfs-en/chapter06/ncurses.xml
 msgid ""
-"This switch prevents the building system from stripping the programs using "
-"<command>strip</command> program from the host.  Using host tools on cross-"
-"compiled program can cause failure."
+"This switch prevents the building system from using the <command>strip</"
+"command> program from the host.  Using host tools on cross-compiled programs "
+"can cause failure."
 msgstr ""
-"该选项防止构建过程使用宿主系统的 <command>strip</command> 移除调试符号。对交"
-"叉编译产生的程序使用宿主工具可能导致构建失败。"
+"该选项防止构建过程使用宿主系统的 <command>strip</command> 程序。对交叉编译产"
+"生的程序使用宿主工具可能导致构建失败。"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: lfs-en/chapter06/ncurses.xml lfs-en/chapter08/ncurses.xml
@@ -534,12 +534,12 @@ msgstr "<parameter>TIC_PATH=$(pwd)/build/progs/tic</parameter>"
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: lfs-en/chapter06/ncurses.xml
 msgid ""
-"We need to pass the path of the just built <command>tic</command> able to "
-"run on the building machine, so that the terminal database can be created "
+"We need to pass the path of the newly built <command>tic</command> program "
+"that runs on the building machine, so the terminal database can be created "
 "without errors."
 msgstr ""
 "我们需要传递刚刚构建的，可以在宿主系统运行的 <command>tic</command> 程序的路"
-"径，以保证正确创建终端数据库。"
+"径，这样才能正确创建终端数据库。"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: lfs-en/chapter06/ncurses.xml

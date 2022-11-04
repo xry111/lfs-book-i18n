@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: lfs-dev@lists.linuxfromscratch.org\n"
-"POT-Creation-Date: 2022-10-15 09:55+0800\n"
+"POT-Creation-Date: 2022-11-04 11:39+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -219,6 +219,11 @@ msgstr "编译该软件包："
 msgid "Install the package:"
 msgstr "安装该软件包："
 
+#. type: Content of: <sect1><title>
+#: lfs-en/chapter01/whatsnew.xml lfs-en/chapter08/systemd.xml
+msgid "Systemd-&systemd-version;"
+msgstr "Systemd-&systemd-version;"
+
 #. type: Content of: <sect1><sect2><segmentedlist><segtitle>
 #: lfs-en/chapter05/linux-headers.xml lfs-en/chapter08/intltool.xml
 #: lfs-en/chapter08/libtool.xml lfs-en/chapter08/wheel.xml
@@ -390,11 +395,6 @@ msgstr ""
 "<productname>systemd</productname> <productnumber>&systemd-version;</"
 "productnumber> <placeholder type=\"address\" id=\"0\"/>"
 
-#. type: Content of: <sect1><title>
-#: lfs-en/chapter08/systemd.xml
-msgid "Systemd-&systemd-version;"
-msgstr "Systemd-&systemd-version;"
-
 #. type: Content of: <sect1><indexterm><primary>
 #: lfs-en/chapter08/systemd.xml
 msgid "systemd"
@@ -421,17 +421,6 @@ msgstr "&systemd-fin-du;"
 #: lfs-en/chapter08/systemd.xml
 msgid "Installation of systemd"
 msgstr "安装 systemd"
-
-#. type: Content of: <sect1><sect2><para>
-#: lfs-en/chapter08/systemd.xml
-msgid "First, fix an issue introduced by glibc-2.36."
-msgstr "首先，修复 Glibc-2.36 引发的问题："
-
-#. type: Content of: <sect1><sect2><screen>
-#: lfs-en/chapter08/systemd.xml
-#, no-wrap
-msgid "<userinput remap=\"pre\">patch -Np1 -i ../&systemd-upstream-patch;</userinput>"
-msgstr "<userinput remap=\"pre\">patch -Np1 -i ../&systemd-upstream-patch;</userinput>"
 
 #. type: Content of: <sect1><sect2><para>
 #: lfs-en/chapter08/systemd.xml
@@ -701,18 +690,18 @@ msgstr "<userinput remap=\"adjust\">systemctl preset-all</userinput>"
 #. type: Content of: <sect1><sect2><para>
 #: lfs-en/chapter08/systemd.xml
 msgid ""
-"Disable a service for upgrading binary distros.  It's useless for a basic "
-"Linux system built from source, and it will report an error if it's enabled "
-"but not configured:"
+"Disable two services for upgrading binary distros.  They are useless for a "
+"basic Linux system built from source, and both will report an error if it's "
+"enabled but not configured:"
 msgstr ""
-"禁用用于升级二进制发行版的服务。它对于从源码构建的，基本的 Linux 系统来说没有"
-"意义，而且如果它被启用但未正确配置，会产生错误消息："
+"禁用两个用于升级二进制发行版的服务。它们对于从源码构建的，基本的 Linux 系统来"
+"说没有意义，而且如果其中某个被启用但未进行配置，会产生错误消息："
 
 #. type: Content of: <sect1><sect2><screen>
 #: lfs-en/chapter08/systemd.xml
 #, no-wrap
-msgid "<userinput remap=\"adjust\">systemctl disable systemd-sysupdate</userinput>"
-msgstr "<userinput remap=\"adjust\">systemctl disable systemd-sysupdate</userinput>"
+msgid "<userinput remap=\"adjust\">systemctl disable systemd-sysupdate{,-reboot}</userinput>"
+msgstr "<userinput remap=\"adjust\">systemctl disable systemd-sysupdate{,-reboot}</userinput>"
 
 #. type: Content of: <sect1><sect2><title>
 #: lfs-en/chapter08/systemd.xml
