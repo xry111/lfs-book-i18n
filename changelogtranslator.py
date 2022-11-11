@@ -35,6 +35,8 @@ tt.append(re.compile('\[([^\]]+)\] - Updated? to ([^ ]+) \([sS]ecurity [uU]pdate
 tt.append(re.compile('\[([^\]]+)\] - Updated? to ([^ ]+)\. +Addresses (<ulink [^>]+> *#[0-9]+ *</ulink>).?$', re.MULTILINE|re.DOTALL),
 	{'fr': '[#1] — Mise à jour vers #2. Traiter #3',
          'zh_CN': '[#1] — 更新到 #2。处理 #3。'})
+tt.append(re.compile('\[([^\]]+)\] - Updated? to ([^ ]+) \(Python [mM]odule\)\. +Fixes (<ulink [^>]+> *#[0-9]+ *</ulink>).?$', re.MULTILINE|re.DOTALL),
+	{'zh_CN': '[#1] — 更新到 #2 (Python 模块)。修复 #3。'})
 tt.append(re.compile('(20[0-9]{2})-(0?)([0-9]+)-(0?)([0-9]+)'),
 	{'fr': '#4#5-#2#3-#1',
          'zh_CN': '#1 年 #3 月 #5 日'})

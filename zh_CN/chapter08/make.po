@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: lfs-dev@lists.linuxfromscratch.org\n"
-"POT-Creation-Date: 2022-09-17 18:28+0800\n"
+"POT-Creation-Date: 2022-11-12 00:07+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -281,7 +281,8 @@ msgstr ""
 "productnumber> <placeholder type=\"address\" id=\"0\"/>"
 
 #. type: Content of: <sect1><title>
-#: lfs-en/chapter06/make.xml lfs-en/chapter08/make.xml
+#: lfs-en/chapter06/make.xml lfs-en/chapter01/whatsnew.xml
+#: lfs-en/chapter08/make.xml
 msgid "Make-&make-version;"
 msgstr "Make-&make-version;"
 
@@ -295,6 +296,18 @@ msgstr "Make"
 #: lfs-en/chapter06/make.xml lfs-en/chapter08/make.xml
 msgid "Installation of Make"
 msgstr "安装 Make"
+
+#. type: Content of: <sect1><sect2><screen>
+#: lfs-en/chapter06/make.xml lfs-en/chapter08/make.xml
+#, no-wrap
+msgid ""
+"<userinput remap=\"pre\">sed -e '/ifdef SIGPIPE/,+2 d' \\\n"
+"    -e '/undef  FATAL_SIG/i FATAL_SIG (SIGPIPE);' \\\n"
+"    -i src/main.c</userinput>"
+msgstr ""
+"<userinput remap=\"pre\">sed -e '/ifdef SIGPIPE/,+2 d' \\\n"
+"    -e '/undef  FATAL_SIG/i FATAL_SIG (SIGPIPE);' \\\n"
+"    -i src/main.c</userinput>"
 
 #. type: Content of: <sect1><sect2><para>
 #: lfs-en/chapter06/make.xml lfs-en/chapter08/make.xml
@@ -507,6 +520,11 @@ msgstr "&make-fin-sbu;"
 #: lfs-en/chapter08/make.xml
 msgid "&make-fin-du;"
 msgstr "&make-fin-du;"
+
+#. type: Content of: <sect1><sect2><para>
+#: lfs-en/chapter08/make.xml
+msgid "First, fix some issues identified upstream:"
+msgstr "首先，修复上游发现的一些问题："
 
 #. type: Content of: <sect1><sect2><title>
 #: lfs-en/chapter08/make.xml

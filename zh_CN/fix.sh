@@ -83,10 +83,6 @@ for iter in 1 2 3; do
 	sed -n "${sed_cmd}" -i chapter08/{glibc,stripping}.xml
 done
 
-# Apply lfs-l10n.xml patch, if it's not applied
-grep "Simplified Chinese" stylesheets/lfs-xsl/lfs-l10n.xml ||
-	patch -N -p1 -i ../patches/lfs-l10n.xml.patch
-
 # Opts in the xsl specifying fonts
 cp -v ../zh_CN-fonts.xsl stylesheets/lfs-xsl/pdf/
 grep zh_CN-fonts stylesheets/lfs-xsl/pdf.xsl ||
