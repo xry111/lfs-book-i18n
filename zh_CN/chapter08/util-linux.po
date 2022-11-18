@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Linux From Scratch 11.0\n"
 "Report-Msgid-Bugs-To: lfs-dev@lists.linuxfromscratch.org\n"
-"POT-Creation-Date: 2022-09-19 14:32+0800\n"
+"POT-Creation-Date: 2022-11-18 12:14+0800\n"
 "PO-Revision-Date: 2021-07-28 12:48+0800\n"
 "Last-Translator: Xi Ruoyao <xry111@xry111.site>\n"
 "Language-Team: noneLanguage: zh_CN\n"
@@ -313,10 +313,10 @@ msgstr "<userinput remap=\"install\">make install</userinput>"
 #: lfs-en/chapter08/xz.xml lfs-en/chapter08/grub.xml
 #: lfs-en/chapter08/e2fsprogs.xml lfs-en/chapter08/gettext.xml
 #: lfs-en/chapter08/procps.xml lfs-en/chapter08/glibc.xml
-#: lfs-en/chapter08/dbus.xml lfs-en/chapter08/util-linux.xml
-#: lfs-en/chapter08/gawk.xml lfs-en/chapter08/man-db.xml
-#: lfs-en/chapter08/groff.xml lfs-en/chapter10/kernel.xml
-#: lfs-en/chapter09/bootscripts.xml
+#: lfs-en/chapter08/dbus.xml lfs-en/chapter08/shadow.xml
+#: lfs-en/chapter08/util-linux.xml lfs-en/chapter08/gawk.xml
+#: lfs-en/chapter08/man-db.xml lfs-en/chapter08/groff.xml
+#: lfs-en/chapter10/kernel.xml lfs-en/chapter09/bootscripts.xml
 msgid "Installed directories"
 msgstr "安装的目录"
 
@@ -516,11 +516,10 @@ msgstr "&util-linux-fin-du;"
 #: lfs-en/chapter08/util-linux.xml
 #, no-wrap
 msgid ""
-"<userinput remap=\"configure\">./configure ADJTIME_PATH=/var/lib/hwclock/adjtime   \\\n"
+"<userinput remap=\"configure\">./configure ADJTIME_PATH=/var/lib/hwclock/adjtime \\\n"
 "            --bindir=/usr/bin    \\\n"
 "            --libdir=/usr/lib    \\\n"
 "            --sbindir=/usr/sbin  \\\n"
-"            --docdir=/usr/share/doc/util-linux-&util-linux-version; \\\n"
 "            --disable-chfn-chsh  \\\n"
 "            --disable-login      \\\n"
 "            --disable-nologin    \\\n"
@@ -531,13 +530,13 @@ msgid ""
 "            --disable-static     \\\n"
 "            --without-python     \\\n"
 "            --without-systemd    \\\n"
-"            --without-systemdsystemunitdir</userinput>"
+"            --without-systemdsystemunitdir \\\n"
+"            --docdir=/usr/share/doc/util-linux-&util-linux-version;</userinput>"
 msgstr ""
-"<userinput remap=\"configure\">./configure ADJTIME_PATH=/var/lib/hwclock/adjtime   \\\n"
+"<userinput remap=\"configure\">./configure ADJTIME_PATH=/var/lib/hwclock/adjtime \\\n"
 "            --bindir=/usr/bin    \\\n"
 "            --libdir=/usr/lib    \\\n"
 "            --sbindir=/usr/sbin  \\\n"
-"            --docdir=/usr/share/doc/util-linux-&util-linux-version; \\\n"
 "            --disable-chfn-chsh  \\\n"
 "            --disable-login      \\\n"
 "            --disable-nologin    \\\n"
@@ -548,17 +547,17 @@ msgstr ""
 "            --disable-static     \\\n"
 "            --without-python     \\\n"
 "            --without-systemd    \\\n"
-"            --without-systemdsystemunitdir</userinput>"
+"            --without-systemdsystemunitdir \\\n"
+"            --docdir=/usr/share/doc/util-linux-&util-linux-version;</userinput>"
 
 #. type: Content of: <sect1><sect2><screen>
 #: lfs-en/chapter08/util-linux.xml
 #, no-wrap
 msgid ""
-"<userinput remap=\"configure\">./configure ADJTIME_PATH=/var/lib/hwclock/adjtime   \\\n"
+"<userinput remap=\"configure\">./configure ADJTIME_PATH=/var/lib/hwclock/adjtime \\\n"
 "            --bindir=/usr/bin    \\\n"
 "            --libdir=/usr/lib    \\\n"
 "            --sbindir=/usr/sbin  \\\n"
-"            --docdir=/usr/share/doc/util-linux-&util-linux-version; \\\n"
 "            --disable-chfn-chsh  \\\n"
 "            --disable-login      \\\n"
 "            --disable-nologin    \\\n"
@@ -567,13 +566,13 @@ msgid ""
 "            --disable-runuser    \\\n"
 "            --disable-pylibmount \\\n"
 "            --disable-static     \\\n"
-"            --without-python</userinput>"
+"            --without-python     \\\n"
+"            --docdir=/usr/share/doc/util-linux-&util-linux-version;</userinput>"
 msgstr ""
-"<userinput remap=\"configure\">./configure ADJTIME_PATH=/var/lib/hwclock/adjtime   \\\n"
+"<userinput remap=\"configure\">./configure ADJTIME_PATH=/var/lib/hwclock/adjtime \\\n"
 "            --bindir=/usr/bin    \\\n"
 "            --libdir=/usr/lib    \\\n"
 "            --sbindir=/usr/sbin  \\\n"
-"            --docdir=/usr/share/doc/util-linux-&util-linux-version; \\\n"
 "            --disable-chfn-chsh  \\\n"
 "            --disable-login      \\\n"
 "            --disable-nologin    \\\n"
@@ -582,7 +581,8 @@ msgstr ""
 "            --disable-runuser    \\\n"
 "            --disable-pylibmount \\\n"
 "            --disable-static     \\\n"
-"            --without-python</userinput>"
+"            --without-python     \\\n"
+"            --docdir=/usr/share/doc/util-linux-&util-linux-version;</userinput>"
 
 #. type: Content of: <sect1><sect2><para>
 #: lfs-en/chapter08/util-linux.xml

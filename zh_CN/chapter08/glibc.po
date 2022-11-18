@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Linux From Scratch 11.0\n"
 "Report-Msgid-Bugs-To: lfs-dev@lists.linuxfromscratch.org\n"
-"POT-Creation-Date: 2022-11-01 11:12+0800\n"
+"POT-Creation-Date: 2022-11-18 14:14+0800\n"
 "PO-Revision-Date: 2021-08-21 11:33+0800\n"
 "Last-Translator: Xi Ruoyao <xry111@xry111.site>\n"
 "Language-Team: noneLanguage: zh_CN\n"
@@ -342,10 +342,10 @@ msgstr "<userinput remap=\"install\">make install</userinput>"
 #: lfs-en/chapter08/xz.xml lfs-en/chapter08/grub.xml
 #: lfs-en/chapter08/e2fsprogs.xml lfs-en/chapter08/gettext.xml
 #: lfs-en/chapter08/procps.xml lfs-en/chapter08/glibc.xml
-#: lfs-en/chapter08/dbus.xml lfs-en/chapter08/util-linux.xml
-#: lfs-en/chapter08/gawk.xml lfs-en/chapter08/man-db.xml
-#: lfs-en/chapter08/groff.xml lfs-en/chapter10/kernel.xml
-#: lfs-en/chapter09/bootscripts.xml
+#: lfs-en/chapter08/dbus.xml lfs-en/chapter08/shadow.xml
+#: lfs-en/chapter08/util-linux.xml lfs-en/chapter08/gawk.xml
+#: lfs-en/chapter08/man-db.xml lfs-en/chapter08/groff.xml
+#: lfs-en/chapter10/kernel.xml lfs-en/chapter09/bootscripts.xml
 msgid "Installed directories"
 msgstr "安装的目录"
 
@@ -598,8 +598,8 @@ msgstr "&glibc-fin-du;"
 #. type: Content of: <sect1><sect2><para>
 #: lfs-en/chapter08/glibc.xml
 msgid ""
-"First, fix an issue building Glibc with parallel jobs and make-4.4 or later:"
-msgstr "首先，修复使用并行任务和 make-4.4 或更新版本构建 Glibc 时出现的问题："
+"First, fix an issue building Glibc with parallel jobs and Make-4.4 or later:"
+msgstr "首先，修复使用并行任务和 Make-4.4 或更新版本构建 Glibc 时出现的问题："
 
 #. type: Content of: <sect1><sect2><para>
 #: lfs-en/chapter08/glibc.xml
@@ -662,7 +662,7 @@ msgstr "该选项禁用 GCC 的 -Werror 选项。这对于运行测试套件来�
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: lfs-en/chapter08/glibc.xml
 msgid ""
-"This option tells the build system that this glibc may be used with kernels "
+"This option tells the build system that this Glibc may be used with kernels "
 "as old as &min-kernel;. This means generating workarounds in case a system "
 "call introduced in a later version cannot be used."
 msgstr ""
@@ -804,7 +804,8 @@ msgstr "<userinput remap=\"install\">sed '/test-installation/s@$(PERL)@echo not 
 #. type: Content of: <sect1><sect2><para>
 #: lfs-en/chapter08/glibc.xml
 msgid ""
-"Fix hardcoded path to the executable loader in <command>ldd</command> script:"
+"Fix a hardcoded path to the executable loader in the <command>ldd</command> "
+"script:"
 msgstr "改正 <command>ldd</command> 脚本中硬编码的可执行文件加载器路径："
 
 #. type: Content of: <sect1><sect2><screen>
@@ -849,11 +850,11 @@ msgstr ""
 #: lfs-en/chapter08/glibc.xml
 msgid ""
 "Next, install the locales that can make the system respond in a different "
-"language.  None of the locales are required, but if some of them are "
-"missing, the test suites of future packages would skip important testcases."
+"language.  None of these locales are required, but if some of them are "
+"missing, the test suites of some packages will skip important test cases."
 msgstr ""
 "下面，安装一些 locale，它们可以使得系统用不同语言响应用户请求。这些 locale 都"
-"不是必须的，但是如果缺少了它们中的某些，在将来运行软件包的测试套件时，可能跳"
+"不是必须的，但是如果缺少了它们中的某些，在运行一些软件包的测试套件时，可能跳"
 "过重要的测试。"
 
 #. type: Content of: <sect1><sect2><para>
@@ -963,14 +964,14 @@ msgstr "另外，安装适合您自己国家、语言和字符集的 locale。"
 #. type: Content of: <sect1><sect2><para>
 #: lfs-en/chapter08/glibc.xml
 msgid ""
-"Alternatively, install all locales listed in the <filename>glibc-&glibc-"
+"Alternatively, install all the locales listed in the <filename>glibc-&glibc-"
 "version;/localedata/SUPPORTED</filename> file (it includes every locale "
 "listed above and many more) at once with the following time-consuming "
 "command:"
 msgstr ""
-"或者，也可以一次安装 <filename>glibc-&glibc-version;/localedata/SUPPORTED</"
-"filename> 中列出的所有 locale (包括上面列出的所有 locale，以及其他很多)。执行"
-"下面这个需要很长时间的命令："
+"或者，也可以执行这个需要很长时间的命令，直接安装 <filename>glibc-&glibc-"
+"version;/localedata/SUPPORTED</filename> 中列出的所有 locale (包括上面列出的"
+"所有 locale，以及其他很多)："
 
 #. type: Content of: <sect1><sect2><screen>
 #: lfs-en/chapter08/glibc.xml
@@ -1090,7 +1091,7 @@ msgstr ""
 
 #. type: Content of: <sect1><sect2><sect3><title>
 #: lfs-en/chapter08/glibc.xml
-msgid "Adding time zone data"
+msgid "Adding Time Zone Data"
 msgstr "添加时区数据"
 
 #. type: Content of: <sect1><sect2><sect3><para>
