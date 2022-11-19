@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: lfs-dev@lists.linuxfromscratch.org\n"
-"POT-Creation-Date: 2022-09-17 18:28+0800\n"
+"POT-Creation-Date: 2022-11-19 15:53+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -362,6 +362,7 @@ msgstr "安装的库"
 #. type: Content of: <sect1><sect2><para>
 #: lfs-en/chapter08/expect.xml lfs-en/chapter08/tcl.xml
 #: lfs-en/chapter08/jinja2.xml lfs-en/chapter08/check.xml
+#: lfs-en/chapter08/groff.xml
 msgid "Build the package:"
 msgstr "构建该软件包："
 
@@ -415,12 +416,12 @@ msgstr "Tcl"
 msgid ""
 "The <application>Tcl</application> package contains the Tool Command "
 "Language, a robust general-purpose scripting language. The "
-"<application>Expect</application> package is written in the "
-"<application>Tcl</application> language."
+"<application>Expect</application> package is written in <application>Tcl</"
+"application> (pronounced \"tickle\")."
 msgstr ""
 "<application>Tcl</application> 软件包包含工具命令语言，它是一个可靠的通用脚本"
 "语言。<application>Except</application> 软件包是用 <application>Tcl</"
-"application> 语言编写的."
+"application> (读作“tickle”) 编写的。"
 
 #. type: Content of: <sect1><sect2><segmentedlist><seglistitem><seg>
 #: lfs-en/chapter08/tcl.xml
@@ -441,15 +442,15 @@ msgstr "安装 Tcl"
 #: lfs-en/chapter08/tcl.xml
 msgid ""
 "This package and the next two (Expect and DejaGNU) are installed to support "
-"running the test suites for binutils and GCC and other packages.  Installing "
+"running the test suites for Binutils, GCC and other packages.  Installing "
 "three packages for testing purposes may seem excessive, but it is very "
 "reassuring, if not essential, to know that the most important tools are "
 "working properly."
 msgstr ""
-"为了支持 Binutils 和 GCC 等软件包测试套件的运行，需要安装这个软件包和接下来的"
-"两个 (Expect 与 DejaGNU)。为了测试目的安装三个软件包看似浪费，但是只有运行了"
-"测试，才能放心地确定多数重要工具可以正常工作，即使测试不是必要的。我们必须安"
-"装这些软件包，才能执行本章中的测试套件。"
+"为了支持 Binutils，GCC，以及其他一些软件包测试套件的运行，需要安装这个软件包"
+"和接下来的两个 (Expect 与 DejaGNU)。为了测试目的安装三个软件包看似浪费，但是"
+"只有运行了测试，才能放心地确定多数重要工具可以正常工作，即使测试不是必要的。"
+"我们必须安装这些软件包，才能执行本章中的测试套件。"
 
 #. type: Content of: <sect1><sect2><para>
 #: lfs-en/chapter08/tcl.xml
@@ -527,10 +528,10 @@ msgstr ""
 #: lfs-en/chapter08/tcl.xml
 msgid ""
 "The various <quote>sed</quote> instructions after the <quote>make</quote> "
-"command removes references to the build directory from the configuration "
-"files and replaces them with the install directory.  This is not mandatory "
-"for the remainder of LFS, but may be needed in case a package built later "
-"uses Tcl."
+"command remove references to the build directory from the configuration "
+"files and replace them with the install directory.  This is not mandatory "
+"for the remainder of LFS, but may be needed if a package built later uses "
+"Tcl."
 msgstr ""
 "<quote>make</quote>命令之后的若干<quote>sed</quote>命令从配置文件中删除构建目"
 "录，并用安装目录替换它们。构建 LFS 的后续过程不对此严格要求，但如果之后构建使"

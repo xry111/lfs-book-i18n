@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Linux From Scratch 11.0\n"
 "Report-Msgid-Bugs-To: lfs-dev@lists.linuxfromscratch.org\n"
-"POT-Creation-Date: 2022-11-04 11:39+0800\n"
+"POT-Creation-Date: 2022-11-19 15:53+0800\n"
 "PO-Revision-Date: 2021-08-16 11:42+0800\n"
 "Last-Translator: Xi Ruoyao <xry111@xry111.site>\n"
 "Language-Team: noneLanguage: zh_CN\n"
@@ -376,7 +376,7 @@ msgstr "Binutils 文档推荐创建一个新的目录，以在其中构建 Binut
 #: lfs-en/chapter08/jinja2.xml lfs-en/chapter08/flex.xml
 #: lfs-en/chapter08/binutils.xml lfs-en/chapter08/bzip2.xml
 #: lfs-en/chapter08/vim.xml lfs-en/chapter08/meson.xml
-#: lfs-en/chapter08/shadow.xml lfs-en/chapter08/gperf.xml
+#: lfs-en/chapter08/gperf.xml
 msgid "Installed directory"
 msgstr "安装的目录"
 
@@ -560,9 +560,9 @@ msgstr "<parameter>--enable-gold</parameter>"
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: lfs-en/chapter08/binutils.xml
 msgid ""
-"Build the gold linker and install it as ld.gold (along side the default "
+"Build the gold linker and install it as ld.gold (alongside the default "
 "linker)."
-msgstr "构建 gold 链接器，并且将它 (和默认链接器一起) 安装为 ld.gold。"
+msgstr "构建 gold 链接器，并且将它安装为 ld.gold (不影响默认链接器的安装)。"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: lfs-en/chapter08/binutils.xml
@@ -597,7 +597,7 @@ msgstr ""
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: lfs-en/chapter08/binutils.xml
 msgid ""
-"Use the installed zlib library rather than building the included version."
+"Use the installed zlib library instead of building the included version."
 msgstr "使用安装好的 zlib 库，而不是构建附带的版本。"
 
 #. type: Content of: <sect1><sect2><screen>
@@ -621,8 +621,8 @@ msgid ""
 "Because this is a custom system, this target-specific directory in <filename "
 "class=\"directory\">/usr</filename> is not required. <filename "
 "class=\"directory\">$(exec_prefix)/$(target_alias)</filename> would be used "
-"if the system was used to cross-compile (for example, compiling a package on "
-"an Intel machine that generates code that can be executed on PowerPC "
+"if the system were used to cross-compile (for example, compiling a package "
+"on an Intel machine that generates code that can be executed on PowerPC "
 "machines)."
 msgstr ""
 "一般来说，工具目录 (最终存放该软件包中可执行文件的目录) 被设定为 <filename "
@@ -661,23 +661,24 @@ msgstr "<userinput remap=\"test\">grep '^FAIL:' $(find -name '*.log')</userinput
 #. type: Content of: <sect1><sect2><para>
 #: lfs-en/chapter08/binutils.xml
 msgid ""
-"Twelve tests fail in the gold testsuite when the <option>--enable-default-"
+"Twelve tests fail in the gold test suite when the <option>--enable-default-"
 "pie</option> and <option>--enable-default-ssp</option> options are passed to "
 "GCC.  The test named <filename>ar with versioned solib</filename> is also "
 "known to fail.  Because of a race between the gas testsuite and the gprofng "
 "testsuite, some gas tests may fail if parallel jobs are used.  If you are "
 "not assured of the correctness of gas, invoke <command>make check-gas</"
 "command> to run gas testsuite separately and all tests should pass. Three "
-"gprofng tests result <literal>ERROR</literal> and they are counted as "
-"<literal>UNRESOLVED</literal> in the summary."
+"gprofng tests yield the <literal>ERROR</literal> result, and they are "
+"counted as <literal>UNRESOLVED</literal> in the summary."
 msgstr ""
 "gold 测试中有十二项测试在 GCC 启用 <option>--enable-default-pie</option> 和 "
 "<option>--enable-default-ssp</option> 时失败。另外，已知名为 <filename>ar "
 "with versioned solib</filename> 的测试会失败。由于 gas 测试套件和 gprofng 测"
 "试套件的竞争，一些 gas 测试在启用并行任务时可能失败。如果您不确定 gas 是否正"
 "常工作，可以使用 <command>make check-gas</command> 命令单独运行 gas 测试套"
-"件，此时所有测试都应该能正常通过。三项 gprofng 测试返回 <literal>ERROR</"
-"literal>，而且它们在测试结果小结中被统计为 <literal>UNRESOLVED</literal>。"
+"件，此时所有测试都应该能正常通过。三项 gprofng 测试产生 <literal>ERROR</"
+"literal> 结果，而且它们在测试结果小结中被统计为 <literal>UNRESOLVED</"
+"literal>。"
 
 #. type: Content of: <sect1><sect2><screen>
 #: lfs-en/chapter08/binutils.xml
@@ -817,7 +818,7 @@ msgstr "<command>elfedit</command>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: lfs-en/chapter08/binutils.xml
-msgid "Updates the ELF header of ELF files"
+msgid "Updates the ELF headers of ELF files"
 msgstr "更改 ELF 文件的 ELF 头"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
@@ -847,7 +848,7 @@ msgstr "<command>gprofng</command>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: lfs-en/chapter08/binutils.xml
-msgid "Gather and analyze performance data"
+msgid "Gathers and analyzes performance data"
 msgstr "收集和分析性能数据"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
@@ -896,8 +897,8 @@ msgstr "<command>ld.bfd</command>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: lfs-en/chapter08/binutils.xml
-msgid "Hard link to <command>ld</command>"
-msgstr "<command>ld</command> 的硬链接"
+msgid "A hard link to <command>ld</command>"
+msgstr "一个指向 <command>ld.bfd</command> 的硬链接"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: lfs-en/chapter08/binutils.xml
