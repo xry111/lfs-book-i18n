@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: lfs-dev@lists.linuxfromscratch.org\n"
-"POT-Creation-Date: 2022-09-17 18:28+0800\n"
+"POT-Creation-Date: 2022-11-22 15:56+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -308,10 +308,10 @@ msgstr "<userinput remap=\"install\">make install</userinput>"
 #: lfs-en/chapter08/xz.xml lfs-en/chapter08/grub.xml
 #: lfs-en/chapter08/e2fsprogs.xml lfs-en/chapter08/gettext.xml
 #: lfs-en/chapter08/procps.xml lfs-en/chapter08/glibc.xml
-#: lfs-en/chapter08/dbus.xml lfs-en/chapter08/util-linux.xml
-#: lfs-en/chapter08/gawk.xml lfs-en/chapter08/man-db.xml
-#: lfs-en/chapter08/groff.xml lfs-en/chapter10/kernel.xml
-#: lfs-en/chapter09/bootscripts.xml
+#: lfs-en/chapter08/dbus.xml lfs-en/chapter08/shadow.xml
+#: lfs-en/chapter08/util-linux.xml lfs-en/chapter08/gawk.xml
+#: lfs-en/chapter08/man-db.xml lfs-en/chapter08/groff.xml
+#: lfs-en/chapter10/kernel.xml lfs-en/chapter09/bootscripts.xml
 msgid "Installed directories"
 msgstr "安装的目录"
 
@@ -478,11 +478,11 @@ msgstr "Acl"
 #: lfs-en/chapter08/acl.xml
 msgid ""
 "The Acl package contains utilities to administer Access Control Lists, which "
-"are used to define more fine-grained discretionary access rights for files "
-"and directories."
+"are used to define fine-grained discretionary access rights for files and "
+"directories."
 msgstr ""
-"Acl 软件包包含管理访问控制列表的工具，访问控制列表能够更细致地自由定义文件和"
-"目录的访问权限。"
+"Acl 软件包包含管理访问控制列表的工具，访问控制列表能够细致地自由定义文件和目"
+"录的访问权限。"
 
 #. type: Content of: <sect1><sect2><segmentedlist><seglistitem><seg>
 #: lfs-en/chapter08/acl.xml
@@ -519,16 +519,16 @@ msgstr ""
 #. type: Content of: <sect1><sect2><para>
 #: lfs-en/chapter08/acl.xml
 msgid ""
-"The Acl tests need to be run on a filesystem that supports access controls "
-"after <application>Coreutils</application> has been built with the Acl "
-"libraries.  If desired, return to this package and run <command>make check</"
-"command> after <application>Coreutils</application> has been built later in "
-"this chapter."
+"The Acl tests must be run on a filesystem that supports access controls, but "
+"not until the <application>Coreutils</application> package has been built, "
+"using the <application>Acl</application> libraries.  If desired, return to "
+"this package and run <command>make check</command> after the "
+"<application>Coreutils</application> package has been built."
 msgstr ""
-"Acl 的测试套件必须在构建了链接到 Acl 库的 <application>Coreutils</"
-"application> 后才能在支持访问控制的文件系统上运行。如果想运行它们，可以稍后返"
-"回这里，执行 <command>make check</command>，前提是本章中的 "
-"<application>Coreutils</application> 已经构建完成。"
+"Acl 的测试套件必须在支持访问控制的文件系统上运行，且必须在使用 "
+"<application>Acl</application> 库构建 <application>Coreutils</application> 软"
+"件包之后才能运行。如果想运行它们，在构建 <application>Coreutils</"
+"application> 软件包后，返回这里并执行 <command>make check</command>。"
 
 #. type: Content of: <sect1><sect2><title>
 #: lfs-en/chapter08/acl.xml

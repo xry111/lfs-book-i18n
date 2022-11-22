@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: lfs-dev@lists.linuxfromscratch.org\n"
-"POT-Creation-Date: 2022-11-18 12:14+0800\n"
+"POT-Creation-Date: 2022-11-23 01:23+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -380,15 +380,6 @@ msgid ""
 msgstr ""
 "<?dbfo list-presentation=\"list\"?> <?dbhtml list-presentation=\"table\"?>"
 
-#. type: Content of: <sect1><sect2><variablelist><title>
-#: lfs-en/chapter07/python.xml lfs-en/chapter07/gettext.xml
-#: lfs-en/chapter08/tar.xml lfs-en/chapter08/kbd.xml
-#: lfs-en/chapter08/readline.xml lfs-en/chapter08/libffi.xml
-#: lfs-en/chapter08/gdbm.xml lfs-en/chapter08/procps.xml
-#: lfs-en/chapter08/shadow.xml
-msgid "The meaning of the configure option:"
-msgstr "配置选项的含义："
-
 #. type: Content of: <sect1><sect2><segmentedlist><segtitle>
 #: lfs-en/chapter08/findutils.xml lfs-en/chapter08/file.xml
 #: lfs-en/chapter08/intltool.xml lfs-en/chapter08/grep.xml
@@ -539,11 +530,11 @@ msgid ""
 "also allows passwords longer than 8 characters. It is also necessary to "
 "change the obsolete <filename class=\"directory\">/var/spool/mail</filename> "
 "location for user mailboxes that Shadow uses by default to the <filename "
-"class=\"directory\">/var/mail</filename> location used currently. And, get "
-"rid of <filename class=\"directory\">/bin</filename> and <filename "
-"class=\"directory\">/sbin</filename> from <envar>PATH</envar>, since they "
-"are simply symlinks to their counterpart in <filename class=\"directory\">/"
-"usr</filename>."
+"class=\"directory\">/var/mail</filename> location used currently. And, "
+"remove <filename class=\"directory\">/bin</filename> and <filename "
+"class=\"directory\">/sbin</filename> from the <envar>PATH</envar>, since "
+"they are simply symlinks to their counterparts in <filename "
+"class=\"directory\">/usr</filename>."
 msgstr ""
 "不使用默认的 <emphasis>crypt</emphasis> 加密方法，使用更安全的 "
 "<emphasis>SHA-512</emphasis> 方法加密密码，该方法也允许长度超过 8 个字符的密"
@@ -557,13 +548,13 @@ msgstr ""
 #. type: Content of: <sect1><sect2><note><para>
 #: lfs-en/chapter08/shadow.xml
 msgid ""
-"If <filename class=\"directory\">/bin</filename> and/or <filename "
-"class=\"directory\">/sbin</filename> are preferred to be left over in "
-"<envar>PATH</envar> for some reason, modify <envar>PATH</envar> in "
-"<filename>.bashrc</filename> after LFS is built."
+"If you wish to include <filename class=\"directory\">/bin</filename> and/or "
+"<filename class=\"directory\">/sbin</filename> in the <envar>PATH</envar> "
+"for some reason, modify the <envar>PATH</envar> in <filename>.bashrc</"
+"filename> after LFS has been built."
 msgstr ""
 "如果由于某种原因，希望将 <filename class=\"directory\">/bin</filename> 和/或 "
-"<filename class=\"directory\">/sbin</filename> 保留在 <envar>PATH</envar> "
+"<filename class=\"directory\">/sbin</filename> 包含在 <envar>PATH</envar> "
 "中，可以在构建 LFS 后通过 <filename>.bashrc</filename> 修改 <envar>PATH</"
 "envar>。"
 
@@ -583,8 +574,8 @@ msgstr ""
 
 #. type: Content of: <sect1><sect2><note><para>
 #: lfs-en/chapter08/shadow.xml
-msgid "If you chose to build Shadow with Cracklib support, run the following:"
-msgstr "如果您选择构建有 Cracklib 支持的 Shadow，执行以下命令："
+msgid "If you chose to build Shadow with Cracklib support, issue this command:"
+msgstr "如果您选择构建有 Cracklib 支持的 Shadow，执行该命令："
 
 #. type: Content of: <sect1><sect2><note><screen>
 #: lfs-en/chapter08/shadow.xml
@@ -611,6 +602,11 @@ msgstr ""
 "            --disable-static  \\\n"
 "            --with-group-name-max-length=32</userinput>"
 
+#. type: Content of: <sect1><sect2><variablelist><title>
+#: lfs-en/chapter08/shadow.xml
+msgid "The meaning of the new configuration options:"
+msgstr "新的配置选项的含义："
+
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: lfs-en/chapter08/shadow.xml
 msgid "<command>touch /usr/bin/passwd</command>"
@@ -620,11 +616,11 @@ msgstr "<command>touch /usr/bin/passwd</command>"
 #: lfs-en/chapter08/shadow.xml
 msgid ""
 "The file <filename>/usr/bin/passwd</filename> needs to exist because its "
-"location is hardcoded in some programs, and if it does not exist, the "
-"default location is not right."
+"location is hardcoded in some programs; if it does not already exist, the "
+"installation script will create it in the wrong place."
 msgstr ""
 "我们需要保证 <filename>/usr/bin/passwd</filename> 存在，因为它的位置会被硬编"
-"码到一些程序中，且如果它不存在的话，会使用错误的默认位置。"
+"码到一些程序中；且如果它不存在的话，安装脚本会在错误的位置创建它。"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: lfs-en/chapter08/shadow.xml
@@ -634,9 +630,9 @@ msgstr "<parameter>--with-group-name-max-length=32</parameter>"
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: lfs-en/chapter08/shadow.xml
 msgid ""
-"The maximum user name is 32 characters.  Make the maximum group name the "
-"same."
-msgstr "最长用户名可以有 32 个字符。设定组名称最大长度为相同值。"
+"The longest permissible user name is 32 characters.  Make the maximum length "
+"of a group name the same."
+msgstr "用户名最长只能有 32 个字符。设定组名称最大长度为相同值。"
 
 #. type: Content of: <sect1><sect2><screen>
 #: lfs-en/chapter08/shadow.xml
@@ -660,10 +656,9 @@ msgid ""
 "set and change their passwords; and perform other administrative tasks. For "
 "a full explanation of what <emphasis>password shadowing</emphasis> means, "
 "see the <filename>doc/HOWTO</filename> file within the unpacked source tree. "
-"If using Shadow support, keep in mind that programs which need to verify "
+"If you use Shadow support, keep in mind that programs which need to verify "
 "passwords (display managers, FTP programs, pop3 daemons, etc.)  must be "
-"Shadow-compliant. That is, they need to be able to work with shadowed "
-"passwords."
+"Shadow-compliant. That is, they must be able to work with shadowed passwords."
 msgstr ""
 "该软件包包含用于添加、修改、删除用户和组，设定和修改它们的密码，以及进行其他"
 "管理任务的工具。如果希望查阅关于 <emphasis>password shadowing</emphasis> 的详"
@@ -698,18 +693,18 @@ msgstr "<userinput>grpconv</userinput>"
 #: lfs-en/chapter08/shadow.xml
 msgid ""
 "Shadow's default configuration for the <command>useradd</command> utility "
-"has a few caveats that need some explanation. First, the default action for "
-"the <command>useradd</command> utility is to create the user and a group of "
-"the same name as the user. By default the user ID (UID) and group ID (GID) "
-"numbers will begin with 1000. This means if you don't pass parameters to "
-"<command>useradd</command>, each user will be a member of a unique group on "
-"the system. If this behavior is undesirable, you'll need to pass one of the "
-"<parameter>-g</parameter> or <parameter>-N</parameter> parameter to "
-"<command>useradd</command> or to change the setting of "
-"<parameter>USERGROUPS_ENAB</parameter> in <filename>/etc/login.defs</"
-"filename>. See <filename>useradd(8)</filename> for more information."
+"needs some explanation. First, the default action for the <command>useradd</"
+"command> utility is to create the user and a group with the same name as the "
+"user. By default the user ID (UID) and group ID (GID) numbers will begin at "
+"1000. This means if you don't pass extra parameters to <command>useradd</"
+"command>, each user will be a member of a unique group on the system. If "
+"this behavior is undesirable, you'll need to pass either the <parameter>-g</"
+"parameter> or <parameter>-N</parameter> parameter to <command>useradd</"
+"command>, or else change the setting of <parameter>USERGROUPS_ENAB</"
+"parameter> in <filename>/etc/login.defs</filename>. See "
+"<filename>useradd(8)</filename> for more information."
 msgstr ""
-"Shadow 中 <command>useradd</command> 的默认配置有一些需要解释的事项。首先，"
+"下面需要解释 Shadow 中 <command>useradd</command> 的默认配置。首先，"
 "<command>useradd</command> 的默认操作是创建一个用户，以及一个名字和用户名相同"
 "的组。默认情况下，用户 ID (UID) 和组 ID (GID) 会从 1000 开始。这意味着，如果"
 "您不向 <command>useradd</command> 传递参数，每个用户都会属于一个不同的组。如"
@@ -722,10 +717,10 @@ msgstr ""
 #: lfs-en/chapter08/shadow.xml
 msgid ""
 "Second, to change the default parameters, the file <filename>/etc/default/"
-"useradd</filename> needs to be created and tailored to suit your particular "
+"useradd</filename> must be created and tailored to suit your particular "
 "needs. Create it with:"
 msgstr ""
-"其次，为了修改默认参数，需要创建 <filename>/etc/default/useradd</filename> 文"
+"其次，为了修改默认参数，必须创建 <filename>/etc/default/useradd</filename> 文"
 "件，并定制其内容，以满足您的特定需要。使用以下命令创建它："
 
 #. type: Content of: <sect1><sect2><screen>
@@ -740,7 +735,7 @@ msgstr ""
 
 #. type: Content of: <sect1><sect2><variablelist><title>
 #: lfs-en/chapter08/shadow.xml
-msgid "<filename>/etc/default/useradd</filename> Parameter Explanations"
+msgid "<filename>/etc/default/useradd</filename> parameter explanations"
 msgstr "<filename>/etc/default/useradd</filename> 参数解释"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
@@ -753,26 +748,26 @@ msgstr "<parameter>GROUP=999</parameter>"
 msgid ""
 "This parameter sets the beginning of the group numbers used in the "
 "<filename>/etc/group</filename> file. The particular value 999 comes from "
-"the <parameter>--gid</parameter> parameter above.  You can modify it to "
-"anything you desire.  Note that <command>useradd</command> will never reuse "
-"a UID or GID.  If the number identified in this parameter is used, it will "
-"use the next available number. Note also that if you don't have a group with "
-"an ID equal to this number on your system the first time you use "
+"the <parameter>--gid</parameter> parameter above.  You may set it to any "
+"desired value.  Note that <command>useradd</command> will never reuse a UID "
+"or GID.  If the number identified in this parameter is used, it will use the "
+"next available number. Note also that if you don't have a group with an ID "
+"equal to this number on your system, then the first time you use "
 "<command>useradd</command> without the <parameter>-g</parameter> parameter, "
-"you will get a message displayed on the terminal that says: "
-"<computeroutput>useradd: unknown GID 999</computeroutput>, although the "
-"account is correctly created. That is why we have created the group "
-"<systemitem class=\"groupname\">users</systemitem> with this group ID in "
-"<xref linkend='ch-tools-createfiles'/>."
+"an error message will be generated &mdash; <computeroutput>useradd: unknown "
+"GID 999</computeroutput>, despite the account can still be created "
+"correctly. That is why we created the group <systemitem "
+"class=\"groupname\">users</systemitem> with this group ID in <xref "
+"linkend='ch-tools-createfiles'/>."
 msgstr ""
 "该参数设定 /etc/group 文件中使用的第一个组编号。这里的值 999 是在上面的 "
 "<parameter>--gid</parameter> 参数中给定的。您可以将它修改为您希望的任何值。注"
 "意，<command>useradd</command> 绝不会重用 UID 或 GID。如果该参数指定的数字已"
 "经被使用了，它就会使用下一个可用的数字。另外，如果您第一次使用不带 "
 "<parameter>-g</parameter> 参数的 <command>useradd</command> 命令时没有编号 "
-"999 的组，您就会在终端看到一条消息：<computeroutput>useradd: unknown GID "
-"999</computeroutput>，不过新的用户账号仍会被正常创建。为了防止这种现象的出"
-"现，我们在<xref linkend='ch-tools-createfiles'/>中已经用编号 999 创建了 "
+"999 的组，您就会在终端看到错误消息 —— <computeroutput>useradd: unknown GID "
+"999</computeroutput>，尽管用户账号仍会被正常创建。为了防止这种现象的出现，我"
+"们在<xref linkend='ch-tools-createfiles'/>中已经用编号 999 创建了 "
 "<systemitem class=\"groupname\">users</systemitem> 组。"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
@@ -784,16 +779,15 @@ msgstr "<parameter>CREATE_MAIL_SPOOL=yes</parameter>"
 #: lfs-en/chapter08/shadow.xml
 msgid ""
 "This parameter causes <command>useradd</command> to create a mailbox file "
-"for the newly created user. <command>useradd</command> will make the group "
+"for each new user. <command>useradd</command> will assign the group "
 "ownership of this file to the <systemitem class=\"groupname\">mail</"
-"systemitem> group with 0660 permissions. If you would prefer that these "
-"mailbox files are not created by <command>useradd</command>, issue the "
-"following command:"
+"systemitem> group with 0660 permissions. If you would rather not create "
+"these files, issue the following command:"
 msgstr ""
-"该参数使得 <command>useradd</command> 为新创建的用户建立邮箱文件。"
+"该参数使得 <command>useradd</command> 为每个新用户创建邮箱文件。"
 "<command>useradd</command> 会使得 <systemitem class=\"groupname\">mail</"
 "systemitem> 为邮箱文件属组，并为邮箱文件赋予 0660 权限模式。如果您不希望 "
-"<command>useradd</command> 创建这些邮箱文件，执行以下命令："
+"<command>useradd</command> 创建邮箱文件，执行以下命令："
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><screen>
 #: lfs-en/chapter08/shadow.xml
@@ -803,8 +797,8 @@ msgstr "<userinput>sed -i '/MAIL/s/yes/no/' /etc/default/useradd</userinput>"
 
 #. type: Content of: <sect1><sect2><title>
 #: lfs-en/chapter08/shadow.xml
-msgid "Setting the root password"
-msgstr "设定 root 密码"
+msgid "Setting the Root Password"
+msgstr "设定根用户密码"
 
 #. type: Content of: <sect1><sect2><para>
 #: lfs-en/chapter08/shadow.xml
@@ -948,8 +942,8 @@ msgstr "<command>faillog</command>"
 #: lfs-en/chapter08/shadow.xml
 msgid ""
 "Is used to examine the log of login failures, to set a maximum number of "
-"failures before an account is blocked, or to reset the failure count"
-msgstr "检查失败登录日志，设定锁定账户的最大失败次数，或重置失败次数"
+"failures before an account is blocked, and to reset the failure count"
+msgstr "用于检查失败登录日志，设定锁定账户的最大失败次数，以及重置失败次数"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: lfs-en/chapter08/shadow.xml
@@ -1214,9 +1208,9 @@ msgstr "<command>nologin</command>"
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: lfs-en/chapter08/shadow.xml
 msgid ""
-"Displays a message that an account is not available; it is designed to be "
-"used as the default shell for accounts that have been disabled"
-msgstr "显示一条账户不可用的消息；它被设计为用来当作被禁用的账户的默认 shell"
+"Displays a message saying an account is not available; it is designed to be "
+"used as the default shell for disabled accounts"
+msgstr "显示一条账户不可用的消息；它被设计为充当已禁用账户的默认 shell"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: lfs-en/chapter08/shadow.xml
@@ -1348,7 +1342,7 @@ msgstr "<command>userdel</command>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: lfs-en/chapter08/shadow.xml
-msgid "Deletes the given user account"
+msgid "Deletes the specified user account"
 msgstr "删除给定用户"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
@@ -1364,10 +1358,10 @@ msgstr "<command>usermod</command>"
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: lfs-en/chapter08/shadow.xml
 msgid ""
-"Is used to modify the given user's login name, User Identification (UID), "
+"Is used to modify the given user's login name, user identification (UID), "
 "shell, initial group, home directory, etc."
 msgstr ""
-"修改给定用户的登录名称、用户标识符 (UID)、shell、初始组、home 目录等信息"
+"用于修改给定用户的登录名称、用户标识符 (UID)、shell、初始组、home 目录等信息"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: lfs-en/chapter08/shadow.xml
@@ -1419,8 +1413,8 @@ msgstr "<filename class='libraryfile'>libsubid</filename>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: lfs-en/chapter08/shadow.xml
-msgid "library for process subordinate id ranges for users"
-msgstr "用于处理用户的辅助 ID 范围的库"
+msgid "library to handle subordinate id ranges for users and groups"
+msgstr "用于操作用户或组的辅助 ID 范围的库"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: lfs-en/chapter08/shadow.xml
