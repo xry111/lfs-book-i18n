@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Linux From Scratch 11.1\n"
 "Report-Msgid-Bugs-To: lfs-dev@lists.linuxfromscratch.org\n"
-"POT-Creation-Date: 2022-10-15 09:55+0800\n"
+"POT-Creation-Date: 2022-11-25 16:16+0800\n"
 "PO-Revision-Date: 2022-03-03 03:00+0800\n"
 "Last-Translator: Xi Ruoyao <xry111@xry111.site>\n"
 "Language-Team: noneLanguage: zh_CN\n"
@@ -365,10 +365,10 @@ msgstr "<userinput remap=\"install\">make install</userinput>"
 #: lfs-en/chapter08/xz.xml lfs-en/chapter08/grub.xml
 #: lfs-en/chapter08/e2fsprogs.xml lfs-en/chapter08/gettext.xml
 #: lfs-en/chapter08/procps.xml lfs-en/chapter08/glibc.xml
-#: lfs-en/chapter08/dbus.xml lfs-en/chapter08/util-linux.xml
-#: lfs-en/chapter08/gawk.xml lfs-en/chapter08/man-db.xml
-#: lfs-en/chapter08/groff.xml lfs-en/chapter10/kernel.xml
-#: lfs-en/chapter09/bootscripts.xml
+#: lfs-en/chapter08/dbus.xml lfs-en/chapter08/shadow.xml
+#: lfs-en/chapter08/util-linux.xml lfs-en/chapter08/gawk.xml
+#: lfs-en/chapter08/man-db.xml lfs-en/chapter08/groff.xml
+#: lfs-en/chapter10/kernel.xml lfs-en/chapter09/bootscripts.xml
 msgid "Installed directories"
 msgstr "安装的目录"
 
@@ -589,13 +589,14 @@ msgstr ""
 #. type: Content of: <sect1><sect2><para>
 #: lfs-en/chapter08/gcc.xml
 msgid ""
-"Note that for other programming languages there are some prerequisites that "
-"are not yet available. See the <ulink url=\"&blfs-book;general/gcc."
-"html\">BLFS Book GCC page</ulink> for instructions on how to build all of "
-"GCC's supported languages."
+"GCC supports seven different computer languages, but the prerequisites for "
+"most of them have not yet been installed. See the <ulink url=\"&blfs-book;"
+"general/gcc.html\">BLFS Book GCC page</ulink> for instructions on how to "
+"build all of GCC's supported languages."
 msgstr ""
-"请注意，对于其他语言，还有一些尚未满足的依赖项。阅读 <ulink url=\"&blfs-book;"
-"general/gcc.html\">BLFS 手册</ulink>，以了解如何构建 GCC 支持的所有语言。"
+"GCC 支持七种程序设计语言，但其中多数语言需要尚未安装的依赖项。阅读 <ulink "
+"url=\"&blfs-book;general/gcc.html\">BLFS 手册</ulink>，以了解如何构建 GCC 支"
+"持的所有语言。"
 
 #. type: Content of: <sect1><sect2><variablelist><title>
 #: lfs-en/chapter08/gcc.xml
@@ -610,12 +611,12 @@ msgstr "<parameter>LD=ld</parameter>"
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: lfs-en/chapter08/gcc.xml
 msgid ""
-"This parameter makes the configure script use the ld installed by the "
-"binutils built earlier in this chapter, rather than the cross-built version "
-"which would otherwise be used."
+"This parameter makes the configure script use the ld program installed by "
+"the Binutils package built earlier in this chapter, rather than the cross-"
+"built version which would otherwise be used."
 msgstr ""
-"该选项使得配置脚本使用之前在本章中构建的 ld，而没有该选项时会使用交叉编译构建"
-"的版本。"
+"该选项使得配置脚本使用之前在本章中构建的 Binutils 提供的 ld 程序，而不是交叉"
+"编译构建的版本。"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: lfs-en/chapter08/gcc.xml lfs-en/chapter08/binutils.xml
@@ -625,7 +626,7 @@ msgstr "<parameter>--with-system-zlib</parameter>"
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: lfs-en/chapter08/gcc.xml
 msgid ""
-"This switch tells GCC to link to the system installed copy of the zlib "
+"This switch tells GCC to link to the system installed copy of the Zlib "
 "library, rather than its own internal copy."
 msgstr "该选项使得 GCC 链接到系统安装的 Zlib 库，而不是它自带的 Zlib 副本。"
 
@@ -637,15 +638,15 @@ msgstr "关于 PIE 和 SSP 的说明"
 #. type: Content of: <sect1><sect2><note><para>
 #: lfs-en/chapter08/gcc.xml
 msgid ""
-"PIE (position-independent executable) is a technique to produce binary "
-"programs that can be loaded anywhere in memory.  Without PIE, the security "
-"feature named ASLR (Address Space Layout Randomization)  can be applied for "
-"the shared libraries, but not the executable itself.  Enabling PIE allows "
-"ASLR for the executables in addition to the shared libraries, and mitigates "
-"some attacks based on fixed addresses of sensitive code or data in the "
+"PIE (position-independent executables) are binary programs that can be "
+"loaded anywhere in memory.  Without PIE, the security feature named ASLR "
+"(Address Space Layout Randomization)  can be applied for the shared "
+"libraries, but not for the executables themselves.  Enabling PIE allows ASLR "
+"for the executables in addition to the shared libraries, and mitigates some "
+"attacks based on fixed addresses of sensitive code or data in the "
 "executables."
 msgstr ""
-"PIE (位置无关可执行文件) 用于生成能加载到内存中任意位置的程序。在不使用 PIE "
+"PIE (位置无关可执行文件) 是能加载到内存中任意位置的二进制程序。在不使用 PIE "
 "时，称为 ASLR (地址空间布局随机化) 的安全特性能被用于共享库，但不能被用于可执"
 "行程序本身。启用 PIE 使得 ASLR 在作用于共享库的同时，同样作用于可执行程序，以"
 "预防一些基于可执行程序中关键代码或数据的固定地址的攻击。"
@@ -654,26 +655,27 @@ msgstr ""
 #: lfs-en/chapter08/gcc.xml
 msgid ""
 "SSP (Stack Smashing Protection) is a technique to ensure that the parameter "
-"stack is not corrupted. Stack corruption can for example alter the return "
-"address of a subroutine, which would allow transferring control to some "
-"dangerous code (existing in the program or shared libraries, or injected by "
-"the attacker somehow) instead of the original one."
+"stack is not corrupted. Stack corruption can, for example, alter the return "
+"address of a subroutine, thus transferring control to some dangerous code "
+"(existing in the program or shared libraries, or injected by the attacker "
+"somehow)."
 msgstr ""
-"SSP (栈溢出防护) 是保证程序的调用栈不被破坏的技术。在调用栈被破坏时，可能导致"
-"子程序的返回地址被修改，进而执行一些危险代码 (这些危险代码可能已经存在于程序"
-"或共享库中，或被攻击者用某种方式注入)，而不是正常返回。"
+"SSP (栈溢出防护) 是保证程序的调用栈不被破坏的技术。在调用栈被破坏时可能导致安"
+"全问题，例如子程序的返回地址可能被修改，进而执行一些危险代码 (这些危险代码可"
+"能已经存在于程序或共享库中，或被攻击者用某种方式注入)。"
 
 #. type: Content of: <sect1><sect2><important><para>
 #: lfs-en/chapter08/gcc.xml
 msgid ""
 "In this section, the test suite for GCC is considered important, but it "
-"takes a long time. First time builders are encouraged to not skip it.  The "
-"time to run the tests can be reduced significantly by adding -jx to the make "
-"command below where x is the number of cores on your system."
+"takes a long time. First-time builders are encouraged to run the test "
+"suite.  The time to run the tests can be reduced significantly by adding -jx "
+"to the <command>make -k check</command> command below, where x is the number "
+"of CPU cores on your system."
 msgstr ""
-"在本节中，GCC 的测试套件十分重要，但需要消耗较长的时间。对于首次编译 LFS 的读"
-"者来说，最好不要跳过它。通过在以下命令中添加 -jx 参数，可以显著降低测试需要的"
-"时间，其中 x 表示系统 CPU 核心数。"
+"在本节中，GCC 的测试套件十分重要，但需要消耗较长的时间。我们建议首次编译 LFS "
+"的读者运行测试套件。通过在以下命令中添加 -jx 参数，可以显著降低测试需要的时"
+"间，其中 x 表示系统 CPU 核心数。"
 
 #. type: Content of: <sect1><sect2><para>
 #: lfs-en/chapter08/gcc.xml
@@ -706,8 +708,8 @@ msgstr ""
 
 #. type: Content of: <sect1><sect2><para>
 #: lfs-en/chapter08/gcc.xml
-msgid "To receive a summary of the test suite results, run:"
-msgstr "输入以下命令查看测试结果的摘要："
+msgid "To extract a summary of the test suite results, run:"
+msgstr "输入以下命令提取测试结果的摘要："
 
 #. type: Content of: <sect1><sect2><screen>
 #: lfs-en/chapter08/gcc.xml
@@ -718,8 +720,8 @@ msgstr "<userinput remap=\"test\">../contrib/test_summary</userinput>"
 #. type: Content of: <sect1><sect2><para>
 #: lfs-en/chapter08/gcc.xml
 msgid ""
-"For only the summaries, pipe the output through <userinput>grep -A7 Summ</"
-"userinput>."
+"To filter out only the summaries, pipe the output through <userinput>grep -"
+"A7 Summ</userinput>."
 msgstr ""
 "如果只想看摘要，将输出用管道送至 <userinput>grep -A7 Summ</userinput>。"
 
@@ -735,22 +737,21 @@ msgstr ""
 #. type: Content of: <sect1><sect2><para>
 #: lfs-en/chapter08/gcc.xml
 msgid ""
-"In gcc, eleven tests, in the i386 test suite are known to FAIL.  It's "
-"because the test files do not account for the <parameter>--enable-default-"
-"pie</parameter> option."
+"Eleven tests in the i386 test suite for the gcc compiler are known to FAIL.  "
+"It's because the test files do not account for the <parameter>--enable-"
+"default-pie</parameter> option."
 msgstr ""
-"在 gcc 测试中，有十一项 i386 测试会失败。这是由于测试文件没有考虑 "
-"<parameter>--enable-default-pie</parameter> 选项。"
+"在 gcc 编译器的 i386 测试套件中，有十一项测试会失败。这是由于测试文件没有考"
+"虑 <parameter>--enable-default-pie</parameter> 选项。"
 
 #. type: Content of: <sect1><sect2><para>
 #: lfs-en/chapter08/gcc.xml
 msgid ""
-"In g++, four tests related to PR100400 are known to be reported as both "
-"XPASS and FAIL.  It's because the test file for this known issue is not well "
-"written."
+"Four tests related to PR100400 may be reported as both XPASS and FAIL when "
+"testing the g++ compiler; the test file is not well written."
 msgstr ""
-"在 g++ 测试中，四项与 PR100400 有关的测试会被同时报告为 XPASS (意外通过) 和 "
-"FAIL (失败)。这是因为与该问题相关的测试文件编写存在瑕疵。"
+"在测试 g++ 编译器时，四项与 PR100400 有关的测试会被同时报告为 XPASS (意外通"
+"过) 和 FAIL (失败)；这是因为与该问题相关的测试文件编写存在瑕疵。"
 
 #. type: Content of: <sect1><sect2><para>
 #: lfs-en/chapter08/gcc.xml
@@ -767,12 +768,12 @@ msgstr ""
 #: lfs-en/chapter08/gcc.xml
 msgid ""
 "The GCC build directory is owned by <systemitem class=\"username\"> tester</"
-"systemitem> now and the ownership of the installed header directory (and its "
-"content) will be incorrect.  Change the ownership to <systemitem "
+"systemitem> now, and the ownership of the installed header directory (and "
+"its content) is incorrect.  Change the ownership to the <systemitem "
 "class=\"username\">root</systemitem> user and group:"
 msgstr ""
 "GCC 构建目录目前属于用户 <systemitem class=\"username\">tester</systemitem>，"
-"这会导致安装的头文件目录 (及其内容) 具有不正确的所有权。将所有者修改为 "
+"导致安装的头文件目录 (及其内容) 具有不正确的所有权。将所有者修改为 "
 "<systemitem class=\"username\">root</systemitem> 用户和组："
 
 #. type: Content of: <sect1><sect2><screen>
@@ -851,8 +852,8 @@ msgstr ""
 
 #. type: Content of: <sect1><sect2><para>
 #: lfs-en/chapter08/gcc.xml
-msgid "Now make sure that we're setup to use the correct start files:"
-msgstr "下面确认我们的设定能够使用正确的启动文件："
+msgid "Now make sure that we're set up to use the correct start files:"
+msgstr "下面确认我们在使用正确的启动文件："
 
 #. type: Content of: <sect1><sect2><screen>
 #: lfs-en/chapter08/gcc.xml
@@ -976,9 +977,9 @@ msgstr ""
 #. type: Content of: <sect1><sect2><para>
 #: lfs-en/chapter08/gcc.xml
 msgid ""
-"A 32-bit system may see a few different directories. For example, here is "
-"the output from an i686 machine:"
-msgstr "在 32 位系统上可能显示一些不同的目录。例如，下面是 i686 机器上的输出："
+"A 32-bit system may use a few other directories. For example, here is the "
+"output from an i686 machine:"
+msgstr "在 32 位系统上可能使用不同的目录。例如，下面是 i686 机器上的输出："
 
 #. type: Content of: <sect1><sect2><screen>
 #: lfs-en/chapter08/gcc.xml
@@ -1050,12 +1051,12 @@ msgstr "<computeroutput>found ld-linux-x86-64.so.2 at /usr/lib/ld-linux-x86-64.s
 msgid ""
 "If the output does not appear as shown above or is not received at all, then "
 "something is seriously wrong. Investigate and retrace the steps to find out "
-"where the problem is and correct it.  Any issues will need to be resolved "
-"before continuing with the process."
+"where the problem is and correct it.  Any issues should be resolved before "
+"continuing with the process."
 msgstr ""
 "如果输出和以上描述不符，或者根本没有输出，那么必然有什么地方出了严重错误。检"
-"查并重新跟踪以上步骤，找到问题的原因，并修复它。这里出现的任何问题在继续构建"
-"前都必须解决。"
+"查并重新跟踪以上步骤，找到问题的原因，并修复它。在继续构建前必须解决这里发现"
+"的所有问题。"
 
 #. type: Content of: <sect1><sect2><para>
 #: lfs-en/chapter08/gcc.xml
@@ -1158,8 +1159,8 @@ msgstr "<command>cpp</command>"
 #: lfs-en/chapter08/gcc.xml
 msgid ""
 "The C preprocessor; it is used by the compiler to expand the #include, "
-"#define, and similar statements in the source files"
-msgstr "C 预处理器，编译器使用它展开源文件中的 #include、#define 及类似指令"
+"#define, and similar directives in the source files"
+msgstr "C 预处理器；编译器使用它展开源文件中的 #include、#define，以及类似指令"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: lfs-en/chapter08/gcc.xml
@@ -1196,10 +1197,10 @@ msgstr "<command>gcc-ar</command>"
 msgid ""
 "A wrapper around <command>ar</command> that adds a plugin to the command "
 "line. This program is only used to add \"link time optimization\" and is not "
-"useful with the default build options"
+"useful with the default build options."
 msgstr ""
 "<command>ar</command> 的一个包装器，它在命令行中添加一个插件。这个程序只被用"
-"于提供链接时优化功能，对于默认的构建选项来说没有作用"
+"于提供链接时优化功能，对于默认的构建选项来说没有作用。"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: lfs-en/chapter08/gcc.xml
@@ -1216,10 +1217,10 @@ msgstr "<command>gcc-nm</command>"
 msgid ""
 "A wrapper around <command>nm</command> that adds a plugin to the command "
 "line. This program is only used to add \"link time optimization\" and is not "
-"useful with the default build options"
+"useful with the default build options."
 msgstr ""
 "<command>nm</command> 的一个包装器，它在命令行中添加一个插件。这个程序只被用"
-"于提供链接时优化功能，对于默认的构建选项来说没有作用"
+"于提供链接时优化功能，对于默认的构建选项来说没有作用。"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: lfs-en/chapter08/gcc.xml
@@ -1236,10 +1237,10 @@ msgstr "<command>gcc-ranlib</command>"
 msgid ""
 "A wrapper around <command>ranlib</command> that adds a plugin to the command "
 "line. This program is only used to add \"link time optimization\" and is not "
-"useful with the default build options"
+"useful with the default build options."
 msgstr ""
 "<command>ranlib</command> 的一个包装器，它在命令行中添加一个插件。这个程序只"
-"被用于提供链接时优化功能，对于默认的构建选项来说没有作用"
+"被用于提供链接时优化功能，对于默认的构建选项来说没有作用。"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: lfs-en/chapter08/gcc.xml
@@ -1255,8 +1256,8 @@ msgstr "<command>gcov</command>"
 #: lfs-en/chapter08/gcc.xml
 msgid ""
 "A coverage testing tool; it is used to analyze programs to determine where "
-"optimizations will have the most effect"
-msgstr "一个覆盖率测试工具；用于分析程序并确定在哪里优化最有效"
+"optimizations will have the greatest effect"
+msgstr "一个覆盖率测试工具；用于分析程序以确定在哪里优化最有效"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: lfs-en/chapter08/gcc.xml
@@ -1376,7 +1377,7 @@ msgstr "<filename class=\"libraryfile\">libgcov</filename>"
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: lfs-en/chapter08/gcc.xml
 msgid ""
-"This library is linked in to a program when GCC is instructed to enable "
+"This library is linked into a program when GCC is instructed to enable "
 "profiling"
 msgstr "在 GCC 被指示启动性能剖析时，这个库被链接到程序中"
 
@@ -1440,9 +1441,9 @@ msgstr "<filename class=\"libraryfile\">liblto_plugin</filename>"
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: lfs-en/chapter08/gcc.xml
 msgid ""
-"GCC's LTO plugin allows binutils to process object files produced by GCC "
+"GCC's LTO plugin allows Binutils to process object files produced by GCC "
 "with LTO enabled"
-msgstr "GCC 的 LTO 插件，允许 binutils 处理 GCC 在启用 LTO 时生成的目标文件"
+msgstr "GCC 的 LTO 插件，允许 Binutils 处理 GCC 在启用 LTO 时生成的目标文件"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: lfs-en/chapter08/gcc.xml
@@ -1473,7 +1474,7 @@ msgstr "<filename class=\"libraryfile\">libssp</filename>"
 #: lfs-en/chapter08/gcc.xml
 msgid ""
 "Contains routines supporting GCC's stack-smashing protection functionality.  "
-"Normally it's unused because glibc also provides those routines"
+"Normally it is not used, because Glibc also provides those routines."
 msgstr ""
 "包含 GCC 的栈溢出保护功能支持子程序。一般不使用它，因为 Glibc 也提供这些子程"
 "序。"
