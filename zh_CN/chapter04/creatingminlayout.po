@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: lfs-dev@lists.linuxfromscratch.org\n"
-"POT-Creation-Date: 2022-10-15 09:55+0800\n"
+"POT-Creation-Date: 2022-11-29 19:07+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -15,7 +15,7 @@ msgstr ""
 
 #. type: Content of: <sect1><title>
 #: lfs-en/chapter04/creatingminlayout.xml
-msgid "Creating a limited directory layout in LFS filesystem"
+msgid "Creating a Limited Directory Layout in the LFS Filesystem"
 msgstr "在 LFS 文件系统中创建有限目录布局"
 
 #. type: Content of: <sect1><para>
@@ -87,3 +87,19 @@ msgstr ""
 #, no-wrap
 msgid "<userinput>mkdir -pv $LFS/tools</userinput>"
 msgstr "<userinput>mkdir -pv $LFS/tools</userinput>"
+
+#. type: Content of: <sect1><note><para>
+#: lfs-en/chapter04/creatingminlayout.xml
+msgid ""
+"The LFS editors have deliberately decided not to use a <filename "
+"class=\"directory\">/usr/lib64</filename> directory.  Several steps are "
+"taken to be sure the toolchain will not use it. If for any reason this "
+"directory appears (either because you made an error in following the "
+"instructions, or because you installed a binary package that created it "
+"after finishing LFS), it may break your system.  You should always be sure "
+"this directory does not exist."
+msgstr ""
+"LFS 编辑团队特意决定不使用 <filename class='directory'>/usr/lib64</filename> "
+"目录。本书中的一些步骤保证工具链不使用该目录。如果该目录被创建，无论原因如何 "
+"(可能是您在使用书中的命令时出现了偏差，或您在完成 LFS 构建后安装了一个创建该"
+"目录的二进制包)，则它可能破坏您的系统。您应该经常检查并确认该目录不存在。"
