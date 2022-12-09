@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Linux From Scratch 11.0\n"
 "Report-Msgid-Bugs-To: lfs-dev@lists.linuxfromscratch.org\n"
-"POT-Creation-Date: 2022-11-23 00:30+0800\n"
+"POT-Creation-Date: 2022-12-09 14:39+0800\n"
 "PO-Revision-Date: 2022-04-18 13:04+0800\n"
 "Last-Translator: Xi Ruoyao <xry111@xry111.site>\n"
 "Language-Team: noneLanguage: zh_CN\n"
@@ -299,8 +299,8 @@ msgstr "安装 Wheel"
 
 #. type: Content of: <sect1><sect2><para>
 #: lfs-en/chapter08/wheel.xml
-msgid "Compile wheel with the following command:"
-msgstr "执行以下命令编译 wheel："
+msgid "Compile Wheel with the following command:"
+msgstr "执行以下命令编译 Wheel："
 
 #. type: Content of: <sect1><sect2><screen>
 #: lfs-en/chapter08/wheel.xml
@@ -310,8 +310,8 @@ msgstr "<userinput remap=\"make\">PYTHONPATH=src pip3 wheel -w dist --no-build-i
 
 #. type: Content of: <sect1><sect2><para>
 #: lfs-en/chapter08/wheel.xml
-msgid "Install wheel with the following command:"
-msgstr "使用以下命令安装 wheel："
+msgid "Install Wheel with the following command:"
+msgstr "使用以下命令安装 Wheel："
 
 #. type: Content of: <sect1><sect2><screen>
 #: lfs-en/chapter08/wheel.xml
@@ -321,8 +321,8 @@ msgstr "<userinput remap=\"install\">pip3 install --no-index --find-links=dist w
 
 #. type: Content of: <sect1><sect2><variablelist><title>
 #: lfs-en/chapter08/wheel.xml
-msgid "The meaning of the pip3 commands:"
-msgstr "pip3 命令的含义："
+msgid "The meaning of the pip3 configuration options and commands:"
+msgstr "pip3 配置选项和命令的含义："
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: lfs-en/chapter08/wheel.xml
@@ -332,8 +332,8 @@ msgstr "<envar>PYTHONPATH=src</envar>"
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: lfs-en/chapter08/wheel.xml
 msgid ""
-"Allow using this package (not installed yet) to build a wheel archive for "
-"itself, to avoid a chicken-or-egg problem."
+"Allows this package (not installed yet) to build a wheel archive for itself, "
+"to avoid a chicken-or-egg problem."
 msgstr ""
 "允许使用 (尚未安装的) 该软件包构建它本身的 wheel 档案，以避免“先有鸡还是先有"
 "蛋”的问题。"
@@ -345,8 +345,8 @@ msgstr "<command>wheel</command>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: lfs-en/chapter08/wheel.xml
-msgid "Build wheel archive for this package."
-msgstr "构建该软件包的 wheel 档案。"
+msgid "This command builds the wheel archive for this package."
+msgstr "该命令构建该软件包的 wheel 档案。"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: lfs-en/chapter08/wheel.xml lfs-en/chapter08/meson.xml
@@ -354,12 +354,13 @@ msgid "<parameter>-w dist</parameter>"
 msgstr "<parameter>-w dist</parameter>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
-#: lfs-en/chapter08/wheel.xml lfs-en/chapter08/meson.xml
+#: lfs-en/chapter08/wheel.xml
 msgid ""
-"Put the created wheels into the <filename class='directory'>dist</filename> "
-"directory."
+"Instructs pip to put the created wheel into the <filename "
+"class='directory'>dist</filename> directory."
 msgstr ""
-"将生成的 wheel 包置入 <filename class='directory'>dist</filename> 目录。"
+"指示 pip 将生成的 wheel 包置入 <filename class='directory'>dist</filename> 目"
+"录。"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: lfs-en/chapter08/wheel.xml lfs-en/chapter08/coreutils.xml
@@ -368,8 +369,8 @@ msgstr "<command>install</command>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: lfs-en/chapter08/wheel.xml
-msgid "Install the package."
-msgstr "安装软件包。"
+msgid "This command installs the package."
+msgstr "该命令安装该软件包。"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: lfs-en/chapter08/wheel.xml
@@ -383,14 +384,14 @@ msgstr ""
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: lfs-en/chapter08/wheel.xml
 msgid ""
-"Prevent pip from fetching files from the online package repository (PyPI). "
-"If packages are installed in the correct order, then it won't need to fetch "
-"any files in the first place, but these options add some safety in case of "
+"These options prevent fetching files from the online package repository "
+"(PyPI). If packages are installed in the correct order, pip won't need to "
+"fetch any files in the first place; these options add some safety in case of "
 "user error."
 msgstr ""
-"防止 pip 从在线软件包仓库 (PyPI) 获取文件。如果按正确的顺序安装软件包，则 "
-"pip 完全不会尝试获取文件，但是在用户不小心犯下错误时，这些选项可以作为保险措"
-"施。"
+"这些选项防止 pip 从在线软件包仓库 (PyPI) 获取文件。如果按正确的顺序安装软件"
+"包，则 pip 完全不会尝试获取文件；但是在用户不小心犯下错误时，这些选项可以作为"
+"保险措施。"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: lfs-en/chapter08/wheel.xml lfs-en/chapter08/meson.xml
@@ -400,9 +401,11 @@ msgstr "<parameter>--find-links dist</parameter>"
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: lfs-en/chapter08/wheel.xml
 msgid ""
-"Search wheel archives from the <filename class='directory'>dist</filename> "
-"directory."
-msgstr "在 <filename class='directory'>dist</filename> 目录中搜索 wheel 包。"
+"Instructs pip to search for wheel archives in the <filename "
+"class='directory'>dist</filename> directory."
+msgstr ""
+"指示 pip 在 <filename class='directory'>dist</filename> 目录中搜索 wheel 档"
+"案。"
 
 #. type: Content of: <sect1><sect2><title>
 #: lfs-en/chapter08/wheel.xml
@@ -420,5 +423,5 @@ msgstr ""
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: lfs-en/chapter08/wheel.xml
-msgid "is an utility to unpack, pack, or convert wheel packages"
-msgstr "是用于解包、包装，或者转换 wheel 软件包的工具"
+msgid "is a utility to unpack, pack, or convert wheel archives"
+msgstr "是用于解包、包装，或者转换 wheel 档案的工具"

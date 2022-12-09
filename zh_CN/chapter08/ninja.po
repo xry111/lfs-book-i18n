@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: lfs-dev@lists.linuxfromscratch.org\n"
-"POT-Creation-Date: 2022-09-17 20:07+0800\n"
+"POT-Creation-Date: 2022-12-09 15:43+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -360,14 +360,13 @@ msgstr "&ninja-fin-du;"
 #. type: Content of: <sect1><sect2><tip><para>
 #: lfs-en/chapter08/ninja.xml
 msgid ""
-"This section is not strictly required for LFS if not using systemd. On the "
-"other hand, ninja associated to meson makes a powerful build system "
-"combination, which is expected to be used more and more often. It is "
-"required for several packages in <ulink url=\"&blfs-book;\">the BLFS book</"
-"ulink>."
+"This section is not strictly required when LFS does not use systemd. On the "
+"other hand, Ninja, along with Meson, makes a powerful build system "
+"combination, which will probably be used more and more often. It is required "
+"for several packages in <ulink url=\"&blfs-book;\">the BLFS book</ulink>."
 msgstr ""
-"如果不使用 systemd，本节内容不是严格必要的。但是，ninja 和 meson 的组合构成一"
-"个强大的构建系统，预期它将被越来越广泛地使用。<ulink url=\"&blfs-book;"
+"如果不使用 systemd，本节内容不是严格必要的。但是，Ninja 和 Meson 组成一个强大"
+"的构建系统，预期这一组合将被越来越广泛地使用。<ulink url=\"&blfs-book;"
 "\">BLFS 手册</ulink>中的一些软件包需要它。"
 
 #. type: Content of: <sect1><sect2><title>
@@ -378,17 +377,18 @@ msgstr "安装 Ninja"
 #. type: Content of: <sect1><sect2><para>
 #: lfs-en/chapter08/ninja.xml
 msgid ""
-"When run, ninja normally runs a maximum number of processes in parallel.  By "
-"default this is the number of cores on the system plus two.  In some cases "
-"this can overheat a CPU or run a system out of memory.  If run from the "
-"command line, passing a -jN parameter will limit the number of parallel "
-"processes, but some packages embed the execution of ninja and do not pass a -"
-"j parameter."
+"When run, <command>ninja</command> normally utilizes the greatest possible "
+"number of processes in parallel.  By default this is the number of cores on "
+"the system, plus two.  This may overheat the CPU, or make the system run out "
+"of memory.  When <command>ninja</command> is invoked from the command line, "
+"passing the -jN parameter will limit the number of parallel processes. Some "
+"packages embed the execution of <command>ninja</command>, and do not pass "
+"the -j parameter on to it."
 msgstr ""
-"在运行时，ninja 一般尽量并行运行更多进程。默认情况下最大进程数是系统 CPU 核心"
-"数加 2 得到的值。某些情况下，这样会导致 CPU 过热，或者耗尽系统内存。如果使用"
-"命令行执行 ninja，可以传递 -jN 参数以限制并行进程数，但某些软件包内嵌了 "
-"ninja 的执行过程，且并不传递 -j 参数。"
+"在运行时，<command>ninja</command> 通常并行运行尽可能多的进程。默认情况下最大"
+"进程数是系统 CPU 核心数加 2 得到的值。这可能导致 CPU 过热，或者耗尽系统内存。"
+"如果使用命令行执行 ninja，可以传递 -jN 参数以限制并行进程数。但是，某些软件包"
+"内嵌了 ninja 的执行过程，且并不传递 -j 参数。"
 
 #. type: Content of: <sect1><sect2><para><screen>
 #: lfs-en/chapter08/ninja.xml
@@ -402,20 +402,22 @@ msgid ""
 "Using the <emphasis>optional</emphasis> procedure below allows a user to "
 "limit the number of parallel processes via an environment variable, "
 "NINJAJOBS.  <emphasis role=\"bold\">For example</emphasis>, setting: "
-"<placeholder type=\"screen\" id=\"0\"/> will limit ninja to four parallel "
-"processes."
+"<placeholder type=\"screen\" id=\"0\"/> will limit <command>ninja</command> "
+"to four parallel processes."
 msgstr ""
 "应用下面这个<emphasis>可选的</emphasis>修改，用户即可通过一个环境变量 "
 "NINJAJOBS 限制并行进程数量。<emphasis role=\"bold\">例如</emphasis>设置："
-"<placeholder type=\"screen\" id=\"0\"/>会限制 ninja 使用 4 个并行进程。"
+"<placeholder type=\"screen\" id=\"0\"/>会限制 <command>ninja</command> 使用 "
+"4 个并行进程。"
 
 #. type: Content of: <sect1><sect2><para>
 #: lfs-en/chapter08/ninja.xml
 msgid ""
-"If desired, add the capability to use the environment variable NINJAJOBS by "
-"running:"
+"If desired, make <command>ninja</command> recognize the environment variable "
+"NINJAJOBS by running the stream editor:"
 msgstr ""
-"如果您希望 Ninja 能够使用环境变量 NINJAJOBS，执行以下命令，添加这一功能："
+"如果希望 <command>ninja</command> 能够识别环境变量 NINJAJOBS，使用流编辑器，"
+"添加这一功能："
 
 #. type: Content of: <sect1><sect2><screen>
 #: lfs-en/chapter08/ninja.xml
@@ -458,8 +460,8 @@ msgstr "<parameter>--bootstrap</parameter>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: lfs-en/chapter08/ninja.xml
-msgid "This parameter forces ninja to rebuild itself for the current system."
-msgstr "这个参数强制 ninja 为当前系统重新构建自身。"
+msgid "This parameter forces Ninja to rebuild itself for the current system."
+msgstr "这个参数强制 Ninja 为当前系统重新构建自身。"
 
 #. type: Content of: <sect1><sect2><screen>
 #: lfs-en/chapter08/ninja.xml

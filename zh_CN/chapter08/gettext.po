@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: lfs-dev@lists.linuxfromscratch.org\n"
-"POT-Creation-Date: 2022-10-15 09:55+0800\n"
+"POT-Creation-Date: 2022-12-09 14:39+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -283,10 +283,10 @@ msgstr "Gettext-&gettext-version;"
 #: lfs-en/chapter08/xz.xml lfs-en/chapter08/grub.xml
 #: lfs-en/chapter08/e2fsprogs.xml lfs-en/chapter08/gettext.xml
 #: lfs-en/chapter08/procps.xml lfs-en/chapter08/glibc.xml
-#: lfs-en/chapter08/dbus.xml lfs-en/chapter08/util-linux.xml
-#: lfs-en/chapter08/gawk.xml lfs-en/chapter08/man-db.xml
-#: lfs-en/chapter08/groff.xml lfs-en/chapter10/kernel.xml
-#: lfs-en/chapter09/bootscripts.xml
+#: lfs-en/chapter08/dbus.xml lfs-en/chapter08/shadow.xml
+#: lfs-en/chapter08/util-linux.xml lfs-en/chapter08/gawk.xml
+#: lfs-en/chapter08/man-db.xml lfs-en/chapter08/groff.xml
+#: lfs-en/chapter10/kernel.xml lfs-en/chapter09/bootscripts.xml
 msgid "Installed directories"
 msgstr "安装的目录"
 
@@ -925,13 +925,13 @@ msgstr "<filename class=\"libraryfile\">libasprintf</filename>"
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: lfs-en/chapter08/gettext.xml
 msgid ""
-"defines the <emphasis>autosprintf</emphasis> class, which makes C formatted "
+"Defines the <emphasis>autosprintf</emphasis> class, which makes C formatted "
 "output routines usable in C++ programs, for use with the <emphasis>&lt;"
 "string&gt;</emphasis> strings and the <emphasis>&lt;iostream&gt;</emphasis> "
 "streams"
 msgstr ""
 "定义 <emphasis>autosprintf</emphasis> 类，使得 C 格式化输出子程序在 C++ 程序"
-"中可用，能够与 <emphasis>&lt;string&gt;</emphasis> 字符串和 <emphasis>&lt;"
+"中能够与 <emphasis>&lt;string&gt;</emphasis> 字符串和 <emphasis>&lt;"
 "iostream&gt;</emphasis> 流一起使用"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
@@ -947,9 +947,9 @@ msgstr "<filename class=\"libraryfile\">libgettextlib</filename>"
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: lfs-en/chapter08/gettext.xml
 msgid ""
-"a private library containing common routines used by the various Gettext "
-"programs; these are not intended for general use"
-msgstr "一个内部库，包含若干 Gettext 程序的公共子程序；不建议普遍使用"
+"Contains common routines used by the various Gettext programs; these are not "
+"intended for general use"
+msgstr "包含若干 Gettext 程序的公共子程序；并未设计为供其他程序使用"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: lfs-en/chapter08/gettext.xml
@@ -988,9 +988,9 @@ msgstr "<filename class=\"libraryfile\">libgettextsrc</filename>"
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: lfs-en/chapter08/gettext.xml
 msgid ""
-"A private library containing common routines used by the various Gettext "
-"programs; these are not intended for general use"
-msgstr "一个内部库，包含若干 Gettext 程序使用的公共子程序；没有设计为普遍使用"
+"Provides common routines used by the various Gettext programs; these are not "
+"intended for general use"
+msgstr "包含若干 Gettext 程序的公共子程序；并未设计为供其他程序使用"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: lfs-en/chapter08/gettext.xml
@@ -1020,10 +1020,10 @@ msgstr "<filename class=\"libraryfile\">preloadable_libintl</filename>"
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: lfs-en/chapter08/gettext.xml
 msgid ""
-"A library, intended to be used by LD_PRELOAD that assists <filename "
-"class=\"libraryfile\">libintl</filename> in logging untranslated messages"
+"A library, intended to be used by LD_PRELOAD, that helps <filename "
+"class=\"libraryfile\">libintl</filename> log untranslated messages"
 msgstr ""
-"一个被设计为由 LD_PRELOAD 预加载的库，帮助 <filename "
+"一个被设计为由 LD_PRELOAD 预加载的库，它帮助 <filename "
 "class=\"libraryfile\">libintl</filename> 记录未翻译的消息"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>

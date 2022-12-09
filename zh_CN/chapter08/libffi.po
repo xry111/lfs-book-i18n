@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Linux From Scratch 11.0\n"
 "Report-Msgid-Bugs-To: lfs-dev@lists.linuxfromscratch.org\n"
-"POT-Creation-Date: 2022-10-01 11:51+0800\n"
+"POT-Creation-Date: 2022-12-09 14:39+0800\n"
 "PO-Revision-Date: 2021-08-07 12:38+0800\n"
 "Last-Translator: Xi Ruoyao <xry111@xry111.site>\n"
 "Language-Team: noneLanguage: zh_CN\n"
@@ -400,9 +400,8 @@ msgstr ""
 #. type: Content of: <sect1><sect2><variablelist><title>
 #: lfs-en/chapter07/python.xml lfs-en/chapter07/gettext.xml
 #: lfs-en/chapter08/tar.xml lfs-en/chapter08/kbd.xml
-#: lfs-en/chapter08/readline.xml lfs-en/chapter08/libffi.xml
-#: lfs-en/chapter08/gdbm.xml lfs-en/chapter08/procps.xml
-#: lfs-en/chapter08/shadow.xml
+#: lfs-en/chapter08/libffi.xml lfs-en/chapter08/gdbm.xml
+#: lfs-en/chapter08/procps.xml
 msgid "The meaning of the configure option:"
 msgstr "配置选项的含义："
 
@@ -491,6 +490,18 @@ msgstr ""
 "Libffi 库提供一个可移植的高级编程接口，用于处理不同调用惯例。这允许程序在运行"
 "时调用任何给定了调用接口的函数。"
 
+#. type: Content of: <sect1><sect2><para>
+#: lfs-en/chapter08/libffi.xml
+msgid ""
+"FFI stands for Foreign Function Interface. An FFI allows a program written "
+"in one language to call a program written in another language. Specifically, "
+"Libffi can provide a bridge between an interpreter like Perl, or Python, and "
+"shared library subroutines written in C, or C++."
+msgstr ""
+"FFI 是 Foreign Function Interface (跨语言函数接口) 的缩写。FFI 允许使用某种编"
+"程语言编写的程序调用其他语言编写的程序。特别地，Libffi 为 Perl 或 Python 等解"
+"释器提供使用 C 或 C++ 编写的共享库中子程序的能力。"
+
 #. type: Content of: <sect1><sect2><segmentedlist><seglistitem><seg>
 #: lfs-en/chapter08/libffi.xml
 msgid "&libffi-fin-sbu;"
@@ -509,22 +520,21 @@ msgstr "安装 Libffi"
 #. type: Content of: <sect1><sect2><note><para>
 #: lfs-en/chapter08/libffi.xml
 msgid ""
-"Similar to GMP, libffi builds with optimizations specific to the processor "
-"in use. If building for another system, change the value of the <parameter>--"
-"with-gcc-arch=</parameter> parameter in the following command to an "
-"architecture name fully implemented by the CPU on that system.  If this is "
-"not done, all applications that link to libffi will trigger Illegal "
-"Operation Errors."
+"Like GMP, Libffi builds with optimizations specific to the processor in use. "
+"If building for another system, change the value of the <parameter>--with-"
+"gcc-arch=</parameter> parameter in the following command to an architecture "
+"name fully implemented by the CPU on that system.  If this is not done, all "
+"applications that link to libffi will trigger Illegal Operation Errors."
 msgstr ""
-"和 GMP 类似，libffi 在构建时会使用特定于当前处理器的优化。如果是在为另一台计"
+"和 GMP 类似，Libffi 在构建时会使用特定于当前处理器的优化。如果是在为另一台计"
 "算机构建系统，请将 <parameter>--with-gcc-arch=</parameter> 的设定值改为那一台"
-"计算机的 CPU 完全实现的某个架构名称。否则，所有链接到 libffi 的程序都可能触发"
+"计算机的 CPU 完全实现的某个架构名称。否则，所有链接到 Libffi 的程序都可能触发"
 "非法指令异常。"
 
 #. type: Content of: <sect1><sect2><para>
 #: lfs-en/chapter08/libffi.xml
-msgid "Prepare libffi for compilation:"
-msgstr "准备编译 libffi："
+msgid "Prepare Libffi for compilation:"
+msgstr "准备编译 Libffi："
 
 #. type: Content of: <sect1><sect2><screen>
 #: lfs-en/chapter08/libffi.xml
@@ -549,18 +559,18 @@ msgstr "<parameter>--with-gcc-arch=native</parameter>"
 #: lfs-en/chapter08/libffi.xml
 msgid ""
 "Ensure GCC optimizes for the current system.  If this is not specified, the "
-"system is guessed and the code generated may not be correct for some "
-"systems.  If the generated code will be copied from the native system to a "
-"less capable system, use the less capable system as a parameter. For details "
-"about alternative system types, see <ulink url='https://gcc.gnu.org/"
-"onlinedocs/gcc-&gcc-version;/gcc/x86-Options.html'> the x86 options in the "
-"GCC manual</ulink>."
+"system is guessed and the code generated may not be correct.  If the "
+"generated code will be copied from the native system to a less capable "
+"system, use the less capable system as a parameter. For details about "
+"alternative system types, see <ulink url='https://gcc.gnu.org/onlinedocs/gcc-"
+"&gcc-version;/gcc/x86-Options.html'> the x86 options in the GCC manual</"
+"ulink>."
 msgstr ""
-"保证 gcc 为当前系统进行优化。如果不使用该选项，构建系统会猜测系统架构，在某些"
-"系统上可能生成不正确的代码。如果要将生成的代码从本地系统复制到指令集功能较弱"
-"的系统中，需要使用目标系统架构作为该选项的参数值。关于不同系统架构的信息，参"
-"阅 <ulink url='https://gcc.gnu.org/onlinedocs/gcc-&gcc-version;/gcc/x86-"
-"Options.html'>gcc 手册中提供的的 x86 选项</ulink>。"
+"保证 gcc 为当前系统进行优化。如果不使用该选项，构建系统会猜测系统架构，可能生"
+"成不正确的代码。如果要将生成的代码从本地系统复制到指令集功能较弱的系统中，需"
+"要使用目标系统架构作为该选项的参数值。关于不同系统架构的信息，参阅 <ulink "
+"url='https://gcc.gnu.org/onlinedocs/gcc-&gcc-version;/gcc/x86-Options."
+"html'>gcc 手册中提供的的 x86 选项</ulink>。"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: lfs-en/chapter08/libffi.xml
@@ -570,11 +580,11 @@ msgstr "<parameter>--disable-exec-static-tramp</parameter>"
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: lfs-en/chapter08/libffi.xml
 msgid ""
-"Disable static trampoline support.  It's a new security feature in libffi, "
-"but some BLFS packages (notably <application>GJS</application>) have not "
-"been adapted for it."
+"Disable static trampoline support, a new security feature in Libffi. Some "
+"BLFS packages (notably <application>GJS</application>) have not been adapted "
+"for it."
 msgstr ""
-"禁用静态蹦床函数支持。这是 libffi 的一项新的安全特性，但一些 BLFS 软件包 (特"
+"禁用静态蹦床函数支持，它是 Libffi 的一项新的安全特性，但一些 BLFS 软件包 (特"
 "别是 <application>GJS</application>) 尚未适配该特性。"
 
 #. type: Content of: <sect1><sect2><title>
@@ -594,5 +604,5 @@ msgstr "<filename class=\"libraryfile\">libffi</filename>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: lfs-en/chapter08/libffi.xml
-msgid "contains the foreign function interface API functions"
+msgid "Contains the foreign function interface API functions"
 msgstr "包含跨语言函数接口 API 函数"

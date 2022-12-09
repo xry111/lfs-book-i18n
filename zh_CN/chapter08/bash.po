@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: lfs-dev@lists.linuxfromscratch.org\n"
-"POT-Creation-Date: 2022-11-12 00:07+0800\n"
+"POT-Creation-Date: 2022-12-09 14:39+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -268,6 +268,7 @@ msgstr "安装该软件包："
 #. type: Content of: <sect1><sect2><variablelist><title>
 #: lfs-en/chapter06/file.xml lfs-en/chapter06/make.xml
 #: lfs-en/chapter07/bison.xml lfs-en/chapter08/bash.xml
+#: lfs-en/chapter08/readline.xml
 msgid "The meaning of the new configure option:"
 msgstr "新的配置选项的含义："
 
@@ -445,7 +446,7 @@ msgstr "<userinput>exec /usr/bin/bash --login</userinput>"
 #: lfs-en/chapter08/jinja2.xml lfs-en/chapter08/flex.xml
 #: lfs-en/chapter08/binutils.xml lfs-en/chapter08/bzip2.xml
 #: lfs-en/chapter08/vim.xml lfs-en/chapter08/meson.xml
-#: lfs-en/chapter08/shadow.xml lfs-en/chapter08/gperf.xml
+#: lfs-en/chapter08/gperf.xml
 msgid "Installed directory"
 msgstr "安装的目录"
 
@@ -481,8 +482,8 @@ msgstr "安装的程序"
 
 #. type: Content of: <sect1><sect2><para>
 #: lfs-en/chapter08/bash.xml
-msgid "The Bash package contains the Bourne-Again SHell."
-msgstr "Bash 软件包包含 Bourne-Again SHell。"
+msgid "The Bash package contains the Bourne-Again Shell."
+msgstr "Bash 软件包包含 Bourne-Again Shell。"
 
 #. type: Content of: <sect1><sect2><segmentedlist><seglistitem><seg>
 #: lfs-en/chapter08/bash.xml
@@ -548,10 +549,11 @@ msgstr "<userinput remap=\"test\">chown -Rv tester .</userinput>"
 #. type: Content of: <sect1><sect2><para>
 #: lfs-en/chapter08/bash.xml
 msgid ""
-"The testsuite of the package is designed to be run as a non-&root; user that "
-"owns the terminal connected to standard input.  To satisfy the requirement, "
-"spawn a new pseudo terminal using <application>Expect</application> and run "
-"the tests as the <systemitem class=\"username\">tester</systemitem> user:"
+"The test suite of this package is designed to be run as a non-&root; user "
+"who owns the terminal connected to standard input.  To satisfy the "
+"requirement, spawn a new pseudo terminal using <application>Expect</"
+"application> and run the tests as the <systemitem class=\"username\">tester</"
+"systemitem> user:"
 msgstr ""
 "该软件包的测试套件被设计为以非 &root; 用户身份运行，且该用户必须是标准输入所"
 "连接的终端的所有者。为了满足这一条件，使用 <application>Expect</application> "

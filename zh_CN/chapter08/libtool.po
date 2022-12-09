@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: lfs-dev@lists.linuxfromscratch.org\n"
-"POT-Creation-Date: 2022-09-17 18:28+0800\n"
+"POT-Creation-Date: 2022-12-09 15:43+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -308,10 +308,10 @@ msgstr "<userinput remap=\"install\">make install</userinput>"
 #: lfs-en/chapter08/xz.xml lfs-en/chapter08/grub.xml
 #: lfs-en/chapter08/e2fsprogs.xml lfs-en/chapter08/gettext.xml
 #: lfs-en/chapter08/procps.xml lfs-en/chapter08/glibc.xml
-#: lfs-en/chapter08/dbus.xml lfs-en/chapter08/util-linux.xml
-#: lfs-en/chapter08/gawk.xml lfs-en/chapter08/man-db.xml
-#: lfs-en/chapter08/groff.xml lfs-en/chapter10/kernel.xml
-#: lfs-en/chapter09/bootscripts.xml
+#: lfs-en/chapter08/dbus.xml lfs-en/chapter08/shadow.xml
+#: lfs-en/chapter08/util-linux.xml lfs-en/chapter08/gawk.xml
+#: lfs-en/chapter08/man-db.xml lfs-en/chapter08/groff.xml
+#: lfs-en/chapter10/kernel.xml lfs-en/chapter09/bootscripts.xml
 msgid "Installed directories"
 msgstr "安装的目录"
 
@@ -501,11 +501,11 @@ msgstr "Libtool"
 #: lfs-en/chapter08/libtool.xml
 msgid ""
 "The Libtool package contains the GNU generic library support script.  It "
-"wraps the complexity of using shared libraries in a consistent, portable "
+"makes the use of shared libraries simpler with a consistent, portable "
 "interface."
 msgstr ""
-"Libtool 软件包包含 GNU 通用库支持脚本。它在一个一致、可移植的接口下隐藏了使用"
-"共享库的复杂性。"
+"Libtool 软件包包含 GNU 通用库支持脚本。它提供一致、可移植的接口，以简化共享库"
+"的使用。"
 
 #. type: Content of: <sect1><sect2><segmentedlist><seglistitem><seg>
 #: lfs-en/chapter08/libtool.xml
@@ -536,12 +536,12 @@ msgstr "<userinput remap=\"test\">make -k check</userinput>"
 #. type: Content of: <sect1><sect2><note><para>
 #: lfs-en/chapter08/libtool.xml
 msgid ""
-"The test time for libtool can be reduced significantly on a system with "
+"The test time for Libtool can be reduced significantly on a system with "
 "multiple cores.  To do this, append <command>TESTSUITEFLAGS=-j&lt;N&gt;</"
 "command> to the line above.  For instance, using -j4 can reduce the test "
 "time by over 60 percent."
 msgstr ""
-"在多核系统上，可以显著减少 libtool 的测试时间。为了使用多个核心，在上述命令中"
+"在多核系统上，可以显著减少 Libtool 的测试时间。为了使用多个核心，在上述命令中"
 "附加 <command>TESTSUITEFLAGS=-j&lt;N&gt;</command> 参数。例如，使用 -j4 可以"
 "减少超过 60% 的测试时间。"
 
@@ -549,11 +549,11 @@ msgstr ""
 #: lfs-en/chapter08/libtool.xml
 msgid ""
 "Five tests are known to fail in the LFS build environment due to a circular "
-"dependency, but these tests pass if rechecked after automake is installed.  "
-"Additionally, with grep-3.8, two tests will trigger a warning for non-POSIX "
-"regular expressions and fail."
+"dependency, but these tests pass if rechecked after automake has been "
+"installed.  Additionally, with grep-3.8, two tests will trigger a warning "
+"for non-POSIX regular expressions and fail."
 msgstr ""
-"在 LFS 构建环境中，已知有五个测试因为循环依赖而失败，但这些测试在 automake 安"
+"在 LFS 构建环境中，已知有五项测试因为循环依赖而失败，但这些测试在 automake 安"
 "装后能够通过。另外，在使用 grep-3.8 时，两项测试触发关于非 POSIX 正则表达式的"
 "警告而失败。"
 
@@ -644,8 +644,8 @@ msgstr "<filename class=\"libraryfile\">libltdl</filename>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: lfs-en/chapter08/libtool.xml
-msgid "Hides the various difficulties of dlopening libraries"
-msgstr "隐藏用 dlopen 加载库时可能遇到的若干困难"
+msgid "Hides the various difficulties of opening dynamically loaded libraries"
+msgstr "隐藏使用动态加载库时可能遇到的若干困难"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: lfs-en/chapter08/libtool.xml

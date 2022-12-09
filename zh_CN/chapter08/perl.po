@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: lfs-dev@lists.linuxfromscratch.org\n"
-"POT-Creation-Date: 2022-09-17 18:28+0800\n"
+"POT-Creation-Date: 2022-12-09 14:39+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -363,7 +363,7 @@ msgstr "安装 Perl"
 #: lfs-en/chapter08/jinja2.xml lfs-en/chapter08/flex.xml
 #: lfs-en/chapter08/binutils.xml lfs-en/chapter08/bzip2.xml
 #: lfs-en/chapter08/vim.xml lfs-en/chapter08/meson.xml
-#: lfs-en/chapter08/shadow.xml lfs-en/chapter08/gperf.xml
+#: lfs-en/chapter08/gperf.xml
 msgid "Installed directory"
 msgstr "安装的目录"
 
@@ -440,14 +440,14 @@ msgstr "&perl-fin-du;"
 #. type: Content of: <sect1><sect2><para>
 #: lfs-en/chapter08/perl.xml
 msgid ""
-"This version of Perl now builds the Compress::Raw::Zlib and Compress::Raw::"
-"BZip2 modules. By default Perl will use an internal copy of the sources for "
-"the build.  Issue the following command so that Perl will use the libraries "
+"This version of Perl builds the Compress::Raw::Zlib and Compress::Raw::BZip2 "
+"modules. By default Perl will use an internal copy of the sources for the "
+"build.  Issue the following command so that Perl will use the libraries "
 "installed on the system:"
 msgstr ""
 "该版本的 Perl 会构建 Compress::Raw::ZLib 和 Compress::Raw::BZip2 模块。默认情"
-"况下 Perl 会使用内部的源码副本构建它们。执行以下命令，使得 Perl 使用系统中已"
-"经安装好的库："
+"况下 Perl 会使用内部的源码副本构建它们。执行以下命令，使得 Perl 使用已经安装"
+"到系统上的库："
 
 #. type: Content of: <sect1><sect2><screen>
 #: lfs-en/chapter08/perl.xml
@@ -464,12 +464,12 @@ msgstr ""
 msgid ""
 "To have full control over the way Perl is set up, you can remove the <quote>-"
 "des</quote> options from the following command and hand-pick the way this "
-"package is built. Alternatively, use the command exactly as below to use the "
-"defaults that Perl auto-detects:"
+"package is built. Alternatively, use the command exactly as shown below to "
+"use the defaults that Perl auto-detects:"
 msgstr ""
 "为了能够完全控制 Perl 的设置，您可以在以下命令中移除 <quote>-des</quote> 选"
-"项，并手动选择构建该软件包的方式。或者，直接使用下面的命令，以使用 Perl 自动"
-"检测的默认值："
+"项，并手动选择构建该软件包的方式。或者，直接使用下面给出的命令，以使用 Perl "
+"自动检测的默认值："
 
 #. type: Content of: <sect1><sect2><screen>
 #: lfs-en/chapter08/perl.xml
@@ -514,10 +514,8 @@ msgstr "<parameter>-Dvendorprefix=/usr</parameter>"
 #: lfs-en/chapter08/perl.xml
 msgid ""
 "This ensures <command>perl</command> knows how to tell packages where they "
-"should install their perl modules."
-msgstr ""
-"这保证 <command>perl</command> 知道如何告知软件包应该在哪里安装它们的 perl 模"
-"块。"
+"should install their Perl modules."
+msgstr "这保证 <command>perl</command> 正确告知软件包安装其 Perl 模块的位置。"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: lfs-en/chapter08/perl.xml
@@ -545,12 +543,11 @@ msgstr ""
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: lfs-en/chapter08/perl.xml
 msgid ""
-"Since Groff is not installed yet, <command>Configure</command> thinks that "
-"we do not want man pages for Perl.  Issuing these parameters overrides this "
-"decision."
+"Since Groff is not installed yet, <command>Configure</command> will not "
+"create man pages for Perl.  These parameters override this behavior."
 msgstr ""
-"由于 Groff 还没有安装，<command>Configure</command> 认为我们不需要 Perl 的 "
-"man 页面。这些参数覆盖这个判断。"
+"由于 Groff 还没有安装，<command>Configure</command> 不会创建 Perl 的 man 页"
+"面。这些参数覆盖这个默认行为。"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: lfs-en/chapter08/perl.xml
@@ -559,8 +556,8 @@ msgstr "<parameter>-Duseshrplib</parameter>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: lfs-en/chapter08/perl.xml
-msgid "Build a shared libperl needed by some perl modules."
-msgstr "构建 libperl 共享库，一些 perl 模块需要它。"
+msgid "Build a shared libperl needed by some Perl modules."
+msgstr "构建 libperl 共享库，一些 Perl 模块需要它。"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: lfs-en/chapter08/perl.xml
@@ -569,8 +566,8 @@ msgstr "<parameter>-Dusethreads</parameter>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: lfs-en/chapter08/perl.xml
-msgid "Build perl with support for threads."
-msgstr "构建带有线程支持的 perl。"
+msgid "Build Perl with support for threads."
+msgstr "构建带有线程支持的 Perl。"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: lfs-en/chapter08/perl.xml
@@ -580,16 +577,15 @@ msgstr "<parameter>-Dprivlib,-Darchlib,-Dsitelib,...</parameter>"
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: lfs-en/chapter08/perl.xml
 msgid ""
-"These settings define where Perl is looking for installed modules. The LFS "
+"These settings define where Perl looks for installed modules. The LFS "
 "editors chose to put them in a directory structure based on the Major.Minor "
 "version of Perl (&perl-version-min;) which allows upgrading Perl to newer "
-"Patch levels (&perl-version;) without the need to reinstall all of the "
-"modules again."
+"Patch levels (&perl-version;) without reinstalling all of the modules."
 msgstr ""
 "这些选项定义 Perl 查找系统上安装的模块的位置。LFS 编辑决定将它们存放在以主版"
-"本号.次版本号 (如 &perl-version-min;) 格式表示 Perl 版本的目录结构中，使得可"
-"以在升级 Perl 到更新的修订号 (修订号即类似 &perl-version; 这样的完整版本号中"
-"最后一部分) 时，不需要重新安装所有模块。"
+"本号.次版本号 (如 &perl-version-min;) 格式表示 Perl 版本的目录结构中，这样在"
+"升级 Perl 到更新的修订号 (即类似 &perl-version; 这样的完整版本号中最后一部"
+"分) 时，不需要重新安装所有模块。"
 
 #. type: Content of: <sect1><sect2><para>
 #: lfs-en/chapter08/perl.xml
@@ -648,7 +644,7 @@ msgstr "<command>corelist</command>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: lfs-en/chapter08/perl.xml
-msgid "A commandline frontend to Module::CoreList"
+msgid "A command line front end to Module::CoreList"
 msgstr "Module::CoreList 的命令行前端"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
@@ -750,9 +746,9 @@ msgstr "<command>instmodsh</command>"
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: lfs-en/chapter08/perl.xml
 msgid ""
-"Shell script for examining installed Perl modules, and can create a tarball "
+"Shell script for examining installed Perl modules; it can create a tarball "
 "from an installed module"
-msgstr "用于检验安装好的 Perl 模块的 shell 脚本，可以从安装好的模块创建压缩包"
+msgstr "用于检验安装好的 Perl 模块的 shell 脚本；可以从安装好的模块创建压缩包"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: lfs-en/chapter08/perl.xml
@@ -801,7 +797,7 @@ msgstr "<command>perl</command>"
 #: lfs-en/chapter08/perl.xml
 msgid ""
 "Combines some of the best features of C, <command>sed</command>, "
-"<command>awk</command> and <command>sh</command> into a single swiss-army "
+"<command>awk</command> and <command>sh</command> into a single Swiss Army "
 "language"
 msgstr ""
 "由 C 语言、<command>sed</command>、<command>awk</command> 和 <command>sh</"
