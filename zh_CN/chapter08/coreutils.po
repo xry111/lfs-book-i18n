@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Linux From Scratch 11.0\n"
 "Report-Msgid-Bugs-To: lfs-dev@lists.linuxfromscratch.org\n"
-"POT-Creation-Date: 2022-11-23 00:30+0800\n"
+"POT-Creation-Date: 2022-12-10 14:56+0800\n"
 "PO-Revision-Date: 2021-07-28 19:07+0800\n"
 "Last-Translator: Xi Ruoyao <xry111@xry111.site>\n"
 "Language-Team: noneLanguage: zh_CN\n"
@@ -508,9 +508,9 @@ msgstr "如果不运行测试套件，直接跳到 <quote>安装该软件包</qu
 #. type: Content of: <sect1><sect2><para>
 #: lfs-en/chapter08/coreutils.xml
 msgid ""
-"The Coreutils package contains utilities for showing and setting the basic "
-"system characteristics."
-msgstr "Coreutils 软件包包含用于显示和设定系统基本属性的工具。"
+"The Coreutils package contains the basic utility programs needed by every "
+"operating system."
+msgstr "Coreutils 软件包包含各种操作系统都需要提供的基本工具程序。"
 
 #. type: Content of: <sect1><sect2><segmentedlist><seglistitem><seg>
 #: lfs-en/chapter08/coreutils.xml
@@ -542,12 +542,12 @@ msgstr "<userinput remap=\"pre\">patch -Np1 -i ../&coreutils-i18n-patch;</userin
 #. type: Content of: <sect1><sect2><note><para>
 #: lfs-en/chapter08/coreutils.xml
 msgid ""
-"In the past, many bugs were found in this patch. When reporting new bugs to "
-"Coreutils maintainers, please check first if they are reproducible without "
-"this patch."
+"Many bugs have been found in this patch. When reporting new bugs to the "
+"Coreutils maintainers, please check first to see if those bugs are "
+"reproducible without this patch."
 msgstr ""
 "在之前，这个补丁中找出了许多 bug。在向 Coreutils 维护者报告新 bug 前，请检查"
-"它们在不使用该补丁的情况下是否还会重现。"
+"这些 bug 在不使用该补丁的情况下是否还会重现。"
 
 #. type: Content of: <sect1><sect2><para>
 #: lfs-en/chapter08/coreutils.xml
@@ -576,9 +576,9 @@ msgstr "<command>autoreconf</command>"
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: lfs-en/chapter08/coreutils.xml
 msgid ""
-"The patch for internationalization has modified the building system of the "
-"package, so the configuration files have to be regenerated."
-msgstr "国际化补丁修改了软件包的构建系统，因此需要重新生成一些配置文件："
+"The patch for internationalization has modified the build system, so the "
+"configuration files must be regenerated."
+msgstr "国际化补丁修改了构建系统，因此需要重新生成配置文件："
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: lfs-en/chapter08/coreutils.xml lfs-en/chapter08/tar.xml
@@ -588,11 +588,11 @@ msgstr "<envar>FORCE_UNSAFE_CONFIGURE=1</envar>"
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: lfs-en/chapter08/coreutils.xml
 msgid ""
-"This environment variable allows the package to be built as the <systemitem "
+"This environment variable allows the package to be built by the <systemitem "
 "class=\"username\">root</systemitem> user."
 msgstr ""
-"该环境变量允许以 <systemitem class=\"username\">root</systemitem>用户身份构建"
-"该软件包。"
+"该环境变量允许以 <systemitem class=\"username\">root</systemitem> 用户身份构"
+"建该软件包。"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: lfs-en/chapter08/coreutils.xml
@@ -602,9 +602,9 @@ msgstr "<parameter>--enable-no-install-program=kill,uptime</parameter>"
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: lfs-en/chapter08/coreutils.xml
 msgid ""
-"The purpose of this switch is to prevent Coreutils from installing binaries "
-"that will be installed by other packages later."
-msgstr "这个开关的目的是防止 Coreutils 安装那些被其他软件包安装的二进制程序。"
+"The purpose of this switch is to prevent Coreutils from installing programs "
+"that will be installed by other packages."
+msgstr "这个开关用于防止 Coreutils 安装那些被其他软件包安装的二进制程序。"
 
 #. type: Content of: <sect1><sect2><para>
 #: lfs-en/chapter08/coreutils.xml
@@ -746,10 +746,10 @@ msgstr "<command>[</command>"
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: lfs-en/chapter08/coreutils.xml
 msgid ""
-"Is an actual command, /usr/bin/[, that is a synonym for the <command>test</"
+"Is an actual command, /usr/bin/[; it is a synonym for the <command>test</"
 "command> command"
 msgstr ""
-"这是一个真实存在的命令，/usr/bin/[，它和 <command>test</command> 命令的功能相"
+"这是一个真实存在的命令，/usr/bin/[；它和 <command>test</command> 命令的功能相"
 "同"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
@@ -883,8 +883,8 @@ msgstr "<command>chmod</command>"
 #: lfs-en/chapter08/coreutils.xml
 msgid ""
 "Changes the permissions of each file to the given mode; the mode can be "
-"either a symbolic representation of the changes to make or an octal number "
-"representing the new permissions"
+"either a symbolic representation of the changes to be made, or an octal "
+"number representing the new permissions"
 msgstr ""
 "修改给定文件的访问权限为指定模式；模式可以是所需修改的符号表示，或新权限的八"
 "进制码"
@@ -985,7 +985,8 @@ msgstr "<command>csplit</command>"
 #: lfs-en/chapter08/coreutils.xml
 msgid ""
 "Splits a given file into several new files, separating them according to "
-"given patterns or line numbers and outputting the byte count of each new file"
+"given patterns or line numbers, and outputting the byte count of each new "
+"file"
 msgstr ""
 "将给定文件分割为若干新文件，根据给定模式或行号进行分割，并输出每个新文件的字"
 "节数"
@@ -1019,8 +1020,10 @@ msgstr "<command>date</command>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: lfs-en/chapter08/coreutils.xml
-msgid "Displays the current time in the given format, or sets the system date"
-msgstr "以给定格式显示当前时间，或设定系统时间"
+msgid ""
+"Displays the current date and time in the given format, or sets the system "
+"date and time"
+msgstr "以给定格式显示当前日期和时间，或设定系统日期和时间"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: lfs-en/chapter08/coreutils.xml
@@ -1104,8 +1107,8 @@ msgstr "<command>dirname</command>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: lfs-en/chapter08/coreutils.xml
-msgid "Strips the non-directory suffix from a file name"
-msgstr "从文件名中删掉非目录的后缀"
+msgid "Extracts the directory portion(s) of the given name(s)"
+msgstr "提取给定文件名的目录部分"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: lfs-en/chapter08/coreutils.xml
@@ -1197,8 +1200,8 @@ msgstr "<command>factor</command>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: lfs-en/chapter08/coreutils.xml
-msgid "Prints the prime factors of all specified integer numbers"
-msgstr "打印所有给定整数的质因数"
+msgid "Prints the prime factors of the specified integers"
+msgstr "打印给定整数的质因子"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: lfs-en/chapter08/coreutils.xml
@@ -1349,8 +1352,8 @@ msgstr "<command>link</command>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: lfs-en/chapter08/coreutils.xml
-msgid "Creates a hard link with the given name to a file"
-msgstr "以给定文件名创建硬链接"
+msgid "Creates a hard link (with the given name) to a file"
+msgstr "(以给定文件名) 创建硬链接"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: lfs-en/chapter08/coreutils.xml
@@ -1440,9 +1443,9 @@ msgstr "<command>mkfifo</command>"
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: lfs-en/chapter08/coreutils.xml
 msgid ""
-"Creates First-In, First-Outs (FIFOs), a \"named pipe\" in UNIX parlance, "
-"with the given names"
-msgstr "以给定名称创建先进先出表 (FIFO)，在 UNIX 惯用语中又称为 “命名管道”"
+"Creates First-In, First-Outs (FIFOs), \"named pipes\" in UNIX parlance, with "
+"the given names"
+msgstr "以给定名称创建先进先出 (FIFO)，在 UNIX 惯用语中又称为 “命名管道”"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: lfs-en/chapter08/coreutils.xml
@@ -2313,8 +2316,10 @@ msgstr "<command>wc</command>"
 #: lfs-en/chapter08/coreutils.xml
 msgid ""
 "Reports the number of lines, words, and bytes for each given file, as well "
-"as a total line when more than one file is given"
-msgstr "报告给定文件的行数、单词数和字节数"
+"as grand totals when more than one file is given"
+msgstr ""
+"报告给定文件的行数、单词数和字节数，如果给定了多个文件，还会输出这些统计值的"
+"总和"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: lfs-en/chapter08/coreutils.xml
@@ -2358,8 +2363,8 @@ msgstr "<command>yes</command>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: lfs-en/chapter08/coreutils.xml
-msgid "Repeatedly outputs <quote>y</quote> or a given string until killed"
-msgstr "不停输出 <quote>y</quote> 或给定字符串，直到被杀死"
+msgid "Repeatedly outputs <quote>y</quote>, or a given string, until killed"
+msgstr "不停输出 <quote>y</quote>，或给定的字符串，直到被杀死"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: lfs-en/chapter08/coreutils.xml
