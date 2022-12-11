@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: lfs-dev@lists.linuxfromscratch.org\n"
-"POT-Creation-Date: 2022-09-19 14:32+0800\n"
+"POT-Creation-Date: 2022-12-11 16:11+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -468,20 +468,24 @@ msgstr "运行命令以测试编译结果："
 #: lfs-en/chapter08/jinja2.xml lfs-en/chapter08/flex.xml
 #: lfs-en/chapter08/binutils.xml lfs-en/chapter08/bzip2.xml
 #: lfs-en/chapter08/vim.xml lfs-en/chapter08/meson.xml
-#: lfs-en/chapter08/shadow.xml lfs-en/chapter08/gperf.xml
+#: lfs-en/chapter08/gperf.xml
 msgid "Installed directory"
 msgstr "安装的目录"
 
 #. type: Content of: <sect1><sect2><para>
 #: lfs-en/chapter08/findutils.xml
 msgid ""
-"The Findutils package contains programs to find files. These programs are "
-"provided to recursively search through a directory tree and to create, "
-"maintain, and search a database (often faster than the recursive find, but "
-"is unreliable if the database has not been recently updated)."
+"The Findutils package contains programs to find files. Programs are provided "
+"to search through all the files in a directory tree and to create, maintain, "
+"and search a database (often faster than the recursive find, but unreliable "
+"unless the database has been updated recently).  Findutils also supplies the "
+"<command>xargs</command> program, which can be used to run a specified "
+"command on each file selected by a search."
 msgstr ""
-"Findutils 软件包包含用于查找文件的程序。这些程序能够递归地搜索目录树，以及创"
-"建、维护和搜索文件数据库 (一般比递归搜索快，但在数据库最近没有更新时不可靠)。"
+"Findutils 软件包包含用于查找文件的程序。这些程序能直接搜索目录树中的所有文"
+"件，也可以创建、维护和搜索文件数据库 (一般比递归搜索快，但在数据库最近没有更"
+"新时不可靠)。Findutils 还提供了 <command>xargs</command> 程序，它能够对一次搜"
+"索列出的素有文件执行给定的命令。"
 
 #. type: Content of: <sect1><sect2><segmentedlist><seglistitem><seg>
 #: lfs-en/chapter08/findutils.xml
@@ -525,11 +529,11 @@ msgstr "<parameter>--localstatedir</parameter>"
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: lfs-en/chapter08/findutils.xml
 msgid ""
-"This option changes the location of the <command>locate</command> database "
-"to be in <filename class=\"directory\">/var/lib/locate</filename>, which is "
-"FHS-compliant."
+"This option moves the <command>locate</command> database to <filename "
+"class=\"directory\">/var/lib/locate</filename>, which is the FHS-compliant "
+"location."
 msgstr ""
-"该选项将 <command>locate</command> 数据库的位置改为 <filename "
+"该选项将 <command>locate</command> 数据库移动到 <filename "
 "class=\"directory\">/var/lib/locate</filename>，以与 FHS 兼容。"
 
 #. type: Content of: <sect1><sect2><screen>

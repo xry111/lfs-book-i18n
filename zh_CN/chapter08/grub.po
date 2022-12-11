@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: lfs-dev@lists.linuxfromscratch.org\n"
-"POT-Creation-Date: 2022-11-04 11:39+0800\n"
+"POT-Creation-Date: 2022-12-11 16:36+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -285,10 +285,10 @@ msgstr "新的配置选项的含义："
 #: lfs-en/chapter08/xz.xml lfs-en/chapter08/grub.xml
 #: lfs-en/chapter08/e2fsprogs.xml lfs-en/chapter08/gettext.xml
 #: lfs-en/chapter08/procps.xml lfs-en/chapter08/glibc.xml
-#: lfs-en/chapter08/dbus.xml lfs-en/chapter08/util-linux.xml
-#: lfs-en/chapter08/gawk.xml lfs-en/chapter08/man-db.xml
-#: lfs-en/chapter08/groff.xml lfs-en/chapter10/kernel.xml
-#: lfs-en/chapter09/bootscripts.xml
+#: lfs-en/chapter08/dbus.xml lfs-en/chapter08/shadow.xml
+#: lfs-en/chapter08/util-linux.xml lfs-en/chapter08/gawk.xml
+#: lfs-en/chapter08/man-db.xml lfs-en/chapter08/groff.xml
+#: lfs-en/chapter10/kernel.xml lfs-en/chapter09/bootscripts.xml
 msgid "Installed directories"
 msgstr "安装的目录"
 
@@ -470,12 +470,12 @@ msgstr "安装 GRUB"
 msgid ""
 "If your system has UEFI support and you wish to boot LFS with UEFI, you can "
 "skip this package in LFS, and install GRUB with UEFI support (and its "
-"dependencies) following <ulink url=\"&blfs-book;postlfs/grub-efi.html\">the "
-"BLFS page</ulink> at the end of this chapter."
+"dependencies) by following the instructions on <ulink url=\"&blfs-book;"
+"postlfs/grub-efi.html\">the BLFS page</ulink>."
 msgstr ""
 "如果您的系统支持 UEFI，且您希望通过 UEFI 引导 LFS，您可以跳过这个 LFS 软件"
-"包，并在本章结束时，按照 <ulink url=\"&blfs-book;postlfs/grub-efi."
-"html\">BLFS 页面</ulink>中的说明，安装支持 UEFI 的 GRUB。"
+"包，并按照 <ulink url=\"&blfs-book;postlfs/grub-efi.html\">BLFS 页面</ulink>"
+"中的说明，安装支持 UEFI 的 GRUB (及其依赖项)。"
 
 #. type: Content of: <sect1><sect2><warning><para>
 #: lfs-en/chapter08/grub.xml
@@ -491,12 +491,12 @@ msgstr "<userinput remap='pre'>unset {C,CPP,CXX,LD}FLAGS</userinput>"
 #. type: Content of: <sect1><sect2><warning><para>
 #: lfs-en/chapter08/grub.xml
 msgid ""
-"Don't try <quote>tuning</quote> this package with custom compilation flags: "
-"this package is a bootloader, with low-level operations in the source code "
-"which is likely to be broken by some aggressive optimizations."
+"Don't try <quote>tuning</quote> this package with custom compilation flags. "
+"This package is a bootloader. The low-level operations in the source code "
+"may be broken by aggressive optimization."
 msgstr ""
-"不要尝试使用自定义的编译选项<quote>优化</quote>该软件包：该软件包是一个引导加"
-"载器，其源代码包含低级操作，这些操作可能被一些激进的优化所破坏。"
+"不要尝试使用自定义的编译选项<quote>优化</quote>该软件包。该软件包是一个引导加"
+"载器，其源代码中的低级操作可能被一些激进的优化所破坏。"
 
 #. type: Content of: <sect1><sect2><para>
 #: lfs-en/chapter08/grub.xml
@@ -521,7 +521,7 @@ msgstr ""
 #: lfs-en/chapter08/grub.xml
 msgid ""
 "This allows the build to complete with warnings introduced by more recent "
-"Flex versions."
+"versions of Flex."
 msgstr "该选项允许在有较新的 Flex 版本导致的警告时完成构建。"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
@@ -532,8 +532,8 @@ msgstr "<parameter>--disable-efiemu</parameter>"
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: lfs-en/chapter08/grub.xml
 msgid ""
-"This option minimizes what is built by disabling a feature and testing "
-"programs not needed for LFS."
+"This option minimizes what is built by disabling a feature and eliminating "
+"some test programs not needed for LFS."
 msgstr "该选项通过禁用 LFS 不需要的特性和测试程序，最小化需要构建的内容。"
 
 #. type: Content of: <sect1><sect2><para>
@@ -559,7 +559,7 @@ msgstr ""
 #. type: Content of: <sect1><sect2><para>
 #: lfs-en/chapter08/grub.xml
 msgid ""
-"Using GRUB to make your LFS system bootable will be discussed in <xref "
+"Making your LFS system bootable with GRUB will be discussed in <xref "
 "linkend=\"ch-bootable-grub\"/>."
 msgstr ""
 "使用 GRUB 引导您的 LFS 系统的方法将在<xref linkend=\"ch-bootable-grub\"/>中讨"
@@ -603,8 +603,8 @@ msgstr "<command>grub-bios-setup</command>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: lfs-en/chapter08/grub.xml
-msgid "Is a helper program for grub-install"
-msgstr "grub-install 使用的辅助程序"
+msgid "Is a helper program for <command>grub-install</command>"
+msgstr "是 grub-install 使用的辅助程序"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: lfs-en/chapter08/grub.xml
@@ -618,8 +618,8 @@ msgstr "<command>grub-editenv</command>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: lfs-en/chapter08/grub.xml
-msgid "A tool to edit the environment block"
-msgstr "用于编辑环境块的工具"
+msgid "Is a tool to edit the environment block"
+msgstr "是一个用于编辑环境块的工具"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: lfs-en/chapter08/grub.xml
@@ -633,7 +633,7 @@ msgstr "<command>grub-file</command>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: lfs-en/chapter08/grub.xml
-msgid "Checks if FILE is of the specified type."
+msgid "Checks to see if the given file is of the specified type"
 msgstr "检验文件是否是给定类型"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
@@ -648,8 +648,8 @@ msgstr "<command>grub-fstest</command>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: lfs-en/chapter08/grub.xml
-msgid "Tool to debug the filesystem driver"
-msgstr "调试文件系统驱动程序的工具"
+msgid "Is a tool to debug the filesystem driver"
+msgstr "是一个调试文件系统驱动程序的工具"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: lfs-en/chapter08/grub.xml
@@ -663,8 +663,10 @@ msgstr "<command>grub-glue-efi</command>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: lfs-en/chapter08/grub.xml
-msgid "Glue 32-bit and 64-bit binary into Apple universal one."
-msgstr "将 32 位和 64 位二进制文件结合成 Apple 通用二进制格式。"
+msgid ""
+"Glues 32-bit and 64-bit binaries into a single file (for Apple machines)"
+msgstr ""
+"将 32 位和 64 位二进制文件结合成一个文件 (以便在 Apple 生产的机器使用)。"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: lfs-en/chapter08/grub.xml
@@ -678,7 +680,7 @@ msgstr "<command>grub-install</command>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: lfs-en/chapter08/grub.xml
-msgid "Install GRUB on your drive"
+msgid "Installs GRUB on your drive"
 msgstr "在您的驱动器上安装 GRUB"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
@@ -693,8 +695,8 @@ msgstr "<command>grub-kbdcomp</command>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: lfs-en/chapter08/grub.xml
-msgid "Script that converts an xkb layout into one recognized by GRUB"
-msgstr "将 xkb 布局转化为 GRUB 能够识别的格式的脚本"
+msgid "Is a script that converts an xkb layout into one recognized by GRUB"
+msgstr "是一个脚本，用于将 xkb 布局转化为 GRUB 能够识别的格式"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: lfs-en/chapter08/grub.xml
@@ -708,8 +710,12 @@ msgstr "<command>grub-macbless</command>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: lfs-en/chapter08/grub.xml
-msgid "Mac-style bless on HFS or HFS+ files"
-msgstr "Mac 风格的 bless 命令，用于 HFS 或 HFS+ 文件系统"
+msgid ""
+"Is the Mac-style bless for HFS or HFS+ file systems (<command>bless</"
+"command> is peculiar to Apple machines; it makes a device bootable)"
+msgstr ""
+"是 Mac 风格的，用于 HFS 和 HFS+ 文件系统的 bless 程序 (<command>bless</"
+"command> 仅用于 Apple 生产的机器；它能将设备变得可引导)"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: lfs-en/chapter08/grub.xml
@@ -742,8 +748,8 @@ msgstr "<command>grub-mkconfig</command>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: lfs-en/chapter08/grub.xml
-msgid "Generate a grub config file"
-msgstr "生成 GRUB 配置文件"
+msgid "Generates a <filename>grub.cfg</filename> file"
+msgstr "生成一个 <filename>grub.cfg</filename> 文件"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: lfs-en/chapter08/grub.xml
@@ -757,7 +763,7 @@ msgstr "<command>grub-mkimage</command>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: lfs-en/chapter08/grub.xml
-msgid "Make a bootable image of GRUB"
+msgid "Makes a bootable image of GRUB"
 msgstr "创建 GRUB 可引导镜像"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
@@ -832,8 +838,10 @@ msgstr "<command>grub-mkrescue</command>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: lfs-en/chapter08/grub.xml
-msgid "Make a bootable image of GRUB suitable for a floppy disk or CDROM/DVD"
-msgstr "为软盘或 CDROM/DVD 创建 GRUB 可引导镜像"
+msgid ""
+"Makes a bootable image of GRUB suitable for a floppy disk, CDROM/DVD, or a "
+"USB drive"
+msgstr "为软盘，CDROM/DVD，或 USB 设备创建 GRUB 可引导镜像"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: lfs-en/chapter08/grub.xml
@@ -862,7 +870,7 @@ msgstr "<command>grub-ofpathname</command>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: lfs-en/chapter08/grub.xml
-msgid "Is a helper program that prints the path of a GRUB device"
+msgid "Is a helper program that prints the path to a GRUB device"
 msgstr "打印 GRUB 设备路径的帮助程序"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
@@ -877,8 +885,8 @@ msgstr "<command>grub-probe</command>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: lfs-en/chapter08/grub.xml
-msgid "Probe device information for a given path or device"
-msgstr "对给定路径或设备探测信息"
+msgid "Probes device information for a given path or device"
+msgstr "探测给定路径或设备的信息"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: lfs-en/chapter08/grub.xml
@@ -907,7 +915,7 @@ msgstr "<command>grub-render-label</command>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: lfs-en/chapter08/grub.xml
-msgid "Render Apple .disk_label for Apple Macs"
+msgid "Renders Apple .disk_label for Apple Macs"
 msgstr "为 Apple Mac 设置 Apple .disk_label"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
@@ -922,7 +930,7 @@ msgstr "<command>grub-script-check</command>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: lfs-en/chapter08/grub.xml
-msgid "Checks GRUB configuration script for syntax errors"
+msgid "Checks the GRUB configuration script for syntax errors"
 msgstr "在 GRUB 配置脚本中检查语法错误"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
@@ -967,7 +975,7 @@ msgstr "<command>grub-syslinux2cfg</command>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: lfs-en/chapter08/grub.xml
-msgid "Transform a syslinux config file into grub.cfg format"
+msgid "Transforms a syslinux config file into grub.cfg format"
 msgstr "将 syslinux 配置文件转换为 grub.cfg 格式"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
