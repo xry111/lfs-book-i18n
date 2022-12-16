@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: lfs-dev@lists.linuxfromscratch.org\n"
-"POT-Creation-Date: 2022-10-15 09:55+0800\n"
+"POT-Creation-Date: 2022-12-16 15:22+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -294,9 +294,9 @@ msgstr "Vim-&vim-version;"
 #: lfs-en/chapter08/gdbm.xml lfs-en/chapter08/procps.xml
 #: lfs-en/chapter08/vim.xml lfs-en/chapter08/glibc.xml
 #: lfs-en/chapter08/dbus.xml lfs-en/chapter08/patch.xml
-#: lfs-en/chapter08/util-linux.xml lfs-en/chapter08/gawk.xml
-#: lfs-en/chapter08/gperf.xml lfs-en/chapter08/man-db.xml
-#: lfs-en/chapter08/groff.xml lfs-en/chapter09/bootscripts.xml
+#: lfs-en/chapter08/util-linux.xml lfs-en/chapter08/gperf.xml
+#: lfs-en/chapter08/man-db.xml lfs-en/chapter08/groff.xml
+#: lfs-en/chapter09/bootscripts.xml
 #, no-wrap
 msgid "<userinput remap=\"install\">make install</userinput>"
 msgstr "<userinput remap=\"install\">make install</userinput>"
@@ -416,7 +416,7 @@ msgstr "<userinput remap=\"configure\">./configure --prefix=/usr</userinput>"
 #: lfs-en/chapter08/jinja2.xml lfs-en/chapter08/flex.xml
 #: lfs-en/chapter08/binutils.xml lfs-en/chapter08/bzip2.xml
 #: lfs-en/chapter08/vim.xml lfs-en/chapter08/meson.xml
-#: lfs-en/chapter08/shadow.xml lfs-en/chapter08/gperf.xml
+#: lfs-en/chapter08/gperf.xml
 msgid "Installed directory"
 msgstr "安装的目录"
 
@@ -529,7 +529,7 @@ msgstr "<userinput remap=\"pre\">echo '#define SYS_VIMRC_FILE \"/etc/vimrc\"' &g
 
 #. type: Content of: <sect1><sect2><para>
 #: lfs-en/chapter08/vim.xml
-msgid "Prepare vim for compilation:"
+msgid "Prepare Vim for compilation:"
 msgstr "准备编译 Vim："
 
 #. type: Content of: <sect1><sect2><para>
@@ -571,12 +571,12 @@ msgstr ""
 #. type: Content of: <sect1><sect2><para>
 #: lfs-en/chapter08/vim.xml
 msgid ""
-"Many users are used to using <command>vi</command> instead of <command>vim</"
+"Many users reflexively type <command>vi</command> instead of <command>vim</"
 "command>. To allow execution of <command>vim</command> when users habitually "
 "enter <command>vi</command>, create a symlink for both the binary and the "
 "man page in the provided languages:"
 msgstr ""
-"许多用户习惯于使用命令 <command>vi</command>，而不是 <command>vim</command>。"
+"许多用户条件反射地输入 <command>vi</command>，而不是 <command>vim</command>。"
 "为了在用户习惯性地输入 <command>vi</command> 时能够执行 <command>vim</"
 "command>，为二进制程序和各种语言的 man 页面创建符号链接："
 
@@ -597,7 +597,7 @@ msgstr ""
 #. type: Content of: <sect1><sect2><para>
 #: lfs-en/chapter08/vim.xml
 msgid ""
-"By default, vim's documentation is installed in <filename "
+"By default, Vim's documentation is installed in <filename "
 "class=\"directory\">/usr/share/vim</filename>. The following symlink allows "
 "the documentation to be accessed via <filename class=\"directory\">/usr/"
 "share/doc/vim-&vim-version;</filename>, making it consistent with the "
@@ -618,10 +618,10 @@ msgstr "<userinput remap=\"install\">ln -sv ../&vim-docdir;/doc /usr/share/doc/v
 #: lfs-en/chapter08/vim.xml
 msgid ""
 "If an X Window System is going to be installed on the LFS system, it may be "
-"necessary to recompile vim after installing X. Vim comes with a GUI version "
+"necessary to recompile Vim after installing X. Vim comes with a GUI version "
 "of the editor that requires X and some additional libraries to be installed. "
-"For more information on this process, refer to the vim documentation and the "
-"vim installation page in the BLFS book at <ulink url=\"&blfs-book;postlfs/"
+"For more information on this process, refer to the Vim documentation and the "
+"Vim installation page in the BLFS book at <ulink url=\"&blfs-book;postlfs/"
 "vim.html\"/>."
 msgstr ""
 "如果在安装 LFS 系统后安装了 X 窗口系统，可能需要在安装 X 后重新编译 Vim。Vim "
@@ -741,12 +741,12 @@ msgstr "<userinput>vim -c ':options'</userinput>"
 #. type: Content of: <sect1><sect2><note><para>
 #: lfs-en/chapter08/vim.xml
 msgid ""
-"By default, vim only installs spell files for the English language.  To "
-"install spell files for your preferred language, copy the <filename "
-"class='extension'>.spl</filename> and optionally, the <filename "
-"class='extension'>.sug</filename> files for your language and character "
-"encoding from <filename class='directory'>runtime/spell</filename> into "
-"<filename class='directory'> /usr/share/&vim-docdir;/spell/</filename>."
+"By default, vim only installs spell-checking files for the English "
+"language.  To install spell-checking files for your preferred language, copy "
+"the <filename class='extension'>.spl</filename> and optionally, the "
+"<filename class='extension'>.sug</filename> files for your language and "
+"character encoding from <filename class='directory'>runtime/spell</filename> "
+"into <filename class='directory'> /usr/share/&vim-docdir;/spell/</filename>."
 msgstr ""
 "默认情况下 Vim 只安装英语拼写检查文件。如果希望安装您使用的语言的拼写检查文"
 "件，需要将适用于您的语言和字符编码的 <filename class='extension'>.spl</"
@@ -757,8 +757,8 @@ msgstr ""
 #. type: Content of: <sect1><sect2><note><para>
 #: lfs-en/chapter08/vim.xml
 msgid ""
-"To use these spell files, some configuration in <filename>/etc/vimrc</"
-"filename> is needed, e.g.:"
+"To use these spell-checking files, some configuration in <filename>/etc/"
+"vimrc</filename> is needed, e.g.:"
 msgstr ""
 "为了使用这些拼写检查文件，需要在 <filename>/etc/vimrc</filename> 中进行配置，"
 "例如："
@@ -937,10 +937,9 @@ msgstr "<command>xxd</command>"
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: lfs-en/chapter08/vim.xml
 msgid ""
-"Creates a hex dump of the given file; it can also do the reverse, so it can "
-"be used for binary patching"
-msgstr ""
-"创建文件的十六进制转储；它也可以从十六进制转储创建文件，因此可用于二进制补丁"
+"Creates a hex dump of the given file; it can also perform the inverse "
+"operation, so it can be used for binary patching"
+msgstr "创建文件的十六进制转储；也可以进行逆操作，因此可用于修补二进制文件"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: lfs-en/chapter08/vim.xml
