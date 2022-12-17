@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Linux From Scratch 11.0\n"
 "Report-Msgid-Bugs-To: lfs-dev@lists.linuxfromscratch.org\n"
-"POT-Creation-Date: 2022-11-18 12:14+0800\n"
+"POT-Creation-Date: 2022-12-17 18:55+0800\n"
 "PO-Revision-Date: 2021-07-28 12:48+0800\n"
 "Last-Translator: Xi Ruoyao <xry111@xry111.site>\n"
 "Language-Team: noneLanguage: zh_CN\n"
@@ -294,9 +294,9 @@ msgstr "安装该软件包："
 #: lfs-en/chapter08/gdbm.xml lfs-en/chapter08/procps.xml
 #: lfs-en/chapter08/vim.xml lfs-en/chapter08/glibc.xml
 #: lfs-en/chapter08/dbus.xml lfs-en/chapter08/patch.xml
-#: lfs-en/chapter08/util-linux.xml lfs-en/chapter08/gawk.xml
-#: lfs-en/chapter08/gperf.xml lfs-en/chapter08/man-db.xml
-#: lfs-en/chapter08/groff.xml lfs-en/chapter09/bootscripts.xml
+#: lfs-en/chapter08/util-linux.xml lfs-en/chapter08/gperf.xml
+#: lfs-en/chapter08/man-db.xml lfs-en/chapter08/groff.xml
+#: lfs-en/chapter09/bootscripts.xml
 #, no-wrap
 msgid "<userinput remap=\"install\">make install</userinput>"
 msgstr "<userinput remap=\"install\">make install</userinput>"
@@ -588,11 +588,11 @@ msgstr ""
 #: lfs-en/chapter08/util-linux.xml
 msgid ""
 "The --disable and --without options prevent warnings about building "
-"components that require packages not in LFS or are inconsistent with "
+"components that either require packages not in LFS, or are inconsistent with "
 "programs installed by other packages."
 msgstr ""
-"--disable 和 --without 选项防止一些警告，它们与一些 LFS 中不存在，或与其他软"
-"件包安装的程序不兼容的构建组件相关。"
+"--disable 和 --without 选项防止一些警告，它们与那些需要 LFS 中不存在的依赖"
+"项，或者和其他软件包安装的程序不兼容的组件的构建过程相关。"
 
 #. type: Content of: <sect1><sect2><para>
 #: lfs-en/chapter08/util-linux.xml
@@ -607,14 +607,14 @@ msgid ""
 "CONFIG_SCSI_DEBUG option for the kernel must be available in the currently "
 "running system and must be built as a module.  Building it into the kernel "
 "will prevent booting.  For complete coverage, other BLFS packages must be "
-"installed.  If desired, this test can be run after rebooting into the "
-"completed LFS system and running:"
+"installed.  If desired, this test can be run by booting into the completed "
+"LFS system and running:"
 msgstr ""
 "以 <systemitem class=\"username\">root</systemitem> 用户身份运行测试套件可能"
 "对系统造成损害。为了运行它，内核配置选项 CONFIG_SCSI_DEBUG 必须在当前运行的系"
 "统中可用，且必须被构建为内核模块。直接将其构建为内核的一部分会导致系统无法引"
-"导。为了测试的完整覆盖，必须安装其他 BLFS 软件包。如果希望的话，可以在重启进"
-"入完整的 LFS 系统后，执行以下命令运行测试："
+"导。为了测试的完整覆盖，必须安装其他 BLFS 软件包。如果希望的话，可以在引导构"
+"建完成的 LFS 系统后，执行以下命令运行测试："
 
 #. type: Content of: <sect1><sect2><warning><screen>
 #: lfs-en/chapter08/util-linux.xml
@@ -652,30 +652,32 @@ msgid ""
 "addpart, agetty, blkdiscard, blkid, blkzone, blockdev, cal, cfdisk, chcpu, "
 "chmem, choom, chrt, col, colcrt, colrm, column, ctrlaltdel, delpart, dmesg, "
 "eject, fallocate, fdisk, fincore, findfs, findmnt, flock, fsck, fsck.cramfs, "
-"fsck.minix, fsfreeze, fstrim, getopt, hexdump, hwclock, i386, ionice, ipcmk, "
-"ipcrm, ipcs, irqtop, isosize, kill, last, lastb (link to last), ldattach, "
-"linux32, linux64, logger, look, losetup, lsblk, lscpu, lsipc, lsirq, "
-"lslocks, lslogins, lsmem, lsns, mcookie, mesg, mkfs, mkfs.bfs, mkfs.cramfs, "
-"mkfs.minix, mkswap, more, mount, mountpoint, namei, nsenter, partx, "
-"pivot_root, prlimit, readprofile, rename, renice, resizepart, rev, rfkill, "
-"rtcwake, script, scriptlive, scriptreplay, setarch, setsid, setterm, sfdisk, "
-"sulogin, swaplabel, swapoff (link to swapon), swapon, switch_root, taskset, "
-"uclampset, ul, umount, uname26, unshare, utmpdump, uuidd, uuidgen, "
-"uuidparse, wall, wdctl, whereis, wipefs, x86_64, and zramctl"
+"fsck.minix, fsfreeze, fstrim, getopt, hardlink, hexdump, hwclock, i386 (link "
+"to setarch), ionice, ipcmk, ipcrm, ipcs, irqtop, isosize, kill, last, lastb "
+"(link to last), ldattach, linux32 (link to setarch), linux64 (link to "
+"setarch), logger, look, losetup, lsblk, lscpu, lsipc, lsirq, lsfd, lslocks, "
+"lslogins, lsmem, lsns, mcookie, mesg, mkfs, mkfs.bfs, mkfs.cramfs, mkfs."
+"minix, mkswap, more, mount, mountpoint, namei, nsenter, partx, pivot_root, "
+"prlimit, readprofile, rename, renice, resizepart, rev, rfkill, rtcwake, "
+"script, scriptlive, scriptreplay, setarch, setsid, setterm, sfdisk, sulogin, "
+"swaplabel, swapoff, swapon, switch_root, taskset, uclampset, ul, umount, "
+"uname26 (link to setarch), unshare, utmpdump, uuidd, uuidgen, uuidparse, "
+"wall, wdctl, whereis, wipefs, x86_64 (link to setarch), and zramctl"
 msgstr ""
 "addpart, agetty, blkdiscard, blkid, blkzone, blockdev, cal, cfdisk, chcpu, "
 "chmem, choom, chrt, col, colcrt, colrm, column, ctrlaltdel, delpart, dmesg, "
 "eject, fallocate, fdisk, fincore, findfs, findmnt, flock, fsck, fsck.cramfs, "
-"fsck.minix, fsfreeze, fstrim, getopt, hexdump, hwclock, i386, ionice, ipcmk, "
-"ipcrm, ipcs, irqtop, isosize, kill, last, lastb (到 last 的链接), ldattach, "
-"linux32, linux64, logger, look, losetup, lsblk, lscpu, lsipc, lsirq, "
-"lslocks, lslogins, lsmem, lsns, mcookie, mesg, mkfs, mkfs.bfs, mkfs.cramfs, "
-"mkfs.minix, mkswap, more, mount, mountpoint, namei, nsenter, partx, "
-"pivot_root, prlimit, readprofile, rename, renice, resizepart, rev, rfkill, "
-"rtcwake, script, scriptlive, scriptreplay, setarch, setsid, setterm, sfdisk, "
-"sulogin, swaplabel, swapoff (到 swapon 的链接), swapon, switch_root, "
-"taskset, uclampset, ul, umount, uname26, unshare, utmpdump, uuidd, uuidgen, "
-"uuidparse, wall, wdctl, whereis, wipefs, x86_64, 以及 zramctl"
+"fsck.minix, fsfreeze, fstrim, getopt, hexdump, hwclock, i386 (到 setarch 的链"
+"接), ionice, ipcmk, ipcrm, ipcs, irqtop, isosize, kill, last, lastb (到 last "
+"的链接), ldattach, linux32 (到 setarch 的链接), linux64 (到 setarch 的链接), "
+"logger, look, losetup, lsblk, lscpu, lsipc, lsirq, lslocks, lslogins, lsmem, "
+"lsns, mcookie, mesg, mkfs, mkfs.bfs, mkfs.cramfs, mkfs.minix, mkswap, more, "
+"mount, mountpoint, namei, nsenter, partx, pivot_root, prlimit, readprofile, "
+"rename, renice, resizepart, rev, rfkill, rtcwake, script, scriptlive, "
+"scriptreplay, setarch, setsid, setterm, sfdisk, sulogin, swaplabel, swapoff, "
+"swapon, switch_root, taskset, uclampset, ul, umount, uname26 (到 setarch 的链"
+"接), unshare, utmpdump, uuidd, uuidgen, uuidparse, wall, wdctl, whereis, "
+"wipefs, x86_64 (到 setarch 的链接), 以及 zramctl"
 
 #. type: Content of: <sect1><sect2><segmentedlist><seglistitem><seg>
 #: lfs-en/chapter08/util-linux.xml
@@ -763,8 +765,8 @@ msgstr "<command>blkzone</command>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: lfs-en/chapter08/util-linux.xml
-msgid "Runs zone command on the given block device"
-msgstr "在给定块设备上运行 zone 命令"
+msgid "Is used to manage zoned storage block devices"
+msgstr "用于管理分区存储的块存储设备"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: lfs-en/chapter08/util-linux.xml
@@ -853,8 +855,12 @@ msgstr "<command>choom</command>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: lfs-en/chapter08/util-linux.xml
-msgid "Displays and adjusts OOM-killer score"
-msgstr "显示和调整 OOM-killer 分数"
+msgid ""
+"Displays and adjusts OOM-killer scores, used to determine which process to "
+"kill first when Linux is Out Of Memory"
+msgstr ""
+"显示或调整 OOM-killer 分数，这一数值用于确定 Linux 在内存不足时首先杀死哪个进"
+"程"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: lfs-en/chapter08/util-linux.xml
@@ -1047,8 +1053,9 @@ msgstr "<command>findfs</command>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: lfs-en/chapter08/util-linux.xml
-msgid "Finds a file system by label or Universally Unique Identifier (UUID)"
-msgstr "根据通用唯一识别码 (UUID) 查找文件系统"
+msgid ""
+"Finds a file system, either by label or Universally Unique Identifier (UUID)"
+msgstr "根据标签或统一标识符 (UUID) 查找文件系统"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: lfs-en/chapter08/util-linux.xml
@@ -1063,8 +1070,8 @@ msgstr "<command>findmnt</command>"
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: lfs-en/chapter08/util-linux.xml
 msgid ""
-"Is a command line interface to the libmount library for work with mountinfo, "
-"fstab and mtab files"
+"Is a command line interface to the libmount library for working with "
+"mountinfo, fstab and mtab files"
 msgstr "是 libmount 库的命令行接口，可以处理 mountinfo、fstab 和 mtab 文件"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
@@ -1183,13 +1190,28 @@ msgstr "getopt"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: lfs-en/chapter08/util-linux.xml
+msgid "<command>hardlink</command>"
+msgstr "<command>hardlink</command>"
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
+#: lfs-en/chapter08/util-linux.xml
+msgid "Consolidates duplicate files by creating hard links"
+msgstr "通过创建硬链接，归并重复的文件"
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
+#: lfs-en/chapter08/util-linux.xml
+msgid "hardlink"
+msgstr "hardlink"
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
+#: lfs-en/chapter08/util-linux.xml
 msgid "<command>hexdump</command>"
 msgstr "<command>hexdump</command>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: lfs-en/chapter08/util-linux.xml
-msgid "Dumps the given file in hexadecimal or in another given format"
-msgstr "以十六进制或其他给定格式转储文件"
+msgid "Dumps the given file in hexadecimal, decimal, octal, or ascii"
+msgstr "以十六进制、十进制、八进制或 ascii 格式转储文件"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: lfs-en/chapter08/util-linux.xml
@@ -1487,6 +1509,21 @@ msgstr "lscpu"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: lfs-en/chapter08/util-linux.xml
+msgid "<command>lsfd</command>"
+msgstr "<command>lsfd</command>"
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
+#: lfs-en/chapter08/util-linux.xml
+msgid "Displays information about open files; replaces <command>lsof</command>"
+msgstr "显示当前已打开的文件信息；可以代替 <command>lsof</command> 命令"
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
+#: lfs-en/chapter08/util-linux.xml
+msgid "lsfd"
+msgstr "lsfd"
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
+#: lfs-en/chapter08/util-linux.xml
 msgid "<command>lsipc</command>"
 msgstr "<command>lsipc</command>"
 
@@ -1737,8 +1774,8 @@ msgstr "<command>namei</command>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: lfs-en/chapter08/util-linux.xml
-msgid "Shows the symbolic links in the given pathnames"
-msgstr "显示给定目录名中的符号链接"
+msgid "Shows the symbolic links in the given paths"
+msgstr "显示给定路径中的符号链接"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: lfs-en/chapter08/util-linux.xml
@@ -1798,7 +1835,7 @@ msgstr "<command>prlimit</command>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: lfs-en/chapter08/util-linux.xml
-msgid "Get and set a process' resource limits"
+msgid "Gets and sets a process's resource limits"
 msgstr "获取和设定进程资源限制"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
@@ -1903,7 +1940,7 @@ msgstr "<command>rtcwake</command>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: lfs-en/chapter08/util-linux.xml
-msgid "Used to enter a system sleep state until specified wakeup time"
+msgid "Used to enter a system sleep state until the specified wakeup time"
 msgstr "进入睡眠状态，直到给定的唤醒时间"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
@@ -1933,7 +1970,7 @@ msgstr "<command>scriptlive</command>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: lfs-en/chapter08/util-linux.xml
-msgid "Re-run session typescripts using timing information"
+msgid "Re-runs session typescripts using timing information"
 msgstr "根据计时信息重新运行会话打字机文档"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
@@ -1964,7 +2001,7 @@ msgstr "<command>setarch</command>"
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: lfs-en/chapter08/util-linux.xml
 msgid ""
-"Changes reported architecture in a new program environment and sets "
+"Changes reported architecture in a new program environment, and sets "
 "personality flags"
 msgstr "在新程序环境中修改系统报告的体系结构，并设置进程执行域信息"
 
@@ -2045,7 +2082,7 @@ msgstr "<command>swaplabel</command>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: lfs-en/chapter08/util-linux.xml
-msgid "Allows to change swaparea UUID and label"
+msgid "Makes changes to the swap area's UUID and label"
 msgstr "允许修改交换空间 UUID 和标签"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
@@ -2076,7 +2113,7 @@ msgstr "<command>swapon</command>"
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: lfs-en/chapter08/util-linux.xml
 msgid ""
-"Enables devices and files for paging and swapping and lists the devices and "
+"Enables devices and files for paging and swapping, and lists the devices and "
 "files currently in use"
 msgstr "启用文件或设备上的分页交换，或列出当前用于交换的设备和文件"
 
@@ -2107,7 +2144,7 @@ msgstr "<command>taskset</command>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: lfs-en/chapter08/util-linux.xml
-msgid "Retrieves or sets a process' CPU affinity"
+msgid "Retrieves or sets a process's CPU affinity"
 msgstr "获取或设置进程 CPU 亲和性"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
@@ -2123,8 +2160,8 @@ msgstr "<command>uclampset</command>"
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: lfs-en/chapter08/util-linux.xml
 msgid ""
-"Manipulate the utilization clamping attributes of the system or a process"
-msgstr "操纵进程资源占用限位属性"
+"Manipulates the utilization clamping attributes of the system or a process"
+msgstr "调节进程资源占用限位属性"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: lfs-en/chapter08/util-linux.xml
@@ -2195,9 +2232,8 @@ msgstr "<command>utmpdump</command>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: lfs-en/chapter08/util-linux.xml
-msgid ""
-"Displays the content of the given login file in a more user-friendly format"
-msgstr "以更加用户友好的格式显示给定登录文件"
+msgid "Displays the content of the given login file in a user-friendly format"
+msgstr "以用户友好的格式显示给定登录文件内容"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: lfs-en/chapter08/util-linux.xml
@@ -2229,12 +2265,14 @@ msgstr "<command>uuidgen</command>"
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: lfs-en/chapter08/util-linux.xml
 msgid ""
-"Creates new UUIDs. Each new UUID can reasonably be considered unique among "
-"all UUIDs created, on the local system and on other systems, in the past and "
-"in the future"
+"Creates new UUIDs. Each new UUID is a random number likely to be unique "
+"among all UUIDs created, on the local system and on other systems, in the "
+"past and in the future, with extremely high probability (~340 trillion "
+"trillion trillion unique UUIDs are possible)"
 msgstr ""
-"创建新的 UUID。每个新的 UUID 可以被合理地认为在本地系统和其他系统上，在过去和"
-"未来，都是唯一的"
+"创建新的 UUID。每个新创建的 UUID 都是一个随机数，它大概率和其他 UUID —— 包括"
+"在本地系统或其他系统，在过去或未来创建的 UUID —— 都不同(可能存在约 340 万亿亿"
+"亿亿个不同的 UUID)"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: lfs-en/chapter08/util-linux.xml
@@ -2248,7 +2286,7 @@ msgstr "<command>uuidparse</command>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: lfs-en/chapter08/util-linux.xml
-msgid "An utility to parse unique identifiers"
+msgid "A utility to parse unique identifiers"
 msgstr "用于解析统一标识符的工具"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
@@ -2296,9 +2334,9 @@ msgstr "<command>whereis</command>"
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: lfs-en/chapter08/util-linux.xml
 msgid ""
-"Reports the location of the binary, source, and man page for the given "
+"Reports the location of the binary, source, and man page files for the given "
 "command"
-msgstr "报告给定命令二进制文件、源代码文件和 man 页面的位置"
+msgstr "报告给定命令二进制，源代码，以及 man 页面文件的位置"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: lfs-en/chapter08/util-linux.xml
