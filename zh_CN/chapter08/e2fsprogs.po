@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: lfs-dev@lists.linuxfromscratch.org\n"
-"POT-Creation-Date: 2022-10-15 09:55+0800\n"
+"POT-Creation-Date: 2022-12-19 00:04+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -324,9 +324,9 @@ msgstr ""
 #: lfs-en/chapter08/gdbm.xml lfs-en/chapter08/procps.xml
 #: lfs-en/chapter08/vim.xml lfs-en/chapter08/glibc.xml
 #: lfs-en/chapter08/dbus.xml lfs-en/chapter08/patch.xml
-#: lfs-en/chapter08/util-linux.xml lfs-en/chapter08/gawk.xml
-#: lfs-en/chapter08/gperf.xml lfs-en/chapter08/man-db.xml
-#: lfs-en/chapter08/groff.xml lfs-en/chapter09/bootscripts.xml
+#: lfs-en/chapter08/util-linux.xml lfs-en/chapter08/gperf.xml
+#: lfs-en/chapter08/man-db.xml lfs-en/chapter08/groff.xml
+#: lfs-en/chapter09/bootscripts.xml
 #, no-wrap
 msgid "<userinput remap=\"install\">make install</userinput>"
 msgstr "<userinput remap=\"install\">make install</userinput>"
@@ -343,10 +343,10 @@ msgstr "<userinput remap=\"install\">make install</userinput>"
 #: lfs-en/chapter08/xz.xml lfs-en/chapter08/grub.xml
 #: lfs-en/chapter08/e2fsprogs.xml lfs-en/chapter08/gettext.xml
 #: lfs-en/chapter08/procps.xml lfs-en/chapter08/glibc.xml
-#: lfs-en/chapter08/dbus.xml lfs-en/chapter08/util-linux.xml
-#: lfs-en/chapter08/gawk.xml lfs-en/chapter08/man-db.xml
-#: lfs-en/chapter08/groff.xml lfs-en/chapter10/kernel.xml
-#: lfs-en/chapter09/bootscripts.xml
+#: lfs-en/chapter08/dbus.xml lfs-en/chapter08/shadow.xml
+#: lfs-en/chapter08/util-linux.xml lfs-en/chapter08/gawk.xml
+#: lfs-en/chapter08/man-db.xml lfs-en/chapter08/groff.xml
+#: lfs-en/chapter10/kernel.xml lfs-en/chapter09/bootscripts.xml
 msgid "Installed directories"
 msgstr "安装的目录"
 
@@ -538,7 +538,7 @@ msgstr "E2fsprogs"
 #. type: Content of: <sect1><sect2><para>
 #: lfs-en/chapter08/e2fsprogs.xml
 msgid ""
-"The e2fsprogs package contains the utilities for handling the <systemitem "
+"The E2fsprogs package contains the utilities for handling the <systemitem "
 "class=\"filesystem\">ext2</systemitem> file system. It also supports the "
 "<systemitem class=\"filesystem\">ext3</systemitem> and <systemitem "
 "class=\"filesystem\">ext4</systemitem> journaling file systems."
@@ -566,13 +566,13 @@ msgstr "安装 E2fsprogs"
 #. type: Content of: <sect1><sect2><para>
 #: lfs-en/chapter08/e2fsprogs.xml
 msgid ""
-"The e2fsprogs documentation recommends that the package be built in a "
+"The E2fsprogs documentation recommends that the package be built in a "
 "subdirectory of the source tree:"
 msgstr "E2fsprogs 文档推荐在源代码目录树中的一个子目录内构建该软件包："
 
 #. type: Content of: <sect1><sect2><para>
 #: lfs-en/chapter08/e2fsprogs.xml
-msgid "Prepare e2fsprogs for compilation:"
+msgid "Prepare E2fsprogs for compilation:"
 msgstr "准备编译 E2fsprogs："
 
 #. type: Content of: <sect1><sect2><screen>
@@ -609,16 +609,16 @@ msgstr "该选项表示创建该软件包中一些程序使用的共享库。"
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: lfs-en/chapter08/e2fsprogs.xml
 msgid ""
-"This prevents e2fsprogs from building and installing the <systemitem "
+"These prevent building and installing the <systemitem "
 "class=\"library\">libuuid</systemitem> and <systemitem "
 "class=\"library\">libblkid</systemitem> libraries, the <systemitem "
 "class=\"daemon\">uuidd</systemitem> daemon, and the <command>fsck</command> "
-"wrapper, as util-linux installs more recent versions."
+"wrapper; util-linux installs more recent versions."
 msgstr ""
-"该选项防止 e2fsprogs 构建和安装 <systemitem class=\"library\">libuuid</"
-"systemitem> 和 <systemitem class=\"library\">libblkid</systemitem> 库，"
-"<systemitem class=\"daemon\">uuidd</systemitem> 守护程序，以及 "
-"<command>fsck</command> 包装器，因为 Util-linux 会安装更新的版本。"
+"这些选项防止构建和安装 <systemitem class=\"library\">libuuid</systemitem> 和 "
+"<systemitem class=\"library\">libblkid</systemitem> 库，<systemitem "
+"class=\"daemon\">uuidd</systemitem> 守护程序，以及 <command>fsck</command> 包"
+"装器；因为 Util-linux 会安装更新的版本。"
 
 #. type: Content of: <sect1><sect2><para>
 #: lfs-en/chapter08/e2fsprogs.xml
@@ -739,14 +739,11 @@ msgstr "<command>chattr</command>"
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: lfs-en/chapter08/e2fsprogs.xml
 msgid ""
-"Changes the attributes of files on an <systemitem class=\"filesystem\">ext2</"
-"systemitem> file system; it also changes <systemitem "
-"class=\"filesystem\">ext3</systemitem> file systems, the journaling version "
-"of <systemitem class=\"filesystem\">ext2</systemitem> file systems"
+"Changes the attributes of files on <systemitem class=\"filesystem\">ext{234}"
+"</systemitem> file systems"
 msgstr ""
-"在 <systemitem class=\"filesystem\">ext2</systemitem> 文件系统上修改文件属"
-"性，也适用于 <systemitem class=\"filesystem\">ext3</systemitem> 文件系统，即"
-"<systemitem class=\"filesystem\">ext2</systemitem> 文件系统的日志版本"
+"改变 <systemitem class='filesystem'>ext{234}</systemitem> 文件系统上文件的标"
+"志属性"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: lfs-en/chapter08/e2fsprogs.xml
@@ -781,11 +778,11 @@ msgstr "<command>debugfs</command>"
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: lfs-en/chapter08/e2fsprogs.xml
 msgid ""
-"A file system debugger; it can be used to examine and change the state of an "
-"<systemitem class=\"filesystem\">ext2</systemitem> file system"
+"A file system debugger; it can be used to examine and change the state of "
+"<systemitem class=\"filesystem\">ext{234}</systemitem> file systems"
 msgstr ""
-"一个文件系统调试器；可以检验并修改 <systemitem class=\"filesystem\">ext2</"
-"systemitem> 文件系统的状态"
+"一个文件系统调试器；可以检验并修改 <systemitem class=\"filesystem\">ext{234}"
+"</systemitem> 文件系统的状态"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: lfs-en/chapter08/e2fsprogs.xml
@@ -832,12 +829,11 @@ msgstr "<command>e2fsck</command>"
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: lfs-en/chapter08/e2fsprogs.xml
 msgid ""
-"Is used to check, and optionally repair <systemitem "
-"class=\"filesystem\">ext2</systemitem> file systems and <systemitem "
-"class=\"filesystem\">ext3</systemitem> file systems"
+"Is used to check and optionally repair <systemitem "
+"class=\"filesystem\">ext{234}</systemitem> file systems"
 msgstr ""
-"用于检查或修复 <systemitem class=\"filesystem\">ext2</systemitem> 文件系统和 "
-"<systemitem class=\"filesystem\">ext3</systemitem> 文件系统"
+"用于检查或修复 <systemitem class=\"filesystem\">ext{234}</systemitem> 文件系"
+"统"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: lfs-en/chapter08/e2fsprogs.xml
@@ -852,11 +848,11 @@ msgstr "<command>e2image</command>"
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: lfs-en/chapter08/e2fsprogs.xml
 msgid ""
-"Is used to save critical <systemitem class=\"filesystem\">ext2</systemitem> "
-"file system data to a file"
+"Is used to save critical <systemitem class=\"filesystem\">ext{234}</"
+"systemitem> file system data to a file"
 msgstr ""
-"用于将 <systemitem class=\"filesystem\">ext2</systemitem> 文件系统关键数据保"
-"存到文件"
+"用于将 <systemitem class=\"filesystem\">ext{234}</systemitem> 文件系统关键数"
+"据保存到文件"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: lfs-en/chapter08/e2fsprogs.xml
@@ -872,10 +868,10 @@ msgstr "<command>e2label</command>"
 #: lfs-en/chapter08/e2fsprogs.xml
 msgid ""
 "Displays or changes the file system label on the <systemitem "
-"class=\"filesystem\">ext2</systemitem> file system present on a given device"
+"class=\"filesystem\">ext{234}</systemitem> file system on a given device"
 msgstr ""
-"显示或修改给定设备上的 <systemitem class=\"filesystem\">ext2</systemitem> 文"
-"件系统标签"
+"显示或修改给定设备上的 <systemitem class=\"filesystem\">ext{234}</"
+"systemitem> 文件系统标签"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: lfs-en/chapter08/e2fsprogs.xml
@@ -889,8 +885,12 @@ msgstr "<command>e2mmpstatus</command>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: lfs-en/chapter08/e2fsprogs.xml
-msgid "Checks MMP status of an ext4 filesystem"
-msgstr "检查 ext4 文件系统的 MMP 状态"
+msgid ""
+"Checks MMP (Multiple Mount Protection) status of an <systemitem "
+"class=\"filesystem\">ext4</systemitem> file system"
+msgstr ""
+"检查 <systemitem class='filesystem'>ext4</systemitem> 文件系统的MMP (多重挂载"
+"保护) 状态"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: lfs-en/chapter08/e2fsprogs.xml
@@ -904,8 +904,12 @@ msgstr "<command>e2scrub</command>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: lfs-en/chapter08/e2fsprogs.xml
-msgid "Checks the contents of a mounted ext[234] filesystem"
-msgstr "检查某个已挂载的 ext2，ext3 或 ext4 文件系统"
+msgid ""
+"Checks the contents of a mounted <systemitem class=\"filesystem\">ext{234}</"
+"systemitem> file system"
+msgstr ""
+"检查已经挂载的 <systemitem class=\"filesystem\">ext{234}</systemitem> 文件系"
+"统的内容"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: lfs-en/chapter08/e2fsprogs.xml
@@ -919,8 +923,12 @@ msgstr "<command>e2scrub_all</command>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: lfs-en/chapter08/e2fsprogs.xml
-msgid "Checks all mounted ext[234] filesystems for errors"
-msgstr "检查所有已挂载的 ext2，ext3 或 ext4 文件系统"
+msgid ""
+"Checks all mounted <systemitem class=\"filesystem\">ext{234}</systemitem> "
+"file systems for errors"
+msgstr ""
+"检查所有已挂载的 <systemitem class=\"filesystem\">ext{234}</systemitem> 文件"
+"系统是否存在错误"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: lfs-en/chapter08/e2fsprogs.xml
@@ -935,11 +943,12 @@ msgstr "<command>e2undo</command>"
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: lfs-en/chapter08/e2fsprogs.xml
 msgid ""
-"Replays the undo log undo_log for an ext2/ext3/ext4 filesystem found on a "
-"device [This can be used to undo a failed operation by an e2fsprogs program.]"
+"Replays the undo log for an <systemitem class=\"filesystem\">ext{234}</"
+"systemitem> file system found on a device. [This can be used to undo a "
+"failed operation by an E2fsprogs program.]"
 msgstr ""
-"重放设备上找到的 ext2/ext3/ext4 文件系统撤销日志 undo_log [可以用于撤销 "
-"e2fsprogs 程序的失败操作。]"
+"重放设备上找到的 <systemitem class=\"filesystem\">ext{234}</systemitem> 文件"
+"系统撤销日志 [可以用于撤销 E2fsprogs 程序的失败操作。]"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: lfs-en/chapter08/e2fsprogs.xml
@@ -953,8 +962,10 @@ msgstr "<command>e4crypt</command>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: lfs-en/chapter08/e2fsprogs.xml
-msgid "Ext4 filesystem encryption utility"
-msgstr "Ext4 文件系统加密工具"
+msgid ""
+"<systemitem class=\"filesystem\">Ext4</systemitem> file system encryption "
+"utility"
+msgstr "<systemitem class=\"filesystem\">Ext4</systemitem> 文件系统加密工具"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: lfs-en/chapter08/e2fsprogs.xml
@@ -968,8 +979,12 @@ msgstr "<command>e4defrag</command>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: lfs-en/chapter08/e2fsprogs.xml
-msgid "Online defragmenter for ext4 filesystems"
-msgstr "ext4 文件系统在线碎片整理器"
+msgid ""
+"Online defragmenter for <systemitem class=\"filesystem\">ext4</systemitem> "
+"file systems"
+msgstr ""
+"用于 <systemitem class=\"filesystem\">ext4</systemitem> 文件系统的在线碎片整"
+"理工具"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: lfs-en/chapter08/e2fsprogs.xml
@@ -1106,11 +1121,11 @@ msgstr "<command>mke2fs</command>"
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: lfs-en/chapter08/e2fsprogs.xml
 msgid ""
-"Creates an <systemitem class=\"filesystem\">ext2</systemitem> or <systemitem "
-"class=\"filesystem\">ext3</systemitem> file system on the given device"
+"Creates an <systemitem class=\"filesystem\">ext{234}</systemitem> file "
+"system on the given device"
 msgstr ""
-"在给定设备上创建 <systemitem class=\"filesystem\">ext2</systemitem> 或 "
-"<systemitem class=\"filesystem\">ext3</systemitem> 文件系统"
+"在给定设备上创建 <systemitem class=\"filesystem\">ext{234}</systemitem> 文件"
+"系统"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: lfs-en/chapter08/e2fsprogs.xml
@@ -1182,14 +1197,14 @@ msgstr "<command>mklost+found</command>"
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: lfs-en/chapter08/e2fsprogs.xml
 msgid ""
-"Used to create a <filename class=\"directory\">lost+found</filename> "
-"directory on an <systemitem class=\"filesystem\">ext2</systemitem> file "
-"system; it pre-allocates disk blocks to this directory to lighten the task "
-"of <command>e2fsck</command>"
+"Creates a <filename class=\"directory\">lost+found</filename> directory on "
+"an <systemitem class=\"filesystem\">ext{234}</systemitem> file system; it "
+"pre-allocates disk blocks to this directory to lighten the task of "
+"<command>e2fsck</command>"
 msgstr ""
-"用于在创建 <filename class=\"directory\">lost+found</filename> 目录；它在 "
-"<systemitem class=\"filesystem\">ext2</systemitem> 文件系统上为该目录预先分配"
-"磁盘块，以减轻 <command>e2fsck</command> 的负担"
+"创建 <filename class=\"directory\">lost+found</filename> 目录；它在 "
+"<systemitem class=\"filesystem\">ext{234}</systemitem> 文件系统上为该目录预先"
+"分配磁盘块，以减轻 <command>e2fsck</command> 的负担"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: lfs-en/chapter08/e2fsprogs.xml
@@ -1204,11 +1219,11 @@ msgstr "<command>resize2fs</command>"
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: lfs-en/chapter08/e2fsprogs.xml
 msgid ""
-"Can be used to enlarge or shrink an <systemitem class=\"filesystem\">ext2</"
-"systemitem> file system"
+"Can be used to enlarge or shrink <systemitem class=\"filesystem\">ext{234}</"
+"systemitem> file systems"
 msgstr ""
-"可以用于扩大或压缩 <systemitem class=\"filesystem\">ext2</systemitem> 文件系"
-"统"
+"可以用于扩大或压缩 <systemitem class=\"filesystem\">ext{234}</systemitem> 文"
+"件系统"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: lfs-en/chapter08/e2fsprogs.xml
@@ -1223,10 +1238,11 @@ msgstr "<command>tune2fs</command>"
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: lfs-en/chapter08/e2fsprogs.xml
 msgid ""
-"Adjusts tunable file system parameters on an <systemitem "
-"class=\"filesystem\">ext2</systemitem> file system"
+"Adjusts tunable file system parameters on <systemitem "
+"class=\"filesystem\">ext{234}</systemitem> file systems"
 msgstr ""
-"调整 <systemitem class=\"filesystem\">ext2</systemitem> 文件系统的可调参数"
+"调整 <systemitem class=\"filesystem\">ext{234}</systemitem> 文件系统的可调参"
+"数"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: lfs-en/chapter08/e2fsprogs.xml
@@ -1275,11 +1291,11 @@ msgstr "<filename class=\"libraryfile\">libext2fs</filename>"
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: lfs-en/chapter08/e2fsprogs.xml
 msgid ""
-"Contains routines to enable user-level programs to manipulate an <systemitem "
-"class=\"filesystem\">ext2</systemitem> file system"
+"Contains routines to enable user-level programs to manipulate <systemitem "
+"class=\"filesystem\">ext{234}</systemitem> file systems"
 msgstr ""
-"包含允许用户级程序操纵 <systemitem class=\"filesystem\">ext2</systemitem> 文"
-"件系统的子程序"
+"包含允许用户级程序操纵 <systemitem class=\"filesystem\">ext{234}</"
+"systemitem> 文件系统的子程序"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: lfs-en/chapter08/e2fsprogs.xml
