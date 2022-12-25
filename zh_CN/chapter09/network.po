@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: lfs-dev@lists.linuxfromscratch.org\n"
-"POT-Creation-Date: 2022-09-17 18:28+0800\n"
+"POT-Creation-Date: 2022-12-25 21:06+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -90,11 +90,6 @@ msgstr ""
 "可以省略 <varname>domain</varname> 语句，或使用一条 <varname>search</"
 "varname> 语句代替它。阅读 resolv.conf 的 man 页面了解更多细节。"
 
-#. type: Content of: <sect1><sect2><title>
-#: lfs-en/chapter09/networkd.xml lfs-en/chapter09/network.xml
-msgid "Configuring the system hostname"
-msgstr "配置系统主机名"
-
 #. type: Content of: <sect1><sect2><para>
 #: lfs-en/chapter09/networkd.xml lfs-en/chapter09/network.xml
 msgid ""
@@ -117,17 +112,6 @@ msgstr ""
 #, no-wrap
 msgid "<userinput>echo \"<replaceable>&lt;lfs&gt;</replaceable>\" &gt; /etc/hostname</userinput>"
 msgstr "<userinput>echo \"<replaceable>&lt;lfs&gt;</replaceable>\" &gt; /etc/hostname</userinput>"
-
-#. type: Content of: <sect1><sect2><para>
-#: lfs-en/chapter09/networkd.xml lfs-en/chapter09/network.xml
-msgid ""
-"<replaceable>&lt;lfs&gt;</replaceable> needs to be replaced with the name "
-"given to the computer. Do not enter the Fully Qualified Domain Name (FQDN) "
-"here. That information is put in the <filename>/etc/hosts</filename> file."
-msgstr ""
-"<replaceable>&lt;lfs&gt;</replaceable> 需要被替换为赋予该计算机的名称。不要在"
-"这里输入全限定域名 (FQDN)，它应该被写入 <filename>/etc/hosts</filename> 文"
-"件。"
 
 #. type: Content of: <sect1><sect2><title>
 #: lfs-en/chapter09/networkd.xml lfs-en/chapter09/network.xml
@@ -196,20 +180,20 @@ msgstr "创建网络接口配置文件"
 #. type: Content of: <sect1><sect2><para>
 #: lfs-en/chapter09/network.xml
 msgid ""
-"Which interfaces are brought up and down by the network script usually "
-"depends on the files in <filename class=\"directory\">/etc/sysconfig/</"
-"filename>.  This directory should contain a file for each interface to be "
+"The files in <filename class=\"directory\">/etc/sysconfig/</filename> "
+"usually determine which interfaces are brought up and down by the network "
+"script.  This directory should contain a file for each interface to be "
 "configured, such as <filename>ifconfig.xyz</filename>, where <quote>xyz</"
-"quote> should describe the network card.  The interface name (e.g. eth0) is "
-"usually appropriate.  Inside this file are attributes to this interface, "
-"such as its IP address(es), subnet masks, and so forth.  It is necessary "
-"that the stem of the filename be <emphasis>ifconfig</emphasis>."
+"quote> describes the network card.  The interface name (e.g. eth0) is "
+"usually appropriate.  Each file contains the attributes of one interface, "
+"such as its IP address(es), subnet masks, and so forth.  The stem of the "
+"filename must be <emphasis>ifconfig</emphasis>."
 msgstr ""
 "负责网络的引导脚本通常根据 <filename class=\"directory\">/etc/sysconfig</"
-"filename> 中配置文件的内容，启用或禁用网络接口。对于每个需要配置的网络接口，"
+"filename> 中配置文件的内容，判定需要启用或禁用哪些网络接口。对于每个需要配置的网络接口，"
 "该目录中都应该包含一个文件，文件名类似 <filename>ifconfig.xyz</filename>，这"
 "里<quote>xyz</quote>应该能够描述该网卡。使用接口名 (如 eth0) 一般比较合适。文"
-"件内部是该网络接口的属性，如 IP 地址、子网掩码等。文件名必须以 "
+"件中包含该网络接口的属性，如 IP 地址、子网掩码等。文件名必须以 "
 "<emphasis>ifconfig</emphasis> 开头。"
 
 #. type: Content of: <sect1><sect2><note><para>
@@ -231,13 +215,13 @@ msgid ""
 "The interface names depend on the implementation and configuration of the "
 "udev daemon running on the system.  The udev daemon for LFS (installed in "
 "<xref linkend=\"ch-system-eudev\"/>) will not run until the LFS system is "
-"booted.  So it's unreliable to determine the interface names being used in "
-"LFS system by running those commands on the host distro, <emphasis>even "
-"though in the chroot environment</emphasis>."
+"booted.  So the interface names in the LFS system cannot always be "
+"determined by running those commands on the host distro, <emphasis>even in "
+"the chroot environment</emphasis>."
 msgstr ""
 "接口名依赖于系统正在运行的 udev 守护进程的实现和配置。LFS 的 udev 守护进程 "
 "(在 <xref linkend=\"ch-system-eudev\"/> 中安装) 直到 LFS 系统引导时才会运行。"
-"因此，无法在宿主系统中使用上述命令可靠地确定 LFS 系统将会使用的接口名，"
+"因此，在宿主系统中使用上述命令未必能确定 LFS 系统将会使用的接口名，"
 "<emphasis>即使在 chroot 环境中仍然如此</emphasis>。"
 
 #. type: Content of: <sect1><sect2><para>
@@ -279,19 +263,19 @@ msgstr ""
 #. type: Content of: <sect1><sect2><para>
 #: lfs-en/chapter09/network.xml
 msgid ""
-"The values in italics must be changed in every file to match the proper "
-"setup."
-msgstr "您必须修改每个文件中用斜体显示的设定值，使其与您的网络环境相匹配。"
+"The values in italics must be changed in each file, to set the interfaces up "
+"correctly."
+msgstr "您必须修改每个文件中用斜体显示的设定值，以正确设置网络接口。"
 
 #. type: Content of: <sect1><sect2><para>
 #: lfs-en/chapter09/network.xml
 msgid ""
 "If the <envar>ONBOOT</envar> variable is set to <quote>yes</quote> the "
 "System V network script will bring up the Network Interface Card (NIC) "
-"during the system boot process. If set to anything but <quote>yes</quote> "
-"the NIC will be ignored by the network script and not be automatically "
-"brought up.  The interface can be manually started or stopped with the "
-"<command>ifup</command> and <command>ifdown</command> commands."
+"during the system boot process. If set to anything besides <quote>yes</"
+"quote>, the NIC will be ignored by the network script and will not be "
+"started automatically.  Interfaces can be manually started or stopped with "
+"the <command>ifup</command> and <command>ifdown</command> commands."
 msgstr ""
 "如果 <envar>ONBOOT</envar> 变量被设置为<quote>yes</quote>，则 System V 网络脚"
 "本会在引导系统时启用该网络接口卡 (NIC)。如果设定的值不是 <quote>yes</quote>，"
@@ -335,21 +319,22 @@ msgstr ""
 #. type: Content of: <sect1><sect2><para>
 #: lfs-en/chapter09/network.xml
 msgid ""
-"The <envar>PREFIX</envar> variable contains the number of bits used in the "
-"subnet. Each octet in an IP address is 8 bits. If the subnet's netmask is "
-"255.255.255.0, then it is using the first three octets (24 bits) to specify "
-"the network number. If the netmask is 255.255.255.240, it would be using the "
-"first 28 bits.  Prefixes longer than 24 bits are commonly used by DSL and "
-"cable-based Internet Service Providers (ISPs).  In this example (PREFIX=24), "
-"the netmask is 255.255.255.0. Adjust the <envar>PREFIX</envar> variable "
-"according to your specific subnet.  If omitted, the PREFIX defaults to 24."
+"The <envar>PREFIX</envar> variable specifies the number of bits used in the "
+"subnet. Each segment of an IP address is 8 bits. If the subnet's netmask is "
+"255.255.255.0, then it is using the first three segments (24 bits) to "
+"specify the network number. If the netmask is 255.255.255.240, the subnet is "
+"using the first 28 bits.  Prefixes longer than 24 bits are commonly used by "
+"DSL and cable-based Internet Service Providers (ISPs).  In this example "
+"(PREFIX=24), the netmask is 255.255.255.0. Adjust the <envar>PREFIX</envar> "
+"variable according to your specific subnet.  If omitted, the PREFIX defaults "
+"to 24."
 msgstr ""
-"<envar>PREFIX</envar> 变量应该包含子网使用的 IP 地址位数。IP 地址中的每一段都"
+"<envar>PREFIX</envar> 变量指定子网使用的 IP 地址位数。IP 地址中的每一段都"
 "是二进制为 8 位的数，如果子网掩码是 255.255.255.0，说明 IP 地址中前三段 (24 "
 "位) 表示子网编号。如果子网掩码是 255.255.255.240，则使用了前 28 位表示子网编"
 "号。子网前缀比 24 长的情况一般见于基于 DSL 或同轴电缆的 Internet 服务提供商 "
-"(ISP).在我们的例子中，子网掩码是 255.255.255.0。您应该根据您所处的子网调整 "
-"<envar>PREFIX</envar> 变量。如果不指定它，则它默认为 24。"
+"(ISP)。在我们的例子中，子网掩码是 255.255.255.0。您应该根据您所处的子网调整 "
+"<envar>PREFIX</envar> 变量。如果忽略它，则默认值为 24。"
 
 #. type: Content of: <sect1><sect2><para>
 #: lfs-en/chapter09/network.xml
@@ -389,6 +374,22 @@ msgstr ""
 #: lfs-en/chapter09/network.xml
 msgid "The Google Public IPv4 DNS addresses are 8.8.8.8 and 8.8.4.4."
 msgstr "Google 公用 DNS 服务器的 IP 地址是 8.8.8.8 和 8.8.4.4。"
+
+#. type: Content of: <sect1><sect2><title>
+#: lfs-en/chapter09/network.xml
+msgid "Configuring the System Hostname"
+msgstr "配置系统主机名"
+
+#. type: Content of: <sect1><sect2><para>
+#: lfs-en/chapter09/network.xml
+msgid ""
+"<replaceable>&lt;lfs&gt;</replaceable> needs to be replaced with the name "
+"given to the computer. Do not enter the Fully Qualified Domain Name (FQDN) "
+"here. That information goes in the <filename>/etc/hosts</filename> file."
+msgstr ""
+"<replaceable>&lt;lfs&gt;</replaceable> 需要被替换为赋予该计算机的名称。不要在"
+"这里输入全限定域名 (FQDN)。FQDN 应该被写入 <filename>/etc/hosts</filename> 文"
+"件。"
 
 #. type: Content of: <sect1><sect2><para>
 #: lfs-en/chapter09/network.xml

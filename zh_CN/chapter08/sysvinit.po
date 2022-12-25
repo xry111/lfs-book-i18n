@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: lfs-dev@lists.linuxfromscratch.org\n"
-"POT-Creation-Date: 2022-09-17 18:28+0800\n"
+"POT-Creation-Date: 2022-12-25 21:06+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -289,9 +289,9 @@ msgstr "安装该软件包："
 #: lfs-en/chapter08/gdbm.xml lfs-en/chapter08/procps.xml
 #: lfs-en/chapter08/vim.xml lfs-en/chapter08/glibc.xml
 #: lfs-en/chapter08/dbus.xml lfs-en/chapter08/patch.xml
-#: lfs-en/chapter08/util-linux.xml lfs-en/chapter08/gawk.xml
-#: lfs-en/chapter08/gperf.xml lfs-en/chapter08/man-db.xml
-#: lfs-en/chapter08/groff.xml lfs-en/chapter09/bootscripts.xml
+#: lfs-en/chapter08/util-linux.xml lfs-en/chapter08/gperf.xml
+#: lfs-en/chapter08/man-db.xml lfs-en/chapter08/groff.xml
+#: lfs-en/chapter09/bootscripts.xml
 #, no-wrap
 msgid "<userinput remap=\"install\">make install</userinput>"
 msgstr "<userinput remap=\"install\">make install</userinput>"
@@ -430,18 +430,6 @@ msgstr "该软件包不包含测试套件。"
 #: lfs-en/chapter09/bootscripts.xml
 msgid "<command>halt</command>"
 msgstr "<command>halt</command>"
-
-#. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
-#: lfs-en/chapter08/systemd.xml lfs-en/chapter08/sysvinit.xml
-msgid ""
-"Normally invokes <command>shutdown</command> with the <parameter>-h</"
-"parameter> option, except when already in run-level 0, then it tells the "
-"kernel to halt the system; it notes in the file <filename>/var/log/wtmp</"
-"filename> that the system is being brought down"
-msgstr ""
-"通常调用 <command>shutdown</command> 并传递 <parameter>-h</parameter> 参数，"
-"除非已经处于运行级别 0，则它会通知内核停止系统运行；在系统被关闭时，它在 "
-"<filename>/var/log/wtmp</filename> 文件中进行记录"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: lfs-en/chapter08/systemd.xml lfs-en/chapter08/sysvinit.xml
@@ -615,7 +603,7 @@ msgstr "<command>fstab-decode</command>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: lfs-en/chapter08/sysvinit.xml
-msgid "Run a command with fstab-encoded arguments"
+msgid "Runs a command with fstab-encoded arguments"
 msgstr "以 fstab 编码的参数运行命令"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
@@ -626,11 +614,23 @@ msgstr "fstab-decode"
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: lfs-en/chapter08/sysvinit.xml
 msgid ""
-"The first process to be started when the kernel has initialized the hardware "
-"which takes over the boot process and starts all the proceses specified in "
-"its configuration file"
+"Normally invokes <command>shutdown</command> with the <parameter>-h</"
+"parameter> option, but when already in run-level 0, it tells the kernel to "
+"halt the system; it notes in the file <filename>/var/log/wtmp</filename> "
+"that the system is going down"
 msgstr ""
-"内核初始化硬件后启动的第一个进程，它接管引导过程，启动其配置文件中指定的所有"
+"通常调用 <command>shutdown</command> 并传递 <parameter>-h</parameter> 参数，"
+"但是如果已经处于运行级别 0，则它会通知内核停止系统运行；在系统被关闭时，它在 "
+"<filename>/var/log/wtmp</filename> 文件中进行记录"
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
+#: lfs-en/chapter08/sysvinit.xml
+msgid ""
+"The first process to be started when the kernel has initialized the "
+"hardware; it takes over the boot process and starts all the processes "
+"specified in its configuration file"
+msgstr ""
+"内核初始化硬件后启动的第一个进程；它接管引导过程，启动其配置文件中指定的所有"
 "进程"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
@@ -641,10 +641,10 @@ msgstr "<command>killall5</command>"
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: lfs-en/chapter08/sysvinit.xml
 msgid ""
-"Sends a signal to all processes, except the processes in its own session so "
-"it will not kill its parent shell"
+"Sends a signal to all processes, except the processes in its own session; it "
+"will not kill its parent shell"
 msgstr ""
-"向除了自身会话中以外的所有进程发送信号，杀死多数进程，但不会杀死作为它本身父"
+"向除了自身会话中以外的所有进程发送信号；它不会杀死作为它本身父"
 "进程的 shell"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>

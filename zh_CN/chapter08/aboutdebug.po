@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: lfs-dev@lists.linuxfromscratch.org\n"
-"POT-Creation-Date: 2022-09-17 18:28+0800\n"
+"POT-Creation-Date: 2022-12-25 21:06+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -36,11 +36,11 @@ msgstr ""
 #. type: Content of: <sect1><para>
 #: lfs-en/chapter08/aboutdebug.xml
 msgid ""
-"However, the inclusion of these debugging symbols enlarges a program or "
-"library significantly. The following is an example of the amount of space "
-"these symbols occupy:"
+"The inclusion of these debugging symbols enlarges a program or library "
+"significantly. Here are two examples of the amount of space these symbols "
+"occupy:"
 msgstr ""
-"然而，插入这些调试符号会显著增大程序或库的体积。下面是一些表现调试符号占用空"
+"然而，包含这些调试符号会显著增大程序或库的体积。下面是两个表现调试符号占用空"
 "间的例子："
 
 #. type: Content of: <sect1><itemizedlist><listitem><para>
@@ -50,8 +50,10 @@ msgstr "一个有调试符号的 <command>bash</command> 二进制程序：1200 
 
 #. type: Content of: <sect1><itemizedlist><listitem><para>
 #: lfs-en/chapter08/aboutdebug.xml
-msgid "A <command>bash</command> binary without debugging symbols: 480 KB"
-msgstr "一个没有调试符号的 <command>bash</command> 二进制程序：480 KB"
+msgid ""
+"A <command>bash</command> binary without debugging symbols: 480 KB (60% "
+"smaller)"
+msgstr "一个没有调试符号的 <command>bash</command> 二进制程序：480 KB (小 60%)"
 
 #. type: Content of: <sect1><itemizedlist><listitem><para>
 #: lfs-en/chapter08/aboutdebug.xml
@@ -65,25 +67,19 @@ msgstr ""
 
 #. type: Content of: <sect1><itemizedlist><listitem><para>
 #: lfs-en/chapter08/aboutdebug.xml
-msgid "Glibc and GCC files without debugging symbols: 16 MB"
-msgstr "没有调试符号的 Glibc 和 GCC 文件：16 MB"
+msgid "Glibc and GCC files without debugging symbols: 16 MB (82% smaller)"
+msgstr "没有调试符号的 Glibc 和 GCC 文件：16 MB (小 82%)"
 
 #. type: Content of: <sect1><para>
 #: lfs-en/chapter08/aboutdebug.xml
 msgid ""
-"Sizes may vary depending on which compiler and C library were used, but when "
-"comparing programs with and without debugging symbols, the difference will "
-"usually be a factor between two and five."
+"Sizes will vary depending on which compiler and C library were used, but a "
+"program that has been stripped of debugging symbols is usually some 50% to "
+"80% smaller than its unstripped counterpart.  Because most users will never "
+"use a debugger on their system software, a lot of disk space can be regained "
+"by removing these symbols. The next section shows how to strip all debugging "
+"symbols from the programs and libraries."
 msgstr ""
-"以上文件大小的值可能随编译器和 C 运行库的版本而变化，但在比较带调试符号和不带"
-"调试符号的程序时，它们文件大小的差距通常达到 2 至 5 倍。"
-
-#. type: Content of: <sect1><para>
-#: lfs-en/chapter08/aboutdebug.xml
-msgid ""
-"Because most users will never use a debugger on their system software, a lot "
-"of disk space can be regained by removing these symbols. The next section "
-"shows how to strip all debugging symbols from the programs and libraries."
-msgstr ""
+"具体的文件大小与使用的编译器和 C 库相关，但是移除调试符号的程序通常比移除条是符号前小 50% 到 80%。"
 "由于大多数用户永远不会用调试器调试系统软件，可以通过移除它们的调试符号，回收"
 "大量磁盘空间。下一节展示如何从系统程序和库中移除所有调试符号。"

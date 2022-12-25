@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Linux From Scratch 11.3\n"
 "Report-Msgid-Bugs-To: lfs-dev@lists.linuxfromscratch.org\n"
-"POT-Creation-Date: 2022-09-19 14:32+0800\n"
+"POT-Creation-Date: 2022-12-25 21:06+0800\n"
 "PO-Revision-Date: 2022-09-19 14:22+0800\n"
 "Last-Translator: Xi Ruoyao <xry111@xry111.site>\n"
 "Language-Team: none\n"
@@ -26,7 +26,7 @@ msgstr "清理系统"
 
 #. type: Content of: <sect1><para>
 #: lfs-en/chapter08/cleanup.xml
-msgid "Finally, clean up some extra files left around from running tests:"
+msgid "Finally, clean up some extra files left over from running tests:"
 msgstr "最后，清理在执行测试的过程中遗留的一些文件："
 
 #. type: Content of: <sect1><screen>
@@ -38,12 +38,11 @@ msgstr "<userinput>rm -rf /tmp/*</userinput>"
 #. type: Content of: <sect1><para>
 #: lfs-en/chapter08/cleanup.xml
 msgid ""
-"There are also several files installed in the /usr/lib and /usr/libexec "
-"directories with a file name extension of .la. These are \"libtool archive\" "
-"files. As already said, on a modern Linux system the libtool .la files are "
-"only useful for libltdl.  No libraries in LFS are expected to be loaded by "
-"libltdl, and it's known that some .la files can cause BLFS packages fail to "
-"build.  Remove those files now:"
+"There are also several files in the /usr/lib and /usr/libexec directories "
+"with a file name extension of .la. These are \"libtool archive\" files. On a "
+"modern Linux system the libtool .la files are only useful for libltdl.  No "
+"libraries in LFS are expected to be loaded by libltdl, and it's known that "
+"some .la files can break BLFS package builds.  Remove those files now:"
 msgstr ""
 "在 /usr/lib 和 /usr/libexec 目录中还有一些扩展名为 .la 的文件。它们是 "
 "\"libtool 档案\" 文件。正如我们已经讨论过的，它们在现代 Linux 系统中仅用于 "

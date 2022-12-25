@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: lfs-dev@lists.linuxfromscratch.org\n"
-"POT-Creation-Date: 2022-10-15 09:55+0800\n"
+"POT-Creation-Date: 2022-12-25 21:06+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -198,9 +198,9 @@ msgstr "安装该软件包："
 #: lfs-en/chapter08/gdbm.xml lfs-en/chapter08/procps.xml
 #: lfs-en/chapter08/vim.xml lfs-en/chapter08/glibc.xml
 #: lfs-en/chapter08/dbus.xml lfs-en/chapter08/patch.xml
-#: lfs-en/chapter08/util-linux.xml lfs-en/chapter08/gawk.xml
-#: lfs-en/chapter08/gperf.xml lfs-en/chapter08/man-db.xml
-#: lfs-en/chapter08/groff.xml lfs-en/chapter09/bootscripts.xml
+#: lfs-en/chapter08/util-linux.xml lfs-en/chapter08/gperf.xml
+#: lfs-en/chapter08/man-db.xml lfs-en/chapter08/groff.xml
+#: lfs-en/chapter09/bootscripts.xml
 #, no-wrap
 msgid "<userinput remap=\"install\">make install</userinput>"
 msgstr "<userinput remap=\"install\">make install</userinput>"
@@ -217,10 +217,10 @@ msgstr "<userinput remap=\"install\">make install</userinput>"
 #: lfs-en/chapter08/xz.xml lfs-en/chapter08/grub.xml
 #: lfs-en/chapter08/e2fsprogs.xml lfs-en/chapter08/gettext.xml
 #: lfs-en/chapter08/procps.xml lfs-en/chapter08/glibc.xml
-#: lfs-en/chapter08/dbus.xml lfs-en/chapter08/util-linux.xml
-#: lfs-en/chapter08/gawk.xml lfs-en/chapter08/man-db.xml
-#: lfs-en/chapter08/groff.xml lfs-en/chapter10/kernel.xml
-#: lfs-en/chapter09/bootscripts.xml
+#: lfs-en/chapter08/dbus.xml lfs-en/chapter08/shadow.xml
+#: lfs-en/chapter08/util-linux.xml lfs-en/chapter08/gawk.xml
+#: lfs-en/chapter08/man-db.xml lfs-en/chapter08/groff.xml
+#: lfs-en/chapter10/kernel.xml lfs-en/chapter09/bootscripts.xml
 msgid "Installed directories"
 msgstr "安装的目录"
 
@@ -466,8 +466,8 @@ msgstr "<command>checkfs</command>"
 #: lfs-en/chapter09/bootscripts.xml
 msgid ""
 "Checks the integrity of the file systems before they are mounted (with the "
-"exception of journal and network based file systems)"
-msgstr "在挂载文件系统前检查文件系统完整性 (日志文件系统和网络文件系统除外)"
+"exception of journaling and network-based file systems)"
+msgstr "在挂载文件系统前检查文件系统完整性 (日志文件系统和基于网络的文件系统除外)"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: lfs-en/chapter09/bootscripts.xml
@@ -601,11 +601,10 @@ msgstr "<command>mountfs</command>"
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: lfs-en/chapter09/bootscripts.xml
 msgid ""
-"Mounts all file systems, except ones that are marked <emphasis>noauto</"
-"emphasis> or are network based"
+"Mounts all file systems, except those that are marked <emphasis>noauto</"
+"emphasis>, or are network based"
 msgstr ""
-"挂载所有文件系统，标为 <emphasis>noauto</emphasis> 的文件系统和网络文件系统除"
-"外"
+"挂载所有文件系统，除了标为 <emphasis>noauto</emphasis> 的文件系统和基于网络的文件系统"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: lfs-en/chapter09/bootscripts.xml
@@ -651,11 +650,11 @@ msgstr "<command>rc</command>"
 #: lfs-en/chapter09/bootscripts.xml
 msgid ""
 "The master run-level control script; it is responsible for running all the "
-"other bootscripts one-by-one, in a sequence determined by the name of the "
-"symbolic links being processed"
+"other bootscripts one-by-one, in a sequence determined by the names of the "
+"symbolic links to those other bootscripts"
 msgstr ""
-"主要运行级别控制脚本；它负责逐个运行所有其他引导脚本，运行的顺序根据脚本符号"
-"链接的名称确定"
+"主要运行级别控制脚本；它负责逐个运行所有其他引导脚本，运行的顺序根据指向那些脚本的符号"
+"链接名称确定"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: lfs-en/chapter09/bootscripts.xml
@@ -691,8 +690,7 @@ msgstr "<command>setclock</command>"
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: lfs-en/chapter09/bootscripts.xml
 msgid ""
-"Resets the kernel clock to local time in case the hardware clock is not set "
-"to UTC time"
+"Resets the system clock to local time if the hardware clock is not set to UTC"
 msgstr "在硬件时钟没有设定为 UTC 时，将内核时钟重设为本地时间"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
@@ -770,8 +768,8 @@ msgstr "<command>udev</command>"
 #: lfs-en/chapter09/bootscripts.xml
 msgid ""
 "Prepares the <filename class=\"directory\">/dev</filename> directory and "
-"starts Udev"
-msgstr "准备 <filename class=\"directory\">/dev</filename> 目录，并启动 udev"
+"starts the udev daemon"
+msgstr "准备 <filename class=\"directory\">/dev</filename> 目录，并启动 udev 守护程序"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: lfs-en/chapter09/bootscripts.xml
