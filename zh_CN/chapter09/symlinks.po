@@ -36,12 +36,12 @@ msgid ""
 "have become eth0 while the Realtek card became eth1. After a reboot, the "
 "cards would sometimes get renumbered the other way around."
 msgstr ""
-"Udev 在默认情况下，根据固件或 BIOS 的数据，或总线、插槽，以及 MAC 地址等物理特性"
-"命名网络设备。这种命名法的主要目的是保证网络设备在每次引导时获得一致的命名，"
-"而不是基于网卡被系统发现的时间进行命名。例如，如果在一台拥有"
-"两块网卡 —— 例如，其中一块由 Intel 生产，另一块由 Realtek 生产 —— 的计算机使用旧版的 Linux，则 Intel 网卡可"
-"能被命名为 eth0，而 Realtek 网卡被命名为 eth1。然而在重新启动系统后，它们的顺"
-"序可能会颠倒。"
+"Udev 在默认情况下，根据固件或 BIOS 的数据，或总线、插槽，以及 MAC 地址等物理"
+"特性命名网络设备。这种命名法的主要目的是保证网络设备在每次引导时获得一致的命"
+"名，而不是基于网卡被系统发现的时间进行命名。例如，如果在一台拥有两块网卡 —— "
+"例如，其中一块由 Intel 生产，另一块由 Realtek 生产 —— 的计算机使用旧版的 "
+"Linux，则 Intel 网卡可能被命名为 eth0，而 Realtek 网卡被命名为 eth1。然而在重"
+"新启动系统后，它们的顺序可能会颠倒。"
 
 #. type: Content of: <sect1><sect2><para>
 #: lfs-en/chapter09/symlinks.xml
@@ -50,8 +50,8 @@ msgid ""
 "enp5s0 or wlp3s0.  If this naming convention is not desired, the traditional "
 "naming scheme, or a custom scheme, can be implemented."
 msgstr ""
-"在新的命名架构中，典型的网络设备名称类似 enp5s0 或 wlp3s0。如果您不喜欢"
-"这种命名惯例，可以采用传统或自定义命名架构。"
+"在新的命名架构中，典型的网络设备名称类似 enp5s0 或 wlp3s0。如果您不喜欢这种命"
+"名惯例，可以采用传统或自定义命名架构。"
 
 #. type: Content of: <sect1><sect2><sect3><title>
 #: lfs-en/chapter09/symlinks.xml
@@ -71,8 +71,8 @@ msgstr ""
 "传统的，类似 eth0，eth1 这样的命名格式可以通过在内核命令行中加入 "
 "<userinput>net.ifnames=0</userinput> 而恢复。这在那些没有两块同类以太网设备的"
 "机器上最为合适。笔记本一般拥有两个以太网连接，在这种命名方式下分别是 eth0 和 "
-"wlan0；也可以为这些笔记本采用这种方法。内核命令行需要写入 GRUB 配置文件中，参阅<xref "
-"linkend=\"grub-cfg\"/>。"
+"wlan0；也可以为这些笔记本采用这种方法。内核命令行需要写入 GRUB 配置文件中，参"
+"阅<xref linkend=\"grub-cfg\"/>。"
 
 #. type: Content of: <sect1><sect2><sect3><title>
 #: lfs-en/chapter09/symlinks.xml
@@ -135,9 +135,9 @@ msgid ""
 msgstr ""
 "该文件的开头是一个注释块，之后对于每个网络接口设备 (NIC) 都给出两行。第一行是"
 "注释，给出该 NIC 的硬件 ID (例如对于 PCI 设备，就是 PCI 生产商 ID 和设备 "
-"ID)，以及其驱动程序的名称 (在括号中，如果能找到驱动程序的话)。它们并不被用于确定该设备的命"
-"名，仅供您在编写规则时进行参考。第二行是匹配该 NIC 的 udev 规则，和实际赋予它"
-"的设备名。"
+"ID)，以及其驱动程序的名称 (在括号中，如果能找到驱动程序的话)。它们并不被用于"
+"确定该设备的命名，仅供您在编写规则时进行参考。第二行是匹配该 NIC 的 udev 规"
+"则，和实际赋予它的设备名。"
 
 #. type: Content of: <sect1><sect2><sect3><para>
 #: lfs-en/chapter09/symlinks.xml
@@ -145,8 +145,8 @@ msgid ""
 "All udev rules are made up of several keywords, separated by commas and "
 "optional whitespace. Here are the keywords, and an explanation of each one:"
 msgstr ""
-"所有 udev 规则包含一些关键字，用逗号和可选的空格进行分隔。下面给出规则中包含的"
-"关键字和对它们的解释："
+"所有 udev 规则包含一些关键字，用逗号和可选的空格进行分隔。下面给出规则中包含"
+"的关键字和对它们的解释："
 
 #. type: Content of: <sect1><sect2><sect3><itemizedlist><listitem><para>
 #: lfs-en/chapter09/symlinks.xml
@@ -213,8 +213,8 @@ msgid ""
 "creating your network configuration files."
 msgstr ""
 "<literal>NAME</literal> 的值是我们关注的重点。在继续阅读之前，您需要确保自己"
-"知道赋予每个网络接口的命名，在之后的配置文件中需要使用 "
-"<literal>NAME</literal> 的值。"
+"知道赋予每个网络接口的命名，在之后的配置文件中需要使用 <literal>NAME</"
+"literal> 的值。"
 
 #. type: Content of: <sect1><sect2><title>
 #: lfs-en/chapter09/symlinks.xml
@@ -273,11 +273,11 @@ msgid ""
 "device that plugs into the same connectors, then you should use the "
 "<quote>by-path</quote> mode."
 msgstr ""
-"两种方式各有优点；正确的方式依赖于设备可能发生的变化。如果您预期指向设备的"
-"物理路径 (即它连接的端口或插槽) 可能变化，例如您可能会将它移动到另一个 IDE 接"
-"口或另一个 USB 接口，您应该使用 <quote>by-id</quote> 模式。另一方面，如果您可"
-"能用具有相同功能，并接入相同接口的另一台设备替换它 (因为设备可能损坏)，则应该使用 <quote>by-"
-"path</quote> 模式。"
+"两种方式各有优点；正确的方式依赖于设备可能发生的变化。如果您预期指向设备的物"
+"理路径 (即它连接的端口或插槽) 可能变化，例如您可能会将它移动到另一个 IDE 接口"
+"或另一个 USB 接口，您应该使用 <quote>by-id</quote> 模式。另一方面，如果您可能"
+"用具有相同功能，并接入相同接口的另一台设备替换它 (因为设备可能损坏)，则应该使"
+"用 <quote>by-path</quote> 模式。"
 
 #. type: Content of: <sect1><sect2><para>
 #: lfs-en/chapter09/symlinks.xml
@@ -409,10 +409,10 @@ msgstr ""
 "class=\"directory\">/dev</filename> 中的顺序是随机的。例如，如果您有一个 USB "
 "摄像头和一个电视棒，有时 <filename>/dev/video0</filename> 会指向摄像头，"
 "<filename>/dev/video1</filename> 指向电视棒，而有时在重启后这个顺序正好颠倒过"
-"来。对于所有除了声卡和网卡以外的设备，该问题都可以通过建立 udev 规则以创建持久化符号链"
-"接来解决。对于网卡的解决方案在<xref linkend=\"ch-config-"
-"network\"/>中单独描述，而声卡配置可以在 <ulink url=\"&blfs-book;postlfs/"
-"devices.html\">BLFS</ulink> 中找到。"
+"来。对于所有除了声卡和网卡以外的设备，该问题都可以通过建立 udev 规则以创建持"
+"久化符号链接来解决。对于网卡的解决方案在<xref linkend=\"ch-config-network\"/>"
+"中单独描述，而声卡配置可以在 <ulink url=\"&blfs-book;postlfs/devices."
+"html\">BLFS</ulink> 中找到。"
 
 #. type: Content of: <sect1><sect2><para>
 #: lfs-en/chapter09/symlinks.xml

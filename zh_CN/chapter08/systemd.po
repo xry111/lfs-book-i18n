@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: lfs-dev@lists.linuxfromscratch.org\n"
-"POT-Creation-Date: 2022-11-04 11:39+0800\n"
+"POT-Creation-Date: 2022-12-29 16:03+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -236,10 +236,10 @@ msgstr "Systemd-&systemd-version;"
 #: lfs-en/chapter08/xz.xml lfs-en/chapter08/grub.xml
 #: lfs-en/chapter08/e2fsprogs.xml lfs-en/chapter08/gettext.xml
 #: lfs-en/chapter08/procps.xml lfs-en/chapter08/glibc.xml
-#: lfs-en/chapter08/dbus.xml lfs-en/chapter08/util-linux.xml
-#: lfs-en/chapter08/gawk.xml lfs-en/chapter08/man-db.xml
-#: lfs-en/chapter08/groff.xml lfs-en/chapter10/kernel.xml
-#: lfs-en/chapter09/bootscripts.xml
+#: lfs-en/chapter08/dbus.xml lfs-en/chapter08/shadow.xml
+#: lfs-en/chapter08/util-linux.xml lfs-en/chapter08/gawk.xml
+#: lfs-en/chapter08/man-db.xml lfs-en/chapter08/groff.xml
+#: lfs-en/chapter10/kernel.xml lfs-en/chapter09/bootscripts.xml
 msgid "Installed directories"
 msgstr "安装的目录"
 
@@ -421,6 +421,17 @@ msgstr "&systemd-fin-du;"
 #: lfs-en/chapter08/systemd.xml
 msgid "Installation of systemd"
 msgstr "安装 systemd"
+
+#. type: Content of: <sect1><sect2><para>
+#: lfs-en/chapter08/systemd.xml
+msgid "First, fix a security issue in systemd-coredump:"
+msgstr "首先，修复上游在 systemd-coredump 中发现的安全问题："
+
+#. type: Content of: <sect1><sect2><screen>
+#: lfs-en/chapter08/systemd.xml
+#, no-wrap
+msgid "<userinput remap=\"pre\">patch -Np1 -i ../&systemd-upstream-patch;</userinput>"
+msgstr "<userinput remap=\"pre\">patch -Np1 -i ../&systemd-upstream-patch;</userinput>"
 
 #. type: Content of: <sect1><sect2><para>
 #: lfs-en/chapter08/systemd.xml
@@ -807,7 +818,7 @@ msgid "<command>halt</command>"
 msgstr "<command>halt</command>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
-#: lfs-en/chapter08/systemd.xml lfs-en/chapter08/sysvinit.xml
+#: lfs-en/chapter08/systemd.xml
 msgid ""
 "Normally invokes <command>shutdown</command> with the <parameter>-h</"
 "parameter> option, except when already in run-level 0, then it tells the "
