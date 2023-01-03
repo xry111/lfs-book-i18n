@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: lfs-dev@lists.linuxfromscratch.org\n"
-"POT-Creation-Date: 2022-12-16 15:22+0800\n"
+"POT-Creation-Date: 2023-01-03 17:57+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -345,30 +345,6 @@ msgstr "&mpc-fin-du;"
 #: lfs-en/chapter08/mpc.xml
 msgid "Installation of MPC"
 msgstr "安装 MPC"
-
-#. type: Content of: <sect1><sect2><para>
-#: lfs-en/chapter08/mpc.xml
-msgid "First, make a fix identified upstream:"
-msgstr "首先，应用上游提供的一项修补："
-
-#. type: Content of: <sect1><sect2><screen>
-#: lfs-en/chapter08/mpc.xml
-#, no-wrap
-msgid "<userinput remap=\"pre\">sed -i '273{ h; d; }; 274,286 { H; d; }; 287 G' src/mpc.h</userinput>"
-msgstr "<userinput remap=\"pre\">sed -i '273{ h; d; }; 274,286 { H; d; }; 287 G' src/mpc.h</userinput>"
-
-#. type: Content of: <sect1><sect2><note><para>
-#: lfs-en/chapter08/mpc.xml
-msgid ""
-"This sed is a little complex and needs some explanation.  It holds the line "
-"273 in a buffer, adds lines 274-286 to it. It then writes the buffer out "
-"after line 287 is read. The result is that the line 287 is moved upwards "
-"from an incorrect location to its correct location in an #ifdef block."
-msgstr ""
-"这条 sed 命令较为复杂，需要进行一些说明。它将第 273 行的内容保存到一个缓冲区"
-"中，并将第 274-286 行也附加到缓冲区。然后，在读取第 287 行后，输出缓冲区中的"
-"内容。这样做相当于将第 287 行从原来的不正确的位置，向上移动到了在一个 #ifdef "
-"块中的正确位置。"
 
 #. type: Content of: <sect1><sect2><para>
 #: lfs-en/chapter08/mpc.xml

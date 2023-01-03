@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: lfs-dev@lists.linuxfromscratch.org\n"
-"POT-Creation-Date: 2022-09-17 18:28+0800\n"
+"POT-Creation-Date: 2023-01-03 17:57+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -22,8 +22,27 @@ msgstr ""
 msgid "configuring"
 msgstr "配置"
 
+#. type: Content of: <sect1><title>
+#: lfs-en/chapter09/clock.xml
+msgid "Configuring the system clock"
+msgstr "配置系统时钟"
+
+#. type: Content of: <sect1><indexterm><primary>
+#: lfs-en/chapter09/clock.xml
+msgid "clock"
+msgstr "clock"
+
 #. type: Content of: <sect1><para>
-#: lfs-en/chapter09/usage.xml lfs-en/chapter09/clock.xml
+#: lfs-en/chapter09/clock.xml
+msgid ""
+"This section discusses how to configure the <command>systemd-timedated</"
+"command> system service, which configures the system clock and timezone."
+msgstr ""
+"本节讨论如何配置 <command>systemd-timedated</command> 系统服务，它的作用是配"
+"置系统时钟和时区。"
+
+#. type: Content of: <sect1><para>
+#: lfs-en/chapter09/clock.xml
 msgid ""
 "If you cannot remember whether or not the hardware clock is set to UTC, find "
 "out by running the <userinput>hwclock --localtime --show</userinput> "
@@ -43,25 +62,6 @@ msgstr ""
 "时区，在 <command>hwclock</command> 显示的时间上加减对应的小时数，进行进一步"
 "的验证。例如，如果您现在处于莫斯科时区，即 GMT -0700，在本地时间上加 7 小时，"
 "再进行比较。"
-
-#. type: Content of: <sect1><title>
-#: lfs-en/chapter09/clock.xml
-msgid "Configuring the system clock"
-msgstr "配置系统时钟"
-
-#. type: Content of: <sect1><indexterm><primary>
-#: lfs-en/chapter09/clock.xml
-msgid "clock"
-msgstr "clock"
-
-#. type: Content of: <sect1><para>
-#: lfs-en/chapter09/clock.xml
-msgid ""
-"This section discusses how to configure the <command>systemd-timedated</"
-"command> system service, which configures the system clock and timezone."
-msgstr ""
-"本节讨论如何配置 <command>systemd-timedated</command> 系统服务，它的作用是配"
-"置系统时钟和时区。"
 
 #. type: Content of: <sect1><para>
 #: lfs-en/chapter09/clock.xml

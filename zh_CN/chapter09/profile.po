@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: lfs-dev@lists.linuxfromscratch.org\n"
-"POT-Creation-Date: 2022-10-15 09:55+0800\n"
+"POT-Creation-Date: 2023-01-03 17:57+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -55,16 +55,6 @@ msgstr "对于 <quote>en_GB.iso88591</quote> locale，以上命令输出："
 msgid "<computeroutput>ISO-8859-1</computeroutput>"
 msgstr "<computeroutput>ISO-8859-1</computeroutput>"
 
-#. type: Content of: <sect1><para>
-#: lfs-en/chapter09/locale.xml lfs-en/chapter09/profile.xml
-msgid ""
-"This results in a final locale setting of <quote>en_GB.ISO-8859-1</quote>.  "
-"It is important that the locale found using the heuristic above is tested "
-"prior to it being added to the Bash startup files:"
-msgstr ""
-"这样就最终确定 locale 应设置为 <quote>en_GB.ISO-8859-1</quote>。在将以上启发"
-"方法获得的 locale 添加到 Bash 启动文件之前，一定要进行下列测试："
-
 #. type: Content of: <sect1><screen>
 #: lfs-en/chapter09/locale.xml lfs-en/chapter09/profile.xml
 #, no-wrap
@@ -96,18 +86,6 @@ msgstr ""
 "如果出现了这种消息，您应该用 <command>localedef</command> 命令安装所需的 "
 "locale，或重新选择一个不同的 locale。后文假设 Glibc 没有输出类似错误消息。"
 
-#. type: Content of: <sect1><para>
-#: lfs-en/chapter09/locale.xml lfs-en/chapter09/profile.xml
-msgid ""
-"Other packages can also function incorrectly (but may not necessarily "
-"display any error messages) if the locale name does not meet their "
-"expectations.  In those cases, investigating how other Linux distributions "
-"support your locale might provide some useful information."
-msgstr ""
-"其他软件包在 locale 名不符合它们的期望时可能工作不正常(但未必输出错误消息)。"
-"在这种情况下，探索一下其他 Linux 发行版是如何支持您的 locale 的，可以得到一些"
-"有用的信息。"
-
 #. type: Content of: <sect1><title>
 #: lfs-en/chapter09/profile.xml
 msgid "The Bash Shell Startup Files"
@@ -118,16 +96,16 @@ msgstr "Bash Shell 启动文件"
 msgid ""
 "The shell program <command>/bin/bash</command> (hereafter referred to as "
 "<quote>the shell</quote>) uses a collection of startup files to help create "
-"an environment to run in. Each file has a specific use and may affect login "
+"the environment to run in. Each file has a specific use and may affect login "
 "and interactive environments differently. The files in the <filename "
-"class=\"directory\">/etc</filename> directory provide global settings. If an "
-"equivalent file exists in the home directory, it may override the global "
+"class=\"directory\">/etc</filename> directory provide global settings. If "
+"equivalent files exist in the home directory, they may override the global "
 "settings."
 msgstr ""
 "Shell 程序 <command>/bin/bash</command> (之后简称 <quote>shell</quote>) 使用"
 "一组启动文件，以帮助创建运行环境。每个文件都有专门的用途，它们可能以不同方式"
 "影响登录和交互环境。<filename class=\"directory\">/etc</filename> 中的文件提"
-"供全局设定。如果在用户主目录中有对应的文件存在，它可能覆盖全局设定。"
+"供全局设定。如果在用户主目录中有对应的文件存在，它们可能覆盖全局设定。"
 
 #. type: Content of: <sect1><para>
 #: lfs-en/chapter09/profile.xml
@@ -149,11 +127,14 @@ msgstr ""
 #. type: Content of: <sect1><para>
 #: lfs-en/chapter09/profile.xml
 msgid ""
-"For more information, see <command>info bash</command> under the "
-"<emphasis>Bash Startup Files and Interactive Shells</emphasis> section."
+"For more information, see the <emphasis>Bash Startup Files</emphasis> and "
+"<emphasis>Interactive Shells</emphasis> sections in the <emphasis>Bash "
+"Features</emphasis> chapter of the Bash info pages (<command>info bash</"
+"command>)."
 msgstr ""
-"阅读 <command>info bash</command> 中的 <emphasis>Bash Startup Files and "
-"Interactive Shells</emphasis> 一节，了解更多信息。"
+"如果需要更多信息，阅读 Bash info 页面 (<command>info bash</command>)  "
+"<emphasis>Bash Features</emphasis> 一章中的 <emphasis>Bash Startup Files</"
+"emphasis> 和 <emphasis>Interactive Shells</emphasis> 这两节。"
 
 #. type: Content of: <sect1><para>
 #: lfs-en/chapter09/profile.xml
@@ -239,6 +220,16 @@ msgstr ""
 #. type: Content of: <sect1><para>
 #: lfs-en/chapter09/profile.xml
 msgid ""
+"This results in a final locale setting of <quote>en_GB.ISO-8859-1</quote>.  "
+"It is important that the locale found using the heuristic above is tested "
+"before it is added to the Bash startup files:"
+msgstr ""
+"这样就最终确定 locale 应设置为 <quote>en_GB.ISO-8859-1</quote>。在将以上启发"
+"方法获得的 locale 添加到 Bash 启动文件之前，一定要进行下列测试："
+
+#. type: Content of: <sect1><para>
+#: lfs-en/chapter09/profile.xml
+msgid ""
 "The above commands should print the language name, the character encoding "
 "used by the locale, the local currency, and the prefix to dial before the "
 "telephone number in order to get into the country. If any of the commands "
@@ -250,6 +241,18 @@ msgstr ""
 "国家或地区的国际电话区号。如果以上某个命令失败并输出类似下面这样的消息，意味"
 "着您的 locale 在<xref linkend=\"ch-system-glibc\"/>中没有安装，或者不被 "
 "Glibc 的默认安装支持。"
+
+#. type: Content of: <sect1><para>
+#: lfs-en/chapter09/profile.xml
+msgid ""
+"Other packages may also function incorrectly (but will not necessarily "
+"display any error messages) if the locale name does not meet their "
+"expectations.  In such cases, investigating how other Linux distributions "
+"support your locale might provide some useful information."
+msgstr ""
+"其他软件包在 locale 名不符合它们的期望时可能工作不正常 (但未必输出错误消息)。"
+"在这种情况下，可以通过调研其他 Linux 发行版如何支持您的 locale，以获得一些有"
+"用的信息。"
 
 #. type: Content of: <sect1><para>
 #: lfs-en/chapter09/profile.xml
@@ -285,28 +288,29 @@ msgid ""
 "The <quote>C</quote> (default) and <quote>en_US.utf8</quote> (the "
 "recommended one for United States English users) locales are different. "
 "<quote>C</quote> uses the US-ASCII 7-bit character set, and treats bytes "
-"with the high bit set as invalid characters. That's why, e.g., the "
-"<command>ls</command> command substitutes them with question marks in that "
-"locale. Also, an attempt to send mail with such characters from Mutt or Pine "
-"results in non-RFC-conforming messages being sent (the charset in the "
-"outgoing mail is indicated as <quote>unknown 8-bit</quote>). So you can use "
-"the <quote>C</quote> locale only if you are sure that you will never need 8-"
+"with the high-order bit set <quote>on</quote> as invalid characters. That's "
+"why, e.g., the <command>ls</command> command displays them as question marks "
+"in that locale. Also, an attempt to send mail with such characters from Mutt "
+"or Pine results in non-RFC-conforming messages being sent (the charset in "
+"the outgoing mail is indicated as <quote>unknown 8-bit</quote>). So you can "
+"only use the <quote>C</quote> locale if you are sure you will never need 8-"
 "bit characters."
 msgstr ""
 "<quote>C</quote> (默认 locale) 和<quote>en_US</quote>(推荐美式英语用户使用的 "
 "locale) 是不同的。<quote>C</quote> locale 使用 US-ASCII 7 位字符集，并且将最"
-"高位为 1 的字节视为无效字符。因此，<command>ls</command> 等命令会将它们替换为"
-"问号。另外，如果试图用 Mutt 或 Pine 发送包含这些字符的邮件，会发出不符合 RFC "
-"标准的消息 (发出邮件的字符集会被标为<quote>未知 8 位</quote>)。因此，您只能在"
-"确信自己永远不会使用 8 位字符时才能使用<quote>C</quote> locale。"
+"高位<quote>被设定</quote>的字节视为无效字符。因此，<command>ls</command> 等命"
+"令会将它们显示为问号。另外，如果试图用 Mutt 或 Pine 发送包含这些字符的邮件，"
+"会发出不符合 RFC 标准的消息 (发出邮件的字符集会被标为<quote>未知 8 位</"
+"quote>)。因此，您只能在确信自己永远不需要 8 位字符时才能使用<quote>C</quote> "
+"locale。"
 
 #. type: Content of: <sect1><para>
 #: lfs-en/chapter09/profile.xml
 msgid ""
 "UTF-8 based locales are not supported well by some programs.  Work is in "
-"progress to document and, if possible, fix such problems, see <ulink "
+"progress to document and, if possible, fix such problems. See <ulink "
 "url=\"&blfs-book;introduction/locale-issues.html\"/>."
 msgstr ""
-"许多程序不能很好地支持基于 UTF-8 的 locale。我们正在努力记录并 (如果可能的"
-"话) 修复它们，参阅 <ulink url=\"&blfs-book;introduction/locale-issues.html\"/"
+"一些程序不能很好地支持基于 UTF-8 的 locale。我们正在努力记录并 (如果可能的"
+"话) 修复它们。参阅 <ulink url=\"&blfs-book;introduction/locale-issues.html\"/"
 ">。"
