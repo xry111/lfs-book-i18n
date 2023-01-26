@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: lfs-dev@lists.linuxfromscratch.org\n"
-"POT-Creation-Date: 2022-12-29 16:03+0800\n"
+"POT-Creation-Date: 2023-01-27 01:53+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -514,7 +514,7 @@ msgstr "<parameter>--buildtype=release</parameter>"
 #: lfs-en/chapter08/systemd.xml
 msgid ""
 "This switch overrides the default buildtype (<quote>debug</quote>), which "
-"would produce unoptimized binaries."
+"produces unoptimized binaries."
 msgstr ""
 "这个开关覆盖默认的构建模式 (<quote>debug</quote>)，因为该模式会生成未优化的二"
 "进制代码。"
@@ -538,7 +538,7 @@ msgstr "<parameter>-Dfirstboot=false</parameter>"
 #: lfs-en/chapter08/systemd.xml
 msgid ""
 "This switch prevents installation of systemd services responsible for "
-"setting up the system for the first time. They are not useful for LFS "
+"setting up the system for the first time. These are not useful in LFS, "
 "because everything is done manually."
 msgstr ""
 "这个开关防止 systemd 安装用于初始化设定系统的服务。在 LFS 中所有工作都会手工"
@@ -563,13 +563,13 @@ msgstr "<parameter>-Dldconfig=false</parameter>"
 #: lfs-en/chapter08/systemd.xml
 msgid ""
 "This switch prevents installation of a systemd unit that runs "
-"<command>ldconfig</command> at boot, which is not useful for source "
-"distributions such as LFS and makes the boot time longer. Remove it if the "
-"described feature is desired."
+"<command>ldconfig</command> at boot; this is not useful for source "
+"distributions such as LFS, and makes the boot time longer. Remove this "
+"option to enable running <command>ldconfig</command> at boot."
 msgstr ""
 "这个开关防止一个 systemd 单元的安装，它在引导时运行 <command>ldconfig</"
-"command>，这对于 LFS 等源代码发行版来说没有意义，还会增加引导时间。如果您需要"
-"这个功能，可以删除这个开关。"
+"command>；这对于 LFS 等源代码发行版来说没有意义，还会增加引导时间。如果需要在"
+"引导时运行 <command>ldconfig</command>，可以删除这个开关。"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: lfs-en/chapter08/systemd.xml
@@ -597,8 +597,8 @@ msgstr "<parameter>-Drpmmacrosdir=no</parameter>"
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: lfs-en/chapter08/systemd.xml
 msgid ""
-"This switch disables installation of RPM Macros for use with systemd because "
-"LFS does not support RPM."
+"This switch disables installation of RPM Macros for use with systemd, "
+"because LFS does not support RPM."
 msgstr "该选项禁止安装用于 systemd 的 RPM 宏，因为 LFS 并不支持 RPM。"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
@@ -609,7 +609,7 @@ msgstr "<parameter>-D{userdb,homed}=false</parameter>"
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: lfs-en/chapter08/systemd.xml
 msgid ""
-"Remove two daemons that have dependencies that do not fit the scope of LFS."
+"Remove two daemons with dependencies that do not fit within the scope of LFS."
 msgstr "移除两个守护程序，它们的依赖项超出了 LFS 的范围。"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
@@ -621,10 +621,10 @@ msgstr "<parameter>-Dman=false</parameter>"
 #: lfs-en/chapter08/systemd.xml
 msgid ""
 "Prevent the generation of man pages to avoid extra dependencies.  We will "
-"install pre-generated man pages for systemd from a tarball later."
+"install pre-generated man pages for systemd from a tarball."
 msgstr ""
-"防止 man 页面的生成，以避免额外的依赖项。后续会从压缩包中安装预先生成的 man "
-"页面。"
+"防止 man 页面的生成，以避免额外的依赖项。我们将会从一个压缩包安装预先生成的 "
+"man 页面。"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: lfs-en/chapter08/systemd.xml
@@ -689,7 +689,7 @@ msgstr "<userinput remap=\"adjust\">systemd-machine-id-setup</userinput>"
 
 #. type: Content of: <sect1><sect2><para>
 #: lfs-en/chapter08/systemd.xml
-msgid "Setup the basic target structure:"
+msgid "Set up the basic target structure:"
 msgstr "设定启动目标单元的基本结构："
 
 #. type: Content of: <sect1><sect2><screen>
@@ -702,11 +702,11 @@ msgstr "<userinput remap=\"adjust\">systemctl preset-all</userinput>"
 #: lfs-en/chapter08/systemd.xml
 msgid ""
 "Disable two services for upgrading binary distros.  They are useless for a "
-"basic Linux system built from source, and both will report an error if it's "
-"enabled but not configured:"
+"basic Linux system built from source, and each one will report an error if "
+"it's enabled but not configured:"
 msgstr ""
 "禁用两个用于升级二进制发行版的服务。它们对于从源码构建的，基本的 Linux 系统来"
-"说没有意义，而且如果其中某个被启用但未进行配置，会产生错误消息："
+"说没有意义，而且如果其中任意一个被启用但未进行配置，会产生错误消息："
 
 #. type: Content of: <sect1><sect2><screen>
 #: lfs-en/chapter08/systemd.xml
@@ -821,7 +821,7 @@ msgstr "<command>halt</command>"
 #: lfs-en/chapter08/systemd.xml
 msgid ""
 "Normally invokes <command>shutdown</command> with the <parameter>-h</"
-"parameter> option, except when already in run-level 0, then it tells the "
+"parameter> option, except when already in run-level 0, when it tells the "
 "kernel to halt the system; it notes in the file <filename>/var/log/wtmp</"
 "filename> that the system is being brought down"
 msgstr ""
@@ -858,12 +858,13 @@ msgstr "<command>init</command>"
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: lfs-en/chapter08/systemd.xml
 msgid ""
-"Is the first process to be started when the kernel has initialized the "
-"hardware which takes over the boot process and starts all processes "
-"according to its configuration files. In this case, it starts systemd"
+"Is the first process to be started after the kernel has initialized the "
+"hardware; <command>init</command> takes over the boot process and starts the "
+"processes specified by its configuration files; in this case, it starts "
+"systemd"
 msgstr ""
-"在内核初始化硬件后第一个启动的进程，它接管引导过程，并根据它的配置文件启动所"
-"有进程。在本例中，它启动 systemd"
+"在内核初始化硬件后第一个启动的进程；<command>init</command> 接管引导过程，并"
+"根据它的配置文件启动所有进程。在本例中，它启动 systemd"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: lfs-en/chapter08/systemd.xml lfs-en/chapter08/sysvinit.xml
@@ -893,10 +894,10 @@ msgstr "<command>kernel-install</command>"
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: lfs-en/chapter08/systemd.xml
 msgid ""
-"Is used to add and remove kernel and initramfs images to and from /boot. In "
+"Is used to add and remove kernel and initramfs images to and from /boot; in "
 "LFS, this is done manually"
 msgstr ""
-"用于在 /boot 中添加或删除内核和 initramfs 映像文件。在 LFS 中，这项工作是手工"
+"用于在 /boot 中添加或删除内核和 initramfs 映像文件；在 LFS 中，这项工作是手工"
 "完成的"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
@@ -1131,9 +1132,9 @@ msgstr "<command>systemd-analyze</command>"
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: lfs-en/chapter08/systemd.xml
 msgid ""
-"Is used to determine system startup performance of the current boot, as well "
-"as identify troublesome systemd units"
-msgstr "用于分析当前运行系统的引导性能，找出导致问题的 systemd 单元"
+"Is used to analyze system startup performance, as well as identify "
+"troublesome systemd units"
+msgstr "用于分析系统引导性能，也能找出导致引导性能问题的 systemd 单元"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: lfs-en/chapter08/systemd.xml
@@ -1149,7 +1150,7 @@ msgstr "<command>systemd-ask-password</command>"
 #: lfs-en/chapter08/systemd.xml
 msgid ""
 "Is used to query a system password or passphrase from the user, using a "
-"question message specified on the command line"
+"message specified on the Linux command line"
 msgstr "用于以命令行指定的消息向用户询问系统密码"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
@@ -1200,9 +1201,9 @@ msgstr "<command>systemd-cgtop</command>"
 #: lfs-en/chapter08/systemd.xml
 msgid ""
 "Shows the top control groups of the local Linux control group hierarchy, "
-"ordered by their CPU, memory and disk I/O load"
+"ordered by their CPU, memory and disk I/O loads"
 msgstr ""
-"显示本地 Linux 控制组层次结构中占用资源最多的，可以按 CPU 、内存和磁盘 I/O 负"
+"显示本地 Linux 控制组层次结构中占用资源最多的，可以按 CPU、内存和磁盘 I/O 负"
 "载排序"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
@@ -1234,10 +1235,10 @@ msgstr "<command>systemd-delta</command>"
 #: lfs-en/chapter08/systemd.xml
 msgid ""
 "Is used to identify and compare configuration files in <filename "
-"class=\"directory\">/etc</filename> that override default counterparts in "
-"<filename class=\"directory\">/usr</filename>"
+"class=\"directory\">/etc</filename> that override the defaults in <filename "
+"class=\"directory\">/usr</filename>"
 msgstr ""
-"用于确定并比较那些覆盖了 <filename class=\"directory\">/usr</filename> 中默认"
+"用于识别和比较那些覆盖了 <filename class=\"directory\">/usr</filename> 中默认"
 "值的 <filename class=\"directory\">/etc</filename> 中的配置文件"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
@@ -1314,8 +1315,8 @@ msgstr "<command>systemd-id128</command>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: lfs-en/chapter08/systemd.xml
-msgid "Generates and prints id128 strings"
-msgstr "生成和打印 id128 串"
+msgid "Generates and prints id128 (UUID) strings"
+msgstr "生成和打印 id128 (UUID) 串"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: lfs-en/chapter08/systemd.xml
@@ -1384,9 +1385,8 @@ msgstr "<command>systemd-notify</command>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: lfs-en/chapter08/systemd.xml
-msgid ""
-"Is used by daemon scripts to notify the init system about status changes"
-msgstr "被守护脚本用于通知 init 系统关于状态变化的信息"
+msgid "Is used by daemon scripts to notify the init system of status changes"
+msgstr "被守护脚本用于将状态变化告知 init 系统"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: lfs-en/chapter08/systemd.xml
@@ -1400,8 +1400,10 @@ msgstr "<command>systemd-nspawn</command>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: lfs-en/chapter08/systemd.xml
-msgid "Is used to run a command or OS in a light-weight namespace container"
-msgstr "用于在轻量级命名空间容器中运行命令或操作系统"
+msgid ""
+"Is used to run a command, or an entire OS, in a light-weight namespace "
+"container"
+msgstr "用于在轻量级命名空间容器中运行命令，或完整的操作系统"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: lfs-en/chapter08/systemd.xml
@@ -1432,10 +1434,10 @@ msgstr "<command>systemd-repart</command>"
 #: lfs-en/chapter08/systemd.xml
 msgid ""
 "Is used to grow and add partitions to a partition table when systemd is used "
-"in an OS image (e.g. a container)"
+"with an OS image (e.g. a container)"
 msgstr ""
-"在 systemd 被作为 OS 映像使用 (例如在容器中) 时，用于在分区表中添加分区或增长"
-"分区大小"
+"在 systemd 和 OS 映像 (例如容器) 共同使用时，可用于在分区表中添加分区或增长分"
+"区大小"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: lfs-en/chapter08/systemd.xml
@@ -1468,9 +1470,9 @@ msgstr "<command>systemd-run</command>"
 #: lfs-en/chapter08/systemd.xml
 msgid ""
 "Is used to create and start a transient .service or a .scope unit and run "
-"the specified command in it. This is useful for validating systemd units"
+"the specified command in it; this is useful for validating systemd units"
 msgstr ""
-"用于创建一个临时的 .service 或 .scope 单元，并在其中运行指定命令。这对于验证 "
+"用于创建一个临时的 .service 或 .scope 单元，并在其中运行指定命令；这对于验证 "
 "systemd 单元很有用"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
@@ -1518,12 +1520,12 @@ msgstr "<command>systemd-tmpfiles</command>"
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: lfs-en/chapter08/systemd.xml
 msgid ""
-"Creates, deletes and cleans up volatile and temporary files and directories, "
-"based on the configuration file format and location specified in <filename "
-"class=\"directory\">tmpfiles.d</filename> directories"
+"Creates, deletes, and cleans up volatile and temporary files and "
+"directories, based on the configuration file format and location specified "
+"in <filename class=\"directory\">tmpfiles.d</filename> directories"
 msgstr ""
 "根据 <filename class=\"directory\">tmpfiles.d</filename> 目录中的配置文件给定"
-"的文件格式和位置，创建、修改和清理易失性、临时性文件和目录"
+"的文件格式和位置，创建、修改，以及清理易失性、临时性文件和目录"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: lfs-en/chapter08/systemd.xml
@@ -1599,7 +1601,7 @@ msgstr "<command>udevadm</command>"
 #: lfs-en/chapter08/systemd.xml
 msgid ""
 "Is a generic udev administration tool which controls the udevd daemon, "
-"provides info from the Udev hardware database, monitors uevents, waits for "
+"provides info from the udev hardware database, monitors uevents, waits for "
 "uevents to finish, tests udev configuration, and triggers uevents for a "
 "given device"
 msgstr ""

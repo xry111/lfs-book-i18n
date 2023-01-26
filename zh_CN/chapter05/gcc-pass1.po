@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: lfs-dev@lists.linuxfromscratch.org\n"
-"POT-Creation-Date: 2022-11-23 01:06+0800\n"
+"POT-Creation-Date: 2023-01-27 01:53+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -593,9 +593,9 @@ msgstr "执行以下命令编译 GCC："
 #: lfs-en/chapter08/gdbm.xml lfs-en/chapter08/procps.xml
 #: lfs-en/chapter08/vim.xml lfs-en/chapter08/glibc.xml
 #: lfs-en/chapter08/dbus.xml lfs-en/chapter08/patch.xml
-#: lfs-en/chapter08/util-linux.xml lfs-en/chapter08/gawk.xml
-#: lfs-en/chapter08/gperf.xml lfs-en/chapter08/man-db.xml
-#: lfs-en/chapter08/groff.xml lfs-en/chapter09/bootscripts.xml
+#: lfs-en/chapter08/util-linux.xml lfs-en/chapter08/gperf.xml
+#: lfs-en/chapter08/man-db.xml lfs-en/chapter08/groff.xml
+#: lfs-en/chapter09/bootscripts.xml
 #, no-wrap
 msgid "<userinput remap=\"install\">make install</userinput>"
 msgstr "<userinput remap=\"install\">make install</userinput>"
@@ -623,6 +623,19 @@ msgstr ""
 "提供的扩展特性。这对于构建临时的 Glibc 已经足够了，但后续工作将需要完整的内部"
 "头文件。使用以下命令创建一个完整版本的内部头文件，该命令与 GCC 构建系统在一般"
 "情况下生成该头文件的命令是一致的："
+
+#. type: Content of: <sect1><sect2><note><para>
+#: lfs-en/chapter05/gcc-pass1.xml
+msgid ""
+"The command below shows an example of nested command substitution using two "
+"methods: backquotes and a <literal>$()</literal> construct.  It could be "
+"rewritten using the same method for both substitutions, but is shown this "
+"way to demonstrate how they can be mixed.  Generally the <literal>$()</"
+"literal> method is preferred."
+msgstr ""
+"下列命令作为实例，展示了命令行代换操作的两种不同写法：反引号和 <literal>$()</"
+"literal> 结构。可以将该命令改写为使用一种写法完成两次代换，但我们这里特意展示"
+"如何混用两种写法。一般来说 <literal>$()</literal> 这种写法更常用。"
 
 #. type: Content of: <sect1><sect2><screen>
 #: lfs-en/chapter05/gcc-pass1.xml
