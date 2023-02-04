@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Linux From Scratch 11.0\n"
 "Report-Msgid-Bugs-To: lfs-dev@lists.linuxfromscratch.org\n"
-"POT-Creation-Date: 2022-12-10 14:25+0800\n"
+"POT-Creation-Date: 2023-02-04 23:29+0800\n"
 "PO-Revision-Date: 2021-08-07 12:38+0800\n"
 "Last-Translator: Xi Ruoyao <xry111@xry111.site>\n"
 "Language-Team: noneLanguage: zh_CN\n"
@@ -299,9 +299,9 @@ msgstr "Libffi-&libffi-version;"
 #: lfs-en/chapter08/gdbm.xml lfs-en/chapter08/procps.xml
 #: lfs-en/chapter08/vim.xml lfs-en/chapter08/glibc.xml
 #: lfs-en/chapter08/dbus.xml lfs-en/chapter08/patch.xml
-#: lfs-en/chapter08/util-linux.xml lfs-en/chapter08/gawk.xml
-#: lfs-en/chapter08/gperf.xml lfs-en/chapter08/man-db.xml
-#: lfs-en/chapter08/groff.xml lfs-en/chapter09/bootscripts.xml
+#: lfs-en/chapter08/util-linux.xml lfs-en/chapter08/gperf.xml
+#: lfs-en/chapter08/man-db.xml lfs-en/chapter08/groff.xml
+#: lfs-en/chapter09/bootscripts.xml
 #, no-wrap
 msgid "<userinput remap=\"install\">make install</userinput>"
 msgstr "<userinput remap=\"install\">make install</userinput>"
@@ -543,13 +543,11 @@ msgstr "准备编译 Libffi："
 msgid ""
 "<userinput remap=\"configure\">./configure --prefix=/usr          \\\n"
 "            --disable-static       \\\n"
-"            --with-gcc-arch=native \\\n"
-"            --disable-exec-static-tramp</userinput>"
+"            --with-gcc-arch=native</userinput>"
 msgstr ""
 "<userinput remap=\"configure\">./configure --prefix=/usr          \\\n"
 "            --disable-static       \\\n"
-"            --with-gcc-arch=native \\\n"
-"            --disable-exec-static-tramp</userinput>"
+"            --with-gcc-arch=native</userinput>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: lfs-en/chapter08/libffi.xml
@@ -572,21 +570,6 @@ msgstr ""
 "要使用目标系统架构作为该选项的参数值。关于不同系统架构的信息，参阅 <ulink "
 "url='https://gcc.gnu.org/onlinedocs/gcc-&gcc-version;/gcc/x86-Options."
 "html'>gcc 手册中提供的的 x86 选项</ulink>。"
-
-#. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
-#: lfs-en/chapter08/libffi.xml
-msgid "<parameter>--disable-exec-static-tramp</parameter>"
-msgstr "<parameter>--disable-exec-static-tramp</parameter>"
-
-#. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
-#: lfs-en/chapter08/libffi.xml
-msgid ""
-"Disable static trampoline support, a new security feature in Libffi. Some "
-"BLFS packages (notably <application>GJS</application>) have not been adapted "
-"for it."
-msgstr ""
-"禁用静态蹦床函数支持，它是 Libffi 的一项新的安全特性，但一些 BLFS 软件包 (特"
-"别是 <application>GJS</application>) 尚未适配该特性。"
 
 #. type: Content of: <sect1><sect2><title>
 #: lfs-en/chapter08/libffi.xml

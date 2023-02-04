@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Linux From Scratch 11.0\n"
 "Report-Msgid-Bugs-To: lfs-dev@lists.linuxfromscratch.org\n"
-"POT-Creation-Date: 2023-01-17 10:00+0800\n"
+"POT-Creation-Date: 2023-02-04 23:29+0800\n"
 "PO-Revision-Date: 2021-08-16 11:42+0800\n"
 "Last-Translator: Xi Ruoyao <xry111@xry111.site>\n"
 "Language-Team: noneLanguage: zh_CN\n"
@@ -652,33 +652,15 @@ msgstr "如果需要列出所有失败的测试，执行："
 msgid "<userinput remap=\"test\">grep '^FAIL:' $(find -name '*.log')</userinput>"
 msgstr "<userinput remap=\"test\">grep '^FAIL:' $(find -name '*.log')</userinput>"
 
-#.  Caused by egrep deprecation.  Note that we don't "patch" temp grep.
-#.          And it seems unworthy to add a sed into temp grep just for one test
-#.          failure.  (I don't really agree to "patch" grep in the first place,
-#.          anyway.)
-#.          Will be fixed in 2.40 (upstream commit 67d1991). 
-#.  https://sourceware.org/bugzilla/show_bug.cgi?id=29107 
-#. Three gprofng tests yield the 
-#.     <literal>
-#. ERROR</literal> result, and they are counted as
-#.     <literal>UNRESOLVED</literal> in the summary.
 #. type: Content of: <sect1><sect2><para>
 #: lfs-en/chapter08/binutils.xml
 msgid ""
 "Twelve tests fail in the gold test suite when the <option>--enable-default-"
 "pie</option> and <option>--enable-default-ssp</option> options are passed to "
-"GCC.  The test named <filename>ar with versioned solib</filename> is also "
-"known to fail.  Because of a race between the gas test suite and the gprofng "
-"test suite, some gas tests may fail if parallel jobs are used.  If you are "
-"not assured of the correctness of gas, invoke <command>make check-gas</"
-"command> to run the gas test suite separately and all tests should pass."
+"GCC."
 msgstr ""
-"gold 测试中有十二项测试在 GCC 启用 <option>--enable-default-pie</option> 和 "
-"<option>--enable-default-ssp</option> 时失败。另外，已知名为 <filename>ar "
-"with versioned solib</filename> 的测试会失败。由于 gas 测试套件和 gprofng 测"
-"试套件的竞争，一些 gas 测试在启用并行任务时可能失败。如果您不确定 gas 是否正"
-"常工作，可以使用 <command>make check-gas</command> 命令单独运行 gas 测试套"
-"件，此时所有测试都应该能正常通过。"
+"Gold 测试套件中，有十二项测试在构建 GCC 时启用 <option>--enable-default-pie</"
+"option> 和 <option>--enable-default-ssp</option> 的情况下会失败。"
 
 #. type: Content of: <sect1><sect2><screen>
 #: lfs-en/chapter08/binutils.xml
@@ -696,10 +678,10 @@ msgstr "删除无用的静态库以及一个空的 man 页面："
 #, no-wrap
 msgid ""
 "<userinput remap=\"install\">rm -fv /usr/lib/lib{bfd,ctf,ctf-nobfd,sframe,opcodes}.a\n"
-"rm -fv /usr/share/man/man1/gprofng.1</userinput>"
+"rm -fv /usr/share/man/man1/{gprofng,gp-*}.1</userinput>"
 msgstr ""
 "<userinput remap=\"install\">rm -fv /usr/lib/lib{bfd,ctf,ctf-nobfd,sframe,opcodes}.a\n"
-"rm -fv /usr/share/man/man1/gprofng.1</userinput>"
+"rm -fv /usr/share/man/man1/{gprofng,gp-*}.1</userinput>"
 
 #. type: Content of: <sect1><sect2><title>
 #: lfs-en/chapter08/binutils.xml
