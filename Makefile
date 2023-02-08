@@ -36,7 +36,7 @@ $(MLANG)/chapter01/changelog.po: lfs-en/chapter01/changelog.xml \
 	po4a --no-translations --force po4a-changelog.cfg
 
 MXML_FILES = $(patsubst $(LFS_EN)/%.xml, $(MLANG)/book/%.xml, $(XML_FILES))
-BOOK_FILES = $(patsubst $(LFS_EN)/%, %, $(shell find $(LFS_EN) -type f -not -path "$(LFS_EN)/.git"))
+BOOK_FILES = $(patsubst $(LFS_EN)/%, %, $(shell find $(LFS_EN) -type f -not -path "$(LFS_EN)/.git" -not -path lfs-en/conditional.ent))
 MBOOK_FILES = $(patsubst %, $(MLANG)/book/%, $(BOOK_FILES))
 
 .PHONY: html booksrc nochunks pdf pofiles
@@ -74,20 +74,19 @@ $(MLANG)/book/tidy.conf: lfs-en/tidy.conf $(MLANG)/lang.mk
 version: $(MLANG)/book/git-version-l10n.sh
 	cd $(<D); \
 	REV=$(REV) GIT_DIR=$(PWD)/lfs-en/.git ./git-version-l10n.sh $(REV)
+	rm -fv $(MLANG)/book/conditional.ent
 
-$(MLANG)/book/version.ent $(MLANG)/book/conditional.ent: version; true
+$(MLANG)/book/version.ent: version; true
 
-$(MLANG)/book/git-version.sh:
-	echo '#!/bin/sh' > $@; echo 'exit 0' >> $@; chmod -v 755 $@
+$(MLANG)/book/git-version.sh: lfs-en/git-version.sh
+	sed '/git.status/,$$ d' $< > $@
+	chmod -v 755 $@
 
 $(MXML_FILES) &: $(XML_FILES) $(PO_FILES) mkpo4acfg.py
 	mkdir -pv $(POT_DIRS)
 	$(CMD_FIND_XML) | $(MKPO4ACFG) > po4a.cfg
 	po4a po4a.cfg
 	sed -e 's|<book>|<book lang="$(M_DOCBOOK_LANG)">|' -i $(MLANG)/book/index.xml
-	# This should be handled by po4a, but if some pages are not done yet
-	# we will need to do it manually.
-	sed -e '/encoding=/s|ISO-8859-1|$(M_ENCODING)|' -i $@
 	cd $(MLANG)/book; $(PWD)/po4a_issue295.sh
 
 L10N_XML = stylesheets/lfs-xsl/lfs-l10n.xml
