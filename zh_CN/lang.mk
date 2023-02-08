@@ -38,6 +38,7 @@ zh_CN/book/git-version-l10n.sh: lfs-en/git-version.sh $(THIS)
 	chmod -v 755 $@
 
 COPY_FILES = zh_CN/book/fonts.mk        \
+             zh_CN/book/fop.xml         \
              zh_CN/book/noto-cjk-commit \
              zh_CN/book/source-han-mono-commit
 
