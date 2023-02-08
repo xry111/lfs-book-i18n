@@ -70,10 +70,13 @@ $(MLANG)/book/tidy.conf: lfs-en/tidy.conf $(MLANG)/lang.mk
 # $(MLANG)/book is not a git repo, so we need to generate the version info
 # now and silence git-version.sh.  lang.mk SHALL contain the recipe for
 # git-version-l10n.sh.
+#
+# The content of version.ent does not depend on REV, so just say "sysv"
+# here.
 .PHONY: version
 version: $(MLANG)/book/git-version-l10n.sh
 	cd $(<D); \
-	REV=$(REV) GIT_DIR=$(PWD)/lfs-en/.git ./git-version-l10n.sh $(REV)
+	GIT_DIR=$(PWD)/lfs-en/.git ./git-version-l10n.sh sysv
 	rm -fv $(MLANG)/book/conditional.ent
 
 $(MLANG)/book/version.ent: version; true
