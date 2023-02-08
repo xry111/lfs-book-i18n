@@ -62,7 +62,6 @@ pdf: booksrc
 	rm -rf $$tmpdir
 
 booksrc: $(MBOOK_FILES) $(ORIG_FILES) $(MLANG)/book/version.ent
-	[ ! -e $(MLANG)/fix.sh ] || (pushd $(MLANG)/book; sh ../fix.sh; popd)
 
 $(MLANG)/book/tidy.conf: lfs-en/tidy.conf $(MLANG)/lang.mk
 	sed -e '/output-encoding:/s|latin1|$(M_ENCODING_ALT)|' $< > $@
@@ -85,7 +84,7 @@ $(MLANG)/book/git-version.sh: lfs-en/git-version.sh
 	sed '/git.status/,$$ d' $< > $@
 	chmod -v 755 $@
 
-$(MXML_FILES) &: $(XML_FILES) $(PO_FILES) mkpo4acfg.py
+$(MXML_FILES) &: $(XML_FILES) $(PO_FILES) mkpo4acfg.py po4a_issue295.sh
 	mkdir -pv $(POT_DIRS)
 	$(CMD_FIND_XML) | $(MKPO4ACFG) > po4a.cfg
 	po4a po4a.cfg

@@ -34,5 +34,5 @@ sed -n "${sed_cmd}" -i \
 
 # Looks stupid, but I don't know any better way.
 for iter in 1 2 3; do
-	sed -n "${sed_cmd}" -i chapter08/{glibc,stripping}.xml
+	sed -n "${sed_cmd}" -i chapter08/glibc.xml chapter08/stripping.xml
 done
