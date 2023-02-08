@@ -1,6 +1,6 @@
 #!/bin/sh
-
 # Fixup for https://github.com/mquinson/po4a/issues/295
+
 sed_cmd='
 1h
 1!{

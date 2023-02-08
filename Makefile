@@ -88,6 +88,12 @@ $(MXML_FILES) &: $(XML_FILES) $(PO_FILES) mkpo4acfg.py
 	# This should be handled by po4a, but if some pages are not done yet
 	# we will need to do it manually.
 	sed -e '/encoding=/s|ISO-8859-1|$(M_ENCODING)|' -i $@
+	cd $(MLANG)/book; $(PWD)/po4a_issue295.sh
+
+L10N_XML = stylesheets/lfs-xsl/lfs-l10n.xml
+
+$(MLANG)/book/$(L10N_XML): lfs-en/$(L10N_XML)
+	sed -e '/encoding=/s|ISO-8859-1|$(M_ENCODING)|' $< > $@
 
 $(MLANG)/book/chapter01/changelog.xml: $(LFS_EN)/chapter01/changelog.xml \
                                        $(MLANG)/chapter01/changelog.po
