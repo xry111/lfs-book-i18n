@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: lfs-dev@lists.linuxfromscratch.org\n"
-"POT-Creation-Date: 2022-12-04 14:02+0800\n"
+"POT-Creation-Date: 2023-02-09 14:35+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -203,9 +203,9 @@ msgstr "Tcl-&tcl-version;"
 #: lfs-en/chapter08/gdbm.xml lfs-en/chapter08/procps.xml
 #: lfs-en/chapter08/vim.xml lfs-en/chapter08/glibc.xml
 #: lfs-en/chapter08/dbus.xml lfs-en/chapter08/patch.xml
-#: lfs-en/chapter08/util-linux.xml lfs-en/chapter08/gawk.xml
-#: lfs-en/chapter08/gperf.xml lfs-en/chapter08/man-db.xml
-#: lfs-en/chapter08/groff.xml lfs-en/chapter09/bootscripts.xml
+#: lfs-en/chapter08/util-linux.xml lfs-en/chapter08/gperf.xml
+#: lfs-en/chapter08/man-db.xml lfs-en/chapter08/groff.xml
+#: lfs-en/chapter09/bootscripts.xml
 #, no-wrap
 msgid "<userinput remap=\"install\">make install</userinput>"
 msgstr "<userinput remap=\"install\">make install</userinput>"
@@ -454,17 +454,6 @@ msgstr ""
 
 #. type: Content of: <sect1><sect2><para>
 #: lfs-en/chapter08/tcl.xml
-msgid "First, unpack the documentation by issuing the following command:"
-msgstr "首先，运行以下命令解压文档："
-
-#. type: Content of: <sect1><sect2><screen>
-#: lfs-en/chapter08/tcl.xml
-#, no-wrap
-msgid "<userinput remap=\"pre\">tar -xf ../tcl&tcl-version;-html.tar.gz --strip-components=1</userinput>"
-msgstr "<userinput remap=\"pre\">tar -xf ../tcl&tcl-version;-html.tar.gz --strip-components=1</userinput>"
-
-#. type: Content of: <sect1><sect2><para>
-#: lfs-en/chapter08/tcl.xml
 msgid "Prepare Tcl for compilation:"
 msgstr "准备编译 Tcl："
 
@@ -586,19 +575,22 @@ msgstr "<userinput remap=\"install\">mv /usr/share/man/man3/{Thread,Tcl_Thread}.
 #. type: Content of: <sect1><sect2><para>
 #: lfs-en/chapter08/tcl.xml
 msgid ""
-"If you downloaded the optional documentation, install it by issuing the "
-"following commands:"
-msgstr "如果下载了可选的文档压缩包，执行命令以安装文档："
+"Optionally, install the documentation by issuing the following commands:"
+msgstr "如果需要，可以运行以下命令安装文档："
 
 #. type: Content of: <sect1><sect2><screen>
 #: lfs-en/chapter08/tcl.xml
 #, no-wrap
 msgid ""
-"<userinput remap=\"install\">mkdir -v -p /usr/share/doc/tcl-&tcl-version;\n"
-"cp -v -r  ../html/* /usr/share/doc/tcl-&tcl-version;</userinput>"
+"<userinput remap=\"install\">cd ..\n"
+"tar -xf ../tcl&tcl-version;-html.tar.gz --strip-components=1\n"
+"mkdir -v -p /usr/share/doc/tcl-&tcl-version;\n"
+"cp -v -r  ./html/* /usr/share/doc/tcl-&tcl-version;</userinput>"
 msgstr ""
-"<userinput remap=\"install\">mkdir -v -p /usr/share/doc/tcl-&tcl-version;\n"
-"cp -v -r  ../html/* /usr/share/doc/tcl-&tcl-version;</userinput>"
+"<userinput remap=\"install\">cd ..\n"
+"tar -xf ../tcl&tcl-version;-html.tar.gz --strip-components=1\n"
+"mkdir -v -p /usr/share/doc/tcl-&tcl-version;\n"
+"cp -v -r  ./html/* /usr/share/doc/tcl-&tcl-version;</userinput>"
 
 #. type: Content of: <sect1><sect2><title>
 #: lfs-en/chapter08/tcl.xml
