@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: lfs-dev@lists.linuxfromscratch.org\n"
-"POT-Creation-Date: 2022-09-17 18:28+0800\n"
+"POT-Creation-Date: 2023-02-13 03:55+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -219,6 +219,11 @@ msgstr "编译该软件包："
 msgid "Install the package:"
 msgstr "安装该软件包："
 
+#. type: Content of: <sect1><title>
+#: lfs-en/chapter01/whatsnew.xml lfs-en/chapter08/zstd.xml
+msgid "Zstd-&zstd-version;"
+msgstr "Zstd-&zstd-version;"
+
 #. type: Content of: <sect1><sect2><variablelist><bridgehead>
 #: lfs-en/chapter05/linux-headers.xml lfs-en/chapter08/pkgconfig.xml
 #: lfs-en/chapter08/findutils.xml lfs-en/chapter08/file.xml
@@ -416,11 +421,6 @@ msgstr ""
 "<productname>zstd</productname> <productnumber>&zstd-version;</"
 "productnumber> <placeholder type=\"address\" id=\"0\"/>"
 
-#. type: Content of: <sect1><title>
-#: lfs-en/chapter08/zstd.xml
-msgid "Zstd-&zstd-version;"
-msgstr "Zstd-&zstd-version;"
-
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: lfs-en/chapter08/zstd.xml
 msgid "zstd"
@@ -450,17 +450,6 @@ msgstr "&zstd-fin-du;"
 #: lfs-en/chapter08/zstd.xml
 msgid "Installation of Zstd"
 msgstr "安装 Zstd"
-
-#. type: Content of: <sect1><sect2><para>
-#: lfs-en/chapter08/zstd.xml
-msgid "Apply a patch to fix some issues identified by upstream:"
-msgstr "应用补丁，以修复上游发现的一些问题："
-
-#. type: Content of: <sect1><sect2><screen>
-#: lfs-en/chapter08/zstd.xml
-#, no-wrap
-msgid "<userinput remap=\"pre\">patch -Np1 -i ../&zstd-upstream-fixes-patch;</userinput>"
-msgstr "<userinput remap=\"pre\">patch -Np1 -i ../&zstd-upstream-fixes-patch;</userinput>"
 
 #. type: Content of: <sect1><sect2><screen>
 #: lfs-en/chapter08/zstd.xml
