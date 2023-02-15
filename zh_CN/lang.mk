@@ -59,6 +59,7 @@ FONTS_XSL = zh_CN/book/stylesheets/lfs-xsl/pdf/zh_CN-fonts.xsl
 PDF_XSL = stylesheets/lfs-xsl/pdf.xsl
 
 $(FONTS_XSL): zh_CN/zh_CN-fonts.xsl
+	mkdir -pv $(@D)
 	cp $< $@
 
 zh_CN/book/$(PDF_XSL): lfs-en/$(PDF_XSL) $(FONTS_XSL) $(THIS)
