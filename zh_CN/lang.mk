@@ -54,3 +54,13 @@ zh_CN/book/Makefile: lfs-en/Makefile $(THIS) $(COPY_FILES) $(@D)
 $(COPY_FILES): zh_CN/$(@F)
 	mkdir -pv $(@D)
 	cp zh_CN/$(@F) $(@D)
+
+FONTS_XSL = zh_CN/book/stylesheets/lfs-xsl/pdf/zh_CN-fonts.xsl
+PDF_XSL = stylesheets/lfs-xsl/pdf.xsl
+
+$(FONTS_XSL): zh_CN/zh_CN-fonts.xsl
+	cp $< $@
+
+zh_CN/book/$(PDF_XSL): lfs-en/$(PDF_XSL) $(FONTS_XSL) $(THIS)
+	sed '/<\/xsl:stylesheet>/i <xsl:include href="pdf/zh_CN-fonts.xsl"/>' \
+		< $< > $@
