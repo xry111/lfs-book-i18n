@@ -62,6 +62,6 @@ $(FONTS_XSL): zh_CN/zh_CN-fonts.xsl
 	cp $< $@
 
 zh_CN/book/$(PDF_XSL): lfs-en/$(PDF_XSL) $(FONTS_XSL) $(THIS)
-    mkdir -pv $(@D)
+	mkdir -pv $(@D)
 	sed '/<\/xsl:stylesheet>/i <xsl:include href="pdf/zh_CN-fonts.xsl"/>' \
 		< $< > $@
