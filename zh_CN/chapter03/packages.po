@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Linux From Scratch 11.0\n"
 "Report-Msgid-Bugs-To: lfs-dev@lists.linuxfromscratch.org\n"
-"POT-Creation-Date: 2022-09-24 17:25+0800\n"
+"POT-Creation-Date: 2023-02-18 14:03+0800\n"
 "PO-Revision-Date: 2021-07-28 19:09+0800\n"
 "Last-Translator: Xi Ruoyao <xry111@xry111.site>\n"
 "Language-Team: noneLanguage: zh_CN\n"
@@ -596,6 +596,25 @@ msgstr "下载地址：<ulink url=\"&glibc-url;\"/>"
 #: lfs-en/chapter03/packages.xml
 msgid "MD5 sum: <literal>&glibc-md5;</literal>"
 msgstr "MD5 校验和：<literal>&glibc-md5;</literal>"
+
+#. type: Content of: <sect1><variablelist><varlistentry><listitem><note><para>
+#: lfs-en/chapter03/packages.xml
+msgid ""
+"The Glibc developers maintain a <ulink url='https://sourceware.org/git/?"
+"p=glibc.git;a=shortlog;h=refs/heads/release/&glibc-version;/master'>Git "
+"branch</ulink> containing patches considered worthy for Glibc-&glibc-"
+"version; but unfortunately developed after Glibc-&glibc-version; release.  "
+"The LFS editors will issue a security advisory if any security fix is added "
+"into the branch, but no actions will be taken for other newly added "
+"patches.  You may review the patches yourself and incorporate some patches "
+"if you consider them important."
+msgstr ""
+"Glibc 开发者维护了一个 <ulink url='https://sourceware.org/git/?p=glibc.git;"
+"a=shortlog;h=refs/heads/release/&glibc-version;/master'>Git 分支</ulink>，包"
+"含那些被认为值得包含在 Glibc-&glibc-version; 中，但不幸地在 Glibc-&glibc-"
+"version; 发布后才完成开发的补丁。LFS 编辑在有安全修补被加入该分支时会发布一条"
+"安全公告，但不会为其他新加入该分支的补丁做出任何反应。您可以自行审查这些补"
+"丁，并在构建时合入您认为重要的补丁。"
 
 #. type: Content of: <sect1><variablelist><varlistentry><term>
 #: lfs-en/chapter03/packages.xml
