@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: lfs-dev@lists.linuxfromscratch.org\n"
-"POT-Creation-Date: 2022-12-11 16:36+0800\n"
+"POT-Creation-Date: 2023-02-22 16:20+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -497,6 +497,25 @@ msgid ""
 msgstr ""
 "不要尝试使用自定义的编译选项<quote>优化</quote>该软件包。该软件包是一个引导加"
 "载器，其源代码中的低级操作可能被一些激进的优化所破坏。"
+
+#. type: Content of: <sect1><sect2><para>
+#: lfs-en/chapter08/grub.xml
+msgid ""
+"Fix an issue causing <command>grub-install</command> to fail when the "
+"<filename class='directory'>/boot</filename> partition (or the root "
+"partition if <filename class='directory'>/boot</filename> is not a separate "
+"partition) is created by e2fsprogs-1.47.0 or later:"
+msgstr ""
+"修复导致 <command>grub-install</command> 在 <filename class='directory'>/"
+"boot</filename> 分区 (或者根分区，如果 <filename class='directory'>/boot</"
+"filename> 不是一个独立分区) 由 e2fsprogs-1.47.0 或更新版本创建时运行失败的问"
+"题："
+
+#. type: Content of: <sect1><sect2><screen>
+#: lfs-en/chapter08/grub.xml
+#, no-wrap
+msgid "<userinput remap='pre'>patch -Np1 -i ../grub-&grub-version;-upstream_fixes-1.patch</userinput>"
+msgstr "<userinput remap='pre'>patch -Np1 -i ../grub-&grub-version;-upstream_fixes-1.patch</userinput>"
 
 #. type: Content of: <sect1><sect2><para>
 #: lfs-en/chapter08/grub.xml

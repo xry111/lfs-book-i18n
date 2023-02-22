@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: lfs-dev@lists.linuxfromscratch.org\n"
-"POT-Creation-Date: 2023-02-08 09:41+0800\n"
+"POT-Creation-Date: 2023-02-22 16:20+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -681,6 +681,46 @@ msgstr ""
 "<userinput remap=\"install\">makeinfo -o      doc/com_err.info ../lib/et/com_err.texinfo\n"
 "install -v -m644 doc/com_err.info /usr/share/info\n"
 "install-info --dir-file=/usr/share/info/dir /usr/share/info/com_err.info</userinput>"
+
+#. type: Content of: <sect1><sect2><title>
+#: lfs-en/chapter08/e2fsprogs.xml
+msgid "Configuring E2fsprogs"
+msgstr "配置 E2fsprogs"
+
+#. type: Content of: <sect1><sect2><indexterm><primary>
+#: lfs-en/chapter08/e2fsprogs.xml
+msgid "/etc/mke2fs.conf"
+msgstr "/etc/mke2fs.conf"
+
+#. type: Content of: <sect1><sect2><para>
+#: lfs-en/chapter08/e2fsprogs.xml
+msgid ""
+"<filename>/etc/mke2fs.conf</filename> contains the default value of various "
+"command line options of <command>mke2fs</command>.  You may edit the file to "
+"make the default values suitable for your need.  For example, some utilities "
+"(not in LFS or BLFS) cannot recognize a <systemitem class='filesystem'>ext4</"
+"systemitem> file system with <literal>metadata_csum_seed</literal> feature "
+"enabled.  <emphasis role='bold'>If</emphasis> you need such an utility, you "
+"may remove the feature from the default <systemitem class='filesystem'>ext4</"
+"systemitem> feature list with the command:"
+msgstr ""
+"<filename>/etc/mke2fs.conf</filename> 包含 <command>mke2fs</command> 一些命令"
+"行选项的默认值。您可以修改这些默认值，使之符合您的需求。例如，一些工具 (未被 "
+"LFS 或 BLFS 包含) 无法识别启用了 <literal>metadata_csum_seed</literal> 特性"
+"的 <systemitem class='filesystem'>ext4</systemitem> 文件系统。<emphasis "
+"role='bold'>如果</emphasis>需要使用这样的工具，可以执行命令，从默认的 "
+"<systemitem class='filesystem'>ext4</systemitem> 特性列表中移除该特性："
+
+#. type: Content of: <sect1><sect2><screen>
+#: lfs-en/chapter08/e2fsprogs.xml
+#, no-wrap
+msgid "<userinput>sed 's/metadata_csum_seed,//' -i /etc/mke2fs.conf</userinput>"
+msgstr "<userinput>sed 's/metadata_csum_seed,//' -i /etc/mke2fs.conf</userinput>"
+
+#. type: Content of: <sect1><sect2><para>
+#: lfs-en/chapter08/e2fsprogs.xml
+msgid "Read the man page <filename>mke2fs.conf(5)</filename> for details."
+msgstr "更多信息详见 man 页面 <filename>mke2fs.conf(5)</filename>。"
 
 #. type: Content of: <sect1><sect2><title>
 #: lfs-en/chapter08/e2fsprogs.xml

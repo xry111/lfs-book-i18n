@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Linux From Scratch 11.0\n"
 "Report-Msgid-Bugs-To: lfs-dev@lists.linuxfromscratch.org\n"
-"POT-Creation-Date: 2023-02-07 00:00+0800\n"
+"POT-Creation-Date: 2023-02-22 16:20+0800\n"
 "PO-Revision-Date: 2022-02-11 20:04+0800\n"
 "Last-Translator: Xi Ruoyao <xry111@xry111.site>\n"
 "Language-Team: noneLanguage: zh_CN\n"
@@ -414,6 +414,12 @@ msgid "Meson"
 msgstr "Meson"
 
 #. type: Content of: <sect1><itemizedlist><listitem><para>
+#: lfs-en/chapter08/dbus.xml lfs-en/appendices/dependencies.xml
+#: lfs-en/prologue/why.xml
+msgid "D-Bus"
+msgstr "D-Bus"
+
+#. type: Content of: <sect1><itemizedlist><listitem><para>
 #: lfs-en/chapter08/dejagnu.xml lfs-en/appendices/dependencies.xml
 #: lfs-en/prologue/why.xml
 msgid "DejaGNU"
@@ -734,8 +740,14 @@ msgstr "Diffutils, E2fsprogs, Findutils, Shadow, 以及 Util-linux"
 
 #. type: Content of: <appendix><segmentedlist><seglistitem><seg>
 #: lfs-en/appendices/dependencies.xml
-msgid "Bash, Diffutils, Eudev, Findutils, and Man-DB"
-msgstr "Bash, Diffutils, Findutils, 以及 Man-DB"
+msgid ""
+"Bash, Diffutils, <phrase revision=\"sysv\">Eudev, </phrase> Findutils, "
+"<phrase revision=\"sysv\">and </phrase>Man-DB<phrase revision=\"systemd\">, "
+"and Systemd</phrase>"
+msgstr ""
+"Bash, Diffutils, <phrase revision=\"sysv\">Eudev, </phrase> Findutils, "
+"<phrase revision=\"sysv\">以及 </phrase>Man-DB<phrase revision=\"systemd\">, "
+"以及 Systemd</phrase>"
 
 #. type: Content of: <appendix><segmentedlist><seglistitem><seg>
 #: lfs-en/appendices/dependencies.xml
@@ -745,6 +757,30 @@ msgid ""
 msgstr ""
 "<ulink url=\"https://metacpan.org/pod/Expect\">Expect.pm</ulink> 和 <ulink "
 "url=\"https://metacpan.org/pod/IO::Tty\">IO::Tty</ulink>"
+
+#. type: Content of: <appendix><segmentedlist><seglistitem><seg>
+#: lfs-en/appendices/dependencies.xml
+msgid ""
+"Bash, Binutils, Coreutils, Diffutils, Gawk, GCC, Glibc, Grep, Make, Sed, "
+"Systemd, and Util-linux"
+msgstr ""
+"Bash, Binutils, Coreutils, Diffutils, Gawk, GCC, Glibc, Grep, Make, Sed, "
+"Systemd, 以及 Util-linux"
+
+#. type: Content of: <appendix><segmentedlist><seglistitem><seg>
+#: lfs-en/appendices/dependencies.xml
+msgid "Glibc and Systemd"
+msgstr "Glibc 和 Systemd"
+
+#. type: Content of: <appendix><segmentedlist><seglistitem><seg>
+#: lfs-en/appendices/dependencies.xml
+msgid "Several packages in BLFS"
+msgstr "一些 BLFS 软件包"
+
+#. type: Content of: <appendix><segmentedlist><seglistitem><seg>
+#: lfs-en/appendices/dependencies.xml
+msgid "<ulink url=\"&blfs-book;x/x7lib.html\">Xorg Libraries</ulink>"
+msgstr "<ulink url=\"&blfs-book;x/x7lib.html\">Xorg 库</ulink>"
 
 #. type: Content of: <appendix><segmentedlist><seglistitem><seg>
 #: lfs-en/appendices/dependencies.xml
@@ -1174,6 +1210,15 @@ msgstr "Glibc, Xz, 以及 Zlib"
 #. type: Content of: <appendix><segmentedlist><seglistitem><seg>
 #: lfs-en/appendices/dependencies.xml
 msgid ""
+"<phrase revision=\"sysv\">Eudev</phrase> <phrase "
+"revision=\"systemd\">Systemd</phrase>"
+msgstr ""
+"<phrase revision='sysv'>Eudev</phrase> <phrase revision='systemd'>Systemd</"
+"phrase>"
+
+#. type: Content of: <appendix><segmentedlist><seglistitem><seg>
+#: lfs-en/appendices/dependencies.xml
+msgid ""
 "Bash, Binutils, Coreutils, Diffutils, GCC, Glibc, Grep, Make, Ncurses, and "
 "Sed"
 msgstr ""
@@ -1187,8 +1232,12 @@ msgstr "Glibc 和 Ncurses"
 
 #. type: Content of: <appendix><segmentedlist><seglistitem><seg>
 #: lfs-en/appendices/dependencies.xml
-msgid "<ulink url=\"&blfs-book;general/pcre.html\">PCRE</ulink>"
-msgstr "<ulink url=\"&blfs-book;general/pcre.html\">PCRE</ulink>"
+msgid ""
+"<ulink url=\"&blfs-book;general/pcre2.html\">PCRE2</ulink> or <ulink "
+"url=\"&blfs-book;general/pcre.html\">PCRE</ulink>"
+msgstr ""
+"<ulink url=\"&blfs-book;general/pcre2.html\">PCRE2</ulink> 或 <ulink "
+"url=\"&blfs-book;general/pcre.html\">PCRE</ulink>"
 
 #. type: Content of: <appendix><segmentedlist><seglistitem><seg>
 #: lfs-en/appendices/dependencies.xml
@@ -1467,12 +1516,6 @@ msgstr "Pkg-config"
 
 #. type: Content of: <appendix><segmentedlist><seglistitem><seg>
 #: lfs-en/appendices/dependencies.xml
-msgid "Bash, Binutils, Coreutils, Gawk, GCC, Glibc, Grep, Make, Popt, and Sed"
-msgstr ""
-"Bash, Binutils, Coreutils, Gawk, GCC, Glibc, Grep, Make, Popt, 以及 Sed"
-
-#. type: Content of: <appendix><segmentedlist><seglistitem><seg>
-#: lfs-en/appendices/dependencies.xml
 msgid "<ulink url=\"&blfs-book;general/glib2.html\">Glib2</ulink>"
 msgstr "<ulink url=\"&blfs-book;general/glib2.html\">Glib2</ulink>"
 
@@ -1617,9 +1660,9 @@ msgid ""
 "html\">qemu</ulink>, <ulink url=\"&blfs-book;general/qrencode."
 "html\">qrencode</ulink>, <ulink url=\"https://sourceforge.net/projects/"
 "linuxquota/\"> quota-tools</ulink>, <ulink url=\"&blfs-book;basicnet/rsync."
-"html\">rsync</ulink>, <ulink url=\"https://pypi.python.org/pypi/"
-"Sphinx\">Sphinx</ulink>, <ulink url=\"https://tpm2-tss.readthedocs.io/en/"
-"latest/\"> tpm2-tss</ulink>, <ulink url=\"&blfs-book;general/valgrind."
+"html\">rsync</ulink>, <ulink url=\"&blfs-book;general/python-modules."
+"html#sphinx\"> Sphinx</ulink>, <ulink url=\"https://tpm2-tss.readthedocs.io/"
+"en/latest/\"> tpm2-tss</ulink>, <ulink url=\"&blfs-book;general/valgrind."
 "html\">Valgrind</ulink>, and <ulink url=\"&blfs-book;postlfs/zsh.html\">zsh</"
 "ulink>"
 msgstr ""
@@ -1651,9 +1694,9 @@ msgstr ""
 "html\">qemu</ulink>, <ulink url=\"&blfs-book;general/qrencode."
 "html\">qrencode</ulink>, <ulink url=\"https://sourceforge.net/projects/"
 "linuxquota/\"> quota-tools</ulink>, <ulink url=\"&blfs-book;basicnet/rsync."
-"html\">rsync</ulink>, <ulink url=\"https://pypi.python.org/pypi/"
-"Sphinx\">Sphinx</ulink>, <ulink url=\"https://tpm2-tss.readthedocs.io/en/"
-"latest/\"> tpm2-tss</ulink>, <ulink url=\"&blfs-book;general/valgrind."
+"html\">rsync</ulink>, <ulink url=\"&blfs-book;general/python-modules."
+"html#sphinx\">Sphinx</ulink>, <ulink url=\"https://tpm2-tss.readthedocs.io/"
+"en/latest/\"> tpm2-tss</ulink>, <ulink url=\"&blfs-book;general/valgrind."
 "html\">Valgrind</ulink>, 以及 <ulink url=\"&blfs-book;postlfs/zsh."
 "html\">zsh</ulink>"
 
@@ -1698,11 +1741,13 @@ msgstr ""
 #. type: Content of: <appendix><segmentedlist><seglistitem><seg>
 #: lfs-en/appendices/dependencies.xml
 msgid ""
-"Bash, Binutils, Coreutils, Diffutils, Eudev, Findutils, Gawk, GCC, Gettext, "
-"Glibc, Grep, Make, Ncurses, Sed, and Zlib"
+"Bash, Binutils, Coreutils, Diffutils, <phrase revision=\"sysv\">Eudev, </"
+"phrase>Findutils, Gawk, GCC, Gettext, Glibc, Grep, Make, Ncurses, Sed, "
+"<phrase revision=\"systemd\">Systemd, </phrase>and Zlib"
 msgstr ""
-"Bash, Binutils, Coreutils, Diffutils, Eudev, Findutils, Gawk, GCC, Gettext, "
-"Glibc, Grep, Make, Ncurses, Sed, 以及 Zlib"
+"Bash, Binutils, Coreutils, Diffutils, <phrase revision=\"sysv\">Eudev, </"
+"phrase>Findutils, Gawk, GCC, Gettext, Glibc, Grep, Make, Ncurses, Sed, "
+"<phrase revision=\"systemd\">Systemd, </phrase>以及 Zlib"
 
 #. type: Content of: <appendix><segmentedlist><seglistitem><seg>
 #: lfs-en/appendices/dependencies.xml
@@ -1775,8 +1820,14 @@ msgstr "Bash, Binutils, Coreutils, Diffutils, GCC, Glibc, 以及 Make."
 
 #. type: Content of: <appendix><segmentedlist><seglistitem><seg>
 #: lfs-en/appendices/dependencies.xml
-msgid "Eudev, File, GRUB, Kmod, and Man-DB"
-msgstr "Eudev, File, GRUB, Kmod, 以及 Man-DB"
+msgid ""
+"<phrase revision=\"sysv\">Eudev, </phrase>File, GRUB, Kmod, <phrase "
+"revision=\"sysv\">and </phrase>Man-DB<phrase revision=\"systemd\">, and "
+"Systemd</phrase>"
+msgstr ""
+"<phrase revision=\"sysv\">Eudev, </phrase>File, GRUB, Kmod, <phrase "
+"revision=\"sysv\">以及 </phrase>Man-DB<phrase revision=\"systemd\">, 以及 "
+"Systemd</phrase>"
 
 #. type: Content of: <appendix><segmentedlist><seglistitem><seg>
 #: lfs-en/appendices/dependencies.xml
