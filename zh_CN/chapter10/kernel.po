@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: lfs-dev@lists.linuxfromscratch.org\n"
-"POT-Creation-Date: 2022-10-15 09:55+0800\n"
+"POT-Creation-Date: 2023-03-09 00:12+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -207,10 +207,10 @@ msgstr "<userinput remap=\"pre\">make mrproper</userinput>"
 #: lfs-en/chapter08/xz.xml lfs-en/chapter08/grub.xml
 #: lfs-en/chapter08/e2fsprogs.xml lfs-en/chapter08/gettext.xml
 #: lfs-en/chapter08/procps.xml lfs-en/chapter08/glibc.xml
-#: lfs-en/chapter08/dbus.xml lfs-en/chapter08/util-linux.xml
-#: lfs-en/chapter08/gawk.xml lfs-en/chapter08/man-db.xml
-#: lfs-en/chapter08/groff.xml lfs-en/chapter10/kernel.xml
-#: lfs-en/chapter09/bootscripts.xml
+#: lfs-en/chapter08/dbus.xml lfs-en/chapter08/shadow.xml
+#: lfs-en/chapter08/util-linux.xml lfs-en/chapter08/gawk.xml
+#: lfs-en/chapter08/man-db.xml lfs-en/chapter08/groff.xml
+#: lfs-en/chapter10/kernel.xml lfs-en/chapter09/bootscripts.xml
 msgid "Installed directories"
 msgstr "安装的目录"
 
@@ -470,6 +470,7 @@ msgid ""
 "General setup ---&gt;\n"
 "   [ ] Compile the kernel with warnings as errors [CONFIG_WERROR]\n"
 "   &lt; &gt; Enable kernel headers through /sys/kernel/kheaders.tar.xz [CONFIG_IKHEADERS]\n"
+"   [ ] Configure standard kernel features (expert users) [CONFIG_EXPERT]\n"
 "General architecture-dependent options  ---&gt;\n"
 "   [*] Stack Protector buffer overflow detection [CONFIG_STACKPROTECTOR]\n"
 "   [*]   Strong Stack Protector [CONFIG_STACKPROTECTOR_STRONG]\n"
@@ -490,6 +491,7 @@ msgstr ""
 "General setup ---&gt;\n"
 "   [ ] Compile the kernel with warnings as errors [CONFIG_WERROR]\n"
 "   &lt; &gt; Enable kernel headers through /sys/kernel/kheaders.tar.xz [CONFIG_IKHEADERS]\n"
+"   [ ] Configure standard kernel features (expert users) [CONFIG_EXPERT]\n"
 "General architecture-dependent options  ---&gt;\n"
 "   [*] Stack Protector buffer overflow detection [CONFIG_STACKPROTECTOR]\n"
 "   [*]   Strong Stack Protector [CONFIG_STACKPROTECTOR_STRONG]\n"
@@ -520,8 +522,7 @@ msgid ""
 "   [*] Control Group support [CONFIG_CGROUPS]   ---&gt;\n"
 "      [*] Memory controller [CONFIG_MEMCG]\n"
 "   [ ] Enable deprecated sysfs features to support old userspace tools [CONFIG_SYSFS_DEPRECATED]\n"
-"   [*] Configure standard kernel features (expert users) [CONFIG_EXPERT] ---&gt;\n"
-"      [*] open by fhandle syscalls [CONFIG_FHANDLE]\n"
+"   [ ] Configure standard kernel features (expert users) [CONFIG_EXPERT]\n"
 "General architecture-dependent options  ---&gt;\n"
 "   [*] Enable seccomp to safely compute untrusted bytecode [CONFIG_SECCOMP]\n"
 "   [*] Stack Protector buffer overflow detection [CONFIG_STACKPROTECTOR]\n"
@@ -560,8 +561,7 @@ msgstr ""
 "   [*] Control Group support [CONFIG_CGROUPS]   ---&gt;\n"
 "      [*] Memory controller [CONFIG_MEMCG]\n"
 "   [ ] Enable deprecated sysfs features to support old userspace tools [CONFIG_SYSFS_DEPRECATED]\n"
-"   [*] Configure standard kernel features (expert users) [CONFIG_EXPERT] ---&gt;\n"
-"      [*] open by fhandle syscalls [CONFIG_FHANDLE]\n"
+"   [ ] Configure standard kernel features (expert users) [CONFIG_EXPERT]\n"
 "General architecture-dependent options  ---&gt;\n"
 "   [*] Enable seccomp to safely compute untrusted bytecode [CONFIG_SECCOMP]\n"
 "   [*] Stack Protector buffer overflow detection [CONFIG_STACKPROTECTOR]\n"
@@ -707,6 +707,23 @@ msgid ""
 msgstr ""
 "启用该选项将会导致构建内核需要 <command>cpio</command>。LFS 没有安装 "
 "<command>cpio</command>。"
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
+#: lfs-en/chapter10/kernel.xml
+msgid ""
+"<parameter> Configure standard kernel features (expert users)  </parameter>"
+msgstr ""
+"<parameter> Configure standard kernel features (expert users)  </parameter>"
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
+#: lfs-en/chapter10/kernel.xml
+msgid ""
+"This will make some options show up in the configuration interface but "
+"changing those options may be dangerous.  Do not use this unless you know "
+"what you are doing."
+msgstr ""
+"该选项会导致配置界面出现一些新选项，但改变这些选项的设定值可能导致危险后果。"
+"不要使用该选项，除非您知道您在做什么。"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: lfs-en/chapter10/kernel.xml

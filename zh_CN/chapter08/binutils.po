@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Linux From Scratch 11.0\n"
 "Report-Msgid-Bugs-To: lfs-dev@lists.linuxfromscratch.org\n"
-"POT-Creation-Date: 2023-03-05 15:30+0800\n"
+"POT-Creation-Date: 2023-03-09 00:12+0800\n"
 "PO-Revision-Date: 2021-08-16 11:42+0800\n"
 "Last-Translator: Xi Ruoyao <xry111@xry111.site>\n"
 "Language-Team: noneLanguage: zh_CN\n"
@@ -478,50 +478,6 @@ msgstr "&binutils-fin-sbu;"
 #: lfs-en/chapter08/binutils.xml
 msgid "&binutils-fin-du;"
 msgstr "&binutils-fin-du;"
-
-#. type: Content of: <sect1><sect2><para>
-#: lfs-en/chapter08/binutils.xml
-msgid ""
-"Verify that the PTYs are working properly inside the chroot environment by "
-"performing a simple test:"
-msgstr "进行简单测试，确认伪终端 (PTY) 在 chroot 环境中能正常工作："
-
-#. type: Content of: <sect1><sect2><screen>
-#: lfs-en/chapter08/binutils.xml
-#, no-wrap
-msgid "<userinput remap=\"test\">expect -c \"spawn ls\"</userinput>"
-msgstr "<userinput remap=\"test\">expect -c \"spawn ls\"</userinput>"
-
-#. type: Content of: <sect1><sect2><para>
-#: lfs-en/chapter08/binutils.xml
-msgid "This command should output the following:"
-msgstr "该命令应该输出："
-
-#. type: Content of: <sect1><sect2><screen>
-#: lfs-en/chapter08/binutils.xml
-#, no-wrap
-msgid "<computeroutput>spawn ls</computeroutput>"
-msgstr "<computeroutput>spawn ls</computeroutput>"
-
-#. type: Content of: <sect1><sect2><para>
-#: lfs-en/chapter08/binutils.xml
-msgid ""
-"If, instead, the output includes the message below, then the environment is "
-"not set up for proper PTY operation.  This issue needs to be resolved before "
-"running the test suites for Binutils and GCC:"
-msgstr ""
-"如果输出不是上面这样，而是下面的消息，就说明环境没有为 PTY 的正常工作设置好。"
-"在运行 Binutils 和 GCC 的测试套件前必须解决这个问题。"
-
-#. type: Content of: <sect1><sect2><screen>
-#: lfs-en/chapter08/binutils.xml
-#, no-wrap
-msgid ""
-"<computeroutput>The system has no more ptys.\n"
-"Ask your system administrator to create more.</computeroutput>"
-msgstr ""
-"<computeroutput>The system has no more ptys.\n"
-"Ask your system administrator to create more.</computeroutput>"
 
 #. type: Content of: <sect1><sect2><screen>
 #: lfs-en/chapter08/binutils.xml
