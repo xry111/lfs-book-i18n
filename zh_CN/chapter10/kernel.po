@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: lfs-dev@lists.linuxfromscratch.org\n"
-"POT-Creation-Date: 2023-03-09 00:12+0800\n"
+"POT-Creation-Date: 2023-03-15 12:18+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -351,6 +351,49 @@ msgstr ""
 "构建内核需要三步 —— 配置、编译、安装。阅读内核源代码树中的 <filename>README</"
 "filename> 文件，了解不同于本手册的内核配置方法。"
 
+#. type: Content of: <sect1><sect2><important><para>
+#: lfs-en/chapter10/kernel.xml
+msgid ""
+"Building the linux kernel for the first time is one of the most challenging "
+"tasks in LFS.  Getting it right depends on the specific hardware for the "
+"target system and your specific needs. There are almost 12,000 configuration "
+"items that are available for the kernel although only about a third of them "
+"are needed for most computers. The LFS editors recommend that users not "
+"familiar with this process follow the procedures below fairly closely.  The "
+"objective is to get an initial system to a point where you can log in at the "
+"command line when you reboot later in <xref linkend=\"ch-finish-reboot\"/>.  "
+"At his point optimization and customization is not a goal."
+msgstr ""
+"初次构建 Linux 内核是 LFS 构建过程中最具挑战性的环节之一。内核配置依赖于系统"
+"硬件和您的个人需求。内核配置包含大约 12,000 个选项，尽管只有约三分之一对于大"
+"多数计算机系统是必要的。LFS 编辑建议不熟悉内核编译的用户严格遵循以下步骤。这"
+"些步骤的目的是使您能够在<xref linkend='ch-finish-reboot'/>中重启进入 LFS 系"
+"统，并通过命令行登录。这里给出的步骤并不试图优化或定制内核配置。"
+
+#. type: Content of: <sect1><sect2><important><para>
+#: lfs-en/chapter10/kernel.xml
+msgid ""
+"For general information on kernel configuration see <ulink url=\"&hints-root;"
+"kernel-configuration.txt\"/>.  Additional information about configuring and "
+"building the kernel can be found at <ulink url=\"&anduin-sources;/kernel-"
+"nutshell/\"/>.  These references are a bit dated, but still give a "
+"reasonable overview of the process."
+msgstr ""
+"<ulink url=\"&hints-root;kernel-configuration.txt\"/> 介绍了内核配置的常识。"
+"<ulink url=\"&anduin-sources;/kernel-nutshell/\"/> 提供了更多关于内核配置的信"
+"息。这两份文档都有些过时，但仍然较好地概括了配置过程。"
+
+#. type: Content of: <sect1><sect2><important><para>
+#: lfs-en/chapter10/kernel.xml
+msgid ""
+"If all else fails, you can ask for help on the <ulink url=\"https://www."
+"linuxfromscratch.org/mail.html\">lfs-support</ulink> mailing list.  Note "
+"that subscribing is required in order for the list to avoid spam."
+msgstr ""
+"如果所有其他尝试都无法解决问题，可以在 <ulink url='https://www."
+"linuxfromscratch.org/mail.html'>lfs-support</ulink> 邮件列表提问。注意为了防"
+"止垃圾邮件，必须先订阅列表才能向列表发送邮件。"
+
 #. type: Content of: <sect1><sect2><para>
 #: lfs-en/chapter10/kernel.xml
 msgid "Prepare for compilation by running the following command:"
@@ -425,21 +468,6 @@ msgid ""
 msgstr ""
 "这会启动 ncurses 目录驱动的界面。如果希望了解其他 (图形) 界面，可以输入 "
 "<command>make help</command>。"
-
-#. type: Content of: <sect1><sect2><para>
-#: lfs-en/chapter10/kernel.xml
-msgid ""
-"For general information on kernel configuration see <ulink url=\"&hints-root;"
-"kernel-configuration.txt\"/>.  BLFS has some information regarding "
-"particular kernel configuration requirements of packages outside of LFS at "
-"<ulink url=\"&blfs-book;longindex.html#kernel-config-index\"/>.  Additional "
-"information about configuring and building the kernel can be found at <ulink "
-"url=\"http://www.kroah.com/lkn/\"/>"
-msgstr ""
-"阅读 <ulink url=\"&hints-root;kernel-configuration.txt\"/> 了解关于内核配置的"
-"一般信息。BLFS 包含一些关于 LFS 之外的软件包需要的特定内核配置的信息，位于"
-"<ulink url=\"&blfs-book;longindex.html#kernel-config-index\"/>。另外在 "
-"<ulink url=\"http://www.kroah.com/lkn/\"/> 也有一些关于配置和构建内核的信息。"
 
 #. type: Content of: <sect1><sect2><note><para>
 #: lfs-en/chapter10/kernel.xml
@@ -626,6 +654,51 @@ msgstr ""
 #. type: Content of: <sect1><sect2><note><para>
 #: lfs-en/chapter10/kernel.xml
 msgid ""
+"If you are building a 32-bit system running on a hardware with RAM more than "
+"4GB, adjust the configuration so the kernel will be able to use up to 64GB "
+"physical RAM:"
+msgstr ""
+"如果正在构建 32 位系统，且系统运行的硬件有超过 4GB 内存，调整内核配置，使其能"
+"够使用多达 64GB 物理内存："
+
+#. type: Content of: <sect1><sect2><note><screen>
+#: lfs-en/chapter10/kernel.xml
+#, no-wrap
+msgid ""
+"Processor type and features ---&gt;\n"
+"  High Memory Support ---&gt;\n"
+"    (X) 64GB [CONFIG_HIGHMEM64G]"
+msgstr ""
+"Processor type and features ---&gt;\n"
+"  High Memory Support ---&gt;\n"
+"    (X) 64GB [CONFIG_HIGHMEM64G]"
+
+#. type: Content of: <sect1><sect2><note><para>
+#: lfs-en/chapter10/kernel.xml
+msgid ""
+"If the partition for the LFS system is in a NVME SSD (i. e. the device node "
+"for the partition is <filename>/dev/nvme*</filename> instead of <filename>/"
+"dev/sd*</filename>), enable NVME support or the LFS system won't boot:"
+msgstr ""
+"如果 LFS 系统分区在 NVME SSD 上 (即，分区的设备节点是 <filename>/dev/nvme*</"
+"filename>，而非 <filename>/dev/sd*</filename>)，启用 NVME 支持，否则 LFS 系统"
+"无法引导："
+
+#. type: Content of: <sect1><sect2><note><screen>
+#: lfs-en/chapter10/kernel.xml
+#, no-wrap
+msgid ""
+"Device Drivers ---&gt;\n"
+"  NVME Support ---&gt;\n"
+"    &lt;*&gt; NVM Express block device [CONFIG_BLK_DEV_NVME]"
+msgstr ""
+"Device Drivers ---&gt;\n"
+"  NVME Support ---&gt;\n"
+"    &lt;*&gt; NVM Express block device [CONFIG_BLK_DEV_NVME]"
+
+#. type: Content of: <sect1><sect2><note><para>
+#: lfs-en/chapter10/kernel.xml
+msgid ""
 "While \"The IPv6 Protocol\" is not strictly required, it is highly "
 "recommended by the systemd developers."
 msgstr ""
@@ -638,24 +711,25 @@ msgid ""
 "There are several other options that may be desired depending on the "
 "requirements for the system. For a list of options needed for BLFS packages, "
 "see the <ulink url=\"&lfs-root;blfs/view/&short-version;/longindex."
-"html#kernel-config-index\">BLFS Index of Kernel Settings</ulink> (&lfs-root;"
-"blfs/view/&short-version;/longindex.html#kernel-config-index)."
+"html#kernel-config-index\">BLFS Index of Kernel Settings</ulink>."
 msgstr ""
 "根据系统的需求，可能需要一些其他配置选项。BLFS 软件包需要的内核配置选项列表可"
 "以在 <ulink url=\"&lfs-root;blfs/view/&short-version;/longindex.html#kernel-"
-"config-index\">BLFS Index of Kernel Settings</ulink> (&lfs-root;blfs/view/"
-"&short-version;/longindex.html#kernel-config-index) 查阅。"
+"config-index\">BLFS 内核配置索引</ulink>查阅。"
 
 #. type: Content of: <sect1><sect2><note><para>
 #: lfs-en/chapter10/kernel.xml
 msgid ""
 "If your host hardware is using UEFI and you wish to boot the LFS system with "
 "it, you should adjust some kernel configuration following <ulink url=\"&blfs-"
-"book;postlfs/grub-setup.html#uefi-kernel\"> the BLFS page</ulink>."
+"book;postlfs/grub-setup.html#uefi-kernel\"> the BLFS page</ulink> <emphasis "
+"role='bold'>even if you'll use the UEFI bootloader from the host distro</"
+"emphasis>."
 msgstr ""
 "如果您的硬件支持 UEFI，且您希望通过 UEFI 引导 LFS 系统，则您需要按照 <ulink "
 "url=\"&blfs-book;postlfs/grub-setup.html#uefi-kernel\">BLFS 页面</ulink>的说"
-"明，调整一些内核配置选项。"
+"明，调整一些内核配置选项，<emphasis role='bold'>即使您准备使用宿主发行版提供"
+"的 UEFI 加载器引导 LFS 系统，也需要进行调整。</emphasis>"
 
 #. type: Content of: <sect1><sect2><variablelist><title>
 #: lfs-en/chapter10/kernel.xml

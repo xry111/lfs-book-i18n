@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Linux From Scratch 11.3\n"
 "Report-Msgid-Bugs-To: lfs-dev@lists.linuxfromscratch.org\n"
-"POT-Creation-Date: 2022-10-02 19:17+0800\n"
+"POT-Creation-Date: 2023-03-15 14:34+0800\n"
 "PO-Revision-Date: 2022-09-19 11:46+0800\n"
 "Last-Translator: Xi Ruoyao <xry111@xry111.site>\n"
 "Language-Team: noneLanguage: zh_CN\n"
@@ -53,6 +53,11 @@ msgid ""
 msgstr ""
 "安装<ulink url='&blfs-book;postlfs/firmware.html'>固件</ulink>，如果您的设备"
 "的内核驱动程序需要一些固件文件才能正常工作的话。"
+
+#. type: Content of: <sect1><itemizedlist><listitem><para>
+#: lfs-en/chapter11/reboot.xml
+msgid "Ensure a password is set for the &root; user."
+msgstr "确认已经为 &root; 用户设置了密码。"
 
 #. type: Content of: <sect1><itemizedlist><listitem><para>
 #: lfs-en/chapter11/reboot.xml
@@ -194,7 +199,22 @@ msgstr ""
 #. type: Content of: <sect1><para>
 #: lfs-en/chapter11/reboot.xml
 msgid ""
-"When the reboot is complete, the LFS system is ready for use and more "
-"software may be added to suit your needs."
+"When the reboot is complete, the LFS system is ready for use.  What you will "
+"see is a simple <quote>login: </quote> prompt.  At this point, you can "
+"proceed to <ulink url=\"&blfs-book;\">the BLFS Book</ulink> where you can "
+"add more software to suit your needs."
 msgstr ""
-"重启完成后，LFS 系统就可以使用了，您可以安装更多软件包以满足自己的需求。"
+"重新启动后，就可以使用 LFS 系统了。您会看到一个简单的 <quote>login</quote> 提"
+"示符。此时，您可以阅读 <ulink url='&blfs-book;'>BLFS 手册</ulink>，它包含安装"
+"更多您所需软件的方法。"
+
+#. type: Content of: <sect1><para>
+#: lfs-en/chapter11/reboot.xml
+msgid ""
+"If your reboot is <emphasis role=\"bold\">not</emphasis> successful, it is "
+"time to troubleshoot.  For hints on solving inital booting problems, see "
+"<ulink url=\"https://www.linuxfromscratch.org/lfs/troubleshooting.html\"/>."
+msgstr ""
+"如果<emphasis role='bold'>没能</emphasis>重启成功，则需要进行故障排除。阅读 "
+"<ulink url=\"https://www.linuxfromscratch.org/lfs/troubleshooting.html\"/> 以"
+"获得更多系统启动阶段出现问题的解决方法。"
