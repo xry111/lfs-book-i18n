@@ -14,8 +14,7 @@ print(r'''[po4a_paths] pot/$master.pot $lang:$lang/$master.po
 
 pfx = 'lfs-en/'
 
-for line in sys.stdin:
-    xml_en = line.rstrip()
+for xml_en in sys.argv[2:]:
     if xml_en[:len(pfx)] != pfx or xml_en[-4:] != '.xml':
         raise Exception("unexpected path " + xml_en)
     out = "$lang:$lang/book/" + xml_en[len(pfx):]

@@ -8,9 +8,12 @@ MLANG = zh_CN
 
 include $(MLANG)/lang.mk
 
-CMD_FIND_XML = find $(LFS_EN) -type f -name '*.xml' \
-               ! \( -name 'lfs-l10n.xml' -or -name 'changelog.xml' \)
-XML_FILES = $(shell $(CMD_FIND_XML))
+L10N_XML = stylesheets/lfs-xsl/lfs-l10n.xml
+EXCLUDE_XML = $(LFS_EN)/$(L10N_XML) $(LFS_EN)/chapter01/changelog.xml \
+              $(LFS_EN)/appendices/creat-comm.xml                     \
+              $(LFS_EN)/appendices/mit-lic.xml
+CMD_FIND_XML = find $(LFS_EN) -type f -name '*.xml'
+XML_FILES = $(filter-out $(EXCLUDE_XML), $(wildcard $(shell $(CMD_FIND_XML))))
 POT_DIRS = $(sort $(patsubst $(LFS_EN)/%, pot/%, $(dir $(XML_FILES))))
 PO_FILES = $(patsubst $(LFS_EN)/%.xml, $(MLANG)/%.po, $(XML_FILES))
 MKPO4ACFG = ./mkpo4acfg.py $(MLANG)
@@ -21,14 +24,14 @@ $(MLANG)/book: ; mkdir -pv $@
 
 $(PO_FILES) &: $(XML_FILES) mkpo4acfg.py
 	mkdir -pv $(POT_DIRS)
-	$(CMD_FIND_XML) | $(MKPO4ACFG) > po4a.cfg
+	$(MKPO4ACFG) $(XML_FILES) > po4a.cfg
 	po4a --no-translations po4a.cfg
 
 $(MLANG)/chapter01/changelog.po: lfs-en/chapter01/changelog.xml \
                                  changelogtranslator.py         \
                                  templatetranslator.py
 	mkdir -pv pot/chapter01
-	echo lfs-en/chapter01/changelog.xml | $(MKPO4ACFG) > po4a-changelog.cfg
+	$(MKPO4ACFG) lfs-en/chapter01/changelog.xml > po4a-changelog.cfg
 	po4a --no-translations po4a-changelog.cfg
 	./changelogtranslator.py $(MLANG)
 	# Run again. polib does not agree with po4a on line wrappings
@@ -64,7 +67,7 @@ pdf: booksrc
 booksrc: $(MBOOK_FILES) $(ORIG_FILES) $(MLANG)/book/version.ent
 
 $(MLANG)/book/tidy.conf: lfs-en/tidy.conf $(MLANG)/lang.mk
-	mkdir $(@D)
+	mkdir -pv $(@D)
 	sed -e '/output-encoding:/s|latin1|$(M_ENCODING_ALT)|' $< > $@
 
 # $(MLANG)/book is not a git repo, so we need to generate the version info
@@ -87,12 +90,10 @@ $(MLANG)/book/git-version.sh: lfs-en/git-version.sh
 
 $(MXML_FILES) &: $(XML_FILES) $(PO_FILES) mkpo4acfg.py po4a_issue295.sh
 	mkdir -pv $(POT_DIRS)
-	$(CMD_FIND_XML) | $(MKPO4ACFG) > po4a.cfg
+	$(MKPO4ACFG) $(XML_FILES) > po4a.cfg
 	po4a po4a.cfg
 	sed -e 's|<book>|<book lang="$(M_DOCBOOK_LANG)">|' -i $(MLANG)/book/index.xml
 	cd $(MLANG)/book; $(PWD)/po4a_issue295.sh
-
-L10N_XML = stylesheets/lfs-xsl/lfs-l10n.xml
 
 $(MLANG)/book/$(L10N_XML): lfs-en/$(L10N_XML)
 	sed -e '/encoding=/s|ISO-8859-1|$(M_ENCODING)|' $< > $@
@@ -100,7 +101,7 @@ $(MLANG)/book/$(L10N_XML): lfs-en/$(L10N_XML)
 $(MLANG)/book/chapter01/changelog.xml: $(LFS_EN)/chapter01/changelog.xml \
                                        $(MLANG)/chapter01/changelog.po
 	mkdir -pv pot/chapter01
-	echo lfs-en/chapter01/changelog.xml | $(MKPO4ACFG) > po4a-changelog.cfg
+	$(MKPO4ACFG) lfs-en/chapter01/changelog.xml > po4a-changelog.cfg
 	po4a po4a-changelog.cfg
 	sed -e '/encoding=/s|ISO-8859-1|$(M_ENCODING)|' -i $@
 
