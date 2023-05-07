@@ -96,6 +96,7 @@ $(MXML_FILES) &: $(XML_FILES) $(PO_FILES) mkpo4acfg.py po4a_issue295.sh
 	cd $(MLANG)/book; $(PWD)/po4a_issue295.sh
 
 $(MLANG)/book/$(L10N_XML): lfs-en/$(L10N_XML)
+	mkdir -pv $(@D)
 	sed -e '/encoding=/s|ISO-8859-1|$(M_ENCODING)|' $< > $@
 
 $(MLANG)/book/chapter01/changelog.xml: $(LFS_EN)/chapter01/changelog.xml \
