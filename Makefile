@@ -39,7 +39,9 @@ $(MLANG)/chapter01/changelog.po: lfs-en/chapter01/changelog.xml \
 	po4a --no-translations --force po4a-changelog.cfg
 
 MXML_FILES = $(patsubst $(LFS_EN)/%.xml, $(MLANG)/book/%.xml, $(XML_FILES))
-BOOK_FILES = $(patsubst $(LFS_EN)/%, %, $(shell find $(LFS_EN) -type f -not -path "$(LFS_EN)/.git" -not -path lfs-en/conditional.ent))
+
+EN_BOOK_FILES = $(shell find $(LFS_EN) -type f -not -path "$(LFS_EN)/.git" -not -path lfs-en/conditional.ent)
+BOOK_FILES = $(patsubst $(LFS_EN)/%, %, $(EN_BOOK_FILES))
 MBOOK_FILES = $(patsubst %, $(MLANG)/book/%, $(BOOK_FILES))
 
 .PHONY: html booksrc nochunks pdf pofiles
@@ -120,22 +122,22 @@ KNOWN_DIFF = chapter09/*-symlinks \
              chapter09/*-locale   \
              chapter10/*-fstab
 
-cmd/en/sysv/stamp: $(XML_FILES)
+cmd/en/sysv/stamp: $(EN_BOOK_FILES)
 	make -C lfs-en DUMPDIR="$(PWD)/$(@D)" REV=sysv dump-commands
 	cd $(@D); rm -f $(KNOWN_DIFF)
 	touch $@
 
-cmd/en/systemd/stamp: $(XML_FILES)
+cmd/en/systemd/stamp: $(EN_BOOK_FILES)
 	make -C lfs-en DUMPDIR="$(PWD)/$(@D)" REV=systemd dump-commands
 	cd $(@D); rm -f $(KNOWN_DIFF)
 	touch $@
 
-cmd/$(MLANG)/sysv/stamp: $(MXML_FILES)
+cmd/$(MLANG)/sysv/stamp: $(MBOOK_FILES)
 	make -C $(MLANG)/book DUMPDIR="$(PWD)/$(@D)" REV=sysv dump-commands
 	cd $(@D); rm -f $(KNOWN_DIFF)
 	touch $@
 
-cmd/$(MLANG)/systemd/stamp: $(MXML_FILES)
+cmd/$(MLANG)/systemd/stamp: $(MBOOK_FILES)
 	make -C $(MLANG)/book DUMPDIR="$(PWD)/$(@D)" REV=systemd dump-commands
 	cd $(@D); rm -f $(KNOWN_DIFF)
 	touch $@
