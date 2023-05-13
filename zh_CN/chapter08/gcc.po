@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Linux From Scratch 11.1\n"
 "Report-Msgid-Bugs-To: lfs-dev@lists.linuxfromscratch.org\n"
-"POT-Creation-Date: 2023-05-07 10:43+0800\n"
+"POT-Creation-Date: 2023-05-13 18:09+0800\n"
 "PO-Revision-Date: 2022-03-03 03:00+0800\n"
 "Last-Translator: Xi Ruoyao <xry111@xry111.site>\n"
 "Language-Team: none\n"
@@ -756,19 +756,23 @@ msgstr ""
 "org/ml/gcc-testresults/\"/> 的结果进行比较。"
 
 #.  https://gcc.gnu.org/PR106375 and https://gcc.gnu.org/PR109353 
+#.  https://gcc.gnu.org/PR107855#c6 
 #. type: Content of: <sect1><sect2><para>
 #: lfs-en/chapter08/gcc.xml
 msgid ""
 "Two tests named <filename>pr104610.c</filename> and <filename>pr69482-1.c</"
 "filename> are known to fail because the test files does not account for the "
-"<parameter>--enable-default-ssp</parameter> option.  Additionally, two tests "
-"named <filename>copy.cc</filename> and <filename>pr56837.c</filename> are "
-"known to fail."
+"<parameter>--enable-default-ssp</parameter> option.  Two tests named "
+"<filename>copy.cc</filename> and <filename>pr56837.c</filename> are known to "
+"fail.  Additionally, several tests in the <filename class='directory'>vect</"
+"filename> directory are known to fail if the hardware does not support AVX."
 msgstr ""
 "已知两项分别名为 <filename>pr104610.c</filename> 和 <filename>pr69482-1.c</"
 "filename> 的测试由于测试文件未考虑 <parameter>--enable-default-ssp</"
-"parameter> 选项而失败。另外，已知两项分别名为 <filename>copy.cc</filename> "
-"和 <filename>pr56837.c</filename> 的测试会失败。"
+"parameter> 选项而失败。已知两项分别名为 <filename>copy.cc</filename> 和 "
+"<filename>pr56837.c</filename> 的测试会失败。另外，已知 <filename "
+"class='directory'>vect</filename> 目录中的一些测试在不支持 AVX 的硬件上会失"
+"败。"
 
 #. type: Content of: <sect1><sect2><para>
 #: lfs-en/chapter08/gcc.xml
