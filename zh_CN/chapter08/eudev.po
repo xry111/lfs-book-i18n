@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Linux From Scratch 11.4\n"
 "Report-Msgid-Bugs-To: lfs-dev@lists.linuxfromscratch.org\n"
-"POT-Creation-Date: 2023-05-21 21:09+0800\n"
+"POT-Creation-Date: 2023-05-26 21:44+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: Xi Ruoyao <xry111@xry111.site>\n"
 "Language-Team: none\n"
@@ -571,6 +571,21 @@ msgstr "&eudev-fin-du;"
 #: lfs-en/chapter08/eudev.xml
 msgid "Installation of Eudev"
 msgstr "安装 Eudev"
+
+#. type: Content of: <sect1><sect2><para>
+#: lfs-en/chapter08/eudev.xml
+msgid ""
+"Remove an unneeded group <systemitem class=\"groupname\">sgx</systemitem>, "
+"from the default udev rules:"
+msgstr ""
+"从默认的 udev 规则中删除不必要的组 <systemitem class=\"groupname\">sgx</"
+"systemitem>："
+
+#. type: Content of: <sect1><sect2><screen>
+#: lfs-en/chapter08/eudev.xml
+#, no-wrap
+msgid "<userinput remap=\"pre\">sed -i -e 's/GROUP=\"sgx\", //' rules/50-udev-default.rules</userinput>"
+msgstr "<userinput remap=\"pre\">sed -i -e 's/GROUP=\"sgx\", //' rules/50-udev-default.rules</userinput>"
 
 #. type: Content of: <sect1><sect2><para>
 #: lfs-en/chapter08/eudev.xml
