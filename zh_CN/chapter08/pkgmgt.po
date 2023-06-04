@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Linux From Scratch 11.4\n"
 "Report-Msgid-Bugs-To: lfs-dev@lists.linuxfromscratch.org\n"
-"POT-Creation-Date: 2022-12-25 21:06+0800\n"
+"POT-Creation-Date: 2023-06-04 20:05+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: Xi Ruoyao <xry111@xry111.site>\n"
 "Language-Team: none\n"
@@ -147,6 +147,31 @@ msgstr ""
 #. type: Content of: <sect1><sect2><itemizedlist><listitem><para>
 #: lfs-en/chapter08/pkgmgt.xml
 msgid ""
+"If a package is (directly or indirectly) linked to both the old and new "
+"names of a shared library (for example, the package links to both <filename "
+"class='libraryfile'>libfoo.so.2</filename> and <filename "
+"class='libraryfile'>libbar.so.1</filename>, while the latter links to "
+"<filename class='libraryfile'>libfoo.so.3</filename>), the package may "
+"malfunction because the different revisions of the shared library present "
+"incompatible definitions for some symbol names. This can be caused by "
+"recompiling some, but not all, of the packages linked to the old shared "
+"library after the package providing the shared library is upgraded.  To "
+"avoid the issue, users will need to rebuild every package linked to a shared "
+"library with an updated revision (e.g. libfoo.so.2 to libfoo.so.3) as soon "
+"as possible."
+msgstr ""
+"如果一个软件包 (直接或间接地) 链接到同一共享库的旧名称和新名称 (例如，同时链"
+"接到 <filename class='libraryfile'>libfoo.so.2</filename> 和 <filename "
+"class='libraryfile'>libbar.so.1</filename>，而后者又链接到 <filename "
+"class='libraryfile'>libfoo.so.3</filename>)，这个软件包可能无法正常工作，这是"
+"由于不同版本的共享库可能对同一符号名提供不兼容的定义。这种情况可能由于在更新"
+"提供共享库的软件包后，重新编译一部分 (而非所有) 链接到旧的共享库的软件包而出"
+"现。为了避免这种问题，用户需要在共享库名称被更新时，尽快重新构建所有链接到该"
+"共享库的软件包。"
+
+#. type: Content of: <sect1><sect2><itemizedlist><listitem><para>
+#: lfs-en/chapter08/pkgmgt.xml
+msgid ""
 "If a package containing a shared library is updated, and the name of the "
 "library doesn't change, but the version number of the library <emphasis "
 "role=\"bold\">file</emphasis> decreases (for example, the library is still "
@@ -195,24 +220,20 @@ msgstr ""
 #. type: Content of: <sect1><sect2><itemizedlist><listitem><screen>
 #: lfs-en/chapter08/pkgmgt.xml
 #, no-wrap
-msgid ""
-"<userinput>grep -l  -e '<replaceable>libfoo</replaceable>.*deleted' /proc/*/maps |\n"
-"   tr -cd 0-9\\\\n | xargs -r ps u</userinput>"
-msgstr ""
-"<userinput>grep -l  -e '<replaceable>libfoo</replaceable>.*deleted' /proc/*/maps |\n"
-"   tr -cd 0-9\\\\n | xargs -r ps u</userinput>"
+msgid "<userinput>grep -l '<replaceable>libfoo</replaceable>.*deleted' /proc/*/maps | tr -cd 0-9\\\\n | xargs -r ps u</userinput>"
+msgstr "<userinput>grep -l '<replaceable>libfoo</replaceable>.*deleted' /proc/*/maps | tr -cd 0-9\\\\n | xargs -r ps u</userinput>"
 
 #. type: Content of: <sect1><sect2><itemizedlist><listitem><para>
 #: lfs-en/chapter08/pkgmgt.xml
 msgid ""
 "If <application>OpenSSH</application> is being used to access the system and "
 "it is linked to the updated library, you must restart the <command>sshd</"
-"command> service, then logout, login again, and rerun the preceding ps "
-"command to confirm that nothing is still using the deleted libraries."
+"command> service, then logout, login again, and run the preceding command "
+"again to confirm that nothing is still using the deleted libraries."
 msgstr ""
 "如果正在使用 <application>OpenSSH</application> 访问系统，且它链接到了被更新"
 "的库，则需要重启 <command>sshd</command> 服务，登出并重新登录，然后再次运行上"
-"述 ps 命令，确认没有进程使用被删除的库文件。"
+"述命令，确认没有进程使用被删除的库文件。"
 
 #. type: Content of: <sect1><sect2><itemizedlist><listitem><para>
 #: lfs-en/chapter08/pkgmgt.xml
