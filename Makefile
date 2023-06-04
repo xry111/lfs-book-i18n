@@ -87,6 +87,7 @@ version: $(MLANG)/book/git-version-l10n.sh
 $(MLANG)/book/version.ent: version; true
 
 $(MLANG)/book/git-version.sh: lfs-en/git-version.sh
+	mkdir -pv "$(@D)"
 	sed '/git.status/,$$ d' $< > $@
 	chmod -v 755 $@
 
