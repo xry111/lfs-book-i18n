@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Linux From Scratch 11.0\n"
 "Report-Msgid-Bugs-To: lfs-dev@lists.linuxfromscratch.org\n"
-"POT-Creation-Date: 2023-04-17 15:41+0800\n"
+"POT-Creation-Date: 2023-06-19 19:49+0800\n"
 "PO-Revision-Date: 2022-02-11 20:04+0800\n"
 "Last-Translator: Xi Ruoyao <xry111@xry111.site>\n"
 "Language-Team: none\n"
@@ -414,6 +414,12 @@ msgid "Meson"
 msgstr "Meson"
 
 #. type: Content of: <sect1><itemizedlist><listitem><para>
+#: lfs-en/chapter08/pkgconf.xml lfs-en/appendices/dependencies.xml
+#: lfs-en/prologue/why.xml
+msgid "Pkgconf"
+msgstr "Pkgconf"
+
+#. type: Content of: <sect1><itemizedlist><listitem><para>
 #: lfs-en/chapter08/dbus.xml lfs-en/appendices/dependencies.xml
 #: lfs-en/prologue/why.xml
 msgid "D-Bus"
@@ -731,6 +737,11 @@ msgstr "Bash 和 Gawk"
 
 #. type: Content of: <appendix><segmentedlist><seglistitem><seg>
 #: lfs-en/appendices/dependencies.xml
+msgid "<ulink url='&github;/testing-cabal/subunit'>libsubunit</ulink>"
+msgstr "<ulink url='&github;/testing-cabal/subunit'>libsubunit</ulink>"
+
+#. type: Content of: <appendix><segmentedlist><seglistitem><seg>
+#: lfs-en/appendices/dependencies.xml
 msgid ""
 "Bash, Binutils, Coreutils, GCC, Gettext, Glibc, GMP, Grep, Libcap, Make, "
 "OpenSSL, Patch, Perl, Sed, and Texinfo"
@@ -766,11 +777,11 @@ msgstr ""
 #. type: Content of: <appendix><segmentedlist><seglistitem><seg>
 #: lfs-en/appendices/dependencies.xml
 msgid ""
-"Bash, Binutils, Coreutils, Diffutils, Gawk, GCC, Glibc, Grep, Make, Sed, "
-"Systemd, and Util-linux"
+"Bash, Binutils, Coreutils, Diffutils, Gawk, GCC, Glibc, Grep, Make, Pkgconf, "
+"Sed, Systemd, and Util-linux"
 msgstr ""
-"Bash, Binutils, Coreutils, Diffutils, Gawk, GCC, Glibc, Grep, Make, Sed, "
-"Systemd, 以及 Util-linux"
+"Bash, Binutils, Coreutils, Diffutils, Gawk, GCC, Glibc, Grep, Make, Pkgconf, "
+"Sed, Systemd, 以及 Util-linux"
 
 #. type: Content of: <appendix><segmentedlist><seglistitem><seg>
 #: lfs-en/appendices/dependencies.xml
@@ -810,10 +821,12 @@ msgstr ""
 #: lfs-en/appendices/dependencies.xml
 msgid ""
 "Bash, Binutils, Coreutils, Diffutils, Gawk, GCC, Glibc, Grep, Gzip, Make, "
-"Sed, Texinfo, and Util-linux"
+"Pkgconf, Sed, <phrase revision='systemd'>Systemd, </phrase>Texinfo, and Util-"
+"linux"
 msgstr ""
 "Bash, Binutils, Coreutils, Diffutils, Gawk, GCC, Glibc, Grep, Gzip, Make, "
-"Sed, Texinfo, 以及 Util-linux"
+"Pkgconf, Sed, <phrase revision='systemd'>Systemd, </phrase>Texinfo, 以及 "
+"Util-linux"
 
 #. type: Content of: <appendix><segmentedlist><seglistitem><seg>
 #: lfs-en/appendices/dependencies.xml
@@ -993,11 +1006,13 @@ msgstr "DejaGNU, Expect, 以及 Shadow"
 #. type: Content of: <appendix><segmentedlist><seglistitem><seg>
 #: lfs-en/appendices/dependencies.xml
 msgid ""
-"<ulink url=\"https://gcc.gnu.org/wiki/GNAT\">GNAT</ulink> and <ulink "
-"url=\"https://repo.or.cz/isl.git\">ISL</ulink>"
+"<ulink url=\"https://www.gdcproject.org/\">GDC</ulink>, <ulink url=\"https://"
+"gcc.gnu.org/wiki/GNAT\">GNAT</ulink>, and <ulink url=\"https://repo.or.cz/"
+"isl.git\">ISL</ulink>"
 msgstr ""
-"<ulink url=\"https://gcc.gnu.org/wiki/GNAT\">GNAT</ulink> 和 <ulink "
-"url=\"https://repo.or.cz/isl.git\">ISL</ulink>"
+"<ulink url=\"https://www.gdcproject.org/\">GDC</ulink>, <ulink url=\"https://"
+"gcc.gnu.org/wiki/GNAT\">GNAT</ulink>, 以及 <ulink url=\"https://repo.or.cz/"
+"isl.git\">ISL</ulink>"
 
 #. type: Content of: <appendix><segmentedlist><seglistitem><seg>
 #: lfs-en/appendices/dependencies.xml
@@ -1174,10 +1189,10 @@ msgstr "IProute2"
 #: lfs-en/appendices/dependencies.xml
 msgid ""
 "Bash, Bison, Coreutils, Flex, GCC, Glibc, Make, Libcap, Libelf, Linux API "
-"Headers, and Zlib"
+"Headers, Pkgconf, and Zlib"
 msgstr ""
 "Bash, Bison, Coreutils, Flex, GCC, Glibc, Make, Libcap, Libelf, Linux API 头"
-"文件, 以及 Zlib"
+"文件, Pkgconf, 以及 Zlib"
 
 #. type: Content of: <appendix><segmentedlist><seglistitem><seg>
 #: lfs-en/appendices/dependencies.xml
@@ -1189,15 +1204,15 @@ msgstr "Bash, Coreutils, Glibc, Libcap, Libelf, 以及 Zlib"
 msgid ""
 "<ulink url=\"&blfs-book;server/db.html\">Berkeley DB</ulink>, <ulink "
 "url=\"&blfs-book;postlfs/iptables.html\">iptables</ulink>, <ulink "
-"url=\"https://github.com/libbpf/libbpf\">libbpf</ulink>, <ulink url=\"&blfs-"
-"book;basicnet/libmnl.html\">libmnl</ulink>, and <ulink url=\"&blfs-book;"
-"basicnet/libtirpc.html\">libtirpc</ulink>"
+"url=\"&github;/libbpf/libbpf\">libbpf</ulink>, <ulink url=\"&blfs-book;"
+"basicnet/libmnl.html\">libmnl</ulink>, and <ulink url=\"&blfs-book;basicnet/"
+"libtirpc.html\">libtirpc</ulink>"
 msgstr ""
 "<ulink url=\"&blfs-book;server/db.html\">Berkeley DB</ulink>, <ulink "
 "url=\"&blfs-book;postlfs/iptables.html\">iptables</ulink>, <ulink "
-"url=\"https://github.com/libbpf/libbpf\">libbpf</ulink>, <ulink url=\"&blfs-"
-"book;basicnet/libmnl.html\">libmnl</ulink>, 以及 <ulink url=\"&blfs-book;"
-"basicnet/libtirpc.html\">libtirpc</ulink>"
+"url=\"&github;/libbpf/libbpf\">libbpf</ulink>, <ulink url=\"&blfs-book;"
+"basicnet/libmnl.html\">libmnl</ulink>, 以及 <ulink url=\"&blfs-book;basicnet/"
+"libtirpc.html\">libtirpc</ulink>"
 
 #. type: Content of: <appendix><segmentedlist><seglistitem><seg>
 #: lfs-en/appendices/dependencies.xml
@@ -1227,10 +1242,10 @@ msgstr "Bash, Coreutils, 以及 Glibc"
 #: lfs-en/appendices/dependencies.xml
 msgid ""
 "Bash, Binutils, Bison, Coreutils, Flex, GCC, Gettext, Glibc, Gzip, Make, "
-"OpenSSL, Pkg-config, Sed, Xz, and Zlib"
+"OpenSSL, Pkgconf, Sed, Xz, and Zlib"
 msgstr ""
 "Bash, Binutils, Bison, Coreutils, Flex, GCC, Gettext, Glibc, Gzip, Make, "
-"OpenSSL, Pkg-config, Sed, Xz, 以及 Zlib"
+"OpenSSL, Pkgconf, Sed, Xz, 以及 Zlib"
 
 #. type: Content of: <appendix><segmentedlist><seglistitem><seg>
 #: lfs-en/appendices/dependencies.xml
@@ -1326,6 +1341,11 @@ msgstr ""
 
 #. type: Content of: <appendix><segmentedlist><seglistitem><seg>
 #: lfs-en/appendices/dependencies.xml
+msgid "Check and Pkgconf"
+msgstr "Check 和 Pkgconf"
+
+#. type: Content of: <appendix><segmentedlist><seglistitem><seg>
+#: lfs-en/appendices/dependencies.xml
 msgid ""
 "Autoconf, Automake, Bash, Binutils, Coreutils, File, GCC, Glibc, Grep, Make, "
 "and Sed"
@@ -1389,10 +1409,12 @@ msgstr "<ulink url=\"&blfs-book;general/guile.html\">Guile</ulink>"
 #: lfs-en/appendices/dependencies.xml
 msgid ""
 "Bash, Binutils, Bzip2, Coreutils, Flex, GCC, GDBM, Gettext, Glibc, Grep, "
-"Groff, Gzip, Less, Libpipeline, Make, Sed, and Xz"
+"Groff, Gzip, Less, Libpipeline, Make, Pkgconf, Sed, <phrase "
+"revision='systemd'>Systemd, </phrase>and Xz"
 msgstr ""
 "Bash, Binutils, Bzip2, Coreutils, Flex, GCC, GDBM, Gettext, Glibc, Grep, "
-"Groff, Gzip, Less, Libpipeline, Make, Sed, 以及 Xz"
+"Groff, Gzip, Less, Libpipeline, Make, Pkgconf, Sed, <phrase "
+"revision='systemd'>Systemd, </phrase>以及 Xz"
 
 #. type: Content of: <appendix><segmentedlist><seglistitem><seg>
 #: lfs-en/appendices/dependencies.xml
@@ -1550,20 +1572,36 @@ msgstr "Iana-Etc, Less, 以及 Procps-ng"
 msgid "<ulink url=\"&blfs-book;server/db.html\">Berkeley DB</ulink>"
 msgstr "<ulink url=\"&blfs-book;server/db.html\">Berkeley DB</ulink>"
 
-#. type: Content of: <sect1><itemizedlist><listitem><para>
-#: lfs-en/appendices/dependencies.xml lfs-en/prologue/why.xml
-msgid "Pkg-config"
-msgstr "Pkg-config"
+#. type: Content of: <appendix><segmentedlist><seglistitem><seg>
+#: lfs-en/appendices/dependencies.xml
+msgid ""
+"<phrase revision='systemd'>D-Bus, </phrase>E2fsprogs, IProute2, Kmod, Man-"
+"DB, Procps-ng, Python, <phrase revision='systemd'>Systemd, </phrase>and Util-"
+"linux"
+msgstr ""
+"<phrase revision='systemd'>D-Bus, </phrase>E2fsprogs, IProute2, Kmod, Man-"
+"DB, Procps-ng, Python, <phrase revision='systemd'>Systemd, </phrase>以及 "
+"Util-linux"
 
 #. type: Content of: <appendix><segmentedlist><seglistitem><seg>
 #: lfs-en/appendices/dependencies.xml
-msgid "<ulink url=\"&blfs-book;general/glib2.html\">Glib2</ulink>"
-msgstr "<ulink url=\"&blfs-book;general/glib2.html\">Glib2</ulink>"
+msgid ""
+"Bash, Binutils, Coreutils, GCC, Glibc, Make, Ncurses, <phrase "
+"revision='sysv'>and </phrase>Pkgconf<phrase revision='systemd'>, and "
+"Systemd</phrase>"
+msgstr ""
+"Bash, Binutils, Coreutils, GCC, Glibc, Make, Ncurses, <phrase "
+"revision='sysv'>and </phrase>Pkgconf<phrase revision='systemd'>, 以及 "
+"Systemd</phrase>"
 
 #. type: Content of: <appendix><segmentedlist><seglistitem><seg>
 #: lfs-en/appendices/dependencies.xml
-msgid "Bash, Binutils, Coreutils, GCC, Glibc, Make, and Ncurses"
-msgstr "Bash, Binutils, Coreutils, GCC, Glibc, Make, 以及 Ncurses"
+msgid ""
+"<phrase revision='systemd'>None</phrase> <phrase revision='sysv'> <ulink "
+"url='&blfs-book;general/elogind.xml'>elogind</ulink> </phrase>"
+msgstr ""
+"<phrase revision='systemd'>None</phrase> <phrase revision='sysv'> <ulink "
+"url='&blfs-book;general/elogind.xml'>elogind</ulink> </phrase>"
 
 #. type: Content of: <appendix><segmentedlist><seglistitem><seg>
 #: lfs-en/appendices/dependencies.xml
@@ -1576,10 +1614,10 @@ msgstr ""
 #: lfs-en/appendices/dependencies.xml
 msgid ""
 "Bash, Binutils, Coreutils, Expat, GCC, Gdbm, Gettext, Glibc, Grep, Libffi, "
-"Make, Ncurses, OpenSSL, Sed, and Util-linux"
+"Make, Ncurses, OpenSSL, Pkgconf, Sed, and Util-linux"
 msgstr ""
 "Bash, Binutils, Coreutils, Expat, GCC, Gdbm, Gettext, Glibc, Grep, Libffi, "
-"Make, Ncurses, OpenSSL, Sed, 以及 Util-linux"
+"Make, Ncurses, OpenSSL, Pkgconf, Sed, 以及 Util-linux"
 
 #. type: Content of: <appendix><segmentedlist><seglistitem><seg>
 #: lfs-en/appendices/dependencies.xml
@@ -1660,15 +1698,20 @@ msgstr "Binutils, Coreutils, GCC, Glibc, Make, 以及 Patch"
 #: lfs-en/appendices/dependencies.xml
 msgid ""
 "Acl, Attr, Bash, Binutils, Coreutils, Diffutils, Expat, Gawk, GCC, Glibc, "
-"Gperf, Grep, Jinja2, Libcap, Meson, Sed, Util-linux, and Zstd"
+"Gperf, Grep, Jinja2, Libcap, Meson, Pkgconf, Sed, Util-linux, and Zstd"
 msgstr ""
 "Acl, Attr, Bash, Binutils, Coreutils, Diffutils, Expat, Gawk, GCC, Glibc, "
-"Gperf, Grep, Intltool, Jinja2, Libcap, Meson, Sed, Util-linux, 以及 Zstd"
+"Gperf, Grep, Jinja2, Libcap, Meson, Pkgconf, Sed, Util-linux, 以及 Zstd"
 
 #. type: Content of: <appendix><segmentedlist><seglistitem><seg>
 #: lfs-en/appendices/dependencies.xml
 msgid "Acl, Attr, Glibc, Libcap, and Util-linux"
 msgstr "Acl, Attr, Glibc, Libcap, 以及 Util-linux"
+
+#. type: Content of: <appendix><segmentedlist><seglistitem><seg>
+#: lfs-en/appendices/dependencies.xml
+msgid "D-Bus, E2fsprogs, Man-DB, Procps-ng, and Util-linux"
+msgstr "D-Bus, E2fsprogs, Man-DB, Procps-ng, 以及 Util-linux"
 
 #. type: Content of: <appendix><segmentedlist><seglistitem><seg>
 #: lfs-en/appendices/dependencies.xml
@@ -1783,12 +1826,12 @@ msgstr ""
 #: lfs-en/appendices/dependencies.xml
 msgid ""
 "Bash, Binutils, Coreutils, Diffutils, <phrase revision=\"sysv\">Eudev, </"
-"phrase>Findutils, Gawk, GCC, Gettext, Glibc, Grep, Make, Ncurses, Sed, "
-"<phrase revision=\"systemd\">Systemd, </phrase>and Zlib"
+"phrase>File, Findutils, Gawk, GCC, Gettext, Glibc, Grep, Make, Ncurses, "
+"Pkgconf, Sed, <phrase revision=\"systemd\">Systemd, </phrase>and Zlib"
 msgstr ""
 "Bash, Binutils, Coreutils, Diffutils, <phrase revision=\"sysv\">Eudev, </"
-"phrase>Findutils, Gawk, GCC, Gettext, Glibc, Grep, Make, Ncurses, Sed, "
-"<phrase revision=\"systemd\">Systemd, </phrase>以及 Zlib"
+"phrase>File, Findutils, Gawk, GCC, Gettext, Glibc, Grep, Make, Ncurses, "
+"Pkgconf, Sed, <phrase revision=\"systemd\">Systemd, </phrase>以及 Zlib"
 
 #. type: Content of: <appendix><segmentedlist><seglistitem><seg>
 #: lfs-en/appendices/dependencies.xml
@@ -1799,14 +1842,20 @@ msgstr "Glibc, Ncurses, Readline, 以及 Zlib"
 #: lfs-en/appendices/dependencies.xml
 msgid ""
 "<ulink url=\"https://people.redhat.com/sgrubb/libcap-ng/\">Libcap-NG</"
-"ulink>, <ulink url=\"&blfs-book;postlfs/linux-pam.html\">Linux-PAM</ulink> "
-"and <ulink url=\"&blfs-book;postlfs/smartmontools.html\">smartmontools</"
-"ulink>"
+"ulink>, <ulink url=\"&github;/openSUSE/libeconf\">libeconf</ulink>, <ulink "
+"url=\"https://pagure.io/libuser/\">libuser</ulink>, <ulink url=\"&github;/"
+"altlinux/libutempter\">libutempter</ulink>, <ulink url=\"&blfs-book;postlfs/"
+"linux-pam.html\">Linux-PAM</ulink>, <ulink url=\"&blfs-book;postlfs/"
+"smartmontools.html\">smartmontools</ulink>, and <ulink url=\"&blfs-book;"
+"general/slang.html\">slang</ulink>"
 msgstr ""
 "<ulink url=\"https://people.redhat.com/sgrubb/libcap-ng/\">Libcap-NG</"
-"ulink>, <ulink url=\"&blfs-book;postlfs/linux-pam.html\">Linux-PAM</ulink>, "
-"以及 <ulink url=\"&blfs-book;postlfs/smartmontools.html\">smartmontools</"
-"ulink>"
+"ulink>, <ulink url=\"&github;/openSUSE/libeconf\">libeconf</ulink>, <ulink "
+"url=\"https://pagure.io/libuser/\">libuser</ulink>, <ulink url=\"&github;/"
+"altlinux/libutempter\">libutempter</ulink>, <ulink url=\"&blfs-book;postlfs/"
+"linux-pam.html\">Linux-PAM</ulink>, <ulink url=\"&blfs-book;postlfs/"
+"smartmontools.html\">smartmontools</ulink>, 以及 <ulink url=\"&blfs-book;"
+"general/slang.html\">slang</ulink>"
 
 #. type: Content of: <appendix><segmentedlist><seglistitem><seg>
 #: lfs-en/appendices/dependencies.xml

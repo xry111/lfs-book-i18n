@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Linux From Scratch 11.0\n"
 "Report-Msgid-Bugs-To: lfs-dev@lists.linuxfromscratch.org\n"
-"POT-Creation-Date: 2023-04-01 03:35+0800\n"
+"POT-Creation-Date: 2023-06-19 19:49+0800\n"
 "PO-Revision-Date: 2021-09-08 14:07+0800\n"
 "Last-Translator: Xi Ruoyao <xry111@xry111.site>\n"
 "Language-Team: none\n"
@@ -381,6 +381,12 @@ msgid "Meson"
 msgstr "Meson"
 
 #. type: Content of: <sect1><itemizedlist><listitem><para>
+#: lfs-en/chapter08/pkgconf.xml lfs-en/appendices/dependencies.xml
+#: lfs-en/prologue/why.xml
+msgid "Pkgconf"
+msgstr "Pkgconf"
+
+#. type: Content of: <sect1><itemizedlist><listitem><para>
 #: lfs-en/chapter08/dbus.xml lfs-en/appendices/dependencies.xml
 #: lfs-en/prologue/why.xml
 msgid "D-Bus"
@@ -441,11 +447,6 @@ msgstr "Systemd"
 #: lfs-en/appendices/dependencies.xml lfs-en/prologue/why.xml
 msgid "Libffi"
 msgstr "Libffi"
-
-#. type: Content of: <sect1><itemizedlist><listitem><para>
-#: lfs-en/appendices/dependencies.xml lfs-en/prologue/why.xml
-msgid "Pkg-config"
-msgstr "Pkg-config"
 
 #. type: Content of: <sect1><itemizedlist><listitem><para>
 #: lfs-en/appendices/dependencies.xml lfs-en/prologue/why.xml
@@ -1013,9 +1014,15 @@ msgstr ""
 #. type: Content of: <sect1><itemizedlist><listitem><para>
 #: lfs-en/prologue/why.xml
 msgid ""
-"This package provides a program that returns meta-data about an installed "
-"library or package."
-msgstr "这个软件包提供一个查询已经安装的库和软件包的元数据信息的程序。"
+"This package contains a program which helps to configure compiler and linker "
+"flags for development libraries.  The program can be used as a drop-in "
+"replacement of <command>pkg-config</command>, which is needed by the "
+"building system of many packages.  It's maintained more actively and "
+"slightly faster than the original Pkg-config package."
+msgstr ""
+"这个软件包包含一个为开发库配置编译和链接选项的程序。该程序可以直接替代 "
+"<command>pkg-config</command> 命令，许多软件包的构建系统都需要该命令。它的维"
+"护比原始的 Pkg-config 软件包更积极，而且运行速度稍快一些。"
 
 #. type: Content of: <sect1><itemizedlist><listitem><para>
 #: lfs-en/prologue/why.xml
