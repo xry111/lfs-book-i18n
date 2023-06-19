@@ -27,11 +27,11 @@ $(PO_FILES) &: $(XML_FILES) mkpo4acfg.py
 	$(MKPO4ACFG) $(XML_FILES) > po4a.cfg
 	po4a --no-translations po4a.cfg
 
-$(MLANG)/chapter01/changelog.po: lfs-en/chapter01/changelog.xml \
+$(MLANG)/chapter01/changelog.po: $(LFS_EN)/chapter01/changelog.xml \
                                  changelogtranslator.py         \
                                  templatetranslator.py
 	mkdir -pv pot/chapter01
-	$(MKPO4ACFG) lfs-en/chapter01/changelog.xml > po4a-changelog.cfg
+	$(MKPO4ACFG) $(LFS_EN)/chapter01/changelog.xml > po4a-changelog.cfg
 	po4a --no-translations po4a-changelog.cfg
 	./changelogtranslator.py $(MLANG)
 	# Run again. polib does not agree with po4a on line wrappings
@@ -40,7 +40,7 @@ $(MLANG)/chapter01/changelog.po: lfs-en/chapter01/changelog.xml \
 
 MXML_FILES = $(patsubst $(LFS_EN)/%.xml, $(MLANG)/book/%.xml, $(XML_FILES))
 
-EN_BOOK_FILES = $(shell find $(LFS_EN) -type f -not -path "$(LFS_EN)/.git" -not -path lfs-en/conditional.ent)
+EN_BOOK_FILES = $(shell find $(LFS_EN) -type f -not -path "$(LFS_EN)/.git" -not -path $(LFS_EN)/conditional.ent)
 BOOK_FILES = $(patsubst $(LFS_EN)/%, %, $(EN_BOOK_FILES))
 MBOOK_FILES = $(patsubst %, $(MLANG)/book/%, $(BOOK_FILES))
 
@@ -68,7 +68,7 @@ pdf: booksrc
 
 booksrc: $(MBOOK_FILES) $(ORIG_FILES) $(MLANG)/book/version.ent
 
-$(MLANG)/book/tidy.conf: lfs-en/tidy.conf $(MLANG)/lang.mk
+$(MLANG)/book/tidy.conf: $(LFS_EN)/tidy.conf $(MLANG)/lang.mk
 	mkdir -pv $(@D)
 	sed -e '/output-encoding:/s|latin1|$(M_ENCODING_ALT)|' $< > $@
 
@@ -81,12 +81,12 @@ $(MLANG)/book/tidy.conf: lfs-en/tidy.conf $(MLANG)/lang.mk
 .PHONY: version
 version: $(MLANG)/book/git-version-l10n.sh
 	cd $(<D); \
-	GIT_DIR=$(PWD)/lfs-en/.git ./git-version-l10n.sh sysv
+	GIT_DIR=$(PWD)/$(LFS_EN)/.git ./git-version-l10n.sh sysv
 	rm -fv $(MLANG)/book/conditional.ent
 
 $(MLANG)/book/version.ent: version; true
 
-$(MLANG)/book/git-version.sh: lfs-en/git-version.sh
+$(MLANG)/book/git-version.sh: $(LFS_EN)/git-version.sh
 	mkdir -pv "$(@D)"
 	sed '/git.status/,$$ d' $< > $@
 	chmod -v 755 $@
@@ -98,14 +98,14 @@ $(MXML_FILES) &: $(XML_FILES) $(PO_FILES) mkpo4acfg.py po4a_issue295.sh
 	sed -e 's|<book>|<book lang="$(M_DOCBOOK_LANG)">|' -i $(MLANG)/book/index.xml
 	cd $(MLANG)/book; $(PWD)/po4a_issue295.sh
 
-$(MLANG)/book/$(L10N_XML): lfs-en/$(L10N_XML)
+$(MLANG)/book/$(L10N_XML): $(LFS_EN)/$(L10N_XML)
 	mkdir -pv $(@D)
 	sed -e '/encoding=/s|ISO-8859-1|$(M_ENCODING)|' $< > $@
 
 $(MLANG)/book/chapter01/changelog.xml: $(LFS_EN)/chapter01/changelog.xml \
                                        $(MLANG)/chapter01/changelog.po
 	mkdir -pv pot/chapter01
-	$(MKPO4ACFG) lfs-en/chapter01/changelog.xml > po4a-changelog.cfg
+	$(MKPO4ACFG) $(LFS_EN)/chapter01/changelog.xml > po4a-changelog.cfg
 	po4a po4a-changelog.cfg
 	sed -e '/encoding=/s|ISO-8859-1|$(M_ENCODING)|' -i $@
 
@@ -124,12 +124,12 @@ KNOWN_DIFF = chapter09/*-symlinks \
              chapter10/*-fstab
 
 cmd/en/sysv/stamp: $(EN_BOOK_FILES)
-	make -C lfs-en DUMPDIR="$(PWD)/$(@D)" REV=sysv dump-commands
+	make -C $(LFS_EN) DUMPDIR="$(PWD)/$(@D)" REV=sysv dump-commands
 	cd $(@D); rm -f $(KNOWN_DIFF)
 	touch $@
 
 cmd/en/systemd/stamp: $(EN_BOOK_FILES)
-	make -C lfs-en DUMPDIR="$(PWD)/$(@D)" REV=systemd dump-commands
+	make -C $(LFS_EN) DUMPDIR="$(PWD)/$(@D)" REV=systemd dump-commands
 	cd $(@D); rm -f $(KNOWN_DIFF)
 	touch $@
 
