@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Linux From Scratch 11.4\n"
 "Report-Msgid-Bugs-To: lfs-dev@lists.linuxfromscratch.org\n"
-"POT-Creation-Date: 2023-06-19 19:15+0800\n"
+"POT-Creation-Date: 2023-06-28 05:16+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: Xi Ruoyao <xry111@xry111.site>\n"
 "Language-Team: none\n"
@@ -548,18 +548,23 @@ msgid ""
 "A few programs do not know about <command>flex</command> yet and try to run "
 "its predecessor, <command>lex</command>. To support those programs, create a "
 "symbolic link named <filename>lex</filename> that runs <filename>flex</"
-"filename> in <command>lex</command> emulation mode:"
+"filename> in <command>lex</command> emulation mode, and also create the man "
+"page of <command>lex</command> as a symlink:"
 msgstr ""
 "个别程序还不知道 <command>flex</command>，并试图去运行它的前身 <command>lex</"
 "command>。为了支持这些程序，创建一个名为 <filename>lex</filename> 的符号链"
 "接，它运行 <filename>flex</filename> 并启动其模拟 <command>lex</command> 的模"
-"式："
+"式，同时将 <command>lex</command> 的 man 页面也创建为符号链接："
 
 #. type: Content of: <sect1><sect2><screen>
 #: lfs-en/chapter08/flex.xml
 #, no-wrap
-msgid "<userinput remap=\"install\">ln -sv flex /usr/bin/lex</userinput>"
-msgstr "<userinput remap=\"install\">ln -sv flex /usr/bin/lex</userinput>"
+msgid ""
+"<userinput remap=\"install\">ln -sv flex   /usr/bin/lex\n"
+"ln -sv flex.1 /usr/share/man/man1/lex.1</userinput>"
+msgstr ""
+"<userinput remap=\"install\">ln -sv flex   /usr/bin/lex\n"
+"ln -sv flex.1 /usr/share/man/man1/lex.1</userinput>"
 
 #. type: Content of: <sect1><sect2><title>
 #: lfs-en/chapter08/flex.xml

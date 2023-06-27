@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Linux From Scratch 11.3\n"
 "Report-Msgid-Bugs-To: lfs-dev@lists.linuxfromscratch.org\n"
-"POT-Creation-Date: 2023-06-19 19:49+0800\n"
+"POT-Creation-Date: 2023-06-28 05:16+0800\n"
 "PO-Revision-Date: 2023-06-19 19:15+0800\n"
 "Last-Translator: Automatically generated\n"
 "Language-Team: none\n"
@@ -520,14 +520,18 @@ msgstr ""
 #. type: Content of: <sect1><sect2><para>
 #: lfs-en/chapter08/pkgconf.xml
 msgid ""
-"To maintain compatibility with the original Pkg-config create a symlink:"
-msgstr "为了维持与原始的 Pkg-config 软件包的兼容性，创建一个符号链接："
+"To maintain compatibility with the original Pkg-config create two symlinks:"
+msgstr "为了维持与原始的 Pkg-config 软件包的兼容性，创建两个符号链接："
 
 #. type: Content of: <sect1><sect2><screen>
 #: lfs-en/chapter08/pkgconf.xml
 #, no-wrap
-msgid "<userinput remap=\"install\">ln -sfv pkgconf /usr/bin/pkg-config</userinput>"
-msgstr "<userinput remap=\"install\">ln -sfv pkgconf /usr/bin/pkg-config</userinput>"
+msgid ""
+"<userinput remap=\"install\">ln -sv pkgconf   /usr/bin/pkg-config\n"
+"ln -sv pkgconf.1 /usr/share/man/man1/pkg-config.1</userinput>"
+msgstr ""
+"<userinput remap=\"install\">ln -sv pkgconf   /usr/bin/pkg-config\n"
+"ln -sv pkgconf.1 /usr/share/man/man1/pkg-config.1</userinput>"
 
 #. type: Content of: <sect1><sect2><title>
 #: lfs-en/chapter08/pkgconf.xml
