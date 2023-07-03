@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Linux From Scratch 11.0\n"
 "Report-Msgid-Bugs-To: lfs-dev@lists.linuxfromscratch.org\n"
-"POT-Creation-Date: 2023-06-19 19:49+0800\n"
+"POT-Creation-Date: 2023-07-03 19:26+0800\n"
 "PO-Revision-Date: 2022-02-11 20:04+0800\n"
 "Last-Translator: Xi Ruoyao <xry111@xry111.site>\n"
 "Language-Team: none\n"
@@ -460,6 +460,12 @@ msgstr "Man-DB"
 #: lfs-en/prologue/why.xml
 msgid "Groff"
 msgstr "Groff"
+
+#. type: Content of: <sect1><itemizedlist><listitem><para>
+#: lfs-en/chapter08/libxcrypt.xml lfs-en/appendices/dependencies.xml
+#: lfs-en/prologue/why.xml
+msgid "Libxcrypt"
+msgstr "Libxcrypt"
 
 #. type: Attribute 'xreflabel' of: <appendix>
 #: lfs-en/appendices/dependencies.xml
@@ -988,10 +994,12 @@ msgstr "<ulink url=\"&blfs-book;general/libsigsegv.html\">libsigsegv</ulink>"
 #: lfs-en/appendices/dependencies.xml
 msgid ""
 "Bash, Binutils, Coreutils, Diffutils, Findutils, Gawk, GCC, Gettext, Glibc, "
-"GMP, Grep, M4, Make, MPC, MPFR, Patch, Perl, Sed, Tar, Texinfo, and Zstd"
+"GMP, Grep, Libxcrypt, M4, Make, MPC, MPFR, Patch, Perl, Sed, Tar, Texinfo, "
+"and Zstd"
 msgstr ""
 "Bash, Binutils, Coreutils, Diffutils, Findutils, Gawk, GCC, Gettext, Glibc, "
-"GMP, Grep, M4, Make, MPC, MPFR, Patch, Perl, Sed, Tar, Texinfo, 以及 Zstd"
+"GMP, Grep, Libxcrypt, M4, Make, MPC, MPFR, Patch, Perl, Sed, Tar, Texinfo, 以"
+"及 Zstd"
 
 #. type: Content of: <appendix><segmentedlist><seglistitem><seg>
 #: lfs-en/appendices/dependencies.xml
@@ -1361,6 +1369,22 @@ msgstr "Autoconf, Automake, 以及 Findutils"
 #. type: Content of: <appendix><segmentedlist><seglistitem><seg>
 #: lfs-en/appendices/dependencies.xml
 msgid ""
+"Bash, Binutils, Coreutils, Diffutils, Gawk, GCC, Glibc, Grep, Make, and Sed"
+msgstr ""
+"Bash, Binutils, Coreutils, Diffutils, Gawk, GCC, Glibc, Grep, Make, 以及 Sed"
+
+#. type: Content of: <appendix><segmentedlist><seglistitem><seg>
+#: lfs-en/appendices/dependencies.xml
+msgid ""
+"GCC, Perl, Python, <phrase revision='sysv'>and </phrase>Shadow<phrase "
+"revision='systemd'>, and Systemd</phrase>"
+msgstr ""
+"GCC, Perl, Python, <phrase revision='sysv'>以及 </phrase>Shadow<phrase "
+"revision='systemd'>, 以及 Systemd</phrase>"
+
+#. type: Content of: <appendix><segmentedlist><seglistitem><seg>
+#: lfs-en/appendices/dependencies.xml
+msgid ""
 "Bash, Bc, Binutils, Coreutils, Diffutils, Findutils, GCC, Glibc, Grep, Gzip, "
 "Kmod, Libelf, Make, Ncurses, OpenSSL, Perl, and Sed"
 msgstr ""
@@ -1551,16 +1575,16 @@ msgstr "<ulink url=\"&blfs-book;postlfs/ed.html\">Ed</ulink>"
 #. type: Content of: <appendix><segmentedlist><seglistitem><seg>
 #: lfs-en/appendices/dependencies.xml
 msgid ""
-"Bash, Binutils, Coreutils, Gawk, GCC, GDBM, Glibc, Grep, Groff, Make, Sed, "
-"and Zlib"
+"Bash, Binutils, Coreutils, Gawk, GCC, GDBM, Glibc, Grep, Groff, Libxcrypt, "
+"Make, Sed, and Zlib"
 msgstr ""
-"Bash, Binutils, Coreutils, Gawk, GCC, GDBM, Glibc, Grep, Groff, Make, Sed, 以"
-"及 Zlib"
+"Bash, Binutils, Coreutils, Gawk, GCC, GDBM, Glibc, Grep, Groff, Libxcrypt, "
+"Make, Sed, 以及 Zlib"
 
 #. type: Content of: <appendix><segmentedlist><seglistitem><seg>
 #: lfs-en/appendices/dependencies.xml
-msgid "GDBM and Glibc"
-msgstr "GDBM 和 Glibc"
+msgid "GDBM, Glibc, and Libxcrypt"
+msgstr "GDBM, Glibc, 以及 Libxcrypt"
 
 #. type: Content of: <appendix><segmentedlist><seglistitem><seg>
 #: lfs-en/appendices/dependencies.xml
@@ -1614,15 +1638,17 @@ msgstr ""
 #: lfs-en/appendices/dependencies.xml
 msgid ""
 "Bash, Binutils, Coreutils, Expat, GCC, Gdbm, Gettext, Glibc, Grep, Libffi, "
-"Make, Ncurses, OpenSSL, Pkgconf, Sed, and Util-linux"
+"Libxcrypt, Make, Ncurses, OpenSSL, Pkgconf, Sed, and Util-linux"
 msgstr ""
 "Bash, Binutils, Coreutils, Expat, GCC, Gdbm, Gettext, Glibc, Grep, Libffi, "
-"Make, Ncurses, OpenSSL, Pkgconf, Sed, 以及 Util-linux"
+"Libxcrypt, Make, Ncurses, OpenSSL, Pkgconf, Sed, 以及 Util-linux"
 
 #. type: Content of: <appendix><segmentedlist><seglistitem><seg>
 #: lfs-en/appendices/dependencies.xml
-msgid "Bzip2, Expat, Gdbm, Glibc, Libffi, Ncurses, OpenSSL, and Zlib"
-msgstr "Bzip2, Expat, Gdbm, Glibc, Libffi, Ncurses, OpenSSL, 以及 Zlib"
+msgid ""
+"Bzip2, Expat, Gdbm, Glibc, Libffi, Libxcrypt, Ncurses, OpenSSL, and Zlib"
+msgstr ""
+"Bzip2, Expat, Gdbm, Glibc, Libffi, Libxcrypt, Ncurses, OpenSSL, 以及 Zlib"
 
 #. type: Content of: <appendix><segmentedlist><seglistitem><seg>
 #: lfs-en/appendices/dependencies.xml
@@ -1675,10 +1701,15 @@ msgstr "E2fsprogs, File, Libtool, 以及 Shadow"
 #: lfs-en/appendices/dependencies.xml
 msgid ""
 "Acl, Attr, Bash, Binutils, Coreutils, Diffutils, Findutils, Gawk, GCC, "
-"Gettext, Glibc, Grep, Libcap, Make, and Sed"
+"Gettext, Glibc, Grep, Libcap, Libxcrypt, Make, and Sed"
 msgstr ""
 "Acl, Attr, Bash, Binutils, Coreutils, Diffutils, Findutils, Gawk, GCC, "
-"Gettext, Glibc, Grep, Libcap, Make, 以及 Sed"
+"Gettext, Glibc, Grep, Libcap, Libxcrypt, Make, 以及 Sed"
+
+#. type: Content of: <appendix><segmentedlist><seglistitem><seg>
+#: lfs-en/appendices/dependencies.xml
+msgid "Glibc and Libxcrypt"
+msgstr "Glibc 和 Libxcrypt"
 
 #. type: Content of: <appendix><segmentedlist><seglistitem><seg>
 #: lfs-en/appendices/dependencies.xml
@@ -1698,15 +1729,17 @@ msgstr "Binutils, Coreutils, GCC, Glibc, Make, 以及 Patch"
 #: lfs-en/appendices/dependencies.xml
 msgid ""
 "Acl, Attr, Bash, Binutils, Coreutils, Diffutils, Expat, Gawk, GCC, Glibc, "
-"Gperf, Grep, Jinja2, Libcap, Meson, Pkgconf, Sed, Util-linux, and Zstd"
+"Gperf, Grep, Jinja2, Libcap, Libxcrypt, Meson, Pkgconf, Sed, Util-linux, and "
+"Zstd"
 msgstr ""
 "Acl, Attr, Bash, Binutils, Coreutils, Diffutils, Expat, Gawk, GCC, Glibc, "
-"Gperf, Grep, Jinja2, Libcap, Meson, Pkgconf, Sed, Util-linux, 以及 Zstd"
+"Gperf, Grep, Jinja2, Libcap, Libxcrypt, Meson, Pkgconf, Sed, Util-linux, 以"
+"及 Zstd"
 
 #. type: Content of: <appendix><segmentedlist><seglistitem><seg>
 #: lfs-en/appendices/dependencies.xml
-msgid "Acl, Attr, Glibc, Libcap, and Util-linux"
-msgstr "Acl, Attr, Glibc, Libcap, 以及 Util-linux"
+msgid "Acl, Attr, Glibc, Libcap, Libxcrypt, and Util-linux"
+msgstr "Acl, Attr, Glibc, Libcap, Libxcrypt, 以及 Util-linux"
 
 #. type: Content of: <appendix><segmentedlist><seglistitem><seg>
 #: lfs-en/appendices/dependencies.xml
