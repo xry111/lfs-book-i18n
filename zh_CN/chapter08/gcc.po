@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Linux From Scratch 11.1\n"
 "Report-Msgid-Bugs-To: lfs-dev@lists.linuxfromscratch.org\n"
-"POT-Creation-Date: 2023-06-28 05:16+0800\n"
+"POT-Creation-Date: 2023-07-16 03:48+0800\n"
 "PO-Revision-Date: 2022-03-03 03:00+0800\n"
 "Last-Translator: Xi Ruoyao <xry111@xry111.site>\n"
 "Language-Team: none\n"
@@ -71,8 +71,8 @@ msgstr ""
 #: lfs-en/chapter08/shadow.xml lfs-en/chapter08/util-linux.xml
 #: lfs-en/chapter08/libcap.xml lfs-en/chapter08/gawk.xml
 #: lfs-en/chapter08/gperf.xml lfs-en/chapter08/man-db.xml
-#: lfs-en/chapter08/groff.xml lfs-en/chapter10/kernel.xml
-#: lfs-en/chapter09/bootscripts.xml
+#: lfs-en/chapter08/groff.xml lfs-en/chapter08/libxcrypt.xml
+#: lfs-en/chapter10/kernel.xml lfs-en/chapter09/bootscripts.xml
 msgid "&buildtime;"
 msgstr "&buildtime;"
 
@@ -128,8 +128,8 @@ msgstr "&buildtime;"
 #: lfs-en/chapter08/shadow.xml lfs-en/chapter08/util-linux.xml
 #: lfs-en/chapter08/libcap.xml lfs-en/chapter08/gawk.xml
 #: lfs-en/chapter08/gperf.xml lfs-en/chapter08/man-db.xml
-#: lfs-en/chapter08/groff.xml lfs-en/chapter10/kernel.xml
-#: lfs-en/chapter09/bootscripts.xml
+#: lfs-en/chapter08/groff.xml lfs-en/chapter08/libxcrypt.xml
+#: lfs-en/chapter10/kernel.xml lfs-en/chapter09/bootscripts.xml
 msgid "&diskspace;"
 msgstr "&diskspace;"
 
@@ -175,6 +175,7 @@ msgstr "&diskspace;"
 #: lfs-en/chapter08/shadow.xml lfs-en/chapter08/util-linux.xml
 #: lfs-en/chapter08/libcap.xml lfs-en/chapter08/gawk.xml
 #: lfs-en/chapter08/gperf.xml lfs-en/chapter08/man-db.xml
+#: lfs-en/chapter08/libxcrypt.xml
 msgid "Compile the package:"
 msgstr "编译该软件包："
 
@@ -220,7 +221,7 @@ msgstr "编译该软件包："
 #: lfs-en/chapter08/shadow.xml lfs-en/chapter08/util-linux.xml
 #: lfs-en/chapter08/gawk.xml lfs-en/chapter08/gperf.xml
 #: lfs-en/chapter08/man-db.xml lfs-en/chapter08/groff.xml
-#: lfs-en/chapter10/kernel.xml
+#: lfs-en/chapter08/libxcrypt.xml lfs-en/chapter10/kernel.xml
 #, no-wrap
 msgid "<userinput remap=\"make\">make</userinput>"
 msgstr "<userinput remap=\"make\">make</userinput>"
@@ -270,7 +271,7 @@ msgstr "<userinput remap=\"make\">make</userinput>"
 #: lfs-en/chapter08/util-linux.xml lfs-en/chapter08/libcap.xml
 #: lfs-en/chapter08/gawk.xml lfs-en/chapter08/gperf.xml
 #: lfs-en/chapter08/man-db.xml lfs-en/chapter08/groff.xml
-#: lfs-en/chapter09/bootscripts.xml
+#: lfs-en/chapter08/libxcrypt.xml lfs-en/chapter09/bootscripts.xml
 msgid "Install the package:"
 msgstr "安装该软件包："
 
@@ -309,11 +310,18 @@ msgid "Installation of GCC"
 msgstr "安装 GCC"
 
 #. type: Content of: <sect1><sect2><para>
-#: lfs-en/chapter06/gcc-pass2.xml lfs-en/chapter08/gcc.xml
+#: lfs-en/chapter06/gcc-pass2.xml lfs-en/chapter05/gcc-pass1.xml
+#: lfs-en/chapter08/gcc.xml
 msgid ""
-"If building on x86_64, change the default directory name for 64-bit "
-"libraries to <quote>lib</quote>:"
-msgstr "在 x86_64 上构建时，修改存放 64 位库的默认路径为 <quote>lib</quote>:"
+"Set the default directory name for 64-bit libraries to <quote>lib</quote>:"
+msgstr "设置存放 64 位库的默认目录为 <quote>lib</quote>："
+
+#. type: Content of: <sect1><sect2><screen>
+#: lfs-en/chapter06/gcc-pass2.xml lfs-en/chapter05/gcc-pass1.xml
+#: lfs-en/chapter08/gcc.xml
+#, no-wrap
+msgid "<userinput remap=\"pre\">sed 's/lib64/lib/' -i.orig gcc/config/loongarch/{t-linux,linux.h}</userinput>"
+msgstr "<userinput remap=\"pre\">sed 's/lib64/lib/' -i.orig gcc/config/loongarch/{t-linux,linux.h}</userinput>"
 
 #. type: Content of: <sect1><title>
 #: lfs-en/chapter01/whatsnew.xml lfs-en/chapter08/gcc.xml
@@ -356,7 +364,8 @@ msgstr "准备编译 GCC："
 #: lfs-en/chapter08/glibc.xml lfs-en/chapter08/dbus.xml
 #: lfs-en/chapter08/patch.xml lfs-en/chapter08/util-linux.xml
 #: lfs-en/chapter08/gperf.xml lfs-en/chapter08/man-db.xml
-#: lfs-en/chapter08/groff.xml lfs-en/chapter09/bootscripts.xml
+#: lfs-en/chapter08/groff.xml lfs-en/chapter08/libxcrypt.xml
+#: lfs-en/chapter09/bootscripts.xml
 #, no-wrap
 msgid "<userinput remap=\"install\">make install</userinput>"
 msgstr "<userinput remap=\"install\">make install</userinput>"
@@ -418,7 +427,8 @@ msgstr "安装的目录"
 #: lfs-en/chapter08/util-linux.xml lfs-en/chapter08/libcap.xml
 #: lfs-en/chapter08/gawk.xml lfs-en/chapter08/gperf.xml
 #: lfs-en/chapter08/man-db.xml lfs-en/chapter08/groff.xml
-#: lfs-en/chapter10/kernel.xml lfs-en/chapter09/bootscripts.xml
+#: lfs-en/chapter08/libxcrypt.xml lfs-en/chapter10/kernel.xml
+#: lfs-en/chapter09/bootscripts.xml
 msgid "Short Descriptions"
 msgstr "简要描述"
 
@@ -464,8 +474,9 @@ msgstr "简要描述"
 #: lfs-en/chapter08/util-linux.xml lfs-en/chapter08/libcap.xml
 #: lfs-en/chapter08/gawk.xml lfs-en/chapter08/gperf.xml
 #: lfs-en/chapter08/man-db.xml lfs-en/chapter08/groff.xml
-#: lfs-en/appendices/acronymlist.xml lfs-en/chapter10/kernel.xml
-#: lfs-en/prologue/standards.xml lfs-en/chapter09/bootscripts.xml
+#: lfs-en/chapter08/libxcrypt.xml lfs-en/appendices/acronymlist.xml
+#: lfs-en/chapter10/kernel.xml lfs-en/prologue/standards.xml
+#: lfs-en/chapter09/bootscripts.xml
 msgid ""
 "<?dbfo list-presentation=\"list\"?> <?dbhtml list-presentation=\"table\"?>"
 msgstr ""
@@ -474,8 +485,8 @@ msgstr ""
 #. type: Content of: <sect1><sect2><screen>
 #: lfs-en/chapter05/glibc.xml lfs-en/chapter08/gcc.xml
 #, no-wrap
-msgid "<computeroutput>[Requesting program interpreter: /lib64/ld-linux-x86-64.so.2]</computeroutput>"
-msgstr "<computeroutput>[Requesting program interpreter: /lib64/ld-linux-x86-64.so.2]</computeroutput>"
+msgid "<computeroutput>[Requesting program interpreter: /lib64/ld-linux-loongarch-lp64d.so.1]</computeroutput>"
+msgstr "<computeroutput>[Requesting program interpreter: /lib64/ld-linux-loongarch-lp64d.so.1]</computeroutput>"
 
 #. type: Content of: <sect1><sect2><segmentedlist><segtitle>
 #: lfs-en/chapter08/findutils.xml lfs-en/chapter08/file.xml
@@ -519,7 +530,7 @@ msgstr "安装的程序"
 #: lfs-en/chapter08/gettext.xml lfs-en/chapter08/glibc.xml
 #: lfs-en/chapter08/dbus.xml lfs-en/chapter08/shadow.xml
 #: lfs-en/chapter08/util-linux.xml lfs-en/chapter08/gawk.xml
-#: lfs-en/chapter08/man-db.xml
+#: lfs-en/chapter08/man-db.xml lfs-en/chapter08/libxcrypt.xml
 msgid "Installed libraries"
 msgstr "安装的库"
 
@@ -548,24 +559,6 @@ msgstr "&gcc-fin-sbu;"
 #: lfs-en/chapter08/gcc.xml
 msgid "&gcc-fin-du;"
 msgstr "&gcc-fin-du;"
-
-#. type: Content of: <sect1><sect2><screen>
-#: lfs-en/chapter08/gcc.xml
-#, no-wrap
-msgid ""
-"<userinput remap=\"pre\">case $(uname -m) in\n"
-"  x86_64)\n"
-"    sed -e '/m64=/s/lib64/lib/' \\\n"
-"        -i.orig gcc/config/i386/t-linux64\n"
-"  ;;\n"
-"esac</userinput>"
-msgstr ""
-"<userinput remap=\"pre\">case $(uname -m) in\n"
-"  x86_64)\n"
-"    sed -e '/m64=/s/lib64/lib/' \\\n"
-"        -i.orig gcc/config/i386/t-linux64\n"
-"  ;;\n"
-"esac</userinput>"
 
 #. type: Content of: <sect1><sect2><screen>
 #: lfs-en/chapter08/gcc.xml
@@ -757,24 +750,18 @@ msgstr ""
 "可以将结果与 <ulink url=\"&test-results;\"/> 和 <ulink url=\"https://gcc.gnu."
 "org/ml/gcc-testresults/\"/> 的结果进行比较。"
 
-#.  https://gcc.gnu.org/PR106375 and https://gcc.gnu.org/PR109353 
-#.  https://gcc.gnu.org/PR107855#c6 
 #. type: Content of: <sect1><sect2><para>
 #: lfs-en/chapter08/gcc.xml
 msgid ""
-"Two tests named <filename>pr104610.c</filename> and <filename>pr69482-1.c</"
-"filename> are known to fail because the test files does not account for the "
-"<parameter>--enable-default-ssp</parameter> option.  Two tests named "
-"<filename>copy.cc</filename> and <filename>pr56837.c</filename> are known to "
-"fail.  Additionally, several tests in the <filename class='directory'>vect</"
-"filename> directory are known to fail if the hardware does not support AVX."
+"The tests named <filename>pr64076</filename>, <filename>pr90883.C</"
+"filename>, <filename>pr108357.c</filename>, <filename>uninit-pred-9_b.c</"
+"filename>, <filename>ssa-dom-cse-2.c</filename>, <filename>stack-check-cfa-1."
+"c</filename>, and <filename>stack-check-cfa-2.c</filename> are known to fail."
 msgstr ""
-"已知两项分别名为 <filename>pr104610.c</filename> 和 <filename>pr69482-1.c</"
-"filename> 的测试由于测试文件未考虑 <parameter>--enable-default-ssp</"
-"parameter> 选项而失败。已知两项分别名为 <filename>copy.cc</filename> 和 "
-"<filename>pr56837.c</filename> 的测试会失败。另外，已知 <filename "
-"class='directory'>vect</filename> 目录中的一些测试在不支持 AVX 的硬件上会失"
-"败。"
+"已知名为 <filename>pr64076</filename>, <filename>pr90883.C</filename>, "
+"<filename>pr108357.c</filename>, <filename>uninit-pred-9_b.c</filename>, "
+"<filename>ssa-dom-cse-2.c</filename>, <filename>stack-check-cfa-1.c</"
+"filename>, 以及 <filename>stack-check-cfa-2.c</filename> 的测试可能失败。"
 
 #. type: Content of: <sect1><sect2><para>
 #: lfs-en/chapter08/gcc.xml
@@ -910,13 +897,13 @@ msgstr "以上命令应该输出："
 #: lfs-en/chapter08/gcc.xml
 #, no-wrap
 msgid ""
-"<computeroutput>/usr/lib/gcc/x86_64-pc-linux-gnu/&gcc-version;/../../../../lib/Scrt1.o succeeded\n"
-"/usr/lib/gcc/x86_64-pc-linux-gnu/&gcc-version;/../../../../lib/crti.o succeeded\n"
-"/usr/lib/gcc/x86_64-pc-linux-gnu/&gcc-version;/../../../../lib/crtn.o succeeded</computeroutput>"
+"<computeroutput>/usr/lib/gcc/loongarch64-unknown-linux-gnu/&gcc-version;/../../../../lib/Scrt1.o succeeded\n"
+"/usr/lib/gcc/loongarch64-unknown-linux-gnu/&gcc-version;/../../../../lib/crti.o succeeded\n"
+"/usr/lib/gcc/loongarch64-unknown-linux-gnu/&gcc-version;/../../../../lib/crtn.o succeeded</computeroutput>"
 msgstr ""
-"<computeroutput>/usr/lib/gcc/x86_64-pc-linux-gnu/&gcc-version;/../../../../lib/Scrt1.o succeeded\n"
-"/usr/lib/gcc/x86_64-pc-linux-gnu/&gcc-version;/../../../../lib/crti.o succeeded\n"
-"/usr/lib/gcc/x86_64-pc-linux-gnu/&gcc-version;/../../../../lib/crtn.o succeeded</computeroutput>"
+"<computeroutput>/usr/lib/gcc/loongarch64-unknown-linux-gnu/&gcc-version;/../../../../lib/Scrt1.o succeeded\n"
+"/usr/lib/gcc/loongarch64-unknown-linux-gnu/&gcc-version;/../../../../lib/crti.o succeeded\n"
+"/usr/lib/gcc/loongarch64-unknown-linux-gnu/&gcc-version;/../../../../lib/crtn.o succeeded</computeroutput>"
 
 #. type: Content of: <sect1><sect2><para>
 #: lfs-en/chapter08/gcc.xml
@@ -954,9 +941,9 @@ msgstr "该命令应当输出："
 #, no-wrap
 msgid ""
 "<computeroutput>#include &lt;...&gt; search starts here:\n"
-" /usr/lib/gcc/x86_64-pc-linux-gnu/&gcc-version;/include\n"
+" /usr/lib/gcc/loongarch64-unknown-linux-gnu/&gcc-version;/include\n"
 " /usr/local/include\n"
-" /usr/lib/gcc/x86_64-pc-linux-gnu/&gcc-version;/include-fixed\n"
+" /usr/lib/gcc/loongarch64-unknown-linux-gnu/&gcc-version;/include-fixed\n"
 " /usr/include</computeroutput>"
 msgstr ""
 "<computeroutput>#include &lt;...&gt; search starts here:\n"
@@ -996,11 +983,11 @@ msgstr "那些包含 '-linux-gnu' 的路径应该忽略，除此之外，以上�
 #: lfs-en/chapter08/gcc.xml
 #, no-wrap
 msgid ""
-"<computeroutput>SEARCH_DIR(\"/usr/x86_64-pc-linux-gnu/lib64\")\n"
+"<computeroutput>SEARCH_DIR(\"/usr/loongarch64-unknown-linux-gnu/lib64\")\n"
 "SEARCH_DIR(\"/usr/local/lib64\")\n"
 "SEARCH_DIR(\"/lib64\")\n"
 "SEARCH_DIR(\"/usr/lib64\")\n"
-"SEARCH_DIR(\"/usr/x86_64-pc-linux-gnu/lib\")\n"
+"SEARCH_DIR(\"/usr/loongarch64-unknown-linux-gnu/lib\")\n"
 "SEARCH_DIR(\"/usr/local/lib\")\n"
 "SEARCH_DIR(\"/lib\")\n"
 "SEARCH_DIR(\"/usr/lib\");</computeroutput>"
@@ -1010,35 +997,6 @@ msgstr ""
 "SEARCH_DIR(\"/lib64\")\n"
 "SEARCH_DIR(\"/usr/lib64\")\n"
 "SEARCH_DIR(\"/usr/x86_64-pc-linux-gnu/lib\")\n"
-"SEARCH_DIR(\"/usr/local/lib\")\n"
-"SEARCH_DIR(\"/lib\")\n"
-"SEARCH_DIR(\"/usr/lib\");</computeroutput>"
-
-#. type: Content of: <sect1><sect2><para>
-#: lfs-en/chapter08/gcc.xml
-msgid ""
-"A 32-bit system may use a few other directories. For example, here is the "
-"output from an i686 machine:"
-msgstr "在 32 位系统上可能使用不同的目录。例如，下面是 i686 机器上的输出："
-
-#. type: Content of: <sect1><sect2><screen>
-#: lfs-en/chapter08/gcc.xml
-#, no-wrap
-msgid ""
-"<computeroutput>SEARCH_DIR(\"/usr/i686-pc-linux-gnu/lib32\")\n"
-"SEARCH_DIR(\"/usr/local/lib32\")\n"
-"SEARCH_DIR(\"/lib32\")\n"
-"SEARCH_DIR(\"/usr/lib32\")\n"
-"SEARCH_DIR(\"/usr/i686-pc-linux-gnu/lib\")\n"
-"SEARCH_DIR(\"/usr/local/lib\")\n"
-"SEARCH_DIR(\"/lib\")\n"
-"SEARCH_DIR(\"/usr/lib\");</computeroutput>"
-msgstr ""
-"<computeroutput>SEARCH_DIR(\"/usr/i686-pc-linux-gnu/lib32\")\n"
-"SEARCH_DIR(\"/usr/local/lib32\")\n"
-"SEARCH_DIR(\"/lib32\")\n"
-"SEARCH_DIR(\"/usr/lib32\")\n"
-"SEARCH_DIR(\"/usr/i686-pc-linux-gnu/lib\")\n"
 "SEARCH_DIR(\"/usr/local/lib\")\n"
 "SEARCH_DIR(\"/lib\")\n"
 "SEARCH_DIR(\"/usr/lib\");</computeroutput>"
@@ -1081,8 +1039,8 @@ msgstr "以上命令应该输出 (不同平台的动态链接器名称可能不�
 #. type: Content of: <sect1><sect2><screen>
 #: lfs-en/chapter08/gcc.xml
 #, no-wrap
-msgid "<computeroutput>found ld-linux-x86-64.so.2 at /usr/lib/ld-linux-x86-64.so.2</computeroutput>"
-msgstr "<computeroutput>found ld-linux-x86-64.so.2 at /usr/lib/ld-linux-x86-64.so.2</computeroutput>"
+msgid "<computeroutput>found ld-linux-loongarch-lp64d.so.1 at /usr/lib/ld-linux-loongarch-lp64d.so.1</computeroutput>"
+msgstr "<computeroutput>found ld-linux-loongarch-lp64d.so.1 at /usr/lib/ld-linux-loongarch-lp64d.so.1</computeroutput>"
 
 #. The most likely
 #.   reason is that something went wrong with the specs file adjustment.

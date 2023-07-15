@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Linux From Scratch 11.0\n"
 "Report-Msgid-Bugs-To: lfs-dev@lists.linuxfromscratch.org\n"
-"POT-Creation-Date: 2023-06-19 19:15+0800\n"
+"POT-Creation-Date: 2023-07-16 03:48+0800\n"
 "PO-Revision-Date: 2021-08-31 16:49+0800\n"
 "Last-Translator: Xi Ruoyao <xry111@xry111.site>\n"
 "Language-Team: none\n"
@@ -71,8 +71,8 @@ msgstr ""
 #: lfs-en/chapter08/shadow.xml lfs-en/chapter08/util-linux.xml
 #: lfs-en/chapter08/libcap.xml lfs-en/chapter08/gawk.xml
 #: lfs-en/chapter08/gperf.xml lfs-en/chapter08/man-db.xml
-#: lfs-en/chapter08/groff.xml lfs-en/chapter10/kernel.xml
-#: lfs-en/chapter09/bootscripts.xml
+#: lfs-en/chapter08/groff.xml lfs-en/chapter08/libxcrypt.xml
+#: lfs-en/chapter10/kernel.xml lfs-en/chapter09/bootscripts.xml
 msgid "&buildtime;"
 msgstr "&buildtime;"
 
@@ -128,8 +128,8 @@ msgstr "&buildtime;"
 #: lfs-en/chapter08/shadow.xml lfs-en/chapter08/util-linux.xml
 #: lfs-en/chapter08/libcap.xml lfs-en/chapter08/gawk.xml
 #: lfs-en/chapter08/gperf.xml lfs-en/chapter08/man-db.xml
-#: lfs-en/chapter08/groff.xml lfs-en/chapter10/kernel.xml
-#: lfs-en/chapter09/bootscripts.xml
+#: lfs-en/chapter08/groff.xml lfs-en/chapter08/libxcrypt.xml
+#: lfs-en/chapter10/kernel.xml lfs-en/chapter09/bootscripts.xml
 msgid "&diskspace;"
 msgstr "&diskspace;"
 
@@ -175,6 +175,7 @@ msgstr "&diskspace;"
 #: lfs-en/chapter08/shadow.xml lfs-en/chapter08/util-linux.xml
 #: lfs-en/chapter08/libcap.xml lfs-en/chapter08/gawk.xml
 #: lfs-en/chapter08/gperf.xml lfs-en/chapter08/man-db.xml
+#: lfs-en/chapter08/libxcrypt.xml
 msgid "Compile the package:"
 msgstr "编译该软件包："
 
@@ -220,7 +221,7 @@ msgstr "编译该软件包："
 #: lfs-en/chapter08/shadow.xml lfs-en/chapter08/util-linux.xml
 #: lfs-en/chapter08/gawk.xml lfs-en/chapter08/gperf.xml
 #: lfs-en/chapter08/man-db.xml lfs-en/chapter08/groff.xml
-#: lfs-en/chapter10/kernel.xml
+#: lfs-en/chapter08/libxcrypt.xml lfs-en/chapter10/kernel.xml
 #, no-wrap
 msgid "<userinput remap=\"make\">make</userinput>"
 msgstr "<userinput remap=\"make\">make</userinput>"
@@ -270,9 +271,17 @@ msgstr "<userinput remap=\"make\">make</userinput>"
 #: lfs-en/chapter08/util-linux.xml lfs-en/chapter08/libcap.xml
 #: lfs-en/chapter08/gawk.xml lfs-en/chapter08/gperf.xml
 #: lfs-en/chapter08/man-db.xml lfs-en/chapter08/groff.xml
-#: lfs-en/chapter09/bootscripts.xml
+#: lfs-en/chapter08/libxcrypt.xml lfs-en/chapter09/bootscripts.xml
 msgid "Install the package:"
 msgstr "安装该软件包："
+
+#. type: Content of: <sect1><sect2><screen>
+#: lfs-en/chapter06/patch.xml lfs-en/chapter08/attr.xml
+#: lfs-en/chapter08/acl.xml lfs-en/chapter08/flex.xml lfs-en/chapter08/gdbm.xml
+#: lfs-en/chapter08/patch.xml lfs-en/chapter08/groff.xml
+#, no-wrap
+msgid "<userinput remap=\"pre\">tar -C build-aux &update-config-arg;</userinput>"
+msgstr "<userinput remap=\"pre\">tar -C build-aux &update-config-arg;</userinput>"
 
 #. type: Content of: <sect1><sect2><screen>
 #: lfs-en/chapter05/gcc-pass1.xml lfs-en/chapter05/binutils-pass1.xml
@@ -299,7 +308,8 @@ msgstr "安装该软件包："
 #: lfs-en/chapter08/glibc.xml lfs-en/chapter08/dbus.xml
 #: lfs-en/chapter08/patch.xml lfs-en/chapter08/util-linux.xml
 #: lfs-en/chapter08/gperf.xml lfs-en/chapter08/man-db.xml
-#: lfs-en/chapter08/groff.xml lfs-en/chapter09/bootscripts.xml
+#: lfs-en/chapter08/groff.xml lfs-en/chapter08/libxcrypt.xml
+#: lfs-en/chapter09/bootscripts.xml
 #, no-wrap
 msgid "<userinput remap=\"install\">make install</userinput>"
 msgstr "<userinput remap=\"install\">make install</userinput>"
@@ -342,7 +352,8 @@ msgstr "<userinput remap=\"install\">make install</userinput>"
 #: lfs-en/chapter08/util-linux.xml lfs-en/chapter08/libcap.xml
 #: lfs-en/chapter08/gawk.xml lfs-en/chapter08/gperf.xml
 #: lfs-en/chapter08/man-db.xml lfs-en/chapter08/groff.xml
-#: lfs-en/chapter10/kernel.xml lfs-en/chapter09/bootscripts.xml
+#: lfs-en/chapter08/libxcrypt.xml lfs-en/chapter10/kernel.xml
+#: lfs-en/chapter09/bootscripts.xml
 msgid "Short Descriptions"
 msgstr "简要描述"
 
@@ -388,8 +399,9 @@ msgstr "简要描述"
 #: lfs-en/chapter08/util-linux.xml lfs-en/chapter08/libcap.xml
 #: lfs-en/chapter08/gawk.xml lfs-en/chapter08/gperf.xml
 #: lfs-en/chapter08/man-db.xml lfs-en/chapter08/groff.xml
-#: lfs-en/appendices/acronymlist.xml lfs-en/chapter10/kernel.xml
-#: lfs-en/prologue/standards.xml lfs-en/chapter09/bootscripts.xml
+#: lfs-en/chapter08/libxcrypt.xml lfs-en/appendices/acronymlist.xml
+#: lfs-en/chapter10/kernel.xml lfs-en/prologue/standards.xml
+#: lfs-en/chapter09/bootscripts.xml
 msgid ""
 "<?dbfo list-presentation=\"list\"?> <?dbhtml list-presentation=\"table\"?>"
 msgstr ""
@@ -421,6 +433,7 @@ msgstr "配置选项的含义："
 #: lfs-en/chapter08/dbus.xml lfs-en/chapter08/dejagnu.xml
 #: lfs-en/chapter08/patch.xml lfs-en/chapter08/libcap.xml
 #: lfs-en/chapter08/gawk.xml lfs-en/chapter08/man-db.xml
+#: lfs-en/chapter08/groff.xml lfs-en/chapter08/libxcrypt.xml
 msgid "To test the results, issue:"
 msgstr "运行命令以测试编译结果："
 
@@ -471,6 +484,7 @@ msgstr "安装的程序"
 #: lfs-en/chapter08/procps.xml lfs-en/chapter08/glibc.xml
 #: lfs-en/chapter08/dbus.xml lfs-en/chapter08/dejagnu.xml
 #: lfs-en/chapter08/patch.xml lfs-en/chapter08/man-db.xml
+#: lfs-en/chapter08/groff.xml lfs-en/chapter08/libxcrypt.xml
 #, no-wrap
 msgid "<userinput remap=\"test\">make check</userinput>"
 msgstr "<userinput remap=\"make\">make check</userinput>"
@@ -487,7 +501,7 @@ msgstr "<userinput remap=\"make\">make check</userinput>"
 #: lfs-en/chapter08/gettext.xml lfs-en/chapter08/glibc.xml
 #: lfs-en/chapter08/dbus.xml lfs-en/chapter08/shadow.xml
 #: lfs-en/chapter08/util-linux.xml lfs-en/chapter08/gawk.xml
-#: lfs-en/chapter08/man-db.xml
+#: lfs-en/chapter08/man-db.xml lfs-en/chapter08/libxcrypt.xml
 msgid "Installed libraries"
 msgstr "安装的库"
 

@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Linux From Scratch 11.4\n"
 "Report-Msgid-Bugs-To: lfs-dev@lists.linuxfromscratch.org\n"
-"POT-Creation-Date: 2023-07-16 00:56+0800\n"
+"POT-Creation-Date: 2023-07-16 03:48+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: Xi Ruoyao <xry111@xry111.site>\n"
 "Language-Team: none\n"
@@ -367,7 +367,7 @@ msgid ""
 "familiar with this process follow the procedures below fairly closely.  The "
 "objective is to get an initial system to a point where you can log in at the "
 "command line when you reboot later in <xref linkend=\"ch-finish-reboot\"/>.  "
-"At this point optimization and customization is not a goal."
+"At his point optimization and customization is not a goal."
 msgstr ""
 "初次构建 Linux 内核是 LFS 构建过程中最具挑战性的环节之一。内核配置依赖于系统"
 "硬件和您的个人需求。内核配置包含大约 12,000 个选项，尽管只有约三分之一对于大"
@@ -508,6 +508,9 @@ msgid ""
 "   [*] Stack Protector buffer overflow detection [CONFIG_STACKPROTECTOR]\n"
 "   [*]   Strong Stack Protector [CONFIG_STACKPROTECTOR_STRONG]\n"
 "Device Drivers  ---&gt;\n"
+"  Firmware Drivers   ---&gt;\n"
+"   EFI (Extensible Firmware Interface) Support  ---&gt;\n"
+"     [*] Enable the generic EFI decompressor [CONFIG_EFI_ZBOOT]\n"
 "  Graphics support ---&gt;\n"
 "   Frame buffer Devices ---&gt;\n"
 "      &lt;*&gt; Support for frame buffer devices ---&gt;\n"
@@ -529,6 +532,9 @@ msgstr ""
 "   [*] Stack Protector buffer overflow detection [CONFIG_STACKPROTECTOR]\n"
 "   [*]   Strong Stack Protector [CONFIG_STACKPROTECTOR_STRONG]\n"
 "Device Drivers  ---&gt;\n"
+"  Firmware Drivers   ---&gt;\n"
+"   EFI (Extensible Firmware Interface) Support  ---&gt;\n"
+"     [*] Enable the generic EFI decompressor [CONFIG_EFI_ZBOOT]\n"
 "  Graphics support ---&gt;\n"
 "   Frame buffer Devices ---&gt;\n"
 "      &lt;*&gt; Support for frame buffer devices ---&gt;\n"
@@ -573,6 +579,8 @@ msgid ""
 "         [ ] Enable the firmware sysfs fallback mechanism [CONFIG_FW_LOADER_USER_HELPER]\n"
 "   Firmware Drivers   ---&gt;\n"
 "      [*] Export DMI identification via sysfs to userspace [CONFIG_DMIID]\n"
+"      EFI (Extensible Firmware Interface) Support  ---&gt;\n"
+"         [*] Enable the generic EFI decompressor [CONFIG_EFI_ZBOOT]\n"
 "   Graphics support ---&gt;\n"
 "      Frame buffer Devices ---&gt;\n"
 "         &lt;*&gt; Support for frame buffer devices ---&gt;\n"
@@ -613,6 +621,8 @@ msgstr ""
 "         [ ] Enable the firmware sysfs fallback mechanism [CONFIG_FW_LOADER_USER_HELPER]\n"
 "   Firmware Drivers   ---&gt;\n"
 "      [*] Export DMI identification via sysfs to userspace [CONFIG_DMIID]\n"
+"      EFI (Extensible Firmware Interface) Support  ---&gt;\n"
+"         [*] Enable the generic EFI decompressor [CONFIG_EFI_ZBOOT]\n"
 "   Graphics support ---&gt;\n"
 "      Frame buffer Devices ---&gt;\n"
 "         &lt;*&gt; Support for frame buffer devices ---&gt;\n"
@@ -622,63 +632,6 @@ msgstr ""
 "   [*] Inotify support for userspace [CONFIG_INOTIFY_USER]\n"
 "       Pseudo filesystems  ---&gt;\n"
 "        [*] Tmpfs POSIX Access Control Lists [CONFIG_TMPFS_POSIX_ACL]"
-
-#. type: Content of: <sect1><sect2><note><para>
-#: lfs-en/chapter10/kernel.xml
-msgid ""
-"Enable some additional features if you are building a 64-bit system.  If you "
-"are using menuconfig, enable them in the order of <parameter>CONFIG_PCI_MSI</"
-"parameter> first, then <parameter>CONFIG_IRQ_REMAP</parameter>, at last "
-"<parameter>CONFIG_X86_X2APIC</parameter> because an option only shows up "
-"after its dependencies are selected."
-msgstr ""
-"如果在构建 64 位系统，还需要启用一些特性。如果使用 menuconfig 进行配置，需要"
-"首先启用 <parameter>CONFIG_PCI_MSI</parameter>，然后启用 "
-"<parameter>CONFIG_IRQ_REMAP</parameter>，最后启用 "
-"<parameter>CONFIG_X86_X2APIC</parameter>，这是因为只有选定了一个选项的所有依"
-"赖项后，该选项才会出现。"
-
-#. type: Content of: <sect1><sect2><note><screen>
-#: lfs-en/chapter10/kernel.xml
-#, no-wrap
-msgid ""
-"Processor type and features ---&gt;\n"
-"  [*] Support x2apic [CONFIG_X86_X2APIC]\n"
-"Device Drivers ---&gt;\n"
-"  [*] PCI Support ---&gt; [CONFIG_PCI]\n"
-"    [*] Message Signaled Interrupts (MSI and MSI-X) [CONFIG_PCI_MSI]\n"
-"  [*] IOMMU Hardware Support ---&gt; [CONFIG_IOMMU_SUPPORT]\n"
-"    [*] Support for Interrupt Remapping [CONFIG_IRQ_REMAP]"
-msgstr ""
-"Processor type and features ---&gt;\n"
-"  [*] Support x2apic [CONFIG_X86_X2APIC]\n"
-"Device Drivers ---&gt;\n"
-"  [*] PCI Support ---&gt; [CONFIG_PCI]\n"
-"    [*] Message Signaled Interrupts (MSI and MSI-X) [CONFIG_PCI_MSI]\n"
-"  [*] IOMMU Hardware Support ---&gt; [CONFIG_IOMMU_SUPPORT]\n"
-"    [*] Support for Interrupt Remapping [CONFIG_IRQ_REMAP]"
-
-#. type: Content of: <sect1><sect2><note><para>
-#: lfs-en/chapter10/kernel.xml
-msgid ""
-"If you are building a 32-bit system running on a hardware with RAM more than "
-"4GB, adjust the configuration so the kernel will be able to use up to 64GB "
-"physical RAM:"
-msgstr ""
-"如果正在构建 32 位系统，且系统运行的硬件有超过 4GB 内存，调整内核配置，使其能"
-"够使用多达 64GB 物理内存："
-
-#. type: Content of: <sect1><sect2><note><screen>
-#: lfs-en/chapter10/kernel.xml
-#, no-wrap
-msgid ""
-"Processor type and features ---&gt;\n"
-"  High Memory Support ---&gt;\n"
-"    (X) 64GB [CONFIG_HIGHMEM64G]"
-msgstr ""
-"Processor type and features ---&gt;\n"
-"  High Memory Support ---&gt;\n"
-"    (X) 64GB [CONFIG_HIGHMEM64G]"
 
 #. type: Content of: <sect1><sect2><note><para>
 #: lfs-en/chapter10/kernel.xml
@@ -867,6 +820,20 @@ msgstr ""
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: lfs-en/chapter10/kernel.xml
+msgid "<parameter>Enable the generic EFI decompressor</parameter>"
+msgstr "<parameter>Enable the generic EFI decompressor</parameter>"
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
+#: lfs-en/chapter10/kernel.xml
+msgid ""
+"Create the bootable image as an EFI application that carries the actual "
+"kernel image in compressed form.  It can make the bootable image 50% smaller."
+msgstr ""
+"将可引导映像构建为携带压缩过的实际内核映像的 EFI 应用程序。这可以使可引导映像"
+"减小 50%。"
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
+#: lfs-en/chapter10/kernel.xml
 msgid "<parameter>Framebuffer Console support</parameter>"
 msgstr "<parameter>Framebuffer Console support</parameter>"
 
@@ -884,24 +851,6 @@ msgstr ""
 "试信息，不应该将其构建为内核模块，除非将要使用 initramfs。另外，如果 "
 "<option>CONFIG_DRM</option> (Direct Rendering Manager) 被启用，通常来说也应该"
 "启用 <option>CONFIG_DRM_FBDEV_EMULATION</option>。"
-
-#. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
-#: lfs-en/chapter10/kernel.xml
-msgid "<parameter>Support x2apic</parameter>"
-msgstr "<parameter>Support x2apic</parameter>"
-
-#. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
-#: lfs-en/chapter10/kernel.xml
-msgid ""
-"Support running the interrupt controller of 64-bit x86 processors in x2APIC "
-"mode.  x2APIC may be enabled by firmware on 64-bit x86 systems, and a kernel "
-"without this option enabled will panic on boot if x2APIC is enabled by "
-"firmware.  This option has has no effect, but also does no harm if x2APIC is "
-"disabled by the firmware."
-msgstr ""
-"支持以 x2APIC 模式运行 64 位 x86 处理器的中断控制器。64 位 x86 系统的固件可能"
-"启用了 x2APIC，此时未启用该选项的内核在引导时会发生内核恐慌。该选项在固件禁"
-"用 x2APIC 时没有作用，但无害。"
 
 #. type: Content of: <sect1><sect2><para>
 #: lfs-en/chapter10/kernel.xml
@@ -1009,17 +958,19 @@ msgid ""
 "The filename below can be changed to suit your taste, but the stem of the "
 "filename should be <emphasis>vmlinuz</emphasis> to be compatible with the "
 "automatic setup of the boot process described in the next section.  The "
-"following command assumes an x86 architecture:"
+"following command assumes a LoongArch platform with an EFI boot loader (for "
+"example, GRUB built in &ch-final;):"
 msgstr ""
 "指向内核映像的路径可能随机器平台的不同而变化。下面使用的文件名可以依照您的需"
 "要改变，但文件名的开头应该保持为 <emphasis>vmlinuz</emphasis>，以保证和下一节"
-"描述的引导过程自动设定相兼容。下面的命令假定机器是 x86 体系结构："
+"描述的引导过程自动设定相兼容。下面的命令假定使用 LoongArch 平台，以及EFI 引导"
+"加载器 (例如，在 &ch-final; 中构建的 GRUB)："
 
 #. type: Content of: <sect1><sect2><screen>
 #: lfs-en/chapter10/kernel.xml
 #, no-wrap
-msgid "<userinput remap=\"install\">cp -iv arch/x86/boot/bzImage /boot/vmlinuz-&linux-version;-lfs-&version;</userinput>"
-msgstr "<userinput remap=\"install\">cp -iv arch/x86/boot/bzImage /boot/vmlinuz-&linux-version;-lfs-&version;</userinput>"
+msgid "<userinput remap=\"install\">cp -iv arch/loongarch/boot/vmlinuz.efi /boot/vmlinuz-&linux-version;-lfs-&version;</userinput>"
+msgstr "<userinput remap=\"install\">cp -iv arch/loongarch/boot/vmlinuz.efi /boot/vmlinuz-&linux-version;-lfs-&version;</userinput>"
 
 #. type: Content of: <sect1><sect2><para>
 #: lfs-en/chapter10/kernel.xml

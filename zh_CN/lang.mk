@@ -18,6 +18,8 @@ zh_CN/book/general.ent: $(LFS_EN)/general.ent $(THIS)
 	    -e 's/Must be installed before/必须在下列软件包之前安装/'  \
 	    -e 's/Optional dependencies/可选依赖项/'                   \
 	    -e "/% reldate/s/\".*\"/\"$${reldate_cn}\"/"               \
+	    -e "s/Update the auxilary .*/更新构建系统使用的辅助脚本，/"        \
+		-e "s/building.*for LoongArch:/以允许为 LoongArch 构建该软件包：/" \
 	    $< > $@
 
 zh_CN/book/packages.ent: $(LFS_EN)/packages.ent $(THIS)

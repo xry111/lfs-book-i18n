@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Linux From Scratch 11.0\n"
 "Report-Msgid-Bugs-To: lfs-dev@lists.linuxfromscratch.org\n"
-"POT-Creation-Date: 2023-01-03 17:57+0800\n"
+"POT-Creation-Date: 2023-07-16 05:00+0800\n"
 "PO-Revision-Date: 2021-09-08 14:04+0800\n"
 "Last-Translator: Xi Ruoyao <xry111@xry111.site>\n"
 "Language-Team: none\n"
@@ -53,14 +53,36 @@ msgstr "使用 GRUB 设定引导过程"
 #. type: Content of: <sect1><note><para>
 #: lfs-en/chapter10/grub.xml
 msgid ""
-"If your system has UEFI support and you wish to boot LFS with UEFI, you "
-"should skip this page, and configure GRUB with UEFI support using the "
-"instructions provided in <ulink url=\"&blfs-book;postlfs/grub-setup."
-"html\">the BLFS page</ulink>."
+"This section assume your system has UEFI support and you wish to boot LFS "
+"with UEFI and GRUB built following the instructions in Chapter 8."
 msgstr ""
-"如果您的系统支持 UEFI，且您希望通过 UEFI 引导 LFS，您应该跳过本页，并按照 "
-"<ulink url=\"&blfs-book;postlfs/grub-setup.html\">BLFS 页面</ulink>中的说明，"
-"配置支持 UEFI 的 GRUB。"
+"本节假设您的系统支持 UEFI，且您希望通过 UEFI 和按照第 8 章给出的命令构建的 "
+"GRUB 引导 LFS。"
+
+#. type: Content of: <sect1><note><para>
+#: lfs-en/chapter10/grub.xml
+msgid ""
+"If you've installed GRUB for UEFI with optional dependencies following BLFS, "
+"you should skip this page, and configure GRUB with UEFI support using the "
+"instructions provided in <ulink url=\"&blfs-book;postlfs/grub-setup."
+"html\">the BLFS page</ulink>, but replace <parameter>--target=x86_64-efi</"
+"parameter> with <parameter>--target=loongarch64-efi</parameter> for the 64-"
+"bit LoongArch system."
+msgstr ""
+"如果您按照 BLFS 的说明安装了支持 UEFI 的 GRUB 及其可选依赖项，您应该跳过本"
+"页，并按照 <ulink url=\"&blfs-book;postlfs/grub-setup.html\">BLFS 页面</"
+"ulink>中的说明，配置支持 UEFI 的 GRUB，但是您需要将 BLFS 页面给出的"
+"<parameter>--target=x86_64-efi</parameter> 替换为适合 LoongArch 的 "
+"<parameter>--target=loongarch64-efi</parameter>。"
+
+#. type: Content of: <sect1><note><para>
+#: lfs-en/chapter10/grub.xml
+msgid ""
+"If your system does not support UEFI or you don't want to use it, you'll "
+"need to figure out how to configure the booting process of the system on "
+"your own."
+msgstr ""
+"如果您的系统不支持 UEFI，或者您不想使用它，您需要自行寻找配置引导过程的方法。"
 
 #. type: Content of: <sect1><sect2><warning><para>
 #: lfs-en/chapter10/grub.xml
@@ -80,28 +102,34 @@ msgstr ""
 msgid ""
 "Ensure that an emergency boot disk is ready to <quote>rescue</quote> the "
 "computer if the computer becomes unusable (un-bootable).  If you do not "
-"already have a boot device, you can create one.  In order for the procedure "
-"below to work, you need to jump ahead to BLFS and install "
-"<userinput>xorriso</userinput> from the <ulink url=\"&blfs-book;multimedia/"
-"libisoburn.html\"> libisoburn</ulink> package."
+"already have a boot device, you can create one.  To create a emergency boot "
+"device for UEFI, consult section <quote>Create an Emergency Boot Disk</"
+"quote> in <ulink url=\"&blfs-book;postlfs/grub-setup.html\">the BLFS page</"
+"ulink>."
 msgstr ""
 "您务必保证自己拥有一个紧急引导磁盘，它在计算机不可用 (无法引导) 时能够 "
 "<quote>抢修</quote> 计算机。如果您现在还没有引导设备，您可以执行以下命令创建"
-"一个。在运行下列命令前，您需要跳到 BLFS，安装包含 <userinput>xorriso</"
-"userinput> 的 <ulink url=\"&blfs-book;multimedia/libisoburn."
-"html\">libisoburn</ulink> 软件包："
+"一个。如果要创建用于 UEFI 的紧急引导设备，参阅 <ulink url=\"&blfs-book;"
+"postlfs/grub-setup.html\">BLFS 页面</ulink>中的<quote>Create an Emergency "
+"Boot Disk</quote>一节。"
 
-#. type: Content of: <sect1><sect2><screen>
+#. type: Content of: <sect1><sect2><title>
 #: lfs-en/chapter10/grub.xml
-#, no-wrap
+msgid "Turn off Secure Boot"
+msgstr "关闭 Secure Boot"
+
+#. type: Content of: <sect1><sect2><para>
+#: lfs-en/chapter10/grub.xml
 msgid ""
-"<userinput>cd /tmp\n"
-"grub-mkrescue --output=grub-img.iso\n"
-"xorriso -as cdrecord -v dev=/dev/cdrw blank=as_needed grub-img.iso</userinput>"
+"LFS does not have the essential packages to support Secure Boot.  To set up "
+"the boot process following the instructions in this section, Secure Boot "
+"must be turned off from the configuration interface of the firmware. Read "
+"the documentation provided by the manufacturer of your system to find out "
+"how."
 msgstr ""
-"<userinput>cd /tmp\n"
-"grub-mkrescue --output=grub-img.iso\n"
-"xorriso -as cdrecord -v dev=/dev/cdrw blank=as_needed grub-img.iso</userinput>"
+"LFS 没有支持 Secure Boot 所需的关键软件包。为了按照本节给出的方法设定引导过"
+"程，必须在固件的设置界面关闭安全引导。如果您不知道如何操作，阅读您的系统生产"
+"商给出的文档。"
 
 #. type: Content of: <sect1><sect2><title>
 #: lfs-en/chapter10/grub.xml
@@ -144,13 +172,62 @@ msgstr "设定 GRUB 配置"
 #. type: Content of: <sect1><sect2><para>
 #: lfs-en/chapter10/grub.xml
 msgid ""
-"GRUB works by writing data to the first physical track of the hard disk.  "
-"This area is not part of any file system.  The programs there access GRUB "
-"modules in the boot partition.  The default location is /boot/grub/."
+"GRUB works by creating an EFI executable in the EFI System Partition (ESP).  "
+"You can find the ESP with:"
 msgstr ""
-"GRUB 的工作方式是，将数据写入硬盘的第一个物理磁道。这里不属于任何文件系统，在"
-"启动时，第一个物理磁道中的程序从引导分区加载 GRUB 模块，默认在 /boot/grub 中"
-"查找模块。"
+"GRUB 需要在 EFI 系统分区 (ESP) 中创建一个 EFI 可执行文件才能正常工作。您可以"
+"用以下命令找到 ESP："
+
+#. type: Content of: <sect1><sect2><screen>
+#: lfs-en/chapter10/grub.xml
+#, no-wrap
+msgid "<userinput>fdisk -l | grep 'EFI System'</userinput>"
+msgstr "<userinput>fdisk -l | grep 'EFI System'</userinput>"
+
+#. type: Content of: <sect1><sect2><para>
+#: lfs-en/chapter10/grub.xml
+msgid ""
+"If no ESP exists on your hard drive (for example, you are building LFS on a "
+"fresh new system with a Live CD as the host distro), read <ulink url=\"&blfs-"
+"book;postlfs/grub-setup.html\">the BLFS page</ulink> for the instruction to "
+"create an ESP on your hard drive."
+msgstr ""
+"如果您的硬盘上没有 ESP (例如，您在一个全新的硬件系统上使用 Live CD 作为宿主发"
+"行版构建 LFS)，阅读 <ulink url=\"&blfs-book;postlfs/grub-setup.html\">BLFS 页"
+"面</ulink>以了解如何在硬盘上创建 ESP。"
+
+#. type: Content of: <sect1><sect2><para>
+#: lfs-en/chapter10/grub.xml
+msgid ""
+"If the ESP is not mounted at <filename class=\"directory\">/boot/efi</"
+"filename> (in the chroot), mount it now:"
+msgstr ""
+"如果 ESP 没有挂载到 (chroot 中的) <filename class=\"directory\">/boot/efi</"
+"filename>，现在挂载它："
+
+#. type: Content of: <sect1><sect2><screen>
+#: lfs-en/chapter10/grub.xml
+#, no-wrap
+msgid ""
+"<userinput>mkdir -pv /boot/efi\n"
+"mount /boot/efi</userinput>"
+msgstr ""
+"<userinput>mkdir -pv /boot/efi\n"
+"mount /boot/efi</userinput>"
+
+#. type: Content of: <sect1><sect2><note><para>
+#: lfs-en/chapter10/grub.xml
+msgid ""
+"The path to the device node is intentionally omitted in the command.  We "
+"expect the entry for mounting the ESP to <filename class=\"directory\">/boot/"
+"efi</filename> is already in <filename>/etc/fstab</filename>.  Add the entry "
+"before running the command if you forgot to create an entry for the ESP in "
+"<xref linkend=\"ch-bootable-fstab\"/>."
+msgstr ""
+"这里有意略去了命令中的设备节点路径。我们假设将 ESP 挂载到 <filename "
+"class=\"directory\">/boot/efi</filename> 的条目已经写入 <filename>/etc/"
+"fstab</filename>。如果您忘记在<xref linkend=\"ch-bootable-fstab\"/>中创建 "
+"ESP 的条目，需要在运行上述命令前，补充这一条目。"
 
 #. type: Content of: <sect1><sect2><para>
 #: lfs-en/chapter10/grub.xml
@@ -201,40 +278,93 @@ msgstr ""
 #: lfs-en/chapter10/grub.xml
 msgid ""
 "Install the GRUB files into <filename class=\"directory\">/boot/grub</"
-"filename> and set up the boot track:"
+"filename> and the GRUB EFI executable into <filename>/boot/efi/EFI/BOOT/"
+"BOOTLOONGARCH64.EFI</filename>:"
 msgstr ""
-"将 GRUB 文件安装到 <filename class=\"directory\">/boot/grub</filename> 并设定"
-"引导磁道："
+"将 GRUB 文件安装到 <filename class=\"directory\">/boot/grub</filename>，并将 "
+"GRUB EFI 可执行文件安装到 <filename>/boot/efi/EFI/BOOT/BOOTLOONGARCH64.EFI</"
+"filename>："
 
 #. type: Content of: <sect1><sect2><warning><para>
 #: lfs-en/chapter10/grub.xml
 msgid ""
-"The following command will overwrite the current boot loader. Do not run the "
-"command if this is not desired, for example, if using a third party boot "
-"manager to manage the Master Boot Record (MBR)."
+"The following command will overwrite <filename>BOOTLOONGARCH64.EFI</"
+"filename>. Do not run the command if this is not desired, for example, if it "
+"contains a third party boot manager.  You can backup it with <command>cp</"
+"command> as it's a regular file."
 msgstr ""
-"以下命令会覆盖当前启动引导器，如果这不是您希望的，不要运行该命令。例如，如果"
-"您使用第三方启动引导器管理主引导记录 (MBR)。"
+"以下命令会覆盖 <filename>BOOTLOONGARCH64.EFI</filename>，如果这不是您希望的，"
+"不要运行该命令。例如，如果该文件已经包含了另一启动管理器。您可以用 "
+"<command>cp</command> 命令备份它，因为它只是一个普通文件。"
 
 #. type: Content of: <sect1><sect2><screen>
 #: lfs-en/chapter10/grub.xml
 #, no-wrap
-msgid "<userinput>grub-install /dev/sda</userinput>"
-msgstr "<userinput>grub-install /dev/sda</userinput>"
+msgid "<userinput>grub-install --removable</userinput>"
+msgstr "<userinput>grub-install --removable</userinput>"
 
 #. type: Content of: <sect1><sect2><note><para>
 #: lfs-en/chapter10/grub.xml
 msgid ""
-"If the system has been booted using UEFI, <command>grub-install</command> "
-"will try to install files for the <emphasis>x86_64-efi</emphasis> target, "
-"but those files have not been installed in <xref linkend=\"chapter-building-"
-"system\"/>.  If this is the case, add <option>--target i386-pc</option> to "
-"the command above."
+"<parameter>--removable</parameter> may seem strange here.  The UEFI firmware "
+"searches EFI executables for boot loaders in a hardcoded path, <filename>EFI/"
+"BOOT/BOOTLOONGARCH64.EFI</filename> in the ESP, and other boot loader paths "
+"listed in the EFI variables.  We've not installed the utilities for "
+"manipulating EFI variables so we need to install the EFI executable into the "
+"hardcoded path.  The hardcoded path is usually used by removable devices "
+"(for example, USB thumb devices)  so the <command>grub-install</command> "
+"option for this purpose is named <parameter>--removable</parameter>."
 msgstr ""
-"如果系统是使用 UEFI 引导的，<command>grub-install</command> 会试图为 "
-"<emphasis>x86_64-efi</emphasis> 目标安装文件，但它们并未在<xref "
-"linkend=\"chapter-building-system\"/>中安装。如果出现了这类问题，请在以上命令"
-"中添加 <option>--target i386-pc</option> 选项。"
+"这里的 <parameter>--removable</parameter> 可能看上去很奇怪。UEFI 固件在 ESP "
+"中以硬编码的路径，即 <filename>EFI/BOOT/BOOTLOONGARCH64.EFI</filename>，以及 "
+"EFI 变量中列出的其他引导加载器路径搜索包含引导加载器的 EFI 可执行文件。我们尚"
+"未安装能够操作 EFI 变量的工具，因此只能将 EFI 可执行文件安装到硬编码的路径"
+"上。硬编码的路径通常用于可移动设备 (如 USB 闪存盘)，因此 使得 <command>grub-"
+"install</command> 使用硬编码路径的选项名为 <parameter>--removable</"
+"parameter>。"
+
+#. type: Content of: <sect1><sect2><note><para>
+#: lfs-en/chapter10/grub.xml
+msgid ""
+"UEFI implementation usually prefers the boot loaders with paths recorded in "
+"an EFI variable, to the boot loader with the hardcoded search path.  You may "
+"need to invoke the boot device selection menu or setting interface of your "
+"EFI firmware on next boot to explicitly select the bootloader."
+msgstr ""
+"UEFI 实现通常倾向于使用 EFI 变量中记录的路径，而不是硬编码的搜索路径。在下次"
+"引导系统时，您可能需要使用 EFI 固件提供的引导设备选择目录或者设置界面，以手动"
+"选择引导加载器。"
+
+#. type: Content of: <sect1><sect2><note><para><screen>
+#: lfs-en/chapter10/grub.xml
+#, no-wrap
+msgid ""
+"<userinput>mount -v -t efivarfs efivarfs /sys/firmware/efi/efivars\n"
+"efibootmgr -B -L LFS || true\n"
+"efibootmgr -c -L LFS -l '\\EFI\\BOOT\\BOOTLOONGARCH64.EFI' -d /dev/sda\n"
+"umount /sys/firmware/efi/efivars</userinput>"
+msgstr ""
+"<userinput>mount -v -t efivarfs efivarfs /sys/firmware/efi/efivars\n"
+"efibootmgr -B -L LFS || true\n"
+"efibootmgr -c -L LFS -l '\\EFI\\BOOT\\BOOTLOONGARCH64.EFI' -d /dev/sda\n"
+"umount /sys/firmware/efi/efivars</userinput>"
+
+#. type: Content of: <sect1><sect2><note><para>
+#: lfs-en/chapter10/grub.xml
+msgid ""
+"Some UEFI implementation may completely skip the hardcoded path if there are "
+"other boot loaders in the same hard drive with paths recorded in an EFI "
+"variable.  Then you need to create an EFI variable for the newly installed "
+"boot loader.  Install <ulink url=\"&blfs-book;postlfs/efibootmgr."
+"html\">efibootmgr</ulink>, then run the following commands: <placeholder "
+"type=\"screen\" id=\"0\"/> Replace <filename>/dev/sda</filename> with the "
+"device node of the hard drive where you are installing GRUB into."
+msgstr ""
+"某些 UEFI 实现在同一硬盘中存在记录于 EFI 变量的引导加载器时，会完全忽略硬编码"
+"的路径。此时您需要为新安装的引导加载器创建一个 EFI 变量。安装 <ulink "
+"url=\"&blfs-book;postlfs/efibootmgr.html\">efibootmgr</ulink>，运行下列命令："
+"<placeholder type=\"screen\" id=\"0\"/> 将 <filename>/dev/sda</filename> 替换"
+"为安装 GRUB 的硬盘对应的设备节点路径。"
 
 #. type: Content of: <sect1><sect2><title>
 #: lfs-en/chapter10/grub.xml
@@ -258,6 +388,8 @@ msgid ""
 "insmod ext2\n"
 "set root=(hd0,2)\n"
 "\n"
+"insmod all_video\n"
+"\n"
 "menuentry \"GNU/Linux, Linux &linux-version;-lfs-&version;\" {\n"
 "        linux   /boot/vmlinuz-&linux-version;-lfs-&version; root=/dev/sda2 ro\n"
 "}</literal>\n"
@@ -270,6 +402,8 @@ msgstr ""
 "\n"
 "insmod ext2\n"
 "set root=(hd0,2)\n"
+"\n"
+"insmod all_video\n"
 "\n"
 "menuentry \"GNU/Linux, Linux &linux-version;-lfs-&version;\" {\n"
 "        linux   /boot/vmlinuz-&linux-version;-lfs-&version; root=/dev/sda2 ro\n"

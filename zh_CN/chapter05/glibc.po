@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Linux From Scratch 11.0\n"
 "Report-Msgid-Bugs-To: lfs-dev@lists.linuxfromscratch.org\n"
-"POT-Creation-Date: 2023-07-03 19:26+0800\n"
+"POT-Creation-Date: 2023-07-16 03:48+0800\n"
 "PO-Revision-Date: 2021-08-07 09:09+0800\n"
 "Last-Translator: Xi Ruoyao <xry111@xry111.site>\n"
 "Language-Team: none\n"
@@ -375,32 +375,15 @@ msgstr "安装 Glibc"
 #. type: Content of: <sect1><sect2><para>
 #: lfs-en/chapter05/glibc.xml
 msgid ""
-"First, create a symbolic link for LSB compliance. Additionally, for x86_64, "
-"create a compatibility symbolic link required for proper operation of the "
+"Create a compatibility symbolic link required for proper operation of the "
 "dynamic library loader:"
-msgstr ""
-"首先，创建一个 LSB 兼容性符号链接。另外，对于 x86_64，创建一个动态链接器正常"
-"工作所必须的符号链接："
+msgstr "创建一个动态链接器正常工作所必须的符号链接："
 
 #. type: Content of: <sect1><sect2><screen>
 #: lfs-en/chapter05/glibc.xml
 #, no-wrap
-msgid ""
-"<userinput remap=\"pre\">case $(uname -m) in\n"
-"    i?86)   ln -sfv ld-linux.so.2 $LFS/lib/ld-lsb.so.3\n"
-"    ;;\n"
-"    x86_64) ln -sfv ../lib/ld-linux-x86-64.so.2 $LFS/lib64\n"
-"            ln -sfv ../lib/ld-linux-x86-64.so.2 $LFS/lib64/ld-lsb-x86-64.so.3\n"
-"    ;;\n"
-"esac</userinput>"
-msgstr ""
-"<userinput remap=\"pre\">case $(uname -m) in\n"
-"    i?86)   ln -sfv ld-linux.so.2 $LFS/lib/ld-lsb.so.3\n"
-"    ;;\n"
-"    x86_64) ln -sfv ../lib/ld-linux-x86-64.so.2 $LFS/lib64\n"
-"            ln -sfv ../lib/ld-linux-x86-64.so.2 $LFS/lib64/ld-lsb-x86-64.so.3\n"
-"    ;;\n"
-"esac</userinput>"
+msgid "<userinput remap=\"pre\">ln -sfv ../lib/ld-linux-loongarch-lp64d.so.1 $LFS/lib64</userinput>"
+msgstr "<userinput remap=\"pre\">ln -sfv ../lib/ld-linux-loongarch-lp64d.so.1 $LFS/lib64</userinput>"
 
 #. type: Content of: <sect1><sect2><note><para>
 #: lfs-en/chapter05/glibc.xml
@@ -667,17 +650,8 @@ msgstr ""
 #. type: Content of: <sect1><sect2><screen>
 #: lfs-en/chapter05/glibc.xml lfs-en/chapter08/gcc.xml
 #, no-wrap
-msgid "<computeroutput>[Requesting program interpreter: /lib64/ld-linux-x86-64.so.2]</computeroutput>"
-msgstr "<computeroutput>[Requesting program interpreter: /lib64/ld-linux-x86-64.so.2]</computeroutput>"
-
-#. type: Content of: <sect1><sect2><caution><para>
-#: lfs-en/chapter05/glibc.xml
-msgid ""
-"Note that for 32-bit machines, the interpreter name will be <filename>/lib/"
-"ld-linux.so.2</filename>."
-msgstr ""
-"注意，对于 32 位机器，解释器的名字将会是 <filename>/lib/ld-linux.so.2</"
-"filename>。"
+msgid "<computeroutput>[Requesting program interpreter: /lib64/ld-linux-loongarch-lp64d.so.1]</computeroutput>"
+msgstr "<computeroutput>[Requesting program interpreter: /lib64/ld-linux-loongarch-lp64d.so.1]</computeroutput>"
 
 #. type: Content of: <sect1><sect2><caution><para>
 #: lfs-en/chapter05/glibc.xml

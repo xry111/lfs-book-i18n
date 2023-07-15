@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Linux From Scratch 11.4\n"
 "Report-Msgid-Bugs-To: lfs-dev@lists.linuxfromscratch.org\n"
-"POT-Creation-Date: 2023-06-19 19:15+0800\n"
+"POT-Creation-Date: 2023-07-16 03:48+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: Xi Ruoyao <xry111@xry111.site>\n"
 "Language-Team: none\n"
@@ -66,8 +66,8 @@ msgstr ""
 #: lfs-en/chapter08/shadow.xml lfs-en/chapter08/util-linux.xml
 #: lfs-en/chapter08/libcap.xml lfs-en/chapter08/gawk.xml
 #: lfs-en/chapter08/gperf.xml lfs-en/chapter08/man-db.xml
-#: lfs-en/chapter08/groff.xml lfs-en/chapter10/kernel.xml
-#: lfs-en/chapter09/bootscripts.xml
+#: lfs-en/chapter08/groff.xml lfs-en/chapter08/libxcrypt.xml
+#: lfs-en/chapter10/kernel.xml lfs-en/chapter09/bootscripts.xml
 msgid "&buildtime;"
 msgstr "&buildtime;"
 
@@ -123,8 +123,8 @@ msgstr "&buildtime;"
 #: lfs-en/chapter08/shadow.xml lfs-en/chapter08/util-linux.xml
 #: lfs-en/chapter08/libcap.xml lfs-en/chapter08/gawk.xml
 #: lfs-en/chapter08/gperf.xml lfs-en/chapter08/man-db.xml
-#: lfs-en/chapter08/groff.xml lfs-en/chapter10/kernel.xml
-#: lfs-en/chapter09/bootscripts.xml
+#: lfs-en/chapter08/groff.xml lfs-en/chapter08/libxcrypt.xml
+#: lfs-en/chapter10/kernel.xml lfs-en/chapter09/bootscripts.xml
 msgid "&diskspace;"
 msgstr "&diskspace;"
 
@@ -170,7 +170,7 @@ msgstr "&diskspace;"
 #: lfs-en/chapter08/shadow.xml lfs-en/chapter08/util-linux.xml
 #: lfs-en/chapter08/gawk.xml lfs-en/chapter08/gperf.xml
 #: lfs-en/chapter08/man-db.xml lfs-en/chapter08/groff.xml
-#: lfs-en/chapter10/kernel.xml
+#: lfs-en/chapter08/libxcrypt.xml lfs-en/chapter10/kernel.xml
 #, no-wrap
 msgid "<userinput remap=\"make\">make</userinput>"
 msgstr "<userinput remap=\"make\">make</userinput>"
@@ -220,9 +220,16 @@ msgstr "<userinput remap=\"make\">make</userinput>"
 #: lfs-en/chapter08/util-linux.xml lfs-en/chapter08/libcap.xml
 #: lfs-en/chapter08/gawk.xml lfs-en/chapter08/gperf.xml
 #: lfs-en/chapter08/man-db.xml lfs-en/chapter08/groff.xml
-#: lfs-en/chapter09/bootscripts.xml
+#: lfs-en/chapter08/libxcrypt.xml lfs-en/chapter09/bootscripts.xml
 msgid "Install the package:"
 msgstr "安装该软件包："
+
+#. type: Content of: <sect1><sect2><screen>
+#: lfs-en/chapter06/file.xml lfs-en/chapter08/file.xml lfs-en/chapter08/gmp.xml
+#: lfs-en/chapter08/check.xml
+#, no-wrap
+msgid "<userinput remap=\"pre\">tar &update-config-arg;</userinput>"
+msgstr "<userinput remap=\"pre\">tar &update-config-arg;</userinput>"
 
 #. type: Content of: <sect1><sect2><variablelist><bridgehead>
 #: lfs-en/chapter05/linux-headers.xml lfs-en/chapter08/findutils.xml
@@ -262,7 +269,8 @@ msgstr "安装该软件包："
 #: lfs-en/chapter08/util-linux.xml lfs-en/chapter08/libcap.xml
 #: lfs-en/chapter08/gawk.xml lfs-en/chapter08/gperf.xml
 #: lfs-en/chapter08/man-db.xml lfs-en/chapter08/groff.xml
-#: lfs-en/chapter10/kernel.xml lfs-en/chapter09/bootscripts.xml
+#: lfs-en/chapter08/libxcrypt.xml lfs-en/chapter10/kernel.xml
+#: lfs-en/chapter09/bootscripts.xml
 msgid "Short Descriptions"
 msgstr "简要描述"
 
@@ -308,8 +316,9 @@ msgstr "简要描述"
 #: lfs-en/chapter08/util-linux.xml lfs-en/chapter08/libcap.xml
 #: lfs-en/chapter08/gawk.xml lfs-en/chapter08/gperf.xml
 #: lfs-en/chapter08/man-db.xml lfs-en/chapter08/groff.xml
-#: lfs-en/appendices/acronymlist.xml lfs-en/chapter10/kernel.xml
-#: lfs-en/prologue/standards.xml lfs-en/chapter09/bootscripts.xml
+#: lfs-en/chapter08/libxcrypt.xml lfs-en/appendices/acronymlist.xml
+#: lfs-en/chapter10/kernel.xml lfs-en/prologue/standards.xml
+#: lfs-en/chapter09/bootscripts.xml
 msgid ""
 "<?dbfo list-presentation=\"list\"?> <?dbhtml list-presentation=\"table\"?>"
 msgstr ""
@@ -332,6 +341,7 @@ msgstr ""
 #: lfs-en/chapter08/procps.xml lfs-en/chapter08/glibc.xml
 #: lfs-en/chapter08/dbus.xml lfs-en/chapter08/dejagnu.xml
 #: lfs-en/chapter08/patch.xml lfs-en/chapter08/man-db.xml
+#: lfs-en/chapter08/groff.xml lfs-en/chapter08/libxcrypt.xml
 #, no-wrap
 msgid "<userinput remap=\"test\">make check</userinput>"
 msgstr "<userinput remap=\"make\">make check</userinput>"
