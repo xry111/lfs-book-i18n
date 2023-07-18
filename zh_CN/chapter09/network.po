@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Linux From Scratch 11.4\n"
 "Report-Msgid-Bugs-To: lfs-dev@lists.linuxfromscratch.org\n"
-"POT-Creation-Date: 2022-12-25 21:06+0800\n"
+"POT-Creation-Date: 2023-07-18 12:46+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: Xi Ruoyao <xry111@xry111.site>\n"
 "Language-Team: none\n"
@@ -15,7 +15,7 @@ msgstr ""
 "X-Generator: Translate Toolkit 2.2.5\n"
 
 #. type: Content of: <sect1><sect2><indexterm><secondary>
-#: lfs-en/chapter08/sysklogd.xml lfs-en/chapter08/eudev.xml
+#: lfs-en/chapter08/sysklogd.xml lfs-en/chapter08/udev.xml
 #: lfs-en/chapter08/shadow.xml lfs-en/chapter09/consoled.xml
 #: lfs-en/chapter09/usage.xml lfs-en/chapter09/networkd.xml
 #: lfs-en/chapter09/clock.xml lfs-en/chapter09/network.xml
@@ -214,13 +214,13 @@ msgstr ""
 msgid ""
 "The interface names depend on the implementation and configuration of the "
 "udev daemon running on the system.  The udev daemon for LFS (installed in "
-"<xref linkend=\"ch-system-eudev\"/>) will not run until the LFS system is "
+"<xref linkend=\"ch-system-udev\"/>) will not run until the LFS system is "
 "booted.  So the interface names in the LFS system cannot always be "
 "determined by running those commands on the host distro, <emphasis>even in "
 "the chroot environment</emphasis>."
 msgstr ""
 "接口名依赖于系统正在运行的 udev 守护进程的实现和配置。LFS 的 udev 守护进程 "
-"(在<xref linkend=\"ch-system-eudev\"/>中安装) 直到 LFS 系统引导时才会运行。因"
+"(在<xref linkend=\"ch-system-udev\"/>中安装) 直到 LFS 系统引导时才会运行。因"
 "此，在宿主系统中使用上述命令未必能确定 LFS 系统将会使用的接口名，<emphasis>即"
 "使在 chroot 环境中仍然如此</emphasis>。"
 
