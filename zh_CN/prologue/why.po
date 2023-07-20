@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Linux From Scratch 11.0\n"
 "Report-Msgid-Bugs-To: lfs-dev@lists.linuxfromscratch.org\n"
-"POT-Creation-Date: 2023-07-03 19:26+0800\n"
+"POT-Creation-Date: 2023-07-20 16:40+0800\n"
 "PO-Revision-Date: 2021-09-08 14:07+0800\n"
 "Last-Translator: Xi Ruoyao <xry111@xry111.site>\n"
 "Language-Team: none\n"
@@ -256,12 +256,6 @@ msgid "Ninja"
 msgstr "Ninja"
 
 #. type: Content of: <sect1><itemizedlist><listitem><para>
-#: lfs-en/chapter08/eudev.xml lfs-en/appendices/dependencies.xml
-#: lfs-en/prologue/why.xml
-msgid "Eudev"
-msgstr "Eudev"
-
-#. type: Content of: <sect1><itemizedlist><listitem><para>
 #: lfs-en/chapter08/autoconf.xml lfs-en/appendices/dependencies.xml
 #: lfs-en/prologue/why.xml
 msgid "Autoconf"
@@ -356,6 +350,12 @@ msgstr "Check"
 msgid "E2fsprogs"
 msgstr "E2fsprogs"
 
+#. type: Content of: <sect1><indexterm><primary>
+#: lfs-en/chapter08/udev.xml lfs-en/appendices/dependencies.xml
+#: lfs-en/prologue/why.xml lfs-en/chapter09/udev.xml
+msgid "Udev"
+msgstr "Udev"
+
 #. type: Content of: <sect1><itemizedlist><listitem><para>
 #: lfs-en/chapter08/gdbm.xml lfs-en/appendices/dependencies.xml
 #: lfs-en/prologue/why.xml
@@ -446,13 +446,13 @@ msgstr "IProute2"
 
 #. type: Content of: <sect1><itemizedlist><listitem><para>
 #: lfs-en/appendices/dependencies.xml lfs-en/prologue/why.xml
-msgid "Systemd"
-msgstr "Systemd"
+msgid "Libffi"
+msgstr "Libffi"
 
 #. type: Content of: <sect1><itemizedlist><listitem><para>
 #: lfs-en/appendices/dependencies.xml lfs-en/prologue/why.xml
-msgid "Libffi"
-msgstr "Libffi"
+msgid "Systemd"
+msgstr "Systemd"
 
 #. type: Content of: <sect1><itemizedlist><listitem><para>
 #: lfs-en/appendices/dependencies.xml lfs-en/prologue/why.xml
@@ -616,16 +616,6 @@ msgstr ""
 #. type: Content of: <sect1><itemizedlist><listitem><para>
 #: lfs-en/prologue/why.xml
 msgid ""
-"This package is a device manager.  It dynamically controls the ownership, "
-"permissions, names, and symbolic links of device nodes in the /dev directory "
-"when devices are added to or removed from the system."
-msgstr ""
-"这个软件包是一个设备管理器，它随着系统中硬件设备的增加或移除，动态地控制 /"
-"dev 目录中设备节点的所有权，访问权限，文件名，以及符号链接。"
-
-#. type: Content of: <sect1><itemizedlist><listitem><para>
-#: lfs-en/prologue/why.xml
-msgid ""
 "This package yields a relatively small XML parsing library.  It is required "
 "by the XML::Parser Perl module."
 msgstr ""
@@ -721,11 +711,11 @@ msgstr ""
 #: lfs-en/prologue/why.xml
 msgid ""
 "This package produces a program that generates a perfect hash function from "
-"a set of keys. It is required by <phrase revision='sysv'>Eudev</phrase> "
+"a set of keys. It is required by <phrase revision='sysv'>Udev</phrase> "
 "<phrase revision='systemd'>Systemd</phrase>."
 msgstr ""
 "这个软件包提供一个能够根据键值集合生成完美散列函数的程序。<phrase "
-"revision='sysv'>Eudev</phrase> <phrase revision='systemd'>Systemd</phrase> 需"
+"revision='sysv'>Udev</phrase> <phrase revision='systemd'>Systemd</phrase> 需"
 "要该软件包。"
 
 #. type: Content of: <sect1><itemizedlist><listitem><para>
@@ -1125,6 +1115,16 @@ msgid ""
 msgstr ""
 "这个软件包提供<application>init</application>程序，在 Linux 系统中它是其他所"
 "有进程的祖先。"
+
+#. type: Content of: <sect1><itemizedlist><listitem><para>
+#: lfs-en/prologue/why.xml
+msgid ""
+"This package is a device manager.  It dynamically controls the ownership, "
+"permissions, names, and symbolic links of device nodes in the /dev directory "
+"when devices are added to or removed from the system."
+msgstr ""
+"这个软件包是一个设备管理器，它随着系统中硬件设备的增加或移除，动态地控制 /"
+"dev 目录中设备节点的所有权，访问权限，文件名，以及符号链接。"
 
 #. type: Content of: <sect1><itemizedlist><listitem><para>
 #: lfs-en/prologue/why.xml
