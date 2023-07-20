@@ -40,7 +40,10 @@ $(MLANG)/chapter01/changelog.po: $(LFS_EN)/chapter01/changelog.xml \
 
 MXML_FILES = $(patsubst $(LFS_EN)/%.xml, $(MLANG)/book/%.xml, $(XML_FILES))
 
-EN_BOOK_FILES = $(shell find $(LFS_EN) -type f -not -path "$(LFS_EN)/.git" -not -path $(LFS_EN)/conditional.ent)
+EN_BOOK_FILES = $(shell find $(LFS_EN) -type f           \
+                  -not -path "$(LFS_EN)/.git"            \
+                  -not -path "$(LFS_EN)/conditional.ent" \
+                  -not -path "*.tar.xz")
 BOOK_FILES = $(patsubst $(LFS_EN)/%, %, $(EN_BOOK_FILES))
 MBOOK_FILES = $(patsubst %, $(MLANG)/book/%, $(BOOK_FILES))
 
