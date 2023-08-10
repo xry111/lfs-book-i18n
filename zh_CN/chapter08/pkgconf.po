@@ -510,13 +510,15 @@ msgid ""
 "the same package.  This breaks many packages in BLFS. Run this sed to "
 "reinstate the old output for pkgconf:"
 msgstr ""
+"Pkgconf-2.0.0 在使用 <option>--modversion</option> 和多个参数时会直接报错退"
+"出，即使这些参数是对同一软件包的约束也会如此。这导致许多 BLFS 软件包无法构"
+"建。运行下列 sed 命令以恢复 pkgconf 旧版本的输出："
 
 #. type: Content of: <sect1><sect2><screen>
 #: lfs-en/chapter08/pkgconf.xml
-#, fuzzy, no-wrap
-#| msgid "<userinput remap=\"pre\">sed -i 's/extras//' Makefile.in</userinput>"
+#, no-wrap
 msgid "<userinput remap=\"pre\">sed -i '1330,1336s|^|//|' cli/main.c</userinput>"
-msgstr "<userinput remap=\"pre\">sed -i 's/extras//' Makefile.in</userinput>"
+msgstr "<userinput remap=\"pre\">sed -i '1330,1336s|^|//|' cli/main.c</userinput>"
 
 #. type: Content of: <sect1><sect2><para>
 #: lfs-en/chapter08/pkgconf.xml

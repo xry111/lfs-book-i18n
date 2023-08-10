@@ -11,7 +11,8 @@ include $(MLANG)/lang.mk
 L10N_XML = stylesheets/lfs-xsl/lfs-l10n.xml
 EXCLUDE_XML = $(LFS_EN)/$(L10N_XML) $(LFS_EN)/chapter01/changelog.xml \
               $(LFS_EN)/appendices/creat-comm.xml                     \
-              $(LFS_EN)/appendices/mit-lic.xml
+              $(LFS_EN)/appendices/mit-lic.xml                        \
+              $(wildcard $(LFS_EN)/chapter10/kernel/*.xml)
 CMD_FIND_XML = find $(LFS_EN) -type f -name '*.xml'
 XML_FILES = $(filter-out $(EXCLUDE_XML), $(wildcard $(shell $(CMD_FIND_XML))))
 POT_DIRS = $(sort $(patsubst $(LFS_EN)/%, pot/%, $(dir $(XML_FILES))))

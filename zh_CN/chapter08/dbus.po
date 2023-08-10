@@ -579,17 +579,7 @@ msgstr "准备编译 D-Bus："
 
 #. type: Content of: <sect1><sect2><screen>
 #: lfs-en/chapter08/dbus.xml
-#, fuzzy, no-wrap
-#| msgid ""
-#| "<userinput remap=\"configure\">./configure --prefix=/usr                        \\\n"
-#| "            --sysconfdir=/etc                    \\\n"
-#| "            --localstatedir=/var                 \\\n"
-#| "            --runstatedir=/run                   \\\n"
-#| "            --disable-static                     \\\n"
-#| "            --disable-doxygen-docs               \\\n"
-#| "            --disable-xml-docs                   \\\n"
-#| "            --docdir=/usr/share/doc/dbus-&dbus-version;  \\\n"
-#| "            --with-system-socket=/run/dbus/system_bus_socket</userinput>"
+#, no-wrap
 msgid ""
 "<userinput remap=\"configure\">./configure --prefix=/usr                        \\\n"
 "            --sysconfdir=/etc                    \\\n"
@@ -606,6 +596,7 @@ msgstr ""
 "            --sysconfdir=/etc                    \\\n"
 "            --localstatedir=/var                 \\\n"
 "            --runstatedir=/run                   \\\n"
+"            --enable-user-session                \\\n"
 "            --disable-static                     \\\n"
 "            --disable-doxygen-docs               \\\n"
 "            --disable-xml-docs                   \\\n"
@@ -634,10 +625,8 @@ msgstr ""
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: lfs-en/chapter08/dbus.xml
-#, fuzzy
-#| msgid "<parameter>--enable-shared</parameter>"
 msgid "<parameter>--enable-user-session</parameter>"
-msgstr "<parameter>--enable-shared</parameter>"
+msgstr "<parameter>--enable-user-session</parameter>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: lfs-en/chapter08/dbus.xml
@@ -646,6 +635,9 @@ msgid ""
 "for Systemd.  They are not useful (but harmless) in a base LFS installation, "
 "however they can be used once systemd is rebuilt with PAM support in BLFS."
 msgstr ""
+"该选项确保为 Systemd 安装 D-Bus 的用户专属服务和套接字单元文件。它们对于基本"
+"的 LFS 系统没有实际作用 (但无害)，然而在 BLFS 中重新构建具有 PAM 支持的 "
+"systemd 后即可使用它们。"
 
 #. type: Content of: <sect1><sect2><para>
 #: lfs-en/chapter08/dbus.xml

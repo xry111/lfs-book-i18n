@@ -682,13 +682,15 @@ msgstr "安装 man 页面："
 #.          component in the path.  
 #. type: Content of: <sect1><sect2><screen>
 #: lfs-en/chapter08/systemd.xml
-#, fuzzy, no-wrap
-#| msgid "<userinput remap=\"install\">tar -xf ../../systemd-man-pages-&systemd-man-version;.tar.xz --strip-components=1 -C /usr/share/man</userinput>"
+#, no-wrap
 msgid ""
 "<userinput remap=\"install\">tar -xf ../../systemd-man-pages-&systemd-version;.tar.xz \\\n"
 "    --no-same-owner --strip-components=1   \\\n"
 "    -C /usr/share/man</userinput>"
-msgstr "<userinput remap=\"install\">tar -xf ../../systemd-man-pages-&systemd-man-version;.tar.xz --strip-components=1 -C /usr/share/man</userinput>"
+msgstr ""
+"<userinput remap=\"install\">tar -xf ../../systemd-man-pages-&systemd-version;.tar.xz \\\n"
+"    --no-same-owner --strip-components=1   \\\n"
+"    -C /usr/share/man</userinput>"
 
 #. type: Content of: <sect1><sect2><para>
 #: lfs-en/chapter08/systemd.xml
@@ -739,22 +741,6 @@ msgstr "systemd 的内容"
 
 #. type: Content of: <sect1><sect2><segmentedlist><seglistitem><seg>
 #: lfs-en/chapter08/systemd.xml
-#, fuzzy
-#| msgid ""
-#| "busctl, coredumpctl, halt (symlink to systemctl), hostnamectl, init, "
-#| "journalctl, kernel-install, localectl, loginctl, machinectl, networkctl, "
-#| "oomctl, portablectl, poweroff (symlink to systemctl), reboot (symlink to "
-#| "systemctl), resolvconf (symlink to resolvectl), resolvectl, runlevel "
-#| "(symlink to systemctl), shutdown (symlink to systemctl), systemctl, "
-#| "systemd-ac-power, systemd-analyze, systemd-ask-password, systemd-cat, "
-#| "systemd-cgls, systemd-cgtop, systemd-creds, systemd-delta, systemd-detect-"
-#| "virt, systemd-dissect, systemd-escape, systemd-hwdb, systemd-id128, "
-#| "systemd-inhibit, systemd-machine-id-setup, systemd-mount, systemd-notify, "
-#| "systemd-nspawn, systemd-path, systemd-repart, systemd-resolve (symlink to "
-#| "resolvectl), systemd-run, systemd-socket-activate, systemd-stdio-bridge, "
-#| "systemd-sysext, systemd-tmpfiles, systemd-tty-ask-password-agent, systemd-"
-#| "umount (symlink to systemd-mount), telinit (symlink to systemctl), "
-#| "timedatectl, and udevadm"
 msgid ""
 "busctl, coredumpctl, halt (symlink to systemctl), hostnamectl, init, "
 "journalctl, kernel-install, localectl, loginctl, machinectl, mount.ddi "
@@ -773,19 +759,20 @@ msgid ""
 "timedatectl, and udevadm"
 msgstr ""
 "busctl, coredumpctl, halt (到 systemctl 的符号链接), hostnamectl, init, "
-"journalctl, kernel-install, localectl, loginctl, machinectl, networkctl, "
-"oomctl, portablectl, poweroff (到 systemctl 的符号链接), reboot (到 "
-"systemctl 的符号链接), resolvconf (到 resolvectl 的符号链接), resolvectl, "
-"runlevel (到 systemctl 的符号链接), shutdown (到 systemctl 的符号链接), "
-"systemctl, systemd-ac-power, systemd-analyze, systemd-ask-password, systemd-"
-"cat, systemd-cgls, systemd-cgtop, systemd-creds, systemd-delta, systemd-"
-"detect-virt, systemd-dissect, systemd-escape, systemd-hwdb, systemd-id128, "
-"systemd-inhibit, systemd-machine-id-setup, systemd-mount, systemd-notify, "
-"systemd-nspawn, systemd-path, systemd-repart, systemd-resolve (到 resolvectl "
-"的符号链接), systemd-run, systemd-socket-activate, systemd-stdio-bridge, "
-"systemd-sysext, systemd-tmpfiles, systemd-tty-ask-password-agent, systemd-"
-"umount (到 systemd-mount 的符号链接), telinit (到 systemctl 的符号链接), "
-"timedatectl, 以及 udevadm"
+"journalctl, kernel-install, localectl, loginctl, machinectl, mount.ddi (到 "
+"systemd-dissect 的符号链接), networkctl, oomctl, portablectl, poweroff (到 "
+"systemctl 的符号链接), reboot (到 systemctl 的符号链接), resolvconf (到 "
+"resolvectl 的符号链接), resolvectl, runlevel (到 systemctl 的符号链接), "
+"shutdown (到 systemctl 的符号链接), systemctl, systemd-ac-power, systemd-"
+"analyze, systemd-ask-password, systemd-cat, systemd-cgls, systemd-cgtop, "
+"systemd-confext (到 systemd-sysext 的符号链接), systemd-creds, systemd-"
+"delta, systemd-detect-virt, systemd-dissect, systemd-escape, systemd-hwdb, "
+"systemd-id128, systemd-inhibit, systemd-machine-id-setup, systemd-mount, "
+"systemd-notify, systemd-nspawn, systemd-path, systemd-repart, systemd-"
+"resolve (到 resolvectl 的符号链接), systemd-run, systemd-socket-activate, "
+"systemd-stdio-bridge, systemd-sysext, systemd-tmpfiles, systemd-tty-ask-"
+"password-agent, systemd-umount (到 systemd-mount 的符号链接), telinit (到 "
+"systemctl 的符号链接), timedatectl, 以及 udevadm"
 
 #. type: Content of: <sect1><sect2><segmentedlist><seglistitem><seg>
 #: lfs-en/chapter08/systemd.xml

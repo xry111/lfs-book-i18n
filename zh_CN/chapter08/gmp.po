@@ -315,10 +315,9 @@ msgstr "安装 GMP"
 
 #. type: Content of: <sect1><sect2><note><para><screen>
 #: lfs-en/chapter08/gmp.xml
-#, fuzzy, no-wrap
-#| msgid "<userinput remap=\"pre\">sed -i s/mawk// configure</userinput>"
+#, no-wrap
 msgid "<userinput><parameter>ABI=32</parameter> ./configure ...</userinput>"
-msgstr "<userinput remap=\"pre\">sed -i s/mawk// configure</userinput>"
+msgstr "<userinput><parameter>ABI=32</parameter> ./configure ...</userinput>"
 
 #. type: Content of: <sect1><sect2><note><para>
 #: lfs-en/chapter08/gmp.xml
@@ -329,15 +328,13 @@ msgid ""
 "to configure for 64-bits and fail.  Avoid this by invoking the configure "
 "command below with <placeholder type=\"screen\" id=\"0\"/>"
 msgstr ""
+"如果您在为 32 位 x86 构建 LFS，但您的 CPU 能够运行 64 位代码，<emphasis>而且"
+"</emphasis> 您指定了 <envar>CFLAGS</envar> 环境变量，配置脚本会试图为 64 位 "
+"CPU 进行配置并且失败。为了避免这个问题，像下面这样执行 configure 命令："
+"<placeholder type=\"screen\" id=\"0\"/>"
 
 #. type: Content of: <sect1><sect2><note><para>
 #: lfs-en/chapter08/gmp.xml
-#, fuzzy
-#| msgid ""
-#| "The default settings of GMP produce libraries optimized for the host "
-#| "processor.  If libraries suitable for processors less capable than the "
-#| "host's CPU are desired, generic libraries can be created by running the "
-#| "following: <placeholder type=\"screen\" id=\"0\"/>"
 msgid ""
 "The default settings of GMP produce libraries optimized for the host "
 "processor.  If libraries suitable for processors less capable than the "
@@ -345,9 +342,9 @@ msgid ""
 "<option>--host=none-linux-gnu</option> option to the <command>configure</"
 "command> command."
 msgstr ""
-"GMP 的默认设定会生成为本机处理器优化的库。如果您希望获得适合功能没有本机强大"
-"的 CPU 的库，执行以下命令，以生成通用库：<placeholder type=\"screen\" "
-"id=\"0\"/>"
+"GMP 的默认设定会生成为本机处理器优化的库。如果您希望获得适合功能较弱的 CPU 的"
+"库，可以向 <command>configure</command> 命令传递 <option>--host=none-linux-"
+"gnu</option> 选项，以生成通用库。"
 
 #. type: Content of: <sect1><sect2><para>
 #: lfs-en/chapter08/gmp.xml
@@ -408,14 +405,6 @@ msgstr "<userinput remap=\"test\">make check 2>&amp;1 | tee gmp-check-log</useri
 
 #. type: Content of: <sect1><sect2><caution><para>
 #: lfs-en/chapter08/gmp.xml
-#, fuzzy
-#| msgid ""
-#| "The code in gmp is highly optimized for the processor where it is built. "
-#| "Occasionally, the code that detects the processor misidentifies the "
-#| "system capabilities and there will be errors in the tests or other "
-#| "applications using the gmp libraries with the message \"Illegal "
-#| "instruction\".  In this case, gmp should be reconfigured with the option "
-#| "--build=x86_64-pc-linux-gnu and rebuilt."
 msgid ""
 "The code in gmp is highly optimized for the processor where it is built. "
 "Occasionally, the code that detects the processor misidentifies the system "
@@ -426,19 +415,15 @@ msgid ""
 msgstr ""
 "GMP 中的代码是针对本机处理器高度优化的。在偶然情况下，检测处理器的代码会错误"
 "识别 CPU 的功能，导致测试套件或使用 GMP 的其他程序输出消息 “Illegal "
-"instruction” (非法指令)。如果发生这种情况，需要加入选项 --build=x86_64-pc-"
-"linux-gnu 并重新构建 GMP。"
+"instruction” (非法指令)。如果发生这种情况，需要使用选项 <option>--build=none-"
+"pc-linux-gnu</option> 重新配置 GMP 并重新构建它。"
 
 #. type: Content of: <sect1><sect2><para>
 #: lfs-en/chapter08/gmp.xml
-#, fuzzy
-#| msgid ""
-#| "Ensure that all 197 tests in the test suite passed.  Check the results by "
-#| "issuing the following command:"
 msgid ""
 "Ensure that all 199 tests in the test suite passed.  Check the results by "
 "issuing the following command:"
-msgstr "务必确认测试套件中的 197 个测试全部通过。运行以下命令检验结果："
+msgstr "务必确认测试套件中的 199 项测试全部通过。运行以下命令检验结果："
 
 #. type: Content of: <sect1><sect2><screen>
 #: lfs-en/chapter08/gmp.xml

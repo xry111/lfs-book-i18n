@@ -614,10 +614,9 @@ msgstr "<userinput remap=\"install\">make tooldir=/usr install</userinput>"
 
 #. type: Content of: <sect1><sect2><screen>
 #: lfs-en/chapter08/binutils.xml
-#, fuzzy, no-wrap
-#| msgid "<userinput remap=\"install\">rm -v $LFS/usr/lib/lib{bfd,ctf,ctf-nobfd,opcodes}.{a,la}</userinput>"
+#, no-wrap
 msgid "<userinput remap=\"install\">rm -fv /usr/lib/lib{bfd,ctf,ctf-nobfd,gprofng,opcodes,sframe}.a</userinput>"
-msgstr "<userinput remap=\"install\">rm -v $LFS/usr/lib/lib{bfd,ctf,ctf-nobfd,opcodes}.{a,la}</userinput>"
+msgstr "<userinput remap=\"install\">rm -fv /usr/lib/lib{bfd,ctf,ctf-nobfd,gprofng,opcodes,sframe}.a</userinput>"
 
 #. type: Content of: <sect1><sect2><title>
 #: lfs-en/chapter08/binutils.xml
@@ -635,14 +634,12 @@ msgstr ""
 
 #. type: Content of: <sect1><sect2><segmentedlist><seglistitem><seg>
 #: lfs-en/chapter08/binutils.xml
-#, fuzzy
-#| msgid ""
-#| "libbfd.so, libctf.so, libctf-nobfd.so, libopcodes.so, and libsframe.so"
 msgid ""
 "libbfd.so, libctf.so, libctf-nobfd.so, libgprofng.so, libopcodes.so, and "
 "libsframe.so"
 msgstr ""
-"libbfd.so, libctf.so, libctf-nobfd.so, libopcodes.so, 以及 libsframe.so"
+"libbfd.so, libctf.so, libctf-nobfd.so, libgprofng.so, libopcodes.so, 以及 "
+"libsframe.so"
 
 #. type: Content of: <sect1><sect2><segmentedlist><seglistitem><seg>
 #: lfs-en/chapter08/binutils.xml
@@ -998,26 +995,18 @@ msgstr "libctf-nobfd"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: lfs-en/chapter08/binutils.xml
-#, fuzzy
-#| msgid "<filename class=\"libraryfile\">libgmp</filename>"
 msgid "<filename class=\"libraryfile\">libgprofng</filename>"
-msgstr "<filename class=\"libraryfile\">libgmp</filename>"
+msgstr "<filename class=\"libraryfile\">libgprofng</filename>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: lfs-en/chapter08/binutils.xml
-#, fuzzy
-#| msgid ""
-#| "Dummy library containing no functions. Previously was a runtime library "
-#| "for <command>g++</command>"
 msgid "A library containing most routines used by <command>gprofng</command>"
-msgstr "没有功能的空库，曾经是 <command>g++</command> 的运行库"
+msgstr "包含 <command>gprofng</command> 使用的多数子程序的库"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: lfs-en/chapter08/binutils.xml
-#, fuzzy
-#| msgid "gprofng"
 msgid "libgprofng"
-msgstr "gprofng"
+msgstr "libgprofng"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: lfs-en/chapter08/binutils.xml
