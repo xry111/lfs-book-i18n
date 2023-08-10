@@ -728,6 +728,7 @@ msgid ""
 "Fix an issue causing all kernel modules built with Binutils-2.41 or later "
 "not loadable:"
 msgstr ""
+"修复导致以 Binutils-2.41 或更新版本构建的所有内核模块都无法加载的问题："
 
 #. type: Content of: <sect1><sect2><screen>
 #: lfs-en/chapter10/kernel.xml
@@ -738,6 +739,10 @@ msgid ""
 "KBUILD_CFLAGS_MODULE += -Wa,-mno-relax</literal>\n"
 "EOF</userinput>"
 msgstr ""
+"<userinput remap=\"pre\">cat &gt;&gt; arch/loongarch/Makefile &lt;&lt; EOF\n"
+"<literal>KBUILD_AFLAGS_MODULE += -Wa,-mno-relax\n"
+"KBUILD_CFLAGS_MODULE += -Wa,-mno-relax</literal>\n"
+"EOF</userinput>"
 
 #. type: Content of: <sect1><sect2><para>
 #: lfs-en/chapter10/kernel.xml
