@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Linux From Scratch 11.0\n"
 "Report-Msgid-Bugs-To: lfs-dev@lists.linuxfromscratch.org\n"
-"POT-Creation-Date: 2023-08-02 10:40+0800\n"
+"POT-Creation-Date: 2023-08-10 21:48+0800\n"
 "PO-Revision-Date: 2021-08-16 11:42+0800\n"
 "Last-Translator: Xi Ruoyao <xry111@xry111.site>\n"
 "Language-Team: none\n"
@@ -643,8 +643,8 @@ msgstr "<userinput remap=\"install\">make tooldir=/usr install</userinput>"
 #. type: Content of: <sect1><sect2><screen>
 #: lfs-en/chapter08/binutils.xml
 #, no-wrap
-msgid "<userinput remap=\"install\">rm -fv /usr/lib/lib{bfd,ctf,ctf-nobfd,sframe,opcodes}.a</userinput>"
-msgstr "<userinput remap=\"install\">rm -fv /usr/lib/lib{bfd,ctf,ctf-nobfd,sframe,opcodes}.a</userinput>"
+msgid "<userinput remap=\"install\">rm -fv /usr/lib/lib{bfd,ctf,ctf-nobfd,gprofng,opcodes,sframe}.a</userinput>"
+msgstr "<userinput remap=\"install\">rm -fv /usr/lib/lib{bfd,ctf,ctf-nobfd,gprofng,opcodes,sframe}.a</userinput>"
 
 #. type: Content of: <sect1><sect2><title>
 #: lfs-en/chapter08/binutils.xml
@@ -662,9 +662,12 @@ msgstr ""
 
 #. type: Content of: <sect1><sect2><segmentedlist><seglistitem><seg>
 #: lfs-en/chapter08/binutils.xml
-msgid "libbfd.so, libctf.so, libctf-nobfd.so, libopcodes.so, and libsframe.so"
+msgid ""
+"libbfd.so, libctf.so, libctf-nobfd.so, libgprofng.so, libopcodes.so, and "
+"libsframe.so"
 msgstr ""
-"libbfd.so, libctf.so, libctf-nobfd.so, libopcodes.so, 以及 libsframe.so"
+"libbfd.so, libctf.so, libctf-nobfd.so, libgprofng.so, libopcodes.so, 以及 "
+"libsframe.so"
 
 #. type: Content of: <sect1><sect2><segmentedlist><seglistitem><seg>
 #: lfs-en/chapter08/binutils.xml
@@ -1032,6 +1035,21 @@ msgstr "libctf 的变体，它不需要 libbfd 的功能"
 #: lfs-en/chapter08/binutils.xml
 msgid "libctf-nobfd"
 msgstr "libctf-nobfd"
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
+#: lfs-en/chapter08/binutils.xml
+msgid "<filename class=\"libraryfile\">libgprofng</filename>"
+msgstr "<filename class=\"libraryfile\">libgprofng</filename>"
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
+#: lfs-en/chapter08/binutils.xml
+msgid "A library containing most routines used by <command>gprofng</command>"
+msgstr "包含 <command>gprofng</command> 使用的多数子程序的库"
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
+#: lfs-en/chapter08/binutils.xml
+msgid "libgprofng"
+msgstr "libgprofng"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: lfs-en/chapter08/binutils.xml
