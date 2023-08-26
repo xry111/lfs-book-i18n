@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Linux From Scratch 11.3\n"
 "Report-Msgid-Bugs-To: lfs-dev@lists.linuxfromscratch.org\n"
-"POT-Creation-Date: 2023-08-10 22:01+0800\n"
+"POT-Creation-Date: 2023-08-26 23:59+0800\n"
 "PO-Revision-Date: 2023-06-19 19:15+0800\n"
 "Last-Translator: Automatically generated\n"
 "Language-Team: none\n"
@@ -501,24 +501,6 @@ msgstr "&pkgconf-fin-du;"
 #: lfs-en/chapter08/pkgconf.xml
 msgid "Installation of Pkgconf"
 msgstr "安装 Pkgconf"
-
-#. type: Content of: <sect1><sect2><para>
-#: lfs-en/chapter08/pkgconf.xml
-msgid ""
-"Pkgconf-2.0.0 explicitly errors when attempting to run <option>--modversion</"
-"option> with multiple arguments, even if these arguments are constraints for "
-"the same package.  This breaks many packages in BLFS. Run this sed to "
-"reinstate the old output for pkgconf:"
-msgstr ""
-"Pkgconf-2.0.0 在使用 <option>--modversion</option> 和多个参数时会直接报错退"
-"出，即使这些参数是对同一软件包的约束也会如此。这导致许多 BLFS 软件包无法构"
-"建。运行下列 sed 命令以恢复 pkgconf 旧版本的输出："
-
-#. type: Content of: <sect1><sect2><screen>
-#: lfs-en/chapter08/pkgconf.xml
-#, no-wrap
-msgid "<userinput remap=\"pre\">sed -i '1330,1336s|^|//|' cli/main.c</userinput>"
-msgstr "<userinput remap=\"pre\">sed -i '1330,1336s|^|//|' cli/main.c</userinput>"
 
 #. type: Content of: <sect1><sect2><para>
 #: lfs-en/chapter08/pkgconf.xml
