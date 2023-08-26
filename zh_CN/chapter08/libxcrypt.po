@@ -576,14 +576,6 @@ msgstr ""
 
 #. type: Content of: <sect1><sect2><note><para>
 #: lfs-en/chapter08/libxcrypt.xml
-#, fuzzy
-#| msgid ""
-#| "The instructions above disabled obsolete API functions since no package "
-#| "installed by compiling from sources would link against them at runtime. "
-#| "However, the only known binary-only applications that link against these "
-#| "functions require ABI version 1.  If you must have such functions because "
-#| "of some binary-only application or to be to be compliant with LSB, build "
-#| "the package again with the following commands:"
 msgid ""
 "The instructions above disabled obsolete API functions since no package "
 "installed by compiling from sources would link against them at runtime. "
@@ -599,16 +591,7 @@ msgstr ""
 
 #. type: Content of: <sect1><sect2><note><screen>
 #: lfs-en/chapter08/libxcrypt.xml
-#, fuzzy, no-wrap
-#| msgid ""
-#| "<userinput remap=\"nodump\">make distclean\n"
-#| "./configure --prefix=/usr                \\\n"
-#| "            --enable-hashes=strong,glibc \\\n"
-#| "            --enable-obsolete-api=glibc  \\\n"
-#| "            --disable-static             \\\n"
-#| "            --disable-failure-tokens\n"
-#| "make\n"
-#| "cp -av .libs/libcrypt.so.1* /usr/lib</userinput>"
+#, no-wrap
 msgid ""
 "<userinput>make distclean\n"
 "./configure --prefix=/usr                \\\n"
@@ -619,7 +602,7 @@ msgid ""
 "make\n"
 "cp -av .libs/libcrypt.so.1* /usr/lib</userinput>"
 msgstr ""
-"<userinput remap=\"nodump\">make distclean\n"
+"<userinput>make distclean\n"
 "./configure --prefix=/usr                \\\n"
 "            --enable-hashes=strong,glibc \\\n"
 "            --enable-obsolete-api=glibc  \\\n"
