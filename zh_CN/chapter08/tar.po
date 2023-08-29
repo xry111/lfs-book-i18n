@@ -548,30 +548,18 @@ msgstr ""
 
 #. type: Content of: <sect1><sect2><note><para>
 #: lfs-en/chapter08/tar.xml
-#, fuzzy
-#| msgid ""
-#| "The test time for autoconf can be reduced significantly on a system with "
-#| "multiple cores.  To do this, append <command>TESTSUITEFLAGS=-j&lt;N&gt;</"
-#| "command> to the line above.  For instance, using -j4 can reduce the test "
-#| "time by over 60 percent."
 msgid ""
 "The test time for Tar can be reduced significantly on a system with multiple "
 "cores.  To do this, append <command>TESTSUITEFLAGS=-j&lt;N&gt;</command> to "
 "the line above.  For instance, using -j4 can reduce the test time by over 70 "
 "percent."
 msgstr ""
-"在多核系统上，可以显著减少 autoconf 的测试时间。为了使用多个核心，在上述命令"
-"中附加 <command>TESTSUITEFLAGS=-j&lt;N&gt;</command> 参数。例如，使用 -j4 可"
-"以减少超过 60% 的测试时间。"
+"在多核系统上，可以显著减少 Tar 的测试时间。为了使用多个核心，在上述命令中附"
+"加 <command>TESTSUITEFLAGS=-j&lt;N&gt;</command> 参数。例如，使用 -j4 可以减"
+"少超过 70% 的测试时间。"
 
 #. type: Content of: <sect1><sect2><para>
 #: lfs-en/chapter08/tar.xml
-#, fuzzy
-#| msgid ""
-#| "One test, capabilities: binary store/restore, is known to fail if it is "
-#| "run because LFS lacks selinux, but will be skipped if the host kernel "
-#| "does not support extended attributes on the filesystem used for building "
-#| "LFS."
 msgid ""
 "One test, capabilities: binary store/restore, is known to fail if it is run "
 "because LFS lacks selinux, but will be skipped if the host kernel does not "
@@ -580,7 +568,7 @@ msgid ""
 msgstr ""
 "一项名为 capabilities: binary store/restore 的测试在运行时会失败，这是由于 "
 "LFS 没有 selinux 功能，但如果宿主系统的内核在构建 LFS 使用的文件系统上不支持"
-"扩展属性，该测试会被跳过。"
+"扩展属性或安全标记，该测试会被跳过。"
 
 #. type: Content of: <sect1><sect2><screen>
 #: lfs-en/chapter08/tar.xml
