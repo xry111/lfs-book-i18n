@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Linux From Scratch 11.0\n"
 "Report-Msgid-Bugs-To: lfs-dev@lists.linuxfromscratch.org\n"
-"POT-Creation-Date: 2023-08-26 23:59+0800\n"
+"POT-Creation-Date: 2023-09-02 02:34+0800\n"
 "PO-Revision-Date: 2021-11-05 23:31+0800\n"
 "Last-Translator: Xi Ruoyao <xry111@xry111.site>\n"
 "Language-Team: none\n"
@@ -65,38 +65,6 @@ msgstr "Gawk-&gawk-version;"
 #: lfs-en/chapter01/whatsnew.xml
 msgid "What's new since the last release"
 msgstr "自上次发布以来的更新"
-
-#. type: Content of: <sect1><caution><para>
-#: lfs-en/chapter01/whatsnew.xml
-msgid ""
-"During a development cycle of LFS, the instructions in the book is often "
-"modified to adapt for a package update or take the advantage of new features "
-"from updated packages.  Mixing up the instructions of different versions of "
-"the LFS book can cause subtle breakages.  This kind of issue is generally a "
-"result from reusing some script created for a prior LFS release.  Such a "
-"reuse is strongly discouraged.  If you are reusing scripts for a prior LFS "
-"release for any reason, you'll need to be very careful to update the scripts "
-"to match current version of the LFS book."
-msgstr ""
-"在 LFS 的开发周期中，经常会修改本书中的指令，以适应更新的软件包，或利用新版本"
-"软件包提供的新特性。混用不同版本 LFS 手册中的指令会导致难以察觉的问题。这种情"
-"况通常是重用为之前的某个 LFS 版本创建的脚本所致。我们强烈反对这种重用。如果您"
-"出于某种原因，一定要重用为旧版本 LFS 创建的脚本，您必须非常小心地更新脚本，使"
-"其内容和当前版本的 LFS 手册一致。"
-
-#. type: Content of: <sect1><para>
-#: lfs-en/chapter01/whatsnew.xml
-msgid ""
-"In the 11.4 release, <parameter>--disable-fixincludes</parameter> is set for "
-"GCC.  It's a configure switch newly added in GCC 13.1 to prevent GCC from "
-"<quote>fixing</quote> the system headers.  Such a <quote>fix</quote> is "
-"unnecessary for a modern Linux system and may cause issues if a package is "
-"updated after installing GCC."
-msgstr ""
-"在本书的 11.4 版本中，我们为 GCC 设定 <parameter>--disable-fixincludes</"
-"parameter> 选项。这个配置开关是 GCC 13.1 新增的，用于防止 GCC <quote>修复</"
-"quote>系统头文件。这种<quote>修复</quote>对于现代的 Linux 系统来说没有必要，"
-"而且如果在安装 GCC 后更新了某个软件包，它可能带来问题。"
 
 #. type: Content of: <sect1><para>
 #: lfs-en/chapter01/whatsnew.xml
