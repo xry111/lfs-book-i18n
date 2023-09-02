@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Linux From Scratch 11.4\n"
 "Report-Msgid-Bugs-To: lfs-dev@lists.linuxfromscratch.org\n"
-"POT-Creation-Date: 2023-08-07 22:58+0800\n"
+"POT-Creation-Date: 2023-09-03 03:29+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: Xi Ruoyao <xry111@xry111.site>\n"
 "Language-Team: none\n"
@@ -464,13 +464,14 @@ msgstr "安装的程序"
 #: lfs-en/chapter08/zlib.xml lfs-en/chapter08/libpipeline.xml
 #: lfs-en/chapter08/mpfr.xml lfs-en/chapter08/libelf.xml
 #: lfs-en/chapter08/inetutils.xml lfs-en/chapter08/gzip.xml
-#: lfs-en/chapter08/flex.xml lfs-en/chapter08/xz.xml lfs-en/chapter08/check.xml
-#: lfs-en/chapter08/e2fsprogs.xml lfs-en/chapter08/libffi.xml
-#: lfs-en/chapter08/gdbm.xml lfs-en/chapter08/zstd.xml
-#: lfs-en/chapter08/gettext.xml lfs-en/chapter08/procps.xml
-#: lfs-en/chapter08/glibc.xml lfs-en/chapter08/dbus.xml
-#: lfs-en/chapter08/dejagnu.xml lfs-en/chapter08/patch.xml
-#: lfs-en/chapter08/groff.xml lfs-en/chapter08/libxcrypt.xml
+#: lfs-en/chapter08/less.xml lfs-en/chapter08/flex.xml lfs-en/chapter08/xz.xml
+#: lfs-en/chapter08/check.xml lfs-en/chapter08/e2fsprogs.xml
+#: lfs-en/chapter08/libffi.xml lfs-en/chapter08/gdbm.xml
+#: lfs-en/chapter08/zstd.xml lfs-en/chapter08/gettext.xml
+#: lfs-en/chapter08/procps.xml lfs-en/chapter08/glibc.xml
+#: lfs-en/chapter08/dbus.xml lfs-en/chapter08/dejagnu.xml
+#: lfs-en/chapter08/patch.xml lfs-en/chapter08/groff.xml
+#: lfs-en/chapter08/libxcrypt.xml
 #, no-wrap
 msgid "<userinput remap=\"test\">make check</userinput>"
 msgstr "<userinput remap=\"make\">make check</userinput>"
@@ -580,6 +581,12 @@ msgid ""
 msgstr ""
 "该选项使得 <command>kill</command> 命令不被构建；它将由 Util-linux 软件包提"
 "供。"
+
+#. type: Content of: <sect1><sect2><screen>
+#: lfs-en/chapter08/procps.xml
+#, no-wrap
+msgid "<userinput remap=\"make\">make src_w_LDADD='$(LDADD) -lsystemd'</userinput>"
+msgstr "<userinput remap=\"make\">make src_w_LDADD='$(LDADD) -lsystemd'</userinput>"
 
 #. type: Content of: <sect1><sect2><title>
 #: lfs-en/chapter08/procps.xml

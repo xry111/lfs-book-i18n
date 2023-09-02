@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Linux From Scratch 11.0\n"
 "Report-Msgid-Bugs-To: lfs-dev@lists.linuxfromscratch.org\n"
-"POT-Creation-Date: 2023-07-18 12:46+0800\n"
+"POT-Creation-Date: 2023-09-03 03:29+0800\n"
 "PO-Revision-Date: 2021-07-09 13:45+0800\n"
 "Last-Translator: Xi Ruoyao <xry111@xry111.site>\n"
 "Language-Team: none\n"
@@ -182,11 +182,6 @@ msgstr "&diskspace;"
 msgid "Install the package:"
 msgstr "安装该软件包："
 
-#. type: Content of: <sect1><title>
-#: lfs-en/chapter01/whatsnew.xml lfs-en/chapter08/jinja2.xml
-msgid "Jinja2-&jinja2-version;"
-msgstr "Jinja2-&jinja2-version;"
-
 #. type: Content of: <sect1><sect2><segmentedlist><segtitle>
 #: lfs-en/chapter08/findutils.xml lfs-en/chapter08/sed.xml
 #: lfs-en/chapter08/bash.xml lfs-en/chapter08/gmp.xml
@@ -212,8 +207,8 @@ msgstr "构建该软件包："
 #. type: Content of: <sect1><sect2><screen>
 #: lfs-en/chapter08/flit-core.xml lfs-en/chapter08/jinja2.xml
 #, no-wrap
-msgid "<userinput remap=\"install\">pip3 wheel -w dist --no-build-isolation --no-deps $PWD</userinput>"
-msgstr "<userinput remap=\"install\">pip3 wheel -w dist --no-build-isolation --no-deps $PWD</userinput>"
+msgid "<userinput remap=\"install\">pip3 wheel -w dist --no-cache-dir --no-build-isolation --no-deps $PWD</userinput>"
+msgstr "<userinput remap=\"install\">pip3 wheel -w dist --no-cache-dir --no-build-isolation --no-deps $PWD</userinput>"
 
 #. type: Content of: <sect1><sect1info><address>
 #: lfs-en/chapter08/jinja2.xml
@@ -229,6 +224,11 @@ msgid ""
 msgstr ""
 "<productname>jinja2</productname> <productnumber>&jinja2-version;</"
 "productnumber> <placeholder type=\"address\" id=\"0\"/>"
+
+#. type: Content of: <sect1><title>
+#: lfs-en/chapter08/jinja2.xml
+msgid "Jinja2-&jinja2-version;"
+msgstr "Jinja2-&jinja2-version;"
 
 #. type: Content of: <sect1><itemizedlist><listitem><para>
 #: lfs-en/chapter08/jinja2.xml lfs-en/appendices/dependencies.xml

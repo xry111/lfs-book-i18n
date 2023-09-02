@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Linux From Scratch 11.0\n"
 "Report-Msgid-Bugs-To: lfs-dev@lists.linuxfromscratch.org\n"
-"POT-Creation-Date: 2023-08-27 00:06+0800\n"
+"POT-Creation-Date: 2023-09-03 03:36+0800\n"
 "PO-Revision-Date: 2022-02-05 22:45+0800\n"
 "Last-Translator: Xi Ruoyao <xry111@xry111.site>\n"
 "Language-Team: none\n"
@@ -48,1084 +48,159 @@ msgstr "更新日志记录："
 
 #. type: Content of: <sect1><itemizedlist><listitem><para>
 #: lfs-en/chapter01/changelog.xml
-msgid "2023-08-18"
-msgstr "2023 年 8 月 18 日"
+msgid "2023-09-02"
+msgstr "2023 年 9 月 2 日"
 
 #. type: Content of: <sect1><itemizedlist><listitem><itemizedlist><listitem><para>
 #: lfs-en/chapter01/changelog.xml
 msgid ""
-"[bdubbs] - Update to linux-6.4.12.  Fixes <ulink url='&lfs-ticket-"
-"root;5320'>#5320</ulink>."
+"[xry111] - Add --no-cache-dir option for pip3 wheel commands.  Addresses "
+"<ulink url='&blfs-ticket-root;18466'>BLFS #18466</ulink>."
 msgstr ""
-"[bdubbs] — 更新到 linux-6.4.12。修复 <ulink url='&lfs-ticket-"
-"root;5320'>#5320</ulink>。"
-
-#. type: Content of: <sect1><itemizedlist><listitem><itemizedlist><listitem><para>
-#: lfs-en/chapter01/changelog.xml
-msgid "[bdubbs] - Update to udev-lfs-20230818."
-msgstr "[bdubbs] — 更新到 udev-lfs-20230818。"
-
-#. type: Content of: <sect1><itemizedlist><listitem><para>
-#: lfs-en/chapter01/changelog.xml
-msgid "2023-08-15"
-msgstr "2023 年 8 月 15 日"
+"[xry111] — 为 pip3 wheel 命令添加 --no-cache-dir 选项。处理 <ulink "
+"url='&blfs-ticket-root;18466'>BLFS #18466</ulink>。"
 
 #. type: Content of: <sect1><itemizedlist><listitem><itemizedlist><listitem><para>
 #: lfs-en/chapter01/changelog.xml
 msgid ""
-"[bdubbs] - Add a patch to fix a performance regression in glibc's "
-"posix_memalign() function. Fixes <ulink url='&lfs-ticket-root;5315'>#5315</"
-"ulink>."
-msgstr ""
-"[bdubbs] — 加入补丁以修复 glibc 中 posix_memalign() 函数的性能退化问题。修复 "
-"<ulink url='&lfs-ticket-root;5315'>#5315</ulink>。"
-
-#. type: Content of: <sect1><itemizedlist><listitem><itemizedlist><listitem><para>
-#: lfs-en/chapter01/changelog.xml
-msgid ""
-"[bdubbs] - Update to less-643. Fixes <ulink url='&lfs-ticket-"
-"root;5317'>#5317</ulink>."
-msgstr ""
-"[bdubbs] — 更新到 less-643。修复 <ulink url='&lfs-ticket-root;5317'>#5317</"
-"ulink>。"
-
-#. type: Content of: <sect1><itemizedlist><listitem><itemizedlist><listitem><para>
-#: lfs-en/chapter01/changelog.xml
-msgid ""
-"[bdubbs] - Update to meson-1.2.1. Fixes <ulink url='&lfs-ticket-"
-"root;5314'>#5314</ulink>."
-msgstr ""
-"[bdubbs] — 更新到 meson-1.2.1。修复 <ulink url='&lfs-ticket-"
-"root;5314'>#5314</ulink>。"
-
-#. type: Content of: <sect1><itemizedlist><listitem><itemizedlist><listitem><para>
-#: lfs-en/chapter01/changelog.xml
-msgid ""
-"[bdubbs] - Update to linux-6.4.10. Fixes <ulink url='&lfs-ticket-"
-"root;5313'>#5313</ulink>."
-msgstr ""
-"[bdubbs] — 更新到 linux-6.4.10。修复 <ulink url='&lfs-ticket-"
-"root;5313'>#5313</ulink>。"
-
-#. type: Content of: <sect1><itemizedlist><listitem><itemizedlist><listitem><para>
-#: lfs-en/chapter01/changelog.xml
-msgid ""
-"[bdubbs] - Update to iana-etc-20230810.  Addresses <ulink url='&lfs-ticket-"
-"root;5006'>#5006</ulink>."
-msgstr ""
-"[bdubbs] — 更新到 iana-etc-20230810。处理 <ulink url='&lfs-ticket-"
-"root;5006'>#5006</ulink>。"
-
-#. type: Content of: <sect1><itemizedlist><listitem><itemizedlist><listitem><para>
-#: lfs-en/chapter01/changelog.xml
-msgid ""
-"[rahul] - Update to pkgconf-2.0.1. Fixes <ulink url='&lfs-ticket-"
-"root;5316'>#5316</ulink>."
-msgstr ""
-"[rahul] — 更新到 pkgconf-2.0.1。修复 <ulink url='&lfs-ticket-"
-"root;5316'>#5316</ulink>。"
-
-#. type: Content of: <sect1><itemizedlist><listitem><para>
-#: lfs-en/chapter01/changelog.xml
-msgid "2023-08-07"
-msgstr "2023 年 8 月 7 日"
-
-#. type: Content of: <sect1><itemizedlist><listitem><itemizedlist><listitem><para>
-#: lfs-en/chapter01/changelog.xml
-msgid ""
-"[bdubbs] - Update to xz-5.4.4. Fixes <ulink url='&lfs-ticket-"
-"root;5307'>#5307</ulink>."
-msgstr ""
-"[bdubbs] — 更新到 xz-5.4.4。修复 <ulink url='&lfs-ticket-root;5307'>#5307</"
-"ulink>。"
-
-#. type: Content of: <sect1><itemizedlist><listitem><itemizedlist><listitem><para>
-#: lfs-en/chapter01/changelog.xml
-msgid ""
-"[bdubbs] - Update to wheel-0.41.1 (Python Module). Fixes <ulink url='&lfs-"
-"ticket-root;5311'>#5311</ulink>."
-msgstr ""
-"[bdubbs] — 更新到 wheel-0.41.1 (Python 模块)。修复 <ulink url='&lfs-ticket-"
-"root;5311'>#5311</ulink>。"
-
-#. type: Content of: <sect1><itemizedlist><listitem><itemizedlist><listitem><para>
-#: lfs-en/chapter01/changelog.xml
-msgid ""
-"[bdubbs] - Update to man-pages-6.05.01. Fixes <ulink url='&lfs-ticket-"
-"root;5306'>#5306</ulink>."
-msgstr ""
-"[bdubbs] — 更新到 man-pages-6.05.01。修复 <ulink url='&lfs-ticket-"
-"root;5306'>#5306</ulink>。"
-
-#. type: Content of: <sect1><itemizedlist><listitem><itemizedlist><listitem><para>
-#: lfs-en/chapter01/changelog.xml
-msgid ""
-"[bdubbs] - Update to linux-6.4.8. Fixes <ulink url='&lfs-ticket-"
-"root;5309'>#5309</ulink>."
-msgstr ""
-"[bdubbs] — 更新到 linux-6.4.8。修复 <ulink url='&lfs-ticket-"
-"root;5309'>#5309</ulink>。"
-
-#. type: Content of: <sect1><itemizedlist><listitem><itemizedlist><listitem><para>
-#: lfs-en/chapter01/changelog.xml
-msgid ""
-"[bdubbs] - Update to iana-etc-20230804.  Addresses <ulink url='&lfs-ticket-"
-"root;5006'>#5006</ulink>."
-msgstr ""
-"[bdubbs] — 更新到 iana-etc-20230804。处理 <ulink url='&lfs-ticket-"
-"root;5006'>#5006</ulink>。"
-
-#. type: Content of: <sect1><itemizedlist><listitem><itemizedlist><listitem><para>
-#: lfs-en/chapter01/changelog.xml
-msgid ""
-"[rahul] - Update to pkgconf-2.0.0. Fixes <ulink url='&lfs-ticket-"
-"root;5310'>#5310</ulink>."
-msgstr ""
-"[rahul] — 更新到 pkgconf-2.0.0。修复 <ulink url='&lfs-ticket-"
-"root;5310'>#5310</ulink>。"
-
-#. type: Content of: <sect1><itemizedlist><listitem><para>
-#: lfs-en/chapter01/changelog.xml
-msgid "2023-08-01"
-msgstr "2023 年 8 月 1 日"
-
-#. type: Content of: <sect1><itemizedlist><listitem><itemizedlist><listitem><para>
-#: lfs-en/chapter01/changelog.xml
-msgid ""
-"[bdubbs] - Update to vim-9.0.1677.  Addresses <ulink url='&lfs-ticket-"
+"[bdubbs] - Update to vim-9.0.1837. Addresses <ulink url='&lfs-ticket-"
 "root;4500'>#4500</ulink>."
 msgstr ""
-"[bdubbs] — 更新到 vim-9.0.1677。处理 <ulink url='&lfs-ticket-"
+"[bdubbs] — 更新到 vim-9.0.1837。处理 <ulink url='&lfs-ticket-"
 "root;4500'>#4500</ulink>。"
 
 #. type: Content of: <sect1><itemizedlist><listitem><itemizedlist><listitem><para>
 #: lfs-en/chapter01/changelog.xml
 msgid ""
-"[bdubbs] - Update to openssl-3.1.2. Fixes <ulink url='&lfs-ticket-"
-"root;5305'>#5305</ulink>."
+"[bdubbs] - Update to zlib-1.3. Fixes <ulink url='&lfs-ticket-"
+"root;5324'>#5324</ulink>."
 msgstr ""
-"[bdubbs] — 更新到 openssl-3.1.2。修复 <ulink url='&lfs-ticket-"
-"root;5305'>#5305</ulink>。"
-
-#. type: Content of: <sect1><itemizedlist><listitem><itemizedlist><listitem><para>
-#: lfs-en/chapter01/changelog.xml
-msgid ""
-"[bdubbs] - Update to man-pages-6.05. Fixes <ulink url='&lfs-ticket-"
-"root;5303'>#5303</ulink>."
-msgstr ""
-"[bdubbs] — 更新到 man-pages-6.05。修复 <ulink url='&lfs-ticket-"
-"root;5303'>#5303</ulink>。"
-
-#. type: Content of: <sect1><itemizedlist><listitem><itemizedlist><listitem><para>
-#: lfs-en/chapter01/changelog.xml
-msgid ""
-"[bdubbs] - Update to binutils-2.41. Fixes <ulink url='&lfs-ticket-"
-"root;5300'>#5300</ulink>."
-msgstr ""
-"[bdubbs] — 更新到 binutils-2.41。修复 <ulink url='&lfs-ticket-"
-"root;5300'>#5300</ulink>。"
-
-#. type: Content of: <sect1><itemizedlist><listitem><itemizedlist><listitem><para>
-#: lfs-en/chapter01/changelog.xml
-msgid ""
-"[bdubbs] - Update to gmp-6.3.0. Fixes <ulink url='&lfs-ticket-"
-"root;5301'>#5301</ulink>."
-msgstr ""
-"[bdubbs] — 更新到 gmp-6.3.0。修复 <ulink url='&lfs-ticket-root;5301'>#5301</"
+"[bdubbs] — 更新到 zlib-1.3。修复 <ulink url='&lfs-ticket-root;5324'>#5324</"
 "ulink>。"
 
 #. type: Content of: <sect1><itemizedlist><listitem><itemizedlist><listitem><para>
 #: lfs-en/chapter01/changelog.xml
 msgid ""
-"[bdubbs] - Update to glibc-2.38. Fixes <ulink url='&lfs-ticket-"
-"root;5302'>#5302</ulink>."
+"[bdubbs] - Update to wheel-0.41.2 (Python Module). Fixes <ulink url='&lfs-"
+"ticket-root;5328'>#5328</ulink>."
 msgstr ""
-"[bdubbs] — 更新到 glibc-2.38。修复 <ulink url='&lfs-ticket-root;5302'>#5302</"
+"[bdubbs] — 更新到 wheel-0.41.2 (Python 模块)。修复 <ulink url='&lfs-ticket-"
+"root;5328'>#5328</ulink>。"
+
+#. type: Content of: <sect1><itemizedlist><listitem><itemizedlist><listitem><para>
+#: lfs-en/chapter01/changelog.xml
+msgid ""
+"[bdubbs] - Update to util-linux-2.39.2. Fixes <ulink url='&lfs-ticket-"
+"root;5322'>#5322</ulink>."
+msgstr ""
+"[bdubbs] — 更新到 util-linux-2.39.2。修复 <ulink url='&lfs-ticket-"
+"root;5322'>#5322</ulink>。"
+
+#. type: Content of: <sect1><itemizedlist><listitem><itemizedlist><listitem><para>
+#: lfs-en/chapter01/changelog.xml
+msgid ""
+"[bdubbs] - Update to sysvinit-3.08. Fixes <ulink url='&lfs-ticket-"
+"root;5321'>#5321</ulink>."
+msgstr ""
+"[bdubbs] — 更新到 sysvinit-3.08。修复 <ulink url='&lfs-ticket-"
+"root;5321'>#5321</ulink>。"
+
+#. type: Content of: <sect1><itemizedlist><listitem><itemizedlist><listitem><para>
+#: lfs-en/chapter01/changelog.xml
+msgid ""
+"[bdubbs] - Update to shadow-4.14.0. Fixes <ulink url='&lfs-ticket-"
+"root;5319'>#5319</ulink>."
+msgstr ""
+"[bdubbs] — 更新到 shadow-4.14.0。修复 <ulink url='&lfs-ticket-"
+"root;5319'>#5319</ulink>。"
+
+#. type: Content of: <sect1><itemizedlist><listitem><itemizedlist><listitem><para>
+#: lfs-en/chapter01/changelog.xml
+msgid ""
+"[bdubbs] - Update to Python-3.11.5. Fixes <ulink url='&lfs-ticket-"
+"root;5330'>#5330</ulink>."
+msgstr ""
+"[bdubbs] — 更新到 Python-3.11.5。修复 <ulink url='&lfs-ticket-"
+"root;5330'>#5330</ulink>。"
+
+#. type: Content of: <sect1><itemizedlist><listitem><itemizedlist><listitem><para>
+#: lfs-en/chapter01/changelog.xml
+msgid ""
+"[bdubbs] - Update to procps-ng-4.0.4. Fixes <ulink url='&lfs-ticket-"
+"root;5335'>#5335</ulink>."
+msgstr ""
+"[bdubbs] — 更新到 procps-ng-4.0.4。修复 <ulink url='&lfs-ticket-"
+"root;5335'>#5335</ulink>。"
+
+#. type: Content of: <sect1><itemizedlist><listitem><itemizedlist><listitem><para>
+#: lfs-en/chapter01/changelog.xml
+msgid ""
+"[bdubbs] - Update to pkgconf-2.0.2. Fixes <ulink url='&lfs-ticket-"
+"root;5323'>#5323</ulink>."
+msgstr ""
+"[bdubbs] — 更新到 pkgconf-2.0.2。修复 <ulink url='&lfs-ticket-"
+"root;5323'>#5323</ulink>。"
+
+#. type: Content of: <sect1><itemizedlist><listitem><itemizedlist><listitem><para>
+#: lfs-en/chapter01/changelog.xml
+msgid ""
+"[bdubbs] - Update to mpfr-4.2.1. Fixes <ulink url='&lfs-ticket-"
+"root;5326'>#5326</ulink>."
+msgstr ""
+"[bdubbs] — 更新到 mpfr-4.2.1。修复 <ulink url='&lfs-ticket-root;5326'>#5326</"
 "ulink>。"
+
+#. type: Content of: <sect1><itemizedlist><listitem><itemizedlist><listitem><para>
+#: lfs-en/chapter01/changelog.xml
+msgid ""
+"[bdubbs] - Update to kbd-2.6.2. Fixes <ulink url='&lfs-ticket-"
+"root;5318'>#5318</ulink>."
+msgstr ""
+"[bdubbs] — 更新到 kbd-2.6.2。修复 <ulink url='&lfs-ticket-root;5318'>#5318</"
+"ulink>。"
+
+#. type: Content of: <sect1><itemizedlist><listitem><itemizedlist><listitem><para>
+#: lfs-en/chapter01/changelog.xml
+msgid ""
+"[bdubbs] - Update to gzip-1.13. Fixes <ulink url='&lfs-ticket-"
+"root;5325'>#5325</ulink>."
+msgstr ""
+"[bdubbs] — 更新到 gzip-1.13。修复 <ulink url='&lfs-ticket-root;5325'>#5325</"
+"ulink>。"
+
+#. type: Content of: <sect1><itemizedlist><listitem><itemizedlist><listitem><para>
+#: lfs-en/chapter01/changelog.xml
+msgid ""
+"[bdubbs] - Update to coreutils-9.4. Fixes <ulink url='&lfs-ticket-"
+"root;5334'>#5334</ulink>."
+msgstr ""
+"[bdubbs] — 更新到 coreutils-9.4。修复 <ulink url='&lfs-ticket-"
+"root;5334'>#5334</ulink>。"
+
+#. type: Content of: <sect1><itemizedlist><listitem><itemizedlist><listitem><para>
+#: lfs-en/chapter01/changelog.xml
+msgid ""
+"[bdubbs] - Specify the 'nobody-group' for systemd. Fixes <ulink url='&lfs-"
+"ticket-root;5333'>#5333</ulink>."
+msgstr ""
+"[bdubbs] — 为 systemd 指定 'nobody-group'。修复 <ulink url='&lfs-ticket-"
+"root;5333'>#5333</ulink>。"
+
+#. type: Content of: <sect1><itemizedlist><listitem><itemizedlist><listitem><para>
+#: lfs-en/chapter01/changelog.xml
+msgid ""
+"[bdubbs] - Remove unused usb group. Fixes <ulink url='&lfs-ticket-"
+"root;5331'>#5331</ulink>."
+msgstr ""
+"[bdubbs] — 移除未使用的 usb 组。修复 <ulink url='&lfs-ticket-"
+"root;5331'>#5331</ulink>"
 
 #. type: Content of: <sect1><itemizedlist><listitem><para>
 #: lfs-en/chapter01/changelog.xml
-msgid "2023-07-28"
-msgstr "2023 年 7 月 28 日"
+msgid "2023-09-01"
+msgstr "2023 年 9 月 1 日"
 
 #. type: Content of: <sect1><itemizedlist><listitem><itemizedlist><listitem><para>
 #: lfs-en/chapter01/changelog.xml
-msgid ""
-"[bdubbs] - Update udev-lfs tarball to remove obsolete cdrom rules and "
-"references to ISDN devices. Fixes <ulink url='&lfs-ticket-root;5291'>#5291</"
-"ulink>."
-msgstr ""
-"[bdubbs] — 更新 udev-lfs 压缩包以删除过时的 cdrom 规则和对 ISDN 设备的引用。"
-"修复 <ulink url='&lfs-ticket-root;5291'>#5291</ulink>。"
-
-#. type: Content of: <sect1><itemizedlist><listitem><itemizedlist><listitem><para>
-#: lfs-en/chapter01/changelog.xml
-msgid ""
-"[bdubbs] - Update to wheel-0.41.0 (Python Module). Fixes <ulink url='&lfs-"
-"ticket-root;5290'>#5290</ulink>."
-msgstr ""
-"[bdubbs] — 更新到 wheel-0.41.0 (Python 模块)。修复 <ulink url='&lfs-ticket-"
-"root;5290'>#5290</ulink>。"
-
-#. type: Content of: <sect1><itemizedlist><listitem><itemizedlist><listitem><para>
-#: lfs-en/chapter01/changelog.xml
-msgid ""
-"[bdubbs] - Update to tar-1.35. Fixes <ulink url='&lfs-ticket-"
-"root;5287'>#5287</ulink>."
-msgstr ""
-"[bdubbs] — 更新到 tar-1.35。修复 <ulink url='&lfs-ticket-root;5287'>#5287</"
-"ulink>。"
-
-#. type: Content of: <sect1><itemizedlist><listitem><itemizedlist><listitem><para>
-#: lfs-en/chapter01/changelog.xml
-msgid ""
-"[bdubbs] - Update to<phrase revision='sysv'> udev from</phrase> systemd-254. "
-"Fixes <ulink url='&lfs-ticket-root;5293'>#5293</ulink>."
-msgstr ""
-"[bdubbs] — 更新到 systemd-254<phrase revision='sysv'> 中的 udev</phrase>。修"
-"复 <ulink url='&lfs-ticket-root;5293'>#5293</ulink>。"
-
-#. type: Content of: <sect1><itemizedlist><listitem><itemizedlist><listitem><para>
-#: lfs-en/chapter01/changelog.xml
-msgid ""
-"[bdubbs] - Update to meson-1.2.0. Fixes <ulink url='&lfs-ticket-"
-"root;5286'>#5286</ulink>."
-msgstr ""
-"[bdubbs] — 更新到 meson-1.2.0。修复 <ulink url='&lfs-ticket-"
-"root;5286'>#5286</ulink>。"
-
-#. type: Content of: <sect1><itemizedlist><listitem><itemizedlist><listitem><para>
-#: lfs-en/chapter01/changelog.xml
-msgid ""
-"[bdubbs] - Update to linux-6.4.7. Fixes <ulink url='&lfs-ticket-"
-"root;5288'>#5288</ulink>."
-msgstr ""
-"[bdubbs] — 更新到 linux-6.4.7。修复 <ulink url='&lfs-ticket-"
-"root;5288'>#5288</ulink>。"
-
-#. type: Content of: <sect1><itemizedlist><listitem><itemizedlist><listitem><para>
-#: lfs-en/chapter01/changelog.xml
-msgid ""
-"[bdubbs] - Update to gcc-13.2.0. Fixes <ulink url='&lfs-ticket-"
-"root;5292'>#5292</ulink>."
-msgstr ""
-"[bdubbs] — 更新到 gcc-13.2.0。修复 <ulink url='&lfs-ticket-root;5292'>#5292</"
-"ulink>。"
-
-#. type: Content of: <sect1><itemizedlist><listitem><itemizedlist><listitem><para>
-#: lfs-en/chapter01/changelog.xml
-msgid ""
-"[bdubbs] - Update to file-5.45. Fixes <ulink url='&lfs-ticket-"
-"root;5294'>#5294</ulink>."
-msgstr ""
-"[bdubbs] — 更新到 file-5.45。修复 <ulink url='&lfs-ticket-root;5294'>#5294</"
-"ulink>。"
-
-#. type: Content of: <sect1><itemizedlist><listitem><itemizedlist><listitem><para>
-#: lfs-en/chapter01/changelog.xml
-msgid ""
-"[xry111] - Enable cgroup-based memory pressure information in kernel, and "
-"add the cgroup file system into /etc/fstab and the mountvirtfs bootscript.  "
-"This is a preparation for udev from systemd-254.  Addresses <ulink url='&lfs-"
-"ticket-root;5293'>#5293</ulink>."
-msgstr ""
-"[xry111] — 在内核配置中启用基于 cgroup 的内存压力信息统计，并将 cgroup 文件系"
-"统加入 /etc/fstab 和 mountvirtfs 引导脚本。这是为 systemd-254 中的 udev 进行"
-"的准备。处理 <ulink url='&lfs-ticket-root;5293'>#5293</ulink>。"
-
-#. type: Content of: <sect1><itemizedlist><listitem><para>
-#: lfs-en/chapter01/changelog.xml
-msgid "2023-07-22"
-msgstr "2023 年 7 月 22 日"
-
-#. type: Content of: <sect1><itemizedlist><listitem><itemizedlist><listitem><para>
-#: lfs-en/chapter01/changelog.xml
-msgid ""
-"[xry111] - Make the mountvirtfs bootscript create essential symlinks in /"
-"dev.  Fixes <ulink url='&lfs-ticket-root;5289'>#5289</ulink>."
-msgstr ""
-"[xry111] — 修改 mountvirtfs 引导脚本，使之在 /dev 中创建必要的符号链接。修复 "
-"<ulink url='&lfs-ticket-root;5289'>#5289</ulink>。"
-
-#. type: Content of: <sect1><itemizedlist><listitem><para>
-#: lfs-en/chapter01/changelog.xml
-msgid "2023-07-15"
-msgstr "2023 年 7 月 15 日"
-
-#. type: Content of: <sect1><itemizedlist><listitem><itemizedlist><listitem><para>
-#: lfs-en/chapter01/changelog.xml
-msgid ""
-"[xry111] - Replace eudev-3.2.12 with udev from systemd-253.  Fixes <ulink "
-"url='&lfs-ticket-root;5285'>#5085</ulink>."
-msgstr ""
-"[xry111] — 将 eudev-3.2.12 替换为 systemd-253 中的 udev。修复 <ulink "
-"url='&lfs-ticket-root;5285'>#5085</ulink>。"
-
-#. type: Content of: <sect1><itemizedlist><listitem><itemizedlist><listitem><para>
-#: lfs-en/chapter01/changelog.xml
-msgid ""
-"[bdubbs] - Update to iana-etc-20230629.  Addresses <ulink url='&lfs-ticket-"
-"root;5006'>#5006</ulink>."
-msgstr ""
-"[bdubbs] — 更新到 iana-etc-20230629。处理 <ulink url='&lfs-ticket-"
-"root;5006'>#5006</ulink>。"
-
-#. type: Content of: <sect1><itemizedlist><listitem><itemizedlist><listitem><para>
-#: lfs-en/chapter01/changelog.xml
-msgid ""
-"[bdubbs] - Update to linux-6.4.3.  Fixes <ulink url='&lfs-ticket-"
-"root;5284'>#5284</ulink>."
-msgstr ""
-"[bdubbs] — 更新到 linux-6.4.3。修复 <ulink url='&lfs-ticket-"
-"root;5284'>#5284</ulink>。"
-
-#. type: Content of: <sect1><itemizedlist><listitem><itemizedlist><listitem><para>
-#: lfs-en/chapter01/changelog.xml
-msgid ""
-"[bdubbs] - Update to libxcrypt-4.4.36.  Fixes <ulink url='&lfs-ticket-"
-"root;5283'>#5283</ulink>."
-msgstr ""
-"[bdubbs] — 更新到 libxcrypt-4.4.36。修复 <ulink url='&lfs-ticket-"
-"root;5283'>#5283</ulink>。"
-
-#. type: Content of: <sect1><itemizedlist><listitem><itemizedlist><listitem><para>
-#: lfs-en/chapter01/changelog.xml
-msgid ""
-"[bdubbs] - Update to groff-1.23.0.  Fixes <ulink url='&lfs-ticket-"
-"root;5282'>#5282</ulink>."
-msgstr ""
-"[bdubbs] — 更新到 groff-1.23.0。修复 <ulink url='&lfs-ticket-"
-"root;5282'>#5282</ulink>。"
-
-#. type: Content of: <sect1><itemizedlist><listitem><itemizedlist><listitem><para>
-#: lfs-en/chapter01/changelog.xml
-msgid ""
-"[bdubbs] - Update to perl-5.38.0.  Fixes <ulink url='&lfs-ticket-"
-"root;5281'>#5281</ulink>."
-msgstr ""
-"[bdubbs] — 更新到 perl-5.38.0。修复 <ulink url='&lfs-ticket-"
-"root;5281'>#5281</ulink>。"
-
-#. type: Content of: <sect1><itemizedlist><listitem><para>
-#: lfs-en/chapter01/changelog.xml
-msgid "2023-07-02"
-msgstr "2023 年 7 月 2 日"
-
-#. type: Content of: <sect1><itemizedlist><listitem><itemizedlist><listitem><para>
-#: lfs-en/chapter01/changelog.xml
-msgid ""
-"[xry111] - Add libxcrypt-4.4.35.  Fixes <ulink url='&lfs-ticket-"
-"root;5280'>#5280</ulink>."
-msgstr ""
-"[xry111] — 加入 libxcrypt-4.4.35。修复 <ulink url='&lfs-ticket-"
-"root;5280'>#5280</ulink>。"
-
-#. type: Content of: <sect1><itemizedlist><listitem><itemizedlist><listitem><para>
-#: lfs-en/chapter01/changelog.xml
-msgid ""
-"[xry111] - Update to iproute2-6.4.0.  Fixes <ulink url='&lfs-ticket-"
-"root;5277'>#5277</ulink>."
-msgstr ""
-"[xry111] — 更新到 iproute2-6.4.0。修复 <ulink url='&lfs-ticket-"
-"root;5277'>#5277</ulink>。"
-
-#. type: Content of: <sect1><itemizedlist><listitem><itemizedlist><listitem><para>
-#: lfs-en/chapter01/changelog.xml
-msgid ""
-"[xry111] - Update to linux-6.4.1.  Fixes <ulink url='&lfs-ticket-"
-"root;5276'>#5276</ulink>."
-msgstr ""
-"[xry111] — 更新到 linux-6.4.1。修复 <ulink url='&lfs-ticket-"
-"root;5276'>#5276</ulink>。"
-
-#. type: Content of: <sect1><itemizedlist><listitem><para>
-#: lfs-en/chapter01/changelog.xml
-msgid "2023-07-01"
-msgstr "2023 年 7 月 1 日"
-
-#. type: Content of: <sect1><itemizedlist><listitem><itemizedlist><listitem><para>
-#: lfs-en/chapter01/changelog.xml
-msgid ""
-"[bdubbs] - Update to iana-etc-20230615.  Addresses <ulink url='&lfs-ticket-"
-"root;5006'>#5006</ulink>."
-msgstr ""
-"[bdubbs] — 更新到 iana-etc-20230615。处理 <ulink url='&lfs-ticket-"
-"root;5006'>#5006</ulink>。"
-
-#. type: Content of: <sect1><itemizedlist><listitem><itemizedlist><listitem><para>
-#: lfs-en/chapter01/changelog.xml
-msgid ""
-"[bdubbs] - Update to vim-9.0.1671.  Addresses <ulink url='&lfs-ticket-"
-"root;4500'>#4500</ulink>."
-msgstr ""
-"[bdubbs] — 更新到 vim-9.0.1671。处理 <ulink url='&lfs-ticket-"
-"root;4500'>#4500</ulink>。"
-
-#. type: Content of: <sect1><itemizedlist><listitem><itemizedlist><listitem><para>
-#: lfs-en/chapter01/changelog.xml
-msgid ""
-"[bdubbs] - Update to util-linux-2.39.1.  Addresses <ulink url='&lfs-ticket-"
-"root;5278'>#5278</ulink>."
-msgstr ""
-"[bdubbs] — 更新到 util-linux-2.39.1。处理 <ulink url='&lfs-ticket-"
-"root;5278'>#5278</ulink>。"
-
-#. type: Content of: <sect1><itemizedlist><listitem><itemizedlist><listitem><para>
-#: lfs-en/chapter01/changelog.xml
-msgid ""
-"[bdubbs] - Update to linux-6.3.10.  Addresses <ulink url='&lfs-ticket-"
-"root;5276'>#5276</ulink>."
-msgstr ""
-"[bdubbs] — 更新到 linux-6.3.10。处理 <ulink url='&lfs-ticket-"
-"root;5276'>#5276</ulink>。"
-
-#. type: Content of: <sect1><itemizedlist><listitem><itemizedlist><listitem><para>
-#: lfs-en/chapter01/changelog.xml
-msgid ""
-"[rahul] - Update to kbd-2.6.1.  Fixes <ulink url='&lfs-ticket-"
-"root;5279'>#5279</ulink>."
-msgstr ""
-"[rahul] — 更新到 kbd-2.6.1。修复 <ulink url='&lfs-ticket-root;5279'>#5279</"
-"ulink>。"
-
-#. type: Content of: <sect1><itemizedlist><listitem><itemizedlist><listitem><para>
-#: lfs-en/chapter01/changelog.xml
-msgid ""
-"[bdubbs] - Update to gettext-0.22.  Fixes <ulink url='&lfs-ticket-"
-"root;5275'>#5275</ulink>."
-msgstr ""
-"[bdubbs] — 更新到 gettext-0.22。修复 <ulink url='&lfs-ticket-"
-"root;5275'>#5275</ulink>。"
-
-#. type: Content of: <sect1><itemizedlist><listitem><para>
-#: lfs-en/chapter01/changelog.xml
-msgid "2023-06-17"
-msgstr "2023 年 6 月 17 日"
-
-#. type: Content of: <sect1><itemizedlist><listitem><itemizedlist><listitem><para>
-#: lfs-en/chapter01/changelog.xml
-msgid ""
-"[xry111] - Update to linux-6.3.8.  Fixes <ulink url='&lfs-ticket-"
-"root;5272'>#5272</ulink>."
-msgstr ""
-"[xry111] — 更新到 linux-6.3.8。修复 <ulink url='&lfs-ticket-"
-"root;5272'>#5272</ulink>。"
-
-#. type: Content of: <sect1><itemizedlist><listitem><itemizedlist><listitem><para>
-#: lfs-en/chapter01/changelog.xml
-msgid ""
-"[xry111] - Update to kbd-2.6.0.  Fixes <ulink url='&lfs-ticket-"
-"root;5273'>#5273</ulink>."
-msgstr ""
-"[xry111] — 更新到 kbd-2.6.0。修复 <ulink url='&lfs-ticket-root;5273'>#5273</"
-"ulink>。"
-
-#. type: Content of: <sect1><itemizedlist><listitem><itemizedlist><listitem><para>
-#: lfs-en/chapter01/changelog.xml
-msgid ""
-"[rahul] - Changed from pkg-config to pkgconf-1.9.5.  Fixes <ulink url='&lfs-"
-"ticket-root;5274'>#5274</ulink>."
-msgstr ""
-"[rahul] — 将 pkg-config 替换为 pkgconf-1.9.5。修复 <ulink url='&lfs-ticket-"
-"root;5274'>#5274</ulink>。"
-
-#. type: Content of: <sect1><itemizedlist><listitem><para>
-#: lfs-en/chapter01/changelog.xml
-msgid "2023-06-09"
-msgstr "2023 年 6 月 9 日"
-
-#. type: Content of: <sect1><itemizedlist><listitem><itemizedlist><listitem><para>
-#: lfs-en/chapter01/changelog.xml
-msgid ""
-"[bdubbs] - Update to dbus-1.14.8. Fixes <ulink url='&lfs-ticket-"
-"root;5271'>#5271</ulink>."
-msgstr ""
-"[bdubbs] — 更新到 dbus-1.14.8。修复 <ulink url='&lfs-ticket-"
-"root;5271'>#5271</ulink>。"
-
-#. type: Content of: <sect1><itemizedlist><listitem><itemizedlist><listitem><para>
-#: lfs-en/chapter01/changelog.xml
-msgid ""
-"[bdubbs] - Update to linux-6.3.6. Fixes <ulink url='&lfs-ticket-"
-"root;5269'>#5269</ulink>."
-msgstr ""
-"[bdubbs] — 更新到 linux-6.3.6。修复 <ulink url='&lfs-ticket-"
-"root;5269'>#5269</ulink>。"
-
-#. type: Content of: <sect1><itemizedlist><listitem><itemizedlist><listitem><para>
-#: lfs-en/chapter01/changelog.xml
-msgid ""
-"[bdubbs] - Update to Python-3.11.4. Fixes <ulink url='&lfs-ticket-"
-"root;5271'>#5271</ulink>."
-msgstr ""
-"[bdubbs] — 更新到 Python-3.11.4。修复 <ulink url='&lfs-ticket-"
-"root;5271'>#5271</ulink>。"
-
-#. type: Content of: <sect1><itemizedlist><listitem><para>
-#: lfs-en/chapter01/changelog.xml
-msgid "2023-06-03"
-msgstr "2023 年 6 月 3 日"
-
-#. type: Content of: <sect1><itemizedlist><listitem><itemizedlist><listitem><para>
-#: lfs-en/chapter01/changelog.xml
-msgid ""
-"[bdubbs] - Update to iana-etc-20230524.  Addresses <ulink url='&lfs-ticket-"
-"root;5006'>#5006</ulink>."
-msgstr ""
-"[bdubbs] — 更新到 iana-etc-20230524。处理 <ulink url='&lfs-ticket-"
-"root;5006'>#5006</ulink>。"
-
-#. type: Content of: <sect1><itemizedlist><listitem><itemizedlist><listitem><para>
-#: lfs-en/chapter01/changelog.xml
-msgid ""
-"[bdubbs] - Update to MarkupSafe-2.1.3 (Python Module). Fixes <ulink "
-"url='&lfs-ticket-root;5268'>#5268</ulink>."
-msgstr ""
-"[bdubbs] — 更新到 MarkupSafe-2.1.3 (Python 模块)。修复 <ulink url='&lfs-"
-"ticket-root;5268'>#5268</ulink>。"
-
-#. type: Content of: <sect1><itemizedlist><listitem><itemizedlist><listitem><para>
-#: lfs-en/chapter01/changelog.xml
-msgid ""
-"[bdubbs] - Update to linux-6.3.5. Fixes <ulink url='&lfs-ticket-"
-"root;5264'>#5264</ulink>."
-msgstr ""
-"[bdubbs] — 更新到 linux-6.3.5。修复 <ulink url='&lfs-ticket-"
-"root;5264'>#5264</ulink>。"
-
-#. type: Content of: <sect1><itemizedlist><listitem><itemizedlist><listitem><para>
-#: lfs-en/chapter01/changelog.xml
-msgid ""
-"[bdubbs] - Update to openssl-3.1.1. Fixes <ulink url='&lfs-ticket-"
-"root;5267'>#5267</ulink>."
-msgstr ""
-"[bdubbs] — 更新到 openssl-3.1.1。修复 <ulink url='&lfs-ticket-"
-"root;5267'>#5267</ulink>。"
-
-#. type: Content of: <sect1><itemizedlist><listitem><itemizedlist><listitem><para>
-#: lfs-en/chapter01/changelog.xml
-msgid ""
-"[bdubbs] - Update to meson-1.1.1. Fixes <ulink url='&lfs-ticket-"
-"root;5266'>#5266</ulink>."
-msgstr ""
-"[bdubbs] — 更新到 meson-1.1.1。修复 <ulink url='&lfs-ticket-"
-"root;5266'>#5266</ulink>。"
-
-#. type: Content of: <sect1><itemizedlist><listitem><itemizedlist><listitem><para>
-#: lfs-en/chapter01/changelog.xml
-msgid ""
-"[bdubbs] - Update to diffutils-3.10. Fixes <ulink url='&lfs-ticket-"
-"root;5262'>#5262</ulink>."
-msgstr ""
-"[bdubbs] — 更新到 diffutils-3.10。修复 <ulink url='&lfs-ticket-"
-"root;5262'>#5262</ulink>。"
-
-#. type: Content of: <sect1><itemizedlist><listitem><itemizedlist><listitem><para>
-#: lfs-en/chapter01/changelog.xml
-msgid ""
-"[bdubbs] - Update to bc-6.6.0. Fixes <ulink url='&lfs-ticket-"
-"root;5263'>#5263</ulink>."
-msgstr ""
-"[bdubbs] — 更新到 bc-6.6.0。修复 <ulink url='&lfs-ticket-root;5263'>#5263</"
-"ulink>。"
-
-#. type: Content of: <sect1><itemizedlist><listitem><para>
-#: lfs-en/chapter01/changelog.xml
-msgid "2023-05-25"
-msgstr "2023 年 5 月 25 日"
-
-#. type: Content of: <sect1><itemizedlist><listitem><itemizedlist><listitem><para>
-#: lfs-en/chapter01/changelog.xml
-msgid ""
-"[ken] - Remove unneeded group sgx from eudev rules.  Fixes <ulink url='&lfs-"
-"ticket-root;5265'>#5265</ulink>."
-msgstr ""
-"[ken] — 移除 eudev 规则中不需要的 sgx 组。修复 <ulink url='&lfs-ticket-"
-"root;5265'>#5265</ulink>。"
-
-#. type: Content of: <sect1><itemizedlist><listitem><para>
-#: lfs-en/chapter01/changelog.xml
-msgid "2023-05-18"
-msgstr "2023 年 5 月 18 日"
-
-#. type: Content of: <sect1><itemizedlist><listitem><itemizedlist><listitem><para>
-#: lfs-en/chapter01/changelog.xml
-msgid ""
-"[bdubbs] - Update to util-linux-2.39.  Fixes <ulink url='&lfs-ticket-"
-"root;5259'>#5259</ulink>."
-msgstr ""
-"[bdubbs] — 更新到 util-linux-2.39。修复 <ulink url='&lfs-ticket-"
-"root;5259'>#5259</ulink>。"
-
-#. type: Content of: <sect1><itemizedlist><listitem><itemizedlist><listitem><para>
-#: lfs-en/chapter01/changelog.xml
-msgid ""
-"[bdubbs] - Update to linux-6.3.3. Fixes <ulink url='&lfs-ticket-"
-"root;5261'>#5261</ulink>."
-msgstr ""
-"[bdubbs] — 更新到 linux-6.3.3。修复 <ulink url='&lfs-ticket-"
-"root;5261'>#5261</ulink>。"
-
-#. type: Content of: <sect1><itemizedlist><listitem><itemizedlist><listitem><para>
-#: lfs-en/chapter01/changelog.xml
-msgid ""
-"[bdubbs] - Update to libcap-2.69. Fixes <ulink url='&lfs-ticket-"
-"root;5258'>#5258</ulink>."
-msgstr ""
-"[bdubbs] — 更新到 libcap-2.69。修复 <ulink url='&lfs-ticket-"
-"root;5258'>#5258</ulink>。"
-
-#. type: Content of: <sect1><itemizedlist><listitem><itemizedlist><listitem><para>
-#: lfs-en/chapter01/changelog.xml
-msgid ""
-"[bdubbs] - Update to grep-3.11. Fixes <ulink url='&lfs-ticket-"
-"root;5256'>#5256</ulink>."
-msgstr ""
-"[bdubbs] — 更新到 grep-3.11。修复 <ulink url='&lfs-ticket-root;5256'>#5256</"
-"ulink>。"
-
-#. type: Content of: <sect1><itemizedlist><listitem><itemizedlist><listitem><para>
-#: lfs-en/chapter01/changelog.xml
-msgid ""
-"[bdubbs] - Update to flit_core-3.9.0. Fixes <ulink url='&lfs-ticket-"
-"root;5257'>#5257</ulink>."
-msgstr ""
-"[bdubbs] — 更新到 flit_core-3.9.0。修复 <ulink url='&lfs-ticket-"
-"root;5257'>#5257</ulink>。"
-
-#. type: Content of: <sect1><itemizedlist><listitem><itemizedlist><listitem><para>
-#: lfs-en/chapter01/changelog.xml
-msgid ""
-"[bdubbs] - Update to eudev-3.2.12. Fixes <ulink url='&lfs-ticket-"
-"root;5260'>#5260</ulink>."
-msgstr ""
-"[bdubbs] — 更新到 eudev-3.2.12。修复 <ulink url='&lfs-ticket-"
-"root;5260'>#5260</ulink>。"
-
-#. type: Content of: <sect1><itemizedlist><listitem><para>
-#: lfs-en/chapter01/changelog.xml
-msgid "2023-05-13"
-msgstr "2023 年 5 月 13 日"
-
-#. type: Content of: <sect1><itemizedlist><listitem><itemizedlist><listitem><para>
-#: lfs-en/chapter01/changelog.xml
-msgid ""
-"[xry111] - Update to less-633.  Fixes <ulink url='&lfs-ticket-"
-"root;5251'>#5251</ulink>."
-msgstr ""
-"[xry111] — 更新到 less-633。修复 <ulink url='&lfs-ticket-root;5251'>#5251</"
-"ulink>。"
-
-#. type: Content of: <sect1><itemizedlist><listitem><itemizedlist><listitem><para>
-#: lfs-en/chapter01/changelog.xml
-msgid ""
-"[xry111] - Update to linux-6.3.2.  Fixes <ulink url='&lfs-ticket-"
-"root;5255'>#5255</ulink>."
-msgstr ""
-"[xry111] — 更新到 linux-6.3.2。修复 <ulink url='&lfs-ticket-"
-"root;5255'>#5255</ulink>。"
-
-#. type: Content of: <sect1><itemizedlist><listitem><itemizedlist><listitem><para>
-#: lfs-en/chapter01/changelog.xml
-msgid ""
-"[xry111] - Update to xz-5.4.3.  Fixes <ulink url='&lfs-ticket-"
-"root;5252'>#5252</ulink>."
-msgstr ""
-"[xry111] — 更新到 xz-5.4.3。修复 <ulink url='&lfs-ticket-root;5252'>#5252</"
-"ulink>。"
-
-#. type: Content of: <sect1><itemizedlist><listitem><itemizedlist><listitem><para>
-#: lfs-en/chapter01/changelog.xml
-msgid ""
-"[xry111] - Update to gawk-5.2.2.  Fixes <ulink url='&lfs-ticket-"
-"root;5253'>#5253</ulink>."
-msgstr ""
-"[xry111] — 更新到 gawk-5.2.2。修复 <ulink url='&lfs-ticket-root;5253'>#5253</"
-"ulink>。"
-
-#. type: Content of: <sect1><itemizedlist><listitem><itemizedlist><listitem><para>
-#: lfs-en/chapter01/changelog.xml
-msgid ""
-"[xry111] - Fix systemd runtime issue exploited by GCC 13.  Fixes <ulink "
-"url='&lfs-ticket-root;5254'>#5254</ulink>."
-msgstr ""
-"[xry111] — 修复 GCC 13 暴露的 systemd 运行时问题。修复 <ulink url='&lfs-"
-"ticket-root;5254'>#5254</ulink>。"
-
-#. type: Content of: <sect1><itemizedlist><listitem><para>
-#: lfs-en/chapter01/changelog.xml
-msgid "2023-05-01"
-msgstr "2023 年 5 月 1 日"
-
-#. type: Content of: <sect1><itemizedlist><listitem><itemizedlist><listitem><para>
-#: lfs-en/chapter01/changelog.xml
-msgid ""
-"[bdubbs] - Update to vim-9.0.1503.  Addresses <ulink url='&lfs-ticket-"
-"root;4500'>#4500</ulink>."
-msgstr ""
-"[bdubbs] — 更新到 vim-9.0.1503。处理 <ulink url='&lfs-ticket-"
-"root;4500'>#4500</ulink>。"
-
-#. type: Content of: <sect1><itemizedlist><listitem><itemizedlist><listitem><para>
-#: lfs-en/chapter01/changelog.xml
-msgid ""
-"[bdubbs] - Update to iana-etc-20230418.  Addresses <ulink url='&lfs-ticket-"
-"root;5006'>#5006</ulink>."
-msgstr ""
-"[bdubbs] — 更新到 iana-etc-20230418。处理 <ulink url='&lfs-ticket-"
-"root;5006'>#5006</ulink>。"
-
-#. type: Content of: <sect1><itemizedlist><listitem><itemizedlist><listitem><para>
-#: lfs-en/chapter01/changelog.xml
-msgid ""
-"[bdubbs] - Update to sysvinit-3.07.  Fixes <ulink url='&lfs-ticket-"
-"root;5250'>#5250</ulink>."
-msgstr ""
-"[bdubbs] — 更新到 sysvinit-3.07。修复 <ulink url='&lfs-ticket-"
-"root;5250'>#5250</ulink>。"
-
-#. type: Content of: <sect1><itemizedlist><listitem><itemizedlist><listitem><para>
-#: lfs-en/chapter01/changelog.xml
-msgid ""
-"[bdubbs] - Update to iproute2-6.3.0. Fixes <ulink url='&lfs-ticket-"
-"root;5248'>#5248</ulink>."
-msgstr ""
-"[bdubbs] — 更新到 iproute2-6.3.0。修复 <ulink url='&lfs-ticket-"
-"root;5248'>#5248</ulink>。"
-
-#. type: Content of: <sect1><itemizedlist><listitem><itemizedlist><listitem><para>
-#: lfs-en/chapter01/changelog.xml
-msgid ""
-"[bdubbs] - Update to gcc-13.1.0. Fixes <ulink url='&lfs-ticket-"
-"root;5247'>#5247</ulink>."
-msgstr ""
-"[bdubbs] — 更新到 gcc-13.1.0。修复 <ulink url='&lfs-ticket-root;5247'>#5247</"
-"ulink>。"
-
-#. type: Content of: <sect1><itemizedlist><listitem><itemizedlist><listitem><para>
-#: lfs-en/chapter01/changelog.xml
-msgid ""
-"[bdubbs] - Update to perl-5.36.1. Fixes <ulink url='&lfs-ticket-"
-"root;5246'>#5246</ulink>."
-msgstr ""
-"[bdubbs] — 更新到 perl-5.36.1。修复 <ulink url='&lfs-ticket-"
-"root;5246'>#5246</ulink>。"
-
-#. type: Content of: <sect1><itemizedlist><listitem><itemizedlist><listitem><para>
-#: lfs-en/chapter01/changelog.xml
-msgid ""
-"[bdubbs] - Update to linux-6.3.1. Fixes <ulink url='&lfs-ticket-"
-"root;5245'>#5245</ulink>."
-msgstr ""
-"[bdubbs] — 更新到 linux-6.3.1。修复 <ulink url='&lfs-ticket-"
-"root;5245'>#5245</ulink>。"
-
-#. type: Content of: <sect1><itemizedlist><listitem><itemizedlist><listitem><para>
-#: lfs-en/chapter01/changelog.xml
-msgid ""
-"[bdubbs] - Update to coreutils-9.3. Fixes <ulink url='&lfs-ticket-"
-"root;5244'>#5244</ulink>."
-msgstr ""
-"[bdubbs] — 更新到 coreutils-9.3。修复 <ulink url='&lfs-ticket-"
-"root;5244'>#5244</ulink>。"
-
-#. type: Content of: <sect1><itemizedlist><listitem><para>
-#: lfs-en/chapter01/changelog.xml
-msgid "2023-04-15"
-msgstr "2023 年 4 月 15 日"
-
-#. type: Content of: <sect1><itemizedlist><listitem><itemizedlist><listitem><para>
-#: lfs-en/chapter01/changelog.xml
-msgid ""
-"[bdubbs] - Update to vim-9.0.1452.  Addresses <ulink url='&lfs-ticket-"
-"root;4500'>#4500</ulink>."
-msgstr ""
-"[bdubbs] — 更新到 vim-9.0.1452。处理 <ulink url='&lfs-ticket-"
-"root;4500'>#4500</ulink>。"
-
-#. type: Content of: <sect1><itemizedlist><listitem><itemizedlist><listitem><para>
-#: lfs-en/chapter01/changelog.xml
-msgid ""
-"[bdubbs] - Update to iana-etc-20230405.  Addresses <ulink url='&lfs-ticket-"
-"root;5006'>#5006</ulink>."
-msgstr ""
-"[bdubbs] — 更新到 iana-etc-20230405。处理 <ulink url='&lfs-ticket-"
-"root;5006'>#5006</ulink>。"
-
-#. type: Content of: <sect1><itemizedlist><listitem><itemizedlist><listitem><para>
-#: lfs-en/chapter01/changelog.xml
-msgid ""
-"[bdubbs] - Update to zstd-1.5.5. Fixes <ulink url='&lfs-ticket-"
-"root;5239'>#5239</ulink>."
-msgstr ""
-"[bdubbs] — 更新到 zstd-1.5.5。修复 <ulink url='&lfs-ticket-root;5239'>#5239</"
-"ulink>。"
-
-#. type: Content of: <sect1><itemizedlist><listitem><itemizedlist><listitem><para>
-#: lfs-en/chapter01/changelog.xml
-msgid ""
-"[bdubbs] - Update to Python-3.11.3. Fixes <ulink url='&lfs-ticket-"
-"root;5240'>#5240</ulink>."
-msgstr ""
-"[bdubbs] — 更新到 Python-3.11.3。修复 <ulink url='&lfs-ticket-"
-"root;5240'>#5240</ulink>。"
-
-#. type: Content of: <sect1><itemizedlist><listitem><itemizedlist><listitem><para>
-#: lfs-en/chapter01/changelog.xml
-msgid ""
-"[bdubbs] - Update to meson-1.1.0. Fixes <ulink url='&lfs-ticket-"
-"root;5242'>#5242</ulink>."
-msgstr ""
-"[bdubbs] — 更新到 meson-1.1.0。修复 <ulink url='&lfs-ticket-"
-"root;5242'>#5242</ulink>。"
-
-#. type: Content of: <sect1><itemizedlist><listitem><itemizedlist><listitem><para>
-#: lfs-en/chapter01/changelog.xml
-msgid ""
-"[bdubbs] - Update to man-pages-6.04. Fixes <ulink url='&lfs-ticket-"
-"root;5238'>#5238</ulink>."
-msgstr ""
-"[bdubbs] — 更新到 man-pages-6.04。修复 <ulink url='&lfs-ticket-"
-"root;5238'>#5238</ulink>。"
-
-#. type: Content of: <sect1><itemizedlist><listitem><itemizedlist><listitem><para>
-#: lfs-en/chapter01/changelog.xml
-msgid ""
-"[bdubbs] - Update to linux-6.2.11. Fixes <ulink url='&lfs-ticket-"
-"root;5241'>#5241</ulink>."
-msgstr ""
-"[bdubbs] — 更新到 linux-6.2.11。修复 <ulink url='&lfs-ticket-"
-"root;5241'>#5241</ulink>。"
-
-#. type: Content of: <sect1><itemizedlist><listitem><para>
-#: lfs-en/chapter01/changelog.xml
-msgid "2023-03-31"
-msgstr "2023 年 3 月 31 日"
-
-#. type: Content of: <sect1><itemizedlist><listitem><itemizedlist><listitem><para>
-#: lfs-en/chapter01/changelog.xml
-msgid ""
-"[xry111] - Update to linux-6.2.9 (security fix).  Fixes <ulink url='&lfs-"
-"ticket-root;5230'>#5230</ulink>."
-msgstr ""
-"[xry111] — 更新到 linux-6.2.9 (修复安全问题)。修复 <ulink url='&lfs-ticket-"
-"root;5230'>#5230</ulink>。"
-
-#. type: Content of: <sect1><itemizedlist><listitem><itemizedlist><listitem><para>
-#: lfs-en/chapter01/changelog.xml
-msgid ""
-"[xry111] - Update to grep-3.10.  Fixes <ulink url='&lfs-ticket-"
-"root;5234'>#5234</ulink>."
-msgstr ""
-"[xry111] — 更新到 grep-3.10。修复 <ulink url='&lfs-ticket-root;5234'>#5234</"
-"ulink>。"
-
-#. type: Content of: <sect1><itemizedlist><listitem><itemizedlist><listitem><para>
-#: lfs-en/chapter01/changelog.xml
-msgid ""
-"[xry111] - Update to wheel-0.40.0.  Fixes <ulink url='&lfs-ticket-"
-"root;5229'>#5229</ulink>."
-msgstr ""
-"[xry111] — 更新到 wheel-0.40.0。修复 <ulink url='&lfs-ticket-"
-"root;5229'>#5229</ulink>。"
-
-#. type: Content of: <sect1><itemizedlist><listitem><itemizedlist><listitem><para>
-#: lfs-en/chapter01/changelog.xml
-msgid ""
-"[xry111] - Update to bc-6.5.0.  Fixes <ulink url='&lfs-ticket-"
-"root;5228'>#5228</ulink>."
-msgstr ""
-"[xry111] — 更新到 bc-6.5.0。修复 <ulink url='&lfs-ticket-root;5228'>#5228</"
-"ulink>。"
-
-#. type: Content of: <sect1><itemizedlist><listitem><itemizedlist><listitem><para>
-#: lfs-en/chapter01/changelog.xml
-msgid ""
-"[xry111] - Update to texinfo-7.0.3.  Fixes <ulink url='&lfs-ticket-"
-"root;5235'>#5235</ulink>."
-msgstr ""
-"[xry111] — 更新到 texinfo-7.0.3。修复 <ulink url='&lfs-ticket-"
-"root;5235'>#5235</ulink>。"
-
-#. type: Content of: <sect1><itemizedlist><listitem><itemizedlist><listitem><para>
-#: lfs-en/chapter01/changelog.xml
-msgid ""
-"[xry111] - Update to coreutils-9.2.  Fixes <ulink url='&lfs-ticket-"
-"root;5232'>#5232</ulink>."
-msgstr ""
-"[xry111] — 更新到 coreutils-9.2。修复 <ulink url='&lfs-ticket-"
-"root;5232'>#5232</ulink>。"
-
-#. type: Content of: <sect1><itemizedlist><listitem><itemizedlist><listitem><para>
-#: lfs-en/chapter01/changelog.xml
-msgid ""
-"[xry111] - Update to libcap-2.68.  Fixes <ulink url='&lfs-ticket-"
-"root;5236'>#5236</ulink>."
-msgstr ""
-"[xry111] — 更新到 libcap-2.68。修复 <ulink url='&lfs-ticket-"
-"root;5236'>#5236</ulink>。"
-
-#. type: Content of: <sect1><itemizedlist><listitem><itemizedlist><listitem><para>
-#: lfs-en/chapter01/changelog.xml
-msgid ""
-"[xry111] - Update to tzdata-2023c.  Fixes <ulink url='&lfs-ticket-"
-"root;5237'>#5237</ulink>."
-msgstr ""
-"[xry111] — 更新到 tzdata-2023c。修复 <ulink url='&lfs-ticket-"
-"root;5237'>#5237</ulink>。"
-
-#. type: Content of: <sect1><itemizedlist><listitem><itemizedlist><listitem><para>
-#: lfs-en/chapter01/changelog.xml
-msgid ""
-"[xry111] - Update to xz-5.4.2.  Fixes <ulink url='&lfs-ticket-"
-"root;5233'>#5233</ulink>."
-msgstr ""
-"[xry111] — 更新到 xz-5.4.2。修复 <ulink url='&lfs-ticket-root;5233'>#5233</"
-"ulink>。"
-
-#. type: Content of: <sect1><itemizedlist><listitem><itemizedlist><listitem><para>
-#: lfs-en/chapter01/changelog.xml
-msgid ""
-"[xry111] - Update to openssl-3.1.0.  Fixes <ulink url='&lfs-ticket-"
-"root;5227'>#5227</ulink>."
-msgstr ""
-"[xry111] — 更新到 openssl-3.1.0。修复 <ulink url='&lfs-ticket-"
-"root;5227'>#5227</ulink>。"
-
-#. type: Content of: <sect1><itemizedlist><listitem><itemizedlist><listitem><para>
-#: lfs-en/chapter01/changelog.xml
-msgid "[xry111] - Add flit-core-3.8.0."
-msgstr "[xry111] — 加入 flit-core-3.8.0。"
-
-#. type: Content of: <sect1><itemizedlist><listitem><para>
-#: lfs-en/chapter01/changelog.xml
-msgid "2023-03-15"
-msgstr "2023 年 3 月 15 日"
-
-#. type: Content of: <sect1><itemizedlist><listitem><itemizedlist><listitem><para>
-#: lfs-en/chapter01/changelog.xml
-msgid ""
-"[bdubbs] - Update to bc-6.4.0.  Fixes <ulink url='&lfs-ticket-"
-"root;5217'>#5217</ulink>."
-msgstr ""
-"[bdubbs] — 更新到 bc-6.4.0。修复 <ulink url='&lfs-ticket-root;5217'>#5217</"
-"ulink>。"
-
-#. type: Content of: <sect1><itemizedlist><listitem><itemizedlist><listitem><para>
-#: lfs-en/chapter01/changelog.xml
-msgid ""
-"[bdubbs] - Update to grep-3.9.  Fixes <ulink url='&lfs-ticket-"
-"root;5225'>#5225</ulink>."
-msgstr ""
-"[bdubbs] — 更新到 grep-3.9。修复 <ulink url='&lfs-ticket-root;5225'>#5225</"
-"ulink>。"
-
-#. type: Content of: <sect1><itemizedlist><listitem><itemizedlist><listitem><para>
-#: lfs-en/chapter01/changelog.xml
-msgid ""
-"[bdubbs] - Update to linux-6.2.6.  Fixes <ulink url='&lfs-ticket-"
-"root;5226'>#5226</ulink>."
-msgstr ""
-"[bdubbs] — 更新到 linux-6.2.6。修复 <ulink url='&lfs-ticket-"
-"root;5226'>#5226</ulink>。"
-
-#. type: Content of: <sect1><itemizedlist><listitem><itemizedlist><listitem><para>
-#: lfs-en/chapter01/changelog.xml
-msgid ""
-"[bdubbs] - Update to iana-etc-20230306.  Addresses <ulink url='&lfs-ticket-"
-"root;5006'>#5006</ulink>."
-msgstr ""
-"[bdubbs] — 更新到 iana-etc-20230306。处理 <ulink url='&lfs-ticket-"
-"root;5006'>#5006</ulink>。"
-
-#. type: Content of: <sect1><itemizedlist><listitem><para>
-#: lfs-en/chapter01/changelog.xml
-msgid "2023-03-04"
-msgstr "2023 年 3 月 4 日"
-
-#. type: Content of: <sect1><itemizedlist><listitem><itemizedlist><listitem><para>
-#: lfs-en/chapter01/changelog.xml
-msgid ""
-"[xry111] - Update to systemd-253.  Fixes <ulink url='&lfs-ticket-"
-"root;5206'>#5206</ulink>."
-msgstr ""
-"[xry111] — 更新到 systemd-253。修复 <ulink url='&lfs-ticket-"
-"root;5206'>#5206</ulink>。"
-
-#. type: Content of: <sect1><itemizedlist><listitem><itemizedlist><listitem><para>
-#: lfs-en/chapter01/changelog.xml
-msgid ""
-"[xry111] - Update to bc-6.3.1.  Fixes <ulink url='&lfs-ticket-"
-"root;5217'>#5217</ulink>."
-msgstr ""
-"[xry111] — 更新到 bc-6.3.1。修复 <ulink url='&lfs-ticket-root;5217'>#5217</"
-"ulink>。"
-
-#. type: Content of: <sect1><itemizedlist><listitem><itemizedlist><listitem><para>
-#: lfs-en/chapter01/changelog.xml
-msgid ""
-"[xry111] - Update to linux-6.2.2 (security fixes).  Fixes <ulink url='&lfs-"
-"ticket-root;5218'>#5218</ulink>."
-msgstr ""
-"[xry111] — 更新到 linux-6.2.2 (修复安全问题)。修复 <ulink url='&lfs-ticket-"
-"root;5218'>#5218</ulink>。"
-
-#. type: Content of: <sect1><itemizedlist><listitem><itemizedlist><listitem><para>
-#: lfs-en/chapter01/changelog.xml
-msgid ""
-"[xry111] - Update to procps-ng-4.0.3.  Fixes <ulink url='&lfs-ticket-"
-"root;5220'>#5220</ulink>."
-msgstr ""
-"[xry111] — 更新到 procps-ng-4.0.3。修复 <ulink url='&lfs-ticket-"
-"root;5220'>#5220</ulink>。"
-
-#. type: Content of: <sect1><itemizedlist><listitem><itemizedlist><listitem><para>
-#: lfs-en/chapter01/changelog.xml
-msgid ""
-"[xry111] - Update to iproute2-6.2.0.  Fixes <ulink url='&lfs-ticket-"
-"root;5221'>#5221</ulink>."
-msgstr ""
-"[xry111] — 更新到 iproute2-6.2.0。修复 <ulink url='&lfs-ticket-"
-"root;5221'>#5221</ulink>。"
-
-#. type: Content of: <sect1><itemizedlist><listitem><itemizedlist><listitem><para>
-#: lfs-en/chapter01/changelog.xml
-msgid ""
-"[xry111] - Update to meson-1.0.1.  Fixes <ulink url='&lfs-ticket-"
-"root;5222'>#5222</ulink>."
-msgstr ""
-"[xry111] — 更新到 meson-1.0.1。修复 <ulink url='&lfs-ticket-"
-"root;5222'>#5222</ulink>。"
-
-#. type: Content of: <sect1><itemizedlist><listitem><itemizedlist><listitem><para>
-#: lfs-en/chapter01/changelog.xml
-msgid ""
-"[xry111] - Update to make-4.4.1.  Fixes <ulink url='&lfs-ticket-"
-"root;5223'>#5223</ulink>."
-msgstr ""
-"[xry111] — 更新到 make-4.4.1。修复 <ulink url='&lfs-ticket-root;5223'>#5223</"
-"ulink>。"
-
-#. type: Content of: <sect1><itemizedlist><listitem><itemizedlist><listitem><para>
-#: lfs-en/chapter01/changelog.xml
-msgid ""
-"[xry111] - Update to libelf-0.189.  Fixes <ulink url='&lfs-ticket-"
-"root;5224'>#5224</ulink>."
-msgstr ""
-"[xry111] — 更新到 libelf-0.189。修复 <ulink url='&lfs-ticket-"
-"root;5224'>#5224</ulink>。"
-
-#. type: Content of: <sect1><itemizedlist><listitem><itemizedlist><listitem><para>
-#: lfs-en/chapter01/changelog.xml
-msgid "[bdubbs] - Change to a better host requirements script in Chapter 2."
-msgstr "[bdubbs] — 在第 2 章中使用改进的宿主系统需求脚本。"
-
-#. type: Content of: <sect1><itemizedlist><listitem><para>
-#: lfs-en/chapter01/changelog.xml
-msgid "2023-03-01"
-msgstr "2023 年 3 月 1 日"
-
-#. type: Content of: <sect1><itemizedlist><listitem><itemizedlist><listitem><para>
-#: lfs-en/chapter01/changelog.xml
-msgid "[bdubbs] - LFS-11.3 released."
-msgstr "[bdubbs] - LFS-11.3 发布。"
+msgid "[bdubbs] - LFS-12.0 released."
+msgstr "[bdubbs] - LFS-12.0 发布。"
