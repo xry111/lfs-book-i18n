@@ -38,16 +38,11 @@ jobs:
         with:
           name: lfs-xml-zh_CN
           path: book.tar
-      - name: Prepare Auxilary Files
-        run: |
-          mkdir $HOME/aux-files
-          cp setenv.sh $HOME/aux-files
-          cp .known_hosts $HOME/aux-files
       - name: Upload Auxilary Files
         uses: actions/upload-artifact@v3
         with:
           name: aux-files
-          path: ~/aux-files
+          path: aux-files
 
   build-sysv-html:
     needs: xml-translation
@@ -62,14 +57,12 @@ jobs:
         uses: actions/download-artifact@v3
         with:
           name: lfs-xml-zh_CN
-          path: ~/lfs-xml-zh_CN
       - name: Untar XML
-        run: |
-          tar -C ~/lfs-xml-zh_CN --strip-components=1 -xf ~/lfs-xml-zh_CN/book.tar
+        run: tar --strip-components=1 -xf book.tar
       - name: Generate Translated Book
         run: |
-          make REV=sysv book -C ~/lfs-xml-zh_CN BASEDIR=~/lfs-sysv-zh_CN
-          tar -C $HOME -cJf lfs-sysv-zh_CN.tar.xz lfs-sysv-zh_CN
+          make REV=sysv book BASEDIR=lfs-sysv-zh_CN
+          tar -cJf lfs-sysv-zh_CN.tar.xz lfs-sysv-zh_CN
       - name: Upload Artifacts
         uses: actions/upload-artifact@v3
         with:
@@ -90,20 +83,17 @@ jobs:
         uses: actions/download-artifact@v3
         with:
           name: lfs-sysv-zh_CN-html
-          path: ~/lfs-sysv-zh_CN-html
       - name: Fetch Auxilary Files
         uses: actions/download-artifact@v3
         with:
           name: aux-files
-          path: ~/aux-files
       - name: Set SSH Host Key
-        run:
-          cat ~/aux-files/.known_hosts >> ~/.ssh/known_hosts
+        run: cat aux-files/.known_hosts >> ~/.ssh/known_hosts
       - name: Set Environment
-        run: sh ~/aux-files/setenv.sh "${GITHUB_REF}"
+        run: sh aux-files/setenv.sh "${GITHUB_REF}"
       - name: Upload the Book
         run: |
-          scp ~/lfs-sysv-zh_CN-html/lfs-sysv-zh_CN.tar.xz "lfsbook@xry111.site:/tmp/lfs-sysv-zh_CN.tar.xz"
+          scp lfs-sysv-zh_CN.tar.xz "lfsbook@xry111.site:/tmp/lfs-sysv-zh_CN.tar.xz"
           ssh "lfsbook@xry111.site" "/usr/local/bin/update-lfs" "/tmp/lfs-sysv-zh_CN.tar.xz" "/var/www/xry111/lfs/zh_CN/${SYSV}"
 
   build-systemd-html:
@@ -119,14 +109,12 @@ jobs:
         uses: actions/download-artifact@v3
         with:
           name: lfs-xml-zh_CN
-          path: ~/lfs-xml-zh_CN
       - name: Untar XML
-        run: |
-          tar -C ~/lfs-xml-zh_CN --strip-components=1 -xf ~/lfs-xml-zh_CN/book.tar
+        run: tar --strip-components=1 -xf book.tar
       - name: Generate Translated Book
         run: |
-          make REV=systemd book -C ~/lfs-xml-zh_CN BASEDIR=~/lfs-systemd-zh_CN
-          tar -C $HOME -cJf lfs-systemd-zh_CN.tar.xz lfs-systemd-zh_CN
+          make REV=systemd book BASEDIR=lfs-systemd-zh_CN
+          tar -cJf lfs-systemd-zh_CN.tar.xz lfs-systemd-zh_CN
       - name: Upload Artifacts
         uses: actions/upload-artifact@v3
         with:
@@ -147,20 +135,17 @@ jobs:
         uses: actions/download-artifact@v3
         with:
           name: lfs-systemd-zh_CN-html
-          path: ~/lfs-systemd-zh_CN-html
       - name: Fetch Auxilary Files
         uses: actions/download-artifact@v3
         with:
           name: aux-files
-          path: ~/aux-files
       - name: Set SSH Host Key
-        run:
-          cat ~/aux-files/.known_hosts >> ~/.ssh/known_hosts
+        run: cat aux-files/.known_hosts >> ~/.ssh/known_hosts
       - name: Set Environment
-        run: sh ~/aux-files/setenv.sh "${GITHUB_REF}"
+        run: sh aux-files/setenv.sh "${GITHUB_REF}"
       - name: Upload the Book
         run: |
-          scp ~/lfs-systemd-zh_CN-html/lfs-systemd-zh_CN.tar.xz "lfsbook@xry111.site:/tmp/lfs-systemd-zh_CN.tar.xz"
+          scp lfs-systemd-zh_CN.tar.xz "lfsbook@xry111.site:/tmp/lfs-systemd-zh_CN.tar.xz"
           ssh "lfsbook@xry111.site" "/usr/local/bin/update-lfs" "/tmp/lfs-systemd-zh_CN.tar.xz" "/var/www/xry111/lfs/zh_CN/${SYSD}"
 
   build-sysv-nochunks:
@@ -176,18 +161,15 @@ jobs:
         uses: actions/download-artifact@v3
         with:
           name: lfs-xml-zh_CN
-          path: ~/lfs-xml-zh_CN
       - name: Untar XML
-        run: |
-          tar -C ~/lfs-xml-zh_CN --strip-components=1 -xf ~/lfs-xml-zh_CN/book.tar
+        run: tar --strip-components=1 -xf book.tar
       - name: Generate Translated Book
-        run: |
-          make REV=sysv nochunks -C ~/lfs-xml-zh_CN BASEDIR=~/lfs-sysv-zh_CN
+        run: make REV=sysv nochunks BASEDIR=render
       - name: Upload Artifacts
         uses: actions/upload-artifact@v3
         with:
           name: lfs-sysv-zh_CN-nochunks
-          path: ~/lfs-sysv-zh_CN/LFS-BOOK.html
+          path: render/LFS-BOOK.html
 
   # attention: upload-sysv-{nochunks,pdf} must be scheduled after
   # upload-sysv-html, because the latter will delete and recreate the
@@ -206,20 +188,16 @@ jobs:
         uses: actions/download-artifact@v3
         with:
           name: lfs-sysv-zh_CN-nochunks
-          path: ~/lfs-sysv-zh_CN-nochunks
       - name: Fetch Auxilary Files
         uses: actions/download-artifact@v3
         with:
           name: aux-files
-          path: ~/aux-files
       - name: Set SSH Host Key
-        run:
-          cat ~/aux-files/.known_hosts >> ~/.ssh/known_hosts
+        run: cat aux-files/.known_hosts >> ~/.ssh/known_hosts
       - name: Set Environment
-        run: sh ~/aux-files/setenv.sh "${GITHUB_REF}"
+        run: sh aux-files/setenv.sh "${GITHUB_REF}"
       - name: Upload the Book
-        run: |
-          scp ~/lfs-sysv-zh_CN-nochunks/LFS-BOOK.html "lfsbook@xry111.site:/var/www/xry111/lfs/zh_CN/${SYSV}"
+        run: scp render/LFS-BOOK.html "lfsbook@xry111.site:/var/www/xry111/lfs/zh_CN/${SYSV}"
 
   build-systemd-nochunks:
     needs: xml-translation
@@ -234,18 +212,15 @@ jobs:
         uses: actions/download-artifact@v3
         with:
           name: lfs-xml-zh_CN
-          path: ~/lfs-xml-zh_CN
       - name: Untar XML
-        run: |
-          tar -C ~/lfs-xml-zh_CN --strip-components=1 -xf ~/lfs-xml-zh_CN/book.tar
+        run: tar --strip-components=1 -xf book.tar
       - name: Generate Translated Book
-        run: |
-          make REV=systemd nochunks -C ~/lfs-xml-zh_CN BASEDIR=~/lfs-systemd-zh_CN
+        run: make REV=systemd nochunks BASEDIR=render
       - name: Upload Artifacts
         uses: actions/upload-artifact@v3
         with:
           name: lfs-systemd-zh_CN-nochunks
-          path: ~/lfs-systemd-zh_CN/LFS-SYSD-BOOK.html
+          path: render/LFS-SYSD-BOOK.html
 
   upload-systemd-nochunks:
     if: github.event_name != 'pull_request' && github.ref_type == 'branch'
@@ -261,20 +236,16 @@ jobs:
         uses: actions/download-artifact@v3
         with:
           name: lfs-systemd-zh_CN-nochunks
-          path: ~/lfs-systemd-zh_CN-nochunks
       - name: Fetch Auxilary Files
         uses: actions/download-artifact@v3
         with:
           name: aux-files
-          path: ~/aux-files
       - name: Set SSH Host Key
-        run:
-          cat ~/aux-files/.known_hosts >> ~/.ssh/known_hosts
+        run: cat aux-files/.known_hosts >> ~/.ssh/known_hosts
       - name: Set Environment
-        run: sh ~/aux-files/setenv.sh "${GITHUB_REF}"
+        run: sh aux-files/setenv.sh "${GITHUB_REF}"
       - name: Upload the Book
-        run: |
-          scp ~/lfs-systemd-zh_CN-nochunks/LFS-SYSD-BOOK.html "lfsbook@xry111.site:/var/www/xry111/lfs/zh_CN/${SYSD}"
+        run: scp render/LFS-SYSD-BOOK.html "lfsbook@xry111.site:/var/www/xry111/lfs/zh_CN/${SYSD}"
 
   build-sysv-pdf:
     needs: xml-translation
@@ -291,16 +262,14 @@ jobs:
           name: lfs-xml-zh_CN
           path: .
       - name: Untar XML
-        run: |
-          tar --strip-components=1 -xf book.tar
+        run: tar --strip-components=1 -xf book.tar
       - name: Cache Fonts
         uses: actions/cache@v3
         with:
           path: fonts/
           key: ${{ hashFiles('noto-cjk-commit', 'source-han-mono-commit') }}
       - name: Generate Translated Book
-        run: |
-          make REV=sysv pdf BASEDIR=render
+        run: make REV=sysv pdf BASEDIR=render
       - name: Upload Artifacts
         uses: actions/upload-artifact@v3
         with:
@@ -321,20 +290,16 @@ jobs:
         uses: actions/download-artifact@v3
         with:
           name: lfs-sysv-zh_CN-pdf
-          path: ~/lfs-sysv-zh_CN-pdf
       - name: Fetch Auxilary Files
         uses: actions/download-artifact@v3
         with:
           name: aux-files
-          path: ~/aux-files
       - name: Set SSH Host Key
-        run:
-          cat ~/aux-files/.known_hosts >> ~/.ssh/known_hosts
+        run: cat aux-files/.known_hosts >> ~/.ssh/known_hosts
       - name: Set Environment
-        run: sh ~/aux-files/setenv.sh "${GITHUB_REF}"
+        run: sh aux-files/setenv.sh "${GITHUB_REF}"
       - name: Upload the Book
-        run: |
-          scp ~/lfs-sysv-zh_CN-pdf/LFS-BOOK.pdf "lfsbook@xry111.site:/var/www/xry111/lfs/zh_CN/${SYSV}"
+        run: scp render/LFS-BOOK.pdf "lfsbook@xry111.site:/var/www/xry111/lfs/zh_CN/${SYSV}"
 
   build-systemd-pdf:
     needs: xml-translation
@@ -351,8 +316,7 @@ jobs:
           name: lfs-xml-zh_CN
           path: .
       - name: Untar XML
-        run: |
-          tar --strip-components=1 -xf book.tar
+        run: tar --strip-components=1 -xf book.tar
       - name: Cache Fonts
         uses: actions/cache@v3
         with:
@@ -365,7 +329,7 @@ jobs:
         uses: actions/upload-artifact@v3
         with:
           name: lfs-systemd-zh_CN-pdf
-          path: render/LFS-BOOK.pdf
+          path: render/LFS-SYSD-BOOK.pdf
 
   upload-systemd-pdf:
     if: github.event_name != 'pull_request' && github.ref_type == 'branch'
@@ -381,20 +345,16 @@ jobs:
         uses: actions/download-artifact@v3
         with:
           name: lfs-systemd-zh_CN-pdf
-          path: ~/lfs-systemd-zh_CN-pdf
       - name: Fetch Auxilary Files
         uses: actions/download-artifact@v3
         with:
           name: aux-files
-          path: ~/aux-files
       - name: Set SSH Host Key
-        run:
-          cat ~/aux-files/.known_hosts >> ~/.ssh/known_hosts
+        run: cat aux-files/.known_hosts >> ~/.ssh/known_hosts
       - name: Set Environment
-        run: sh ~/aux-files/setenv.sh "${GITHUB_REF}"
+        run: sh aux-files/setenv.sh "${GITHUB_REF}"
       - name: Upload the Book
-        run: |
-          scp ~/lfs-systemd-zh_CN-pdf/LFS-SYSD-BOOK.pdf "lfsbook@xry111.site:/var/www/xry111/lfs/zh_CN/${SYSD}"
+        run: scp render/LFS-SYSD-BOOK.pdf "lfsbook@xry111.site:/var/www/xry111/lfs/zh_CN/${SYSD}"
   make_release:
     if: github.event_name != 'pull_request' && github.ref_type == 'tag'
     permissions:
