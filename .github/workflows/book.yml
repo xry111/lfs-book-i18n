@@ -88,7 +88,7 @@ jobs:
         with:
           name: aux-files
       - name: Set SSH Host Key
-        run: cat aux-files/.known_hosts >> ~/.ssh/known_hosts
+        run: cat aux-files/known_hosts >> ~/.ssh/known_hosts
       - name: Set Environment
         run: sh aux-files/setenv.sh "${GITHUB_REF}"
       - name: Upload the Book
@@ -140,7 +140,7 @@ jobs:
         with:
           name: aux-files
       - name: Set SSH Host Key
-        run: cat aux-files/.known_hosts >> ~/.ssh/known_hosts
+        run: cat aux-files/known_hosts >> ~/.ssh/known_hosts
       - name: Set Environment
         run: sh aux-files/setenv.sh "${GITHUB_REF}"
       - name: Upload the Book
@@ -193,7 +193,7 @@ jobs:
         with:
           name: aux-files
       - name: Set SSH Host Key
-        run: cat aux-files/.known_hosts >> ~/.ssh/known_hosts
+        run: cat aux-files/known_hosts >> ~/.ssh/known_hosts
       - name: Set Environment
         run: sh aux-files/setenv.sh "${GITHUB_REF}"
       - name: Upload the Book
@@ -241,7 +241,7 @@ jobs:
         with:
           name: aux-files
       - name: Set SSH Host Key
-        run: cat aux-files/.known_hosts >> ~/.ssh/known_hosts
+        run: cat aux-files/known_hosts >> ~/.ssh/known_hosts
       - name: Set Environment
         run: sh aux-files/setenv.sh "${GITHUB_REF}"
       - name: Upload the Book
@@ -295,7 +295,7 @@ jobs:
         with:
           name: aux-files
       - name: Set SSH Host Key
-        run: cat aux-files/.known_hosts >> ~/.ssh/known_hosts
+        run: cat aux-files/known_hosts >> ~/.ssh/known_hosts
       - name: Set Environment
         run: sh aux-files/setenv.sh "${GITHUB_REF}"
       - name: Upload the Book
@@ -350,7 +350,7 @@ jobs:
         with:
           name: aux-files
       - name: Set SSH Host Key
-        run: cat aux-files/.known_hosts >> ~/.ssh/known_hosts
+        run: cat aux-files/known_hosts >> ~/.ssh/known_hosts
       - name: Set Environment
         run: sh aux-files/setenv.sh "${GITHUB_REF}"
       - name: Upload the Book
