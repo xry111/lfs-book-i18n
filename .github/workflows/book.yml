@@ -197,7 +197,7 @@ jobs:
       - name: Set Environment
         run: sh setenv.sh "${GITHUB_REF}"
       - name: Upload the Book
-        run: scp render/LFS-BOOK.html "lfsbook@xry111.site:/var/www/xry111/lfs/zh_CN/${SYSV}"
+        run: scp LFS-BOOK.html "lfsbook@xry111.site:/var/www/xry111/lfs/zh_CN/${SYSV}"
 
   build-systemd-nochunks:
     needs: xml-translation
@@ -245,7 +245,7 @@ jobs:
       - name: Set Environment
         run: sh setenv.sh "${GITHUB_REF}"
       - name: Upload the Book
-        run: scp render/LFS-SYSD-BOOK.html "lfsbook@xry111.site:/var/www/xry111/lfs/zh_CN/${SYSD}"
+        run: scp LFS-SYSD-BOOK.html "lfsbook@xry111.site:/var/www/xry111/lfs/zh_CN/${SYSD}"
 
   build-sysv-pdf:
     needs: xml-translation
@@ -299,7 +299,7 @@ jobs:
       - name: Set Environment
         run: sh setenv.sh "${GITHUB_REF}"
       - name: Upload the Book
-        run: scp render/LFS-BOOK.pdf "lfsbook@xry111.site:/var/www/xry111/lfs/zh_CN/${SYSV}"
+        run: scp LFS-BOOK.pdf "lfsbook@xry111.site:/var/www/xry111/lfs/zh_CN/${SYSV}"
 
   build-systemd-pdf:
     needs: xml-translation
@@ -354,7 +354,7 @@ jobs:
       - name: Set Environment
         run: sh setenv.sh "${GITHUB_REF}"
       - name: Upload the Book
-        run: scp render/LFS-SYSD-BOOK.pdf "lfsbook@xry111.site:/var/www/xry111/lfs/zh_CN/${SYSD}"
+        run: scp LFS-SYSD-BOOK.pdf "lfsbook@xry111.site:/var/www/xry111/lfs/zh_CN/${SYSD}"
   make_release:
     if: github.event_name != 'pull_request' && github.ref_type == 'tag'
     permissions:
