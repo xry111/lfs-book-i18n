@@ -88,9 +88,9 @@ jobs:
         with:
           name: aux-files
       - name: Set SSH Host Key
-        run: cat aux-files/known_hosts >> ~/.ssh/known_hosts
+        run: cat known_hosts >> ~/.ssh/known_hosts
       - name: Set Environment
-        run: sh aux-files/setenv.sh "${GITHUB_REF}"
+        run: sh setenv.sh "${GITHUB_REF}"
       - name: Upload the Book
         run: |
           scp lfs-sysv-zh_CN.tar.xz "lfsbook@xry111.site:/tmp/lfs-sysv-zh_CN.tar.xz"
@@ -140,9 +140,9 @@ jobs:
         with:
           name: aux-files
       - name: Set SSH Host Key
-        run: cat aux-files/known_hosts >> ~/.ssh/known_hosts
+        run: cat known_hosts >> ~/.ssh/known_hosts
       - name: Set Environment
-        run: sh aux-files/setenv.sh "${GITHUB_REF}"
+        run: sh setenv.sh "${GITHUB_REF}"
       - name: Upload the Book
         run: |
           scp lfs-systemd-zh_CN.tar.xz "lfsbook@xry111.site:/tmp/lfs-systemd-zh_CN.tar.xz"
@@ -193,9 +193,9 @@ jobs:
         with:
           name: aux-files
       - name: Set SSH Host Key
-        run: cat aux-files/known_hosts >> ~/.ssh/known_hosts
+        run: cat known_hosts >> ~/.ssh/known_hosts
       - name: Set Environment
-        run: sh aux-files/setenv.sh "${GITHUB_REF}"
+        run: sh setenv.sh "${GITHUB_REF}"
       - name: Upload the Book
         run: scp render/LFS-BOOK.html "lfsbook@xry111.site:/var/www/xry111/lfs/zh_CN/${SYSV}"
 
@@ -241,9 +241,9 @@ jobs:
         with:
           name: aux-files
       - name: Set SSH Host Key
-        run: cat aux-files/known_hosts >> ~/.ssh/known_hosts
+        run: cat known_hosts >> ~/.ssh/known_hosts
       - name: Set Environment
-        run: sh aux-files/setenv.sh "${GITHUB_REF}"
+        run: sh setenv.sh "${GITHUB_REF}"
       - name: Upload the Book
         run: scp render/LFS-SYSD-BOOK.html "lfsbook@xry111.site:/var/www/xry111/lfs/zh_CN/${SYSD}"
 
@@ -295,9 +295,9 @@ jobs:
         with:
           name: aux-files
       - name: Set SSH Host Key
-        run: cat aux-files/known_hosts >> ~/.ssh/known_hosts
+        run: cat known_hosts >> ~/.ssh/known_hosts
       - name: Set Environment
-        run: sh aux-files/setenv.sh "${GITHUB_REF}"
+        run: sh setenv.sh "${GITHUB_REF}"
       - name: Upload the Book
         run: scp render/LFS-BOOK.pdf "lfsbook@xry111.site:/var/www/xry111/lfs/zh_CN/${SYSV}"
 
@@ -350,9 +350,9 @@ jobs:
         with:
           name: aux-files
       - name: Set SSH Host Key
-        run: cat aux-files/known_hosts >> ~/.ssh/known_hosts
+        run: cat known_hosts >> ~/.ssh/known_hosts
       - name: Set Environment
-        run: sh aux-files/setenv.sh "${GITHUB_REF}"
+        run: sh setenv.sh "${GITHUB_REF}"
       - name: Upload the Book
         run: scp render/LFS-SYSD-BOOK.pdf "lfsbook@xry111.site:/var/www/xry111/lfs/zh_CN/${SYSD}"
   make_release:
