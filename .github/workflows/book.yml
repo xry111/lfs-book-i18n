@@ -289,18 +289,23 @@ jobs:
         uses: actions/download-artifact@v3
         with:
           name: lfs-xml-zh_CN
-          path: ~/lfs-xml-zh_CN
+          path: .
       - name: Untar XML
         run: |
-          tar -C ~/lfs-xml-zh_CN --strip-components=1 -xf ~/lfs-xml-zh_CN/book.tar
+          tar --strip-components=1 -xf book.tar
+      - name: Cache Fonts
+        uses: actions/cache@v3
+        with:
+          path: fonts/
+          key: ${{ hashFiles('noto-cjk-commit', 'source-han-mono-commit') }}
       - name: Generate Translated Book
         run: |
-          make REV=sysv pdf -C ~/lfs-xml-zh_CN BASEDIR=~/lfs-sysv-zh_CN
+          make REV=sysv pdf BASEDIR=render
       - name: Upload Artifacts
         uses: actions/upload-artifact@v3
         with:
           name: lfs-sysv-zh_CN-pdf
-          path: ~/lfs-sysv-zh_CN/LFS-BOOK.pdf
+          path: render/LFS-BOOK.pdf
 
   upload-sysv-pdf:
     if: github.event_name != 'pull_request' && github.ref_type == 'branch'
@@ -344,18 +349,23 @@ jobs:
         uses: actions/download-artifact@v3
         with:
           name: lfs-xml-zh_CN
-          path: ~/lfs-xml-zh_CN
+          path: .
       - name: Untar XML
         run: |
-          tar -C ~/lfs-xml-zh_CN --strip-components=1 -xf ~/lfs-xml-zh_CN/book.tar
+          tar --strip-components=1 -xf book.tar
+      - name: Cache Fonts
+        uses: actions/cache@v3
+        with:
+          path: fonts/
+          key: ${{ hashFiles('noto-cjk-commit', 'source-han-mono-commit') }}
       - name: Generate Translated Book
         run: |
-          make REV=systemd pdf -C ~/lfs-xml-zh_CN BASEDIR=~/lfs-systemd-zh_CN
+          make REV=systemd pdf BASEDIR=render
       - name: Upload Artifacts
         uses: actions/upload-artifact@v3
         with:
           name: lfs-systemd-zh_CN-pdf
-          path: ~/lfs-systemd-zh_CN/LFS-SYSD-BOOK.pdf
+          path: render/LFS-BOOK.pdf
 
   upload-systemd-pdf:
     if: github.event_name != 'pull_request' && github.ref_type == 'branch'
