@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Linux From Scratch 11.3\n"
 "Report-Msgid-Bugs-To: lfs-dev@lists.linuxfromscratch.org\n"
-"POT-Creation-Date: 2023-08-16 12:21+0800\n"
+"POT-Creation-Date: 2023-09-08 15:54+0800\n"
 "PO-Revision-Date: 2023-06-19 19:15+0800\n"
 "Last-Translator: Automatically generated\n"
 "Language-Team: none\n"
@@ -501,6 +501,17 @@ msgstr "&pkgconf-fin-du;"
 #: lfs-en/chapter08/pkgconf.xml
 msgid "Installation of Pkgconf"
 msgstr "安装 Pkgconf"
+
+#. type: Content of: <sect1><sect2><para>
+#: lfs-en/chapter08/pkgconf.xml
+msgid "Fix a regression in pkgconf-2.0.3 breaking BLFS packages:"
+msgstr "修复 pkgconf-2.0.3 中导致一些 BLFS 软件包无法构建的退化问题："
+
+#. type: Content of: <sect1><sect2><screen>
+#: lfs-en/chapter08/pkgconf.xml
+#, no-wrap
+msgid "<userinput remap=\"pre\">sed -i 's/str\\(cmp.*package\\)/strn\\1, strlen(pkg-&gt;why)/' cli/main.c</userinput>"
+msgstr "<userinput remap=\"pre\">sed -i 's/str\\(cmp.*package\\)/strn\\1, strlen(pkg-&gt;why)/' cli/main.c</userinput>"
 
 #. type: Content of: <sect1><sect2><para>
 #: lfs-en/chapter08/pkgconf.xml
