@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Linux From Scratch 11.0\n"
 "Report-Msgid-Bugs-To: lfs-dev@lists.linuxfromscratch.org\n"
-"POT-Creation-Date: 2023-09-08 16:16+0800\n"
+"POT-Creation-Date: 2023-09-10 15:20+0800\n"
 "PO-Revision-Date: 2021-07-28 12:48+0800\n"
 "Last-Translator: Xi Ruoyao <xry111@xry111.site>\n"
 "Language-Team: none\n"
@@ -319,14 +319,15 @@ msgstr "<userinput remap=\"install\">make install</userinput>"
 #: lfs-en/chapter08/iproute2.xml lfs-en/chapter08/readline.xml
 #: lfs-en/chapter08/acl.xml lfs-en/chapter08/texinfo.xml
 #: lfs-en/chapter08/openssl.xml lfs-en/chapter08/automake.xml
-#: lfs-en/chapter08/ncurses.xml lfs-en/chapter08/xz.xml
-#: lfs-en/chapter08/grub.xml lfs-en/chapter08/e2fsprogs.xml
-#: lfs-en/chapter08/udev.xml lfs-en/chapter08/gettext.xml
-#: lfs-en/chapter08/procps.xml lfs-en/chapter08/glibc.xml
-#: lfs-en/chapter08/dbus.xml lfs-en/chapter08/shadow.xml
-#: lfs-en/chapter08/util-linux.xml lfs-en/chapter08/gawk.xml
-#: lfs-en/chapter08/man-db.xml lfs-en/chapter08/groff.xml
-#: lfs-en/chapter10/kernel.xml lfs-en/chapter09/bootscripts.xml
+#: lfs-en/chapter08/python.xml lfs-en/chapter08/ncurses.xml
+#: lfs-en/chapter08/xz.xml lfs-en/chapter08/grub.xml
+#: lfs-en/chapter08/e2fsprogs.xml lfs-en/chapter08/udev.xml
+#: lfs-en/chapter08/gettext.xml lfs-en/chapter08/procps.xml
+#: lfs-en/chapter08/glibc.xml lfs-en/chapter08/dbus.xml
+#: lfs-en/chapter08/shadow.xml lfs-en/chapter08/util-linux.xml
+#: lfs-en/chapter08/gawk.xml lfs-en/chapter08/man-db.xml
+#: lfs-en/chapter08/groff.xml lfs-en/chapter10/kernel.xml
+#: lfs-en/chapter09/bootscripts.xml
 msgid "Installed directories"
 msgstr "安装的目录"
 
@@ -466,8 +467,8 @@ msgstr "准备编译 Util-linux："
 #: lfs-en/chapter08/sysvinit.xml lfs-en/chapter08/ninja.xml
 #: lfs-en/chapter08/autoconf.xml lfs-en/chapter08/texinfo.xml
 #: lfs-en/chapter08/openssl.xml lfs-en/chapter08/automake.xml
-#: lfs-en/chapter08/inetutils.xml lfs-en/chapter08/tcl.xml
-#: lfs-en/chapter08/perl.xml lfs-en/chapter08/gzip.xml
+#: lfs-en/chapter08/inetutils.xml lfs-en/chapter08/python.xml
+#: lfs-en/chapter08/tcl.xml lfs-en/chapter08/perl.xml lfs-en/chapter08/gzip.xml
 #: lfs-en/chapter08/less.xml lfs-en/chapter08/ncurses.xml
 #: lfs-en/chapter08/flex.xml lfs-en/chapter08/xz.xml lfs-en/chapter08/grub.xml
 #: lfs-en/chapter08/e2fsprogs.xml lfs-en/chapter08/udev.xml
@@ -485,17 +486,19 @@ msgstr "安装的程序"
 
 #. type: Content of: <sect1><sect2><segmentedlist><segtitle>
 #: lfs-en/chapter08/libtool.xml lfs-en/chapter08/gcc.xml
-#: lfs-en/chapter08/systemd.xml lfs-en/chapter08/expat.xml
+#: lfs-en/chapter08/gmp.xml lfs-en/chapter08/systemd.xml
+#: lfs-en/chapter08/mpc.xml lfs-en/chapter08/expat.xml
 #: lfs-en/chapter08/readline.xml lfs-en/chapter08/zlib.xml
-#: lfs-en/chapter08/openssl.xml lfs-en/chapter08/perl.xml
-#: lfs-en/chapter08/ncurses.xml lfs-en/chapter08/flex.xml
-#: lfs-en/chapter08/xz.xml lfs-en/chapter08/e2fsprogs.xml
-#: lfs-en/chapter08/udev.xml lfs-en/chapter08/binutils.xml
-#: lfs-en/chapter08/gdbm.xml lfs-en/chapter08/bzip2.xml
-#: lfs-en/chapter08/gettext.xml lfs-en/chapter08/glibc.xml
-#: lfs-en/chapter08/dbus.xml lfs-en/chapter08/shadow.xml
-#: lfs-en/chapter08/util-linux.xml lfs-en/chapter08/gawk.xml
-#: lfs-en/chapter08/man-db.xml lfs-en/chapter08/libxcrypt.xml
+#: lfs-en/chapter08/openssl.xml lfs-en/chapter08/mpfr.xml
+#: lfs-en/chapter08/perl.xml lfs-en/chapter08/ncurses.xml
+#: lfs-en/chapter08/flex.xml lfs-en/chapter08/xz.xml
+#: lfs-en/chapter08/e2fsprogs.xml lfs-en/chapter08/udev.xml
+#: lfs-en/chapter08/binutils.xml lfs-en/chapter08/gdbm.xml
+#: lfs-en/chapter08/bzip2.xml lfs-en/chapter08/gettext.xml
+#: lfs-en/chapter08/glibc.xml lfs-en/chapter08/dbus.xml
+#: lfs-en/chapter08/shadow.xml lfs-en/chapter08/util-linux.xml
+#: lfs-en/chapter08/gawk.xml lfs-en/chapter08/man-db.xml
+#: lfs-en/chapter08/libxcrypt.xml
 msgid "Installed libraries"
 msgstr "安装的库"
 
@@ -520,7 +523,7 @@ msgstr "&util-linux-fin-du;"
 
 #. type: Content of: <sect1><sect2><para>
 #: lfs-en/chapter08/util-linux.xml
-msgid "First, disable a problem test:"
+msgid "First, disable a problematic test:"
 msgstr "首先，禁止运行一项有问题的测试："
 
 #. type: Content of: <sect1><sect2><screen>
