@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Linux From Scratch 11.0\n"
 "Report-Msgid-Bugs-To: lfs-dev@lists.linuxfromscratch.org\n"
-"POT-Creation-Date: 2023-09-03 03:29+0800\n"
+"POT-Creation-Date: 2023-09-13 15:44+0800\n"
 "PO-Revision-Date: 2021-08-21 11:33+0800\n"
 "Last-Translator: Xi Ruoyao <xry111@xry111.site>\n"
 "Language-Team: none\n"
@@ -282,9 +282,9 @@ msgstr "安装该软件包："
 #: lfs-en/chapter08/expect.xml lfs-en/chapter08/bc.xml
 #: lfs-en/chapter08/coreutils.xml lfs-en/chapter08/kmod.xml
 #: lfs-en/chapter08/inetutils.xml lfs-en/chapter08/python.xml
-#: lfs-en/chapter08/perl.xml lfs-en/chapter08/less.xml
-#: lfs-en/chapter08/e2fsprogs.xml lfs-en/chapter08/glibc.xml
-#: lfs-en/chapter08/dbus.xml lfs-en/chapter08/man-db.xml
+#: lfs-en/chapter08/less.xml lfs-en/chapter08/e2fsprogs.xml
+#: lfs-en/chapter08/glibc.xml lfs-en/chapter08/dbus.xml
+#: lfs-en/chapter08/man-db.xml
 msgid "The meaning of the configure options:"
 msgstr "配置选项的含义："
 
@@ -342,14 +342,15 @@ msgstr "<userinput remap=\"install\">make install</userinput>"
 #: lfs-en/chapter08/iproute2.xml lfs-en/chapter08/readline.xml
 #: lfs-en/chapter08/acl.xml lfs-en/chapter08/texinfo.xml
 #: lfs-en/chapter08/openssl.xml lfs-en/chapter08/automake.xml
-#: lfs-en/chapter08/ncurses.xml lfs-en/chapter08/xz.xml
-#: lfs-en/chapter08/grub.xml lfs-en/chapter08/e2fsprogs.xml
-#: lfs-en/chapter08/udev.xml lfs-en/chapter08/gettext.xml
-#: lfs-en/chapter08/procps.xml lfs-en/chapter08/glibc.xml
-#: lfs-en/chapter08/dbus.xml lfs-en/chapter08/shadow.xml
-#: lfs-en/chapter08/util-linux.xml lfs-en/chapter08/gawk.xml
-#: lfs-en/chapter08/man-db.xml lfs-en/chapter08/groff.xml
-#: lfs-en/chapter10/kernel.xml lfs-en/chapter09/bootscripts.xml
+#: lfs-en/chapter08/python.xml lfs-en/chapter08/ncurses.xml
+#: lfs-en/chapter08/xz.xml lfs-en/chapter08/grub.xml
+#: lfs-en/chapter08/e2fsprogs.xml lfs-en/chapter08/udev.xml
+#: lfs-en/chapter08/gettext.xml lfs-en/chapter08/procps.xml
+#: lfs-en/chapter08/glibc.xml lfs-en/chapter08/dbus.xml
+#: lfs-en/chapter08/shadow.xml lfs-en/chapter08/util-linux.xml
+#: lfs-en/chapter08/gawk.xml lfs-en/chapter08/man-db.xml
+#: lfs-en/chapter08/groff.xml lfs-en/chapter10/kernel.xml
+#: lfs-en/chapter09/bootscripts.xml
 msgid "Installed directories"
 msgstr "安装的目录"
 
@@ -518,8 +519,8 @@ msgstr "<parameter>libc_cv_slibdir=/usr/lib</parameter>"
 #: lfs-en/chapter08/sysvinit.xml lfs-en/chapter08/ninja.xml
 #: lfs-en/chapter08/autoconf.xml lfs-en/chapter08/texinfo.xml
 #: lfs-en/chapter08/openssl.xml lfs-en/chapter08/automake.xml
-#: lfs-en/chapter08/inetutils.xml lfs-en/chapter08/tcl.xml
-#: lfs-en/chapter08/perl.xml lfs-en/chapter08/gzip.xml
+#: lfs-en/chapter08/inetutils.xml lfs-en/chapter08/python.xml
+#: lfs-en/chapter08/tcl.xml lfs-en/chapter08/perl.xml lfs-en/chapter08/gzip.xml
 #: lfs-en/chapter08/less.xml lfs-en/chapter08/ncurses.xml
 #: lfs-en/chapter08/flex.xml lfs-en/chapter08/xz.xml lfs-en/chapter08/grub.xml
 #: lfs-en/chapter08/e2fsprogs.xml lfs-en/chapter08/udev.xml
@@ -559,17 +560,19 @@ msgstr "<userinput remap=\"make\">make check</userinput>"
 
 #. type: Content of: <sect1><sect2><segmentedlist><segtitle>
 #: lfs-en/chapter08/libtool.xml lfs-en/chapter08/gcc.xml
-#: lfs-en/chapter08/systemd.xml lfs-en/chapter08/expat.xml
+#: lfs-en/chapter08/gmp.xml lfs-en/chapter08/systemd.xml
+#: lfs-en/chapter08/mpc.xml lfs-en/chapter08/expat.xml
 #: lfs-en/chapter08/readline.xml lfs-en/chapter08/zlib.xml
-#: lfs-en/chapter08/openssl.xml lfs-en/chapter08/perl.xml
-#: lfs-en/chapter08/ncurses.xml lfs-en/chapter08/flex.xml
-#: lfs-en/chapter08/xz.xml lfs-en/chapter08/e2fsprogs.xml
-#: lfs-en/chapter08/udev.xml lfs-en/chapter08/binutils.xml
-#: lfs-en/chapter08/gdbm.xml lfs-en/chapter08/bzip2.xml
-#: lfs-en/chapter08/gettext.xml lfs-en/chapter08/glibc.xml
-#: lfs-en/chapter08/dbus.xml lfs-en/chapter08/shadow.xml
-#: lfs-en/chapter08/util-linux.xml lfs-en/chapter08/gawk.xml
-#: lfs-en/chapter08/man-db.xml lfs-en/chapter08/libxcrypt.xml
+#: lfs-en/chapter08/openssl.xml lfs-en/chapter08/mpfr.xml
+#: lfs-en/chapter08/perl.xml lfs-en/chapter08/ncurses.xml
+#: lfs-en/chapter08/flex.xml lfs-en/chapter08/xz.xml
+#: lfs-en/chapter08/e2fsprogs.xml lfs-en/chapter08/udev.xml
+#: lfs-en/chapter08/binutils.xml lfs-en/chapter08/gdbm.xml
+#: lfs-en/chapter08/bzip2.xml lfs-en/chapter08/gettext.xml
+#: lfs-en/chapter08/glibc.xml lfs-en/chapter08/dbus.xml
+#: lfs-en/chapter08/shadow.xml lfs-en/chapter08/util-linux.xml
+#: lfs-en/chapter08/gawk.xml lfs-en/chapter08/man-db.xml
+#: lfs-en/chapter08/libxcrypt.xml
 msgid "Installed libraries"
 msgstr "安装的库"
 
@@ -624,6 +627,29 @@ msgstr "现在修复导致 posix_memalign() 函数在一些条件下非常缓慢
 #, no-wrap
 msgid "<userinput remap=\"pre\">patch -Np1 -i ../&glibc-memalign-patch;</userinput>"
 msgstr "<userinput remap=\"pre\">patch -Np1 -i ../&glibc-memalign-patch;</userinput>"
+
+#. type: Content of: <sect1><sect2><para>
+#: lfs-en/chapter08/glibc.xml
+msgid ""
+"Then fix a security vulnerability exploitable when the <option>no-aaaa</"
+"option> option is used in <filename>/etc/resolv.conf</filename>:"
+msgstr ""
+"然后修复在 <filename>/etc/resolv.conf</filename> 中使用了 <option>no-aaaa</"
+"option> 时可利用的安全缺陷："
+
+#. type: Content of: <sect1><sect2><screen>
+#: lfs-en/chapter08/glibc.xml
+#, no-wrap
+msgid ""
+"<userinput remap=\"pre\">sed \\\n"
+"  -E \"/__res_context_search/\\\n"
+"      {N;N;s/(search \\(([^,]*,){6}[^,]*)NULL/\\1\\&amp;alt_dns_packet_buffer/}\" \\\n"
+"  -i resolv/nss_dns/dns-host.c</userinput>"
+msgstr ""
+"<userinput remap=\"pre\">sed \\\n"
+"  -E \"/__res_context_search/\\\n"
+"      {N;N;s/(search \\(([^,]*,){6}[^,]*)NULL/\\1\\&amp;alt_dns_packet_buffer/}\" \\\n"
+"  -i resolv/nss_dns/dns-host.c</userinput>"
 
 #. type: Content of: <sect1><sect2><para>
 #: lfs-en/chapter08/glibc.xml
