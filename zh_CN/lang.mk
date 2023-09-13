@@ -30,7 +30,7 @@ zh_CN/book/packages.ent: $(LFS_EN)/packages.ent $(THIS)
 	    -e 's/\([0-9.]* SBU\) on a spinning disk, \(.* SBU\) on an SSD/机械硬盘上 \1，固态硬盘上 \2/' \
 	    $< > $@
 
-zh_CN/book/git-version-l10n.sh: $(LFS_EN)/git-version.sh $(THIS)
+zh_CN/book/git-version.sh: $(LFS_EN)/git-version.sh $(THIS)
 	mkdir -pv $(@D)
 	sed -e '/full_date=/ i month_zh_cn=$$(date -d "$$commit_date" "+%m" | sed "s/^0//")' \
 	    -e '/full_date=/ s@".*"@"$$year 年 $$month_zh_cn 月 $$day 日"@' \
