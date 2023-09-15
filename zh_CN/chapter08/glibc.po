@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Linux From Scratch 11.0\n"
 "Report-Msgid-Bugs-To: lfs-dev@lists.linuxfromscratch.org\n"
-"POT-Creation-Date: 2023-09-13 15:44+0800\n"
+"POT-Creation-Date: 2023-09-15 16:47+0800\n"
 "PO-Revision-Date: 2021-08-21 11:33+0800\n"
 "Last-Translator: Xi Ruoyao <xry111@xry111.site>\n"
 "Language-Team: none\n"
@@ -618,38 +618,17 @@ msgstr "<userinput remap=\"pre\">patch -Np1 -i ../&glibc-fhs-patch;</userinput>"
 #. type: Content of: <sect1><sect2><para>
 #: lfs-en/chapter08/glibc.xml
 msgid ""
-"Now fix a regression causing the posix_memalign() function to be very slow "
-"in some conditions:"
-msgstr "现在修复导致 posix_memalign() 函数在一些条件下非常缓慢的退化问题："
+"Now fix two security vulnerabilities and a regression causing the "
+"posix_memalign() function very slow in some conditions:"
+msgstr ""
+"现在修复两项安全缺陷，以及一项导致 posix_memalign() 函数在一些条件下非常缓慢"
+"的退化问题："
 
 #. type: Content of: <sect1><sect2><screen>
 #: lfs-en/chapter08/glibc.xml
 #, no-wrap
-msgid "<userinput remap=\"pre\">patch -Np1 -i ../&glibc-memalign-patch;</userinput>"
-msgstr "<userinput remap=\"pre\">patch -Np1 -i ../&glibc-memalign-patch;</userinput>"
-
-#. type: Content of: <sect1><sect2><para>
-#: lfs-en/chapter08/glibc.xml
-msgid ""
-"Then fix a security vulnerability exploitable when the <option>no-aaaa</"
-"option> option is used in <filename>/etc/resolv.conf</filename>:"
-msgstr ""
-"然后修复在 <filename>/etc/resolv.conf</filename> 中使用了 <option>no-aaaa</"
-"option> 时可利用的安全缺陷："
-
-#. type: Content of: <sect1><sect2><screen>
-#: lfs-en/chapter08/glibc.xml
-#, no-wrap
-msgid ""
-"<userinput remap=\"pre\">sed \\\n"
-"  -E \"/__res_context_search/\\\n"
-"      {N;N;s/(search \\(([^,]*,){6}[^,]*)NULL/\\1\\&amp;alt_dns_packet_buffer/}\" \\\n"
-"  -i resolv/nss_dns/dns-host.c</userinput>"
-msgstr ""
-"<userinput remap=\"pre\">sed \\\n"
-"  -E \"/__res_context_search/\\\n"
-"      {N;N;s/(search \\(([^,]*,){6}[^,]*)NULL/\\1\\&amp;alt_dns_packet_buffer/}\" \\\n"
-"  -i resolv/nss_dns/dns-host.c</userinput>"
+msgid "<userinput remap=\"pre\">patch -Np1 -i ../&glibc-upstream-fixes-patch;</userinput>"
+msgstr "<userinput remap=\"pre\">patch -Np1 -i ../&glibc-upstream-fixes-patch;</userinput>"
 
 #. type: Content of: <sect1><sect2><para>
 #: lfs-en/chapter08/glibc.xml
@@ -1102,6 +1081,46 @@ msgstr ""
 "shadow: files\n"
 "\n"
 "hosts: files dns\n"
+"networks: files\n"
+"\n"
+"protocols: files\n"
+"services: files\n"
+"ethers: files\n"
+"rpc: files\n"
+"\n"
+"# End /etc/nsswitch.conf</literal>\n"
+"EOF</userinput>"
+
+#. type: Content of: <sect1><sect2><sect3><screen>
+#: lfs-en/chapter08/glibc.xml
+#, no-wrap
+msgid ""
+"<userinput>cat &gt; /etc/nsswitch.conf &lt;&lt; \"EOF\"\n"
+"<literal># Begin /etc/nsswitch.conf\n"
+"\n"
+"passwd: files systemd\n"
+"group: files systemd\n"
+"shadow: files systemd\n"
+"\n"
+"hosts: mymachines resolve [!UNAVAIL=return] files myhostname dns\n"
+"networks: files\n"
+"\n"
+"protocols: files\n"
+"services: files\n"
+"ethers: files\n"
+"rpc: files\n"
+"\n"
+"# End /etc/nsswitch.conf</literal>\n"
+"EOF</userinput>"
+msgstr ""
+"<userinput>cat &gt; /etc/nsswitch.conf &lt;&lt; \"EOF\"\n"
+"<literal># Begin /etc/nsswitch.conf\n"
+"\n"
+"passwd: files systemd\n"
+"group: files systemd\n"
+"shadow: files systemd\n"
+"\n"
+"hosts: mymachines resolve [!UNAVAIL=return] files myhostname dns\n"
 "networks: files\n"
 "\n"
 "protocols: files\n"
