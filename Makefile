@@ -84,7 +84,7 @@ $(MLANG)/book/tidy.conf: $(LFS_EN)/tidy.conf $(MLANG)/lang.mk
 # here.
 .PHONY: version
 version: $(MLANG)/book/git-version.sh
-	cd $(<D); \
+	cd $(<D); rm LFS-RELEASE; \
 	DIST=./LFS-RELEASE GIT_DIR=$(PWD)/$(LFS_EN)/.git ./$(<F) sysv
 	rm -fv $(MLANG)/book/conditional.ent
 
