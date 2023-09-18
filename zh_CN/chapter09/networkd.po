@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Linux From Scratch 11.4\n"
 "Report-Msgid-Bugs-To: lfs-dev@lists.linuxfromscratch.org\n"
-"POT-Creation-Date: 2023-09-15 16:47+0800\n"
+"POT-Creation-Date: 2023-09-18 16:58+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: Xi Ruoyao <xry111@xry111.site>\n"
 "Language-Team: none\n"
@@ -14,42 +14,194 @@ msgstr ""
 "X-Pootle-Path: /zh_CN/lfs/chapter09/networkd.po\n"
 "X-Generator: Translate Toolkit 2.2.5\n"
 
-#. type: Content of: <sect1><sect2><indexterm><secondary>
-#: lfs-en/chapter08/sysklogd.xml lfs-en/chapter08/udev.xml
-#: lfs-en/chapter08/shadow.xml lfs-en/chapter09/consoled.xml
-#: lfs-en/chapter09/usage.xml lfs-en/chapter09/networkd.xml
-#: lfs-en/chapter09/clock.xml lfs-en/chapter09/network.xml
-msgid "configuring"
-msgstr "配置"
-
 #. type: Content of: <sect1><sect2><indexterm><primary>
-#: lfs-en/chapter08/inetutils.xml lfs-en/chapter09/networkd.xml
-#: lfs-en/chapter09/network.xml
+#: lfs-en/chapter08/inetutils.xml lfs-en/chapter09/network.xml
+#: lfs-en/chapter09/networkd.xml
 msgid "hostname"
 msgstr "hostname"
 
 #. type: Content of: <sect1><sect2><indexterm><secondary>
-#: lfs-en/chapter11/reboot.xml lfs-en/chapter09/networkd.xml
-#: lfs-en/chapter09/network.xml
-msgid "/etc/hosts"
-msgstr "/etc/hosts"
+#: lfs-en/chapter08/shadow.xml lfs-en/chapter08/sysklogd.xml
+#: lfs-en/chapter08/udev.xml lfs-en/chapter09/clock.xml
+#: lfs-en/chapter09/consoled.xml lfs-en/chapter09/network.xml
+#: lfs-en/chapter09/networkd.xml lfs-en/chapter09/usage.xml
+msgid "configuring"
+msgstr "配置"
 
 #. type: Content of: <sect1><sect2><indexterm><primary>
-#: lfs-en/chapter11/reboot.xml lfs-en/chapter09/networkd.xml
-#: lfs-en/chapter09/network.xml
-msgid "/etc/resolv.conf"
-msgstr "/etc/resolv.conf"
+#: lfs-en/chapter09/bootscripts.xml lfs-en/chapter09/network.xml
+#: lfs-en/chapter09/networkd.xml
+msgid "localnet"
+msgstr "localnet"
+
+#. type: Content of: <sect1><sect2><indexterm><primary>
+#: lfs-en/chapter09/bootscripts.xml lfs-en/chapter09/network.xml
+#: lfs-en/chapter09/networkd.xml
+msgid "network"
+msgstr "network"
 
 #. type: Content of: <sect1><title>
-#: lfs-en/chapter09/networkd.xml lfs-en/chapter09/network.xml
+#: lfs-en/chapter09/network.xml lfs-en/chapter09/networkd.xml
 msgid "General Network Configuration"
 msgstr "一般网络配置"
 
-#. type: Content of: <sect1><sect2><indexterm><primary>
-#: lfs-en/chapter09/networkd.xml lfs-en/chapter09/bootscripts.xml
-#: lfs-en/chapter09/network.xml
-msgid "network"
-msgstr "network"
+#. type: Content of: <sect1><sect2><title>
+#: lfs-en/chapter09/network.xml lfs-en/chapter09/networkd.xml
+msgid "Creating the /etc/resolv.conf File"
+msgstr "创建 /etc/resolv.conf 文件"
+
+#. type: Content of: <sect1><itemizedlist><listitem><itemizedlist><listitem><para>
+#: lfs-en/chapter09/network.xml lfs-en/chapter09/networkd.xml
+#: lfs-en/chapter11/reboot.xml
+msgid "/etc/resolv.conf"
+msgstr "/etc/resolv.conf"
+
+#. type: Content of: <sect1><sect2><sect3><screen>
+#: lfs-en/chapter09/network.xml lfs-en/chapter09/networkd.xml
+#, no-wrap
+msgid ""
+"<userinput>cat &gt; /etc/resolv.conf &lt;&lt; \"EOF\"\n"
+"<literal># Begin /etc/resolv.conf\n"
+"\n"
+"domain <replaceable>&lt;Your Domain Name&gt;</replaceable>\n"
+"nameserver <replaceable>&lt;IP address of your primary nameserver&gt;</replaceable>\n"
+"nameserver <replaceable>&lt;IP address of your secondary nameserver&gt;</replaceable>\n"
+"\n"
+"# End /etc/resolv.conf</literal>\n"
+"EOF</userinput>"
+msgstr ""
+"<userinput>cat &gt; /etc/resolv.conf &lt;&lt; \"EOF\"\n"
+"<literal># Begin /etc/resolv.conf\n"
+"\n"
+"domain <replaceable>&lt;您的域名&gt;</replaceable>\n"
+"nameserver <replaceable>&lt;您的主要域名服务器 IP 地址&gt;</replaceable>\n"
+"nameserver <replaceable>&lt;您的次要域名服务器 IP 地址&gt;</replaceable>\n"
+"\n"
+"# End /etc/resolv.conf</literal>\n"
+"EOF</userinput>"
+
+#. type: Content of: <sect1><sect2><sect3><para>
+#: lfs-en/chapter09/network.xml lfs-en/chapter09/networkd.xml
+msgid ""
+"The <varname>domain</varname> statement can be omitted or replaced with a "
+"<varname>search</varname> statement.  See the man page for resolv.conf for "
+"more details."
+msgstr ""
+"可以省略 <varname>domain</varname> 语句，或使用一条 <varname>search</"
+"varname> 语句代替它。阅读 resolv.conf 的手册页了解更多细节。"
+
+#. type: Content of: <sect1><sect2><para>
+#: lfs-en/chapter09/network.xml lfs-en/chapter09/networkd.xml
+msgid ""
+"During the boot process, the file <filename>/etc/hostname</filename> is used "
+"for establishing the system's hostname."
+msgstr ""
+"在引导过程中，<filename>/etc/hostname</filename> 被用于设定系统主机名。"
+
+#. type: Content of: <sect1><sect2><para>
+#: lfs-en/chapter09/network.xml lfs-en/chapter09/networkd.xml
+msgid ""
+"Create the <filename>/etc/hostname</filename> file and enter a hostname by "
+"running:"
+msgstr ""
+"执行以下命令，创建 <filename>/etc/hostname</filename> 文件，并输入一个主机"
+"名："
+
+#. type: Content of: <sect1><sect2><screen>
+#: lfs-en/chapter09/network.xml lfs-en/chapter09/networkd.xml
+#, no-wrap
+msgid "<userinput>echo \"<replaceable>&lt;lfs&gt;</replaceable>\" &gt; /etc/hostname</userinput>"
+msgstr "<userinput>echo \"<replaceable>&lt;lfs&gt;</replaceable>\" &gt; /etc/hostname</userinput>"
+
+#. type: Content of: <sect1><sect2><title>
+#: lfs-en/chapter09/network.xml lfs-en/chapter09/networkd.xml
+msgid "Customizing the /etc/hosts File"
+msgstr "自定义 /etc/hosts 文件"
+
+#. type: Content of: <sect1><itemizedlist><listitem><itemizedlist><listitem><para>
+#: lfs-en/chapter09/network.xml lfs-en/chapter09/networkd.xml
+#: lfs-en/chapter11/reboot.xml
+msgid "/etc/hosts"
+msgstr "/etc/hosts"
+
+#. type: Content of: <sect1><sect2><para>
+#: lfs-en/chapter09/network.xml lfs-en/chapter09/networkd.xml
+msgid ""
+"Decide on a fully-qualified domain name (FQDN), and possible aliases for use "
+"in the <filename>/etc/hosts</filename> file. If using static IP addresses, "
+"you'll also need to decide on an IP address. The syntax for a hosts file "
+"entry is:"
+msgstr ""
+"选择一个全限定域名 (FQDN)，和可能的别名，以供 <filename>/etc/hosts</"
+"filename> 文件使用。如果使用静态 IP 地址，您还需要确定要使用的 IP 地址。"
+"hosts 文件条目的语法是："
+
+#. type: Content of: <sect1><sect2><screen>
+#: lfs-en/chapter09/network.xml lfs-en/chapter09/networkd.xml
+#, no-wrap
+msgid "<literal>IP_address myhost.example.org aliases</literal>"
+msgstr "<literal>IP_地址 主机名.域名 别名</literal>"
+
+#. type: Content of: <sect1><sect2><para>
+#: lfs-en/chapter09/network.xml lfs-en/chapter09/networkd.xml
+msgid ""
+"Unless the computer is to be visible to the Internet (i.e., there is a "
+"registered domain and a valid block of assigned IP addresses&mdash;most "
+"users do not have this), make sure that the IP address is in the private "
+"network IP address range. Valid ranges are:"
+msgstr ""
+"除非该计算机可以从 Internet 访问 (即拥有一个注册域名，并分配了一个有效的 IP "
+"地址段 —— 多数用户没有分配公网 IP)，则使用的 IP 地址必须属于私网 IP 范围。有"
+"效的范围是："
+
+#. type: Content of: <sect1><sect2><screen>
+#: lfs-en/chapter09/network.xml lfs-en/chapter09/networkd.xml
+#, no-wrap
+msgid ""
+"<literal>Private Network Address Range      Normal Prefix\n"
+"10.0.0.1 - 10.255.255.254           8\n"
+"172.x.0.1 - 172.x.255.254           16\n"
+"192.168.y.1 - 192.168.y.254         24</literal>"
+msgstr ""
+"<literal>私网地址范围                         公共前缀长度\n"
+"10.0.0.1 - 10.255.255.254            8\n"
+"172.x.0.1 - 172.x.255.254           16\n"
+"192.168.y.1 - 192.168.y.254         24</literal>"
+
+#. type: Content of: <sect1><sect2><para>
+#: lfs-en/chapter09/network.xml lfs-en/chapter09/networkd.xml
+msgid ""
+"x can be any number in the range 16-31. y can be any number in the range "
+"0-255."
+msgstr "x 可以是 16-31 之间的任何数字。y 可以是 0-255 之间的任何数字。"
+
+#. type: Content of: <sect1><sect2><para>
+#: lfs-en/chapter09/network.xml lfs-en/chapter09/networkd.xml
+msgid "A valid private IP address could be 192.168.1.1."
+msgstr "例如，192.168.1.1 是有效的私网 IP 地址。"
+
+#. type: Content of: <sect1><sect2><para>
+#: lfs-en/chapter09/network.xml lfs-en/chapter09/networkd.xml
+msgid ""
+"If the computer is to be visible to the Internet, a valid FQDN can be the "
+"domain name itself, or a string resulted by concatenating a prefix (often "
+"the hostname) and the domain name with a <quote>.</quote> character.  And, "
+"you need to contact the domain provider to resolve the FQDN to your public "
+"IP address."
+msgstr ""
+"如果计算机要被配置为能够从 Internet 访问，则可以使用注册域名本身作为有效的 "
+"FQDN，或者在其之前用<quote>.</quote>符号连接一个前缀 (前缀通常是主机名) 得到 "
+"FQDN。另外，您需要联系域名提供商，以将 FQDN 解析到您的公网 IP 地址。"
+
+#. type: Content of: <sect1><sect2><para>
+#: lfs-en/chapter09/network.xml lfs-en/chapter09/networkd.xml
+msgid ""
+"Even if the computer is not visible to the Internet, a FQDN is still needed "
+"for certain programs, such as MTAs, to operate properly.  A special FQDN, "
+"<literal>localhost.localdomain</literal>, can be used for this purpose."
+msgstr ""
+"即使计算机无法从 Internet 访问，一些程序，如 MTA，仍然需要一个 FQDN 才能正常"
+"工作。此时可以使用一个特殊的 FQDN <literal>localhost.localdomain</literal>。"
 
 #. type: Content of: <sect1><para>
 #: lfs-en/chapter09/networkd.xml
@@ -323,11 +475,6 @@ msgstr ""
 "UseDomains=true</literal>\n"
 "EOF</userinput>"
 
-#. type: Content of: <sect1><sect2><title>
-#: lfs-en/chapter09/networkd.xml lfs-en/chapter09/network.xml
-msgid "Creating the /etc/resolv.conf File"
-msgstr "创建 /etc/resolv.conf 文件"
-
 #. type: Content of: <sect1><sect2><para>
 #: lfs-en/chapter09/networkd.xml
 msgid ""
@@ -403,40 +550,6 @@ msgid ""
 msgstr ""
 "如果希望使用静态的 <filename>/etc/resolv.conf</filename> 执行以下命令创建它："
 
-#. type: Content of: <sect1><sect2><screen>
-#: lfs-en/chapter09/networkd.xml lfs-en/chapter09/network.xml
-#, no-wrap
-msgid ""
-"<userinput>cat &gt; /etc/resolv.conf &lt;&lt; \"EOF\"\n"
-"<literal># Begin /etc/resolv.conf\n"
-"\n"
-"domain <replaceable>&lt;Your Domain Name&gt;</replaceable>\n"
-"nameserver <replaceable>&lt;IP address of your primary nameserver&gt;</replaceable>\n"
-"nameserver <replaceable>&lt;IP address of your secondary nameserver&gt;</replaceable>\n"
-"\n"
-"# End /etc/resolv.conf</literal>\n"
-"EOF</userinput>"
-msgstr ""
-"<userinput>cat &gt; /etc/resolv.conf &lt;&lt; \"EOF\"\n"
-"<literal># Begin /etc/resolv.conf\n"
-"\n"
-"domain <replaceable>&lt;您的域名&gt;</replaceable>\n"
-"nameserver <replaceable>&lt;您的主要域名服务器 IP 地址&gt;</replaceable>\n"
-"nameserver <replaceable>&lt;您的次要域名服务器 IP 地址&gt;</replaceable>\n"
-"\n"
-"# End /etc/resolv.conf</literal>\n"
-"EOF</userinput>"
-
-#. type: Content of: <sect1><sect2><para>
-#: lfs-en/chapter09/networkd.xml lfs-en/chapter09/network.xml
-msgid ""
-"The <varname>domain</varname> statement can be omitted or replaced with a "
-"<varname>search</varname> statement.  See the man page for resolv.conf for "
-"more details."
-msgstr ""
-"可以省略 <varname>domain</varname> 语句，或使用一条 <varname>search</"
-"varname> 语句代替它。阅读 resolv.conf 的手册页了解更多细节。"
-
 #. type: Content of: <sect1><sect2><sect3><para>
 #: lfs-en/chapter09/networkd.xml
 msgid ""
@@ -472,29 +585,6 @@ msgid "Configuring the system hostname"
 msgstr "配置系统主机名"
 
 #. type: Content of: <sect1><sect2><para>
-#: lfs-en/chapter09/networkd.xml lfs-en/chapter09/network.xml
-msgid ""
-"During the boot process, the file <filename>/etc/hostname</filename> is used "
-"for establishing the system's hostname."
-msgstr ""
-"在引导过程中，<filename>/etc/hostname</filename> 被用于设定系统主机名。"
-
-#. type: Content of: <sect1><sect2><para>
-#: lfs-en/chapter09/networkd.xml lfs-en/chapter09/network.xml
-msgid ""
-"Create the <filename>/etc/hostname</filename> file and enter a hostname by "
-"running:"
-msgstr ""
-"执行以下命令，创建 <filename>/etc/hostname</filename> 文件，并输入一个主机"
-"名："
-
-#. type: Content of: <sect1><sect2><screen>
-#: lfs-en/chapter09/networkd.xml lfs-en/chapter09/network.xml
-#, no-wrap
-msgid "<userinput>echo \"<replaceable>&lt;lfs&gt;</replaceable>\" &gt; /etc/hostname</userinput>"
-msgstr "<userinput>echo \"<replaceable>&lt;lfs&gt;</replaceable>\" &gt; /etc/hostname</userinput>"
-
-#. type: Content of: <sect1><sect2><para>
 #: lfs-en/chapter09/networkd.xml
 msgid ""
 "<replaceable>&lt;lfs&gt;</replaceable> needs to be replaced with the name "
@@ -504,96 +594,6 @@ msgstr ""
 "<replaceable>&lt;lfs&gt;</replaceable> 需要被替换为赋予该计算机的名称。不要在"
 "这里输入全限定域名 (FQDN)，它应该被写入 <filename>/etc/hosts</filename> 文"
 "件。"
-
-#. type: Content of: <sect1><sect2><title>
-#: lfs-en/chapter09/networkd.xml lfs-en/chapter09/network.xml
-msgid "Customizing the /etc/hosts File"
-msgstr "自定义 /etc/hosts 文件"
-
-#. type: Content of: <sect1><sect2><indexterm><primary>
-#: lfs-en/chapter09/networkd.xml lfs-en/chapter09/bootscripts.xml
-#: lfs-en/chapter09/network.xml
-msgid "localnet"
-msgstr "localnet"
-
-#. type: Content of: <sect1><sect2><para>
-#: lfs-en/chapter09/networkd.xml lfs-en/chapter09/network.xml
-msgid ""
-"Decide on a fully-qualified domain name (FQDN), and possible aliases for use "
-"in the <filename>/etc/hosts</filename> file. If using static IP addresses, "
-"you'll also need to decide on an IP address. The syntax for a hosts file "
-"entry is:"
-msgstr ""
-"选择一个全限定域名 (FQDN)，和可能的别名，以供 <filename>/etc/hosts</"
-"filename> 文件使用。如果使用静态 IP 地址，您还需要确定要使用的 IP 地址。"
-"hosts 文件条目的语法是："
-
-#. type: Content of: <sect1><sect2><screen>
-#: lfs-en/chapter09/networkd.xml lfs-en/chapter09/network.xml
-#, no-wrap
-msgid "<literal>IP_address myhost.example.org aliases</literal>"
-msgstr "<literal>IP_地址 主机名.域名 别名</literal>"
-
-#. type: Content of: <sect1><sect2><para>
-#: lfs-en/chapter09/networkd.xml lfs-en/chapter09/network.xml
-msgid ""
-"Unless the computer is to be visible to the Internet (i.e., there is a "
-"registered domain and a valid block of assigned IP addresses&mdash;most "
-"users do not have this), make sure that the IP address is in the private "
-"network IP address range. Valid ranges are:"
-msgstr ""
-"除非该计算机可以从 Internet 访问 (即拥有一个注册域名，并分配了一个有效的 IP "
-"地址段 —— 多数用户没有分配公网 IP)，则使用的 IP 地址必须属于私网 IP 范围。有"
-"效的范围是："
-
-#. type: Content of: <sect1><sect2><screen>
-#: lfs-en/chapter09/networkd.xml lfs-en/chapter09/network.xml
-#, no-wrap
-msgid ""
-"<literal>Private Network Address Range      Normal Prefix\n"
-"10.0.0.1 - 10.255.255.254           8\n"
-"172.x.0.1 - 172.x.255.254           16\n"
-"192.168.y.1 - 192.168.y.254         24</literal>"
-msgstr ""
-"<literal>私网地址范围                         公共前缀长度\n"
-"10.0.0.1 - 10.255.255.254            8\n"
-"172.x.0.1 - 172.x.255.254           16\n"
-"192.168.y.1 - 192.168.y.254         24</literal>"
-
-#. type: Content of: <sect1><sect2><para>
-#: lfs-en/chapter09/networkd.xml lfs-en/chapter09/network.xml
-msgid ""
-"x can be any number in the range 16-31. y can be any number in the range "
-"0-255."
-msgstr "x 可以是 16-31 之间的任何数字。y 可以是 0-255 之间的任何数字。"
-
-#. type: Content of: <sect1><sect2><para>
-#: lfs-en/chapter09/networkd.xml lfs-en/chapter09/network.xml
-msgid "A valid private IP address could be 192.168.1.1."
-msgstr "例如，192.168.1.1 是有效的私网 IP 地址。"
-
-#. type: Content of: <sect1><sect2><para>
-#: lfs-en/chapter09/networkd.xml lfs-en/chapter09/network.xml
-msgid ""
-"If the computer is to be visible to the Internet, a valid FQDN can be the "
-"domain name itself, or a string resulted by concatenating a prefix (often "
-"the hostname) and the domain name with a <quote>.</quote> character.  And, "
-"you need to contact the domain provider to resolve the FQDN to your public "
-"IP address."
-msgstr ""
-"如果计算机要被配置为能够从 Internet 访问，则可以使用注册域名本身作为有效的 "
-"FQDN，或者在其之前用<quote>.</quote>符号连接一个前缀 (前缀通常是主机名) 得到 "
-"FQDN。另外，您需要联系域名提供商，以将 FQDN 解析到您的公网 IP 地址。"
-
-#. type: Content of: <sect1><sect2><para>
-#: lfs-en/chapter09/networkd.xml lfs-en/chapter09/network.xml
-msgid ""
-"Even if the computer is not visible to the Internet, a FQDN is still needed "
-"for certain programs, such as MTAs, to operate properly.  A special FQDN, "
-"<literal>localhost.localdomain</literal>, can be used for this purpose."
-msgstr ""
-"即使计算机无法从 Internet 访问，一些程序，如 MTA，仍然需要一个 FQDN 才能正常"
-"工作。此时可以使用一个特殊的 FQDN <literal>localhost.localdomain</literal>。"
 
 #. type: Content of: <sect1><sect2><para>
 #: lfs-en/chapter09/networkd.xml
