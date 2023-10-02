@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Linux From Scratch 11.0\n"
 "Report-Msgid-Bugs-To: lfs-dev@lists.linuxfromscratch.org\n"
-"POT-Creation-Date: 2023-09-18 16:58+0800\n"
+"POT-Creation-Date: 2023-10-02 11:33+0800\n"
 "PO-Revision-Date: 2021-08-21 11:33+0800\n"
 "Last-Translator: Xi Ruoyao <xry111@xry111.site>\n"
 "Language-Team: none\n"
@@ -401,6 +401,16 @@ msgstr "<parameter>--enable-kernel=&min-kernel;</parameter>"
 msgid "<parameter>libc_cv_slibdir=/usr/lib</parameter>"
 msgstr "<parameter>libc_cv_slibdir=/usr/lib</parameter>"
 
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
+#: lfs-en/chapter05/glibc.xml lfs-en/chapter08/glibc.xml
+msgid "<parameter>--disable-nscd</parameter>"
+msgstr "<parameter>--disable-nscd</parameter>"
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
+#: lfs-en/chapter05/glibc.xml lfs-en/chapter08/glibc.xml
+msgid "Do not build the name service cache daemon which is no longer used."
+msgstr "不构建目前已经没有作用的命名服务缓存守护程序。"
+
 #. type: Content of: <sect1><sect2><para>
 #: lfs-en/chapter05/glibc.xml lfs-en/chapter06/bash.xml
 #: lfs-en/chapter06/binutils-pass2.xml lfs-en/chapter06/coreutils.xml
@@ -658,6 +668,7 @@ msgid ""
 "             --enable-kernel=&min-kernel;                     \\\n"
 "             --enable-stack-protector=strong          \\\n"
 "             --with-headers=/usr/include              \\\n"
+"             --disable-nscd                           \\\n"
 "             libc_cv_slibdir=/usr/lib</userinput>"
 msgstr ""
 "<userinput remap=\"configure\">../configure --prefix=/usr                            \\\n"
@@ -665,6 +676,7 @@ msgstr ""
 "             --enable-kernel=&min-kernel;                     \\\n"
 "             --enable-stack-protector=strong          \\\n"
 "             --with-headers=/usr/include              \\\n"
+"             --disable-nscd                           \\\n"
 "             libc_cv_slibdir=/usr/lib</userinput>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
@@ -819,38 +831,6 @@ msgstr "改正 <command>ldd</command> 脚本中硬编码的可执行文件加载
 #, no-wrap
 msgid "<userinput remap=\"install\">sed '/RTLDLIST=/s@/usr@@g' -i /usr/bin/ldd</userinput>"
 msgstr "<userinput remap=\"install\">sed '/RTLDLIST=/s@/usr@@g' -i /usr/bin/ldd</userinput>"
-
-#. type: Content of: <sect1><sect2><para>
-#: lfs-en/chapter08/glibc.xml
-msgid ""
-"Install the configuration file and runtime directory for <command>nscd</"
-"command>:"
-msgstr "安装 <command>nscd</command> 的配置文件和运行时目录："
-
-#. type: Content of: <sect1><sect2><screen>
-#: lfs-en/chapter08/glibc.xml
-#, no-wrap
-msgid ""
-"<userinput remap=\"install\">cp -v ../nscd/nscd.conf /etc/nscd.conf\n"
-"mkdir -pv /var/cache/nscd</userinput>"
-msgstr ""
-"<userinput remap=\"install\">cp -v ../nscd/nscd.conf /etc/nscd.conf\n"
-"mkdir -pv /var/cache/nscd</userinput>"
-
-#. type: Content of: <sect1><sect2><para>
-#: lfs-en/chapter08/glibc.xml
-msgid "Install the systemd support files for <command>nscd</command>:"
-msgstr "安装 <command>nscd</command> 的 systemd 支持文件："
-
-#. type: Content of: <sect1><sect2><screen>
-#: lfs-en/chapter08/glibc.xml
-#, no-wrap
-msgid ""
-"<userinput remap=\"install\">install -v -Dm644 ../nscd/nscd.tmpfiles /usr/lib/tmpfiles.d/nscd.conf\n"
-"install -v -Dm644 ../nscd/nscd.service /usr/lib/systemd/system/nscd.service</userinput>"
-msgstr ""
-"<userinput remap=\"install\">install -v -Dm644 ../nscd/nscd.tmpfiles /usr/lib/tmpfiles.d/nscd.conf\n"
-"install -v -Dm644 ../nscd/nscd.service /usr/lib/systemd/system/nscd.service</userinput>"
 
 #. type: Content of: <sect1><sect2><para>
 #: lfs-en/chapter08/glibc.xml
@@ -1389,13 +1369,13 @@ msgstr "Glibc 的内容"
 msgid ""
 "gencat, getconf, getent, iconv, iconvconfig, ldconfig, ldd, lddlibc4, ld.so "
 "(symlink to ld-linux-x86-64.so.2 or ld-linux.so.2), locale, localedef, "
-"makedb, mtrace, nscd, pcprofiledump, pldd, sln, sotruss, sprof, tzselect, "
-"xtrace, zdump, and zic"
+"makedb, mtrace, pcprofiledump, pldd, sln, sotruss, sprof, tzselect, xtrace, "
+"zdump, and zic"
 msgstr ""
 "gencat, getconf, getent, iconv, iconvconfig, ldconfig, ldd, lddlibc4, ld.so "
 "(到 ld-linux-x86-64.so.2 或 ld-linux.so.2 的符号链接), locale, localedef, "
-"makedb, mtrace, nscd, pcprofiledump, pldd, sln, sotruss, sprof, tzselect, "
-"xtrace, zdump, 以及 zic"
+"makedb, mtrace, pcprofiledump, pldd, sln, sotruss, sprof, tzselect, xtrace, "
+"zdump, 以及 zic"
 
 #. type: Content of: <sect1><sect2><segmentedlist><seglistitem><seg>
 #: lfs-en/chapter08/glibc.xml
@@ -1423,7 +1403,7 @@ msgid ""
 "netiucv, /usr/include/netpacket, /usr/include/netrom, /usr/include/netrose, /"
 "usr/include/nfs, /usr/include/protocols, /usr/include/rpc, /usr/include/"
 "sys, /usr/lib/audit, /usr/lib/gconv, /usr/lib/locale, /usr/libexec/getconf, /"
-"usr/share/i18n, /usr/share/zoneinfo, /var/cache/nscd, and /var/lib/nss_db"
+"usr/share/i18n, /usr/share/zoneinfo, and /var/lib/nss_db"
 msgstr ""
 "/usr/include/arpa, /usr/include/bits, /usr/include/gnu, /usr/include/net, /"
 "usr/include/netash, /usr/include/netatalk, /usr/include/netax25, /usr/"
@@ -1431,7 +1411,7 @@ msgstr ""
 "netiucv, /usr/include/netpacket, /usr/include/netrom, /usr/include/netrose, /"
 "usr/include/nfs, /usr/include/protocols, /usr/include/rpc, /usr/include/"
 "sys, /usr/lib/audit, /usr/lib/gconv, /usr/lib/locale, /usr/libexec/getconf, /"
-"usr/share/i18n, /usr/share/zoneinfo, /var/cache/nscd, 以及 /var/lib/nss_db"
+"usr/share/i18n, /usr/share/zoneinfo, 以及 /var/lib/nss_db"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: lfs-en/chapter08/glibc.xml
@@ -1620,22 +1600,6 @@ msgstr "读取并解析内存跟踪文件，以人类可读的形式输出内存
 #: lfs-en/chapter08/glibc.xml
 msgid "mtrace"
 msgstr "mtrace"
-
-#. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
-#: lfs-en/chapter08/glibc.xml
-msgid "<command>nscd</command>"
-msgstr "<command>nscd</command>"
-
-#. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
-#: lfs-en/chapter08/glibc.xml
-msgid ""
-"A daemon that provides a cache for the most common name service requests"
-msgstr "一个缓存最常见命名服务请求的守护进程"
-
-#. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
-#: lfs-en/chapter08/glibc.xml
-msgid "nscd"
-msgstr "nscd"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: lfs-en/chapter08/glibc.xml

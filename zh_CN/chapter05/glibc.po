@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Linux From Scratch 11.0\n"
 "Report-Msgid-Bugs-To: lfs-dev@lists.linuxfromscratch.org\n"
-"POT-Creation-Date: 2023-09-18 16:58+0800\n"
+"POT-Creation-Date: 2023-10-02 11:33+0800\n"
 "PO-Revision-Date: 2021-08-07 09:09+0800\n"
 "Last-Translator: Xi Ruoyao <xry111@xry111.site>\n"
 "Language-Team: none\n"
@@ -411,6 +411,7 @@ msgid ""
 "      --build=$(../scripts/config.guess) \\\n"
 "      --enable-kernel=&min-kernel;               \\\n"
 "      --with-headers=$LFS/usr/include    \\\n"
+"      --disable-nscd                     \\\n"
 "      libc_cv_slibdir=/usr/lib</userinput>"
 msgstr ""
 "<userinput remap=\"configure\">../configure                             \\\n"
@@ -419,6 +420,7 @@ msgstr ""
 "      --build=$(../scripts/config.guess) \\\n"
 "      --enable-kernel=&min-kernel;               \\\n"
 "      --with-headers=$LFS/usr/include    \\\n"
+"      --disable-nscd                     \\\n"
 "      libc_cv_slibdir=/usr/lib</userinput>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
@@ -479,6 +481,16 @@ msgid ""
 "This ensures that the library is installed in /usr/lib instead of the "
 "default /lib64 on 64-bit machines."
 msgstr "在 64 位机器上，这保证将库安装到 /usr/lib，而不是默认的 /lib64。"
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
+#: lfs-en/chapter05/glibc.xml lfs-en/chapter08/glibc.xml
+msgid "<parameter>--disable-nscd</parameter>"
+msgstr "<parameter>--disable-nscd</parameter>"
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
+#: lfs-en/chapter05/glibc.xml lfs-en/chapter08/glibc.xml
+msgid "Do not build the name service cache daemon which is no longer used."
+msgstr "不构建目前已经没有作用的命名服务缓存守护程序。"
 
 #. type: Content of: <sect1><sect2><para>
 #: lfs-en/chapter05/glibc.xml
