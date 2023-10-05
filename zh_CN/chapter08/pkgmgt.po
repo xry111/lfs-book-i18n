@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Linux From Scratch 11.4\n"
 "Report-Msgid-Bugs-To: lfs-dev@lists.linuxfromscratch.org\n"
-"POT-Creation-Date: 2023-06-04 20:05+0800\n"
+"POT-Creation-Date: 2023-10-05 15:22+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: Xi Ruoyao <xry111@xry111.site>\n"
 "Language-Team: none\n"
@@ -116,6 +116,23 @@ msgstr ""
 "如果需要升级 Linux API 头文件或 Glibc (例如从 Glibc-2.31 升级到 Glibc-2.32)，"
 "最安全的方法是重新构建 LFS。尽管您<emphasis>或许</emphasis>能按依赖顺序重新构"
 "建所有软件包，但我们不推荐这样做。"
+
+#. type: Content of: <sect1><sect2><itemizedlist><listitem><para>
+#: lfs-en/chapter08/pkgmgt.xml
+msgid ""
+"Reinstalling the same version of Glibc (&glibc-version; for this release of "
+"LFS) with patches should be safe when these patches do not change ABI and "
+"API.  When a security vulnerability is found in Glibc, we often need to "
+"apply such a patch to fix the vulnerability and reinstall Glibc.  Consult "
+"<ulink url='&lfs-root;lfs/advisories/'>LFS security advisories</ulink> if "
+"you are alerted for a published Glibc security vulnerability but unsure "
+"about the action to take."
+msgstr ""
+"重新安装用补丁修补的相同版本 Glibc (对于当前的 LFS 发布版本来说是 &glibc-"
+"version;) 在补丁不改变 ABI 和 API 时应该不会引起问题。在 Glibc 中发现新的安全"
+"缺陷时，我们一般需要应用满足上述条件的补丁以修复安全缺陷，并重新安装 Glibc。"
+"如果您发现了新公开的 Glibc 安全缺陷，但不确定应该如何处理它，参阅 <ulink "
+"url='&lfs-root;lfs/advisories/'>LFS 安全公告</ulink>。"
 
 #. type: Content of: <sect1><sect2><itemizedlist><listitem><para>
 #: lfs-en/chapter08/pkgmgt.xml
