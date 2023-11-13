@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Linux From Scratch 11.4\n"
 "Report-Msgid-Bugs-To: lfs-dev@lists.linuxfromscratch.org\n"
-"POT-Creation-Date: 2023-09-18 16:58+0800\n"
+"POT-Creation-Date: 2023-11-14 02:39+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: Xi Ruoyao <xry111@xry111.site>\n"
 "Language-Team: none\n"
@@ -116,14 +116,14 @@ msgstr "Udev"
 #: lfs-en/chapter08/perl.xml lfs-en/chapter08/pkgconf.xml
 #: lfs-en/chapter08/procps.xml lfs-en/chapter08/psmisc.xml
 #: lfs-en/chapter08/python.xml lfs-en/chapter08/readline.xml
-#: lfs-en/chapter08/sed.xml lfs-en/chapter08/shadow.xml
-#: lfs-en/chapter08/sysklogd.xml lfs-en/chapter08/systemd.xml
-#: lfs-en/chapter08/sysvinit.xml lfs-en/chapter08/tar.xml
-#: lfs-en/chapter08/tcl.xml lfs-en/chapter08/texinfo.xml
-#: lfs-en/chapter08/udev.xml lfs-en/chapter08/util-linux.xml
-#: lfs-en/chapter08/vim.xml lfs-en/chapter08/wheel.xml
-#: lfs-en/chapter08/xml-parser.xml lfs-en/chapter08/xz.xml
-#: lfs-en/chapter08/zlib.xml lfs-en/chapter08/zstd.xml
+#: lfs-en/chapter08/sed.xml lfs-en/chapter08/setuptools.xml
+#: lfs-en/chapter08/shadow.xml lfs-en/chapter08/sysklogd.xml
+#: lfs-en/chapter08/systemd.xml lfs-en/chapter08/sysvinit.xml
+#: lfs-en/chapter08/tar.xml lfs-en/chapter08/tcl.xml
+#: lfs-en/chapter08/texinfo.xml lfs-en/chapter08/udev.xml
+#: lfs-en/chapter08/util-linux.xml lfs-en/chapter08/vim.xml
+#: lfs-en/chapter08/wheel.xml lfs-en/chapter08/xml-parser.xml
+#: lfs-en/chapter08/xz.xml lfs-en/chapter08/zlib.xml lfs-en/chapter08/zstd.xml
 #: lfs-en/chapter09/bootscripts.xml lfs-en/chapter10/kernel.xml
 msgid "&buildtime;"
 msgstr "&buildtime;"
@@ -174,14 +174,14 @@ msgstr "&buildtime;"
 #: lfs-en/chapter08/perl.xml lfs-en/chapter08/pkgconf.xml
 #: lfs-en/chapter08/procps.xml lfs-en/chapter08/psmisc.xml
 #: lfs-en/chapter08/python.xml lfs-en/chapter08/readline.xml
-#: lfs-en/chapter08/sed.xml lfs-en/chapter08/shadow.xml
-#: lfs-en/chapter08/sysklogd.xml lfs-en/chapter08/systemd.xml
-#: lfs-en/chapter08/sysvinit.xml lfs-en/chapter08/tar.xml
-#: lfs-en/chapter08/tcl.xml lfs-en/chapter08/texinfo.xml
-#: lfs-en/chapter08/udev.xml lfs-en/chapter08/util-linux.xml
-#: lfs-en/chapter08/vim.xml lfs-en/chapter08/wheel.xml
-#: lfs-en/chapter08/xml-parser.xml lfs-en/chapter08/xz.xml
-#: lfs-en/chapter08/zlib.xml lfs-en/chapter08/zstd.xml
+#: lfs-en/chapter08/sed.xml lfs-en/chapter08/setuptools.xml
+#: lfs-en/chapter08/shadow.xml lfs-en/chapter08/sysklogd.xml
+#: lfs-en/chapter08/systemd.xml lfs-en/chapter08/sysvinit.xml
+#: lfs-en/chapter08/tar.xml lfs-en/chapter08/tcl.xml
+#: lfs-en/chapter08/texinfo.xml lfs-en/chapter08/udev.xml
+#: lfs-en/chapter08/util-linux.xml lfs-en/chapter08/vim.xml
+#: lfs-en/chapter08/wheel.xml lfs-en/chapter08/xml-parser.xml
+#: lfs-en/chapter08/xz.xml lfs-en/chapter08/zlib.xml lfs-en/chapter08/zstd.xml
 #: lfs-en/chapter09/bootscripts.xml lfs-en/chapter10/kernel.xml
 msgid "&diskspace;"
 msgstr "&diskspace;"
@@ -224,13 +224,14 @@ msgstr "&diskspace;"
 #: lfs-en/chapter08/openssl.xml lfs-en/chapter08/patch.xml
 #: lfs-en/chapter08/pkgconf.xml lfs-en/chapter08/procps.xml
 #: lfs-en/chapter08/psmisc.xml lfs-en/chapter08/python.xml
-#: lfs-en/chapter08/readline.xml lfs-en/chapter08/shadow.xml
-#: lfs-en/chapter08/sysklogd.xml lfs-en/chapter08/systemd.xml
-#: lfs-en/chapter08/sysvinit.xml lfs-en/chapter08/tar.xml
-#: lfs-en/chapter08/tcl.xml lfs-en/chapter08/texinfo.xml
-#: lfs-en/chapter08/udev.xml lfs-en/chapter08/util-linux.xml
-#: lfs-en/chapter08/vim.xml lfs-en/chapter08/xml-parser.xml
-#: lfs-en/chapter08/xz.xml lfs-en/chapter08/zlib.xml lfs-en/chapter08/zstd.xml
+#: lfs-en/chapter08/readline.xml lfs-en/chapter08/setuptools.xml
+#: lfs-en/chapter08/shadow.xml lfs-en/chapter08/sysklogd.xml
+#: lfs-en/chapter08/systemd.xml lfs-en/chapter08/sysvinit.xml
+#: lfs-en/chapter08/tar.xml lfs-en/chapter08/tcl.xml
+#: lfs-en/chapter08/texinfo.xml lfs-en/chapter08/udev.xml
+#: lfs-en/chapter08/util-linux.xml lfs-en/chapter08/vim.xml
+#: lfs-en/chapter08/xml-parser.xml lfs-en/chapter08/xz.xml
+#: lfs-en/chapter08/zlib.xml lfs-en/chapter08/zstd.xml
 #: lfs-en/chapter09/bootscripts.xml
 msgid "Install the package:"
 msgstr "安装该软件包："
@@ -522,6 +523,8 @@ msgid ""
 "      -Dmode=release                \\\n"
 "      -Ddev-kvm-mode=0660           \\\n"
 "      -Dlink-udev-shared=false      \\\n"
+"      -Dlogind=false                \\\n"
+"      -Dvconsole=false              \\\n"
 "      ..</userinput>"
 msgstr ""
 "<userinput remap=\"configure\">mkdir -p build\n"
@@ -533,6 +536,8 @@ msgstr ""
 "      -Dmode=release                \\\n"
 "      -Ddev-kvm-mode=0660           \\\n"
 "      -Dlink-udev-shared=false      \\\n"
+"      -Dlogind=false                \\\n"
+"      -Dvconsole=false              \\\n"
 "      ..</userinput>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
@@ -552,6 +557,19 @@ msgstr ""
 "class='library'>libsystemd-shared</systemitem>。这个库被设计为被许多 Systemd "
 "组件共同使用，在只安装 udev 时它功能明显过剩。"
 
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
+#: lfs-en/chapter08/udev.xml
+msgid "<parameter>-Dlogind=false -Dvconsole=false</parameter>"
+msgstr "<parameter>-Dlogind=false -Dvconsole=false</parameter>"
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
+#: lfs-en/chapter08/udev.xml
+msgid ""
+"These options prevent the generation of several udev rule files belonging to "
+"the other Systemd components that we won't install."
+msgstr ""
+"该选项防止生成一些属于其他的，我们不会安装的 Systemd 组件的 udev 规则文件。"
+
 #. type: Content of: <sect1><sect2><para>
 #: lfs-en/chapter08/udev.xml
 msgid "Only build the components needed for udev:"
@@ -561,26 +579,13 @@ msgstr "只构建 udev 需要的组件："
 #: lfs-en/chapter08/udev.xml
 #, no-wrap
 msgid ""
-"<userinput remap=\"make\">ninja udevadm systemd-hwdb \\\n"
-"      $(grep -o -E \"^build (src/libudev|src/udev|rules.d|hwdb.d)[^:]*\" \\\n"
-"        build.ninja | awk '{ print $2 }')                              \\\n"
+"<userinput remap=\"make\">ninja udevadm systemd-hwdb                                           \\\n"
+"      $(ninja -n | grep -Eo '(src/(lib)?udev|rules.d|hwdb.d)/[^ ]*') \\\n"
 "      $(realpath libudev.so --relative-to .)</userinput>"
 msgstr ""
-"<userinput remap=\"make\">ninja udevadm systemd-hwdb \\\n"
-"      $(grep -o -E \"^build (src/libudev|src/udev|rules.d|hwdb.d)[^:]*\" \\\n"
-"        build.ninja | awk '{ print $2 }')                              \\\n"
+"<userinput remap=\"make\">ninja udevadm systemd-hwdb                                           \\\n"
+"      $(ninja -n | grep -Eo '(src/(lib)?udev|rules.d|hwdb.d)/[^ ]*') \\\n"
 "      $(realpath libudev.so --relative-to .)</userinput>"
-
-#. type: Content of: <sect1><sect2><para>
-#: lfs-en/chapter08/udev.xml
-msgid "Remove one udev rule file requiring a full Systemd installation:"
-msgstr "移除一个需要完整安装 Systemd 的 udev 规则文件："
-
-#. type: Content of: <sect1><sect2><screen>
-#: lfs-en/chapter08/udev.xml
-#, no-wrap
-msgid "<userinput remap=\"make\">rm rules.d/90-vconsole.rules</userinput>"
-msgstr "<userinput remap=\"make\">rm rules.d/90-vconsole.rules</userinput>"
 
 #. type: Content of: <sect1><sect2><screen>
 #: lfs-en/chapter08/udev.xml
@@ -588,31 +593,37 @@ msgstr "<userinput remap=\"make\">rm rules.d/90-vconsole.rules</userinput>"
 msgid ""
 "<userinput remap=\"install\">install -vm755 -d {/usr/lib,/etc}/udev/{hwdb,rules}.d\n"
 "install -vm755 -d /usr/{lib,share}/pkgconfig\n"
-"install -vm755 udevadm                     /usr/bin/\n"
-"install -vm755 systemd-hwdb                /usr/bin/udev-hwdb\n"
-"ln      -svfn  ../bin/udevadm              /usr/sbin/udevd\n"
-"cp      -av    libudev.so{,*[0-9]}         /usr/lib/\n"
-"install -vm644 ../src/libudev/libudev.h    /usr/include/\n"
-"install -vm644 src/libudev/*.pc            /usr/lib/pkgconfig/\n"
-"install -vm644 src/udev/*.pc               /usr/share/pkgconfig/\n"
-"install -vm644 ../src/udev/udev.conf       /etc/udev/\n"
-"install -vm644 rules.d/* ../rules.d/{*.rules,README} /usr/lib/udev/rules.d/\n"
-"install -vm644 hwdb.d/*  ../hwdb.d/{*.hwdb,README}   /usr/lib/udev/hwdb.d/\n"
-"install -vm755 $(find src/udev -type f | grep -F -v \".\") /usr/lib/udev</userinput>"
+"install -vm755 udevadm                             /usr/bin/\n"
+"install -vm755 systemd-hwdb                        /usr/bin/udev-hwdb\n"
+"ln      -svfn  ../bin/udevadm                      /usr/sbin/udevd\n"
+"cp      -av    libudev.so{,*[0-9]}                 /usr/lib/\n"
+"install -vm644 ../src/libudev/libudev.h            /usr/include/\n"
+"install -vm644 src/libudev/*.pc                    /usr/lib/pkgconfig/\n"
+"install -vm644 src/udev/*.pc                       /usr/share/pkgconfig/\n"
+"install -vm644 ../src/udev/udev.conf               /etc/udev/\n"
+"install -vm644 rules.d/* ../rules.d/README         /usr/lib/udev/rules.d/\n"
+"install -vm644 $(find ../rules.d/*.rules \\\n"
+"                      -not -name '*power-switch*') /usr/lib/udev/rules.d/\n"
+"install -vm644 hwdb.d/*  ../hwdb.d/{*.hwdb,README} /usr/lib/udev/hwdb.d/\n"
+"install -vm755 $(find src/udev \\\n"
+"                      -type f -not -name '*.*')    /usr/lib/udev</userinput>"
 msgstr ""
 "<userinput remap=\"install\">install -vm755 -d {/usr/lib,/etc}/udev/{hwdb,rules}.d\n"
 "install -vm755 -d /usr/{lib,share}/pkgconfig\n"
-"install -vm755 udevadm                     /usr/bin/\n"
-"install -vm755 systemd-hwdb                /usr/bin/udev-hwdb\n"
-"ln      -svfn  ../bin/udevadm              /usr/sbin/udevd\n"
-"cp      -av    libudev.so{,*[0-9]}         /usr/lib/\n"
-"install -vm644 ../src/libudev/libudev.h    /usr/include/\n"
-"install -vm644 src/libudev/*.pc            /usr/lib/pkgconfig/\n"
-"install -vm644 src/udev/*.pc               /usr/share/pkgconfig/\n"
-"install -vm644 ../src/udev/udev.conf       /etc/udev/\n"
-"install -vm644 rules.d/* ../rules.d/{*.rules,README} /usr/lib/udev/rules.d/\n"
-"install -vm644 hwdb.d/*  ../hwdb.d/{*.hwdb,README}   /usr/lib/udev/hwdb.d/\n"
-"install -vm755 $(find src/udev -type f | grep -F -v \".\") /usr/lib/udev</userinput>"
+"install -vm755 udevadm                             /usr/bin/\n"
+"install -vm755 systemd-hwdb                        /usr/bin/udev-hwdb\n"
+"ln      -svfn  ../bin/udevadm                      /usr/sbin/udevd\n"
+"cp      -av    libudev.so{,*[0-9]}                 /usr/lib/\n"
+"install -vm644 ../src/libudev/libudev.h            /usr/include/\n"
+"install -vm644 src/libudev/*.pc                    /usr/lib/pkgconfig/\n"
+"install -vm644 src/udev/*.pc                       /usr/share/pkgconfig/\n"
+"install -vm644 ../src/udev/udev.conf               /etc/udev/\n"
+"install -vm644 rules.d/* ../rules.d/README         /usr/lib/udev/rules.d/\n"
+"install -vm644 $(find ../rules.d/*.rules \\\n"
+"                      -not -name '*power-switch*') /usr/lib/udev/rules.d/\n"
+"install -vm644 hwdb.d/*  ../hwdb.d/{*.hwdb,README} /usr/lib/udev/hwdb.d/\n"
+"install -vm755 $(find src/udev \\\n"
+"                      -type f -not -name '*.*')    /usr/lib/udev</userinput>"
 
 #. type: Content of: <sect1><sect2><para>
 #: lfs-en/chapter08/udev.xml

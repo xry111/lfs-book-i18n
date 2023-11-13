@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Linux From Scratch 11.4\n"
 "Report-Msgid-Bugs-To: lfs-dev@lists.linuxfromscratch.org\n"
-"POT-Creation-Date: 2023-08-07 22:58+0800\n"
+"POT-Creation-Date: 2023-11-14 02:01+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: Xi Ruoyao <xry111@xry111.site>\n"
 "Language-Team: none\n"
@@ -351,6 +351,95 @@ msgstr ""
 "注意我们将会在<xref linkend=\"ch-system-bash\"/>中构建的 LFS Bash 软件包未被"
 "配置为读取或执行 <filename>/etc/bash.bashrc</filename>，因此它在完整的 LFS 系"
 "统中没有作用。"
+
+#. type: Content of: <sect1><para>
+#: lfs-en/chapter04/settingenviron.xml
+msgid ""
+"For many modern systems with multiple processors (or cores) the compilation "
+"time for a package can be reduced by performing a \"parallel make\" by "
+"telling the make program how many processors are available via a command "
+"line option or an environment variable.  For instance, an Intel Core "
+"i9-13900K processor has 8 P (performance) cores and 16 E (efficiency) cores, "
+"and a P core can simultaneously run two threads so each P core are modeled "
+"as two logical cores by the Linux kernel.  As the result there are 32 "
+"logical cores in total.  One obvious way to use all these logical cores is "
+"allowing <command>make</command> to spawn up to 32 build jobs.  This can be "
+"done by passing the <parameter>-j32</parameter> option to <command>make</"
+"command>:"
+msgstr ""
+"对于许多拥有多个处理器 (或 CPU 核心) 的系统，可以使用命令行选项或环境变量指"
+"定 make 程序可用的处理器核心数，以进行 \"并行 make\"，从而减少构建软件包所需"
+"的时间。例如，一块 Intel Core i9-13900K 处理器有 8 个 P (性能) 核与 16 个 E "
+"(能效) 核，且每个 P 核能同时运行两个线程，因此 Linux 内核将每个 P 核抽象为两"
+"个逻辑核心。因此，该处理器共有 32 个逻辑核心。一种显而易见的利用这些逻辑核心"
+"的方法是允许 <command>make</command> 生成至多 32 个构建任务。为此，可以将 "
+"<parameter>-j32</parameter> 选项传递给 <command>make</command>："
+
+#. type: Content of: <sect1><screen>
+#: lfs-en/chapter04/settingenviron.xml
+#, no-wrap
+msgid "<userinput>make -j32</userinput>"
+msgstr "<userinput>make -j32</userinput>"
+
+#. type: Content of: <sect1><para>
+#: lfs-en/chapter04/settingenviron.xml
+msgid ""
+"Or set the <envar>MAKEFLAGS</envar> environment variable and its content "
+"will be automatically used by <command>make</command> as command line "
+"options:"
+msgstr ""
+"或者，设置环境变量 <envar>MAKEFLAGS</envar>，它的内容会被 <command>make</"
+"command> 自动视为命令行选项："
+
+#. type: Content of: <sect1><screen>
+#: lfs-en/chapter04/settingenviron.xml
+#, no-wrap
+msgid "<userinput>export MAKEFLAGS=-j32</userinput>"
+msgstr "<userinput>export MAKEFLAGS=-j32</userinput>"
+
+#. type: Content of: <sect1><important><para>
+#: lfs-en/chapter04/settingenviron.xml
+msgid ""
+"Never pass a <parameter>-j</parameter> option without a number to "
+"<command>make</command> or set such an option in <envar>MAKEFLAGS</envar>.  "
+"Doing so will allow <command>make</command> to spawn infinite build jobs and "
+"cause system stability issue."
+msgstr ""
+"绝对不要将一个没有数字的 <parameter>-j</parameter> 选项传递给 <command>make</"
+"command> 或在 <envar>MAKEFLAGS</envar> 中设定这样的选项。这样做会导致 "
+"<command>make</command> 生成无限多的构建任务并导致系统稳定性问题。"
+
+#. type: Content of: <sect1><para>
+#: lfs-en/chapter04/settingenviron.xml
+msgid ""
+"To use all logical cores available for building packages in <xref "
+"linkend='chapter-cross-tools'/> and <xref linkend='chapter-temporary-tools'/"
+">, set <envar>MAKEFLAGS</envar> now in <filename>.bashrc</filename>:"
+msgstr ""
+"为了在构建<xref linkend='chapter-cross-tools'/>和<xref linkend='chapter-"
+"temporary-tools'/> 中的软件包时使用所有可用的逻辑 CPU 核心，现在将 "
+"<envar>MAKEFLAGS</envar> 的设置写入 <filename>.bashrc</filename> 中："
+
+#. type: Content of: <sect1><screen>
+#: lfs-en/chapter04/settingenviron.xml
+#, no-wrap
+msgid ""
+"<userinput>cat &gt;&gt; ~/.bashrc &lt;&lt; \"EOF\"\n"
+"<literal>export MAKEFLAGS=-j<replaceable>$(nproc)</replaceable></literal>\n"
+"EOF</userinput>"
+msgstr ""
+"<userinput>cat &gt;&gt; ~/.bashrc &lt;&lt; \"EOF\"\n"
+"<literal>export MAKEFLAGS=-j<replaceable>$(nproc)</replaceable></literal>\n"
+"EOF</userinput>"
+
+#. type: Content of: <sect1><para>
+#: lfs-en/chapter04/settingenviron.xml
+msgid ""
+"Replace <replaceable>$(nproc)</replaceable> with the number of logical cores "
+"you want to use if you don't want to use all the logical cores."
+msgstr ""
+"如果不希望使用全部逻辑 CPU 核心，将 <replaceable>$(nproc)</replaceable> 替换"
+"为希望使用的核心数。"
 
 #. type: Content of: <sect1><para>
 #: lfs-en/chapter04/settingenviron.xml
