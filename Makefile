@@ -72,10 +72,6 @@ pdf: booksrc
 
 booksrc: $(MBOOK_FILES) $(ORIG_FILES) $(MLANG)/book/version.ent
 
-$(MLANG)/book/tidy.conf: $(LFS_EN)/tidy.conf $(MLANG)/lang.mk
-	mkdir -pv $(@D)
-	sed -e '/output-encoding:/s|latin1|$(M_ENCODING_ALT)|' $< > $@
-
 # $(MLANG)/book is not a git repo, so we need to generate the version info
 # now and silence git-version.sh.  lang.mk SHALL contain the recipe to
 # localize git-version.sh.

@@ -45,8 +45,7 @@ COPY_FILES = zh_CN/book/fonts.mk        \
 
 zh_CN/book/Makefile: $(LFS_EN)/Makefile $(THIS) $(COPY_FILES) $(@D)
 	mkdir -pv $(@D)
-	sed -e '/xa9/d' \
-	    -e 's|fop -q|& -c fop.xml|' \
+	sed -e 's|fop -q|& -c fop.xml|' \
 	    -e '/fop -q/i \\trm -rfv $$(RENDERTMP)/fonts; ln -sv $$(CURDIR)/fonts $$(RENDERTMP)/fonts' \
 	    $< > $@
 	echo 'include fonts.mk' >> $@
