@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Linux From Scratch 11.4\n"
 "Report-Msgid-Bugs-To: lfs-dev@lists.linuxfromscratch.org\n"
-"POT-Creation-Date: 2023-11-14 02:39+0800\n"
+"POT-Creation-Date: 2023-12-12 18:27+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: Xi Ruoyao <xry111@xry111.site>\n"
 "Language-Team: none\n"
@@ -507,6 +507,19 @@ msgstr "<userinput remap=\"pre\">sed '/systemd-sysctl/s/^/#/' -i rules.d/99-syst
 
 #. type: Content of: <sect1><sect2><para>
 #: lfs-en/chapter08/udev.xml
+msgid ""
+"Adjust the hardcoded paths to network configuration files for the standalone "
+"udev installation:"
+msgstr "调整硬编码的网络配置文件路径，使之适合单独安装 udev："
+
+#. type: Content of: <sect1><sect2><screen>
+#: lfs-en/chapter08/udev.xml
+#, no-wrap
+msgid "<userinput remap=\"pre\">sed '/NETWORK_DIRS/s/systemd/udev/' -i src/basic/path-lookup.h</userinput>"
+msgstr "<userinput remap=\"pre\">sed '/NETWORK_DIRS/s/systemd/udev/' -i src/basic/path-lookup.h</userinput>"
+
+#. type: Content of: <sect1><sect2><para>
+#: lfs-en/chapter08/udev.xml
 msgid "Prepare Udev for compilation:"
 msgstr "准备编译 Udev："
 
@@ -591,7 +604,7 @@ msgstr ""
 #: lfs-en/chapter08/udev.xml
 #, no-wrap
 msgid ""
-"<userinput remap=\"install\">install -vm755 -d {/usr/lib,/etc}/udev/{hwdb,rules}.d\n"
+"<userinput remap=\"install\">install -vm755 -d {/usr/lib,/etc}/udev/{hwdb.d,rules.d,network}\n"
 "install -vm755 -d /usr/{lib,share}/pkgconfig\n"
 "install -vm755 udevadm                             /usr/bin/\n"
 "install -vm755 systemd-hwdb                        /usr/bin/udev-hwdb\n"
@@ -606,9 +619,10 @@ msgid ""
 "                      -not -name '*power-switch*') /usr/lib/udev/rules.d/\n"
 "install -vm644 hwdb.d/*  ../hwdb.d/{*.hwdb,README} /usr/lib/udev/hwdb.d/\n"
 "install -vm755 $(find src/udev \\\n"
-"                      -type f -not -name '*.*')    /usr/lib/udev</userinput>"
+"                      -type f -not -name '*.*')    /usr/lib/udev\n"
+"install -vm644 ../network/99-default.link          /usr/lib/udev/network</userinput>"
 msgstr ""
-"<userinput remap=\"install\">install -vm755 -d {/usr/lib,/etc}/udev/{hwdb,rules}.d\n"
+"<userinput remap=\"install\">install -vm755 -d {/usr/lib,/etc}/udev/{hwdb.d,rules.d,network}\n"
 "install -vm755 -d /usr/{lib,share}/pkgconfig\n"
 "install -vm755 udevadm                             /usr/bin/\n"
 "install -vm755 systemd-hwdb                        /usr/bin/udev-hwdb\n"
@@ -623,7 +637,8 @@ msgstr ""
 "                      -not -name '*power-switch*') /usr/lib/udev/rules.d/\n"
 "install -vm644 hwdb.d/*  ../hwdb.d/{*.hwdb,README} /usr/lib/udev/hwdb.d/\n"
 "install -vm755 $(find src/udev \\\n"
-"                      -type f -not -name '*.*')    /usr/lib/udev</userinput>"
+"                      -type f -not -name '*.*')    /usr/lib/udev\n"
+"install -vm644 ../network/99-default.link          /usr/lib/udev/network</userinput>"
 
 #. type: Content of: <sect1><sect2><para>
 #: lfs-en/chapter08/udev.xml
@@ -650,24 +665,40 @@ msgid ""
 "<userinput remap=\"install\">tar -xf ../../systemd-man-pages-&systemd-man-version;.tar.xz                            \\\n"
 "    --no-same-owner --strip-components=1                              \\\n"
 "    -C /usr/share/man --wildcards '*/udev*' '*/libudev*'              \\\n"
+"                                  '*/systemd.link.5'                  \\\n"
 "                                  '*/systemd-'{hwdb,udevd.service}.8\n"
+"\n"
+"sed 's|systemd/network|udev/network|'                                 \\\n"
+"    /usr/share/man/man5/systemd.link.5                                \\\n"
+"  > /usr/share/man/man5/udev.link.5\n"
+"\n"
 "sed 's/systemd\\(\\\\\\?-\\)/udev\\1/' /usr/share/man/man8/systemd-hwdb.8   \\\n"
 "                               > /usr/share/man/man8/udev-hwdb.8\n"
+"\n"
 "sed 's|lib.*udevd|sbin/udevd|'                                        \\\n"
 "    /usr/share/man/man8/systemd-udevd.service.8                       \\\n"
 "  > /usr/share/man/man8/udevd.8\n"
-"rm  /usr/share/man/man8/systemd-*.8</userinput>"
+"\n"
+"rm /usr/share/man/man*/systemd*</userinput>"
 msgstr ""
 "<userinput remap=\"install\">tar -xf ../../systemd-man-pages-&systemd-man-version;.tar.xz                            \\\n"
 "    --no-same-owner --strip-components=1                              \\\n"
 "    -C /usr/share/man --wildcards '*/udev*' '*/libudev*'              \\\n"
+"                                  '*/systemd.link.5'                  \\\n"
 "                                  '*/systemd-'{hwdb,udevd.service}.8\n"
+"\n"
+"sed 's|systemd/network|udev/network|'                                 \\\n"
+"    /usr/share/man/man5/systemd.link.5                                \\\n"
+"  > /usr/share/man/man5/udev.link.5\n"
+"\n"
 "sed 's/systemd\\(\\\\\\?-\\)/udev\\1/' /usr/share/man/man8/systemd-hwdb.8   \\\n"
 "                               > /usr/share/man/man8/udev-hwdb.8\n"
+"\n"
 "sed 's|lib.*udevd|sbin/udevd|'                                        \\\n"
 "    /usr/share/man/man8/systemd-udevd.service.8                       \\\n"
 "  > /usr/share/man/man8/udevd.8\n"
-"rm  /usr/share/man/man8/systemd-*.8</userinput>"
+"\n"
+"rm /usr/share/man/man*/systemd*</userinput>"
 
 #. type: Content of: <sect1><sect2><title>
 #: lfs-en/chapter08/udev.xml
