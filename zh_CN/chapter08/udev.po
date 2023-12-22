@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Linux From Scratch 11.4\n"
 "Report-Msgid-Bugs-To: lfs-dev@lists.linuxfromscratch.org\n"
-"POT-Creation-Date: 2023-12-12 18:27+0800\n"
+"POT-Creation-Date: 2023-12-22 18:09+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: Xi Ruoyao <xry111@xry111.site>\n"
 "Language-Team: none\n"
@@ -585,6 +585,23 @@ msgstr ""
 
 #. type: Content of: <sect1><sect2><para>
 #: lfs-en/chapter08/udev.xml
+msgid ""
+"Get the list of the shipped udev helpers and save it into an environment "
+"variable:"
+msgstr "获取软件包提供的 udev 辅助程序列表，并将其保存在环境变量中："
+
+#. type: Content of: <sect1><sect2><screen>
+#: lfs-en/chapter08/udev.xml
+#, no-wrap
+msgid ""
+"<userinput remap=\"make\">udev_helpers=$(grep \"'name' :\" ../src/udev/meson.build | \\\n"
+"               awk '{print $3}' | tr -d \",'\" | grep -v 'udevadm')</userinput>"
+msgstr ""
+"<userinput remap=\"make\">udev_helpers=$(grep \"'name' :\" ../src/udev/meson.build | \\\n"
+"               awk '{print $3}' | tr -d \",'\" | grep -v 'udevadm')</userinput>"
+
+#. type: Content of: <sect1><sect2><para>
+#: lfs-en/chapter08/udev.xml
 msgid "Only build the components needed for udev:"
 msgstr "只构建 udev 需要的组件："
 
@@ -594,11 +611,13 @@ msgstr "只构建 udev 需要的组件："
 msgid ""
 "<userinput remap=\"make\">ninja udevadm systemd-hwdb                                           \\\n"
 "      $(ninja -n | grep -Eo '(src/(lib)?udev|rules.d|hwdb.d)/[^ ]*') \\\n"
-"      $(realpath libudev.so --relative-to .)</userinput>"
+"      $(realpath libudev.so --relative-to .)                         \\\n"
+"      $udev_helpers udevadm</userinput>"
 msgstr ""
 "<userinput remap=\"make\">ninja udevadm systemd-hwdb                                           \\\n"
 "      $(ninja -n | grep -Eo '(src/(lib)?udev|rules.d|hwdb.d)/[^ ]*') \\\n"
-"      $(realpath libudev.so --relative-to .)</userinput>"
+"      $(realpath libudev.so --relative-to .)                         \\\n"
+"      $udev_helpers udevadm</userinput>"
 
 #. type: Content of: <sect1><sect2><screen>
 #: lfs-en/chapter08/udev.xml
@@ -618,8 +637,7 @@ msgid ""
 "install -vm644 $(find ../rules.d/*.rules \\\n"
 "                      -not -name '*power-switch*') /usr/lib/udev/rules.d/\n"
 "install -vm644 hwdb.d/*  ../hwdb.d/{*.hwdb,README} /usr/lib/udev/hwdb.d/\n"
-"install -vm755 $(find src/udev \\\n"
-"                      -type f -not -name '*.*')    /usr/lib/udev\n"
+"install -vm755 $udev_helpers                       /usr/lib/udev\n"
 "install -vm644 ../network/99-default.link          /usr/lib/udev/network</userinput>"
 msgstr ""
 "<userinput remap=\"install\">install -vm755 -d {/usr/lib,/etc}/udev/{hwdb.d,rules.d,network}\n"
@@ -636,8 +654,7 @@ msgstr ""
 "install -vm644 $(find ../rules.d/*.rules \\\n"
 "                      -not -name '*power-switch*') /usr/lib/udev/rules.d/\n"
 "install -vm644 hwdb.d/*  ../hwdb.d/{*.hwdb,README} /usr/lib/udev/hwdb.d/\n"
-"install -vm755 $(find src/udev \\\n"
-"                      -type f -not -name '*.*')    /usr/lib/udev\n"
+"install -vm755 $udev_helpers                       /usr/lib/udev\n"
 "install -vm644 ../network/99-default.link          /usr/lib/udev/network</userinput>"
 
 #. type: Content of: <sect1><sect2><para>

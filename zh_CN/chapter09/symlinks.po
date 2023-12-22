@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Linux From Scratch 11.4\n"
 "Report-Msgid-Bugs-To: lfs-dev@lists.linuxfromscratch.org\n"
-"POT-Creation-Date: 2022-12-25 21:06+0800\n"
+"POT-Creation-Date: 2023-12-22 18:23+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: Xi Ruoyao <xry111@xry111.site>\n"
 "Language-Team: none\n"
@@ -215,6 +215,36 @@ msgstr ""
 "<literal>NAME</literal> 的值是我们关注的重点。在继续阅读之前，您需要确保自己"
 "知道赋予每个网络接口的命名，在之后的配置文件中需要使用 <literal>NAME</"
 "literal> 的值。"
+
+#. type: Content of: <sect1><sect2><sect3><para>
+#: lfs-en/chapter09/symlinks.xml
+msgid ""
+"Even if the custom udev rule file is created, udev may still assign one or "
+"more alternative names for a NIC based on physical characteristics.  If a "
+"custom udev rule would rename some NIC using a name already assigned as an "
+"alternative name of another NIC, this udev rule will fail.  If this issue "
+"happens, you may create the <filename>/etc/udev/network/99-default.link</"
+"filename> configuration file with an empty alternative assignment policy, "
+"overriding the default configuration file <filename>/usr/lib/udev/network/99-"
+"default.link</filename>:"
+msgstr ""
+"即使使用了自定义的 udev 规则文件，udev 仍然可能根据物理特性，为网卡分配一个或"
+"多个备用命名。如果某条自定义 udev 规则试图将某个网卡重命名为另一网卡的备用命"
+"名，则这条 udev 规则会失败。如果出现这类问题，可以创建 <filename>/etc/udev/"
+"network/99-default.link</filename> 文件并在其中将备用命名规则置空，以覆盖默认"
+"配置文件 <filename>/usr/lib/udev/network/99-default.link</filename> 的设置："
+
+#. type: Content of: <sect1><sect2><sect3><screen>
+#: lfs-en/chapter09/symlinks.xml
+#, no-wrap
+msgid ""
+"<userinput>sed -e '/^AlternativeNamesPolicy/s/=.*$/=/'  \\\n"
+"    -i /usr/lib/udev/network/99-default.link \\\n"
+"     > /etc/udev/network/99-default.link</userinput>"
+msgstr ""
+"<userinput>sed -e '/^AlternativeNamesPolicy/s/=.*$/=/'  \\\n"
+"    -i /usr/lib/udev/network/99-default.link \\\n"
+"     > /etc/udev/network/99-default.link</userinput>"
 
 #. type: Content of: <sect1><sect2><title>
 #: lfs-en/chapter09/symlinks.xml

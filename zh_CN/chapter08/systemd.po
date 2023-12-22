@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Linux From Scratch 11.4\n"
 "Report-Msgid-Bugs-To: lfs-dev@lists.linuxfromscratch.org\n"
-"POT-Creation-Date: 2023-09-18 16:58+0800\n"
+"POT-Creation-Date: 2023-12-22 18:09+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: Xi Ruoyao <xry111@xry111.site>\n"
 "Language-Team: none\n"
@@ -110,14 +110,14 @@ msgstr ""
 #: lfs-en/chapter08/perl.xml lfs-en/chapter08/pkgconf.xml
 #: lfs-en/chapter08/procps.xml lfs-en/chapter08/psmisc.xml
 #: lfs-en/chapter08/python.xml lfs-en/chapter08/readline.xml
-#: lfs-en/chapter08/sed.xml lfs-en/chapter08/shadow.xml
-#: lfs-en/chapter08/sysklogd.xml lfs-en/chapter08/systemd.xml
-#: lfs-en/chapter08/sysvinit.xml lfs-en/chapter08/tar.xml
-#: lfs-en/chapter08/tcl.xml lfs-en/chapter08/texinfo.xml
-#: lfs-en/chapter08/udev.xml lfs-en/chapter08/util-linux.xml
-#: lfs-en/chapter08/vim.xml lfs-en/chapter08/wheel.xml
-#: lfs-en/chapter08/xml-parser.xml lfs-en/chapter08/xz.xml
-#: lfs-en/chapter08/zlib.xml lfs-en/chapter08/zstd.xml
+#: lfs-en/chapter08/sed.xml lfs-en/chapter08/setuptools.xml
+#: lfs-en/chapter08/shadow.xml lfs-en/chapter08/sysklogd.xml
+#: lfs-en/chapter08/systemd.xml lfs-en/chapter08/sysvinit.xml
+#: lfs-en/chapter08/tar.xml lfs-en/chapter08/tcl.xml
+#: lfs-en/chapter08/texinfo.xml lfs-en/chapter08/udev.xml
+#: lfs-en/chapter08/util-linux.xml lfs-en/chapter08/vim.xml
+#: lfs-en/chapter08/wheel.xml lfs-en/chapter08/xml-parser.xml
+#: lfs-en/chapter08/xz.xml lfs-en/chapter08/zlib.xml lfs-en/chapter08/zstd.xml
 #: lfs-en/chapter09/bootscripts.xml lfs-en/chapter10/kernel.xml
 msgid "&buildtime;"
 msgstr "&buildtime;"
@@ -168,14 +168,14 @@ msgstr "&buildtime;"
 #: lfs-en/chapter08/perl.xml lfs-en/chapter08/pkgconf.xml
 #: lfs-en/chapter08/procps.xml lfs-en/chapter08/psmisc.xml
 #: lfs-en/chapter08/python.xml lfs-en/chapter08/readline.xml
-#: lfs-en/chapter08/sed.xml lfs-en/chapter08/shadow.xml
-#: lfs-en/chapter08/sysklogd.xml lfs-en/chapter08/systemd.xml
-#: lfs-en/chapter08/sysvinit.xml lfs-en/chapter08/tar.xml
-#: lfs-en/chapter08/tcl.xml lfs-en/chapter08/texinfo.xml
-#: lfs-en/chapter08/udev.xml lfs-en/chapter08/util-linux.xml
-#: lfs-en/chapter08/vim.xml lfs-en/chapter08/wheel.xml
-#: lfs-en/chapter08/xml-parser.xml lfs-en/chapter08/xz.xml
-#: lfs-en/chapter08/zlib.xml lfs-en/chapter08/zstd.xml
+#: lfs-en/chapter08/sed.xml lfs-en/chapter08/setuptools.xml
+#: lfs-en/chapter08/shadow.xml lfs-en/chapter08/sysklogd.xml
+#: lfs-en/chapter08/systemd.xml lfs-en/chapter08/sysvinit.xml
+#: lfs-en/chapter08/tar.xml lfs-en/chapter08/tcl.xml
+#: lfs-en/chapter08/texinfo.xml lfs-en/chapter08/udev.xml
+#: lfs-en/chapter08/util-linux.xml lfs-en/chapter08/vim.xml
+#: lfs-en/chapter08/wheel.xml lfs-en/chapter08/xml-parser.xml
+#: lfs-en/chapter08/xz.xml lfs-en/chapter08/zlib.xml lfs-en/chapter08/zstd.xml
 #: lfs-en/chapter09/bootscripts.xml lfs-en/chapter10/kernel.xml
 msgid "&diskspace;"
 msgstr "&diskspace;"
@@ -218,13 +218,14 @@ msgstr "&diskspace;"
 #: lfs-en/chapter08/openssl.xml lfs-en/chapter08/patch.xml
 #: lfs-en/chapter08/pkgconf.xml lfs-en/chapter08/procps.xml
 #: lfs-en/chapter08/psmisc.xml lfs-en/chapter08/python.xml
-#: lfs-en/chapter08/readline.xml lfs-en/chapter08/shadow.xml
-#: lfs-en/chapter08/sysklogd.xml lfs-en/chapter08/systemd.xml
-#: lfs-en/chapter08/sysvinit.xml lfs-en/chapter08/tar.xml
-#: lfs-en/chapter08/tcl.xml lfs-en/chapter08/texinfo.xml
-#: lfs-en/chapter08/udev.xml lfs-en/chapter08/util-linux.xml
-#: lfs-en/chapter08/vim.xml lfs-en/chapter08/xml-parser.xml
-#: lfs-en/chapter08/xz.xml lfs-en/chapter08/zlib.xml lfs-en/chapter08/zstd.xml
+#: lfs-en/chapter08/readline.xml lfs-en/chapter08/setuptools.xml
+#: lfs-en/chapter08/shadow.xml lfs-en/chapter08/sysklogd.xml
+#: lfs-en/chapter08/systemd.xml lfs-en/chapter08/sysvinit.xml
+#: lfs-en/chapter08/tar.xml lfs-en/chapter08/tcl.xml
+#: lfs-en/chapter08/texinfo.xml lfs-en/chapter08/udev.xml
+#: lfs-en/chapter08/util-linux.xml lfs-en/chapter08/vim.xml
+#: lfs-en/chapter08/xml-parser.xml lfs-en/chapter08/xz.xml
+#: lfs-en/chapter08/zlib.xml lfs-en/chapter08/zstd.xml
 #: lfs-en/chapter09/bootscripts.xml
 msgid "Install the package:"
 msgstr "安装该软件包："
@@ -473,13 +474,15 @@ msgid ""
 "      -Dldconfig=false              \\\n"
 "      -Dsysusers=false              \\\n"
 "      -Drpmmacrosdir=no             \\\n"
-"      -Dhomed=false                 \\\n"
+"      -Dhomed=disabled              \\\n"
 "      -Duserdb=false                \\\n"
 "      -Dman=false                   \\\n"
 "      -Dmode=release                \\\n"
 "      -Dpamconfdir=no               \\\n"
 "      -Ddev-kvm-mode=0660           \\\n"
 "      -Dnobody-group=nogroup        \\\n"
+"      -Dsysupdate=disabled          \\\n"
+"      -Dukify=disabled              \\\n"
 "      -Ddocdir=/usr/share/doc/systemd-&systemd-version; \\\n"
 "      ..</userinput>"
 msgstr ""
@@ -495,13 +498,15 @@ msgstr ""
 "      -Dldconfig=false              \\\n"
 "      -Dsysusers=false              \\\n"
 "      -Drpmmacrosdir=no             \\\n"
-"      -Dhomed=false                 \\\n"
+"      -Dhomed=disabled              \\\n"
 "      -Duserdb=false                \\\n"
 "      -Dman=false                   \\\n"
 "      -Dmode=release                \\\n"
 "      -Dpamconfdir=no               \\\n"
 "      -Ddev-kvm-mode=0660           \\\n"
 "      -Dnobody-group=nogroup        \\\n"
+"      -Dsysupdate=disabled          \\\n"
+"      -Dukify=disabled              \\\n"
 "      -Ddocdir=/usr/share/doc/systemd-&systemd-version; \\\n"
 "      ..</userinput>"
 
@@ -608,8 +613,12 @@ msgstr "该选项禁止安装用于 systemd 的 RPM 宏，因为 LFS 并不支�
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: lfs-en/chapter08/systemd.xml
-msgid "<parameter>-D{userdb,homed}=false</parameter>"
-msgstr "<parameter>-D{userdb,homed}=false</parameter>"
+msgid ""
+"<parameter>-Dhomed=disabled</parameter> and <parameter>-Duserdb=false</"
+"parameter>"
+msgstr ""
+"<parameter>-Dhomed=disabled</parameter> 和 <parameter>-Duserdb=false</"
+"parameter>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: lfs-en/chapter08/systemd.xml
@@ -681,6 +690,39 @@ msgstr ""
 "告诉该软件包组编号 65534 被分配给 <systemitem class=\"groupname\">nogroup</"
 "systemitem> 组。"
 
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
+#: lfs-en/chapter08/systemd.xml
+msgid "<parameter>-Dsysupdate=disabled</parameter>"
+msgstr "<parameter>-Dsysupdate=disabled</parameter>"
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
+#: lfs-en/chapter08/systemd.xml
+msgid ""
+"Do not install the <command>systemd-sysupdate</command> tool.  It's designed "
+"for automatically upgrading binary distros, so it's useless for a basic "
+"Linux system built from source.  And it will report errors on boot if it's "
+"enabled but not properly configured."
+msgstr ""
+"不安装 <command>systemd-sysupdate</command> 工具。它被设计为用于更新二进制发"
+"行版，因此它对于从源码构建的，基本的 Linux 系统来说没有作用，而且如果它被启用"
+"但未正确配置，会在系统启动时产生错误消息："
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
+#: lfs-en/chapter08/systemd.xml
+msgid "<parameter>-Dukify=disabled</parameter>"
+msgstr "<parameter>-Dukify=disabled</parameter>"
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
+#: lfs-en/chapter08/systemd.xml
+msgid ""
+"Do not install the <command>systemd-ukify</command> script.  At runtime this "
+"script requires the <application>pefile</application> Python module that "
+"neither LFS nor BLFS provides."
+msgstr ""
+"不安装 <command>systemd-ukify</command> 脚本。它在运行时需要名为 "
+"<application>pefile</application> 的 Python 模块，而 LFS 和 BLFS 都不提供该模"
+"块。"
+
 #. type: Content of: <sect1><sect2><screen>
 #: lfs-en/chapter08/systemd.xml
 #, no-wrap
@@ -737,22 +779,6 @@ msgstr "设定启动目标单元的基本结构："
 #, no-wrap
 msgid "<userinput remap=\"adjust\">systemctl preset-all</userinput>"
 msgstr "<userinput remap=\"adjust\">systemctl preset-all</userinput>"
-
-#. type: Content of: <sect1><sect2><para>
-#: lfs-en/chapter08/systemd.xml
-msgid ""
-"Disable two services for upgrading binary distros.  They are useless for a "
-"basic Linux system built from source, and each one will report an error if "
-"it's enabled but not configured:"
-msgstr ""
-"禁用两个用于升级二进制发行版的服务。它们对于从源码构建的，基本的 Linux 系统来"
-"说没有意义，而且如果其中任意一个被启用但未进行配置，会产生错误消息："
-
-#. type: Content of: <sect1><sect2><screen>
-#: lfs-en/chapter08/systemd.xml
-#, no-wrap
-msgid "<userinput remap=\"adjust\">systemctl disable systemd-sysupdate{,-reboot}</userinput>"
-msgstr "<userinput remap=\"adjust\">systemctl disable systemd-sysupdate{,-reboot}</userinput>"
 
 #. type: Content of: <sect1><sect2><title>
 #: lfs-en/chapter08/systemd.xml
