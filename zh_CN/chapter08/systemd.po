@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Linux From Scratch 11.4\n"
 "Report-Msgid-Bugs-To: lfs-dev@lists.linuxfromscratch.org\n"
-"POT-Creation-Date: 2023-12-22 18:09+0800\n"
+"POT-Creation-Date: 2023-12-31 21:32+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: Xi Ruoyao <xry111@xry111.site>\n"
 "Language-Team: none\n"
@@ -452,6 +452,24 @@ msgid ""
 msgstr ""
 "<userinput remap=\"pre\">sed -i -e 's/GROUP=\"render\"/GROUP=\"video\"/' \\\n"
 "       -e 's/GROUP=\"sgx\", //' rules.d/50-udev-default.rules.in</userinput>"
+
+#. type: Content of: <sect1><sect2><para>
+#: lfs-en/chapter08/systemd.xml
+msgid ""
+"Now fix a security vulnerability in the DNSSEC verification of "
+"<command>systemd-resolved</command>:"
+msgstr ""
+"现在修复 <command>systemd-resolved</command> 在验证 DNSSEC 时的安全缺陷："
+
+#. type: Content of: <sect1><sect2><screen>
+#: lfs-en/chapter08/systemd.xml
+#, no-wrap
+msgid ""
+"<userinput remap='pre'>sed -e '/return FLAGS_SET.*AUTHENTICATED/s/(t/(dt/' \\\n"
+"    -i src/resolve/resolved-dns-transaction.c</userinput>"
+msgstr ""
+"<userinput remap='pre'>sed -e '/return FLAGS_SET.*AUTHENTICATED/s/(t/(dt/' \\\n"
+"    -i src/resolve/resolved-dns-transaction.c</userinput>"
 
 #. type: Content of: <sect1><sect2><para>
 #: lfs-en/chapter08/systemd.xml

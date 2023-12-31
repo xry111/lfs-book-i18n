@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Linux From Scratch 11.0\n"
 "Report-Msgid-Bugs-To: lfs-dev@lists.linuxfromscratch.org\n"
-"POT-Creation-Date: 2023-09-18 16:58+0800\n"
+"POT-Creation-Date: 2023-12-31 21:32+0800\n"
 "PO-Revision-Date: 2021-08-25 04:40+0800\n"
 "Last-Translator: Xi Ruoyao <xry111@xry111.site>\n"
 "Language-Team: none\n"
@@ -98,14 +98,14 @@ msgstr "工具，第一遍"
 #: lfs-en/chapter08/perl.xml lfs-en/chapter08/pkgconf.xml
 #: lfs-en/chapter08/procps.xml lfs-en/chapter08/psmisc.xml
 #: lfs-en/chapter08/python.xml lfs-en/chapter08/readline.xml
-#: lfs-en/chapter08/sed.xml lfs-en/chapter08/shadow.xml
-#: lfs-en/chapter08/sysklogd.xml lfs-en/chapter08/systemd.xml
-#: lfs-en/chapter08/sysvinit.xml lfs-en/chapter08/tar.xml
-#: lfs-en/chapter08/tcl.xml lfs-en/chapter08/texinfo.xml
-#: lfs-en/chapter08/udev.xml lfs-en/chapter08/util-linux.xml
-#: lfs-en/chapter08/vim.xml lfs-en/chapter08/wheel.xml
-#: lfs-en/chapter08/xml-parser.xml lfs-en/chapter08/xz.xml
-#: lfs-en/chapter08/zlib.xml lfs-en/chapter08/zstd.xml
+#: lfs-en/chapter08/sed.xml lfs-en/chapter08/setuptools.xml
+#: lfs-en/chapter08/shadow.xml lfs-en/chapter08/sysklogd.xml
+#: lfs-en/chapter08/systemd.xml lfs-en/chapter08/sysvinit.xml
+#: lfs-en/chapter08/tar.xml lfs-en/chapter08/tcl.xml
+#: lfs-en/chapter08/texinfo.xml lfs-en/chapter08/udev.xml
+#: lfs-en/chapter08/util-linux.xml lfs-en/chapter08/vim.xml
+#: lfs-en/chapter08/wheel.xml lfs-en/chapter08/xml-parser.xml
+#: lfs-en/chapter08/xz.xml lfs-en/chapter08/zlib.xml lfs-en/chapter08/zstd.xml
 #: lfs-en/chapter09/bootscripts.xml lfs-en/chapter10/kernel.xml
 msgid "&buildtime;"
 msgstr "&buildtime;"
@@ -156,14 +156,14 @@ msgstr "&buildtime;"
 #: lfs-en/chapter08/perl.xml lfs-en/chapter08/pkgconf.xml
 #: lfs-en/chapter08/procps.xml lfs-en/chapter08/psmisc.xml
 #: lfs-en/chapter08/python.xml lfs-en/chapter08/readline.xml
-#: lfs-en/chapter08/sed.xml lfs-en/chapter08/shadow.xml
-#: lfs-en/chapter08/sysklogd.xml lfs-en/chapter08/systemd.xml
-#: lfs-en/chapter08/sysvinit.xml lfs-en/chapter08/tar.xml
-#: lfs-en/chapter08/tcl.xml lfs-en/chapter08/texinfo.xml
-#: lfs-en/chapter08/udev.xml lfs-en/chapter08/util-linux.xml
-#: lfs-en/chapter08/vim.xml lfs-en/chapter08/wheel.xml
-#: lfs-en/chapter08/xml-parser.xml lfs-en/chapter08/xz.xml
-#: lfs-en/chapter08/zlib.xml lfs-en/chapter08/zstd.xml
+#: lfs-en/chapter08/sed.xml lfs-en/chapter08/setuptools.xml
+#: lfs-en/chapter08/shadow.xml lfs-en/chapter08/sysklogd.xml
+#: lfs-en/chapter08/systemd.xml lfs-en/chapter08/sysvinit.xml
+#: lfs-en/chapter08/tar.xml lfs-en/chapter08/tcl.xml
+#: lfs-en/chapter08/texinfo.xml lfs-en/chapter08/udev.xml
+#: lfs-en/chapter08/util-linux.xml lfs-en/chapter08/vim.xml
+#: lfs-en/chapter08/wheel.xml lfs-en/chapter08/xml-parser.xml
+#: lfs-en/chapter08/xz.xml lfs-en/chapter08/zlib.xml lfs-en/chapter08/zstd.xml
 #: lfs-en/chapter09/bootscripts.xml lfs-en/chapter10/kernel.xml
 msgid "&diskspace;"
 msgstr "&diskspace;"
@@ -253,14 +253,16 @@ msgid ""
 "             --target=$LFS_TGT   \\\n"
 "             --disable-nls       \\\n"
 "             --enable-gprofng=no \\\n"
-"             --disable-werror</userinput>"
+"             --disable-werror    \\\n"
+"             --enable-default-hash-style=gnu</userinput>"
 msgstr ""
 "<userinput remap=\"configure\">../configure --prefix=$LFS/tools \\\n"
 "             --with-sysroot=$LFS \\\n"
 "             --target=$LFS_TGT   \\\n"
 "             --disable-nls       \\\n"
 "             --enable-gprofng=no \\\n"
-"             --disable-werror</userinput>"
+"             --disable-werror    \\\n"
+"             --enable-default-hash-style=gnu</userinput>"
 
 #. type: Content of: <sect1><sect2><variablelist><title>
 #: lfs-en/chapter05/binutils-pass1.xml lfs-en/chapter05/gcc-pass1.xml
@@ -355,6 +357,30 @@ msgid ""
 "from the host's compiler."
 msgstr "该选项防止宿主系统编译器警告导致构建失败。"
 
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
+#: lfs-en/chapter05/binutils-pass1.xml
+msgid "<parameter>--enable-default-hash-style=gnu</parameter>"
+msgstr "<parameter>--enable-default-hash-style=gnu</parameter>"
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
+#: lfs-en/chapter05/binutils-pass1.xml
+msgid ""
+"By default, the linker would generate both the GNU-style hash table and the "
+"classic ELF hash table for shared libraries and dynamically linked "
+"executables.  The hash tables are only intended for a dynamic linker to "
+"perform symbol lookup.  On LFS the dynamic linker (provided by the Glibc "
+"package) will always use the GNU-style hash table which is faster to query.  "
+"So the classic ELF hash table is completely useless.  This makes the the "
+"linker only generate the GNU-style hash table by default, so we can avoid "
+"wasting time to generate the classic ELF hash table when we build the "
+"packages, or wasting disk space to store it."
+msgstr ""
+"默认情况下，链接器会为共享库和动态链接的可执行文件同时生成 GNU 风格的散列表和"
+"经典的 ELF 散列表。散列表仅供动态链接器进行符号查询。LFS 系统的动态链接器 "
+"(由 Glibc 软件包提供) 总是使用查询更快的 GNU 风格散列表。因此经典 ELF 散列表"
+"完全没有意义。该选项使得链接器在默认情况下只生成 GNU 风格散列表，以避免为生成"
+"和存储经典 ELF 散列表浪费时间和空间。"
+
 #. type: Content of: <sect1><sect2><para>
 #: lfs-en/chapter05/binutils-pass1.xml
 msgid "Continue with compiling the package:"
@@ -444,13 +470,14 @@ msgstr "<userinput remap=\"make\">make</userinput>"
 #: lfs-en/chapter08/openssl.xml lfs-en/chapter08/patch.xml
 #: lfs-en/chapter08/pkgconf.xml lfs-en/chapter08/procps.xml
 #: lfs-en/chapter08/psmisc.xml lfs-en/chapter08/python.xml
-#: lfs-en/chapter08/readline.xml lfs-en/chapter08/shadow.xml
-#: lfs-en/chapter08/sysklogd.xml lfs-en/chapter08/systemd.xml
-#: lfs-en/chapter08/sysvinit.xml lfs-en/chapter08/tar.xml
-#: lfs-en/chapter08/tcl.xml lfs-en/chapter08/texinfo.xml
-#: lfs-en/chapter08/udev.xml lfs-en/chapter08/util-linux.xml
-#: lfs-en/chapter08/vim.xml lfs-en/chapter08/xml-parser.xml
-#: lfs-en/chapter08/xz.xml lfs-en/chapter08/zlib.xml lfs-en/chapter08/zstd.xml
+#: lfs-en/chapter08/readline.xml lfs-en/chapter08/setuptools.xml
+#: lfs-en/chapter08/shadow.xml lfs-en/chapter08/sysklogd.xml
+#: lfs-en/chapter08/systemd.xml lfs-en/chapter08/sysvinit.xml
+#: lfs-en/chapter08/tar.xml lfs-en/chapter08/tcl.xml
+#: lfs-en/chapter08/texinfo.xml lfs-en/chapter08/udev.xml
+#: lfs-en/chapter08/util-linux.xml lfs-en/chapter08/vim.xml
+#: lfs-en/chapter08/xml-parser.xml lfs-en/chapter08/xz.xml
+#: lfs-en/chapter08/zlib.xml lfs-en/chapter08/zstd.xml
 #: lfs-en/chapter09/bootscripts.xml
 msgid "Install the package:"
 msgstr "安装该软件包："
