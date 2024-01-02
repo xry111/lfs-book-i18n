@@ -77,7 +77,7 @@ msgstr ""
 "户环境又基于基本的<ulink url=\"&blfs-book;x/installing.html\">图形环境</"
 "ulink>和其他图形界面应用，例如 <ulink url=\"&blfs-book;xsoft/firefox."
 "html\">Firefox 浏览器</ulink>，<ulink url=\"&blfs-book;xsoft/thunderbird."
-"html\">Thunderbird 邮件客户端</ulink>，或<ulink url=\"&blfs-book;xsoft/"
+"html\">Thunderbird 邮件客户端</ulink>，或 <ulink url=\"&blfs-book;xsoft/"
 "libreoffice.html\">LibreOffice 办公套件</ulink>。这些应用需要很多 (如果需要比"
 "较完备的功能，可能需要几百个) 额外的软件包中的应用和库的支持。"
 
@@ -317,16 +317,6 @@ msgstr "使用 ssh 远程工作"
 
 #. type: Content of: <sect1><sect2><sect3><para>
 #: lfs-en/chapter11/afterlfs.xml
-#, fuzzy
-#| msgid ""
-#| "This method also provides a full graphical environment, but first "
-#| "requires installing <ulink url=\"&blfs-book;postlfs/openssh.html\">sshd</"
-#| "ulink> and <ulink url=\"&blfs-book;basicnet/wget.html\">wget</ulink> on "
-#| "the LFS system, usually in chroot. It also requires a second computer. "
-#| "This method has the advantage of being simple by not requiring the "
-#| "complexity of the chroot environment. It also uses your LFS built kernel "
-#| "for all additional packages and still provides a complete system for "
-#| "installing packages."
 msgid ""
 "This method also provides a full graphical environment, but first requires "
 "installing <ulink url=\"&blfs-book;postlfs/openssh.html\">sshd</ulink> on "
@@ -337,11 +327,10 @@ msgid ""
 "packages."
 msgstr ""
 "这种方法同样允许使用完整的图形环境，但首先需要在 LFS 系统上安装 <ulink "
-"url='&blfs-book;postlfs/openssh.html'>sshd</ulink> 和 <ulink url='&blfs-book;"
-"postlfs/openssh.html'>wget</ulink> (通常可以在 chroot 中安装它们)。另外，这种"
-"方法需要第二台计算机。这种方法相比于使用 chroot 环境更简单。而且，它在构建软"
-"件包时使用为 LFS 系统构建的内核，却仍然能够像使用 chroot 一样在一个完整的系统"
-"上工作。"
+"url='&blfs-book;postlfs/openssh.html'>sshd</ulink> (通常可以在 chroot 中安装"
+"它)。另外，这种方法需要第二台计算机。这种方法相比于使用 chroot 环境更简单。而"
+"且，它在构建软件包时使用为 LFS 系统构建的内核，却仍然能够像使用 chroot 一样在"
+"一个完整的系统上工作。"
 
 #. type: Content of: <sect1><sect2><sect3><para>
 #: lfs-en/chapter11/afterlfs.xml
@@ -355,6 +344,13 @@ msgid ""
 "chroot (or upload their sources using <command>scp</command> after booting "
 "the LFS system)."
 msgstr ""
+"可以使用 <command>scp</command> 命令将软件包源代码上传到 LFS 系统。如果希望直"
+"接在 LFS 系统上下载源代码，可以在 chroot 环境中安装 <ulink url=\"&blfs-book;"
+"general/libtasn1.html\">libtasn1</ulink>，<ulink url=\"&blfs-book;postlfs/"
+"p11-kit.html\">p11-kit</ulink>，<ulink url=\"&blfs-book;postlfs/make-ca."
+"html\">make-ca</ulink>，以及 <ulink url=\"&blfs-book;basicnet/wget."
+"html\">wget</ulink> (或者在引导 LFS 系统后用 <command>scp</command> 上传它们"
+"的源代码)。"
 
 #. type: Content of: <sect1><sect2><sect3><title>
 #: lfs-en/chapter11/afterlfs.xml

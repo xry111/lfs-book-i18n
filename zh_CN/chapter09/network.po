@@ -88,7 +88,7 @@ msgid ""
 "more details."
 msgstr ""
 "可以省略 <varname>domain</varname> 语句，或使用一条 <varname>search</"
-"varname> 语句代替它。阅读 resolv.conf 的 man 页面了解更多细节。"
+"varname> 语句代替它。阅读 resolv.conf 的手册页了解更多细节。"
 
 #. type: Content of: <sect1><sect2><para>
 #: lfs-en/chapter09/networkd.xml lfs-en/chapter09/network.xml
@@ -177,14 +177,8 @@ msgstr "x 可以是 16-31 之间的任何数字。y 可以是 0-255 之间的任
 
 #. type: Content of: <sect1><sect2><para>
 #: lfs-en/chapter09/networkd.xml lfs-en/chapter09/network.xml
-#, fuzzy
-#| msgid ""
-#| "A valid private IP address could be 192.168.1.1. A valid FQDN for this IP "
-#| "could be lfs.example.org."
 msgid "A valid private IP address could be 192.168.1.1."
-msgstr ""
-"有效的私网 IP 地址的一个例子是 192.168.1.1。与之对应的 FQDN 可以是 lfs."
-"example.org。"
+msgstr "例如，192.168.1.1 是有效的私网 IP 地址。"
 
 #. type: Content of: <sect1><sect2><para>
 #: lfs-en/chapter09/networkd.xml lfs-en/chapter09/network.xml
@@ -195,6 +189,9 @@ msgid ""
 "you need to contact the domain provider to resolve the FQDN to your public "
 "IP address."
 msgstr ""
+"如果计算机要被配置为能够从 Internet 访问，则可以使用注册域名本身作为有效的 "
+"FQDN，或者在其之前用<quote>.</quote>符号连接一个前缀 (前缀通常是主机名) 得到 "
+"FQDN。另外，您需要联系域名提供商，以将 FQDN 解析到您的公网 IP 地址。"
 
 #. type: Content of: <sect1><sect2><para>
 #: lfs-en/chapter09/networkd.xml lfs-en/chapter09/network.xml
@@ -203,6 +200,8 @@ msgid ""
 "for certain programs, such as MTAs, to operate properly.  A special FQDN, "
 "<literal>localhost.localdomain</literal>, can be used for this purpose."
 msgstr ""
+"即使计算机无法从 Internet 访问，一些程序，如 MTA，仍然需要一个 FQDN 才能正常"
+"工作。此时可以使用一个特殊的 FQDN <literal>localhost.localdomain</literal>。"
 
 #. type: Content of: <sect1><sect2><title>
 #: lfs-en/chapter09/network.xml
@@ -371,7 +370,7 @@ msgstr ""
 #. type: Content of: <sect1><sect2><para>
 #: lfs-en/chapter09/network.xml
 msgid "For more information see the <command>ifup</command> man page."
-msgstr "参考 <command>ifup</command> 的 man 页面获得更多信息。"
+msgstr "参考 <command>ifup</command> 的手册页获得更多信息。"
 
 #. type: Content of: <sect1><sect2><para>
 #: lfs-en/chapter09/network.xml

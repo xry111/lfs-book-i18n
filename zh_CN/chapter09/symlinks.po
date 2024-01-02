@@ -228,6 +228,11 @@ msgid ""
 "overriding the default configuration file <filename>/usr/lib/udev/network/99-"
 "default.link</filename>:"
 msgstr ""
+"即使使用了自定义的 udev 规则文件，udev 仍然可能根据物理特性，为网卡分配一个或"
+"多个备用命名。如果某条自定义 udev 规则试图将某个网卡重命名为另一网卡的备用命"
+"名，则这条 udev 规则会失败。如果出现这类问题，可以创建 <filename>/etc/udev/"
+"network/99-default.link</filename> 文件并在其中将备用命名规则置空，以覆盖默认"
+"配置文件 <filename>/usr/lib/udev/network/99-default.link</filename> 的设置："
 
 #. type: Content of: <sect1><sect2><sect3><screen>
 #: lfs-en/chapter09/symlinks.xml
@@ -237,6 +242,9 @@ msgid ""
 "    -i /usr/lib/udev/network/99-default.link \\\n"
 "     > /etc/udev/network/99-default.link</userinput>"
 msgstr ""
+"<userinput>sed -e '/^AlternativeNamesPolicy/s/=.*$/=/'  \\\n"
+"    -i /usr/lib/udev/network/99-default.link \\\n"
+"     > /etc/udev/network/99-default.link</userinput>"
 
 #. type: Content of: <sect1><sect2><title>
 #: lfs-en/chapter09/symlinks.xml

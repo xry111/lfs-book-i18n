@@ -128,6 +128,11 @@ msgid ""
 "you are alerted for a published Glibc security vulnerability but unsure "
 "about the action to take."
 msgstr ""
+"重新安装用补丁修补的相同版本 Glibc (对于当前的 LFS 发布版本来说是 &glibc-"
+"version;) 在补丁不改变 ABI 和 API 时应该不会引起问题。在 Glibc 中发现新的安全"
+"缺陷时，我们一般需要应用满足上述条件的补丁以修复安全缺陷，并重新安装 Glibc。"
+"如果您发现了新公开的 Glibc 安全缺陷，但不确定应该如何处理它，参阅 <ulink "
+"url='&lfs-root;lfs/advisories/'>LFS 安全公告</ulink>。"
 
 #. type: Content of: <sect1><sect2><itemizedlist><listitem><para>
 #: lfs-en/chapter08/pkgmgt.xml
@@ -262,20 +267,6 @@ msgstr ""
 
 #. type: Content of: <sect1><sect2><itemizedlist><listitem><para>
 #: lfs-en/chapter08/pkgmgt.xml
-#, fuzzy
-#| msgid ""
-#| "If an executable program or a shared library is overwritten, the "
-#| "processes using the code or data in that program or library may crash.  "
-#| "The correct way to update a program or a shared library without causing "
-#| "the process to crash is to remove it first, then install the new version. "
-#| "The <command>install</command> command provided by "
-#| "<application>coreutils</application> has already implemented this, and "
-#| "most packages use that command to install binary files and libraries.  "
-#| "This means that you won't be troubled by this issue most of the time.  "
-#| "However, the install process of some packages (notably Mozilla JS in "
-#| "BLFS) just overwrites the file if it exists; this causes a crash. So it's "
-#| "safer to save your work and close unneeded running processes before "
-#| "updating a package."
 msgid ""
 "If an executable program or a shared library is overwritten, the processes "
 "using the code or data in that program or library may crash.  The correct "
@@ -293,9 +284,9 @@ msgstr ""
 "崩溃。正确的，不会导致进程崩溃的更新程序或共享库的方法是：先删除旧版本，再安"
 "装新版本。<application>Coreutils</application> 提供的 <command>install</"
 "command> 已经实现了这一过程，多数软件包使用该命令安装二进制文件和库。这意味着"
-"在更新软件包时通常不会遇到这个问题。然而，一些软件包 (如 BLFS 中的 Mozilla "
-"JS) 的安装过程会简单覆盖已经存在的文件并导致进程崩溃，因此在进行更新前，最好"
-"保存工作并关闭不需要的，正在运行的进程。"
+"在更新软件包时通常不会遇到这个问题。然而，一些软件包 (如 BLFS 中的 "
+"SpiderMonkey) 的安装过程会简单覆盖已经存在的文件并导致进程崩溃，因此在进行更"
+"新前，最好保存工作并关闭不需要的，正在运行的进程。"
 
 #. type: Content of: <sect1><sect2><title>
 #: lfs-en/chapter08/pkgmgt.xml
@@ -337,17 +328,6 @@ msgstr "安装到独立目录"
 
 #. type: Content of: <sect1><sect2><sect3><para>
 #: lfs-en/chapter08/pkgmgt.xml
-#, fuzzy
-#| msgid ""
-#| "This is a simplistic package management technique that does not need a "
-#| "special program to manage the packages. Each package is installed in a "
-#| "separate directory. For example, package foo-1.1 is installed in "
-#| "<filename class='directory'>/usr/pkg/foo-1.1</filename> and a symlink is "
-#| "made from <filename>/usr/pkg/foo</filename> to <filename "
-#| "class='directory'>/usr/pkg/foo-1.1</filename>. When a new version foo-1.2 "
-#| "comes along, it is installed in <filename class='directory'>/usr/pkg/"
-#| "foo-1.2</filename> and the previous symlink is replaced by a symlink to "
-#| "the new version."
 msgid ""
 "This is a simplistic package management technique that does not need a "
 "special program to manage the packages. Each package is installed in a "
@@ -360,21 +340,13 @@ msgid ""
 msgstr ""
 "这是一种最简单的软件包管理方式，它不需要控制软件包安装的专用程序。每个软件包"
 "都被安装在单独的目录中。例如，软件包 foo-1.1 将会被安装在 <filename "
-"class='directory'>/usr/pkg/foo-1.1</filename>，然后创建一个符号链接 "
-"<filename>/usr/pkg/foo</filename> 指向 <filename class='directory'>/usr/pkg/"
-"foo-1.1</filename>。在安装新版本 foo-1.2 的时候，把它安装到 <filename "
-"class='directory'>/usr/pkg/foo-1.2</filename>，然后把之前的符号链接替换为指向"
-"新版本的符号链接。"
+"class='directory'>/opt/foo-1.1</filename>，然后创建一个符号链接 <filename>/"
+"opt/foo</filename> 指向 <filename class='directory'>/opt/foo-1.1</filename>。"
+"在安装新版本 foo-1.2 的时候，把它安装到 <filename class='directory'>/opt/"
+"foo-1.2</filename>，然后把之前的符号链接替换为指向新版本的符号链接。"
 
 #. type: Content of: <sect1><sect2><sect3><para>
 #: lfs-en/chapter08/pkgmgt.xml
-#, fuzzy
-#| msgid ""
-#| "Environment variables such as <envar>PATH</envar>, "
-#| "<envar>LD_LIBRARY_PATH</envar>, <envar>MANPATH</envar>, <envar>INFOPATH</"
-#| "envar> and <envar>CPPFLAGS</envar> need to be expanded to include "
-#| "<filename>/usr/pkg/foo</filename>. If you install more than a few "
-#| "packages, this scheme becomes unmanageable."
 msgid ""
 "Environment variables such as <envar>PATH</envar>, <envar>MANPATH</envar>, "
 "<envar>INFOPATH</envar>, <envar>PKG_CONFIG_PATH</envar>, <envar>CPPFLAGS</"
@@ -382,10 +354,10 @@ msgid ""
 "so.conf</filename> may need to be expanded to include the corresponding "
 "subdirectories in <filename class='directory'>/opt/foo-x.y</filename>."
 msgstr ""
-"<envar>PATH</envar>、<envar>LD_LIBRARY_PATH</envar>、<envar>MANPATH</envar>、"
-"<envar>INFOPATH</envar> 和 <envar>CPPFLAGS</envar> 等环境变量需要被扩充，以包"
-"含 <filename>/usr/pkg/foo</filename>。一旦安装了比较多的软件包，这种模式就会"
-"变得无法管理。"
+"<envar>PATH</envar>、<envar>MANPATH</envar>、<envar>INFOPATH</envar>、"
+"<envar>PKG_CONFIG_PATH</envar>、<envar>CPPFLAGS</envar>、<envar>LDFLAGS</"
+"envar> 等环境变量，以及配置文件 <filename>/etc/ld.so.conf</filename> 可能需要"
+"被扩充，以包含 <filename>/opt/foo-x.y</filename>。"
 
 #. type: Content of: <sect1><sect2><sect3><para>
 #: lfs-en/chapter08/pkgmgt.xml
@@ -396,6 +368,10 @@ msgid ""
 "headers and Glibc) may not work well with this scheme.  <emphasis "
 "role='bold'>Never use this scheme system-wide.</emphasis>"
 msgstr ""
+"BLFS 手册使用这种模式安装一些非常庞大的软件包，这样能更容易地更新它们。一旦用"
+"这种方式安装了比较多的软件包，这种模式就会变得难以控制。另外，一些软件包 (如 "
+"Linux API 头文件和 Glibc) 在使用这种方式安装时可能无法正常工作。<emphasis "
+"role='bold'>永远不要对整个系统的所有软件包使用这种模式。</emphasis>"
 
 #. type: Content of: <sect1><sect2><sect3><title>
 #: lfs-en/chapter08/pkgmgt.xml

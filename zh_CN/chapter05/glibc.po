@@ -447,15 +447,7 @@ msgstr "下面，准备编译 Glibc："
 
 #. type: Content of: <sect1><sect2><screen>
 #: lfs-en/chapter05/glibc.xml
-#, fuzzy, no-wrap
-#| msgid ""
-#| "<userinput remap=\"configure\">../configure                             \\\n"
-#| "      --prefix=/usr                      \\\n"
-#| "      --host=$LFS_TGT                    \\\n"
-#| "      --build=$(../scripts/config.guess) \\\n"
-#| "      --enable-kernel=&min-kernel;               \\\n"
-#| "      --with-headers=$LFS/usr/include    \\\n"
-#| "      libc_cv_slibdir=/usr/lib</userinput>"
+#, no-wrap
 msgid ""
 "<userinput remap=\"configure\">../configure                             \\\n"
 "      --prefix=/usr                      \\\n"
@@ -472,6 +464,7 @@ msgstr ""
 "      --build=$(../scripts/config.guess) \\\n"
 "      --enable-kernel=&min-kernel;               \\\n"
 "      --with-headers=$LFS/usr/include    \\\n"
+"      --disable-nscd                     \\\n"
 "      libc_cv_slibdir=/usr/lib</userinput>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
@@ -535,15 +528,13 @@ msgstr "在 64 位机器上，这保证将库安装到 /usr/lib，而不是默�
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: lfs-en/chapter05/glibc.xml lfs-en/chapter08/glibc.xml
-#, fuzzy
-#| msgid "<parameter>--disable-nls</parameter>"
 msgid "<parameter>--disable-nscd</parameter>"
-msgstr "<parameter>--disable-nls</parameter>"
+msgstr "<parameter>--disable-nscd</parameter>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: lfs-en/chapter05/glibc.xml lfs-en/chapter08/glibc.xml
 msgid "Do not build the name service cache daemon which is no longer used."
-msgstr ""
+msgstr "不构建目前已经没有作用的命名服务缓存守护程序。"
 
 #. type: Content of: <sect1><sect2><para>
 #: lfs-en/chapter05/glibc.xml

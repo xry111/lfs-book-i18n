@@ -514,9 +514,9 @@ msgid ""
 "installation of manual pages that were already installed in <xref "
 "linkend=\"ch-system-man-pages\"/>:"
 msgstr ""
-"禁止该软件包安装 <command>groups</command> 程序和它的 man 页面，因为 "
-"Coreutils 会提供更好的版本。同样，避免安装<xref linkend=\"ch-system-man-"
-"pages\"/>软件包已经提供的 man 页面："
+"禁止该软件包安装 <command>groups</command> 程序和它的手册页，因为 Coreutils "
+"会提供更好的版本。同样，避免安装<xref linkend=\"ch-system-man-pages\"/>软件包"
+"已经提供的手册页："
 
 #. type: Content of: <sect1><sect2><screen>
 #: lfs-en/chapter08/shadow.xml
@@ -600,13 +600,7 @@ msgstr "准备编译 Shadow："
 
 #. type: Content of: <sect1><sect2><screen>
 #: lfs-en/chapter08/shadow.xml
-#, fuzzy, no-wrap
-#| msgid ""
-#| "<userinput remap=\"configure\">touch /usr/bin/passwd\n"
-#| "./configure --sysconfdir=/etc   \\\n"
-#| "            --disable-static    \\\n"
-#| "            --with-{b,yes}crypt \\\n"
-#| "            --with-group-name-max-length=32</userinput>"
+#, no-wrap
 msgid ""
 "<userinput remap=\"configure\">touch /usr/bin/passwd\n"
 "./configure --sysconfdir=/etc   \\\n"
@@ -619,6 +613,7 @@ msgstr ""
 "./configure --sysconfdir=/etc   \\\n"
 "            --disable-static    \\\n"
 "            --with-{b,yes}crypt \\\n"
+"            --without-libbsd    \\\n"
 "            --with-group-name-max-length=32</userinput>"
 
 #. type: Content of: <sect1><sect2><variablelist><title>
@@ -676,10 +671,8 @@ msgstr "用户名最长只能有 32 个字符。设定组名称最大长度为�
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: lfs-en/chapter08/shadow.xml
-#, fuzzy
-#| msgid "<parameter>--without-ada</parameter>"
 msgid "<parameter>--without-libbsd</parameter>"
-msgstr "<parameter>--without-ada</parameter>"
+msgstr "<parameter>--without-libbsd</parameter>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: lfs-en/chapter08/shadow.xml
@@ -687,6 +680,8 @@ msgid ""
 "Do not use the readpassphrase function from libbsd which is not in LFS.  Use "
 "the internal copy instead."
 msgstr ""
+"不要使用 LFS 不包含的 libbsd 库中的 readpassphrase 函数。使用软件包内置的 "
+"readpassphrase 实现代替它。"
 
 #. type: Content of: <sect1><sect2><screen>
 #: lfs-en/chapter08/shadow.xml
@@ -873,13 +868,6 @@ msgstr "Shadow 的内容"
 
 #. type: Content of: <sect1><sect2><segmentedlist><seglistitem><seg>
 #: lfs-en/chapter08/shadow.xml
-#, fuzzy
-#| msgid ""
-#| "chage, chfn, chgpasswd, chpasswd, chsh, expiry, faillog, getsubids, "
-#| "gpasswd, groupadd, groupdel, groupmems, groupmod, grpck, grpconv, "
-#| "grpunconv, lastlog, login, logoutd, newgidmap, newgrp, newuidmap, "
-#| "newusers, nologin, passwd, pwck, pwconv, pwunconv, sg (link to newgrp), "
-#| "su, useradd, userdel, usermod, vigr (link to vipw), and vipw"
 msgid ""
 "chage, chfn, chgpasswd, chpasswd, chsh, expiry, faillog, getsubids, gpasswd, "
 "groupadd, groupdel, groupmems, groupmod, grpck, grpconv, grpunconv, login, "
@@ -888,10 +876,10 @@ msgid ""
 "(link to vipw), and vipw"
 msgstr ""
 "chage, chfn, chgpasswd, chpasswd, chsh, expiry, faillog, getsubids, gpasswd, "
-"groupadd, groupdel, groupmems, groupmod, grpck, grpconv, grpunconv, lastlog, "
-"login, logoutd, newgidmap, newgrp, newuidmap, newusers, nologin, passwd, "
-"pwck, pwconv, pwunconv, sg (到 newgrp 的链接), su, useradd, userdel, "
-"usermod, vigr (到 vipw 的链接), 以及 vipw"
+"groupadd, groupdel, groupmems, groupmod, grpck, grpconv, grpunconv, login, "
+"logoutd, newgidmap, newgrp, newuidmap, newusers, nologin, passwd, pwck, "
+"pwconv, pwunconv, sg (到 newgrp 的链接), su, useradd, userdel, usermod, vigr "
+"(到 vipw 的链接), 以及 vipw"
 
 #. type: Content of: <sect1><sect2><segmentedlist><seglistitem><seg>
 #: lfs-en/chapter08/shadow.xml

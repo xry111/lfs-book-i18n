@@ -510,15 +510,13 @@ msgstr "<parameter>libc_cv_slibdir=/usr/lib</parameter>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: lfs-en/chapter05/glibc.xml lfs-en/chapter08/glibc.xml
-#, fuzzy
-#| msgid "<parameter>--disable-nls</parameter>"
 msgid "<parameter>--disable-nscd</parameter>"
-msgstr "<parameter>--disable-nls</parameter>"
+msgstr "<parameter>--disable-nscd</parameter>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: lfs-en/chapter05/glibc.xml lfs-en/chapter08/glibc.xml
 msgid "Do not build the name service cache daemon which is no longer used."
-msgstr ""
+msgstr "不构建目前已经没有作用的命名服务缓存守护程序。"
 
 #. type: Content of: <sect1><sect2><segmentedlist><segtitle>
 #: lfs-en/chapter08/findutils.xml lfs-en/chapter08/file.xml
@@ -571,7 +569,7 @@ msgstr "安装的程序"
 #: lfs-en/chapter08/groff.xml lfs-en/chapter08/libxcrypt.xml
 #, no-wrap
 msgid "<userinput remap=\"test\">make check</userinput>"
-msgstr "<userinput remap=\"make\">make check</userinput>"
+msgstr "<userinput remap=\"test\">make check</userinput>"
 
 #. type: Content of: <sect1><sect2><segmentedlist><segtitle>
 #: lfs-en/chapter08/libtool.xml lfs-en/chapter08/gcc.xml
@@ -632,21 +630,18 @@ msgstr "<userinput remap=\"pre\">patch -Np1 -i ../&glibc-fhs-patch;</userinput>"
 
 #. type: Content of: <sect1><sect2><para>
 #: lfs-en/chapter08/glibc.xml
-#, fuzzy
-#| msgid ""
-#| "Now fix a regression causing the posix_memalign() function to be very "
-#| "slow in some conditions:"
 msgid ""
 "Now fix two security vulnerabilities and a regression causing the "
 "posix_memalign() function very slow in some conditions:"
-msgstr "现在修复导致 posix_memalign() 函数在一些条件下非常缓慢的退化问题："
+msgstr ""
+"现在修复两项安全缺陷，以及一项导致 posix_memalign() 函数在一些条件下非常缓慢"
+"的退化问题："
 
 #. type: Content of: <sect1><sect2><screen>
 #: lfs-en/chapter08/glibc.xml
-#, fuzzy, no-wrap
-#| msgid "<userinput remap=\"pre\">patch -Np1 -i ../&glibc-fhs-patch;</userinput>"
+#, no-wrap
 msgid "<userinput remap=\"pre\">patch -Np1 -i ../&glibc-upstream-fixes-patch;</userinput>"
-msgstr "<userinput remap=\"pre\">patch -Np1 -i ../&glibc-fhs-patch;</userinput>"
+msgstr "<userinput remap=\"pre\">patch -Np1 -i ../&glibc-upstream-fixes-patch;</userinput>"
 
 #. type: Content of: <sect1><sect2><para>
 #: lfs-en/chapter08/glibc.xml
@@ -665,14 +660,7 @@ msgstr "准备编译 Glibc："
 
 #. type: Content of: <sect1><sect2><screen>
 #: lfs-en/chapter08/glibc.xml
-#, fuzzy, no-wrap
-#| msgid ""
-#| "<userinput remap=\"configure\">../configure --prefix=/usr                            \\\n"
-#| "             --disable-werror                         \\\n"
-#| "             --enable-kernel=&min-kernel;                     \\\n"
-#| "             --enable-stack-protector=strong          \\\n"
-#| "             --with-headers=/usr/include              \\\n"
-#| "             libc_cv_slibdir=/usr/lib</userinput>"
+#, no-wrap
 msgid ""
 "<userinput remap=\"configure\">../configure --prefix=/usr                            \\\n"
 "             --disable-werror                         \\\n"
@@ -687,6 +675,7 @@ msgstr ""
 "             --enable-kernel=&min-kernel;                     \\\n"
 "             --enable-stack-protector=strong          \\\n"
 "             --with-headers=/usr/include              \\\n"
+"             --disable-nscd                           \\\n"
 "             libc_cv_slibdir=/usr/lib</userinput>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
@@ -1087,25 +1076,7 @@ msgstr ""
 
 #. type: Content of: <sect1><sect2><sect3><screen>
 #: lfs-en/chapter08/glibc.xml
-#, fuzzy, no-wrap
-#| msgid ""
-#| "<userinput>cat &gt; /etc/nsswitch.conf &lt;&lt; \"EOF\"\n"
-#| "<literal># Begin /etc/nsswitch.conf\n"
-#| "\n"
-#| "passwd: files\n"
-#| "group: files\n"
-#| "shadow: files\n"
-#| "\n"
-#| "hosts: files dns\n"
-#| "networks: files\n"
-#| "\n"
-#| "protocols: files\n"
-#| "services: files\n"
-#| "ethers: files\n"
-#| "rpc: files\n"
-#| "\n"
-#| "# End /etc/nsswitch.conf</literal>\n"
-#| "EOF</userinput>"
+#, no-wrap
 msgid ""
 "<userinput>cat &gt; /etc/nsswitch.conf &lt;&lt; \"EOF\"\n"
 "<literal># Begin /etc/nsswitch.conf\n"
@@ -1128,11 +1099,11 @@ msgstr ""
 "<userinput>cat &gt; /etc/nsswitch.conf &lt;&lt; \"EOF\"\n"
 "<literal># Begin /etc/nsswitch.conf\n"
 "\n"
-"passwd: files\n"
-"group: files\n"
-"shadow: files\n"
+"passwd: files systemd\n"
+"group: files systemd\n"
+"shadow: files systemd\n"
 "\n"
-"hosts: files dns\n"
+"hosts: mymachines resolve [!UNAVAIL=return] files myhostname dns\n"
 "networks: files\n"
 "\n"
 "protocols: files\n"
@@ -1394,12 +1365,6 @@ msgstr "Glibc 的内容"
 
 #. type: Content of: <sect1><sect2><segmentedlist><seglistitem><seg>
 #: lfs-en/chapter08/glibc.xml
-#, fuzzy
-#| msgid ""
-#| "gencat, getconf, getent, iconv, iconvconfig, ldconfig, ldd, lddlibc4, ld."
-#| "so (symlink to ld-linux-x86-64.so.2 or ld-linux.so.2), locale, localedef, "
-#| "makedb, mtrace, nscd, pcprofiledump, pldd, sln, sotruss, sprof, tzselect, "
-#| "xtrace, zdump, and zic"
 msgid ""
 "gencat, getconf, getent, iconv, iconvconfig, ldconfig, ldd, lddlibc4, ld.so "
 "(symlink to ld-linux-x86-64.so.2 or ld-linux.so.2), locale, localedef, "
@@ -1408,8 +1373,8 @@ msgid ""
 msgstr ""
 "gencat, getconf, getent, iconv, iconvconfig, ldconfig, ldd, lddlibc4, ld.so "
 "(到 ld-linux-x86-64.so.2 或 ld-linux.so.2 的符号链接), locale, localedef, "
-"makedb, mtrace, nscd, pcprofiledump, pldd, sln, sotruss, sprof, tzselect, "
-"xtrace, zdump, 以及 zic"
+"makedb, mtrace, pcprofiledump, pldd, sln, sotruss, sprof, tzselect, xtrace, "
+"zdump, 以及 zic"
 
 #. type: Content of: <sect1><sect2><segmentedlist><seglistitem><seg>
 #: lfs-en/chapter08/glibc.xml
@@ -1430,16 +1395,6 @@ msgstr ""
 
 #. type: Content of: <sect1><sect2><segmentedlist><seglistitem><seg>
 #: lfs-en/chapter08/glibc.xml
-#, fuzzy
-#| msgid ""
-#| "/usr/include/arpa, /usr/include/bits, /usr/include/gnu, /usr/include/"
-#| "net, /usr/include/netash, /usr/include/netatalk, /usr/include/netax25, /"
-#| "usr/include/neteconet, /usr/include/netinet, /usr/include/netipx, /usr/"
-#| "include/netiucv, /usr/include/netpacket, /usr/include/netrom, /usr/"
-#| "include/netrose, /usr/include/nfs, /usr/include/protocols, /usr/include/"
-#| "rpc, /usr/include/sys, /usr/lib/audit, /usr/lib/gconv, /usr/lib/locale, /"
-#| "usr/libexec/getconf, /usr/share/i18n, /usr/share/zoneinfo, /var/cache/"
-#| "nscd, and /var/lib/nss_db"
 msgid ""
 "/usr/include/arpa, /usr/include/bits, /usr/include/gnu, /usr/include/net, /"
 "usr/include/netash, /usr/include/netatalk, /usr/include/netax25, /usr/"
@@ -1455,7 +1410,7 @@ msgstr ""
 "netiucv, /usr/include/netpacket, /usr/include/netrom, /usr/include/netrose, /"
 "usr/include/nfs, /usr/include/protocols, /usr/include/rpc, /usr/include/"
 "sys, /usr/lib/audit, /usr/lib/gconv, /usr/lib/locale, /usr/libexec/getconf, /"
-"usr/share/i18n, /usr/share/zoneinfo, /var/cache/nscd, 以及 /var/lib/nss_db"
+"usr/share/i18n, /usr/share/zoneinfo, 以及 /var/lib/nss_db"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: lfs-en/chapter08/glibc.xml

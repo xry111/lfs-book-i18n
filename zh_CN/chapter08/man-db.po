@@ -507,7 +507,7 @@ msgstr "安装的程序"
 #: lfs-en/chapter08/groff.xml lfs-en/chapter08/libxcrypt.xml
 #, no-wrap
 msgid "<userinput remap=\"test\">make check</userinput>"
-msgstr "<userinput remap=\"make\">make check</userinput>"
+msgstr "<userinput remap=\"test\">make check</userinput>"
 
 #. type: Content of: <sect1><sect2><segmentedlist><segtitle>
 #: lfs-en/chapter08/libtool.xml lfs-en/chapter08/gcc.xml
@@ -551,7 +551,7 @@ msgstr "Man-DB"
 #. type: Content of: <sect1><sect2><para>
 #: lfs-en/chapter08/man-db.xml
 msgid "The Man-DB package contains programs for finding and viewing man pages."
-msgstr "Man-DB 软件包包含查找和阅读 man 页面的程序。"
+msgstr "Man-DB 软件包包含查找和阅读手册页的程序。"
 
 #. type: Content of: <sect1><sect2><segmentedlist><seglistitem><seg>
 #: lfs-en/chapter08/man-db.xml
@@ -669,9 +669,9 @@ msgstr ""
 "这三个选项设定一些默认程序。<command>lynx</command> 是基于文本的 web 浏览器 "
 "(安装过程可在 BLFS 中查阅)，<command>vgrind</command> 将程序源代码转换成 "
 "Groff 输入，<command>grap</command> 用于在 Groff 文档中画图。"
-"<command>vgrind</command> 和 <command>grap</command> 在阅读 man 手册页面时一"
-"般用不到。它们不是 LFS 或 BLFS 的一部分，但如果需要的话，您应该可以在完成 "
-"LFS 的构建后自行安装它们。"
+"<command>vgrind</command> 和 <command>grap</command> 在阅读手册页时一般用不"
+"到。它们不是 LFS 或 BLFS 的一部分，但如果需要的话，您应该可以在完成 LFS 的构"
+"建后自行安装它们。"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: lfs-en/chapter08/man-db.xml
@@ -687,7 +687,7 @@ msgstr "该选项防止安装不必要的，为 systemd 提供的目录和文件
 #. type: Content of: <sect1><sect2><title>
 #: lfs-en/chapter08/man-db.xml
 msgid "Non-English Manual Pages in LFS"
-msgstr "LFS 中的非英文 man 手册页面"
+msgstr "LFS 中的非英文手册页"
 
 #. type: Content of: <sect1><sect2><para>
 #: lfs-en/chapter08/man-db.xml
@@ -698,13 +698,13 @@ msgid ""
 "determines if manual pages installed in that directory are UTF-8 encoded."
 msgstr ""
 "下表展示了 Man-DB 假定的安装在 <filename class=\"directory\">/usr/share/man/"
-"&lt;ll&gt;</filename> 中的 man 手册页面的编码字符集。另外，Man-DB 还能正确地"
-"判断出这些页面是否为 UTF-8 编码。"
+"&lt;ll&gt;</filename> 中的手册页的编码字符集。另外，Man-DB 还能正确地判断出这"
+"些页面是否为 UTF-8 编码。"
 
 #. type: Content of: <sect1><sect2><table><title>
 #: lfs-en/chapter08/man-db.xml
 msgid "Expected character encoding of legacy 8-bit manual pages"
-msgstr "传统 8 位 man 手册页面的预期字符编码"
+msgstr "传统 8 位手册页的预期字符编码"
 
 #. type: Content of: <sect1><sect2><table>
 #: lfs-en/chapter08/man-db.xml
@@ -1004,7 +1004,7 @@ msgstr "BIG5"
 #. type: Content of: <sect1><sect2><note><para>
 #: lfs-en/chapter08/man-db.xml
 msgid "Manual pages in languages not in the list are not supported."
-msgstr "用该表之外的语言编写的 man 手册页面不被支持。"
+msgstr "用该表之外的语言编写的手册页不被支持。"
 
 #. type: Content of: <sect1><sect2><title>
 #: lfs-en/chapter08/man-db.xml
@@ -1076,7 +1076,7 @@ msgstr "<command>catman</command>"
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: lfs-en/chapter08/man-db.xml
 msgid "Creates or updates the pre-formatted manual pages"
-msgstr "创建或更新预先格式化的 man 手册页面"
+msgstr "创建或更新预先格式化的手册页"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: lfs-en/chapter08/man-db.xml
@@ -1091,7 +1091,7 @@ msgstr "<command>lexgrog</command>"
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: lfs-en/chapter08/man-db.xml
 msgid "Displays one-line summary information about a given manual page"
-msgstr "显示给定 man 手册页面的单行摘要信息"
+msgstr "显示给定手册页的单行摘要信息"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: lfs-en/chapter08/man-db.xml
@@ -1106,7 +1106,7 @@ msgstr "<command>man</command>"
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: lfs-en/chapter08/man-db.xml
 msgid "Formats and displays the requested manual page"
-msgstr "格式化并显示请求的 man 手册页面"
+msgstr "格式化并显示请求的手册页"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: lfs-en/chapter08/man-db.xml
@@ -1121,7 +1121,7 @@ msgstr "<command>man-recode</command>"
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: lfs-en/chapter08/man-db.xml
 msgid "Converts manual pages to another encoding"
-msgstr "转换 man 页面的编码"
+msgstr "转换手册页的编码"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: lfs-en/chapter08/man-db.xml

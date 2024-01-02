@@ -36,14 +36,7 @@ msgstr ""
 
 #. type: Content of: <sect1><screen>
 #: lfs-en/chapter07/chroot.xml
-#, fuzzy, no-wrap
-#| msgid ""
-#| "<userinput>chroot \"$LFS\" /usr/bin/env -i   \\\n"
-#| "    HOME=/root                  \\\n"
-#| "    TERM=\"$TERM\"                \\\n"
-#| "    PS1='(lfs chroot) \\u:\\w\\$ ' \\\n"
-#| "    PATH=/usr/bin:/usr/sbin     \\\n"
-#| "    /bin/bash --login</userinput>"
+#, no-wrap
 msgid ""
 "<userinput>chroot \"$LFS\" /usr/bin/env -i   \\\n"
 "    HOME=/root                  \\\n"
@@ -59,6 +52,8 @@ msgstr ""
 "    TERM=\"$TERM\"                \\\n"
 "    PS1='(lfs chroot) \\u:\\w\\$ ' \\\n"
 "    PATH=/usr/bin:/usr/sbin     \\\n"
+"    MAKEFLAGS=\"-j<replaceable>$(nproc)</replaceable>\"      \\\n"
+"    TESTSUITEFLAGS=\"-j<replaceable>$(nproc)</replaceable>\" \\\n"
 "    /bin/bash --login</userinput>"
 
 #. type: Content of: <sect1><para>
@@ -72,6 +67,11 @@ msgid ""
 "<envar>TESTSUITEFLAGS</envar> environment variable instead. We set that here "
 "as well for running these test suites with multiple cores."
 msgstr ""
+"如果不希望使用所有可用的逻辑 CPU 核心，将 <replaceable>$(nproc)</"
+"replaceable> 替换为在本章和后续章节中构建软件包时所希望使用的核心数。&ch-"
+"final; 中的一些软件包 (如 Autoconf, Libtool, 以及 Tar) 的测试套件不受 "
+"<envar>MAKEFLAGS</envar> 控制，它们使用另一个环境变量 <envar>TESTSUITEFLAGS</"
+"envar>。我们在此也设置这个变量，以便用多个 CPU 核心运行测试套件。"
 
 #. type: Content of: <sect1><para>
 #: lfs-en/chapter07/chroot.xml
@@ -120,19 +120,14 @@ msgstr ""
 
 #. type: Content of: <sect1><para>
 #: lfs-en/chapter07/chroot.xml
-#, fuzzy
-#| msgid ""
-#| "Note that the <command>bash</command> prompt will say <computeroutput>I "
-#| "have no name!</computeroutput> This is normal because the <filename>/etc/"
-#| "passwd</filename> file has not been created yet."
 msgid ""
 "Also note that the <command>bash</command> prompt will say <computeroutput>I "
 "have no name!</computeroutput> This is normal because the <filename>/etc/"
 "passwd</filename> file has not been created yet."
 msgstr ""
-"注意 <command>bash</command> 的提示符会包含 <computeroutput>I have no name!</"
-"computeroutput>。这是正常的，因为现在还没有创建 <filename>/etc/passwd</"
-"filename> 文件。"
+"另外，注意 <command>bash</command> 的提示符会包含 <computeroutput>I have no "
+"name!</computeroutput>。这是正常的，因为现在还没有创建 <filename>/etc/"
+"passwd</filename> 文件。"
 
 #. type: Content of: <sect1><note><para>
 #: lfs-en/chapter07/chroot.xml

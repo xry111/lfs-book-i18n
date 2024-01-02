@@ -152,13 +152,7 @@ msgstr ""
 
 #. type: Content of: <sect1><sect2><screen>
 #: lfs-en/chapter07/kernfs.xml
-#, fuzzy, no-wrap
-#| msgid ""
-#| "<userinput>if [ -h $LFS/dev/shm ]; then\n"
-#| "  mkdir -pv $LFS/$(readlink $LFS/dev/shm)\n"
-#| "else\n"
-#| "  mount -t tmpfs -o nosuid,nodev tmpfs $LFS/dev/shm\n"
-#| "fi</userinput>"
+#, no-wrap
 msgid ""
 "<userinput>if [ -h $LFS/dev/shm ]; then\n"
 "  (cd $LFS/dev; mkdir $(readlink shm))\n"
@@ -167,7 +161,7 @@ msgid ""
 "fi</userinput>"
 msgstr ""
 "<userinput>if [ -h $LFS/dev/shm ]; then\n"
-"  mkdir -pv $LFS/$(readlink $LFS/dev/shm)\n"
+"  (cd $LFS/dev; mkdir $(readlink shm))\n"
 "else\n"
-"  mount -t tmpfs -o nosuid,nodev tmpfs $LFS/dev/shm\n"
+"  mount -vt tmpfs -o nosuid,nodev tmpfs $LFS/dev/shm\n"
 "fi</userinput>"

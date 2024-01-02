@@ -395,14 +395,7 @@ msgstr "现在，准备编译 Binutils："
 
 #. type: Content of: <sect1><sect2><screen>
 #: lfs-en/chapter05/binutils-pass1.xml
-#, fuzzy, no-wrap
-#| msgid ""
-#| "<userinput remap=\"configure\">../configure --prefix=$LFS/tools \\\n"
-#| "             --with-sysroot=$LFS \\\n"
-#| "             --target=$LFS_TGT   \\\n"
-#| "             --disable-nls       \\\n"
-#| "             --enable-gprofng=no \\\n"
-#| "             --disable-werror</userinput>"
+#, no-wrap
 msgid ""
 "<userinput remap=\"configure\">../configure --prefix=$LFS/tools \\\n"
 "             --with-sysroot=$LFS \\\n"
@@ -417,7 +410,8 @@ msgstr ""
 "             --target=$LFS_TGT   \\\n"
 "             --disable-nls       \\\n"
 "             --enable-gprofng=no \\\n"
-"             --disable-werror</userinput>"
+"             --disable-werror    \\\n"
+"             --enable-default-hash-style=gnu</userinput>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: lfs-en/chapter05/binutils-pass1.xml
@@ -500,10 +494,8 @@ msgstr "该选项防止宿主系统编译器警告导致构建失败。"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: lfs-en/chapter05/binutils-pass1.xml
-#, fuzzy
-#| msgid "<parameter>--enable-ld=default</parameter>"
 msgid "<parameter>--enable-default-hash-style=gnu</parameter>"
-msgstr "<parameter>--enable-ld=default</parameter>"
+msgstr "<parameter>--enable-default-hash-style=gnu</parameter>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: lfs-en/chapter05/binutils-pass1.xml
@@ -518,6 +510,11 @@ msgid ""
 "wasting time to generate the classic ELF hash table when we build the "
 "packages, or wasting disk space to store it."
 msgstr ""
+"默认情况下，链接器会为共享库和动态链接的可执行文件同时生成 GNU 风格的散列表和"
+"经典的 ELF 散列表。散列表仅供动态链接器进行符号查询。LFS 系统的动态链接器 "
+"(由 Glibc 软件包提供) 总是使用查询更快的 GNU 风格散列表。因此经典 ELF 散列表"
+"完全没有意义。该选项使得链接器在默认情况下只生成 GNU 风格散列表，以避免为生成"
+"和存储经典 ELF 散列表浪费时间和空间。"
 
 #. type: Content of: <sect1><sect2><para>
 #: lfs-en/chapter05/binutils-pass1.xml

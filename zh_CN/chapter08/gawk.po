@@ -552,40 +552,35 @@ msgstr "&gawk-fin-du;"
 
 #. type: Content of: <sect1><sect2><screen>
 #: lfs-en/chapter08/gawk.xml
-#, fuzzy, no-wrap
-#| msgid "<userinput remap=\"install\">make docdir=/usr/share/doc/check-&check-version; install</userinput>"
+#, no-wrap
 msgid ""
 "<userinput remap=\"install\">rm -f /usr/bin/gawk-&gawk-version;\n"
 "make install</userinput>"
-msgstr "<userinput remap=\"install\">make docdir=/usr/share/doc/check-&check-version; install</userinput>"
+msgstr ""
+"<userinput remap=\"install\">rm -f /usr/bin/gawk-&gawk-version;\n"
+"make install</userinput>"
 
 #. type: Content of: <sect1><sect2><variablelist><title>
 #: lfs-en/chapter08/gawk.xml
-#, fuzzy
-#| msgid "The meaning of the zic commands:"
 msgid "The meaning of the command:"
-msgstr "zic 命令的含义："
+msgstr "命令的含义："
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: lfs-en/chapter08/gawk.xml
-#, fuzzy
-#| msgid "<command>gawk-&gawk-version;</command>"
 msgid "<command>rm -f /usr/bin/gawk-&gawk-version;</command>"
-msgstr "<command>gawk-&gawk-version;</command>"
+msgstr "<command>rm -f /usr/bin/gawk-&gawk-version;</command>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: lfs-en/chapter08/gawk.xml
-#, fuzzy
-#| msgid ""
-#| "This variable ensures that the previous hard link installed in <xref "
-#| "linkend='ch-tools-gawk'/> is updated here."
 msgid ""
 "The building system will not recreate the hard link <filename>gawk-&gawk-"
 "version;</filename> if it already exists.  Remove it to ensure that the "
 "previous hard link installed in <xref linkend='ch-tools-gawk'/> is updated "
 "here."
 msgstr ""
-"该变量保证之前在<xref linkend='ch-tools-gawk'/>中安装的硬链接被正确更新。"
+"如果硬链接 <filename>gawk-&gawk-version;</filename> 已经存在，则构建系统不会"
+"更新它。移除该链接以保证之前在<xref linkend='ch-tools-gawk'/>中安装的硬链接被"
+"正确更新。"
 
 #. type: Content of: <sect1><sect2><para>
 #: lfs-en/chapter08/gawk.xml
@@ -593,8 +588,8 @@ msgid ""
 "The installation process already created <command>awk</command> as a symlink "
 "to <command>gawk</command>, create its man page as a symlink as well:"
 msgstr ""
-"安装过程已经将 <command>awk</command> 创建为符号链接，将其 man 页面也创建为符"
-"号链接："
+"安装过程已经将 <command>awk</command> 创建为符号链接，将其手册页也创建为符号"
+"链接："
 
 #. type: Content of: <sect1><sect2><screen>
 #: lfs-en/chapter08/gawk.xml

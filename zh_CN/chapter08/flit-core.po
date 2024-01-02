@@ -268,10 +268,9 @@ msgstr "安装 Flit-Core"
 #. type: Content of: <sect1><sect2><screen>
 #: lfs-en/chapter08/flit-core.xml lfs-en/chapter08/jinja2.xml
 #: lfs-en/chapter08/setuptools.xml
-#, fuzzy, no-wrap
-#| msgid "<userinput remap=\"install\">pip3 wheel -w dist --no-build-isolation --no-deps $PWD</userinput>"
+#, no-wrap
 msgid "<userinput remap=\"install\">pip3 wheel -w dist --no-cache-dir --no-build-isolation --no-deps $PWD</userinput>"
-msgstr "<userinput remap=\"install\">pip3 wheel -w dist --no-build-isolation --no-deps $PWD</userinput>"
+msgstr "<userinput remap=\"install\">pip3 wheel -w dist --no-cache-dir --no-build-isolation --no-deps $PWD</userinput>"
 
 #. type: Content of: <sect1><sect2><screen>
 #: lfs-en/chapter08/flit-core.xml
@@ -305,23 +304,17 @@ msgstr ""
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: lfs-en/chapter08/flit-core.xml
-#, fuzzy
-#| msgid "<parameter>--localstatedir</parameter>"
 msgid "<parameter>--no-cache-dir</parameter>"
-msgstr "<parameter>--localstatedir</parameter>"
+msgstr "<parameter>--no-cache-dir</parameter>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: lfs-en/chapter08/flit-core.xml
-#, fuzzy
-#| msgid ""
-#| "Instructs pip to put the created wheel into the <filename "
-#| "class='directory'>dist</filename> directory."
 msgid ""
 "Prevents pip from copying the created wheel into the <filename "
 "class='directory'>/root/.cache/pip</filename> directory."
 msgstr ""
-"指示 pip 将生成的 wheel 包置入 <filename class='directory'>dist</filename> 目"
-"录。"
+"防止 pip 将生成的 wheel 包复制到 <filename class='directory'>/root/.cache/"
+"pip</filename> 目录。"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: lfs-en/chapter08/flit-core.xml

@@ -72,28 +72,19 @@ pdf: booksrc
 
 booksrc: $(MBOOK_FILES) $(ORIG_FILES) $(MLANG)/book/version.ent
 
-$(MLANG)/book/tidy.conf: $(LFS_EN)/tidy.conf $(MLANG)/lang.mk
-	mkdir -pv $(@D)
-	sed -e '/output-encoding:/s|latin1|$(M_ENCODING_ALT)|' $< > $@
-
 # $(MLANG)/book is not a git repo, so we need to generate the version info
-# now and silence git-version.sh.  lang.mk SHALL contain the recipe for
-# git-version-l10n.sh.
+# now and silence git-version.sh.  lang.mk SHALL contain the recipe to
+# localize git-version.sh.
 #
 # The content of version.ent does not depend on REV, so just say "sysv"
 # here.
 .PHONY: version
-version: $(MLANG)/book/git-version-l10n.sh
-	cd $(<D); \
-	GIT_DIR=$(PWD)/$(LFS_EN)/.git ./git-version-l10n.sh sysv
+version: $(MLANG)/book/git-version.sh
+	cd $(<D); rm LFS-RELEASE; \
+	DIST=./LFS-RELEASE GIT_DIR=$(PWD)/$(LFS_EN)/.git ./$(<F) sysv
 	rm -fv $(MLANG)/book/conditional.ent
 
 $(MLANG)/book/version.ent: version; true
-
-$(MLANG)/book/git-version.sh: $(LFS_EN)/git-version.sh
-	mkdir -pv "$(@D)"
-	sed '/git.status/,$$ d' $< > $@
-	chmod -v 755 $@
 
 $(MXML_FILES) &: $(XML_FILES) $(PO_FILES) mkpo4acfg.py po4a_issue295.sh
 	mkdir -pv $(POT_DIRS)

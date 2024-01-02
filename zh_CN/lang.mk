@@ -32,7 +32,7 @@ zh_CN/book/packages.ent: $(LFS_EN)/packages.ent $(THIS)
 	    -e 's/\([0-9.]* SBU\) on a spinning disk, \(.* SBU\) on an SSD/机械硬盘上 \1，固态硬盘上 \2/' \
 	    $< > $@
 
-zh_CN/book/git-version-l10n.sh: $(LFS_EN)/git-version.sh $(THIS)
+zh_CN/book/git-version.sh: $(LFS_EN)/git-version.sh $(THIS)
 	mkdir -pv $(@D)
 	sed -e '/full_date=/ i month_zh_cn=$$(date -d "$$commit_date" "+%m" | sed "s/^0//")' \
 	    -e '/full_date=/ s@".*"@"$$year 年 $$month_zh_cn 月 $$day 日"@' \
@@ -40,14 +40,14 @@ zh_CN/book/git-version-l10n.sh: $(LFS_EN)/git-version.sh $(THIS)
 	chmod -v 755 $@
 
 COPY_FILES = zh_CN/book/fonts.mk        \
+             zh_CN/book/fonts.md5       \
              zh_CN/book/fop.xml         \
              zh_CN/book/noto-cjk-commit \
              zh_CN/book/source-han-mono-commit
 
 zh_CN/book/Makefile: $(LFS_EN)/Makefile $(THIS) $(COPY_FILES) $(@D)
 	mkdir -pv $(@D)
-	sed -e '/xa9/d' \
-	    -e 's|fop -q|& -c fop.xml|' \
+	sed -e 's|fop -q|& -c fop.xml|' \
 	    -e '/fop -q/i \\trm -rfv $$(RENDERTMP)/fonts; ln -sv $$(CURDIR)/fonts $$(RENDERTMP)/fonts' \
 	    $< > $@
 	echo 'include fonts.mk' >> $@

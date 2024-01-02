@@ -421,7 +421,7 @@ msgstr ""
 #. type: Content of: <sect1><sect2><para>
 #: lfs-en/chapter08/systemd.xml lfs-en/chapter08/udev.xml
 msgid "Install the man pages:"
-msgstr "安装 man 页面："
+msgstr "安装手册页："
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: lfs-en/chapter08/systemd.xml lfs-en/chapter08/udev.xml
@@ -509,14 +509,13 @@ msgstr "<userinput remap=\"pre\">sed '/systemd-sysctl/s/^/#/' -i rules.d/99-syst
 msgid ""
 "Adjust the hardcoded paths to network configuration files for the standalone "
 "udev installation:"
-msgstr ""
+msgstr "调整硬编码的网络配置文件路径，使之适合单独安装 udev："
 
 #. type: Content of: <sect1><sect2><screen>
 #: lfs-en/chapter08/udev.xml
-#, fuzzy, no-wrap
-#| msgid "<userinput remap=\"install\">sed '/RTLDLIST=/s@/usr@@g' -i /usr/bin/ldd</userinput>"
+#, no-wrap
 msgid "<userinput remap=\"pre\">sed '/NETWORK_DIRS/s/systemd/udev/' -i src/basic/path-lookup.h</userinput>"
-msgstr "<userinput remap=\"install\">sed '/RTLDLIST=/s@/usr@@g' -i /usr/bin/ldd</userinput>"
+msgstr "<userinput remap=\"pre\">sed '/NETWORK_DIRS/s/systemd/udev/' -i src/basic/path-lookup.h</userinput>"
 
 #. type: Content of: <sect1><sect2><para>
 #: lfs-en/chapter08/udev.xml
@@ -584,10 +583,8 @@ msgstr ""
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: lfs-en/chapter08/udev.xml
-#, fuzzy
-#| msgid "<parameter>-Dldconfig=false</parameter>"
 msgid "<parameter>-Dlogind=false -Dvconsole=false</parameter>"
-msgstr "<parameter>-Dldconfig=false</parameter>"
+msgstr "<parameter>-Dlogind=false -Dvconsole=false</parameter>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: lfs-en/chapter08/udev.xml
@@ -595,13 +592,14 @@ msgid ""
 "These options prevent the generation of several udev rule files belonging to "
 "the other Systemd components that we won't install."
 msgstr ""
+"该选项防止生成一些属于其他的，我们不会安装的 Systemd 组件的 udev 规则文件。"
 
 #. type: Content of: <sect1><sect2><para>
 #: lfs-en/chapter08/udev.xml
 msgid ""
 "Get the list of the shipped udev helpers and save it into an environment "
 "variable:"
-msgstr ""
+msgstr "获取软件包提供的 udev 辅助程序列表，并将其保存在环境变量中："
 
 #. type: Content of: <sect1><sect2><screen>
 #: lfs-en/chapter08/udev.xml
@@ -610,6 +608,8 @@ msgid ""
 "<userinput remap=\"make\">udev_helpers=$(grep \"'name' :\" ../src/udev/meson.build | \\\n"
 "               awk '{print $3}' | tr -d \",'\" | grep -v 'udevadm')</userinput>"
 msgstr ""
+"<userinput remap=\"make\">udev_helpers=$(grep \"'name' :\" ../src/udev/meson.build | \\\n"
+"               awk '{print $3}' | tr -d \",'\" | grep -v 'udevadm')</userinput>"
 
 #. type: Content of: <sect1><sect2><para>
 #: lfs-en/chapter08/udev.xml
@@ -618,40 +618,21 @@ msgstr "只构建 udev 需要的组件："
 
 #. type: Content of: <sect1><sect2><screen>
 #: lfs-en/chapter08/udev.xml
-#, fuzzy, no-wrap
-#| msgid ""
-#| "<userinput remap=\"make\">ninja udevadm systemd-hwdb \\\n"
-#| "      $(grep -o -E \"^build (src/libudev|src/udev|rules.d|hwdb.d)[^:]*\" \\\n"
-#| "        build.ninja | awk '{ print $2 }')                              \\\n"
-#| "      $(realpath libudev.so --relative-to .)</userinput>"
+#, no-wrap
 msgid ""
 "<userinput remap=\"make\">ninja udevadm systemd-hwdb                                           \\\n"
 "      $(ninja -n | grep -Eo '(src/(lib)?udev|rules.d|hwdb.d)/[^ ]*') \\\n"
 "      $(realpath libudev.so --relative-to .)                         \\\n"
 "      $udev_helpers udevadm</userinput>"
 msgstr ""
-"<userinput remap=\"make\">ninja udevadm systemd-hwdb \\\n"
-"      $(grep -o -E \"^build (src/libudev|src/udev|rules.d|hwdb.d)[^:]*\" \\\n"
-"        build.ninja | awk '{ print $2 }')                              \\\n"
-"      $(realpath libudev.so --relative-to .)</userinput>"
+"<userinput remap=\"make\">ninja udevadm systemd-hwdb                                           \\\n"
+"      $(ninja -n | grep -Eo '(src/(lib)?udev|rules.d|hwdb.d)/[^ ]*') \\\n"
+"      $(realpath libudev.so --relative-to .)                         \\\n"
+"      $udev_helpers udevadm</userinput>"
 
 #. type: Content of: <sect1><sect2><screen>
 #: lfs-en/chapter08/udev.xml
-#, fuzzy, no-wrap
-#| msgid ""
-#| "<userinput remap=\"install\">install -vm755 -d {/usr/lib,/etc}/udev/{hwdb,rules}.d\n"
-#| "install -vm755 -d /usr/{lib,share}/pkgconfig\n"
-#| "install -vm755 udevadm                     /usr/bin/\n"
-#| "install -vm755 systemd-hwdb                /usr/bin/udev-hwdb\n"
-#| "ln      -svfn  ../bin/udevadm              /usr/sbin/udevd\n"
-#| "cp      -av    libudev.so{,*[0-9]}         /usr/lib/\n"
-#| "install -vm644 ../src/libudev/libudev.h    /usr/include/\n"
-#| "install -vm644 src/libudev/*.pc            /usr/lib/pkgconfig/\n"
-#| "install -vm644 src/udev/*.pc               /usr/share/pkgconfig/\n"
-#| "install -vm644 ../src/udev/udev.conf       /etc/udev/\n"
-#| "install -vm644 rules.d/* ../rules.d/{*.rules,README} /usr/lib/udev/rules.d/\n"
-#| "install -vm644 hwdb.d/*  ../hwdb.d/{*.hwdb,README}   /usr/lib/udev/hwdb.d/\n"
-#| "install -vm755 $(find src/udev -type f | grep -F -v \".\") /usr/lib/udev</userinput>"
+#, no-wrap
 msgid ""
 "<userinput remap=\"install\">install -vm755 -d {/usr/lib,/etc}/udev/{hwdb.d,rules.d,network}\n"
 "install -vm755 -d /usr/{lib,share}/pkgconfig\n"
@@ -670,19 +651,22 @@ msgid ""
 "install -vm755 $udev_helpers                       /usr/lib/udev\n"
 "install -vm644 ../network/99-default.link          /usr/lib/udev/network</userinput>"
 msgstr ""
-"<userinput remap=\"install\">install -vm755 -d {/usr/lib,/etc}/udev/{hwdb,rules}.d\n"
+"<userinput remap=\"install\">install -vm755 -d {/usr/lib,/etc}/udev/{hwdb.d,rules.d,network}\n"
 "install -vm755 -d /usr/{lib,share}/pkgconfig\n"
-"install -vm755 udevadm                     /usr/bin/\n"
-"install -vm755 systemd-hwdb                /usr/bin/udev-hwdb\n"
-"ln      -svfn  ../bin/udevadm              /usr/sbin/udevd\n"
-"cp      -av    libudev.so{,*[0-9]}         /usr/lib/\n"
-"install -vm644 ../src/libudev/libudev.h    /usr/include/\n"
-"install -vm644 src/libudev/*.pc            /usr/lib/pkgconfig/\n"
-"install -vm644 src/udev/*.pc               /usr/share/pkgconfig/\n"
-"install -vm644 ../src/udev/udev.conf       /etc/udev/\n"
-"install -vm644 rules.d/* ../rules.d/{*.rules,README} /usr/lib/udev/rules.d/\n"
-"install -vm644 hwdb.d/*  ../hwdb.d/{*.hwdb,README}   /usr/lib/udev/hwdb.d/\n"
-"install -vm755 $(find src/udev -type f | grep -F -v \".\") /usr/lib/udev</userinput>"
+"install -vm755 udevadm                             /usr/bin/\n"
+"install -vm755 systemd-hwdb                        /usr/bin/udev-hwdb\n"
+"ln      -svfn  ../bin/udevadm                      /usr/sbin/udevd\n"
+"cp      -av    libudev.so{,*[0-9]}                 /usr/lib/\n"
+"install -vm644 ../src/libudev/libudev.h            /usr/include/\n"
+"install -vm644 src/libudev/*.pc                    /usr/lib/pkgconfig/\n"
+"install -vm644 src/udev/*.pc                       /usr/share/pkgconfig/\n"
+"install -vm644 ../src/udev/udev.conf               /etc/udev/\n"
+"install -vm644 rules.d/* ../rules.d/README         /usr/lib/udev/rules.d/\n"
+"install -vm644 $(find ../rules.d/*.rules \\\n"
+"                      -not -name '*power-switch*') /usr/lib/udev/rules.d/\n"
+"install -vm644 hwdb.d/*  ../hwdb.d/{*.hwdb,README} /usr/lib/udev/hwdb.d/\n"
+"install -vm755 $udev_helpers                       /usr/lib/udev\n"
+"install -vm644 ../network/99-default.link          /usr/lib/udev/network</userinput>"
 
 #. type: Content of: <sect1><sect2><para>
 #: lfs-en/chapter08/udev.xml
@@ -704,18 +688,7 @@ msgstr ""
 #.          component in the path.  
 #. type: Content of: <sect1><sect2><screen>
 #: lfs-en/chapter08/udev.xml
-#, fuzzy, no-wrap
-#| msgid ""
-#| "<userinput remap=\"install\">tar -xf ../../systemd-man-pages-&systemd-man-version;.tar.xz                            \\\n"
-#| "    --no-same-owner --strip-components=1                              \\\n"
-#| "    -C /usr/share/man --wildcards '*/udev*' '*/libudev*'              \\\n"
-#| "                                  '*/systemd-'{hwdb,udevd.service}.8\n"
-#| "sed 's/systemd\\(\\\\\\?-\\)/udev\\1/' /usr/share/man/man8/systemd-hwdb.8   \\\n"
-#| "                               > /usr/share/man/man8/udev-hwdb.8\n"
-#| "sed 's|lib.*udevd|sbin/udevd|'                                        \\\n"
-#| "    /usr/share/man/man8/systemd-udevd.service.8                       \\\n"
-#| "  > /usr/share/man/man8/udevd.8\n"
-#| "rm  /usr/share/man/man8/systemd-*.8</userinput>"
+#, no-wrap
 msgid ""
 "<userinput remap=\"install\">tar -xf ../../systemd-man-pages-&systemd-man-version;.tar.xz                            \\\n"
 "    --no-same-owner --strip-components=1                              \\\n"
@@ -739,13 +712,21 @@ msgstr ""
 "<userinput remap=\"install\">tar -xf ../../systemd-man-pages-&systemd-man-version;.tar.xz                            \\\n"
 "    --no-same-owner --strip-components=1                              \\\n"
 "    -C /usr/share/man --wildcards '*/udev*' '*/libudev*'              \\\n"
+"                                  '*/systemd.link.5'                  \\\n"
 "                                  '*/systemd-'{hwdb,udevd.service}.8\n"
+"\n"
+"sed 's|systemd/network|udev/network|'                                 \\\n"
+"    /usr/share/man/man5/systemd.link.5                                \\\n"
+"  > /usr/share/man/man5/udev.link.5\n"
+"\n"
 "sed 's/systemd\\(\\\\\\?-\\)/udev\\1/' /usr/share/man/man8/systemd-hwdb.8   \\\n"
 "                               > /usr/share/man/man8/udev-hwdb.8\n"
+"\n"
 "sed 's|lib.*udevd|sbin/udevd|'                                        \\\n"
 "    /usr/share/man/man8/systemd-udevd.service.8                       \\\n"
 "  > /usr/share/man/man8/udevd.8\n"
-"rm  /usr/share/man/man8/systemd-*.8</userinput>"
+"\n"
+"rm /usr/share/man/man*/systemd*</userinput>"
 
 #. type: Content of: <sect1><sect2><title>
 #: lfs-en/chapter08/udev.xml

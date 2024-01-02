@@ -526,8 +526,6 @@ msgstr "&util-linux-fin-du;"
 
 #. type: Content of: <sect1><sect2><para>
 #: lfs-en/chapter08/util-linux.xml
-#, fuzzy
-#| msgid "First, disable a problem test:"
 msgid "First, disable a problematic test:"
 msgstr "首先，禁止运行一项有问题的测试："
 
@@ -539,25 +537,7 @@ msgstr "<userinput remap=\"pre\">sed -i '/test_mkfds/s/^/#/' tests/helpers/Makem
 
 #. type: Content of: <sect1><sect2><screen>
 #: lfs-en/chapter08/util-linux.xml
-#, fuzzy, no-wrap
-#| msgid ""
-#| "<userinput remap=\"configure\">./configure ADJTIME_PATH=/var/lib/hwclock/adjtime \\\n"
-#| "            --bindir=/usr/bin    \\\n"
-#| "            --libdir=/usr/lib    \\\n"
-#| "            --runstatedir=/run   \\\n"
-#| "            --sbindir=/usr/sbin  \\\n"
-#| "            --disable-chfn-chsh  \\\n"
-#| "            --disable-login      \\\n"
-#| "            --disable-nologin    \\\n"
-#| "            --disable-su         \\\n"
-#| "            --disable-setpriv    \\\n"
-#| "            --disable-runuser    \\\n"
-#| "            --disable-pylibmount \\\n"
-#| "            --disable-static     \\\n"
-#| "            --without-python     \\\n"
-#| "            --without-systemd    \\\n"
-#| "            --without-systemdsystemunitdir \\\n"
-#| "            --docdir=/usr/share/doc/util-linux-&util-linux-version;</userinput>"
+#, no-wrap
 msgid ""
 "<userinput remap=\"configure\">./configure --bindir=/usr/bin    \\\n"
 "            --libdir=/usr/lib    \\\n"
@@ -577,8 +557,7 @@ msgid ""
 "            ADJTIME_PATH=/var/lib/hwclock/adjtime \\\n"
 "            --docdir=/usr/share/doc/util-linux-&util-linux-version;</userinput>"
 msgstr ""
-"<userinput remap=\"configure\">./configure ADJTIME_PATH=/var/lib/hwclock/adjtime \\\n"
-"            --bindir=/usr/bin    \\\n"
+"<userinput remap=\"configure\">./configure --bindir=/usr/bin    \\\n"
 "            --libdir=/usr/lib    \\\n"
 "            --runstatedir=/run   \\\n"
 "            --sbindir=/usr/sbin  \\\n"
@@ -592,28 +571,13 @@ msgstr ""
 "            --disable-static     \\\n"
 "            --without-python     \\\n"
 "            --without-systemd    \\\n"
-"            --without-systemdsystemunitdir \\\n"
+"            --without-systemdsystemunitdir        \\\n"
+"            ADJTIME_PATH=/var/lib/hwclock/adjtime \\\n"
 "            --docdir=/usr/share/doc/util-linux-&util-linux-version;</userinput>"
 
 #. type: Content of: <sect1><sect2><screen>
 #: lfs-en/chapter08/util-linux.xml
-#, fuzzy, no-wrap
-#| msgid ""
-#| "<userinput remap=\"configure\">./configure ADJTIME_PATH=/var/lib/hwclock/adjtime \\\n"
-#| "            --bindir=/usr/bin    \\\n"
-#| "            --libdir=/usr/lib    \\\n"
-#| "            --runstatedir=/run   \\\n"
-#| "            --sbindir=/usr/sbin  \\\n"
-#| "            --disable-chfn-chsh  \\\n"
-#| "            --disable-login      \\\n"
-#| "            --disable-nologin    \\\n"
-#| "            --disable-su         \\\n"
-#| "            --disable-setpriv    \\\n"
-#| "            --disable-runuser    \\\n"
-#| "            --disable-pylibmount \\\n"
-#| "            --disable-static     \\\n"
-#| "            --without-python     \\\n"
-#| "            --docdir=/usr/share/doc/util-linux-&util-linux-version;</userinput>"
+#, no-wrap
 msgid ""
 "<userinput remap=\"configure\">./configure --bindir=/usr/bin    \\\n"
 "            --libdir=/usr/lib    \\\n"
@@ -631,8 +595,7 @@ msgid ""
 "            ADJTIME_PATH=/var/lib/hwclock/adjtime \\\n"
 "            --docdir=/usr/share/doc/util-linux-&util-linux-version;</userinput>"
 msgstr ""
-"<userinput remap=\"configure\">./configure ADJTIME_PATH=/var/lib/hwclock/adjtime \\\n"
-"            --bindir=/usr/bin    \\\n"
+"<userinput remap=\"configure\">./configure --bindir=/usr/bin    \\\n"
 "            --libdir=/usr/lib    \\\n"
 "            --runstatedir=/run   \\\n"
 "            --sbindir=/usr/sbin  \\\n"
@@ -645,6 +608,7 @@ msgstr ""
 "            --disable-pylibmount \\\n"
 "            --disable-static     \\\n"
 "            --without-python     \\\n"
+"            ADJTIME_PATH=/var/lib/hwclock/adjtime \\\n"
 "            --docdir=/usr/share/doc/util-linux-&util-linux-version;</userinput>"
 
 #. type: Content of: <sect1><sect2><para>
@@ -2335,12 +2299,6 @@ msgstr "<command>uuidgen</command>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: lfs-en/chapter08/util-linux.xml
-#, fuzzy
-#| msgid ""
-#| "Creates new UUIDs. Each new UUID is a random number likely to be unique "
-#| "among all UUIDs created, on the local system and on other systems, in the "
-#| "past and in the future, with extremely high probability (~340 trillion "
-#| "trillion trillion unique UUIDs are possible)"
 msgid ""
 "Creates new UUIDs. Each new UUID is a random number likely to be unique "
 "among all UUIDs created, on the local system and on other systems, in the "
@@ -2348,8 +2306,8 @@ msgid ""
 "superscript> UUIDs are possible)"
 msgstr ""
 "创建新的 UUID。每个新创建的 UUID 都是一个随机数，它大概率和其他 UUID —— 包括"
-"在本地系统或其他系统，在过去或未来创建的 UUID —— 都不同(可能存在约 340 万亿亿"
-"亿亿个不同的 UUID)"
+"在本地系统或其他系统，在过去或未来创建的 UUID —— 都不同 (可能存在 "
+"2<superscript>128</superscript> 个不同的 UUID)"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: lfs-en/chapter08/util-linux.xml
@@ -2413,7 +2371,7 @@ msgstr "<command>whereis</command>"
 msgid ""
 "Reports the location of the binary, source, and man page files for the given "
 "command"
-msgstr "报告给定命令二进制，源代码，以及 man 页面文件的位置"
+msgstr "报告给定命令二进制，源代码，以及手册页文件的位置"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: lfs-en/chapter08/util-linux.xml

@@ -14,7 +14,10 @@ print(r'''[po4a_paths] pot/$master.pot $lang:$lang/$master.po
 
 pfx = 'lfs-en/'
 
-for xml_en in sys.argv[2:]:
+files = sys.argv[2:]
+files.sort()
+
+for xml_en in files:
     if xml_en[:len(pfx)] != pfx or xml_en[-4:] != '.xml':
         raise Exception("unexpected path " + xml_en)
     out = "$lang:$lang/book/" + xml_en[len(pfx):]

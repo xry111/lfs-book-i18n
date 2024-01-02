@@ -532,13 +532,7 @@ msgstr "安装 Python 3"
 
 #. type: Content of: <sect1><sect2><screen>
 #: lfs-en/chapter08/python.xml
-#, fuzzy, no-wrap
-#| msgid ""
-#| "<userinput remap=\"configure\">./configure --prefix=/usr        \\\n"
-#| "            --enable-shared      \\\n"
-#| "            --with-system-expat  \\\n"
-#| "            --with-system-ffi    \\\n"
-#| "            --enable-optimizations</userinput>"
+#, no-wrap
 msgid ""
 "<userinput remap=\"configure\">./configure --prefix=/usr        \\\n"
 "            --enable-shared      \\\n"
@@ -548,7 +542,6 @@ msgstr ""
 "<userinput remap=\"configure\">./configure --prefix=/usr        \\\n"
 "            --enable-shared      \\\n"
 "            --with-system-expat  \\\n"
-"            --with-system-ffi    \\\n"
 "            --enable-optimizations</userinput>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
@@ -701,15 +694,7 @@ msgstr "如果需要的话，安装预先格式化的文档："
 
 #. type: Content of: <sect1><sect2><screen>
 #: lfs-en/chapter08/python.xml
-#, fuzzy, no-wrap
-#| msgid ""
-#| "<userinput remap=\"install\">install -v -dm755 /usr/share/doc/python-&python-version;/html\n"
-#| "\n"
-#| "tar --strip-components=1  \\\n"
-#| "    --no-same-owner       \\\n"
-#| "    --no-same-permissions \\\n"
-#| "    -C /usr/share/doc/python-&python-version;/html \\\n"
-#| "    -xvf ../python-&python-version;-docs-html.tar.bz2</userinput>"
+#, no-wrap
 msgid ""
 "<userinput remap=\"install\">install -v -dm755 /usr/share/doc/python-&python-version;/html\n"
 "\n"
@@ -720,11 +705,10 @@ msgid ""
 msgstr ""
 "<userinput remap=\"install\">install -v -dm755 /usr/share/doc/python-&python-version;/html\n"
 "\n"
-"tar --strip-components=1  \\\n"
-"    --no-same-owner       \\\n"
-"    --no-same-permissions \\\n"
-"    -C /usr/share/doc/python-&python-version;/html \\\n"
-"    -xvf ../python-&python-version;-docs-html.tar.bz2</userinput>"
+"tar --no-same-owner \\\n"
+"    -xvf ../python-&python-version;-docs-html.tar.bz2\n"
+"cp -R --no-preserve=mode python-&python-version;-docs-html/* \\\n"
+"    /usr/share/doc/python-&python-version;/html</userinput>"
 
 #. type: Content of: <sect1><sect2><variablelist><title>
 #: lfs-en/chapter08/python.xml
@@ -733,23 +717,15 @@ msgstr "文档安装命令的含义："
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: lfs-en/chapter08/python.xml
-#, fuzzy
-#| msgid ""
-#| "<option>--no-same-owner</option> and <option>--no-same-permissions</"
-#| "option>"
 msgid ""
 "<option>--no-same-owner</option> (tar) and <option>--no-preserve=mode</"
 "option> (cp)"
 msgstr ""
-"<option>--no-same-owner</option> 和 <option>--no-same-permissions</option>"
+"<option>--no-same-owner</option> (tar) 和 <option>--no-preserve=mode</"
+"option> (cp)"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: lfs-en/chapter08/python.xml
-#, fuzzy
-#| msgid ""
-#| "Ensure the installed files have the correct ownership and permissions.  "
-#| "Without these options, <application>tar</application> will install the "
-#| "package files with the upstream creator's values."
 msgid ""
 "Ensure the installed files have the correct ownership and permissions.  "
 "Without these options, <application>tar</application> will install the "
@@ -757,7 +733,8 @@ msgid ""
 "restrictive permissions."
 msgstr ""
 "保证安装的文件拥有正确的所有者和权限模式。在没有这些选项的时候，"
-"<application>tar</application> 会以上游开发者使用的用户和权限模式安装文件。"
+"<application>tar</application> 会以上游开发者使用的用户作为所有者，且安装的文"
+"件会设有过于严格的权限模式。"
 
 #. type: Content of: <sect1><sect2><title>
 #: lfs-en/chapter08/python.xml

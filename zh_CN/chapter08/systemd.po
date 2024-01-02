@@ -454,14 +454,11 @@ msgstr ""
 
 #. type: Content of: <sect1><sect2><para>
 #: lfs-en/chapter08/systemd.xml
-#, fuzzy
-#| msgid ""
-#| "Registers DNS server and domain configuration with <command>systemd-"
-#| "resolved</command>"
 msgid ""
 "Now fix a security vulnerability in the DNSSEC verification of "
 "<command>systemd-resolved</command>:"
-msgstr "为 <command>systemd-resolved</command> 注册 DNS 服务器和域设置"
+msgstr ""
+"现在修复 <command>systemd-resolved</command> 在验证 DNSSEC 时的安全缺陷："
 
 #. type: Content of: <sect1><sect2><screen>
 #: lfs-en/chapter08/systemd.xml
@@ -470,6 +467,8 @@ msgid ""
 "<userinput remap='pre'>sed -e '/return FLAGS_SET.*AUTHENTICATED/s/(t/(dt/' \\\n"
 "    -i src/resolve/resolved-dns-transaction.c</userinput>"
 msgstr ""
+"<userinput remap='pre'>sed -e '/return FLAGS_SET.*AUTHENTICATED/s/(t/(dt/' \\\n"
+"    -i src/resolve/resolved-dns-transaction.c</userinput>"
 
 #. type: Content of: <sect1><sect2><para>
 #: lfs-en/chapter08/systemd.xml
@@ -652,16 +651,12 @@ msgstr "该选项禁止安装用于 systemd 的 RPM 宏，因为 LFS 并不支�
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: lfs-en/chapter08/systemd.xml
-#, fuzzy
-#| msgid ""
-#| "<parameter>--runstatedir=/run</parameter> and <parameter>--with-system-"
-#| "socket=/run/dbus/system_bus_socket</parameter>"
 msgid ""
 "<parameter>-Dhomed=disabled</parameter> and <parameter>-Duserdb=false</"
 "parameter>"
 msgstr ""
-"<parameter>--runstatedir=/run</parameter> 和 <parameter>--with-system-"
-"socket=/run/dbus/system_bus_socket</parameter>"
+"<parameter>-Dhomed=disabled</parameter> 和 <parameter>-Duserdb=false</"
+"parameter>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: lfs-en/chapter08/systemd.xml
@@ -680,8 +675,8 @@ msgid ""
 "Prevent the generation of man pages to avoid extra dependencies.  We will "
 "install pre-generated man pages for systemd from a tarball."
 msgstr ""
-"防止 man 页面的生成，以避免额外的依赖项。我们将会从一个压缩包安装预先生成的 "
-"man 页面。"
+"防止手册页的生成，以避免额外的依赖项。我们将会从一个压缩包安装预先生成的手册"
+"页。"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: lfs-en/chapter08/systemd.xml lfs-en/chapter08/udev.xml
@@ -721,53 +716,39 @@ msgstr ""
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: lfs-en/chapter08/systemd.xml
-#, fuzzy
-#| msgid "<parameter>--enable-gprofng=no</parameter>"
 msgid "<parameter>-Dnobody-group=nogroup</parameter>"
-msgstr "<parameter>--enable-gprofng=no</parameter>"
+msgstr "<parameter>-Dnobody-group=nogroup</parameter>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: lfs-en/chapter08/systemd.xml
-#, fuzzy
-#| msgid ""
-#| "This environment variable allows the package to be built by the "
-#| "<systemitem class=\"username\">root</systemitem> user."
 msgid ""
 "Tell the package the group name with GID 65534 is <systemitem "
 "class='groupname'>nogroup</systemitem>."
 msgstr ""
-"该环境变量允许以 <systemitem class=\"username\">root</systemitem> 用户身份构"
-"建该软件包。"
+"告诉该软件包组编号 65534 被分配给 <systemitem class=\"groupname\">nogroup</"
+"systemitem> 组。"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: lfs-en/chapter08/systemd.xml
-#, fuzzy
-#| msgid "<parameter>-Dsysusers=false</parameter>"
 msgid "<parameter>-Dsysupdate=disabled</parameter>"
-msgstr "<parameter>-Dsysusers=false</parameter>"
+msgstr "<parameter>-Dsysupdate=disabled</parameter>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: lfs-en/chapter08/systemd.xml
-#, fuzzy
-#| msgid ""
-#| "Disable two services for upgrading binary distros.  They are useless for "
-#| "a basic Linux system built from source, and each one will report an error "
-#| "if it's enabled but not configured:"
 msgid ""
 "Do not install the <command>systemd-sysupdate</command> tool.  It's designed "
 "for automatically upgrading binary distros, so it's useless for a basic "
 "Linux system built from source.  And it will report errors on boot if it's "
 "enabled but not properly configured."
 msgstr ""
-"禁用两个用于升级二进制发行版的服务。它们对于从源码构建的，基本的 Linux 系统来"
-"说没有意义，而且如果其中任意一个被启用但未进行配置，会产生错误消息："
+"不安装 <command>systemd-sysupdate</command> 工具。它被设计为用于更新二进制发"
+"行版，因此它对于从源码构建的，基本的 Linux 系统来说没有作用，而且如果它被启用"
+"但未正确配置，会在系统启动时产生错误消息："
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: lfs-en/chapter08/systemd.xml
-#, fuzzy
-#| msgid "<parameter>--disable-*</parameter>"
 msgid "<parameter>-Dukify=disabled</parameter>"
-msgstr "<parameter>--disable-*</parameter>"
+msgstr "<parameter>-Dukify=disabled</parameter>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: lfs-en/chapter08/systemd.xml
@@ -776,6 +757,9 @@ msgid ""
 "script requires the <application>pefile</application> Python module that "
 "neither LFS nor BLFS provides."
 msgstr ""
+"不安装 <command>systemd-ukify</command> 脚本。它在运行时需要名为 "
+"<application>pefile</application> 的 Python 模块，而 LFS 和 BLFS 都不提供该模"
+"块。"
 
 #. type: Content of: <sect1><sect2><screen>
 #: lfs-en/chapter08/systemd.xml
@@ -792,7 +776,7 @@ msgstr "<userinput remap=\"install\">ninja install</userinput>"
 #. type: Content of: <sect1><sect2><para>
 #: lfs-en/chapter08/systemd.xml lfs-en/chapter08/udev.xml
 msgid "Install the man pages:"
-msgstr "安装 man 页面："
+msgstr "安装手册页："
 
 #.  Please make sure systemd man pages tarball has a common leading
 #.          component in the path.  
