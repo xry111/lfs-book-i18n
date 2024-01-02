@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Linux From Scratch 11.0\n"
 "Report-Msgid-Bugs-To: lfs-dev@lists.linuxfromscratch.org\n"
-"POT-Creation-Date: 2023-07-18 12:46+0800\n"
+"POT-Creation-Date: 2024-01-02 21:02+0800\n"
 "PO-Revision-Date: 2022-02-11 20:04+0800\n"
 "Last-Translator: Xi Ruoyao <xry111@xry111.site>\n"
 "Language-Team: none\n"
@@ -183,11 +183,6 @@ msgstr "Intltool"
 msgid "Libtool"
 msgstr "Libtool"
 
-#. type: Content of: <appendix><bridgehead>
-#: lfs-en/chapter08/wheel.xml lfs-en/appendices/dependencies.xml
-msgid "wheel"
-msgstr "wheel"
-
 #. type: Content of: <sect1><itemizedlist><listitem><para>
 #: lfs-en/chapter08/expect.xml lfs-en/appendices/dependencies.xml
 #: lfs-en/prologue/why.xml
@@ -360,6 +355,13 @@ msgstr "Iana-Etc"
 msgid "Flex"
 msgstr "Flex"
 
+#. type: Content of: <appendix><bridgehead>
+#: lfs-en/chapter08/setuptools.xml lfs-en/appendices/dependencies.xml
+#, fuzzy
+#| msgid "tools"
+msgid "Setuptools"
+msgstr "工具"
+
 #. type: Content of: <sect1><itemizedlist><listitem><para>
 #: lfs-en/chapter08/grub.xml lfs-en/appendices/dependencies.xml
 #: lfs-en/prologue/why.xml
@@ -380,7 +382,7 @@ msgstr "E2fsprogs"
 
 #. type: Content of: <sect1><indexterm><primary>
 #: lfs-en/chapter08/udev.xml lfs-en/appendices/dependencies.xml
-#: lfs-en/chapter09/udev.xml
+#: lfs-en/prologue/why.xml lfs-en/chapter09/udev.xml
 msgid "Udev"
 msgstr "Udev"
 
@@ -467,6 +469,13 @@ msgstr "Groff"
 msgid "Libxcrypt"
 msgstr "Libxcrypt"
 
+#. type: Content of the bdb entity
+#: lfs-en/appendices/dependencies.xml
+msgid ""
+"<ulink url='https://www.oracle.com/database/technologies/related/berkeleydb."
+"html'>Berkeley DB</ulink>"
+msgstr ""
+
 #. type: Attribute 'xreflabel' of: <appendix>
 #: lfs-en/appendices/dependencies.xml
 msgid "Appendix C"
@@ -494,6 +503,21 @@ msgstr ""
 
 #. type: Content of: <appendix><para>
 #: lfs-en/appendices/dependencies.xml
+#, fuzzy
+#| msgid ""
+#| "For each package that is built, there are three, and sometimes up to five "
+#| "types of dependencies listed below. The first lists what other packages "
+#| "need to be available in order to compile and install the package in "
+#| "question.  The second lists the packages that must be available when any "
+#| "programs or libraries from the package are used at runtime. The third "
+#| "lists what packages, in addition to those on the first list, need to be "
+#| "available in order to run the test suites. The fourth list of "
+#| "dependencies are packages that require this package to be built and "
+#| "installed in its final location before they are built and installed. In "
+#| "most cases, this is because these packages will hard code paths to "
+#| "binaries within their scripts. If not built in a certain order, this "
+#| "could result in paths of /tools/bin/[binary] being placed inside scripts "
+#| "installed to the final system. This is obviously not desirable."
 msgid ""
 "For each package that is built, there are three, and sometimes up to five "
 "types of dependencies listed below. The first lists what other packages need "
@@ -503,11 +527,7 @@ msgid ""
 "packages, in addition to those on the first list, need to be available in "
 "order to run the test suites. The fourth list of dependencies are packages "
 "that require this package to be built and installed in its final location "
-"before they are built and installed. In most cases, this is because these "
-"packages will hard code paths to binaries within their scripts. If not built "
-"in a certain order, this could result in paths of /tools/bin/[binary] being "
-"placed inside scripts installed to the final system. This is obviously not "
-"desirable."
+"before they are built and installed."
 msgstr ""
 "对于我们构建的每个软件包，我们都列出了三到五种依赖关系。第一种列出了编译和安"
 "装该软件包需要的其他软件包。第二种列出了在运行该软件包提供的程序或库时必要的"
@@ -617,6 +637,13 @@ msgstr "Automake, Diffutils, Findutils, GCC, 以及 Libtool"
 
 #. type: Content of: <appendix><segmentedlist><seglistitem><seg>
 #: lfs-en/appendices/dependencies.xml
+#, fuzzy
+#| msgid "Automake and Bison"
+msgid "Automake and Coreutils"
+msgstr "Automake 和 Bison"
+
+#. type: Content of: <appendix><segmentedlist><seglistitem><seg>
+#: lfs-en/appendices/dependencies.xml
 msgid "<ulink url=\"&blfs-book;postlfs/emacs.html\">Emacs</ulink>"
 msgstr "<ulink url=\"&blfs-book;postlfs/emacs.html\">Emacs</ulink>"
 
@@ -672,17 +699,23 @@ msgstr "Bash, Binutils, Coreutils, GCC, Glibc, Grep, Make, 以及 Readline"
 
 #. type: Content of: <appendix><segmentedlist><seglistitem><seg>
 #: lfs-en/appendices/dependencies.xml
+#, fuzzy
+#| msgid ""
+#| "Bash, Binutils, Coreutils, Diffutils, File, Flex, Gawk, GCC, Glibc, Grep, "
+#| "Make, Perl, Sed, Texinfo, and Zlib"
 msgid ""
 "Bash, Binutils, Coreutils, Diffutils, File, Flex, Gawk, GCC, Glibc, Grep, "
-"Make, Perl, Sed, Texinfo, and Zlib"
+"Make, Perl, Pkgconf, Sed, Texinfo, Zlib, and Zstd"
 msgstr ""
 "Bash, Binutils, Coreutils, Diffutils, File, Flex, Gawk, GCC, Glibc, Grep, "
 "Make, Perl, Sed, Texinfo, 以及 Zlib"
 
 #. type: Content of: <appendix><segmentedlist><seglistitem><seg>
 #: lfs-en/appendices/dependencies.xml
-msgid "Glibc and Zlib"
-msgstr "Glibc 和 Zlib"
+#, fuzzy
+#| msgid "Bzip2, Glibc, Xz, Zlib, and Zstd"
+msgid "Glibc, Zlib, and Zstd"
+msgstr "Bzip2, Glibc, Xz, Zlib, 以及 Zstd"
 
 #. type: Content of: <appendix><segmentedlist><seglistitem><seg>
 #: lfs-en/appendices/dependencies.xml
@@ -743,14 +776,22 @@ msgstr "Bash 和 Gawk"
 
 #. type: Content of: <appendix><segmentedlist><seglistitem><seg>
 #: lfs-en/appendices/dependencies.xml
-msgid "<ulink url='&github;/testing-cabal/subunit'>libsubunit</ulink>"
+#, fuzzy
+#| msgid "<ulink url='&github;/testing-cabal/subunit'>libsubunit</ulink>"
+msgid ""
+"<ulink url='&github;/testing-cabal/subunit'>libsubunit</ulink> and <ulink "
+"url='http://cyberelk.net/tim/software/patchutils/'> patchutils</ulink>"
 msgstr "<ulink url='&github;/testing-cabal/subunit'>libsubunit</ulink>"
 
 #. type: Content of: <appendix><segmentedlist><seglistitem><seg>
 #: lfs-en/appendices/dependencies.xml
+#, fuzzy
+#| msgid ""
+#| "Bash, Binutils, Coreutils, GCC, Gettext, Glibc, GMP, Grep, Libcap, Make, "
+#| "OpenSSL, Patch, Perl, Sed, and Texinfo"
 msgid ""
-"Bash, Binutils, Coreutils, GCC, Gettext, Glibc, GMP, Grep, Libcap, Make, "
-"OpenSSL, Patch, Perl, Sed, and Texinfo"
+"Autoconf, Automake, Bash, Binutils, Coreutils, GCC, Gettext, Glibc, GMP, "
+"Grep, Libcap, Make, OpenSSL, Patch, Perl, Sed, and Texinfo"
 msgstr ""
 "Bash, Binutils, Coreutils, GCC, Gettext, Glibc, GMP, Grep, Libcap, Make, "
 "OpenSSL, Patch, Perl, Sed, 以及 Texinfo"
@@ -1189,18 +1230,29 @@ msgstr "Bash, Coreutils, Glibc, Libcap, Libelf, 以及 Zlib"
 
 #. type: Content of: <appendix><segmentedlist><seglistitem><seg>
 #: lfs-en/appendices/dependencies.xml
+#, fuzzy
+#| msgid ""
+#| "<ulink url=\"&blfs-book;server/db.html\">Berkeley DB</ulink>, <ulink "
+#| "url=\"&blfs-book;postlfs/iptables.html\">iptables</ulink>, <ulink "
+#| "url=\"&github;/libbpf/libbpf\">libbpf</ulink>, <ulink url=\"&blfs-book;"
+#| "basicnet/libmnl.html\">libmnl</ulink>, and <ulink url=\"&blfs-book;"
+#| "basicnet/libtirpc.html\">libtirpc</ulink>"
 msgid ""
-"<ulink url=\"&blfs-book;server/db.html\">Berkeley DB</ulink>, <ulink "
-"url=\"&blfs-book;postlfs/iptables.html\">iptables</ulink>, <ulink "
-"url=\"&github;/libbpf/libbpf\">libbpf</ulink>, <ulink url=\"&blfs-book;"
-"basicnet/libmnl.html\">libmnl</ulink>, and <ulink url=\"&blfs-book;basicnet/"
-"libtirpc.html\">libtirpc</ulink>"
+"&bdb;, <ulink url=\"&blfs-book;postlfs/iptables.html\">iptables</ulink>, "
+"<ulink url=\"&github;/libbpf/libbpf\">libbpf</ulink>, <ulink url=\"&blfs-"
+"book;basicnet/libmnl.html\">libmnl</ulink>, and <ulink url=\"&blfs-book;"
+"basicnet/libtirpc.html\">libtirpc</ulink>"
 msgstr ""
 "<ulink url=\"&blfs-book;server/db.html\">Berkeley DB</ulink>, <ulink "
 "url=\"&blfs-book;postlfs/iptables.html\">iptables</ulink>, <ulink "
 "url=\"&github;/libbpf/libbpf\">libbpf</ulink>, <ulink url=\"&blfs-book;"
 "basicnet/libmnl.html\">libmnl</ulink>, 以及 <ulink url=\"&blfs-book;basicnet/"
 "libtirpc.html\">libtirpc</ulink>"
+
+#. type: Content of: <appendix><segmentedlist><seglistitem><seg>
+#: lfs-en/appendices/dependencies.xml
+msgid "MarkupSafe, Python, Setuptools, and Wheel"
+msgstr ""
 
 #. type: Content of: <appendix><segmentedlist><seglistitem><seg>
 #: lfs-en/appendices/dependencies.xml
@@ -1435,8 +1487,13 @@ msgstr "Bash, Coreutils, 以及 Make"
 
 #. type: Content of: <appendix><segmentedlist><seglistitem><seg>
 #: lfs-en/appendices/dependencies.xml
-msgid "Ninja and Python"
-msgstr "Ninja 和 Python"
+msgid "Python, Setuptools, and Wheel"
+msgstr ""
+
+#. type: Content of: <appendix><segmentedlist><seglistitem><seg>
+#: lfs-en/appendices/dependencies.xml
+msgid "Ninja, Python, Setuptools, and Wheel"
+msgstr ""
 
 #. type: Content of: <appendix><segmentedlist><seglistitem><seg>
 #: lfs-en/appendices/dependencies.xml
@@ -1553,14 +1610,18 @@ msgstr "Iana-Etc, Less, 以及 Procps-ng"
 
 #. type: Content of: <appendix><segmentedlist><seglistitem><seg>
 #: lfs-en/appendices/dependencies.xml
-msgid "<ulink url=\"&blfs-book;server/db.html\">Berkeley DB</ulink>"
-msgstr "<ulink url=\"&blfs-book;server/db.html\">Berkeley DB</ulink>"
+msgid "&bdb;"
+msgstr ""
 
 #. type: Content of: <appendix><segmentedlist><seglistitem><seg>
 #: lfs-en/appendices/dependencies.xml
+#, fuzzy
+#| msgid ""
+#| "<phrase revision='systemd'>D-Bus, </phrase>E2fsprogs, IProute2, Kmod, Man-"
+#| "DB, Procps-ng, Python, &systemd-udev;, and Util-linux"
 msgid ""
-"<phrase revision='systemd'>D-Bus, </phrase>E2fsprogs, IProute2, Kmod, Man-"
-"DB, Procps-ng, Python, &systemd-udev;, and Util-linux"
+"Binutils, <phrase revision='systemd'>D-Bus, </phrase>E2fsprogs, IProute2, "
+"Kmod, Man-DB, Procps-ng, Python, &systemd-udev;, and Util-linux"
 msgstr ""
 "<phrase revision='systemd'>D-Bus, </phrase>E2fsprogs, IProute2, Kmod, Man-"
 "DB, Procps-ng, Python, &systemd-udev;, 以及 Util-linux"
@@ -1578,9 +1639,13 @@ msgstr ""
 
 #. type: Content of: <appendix><segmentedlist><seglistitem><seg>
 #: lfs-en/appendices/dependencies.xml
+#, fuzzy
+#| msgid ""
+#| "<phrase revision='systemd'>None</phrase> <phrase revision='sysv'> <ulink "
+#| "url='&blfs-book;general/elogind.xml'>elogind</ulink> </phrase>"
 msgid ""
 "<phrase revision='systemd'>None</phrase> <phrase revision='sysv'> <ulink "
-"url='&blfs-book;general/elogind.xml'>elogind</ulink> </phrase>"
+"url='&blfs-book;general/elogind.html'>elogind</ulink> </phrase>"
 msgstr ""
 "<phrase revision='systemd'>None</phrase> <phrase revision='sysv'> <ulink "
 "url='&blfs-book;general/elogind.xml'>elogind</ulink> </phrase>"
@@ -1615,11 +1680,16 @@ msgstr "GDB 和 Valgrind"
 
 #. type: Content of: <appendix><segmentedlist><seglistitem><seg>
 #: lfs-en/appendices/dependencies.xml
+#, fuzzy
+#| msgid ""
+#| "<ulink url=\"&blfs-book;server/db.html\">Berkeley DB</ulink>, <ulink "
+#| "url=\"&blfs-book;basicnet/libnsl.html\">libnsl</ulink>, <ulink "
+#| "url=\"&blfs-book;server/sqlite.html\">SQLite</ulink>, and <ulink "
+#| "url=\"&blfs-book;general/tk.html\">Tk</ulink>"
 msgid ""
-"<ulink url=\"&blfs-book;server/db.html\">Berkeley DB</ulink>, <ulink "
-"url=\"&blfs-book;basicnet/libnsl.html\">libnsl</ulink>, <ulink url=\"&blfs-"
-"book;server/sqlite.html\">SQLite</ulink>, and <ulink url=\"&blfs-book;"
-"general/tk.html\">Tk</ulink>"
+"&bdb;, <ulink url=\"&blfs-book;basicnet/libnsl.html\">libnsl</ulink>, <ulink "
+"url=\"&blfs-book;server/sqlite.html\">SQLite</ulink>, and <ulink url=\"&blfs-"
+"book;general/tk.html\">Tk</ulink>"
 msgstr ""
 "<ulink url=\"&blfs-book;server/db.html\">Berkeley DB</ulink>, <ulink "
 "url=\"&blfs-book;basicnet/libnsl.html\">libnsl</ulink>, <ulink url=\"&blfs-"
@@ -1654,6 +1724,20 @@ msgstr "Diffutils 和 Gawk"
 #: lfs-en/appendices/dependencies.xml
 msgid "E2fsprogs, File, Libtool, and Shadow"
 msgstr "E2fsprogs, File, Libtool, 以及 Shadow"
+
+#. type: Content of: <appendix><segmentedlist><seglistitem><seg>
+#: lfs-en/appendices/dependencies.xml
+#, fuzzy
+#| msgid "Python and Flit-core"
+msgid "Python and Wheel"
+msgstr "Python 和 Flit-core"
+
+#. type: Content of: <appendix><segmentedlist><seglistitem><seg>
+#: lfs-en/appendices/dependencies.xml
+#, fuzzy
+#| msgid "MarkupSafe and Python"
+msgid "Jinja2, MarkupSafe, and Meson"
+msgstr "MarkupSafe 和 Python"
 
 #. type: Content of: <appendix><segmentedlist><seglistitem><seg>
 #: lfs-en/appendices/dependencies.xml
@@ -1711,22 +1795,60 @@ msgstr "D-Bus, E2fsprogs, Man-DB, Procps-ng, 以及 Util-linux"
 
 #. type: Content of: <appendix><segmentedlist><seglistitem><seg>
 #: lfs-en/appendices/dependencies.xml
+#, fuzzy
+#| msgid ""
+#| "<ulink url=\"&blfs-book;postlfs/btrfs-progs.html\">btrfs-progs</ulink>, "
+#| "<ulink url=\"&blfs-book;basicnet/curl.html\">cURL</ulink>, <ulink "
+#| "url=\"&blfs-book;postlfs/cryptsetup.html\">cryptsetup</ulink>, <ulink "
+#| "url=\"&blfs-book;pst/docbook.html\">docbook-xml</ulink>, <ulink "
+#| "url=\"&blfs-book;pst/docbook-xsl.html\">docbook-xsl-nons</ulink>, <ulink "
+#| "url=\"https://sourceware.org/elfutils/\">elfutils</ulink>, <ulink "
+#| "url=\"&blfs-book;general/git.html\">Git</ulink>, <ulink url=\"https://"
+#| "sourceforge.net/projects/gnu-efi/\">gnu-efi</ulink>, <ulink url=\"&blfs-"
+#| "book;postlfs/gnutls.html\">GnuTLS</ulink>, <ulink url=\"&blfs-book;"
+#| "postlfs/iptables.html\">iptables</ulink>, <ulink url=\"https://www.kernel."
+#| "org/pub/linux/utils/kernel/kexec/\"> kexec-tools</ulink>, <ulink "
+#| "url=\"https://developers.yubico.com/libfido2/\">libfido2</ulink>, <ulink "
+#| "url=\"&blfs-book;general/libgcrypt.html\">libgcrypt</ulink>, <ulink "
+#| "url=\"&blfs-book;general/libidn2.html\">libidn2</ulink>, <ulink "
+#| "url=\"https://www.gnu.org/software/libmicrohttpd/\"> Libmicrohttpd</"
+#| "ulink>, <ulink url=\"&blfs-book;postlfs/libpwquality.html\">libpwquality</"
+#| "ulink>, <ulink url=\"&blfs-book;general/libseccomp.html\">libseccomp</"
+#| "ulink>, <ulink url=\"&blfs-book;general/libxkbcommon.html\">libxkbcommon</"
+#| "ulink>, <ulink url=\"&blfs-book;general/libxslt.html\">libxslt</ulink>, "
+#| "<ulink url=\"&blfs-book;postlfs/linux-pam.html\">Linux-PAM</ulink>, "
+#| "<ulink url=\"&blfs-book;general/python-modules.html#lxml\">lxml</ulink>, "
+#| "<ulink url=\"https://lz4.github.io/lz4/\">LZ4</ulink>, <ulink url=\"&blfs-"
+#| "book;postlfs/make-ca.html\">make-ca</ulink>, <ulink url=\"&blfs-book;"
+#| "postlfs/p11-kit.html\">p11-kit</ulink>, <ulink url=\"&blfs-book;general/"
+#| "pcre2.html\">PCRE2</ulink>, <ulink url=\"&blfs-book;postlfs/polkit."
+#| "html\">Polkit</ulink>, <ulink url=\"&blfs-book;postlfs/qemu.html\">qemu</"
+#| "ulink>, <ulink url=\"&blfs-book;general/qrencode.html\">qrencode</ulink>, "
+#| "<ulink url=\"https://sourceforge.net/projects/linuxquota/\"> quota-tools</"
+#| "ulink>, <ulink url=\"&blfs-book;basicnet/rsync.html\">rsync</ulink>, "
+#| "<ulink url=\"&blfs-book;general/python-modules.html#sphinx\"> Sphinx</"
+#| "ulink>, <ulink url=\"https://tpm2-tss.readthedocs.io/en/latest/\"> tpm2-"
+#| "tss</ulink>, <ulink url=\"&blfs-book;general/valgrind.html\">Valgrind</"
+#| "ulink>, and <ulink url=\"&blfs-book;postlfs/zsh.html\">zsh</ulink>"
 msgid ""
+"<ulink url=\"https://www.apparmor.net/\">AppArmor</ulink>, <ulink "
+"url=\"&github;/linux-audit/audit-userspace\"> audit-userspace</ulink>, "
+"<ulink url=\"&github;/scop/bash-completion\"> bash-completion</ulink>, "
 "<ulink url=\"&blfs-book;postlfs/btrfs-progs.html\">btrfs-progs</ulink>, "
 "<ulink url=\"&blfs-book;basicnet/curl.html\">cURL</ulink>, <ulink "
 "url=\"&blfs-book;postlfs/cryptsetup.html\">cryptsetup</ulink>, <ulink "
 "url=\"&blfs-book;pst/docbook.html\">docbook-xml</ulink>, <ulink url=\"&blfs-"
-"book;pst/docbook-xsl.html\">docbook-xsl-nons</ulink>, <ulink url=\"https://"
-"sourceware.org/elfutils/\">elfutils</ulink>, <ulink url=\"&blfs-book;general/"
-"git.html\">Git</ulink>, <ulink url=\"https://sourceforge.net/projects/gnu-"
-"efi/\">gnu-efi</ulink>, <ulink url=\"&blfs-book;postlfs/gnutls."
+"book;pst/docbook-xsl.html\">docbook-xsl-nons</ulink>, <ulink url=\"&blfs-"
+"book;general/git.html\">Git</ulink>, <ulink url=\"&blfs-book;postlfs/gnutls."
 "html\">GnuTLS</ulink>, <ulink url=\"&blfs-book;postlfs/iptables."
-"html\">iptables</ulink>, <ulink url=\"https://www.kernel.org/pub/linux/utils/"
-"kernel/kexec/\"> kexec-tools</ulink>, <ulink url=\"https://developers.yubico."
-"com/libfido2/\">libfido2</ulink>, <ulink url=\"&blfs-book;general/libgcrypt."
-"html\">libgcrypt</ulink>, <ulink url=\"&blfs-book;general/libidn2."
-"html\">libidn2</ulink>, <ulink url=\"https://www.gnu.org/software/"
-"libmicrohttpd/\"> Libmicrohttpd</ulink>, <ulink url=\"&blfs-book;postlfs/"
+"html\">iptables</ulink>, <ulink url='https://jekyllrb.com/'>jekyll</ulink>, "
+"<ulink url=\"https://www.kernel.org/pub/linux/utils/kernel/kexec/\"> kexec-"
+"tools</ulink>, <ulink url='&github;/libbpf/libbpf'>libbpf</ulink>, <ulink "
+"url=\"https://sourceware.org/elfutils/\">libdw</ulink>, <ulink url=\"https://"
+"developers.yubico.com/libfido2/\">libfido2</ulink>, <ulink url=\"&blfs-book;"
+"general/libgcrypt.html\">libgcrypt</ulink>, <ulink url=\"&blfs-book;general/"
+"libidn2.html\">libidn2</ulink>, <ulink url=\"https://www.gnu.org/software/"
+"libmicrohttpd/\"> libmicrohttpd</ulink>, <ulink url=\"&blfs-book;postlfs/"
 "libpwquality.html\">libpwquality</ulink>, <ulink url=\"&blfs-book;general/"
 "libseccomp.html\">libseccomp</ulink>, <ulink url=\"&blfs-book;general/"
 "libxkbcommon.html\">libxkbcommon</ulink>, <ulink url=\"&blfs-book;general/"
@@ -1735,16 +1857,20 @@ msgid ""
 "html#lxml\">lxml</ulink>, <ulink url=\"https://lz4.github.io/lz4/\">LZ4</"
 "ulink>, <ulink url=\"&blfs-book;postlfs/make-ca.html\">make-ca</ulink>, "
 "<ulink url=\"&blfs-book;postlfs/p11-kit.html\">p11-kit</ulink>, <ulink "
-"url=\"&blfs-book;general/pcre2.html\">PCRE2</ulink>, <ulink url=\"&blfs-book;"
-"postlfs/polkit.html\">Polkit</ulink>, <ulink url=\"&blfs-book;postlfs/qemu."
-"html\">qemu</ulink>, <ulink url=\"&blfs-book;general/qrencode."
-"html\">qrencode</ulink>, <ulink url=\"https://sourceforge.net/projects/"
-"linuxquota/\"> quota-tools</ulink>, <ulink url=\"&blfs-book;basicnet/rsync."
-"html\">rsync</ulink>, <ulink url=\"&blfs-book;general/python-modules."
-"html#sphinx\"> Sphinx</ulink>, <ulink url=\"https://tpm2-tss.readthedocs.io/"
-"en/latest/\"> tpm2-tss</ulink>, <ulink url=\"&blfs-book;general/valgrind."
-"html\">Valgrind</ulink>, and <ulink url=\"&blfs-book;postlfs/zsh.html\">zsh</"
-"ulink>"
+"url=\"&blfs-book;general/pcre2.html\">PCRE2</ulink>, <ulink url=\"&pypi-home;"
+"pefile\">pefile</ulink>, <ulink url=\"&blfs-book;postlfs/polkit."
+"html\">Polkit</ulink>, <ulink url='&pypi-home;/pyelftools'>pyelftools</"
+"ulink>, <ulink url=\"&blfs-book;postlfs/qemu.html\">qemu</ulink>, <ulink "
+"url=\"&blfs-book;general/qrencode.html\">qrencode</ulink>, <ulink "
+"url=\"https://sourceforge.net/projects/linuxquota/\" >quota-tools</ulink>, "
+"<ulink url=\"https://rpm.org\">rpm</ulink>, <ulink url=\"&blfs-book;basicnet/"
+"rsync.html\">rsync</ulink>, <ulink url=\"&github;/SELinuxProject/selinux\"> "
+"SELinux</ulink>, <ulink url=\"&blfs-book;general/python-modules."
+"html#sphinx\"> Sphinx</ulink>, <ulink url=\"https://sourceware.org/systemtap/"
+"\"> systemtap</ulink>, <ulink url=\"https://tpm2-tss.readthedocs.io/en/"
+"latest/\"> tpm2-tss</ulink>, <ulink url=\"&blfs-book;general/valgrind."
+"html\">Valgrind</ulink>, <ulink url=\"https://xenproject.org\">Xen</ulink>, "
+"and <ulink url=\"&blfs-book;postlfs/zsh.html\">zsh</ulink>"
 msgstr ""
 "<ulink url=\"&blfs-book;postlfs/btrfs-progs.html\">btrfs-progs</ulink>, "
 "<ulink url=\"&blfs-book;basicnet/curl.html\">cURL</ulink>, <ulink "
@@ -1811,6 +1937,11 @@ msgstr "Bash, Binutils, Coreutils, Diffutils, GCC, Glibc, Grep, Make, 以及 Sed
 
 #. type: Content of: <appendix><segmentedlist><seglistitem><seg>
 #: lfs-en/appendices/dependencies.xml
+msgid "Glibc and Zlib"
+msgstr "Glibc 和 Zlib"
+
+#. type: Content of: <appendix><segmentedlist><seglistitem><seg>
+#: lfs-en/appendices/dependencies.xml
 msgid ""
 "Bash, Binutils, Coreutils, GCC, Gettext, Glibc, Grep, Make, Ncurses, Patch, "
 "and Sed"
@@ -1839,14 +1970,25 @@ msgstr "Glibc, Ncurses, Readline, &systemd-udev;, 以及 Zlib"
 
 #. type: Content of: <appendix><segmentedlist><seglistitem><seg>
 #: lfs-en/appendices/dependencies.xml
+#, fuzzy
+#| msgid ""
+#| "<ulink url=\"https://people.redhat.com/sgrubb/libcap-ng/\">Libcap-NG</"
+#| "ulink>, <ulink url=\"&github;/openSUSE/libeconf\">libeconf</ulink>, "
+#| "<ulink url=\"https://pagure.io/libuser/\">libuser</ulink>, <ulink "
+#| "url=\"&github;/altlinux/libutempter\">libutempter</ulink>, <ulink "
+#| "url=\"&blfs-book;postlfs/linux-pam.html\">Linux-PAM</ulink>, <ulink "
+#| "url=\"&blfs-book;postlfs/smartmontools.html\">smartmontools</ulink>, and "
+#| "<ulink url=\"&blfs-book;general/slang.html\">slang</ulink>"
 msgid ""
+"<ulink url=\"&blfs-book;general/asciidoctor.html\">Asciidoctor</ulink>, "
 "<ulink url=\"https://people.redhat.com/sgrubb/libcap-ng/\">Libcap-NG</"
 "ulink>, <ulink url=\"&github;/openSUSE/libeconf\">libeconf</ulink>, <ulink "
 "url=\"https://pagure.io/libuser/\">libuser</ulink>, <ulink url=\"&github;/"
 "altlinux/libutempter\">libutempter</ulink>, <ulink url=\"&blfs-book;postlfs/"
 "linux-pam.html\">Linux-PAM</ulink>, <ulink url=\"&blfs-book;postlfs/"
-"smartmontools.html\">smartmontools</ulink>, and <ulink url=\"&blfs-book;"
-"general/slang.html\">slang</ulink>"
+"smartmontools.html\">smartmontools</ulink>, <ulink url=\"https://po4a.org/"
+"index.php.en\">po4a</ulink>, and <ulink url=\"&blfs-book;general/slang."
+"html\">slang</ulink>"
 msgstr ""
 "<ulink url=\"https://people.redhat.com/sgrubb/libcap-ng/\">Libcap-NG</"
 "ulink>, <ulink url=\"&github;/openSUSE/libeconf\">libeconf</ulink>, <ulink "
@@ -1890,12 +2032,8 @@ msgstr "Python 和 Flit-core"
 
 #. type: Content of: <appendix><segmentedlist><seglistitem><seg>
 #: lfs-en/appendices/dependencies.xml
-msgid ""
-"<phrase revision='sysv'>None</phrase> <phrase revision='systemd'>Jinja2</"
-"phrase>"
+msgid "Jinja2, MarkupSafe, Meson, and Setuptools"
 msgstr ""
-"<phrase revision='sysv'>无</phrase> <phrase revision='systemd'>Jinja2</"
-"phrase>"
 
 #. type: Content of: <appendix><segmentedlist><seglistitem><seg>
 #: lfs-en/appendices/dependencies.xml
@@ -1934,7 +2072,9 @@ msgstr "Binutils, Coreutils, GCC, Glibc, Gzip, Make, Xz, 以及 Zlib"
 
 #. type: Content of: <appendix><segmentedlist><seglistitem><seg>
 #: lfs-en/appendices/dependencies.xml
-msgid "GCC, Libelf, and &systemd-udev;"
+#, fuzzy
+#| msgid "GCC, Libelf, and &systemd-udev;"
+msgid "Binutils, GCC, Libelf, and &systemd-udev;"
 msgstr "GCC, Libelf, 以及 &systemd-udev;"
 
 #. type: Content of: <appendix><segmentedlist><seglistitem><seg>

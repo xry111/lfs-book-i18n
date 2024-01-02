@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Linux From Scratch 11.4\n"
 "Report-Msgid-Bugs-To: lfs-dev@lists.linuxfromscratch.org\n"
-"POT-Creation-Date: 2022-11-18 12:42+0800\n"
+"POT-Creation-Date: 2024-01-02 21:02+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: Xi Ruoyao <xry111@xry111.site>\n"
 "Language-Team: none\n"
@@ -36,13 +36,22 @@ msgstr ""
 
 #. type: Content of: <sect1><screen>
 #: lfs-en/chapter07/chroot.xml
-#, no-wrap
+#, fuzzy, no-wrap
+#| msgid ""
+#| "<userinput>chroot \"$LFS\" /usr/bin/env -i   \\\n"
+#| "    HOME=/root                  \\\n"
+#| "    TERM=\"$TERM\"                \\\n"
+#| "    PS1='(lfs chroot) \\u:\\w\\$ ' \\\n"
+#| "    PATH=/usr/bin:/usr/sbin     \\\n"
+#| "    /bin/bash --login</userinput>"
 msgid ""
 "<userinput>chroot \"$LFS\" /usr/bin/env -i   \\\n"
 "    HOME=/root                  \\\n"
 "    TERM=\"$TERM\"                \\\n"
 "    PS1='(lfs chroot) \\u:\\w\\$ ' \\\n"
 "    PATH=/usr/bin:/usr/sbin     \\\n"
+"    MAKEFLAGS=\"-j<replaceable>$(nproc)</replaceable>\"      \\\n"
+"    TESTSUITEFLAGS=\"-j<replaceable>$(nproc)</replaceable>\" \\\n"
 "    /bin/bash --login</userinput>"
 msgstr ""
 "<userinput>chroot \"$LFS\" /usr/bin/env -i   \\\n"
@@ -51,6 +60,18 @@ msgstr ""
 "    PS1='(lfs chroot) \\u:\\w\\$ ' \\\n"
 "    PATH=/usr/bin:/usr/sbin     \\\n"
 "    /bin/bash --login</userinput>"
+
+#. type: Content of: <sect1><para>
+#: lfs-en/chapter07/chroot.xml
+msgid ""
+"If you don't want to use all available logical cores, replace "
+"<replaceable>$(nproc)</replaceable> with the number of logical cores you "
+"want to use for building packages in this chapter and the following "
+"chapters.  The test suites of some packages (notably Autoconf, Libtool, and "
+"Tar) in &ch-final; are not affected by <envar>MAKEFLAGS</envar>, they use a "
+"<envar>TESTSUITEFLAGS</envar> environment variable instead. We set that here "
+"as well for running these test suites with multiple cores."
+msgstr ""
 
 #. type: Content of: <sect1><para>
 #: lfs-en/chapter07/chroot.xml
@@ -99,10 +120,15 @@ msgstr ""
 
 #. type: Content of: <sect1><para>
 #: lfs-en/chapter07/chroot.xml
+#, fuzzy
+#| msgid ""
+#| "Note that the <command>bash</command> prompt will say <computeroutput>I "
+#| "have no name!</computeroutput> This is normal because the <filename>/etc/"
+#| "passwd</filename> file has not been created yet."
 msgid ""
-"Note that the <command>bash</command> prompt will say <computeroutput>I have "
-"no name!</computeroutput> This is normal because the <filename>/etc/passwd</"
-"filename> file has not been created yet."
+"Also note that the <command>bash</command> prompt will say <computeroutput>I "
+"have no name!</computeroutput> This is normal because the <filename>/etc/"
+"passwd</filename> file has not been created yet."
 msgstr ""
 "注意 <command>bash</command> 的提示符会包含 <computeroutput>I have no name!</"
 "computeroutput>。这是正常的，因为现在还没有创建 <filename>/etc/passwd</"

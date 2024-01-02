@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Linux From Scratch 11.0\n"
 "Report-Msgid-Bugs-To: lfs-dev@lists.linuxfromscratch.org\n"
-"POT-Creation-Date: 2023-08-26 23:59+0800\n"
+"POT-Creation-Date: 2024-01-02 21:02+0800\n"
 "PO-Revision-Date: 2021-11-05 23:31+0800\n"
 "Last-Translator: Xi Ruoyao <xry111@xry111.site>\n"
 "Language-Team: none\n"
@@ -20,16 +20,10 @@ msgstr ""
 "X-Pootle-Revision: 9999999\n"
 
 #. type: Content of: <sect1><title>
-#: lfs-en/chapter06/file.xml lfs-en/chapter01/whatsnew.xml
-#: lfs-en/chapter08/file.xml
-msgid "File-&file-version;"
-msgstr "File-&file-version;"
-
-#. type: Content of: <sect1><title>
-#: lfs-en/chapter06/grep.xml lfs-en/chapter01/whatsnew.xml
-#: lfs-en/chapter08/grep.xml
-msgid "Grep-&grep-version;"
-msgstr "Grep-&grep-version;"
+#: lfs-en/chapter06/bash.xml lfs-en/chapter01/whatsnew.xml
+#: lfs-en/chapter08/bash.xml
+msgid "Bash-&bash-version;"
+msgstr "Bash-&bash-version;"
 
 #. type: Content of: <sect1><title>
 #: lfs-en/chapter06/coreutils.xml lfs-en/chapter01/whatsnew.xml
@@ -38,22 +32,16 @@ msgid "Coreutils-&coreutils-version;"
 msgstr "Coreutils-&coreutils-version;"
 
 #. type: Content of: <sect1><title>
-#: lfs-en/chapter06/tar.xml lfs-en/chapter01/whatsnew.xml
-#: lfs-en/chapter08/tar.xml
-msgid "Tar-&tar-version;"
-msgstr "Tar-&tar-version;"
+#: lfs-en/chapter06/gzip.xml lfs-en/chapter01/whatsnew.xml
+#: lfs-en/chapter08/gzip.xml
+msgid "Gzip-&gzip-version;"
+msgstr "Gzip-&gzip-version;"
 
 #. type: Content of: <sect1><title>
-#: lfs-en/chapter06/diffutils.xml lfs-en/chapter01/whatsnew.xml
-#: lfs-en/chapter08/diffutils.xml
-msgid "Diffutils-&diffutils-version;"
-msgstr "Diffutils-&diffutils-version;"
-
-#. type: Content of: <sect1><title>
-#: lfs-en/chapter06/make.xml lfs-en/chapter01/whatsnew.xml
-#: lfs-en/chapter08/make.xml
-msgid "Make-&make-version;"
-msgstr "Make-&make-version;"
+#: lfs-en/chapter06/xz.xml lfs-en/chapter01/whatsnew.xml
+#: lfs-en/chapter08/xz.xml
+msgid "Xz-&xz-version;"
+msgstr "Xz-&xz-version;"
 
 #. type: Content of: <sect1><title>
 #: lfs-en/chapter06/gawk.xml lfs-en/chapter01/whatsnew.xml
@@ -66,38 +54,6 @@ msgstr "Gawk-&gawk-version;"
 msgid "What's new since the last release"
 msgstr "自上次发布以来的更新"
 
-#. type: Content of: <sect1><caution><para>
-#: lfs-en/chapter01/whatsnew.xml
-msgid ""
-"During a development cycle of LFS, the instructions in the book is often "
-"modified to adapt for a package update or take the advantage of new features "
-"from updated packages.  Mixing up the instructions of different versions of "
-"the LFS book can cause subtle breakages.  This kind of issue is generally a "
-"result from reusing some script created for a prior LFS release.  Such a "
-"reuse is strongly discouraged.  If you are reusing scripts for a prior LFS "
-"release for any reason, you'll need to be very careful to update the scripts "
-"to match current version of the LFS book."
-msgstr ""
-"在 LFS 的开发周期中，经常会修改本书中的指令，以适应更新的软件包，或利用新版本"
-"软件包提供的新特性。混用不同版本 LFS 手册中的指令会导致难以察觉的问题。这种情"
-"况通常是重用为之前的某个 LFS 版本创建的脚本所致。我们强烈反对这种重用。如果您"
-"出于某种原因，一定要重用为旧版本 LFS 创建的脚本，您必须非常小心地更新脚本，使"
-"其内容和当前版本的 LFS 手册一致。"
-
-#. type: Content of: <sect1><para>
-#: lfs-en/chapter01/whatsnew.xml
-msgid ""
-"In the 11.4 release, <parameter>--disable-fixincludes</parameter> is set for "
-"GCC.  It's a configure switch newly added in GCC 13.1 to prevent GCC from "
-"<quote>fixing</quote> the system headers.  Such a <quote>fix</quote> is "
-"unnecessary for a modern Linux system and may cause issues if a package is "
-"updated after installing GCC."
-msgstr ""
-"在本书的 11.4 版本中，我们为 GCC 设定 <parameter>--disable-fixincludes</"
-"parameter> 选项。这个配置开关是 GCC 13.1 新增的，用于防止 GCC <quote>修复</"
-"quote>系统头文件。这种<quote>修复</quote>对于现代的 Linux 系统来说没有必要，"
-"而且如果在安装 GCC 后更新了某个软件包，它可能带来问题。"
-
 #. type: Content of: <sect1><para>
 #: lfs-en/chapter01/whatsnew.xml
 msgid ""
@@ -109,30 +65,20 @@ msgstr "这里列出本书上一次发布之后发生变化的软件包。"
 msgid "Upgraded to:"
 msgstr "已升级："
 
-#. type: Content of: <sect1><itemizedlist><listitem><para>
-#: lfs-en/chapter01/whatsnew.xml
-msgid "Bc &bc-version;"
-msgstr "Bc &bc-version;"
+#. type: Content of: <sect1><title>
+#: lfs-en/chapter01/whatsnew.xml lfs-en/chapter08/autoconf.xml
+msgid "Autoconf-&autoconf-version;"
+msgstr "Autoconf-&autoconf-version;"
 
 #. type: Content of: <sect1><title>
-#: lfs-en/chapter01/whatsnew.xml lfs-en/chapter08/binutils.xml
-msgid "Binutils-&binutils-version;"
-msgstr "Binutils-&binutils-version;"
+#: lfs-en/chapter01/whatsnew.xml lfs-en/chapter08/bc.xml
+msgid "Bc-&bc-version;"
+msgstr "Bc-&bc-version;"
 
 #. type: Content of: <sect1><title>
 #: lfs-en/chapter01/whatsnew.xml lfs-en/chapter08/dbus.xml
 msgid "D-Bus-&dbus-version;"
 msgstr "D-Bus-&dbus-version;"
-
-#. type: Content of: <sect1><itemizedlist><listitem><para>
-#: lfs-en/chapter01/whatsnew.xml
-msgid "Flit-core-&flit-core-version;"
-msgstr "Flit-core-&flit-core-version;"
-
-#. type: Content of: <sect1><title>
-#: lfs-en/chapter01/whatsnew.xml lfs-en/chapter08/gcc.xml
-msgid "GCC-&gcc-version;"
-msgstr "GCC-&gcc-version;"
 
 #. type: Content of: <sect1><title>
 #: lfs-en/chapter01/whatsnew.xml lfs-en/chapter07/gettext.xml
@@ -141,30 +87,19 @@ msgid "Gettext-&gettext-version;"
 msgstr "Gettext-&gettext-version;"
 
 #. type: Content of: <sect1><title>
-#: lfs-en/chapter01/whatsnew.xml lfs-en/chapter05/glibc.xml
-#: lfs-en/chapter08/glibc.xml
-msgid "Glibc-&glibc-version;"
-msgstr "Glibc-&glibc-version;"
-
-#. type: Content of: <sect1><title>
-#: lfs-en/chapter01/whatsnew.xml lfs-en/chapter08/gmp.xml
-msgid "GMP-&gmp-version;"
-msgstr "GMP-&gmp-version;"
-
-#. type: Content of: <sect1><title>
-#: lfs-en/chapter01/whatsnew.xml lfs-en/chapter08/groff.xml
-msgid "Groff-&groff-version;"
-msgstr "Groff-&groff-version;"
-
-#. type: Content of: <sect1><title>
 #: lfs-en/chapter01/whatsnew.xml lfs-en/chapter08/grub.xml
 msgid "GRUB-&grub-version;"
 msgstr "GRUB-&grub-version;"
 
-#. type: Content of: <sect1><itemizedlist><listitem><para>
-#: lfs-en/chapter01/whatsnew.xml
-msgid "IANA-Etc-&iana-etc-version;"
-msgstr "IANA-Etc-&iana-etc-version;"
+#. type: Content of: <sect1><title>
+#: lfs-en/chapter01/whatsnew.xml lfs-en/chapter08/iana-etc.xml
+msgid "Iana-Etc-&iana-etc-version;"
+msgstr "Iana-Etc-&iana-etc-version;"
+
+#. type: Content of: <sect1><title>
+#: lfs-en/chapter01/whatsnew.xml lfs-en/chapter08/inetutils.xml
+msgid "Inetutils-&inetutils-version;"
+msgstr "Inetutils-&inetutils-version;"
 
 #. type: Content of: <sect1><title>
 #: lfs-en/chapter01/whatsnew.xml lfs-en/chapter08/iproute2.xml
@@ -177,19 +112,14 @@ msgid "Kbd-&kbd-version;"
 msgstr "Kbd-&kbd-version;"
 
 #. type: Content of: <sect1><title>
-#: lfs-en/chapter01/whatsnew.xml lfs-en/chapter08/less.xml
-msgid "Less-&less-version;"
-msgstr "Less-&less-version;"
+#: lfs-en/chapter01/whatsnew.xml lfs-en/chapter08/kmod.xml
+msgid "Kmod-&kmod-version;"
+msgstr "Kmod-&kmod-version;"
 
 #. type: Content of: <sect1><title>
-#: lfs-en/chapter01/whatsnew.xml lfs-en/chapter08/libcap.xml
-msgid "Libcap-&libcap-version;"
-msgstr "Libcap-&libcap-version;"
-
-#. type: Content of: <sect1><itemizedlist><listitem><para>
-#: lfs-en/chapter01/whatsnew.xml
-msgid "Libelf-&elfutils-version; (from elfutils)"
-msgstr "Libelf-&elfutils-version; (来自 elfutils)"
+#: lfs-en/chapter01/whatsnew.xml lfs-en/chapter08/libelf.xml
+msgid "Libelf from Elfutils-&elfutils-version;"
+msgstr "Elfutils-&elfutils-version; 中的 Libelf"
 
 #. type: Content of: <sect1><title>
 #: lfs-en/chapter01/whatsnew.xml lfs-en/chapter10/kernel.xml
@@ -197,35 +127,35 @@ msgid "Linux-&linux-version;"
 msgstr "Linux-&linux-version;"
 
 #. type: Content of: <sect1><title>
-#: lfs-en/chapter01/whatsnew.xml lfs-en/chapter08/man-pages.xml
-msgid "Man-pages-&man-pages-version;"
-msgstr "Man-pages-&man-pages-version;"
-
-#. type: Content of: <sect1><title>
-#: lfs-en/chapter01/whatsnew.xml lfs-en/chapter08/markupsafe.xml
-msgid "MarkupSafe-&markupsafe-version;"
-msgstr "MarkupSafe-&markupsafe-version;"
+#: lfs-en/chapter01/whatsnew.xml lfs-en/chapter08/man-db.xml
+msgid "Man-DB-&man-db-version;"
+msgstr "Man-DB-&man-db-version;"
 
 #. type: Content of: <sect1><title>
 #: lfs-en/chapter01/whatsnew.xml lfs-en/chapter08/meson.xml
 msgid "Meson-&meson-version;"
 msgstr "Meson-&meson-version;"
 
-#. type: Content of: <sect1><itemizedlist><listitem><para>
-#: lfs-en/chapter01/whatsnew.xml
-msgid "Openssl-&openssl-version;"
-msgstr "Openssl-&openssl-version;"
+#. type: Content of: <sect1><title>
+#: lfs-en/chapter01/whatsnew.xml lfs-en/chapter08/mpfr.xml
+msgid "MPFR-&mpfr-version;"
+msgstr "MPFR-&mpfr-version;"
 
 #. type: Content of: <sect1><title>
-#: lfs-en/chapter01/whatsnew.xml lfs-en/chapter08/pkgconf.xml
-msgid "Pkgconf-&pkgconf-version;"
-msgstr "Pkgconf-&pkgconf-version;"
+#: lfs-en/chapter01/whatsnew.xml lfs-en/chapter08/openssl.xml
+msgid "OpenSSL-&openssl-version;"
+msgstr "OpenSSL-&openssl-version;"
 
 #. type: Content of: <sect1><title>
 #: lfs-en/chapter01/whatsnew.xml lfs-en/chapter07/perl.xml
 #: lfs-en/chapter08/perl.xml
 msgid "Perl-&perl-version;"
 msgstr "Perl-&perl-version;"
+
+#. type: Content of: <sect1><title>
+#: lfs-en/chapter01/whatsnew.xml lfs-en/chapter08/pkgconf.xml
+msgid "Pkgconf-&pkgconf-version;"
+msgstr "Pkgconf-&pkgconf-version;"
 
 #. type: Content of: <sect1><title>
 #: lfs-en/chapter01/whatsnew.xml lfs-en/chapter08/procps.xml
@@ -239,14 +169,16 @@ msgid "Python-&python-version;"
 msgstr "Python-&python-version;"
 
 #. type: Content of: <sect1><title>
-#: lfs-en/chapter01/whatsnew.xml lfs-en/chapter08/sysklogd.xml
-msgid "Sysklogd-&sysklogd-version;"
-msgstr "Sysklogd-&sysklogd-version;"
+#: lfs-en/chapter01/whatsnew.xml lfs-en/chapter08/shadow.xml
+msgid "Shadow-&shadow-version;"
+msgstr "Shadow-&shadow-version;"
 
-#. type: Content of: <sect1><title>
-#: lfs-en/chapter01/whatsnew.xml lfs-en/chapter08/systemd.xml
-msgid "Systemd-&systemd-version;"
-msgstr "Systemd-&systemd-version;"
+#. type: Content of: <sect1><itemizedlist><listitem><para>
+#: lfs-en/chapter01/whatsnew.xml
+#, fuzzy
+#| msgid "Sysvinit-&sysvinit-version;"
+msgid "SysVinit-&sysvinit-version;"
+msgstr "Sysvinit-&sysvinit-version;"
 
 #. type: Content of: <sect1><title>
 #: lfs-en/chapter01/whatsnew.xml lfs-en/chapter07/texinfo.xml
@@ -259,30 +191,31 @@ msgstr "Texinfo-&texinfo-version;"
 msgid "Tzdata-&tzdata-version;"
 msgstr "Tzdata-&tzdata-version;"
 
-#. type: Content of: <sect1><itemizedlist><listitem><para>
-#: lfs-en/chapter01/whatsnew.xml
-msgid "Util-Linux-&util-linux-version;"
-msgstr "Util-Linux-&util-linux-version;"
+#. type: Content of: <sect1><title>
+#: lfs-en/chapter01/whatsnew.xml lfs-en/chapter07/util-linux.xml
+#: lfs-en/chapter08/util-linux.xml
+msgid "Util-linux-&util-linux-version;"
+msgstr "Util-linux-&util-linux-version;"
 
 #. type: Content of: <sect1><title>
 #: lfs-en/chapter01/whatsnew.xml lfs-en/chapter08/vim.xml
 msgid "Vim-&vim-version;"
 msgstr "Vim-&vim-version;"
 
-#. type: Content of: <sect1><itemizedlist><listitem><para>
-#: lfs-en/chapter01/whatsnew.xml
-msgid "wheel-&wheel-version;"
-msgstr "wheel-&wheel-version;"
-
-#. type: Content of: <sect1><itemizedlist><listitem><para>
-#: lfs-en/chapter01/whatsnew.xml
-msgid "XZ-Utils-&xz-version;"
-msgstr "XZ-Utils-&xz-version;"
+#. type: Content of: <sect1><title>
+#: lfs-en/chapter01/whatsnew.xml lfs-en/chapter08/wheel.xml
+msgid "Wheel-&wheel-version;"
+msgstr "Wheel-&wheel-version;"
 
 #. type: Content of: <sect1><title>
-#: lfs-en/chapter01/whatsnew.xml lfs-en/chapter08/zstd.xml
-msgid "Zstd-&zstd-version;"
-msgstr "Zstd-&zstd-version;"
+#: lfs-en/chapter01/whatsnew.xml lfs-en/chapter08/xml-parser.xml
+msgid "XML::Parser-&xml-parser-version;"
+msgstr "XML::Parser-&xml-parser-version;"
+
+#. type: Content of: <sect1><title>
+#: lfs-en/chapter01/whatsnew.xml lfs-en/chapter08/zlib.xml
+msgid "Zlib-&zlib-version;"
+msgstr "Zlib-&zlib-version;"
 
 #. type: Content of: <sect1><itemizedlist><title>
 #: lfs-en/chapter01/whatsnew.xml
@@ -291,28 +224,24 @@ msgstr "已添加："
 
 #. type: Content of: <sect1><itemizedlist><listitem><para>
 #: lfs-en/chapter01/whatsnew.xml
-msgid "Udev-&systemd-version; (from systemd)"
-msgstr "Udev-&systemd-version; (来自 systemd)"
-
-#. type: Content of: <sect1><title>
-#: lfs-en/chapter01/whatsnew.xml lfs-en/chapter08/jinja2.xml
-msgid "Jinja2-&jinja2-version;"
-msgstr "Jinja2-&jinja2-version;"
-
-#. type: Content of: <sect1><title>
-#: lfs-en/chapter01/whatsnew.xml lfs-en/chapter08/libxcrypt.xml
-msgid "Libxcrypt-&libxcrypt-version;"
-msgstr "Libxcrypt-&libxcrypt-version;"
+#, fuzzy
+#| msgid "Inetutils-&inetutils-version;"
+msgid "setuptools-&setuptools-version;"
+msgstr "Inetutils-&inetutils-version;"
 
 #. type: Content of: <sect1><itemizedlist><listitem><para>
 #: lfs-en/chapter01/whatsnew.xml
-msgid "&elfutils-loongarch-patch;"
-msgstr "&elfutils-loongarch-patch;"
+#, fuzzy
+#| msgid "grub-2.06-upstream_fixes-1.patch"
+msgid "&glibc-upstream-fixes-patch;"
+msgstr "grub-2.06-upstream_fixes-1.patch"
 
 #. type: Content of: <sect1><itemizedlist><listitem><para>
 #: lfs-en/chapter01/whatsnew.xml
-msgid "&glibc-memalign-patch;"
-msgstr "&glibc-memalign-patch;"
+#, fuzzy
+#| msgid "&readline-fin-du;"
+msgid "&readline-fixes-patch;"
+msgstr "&readline-fin-du;"
 
 #. type: Content of: <sect1><itemizedlist><title>
 #: lfs-en/chapter01/whatsnew.xml
@@ -321,8 +250,17 @@ msgstr "已移除："
 
 #. type: Content of: <sect1><itemizedlist><listitem><para>
 #: lfs-en/chapter01/whatsnew.xml
-msgid "eudev-3.2.12"
-msgstr "eudev-3.2.12"
+#, fuzzy
+#| msgid "&elfutils-loongarch-patch;"
+msgid "elfutils-0.189-loongarch-3.patch"
+msgstr "&elfutils-loongarch-patch;"
+
+#. type: Content of: <sect1><itemizedlist><listitem><para>
+#: lfs-en/chapter01/whatsnew.xml
+#, fuzzy
+#| msgid "&glibc-memalign-patch;"
+msgid "glibc-2.38-memalign_fix-1.patch"
+msgstr "&glibc-memalign-patch;"
 
 #. type: Content of: <sect1><itemizedlist><listitem><para>
 #: lfs-en/chapter01/whatsnew.xml
@@ -331,10 +269,7 @@ msgstr "grub-2.06-upstream_fixes-1.patch"
 
 #. type: Content of: <sect1><itemizedlist><listitem><para>
 #: lfs-en/chapter01/whatsnew.xml
-msgid "Pkg-config-0.29.2"
-msgstr "Pkg-config-0.29.2"
-
-#. type: Content of: <sect1><itemizedlist><listitem><para>
-#: lfs-en/chapter01/whatsnew.xml
-msgid "systemd-252-security_fix-1.patch"
-msgstr "systemd-252-security_fix-1.patch"
+#, fuzzy
+#| msgid "grub-2.06-upstream_fixes-1.patch"
+msgid "readline-8.2-upstream_fix-1.patch"
+msgstr "grub-2.06-upstream_fixes-1.patch"

@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Linux From Scratch 11.4\n"
 "Report-Msgid-Bugs-To: lfs-dev@lists.linuxfromscratch.org\n"
-"POT-Creation-Date: 2023-07-18 12:46+0800\n"
+"POT-Creation-Date: 2024-01-02 21:02+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: Xi Ruoyao <xry111@xry111.site>\n"
 "Language-Team: none\n"
@@ -124,6 +124,18 @@ msgstr "自定义 /etc/hosts 文件"
 msgid "localnet"
 msgstr "localnet"
 
+#. type: Content of: <sect1><sect2><para>
+#: lfs-en/chapter09/networkd.xml lfs-en/chapter09/network.xml
+msgid ""
+"Decide on a fully-qualified domain name (FQDN), and possible aliases for use "
+"in the <filename>/etc/hosts</filename> file. If using static IP addresses, "
+"you'll also need to decide on an IP address. The syntax for a hosts file "
+"entry is:"
+msgstr ""
+"选择一个全限定域名 (FQDN)，和可能的别名，以供 <filename>/etc/hosts</"
+"filename> 文件使用。如果使用静态 IP 地址，您还需要确定要使用的 IP 地址。"
+"hosts 文件条目的语法是："
+
 #. type: Content of: <sect1><sect2><screen>
 #: lfs-en/chapter09/networkd.xml lfs-en/chapter09/network.xml
 #, no-wrap
@@ -165,12 +177,32 @@ msgstr "x 可以是 16-31 之间的任何数字。y 可以是 0-255 之间的任
 
 #. type: Content of: <sect1><sect2><para>
 #: lfs-en/chapter09/networkd.xml lfs-en/chapter09/network.xml
-msgid ""
-"A valid private IP address could be 192.168.1.1. A valid FQDN for this IP "
-"could be lfs.example.org."
+#, fuzzy
+#| msgid ""
+#| "A valid private IP address could be 192.168.1.1. A valid FQDN for this IP "
+#| "could be lfs.example.org."
+msgid "A valid private IP address could be 192.168.1.1."
 msgstr ""
 "有效的私网 IP 地址的一个例子是 192.168.1.1。与之对应的 FQDN 可以是 lfs."
 "example.org。"
+
+#. type: Content of: <sect1><sect2><para>
+#: lfs-en/chapter09/networkd.xml lfs-en/chapter09/network.xml
+msgid ""
+"If the computer is to be visible to the Internet, a valid FQDN can be the "
+"domain name itself, or a string resulted by concatenating a prefix (often "
+"the hostname) and the domain name with a <quote>.</quote> character.  And, "
+"you need to contact the domain provider to resolve the FQDN to your public "
+"IP address."
+msgstr ""
+
+#. type: Content of: <sect1><sect2><para>
+#: lfs-en/chapter09/networkd.xml lfs-en/chapter09/network.xml
+msgid ""
+"Even if the computer is not visible to the Internet, a FQDN is still needed "
+"for certain programs, such as MTAs, to operate properly.  A special FQDN, "
+"<literal>localhost.localdomain</literal>, can be used for this purpose."
+msgstr ""
 
 #. type: Content of: <sect1><sect2><title>
 #: lfs-en/chapter09/network.xml
@@ -390,23 +422,6 @@ msgstr ""
 "<replaceable>&lt;lfs&gt;</replaceable> 需要被替换为赋予该计算机的名称。不要在"
 "这里输入全限定域名 (FQDN)。FQDN 应该被写入 <filename>/etc/hosts</filename> 文"
 "件。"
-
-#. type: Content of: <sect1><sect2><para>
-#: lfs-en/chapter09/network.xml
-msgid ""
-"Decide on the IP address, fully-qualified domain name (FQDN), and possible "
-"aliases for use in the <filename>/etc/hosts</filename> file. The syntax is:"
-msgstr ""
-"选择一个全限定域名 (FQDN) 和可能的别名，以供 <filename>/etc/hosts</filename> "
-"文件使用。如果使用静态 IP 地址，您还需要确定要使用的 IP 地址。hosts 文件条目"
-"的语法是："
-
-#. type: Content of: <sect1><sect2><para>
-#: lfs-en/chapter09/network.xml
-msgid ""
-"Even if not using a network card, a valid FQDN is still required.  This is "
-"necessary for certain programs to operate correctly."
-msgstr "即使没有网卡，也要提供一个有效的 FQDN，某些程序需要它才能正常工作。"
 
 #. type: Content of: <sect1><sect2><para>
 #: lfs-en/chapter09/network.xml

@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Linux From Scratch 11.4\n"
 "Report-Msgid-Bugs-To: lfs-dev@lists.linuxfromscratch.org\n"
-"POT-Creation-Date: 2023-02-18 14:03+0800\n"
+"POT-Creation-Date: 2024-01-02 21:02+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: Xi Ruoyao <xry111@xry111.site>\n"
 "Language-Team: none\n"
@@ -15,7 +15,7 @@ msgstr ""
 "X-Generator: Translate Toolkit 2.2.5\n"
 
 #. type: Content of: <sect1><sect2><indexterm><secondary>
-#: lfs-en/chapter08/sysklogd.xml lfs-en/chapter08/eudev.xml
+#: lfs-en/chapter08/sysklogd.xml lfs-en/chapter08/udev.xml
 #: lfs-en/chapter08/shadow.xml lfs-en/chapter09/consoled.xml
 #: lfs-en/chapter09/usage.xml lfs-en/chapter09/networkd.xml
 #: lfs-en/chapter09/clock.xml lfs-en/chapter09/network.xml
@@ -517,7 +517,7 @@ msgid "localnet"
 msgstr "localnet"
 
 #. type: Content of: <sect1><sect2><para>
-#: lfs-en/chapter09/networkd.xml
+#: lfs-en/chapter09/networkd.xml lfs-en/chapter09/network.xml
 msgid ""
 "Decide on a fully-qualified domain name (FQDN), and possible aliases for use "
 "in the <filename>/etc/hosts</filename> file. If using static IP addresses, "
@@ -569,20 +569,32 @@ msgstr "x 可以是 16-31 之间的任何数字。y 可以是 0-255 之间的任
 
 #. type: Content of: <sect1><sect2><para>
 #: lfs-en/chapter09/networkd.xml lfs-en/chapter09/network.xml
-msgid ""
-"A valid private IP address could be 192.168.1.1. A valid FQDN for this IP "
-"could be lfs.example.org."
+#, fuzzy
+#| msgid ""
+#| "A valid private IP address could be 192.168.1.1. A valid FQDN for this IP "
+#| "could be lfs.example.org."
+msgid "A valid private IP address could be 192.168.1.1."
 msgstr ""
 "有效的私网 IP 地址的一个例子是 192.168.1.1。与之对应的 FQDN 可以是 lfs."
 "example.org。"
 
 #. type: Content of: <sect1><sect2><para>
-#: lfs-en/chapter09/networkd.xml
+#: lfs-en/chapter09/networkd.xml lfs-en/chapter09/network.xml
 msgid ""
-"Even if not using a network card, a valid FQDN is still required.  This is "
-"necessary for certain programs, such as MTAs, to operate properly."
+"If the computer is to be visible to the Internet, a valid FQDN can be the "
+"domain name itself, or a string resulted by concatenating a prefix (often "
+"the hostname) and the domain name with a <quote>.</quote> character.  And, "
+"you need to contact the domain provider to resolve the FQDN to your public "
+"IP address."
 msgstr ""
-"即使没有网卡，也要提供一个有效的 FQDN。某些程序，如 MTA，需要它才能正常工作。"
+
+#. type: Content of: <sect1><sect2><para>
+#: lfs-en/chapter09/networkd.xml lfs-en/chapter09/network.xml
+msgid ""
+"Even if the computer is not visible to the Internet, a FQDN is still needed "
+"for certain programs, such as MTAs, to operate properly.  A special FQDN, "
+"<literal>localhost.localdomain</literal>, can be used for this purpose."
+msgstr ""
 
 #. type: Content of: <sect1><sect2><para>
 #: lfs-en/chapter09/networkd.xml
@@ -592,15 +604,26 @@ msgstr "执行以下命令，创建 <filename>/etc/hosts</filename> 文件："
 
 #. type: Content of: <sect1><sect2><screen>
 #: lfs-en/chapter09/networkd.xml
-#, no-wrap
+#, fuzzy, no-wrap
+#| msgid ""
+#| "<userinput>cat &gt; /etc/hosts &lt;&lt; \"EOF\"\n"
+#| "<literal># Begin /etc/hosts\n"
+#| "\n"
+#| "127.0.0.1 localhost.localdomain localhost\n"
+#| "127.0.1.1 <replaceable>&lt;FQDN&gt;</replaceable> <replaceable>&lt;HOSTNAME&gt;</replaceable>\n"
+#| "<replaceable>&lt;192.168.0.2&gt;</replaceable> <replaceable>&lt;FQDN&gt;</replaceable> <replaceable>&lt;HOSTNAME&gt;</replaceable> <replaceable>[alias1] [alias2] ...</replaceable>\n"
+#| "::1       localhost ip6-localhost ip6-loopback\n"
+#| "ff02::1   ip6-allnodes\n"
+#| "ff02::2   ip6-allrouters\n"
+#| "\n"
+#| "# End /etc/hosts</literal>\n"
+#| "EOF</userinput>"
 msgid ""
 "<userinput>cat &gt; /etc/hosts &lt;&lt; \"EOF\"\n"
 "<literal># Begin /etc/hosts\n"
 "\n"
-"127.0.0.1 localhost.localdomain localhost\n"
-"127.0.1.1 <replaceable>&lt;FQDN&gt;</replaceable> <replaceable>&lt;HOSTNAME&gt;</replaceable>\n"
-"<replaceable>&lt;192.168.0.2&gt;</replaceable> <replaceable>&lt;FQDN&gt;</replaceable> <replaceable>&lt;HOSTNAME&gt;</replaceable> <replaceable>[alias1] [alias2] ...</replaceable>\n"
-"::1       localhost ip6-localhost ip6-loopback\n"
+"<replaceable>&lt;192.168.0.2&gt;</replaceable> <replaceable>&lt;FQDN&gt;</replaceable> <replaceable>[alias1] [alias2] ...</replaceable>\n"
+"::1       ip6-localhost ip6-loopback\n"
 "ff02::1   ip6-allnodes\n"
 "ff02::2   ip6-allrouters\n"
 "\n"
@@ -622,14 +645,25 @@ msgstr ""
 
 #. type: Content of: <sect1><sect2><para>
 #: lfs-en/chapter09/networkd.xml
+#, fuzzy
+#| msgid ""
+#| "The <replaceable>&lt;192.168.0.2&gt;</replaceable>, <replaceable>&lt;"
+#| "FQDN&gt;</replaceable>, and <replaceable>&lt;HOSTNAME&gt;</replaceable> "
+#| "values need to be changed for specific uses or requirements (if assigned "
+#| "an IP address by a network/system administrator and the machine will be "
+#| "connected to an existing network). The optional alias name(s) can be "
+#| "omitted, and the <replaceable>&lt;192.168.0.2&gt;</replaceable> line can "
+#| "be omitted if you are using a connection configured with DHCP or IPv6 "
+#| "Autoconfiguration."
 msgid ""
-"The <replaceable>&lt;192.168.0.2&gt;</replaceable>, <replaceable>&lt;FQDN&gt;"
-"</replaceable>, and <replaceable>&lt;HOSTNAME&gt;</replaceable> values need "
-"to be changed for specific uses or requirements (if assigned an IP address "
-"by a network/system administrator and the machine will be connected to an "
-"existing network). The optional alias name(s) can be omitted, and the "
-"<replaceable>&lt;192.168.0.2&gt;</replaceable> line can be omitted if you "
-"are using a connection configured with DHCP or IPv6 Autoconfiguration."
+"The <replaceable>&lt;192.168.0.2&gt;</replaceable> and <replaceable>&lt;"
+"FQDN&gt;</replaceable> values need to be changed for specific uses or "
+"requirements (if assigned an IP address by a network/system administrator "
+"and the machine will be connected to an existing network). The optional "
+"alias name(s) can be omitted, and the <replaceable>&lt;192.168.0.2&gt;</"
+"replaceable> line can be omitted if you are using a connection configured "
+"with DHCP or IPv6 Autoconfiguration, or using <literal>localhost."
+"localdomain</literal> as the FQDN."
 msgstr ""
 "其中 <replaceable>&lt;192.168.0.2&gt;</replaceable>，<replaceable>&lt;"
 "FQDN&gt;</replaceable>，以及<replaceable>&lt;主机名&gt;</replaceable> 的值需"
@@ -641,7 +675,21 @@ msgstr ""
 #. type: Content of: <sect1><sect2><para>
 #: lfs-en/chapter09/networkd.xml
 msgid ""
+"The <filename>/etc/hostname</filename> does not contain entries for "
+"<literal>localhost</literal>, <literal>localhost.localdomain</literal>, or "
+"the hostname (without a domain) because they are handled by the <systemitem "
+"class='library'>myhostname</systemitem> NSS module, read the man page "
+"<filename>nss-myhostname(8)</filename> for details."
+msgstr ""
+
+#. type: Content of: <sect1><sect2><para>
+#: lfs-en/chapter09/networkd.xml
+#, fuzzy
+#| msgid ""
+#| "The ::1 entry is the IPv6 counterpart of 127.0.0.1 and represents the "
+#| "IPv6 loopback interface. 127.0.1.1 is a loopback entry reserved "
+#| "specifically for the FQDN."
+msgid ""
 "The ::1 entry is the IPv6 counterpart of 127.0.0.1 and represents the IPv6 "
-"loopback interface. 127.0.1.1 is a loopback entry reserved specifically for "
-"the FQDN."
+"loopback interface."
 msgstr "::1 是 127.0.0.1 在 IPv6 中的对应，即 IPv6 回环接口。"

@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Linux From Scratch 11.4\n"
 "Report-Msgid-Bugs-To: lfs-dev@lists.linuxfromscratch.org\n"
-"POT-Creation-Date: 2023-08-10 22:01+0800\n"
+"POT-Creation-Date: 2024-01-02 21:02+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: Xi Ruoyao <xry111@xry111.site>\n"
 "Language-Team: none\n"
@@ -351,6 +351,90 @@ msgstr ""
 "注意我们将会在<xref linkend=\"ch-system-bash\"/>中构建的 LFS Bash 软件包未被"
 "配置为读取或执行 <filename>/etc/bash.bashrc</filename>，因此它在完整的 LFS 系"
 "统中没有作用。"
+
+#. type: Content of: <sect1><para>
+#: lfs-en/chapter04/settingenviron.xml
+msgid ""
+"For many modern systems with multiple processors (or cores) the compilation "
+"time for a package can be reduced by performing a \"parallel make\" by "
+"telling the make program how many processors are available via a command "
+"line option or an environment variable.  For instance, an Intel Core "
+"i9-13900K processor has 8 P (performance) cores and 16 E (efficiency) cores, "
+"and a P core can simultaneously run two threads so each P core are modeled "
+"as two logical cores by the Linux kernel.  As the result there are 32 "
+"logical cores in total.  One obvious way to use all these logical cores is "
+"allowing <command>make</command> to spawn up to 32 build jobs.  This can be "
+"done by passing the <parameter>-j32</parameter> option to <command>make</"
+"command>:"
+msgstr ""
+
+#. type: Content of: <sect1><screen>
+#: lfs-en/chapter04/settingenviron.xml
+#, fuzzy, no-wrap
+#| msgid "<userinput>make -j4</userinput>"
+msgid "<userinput>make -j32</userinput>"
+msgstr "<userinput>make -j4</userinput>"
+
+#. type: Content of: <sect1><para>
+#: lfs-en/chapter04/settingenviron.xml
+#, fuzzy
+#| msgid ""
+#| "Outputs commands to set the <envar>LS_COLOR</envar> environment variable "
+#| "to change the color scheme used by <command>ls</command>"
+msgid ""
+"Or set the <envar>MAKEFLAGS</envar> environment variable and its content "
+"will be automatically used by <command>make</command> as command line "
+"options:"
+msgstr ""
+"输出用于设定 <envar>LS_COLOR</envar> 环境变量的命令，以修改 <command>ls</"
+"command> 的配色方案"
+
+#. type: Content of: <sect1><screen>
+#: lfs-en/chapter04/settingenviron.xml
+#, fuzzy, no-wrap
+#| msgid "<userinput>export MAKEFLAGS='-j4'</userinput>"
+msgid "<userinput>export MAKEFLAGS=-j32</userinput>"
+msgstr "<userinput>export MAKEFLAGS='-j4'</userinput>"
+
+#. type: Content of: <sect1><important><para>
+#: lfs-en/chapter04/settingenviron.xml
+msgid ""
+"Never pass a <parameter>-j</parameter> option without a number to "
+"<command>make</command> or set such an option in <envar>MAKEFLAGS</envar>.  "
+"Doing so will allow <command>make</command> to spawn infinite build jobs and "
+"cause system stability problems."
+msgstr ""
+
+#. type: Content of: <sect1><para>
+#: lfs-en/chapter04/settingenviron.xml
+msgid ""
+"To use all logical cores available for building packages in <xref "
+"linkend='chapter-cross-tools'/> and <xref linkend='chapter-temporary-tools'/"
+">, set <envar>MAKEFLAGS</envar> now in <filename>.bashrc</filename>:"
+msgstr ""
+
+#. type: Content of: <sect1><screen>
+#: lfs-en/chapter04/settingenviron.xml
+#, fuzzy, no-wrap
+#| msgid ""
+#| "<userinput>cat &gt; /etc/locale.conf &lt;&lt; \"EOF\"\n"
+#| "<literal>LANG=<replaceable>&lt;ll&gt;_&lt;CC&gt;.&lt;charmap&gt;&lt;@modifiers&gt;</replaceable></literal>\n"
+#| "EOF</userinput>"
+msgid ""
+"<userinput>cat &gt;&gt; ~/.bashrc &lt;&lt; \"EOF\"\n"
+"<literal>export MAKEFLAGS=-j<replaceable>$(nproc)</replaceable></literal>\n"
+"EOF</userinput>"
+msgstr ""
+"<userinput>cat &gt; /etc/locale.conf &lt;&lt; \"EOF\"\n"
+"<literal>LANG=<replaceable>&lt;ll&gt;_&lt;CC&gt;.&lt;charmap&gt;&lt;@modifiers&gt;</replaceable></literal>\n"
+"EOF</userinput>"
+
+#. type: Content of: <sect1><para>
+#: lfs-en/chapter04/settingenviron.xml
+msgid ""
+"Replace <replaceable>$(nproc)</replaceable> with the number of logical cores "
+"you want to use if you don't want to use all the logical cores."
+msgstr ""
 
 #. type: Content of: <sect1><para>
 #: lfs-en/chapter04/settingenviron.xml

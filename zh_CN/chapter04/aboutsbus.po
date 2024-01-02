@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Linux From Scratch 11.4\n"
 "Report-Msgid-Bugs-To: lfs-dev@lists.linuxfromscratch.org\n"
-"POT-Creation-Date: 2023-02-13 04:26+0800\n"
+"POT-Creation-Date: 2024-01-02 21:02+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: Xi Ruoyao <xry111@xry111.site>\n"
 "Language-Team: none\n"
@@ -71,37 +71,6 @@ msgstr ""
 "SBU 不是完全准确的，这是由于它受到许多因素的影响，包括宿主系统的 GCC 版本。"
 "SBU 只能用来估计安装一个软件包可能需要的时间，估计结果的误差在个别情况下可能"
 "达到几十分钟。"
-
-#. type: Content of: <sect1><note><para>
-#: lfs-en/chapter04/aboutsbus.xml
-msgid ""
-"For many modern systems with multiple processors (or cores) the compilation "
-"time for a package can be reduced by performing a \"parallel make\" by "
-"either setting an environment variable or telling the <command>make</"
-"command> program how many processors are available.  For instance, an Intel "
-"i5-6500 CPU can support four simultaneous processes with:"
-msgstr ""
-"对于许多拥有多个处理器 (或处理器核心) 的现代系统，可以显著缩短软件包的编译时"
-"间，设置环境变量或者直接告诉 <command>make</command> 命令有多少个可用的处理"
-"器，即可进行并行构建。例如，一块 Intel i5-6500 CPU 可以支持 4 个同时运行的进"
-"程，可以设定："
-
-#. type: Content of: <sect1><note><screen>
-#: lfs-en/chapter04/aboutsbus.xml
-#, no-wrap
-msgid "<userinput>export MAKEFLAGS='-j4'</userinput>"
-msgstr "<userinput>export MAKEFLAGS='-j4'</userinput>"
-
-#. type: Content of: <sect1><note><para>
-#: lfs-en/chapter04/aboutsbus.xml
-msgid "or by building with:"
-msgstr "或者用以下命令构建："
-
-#. type: Content of: <sect1><note><screen>
-#: lfs-en/chapter04/aboutsbus.xml
-#, no-wrap
-msgid "<userinput>make -j4</userinput>"
-msgstr "<userinput>make -j4</userinput>"
 
 #. type: Content of: <sect1><note><para>
 #: lfs-en/chapter04/aboutsbus.xml

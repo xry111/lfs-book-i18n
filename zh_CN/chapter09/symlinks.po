@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Linux From Scratch 11.4\n"
 "Report-Msgid-Bugs-To: lfs-dev@lists.linuxfromscratch.org\n"
-"POT-Creation-Date: 2022-12-25 21:06+0800\n"
+"POT-Creation-Date: 2024-01-02 21:02+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: Xi Ruoyao <xry111@xry111.site>\n"
 "Language-Team: none\n"
@@ -215,6 +215,28 @@ msgstr ""
 "<literal>NAME</literal> 的值是我们关注的重点。在继续阅读之前，您需要确保自己"
 "知道赋予每个网络接口的命名，在之后的配置文件中需要使用 <literal>NAME</"
 "literal> 的值。"
+
+#. type: Content of: <sect1><sect2><sect3><para>
+#: lfs-en/chapter09/symlinks.xml
+msgid ""
+"Even if the custom udev rule file is created, udev may still assign one or "
+"more alternative names for a NIC based on physical characteristics.  If a "
+"custom udev rule would rename some NIC using a name already assigned as an "
+"alternative name of another NIC, this udev rule will fail.  If this issue "
+"happens, you may create the <filename>/etc/udev/network/99-default.link</"
+"filename> configuration file with an empty alternative assignment policy, "
+"overriding the default configuration file <filename>/usr/lib/udev/network/99-"
+"default.link</filename>:"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><sect3><screen>
+#: lfs-en/chapter09/symlinks.xml
+#, no-wrap
+msgid ""
+"<userinput>sed -e '/^AlternativeNamesPolicy/s/=.*$/=/'  \\\n"
+"    -i /usr/lib/udev/network/99-default.link \\\n"
+"     > /etc/udev/network/99-default.link</userinput>"
+msgstr ""
 
 #. type: Content of: <sect1><sect2><title>
 #: lfs-en/chapter09/symlinks.xml
