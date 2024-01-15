@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Linux From Scratch 11.4\n"
 "Report-Msgid-Bugs-To: lfs-dev@lists.linuxfromscratch.org\n"
-"POT-Creation-Date: 2023-12-22 18:09+0800\n"
+"POT-Creation-Date: 2024-01-15 12:30+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: Xi Ruoyao <xry111@xry111.site>\n"
 "Language-Team: none\n"
@@ -587,18 +587,21 @@ msgstr ""
 #: lfs-en/chapter08/udev.xml
 msgid ""
 "Get the list of the shipped udev helpers and save it into an environment "
-"variable:"
-msgstr "获取软件包提供的 udev 辅助程序列表，并将其保存在环境变量中："
+"variable (exporting it is not strictly necessary, but it makes building as a "
+"regular user or using a package manager easier):"
+msgstr ""
+"获取软件包提供的 udev 辅助程序列表并将其保存到环境变量中 (实际上并不需要导出"
+"该变量，但这使得以非特权用户身份进行构建或使用包管理器更容易)："
 
 #. type: Content of: <sect1><sect2><screen>
 #: lfs-en/chapter08/udev.xml
 #, no-wrap
 msgid ""
-"<userinput remap=\"make\">udev_helpers=$(grep \"'name' :\" ../src/udev/meson.build | \\\n"
-"               awk '{print $3}' | tr -d \",'\" | grep -v 'udevadm')</userinput>"
+"<userinput remap=\"make\">export udev_helpers=$(grep \"'name' :\" ../src/udev/meson.build | \\\n"
+"                      awk '{print $3}' | tr -d \",'\" | grep -v 'udevadm')</userinput>"
 msgstr ""
-"<userinput remap=\"make\">udev_helpers=$(grep \"'name' :\" ../src/udev/meson.build | \\\n"
-"               awk '{print $3}' | tr -d \",'\" | grep -v 'udevadm')</userinput>"
+"<userinput remap=\"make\">export udev_helpers=$(grep \"'name' :\" ../src/udev/meson.build | \\\n"
+"                      awk '{print $3}' | tr -d \",'\" | grep -v 'udevadm')</userinput>"
 
 #. type: Content of: <sect1><sect2><para>
 #: lfs-en/chapter08/udev.xml
@@ -612,12 +615,12 @@ msgid ""
 "<userinput remap=\"make\">ninja udevadm systemd-hwdb                                           \\\n"
 "      $(ninja -n | grep -Eo '(src/(lib)?udev|rules.d|hwdb.d)/[^ ]*') \\\n"
 "      $(realpath libudev.so --relative-to .)                         \\\n"
-"      $udev_helpers udevadm</userinput>"
+"      $udev_helpers</userinput>"
 msgstr ""
 "<userinput remap=\"make\">ninja udevadm systemd-hwdb                                           \\\n"
 "      $(ninja -n | grep -Eo '(src/(lib)?udev|rules.d|hwdb.d)/[^ ]*') \\\n"
 "      $(realpath libudev.so --relative-to .)                         \\\n"
-"      $udev_helpers udevadm</userinput>"
+"      $udev_helpers</userinput>"
 
 #. type: Content of: <sect1><sect2><screen>
 #: lfs-en/chapter08/udev.xml
@@ -716,6 +719,19 @@ msgstr ""
 "  > /usr/share/man/man8/udevd.8\n"
 "\n"
 "rm /usr/share/man/man*/systemd*</userinput>"
+
+#. type: Content of: <sect1><sect2><para>
+#: lfs-en/chapter08/udev.xml
+msgid "Finally, unset the <envar>udev_helpers</envar> variable:"
+msgstr "最后，移除 <envar>udev_helpers</envar> 变量："
+
+#.  remap="make" seems confusing but we don't have sth. like
+#.          remap="clean".  
+#. type: Content of: <sect1><sect2><screen>
+#: lfs-en/chapter08/udev.xml
+#, no-wrap
+msgid "<userinput remap=\"install\">unset udev_helpers</userinput>"
+msgstr "<userinput remap=\"install\">unset udev_helpers</userinput>"
 
 #. type: Content of: <sect1><sect2><title>
 #: lfs-en/chapter08/udev.xml
