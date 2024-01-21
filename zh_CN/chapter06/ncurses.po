@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Linux From Scratch 11.4\n"
 "Report-Msgid-Bugs-To: lfs-dev@lists.linuxfromscratch.org\n"
-"POT-Creation-Date: 2023-11-24 11:47+0800\n"
+"POT-Creation-Date: 2024-01-22 06:18+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: Xi Ruoyao <xry111@xry111.site>\n"
 "Language-Team: none\n"
@@ -19,6 +19,12 @@ msgstr ""
 #: lfs-en/chapter08/ncurses.xml lfs-en/prologue/why.xml
 msgid "Ncurses"
 msgstr "Ncurses"
+
+#. type: Content of: <sect1><title>
+#: lfs-en/chapter01/whatsnew.xml lfs-en/chapter06/ncurses.xml
+#: lfs-en/chapter08/ncurses.xml
+msgid "Ncurses-&ncurses-version;"
+msgstr "Ncurses-&ncurses-version;"
 
 #. type: Content of: <sect1><sect2><segmentedlist><segtitle>
 #: lfs-en/chapter05/binutils-pass1.xml lfs-en/chapter05/gcc-pass1.xml
@@ -200,11 +206,12 @@ msgstr "<userinput remap=\"make\">make</userinput>"
 #: lfs-en/chapter08/bc.xml lfs-en/chapter08/binutils.xml
 #: lfs-en/chapter08/bison.xml lfs-en/chapter08/check.xml
 #: lfs-en/chapter08/coreutils.xml lfs-en/chapter08/dbus.xml
-#: lfs-en/chapter08/diffutils.xml lfs-en/chapter08/e2fsprogs.xml
-#: lfs-en/chapter08/expat.xml lfs-en/chapter08/expect.xml
-#: lfs-en/chapter08/file.xml lfs-en/chapter08/findutils.xml
-#: lfs-en/chapter08/flex.xml lfs-en/chapter08/flit-core.xml
-#: lfs-en/chapter08/gawk.xml lfs-en/chapter08/gcc.xml lfs-en/chapter08/gdbm.xml
+#: lfs-en/chapter08/dejagnu.xml lfs-en/chapter08/diffutils.xml
+#: lfs-en/chapter08/e2fsprogs.xml lfs-en/chapter08/expat.xml
+#: lfs-en/chapter08/expect.xml lfs-en/chapter08/file.xml
+#: lfs-en/chapter08/findutils.xml lfs-en/chapter08/flex.xml
+#: lfs-en/chapter08/flit-core.xml lfs-en/chapter08/gawk.xml
+#: lfs-en/chapter08/gcc.xml lfs-en/chapter08/gdbm.xml
 #: lfs-en/chapter08/gettext.xml lfs-en/chapter08/glibc.xml
 #: lfs-en/chapter08/gperf.xml lfs-en/chapter08/grep.xml
 #: lfs-en/chapter08/groff.xml lfs-en/chapter08/grub.xml
@@ -312,11 +319,6 @@ msgid ""
 msgstr ""
 "<productname>ncurses</productname> <productnumber>&ncurses-version;</"
 "productnumber> <placeholder type=\"address\" id=\"0\"/>"
-
-#. type: Content of: <sect1><title>
-#: lfs-en/chapter06/ncurses.xml lfs-en/chapter08/ncurses.xml
-msgid "Ncurses-&ncurses-version;"
-msgstr "Ncurses-&ncurses-version;"
 
 #. type: Content of: <sect1><sect2><segmentedlist><seglistitem><seg>
 #: lfs-en/chapter06/ncurses.xml
@@ -500,7 +502,7 @@ msgid "<parameter>--enable-widec</parameter>"
 msgstr "<parameter>--enable-widec</parameter>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
-#: lfs-en/chapter06/ncurses.xml lfs-en/chapter08/ncurses.xml
+#: lfs-en/chapter06/ncurses.xml
 msgid ""
 "This switch causes wide-character libraries (e.g., <filename "
 "class=\"libraryfile\">libncursesw.so.&ncurses-version;</filename>)  to be "
@@ -522,10 +524,14 @@ msgstr ""
 #, no-wrap
 msgid ""
 "<userinput remap=\"install\">make DESTDIR=$LFS TIC_PATH=$(pwd)/build/progs/tic install\n"
-"echo \"INPUT(-lncursesw)\" > $LFS/usr/lib/libncurses.so</userinput>"
+"ln -sv libncursesw.so $LFS/usr/lib/libncurses.so\n"
+"sed -e 's/^#if.*XOPEN.*$/#if 1/' \\\n"
+"    -i $LFS/usr/include/curses.h</userinput>"
 msgstr ""
 "<userinput remap=\"install\">make DESTDIR=$LFS TIC_PATH=$(pwd)/build/progs/tic install\n"
-"echo \"INPUT(-lncursesw)\" > $LFS/usr/lib/libncurses.so</userinput>"
+"ln -sv libncursesw.so $LFS/usr/lib/libncurses.so\n"
+"sed -e 's/^#if.*XOPEN.*$/#if 1/' \\\n"
+"    -i $LFS/usr/include/curses.h</userinput>"
 
 #. type: Content of: <sect1><sect2><variablelist><title>
 #: lfs-en/chapter06/ncurses.xml
@@ -549,21 +555,44 @@ msgstr ""
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: lfs-en/chapter06/ncurses.xml
-msgid ""
-"<command>echo \"INPUT(-lncursesw)\" > $LFS/usr/lib/libncurses.so</command>"
-msgstr ""
-"<command>echo \"INPUT(-lncursesw)\" > $LFS/usr/lib/libncurses.so</command>"
+msgid "<command>ln -sv libncursesw.so $LFS/usr/lib/libncurses.so</command>"
+msgstr "<command>ln -sv libncursesw.so $LFS/usr/lib/libncurses.so</command>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: lfs-en/chapter06/ncurses.xml
 msgid ""
 "The <filename>libncurses.so</filename> library is needed by a few packages "
-"we will build soon. We create this small linker script, as this is what is "
-"done in <xref linkend=\"chapter-building-system\"/>."
+"we will build soon. We create this symlink to use <filename>libncursesw.so</"
+"filename> as a replacement."
 msgstr ""
 "我们很快将会构建一些需要 <filename>libncurses.so</filename> 库的软件包。创建"
-"这个简短的链接脚本，正如我们在<xref linkend=\"chapter-building-system\"/>中将"
-"要做的那样。"
+"该符号链接，使得浙西包使用 <filename>libncursesw.so</filename> 作为替代。"
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
+#: lfs-en/chapter06/ncurses.xml
+msgid "<command>sed -e 's/^#if.*XOPEN.*$/#if 1/' ...</command>"
+msgstr "<command>sed -e 's/^#if.*XOPEN.*$/#if 1/' ...</command>"
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
+#: lfs-en/chapter06/ncurses.xml
+msgid ""
+"The header file <filename>curses.h</filename> contains the definition of "
+"various Ncurses data structures.  With different preprocessor macro "
+"definitions two different sets of the data structure definition may be used: "
+"the 8-bit definition is compatible with <filename>libncurses.so</filename> "
+"and the wide-character definition is compatible with <filename>libncursesw."
+"so</filename>.  Since we are using <filename>libncursesw.so</filename> as a "
+"replacement of <filename>libncurses.so</filename>, edit the header file so "
+"it will always use the wide-character data structure definition compatible "
+"with <filename>libncursesw.so</filename>."
+msgstr ""
+"头文件 <filename>curses.h</filename> 包含若干 Ncurses 数据结构的定义。在使用"
+"不同预处理器宏定义时，可能使用两套不同的数据结构定义：一套是用于 8 字节字符的"
+"定义，和 <filename>libncurses.so</filename> 兼容；而另一套是用于宽字符的定"
+"义，和 <filename>libncursesw.so</filename> 兼容。由于我们使用 "
+"<filename>libncursesw.so</filename> 替代 <filename>libncurses.so</filename>，"
+"修改这个头文件，使之总是使用与 <filename>libncursesw.so</filename> 兼容的宽字"
+"符数据结构定义："
 
 #. type: Content of: <sect1><sect2><para>
 #: lfs-en/chapter06/ncurses.xml
