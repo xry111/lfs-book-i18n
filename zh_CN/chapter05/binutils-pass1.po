@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Linux From Scratch 11.0\n"
 "Report-Msgid-Bugs-To: lfs-dev@lists.linuxfromscratch.org\n"
-"POT-Creation-Date: 2024-01-02 21:03+0800\n"
+"POT-Creation-Date: 2024-01-23 18:37+0800\n"
 "PO-Revision-Date: 2021-08-25 04:40+0800\n"
 "Last-Translator: Xi Ruoyao <xry111@xry111.site>\n"
 "Language-Team: none\n"
@@ -364,16 +364,27 @@ msgstr "<parameter>--enable-default-hash-style=gnu</parameter>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: lfs-en/chapter05/binutils-pass1.xml
+#, fuzzy
+#| msgid ""
+#| "By default, the linker would generate both the GNU-style hash table and "
+#| "the classic ELF hash table for shared libraries and dynamically linked "
+#| "executables.  The hash tables are only intended for a dynamic linker to "
+#| "perform symbol lookup.  On LFS the dynamic linker (provided by the Glibc "
+#| "package) will always use the GNU-style hash table which is faster to "
+#| "query.  So the classic ELF hash table is completely useless.  This makes "
+#| "the the linker only generate the GNU-style hash table by default, so we "
+#| "can avoid wasting time to generate the classic ELF hash table when we "
+#| "build the packages, or wasting disk space to store it."
 msgid ""
 "By default, the linker would generate both the GNU-style hash table and the "
 "classic ELF hash table for shared libraries and dynamically linked "
 "executables.  The hash tables are only intended for a dynamic linker to "
 "perform symbol lookup.  On LFS the dynamic linker (provided by the Glibc "
 "package) will always use the GNU-style hash table which is faster to query.  "
-"So the classic ELF hash table is completely useless.  This makes the the "
-"linker only generate the GNU-style hash table by default, so we can avoid "
-"wasting time to generate the classic ELF hash table when we build the "
-"packages, or wasting disk space to store it."
+"So the classic ELF hash table is completely useless.  This makes the linker "
+"only generate the GNU-style hash table by default, so we can avoid wasting "
+"time to generate the classic ELF hash table when we build the packages, or "
+"wasting disk space to store it."
 msgstr ""
 "默认情况下，链接器会为共享库和动态链接的可执行文件同时生成 GNU 风格的散列表和"
 "经典的 ELF 散列表。散列表仅供动态链接器进行符号查询。LFS 系统的动态链接器 "
@@ -450,11 +461,12 @@ msgstr "<userinput remap=\"make\">make</userinput>"
 #: lfs-en/chapter08/bc.xml lfs-en/chapter08/binutils.xml
 #: lfs-en/chapter08/bison.xml lfs-en/chapter08/check.xml
 #: lfs-en/chapter08/coreutils.xml lfs-en/chapter08/dbus.xml
-#: lfs-en/chapter08/diffutils.xml lfs-en/chapter08/e2fsprogs.xml
-#: lfs-en/chapter08/expat.xml lfs-en/chapter08/expect.xml
-#: lfs-en/chapter08/file.xml lfs-en/chapter08/findutils.xml
-#: lfs-en/chapter08/flex.xml lfs-en/chapter08/flit-core.xml
-#: lfs-en/chapter08/gawk.xml lfs-en/chapter08/gcc.xml lfs-en/chapter08/gdbm.xml
+#: lfs-en/chapter08/dejagnu.xml lfs-en/chapter08/diffutils.xml
+#: lfs-en/chapter08/e2fsprogs.xml lfs-en/chapter08/expat.xml
+#: lfs-en/chapter08/expect.xml lfs-en/chapter08/file.xml
+#: lfs-en/chapter08/findutils.xml lfs-en/chapter08/flex.xml
+#: lfs-en/chapter08/flit-core.xml lfs-en/chapter08/gawk.xml
+#: lfs-en/chapter08/gcc.xml lfs-en/chapter08/gdbm.xml
 #: lfs-en/chapter08/gettext.xml lfs-en/chapter08/glibc.xml
 #: lfs-en/chapter08/gperf.xml lfs-en/chapter08/grep.xml
 #: lfs-en/chapter08/groff.xml lfs-en/chapter08/grub.xml

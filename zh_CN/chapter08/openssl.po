@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Linux From Scratch 11.0\n"
 "Report-Msgid-Bugs-To: lfs-dev@lists.linuxfromscratch.org\n"
-"POT-Creation-Date: 2024-01-02 21:03+0800\n"
+"POT-Creation-Date: 2024-01-23 18:37+0800\n"
 "PO-Revision-Date: 2021-08-31 16:47+0800\n"
 "Last-Translator: Xi Ruoyao <xry111@xry111.site>\n"
 "Language-Team: none\n"
@@ -259,11 +259,12 @@ msgstr "<userinput remap=\"make\">make</userinput>"
 #: lfs-en/chapter08/bc.xml lfs-en/chapter08/binutils.xml
 #: lfs-en/chapter08/bison.xml lfs-en/chapter08/check.xml
 #: lfs-en/chapter08/coreutils.xml lfs-en/chapter08/dbus.xml
-#: lfs-en/chapter08/diffutils.xml lfs-en/chapter08/e2fsprogs.xml
-#: lfs-en/chapter08/expat.xml lfs-en/chapter08/expect.xml
-#: lfs-en/chapter08/file.xml lfs-en/chapter08/findutils.xml
-#: lfs-en/chapter08/flex.xml lfs-en/chapter08/flit-core.xml
-#: lfs-en/chapter08/gawk.xml lfs-en/chapter08/gcc.xml lfs-en/chapter08/gdbm.xml
+#: lfs-en/chapter08/dejagnu.xml lfs-en/chapter08/diffutils.xml
+#: lfs-en/chapter08/e2fsprogs.xml lfs-en/chapter08/expat.xml
+#: lfs-en/chapter08/expect.xml lfs-en/chapter08/file.xml
+#: lfs-en/chapter08/findutils.xml lfs-en/chapter08/flex.xml
+#: lfs-en/chapter08/flit-core.xml lfs-en/chapter08/gawk.xml
+#: lfs-en/chapter08/gcc.xml lfs-en/chapter08/gdbm.xml
 #: lfs-en/chapter08/gettext.xml lfs-en/chapter08/glibc.xml
 #: lfs-en/chapter08/gperf.xml lfs-en/chapter08/grep.xml
 #: lfs-en/chapter08/groff.xml lfs-en/chapter08/grub.xml
@@ -512,17 +513,35 @@ msgstr "安装 OpenSSL"
 
 #. type: Content of: <sect1><sect2><para>
 #: lfs-en/chapter08/openssl.xml
+msgid "First apply a patch to fix various runtime issues on LoongArch:"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><screen>
+#: lfs-en/chapter08/openssl.xml
+#, fuzzy, no-wrap
+#| msgid "<userinput remap=\"pre\">patch -Np1 -i ../&bzip2-docs-patch;</userinput>"
+msgid "<userinput remap=\"pre\">patch -Np1 -i ../&openssl-loongarch-patch;</userinput>"
+msgstr "<userinput remap=\"pre\">patch -Np1 -i ../&bzip2-docs-patch;</userinput>"
+
+#. type: Content of: <sect1><sect2><para>
+#: lfs-en/chapter08/openssl.xml
 msgid "Prepare OpenSSL for compilation:"
 msgstr "准备编译 OpenSSL："
 
 #. type: Content of: <sect1><sect2><screen>
 #: lfs-en/chapter08/openssl.xml
-#, no-wrap
+#, fuzzy, no-wrap
+#| msgid ""
+#| "<userinput remap=\"configure\">./config --prefix=/usr         \\\n"
+#| "         --openssldir=/etc/ssl \\\n"
+#| "         --libdir=lib          \\\n"
+#| "         linux64-loongarch64   \\\n"
+#| "         shared                \\\n"
+#| "         zlib-dynamic</userinput>"
 msgid ""
 "<userinput remap=\"configure\">./config --prefix=/usr         \\\n"
 "         --openssldir=/etc/ssl \\\n"
 "         --libdir=lib          \\\n"
-"         linux64-loongarch64   \\\n"
 "         shared                \\\n"
 "         zlib-dynamic</userinput>"
 msgstr ""
@@ -673,11 +692,17 @@ msgstr "<command>openssl</command>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: lfs-en/chapter08/openssl.xml
+#, fuzzy
+#| msgid ""
+#| "is a command-line tool for using the various cryptography functions of "
+#| "<application>OpenSSL</application>'s crypto library from the shell. It "
+#| "can be used for various functions which are documented in <command>man 1 "
+#| "openssl</command>"
 msgid ""
 "is a command-line tool for using the various cryptography functions of "
 "<application>OpenSSL</application>'s crypto library from the shell. It can "
-"be used for various functions which are documented in <command>man 1 "
-"openssl</command>"
+"be used for various functions which are documented in <filename>openssl(1)</"
+"filename>"
 msgstr ""
 "一个命令行工具，用于从 shell 使用 <application>OpenSSL</application>的密码学"
 "库的一些密码学函数。它可以被用于 <command>man 1 openssl</command>描述的许多功"
@@ -720,10 +745,14 @@ msgstr "<filename class=\"libraryfile\">libssl.so</filename>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: lfs-en/chapter08/openssl.xml
+#, fuzzy
+#| msgid ""
+#| "implements the Transport Layer Security (TLS v1) protocol.  It provides a "
+#| "rich API, documentation on which can be found by running <command>man 7 "
+#| "ssl</command>"
 msgid ""
 "implements the Transport Layer Security (TLS v1) protocol.  It provides a "
-"rich API, documentation on which can be found by running <command>man 7 ssl</"
-"command>"
+"rich API, documentation on which can be found in <filename>ssl(7)</filename>"
 msgstr ""
 "实现传输层安全 (TLS v1) 协议。它提供了丰富的 API，这些 API 的文档可以通过执"
 "行 <command>man 7 ssl</command>查阅"

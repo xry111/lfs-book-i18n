@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Linux From Scratch 11.4\n"
 "Report-Msgid-Bugs-To: lfs-dev@lists.linuxfromscratch.org\n"
-"POT-Creation-Date: 2024-01-02 21:03+0800\n"
+"POT-Creation-Date: 2024-01-23 18:37+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: Xi Ruoyao <xry111@xry111.site>\n"
 "Language-Team: none\n"
@@ -69,6 +69,12 @@ msgstr ""
 #: lfs-en/chapter08/ncurses.xml lfs-en/prologue/why.xml
 msgid "Ncurses"
 msgstr "Ncurses"
+
+#. type: Content of: <sect1><title>
+#: lfs-en/chapter01/whatsnew.xml lfs-en/chapter06/ncurses.xml
+#: lfs-en/chapter08/ncurses.xml
+msgid "Ncurses-&ncurses-version;"
+msgstr "Ncurses-&ncurses-version;"
 
 #. type: Content of: <sect1><sect2><segmentedlist><segtitle>
 #: lfs-en/chapter05/binutils-pass1.xml lfs-en/chapter05/gcc-pass1.xml
@@ -363,11 +369,6 @@ msgstr ""
 "<productname>ncurses</productname> <productnumber>&ncurses-version;</"
 "productnumber> <placeholder type=\"address\" id=\"0\"/>"
 
-#. type: Content of: <sect1><title>
-#: lfs-en/chapter06/ncurses.xml lfs-en/chapter08/ncurses.xml
-msgid "Ncurses-&ncurses-version;"
-msgstr "Ncurses-&ncurses-version;"
-
 #. type: Content of: <sect1><sect2><title>
 #: lfs-en/chapter06/ncurses.xml lfs-en/chapter08/ncurses.xml
 msgid "Installation of Ncurses"
@@ -416,24 +417,6 @@ msgstr ""
 #: lfs-en/chapter06/ncurses.xml lfs-en/chapter08/ncurses.xml
 msgid "<parameter>--enable-widec</parameter>"
 msgstr "<parameter>--enable-widec</parameter>"
-
-#. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
-#: lfs-en/chapter06/ncurses.xml lfs-en/chapter08/ncurses.xml
-msgid ""
-"This switch causes wide-character libraries (e.g., <filename "
-"class=\"libraryfile\">libncursesw.so.&ncurses-version;</filename>)  to be "
-"built instead of normal ones (e.g., <filename "
-"class=\"libraryfile\">libncurses.so.&ncurses-version;</filename>).  These "
-"wide-character libraries are usable in both multibyte and traditional 8-bit "
-"locales, while normal libraries work properly only in 8-bit locales. Wide-"
-"character and normal libraries are source-compatible, but not binary-"
-"compatible."
-msgstr ""
-"该选项使得宽字符库 (例如 <filename class=\"libraryfile\">libncursesw.so."
-"&ncurses-version;</filename>) 被构建，而不构建常规字符库 (例如 <filename "
-"class=\"libraryfile\">libncurses.so.&ncurses-version;</filename>)。宽字符库在"
-"多字节和传统 8 位 locale 中都能工作，而常规字符库只能在 8 位 locale 中工作。"
-"宽字符库和普通字符库在源码层面是兼容的，但二进制不兼容。"
 
 #. type: Content of: <sect1><sect2><segmentedlist><segtitle>
 #: lfs-en/chapter08/acl.xml lfs-en/chapter08/attr.xml
@@ -544,6 +527,34 @@ msgstr "<parameter>--enable-pc-files</parameter>"
 msgid "This switch generates and installs .pc files for pkg-config."
 msgstr "该参数使得构建系统生成并安装 pkg-config 使用的 .pc 文件。"
 
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
+#: lfs-en/chapter08/ncurses.xml
+#, fuzzy
+#| msgid ""
+#| "This switch causes wide-character libraries (e.g., <filename "
+#| "class=\"libraryfile\">libncursesw.so.&ncurses-version;</filename>)  to be "
+#| "built instead of normal ones (e.g., <filename "
+#| "class=\"libraryfile\">libncurses.so.&ncurses-version;</filename>).  These "
+#| "wide-character libraries are usable in both multibyte and traditional 8-"
+#| "bit locales, while normal libraries work properly only in 8-bit locales. "
+#| "Wide-character and normal libraries are source-compatible, but not binary-"
+#| "compatible."
+msgid ""
+"This switch causes wide-character libraries (e.g., <filename "
+"class=\"libraryfile\">libncursesw.so.&ncurses-release;</filename>)  to be "
+"built instead of normal ones (e.g., <filename "
+"class=\"libraryfile\">libncurses.so.&ncurses-release;</filename>).  These "
+"wide-character libraries are usable in both multibyte and traditional 8-bit "
+"locales, while normal libraries work properly only in 8-bit locales. Wide-"
+"character and normal libraries are source-compatible, but not binary-"
+"compatible."
+msgstr ""
+"该选项使得宽字符库 (例如 <filename class=\"libraryfile\">libncursesw.so."
+"&ncurses-version;</filename>) 被构建，而不构建常规字符库 (例如 <filename "
+"class=\"libraryfile\">libncurses.so.&ncurses-version;</filename>)。宽字符库在"
+"多字节和传统 8 位 locale 中都能工作，而常规字符库只能在 8 位 locale 中工作。"
+"宽字符库和普通字符库在源码层面是兼容的，但二进制不兼容。"
+
 #. type: Content of: <sect1><sect2><para>
 #: lfs-en/chapter08/ncurses.xml
 msgid ""
@@ -558,12 +569,22 @@ msgstr ""
 
 #. type: Content of: <sect1><sect2><para>
 #: lfs-en/chapter08/ncurses.xml
+#, fuzzy
+#| msgid ""
+#| "The installation of this package will overwrite <filename "
+#| "class=\"libraryfile\">libncursesw.so.&ncurses-version;</filename> in-"
+#| "place.  It may crash the shell process which is using code and data from "
+#| "the library file.  Install the package with <literal>DESTDIR</literal>, "
+#| "and replace the library file correctly using <command>install</command> "
+#| "command:"
 msgid ""
 "The installation of this package will overwrite <filename "
-"class=\"libraryfile\">libncursesw.so.&ncurses-version;</filename> in-place.  "
+"class=\"libraryfile\">libncursesw.so.&ncurses-release;</filename> in-place.  "
 "It may crash the shell process which is using code and data from the library "
 "file.  Install the package with <literal>DESTDIR</literal>, and replace the "
-"library file correctly using <command>install</command> command:"
+"library file correctly using <command>install</command> command (the header "
+"<filename>curses.h</filename> is also edited to ensure the wide-character "
+"ABI to be used as what we've done in <xref linkend='ch-tools-ncurses'/>):"
 msgstr ""
 "安装该软件包会直接覆盖文件 <filename class=\"libraryfile\">libncursesw.so."
 "&ncurses-version;</filename>。这可能导致正在使用该库文件中的代码和数据的 "
@@ -572,11 +593,18 @@ msgstr ""
 
 #. type: Content of: <sect1><sect2><screen>
 #: lfs-en/chapter08/ncurses.xml
-#, no-wrap
+#, fuzzy, no-wrap
+#| msgid ""
+#| "<userinput remap=\"install\">make DESTDIR=$PWD/dest install\n"
+#| "install -vm755 dest/usr/lib/libncursesw.so.&ncurses-version; /usr/lib\n"
+#| "rm -v  dest/usr/lib/libncursesw.so.&ncurses-version;\n"
+#| "cp -av dest/* /</userinput>"
 msgid ""
 "<userinput remap=\"install\">make DESTDIR=$PWD/dest install\n"
-"install -vm755 dest/usr/lib/libncursesw.so.&ncurses-version; /usr/lib\n"
-"rm -v  dest/usr/lib/libncursesw.so.&ncurses-version;\n"
+"install -vm755 dest/usr/lib/libncursesw.so.&ncurses-release; /usr/lib\n"
+"rm -v  dest/usr/lib/libncursesw.so.&ncurses-release;\n"
+"sed -e 's/^#if.*XOPEN.*$/#if 1/' \\\n"
+"    -i dest/usr/include/curses.h\n"
 "cp -av dest/* /</userinput>"
 msgstr ""
 "<userinput remap=\"install\">make DESTDIR=$PWD/dest install\n"
@@ -586,22 +614,34 @@ msgstr ""
 
 #. type: Content of: <sect1><sect2><para>
 #: lfs-en/chapter08/ncurses.xml
+#, fuzzy
+#| msgid ""
+#| "Many applications still expect the linker to be able to find non-wide-"
+#| "character Ncurses libraries. Trick such applications into linking with "
+#| "wide-character libraries by means of symlinks and linker scripts:"
 msgid ""
 "Many applications still expect the linker to be able to find non-wide-"
 "character Ncurses libraries. Trick such applications into linking with wide-"
-"character libraries by means of symlinks and linker scripts:"
+"character libraries by means of symlinks (note that the <filename "
+"class='extension'>.so</filename> links are only safe with <filename>curses."
+"h</filename> edited to always use the wide-character ABI):"
 msgstr ""
 "许多程序仍然希望链接器能够找到非宽字符版本的 Ncurses 库。通过使用符号链接和链"
 "接脚本，诱导它们链接到宽字符库："
 
 #. type: Content of: <sect1><sect2><screen>
 #: lfs-en/chapter08/ncurses.xml
-#, no-wrap
+#, fuzzy, no-wrap
+#| msgid ""
+#| "<userinput remap=\"install\">for lib in ncurses form panel menu ; do\n"
+#| "    rm -vf                    /usr/lib/lib${lib}.so\n"
+#| "    echo \"INPUT(-l${lib}w)\" &gt; /usr/lib/lib${lib}.so\n"
+#| "    ln -sfv ${lib}w.pc        /usr/lib/pkgconfig/${lib}.pc\n"
+#| "done</userinput>"
 msgid ""
 "<userinput remap=\"install\">for lib in ncurses form panel menu ; do\n"
-"    rm -vf                    /usr/lib/lib${lib}.so\n"
-"    echo \"INPUT(-l${lib}w)\" &gt; /usr/lib/lib${lib}.so\n"
-"    ln -sfv ${lib}w.pc        /usr/lib/pkgconfig/${lib}.pc\n"
+"    ln -sfv lib${lib}w.so /usr/lib/lib${lib}.so\n"
+"    ln -sfv ${lib}w.pc    /usr/lib/pkgconfig/${lib}.pc\n"
 "done</userinput>"
 msgstr ""
 "<userinput remap=\"install\">for lib in ncurses form panel menu ; do\n"
@@ -621,15 +661,10 @@ msgstr ""
 
 #. type: Content of: <sect1><sect2><screen>
 #: lfs-en/chapter08/ncurses.xml
-#, no-wrap
-msgid ""
-"<userinput remap=\"install\">rm -vf                     /usr/lib/libcursesw.so\n"
-"echo \"INPUT(-lncursesw)\" &gt; /usr/lib/libcursesw.so\n"
-"ln -sfv libncurses.so      /usr/lib/libcurses.so</userinput>"
-msgstr ""
-"<userinput remap=\"install\">rm -vf                     /usr/lib/libcursesw.so\n"
-"echo \"INPUT(-lncursesw)\" &gt; /usr/lib/libcursesw.so\n"
-"ln -sfv libncurses.so      /usr/lib/libcurses.so</userinput>"
+#, fuzzy, no-wrap
+#| msgid "<userinput remap=\"install\">rm -fv /usr/lib/libz.a</userinput>"
+msgid "<userinput remap=\"install\">ln -sfv libncursesw.so /usr/lib/libcurses.so</userinput>"
+msgstr "<userinput remap=\"install\">rm -fv /usr/lib/libz.a</userinput>"
 
 #. type: Content of: <sect1><sect2><para>
 #: lfs-en/chapter08/ncurses.xml
@@ -697,10 +732,15 @@ msgstr ""
 
 #. type: Content of: <sect1><sect2><segmentedlist><seglistitem><seg>
 #: lfs-en/chapter08/ncurses.xml
+#, fuzzy
+#| msgid ""
+#| "libcursesw.so (symlink and linker script to libncursesw.so), libformw.so, "
+#| "libmenuw.so, libncursesw.so, libncurses++w.so, libpanelw.so, and their "
+#| "non-wide-character counterparts without \"w\" in the library names."
 msgid ""
-"libcursesw.so (symlink and linker script to libncursesw.so), libformw.so, "
-"libmenuw.so, libncursesw.so, libncurses++w.so, libpanelw.so, and their non-"
-"wide-character counterparts without \"w\" in the library names."
+"libcurses.so (symlink), libform.so (symlink), libformw.so, libmenu.so "
+"(symlink), libmenuw.so, libncurses.so (symlink), libncursesw.so, libncurses+"
+"+w.so, libpanel.so (symlink), and libpanelw.so,"
 msgstr ""
 "libcursesw.so (指向 libncursesw.so 的符号链接和链接脚本), libformw.so, "
 "libmenuw.so, libncursesw.so, libncurses++w.so, libpanelw.so, 以及它们的库名称"
@@ -890,21 +930,6 @@ msgstr "可以被用于初始化终端"
 #: lfs-en/chapter08/ncurses.xml
 msgid "tset"
 msgstr "tset"
-
-#. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
-#: lfs-en/chapter08/ncurses.xml
-msgid "<filename class=\"libraryfile\">libcursesw</filename>"
-msgstr "<filename class=\"libraryfile\">libcursesw</filename>"
-
-#. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
-#: lfs-en/chapter08/ncurses.xml
-msgid "A link to <filename>libncursesw</filename>"
-msgstr "指向 <filename>libncursesw</filename> 的链接"
-
-#. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
-#: lfs-en/chapter08/ncurses.xml
-msgid "libcursesw"
-msgstr "libcursesw"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: lfs-en/chapter08/ncurses.xml
