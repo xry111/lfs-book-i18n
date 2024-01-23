@@ -530,14 +530,7 @@ msgstr "准备编译 OpenSSL："
 
 #. type: Content of: <sect1><sect2><screen>
 #: lfs-en/chapter08/openssl.xml
-#, fuzzy, no-wrap
-#| msgid ""
-#| "<userinput remap=\"configure\">./config --prefix=/usr         \\\n"
-#| "         --openssldir=/etc/ssl \\\n"
-#| "         --libdir=lib          \\\n"
-#| "         linux64-loongarch64   \\\n"
-#| "         shared                \\\n"
-#| "         zlib-dynamic</userinput>"
+#, no-wrap
 msgid ""
 "<userinput remap=\"configure\">./config --prefix=/usr         \\\n"
 "         --openssldir=/etc/ssl \\\n"
@@ -548,7 +541,6 @@ msgstr ""
 "<userinput remap=\"configure\">./config --prefix=/usr         \\\n"
 "         --openssldir=/etc/ssl \\\n"
 "         --libdir=lib          \\\n"
-"         linux64-loongarch64   \\\n"
 "         shared                \\\n"
 "         zlib-dynamic</userinput>"
 
@@ -692,12 +684,6 @@ msgstr "<command>openssl</command>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: lfs-en/chapter08/openssl.xml
-#, fuzzy
-#| msgid ""
-#| "is a command-line tool for using the various cryptography functions of "
-#| "<application>OpenSSL</application>'s crypto library from the shell. It "
-#| "can be used for various functions which are documented in <command>man 1 "
-#| "openssl</command>"
 msgid ""
 "is a command-line tool for using the various cryptography functions of "
 "<application>OpenSSL</application>'s crypto library from the shell. It can "
@@ -705,7 +691,7 @@ msgid ""
 "filename>"
 msgstr ""
 "一个命令行工具，用于从 shell 使用 <application>OpenSSL</application>的密码学"
-"库的一些密码学函数。它可以被用于 <command>man 1 openssl</command>描述的许多功"
+"库的一些密码学函数。它可以被用于 <filename>openssl(1)</filename>描述的许多功"
 "能"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
@@ -745,17 +731,12 @@ msgstr "<filename class=\"libraryfile\">libssl.so</filename>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: lfs-en/chapter08/openssl.xml
-#, fuzzy
-#| msgid ""
-#| "implements the Transport Layer Security (TLS v1) protocol.  It provides a "
-#| "rich API, documentation on which can be found by running <command>man 7 "
-#| "ssl</command>"
 msgid ""
 "implements the Transport Layer Security (TLS v1) protocol.  It provides a "
 "rich API, documentation on which can be found in <filename>ssl(7)</filename>"
 msgstr ""
-"实现传输层安全 (TLS v1) 协议。它提供了丰富的 API，这些 API 的文档可以通过执"
-"行 <command>man 7 ssl</command>查阅"
+"实现传输层安全 (TLS v1) 协议。它提供了丰富的 API，这些 API 的文档可以在 "
+"<filename>ssl(7)</filename> 中查阅"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: lfs-en/chapter08/openssl.xml

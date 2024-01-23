@@ -1,5 +1,3 @@
-M_ENCODING = UTF-8
-M_ENCODING_ALT = utf8
 M_DOCBOOK_LANG = zh_cn
 
 THIS = zh_CN/lang.mk

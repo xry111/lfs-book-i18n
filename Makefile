@@ -8,8 +8,8 @@ MLANG = zh_CN
 
 include $(MLANG)/lang.mk
 
-L10N_XML = stylesheets/lfs-xsl/lfs-l10n.xml
-EXCLUDE_XML = $(LFS_EN)/$(L10N_XML) $(LFS_EN)/chapter01/changelog.xml \
+EXCLUDE_XML = $(LFS_EN)/stylesheets/lfs-xsl/lfs-l10n.xml              \
+              $(LFS_EN)/chapter01/changelog.xml                       \
               $(LFS_EN)/appendices/creat-comm.xml                     \
               $(LFS_EN)/appendices/mit-lic.xml                        \
               $(wildcard $(LFS_EN)/chapter10/kernel/*.xml)
@@ -93,16 +93,11 @@ $(MXML_FILES) &: $(XML_FILES) $(PO_FILES) mkpo4acfg.py po4a_issue295.sh
 	sed -e 's|<book>|<book lang="$(M_DOCBOOK_LANG)">|' -i $(MLANG)/book/index.xml
 	cd $(MLANG)/book; $(PWD)/po4a_issue295.sh
 
-$(MLANG)/book/$(L10N_XML): $(LFS_EN)/$(L10N_XML)
-	mkdir -pv $(@D)
-	sed -e '/encoding=/s|ISO-8859-1|$(M_ENCODING)|' $< > $@
-
 $(MLANG)/book/chapter01/changelog.xml: $(LFS_EN)/chapter01/changelog.xml \
                                        $(MLANG)/chapter01/changelog.po
 	mkdir -pv pot/chapter01
 	$(MKPO4ACFG) $(LFS_EN)/chapter01/changelog.xml > po4a-changelog.cfg
 	po4a po4a-changelog.cfg
-	sed -e '/encoding=/s|ISO-8859-1|$(M_ENCODING)|' -i $@
 
 $(MLANG)/book/%: $(LFS_EN)/%
 	mkdir -pv "$(@D)"

@@ -521,10 +521,7 @@ msgstr ""
 
 #. type: Content of: <sect1><sect2><screen>
 #: lfs-en/chapter06/ncurses.xml
-#, fuzzy, no-wrap
-#| msgid ""
-#| "<userinput remap=\"install\">make DESTDIR=$LFS TIC_PATH=$(pwd)/build/progs/tic install\n"
-#| "echo \"INPUT(-lncursesw)\" > $LFS/usr/lib/libncurses.so</userinput>"
+#, no-wrap
 msgid ""
 "<userinput remap=\"install\">make DESTDIR=$LFS TIC_PATH=$(pwd)/build/progs/tic install\n"
 "ln -sv libncursesw.so $LFS/usr/lib/libncurses.so\n"
@@ -532,7 +529,9 @@ msgid ""
 "    -i $LFS/usr/include/curses.h</userinput>"
 msgstr ""
 "<userinput remap=\"install\">make DESTDIR=$LFS TIC_PATH=$(pwd)/build/progs/tic install\n"
-"echo \"INPUT(-lncursesw)\" > $LFS/usr/lib/libncurses.so</userinput>"
+"ln -sv libncursesw.so $LFS/usr/lib/libncurses.so\n"
+"sed -e 's/^#if.*XOPEN.*$/#if 1/' \\\n"
+"    -i $LFS/usr/include/curses.h</userinput>"
 
 #. type: Content of: <sect1><sect2><variablelist><title>
 #: lfs-en/chapter06/ncurses.xml
@@ -556,35 +555,23 @@ msgstr ""
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: lfs-en/chapter06/ncurses.xml
-#, fuzzy
-#| msgid ""
-#| "<command>echo \"INPUT(-lncursesw)\" > $LFS/usr/lib/libncurses.so</command>"
 msgid "<command>ln -sv libncursesw.so $LFS/usr/lib/libncurses.so</command>"
-msgstr ""
-"<command>echo \"INPUT(-lncursesw)\" > $LFS/usr/lib/libncurses.so</command>"
+msgstr "<command>ln -sv libncursesw.so $LFS/usr/lib/libncurses.so</command>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: lfs-en/chapter06/ncurses.xml
-#, fuzzy
-#| msgid ""
-#| "The <filename>libncurses.so</filename> library is needed by a few "
-#| "packages we will build soon. We create this small linker script, as this "
-#| "is what is done in <xref linkend=\"chapter-building-system\"/>."
 msgid ""
 "The <filename>libncurses.so</filename> library is needed by a few packages "
 "we will build soon. We create this symlink to use <filename>libncursesw.so</"
 "filename> as a replacement."
 msgstr ""
 "我们很快将会构建一些需要 <filename>libncurses.so</filename> 库的软件包。创建"
-"这个简短的链接脚本，正如我们在<xref linkend=\"chapter-building-system\"/>中将"
-"要做的那样。"
+"该符号链接，使得浙西包使用 <filename>libncursesw.so</filename> 作为替代。"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: lfs-en/chapter06/ncurses.xml
-#, fuzzy
-#| msgid "<command>sdiff</command>"
 msgid "<command>sed -e 's/^#if.*XOPEN.*$/#if 1/' ...</command>"
-msgstr "<command>sdiff</command>"
+msgstr "<command>sed -e 's/^#if.*XOPEN.*$/#if 1/' ...</command>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: lfs-en/chapter06/ncurses.xml
@@ -599,6 +586,13 @@ msgid ""
 "it will always use the wide-character data structure definition compatible "
 "with <filename>libncursesw.so</filename>."
 msgstr ""
+"头文件 <filename>curses.h</filename> 包含若干 Ncurses 数据结构的定义。在使用"
+"不同预处理器宏定义时，可能使用两套不同的数据结构定义：一套是用于 8 字节字符的"
+"定义，和 <filename>libncurses.so</filename> 兼容；而另一套是用于宽字符的定"
+"义，和 <filename>libncursesw.so</filename> 兼容。由于我们使用 "
+"<filename>libncursesw.so</filename> 替代 <filename>libncurses.so</filename>，"
+"修改这个头文件，使之总是使用与 <filename>libncursesw.so</filename> 兼容的宽字"
+"符数据结构定义："
 
 #. type: Content of: <sect1><sect2><para>
 #: lfs-en/chapter06/ncurses.xml
