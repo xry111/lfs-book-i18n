@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Linux From Scratch 11.4\n"
 "Report-Msgid-Bugs-To: lfs-dev@lists.linuxfromscratch.org\n"
-"POT-Creation-Date: 2023-09-18 16:58+0800\n"
+"POT-Creation-Date: 2024-01-28 17:39+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: Xi Ruoyao <xry111@xry111.site>\n"
 "Language-Team: none\n"
@@ -116,14 +116,14 @@ msgstr "GMP"
 #: lfs-en/chapter08/perl.xml lfs-en/chapter08/pkgconf.xml
 #: lfs-en/chapter08/procps.xml lfs-en/chapter08/psmisc.xml
 #: lfs-en/chapter08/python.xml lfs-en/chapter08/readline.xml
-#: lfs-en/chapter08/sed.xml lfs-en/chapter08/shadow.xml
-#: lfs-en/chapter08/sysklogd.xml lfs-en/chapter08/systemd.xml
-#: lfs-en/chapter08/sysvinit.xml lfs-en/chapter08/tar.xml
-#: lfs-en/chapter08/tcl.xml lfs-en/chapter08/texinfo.xml
-#: lfs-en/chapter08/udev.xml lfs-en/chapter08/util-linux.xml
-#: lfs-en/chapter08/vim.xml lfs-en/chapter08/wheel.xml
-#: lfs-en/chapter08/xml-parser.xml lfs-en/chapter08/xz.xml
-#: lfs-en/chapter08/zlib.xml lfs-en/chapter08/zstd.xml
+#: lfs-en/chapter08/sed.xml lfs-en/chapter08/setuptools.xml
+#: lfs-en/chapter08/shadow.xml lfs-en/chapter08/sysklogd.xml
+#: lfs-en/chapter08/systemd.xml lfs-en/chapter08/sysvinit.xml
+#: lfs-en/chapter08/tar.xml lfs-en/chapter08/tcl.xml
+#: lfs-en/chapter08/texinfo.xml lfs-en/chapter08/udev.xml
+#: lfs-en/chapter08/util-linux.xml lfs-en/chapter08/vim.xml
+#: lfs-en/chapter08/wheel.xml lfs-en/chapter08/xml-parser.xml
+#: lfs-en/chapter08/xz.xml lfs-en/chapter08/zlib.xml lfs-en/chapter08/zstd.xml
 #: lfs-en/chapter09/bootscripts.xml lfs-en/chapter10/kernel.xml
 msgid "&buildtime;"
 msgstr "&buildtime;"
@@ -174,14 +174,14 @@ msgstr "&buildtime;"
 #: lfs-en/chapter08/perl.xml lfs-en/chapter08/pkgconf.xml
 #: lfs-en/chapter08/procps.xml lfs-en/chapter08/psmisc.xml
 #: lfs-en/chapter08/python.xml lfs-en/chapter08/readline.xml
-#: lfs-en/chapter08/sed.xml lfs-en/chapter08/shadow.xml
-#: lfs-en/chapter08/sysklogd.xml lfs-en/chapter08/systemd.xml
-#: lfs-en/chapter08/sysvinit.xml lfs-en/chapter08/tar.xml
-#: lfs-en/chapter08/tcl.xml lfs-en/chapter08/texinfo.xml
-#: lfs-en/chapter08/udev.xml lfs-en/chapter08/util-linux.xml
-#: lfs-en/chapter08/vim.xml lfs-en/chapter08/wheel.xml
-#: lfs-en/chapter08/xml-parser.xml lfs-en/chapter08/xz.xml
-#: lfs-en/chapter08/zlib.xml lfs-en/chapter08/zstd.xml
+#: lfs-en/chapter08/sed.xml lfs-en/chapter08/setuptools.xml
+#: lfs-en/chapter08/shadow.xml lfs-en/chapter08/sysklogd.xml
+#: lfs-en/chapter08/systemd.xml lfs-en/chapter08/sysvinit.xml
+#: lfs-en/chapter08/tar.xml lfs-en/chapter08/tcl.xml
+#: lfs-en/chapter08/texinfo.xml lfs-en/chapter08/udev.xml
+#: lfs-en/chapter08/util-linux.xml lfs-en/chapter08/vim.xml
+#: lfs-en/chapter08/wheel.xml lfs-en/chapter08/xml-parser.xml
+#: lfs-en/chapter08/xz.xml lfs-en/chapter08/zlib.xml lfs-en/chapter08/zstd.xml
 #: lfs-en/chapter09/bootscripts.xml lfs-en/chapter10/kernel.xml
 msgid "&diskspace;"
 msgstr "&diskspace;"
@@ -248,7 +248,8 @@ msgstr "新的配置选项的含义："
 #: lfs-en/chapter08/markupsafe.xml lfs-en/chapter08/meson.xml
 #: lfs-en/chapter08/mpc.xml lfs-en/chapter08/mpfr.xml lfs-en/chapter08/perl.xml
 #: lfs-en/chapter08/pkgconf.xml lfs-en/chapter08/sed.xml
-#: lfs-en/chapter08/tar.xml lfs-en/chapter08/vim.xml
+#: lfs-en/chapter08/setuptools.xml lfs-en/chapter08/tar.xml
+#: lfs-en/chapter08/vim.xml
 msgid "Installed directory"
 msgstr "安装的目录"
 
@@ -424,14 +425,15 @@ msgid ""
 "The code in gmp is highly optimized for the processor where it is built. "
 "Occasionally, the code that detects the processor misidentifies the system "
 "capabilities and there will be errors in the tests or other applications "
-"using the gmp libraries with the message \"Illegal instruction\".  In this "
-"case, gmp should be reconfigured with the option <option>--host=none-linux-"
-"gnu</option> and rebuilt."
+"using the gmp libraries with the message <computeroutput>Illegal "
+"instruction</computeroutput>.  In this case, gmp should be reconfigured with "
+"the option <option>--host=none-linux-gnu</option> and rebuilt."
 msgstr ""
 "GMP 中的代码是针对本机处理器高度优化的。在偶然情况下，检测处理器的代码会错误"
-"识别 CPU 的功能，导致测试套件或使用 GMP 的其他程序输出消息 “Illegal "
-"instruction” (非法指令)。如果发生这种情况，需要使用选项 <option>--build=none-"
-"pc-linux-gnu</option> 重新配置 GMP 并重新构建它。"
+"识别 CPU 的功能，导致测试套件或使用 GMP 的其他程序输出消息 "
+"<computeroutput>Illegal instruction</computeroutput> (非法指令)。如果发生这种"
+"情况，需要使用选项 <option>--build=none-pc-linux-gnu</option> 重新配置 GMP 并"
+"重新构建它。"
 
 #. type: Content of: <sect1><sect2><para>
 #: lfs-en/chapter08/gmp.xml

@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Linux From Scratch 11.4\n"
 "Report-Msgid-Bugs-To: lfs-dev@lists.linuxfromscratch.org\n"
-"POT-Creation-Date: 2022-09-17 18:28+0800\n"
+"POT-Creation-Date: 2024-01-28 21:07+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: Xi Ruoyao <xry111@xry111.site>\n"
 "Language-Team: none\n"
@@ -29,6 +29,11 @@ msgstr ""
 msgid "Configuring the System Locale"
 msgstr "配置系统 Locale"
 
+#. type: Content of: <sect1><itemizedlist><listitem><itemizedlist><listitem><para>
+#: lfs-en/chapter09/locale.xml lfs-en/chapter11/reboot.xml
+msgid "/etc/profile"
+msgstr "/etc/profile"
+
 #. type: Content of: <sect1><indexterm><primary>
 #: lfs-en/chapter09/locale.xml
 msgid "/etc/locale.conf"
@@ -37,12 +42,9 @@ msgstr "/etc/locale.conf"
 #. type: Content of: <sect1><para>
 #: lfs-en/chapter09/locale.xml
 msgid ""
-"The <filename>/etc/locale.conf</filename> file below sets some environment "
-"variables necessary for native language support. Setting them properly "
-"results in:"
-msgstr ""
-"下面将创建的 <filename>/etc/locale.conf</filename> 设定本地语言支持需要的若干"
-"环境变量，正确设定它们可以带来以下好处："
+"Some environment variables are necessary for native language support. "
+"Setting them properly results in:"
+msgstr "本地语言支持需要一些环境变量。正确设定它们可以带来以下好处："
 
 #. type: Content of: <sect1><itemizedlist><listitem><para>
 #: lfs-en/chapter09/locale.xml
@@ -60,7 +62,7 @@ msgstr ""
 "受命令行中的非 ASCII 本地非英文字符来说是必要的"
 
 #. type: Content of: <sect1><itemizedlist><listitem><para>
-#: lfs-en/chapter09/locale.xml lfs-en/chapter09/profile.xml
+#: lfs-en/chapter09/locale.xml
 msgid "The correct alphabetical sorting order for the country"
 msgstr "根据所在地区惯例排序字母"
 
@@ -78,27 +80,27 @@ msgstr "正确格式化货币、时间和日期值"
 #: lfs-en/chapter09/locale.xml
 msgid ""
 "Replace <replaceable>&lt;ll&gt;</replaceable> below with the two-letter code "
-"for your desired language (e.g., <quote>en</quote>) and <replaceable>&lt;"
+"for your desired language (e.g., <literal>en</literal>) and <replaceable>&lt;"
 "CC&gt;</replaceable> with the two-letter code for the appropriate country (e."
-"g., <quote>GB</quote>). <replaceable>&lt;charmap&gt;</replaceable> should be "
-"replaced with the canonical charmap for your chosen locale. Optional "
-"modifiers such as <quote>@euro</quote> may also be present."
+"g., <literal>GB</literal>). <replaceable>&lt;charmap&gt;</replaceable> "
+"should be replaced with the canonical charmap for your chosen locale. "
+"Optional modifiers such as <literal>@euro</literal> may also be present."
 msgstr ""
 "将下面的 <replaceable>&lt;ll&gt;</replaceable> 替换为所需语言的双字符代号 (例"
 "如<quote>en</quote>)，<replaceable>&lt;CC&gt;</replaceable> 替换为国家或地区"
-"的双字符代号 (例如<quote>GB</quote>)，<replaceable>&lt;charmap&gt;</"
+"的双字符代号 (例如 <literal>GB</literal>)，<replaceable>&lt;charmap&gt;</"
 "replaceable> 替换为您选定的 locale 的标准字符映射。另外，还可以加入 "
-"<quote>@euro</quote> 等可选修饰符。"
+"<literal>@euro</literal> 等可选修饰符。"
 
 #. type: Content of: <sect1><para>
-#: lfs-en/chapter09/locale.xml lfs-en/chapter09/profile.xml
+#: lfs-en/chapter09/locale.xml
 msgid ""
 "The list of all locales supported by Glibc can be obtained by running the "
 "following command:"
 msgstr "Glibc 支持的所有 locale 可以用以下命令列出："
 
 #. type: Content of: <sect1><screen>
-#: lfs-en/chapter09/locale.xml lfs-en/chapter09/profile.xml
+#: lfs-en/chapter09/locale.xml
 #, no-wrap
 msgid "<userinput>locale -a</userinput>"
 msgstr "<userinput>locale -a</userinput>"
@@ -106,54 +108,56 @@ msgstr "<userinput>locale -a</userinput>"
 #. type: Content of: <sect1><para>
 #: lfs-en/chapter09/locale.xml
 msgid ""
-"Charmaps can have a number of aliases, e.g., <quote>ISO-8859-1</quote> is "
-"also referred to as <quote>iso8859-1</quote> and <quote>iso88591</quote>.  "
-"Some applications cannot handle the various synonyms correctly (e.g., "
-"require that <quote>UTF-8</quote> is written as <quote>UTF-8</quote>, not "
-"<quote>utf8</quote>), so it is the safest in most cases to choose the "
-"canonical name for a particular locale. To determine the canonical name, run "
-"the following command, where <replaceable>&lt;locale name&gt;</replaceable> "
-"is the output given by <command>locale -a</command> for your preferred "
-"locale (<quote>en_GB.iso88591</quote> in our example)."
+"Charmaps can have a number of aliases, e.g., <literal>ISO-8859-1</literal> "
+"is also referred to as <literal>iso8859-1</literal> and <literal>iso88591</"
+"literal>.  Some applications cannot handle the various synonyms correctly (e."
+"g., require that <literal>UTF-8</literal> is written as <literal>UTF-8</"
+"literal>, not <literal>utf8</literal>), so it is the safest in most cases to "
+"choose the canonical name for a particular locale. To determine the "
+"canonical name, run the following command, where <replaceable>&lt;locale "
+"name&gt;</replaceable> is the output given by <command>locale -a</command> "
+"for your preferred locale (<literal>en_GB.iso88591</literal> in our example)."
 msgstr ""
-"字符映射可能有多个别名，例如<quote>ISO-8859-1</quote>也可以称为"
-"<quote>iso8859-1</quote>或者<quote>iso88591</quote>。某些程序不能正确处理一些"
-"别名 (例如，<quote>UTF-8</quote>必须写作<quote>UTF-8</quote>才能识别，而不能"
-"识别<quote>utf8</quote>)，因此在多数情况下，为了保险起见，最好使用 locale 的"
-"规范名称。为了确定规范名称，执行以下命令，将 <replaceable>&lt;locale 名&gt;</"
-"replaceable> 替换成 <command>locale -a</command> 对于您希望的 locale 的输出 "
-"(以<quote>en_GB.iso88591</quote>为例)。"
+"字符映射可能有多个别名，例如 <literal>ISO-8859-1</literal> 也可以称为 "
+"<literal>iso8859-1</literal> 或者 <literal>iso88591</literal>。某些程序不能正"
+"确处理一些别名 (例如，<literal>UTF-8</literal> 必须写作 <literal>UTF-8</"
+"literal> 才能识别，而不能识别 <literal>utf8</literal>)，因此在多数情况下，为"
+"了保险起见，最好使用 locale 的规范名称。为了确定规范名称，执行以下命令，将 "
+"<replaceable>&lt;locale 名&gt;</replaceable> 替换成 <command>locale -a</"
+"command> 对于您希望的 locale 的输出 (以 <literal>en_GB.iso88591</literal> 为"
+"例)。"
 
 #. type: Content of: <sect1><screen>
-#: lfs-en/chapter09/locale.xml lfs-en/chapter09/profile.xml
+#: lfs-en/chapter09/locale.xml
 #, no-wrap
 msgid "<userinput>LC_ALL=<replaceable>&lt;locale name&gt;</replaceable> locale charmap</userinput>"
 msgstr "<userinput>LC_ALL=<replaceable>&lt;locale 名&gt;</replaceable> locale charmap</userinput>"
 
 #. type: Content of: <sect1><para>
-#: lfs-en/chapter09/locale.xml lfs-en/chapter09/profile.xml
+#: lfs-en/chapter09/locale.xml
 msgid ""
-"For the <quote>en_GB.iso88591</quote> locale, the above command will print:"
-msgstr "对于 <quote>en_GB.iso88591</quote> locale，以上命令输出："
+"For the <literal>en_GB.iso88591</literal> locale, the above command will "
+"print:"
+msgstr "对于 <literal>en_GB.iso88591</literal> locale，以上命令输出："
 
 #. type: Content of: <sect1><screen>
-#: lfs-en/chapter09/locale.xml lfs-en/chapter09/profile.xml
+#: lfs-en/chapter09/locale.xml
 #, no-wrap
 msgid "<computeroutput>ISO-8859-1</computeroutput>"
 msgstr "<computeroutput>ISO-8859-1</computeroutput>"
 
 #. type: Content of: <sect1><para>
-#: lfs-en/chapter09/locale.xml lfs-en/chapter09/profile.xml
+#: lfs-en/chapter09/locale.xml
 msgid ""
-"This results in a final locale setting of <quote>en_GB.ISO-8859-1</quote>.  "
-"It is important that the locale found using the heuristic above is tested "
-"prior to it being added to the Bash startup files:"
+"This results in a final locale setting of <literal>en_GB.ISO-8859-1</"
+"literal>.  It is important that the locale found using the heuristic above "
+"is tested prior to it being added to the Bash startup files:"
 msgstr ""
-"这样就最终确定 locale 应设置为 <quote>en_GB.ISO-8859-1</quote>。在将以上启发"
-"方法获得的 locale 添加到 Bash 启动文件之前，一定要进行下列测试："
+"这样就最终确定 locale 应设置为 <literal>en_GB.ISO-8859-1</literal>。在将以上"
+"启发方法获得的 locale 添加到 Bash 启动文件之前，一定要进行下列测试："
 
 #. type: Content of: <sect1><screen>
-#: lfs-en/chapter09/locale.xml lfs-en/chapter09/profile.xml
+#: lfs-en/chapter09/locale.xml
 #, no-wrap
 msgid ""
 "<userinput>LC_ALL=&lt;locale name&gt; locale language\n"
@@ -181,13 +185,13 @@ msgstr ""
 "着您的 locale 在第 8 章中没有安装，或者不被 Glibc 的默认安装支持。"
 
 #. type: Content of: <sect1><screen>
-#: lfs-en/chapter09/locale.xml lfs-en/chapter09/profile.xml
+#: lfs-en/chapter09/locale.xml
 #, no-wrap
 msgid "<computeroutput>locale: Cannot set LC_* to default locale: No such file or directory</computeroutput>"
 msgstr "<computeroutput>locale: Cannot set LC_* to default locale: No such file or directory</computeroutput>"
 
 #. type: Content of: <sect1><para>
-#: lfs-en/chapter09/locale.xml lfs-en/chapter09/profile.xml
+#: lfs-en/chapter09/locale.xml
 msgid ""
 "If this happens, you should either install the desired locale using the "
 "<command>localedef</command> command, or consider choosing a different "
@@ -199,42 +203,6 @@ msgstr ""
 
 #. type: Content of: <sect1><para>
 #: lfs-en/chapter09/locale.xml
-msgid ""
-"Some packages beyond LFS may also lack support for your chosen locale. One "
-"example is the X library (part of the X Window System), which outputs the "
-"following error message if the locale does not exactly match one of the "
-"character map names in its internal files:"
-msgstr ""
-"某些 LFS 以外的软件包可能缺乏对您选择的 locale 的支持，例如 X 库 (X 窗口系统"
-"的一部分)，它在您的 locale 与它内部文件中的字符映射表名不完全匹配时，会输出以"
-"下错误消息："
-
-#. type: Content of: <sect1><screen>
-#: lfs-en/chapter09/locale.xml
-#, no-wrap
-msgid "<computeroutput>Warning: locale not supported by Xlib, locale set to C</computeroutput>"
-msgstr "<computeroutput>Warning: locale not supported by Xlib, locale set to C</computeroutput>"
-
-#. type: Content of: <sect1><para>
-#: lfs-en/chapter09/locale.xml
-msgid ""
-"In several cases Xlib expects that the character map will be listed in "
-"uppercase notation with canonical dashes. For instance, \"ISO-8859-1\" "
-"rather than \"iso88591\". It is also possible to find an appropriate "
-"specification by removing the charmap part of the locale specification.  "
-"This can be checked by running the <command>locale charmap</command> command "
-"in both locales.  For example, one would have to change \"de_DE."
-"ISO-8859-15@euro\" to \"de_DE@euro\" in order to get this locale recognized "
-"by Xlib."
-msgstr ""
-"某些情况下 Xlib 期望字符映射以带有规范连字符的大写形式给出，例如应该使用 "
-"“ISO-8859-1”而不是“iso88591”。有时也可以通过去除 locale 规范中的字符映射部分"
-"找到合适的规范，可以通过运行 <command>locale charmap</command> 确认。例如，您"
-"需要将“de_DE.ISO-8859-15@euro”替换成“de_DE@euro”，以获得 Xlib 能够识别的 "
-"locale。"
-
-#. type: Content of: <sect1><para>
-#: lfs-en/chapter09/locale.xml lfs-en/chapter09/profile.xml
 msgid ""
 "Other packages can also function incorrectly (but may not necessarily "
 "display any error messages) if the locale name does not meet their "
@@ -264,6 +232,147 @@ msgid ""
 msgstr ""
 "<userinput>cat &gt; /etc/locale.conf &lt;&lt; \"EOF\"\n"
 "<literal>LANG=<replaceable>&lt;ll&gt;_&lt;CC&gt;.&lt;charmap&gt;&lt;@modifiers&gt;</replaceable></literal>\n"
+"EOF</userinput>"
+
+#. type: Content of: <sect1><para>
+#: lfs-en/chapter09/locale.xml
+msgid ""
+"The shell program <command>/bin/bash</command> (here after referred as "
+"<quote>the shell</quote>) uses a collection of startup files to help create "
+"the environment to run in. Each file has a specific use and may affect login "
+"and interactive environments differently. The files in the <filename "
+"class=\"directory\">/etc</filename> directory provide global settings.  If "
+"equivalent files exist in the home directory, they may override the global "
+"settings."
+msgstr ""
+"Shell 程序 <command>/bin/bash</command> (下文称为 <quote>shell</quote>) 使用"
+"一组初始化文件，以帮助创建其运行环境。这些文件有不同的使用场合，可能以不同方"
+"式影响登录和交互环境。<filename class='directory'>/etc</filename> 中的文件提"
+"供全局设定。如果对应的文件同时在用户主目录中存在，它们可能覆盖全局设定。"
+
+#. type: Content of: <sect1><para>
+#: lfs-en/chapter09/locale.xml
+msgid ""
+"An interactive login shell is started after a successful login, using "
+"<command>/bin/login</command>, by reading the <filename>/etc/passwd</"
+"filename> file.  An interactive non-login shell is started at the command-"
+"line (e.g.  <prompt>[prompt]$</prompt><command>/bin/bash</command>).  A non-"
+"interactive shell is usually present when a shell script is running.  It is "
+"non-interactive because it is processing a script and not waiting for user "
+"input between commands."
+msgstr ""
+"<command>/bin/login</command> 在用户成功登录后，会读取 <filename>/etc/"
+"passwd</filename> 中指定的 shell，并启动一个交互式登录 shell 进程。而交互式非"
+"登录 shell 会在使用命令行直接运行 shell 时 (例如 <prompt>[prompt]$</"
+"prompt><command>/bin/bash</command>) 启动。非交互式 shell 在运行 shell 脚本时"
+"启动。在处理脚本时，shell 不会在执行两条命令的间隔中等待用户输入，因此是非交"
+"互的。"
+
+#. type: Content of: <sect1><para>
+#: lfs-en/chapter09/locale.xml
+msgid ""
+"<phrase revision='systemd'>The login shells are often unaffected by the "
+"settings in <filename>/etc/locale.conf</filename>. </phrase>Create the "
+"<filename>/etc/profile</filename> <phrase revision='sysv'>once the proper "
+"locale settings have been determined to set the desired locale</"
+"phrase><phrase revision='systemd'>to read the locale settings from "
+"<filename>/etc/locale.conf</filename> and export them</phrase>, but set the "
+"<literal>C</literal> locale instead if running in the Linux console (to "
+"prevent programs from outputting characters that the Linux console is unable "
+"to render):"
+msgstr ""
+"<phrase revision='systemd'>登录 shell 往往不会使用 <filename>/etc/locale."
+"conf</filename>中的设定。</phrase><phrase revision='sysv'>在确定设定所需的各"
+"项设定值后，</phrase>创建 <filename>/etc/profile</filename><phrase "
+"revision='systemd'>以读取 <filename>/etc/locale.conf</filename> 中的 locale "
+"设定值并导出它们</phrase><phrase>以设定您期望的 locale</phrase>，但是在 "
+"Linux 控制台中运行时则使用 <literal>C</literal> locale (以防程序输出 Linux "
+"console 无法显示的字符)："
+
+#. type: Content of: <sect1><screen>
+#: lfs-en/chapter09/locale.xml
+#, no-wrap
+msgid ""
+"<userinput>cat &gt; /etc/profile &lt;&lt; \"EOF\"\n"
+"<literal># Begin /etc/profile\n"
+"\n"
+"for i in $(locale); do\n"
+"  unset ${i%=*}\n"
+"done\n"
+"\n"
+"if [[ \"$TERM\" = linux ]]; then\n"
+"  export LANG=C\n"
+"else\n"
+"  source /etc/locale.conf\n"
+"\n"
+"  for i in $(locale); do\n"
+"    key=${i%=*}\n"
+"    if [[ -v $key ]]; then\n"
+"      export $key\n"
+"    fi\n"
+"  done\n"
+"fi\n"
+"\n"
+"# End /etc/profile</literal>\n"
+"EOF</userinput>"
+msgstr ""
+"<userinput>cat &gt; /etc/profile &lt;&lt; \"EOF\"\n"
+"<literal># Begin /etc/profile\n"
+"\n"
+"for i in $(locale); do\n"
+"  unset ${i%=*}\n"
+"done\n"
+"\n"
+"if [[ \"$TERM\" = linux ]]; then\n"
+"  export LANG=C\n"
+"else\n"
+"  source /etc/locale.conf\n"
+"\n"
+"  for i in $(locale); do\n"
+"    key=${i%=*}\n"
+"    if [[ -v $key ]]; then\n"
+"      export $key\n"
+"    fi\n"
+"  done\n"
+"fi\n"
+"\n"
+"# End /etc/profile</literal>\n"
+"EOF</userinput>"
+
+#. type: Content of: <sect1><screen>
+#: lfs-en/chapter09/locale.xml
+#, no-wrap
+msgid ""
+"<userinput>cat &gt; /etc/profile &lt;&lt; \"EOF\"\n"
+"<literal># Begin /etc/profile\n"
+"\n"
+"for i in $(locale); do\n"
+"  unset ${i%=*}\n"
+"done\n"
+"\n"
+"if [[ \"$TERM\" = linux ]]; then\n"
+"  export LANG=C\n"
+"else\n"
+"  export LANG=<replaceable>&lt;ll&gt;_&lt;CC&gt;.&lt;charmap&gt;&lt;@modifiers&gt;</replaceable>\n"
+"fi\n"
+"\n"
+"# End /etc/profile</literal>\n"
+"EOF</userinput>"
+msgstr ""
+"<userinput>cat &gt; /etc/profile &lt;&lt; \"EOF\"\n"
+"<literal># Begin /etc/profile\n"
+"\n"
+"for i in $(locale); do\n"
+"  unset ${i%=*}\n"
+"done\n"
+"\n"
+"if [[ \"$TERM\" = linux ]]; then\n"
+"  export LANG=C\n"
+"else\n"
+"  export LANG=<replaceable>&lt;ll&gt;_&lt;CC&gt;.&lt;charmap&gt;&lt;@modifiers&gt;</replaceable>\n"
+"fi\n"
+"\n"
+"# End /etc/profile</literal>\n"
 "EOF</userinput>"
 
 #. type: Content of: <sect1><para>
@@ -306,20 +415,21 @@ msgstr "<userinput>localectl set-locale LANG=\"en_US.UTF-8\" LC_CTYPE=\"en_US\"<
 #. type: Content of: <sect1><para>
 #: lfs-en/chapter09/locale.xml
 msgid ""
-"The <quote>C</quote> (default) and <quote>en_US</quote> (the recommended one "
-"for United States English users) locales are different. <quote>C</quote> "
-"uses the US-ASCII 7-bit character set, and treats bytes with the high bit "
-"set as invalid characters. That's why, e.g., the <command>ls</command> "
-"command substitutes them with question marks in that locale. Also, an "
-"attempt to send mail with such characters from Mutt or Pine results in non-"
-"RFC-conforming messages being sent (the charset in the outgoing mail is "
-"indicated as <quote>unknown 8-bit</quote>). It's suggested that you use the "
-"<quote>C</quote> locale only if you are certain that you will never need 8-"
-"bit characters."
+"The <literal>C</literal> (default) and <literal>en_US</literal> (the "
+"recommended one for United States English users) locales are different. "
+"<literal>C</literal> uses the US-ASCII 7-bit character set, and treats bytes "
+"with the high bit set as invalid characters. That's why, e.g., the "
+"<command>ls</command> command substitutes them with question marks in that "
+"locale. Also, an attempt to send mail with such characters from Mutt or Pine "
+"results in non-RFC-conforming messages being sent (the charset in the "
+"outgoing mail is indicated as <computeroutput>unknown 8-bit</"
+"computeroutput>). It's suggested that you use the <literal>C</literal> "
+"locale only if you are certain that you will never need 8-bit characters."
 msgstr ""
-"<quote>C</quote> (默认 locale) 和<quote>en_US</quote>(推荐美式英语用户使用的 "
-"locale) 是不同的。<quote>C</quote> locale 使用 US-ASCII 7 位字符集，并且将最"
-"高位为 1 的字节视为无效字符。因此，<command>ls</command> 等命令会将它们替换为"
-"问号。另外，如果试图用 Mutt 或 Pine 发送包含这些字符的邮件，会发出不符合 RFC "
-"标准的消息 (发出邮件的字符集会被标为<quote>未知 8 位</quote>)。因此，您只能在"
-"确信自己永远不会使用 8 位字符时才能使用<quote>C</quote> locale。"
+"<literal>C</literal> (默认 locale) 和 <literal>en_US</literal> (推荐美式英语"
+"用户使用的 locale) 是不同的。<literal>C</literal> locale 使用 US-ASCII 7 位字"
+"符集，并且将最高位为 1 的字节视为无效字符。因此，<command>ls</command> 等命令"
+"会将它们替换为问号。另外，如果试图用 Mutt 或 Pine 发送包含这些字符的邮件，会"
+"发出不符合 RFC 标准的消息 (发出邮件的字符集会被标为 <computeroutput>unknown "
+"8-bit</computeroutput>，即“不明 8 位字符集”)。因此，您只能在确信自己永远不会"
+"使用 8 位字符时才能使用 <literal>C</literal> locale。"

@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Linux From Scratch 11.0\n"
 "Report-Msgid-Bugs-To: lfs-dev@lists.linuxfromscratch.org\n"
-"POT-Creation-Date: 2023-09-18 16:58+0800\n"
+"POT-Creation-Date: 2024-01-28 20:56+0800\n"
 "PO-Revision-Date: 2021-07-28 12:52+0800\n"
 "Last-Translator: Xi Ruoyao <xry111@xry111.site>\n"
 "Language-Team: none\n"
@@ -77,14 +77,14 @@ msgstr "Python-&python-version;"
 #: lfs-en/chapter08/perl.xml lfs-en/chapter08/pkgconf.xml
 #: lfs-en/chapter08/procps.xml lfs-en/chapter08/psmisc.xml
 #: lfs-en/chapter08/python.xml lfs-en/chapter08/readline.xml
-#: lfs-en/chapter08/sed.xml lfs-en/chapter08/shadow.xml
-#: lfs-en/chapter08/sysklogd.xml lfs-en/chapter08/systemd.xml
-#: lfs-en/chapter08/sysvinit.xml lfs-en/chapter08/tar.xml
-#: lfs-en/chapter08/tcl.xml lfs-en/chapter08/texinfo.xml
-#: lfs-en/chapter08/udev.xml lfs-en/chapter08/util-linux.xml
-#: lfs-en/chapter08/vim.xml lfs-en/chapter08/wheel.xml
-#: lfs-en/chapter08/xml-parser.xml lfs-en/chapter08/xz.xml
-#: lfs-en/chapter08/zlib.xml lfs-en/chapter08/zstd.xml
+#: lfs-en/chapter08/sed.xml lfs-en/chapter08/setuptools.xml
+#: lfs-en/chapter08/shadow.xml lfs-en/chapter08/sysklogd.xml
+#: lfs-en/chapter08/systemd.xml lfs-en/chapter08/sysvinit.xml
+#: lfs-en/chapter08/tar.xml lfs-en/chapter08/tcl.xml
+#: lfs-en/chapter08/texinfo.xml lfs-en/chapter08/udev.xml
+#: lfs-en/chapter08/util-linux.xml lfs-en/chapter08/vim.xml
+#: lfs-en/chapter08/wheel.xml lfs-en/chapter08/xml-parser.xml
+#: lfs-en/chapter08/xz.xml lfs-en/chapter08/zlib.xml lfs-en/chapter08/zstd.xml
 #: lfs-en/chapter09/bootscripts.xml lfs-en/chapter10/kernel.xml
 msgid "&buildtime;"
 msgstr "&buildtime;"
@@ -135,14 +135,14 @@ msgstr "&buildtime;"
 #: lfs-en/chapter08/perl.xml lfs-en/chapter08/pkgconf.xml
 #: lfs-en/chapter08/procps.xml lfs-en/chapter08/psmisc.xml
 #: lfs-en/chapter08/python.xml lfs-en/chapter08/readline.xml
-#: lfs-en/chapter08/sed.xml lfs-en/chapter08/shadow.xml
-#: lfs-en/chapter08/sysklogd.xml lfs-en/chapter08/systemd.xml
-#: lfs-en/chapter08/sysvinit.xml lfs-en/chapter08/tar.xml
-#: lfs-en/chapter08/tcl.xml lfs-en/chapter08/texinfo.xml
-#: lfs-en/chapter08/udev.xml lfs-en/chapter08/util-linux.xml
-#: lfs-en/chapter08/vim.xml lfs-en/chapter08/wheel.xml
-#: lfs-en/chapter08/xml-parser.xml lfs-en/chapter08/xz.xml
-#: lfs-en/chapter08/zlib.xml lfs-en/chapter08/zstd.xml
+#: lfs-en/chapter08/sed.xml lfs-en/chapter08/setuptools.xml
+#: lfs-en/chapter08/shadow.xml lfs-en/chapter08/sysklogd.xml
+#: lfs-en/chapter08/systemd.xml lfs-en/chapter08/sysvinit.xml
+#: lfs-en/chapter08/tar.xml lfs-en/chapter08/tcl.xml
+#: lfs-en/chapter08/texinfo.xml lfs-en/chapter08/udev.xml
+#: lfs-en/chapter08/util-linux.xml lfs-en/chapter08/vim.xml
+#: lfs-en/chapter08/wheel.xml lfs-en/chapter08/xml-parser.xml
+#: lfs-en/chapter08/xz.xml lfs-en/chapter08/zlib.xml lfs-en/chapter08/zstd.xml
 #: lfs-en/chapter09/bootscripts.xml lfs-en/chapter10/kernel.xml
 msgid "&diskspace;"
 msgstr "&diskspace;"
@@ -211,11 +211,12 @@ msgstr "<userinput remap=\"make\">make</userinput>"
 #: lfs-en/chapter08/bc.xml lfs-en/chapter08/binutils.xml
 #: lfs-en/chapter08/bison.xml lfs-en/chapter08/check.xml
 #: lfs-en/chapter08/coreutils.xml lfs-en/chapter08/dbus.xml
-#: lfs-en/chapter08/diffutils.xml lfs-en/chapter08/e2fsprogs.xml
-#: lfs-en/chapter08/expat.xml lfs-en/chapter08/expect.xml
-#: lfs-en/chapter08/file.xml lfs-en/chapter08/findutils.xml
-#: lfs-en/chapter08/flex.xml lfs-en/chapter08/flit-core.xml
-#: lfs-en/chapter08/gawk.xml lfs-en/chapter08/gcc.xml lfs-en/chapter08/gdbm.xml
+#: lfs-en/chapter08/dejagnu.xml lfs-en/chapter08/diffutils.xml
+#: lfs-en/chapter08/e2fsprogs.xml lfs-en/chapter08/expat.xml
+#: lfs-en/chapter08/expect.xml lfs-en/chapter08/file.xml
+#: lfs-en/chapter08/findutils.xml lfs-en/chapter08/flex.xml
+#: lfs-en/chapter08/flit-core.xml lfs-en/chapter08/gawk.xml
+#: lfs-en/chapter08/gcc.xml lfs-en/chapter08/gdbm.xml
 #: lfs-en/chapter08/gettext.xml lfs-en/chapter08/glibc.xml
 #: lfs-en/chapter08/gperf.xml lfs-en/chapter08/grep.xml
 #: lfs-en/chapter08/groff.xml lfs-en/chapter08/grub.xml
@@ -231,13 +232,14 @@ msgstr "<userinput remap=\"make\">make</userinput>"
 #: lfs-en/chapter08/openssl.xml lfs-en/chapter08/patch.xml
 #: lfs-en/chapter08/pkgconf.xml lfs-en/chapter08/procps.xml
 #: lfs-en/chapter08/psmisc.xml lfs-en/chapter08/python.xml
-#: lfs-en/chapter08/readline.xml lfs-en/chapter08/shadow.xml
-#: lfs-en/chapter08/sysklogd.xml lfs-en/chapter08/systemd.xml
-#: lfs-en/chapter08/sysvinit.xml lfs-en/chapter08/tar.xml
-#: lfs-en/chapter08/tcl.xml lfs-en/chapter08/texinfo.xml
-#: lfs-en/chapter08/udev.xml lfs-en/chapter08/util-linux.xml
-#: lfs-en/chapter08/vim.xml lfs-en/chapter08/xml-parser.xml
-#: lfs-en/chapter08/xz.xml lfs-en/chapter08/zlib.xml lfs-en/chapter08/zstd.xml
+#: lfs-en/chapter08/readline.xml lfs-en/chapter08/setuptools.xml
+#: lfs-en/chapter08/shadow.xml lfs-en/chapter08/sysklogd.xml
+#: lfs-en/chapter08/systemd.xml lfs-en/chapter08/sysvinit.xml
+#: lfs-en/chapter08/tar.xml lfs-en/chapter08/tcl.xml
+#: lfs-en/chapter08/texinfo.xml lfs-en/chapter08/udev.xml
+#: lfs-en/chapter08/util-linux.xml lfs-en/chapter08/vim.xml
+#: lfs-en/chapter08/xml-parser.xml lfs-en/chapter08/xz.xml
+#: lfs-en/chapter08/zlib.xml lfs-en/chapter08/zstd.xml
 #: lfs-en/chapter09/bootscripts.xml
 msgid "Install the package:"
 msgstr "安装该软件包："
@@ -370,12 +372,13 @@ msgstr "安装 Python"
 #. type: Content of: <sect1><sect2><note><para>
 #: lfs-en/chapter07/python.xml
 msgid ""
-"There are two package files whose name starts with <quote>python</quote>. "
-"The one to extract from is <filename>Python-&python-version;.tar.xz</"
+"There are two package files whose name starts with the <quote>python</quote> "
+"prefix. The one to extract from is <filename>Python-&python-version;.tar.xz</"
 "filename> (notice the uppercase first letter)."
 msgstr ""
-"该软件包包含两个以 <quote>python</quote> 开头的压缩包。我们应该解压的包是 "
-"<filename>Python-&python-version;.tar.xz</filename> (注意首字母是大写的)。"
+"该软件包包含两个文件名以 <quote>python</quote> 为前缀的压缩包。我们应该解压的"
+"包是 <filename>Python-&python-version;.tar.xz</filename> (注意首字母是大写"
+"的)。"
 
 #. type: Content of: <sect1><sect2><para>
 #: lfs-en/chapter07/python.xml lfs-en/chapter08/python.xml
@@ -415,18 +418,19 @@ msgstr "该选项禁止构建 Python 软件包安装器，它在当前阶段没�
 #: lfs-en/chapter07/python.xml
 msgid ""
 "Some Python 3 modules can't be built now because the dependencies are not "
-"installed yet. The building system still attempts to build them however, so "
-"the compilation of some files will fail and the compiler message may seem to "
-"indicate <quote>fatal error</quote>.  The message should be ignored.  Just "
-"make sure the toplevel <command>make</command> command has not failed.  The "
-"optional modules are not needed now and they will be built in <xref "
-"linkend=\"chapter-building-system\"/>."
+"installed yet. For the <filename>ssl</filename> module, a message "
+"<computeroutput>Python requires a OpenSSL 1.1.1 or newer</computeroutput> is "
+"outputted.  The message should be ignored.  Just make sure the toplevel "
+"<command>make</command> command has not failed.  The optional modules are "
+"not needed now and they will be built in <xref linkend=\"chapter-building-"
+"system\"/>."
 msgstr ""
-"一些 Python 3 模块目前无法构建，这是因为它们的依赖项尚未安装。然而，构建系统"
-"仍会尝试构建它们，因此一些文件会编译失败，编译器的消息可能看上去是 "
-"<quote>fatal error</quote> (致命错误)。这类消息应该被忽略。只需要确认最外层"
-"的 <command>make</command> 命令执行成功即可。目前不需要这些可选的模块，它们将"
-"在<xref linkend=\"chapter-building-system\"/>中被构建。"
+"一些 Python 3 模块目前无法构建，这是因为它们的依赖项尚未安装。对于 "
+"<filename>ssl</filename> 模块，构建系统会输出一条消息<computeroutput>Python "
+"requires a OpenSSL 1.1.1 or newer</computeroutput> (“Python 需要 OpenSSL "
+"1.1.1 或更新版本”)。这条消息应该被忽略。只需要确认最外层的 <command>make</"
+"command> 命令执行成功即可。目前不需要这些可选的模块，它们将在<xref "
+"linkend=\"chapter-building-system\"/>中被构建。"
 
 #. type: Content of: <sect1><sect2><para>
 #: lfs-en/chapter07/python.xml
