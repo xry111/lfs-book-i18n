@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Linux From Scratch 11.0\n"
 "Report-Msgid-Bugs-To: lfs-dev@lists.linuxfromscratch.org\n"
-"POT-Creation-Date: 2024-01-15 12:25+0800\n"
+"POT-Creation-Date: 2024-02-01 03:06+0800\n"
 "PO-Revision-Date: 2021-08-21 11:33+0800\n"
 "Last-Translator: Xi Ruoyao <xry111@xry111.site>\n"
 "Language-Team: none\n"
@@ -290,11 +290,12 @@ msgstr "<userinput remap=\"make\">make</userinput>"
 #: lfs-en/chapter08/bc.xml lfs-en/chapter08/binutils.xml
 #: lfs-en/chapter08/bison.xml lfs-en/chapter08/check.xml
 #: lfs-en/chapter08/coreutils.xml lfs-en/chapter08/dbus.xml
-#: lfs-en/chapter08/diffutils.xml lfs-en/chapter08/e2fsprogs.xml
-#: lfs-en/chapter08/expat.xml lfs-en/chapter08/expect.xml
-#: lfs-en/chapter08/file.xml lfs-en/chapter08/findutils.xml
-#: lfs-en/chapter08/flex.xml lfs-en/chapter08/flit-core.xml
-#: lfs-en/chapter08/gawk.xml lfs-en/chapter08/gcc.xml lfs-en/chapter08/gdbm.xml
+#: lfs-en/chapter08/dejagnu.xml lfs-en/chapter08/diffutils.xml
+#: lfs-en/chapter08/e2fsprogs.xml lfs-en/chapter08/expat.xml
+#: lfs-en/chapter08/expect.xml lfs-en/chapter08/file.xml
+#: lfs-en/chapter08/findutils.xml lfs-en/chapter08/flex.xml
+#: lfs-en/chapter08/flit-core.xml lfs-en/chapter08/gawk.xml
+#: lfs-en/chapter08/gcc.xml lfs-en/chapter08/gdbm.xml
 #: lfs-en/chapter08/gettext.xml lfs-en/chapter08/glibc.xml
 #: lfs-en/chapter08/gperf.xml lfs-en/chapter08/grep.xml
 #: lfs-en/chapter08/groff.xml lfs-en/chapter08/grub.xml
@@ -668,7 +669,6 @@ msgid ""
 "             --disable-werror                         \\\n"
 "             --enable-kernel=&min-kernel;                     \\\n"
 "             --enable-stack-protector=strong          \\\n"
-"             --with-headers=/usr/include              \\\n"
 "             --disable-nscd                           \\\n"
 "             libc_cv_slibdir=/usr/lib</userinput>"
 msgstr ""
@@ -676,7 +676,6 @@ msgstr ""
 "             --disable-werror                         \\\n"
 "             --enable-kernel=&min-kernel;                     \\\n"
 "             --enable-stack-protector=strong          \\\n"
-"             --with-headers=/usr/include              \\\n"
 "             --disable-nscd                           \\\n"
 "             libc_cv_slibdir=/usr/lib</userinput>"
 
@@ -706,21 +705,13 @@ msgstr "<parameter>--enable-stack-protector=strong</parameter>"
 #: lfs-en/chapter08/glibc.xml
 msgid ""
 "This option increases system security by adding extra code to check for "
-"buffer overflows, such as stack smashing attacks."
+"buffer overflows, such as stack smashing attacks.  Note that Glibc always "
+"explicitly overrides the default of GCC, so this option is still needed even "
+"though we've already specified <option>--enable-default-ssp</option> for GCC."
 msgstr ""
-"该选项通过加入额外代码，对栈溢出攻击等导致的缓冲区溢出进行检查，以提高系统安"
-"全性。"
-
-#. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
-#: lfs-en/chapter08/glibc.xml
-msgid "<parameter>--with-headers=/usr/include</parameter>"
-msgstr "<parameter>--with-headers=/usr/include</parameter>"
-
-#. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
-#: lfs-en/chapter08/glibc.xml
-msgid ""
-"This option tells the build system where to find the kernel API headers."
-msgstr "该选项指定构建系统搜索内核 API 头文件的位置。"
+"该选项加入额外的缓冲区溢出检查代码以防范栈溢出攻击。注意 Glibc 总是显式指定栈"
+"防护设置并覆盖 GCC 的默认值，因此尽管已经为 GCC 指定了 <option>--enable-"
+"default-ssp</option> 选项，仍然需要使用该选项。"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: lfs-en/chapter08/glibc.xml

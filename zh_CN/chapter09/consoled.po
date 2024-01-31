@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Linux From Scratch 11.4\n"
 "Report-Msgid-Bugs-To: lfs-dev@lists.linuxfromscratch.org\n"
-"POT-Creation-Date: 2024-01-28 17:39+0800\n"
+"POT-Creation-Date: 2024-02-01 03:06+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: Xi Ruoyao <xry111@xry111.site>\n"
 "Language-Team: none\n"
@@ -125,6 +125,40 @@ msgstr "FONT_UNIMAP"
 #: lfs-en/chapter09/consoled.xml
 msgid "This variable specifies the Unicode font map."
 msgstr "该变量指定 Unicode 字体映射。"
+
+#. type: Content of: <sect1><para>
+#: lfs-en/chapter09/consoled.xml
+msgid ""
+"We'll use <literal>C.UTF-8</literal> as the locale for interactive sessions "
+"in the Linux console in <xref role='.' linkend='ch-config-locale'/> The "
+"console fonts shipped by the <application>Kbd</application> package "
+"containing the glyphs for all characters from the program messages in the "
+"<literal>C.UTF-8</literal> locale are <filename>LatArCyrHeb*.psfu.gz</"
+"filename>, <filename>LatGrkCyr*.psfu.gz</filename>, <filename>Lat2-"
+"Terminus16.psfu.gz</filename>, and <filename>pancyrillic.f16.psfu.gz</"
+"filename> in <filename class='directory'>/usr/share/consolefonts</filename> "
+"(the other shipped console fonts lack glyphs of some characters like the "
+"Unicode left/right quotation marks and the Unicode English dash). So set one "
+"of them, for example <filename>Lat2-Terminus16.psfu.gz</filename> as the "
+"default console font:"
+msgstr ""
+"在<xref linkend='ch-config-locale'/>中，我们会指定 <literal>C.UTF-8</"
+"literal> 为 Linux 控制台中交互会话的 locale。<application>Kbd</application> "
+"软件包提供的，包含 <literal>C.UTF-8</literal> locale 下程序输出消息中全部字符"
+"字形的控制台字体有 <filename class='directory'>/usr/share/consolefonts</"
+"filename> 中的 <filename>LatArCyrHeb*.psfu.gz</filename>，"
+"<filename>LatGrkCyr*.psfu.gz</filename>，<filename>Lat2-Terminus16.psfu.gz</"
+"filename>，以及 <filename>pancyrillic.f16.psfu.gz</filename> (其他提供的字体"
+"缺失一些字符的字形，如 Unicode 左右引号和 Unicode 英文破折号)。因此将它们中的"
+"某个，例如 <filename>Lat2-Terminus16.psfu.gz</filename> 设为默认控制台字体："
+
+#.  We are using "nodump" for general settings, but not examples.  This
+#.        is ironic, but needed for the compatibility with jhalfs!  
+#. type: Content of: <sect1><screen>
+#: lfs-en/chapter09/consoled.xml
+#, no-wrap
+msgid "<userinput>echo <literal>FONT=Lat2-Terminus16</literal> &gt; /etc/vconsole.conf</userinput>"
+msgstr "<userinput>echo <literal>FONT=Lat2-Terminus16</literal> &gt; /etc/vconsole.conf</userinput>"
 
 #. type: Content of: <sect1><para>
 #: lfs-en/chapter09/consoled.xml
