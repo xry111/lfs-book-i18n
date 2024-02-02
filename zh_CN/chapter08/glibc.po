@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Linux From Scratch 11.0\n"
 "Report-Msgid-Bugs-To: lfs-dev@lists.linuxfromscratch.org\n"
-"POT-Creation-Date: 2024-02-01 03:06+0800\n"
+"POT-Creation-Date: 2024-02-02 19:05+0800\n"
 "PO-Revision-Date: 2021-08-21 11:33+0800\n"
 "Last-Translator: Xi Ruoyao <xry111@xry111.site>\n"
 "Language-Team: none\n"
@@ -74,6 +74,12 @@ msgstr ""
 #: lfs-en/chapter08/glibc.xml lfs-en/prologue/why.xml
 msgid "Glibc"
 msgstr "Glibc"
+
+#. type: Content of: <sect1><title>
+#: lfs-en/chapter01/whatsnew.xml lfs-en/chapter05/glibc.xml
+#: lfs-en/chapter08/glibc.xml
+msgid "Glibc-&glibc-version;"
+msgstr "Glibc-&glibc-version;"
 
 #. type: Content of: <sect1><sect2><segmentedlist><segtitle>
 #: lfs-en/chapter05/binutils-pass1.xml lfs-en/chapter05/gcc-pass1.xml
@@ -370,11 +376,6 @@ msgstr ""
 "<productname>glibc</productname> <productnumber>&glibc-version;</"
 "productnumber> <placeholder type=\"address\" id=\"0\"/>"
 
-#. type: Content of: <sect1><title>
-#: lfs-en/chapter05/glibc.xml lfs-en/chapter08/glibc.xml
-msgid "Glibc-&glibc-version;"
-msgstr "Glibc-&glibc-version;"
-
 #. type: Content of: <sect1><sect2><title>
 #: lfs-en/chapter05/glibc.xml lfs-en/chapter08/glibc.xml
 msgid "Installation of Glibc"
@@ -634,21 +635,6 @@ msgstr "<userinput remap=\"pre\">patch -Np1 -i ../&glibc-fhs-patch;</userinput>"
 #. type: Content of: <sect1><sect2><para>
 #: lfs-en/chapter08/glibc.xml
 msgid ""
-"Now fix two security vulnerabilities and a regression causing the "
-"posix_memalign() function very slow in some conditions:"
-msgstr ""
-"现在修复两项安全缺陷，以及一项导致 posix_memalign() 函数在一些条件下非常缓慢"
-"的退化问题："
-
-#. type: Content of: <sect1><sect2><screen>
-#: lfs-en/chapter08/glibc.xml
-#, no-wrap
-msgid "<userinput remap=\"pre\">patch -Np1 -i ../&glibc-upstream-fixes-patch;</userinput>"
-msgstr "<userinput remap=\"pre\">patch -Np1 -i ../&glibc-upstream-fixes-patch;</userinput>"
-
-#. type: Content of: <sect1><sect2><para>
-#: lfs-en/chapter08/glibc.xml
-msgid ""
 "Ensure that the <command>ldconfig</command> and <command>sln</command> "
 "utilities will be installed into <filename class=\"directory\">/usr/sbin</"
 "filename>:"
@@ -810,6 +796,141 @@ msgstr ""
 #, no-wrap
 msgid "<userinput remap=\"install\">sed '/test-installation/s@$(PERL)@echo not running@' -i ../Makefile</userinput>"
 msgstr "<userinput remap=\"install\">sed '/test-installation/s@$(PERL)@echo not running@' -i ../Makefile</userinput>"
+
+#. type: Content of: <sect1><sect2><important><para>
+#: lfs-en/chapter08/glibc.xml
+msgid ""
+"If upgrading Glibc to a new minor version (for example, from Glibc-2.36 to "
+"Glibc-&glibc-version;) on a running LFS system, you need to take some extra "
+"precautions to avoid breaking the system:"
+msgstr ""
+"如果在正在运行的 LFS 系统上升级 Glibc 到一个新的次版本号 (例如，从 "
+"Glibc-2.36 升级到 Glibc-&glibc-version;)，则需要额外注意一些事项，以防止损坏"
+"系统："
+
+#. type: Content of: <sect1><sect2><important><itemizedlist><listitem><para>
+#: lfs-en/chapter08/glibc.xml
+msgid ""
+"Upgrading Glibc on a LFS system prior to 11.0 (exclusive) is not supported.  "
+"Rebuild LFS if you are running such an old LFS system but you need a newer "
+"Glibc."
+msgstr ""
+"我们不支持在 11.0 (不含) 之前版本的 LFS 系统上升级 Glibc。如果您正在运行这样"
+"古老的 LFS 系统，但需要更新 Glibc，则需要重新构建 LFS。"
+
+#. type: Content of: <sect1><sect2><important><itemizedlist><listitem><para>
+#: lfs-en/chapter08/glibc.xml
+msgid ""
+"If upgrading on a LFS system prior to 12.0 (exclusive), install "
+"<application>Libxcrypt</application> following <xref role='.' linkend='ch-"
+"system-libxcrypt'/> In addition to a normal <application>Libxcrypt</"
+"application> installation, <emphasis role='bold'>you MUST follow the note in "
+"Libxcrypt section to install <filename class='libraryfile'>libcrypt.so.1*</"
+"filename> (overwritting <filename class='libraryfile'>libcrypt.so.1</"
+"filename> from the prior Glibc installation)</emphasis>."
+msgstr ""
+"如果在 12.0 (不含) 之前版本的 LFS 系统上进行升级，需要按照xref linkend='ch-"
+"system-libxcrypt'/> 安装 <application>Libxcrypt</application>。除了正常安装 "
+"<application>Libxcrypt</application> 外，<emphasis role='bold'>必须按照 "
+"Libxcrypt 一节中的“注意”部分，安装 <filename class='libraryfile'>libcrypt."
+"so.1*</filename> (将之前 Glibc 安装的 <filename class='libraryfile'>libcrypt."
+"so.1</filename> 覆盖)</emphasis>。"
+
+#. type: Content of: <sect1><sect2><important><itemizedlist><listitem><para>
+#: lfs-en/chapter08/glibc.xml
+msgid ""
+"If upgrading on a LFS system prior to 12.1 (exclusive), remove the "
+"<command>nscd</command> program:"
+msgstr ""
+"如果在 12.1 (不含) 之前的 LFS 系统上进行升级，删除 <command>nscd</command> 程"
+"序："
+
+#. type: Content of: <sect1><sect2><important><itemizedlist><listitem><screen>
+#: lfs-en/chapter08/glibc.xml
+#, no-wrap
+msgid "<userinput>rm -f /usr/sbin/nscd</userinput>"
+msgstr "<userinput>rm -f /usr/sbin/nscd</userinput>"
+
+#. type: Content of: <sect1><sect2><important><itemizedlist><listitem><para>
+#: lfs-en/chapter08/glibc.xml
+msgid ""
+"If this system (prior to LFS 12.1, exclusive) is based on Systemd, it's also "
+"needed to disable and stop the <command>nscd</command> service now:"
+msgstr ""
+"如果正在升级的 LFS 系统 (12.1 之前，不含 12.1) 使用 Systemd，则同时需要禁用并"
+"停止 <command>nscd</command> 服务："
+
+#. type: Content of: <sect1><sect2><important><itemizedlist><listitem><screen>
+#: lfs-en/chapter08/glibc.xml
+#, no-wrap
+msgid "<userinput>systemctl disable --now nscd</userinput>"
+msgstr "<userinput>systemctl disable --now nscd</userinput>"
+
+#. type: Content of: <sect1><sect2><important><itemizedlist><listitem><para>
+#: lfs-en/chapter08/glibc.xml
+msgid ""
+"Upgrade the kernel and reboot if it's older than &min-kernel; (check the "
+"current version with <command>uname -r</command>)  or if you want to upgrade "
+"it anyway, following <xref linkend='ch-bootable-kernel' role='.'/>"
+msgstr ""
+"如果内核版本早于 &min-kernel; (使用 <command>uname -r</command> 查看当前版"
+"本) 或者您希望升级内核，按照<xref linkend='ch-bootable-kernel'/>升级内核并重"
+"启。"
+
+#. type: Content of: <sect1><sect2><important><itemizedlist><listitem><para>
+#: lfs-en/chapter08/glibc.xml
+msgid ""
+"Upgrade the kernel API headers if it's older than &min-kernel; (check the "
+"current version with <command>cat /usr/include/linux/version.h</command>)  "
+"or if you want to upgrade it anyway, following <xref linkend='ch-tools-linux-"
+"headers'/> (but removing <envar>$LFS</envar> from the <command>cp</command> "
+"command)."
+msgstr ""
+"如果内核 API 头文件版本早于 &min-kernel; (使用 <command>cat /usr/include/"
+"linux/version.h</command> 查看当前版本) 或者您希望升级内核头文件，按照<xref "
+"linkend='ch-tools-linux-headers'/> (但是需要从命令中删去 <envar>$LFS</"
+"envar>) 进行升级。"
+
+#. type: Content of: <sect1><sect2><important><itemizedlist><listitem><para>
+#: lfs-en/chapter08/glibc.xml
+msgid ""
+"Perform a <envar>DESTDIR</envar> installation and upgrade the Glibc shared "
+"libraries on the system using one single <command>install</command> command:"
+msgstr ""
+"使用 <envar>DESTDIR</envar> 进行安装，并使用一条 <command>install</command> "
+"命令一次性升级系统上安装的的所有 Glibc 共享库："
+
+#. type: Content of: <sect1><sect2><important><itemizedlist><listitem><screen>
+#: lfs-en/chapter08/glibc.xml
+#, no-wrap
+msgid ""
+"<userinput>make DESTDIR=$PWD/dest install\n"
+"install -vm755 dest/usr/lib/*.so.* /usr/lib</userinput>"
+msgstr ""
+"<userinput>make DESTDIR=$PWD/dest install\n"
+"install -vm755 dest/usr/lib/*.so.* /usr/lib</userinput>"
+
+#. type: Content of: <sect1><sect2><important><para>
+#: lfs-en/chapter08/glibc.xml
+msgid ""
+"It's imperative to strictly follow these steps above unless you completely "
+"understand what you are doing.  <emphasis role='bold'>Any unexpected "
+"deviation may render the system completely unusable.  YOU ARE WARNED.</"
+"emphasis>"
+msgstr ""
+"必须严格执行上述步骤，除非您完全理解您在做什么。<emphasis role='bold'>有意或"
+"无意地偏离上述步骤都可能导致您的系统完全无法使用。后果自负。</emphasis>"
+
+#. type: Content of: <sect1><sect2><important><para>
+#: lfs-en/chapter08/glibc.xml
+msgid ""
+"Then continue to run the <command>make install</command> command and the "
+"<command>sed</command> command against <filename>/usr/bin/ldd</filename>.  "
+"Once they are finished, reboot the system immediately."
+msgstr ""
+"之后继续运行 <command>make install</command> 命令和针对 <filename>/usr/bin/"
+"ldd</filename> 的 <command>sed</command> 命令。完成这两条命令后，立刻重启系"
+"统。"
 
 #. type: Content of: <sect1><sect2><para>
 #: lfs-en/chapter08/glibc.xml
