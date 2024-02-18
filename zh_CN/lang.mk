@@ -64,3 +64,7 @@ zh_CN/book/$(PDF_XSL): $(LFS_EN)/$(PDF_XSL) $(FONTS_XSL) $(THIS)
 	mkdir -pv $(@D)
 	sed '/<\/xsl:stylesheet>/i <xsl:include href="pdf/zh_CN-fonts.xsl"/>' \
 		< $< > $@
+
+zh_CN/book/pdf-fixups.sh: $(LFS_EN)/pdf-fixups.sh $(THIS)
+	mkdir -pv $(@D)
+	sed 's/monospace/Mono SC/' < $< > $@
