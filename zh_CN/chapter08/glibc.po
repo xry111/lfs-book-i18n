@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Linux From Scratch 11.0\n"
 "Report-Msgid-Bugs-To: lfs-dev@lists.linuxfromscratch.org\n"
-"POT-Creation-Date: 2024-02-18 11:42+0800\n"
+"POT-Creation-Date: 2024-02-23 17:24+0800\n"
 "PO-Revision-Date: 2021-08-21 11:33+0800\n"
 "Last-Translator: Xi Ruoyao <xry111@xry111.site>\n"
 "Language-Team: none\n"
@@ -745,33 +745,51 @@ msgstr "已知 <emphasis>io/tst-lchmod</emphasis> 在 LFS chroot 环境中会失
 #. type: Content of: <sect1><sect2><itemizedlist><listitem><para>
 #: lfs-en/chapter08/glibc.xml
 msgid ""
-"Three <emphasis>nptl/tst-thread-affinity*</emphasis> tests are known to fail."
-msgstr "已知三项 <emphasis>nptl/tst-thread-affinity*</emphasis> 测试可能失败。"
-
-#. type: Content of: <sect1><sect2><itemizedlist><listitem><para>
-#: lfs-en/chapter08/glibc.xml
-msgid ""
-"The <emphasis>stdlib/tst-arc4random-thread</emphasis> test is known to fail "
-"if the host kernel is relatively old."
+"Some tests, for example <emphasis>nss/tst-nss-files-hosts-multi</emphasis> "
+"and <emphasis>nptl/tst-thread-affinity*</emphasis> are known to fail due to "
+"a timeout (especially when the system is relatively slow and/or running the "
+"test suite with multiple parallel make jobs).  These tests can be identified "
+"with:"
 msgstr ""
-"已知 <emphasis>stdlib/tst-arc4random-thread</emphasis> 在宿主内核版本较低时会"
-"失败。"
+"一些测试，例如 <emphasis>nss/tst-nss-files-hosts-multi</emphasis> 和 "
+"<emphasis>nptl/tst-thread-affinity*</emphasis> 会由于超时而失败 (特别是在系统"
+"较慢和/或使用多个并行 make 任务进行测试时)。可以使用下列命令识别因为该原因失"
+"败的测试："
+
+#.  TODO: Using nodump for freeze.  Change it to role="test" after
+#.              12.1 release so jhalfs can list these in the log.  
+#. type: Content of: <sect1><sect2><itemizedlist><listitem><screen>
+#: lfs-en/chapter08/glibc.xml
+#, no-wrap
+msgid "<userinput>grep \"Timed out\" -l $(find -name \\*.out)</userinput>"
+msgstr "<userinput>grep \"Timed out\" -l $(find -name \\*.out)</userinput>"
 
 #. type: Content of: <sect1><sect2><itemizedlist><listitem><para>
 #: lfs-en/chapter08/glibc.xml
 msgid ""
-"Some tests, for example <emphasis>nss/tst-nss-files-hosts-multi</emphasis>, "
-"are known to fail on relatively slow systems due to an internal timeout."
+"It's possible to re-run a single test with enlarged timeout with "
+"<command>TIMEOUTFACTOR=<replaceable>&lt;factor&gt;</replaceable> make test "
+"t=<replaceable>&lt;test name&gt;</replaceable></command>.  For example, "
+"<command>TIMEOUTFACTOR=10 make test t=nss/tst-nss-files-hosts-multi</"
+"command> will re-run <emphasis>nss/tst-nss-files-hosts-multi</emphasis> with "
+"ten times the original timeout."
 msgstr ""
-"一些测试，例如 <emphasis>nss/tst-nss-file-hosts-multi</emphasis>，在较慢的系"
-"统运行时会由于其内部发生超时而失败。"
+"可以执行 <command>TIMEOUTFACTOR=<replaceable>&lt;因子&gt;</replaceable> make "
+"test t=<replaceable>&lt;测试名&gt;</replaceable></command> 重新运行单项测试并"
+"放宽其运行时间限制。例如，<command>TIMEOUTFACTOR=10 make test t=nss/tst-nss-"
+"files-hosts-multi</command> 会以十倍于默认的最长运行时间重新运行 "
+"<emphasis>nss/tst-nss-files-hosts-multi</emphasis>。"
 
 #. type: Content of: <sect1><sect2><itemizedlist><listitem><para>
 #: lfs-en/chapter08/glibc.xml
 msgid ""
-"Additionally, some tests may fail with a relatively old CPU model or host "
-"kernel version."
-msgstr "另外，一些测试在较老的 CPU 型号或宿主内核版本上运行时会失败。"
+"Additionally, some tests may fail with a relatively old CPU model (for "
+"example <emphasis>elf/tst-cpu-features-cpuinfo</emphasis>) or host kernel "
+"version (for example <emphasis>stdlib/tst-arc4random-thread</emphasis>)."
+msgstr ""
+"另外，一些测试在 CPU 型号 (如 <emphasis>elf/tst-cpu-features-cpuinfo</"
+"emphasis>) 或宿主系统内核版本 (如 <emphasis>stdlib/tst-arc4random-thread</"
+"emphasis>) 较为老旧时可能失败。"
 
 #. type: Content of: <sect1><sect2><para>
 #: lfs-en/chapter08/glibc.xml

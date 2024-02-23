@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Linux From Scratch 11.1\n"
 "Report-Msgid-Bugs-To: lfs-dev@lists.linuxfromscratch.org\n"
-"POT-Creation-Date: 2024-02-18 11:42+0800\n"
+"POT-Creation-Date: 2024-02-23 17:24+0800\n"
 "PO-Revision-Date: 2022-03-03 03:00+0800\n"
 "Last-Translator: Xi Ruoyao <xry111@xry111.site>\n"
 "Language-Team: none\n"
@@ -767,29 +767,27 @@ msgstr ""
 "可以将结果与 <ulink url=\"&test-results;\"/> 和 <ulink url=\"https://gcc.gnu."
 "org/ml/gcc-testresults/\"/> 的结果进行比较。"
 
-#. Two tests named <filename>
-#. pr104610.c</filename> and
-#.     <filename>pr69482-1.c</filename> are known to fail because the test
-#.     files does not account for the
-#.     <parameter>- -enable-default-ssp</parameter> option.
-#.  https://gcc.gnu.org/PR106375 and https://gcc.gnu.org/PR109353 
+#.  https://gcc.gnu.org/PR106375 
+#.  https://gcc.gnu.org/PR109353 
 #. type: Content of: <sect1><sect2><para>
 #: lfs-en/chapter08/gcc.xml
 msgid ""
-"Eight gcc tests (out of over 185,000), data-model-4.c, pr56837.c, and six "
-"\"analyzer\" tests are known to fail.  One libstdc++ test (out of over "
-"15000), copy.cc, is known to fail.  For g++, 21 tests (out of approximately "
-"250,000), 14 \"AddressSanitizer*\" tests and 7 interception-malloc-test-1.C "
-"tests, are known to fail.  Additionally, several tests in the <filename "
-"class='directory'>vect</filename> directory are known to fail if the "
-"hardware does not support AVX."
+"Eight gcc tests (out of over 185,000): <filename>pr56837.c</filename> and "
+"seven tests in the <filename class='directory'>analyzer</filename> directory "
+"are known to fail.  One libstdc++ test (out of over 15000), <filename>copy."
+"cc</filename>, is known to fail.  For g++, 21 tests (out of approximately "
+"250,000): 14 <quote>AddressSanitizer*</quote> tests and 7 "
+"<filename>interception-malloc-test-1.C</filename> tests, are known to fail.  "
+"Additionally, several tests in the <filename class='directory'>vect</"
+"filename> directory are known to fail if the hardware does not support AVX."
 msgstr ""
-"已知八项 gcc 测试 (共有 185,000 余项)：data-model-4.c, pr56387.c，以及六项 "
-"\"analyzer\" 测试会失败。已知一项名为 copy.cc 的 libstdc++ 测试 (共有 15000 "
-"余项) 会失败。在 g++ 测试中，已知 21 项测试 (共有约 250,000 项)：14 项 "
-"\"AddressSanitizer\" 测试和 7 项 interception-malloc-test-1.C 测试会失败。另"
-"外，已知 <filename class='directory'>vect</filename> 目录中的一些测试在硬件不"
-"支持 AVX 时会失败。"
+"已知八项 gcc 测试 (共有 185,000 余项)：pr56387.c 和七项 <filename "
+"class='directory'>analyzer</filename> 测试会失败。已知一项名为 "
+"<filename>copy.cc</filename> 的 libstdc++ 测试 (共有 15000 余项) 会失败。在 "
+"g++ 测试中，已知 21 项测试 (共有约 250,000 项)：14 项"
+"<quote>AddressSanitizer</quote>测试和 7 项 <filename>interception-malloc-"
+"test-1.C</filename> 测试会失败。另外，已知 <filename class='directory'>vect</"
+"filename> 目录中的一些测试在硬件不支持 AVX 时会失败。"
 
 #. type: Content of: <sect1><sect2><para>
 #: lfs-en/chapter08/gcc.xml
