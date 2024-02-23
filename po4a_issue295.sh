@@ -18,6 +18,7 @@ $p
 
 sed -n "${sed_cmd}" -i \
 	chapter06/ncurses.xml                        \
+	chapter07/kernfs.xml                         \
 	chapter08/glibc.xml                          \
 	chapter08/flex.xml                           \
 	chapter08/autoconf.xml                       \
