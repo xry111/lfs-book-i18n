@@ -456,23 +456,20 @@ msgstr ""
 
 #. type: Content of: <sect1><sect2><para>
 #: lfs-en/chapter08/systemd.xml
-#, fuzzy
-#| msgid ""
-#| "Now fix a security vulnerability in the DNSSEC verification of "
-#| "<command>systemd-resolved</command>:"
 msgid ""
 "Now fix a security vulnerability in the DNSSEC verification of "
 "<command>systemd-resolved</command> and a bug breaking running "
 "<command>systemd-analyze verify</command> on an instantiated systemd unit:"
 msgstr ""
-"现在修复 <command>systemd-resolved</command> 在验证 DNSSEC 时的安全缺陷："
+"现在修复 <command>systemd-resolved</command> 在验证 DNSSEC 时的安全缺陷，以及"
+"导致无法使用 <command>systemd-analyze verify</command> 分析实例化的 systemd "
+"单元的程序错误："
 
 #. type: Content of: <sect1><sect2><screen>
 #: lfs-en/chapter08/systemd.xml
-#, fuzzy, no-wrap
-#| msgid "<userinput remap=\"pre\">patch -Np1 -i ../&glibc-upstream-fixes-patch;</userinput>"
+#, no-wrap
 msgid "<userinput remap='pre'>patch -Np1 -i ../&systemd-upstream-patch;</userinput>"
-msgstr "<userinput remap=\"pre\">patch -Np1 -i ../&glibc-upstream-fixes-patch;</userinput>"
+msgstr "<userinput remap='pre'>patch -Np1 -i ../&systemd-upstream-patch;</userinput>"
 
 #. type: Content of: <sect1><sect2><para>
 #: lfs-en/chapter08/systemd.xml

@@ -461,28 +461,17 @@ msgid ""
 "Expect needs PTYs to work.  Verify that the PTYs are working properly inside "
 "the chroot environment by performing a simple test:"
 msgstr ""
+"Expect 需要伪终端 (PTY) 才能正常工作。进行简单测试以验证 PTY 是否在 chroot 环"
+"境中正常工作："
 
 #. type: Content of: <sect1><sect2><screen>
 #: lfs-en/chapter08/expect.xml
-#, fuzzy, no-wrap
-#| msgid "<userinput remap=\"configure\">python3 configure.py --bootstrap</userinput>"
+#, no-wrap
 msgid "<userinput remap=\"test\">python3 -c 'from pty import spawn; spawn([\"echo\", \"ok\"])'</userinput>"
-msgstr "<userinput remap=\"configure\">python3 configure.py --bootstrap</userinput>"
+msgstr "<userinput remap=\"test\">python3 -c 'from pty import spawn; spawn([\"echo\", \"ok\"])'</userinput>"
 
 #. type: Content of: <sect1><sect2><para>
 #: lfs-en/chapter08/expect.xml
-#, fuzzy
-#| msgid ""
-#| "If any test fails with the message <quote><computeroutput>The system has "
-#| "no more ptys.  Ask your system administrator to create more</"
-#| "computeroutput></quote>, it indicates you've not mounted the <systemitem "
-#| "class=\"filesystem\">devpts</systemitem> file system correctly.  You need "
-#| "to exit from the chroot environment, read <xref linkend='ch-tools-kernfs'/"
-#| "> again, and ensure the <systemitem class=\"filesystem\">devpts</"
-#| "systemitem> file system (and other virtual kernel file systems) mounted "
-#| "correctly.  Then reenter the chroot environment following <xref "
-#| "linkend='ch-tools-chroot'/>.  This issue needs to be resolved before "
-#| "continuing."
 msgid ""
 "This command should output <computeroutput>ok</computeroutput>.  If, "
 "instead, the output includes <computeroutput>OSError: out of pty devices</"
@@ -496,13 +485,14 @@ msgid ""
 "the test suites of Bash, Binutils, GCC, GDBM, and of course Expect itself) "
 "will fail catastrophically, and other subtle breakages may also happen."
 msgstr ""
-"如果有测试失败并输出 <quote><computeroutput>The system has no more ptys.  "
-"Ask your system administrator to create more</computeroutput></quote>, 这说明"
-"您没有正确挂载 <systemitem class=\"filesystem\">devpts</systemitem> 文件系"
-"统。您需要退出 chroot 环境，再次阅读<xref linkend='ch-tools-kernfs'/>，并确"
-"认 <systemitem class=\"filesystem\">devpts</systemitem> 文件系统 (以及其他虚"
-"拟内核文件系统) 已被正确挂载。之后按照<xref linkend='ch-tools-chroot'/>重新进"
-"入 chroot 环境。在继续构建之前，必须解决这一问题。"
+"该命令应该输出 <computeroutput>ok</computeroutput>。如果该命令反而输出 "
+"<computeroutput>OSError: out of pty devices</computeroutput>，说明 PTY 在当前"
+"环境无法正常工作。此时需要退出 chroot 环境，再次阅读<xref linkend='ch-tools-"
+"kernfs'/>，并确认 <systemitem class=\"filesystem\">devpts</systemitem> 文件系"
+"统 (以及其他虚拟内核文件系统) 已被正确挂载。之后按照<xref linkend='ch-tools-"
+"chroot'/>重新进入 chroot 环境。在继续构建之前，必须解决这一问题，否则需要使"
+"用 Expect 的测试套件 (例如 Bash，Binutils，GCC，GDBM，以及 (显然地) Expect 本"
+"身的测试套件) 都会出现大规模的测试失败，而且也可能产生其他隐蔽的问题。"
 
 #. type: Content of: <sect1><sect2><screen>
 #: lfs-en/chapter08/expect.xml

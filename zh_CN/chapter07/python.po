@@ -371,18 +371,14 @@ msgstr "安装 Python"
 
 #. type: Content of: <sect1><sect2><note><para>
 #: lfs-en/chapter07/python.xml
-#, fuzzy
-#| msgid ""
-#| "There are two package files whose name starts with <quote>python</quote>. "
-#| "The one to extract from is <filename>Python-&python-version;.tar.xz</"
-#| "filename> (notice the uppercase first letter)."
 msgid ""
 "There are two package files whose name starts with the <quote>python</quote> "
 "prefix. The one to extract from is <filename>Python-&python-version;.tar.xz</"
 "filename> (notice the uppercase first letter)."
 msgstr ""
-"该软件包包含两个以 <quote>python</quote> 开头的压缩包。我们应该解压的包是 "
-"<filename>Python-&python-version;.tar.xz</filename> (注意首字母是大写的)。"
+"该软件包包含两个文件名以 <quote>python</quote> 为前缀的压缩包。我们应该解压的"
+"包是 <filename>Python-&python-version;.tar.xz</filename> (注意首字母是大写"
+"的)。"
 
 #. type: Content of: <sect1><sect2><para>
 #: lfs-en/chapter07/python.xml lfs-en/chapter08/python.xml
@@ -420,15 +416,6 @@ msgstr "该选项禁止构建 Python 软件包安装器，它在当前阶段没�
 
 #. type: Content of: <sect1><sect2><note><para>
 #: lfs-en/chapter07/python.xml
-#, fuzzy
-#| msgid ""
-#| "Some Python 3 modules can't be built now because the dependencies are not "
-#| "installed yet. The building system still attempts to build them however, "
-#| "so the compilation of some files will fail and the compiler message may "
-#| "seem to indicate <quote>fatal error</quote>.  The message should be "
-#| "ignored.  Just make sure the toplevel <command>make</command> command has "
-#| "not failed.  The optional modules are not needed now and they will be "
-#| "built in <xref linkend=\"chapter-building-system\"/>."
 msgid ""
 "Some Python 3 modules can't be built now because the dependencies are not "
 "installed yet. For the <filename>ssl</filename> module, a message "
@@ -438,11 +425,12 @@ msgid ""
 "not needed now and they will be built in <xref linkend=\"chapter-building-"
 "system\"/>."
 msgstr ""
-"一些 Python 3 模块目前无法构建，这是因为它们的依赖项尚未安装。然而，构建系统"
-"仍会尝试构建它们，因此一些文件会编译失败，编译器的消息可能看上去是 "
-"<quote>fatal error</quote> (致命错误)。这类消息应该被忽略。只需要确认最外层"
-"的 <command>make</command> 命令执行成功即可。目前不需要这些可选的模块，它们将"
-"在<xref linkend=\"chapter-building-system\"/>中被构建。"
+"一些 Python 3 模块目前无法构建，这是因为它们的依赖项尚未安装。对于 "
+"<filename>ssl</filename> 模块，构建系统会输出一条消息<computeroutput>Python "
+"requires a OpenSSL 1.1.1 or newer</computeroutput> (“Python 需要 OpenSSL "
+"1.1.1 或更新版本”)。这条消息应该被忽略。只需要确认最外层的 <command>make</"
+"command> 命令执行成功即可。目前不需要这些可选的模块，它们将在<xref "
+"linkend=\"chapter-building-system\"/>中被构建。"
 
 #. type: Content of: <sect1><sect2><para>
 #: lfs-en/chapter07/python.xml

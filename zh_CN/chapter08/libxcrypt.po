@@ -598,16 +598,7 @@ msgstr ""
 
 #. type: Content of: <sect1><sect2><note><screen>
 #: lfs-en/chapter08/libxcrypt.xml
-#, fuzzy, no-wrap
-#| msgid ""
-#| "<userinput>make distclean\n"
-#| "./configure --prefix=/usr                \\\n"
-#| "            --enable-hashes=strong,glibc \\\n"
-#| "            --enable-obsolete-api=glibc  \\\n"
-#| "            --disable-static             \\\n"
-#| "            --disable-failure-tokens\n"
-#| "make\n"
-#| "cp -av .libs/libcrypt.so.1* /usr/lib</userinput>"
+#, no-wrap
 msgid ""
 "<userinput>make distclean\n"
 "./configure --prefix=/usr                \\\n"
@@ -625,7 +616,7 @@ msgstr ""
 "            --disable-static             \\\n"
 "            --disable-failure-tokens\n"
 "make\n"
-"cp -av .libs/libcrypt.so.1* /usr/lib</userinput>"
+"cp -av --remove-destination .libs/libcrypt.so.1* /usr/lib</userinput>"
 
 #. type: Content of: <sect1><sect2><title>
 #: lfs-en/chapter08/libxcrypt.xml

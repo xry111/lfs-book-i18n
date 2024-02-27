@@ -248,21 +248,6 @@ msgstr "<userinput>systemctl disable systemd-networkd-wait-online</userinput>"
 
 #. type: Content of: <sect1><sect2><para>
 #: lfs-en/chapter09/networkd.xml
-#, fuzzy
-#| msgid ""
-#| "Configuration files for <command>systemd-networkd</command> (and "
-#| "<command>systemd-resolved</command>) can be placed in <filename "
-#| "class=\"directory\">/usr/lib/systemd/network</filename> or <filename "
-#| "class=\"directory\">/etc/systemd/network</filename>. Files in <filename "
-#| "class=\"directory\">/etc/systemd/network</filename> have a higher "
-#| "priority than the ones in <filename class=\"directory\">/usr/lib/systemd/"
-#| "network</filename>.  There are three types of configuration files: "
-#| "<filename class=\"extension\">.link</filename>, <filename "
-#| "class=\"extension\">.netdev</filename> and <filename class=\"extension\">."
-#| "network</filename> files. For detailed descriptions and example contents "
-#| "of these configuration files, consult the <filename>systemd-link(5)</"
-#| "filename>, <filename>systemd-netdev(5)</filename> and <filename>systemd-"
-#| "network(5)</filename> manual pages."
 msgid ""
 "Configuration files for <command>systemd-networkd</command> (and "
 "<command>systemd-resolved</command>) can be placed in <filename "
@@ -286,10 +271,11 @@ msgstr ""
 "filename> 中的配置文件优先级高于 <filename class=\"directory\">/usr/lib/"
 "systemd/network</filename> 中的配置文件。有三种类型的配置文件：<filename "
 "class=\"extension\">.link</filename>、<filename class=\"extension\">.netdev</"
-"filename> 和 <filename class=\"extension\">.network</filename> 文件。要获得它"
-"们的详细描述和内容示例，参阅 <filename>systemd-link(5)</filename>、"
-"<filename>systemd-netdev(5)</filename> 和 <filename>systemd-network(5)</"
-"filename> 手册页。"
+"filename> 和 <filename class=\"extension\">.network</filename> 文件。如果需要"
+"它们的详细描述和内容示例，参阅 <ulink role='man' url='&man;systemd-"
+"link.5'>systemd-link(5)</ulink>，<ulink role='man' url='&man;systemd-"
+"netdev.5'>systemd-netdev(5)</ulink>，以及 <ulink role='man' url='&man;"
+"systemd-network.5'>systemd-network(5)</ulink> 手册页。"
 
 #. type: Content of: <sect1><sect2><sect3><title>
 #: lfs-en/chapter09/networkd.xml
@@ -349,24 +335,15 @@ msgstr "<userinput>ln -s /dev/null /etc/systemd/network/99-default.link</userinp
 
 #. type: Content of: <sect1><sect2><sect3><itemizedlist><listitem><para>
 #: lfs-en/chapter09/networkd.xml
-#, fuzzy
-#| msgid ""
-#| "Mask udev's .link file for the default policy: <placeholder "
-#| "type=\"screen\" id=\"0\"/>"
 msgid ""
 "Mask udev's <filename class='extension'>.link</filename> file for the "
 "default policy: <placeholder type=\"screen\" id=\"0\"/>"
 msgstr ""
-"覆盖 udev 提供默认策略的 .link 文件：<placeholder type=\"screen\" id=\"0\"/>"
+"覆盖 udev 提供默认策略的 <filename class='extension'>.link</filename> 文件："
+"<placeholder type=\"screen\" id=\"0\"/>"
 
 #. type: Content of: <sect1><sect2><sect3><itemizedlist><listitem><para>
 #: lfs-en/chapter09/networkd.xml
-#, fuzzy
-#| msgid ""
-#| "Create a manual naming scheme, for example by naming the interfaces "
-#| "something like \"internet0\", \"dmz0\", or \"lan0\".  To do that, create ."
-#| "link files in /etc/systemd/network/ that select an explicit name or a "
-#| "better naming scheme for your network interfaces. For example:"
 msgid ""
 "Create a manual naming scheme, for example by naming the interfaces "
 "something like <literal>internet0</literal>, <literal>dmz0</literal>, or "
@@ -374,9 +351,10 @@ msgid ""
 "link</filename> files in /etc/systemd/network/ that select an explicit name "
 "or a better naming scheme for your network interfaces. For example:"
 msgstr ""
-"手动创建命名架构，例如将网络接口命名为“internet0”、“dmz0” 或 “lan0”。为此，"
-"在 /etc/systemd/network 中创建 .link 文件，为您的一个、一些或全部网络接口直接"
-"选择名称，或选择更好的命名架构。例如："
+"手动创建命名架构，例如将网络接口命名为 <literal>internet0</literal>，"
+"<literal>dmz0</literal>，或者 <literal>lan0</literal>。为此，在 /etc/systemd/"
+"network 中创建 <filename class='extension'>.link</filename> 文件，为您的一"
+"个，一些，或者全部网络接口直接选择名称，或选择更好的命名架构。例如："
 
 #. type: Content of: <sect1><sect2><sect3><itemizedlist><listitem><screen>
 #: lfs-en/chapter09/networkd.xml
@@ -402,12 +380,12 @@ msgstr ""
 
 #. type: Content of: <sect1><sect2><sect3><itemizedlist><listitem><para>
 #: lfs-en/chapter09/networkd.xml
-#, fuzzy
-#| msgid "See <filename>systemd.link(5)</filename> for more information."
 msgid ""
 "See <ulink role='man' url='&man;systemd.link.5'>systemd.link(5)</ulink> for "
 "more information."
-msgstr "参阅手册页 <filename>systemd.link(5)</filename> 获得更多信息。"
+msgstr ""
+"参阅手册页 <ulink role='man' url='&man;systemd.link.5'>systemd.link(5)</"
+"ulink> 获得更多信息。"
 
 #. type: Content of: <sect1><sect2><sect3><itemizedlist><listitem><para>
 #: lfs-en/chapter09/networkd.xml
@@ -681,13 +659,6 @@ msgstr ""
 
 #. type: Content of: <sect1><sect2><para>
 #: lfs-en/chapter09/networkd.xml
-#, fuzzy
-#| msgid ""
-#| "The <filename>/etc/hostname</filename> does not contain entries for "
-#| "<literal>localhost</literal>, <literal>localhost.localdomain</literal>, "
-#| "or the hostname (without a domain) because they are handled by the "
-#| "<systemitem class='library'>myhostname</systemitem> NSS module, read the "
-#| "man page <filename>nss-myhostname(8)</filename> for details."
 msgid ""
 "The <filename>/etc/hostname</filename> does not contain entries for "
 "<literal>localhost</literal>, <literal>localhost.localdomain</literal>, or "
@@ -698,7 +669,8 @@ msgstr ""
 "<filename>/etc/hostname</filename> 文件不包含 <literal>localhost</literal>，"
 "<literal>localhost.localdomain</literal>，或者(不包含域名的) 主机名，因为 "
 "<systemitem class='library'>myhostname</systemitem> NSS 模块会处理它们，参阅"
-"手册页 <filename>nss-myhostname(8)</filename> 以获得详细信息。"
+"手册页 <ulink role='man' url='&man;nss-myhostname.8'>nss-myhostname(8)</"
+"ulink> for details."
 
 #. type: Content of: <sect1><sect2><para>
 #: lfs-en/chapter09/networkd.xml

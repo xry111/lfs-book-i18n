@@ -421,14 +421,6 @@ msgstr "<userinput remap=\"test\">make check 2>&amp;1 | tee gmp-check-log</useri
 
 #. type: Content of: <sect1><sect2><caution><para>
 #: lfs-en/chapter08/gmp.xml
-#, fuzzy
-#| msgid ""
-#| "The code in gmp is highly optimized for the processor where it is built. "
-#| "Occasionally, the code that detects the processor misidentifies the "
-#| "system capabilities and there will be errors in the tests or other "
-#| "applications using the gmp libraries with the message \"Illegal "
-#| "instruction\".  In this case, gmp should be reconfigured with the option "
-#| "<option>--host=none-linux-gnu</option> and rebuilt."
 msgid ""
 "The code in gmp is highly optimized for the processor where it is built. "
 "Occasionally, the code that detects the processor misidentifies the system "
@@ -438,9 +430,10 @@ msgid ""
 "the option <option>--host=none-linux-gnu</option> and rebuilt."
 msgstr ""
 "GMP 中的代码是针对本机处理器高度优化的。在偶然情况下，检测处理器的代码会错误"
-"识别 CPU 的功能，导致测试套件或使用 GMP 的其他程序输出消息 “Illegal "
-"instruction” (非法指令)。如果发生这种情况，需要使用选项 <option>--build=none-"
-"pc-linux-gnu</option> 重新配置 GMP 并重新构建它。"
+"识别 CPU 的功能，导致测试套件或使用 GMP 的其他程序输出消息 "
+"<computeroutput>Illegal instruction</computeroutput> (非法指令)。如果发生这种"
+"情况，需要使用选项 <option>--build=none-pc-linux-gnu</option> 重新配置 GMP 并"
+"重新构建它。"
 
 #. type: Content of: <sect1><sect2><para>
 #: lfs-en/chapter08/gmp.xml

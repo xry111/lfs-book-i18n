@@ -741,19 +741,6 @@ msgstr "<userinput>grpconv</userinput>"
 
 #. type: Content of: <sect1><sect2><para>
 #: lfs-en/chapter08/shadow.xml
-#, fuzzy
-#| msgid ""
-#| "Shadow's default configuration for the <command>useradd</command> utility "
-#| "needs some explanation. First, the default action for the "
-#| "<command>useradd</command> utility is to create the user and a group with "
-#| "the same name as the user. By default the user ID (UID) and group ID "
-#| "(GID) numbers will begin at 1000. This means if you don't pass extra "
-#| "parameters to <command>useradd</command>, each user will be a member of a "
-#| "unique group on the system. If this behavior is undesirable, you'll need "
-#| "to pass either the <parameter>-g</parameter> or <parameter>-N</parameter> "
-#| "parameter to <command>useradd</command>, or else change the setting of "
-#| "<parameter>USERGROUPS_ENAB</parameter> in <filename>/etc/login.defs</"
-#| "filename>. See <filename>useradd(8)</filename> for more information."
 msgid ""
 "Shadow's default configuration for the <command>useradd</command> utility "
 "needs some explanation. First, the default action for the <command>useradd</"
@@ -774,7 +761,7 @@ msgstr ""
 "果您不希望这样，就要传递 <parameter>-g</parameter> 或者 <parameter>-N</"
 "parameter> 参数给 <command>useradd</command>，或者在<filename>/etc/login."
 "defs</filename> 中修改 <parameter>USERGROUPS_ENAB</parameter> 的值。参阅 "
-"<filename>useradd(8)</filename> 了解更多相关信息。"
+"<ulink role='man' url='&man;useradd.8'>useradd(8)</ulink> 了解更多相关信息。"
 
 #. type: Content of: <sect1><sect2><para>
 #: lfs-en/chapter08/shadow.xml

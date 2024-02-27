@@ -92,14 +92,6 @@ msgstr ""
 
 #. type: Content of: <sect1><sect2><itemizedlist><listitem><para>
 #: lfs-en/chapter08/pkgmgt.xml
-#, fuzzy
-#| msgid ""
-#| "If the Linux kernel needs to be upgraded (for example, from 5.10.17 to "
-#| "5.10.18 or 5.11.1), nothing else needs to be rebuilt.  The system will "
-#| "keep working fine thanks to the well-defined interface between the kernel "
-#| "and userspace.  Specifically, Linux API headers need not be (and should "
-#| "not be, see the next item) upgraded along with the kernel.  You will "
-#| "merely need to reboot your system to use the upgraded kernel."
 msgid ""
 "If the Linux kernel needs to be upgraded (for example, from 5.10.17 to "
 "5.10.18 or 5.11.1), nothing else needs to be rebuilt.  The system will keep "
@@ -110,8 +102,8 @@ msgid ""
 msgstr ""
 "如果需要升级 Linux 内核 (例如，从 5.10.17 升级到 5.10.18 或 5.11.1)，则不需要"
 "重新构建其他任何软件包。因为内核态与用户态的接口十分清晰，系统仍然能够继续正"
-"常工作。特别地，在升级内核时，不需要 (也不应该，详见下一项说明) 一同更新 "
-"Linux API 头文件。重新引导系统即可使用升级后的内核。"
+"常工作。特别地，在升级内核时，不需要一同更新 Linux API 头文件。重新引导系统即"
+"可使用升级后的内核。"
 
 #. type: Content of: <sect1><sect2><itemizedlist><listitem><para>
 #: lfs-en/chapter08/pkgmgt.xml
@@ -120,6 +112,9 @@ msgid ""
 "Glibc-&glibc-version;), some extra steps are needed to avoid breaking the "
 "system.  Read <xref linkend='ch-system-glibc'/> for details."
 msgstr ""
+"如果需要将 Glibc 升级到一个新版本 (例如，从 Glibc-2.36 升级到 Glibc-&glibc-"
+"version;)，则需要进行一些额外操作，以防止损坏系统。详见<xref linkend='ch-"
+"system-glibc'/>。"
 
 #. type: Content of: <sect1><sect2><itemizedlist><listitem><para>
 #: lfs-en/chapter08/pkgmgt.xml

@@ -471,10 +471,9 @@ msgstr "安装的目录"
 
 #. type: Content of: <sect1><sect2><screen>
 #: lfs-en/chapter08/bash.xml lfs-en/chapter08/vim.xml
-#, fuzzy, no-wrap
-#| msgid "<userinput remap=\"test\">chown -Rv tester .</userinput>"
+#, no-wrap
 msgid "<userinput remap=\"test\">chown -R tester .</userinput>"
-msgstr "<userinput remap=\"test\">chown -Rv tester .</userinput>"
+msgstr "<userinput remap=\"test\">chown -R tester .</userinput>"
 
 #. type: Content of: <sect1><sect1info><address>
 #: lfs-en/chapter08/vim.xml
@@ -565,22 +564,16 @@ msgstr ""
 
 #. type: Content of: <sect1><sect2><screen>
 #: lfs-en/chapter08/vim.xml
-#, fuzzy, no-wrap
-#| msgid "<userinput remap=\"test\">su tester -c \"LANG=en_US.UTF-8 make -j1 test\" &amp;> vim-test.log</userinput>"
+#, no-wrap
 msgid ""
 "<userinput remap=\"test\">su tester -c \"TERM=xterm-256color LANG=en_US.UTF-8 make -j1 test\" \\\n"
 "   &amp;> vim-test.log</userinput>"
-msgstr "<userinput remap=\"test\">su tester -c \"LANG=en_US.UTF-8 make -j1 test\" &amp;> vim-test.log</userinput>"
+msgstr ""
+"<userinput remap=\"test\">su tester -c \"TERM=xterm-256color LANG=en_US.UTF-8 make -j1 test\" \\\n"
+"   &amp;> vim-test.log</userinput>"
 
 #. type: Content of: <sect1><sect2><para>
 #: lfs-en/chapter08/vim.xml
-#, fuzzy
-#| msgid ""
-#| "The test suite outputs a lot of binary data to the screen.  This can "
-#| "cause issues with the settings of the current terminal.  The problem can "
-#| "be avoided by redirecting the output to a log file as shown above.  A "
-#| "successful test will result in the words \"ALL DONE\" in the log file at "
-#| "completion."
 msgid ""
 "The test suite outputs a lot of binary data to the screen.  This can cause "
 "issues with the settings of the current terminal (especially while we are "
@@ -589,9 +582,10 @@ msgid ""
 "log file as shown above.  A successful test will result in the words "
 "<computeroutput>ALL DONE</computeroutput> in the log file at completion."
 msgstr ""
-"测试套件会将大量二进制数据输出到屏幕。这可能扰乱当前终端设置。为了避免这个问"
-"题，像上面的命令一样，将输出重定向到日志文件。测试成功完成后，日志文件末尾会"
-"包含 “ALL DONE”。"
+"测试套件会将大量二进制数据输出到屏幕。这可能扰乱当前终端设置 (特别是像我们所"
+"做的一样，覆盖 <envar>TERM</envar> 环境变量以满足测试套件的一些假设时)。为了"
+"避免这个问题，以上命令将输出重定向到日志文件。测试成功完成后，日志文件末尾会"
+"包含 <computeroutput>ALL DONE</computeroutput>。"
 
 #. type: Content of: <sect1><sect2><para>
 #: lfs-en/chapter08/vim.xml

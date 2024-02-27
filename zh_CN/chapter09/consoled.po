@@ -65,16 +65,12 @@ msgstr ""
 
 #. type: Content of: <sect1><para>
 #: lfs-en/chapter09/consoled.xml
-#, fuzzy
-#| msgid ""
-#| "The <filename>/etc/vconsole.conf</filename> file should contain lines of "
-#| "the form: VARIABLE=\"value\". The following variables are recognized:"
 msgid ""
 "The <filename>/etc/vconsole.conf</filename> file should contain lines of the "
 "form: <envar>VARIABLE=value</envar>. The following variables are recognized:"
 msgstr ""
-"<filename>/etc/vconsole.conf</filename> 文件的每一行都应该符合格式：变量名"
-"=\"值\"，"
+"<filename>/etc/vconsole.conf</filename> 文件的每一行都应该符合格式：<envar>变"
+"量名=值</envar>，有效的变量名包括："
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: lfs-en/chapter09/consoled.xml lfs-en/chapter09/usage.xml
@@ -146,15 +142,23 @@ msgid ""
 "of them, for example <filename>Lat2-Terminus16.psfu.gz</filename> as the "
 "default console font:"
 msgstr ""
+"在<xref linkend='ch-config-locale'/>中，我们会指定 <literal>C.UTF-8</"
+"literal> 为 Linux 控制台中交互会话的 locale。<application>Kbd</application> "
+"软件包提供的，包含 <literal>C.UTF-8</literal> locale 下程序输出消息中全部字符"
+"字形的控制台字体有 <filename class='directory'>/usr/share/consolefonts</"
+"filename> 中的 <filename>LatArCyrHeb*.psfu.gz</filename>，"
+"<filename>LatGrkCyr*.psfu.gz</filename>，<filename>Lat2-Terminus16.psfu.gz</"
+"filename>，以及 <filename>pancyrillic.f16.psfu.gz</filename> (其他提供的字体"
+"缺失一些字符的字形，如 Unicode 左右引号和 Unicode 英文破折号)。因此将它们中的"
+"某个，例如 <filename>Lat2-Terminus16.psfu.gz</filename> 设为默认控制台字体："
 
 #.  We are using "nodump" for general settings, but not examples.  This
 #.        is ironic, but needed for the compatibility with jhalfs!  
 #. type: Content of: <sect1><screen>
 #: lfs-en/chapter09/consoled.xml
-#, fuzzy, no-wrap
-#| msgid "<userinput>echo \"<replaceable>&lt;lfs&gt;</replaceable>\" &gt; /etc/hostname</userinput>"
+#, no-wrap
 msgid "<userinput>echo <literal>FONT=Lat2-Terminus16</literal> &gt; /etc/vconsole.conf</userinput>"
-msgstr "<userinput>echo \"<replaceable>&lt;lfs&gt;</replaceable>\" &gt; /etc/hostname</userinput>"
+msgstr "<userinput>echo <literal>FONT=Lat2-Terminus16</literal> &gt; /etc/vconsole.conf</userinput>"
 
 #. type: Content of: <sect1><para>
 #: lfs-en/chapter09/consoled.xml

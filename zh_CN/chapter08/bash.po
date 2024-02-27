@@ -511,17 +511,14 @@ msgstr "&bash-fin-du;"
 
 #. type: Content of: <sect1><sect2><para>
 #: lfs-en/chapter08/bash.xml
-#, fuzzy
-#| msgid "Now fix a problem identified upstream:"
 msgid "First, fix some issues identified upstream:"
-msgstr "现在修复上游发现的问题："
+msgstr "首先，修复上游发现的一些问题："
 
 #. type: Content of: <sect1><sect2><screen>
 #: lfs-en/chapter08/bash.xml
-#, fuzzy, no-wrap
-#| msgid "<userinput remap=\"pre\">patch -Np1 -i ../&glibc-upstream-fixes-patch;</userinput>"
+#, no-wrap
 msgid "<userinput remap=\"pre\">patch -Np1 -i ../&bash-upstream-fixes-patch;</userinput>"
-msgstr "<userinput remap=\"pre\">patch -Np1 -i ../&glibc-upstream-fixes-patch;</userinput>"
+msgstr "<userinput remap=\"pre\">patch -Np1 -i ../&bash-upstream-fixes-patch;</userinput>"
 
 #. type: Content of: <sect1><sect2><screen>
 #: lfs-en/chapter08/bash.xml
@@ -570,10 +567,9 @@ msgstr ""
 
 #. type: Content of: <sect1><sect2><screen>
 #: lfs-en/chapter08/bash.xml lfs-en/chapter08/vim.xml
-#, fuzzy, no-wrap
-#| msgid "<userinput remap=\"test\">chown -Rv tester .</userinput>"
+#, no-wrap
 msgid "<userinput remap=\"test\">chown -R tester .</userinput>"
-msgstr "<userinput remap=\"test\">chown -Rv tester .</userinput>"
+msgstr "<userinput remap=\"test\">chown -R tester .</userinput>"
 
 #. type: Content of: <sect1><sect2><para>
 #: lfs-en/chapter08/bash.xml
@@ -591,15 +587,7 @@ msgstr ""
 
 #. type: Content of: <sect1><sect2><screen>
 #: lfs-en/chapter08/bash.xml
-#, fuzzy, no-wrap
-#| msgid ""
-#| "<userinput remap=\"test\">su -s /usr/bin/expect tester &lt;&lt; EOF\n"
-#| "set timeout -1\n"
-#| "spawn make tests\n"
-#| "expect eof\n"
-#| "lassign [wait] _ _ _ value\n"
-#| "exit $value\n"
-#| "EOF</userinput>"
+#, no-wrap
 msgid ""
 "<userinput remap=\"test\">su -s /usr/bin/expect tester &lt;&lt; \"EOF\"\n"
 "set timeout -1\n"
@@ -609,7 +597,7 @@ msgid ""
 "exit $value\n"
 "EOF</userinput>"
 msgstr ""
-"<userinput remap=\"test\">su -s /usr/bin/expect tester &lt;&lt; EOF\n"
+"<userinput remap=\"test\">su -s /usr/bin/expect tester &lt;&lt; \"EOF\"\n"
 "set timeout -1\n"
 "spawn make tests\n"
 "expect eof\n"

@@ -31,14 +31,6 @@ msgstr "基础设置"
 
 #. type: Content of: <sect1><sect2><para>
 #: lfs-en/chapter09/systemd-custom.xml
-#, fuzzy
-#| msgid ""
-#| "The <filename>/etc/systemd/system.conf</filename> file contains a set of "
-#| "options to control basic systemd operations. The default file has all "
-#| "entries commented out with the default settings indicated. This file is "
-#| "where the log level may be changed as well as some basic logging "
-#| "settings.  See the <filename>systemd-system.conf(5)</filename> manual "
-#| "page for details on each configuration option."
 msgid ""
 "The <filename>/etc/systemd/system.conf</filename> file contains a set of "
 "options to control basic systemd operations. The default file has all "
@@ -49,8 +41,8 @@ msgid ""
 msgstr ""
 "<filename>/etc/systemd/system.conf</filename> 文件包含一组控制 systemd 基本功"
 "能的选项。默认文件中所有条目都被注释掉，并标明了默认值。可以在这里修改日志级"
-"别，以及其他一些基本日志设定。参阅 <filename>systemd-system.conf(5)</"
-"filename> 手册页了解每个选项的详细信息。"
+"别，以及其他一些基本日志设定。参阅 <ulink role='man' url='&man;systemd-"
+"system.conf.5'>systemd-system.conf(5)</ulink> 手册页了解每个选项的详细信息。"
 
 #. type: Content of: <sect1><sect2><title>
 #: lfs-en/chapter09/systemd-custom.xml
@@ -165,15 +157,6 @@ msgstr "systemd-tmpfiles-setup.service"
 
 #. type: Content of: <sect1><sect2><para>
 #: lfs-en/chapter09/systemd-custom.xml
-#, fuzzy
-#| msgid ""
-#| "The system location for the configuration files is <filename>/usr/lib/"
-#| "tmpfiles.d/*.conf</filename>. The local configuration files are in "
-#| "<filename class=\"directory\">/etc/tmpfiles.d</filename>. Files in "
-#| "<filename class=\"directory\">/etc/tmpfiles.d</filename> override files "
-#| "with the same name in <filename class=\"directory\">/usr/lib/tmpfiles.d</"
-#| "filename>. See <filename>tmpfiles.d(5)</filename> manual page for file "
-#| "format details."
 msgid ""
 "The system location for the configuration files is <filename>/usr/lib/"
 "tmpfiles.d/*.conf</filename>. The local configuration files are in <filename "
@@ -187,7 +170,8 @@ msgstr ""
 "配置文件位于 <filename class=\"directory\">/etc/tmpfiles.d</filename>。"
 "<filename class=\"directory\">/etc/tmpfiles.d</filename> 中的文件覆盖 "
 "<filename class=\"directory\">/usr/lib/tmpfiles.d</filename> 中的同名文件。参"
-"阅 <filename>tmpfiles.d(5)</filename> 手册页，了解配置文件格式的细节。"
+"阅 <ulink role='man' url='&man;tmpfiles.d.5'>tmpfiles.d(5)</ulink> 手册页，了"
+"解配置文件格式的细节。"
 
 #. type: Content of: <sect1><sect2><para><screen>
 #: lfs-en/chapter09/systemd-custom.xml
@@ -274,21 +258,16 @@ msgstr ""
 
 #. type: Content of: <sect1><sect2><para>
 #: lfs-en/chapter09/systemd-custom.xml
-#, fuzzy
-#| msgid ""
-#| "See <filename>systemd.unit(5)</filename> manual page for more "
-#| "information. After creating the configuration file, run "
-#| "<userinput>systemctl daemon-reload</userinput> and <userinput>systemctl "
-#| "restart foobar</userinput> to activate the changes to a service."
 msgid ""
 "See <ulink role='man' url='&man;systemd.unit.5'>systemd.unit(5)</ulink> "
 "manual page for more information. After creating the configuration file, run "
 "<userinput>systemctl daemon-reload</userinput> and <userinput>systemctl "
 "restart foobar</userinput> to activate the changes to a service."
 msgstr ""
-"参阅 <filename>systemd.unit(5)</filename> 手册页获取更多信息。在创建配置文件"
-"后，执行 <userinput>systemctl daemon-reload</userinput> 和 "
-"<userinput>systemctl restart foobar</userinput>，激活对服务进行的修改。"
+"参阅 <ulink role='man' url='&man;systemd.unit.5'>systemd.unit(5)</ulink> 手册"
+"页获取更多信息。在创建配置文件后，执行 <userinput>systemctl daemon-reload</"
+"userinput> 和 <userinput>systemctl restart foobar</userinput>，激活对服务进行"
+"的修改。"
 
 #. type: Content of: <sect1><sect2><title>
 #: lfs-en/chapter09/systemd-custom.xml
@@ -485,20 +464,16 @@ msgstr ""
 
 #. type: Content of: <sect1><sect2><para>
 #: lfs-en/chapter09/systemd-custom.xml
-#, fuzzy
-#| msgid ""
-#| "See the <filename>systemd-coredump(8)</filename>, "
-#| "<filename>coredumpctl(1)</filename>, and <filename>coredump.conf.d(5)</"
-#| "filename> manual pages for more information."
 msgid ""
 "See the <ulink role='man' url='&man;systemd-coredump.8'>systemd-coredump(8)</"
 "ulink>, <ulink role='man' url='&man;coredumpctl.1'>coredumpctl(1)</ulink>, "
 "and <ulink role='man' url='&man;coredump.conf.d.5'>coredump.conf.d(5)</"
 "ulink> manual pages for more information."
 msgstr ""
-"参阅手册页 <filename>systemd-coredump(8)</filename>，"
-"<filename>coredumpctl(1)</filename>，以及 <filename>coredump.conf.d(5)</"
-"filename> 了解更多信息。"
+"参阅手册页 <ulink role='man' url='&man;systemd-coredump.8'>systemd-"
+"coredump(8)</ulink>，<ulink role='man' url='&man;"
+"coredumpctl.1'>coredumpctl(1)</ulink>，以及 <ulink role='man' url='&man;"
+"coredump.conf.d.5'>coredump.conf.d(5)</ulink> 了解更多信息。"
 
 #. type: Content of: <sect1><sect2><title>
 #: lfs-en/chapter09/systemd-custom.xml
