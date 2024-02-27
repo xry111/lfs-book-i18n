@@ -455,6 +455,8 @@ msgid ""
 "Optimization (LTO).  Note that some BLFS packages will be built with LTO "
 "enabled by default even if you don't enable it explicitly:"
 msgstr ""
+"首先，修复导致一些软件包在启用链接时优化 (LTO) 时构建失败的问题。注意一些 "
+"BLFS 软件包在构建时默认启用 LTO，即使您不主动启用 LTO："
 
 #. type: Content of: <sect1><sect2><screen>
 #: lfs-en/chapter08/binutils.xml
@@ -465,6 +467,10 @@ msgid ""
 "      -i gas/config/tc-loongarch.c\n"
 "done</userinput>"
 msgstr ""
+"<userinput remap=\"pre\">for i in LO12 HI20 ADD; do\n"
+"  sed -e '/DESC64_HI12/a\\    case BFD_RELOC_LARCH_TLS_LE_'${i}'_R:' \\\n"
+"      -i gas/config/tc-loongarch.c\n"
+"done</userinput>"
 
 #. type: Content of: <sect1><sect2><screen>
 #: lfs-en/chapter08/binutils.xml

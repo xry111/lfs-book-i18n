@@ -346,16 +346,13 @@ msgstr "&gcc-url;"
 #. type: Content of: <sect1><sect2><screen>
 #: lfs-en/chapter05/gcc-pass1.xml lfs-en/chapter06/gcc-pass2.xml
 #: lfs-en/chapter08/gcc.xml
-#, fuzzy, no-wrap
-#| msgid ""
-#| "<userinput remap=\"pre\">sed -e 's/lib64/lib/' \\\n"
-#| "    -i.orig gcc/config/loongarch/{t-linux,linux.h}</userinput>"
+#, no-wrap
 msgid ""
 "<userinput remap='pre'>sed -e '/ASM_OUTPUT_ALIGN_WITH_NOP/,+1d' \\\n"
 "    -i gcc/config/loongarch/loongarch.h</userinput>"
 msgstr ""
-"<userinput remap=\"pre\">sed -e 's/lib64/lib/' \\\n"
-"    -i.orig gcc/config/loongarch/{t-linux,linux.h}</userinput>"
+"<userinput remap='pre'>sed -e '/ASM_OUTPUT_ALIGN_WITH_NOP/,+1d' \\\n"
+"    -i gcc/config/loongarch/loongarch.h</userinput>"
 
 #. type: Content of: <sect1><sect2><para>
 #: lfs-en/chapter05/gcc-pass1.xml lfs-en/chapter06/gcc-pass2.xml
@@ -511,6 +508,8 @@ msgid ""
 "Again, fix an issue producing illegal instructions in linked executables and "
 "shared libraries with GCC &gcc-version; and Binutils-2.42:"
 msgstr ""
+"再次修复 GCC &gcc-version; 中导致 Binutils-2.42 链接生成的可执行文件可能包含"
+"非法指令的问题："
 
 #. type: Content of: <sect1><sect2><segmentedlist><segtitle>
 #: lfs-en/chapter08/acl.xml lfs-en/chapter08/attr.xml
@@ -802,6 +801,10 @@ msgid ""
 "<quote>AddressSanitizer*</quote> tests and 7 <filename>interception-malloc-"
 "test-1.C</filename> tests, are known to fail."
 msgstr ""
+"已知 <filename class='directory'>analyzer</filename> 目录中的七项测试可能失"
+"败。在 g++ 测试中，21 项测试 (共计有约 250,000 项测试)：14 项 "
+"<quote>AddressSanitizer*</quote> 测试和 7 项 <filename>interception-malloc-"
+"test-1.C</filename> 测试会失败。"
 
 #. type: Content of: <sect1><sect2><para>
 #: lfs-en/chapter08/gcc.xml

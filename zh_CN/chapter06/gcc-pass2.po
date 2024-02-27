@@ -259,16 +259,13 @@ msgstr "&gcc-url;"
 #. type: Content of: <sect1><sect2><screen>
 #: lfs-en/chapter05/gcc-pass1.xml lfs-en/chapter06/gcc-pass2.xml
 #: lfs-en/chapter08/gcc.xml
-#, fuzzy, no-wrap
-#| msgid ""
-#| "<userinput remap=\"pre\">sed -e 's/lib64/lib/' \\\n"
-#| "    -i.orig gcc/config/loongarch/{t-linux,linux.h}</userinput>"
+#, no-wrap
 msgid ""
 "<userinput remap='pre'>sed -e '/ASM_OUTPUT_ALIGN_WITH_NOP/,+1d' \\\n"
 "    -i gcc/config/loongarch/loongarch.h</userinput>"
 msgstr ""
-"<userinput remap=\"pre\">sed -e 's/lib64/lib/' \\\n"
-"    -i.orig gcc/config/loongarch/{t-linux,linux.h}</userinput>"
+"<userinput remap='pre'>sed -e '/ASM_OUTPUT_ALIGN_WITH_NOP/,+1d' \\\n"
+"    -i gcc/config/loongarch/loongarch.h</userinput>"
 
 #. type: Content of: <sect1><sect2><screen>
 #: lfs-en/chapter05/gcc-pass1.xml lfs-en/chapter06/gcc-pass2.xml
@@ -430,6 +427,8 @@ msgid ""
 "Again, fix an issue producing illegal instructions in linked executables and "
 "shared libraries with GCC &gcc-version; and Binutils-2.42:"
 msgstr ""
+"再次修复 GCC &gcc-version; 中导致 Binutils-2.42 链接生成的可执行文件可能包含"
+"非法指令的问题："
 
 #. type: Content of: <sect1><sect2><para>
 #: lfs-en/chapter06/gcc-pass2.xml
