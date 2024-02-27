@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Linux From Scratch 11.4\n"
 "Report-Msgid-Bugs-To: lfs-dev@lists.linuxfromscratch.org\n"
-"POT-Creation-Date: 2024-01-02 21:03+0800\n"
+"POT-Creation-Date: 2024-02-28 01:01+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: Xi Ruoyao <xry111@xry111.site>\n"
 "Language-Team: none\n"
@@ -418,8 +418,12 @@ msgstr ""
 
 #. type: Content of: <sect1><sect2><para>
 #: lfs-en/chapter10/kernel.xml
+#, fuzzy
+#| msgid ""
+#| "There are several ways to configure the kernel options. Usually, This is "
+#| "done through a menu-driven interface, for example:"
 msgid ""
-"There are several ways to configure the kernel options. Usually, This is "
+"There are several ways to configure the kernel options. Usually, this is "
 "done through a menu-driven interface, for example:"
 msgstr ""
 "有多种配置内核选项的方法。例如，通常我们通过目录驱动的界面完成这一工作："
@@ -729,18 +733,43 @@ msgstr ""
 
 #. type: Content of: <sect1><sect2><para>
 #: lfs-en/chapter10/kernel.xml
+msgid ""
+"Now fix an issue causing the kernel fail to build with Binutils 2.42 on "
+"LoongArch:"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><screen>
+#: lfs-en/chapter10/kernel.xml
+#, no-wrap
+msgid ""
+"<userinput remap=\"pre\">sed -e '/case EM_LOONG/aif (r_type == 100 || r_type == 102) continue;' \\\n"
+"    -i scripts/mod/modpost.c</userinput>"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><para>
+#: lfs-en/chapter10/kernel.xml
 msgid "Compile the kernel image and modules:"
 msgstr "编译内核映像和模块："
 
 #. type: Content of: <sect1><sect2><para>
 #: lfs-en/chapter10/kernel.xml
+#, fuzzy
+#| msgid ""
+#| "If using kernel modules, module configuration in <filename "
+#| "class=\"directory\">/etc/modprobe.d</filename> may be required.  "
+#| "Information pertaining to modules and kernel configuration is located in "
+#| "<xref linkend=\"ch-config-udev\"/> and in the kernel documentation in the "
+#| "<filename class=\"directory\">linux-&linux-version;/Documentation</"
+#| "filename> directory.  Also, <filename>modprobe.d(5)</filename> may be of "
+#| "interest."
 msgid ""
 "If using kernel modules, module configuration in <filename "
 "class=\"directory\">/etc/modprobe.d</filename> may be required.  Information "
 "pertaining to modules and kernel configuration is located in <xref "
 "linkend=\"ch-config-udev\"/> and in the kernel documentation in the "
 "<filename class=\"directory\">linux-&linux-version;/Documentation</filename> "
-"directory.  Also, <filename>modprobe.d(5)</filename> may be of interest."
+"directory.  Also, <ulink role='man' url='&man;modprobe.d.5'>modprobe.d(5)</"
+"ulink> may be of interest."
 msgstr ""
 "如果要使用内核模块，可能需要在 <filename class=\"directory\">/etc/modprobe."
 "d</filename> 中写入模块配置。讨论模块和内核配置的信息位于<xref linkend=\"ch-"

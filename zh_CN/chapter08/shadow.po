@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Linux From Scratch 11.4\n"
 "Report-Msgid-Bugs-To: lfs-dev@lists.linuxfromscratch.org\n"
-"POT-Creation-Date: 2024-01-02 21:03+0800\n"
+"POT-Creation-Date: 2024-02-28 01:01+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: Xi Ruoyao <xry111@xry111.site>\n"
 "Language-Team: none\n"
@@ -255,11 +255,12 @@ msgstr "<userinput remap=\"make\">make</userinput>"
 #: lfs-en/chapter08/bc.xml lfs-en/chapter08/binutils.xml
 #: lfs-en/chapter08/bison.xml lfs-en/chapter08/check.xml
 #: lfs-en/chapter08/coreutils.xml lfs-en/chapter08/dbus.xml
-#: lfs-en/chapter08/diffutils.xml lfs-en/chapter08/e2fsprogs.xml
-#: lfs-en/chapter08/expat.xml lfs-en/chapter08/expect.xml
-#: lfs-en/chapter08/file.xml lfs-en/chapter08/findutils.xml
-#: lfs-en/chapter08/flex.xml lfs-en/chapter08/flit-core.xml
-#: lfs-en/chapter08/gawk.xml lfs-en/chapter08/gcc.xml lfs-en/chapter08/gdbm.xml
+#: lfs-en/chapter08/dejagnu.xml lfs-en/chapter08/diffutils.xml
+#: lfs-en/chapter08/e2fsprogs.xml lfs-en/chapter08/expat.xml
+#: lfs-en/chapter08/expect.xml lfs-en/chapter08/file.xml
+#: lfs-en/chapter08/findutils.xml lfs-en/chapter08/flex.xml
+#: lfs-en/chapter08/flit-core.xml lfs-en/chapter08/gawk.xml
+#: lfs-en/chapter08/gcc.xml lfs-en/chapter08/gdbm.xml
 #: lfs-en/chapter08/gettext.xml lfs-en/chapter08/glibc.xml
 #: lfs-en/chapter08/gperf.xml lfs-en/chapter08/grep.xml
 #: lfs-en/chapter08/groff.xml lfs-en/chapter08/grub.xml
@@ -740,6 +741,19 @@ msgstr "<userinput>grpconv</userinput>"
 
 #. type: Content of: <sect1><sect2><para>
 #: lfs-en/chapter08/shadow.xml
+#, fuzzy
+#| msgid ""
+#| "Shadow's default configuration for the <command>useradd</command> utility "
+#| "needs some explanation. First, the default action for the "
+#| "<command>useradd</command> utility is to create the user and a group with "
+#| "the same name as the user. By default the user ID (UID) and group ID "
+#| "(GID) numbers will begin at 1000. This means if you don't pass extra "
+#| "parameters to <command>useradd</command>, each user will be a member of a "
+#| "unique group on the system. If this behavior is undesirable, you'll need "
+#| "to pass either the <parameter>-g</parameter> or <parameter>-N</parameter> "
+#| "parameter to <command>useradd</command>, or else change the setting of "
+#| "<parameter>USERGROUPS_ENAB</parameter> in <filename>/etc/login.defs</"
+#| "filename>. See <filename>useradd(8)</filename> for more information."
 msgid ""
 "Shadow's default configuration for the <command>useradd</command> utility "
 "needs some explanation. First, the default action for the <command>useradd</"
@@ -750,8 +764,8 @@ msgid ""
 "this behavior is undesirable, you'll need to pass either the <parameter>-g</"
 "parameter> or <parameter>-N</parameter> parameter to <command>useradd</"
 "command>, or else change the setting of <parameter>USERGROUPS_ENAB</"
-"parameter> in <filename>/etc/login.defs</filename>. See "
-"<filename>useradd(8)</filename> for more information."
+"parameter> in <filename>/etc/login.defs</filename>. See <ulink role='man' "
+"url='&man;useradd.8'>useradd(8)</ulink> for more information."
 msgstr ""
 "下面需要解释 Shadow 中 <command>useradd</command> 的默认配置。首先，"
 "<command>useradd</command> 的默认操作是创建一个用户，以及一个名字和用户名相同"

@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Linux From Scratch 11.0\n"
 "Report-Msgid-Bugs-To: lfs-dev@lists.linuxfromscratch.org\n"
-"POT-Creation-Date: 2024-01-02 21:03+0800\n"
+"POT-Creation-Date: 2024-02-28 01:01+0800\n"
 "PO-Revision-Date: 2021-07-28 12:48+0800\n"
 "Last-Translator: Xi Ruoyao <xry111@xry111.site>\n"
 "Language-Team: none\n"
@@ -261,11 +261,12 @@ msgstr "<userinput remap=\"make\">make</userinput>"
 #: lfs-en/chapter08/bc.xml lfs-en/chapter08/binutils.xml
 #: lfs-en/chapter08/bison.xml lfs-en/chapter08/check.xml
 #: lfs-en/chapter08/coreutils.xml lfs-en/chapter08/dbus.xml
-#: lfs-en/chapter08/diffutils.xml lfs-en/chapter08/e2fsprogs.xml
-#: lfs-en/chapter08/expat.xml lfs-en/chapter08/expect.xml
-#: lfs-en/chapter08/file.xml lfs-en/chapter08/findutils.xml
-#: lfs-en/chapter08/flex.xml lfs-en/chapter08/flit-core.xml
-#: lfs-en/chapter08/gawk.xml lfs-en/chapter08/gcc.xml lfs-en/chapter08/gdbm.xml
+#: lfs-en/chapter08/dejagnu.xml lfs-en/chapter08/diffutils.xml
+#: lfs-en/chapter08/e2fsprogs.xml lfs-en/chapter08/expat.xml
+#: lfs-en/chapter08/expect.xml lfs-en/chapter08/file.xml
+#: lfs-en/chapter08/findutils.xml lfs-en/chapter08/flex.xml
+#: lfs-en/chapter08/flit-core.xml lfs-en/chapter08/gawk.xml
+#: lfs-en/chapter08/gcc.xml lfs-en/chapter08/gdbm.xml
 #: lfs-en/chapter08/gettext.xml lfs-en/chapter08/glibc.xml
 #: lfs-en/chapter08/gperf.xml lfs-en/chapter08/grep.xml
 #: lfs-en/chapter08/groff.xml lfs-en/chapter08/grub.xml
@@ -652,9 +653,12 @@ msgstr "<userinput>bash tests/run.sh --srcdir=$PWD --builddir=$PWD</userinput>"
 
 #. type: Content of: <sect1><sect2><screen>
 #: lfs-en/chapter08/util-linux.xml
-#, no-wrap
+#, fuzzy, no-wrap
+#| msgid ""
+#| "<userinput remap=\"test\">chown -Rv tester .\n"
+#| "su tester -c \"make -k check\"</userinput>"
 msgid ""
-"<userinput remap=\"test\">chown -Rv tester .\n"
+"<userinput remap=\"test\">chown -R tester .\n"
 "su tester -c \"make -k check\"</userinput>"
 msgstr ""
 "<userinput remap=\"test\">chown -Rv tester .\n"
@@ -1350,9 +1354,13 @@ msgstr "<command>irqtop</command>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: lfs-en/chapter08/util-linux.xml
+#, fuzzy
+#| msgid ""
+#| "Displays kernel interrupt counter information in <filename>top(1)</"
+#| "filename> style view"
 msgid ""
-"Displays kernel interrupt counter information in <filename>top(1)</filename> "
-"style view"
+"Displays kernel interrupt counter information in <ulink role='man' url='&man;"
+"top.1'>top(1)</ulink> style view"
 msgstr "以 <filename>top(1)</filename> 风格显示内核中断计数信息"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>

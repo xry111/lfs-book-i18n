@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Linux From Scratch 11.4\n"
 "Report-Msgid-Bugs-To: lfs-dev@lists.linuxfromscratch.org\n"
-"POT-Creation-Date: 2023-09-18 16:58+0800\n"
+"POT-Creation-Date: 2024-02-28 01:01+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: Xi Ruoyao <xry111@xry111.site>\n"
 "Language-Team: none\n"
@@ -65,9 +65,13 @@ msgstr ""
 
 #. type: Content of: <sect1><para>
 #: lfs-en/chapter09/consoled.xml
+#, fuzzy
+#| msgid ""
+#| "The <filename>/etc/vconsole.conf</filename> file should contain lines of "
+#| "the form: VARIABLE=\"value\". The following variables are recognized:"
 msgid ""
 "The <filename>/etc/vconsole.conf</filename> file should contain lines of the "
-"form: VARIABLE=\"value\". The following variables are recognized:"
+"form: <envar>VARIABLE=value</envar>. The following variables are recognized:"
 msgstr ""
 "<filename>/etc/vconsole.conf</filename> 文件的每一行都应该符合格式：变量名"
 "=\"值\"，"
@@ -125,6 +129,32 @@ msgstr "FONT_UNIMAP"
 #: lfs-en/chapter09/consoled.xml
 msgid "This variable specifies the Unicode font map."
 msgstr "该变量指定 Unicode 字体映射。"
+
+#. type: Content of: <sect1><para>
+#: lfs-en/chapter09/consoled.xml
+msgid ""
+"We'll use <literal>C.UTF-8</literal> as the locale for interactive sessions "
+"in the Linux console in <xref role='.' linkend='ch-config-locale'/> The "
+"console fonts shipped by the <application>Kbd</application> package "
+"containing the glyphs for all characters from the program messages in the "
+"<literal>C.UTF-8</literal> locale are <filename>LatArCyrHeb*.psfu.gz</"
+"filename>, <filename>LatGrkCyr*.psfu.gz</filename>, <filename>Lat2-"
+"Terminus16.psfu.gz</filename>, and <filename>pancyrillic.f16.psfu.gz</"
+"filename> in <filename class='directory'>/usr/share/consolefonts</filename> "
+"(the other shipped console fonts lack glyphs of some characters like the "
+"Unicode left/right quotation marks and the Unicode English dash). So set one "
+"of them, for example <filename>Lat2-Terminus16.psfu.gz</filename> as the "
+"default console font:"
+msgstr ""
+
+#.  We are using "nodump" for general settings, but not examples.  This
+#.        is ironic, but needed for the compatibility with jhalfs!  
+#. type: Content of: <sect1><screen>
+#: lfs-en/chapter09/consoled.xml
+#, fuzzy, no-wrap
+#| msgid "<userinput>echo \"<replaceable>&lt;lfs&gt;</replaceable>\" &gt; /etc/hostname</userinput>"
+msgid "<userinput>echo <literal>FONT=Lat2-Terminus16</literal> &gt; /etc/vconsole.conf</userinput>"
+msgstr "<userinput>echo \"<replaceable>&lt;lfs&gt;</replaceable>\" &gt; /etc/hostname</userinput>"
 
 #. type: Content of: <sect1><para>
 #: lfs-en/chapter09/consoled.xml

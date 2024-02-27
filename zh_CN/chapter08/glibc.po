@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Linux From Scratch 11.0\n"
 "Report-Msgid-Bugs-To: lfs-dev@lists.linuxfromscratch.org\n"
-"POT-Creation-Date: 2024-01-23 18:37+0800\n"
+"POT-Creation-Date: 2024-02-28 01:01+0800\n"
 "PO-Revision-Date: 2021-08-21 11:33+0800\n"
 "Last-Translator: Xi Ruoyao <xry111@xry111.site>\n"
 "Language-Team: none\n"
@@ -74,6 +74,12 @@ msgstr ""
 #: lfs-en/chapter08/glibc.xml lfs-en/prologue/why.xml
 msgid "Glibc"
 msgstr "Glibc"
+
+#. type: Content of: <sect1><title>
+#: lfs-en/chapter01/whatsnew.xml lfs-en/chapter05/glibc.xml
+#: lfs-en/chapter08/glibc.xml
+msgid "Glibc-&glibc-version;"
+msgstr "Glibc-&glibc-version;"
 
 #. type: Content of: <sect1><sect2><segmentedlist><segtitle>
 #: lfs-en/chapter05/binutils-pass1.xml lfs-en/chapter05/gcc-pass1.xml
@@ -370,11 +376,6 @@ msgstr ""
 "<productname>glibc</productname> <productnumber>&glibc-version;</"
 "productnumber> <placeholder type=\"address\" id=\"0\"/>"
 
-#. type: Content of: <sect1><title>
-#: lfs-en/chapter05/glibc.xml lfs-en/chapter08/glibc.xml
-msgid "Glibc-&glibc-version;"
-msgstr "Glibc-&glibc-version;"
-
 #. type: Content of: <sect1><sect2><title>
 #: lfs-en/chapter05/glibc.xml lfs-en/chapter08/glibc.xml
 msgid "Installation of Glibc"
@@ -568,9 +569,9 @@ msgstr "安装的程序"
 #: lfs-en/chapter08/libxcrypt.xml lfs-en/chapter08/m4.xml
 #: lfs-en/chapter08/man-db.xml lfs-en/chapter08/mpc.xml
 #: lfs-en/chapter08/mpfr.xml lfs-en/chapter08/patch.xml
-#: lfs-en/chapter08/procps.xml lfs-en/chapter08/psmisc.xml
-#: lfs-en/chapter08/tar.xml lfs-en/chapter08/texinfo.xml
-#: lfs-en/chapter08/xz.xml lfs-en/chapter08/zlib.xml lfs-en/chapter08/zstd.xml
+#: lfs-en/chapter08/psmisc.xml lfs-en/chapter08/tar.xml
+#: lfs-en/chapter08/texinfo.xml lfs-en/chapter08/xz.xml
+#: lfs-en/chapter08/zlib.xml lfs-en/chapter08/zstd.xml
 #, no-wrap
 msgid "<userinput remap=\"test\">make check</userinput>"
 msgstr "<userinput remap=\"test\">make check</userinput>"
@@ -634,21 +635,6 @@ msgstr "<userinput remap=\"pre\">patch -Np1 -i ../&glibc-fhs-patch;</userinput>"
 #. type: Content of: <sect1><sect2><para>
 #: lfs-en/chapter08/glibc.xml
 msgid ""
-"Now fix two security vulnerabilities and a regression causing the "
-"posix_memalign() function very slow in some conditions:"
-msgstr ""
-"现在修复两项安全缺陷，以及一项导致 posix_memalign() 函数在一些条件下非常缓慢"
-"的退化问题："
-
-#. type: Content of: <sect1><sect2><screen>
-#: lfs-en/chapter08/glibc.xml
-#, no-wrap
-msgid "<userinput remap=\"pre\">patch -Np1 -i ../&glibc-upstream-fixes-patch;</userinput>"
-msgstr "<userinput remap=\"pre\">patch -Np1 -i ../&glibc-upstream-fixes-patch;</userinput>"
-
-#. type: Content of: <sect1><sect2><para>
-#: lfs-en/chapter08/glibc.xml
-msgid ""
 "Ensure that the <command>ldconfig</command> and <command>sln</command> "
 "utilities will be installed into <filename class=\"directory\">/usr/sbin</"
 "filename>:"
@@ -663,13 +649,20 @@ msgstr "准备编译 Glibc："
 
 #. type: Content of: <sect1><sect2><screen>
 #: lfs-en/chapter08/glibc.xml
-#, no-wrap
+#, fuzzy, no-wrap
+#| msgid ""
+#| "<userinput remap=\"configure\">../configure --prefix=/usr                            \\\n"
+#| "             --disable-werror                         \\\n"
+#| "             --enable-kernel=&min-kernel;                     \\\n"
+#| "             --enable-stack-protector=strong          \\\n"
+#| "             --with-headers=/usr/include              \\\n"
+#| "             --disable-nscd                           \\\n"
+#| "             libc_cv_slibdir=/usr/lib</userinput>"
 msgid ""
 "<userinput remap=\"configure\">../configure --prefix=/usr                            \\\n"
 "             --disable-werror                         \\\n"
 "             --enable-kernel=&min-kernel;                     \\\n"
 "             --enable-stack-protector=strong          \\\n"
-"             --with-headers=/usr/include              \\\n"
 "             --disable-nscd                           \\\n"
 "             libc_cv_slibdir=/usr/lib</userinput>"
 msgstr ""
@@ -707,21 +700,10 @@ msgstr "<parameter>--enable-stack-protector=strong</parameter>"
 #: lfs-en/chapter08/glibc.xml
 msgid ""
 "This option increases system security by adding extra code to check for "
-"buffer overflows, such as stack smashing attacks."
+"buffer overflows, such as stack smashing attacks.  Note that Glibc always "
+"explicitly overrides the default of GCC, so this option is still needed even "
+"though we've already specified <option>--enable-default-ssp</option> for GCC."
 msgstr ""
-"该选项通过加入额外代码，对栈溢出攻击等导致的缓冲区溢出进行检查，以提高系统安"
-"全性。"
-
-#. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
-#: lfs-en/chapter08/glibc.xml
-msgid "<parameter>--with-headers=/usr/include</parameter>"
-msgstr "<parameter>--with-headers=/usr/include</parameter>"
-
-#. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
-#: lfs-en/chapter08/glibc.xml
-msgid ""
-"This option tells the build system where to find the kernel API headers."
-msgstr "该选项指定构建系统搜索内核 API 头文件的位置。"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: lfs-en/chapter08/glibc.xml
@@ -769,27 +751,40 @@ msgstr "已知 <emphasis>io/tst-lchmod</emphasis> 在 LFS chroot 环境中会失
 #. type: Content of: <sect1><sect2><itemizedlist><listitem><para>
 #: lfs-en/chapter08/glibc.xml
 msgid ""
-"The <emphasis>stdlib/tst-arc4random-thread</emphasis> test is known to fail "
-"if the host kernel is relatively old."
+"Some tests, for example <emphasis>nss/tst-nss-files-hosts-multi</emphasis> "
+"and <emphasis>nptl/tst-thread-affinity*</emphasis> are known to fail due to "
+"a timeout (especially when the system is relatively slow and/or running the "
+"test suite with multiple parallel make jobs).  These tests can be identified "
+"with:"
 msgstr ""
-"已知 <emphasis>stdlib/tst-arc4random-thread</emphasis> 在宿主内核版本较低时会"
-"失败。"
+
+#.  TODO: Using nodump for freeze.  Change it to role="test" after
+#.              12.1 release so jhalfs can list these in the log.  
+#. type: Content of: <sect1><sect2><itemizedlist><listitem><screen>
+#: lfs-en/chapter08/glibc.xml
+#, fuzzy, no-wrap
+#| msgid "<userinput remap=\"test\">grep '^FAIL:' $(find -name '*.log')</userinput>"
+msgid "<userinput>grep \"Timed out\" -l $(find -name \\*.out)</userinput>"
+msgstr "<userinput remap=\"test\">grep '^FAIL:' $(find -name '*.log')</userinput>"
 
 #. type: Content of: <sect1><sect2><itemizedlist><listitem><para>
 #: lfs-en/chapter08/glibc.xml
 msgid ""
-"Some tests, for example <emphasis>nss/tst-nss-files-hosts-multi</emphasis>, "
-"are known to fail on relatively slow systems due to an internal timeout."
+"It's possible to re-run a single test with enlarged timeout with "
+"<command>TIMEOUTFACTOR=<replaceable>&lt;factor&gt;</replaceable> make test "
+"t=<replaceable>&lt;test name&gt;</replaceable></command>.  For example, "
+"<command>TIMEOUTFACTOR=10 make test t=nss/tst-nss-files-hosts-multi</"
+"command> will re-run <emphasis>nss/tst-nss-files-hosts-multi</emphasis> with "
+"ten times the original timeout."
 msgstr ""
-"一些测试，例如 <emphasis>nss/tst-nss-file-hosts-multi</emphasis>，在较慢的系"
-"统运行时会由于其内部发生超时而失败。"
 
 #. type: Content of: <sect1><sect2><itemizedlist><listitem><para>
 #: lfs-en/chapter08/glibc.xml
 msgid ""
-"Additionally, some tests may fail with a relatively old CPU model or host "
-"kernel version."
-msgstr "另外，一些测试在较老的 CPU 型号或宿主内核版本上运行时会失败。"
+"Additionally, some tests may fail with a relatively old CPU model (for "
+"example <emphasis>elf/tst-cpu-features-cpuinfo</emphasis>) or host kernel "
+"version (for example <emphasis>stdlib/tst-arc4random-thread</emphasis>)."
+msgstr ""
 
 #. type: Content of: <sect1><sect2><para>
 #: lfs-en/chapter08/glibc.xml
@@ -820,6 +815,114 @@ msgstr ""
 #, no-wrap
 msgid "<userinput remap=\"install\">sed '/test-installation/s@$(PERL)@echo not running@' -i ../Makefile</userinput>"
 msgstr "<userinput remap=\"install\">sed '/test-installation/s@$(PERL)@echo not running@' -i ../Makefile</userinput>"
+
+#. type: Content of: <sect1><sect2><important><para>
+#: lfs-en/chapter08/glibc.xml
+msgid ""
+"If upgrading Glibc to a new minor version (for example, from Glibc-2.36 to "
+"Glibc-&glibc-version;) on a running LFS system, you need to take some extra "
+"precautions to avoid breaking the system:"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><important><itemizedlist><listitem><para>
+#: lfs-en/chapter08/glibc.xml
+msgid ""
+"Upgrading Glibc on a LFS system prior to 11.0 (exclusive) is not supported.  "
+"Rebuild LFS if you are running such an old LFS system but you need a newer "
+"Glibc."
+msgstr ""
+
+#. type: Content of: <sect1><sect2><important><itemizedlist><listitem><para>
+#: lfs-en/chapter08/glibc.xml
+msgid ""
+"If upgrading on a LFS system prior to 12.0 (exclusive), install "
+"<application>Libxcrypt</application> following <xref role='.' linkend='ch-"
+"system-libxcrypt'/> In addition to a normal <application>Libxcrypt</"
+"application> installation, <emphasis role='bold'>you MUST follow the note in "
+"Libxcrypt section to install <filename class='libraryfile'>libcrypt.so.1*</"
+"filename> (replacing <filename class='libraryfile'>libcrypt.so.1</filename> "
+"from the prior Glibc installation)</emphasis>."
+msgstr ""
+
+#. type: Content of: <sect1><sect2><important><itemizedlist><listitem><para>
+#: lfs-en/chapter08/glibc.xml
+msgid ""
+"If upgrading on a LFS system prior to 12.1 (exclusive), remove the "
+"<command>nscd</command> program:"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><important><itemizedlist><listitem><screen>
+#: lfs-en/chapter08/glibc.xml
+#, fuzzy, no-wrap
+#| msgid "<userinput>rm -rf /tools</userinput>"
+msgid "<userinput>rm -f /usr/sbin/nscd</userinput>"
+msgstr "<userinput>rm -rf /tools</userinput>"
+
+#. type: Content of: <sect1><sect2><important><itemizedlist><listitem><para>
+#: lfs-en/chapter08/glibc.xml
+msgid ""
+"If this system (prior to LFS 12.1, exclusive) is based on Systemd, it's also "
+"needed to disable and stop the <command>nscd</command> service now:"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><important><itemizedlist><listitem><screen>
+#: lfs-en/chapter08/glibc.xml
+#, fuzzy, no-wrap
+#| msgid "<userinput>systemctl disable systemd-timesyncd</userinput>"
+msgid "<userinput>systemctl disable --now nscd</userinput>"
+msgstr "<userinput>systemctl disable systemd-timesyncd</userinput>"
+
+#. type: Content of: <sect1><sect2><important><itemizedlist><listitem><para>
+#: lfs-en/chapter08/glibc.xml
+msgid ""
+"Upgrade the kernel and reboot if it's older than &min-kernel; (check the "
+"current version with <command>uname -r</command>)  or if you want to upgrade "
+"it anyway, following <xref linkend='ch-bootable-kernel' role='.'/>"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><important><itemizedlist><listitem><para>
+#: lfs-en/chapter08/glibc.xml
+msgid ""
+"Upgrade the kernel API headers if it's older than &min-kernel; (check the "
+"current version with <command>cat /usr/include/linux/version.h</command>)  "
+"or if you want to upgrade it anyway, following <xref linkend='ch-tools-linux-"
+"headers'/> (but removing <envar>$LFS</envar> from the <command>cp</command> "
+"command)."
+msgstr ""
+
+#. type: Content of: <sect1><sect2><important><itemizedlist><listitem><para>
+#: lfs-en/chapter08/glibc.xml
+msgid ""
+"Perform a <envar>DESTDIR</envar> installation and upgrade the Glibc shared "
+"libraries on the system using one single <command>install</command> command:"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><important><itemizedlist><listitem><screen>
+#: lfs-en/chapter08/glibc.xml
+#, fuzzy, no-wrap
+#| msgid "<userinput remap=\"install\">ln -svr /usr/bin/cpp /usr/lib</userinput>"
+msgid ""
+"<userinput>make DESTDIR=$PWD/dest install\n"
+"install -vm755 dest/usr/lib/*.so.* /usr/lib</userinput>"
+msgstr "<userinput remap=\"install\">ln -svr /usr/bin/cpp /usr/lib</userinput>"
+
+#. type: Content of: <sect1><sect2><important><para>
+#: lfs-en/chapter08/glibc.xml
+msgid ""
+"It's imperative to strictly follow these steps above unless you completely "
+"understand what you are doing.  <emphasis role='bold'>Any unexpected "
+"deviation may render the system completely unusable.  YOU ARE WARNED.</"
+"emphasis>"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><important><para>
+#: lfs-en/chapter08/glibc.xml
+msgid ""
+"Then continue to run the <command>make install</command> command, the "
+"<command>sed</command> command against <filename>/usr/bin/ldd</filename>, "
+"and the commands to install the locales.  Once they are finished, reboot the "
+"system immediately."
+msgstr ""
 
 #. type: Content of: <sect1><sect2><para>
 #: lfs-en/chapter08/glibc.xml
@@ -1218,9 +1321,14 @@ msgstr "<parameter>zic ... -p ...</parameter>"
 
 #. type: Content of: <sect1><sect2><sect3><variablelist><varlistentry><listitem><para>
 #: lfs-en/chapter08/glibc.xml
+#, fuzzy
+#| msgid ""
+#| "This creates the <filename>posixrules</filename> file. We use New York "
+#| "because POSIX requires the daylight savings time rules to be in "
+#| "accordance with US rules."
 msgid ""
 "This creates the <filename>posixrules</filename> file. We use New York "
-"because POSIX requires the daylight savings time rules to be in accordance "
+"because POSIX requires the daylight saving time rules to be in accordance "
 "with US rules."
 msgstr ""
 "该命令创建 <filename>posixrule</filename> 文件。我们使用纽约时区，因为 POSIX "

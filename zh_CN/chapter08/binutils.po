@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Linux From Scratch 11.0\n"
 "Report-Msgid-Bugs-To: lfs-dev@lists.linuxfromscratch.org\n"
-"POT-Creation-Date: 2024-01-02 21:03+0800\n"
+"POT-Creation-Date: 2024-02-28 01:01+0800\n"
 "PO-Revision-Date: 2021-08-16 11:42+0800\n"
 "Last-Translator: Xi Ruoyao <xry111@xry111.site>\n"
 "Language-Team: none\n"
@@ -75,6 +75,11 @@ msgstr ""
 #: lfs-en/prologue/why.xml
 msgid "Binutils"
 msgstr "Binutils"
+
+#. type: Content of: <sect1><title>
+#: lfs-en/chapter01/whatsnew.xml lfs-en/chapter08/binutils.xml
+msgid "Binutils-&binutils-version;"
+msgstr "Binutils-&binutils-version;"
 
 #. type: Content of: <sect1><sect1info><address>
 #: lfs-en/chapter05/binutils-pass1.xml lfs-en/chapter06/binutils-pass2.xml
@@ -239,11 +244,12 @@ msgstr ""
 #: lfs-en/chapter08/bc.xml lfs-en/chapter08/binutils.xml
 #: lfs-en/chapter08/bison.xml lfs-en/chapter08/check.xml
 #: lfs-en/chapter08/coreutils.xml lfs-en/chapter08/dbus.xml
-#: lfs-en/chapter08/diffutils.xml lfs-en/chapter08/e2fsprogs.xml
-#: lfs-en/chapter08/expat.xml lfs-en/chapter08/expect.xml
-#: lfs-en/chapter08/file.xml lfs-en/chapter08/findutils.xml
-#: lfs-en/chapter08/flex.xml lfs-en/chapter08/flit-core.xml
-#: lfs-en/chapter08/gawk.xml lfs-en/chapter08/gcc.xml lfs-en/chapter08/gdbm.xml
+#: lfs-en/chapter08/dejagnu.xml lfs-en/chapter08/diffutils.xml
+#: lfs-en/chapter08/e2fsprogs.xml lfs-en/chapter08/expat.xml
+#: lfs-en/chapter08/expect.xml lfs-en/chapter08/file.xml
+#: lfs-en/chapter08/findutils.xml lfs-en/chapter08/flex.xml
+#: lfs-en/chapter08/flit-core.xml lfs-en/chapter08/gawk.xml
+#: lfs-en/chapter08/gcc.xml lfs-en/chapter08/gdbm.xml
 #: lfs-en/chapter08/gettext.xml lfs-en/chapter08/glibc.xml
 #: lfs-en/chapter08/gperf.xml lfs-en/chapter08/grep.xml
 #: lfs-en/chapter08/groff.xml lfs-en/chapter08/grub.xml
@@ -425,11 +431,6 @@ msgstr ""
 "<productname>binutils</productname> <productnumber>&binutils-version;</"
 "productnumber> <placeholder type=\"address\" id=\"0\"/>"
 
-#. type: Content of: <sect1><title>
-#: lfs-en/chapter08/binutils.xml
-msgid "Binutils-&binutils-version;"
-msgstr "Binutils-&binutils-version;"
-
 #. type: Content of: <sect1><sect2><para>
 #: lfs-en/chapter08/binutils.xml
 msgid ""
@@ -446,6 +447,24 @@ msgstr "&binutils-fin-sbu;"
 #: lfs-en/chapter08/binutils.xml
 msgid "&binutils-fin-du;"
 msgstr "&binutils-fin-du;"
+
+#. type: Content of: <sect1><sect2><para>
+#: lfs-en/chapter08/binutils.xml
+msgid ""
+"First, fix an issue causing some packages fail to build with Link Time "
+"Optimization (LTO).  Note that some BLFS packages will be built with LTO "
+"enabled by default even if you don't enable it explicitly:"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><screen>
+#: lfs-en/chapter08/binutils.xml
+#, no-wrap
+msgid ""
+"<userinput remap=\"pre\">for i in LO12 HI20 ADD; do\n"
+"  sed -e '/DESC64_HI12/a\\    case BFD_RELOC_LARCH_TLS_LE_'${i}'_R:' \\\n"
+"      -i gas/config/tc-loongarch.c\n"
+"done</userinput>"
+msgstr ""
 
 #. type: Content of: <sect1><sect2><screen>
 #: lfs-en/chapter08/binutils.xml
@@ -564,6 +583,7 @@ msgstr "测试编译结果："
 
 #. type: Content of: <sect1><sect2><screen>
 #: lfs-en/chapter08/binutils.xml lfs-en/chapter08/libtool.xml
+#: lfs-en/chapter08/procps.xml
 #, no-wrap
 msgid "<userinput remap=\"test\">make -k check</userinput>"
 msgstr "<userinput remap=\"test\">make -k check</userinput>"

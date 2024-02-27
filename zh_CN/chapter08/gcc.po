@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Linux From Scratch 11.1\n"
 "Report-Msgid-Bugs-To: lfs-dev@lists.linuxfromscratch.org\n"
-"POT-Creation-Date: 2024-01-23 18:37+0800\n"
+"POT-Creation-Date: 2024-02-28 01:01+0800\n"
 "PO-Revision-Date: 2022-03-03 03:00+0800\n"
 "Last-Translator: Xi Ruoyao <xry111@xry111.site>\n"
 "Language-Team: none\n"
@@ -343,6 +343,20 @@ msgstr "<userinput remap=\"install\">make install</userinput>"
 msgid "&gcc-url;"
 msgstr "&gcc-url;"
 
+#. type: Content of: <sect1><sect2><screen>
+#: lfs-en/chapter05/gcc-pass1.xml lfs-en/chapter06/gcc-pass2.xml
+#: lfs-en/chapter08/gcc.xml
+#, fuzzy, no-wrap
+#| msgid ""
+#| "<userinput remap=\"pre\">sed -e 's/lib64/lib/' \\\n"
+#| "    -i.orig gcc/config/loongarch/{t-linux,linux.h}</userinput>"
+msgid ""
+"<userinput remap='pre'>sed -e '/ASM_OUTPUT_ALIGN_WITH_NOP/,+1d' \\\n"
+"    -i gcc/config/loongarch/loongarch.h</userinput>"
+msgstr ""
+"<userinput remap=\"pre\">sed -e 's/lib64/lib/' \\\n"
+"    -i.orig gcc/config/loongarch/{t-linux,linux.h}</userinput>"
+
 #. type: Content of: <sect1><sect2><para>
 #: lfs-en/chapter05/gcc-pass1.xml lfs-en/chapter06/gcc-pass2.xml
 #: lfs-en/chapter08/gcc.xml
@@ -490,6 +504,13 @@ msgstr "简要描述"
 #: lfs-en/chapter06/gcc-pass2.xml lfs-en/chapter08/gcc.xml
 msgid "Installation of GCC"
 msgstr "安装 GCC"
+
+#. type: Content of: <sect1><sect2><para>
+#: lfs-en/chapter06/gcc-pass2.xml lfs-en/chapter08/gcc.xml
+msgid ""
+"Again, fix an issue producing illegal instructions in linked executables and "
+"shared libraries with GCC &gcc-version; and Binutils-2.42:"
+msgstr ""
 
 #. type: Content of: <sect1><sect2><segmentedlist><segtitle>
 #: lfs-en/chapter08/acl.xml lfs-en/chapter08/attr.xml
@@ -724,9 +745,12 @@ msgstr "以非特权用户身份测试编译结果，但出错时继续执行其
 
 #. type: Content of: <sect1><sect2><screen>
 #: lfs-en/chapter08/gcc.xml
-#, no-wrap
+#, fuzzy, no-wrap
+#| msgid ""
+#| "<userinput remap=\"test\">chown -Rv tester .\n"
+#| "su tester -c \"PATH=$PATH make -k check\"</userinput>"
 msgid ""
-"<userinput remap=\"test\">chown -Rv tester .\n"
+"<userinput remap=\"test\">chown -R tester .\n"
 "su tester -c \"PATH=$PATH make -k check\"</userinput>"
 msgstr ""
 "<userinput remap=\"test\">chown -Rv tester .\n"
@@ -776,16 +800,11 @@ msgstr ""
 #. type: Content of: <sect1><sect2><para>
 #: lfs-en/chapter08/gcc.xml
 msgid ""
-"With Glibc-2.38, the analyzer tests named <filename>data-model-4.c</"
-"filename> and <filename>conftest-1.c</filename> are known to fail.  In the "
-"asan tests, several tests in <filename>asan_test.C</filename> are known to "
-"fail.  The test named <filename>interception-malloc-test-1.C</filename> is "
-"known to fail."
+"Seven tests in the <filename class='directory'>analyzer</filename> directory "
+"are known to fail.  For g++, 21 tests (out of approximately 250,000): 14 "
+"<quote>AddressSanitizer*</quote> tests and 7 <filename>interception-malloc-"
+"test-1.C</filename> tests, are known to fail."
 msgstr ""
-"在使用 Glibc-2.38 时，已知名为 <filename>data-model-4.c</filename> 和 "
-"<filename>conftest-1.c</filename> 的静态分析器 (analyzer) 测试会失败。在 "
-"asan 测试中，已知 <filename>asan_test.C</filename> 中一些测试会失败。已知名"
-"为 <filename>interception-malloc-test-1.C</filename> 的测试会失败。"
 
 #. type: Content of: <sect1><sect2><para>
 #: lfs-en/chapter08/gcc.xml

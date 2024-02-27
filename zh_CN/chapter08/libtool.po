@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Linux From Scratch 11.4\n"
 "Report-Msgid-Bugs-To: lfs-dev@lists.linuxfromscratch.org\n"
-"POT-Creation-Date: 2024-01-02 21:03+0800\n"
+"POT-Creation-Date: 2024-02-28 01:01+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: Xi Ruoyao <xry111@xry111.site>\n"
 "Language-Team: none\n"
@@ -250,11 +250,12 @@ msgstr "<userinput remap=\"make\">make</userinput>"
 #: lfs-en/chapter08/bc.xml lfs-en/chapter08/binutils.xml
 #: lfs-en/chapter08/bison.xml lfs-en/chapter08/check.xml
 #: lfs-en/chapter08/coreutils.xml lfs-en/chapter08/dbus.xml
-#: lfs-en/chapter08/diffutils.xml lfs-en/chapter08/e2fsprogs.xml
-#: lfs-en/chapter08/expat.xml lfs-en/chapter08/expect.xml
-#: lfs-en/chapter08/file.xml lfs-en/chapter08/findutils.xml
-#: lfs-en/chapter08/flex.xml lfs-en/chapter08/flit-core.xml
-#: lfs-en/chapter08/gawk.xml lfs-en/chapter08/gcc.xml lfs-en/chapter08/gdbm.xml
+#: lfs-en/chapter08/dejagnu.xml lfs-en/chapter08/diffutils.xml
+#: lfs-en/chapter08/e2fsprogs.xml lfs-en/chapter08/expat.xml
+#: lfs-en/chapter08/expect.xml lfs-en/chapter08/file.xml
+#: lfs-en/chapter08/findutils.xml lfs-en/chapter08/flex.xml
+#: lfs-en/chapter08/flit-core.xml lfs-en/chapter08/gawk.xml
+#: lfs-en/chapter08/gcc.xml lfs-en/chapter08/gdbm.xml
 #: lfs-en/chapter08/gettext.xml lfs-en/chapter08/glibc.xml
 #: lfs-en/chapter08/gperf.xml lfs-en/chapter08/grep.xml
 #: lfs-en/chapter08/groff.xml lfs-en/chapter08/grub.xml
@@ -491,6 +492,7 @@ msgstr "运行命令以测试编译结果："
 
 #. type: Content of: <sect1><sect2><screen>
 #: lfs-en/chapter08/binutils.xml lfs-en/chapter08/libtool.xml
+#: lfs-en/chapter08/procps.xml
 #, no-wrap
 msgid "<userinput remap=\"test\">make -k check</userinput>"
 msgstr "<userinput remap=\"test\">make -k check</userinput>"
@@ -570,11 +572,17 @@ msgstr "准备编译 Libtool："
 
 #. type: Content of: <sect1><sect2><para>
 #: lfs-en/chapter08/libtool.xml
+#, fuzzy
+#| msgid ""
+#| "Five tests are known to fail in the LFS build environment due to a "
+#| "circular dependency, but these tests pass if rechecked after automake has "
+#| "been installed.  Additionally, with grep-3.8, two tests will trigger a "
+#| "warning for non-POSIX regular expressions and fail."
 msgid ""
 "Five tests are known to fail in the LFS build environment due to a circular "
 "dependency, but these tests pass if rechecked after automake has been "
-"installed.  Additionally, with grep-3.8, two tests will trigger a warning "
-"for non-POSIX regular expressions and fail."
+"installed.  Additionally, with grep-3.8 or newer, two tests will trigger a "
+"warning for non-POSIX regular expressions and fail."
 msgstr ""
 "在 LFS 构建环境中，已知有五项测试因为循环依赖而失败，但这些测试在 automake 安"
 "装后能够通过。另外，在使用 grep-3.8 时，两项测试触发关于非 POSIX 正则表达式的"

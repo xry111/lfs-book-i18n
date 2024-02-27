@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Linux From Scratch 11.4\n"
 "Report-Msgid-Bugs-To: lfs-dev@lists.linuxfromscratch.org\n"
-"POT-Creation-Date: 2024-01-02 21:02+0800\n"
+"POT-Creation-Date: 2024-02-28 01:01+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: Xi Ruoyao <xry111@xry111.site>\n"
 "Language-Team: none\n"
@@ -113,11 +113,18 @@ msgstr "挂载虚拟内核文件系统"
 msgid "Now mount the remaining virtual kernel file systems:"
 msgstr "现在挂载其余的虚拟内核文件系统："
 
+#.  Do not put any option after $LFS/${mountpoint} or jhalfs cannot
+#.            handle it! 
 #. type: Content of: <sect1><sect2><screen>
 #: lfs-en/chapter07/kernfs.xml
-#, no-wrap
+#, fuzzy, no-wrap
+#| msgid ""
+#| "<userinput>mount -v --bind /dev/pts $LFS/dev/pts\n"
+#| "mount -vt proc proc $LFS/proc\n"
+#| "mount -vt sysfs sysfs $LFS/sys\n"
+#| "mount -vt tmpfs tmpfs $LFS/run</userinput>"
 msgid ""
-"<userinput>mount -v --bind /dev/pts $LFS/dev/pts\n"
+"<userinput>mount -vt devpts devpts -o gid=5,mode=0620 $LFS/dev/pts\n"
 "mount -vt proc proc $LFS/proc\n"
 "mount -vt sysfs sysfs $LFS/sys\n"
 "mount -vt tmpfs tmpfs $LFS/run</userinput>"
@@ -127,12 +134,59 @@ msgstr ""
 "mount -vt sysfs sysfs $LFS/sys\n"
 "mount -vt tmpfs tmpfs $LFS/run</userinput>"
 
-#. type: Content of: <sect1><sect2><para>
+#. type: Content of: <sect1><sect2><variablelist><title>
+#: lfs-en/chapter07/kernfs.xml
+#, fuzzy
+#| msgid "The meaning of the meson options:"
+msgid "The meaning of the mount options for devpts:"
+msgstr "meson 选项的含义："
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
+#: lfs-en/chapter07/kernfs.xml
+#, fuzzy
+#| msgid "<parameter>-des</parameter>"
+msgid "<parameter>gid=5</parameter>"
+msgstr "<parameter>-des</parameter>"
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: lfs-en/chapter07/kernfs.xml
 msgid ""
-"In some host systems, <filename>/dev/shm</filename> is a symbolic link to "
-"<filename class=\"directory\">/run/shm</filename>.  The /run tmpfs was "
-"mounted above so in this case only a directory needs to be created."
+"This ensures that all devpts-created device nodes are owned by group ID 5.  "
+"This is the ID we will use later on for the <systemitem "
+"class=\"groupname\">tty</systemitem> group.  We use the group ID instead of "
+"a name, since the host system might use a different ID for its <systemitem "
+"class=\"groupname\">tty</systemitem> group."
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
+#: lfs-en/chapter07/kernfs.xml
+#, fuzzy
+#| msgid "<parameter>-des</parameter>"
+msgid "<parameter>mode=0620</parameter>"
+msgstr "<parameter>-des</parameter>"
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
+#: lfs-en/chapter07/kernfs.xml
+msgid ""
+"This ensures that all devpts-created device nodes have mode 0620 (user "
+"readable and writable, group writable).  Together with the option above, "
+"this ensures that devpts will create device nodes that meet the requirements "
+"of grantpt(), meaning the Glibc <command>pt_chown</command> helper binary "
+"(which is not installed by default) is not necessary."
+msgstr ""
+
+#. type: Content of: <sect1><sect2><para>
+#: lfs-en/chapter07/kernfs.xml
+#, fuzzy
+#| msgid ""
+#| "In some host systems, <filename>/dev/shm</filename> is a symbolic link to "
+#| "<filename class=\"directory\">/run/shm</filename>.  The /run tmpfs was "
+#| "mounted above so in this case only a directory needs to be created."
+msgid ""
+"In some host systems, <filename>/dev/shm</filename> is a symbolic link to a "
+"directory, typically <filename class=\"directory\">/run/shm</filename>.  "
+"The /run tmpfs was mounted above so in this case only a directory needs to "
+"be created with the correct permissions."
 msgstr ""
 "在某些宿主系统上，<filename>/dev/shm</filename> 是一个指向 <filename "
 "class=\"directory\">/run/shm</filename> 的符号链接。我们已经在 /run 下挂载了 "
@@ -152,10 +206,16 @@ msgstr ""
 
 #. type: Content of: <sect1><sect2><screen>
 #: lfs-en/chapter07/kernfs.xml
-#, no-wrap
+#, fuzzy, no-wrap
+#| msgid ""
+#| "<userinput>if [ -h $LFS/dev/shm ]; then\n"
+#| "  (cd $LFS/dev; mkdir $(readlink shm))\n"
+#| "else\n"
+#| "  mount -vt tmpfs -o nosuid,nodev tmpfs $LFS/dev/shm\n"
+#| "fi</userinput>"
 msgid ""
 "<userinput>if [ -h $LFS/dev/shm ]; then\n"
-"  (cd $LFS/dev; mkdir $(readlink shm))\n"
+"  install -v -d -m 1777 $LFS$(realpath /dev/shm)\n"
 "else\n"
 "  mount -vt tmpfs -o nosuid,nodev tmpfs $LFS/dev/shm\n"
 "fi</userinput>"

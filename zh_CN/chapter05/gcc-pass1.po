@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Linux From Scratch 11.4\n"
 "Report-Msgid-Bugs-To: lfs-dev@lists.linuxfromscratch.org\n"
-"POT-Creation-Date: 2024-01-02 21:03+0800\n"
+"POT-Creation-Date: 2024-02-28 01:01+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: Xi Ruoyao <xry111@xry111.site>\n"
 "Language-Team: none\n"
@@ -235,11 +235,12 @@ msgstr "<userinput remap=\"make\">make</userinput>"
 #: lfs-en/chapter08/bc.xml lfs-en/chapter08/binutils.xml
 #: lfs-en/chapter08/bison.xml lfs-en/chapter08/check.xml
 #: lfs-en/chapter08/coreutils.xml lfs-en/chapter08/dbus.xml
-#: lfs-en/chapter08/diffutils.xml lfs-en/chapter08/e2fsprogs.xml
-#: lfs-en/chapter08/expat.xml lfs-en/chapter08/expect.xml
-#: lfs-en/chapter08/file.xml lfs-en/chapter08/findutils.xml
-#: lfs-en/chapter08/flex.xml lfs-en/chapter08/flit-core.xml
-#: lfs-en/chapter08/gawk.xml lfs-en/chapter08/gcc.xml lfs-en/chapter08/gdbm.xml
+#: lfs-en/chapter08/dejagnu.xml lfs-en/chapter08/diffutils.xml
+#: lfs-en/chapter08/e2fsprogs.xml lfs-en/chapter08/expat.xml
+#: lfs-en/chapter08/expect.xml lfs-en/chapter08/file.xml
+#: lfs-en/chapter08/findutils.xml lfs-en/chapter08/flex.xml
+#: lfs-en/chapter08/flit-core.xml lfs-en/chapter08/gawk.xml
+#: lfs-en/chapter08/gcc.xml lfs-en/chapter08/gdbm.xml
 #: lfs-en/chapter08/gettext.xml lfs-en/chapter08/glibc.xml
 #: lfs-en/chapter08/gperf.xml lfs-en/chapter08/grep.xml
 #: lfs-en/chapter08/groff.xml lfs-en/chapter08/grub.xml
@@ -339,6 +340,27 @@ msgstr "&gcc-tmpp1-du;"
 #: lfs-en/chapter05/gcc-pass1.xml
 msgid "Installation of Cross GCC"
 msgstr "安装交叉工具链中的 GCC"
+
+#. type: Content of: <sect1><sect2><para>
+#: lfs-en/chapter05/gcc-pass1.xml
+msgid ""
+"At first, fix an issue producing illegal instructions in linked executables "
+"and shared libraries with GCC &gcc-version; and Binutils-2.42:"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><screen>
+#: lfs-en/chapter05/gcc-pass1.xml lfs-en/chapter06/gcc-pass2.xml
+#: lfs-en/chapter08/gcc.xml
+#, fuzzy, no-wrap
+#| msgid ""
+#| "<userinput remap=\"pre\">sed -e 's/lib64/lib/' \\\n"
+#| "    -i.orig gcc/config/loongarch/{t-linux,linux.h}</userinput>"
+msgid ""
+"<userinput remap='pre'>sed -e '/ASM_OUTPUT_ALIGN_WITH_NOP/,+1d' \\\n"
+"    -i gcc/config/loongarch/loongarch.h</userinput>"
+msgstr ""
+"<userinput remap=\"pre\">sed -e 's/lib64/lib/' \\\n"
+"    -i.orig gcc/config/loongarch/{t-linux,linux.h}</userinput>"
 
 #. type: Content of: <sect1><sect2><para>
 #: lfs-en/chapter05/gcc-pass1.xml
