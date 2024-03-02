@@ -26,7 +26,6 @@ zh_CN/book/packages.ent: $(LFS_EN)/packages.ent $(THIS)
 	    -e 's/typically about/一般约/'                      \
 	    -e 's/about \(.*\) with tests/计入测试时间为约 \1/' \
 	    -e 's/with tests/已计入测试时间/'                   \
-	    -e '/encoding=/s/ISO-8859-1/UTF-8/'                 \
 	    -e 's/\([0-9.]* SBU\) on a spinning disk, \(.* SBU\) on an SSD/机械硬盘上 \1，固态硬盘上 \2/' \
 	    $< > $@
 
