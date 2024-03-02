@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Linux From Scratch 11.0\n"
 "Report-Msgid-Bugs-To: lfs-dev@lists.linuxfromscratch.org\n"
-"POT-Creation-Date: 2024-02-28 01:01+0800\n"
+"POT-Creation-Date: 2024-03-02 17:26+0800\n"
 "PO-Revision-Date: 2021-07-28 19:07+0800\n"
 "Last-Translator: Xi Ruoyao <xry111@xry111.site>\n"
 "Language-Team: none\n"
@@ -681,13 +681,19 @@ msgstr "<userinput remap=\"test\">chown -R tester . </userinput>"
 
 #. type: Content of: <sect1><sect2><para>
 #: lfs-en/chapter08/coreutils.xml
-msgid "Now run the tests:"
-msgstr "现在运行测试："
+msgid ""
+"Now run the tests (using <filename>/dev/null</filename> for the standard "
+"input, or two tests may be broken if building LFS in a graphical terminal or "
+"a session in SSH or GNU Screen etc. because the standard input is connected "
+"to a PTY from host distro, and the device node for such a PTY cannot be "
+"accessed from the LFS chroot environment):"
+msgstr ""
 
 #. type: Content of: <sect1><sect2><screen>
 #: lfs-en/chapter08/coreutils.xml
-#, no-wrap
-msgid "<userinput remap=\"test\">su tester -c \"PATH=$PATH make RUN_EXPENSIVE_TESTS=yes check\"</userinput>"
+#, fuzzy, no-wrap
+#| msgid "<userinput remap=\"test\">su tester -c \"PATH=$PATH make RUN_EXPENSIVE_TESTS=yes check\"</userinput>"
+msgid "<userinput remap=\"test\">su tester -c \"PATH=$PATH make RUN_EXPENSIVE_TESTS=yes check\" &lt; /dev/null</userinput>"
 msgstr "<userinput remap=\"test\">su tester -c \"PATH=$PATH make RUN_EXPENSIVE_TESTS=yes check\"</userinput>"
 
 #. type: Content of: <sect1><sect2><para>

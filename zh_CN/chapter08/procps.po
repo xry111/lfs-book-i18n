@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Linux From Scratch 11.4\n"
 "Report-Msgid-Bugs-To: lfs-dev@lists.linuxfromscratch.org\n"
-"POT-Creation-Date: 2024-02-28 01:01+0800\n"
+"POT-Creation-Date: 2024-03-02 17:26+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: Xi Ruoyao <xry111@xry111.site>\n"
 "Language-Team: none\n"
@@ -480,11 +480,16 @@ msgid "Installed library"
 msgstr "安装的库"
 
 #. type: Content of: <sect1><sect2><screen>
-#: lfs-en/chapter08/binutils.xml lfs-en/chapter08/libtool.xml
-#: lfs-en/chapter08/procps.xml
+#: lfs-en/chapter08/findutils.xml lfs-en/chapter08/gawk.xml
+#: lfs-en/chapter08/make.xml lfs-en/chapter08/procps.xml
+#: lfs-en/chapter08/sed.xml
 #, no-wrap
-msgid "<userinput remap=\"test\">make -k check</userinput>"
-msgstr "<userinput remap=\"test\">make -k check</userinput>"
+msgid ""
+"<userinput remap=\"test\">chown -R tester .\n"
+"su tester -c \"PATH=$PATH make check\"</userinput>"
+msgstr ""
+"<userinput remap=\"test\">chown -R tester .\n"
+"su tester -c \"PATH=$PATH make check\"</userinput>"
 
 #. type: Content of: <sect1><sect1info><address>
 #: lfs-en/chapter08/procps.xml
@@ -581,18 +586,19 @@ msgstr "<userinput remap=\"make\">make src_w_LDADD='$(LDADD) -lsystemd'</userinp
 msgid "To run the test suite, run:"
 msgstr "如果要运行测试套件，执行命令："
 
-#.  These two tests just do not work as root but they seem to pass
-#.          in most time due to some internal hazards of Tcl/Expect/DejaGNU
-#.          framework.  However the failures have been really observed.
-#.          TODO: run the test suite as tester after the freeze ends.  
 #. type: Content of: <sect1><sect2><para>
 #: lfs-en/chapter08/procps.xml
+#, fuzzy
+#| msgid ""
+#| "One test named <literal>ps with output flag bsdtime,cputime,etime,etimes</"
+#| "literal> is known to fail if the host kernel is not built with "
+#| "<literal>CONFIG_BSD_PROCESS_ACCT</literal> enabled.  Two tests named "
+#| "<literal>pmap X with unreachable process</literal> and <literal>pmap XX "
+#| "with unreachable process</literal> are known to fail occasionally."
 msgid ""
 "One test named <literal>ps with output flag bsdtime,cputime,etime,etimes</"
 "literal> is known to fail if the host kernel is not built with "
-"<literal>CONFIG_BSD_PROCESS_ACCT</literal> enabled.  Two tests named "
-"<literal>pmap X with unreachable process</literal> and <literal>pmap XX with "
-"unreachable process</literal> are known to fail occasionally."
+"<literal>CONFIG_BSD_PROCESS_ACCT</literal> enabled."
 msgstr ""
 "已知名为 <literal>ps with output flag bsdtime,cputime,etime,etimes</literal> "
 "的一项测试在宿主系统内核未启用 <literal>CONFIG_BSD_PROCESS_ACCT</literal> 时"

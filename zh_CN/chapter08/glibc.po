@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Linux From Scratch 11.0\n"
 "Report-Msgid-Bugs-To: lfs-dev@lists.linuxfromscratch.org\n"
-"POT-Creation-Date: 2024-02-28 01:01+0800\n"
+"POT-Creation-Date: 2024-03-02 17:26+0800\n"
 "PO-Revision-Date: 2021-08-21 11:33+0800\n"
 "Last-Translator: Xi Ruoyao <xry111@xry111.site>\n"
 "Language-Team: none\n"
@@ -756,12 +756,11 @@ msgstr ""
 "较慢和/或使用多个并行 make 任务进行测试时)。可以使用下列命令识别因为该原因失"
 "败的测试："
 
-#.  TODO: Using nodump for freeze.  Change it to role="test" after
-#.              12.1 release so jhalfs can list these in the log.  
 #. type: Content of: <sect1><sect2><itemizedlist><listitem><screen>
 #: lfs-en/chapter08/glibc.xml
-#, no-wrap
-msgid "<userinput>grep \"Timed out\" -l $(find -name \\*.out)</userinput>"
+#, fuzzy, no-wrap
+#| msgid "<userinput>grep \"Timed out\" -l $(find -name \\*.out)</userinput>"
+msgid "<userinput remap=\"test\">grep \"Timed out\" $(find -name \\*.out)</userinput>"
 msgstr "<userinput>grep \"Timed out\" -l $(find -name \\*.out)</userinput>"
 
 #. type: Content of: <sect1><sect2><itemizedlist><listitem><para>
