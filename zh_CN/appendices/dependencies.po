@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Linux From Scratch 11.0\n"
 "Report-Msgid-Bugs-To: lfs-dev@lists.linuxfromscratch.org\n"
-"POT-Creation-Date: 2024-02-28 01:05+0800\n"
+"POT-Creation-Date: 2024-03-20 15:18+0800\n"
 "PO-Revision-Date: 2022-02-11 20:04+0800\n"
 "Last-Translator: Xi Ruoyao <xry111@xry111.site>\n"
 "Language-Team: none\n"
@@ -1243,6 +1243,16 @@ msgstr ""
 "Bash, Binutils, Coreutils, Findutils, GCC, Glibc, Grep, Gzip, Make, Perl, 以"
 "及 Sed"
 
+#. type: Content of: <sect1><indexterm><primary>
+#: lfs-en/appendices/dependencies.xml lfs-en/chapter08/lz4.xml
+msgid "Lz4"
+msgstr "Lz4"
+
+#. type: Content of: <appendix><segmentedlist><seglistitem><seg>
+#: lfs-en/appendices/dependencies.xml
+msgid "Zstd <phrase revision=\"systemd\">and Systemd</phrase>"
+msgstr "Zstd <phrase revision=\"systemd\">和 Systemd</phrase>"
+
 #. type: Content of: <sect1><itemizedlist><listitem><para>
 #: lfs-en/appendices/dependencies.xml lfs-en/chapter06/m4.xml
 #: lfs-en/chapter08/m4.xml lfs-en/prologue/why.xml
@@ -1308,8 +1318,8 @@ msgstr "Man-Pages"
 
 #. type: Content of: <appendix><segmentedlist><seglistitem><seg>
 #: lfs-en/appendices/dependencies.xml
-msgid "Bash, Coreutils, and Make"
-msgstr "Bash, Coreutils, 以及 Make"
+msgid "Bash, Coreutils, Make, and Sed"
+msgstr "Bash, Coreutils, Make, 以及 Sed"
 
 #. type: Content of: <sect1><itemizedlist><listitem><para>
 #: lfs-en/appendices/dependencies.xml lfs-en/chapter08/markupsafe.xml
@@ -1676,11 +1686,12 @@ msgstr "Systemd"
 #: lfs-en/appendices/dependencies.xml
 msgid ""
 "Acl, Bash, Binutils, Coreutils, Diffutils, Gawk, GCC, Glibc, Gperf, Grep, "
-"Jinja2, Libcap, Libxcrypt, Meson, OpenSSL, Pkgconf, Sed, Util-linux, and Zstd"
+"Jinja2, Libcap, Libxcrypt, Lz4, Meson, OpenSSL, Pkgconf, Sed, Util-linux, "
+"and Zstd"
 msgstr ""
 "Acl, Bash, Binutils, Coreutils, Diffutils, Gawk, GCC, Glibc, Gperf, Grep, "
-"Jinja2, Libcap, Libxcrypt, Meson, OpenSSL, Pkgconf, Sed, Util-linux, 以及 "
-"Zstd"
+"Jinja2, Libcap, Libxcrypt, Lz4, Meson, OpenSSL, Pkgconf, Sed, Util-linux, 以"
+"及 Zstd"
 
 #. type: Content of: <appendix><segmentedlist><seglistitem><seg>
 #: lfs-en/appendices/dependencies.xml
@@ -1719,23 +1730,23 @@ msgid ""
 "libxkbcommon.html\">libxkbcommon</ulink>, <ulink url=\"&blfs-book;general/"
 "libxslt.html\">libxslt</ulink>, <ulink url=\"&blfs-book;postlfs/linux-pam."
 "html\">Linux-PAM</ulink>, <ulink url=\"&blfs-book;general/python-modules."
-"html#lxml\">lxml</ulink>, <ulink url=\"https://lz4.github.io/lz4/\">LZ4</"
-"ulink>, <ulink url=\"&blfs-book;postlfs/make-ca.html\">make-ca</ulink>, "
-"<ulink url=\"&blfs-book;postlfs/p11-kit.html\">p11-kit</ulink>, <ulink "
-"url=\"&blfs-book;general/pcre2.html\">PCRE2</ulink>, <ulink url=\"&pypi-home;"
-"pefile\">pefile</ulink>, <ulink url=\"&blfs-book;postlfs/polkit."
-"html\">Polkit</ulink>, <ulink url='&pypi-home;/pyelftools'>pyelftools</"
-"ulink>, <ulink url=\"&blfs-book;postlfs/qemu.html\">qemu</ulink>, <ulink "
-"url=\"&blfs-book;general/qrencode.html\">qrencode</ulink>, <ulink "
-"url=\"https://sourceforge.net/projects/linuxquota/\" >quota-tools</ulink>, "
-"<ulink url=\"https://rpm.org\">rpm</ulink>, <ulink url=\"&blfs-book;basicnet/"
-"rsync.html\">rsync</ulink>, <ulink url=\"&github;/SELinuxProject/selinux\"> "
-"SELinux</ulink>, <ulink url=\"&blfs-book;general/python-modules."
-"html#sphinx\"> Sphinx</ulink>, <ulink url=\"https://sourceware.org/systemtap/"
-"\"> systemtap</ulink>, <ulink url=\"https://tpm2-tss.readthedocs.io/en/"
-"latest/\"> tpm2-tss</ulink>, <ulink url=\"&blfs-book;general/valgrind."
-"html\">Valgrind</ulink>, <ulink url=\"https://xenproject.org\">Xen</ulink>, "
-"and <ulink url=\"&blfs-book;postlfs/zsh.html\">zsh</ulink>"
+"html#lxml\">lxml</ulink>, <ulink url=\"&blfs-book;postlfs/make-ca."
+"html\">make-ca</ulink>, <ulink url=\"&blfs-book;postlfs/p11-kit.html\">p11-"
+"kit</ulink>, <ulink url=\"&blfs-book;general/pcre2.html\">PCRE2</ulink>, "
+"<ulink url=\"&pypi-home;pefile\">pefile</ulink>, <ulink url=\"&blfs-book;"
+"postlfs/polkit.html\">Polkit</ulink>, <ulink url='&pypi-home;/"
+"pyelftools'>pyelftools</ulink>, <ulink url=\"&blfs-book;postlfs/qemu."
+"html\">qemu</ulink>, <ulink url=\"&blfs-book;general/qrencode."
+"html\">qrencode</ulink>, <ulink url=\"https://sourceforge.net/projects/"
+"linuxquota/\" >quota-tools</ulink>, <ulink url=\"https://rpm.org\">rpm</"
+"ulink>, <ulink url=\"&blfs-book;basicnet/rsync.html\">rsync</ulink>, <ulink "
+"url=\"&github;/SELinuxProject/selinux\"> SELinux</ulink>, <ulink url=\"&blfs-"
+"book;general/python-modules.html#sphinx\"> Sphinx</ulink>, <ulink "
+"url=\"https://sourceware.org/systemtap/\"> systemtap</ulink>, <ulink "
+"url=\"https://tpm2-tss.readthedocs.io/en/latest/\"> tpm2-tss</ulink>, <ulink "
+"url=\"&blfs-book;general/valgrind.html\">Valgrind</ulink>, <ulink "
+"url=\"https://xenproject.org\">Xen</ulink>, and <ulink url=\"&blfs-book;"
+"postlfs/zsh.html\">zsh</ulink>"
 msgstr ""
 "<ulink url=\"https://www.apparmor.net/\">AppArmor</ulink>, <ulink "
 "url=\"&github;/linux-audit/audit-userspace\"> audit-userspace</ulink>, "
@@ -1760,23 +1771,23 @@ msgstr ""
 "libxkbcommon.html\">libxkbcommon</ulink>, <ulink url=\"&blfs-book;general/"
 "libxslt.html\">libxslt</ulink>, <ulink url=\"&blfs-book;postlfs/linux-pam."
 "html\">Linux-PAM</ulink>, <ulink url=\"&blfs-book;general/python-modules."
-"html#lxml\">lxml</ulink>, <ulink url=\"https://lz4.github.io/lz4/\">LZ4</"
-"ulink>, <ulink url=\"&blfs-book;postlfs/make-ca.html\">make-ca</ulink>, "
-"<ulink url=\"&blfs-book;postlfs/p11-kit.html\">p11-kit</ulink>, <ulink "
-"url=\"&blfs-book;general/pcre2.html\">PCRE2</ulink>, <ulink url=\"&pypi-home;"
-"pefile\">pefile</ulink>, <ulink url=\"&blfs-book;postlfs/polkit."
-"html\">Polkit</ulink>, <ulink url='&pypi-home;/pyelftools'>pyelftools</"
-"ulink>, <ulink url=\"&blfs-book;postlfs/qemu.html\">qemu</ulink>, <ulink "
-"url=\"&blfs-book;general/qrencode.html\">qrencode</ulink>, <ulink "
-"url=\"https://sourceforge.net/projects/linuxquota/\" >quota-tools</ulink>, "
-"<ulink url=\"https://rpm.org\">rpm</ulink>, <ulink url=\"&blfs-book;basicnet/"
-"rsync.html\">rsync</ulink>, <ulink url=\"&github;/SELinuxProject/selinux\"> "
-"SELinux</ulink>, <ulink url=\"&blfs-book;general/python-modules."
-"html#sphinx\"> Sphinx</ulink>, <ulink url=\"https://sourceware.org/systemtap/"
-"\"> systemtap</ulink>, <ulink url=\"https://tpm2-tss.readthedocs.io/en/"
-"latest/\"> tpm2-tss</ulink>, <ulink url=\"&blfs-book;general/valgrind."
-"html\">Valgrind</ulink>, <ulink url=\"https://xenproject.org\">Xen</ulink>, "
-"以及 <ulink url=\"&blfs-book;postlfs/zsh.html\">zsh</ulink>"
+"html#lxml\">lxml</ulink>, <ulink url=\"&blfs-book;postlfs/make-ca."
+"html\">make-ca</ulink>, <ulink url=\"&blfs-book;postlfs/p11-kit.html\">p11-"
+"kit</ulink>, <ulink url=\"&blfs-book;general/pcre2.html\">PCRE2</ulink>, "
+"<ulink url=\"&pypi-home;pefile\">pefile</ulink>, <ulink url=\"&blfs-book;"
+"postlfs/polkit.html\">Polkit</ulink>, <ulink url='&pypi-home;/"
+"pyelftools'>pyelftools</ulink>, <ulink url=\"&blfs-book;postlfs/qemu."
+"html\">qemu</ulink>, <ulink url=\"&blfs-book;general/qrencode."
+"html\">qrencode</ulink>, <ulink url=\"https://sourceforge.net/projects/"
+"linuxquota/\" >quota-tools</ulink>, <ulink url=\"https://rpm.org\">rpm</"
+"ulink>, <ulink url=\"&blfs-book;basicnet/rsync.html\">rsync</ulink>, <ulink "
+"url=\"&github;/SELinuxProject/selinux\"> SELinux</ulink>, <ulink url=\"&blfs-"
+"book;general/python-modules.html#sphinx\"> Sphinx</ulink>, <ulink "
+"url=\"https://sourceware.org/systemtap/\"> systemtap</ulink>, <ulink "
+"url=\"https://tpm2-tss.readthedocs.io/en/latest/\"> tpm2-tss</ulink>, <ulink "
+"url=\"&blfs-book;general/valgrind.html\">Valgrind</ulink>, <ulink "
+"url=\"https://xenproject.org\">Xen</ulink>, 以及 <ulink url=\"&blfs-book;"
+"postlfs/zsh.html\">zsh</ulink>"
 
 #. type: Content of: <sect1><itemizedlist><listitem><para>
 #: lfs-en/appendices/dependencies.xml lfs-en/chapter08/sysvinit.xml
@@ -1844,6 +1855,16 @@ msgstr ""
 #: lfs-en/chapter09/udev.xml lfs-en/prologue/why.xml
 msgid "Udev"
 msgstr "Udev"
+
+#. type: Content of: <appendix><segmentedlist><seglistitem><seg>
+#: lfs-en/appendices/dependencies.xml
+msgid ""
+"Acl, Bash, Binutils, Coreutils, Diffutils, Gawk, GCC, Glibc, Gperf, Grep, "
+"Jinja2, Libcap, Libxcrypt, Meson, OpenSSL, Pkgconf, Sed, Util-linux, and Zstd"
+msgstr ""
+"Acl, Bash, Binutils, Coreutils, Diffutils, Gawk, GCC, Glibc, Gperf, Grep, "
+"Jinja2, Libcap, Libxcrypt, Meson, OpenSSL, Pkgconf, Sed, Util-linux, 以及 "
+"Zstd"
 
 #. type: Content of: <appendix><segmentedlist><seglistitem><seg>
 #: lfs-en/appendices/dependencies.xml
@@ -1980,15 +2001,10 @@ msgstr "Zstd"
 
 #. type: Content of: <appendix><segmentedlist><seglistitem><seg>
 #: lfs-en/appendices/dependencies.xml
-msgid "Binutils, Coreutils, GCC, Glibc, Gzip, Make, Xz, and Zlib"
-msgstr "Binutils, Coreutils, GCC, Glibc, Gzip, Make, Xz, 以及 Zlib"
+msgid "Binutils, Coreutils, GCC, Glibc, Gzip, Lz4, Make, Xz, and Zlib"
+msgstr "Binutils, Coreutils, GCC, Glibc, Gzip, Lz4, Make, Xz, 以及 Zlib"
 
 #. type: Content of: <appendix><segmentedlist><seglistitem><seg>
 #: lfs-en/appendices/dependencies.xml
 msgid "Binutils, GCC, Libelf, and &systemd-udev;"
 msgstr "Binutils, GCC, Libelf, 以及 &systemd-udev;"
-
-#. type: Content of: <appendix><segmentedlist><seglistitem><seg>
-#: lfs-en/appendices/dependencies.xml
-msgid "<ulink url=\"https://lz4.github.io/lz4/\">LZ4</ulink>"
-msgstr "<ulink url=\"https://lz4.github.io/lz4/\">LZ4</ulink>"
