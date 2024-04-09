@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Linux From Scratch 11.0\n"
 "Report-Msgid-Bugs-To: lfs-dev@lists.linuxfromscratch.org\n"
-"POT-Creation-Date: 2024-04-02 18:09+0800\n"
+"POT-Creation-Date: 2024-04-09 16:46+0800\n"
 "PO-Revision-Date: 2021-07-28 12:48+0800\n"
 "Last-Translator: Xi Ruoyao <xry111@xry111.site>\n"
 "Language-Team: none\n"
@@ -618,8 +618,12 @@ msgstr ""
 
 #. type: Content of: <sect1><sect2><para>
 #: lfs-en/chapter08/util-linux.xml
-msgid "If desired, run the test suite as a non-&root; user:"
-msgstr "如果希望的话，以非 &root; 用户身份运行测试套件："
+msgid ""
+"If desired, create a dummy <filename>/etc/fstab</filename> file to satisfy "
+"two tests and run the test suite as a non-&root; user:"
+msgstr ""
+"如果希望进行测试，创建 <filename>/etc/fstab</filename> 文件以满足两项测试的要"
+"求，并以非 &root; 用户身份运行测试套件："
 
 #. type: Content of: <sect1><sect2><warning><para>
 #: lfs-en/chapter08/util-linux.xml
@@ -648,10 +652,12 @@ msgstr "<userinput>bash tests/run.sh --srcdir=$PWD --builddir=$PWD</userinput>"
 #: lfs-en/chapter08/util-linux.xml
 #, no-wrap
 msgid ""
-"<userinput remap=\"test\">chown -R tester .\n"
+"<userinput remap=\"test\">touch /etc/fstab\n"
+"chown -R tester .\n"
 "su tester -c \"make -k check\"</userinput>"
 msgstr ""
-"<userinput remap=\"test\">chown -R tester .\n"
+"<userinput remap=\"test\">touch /etc/fstab\n"
+"chown -R tester .\n"
 "su tester -c \"make -k check\"</userinput>"
 
 #. type: Content of: <sect1><sect2><para>
