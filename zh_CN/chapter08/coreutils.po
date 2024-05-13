@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Linux From Scratch 11.0\n"
 "Report-Msgid-Bugs-To: lfs-dev@lists.linuxfromscratch.org\n"
-"POT-Creation-Date: 2024-04-02 18:16+0800\n"
+"POT-Creation-Date: 2024-05-12 21:27+0800\n"
 "PO-Revision-Date: 2021-07-28 19:07+0800\n"
 "Last-Translator: Xi Ruoyao <xry111@xry111.site>\n"
 "Language-Team: none\n"
@@ -331,11 +331,11 @@ msgstr "安装该软件包："
 #: lfs-en/chapter08/man-db.xml lfs-en/chapter08/patch.xml
 #: lfs-en/chapter08/pkgconf.xml lfs-en/chapter08/procps.xml
 #: lfs-en/chapter08/psmisc.xml lfs-en/chapter08/python.xml
-#: lfs-en/chapter08/sysvinit.xml lfs-en/chapter08/tcl.xml
-#: lfs-en/chapter08/texinfo.xml lfs-en/chapter08/util-linux.xml
-#: lfs-en/chapter08/vim.xml lfs-en/chapter08/xml-parser.xml
-#: lfs-en/chapter08/xz.xml lfs-en/chapter08/zlib.xml
-#: lfs-en/chapter09/bootscripts.xml
+#: lfs-en/chapter08/sysklogd.xml lfs-en/chapter08/sysvinit.xml
+#: lfs-en/chapter08/tcl.xml lfs-en/chapter08/texinfo.xml
+#: lfs-en/chapter08/util-linux.xml lfs-en/chapter08/vim.xml
+#: lfs-en/chapter08/xml-parser.xml lfs-en/chapter08/xz.xml
+#: lfs-en/chapter08/zlib.xml lfs-en/chapter09/bootscripts.xml
 #, no-wrap
 msgid "<userinput remap=\"install\">make install</userinput>"
 msgstr "<userinput remap=\"install\">make install</userinput>"
@@ -682,8 +682,12 @@ msgstr ""
 #. type: Content of: <sect1><sect2><screen>
 #: lfs-en/chapter08/coreutils.xml
 #, no-wrap
-msgid "<userinput remap=\"test\">su tester -c \"PATH=$PATH make RUN_EXPENSIVE_TESTS=yes check\" &lt; /dev/null</userinput>"
-msgstr "<userinput remap=\"test\">su tester -c \"PATH=$PATH make RUN_EXPENSIVE_TESTS=yes check\" &lt; /dev/null</userinput>"
+msgid ""
+"<userinput remap=\"test\">su tester -c \"PATH=$PATH make -k RUN_EXPENSIVE_TESTS=yes check\" \\\n"
+"   &lt; /dev/null</userinput>"
+msgstr ""
+"<userinput remap=\"test\">su tester -c \"PATH=$PATH make -k RUN_EXPENSIVE_TESTS=yes check\" \\\n"
+"   &lt; /dev/null</userinput>"
 
 #. type: Content of: <sect1><sect2><para>
 #: lfs-en/chapter08/coreutils.xml
