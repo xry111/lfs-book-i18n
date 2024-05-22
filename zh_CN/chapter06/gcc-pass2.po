@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Linux From Scratch 11.4\n"
 "Report-Msgid-Bugs-To: lfs-dev@lists.linuxfromscratch.org\n"
-"POT-Creation-Date: 2023-12-12 18:27+0800\n"
+"POT-Creation-Date: 2024-05-22 16:24+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: Xi Ruoyao <xry111@xry111.site>\n"
 "Language-Team: none\n"
@@ -58,7 +58,7 @@ msgstr "GCC"
 #: lfs-en/chapter08/libcap.xml lfs-en/chapter08/libelf.xml
 #: lfs-en/chapter08/libffi.xml lfs-en/chapter08/libpipeline.xml
 #: lfs-en/chapter08/libtool.xml lfs-en/chapter08/libxcrypt.xml
-#: lfs-en/chapter08/m4.xml lfs-en/chapter08/make.xml
+#: lfs-en/chapter08/lz4.xml lfs-en/chapter08/m4.xml lfs-en/chapter08/make.xml
 #: lfs-en/chapter08/man-db.xml lfs-en/chapter08/man-pages.xml
 #: lfs-en/chapter08/markupsafe.xml lfs-en/chapter08/meson.xml
 #: lfs-en/chapter08/mpc.xml lfs-en/chapter08/mpfr.xml
@@ -116,7 +116,7 @@ msgstr "&buildtime;"
 #: lfs-en/chapter08/libcap.xml lfs-en/chapter08/libelf.xml
 #: lfs-en/chapter08/libffi.xml lfs-en/chapter08/libpipeline.xml
 #: lfs-en/chapter08/libtool.xml lfs-en/chapter08/libxcrypt.xml
-#: lfs-en/chapter08/m4.xml lfs-en/chapter08/make.xml
+#: lfs-en/chapter08/lz4.xml lfs-en/chapter08/m4.xml lfs-en/chapter08/make.xml
 #: lfs-en/chapter08/man-db.xml lfs-en/chapter08/man-pages.xml
 #: lfs-en/chapter08/markupsafe.xml lfs-en/chapter08/meson.xml
 #: lfs-en/chapter08/mpc.xml lfs-en/chapter08/mpfr.xml
@@ -216,11 +216,12 @@ msgstr "<userinput remap=\"make\">make</userinput>"
 #: lfs-en/chapter08/bc.xml lfs-en/chapter08/binutils.xml
 #: lfs-en/chapter08/bison.xml lfs-en/chapter08/check.xml
 #: lfs-en/chapter08/coreutils.xml lfs-en/chapter08/dbus.xml
-#: lfs-en/chapter08/diffutils.xml lfs-en/chapter08/e2fsprogs.xml
-#: lfs-en/chapter08/expat.xml lfs-en/chapter08/expect.xml
-#: lfs-en/chapter08/file.xml lfs-en/chapter08/findutils.xml
-#: lfs-en/chapter08/flex.xml lfs-en/chapter08/flit-core.xml
-#: lfs-en/chapter08/gawk.xml lfs-en/chapter08/gcc.xml lfs-en/chapter08/gdbm.xml
+#: lfs-en/chapter08/dejagnu.xml lfs-en/chapter08/diffutils.xml
+#: lfs-en/chapter08/e2fsprogs.xml lfs-en/chapter08/expat.xml
+#: lfs-en/chapter08/expect.xml lfs-en/chapter08/file.xml
+#: lfs-en/chapter08/findutils.xml lfs-en/chapter08/flex.xml
+#: lfs-en/chapter08/flit-core.xml lfs-en/chapter08/gawk.xml
+#: lfs-en/chapter08/gcc.xml lfs-en/chapter08/gdbm.xml
 #: lfs-en/chapter08/gettext.xml lfs-en/chapter08/glibc.xml
 #: lfs-en/chapter08/gperf.xml lfs-en/chapter08/grep.xml
 #: lfs-en/chapter08/groff.xml lfs-en/chapter08/grub.xml
@@ -230,7 +231,7 @@ msgstr "<userinput remap=\"make\">make</userinput>"
 #: lfs-en/chapter08/less.xml lfs-en/chapter08/libcap.xml
 #: lfs-en/chapter08/libffi.xml lfs-en/chapter08/libpipeline.xml
 #: lfs-en/chapter08/libtool.xml lfs-en/chapter08/libxcrypt.xml
-#: lfs-en/chapter08/m4.xml lfs-en/chapter08/make.xml
+#: lfs-en/chapter08/lz4.xml lfs-en/chapter08/m4.xml lfs-en/chapter08/make.xml
 #: lfs-en/chapter08/man-db.xml lfs-en/chapter08/markupsafe.xml
 #: lfs-en/chapter08/meson.xml lfs-en/chapter08/ninja.xml
 #: lfs-en/chapter08/openssl.xml lfs-en/chapter08/patch.xml
@@ -311,7 +312,7 @@ msgstr "该软件包的详细信息在<xref linkend=\"contents-gcc\"/>可以找�
 #: lfs-en/chapter08/libcap.xml lfs-en/chapter08/libelf.xml
 #: lfs-en/chapter08/libffi.xml lfs-en/chapter08/libpipeline.xml
 #: lfs-en/chapter08/libtool.xml lfs-en/chapter08/libxcrypt.xml
-#: lfs-en/chapter08/m4.xml lfs-en/chapter08/make.xml
+#: lfs-en/chapter08/lz4.xml lfs-en/chapter08/m4.xml lfs-en/chapter08/make.xml
 #: lfs-en/chapter08/man-db.xml lfs-en/chapter08/ncurses.xml
 #: lfs-en/chapter08/openssl.xml lfs-en/chapter08/patch.xml
 #: lfs-en/chapter08/perl.xml lfs-en/chapter08/pkgconf.xml
@@ -529,19 +530,19 @@ msgstr "<parameter>--target=$LFS_TGT</parameter>"
 msgid ""
 "We are cross-compiling GCC, so it's impossible to build target libraries "
 "(<filename class=\"libraryfile\">libgcc</filename> and <filename "
-"class=\"libraryfile\">libstdc++</filename>) with the previously compiled GCC "
-"binaries&mdash;those binaries won't run on the host.  The GCC build system "
-"will attempt to use the host's C and C++ compilers as a workaround by "
+"class=\"libraryfile\">libstdc++</filename>) with the GCC binaries compiled "
+"in this pass&mdash;those binaries won't run on the host.  The GCC build "
+"system will attempt to use the host's C and C++ compilers as a workaround by "
 "default.  Building the GCC target libraries with a different version of GCC "
 "is not supported, so using the host's compilers may cause the build to fail. "
 "This parameter ensures the libraries are built by GCC pass 1."
 msgstr ""
-"我们正在交叉编译 GCC，因此不可能用编译得到的 GCC 二进制程序构建用于目标系统的"
-"运行库 (<filename class=\"libraryfile\">libgcc</filename> 和 <filename "
-"class=\"libraryfile\">libstdc++</filename>) —— 这些二进制程序无法在宿主系统运"
-"行。GCC 构建系统在默认情况下会试图使用宿主系统提供的 C 和 C++ 编译器来绕过这"
-"个问题。但是，用不同版本的 GCC 构建 GCC 运行库不受支持，所以使用宿主系统的编"
-"译器可能导致构建失败。该选项保证使用第一遍构建的 GCC 编译运行库。"
+"我们正在交叉编译 GCC，因此无法使用这一遍构建的 GCC 二进制程序 —— 它们无法在宿"
+"主系统运行 —— 为目标系统构建运行库 (<filename class=\"libraryfile\">libgcc</"
+"filename> 和 <filename class=\"libraryfile\">libstdc++</filename>)。GCC 构建"
+"系统在默认情况下会试图使用宿主系统提供的 C 和 C++ 编译器来绕过这个问题。但"
+"是，用不同版本的 GCC 构建 GCC 运行库不受支持，所以使用宿主系统的编译器可能导"
+"致构建失败。该选项保证使用第一遍构建的 GCC 编译运行库。"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: lfs-en/chapter06/gcc-pass2.xml
@@ -569,15 +570,13 @@ msgstr "<parameter>--disable-libsanitizer</parameter>"
 #: lfs-en/chapter06/gcc-pass2.xml
 msgid ""
 "Disable GCC sanitizer runtime libraries.  They are not needed for the "
-"temporary installation.  This switch is necessary to build GCC without "
-"<systemitem class='library'>libcrypt</systemitem> installed for the target.  "
-"In <xref linkend='ch-tools-gcc-pass1'/> it was implied by <parameter>--"
-"disable-libstdcxx</parameter>, but now we have to explicitly pass it."
+"temporary installation.  In <xref linkend='ch-tools-gcc-pass1'/> it was "
+"implied by <parameter>--disable-libstdcxx</parameter>, and now we can "
+"explicitly pass it."
 msgstr ""
-"禁用 GCC 清理检查运行库。它们对于临时安装的 GCC 并不必要。为了在没有为目标安"
-"装 <systemitem class='library'>libcrypt</systemitem> 的情况下构建 GCC，必须使"
-"用该选项。在 <xref linkend='ch-tools-gcc-pass1'/> 中，<parameter>--disable-"
-"libstdcxx</parameter> 隐式地指定了该选项，但这里我们必须显式指定它。"
+"禁用 GCC 清理检查运行库。临时性安装 GCC 不需要它们。在 <xref linkend='ch-"
+"tools-gcc-pass1'/> 中，<parameter>--disable-libstdcxx</parameter> 隐含了该选"
+"项，这里我们可以显式指定它。"
 
 #. type: Content of: <sect1><sect2><para>
 #: lfs-en/chapter06/gcc-pass2.xml
