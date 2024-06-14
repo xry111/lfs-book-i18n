@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Linux From Scratch 11.4\n"
 "Report-Msgid-Bugs-To: lfs-dev@lists.linuxfromscratch.org\n"
-"POT-Creation-Date: 2024-06-02 19:47+0800\n"
+"POT-Creation-Date: 2024-06-15 01:22+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: Xi Ruoyao <xry111@xry111.site>\n"
 "Language-Team: none\n"
@@ -63,6 +63,11 @@ msgid ""
 "<?dbfo list-presentation=\"list\"?> <?dbhtml list-presentation=\"table\"?>"
 msgstr ""
 "<?dbfo list-presentation=\"list\"?> <?dbhtml list-presentation=\"table\"?>"
+
+#. type: Content of: <sect1><title>
+#: lfs-en/chapter01/whatsnew.xml lfs-en/chapter08/systemd.xml
+msgid "Systemd-&systemd-version;"
+msgstr "Systemd-&systemd-version;"
 
 #. type: Content of: <sect1><sect2><segmentedlist><segtitle>
 #: lfs-en/chapter05/binutils-pass1.xml lfs-en/chapter05/gcc-pass1.xml
@@ -402,11 +407,6 @@ msgstr ""
 "<productname>systemd</productname> <productnumber>&systemd-version;</"
 "productnumber> <placeholder type=\"address\" id=\"0\"/>"
 
-#. type: Content of: <sect1><title>
-#: lfs-en/chapter08/systemd.xml
-msgid "Systemd-&systemd-version;"
-msgstr "Systemd-&systemd-version;"
-
 #. type: Content of: <sect1><indexterm><primary>
 #: lfs-en/chapter08/systemd.xml
 msgid "systemd"
@@ -453,52 +453,6 @@ msgid ""
 msgstr ""
 "<userinput remap=\"pre\">sed -i -e 's/GROUP=\"render\"/GROUP=\"video\"/' \\\n"
 "       -e 's/GROUP=\"sgx\", //' rules.d/50-udev-default.rules.in</userinput>"
-
-#. type: Content of: <sect1><sect2><para>
-#: lfs-en/chapter08/systemd.xml lfs-en/chapter08/udev.xml
-msgid "Next, fix compatibility with API headers from linux-6.9 and later:"
-msgstr "然后，修复该软件包，使其与 linux-6.9 更新版本提供的 API 头文件兼容："
-
-#. type: Content of: <sect1><sect2><screen>
-#: lfs-en/chapter08/systemd.xml lfs-en/chapter08/udev.xml
-#, no-wrap
-msgid ""
-"<userinput remap=\"pre\">sed -i '/DEVMEM_MAGIC 0/{n;n;a \\\n"
-"/* cb12fd8e0dabb9a1c8aef55a6a41e2c255fcdf4b (6.8) */ \\\n"
-"#ifndef PID_FS_MAGIC \\\n"
-"#define PID_FS_MAGIC 0x50494446 \\\n"
-"#endif\n"
-"}' src/basic/missing_magic.h\n"
-"\n"
-"sed -i '/OVERLAYFS_SUPER_MAGIC/a \\\n"
-"pidfs,           {PID_FS_MAGIC}' src/basic/filesystems-gperf.gperf</userinput>"
-msgstr ""
-"<userinput remap=\"pre\">sed -i '/DEVMEM_MAGIC 0/{n;n;a \\\n"
-"/* cb12fd8e0dabb9a1c8aef55a6a41e2c255fcdf4b (6.8) */ \\\n"
-"#ifndef PID_FS_MAGIC \\\n"
-"#define PID_FS_MAGIC 0x50494446 \\\n"
-"#endif\n"
-"}' src/basic/missing_magic.h\n"
-"\n"
-"sed -i '/OVERLAYFS_SUPER_MAGIC/a \\\n"
-"pidfs,           {PID_FS_MAGIC}' src/basic/filesystems-gperf.gperf</userinput>"
-
-#. type: Content of: <sect1><sect2><para>
-#: lfs-en/chapter08/systemd.xml
-msgid ""
-"Now fix a security vulnerability in the DNSSEC verification of "
-"<command>systemd-resolved</command> and a bug breaking running "
-"<command>systemd-analyze verify</command> on an instantiated systemd unit:"
-msgstr ""
-"现在修复 <command>systemd-resolved</command> 在验证 DNSSEC 时的安全缺陷，以及"
-"导致无法使用 <command>systemd-analyze verify</command> 分析实例化的 systemd "
-"单元的程序错误："
-
-#. type: Content of: <sect1><sect2><screen>
-#: lfs-en/chapter08/systemd.xml
-#, no-wrap
-msgid "<userinput remap='pre'>patch -Np1 -i ../&systemd-upstream-patch;</userinput>"
-msgstr "<userinput remap='pre'>patch -Np1 -i ../&systemd-upstream-patch;</userinput>"
 
 #. type: Content of: <sect1><sect2><para>
 #: lfs-en/chapter08/systemd.xml
@@ -798,12 +752,14 @@ msgstr ""
 #. type: Content of: <sect1><sect2><para>
 #: lfs-en/chapter08/systemd.xml
 msgid ""
-"One test named <literal>systemd:core / test-namespace</literal> is known to "
+"Three tests: <literal>systemd:core / test-namespace</literal>, <literal>test-"
+"chase</literal>, and <literal>test-systemd-tmpfiles</literal>, are known to "
 "fail in the LFS chroot environment.  Some other tests may fail because they "
 "depend on various kernel configuration options."
 msgstr ""
-"已知一项名为 <literal>systemd:core / test-namespace</literal> 在 LFS chroot "
-"环境中会失败。一些其他测试可能由于依赖一些内核配置选项而失败。"
+"已知三项测试：<literal>systemd:core / test-namespace</literal>，"
+"<literal>test-chase</literal>，以及 <literal>test-systemd-tmpfiles</literal> "
+"在 LFS chroot 环境中会失败。一些其他测试可能由于依赖一些内核配置选项而失败。"
 
 #. type: Content of: <sect1><sect2><screen>
 #: lfs-en/chapter08/systemd.xml

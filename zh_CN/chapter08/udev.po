@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Linux From Scratch 11.4\n"
 "Report-Msgid-Bugs-To: lfs-dev@lists.linuxfromscratch.org\n"
-"POT-Creation-Date: 2024-06-02 19:47+0800\n"
+"POT-Creation-Date: 2024-06-15 01:10+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: Xi Ruoyao <xry111@xry111.site>\n"
 "Language-Team: none\n"
@@ -381,35 +381,6 @@ msgid ""
 msgstr ""
 "<userinput remap=\"pre\">sed -i -e 's/GROUP=\"render\"/GROUP=\"video\"/' \\\n"
 "       -e 's/GROUP=\"sgx\", //' rules.d/50-udev-default.rules.in</userinput>"
-
-#. type: Content of: <sect1><sect2><para>
-#: lfs-en/chapter08/systemd.xml lfs-en/chapter08/udev.xml
-msgid "Next, fix compatibility with API headers from linux-6.9 and later:"
-msgstr "然后，修复该软件包，使其与 linux-6.9 更新版本提供的 API 头文件兼容："
-
-#. type: Content of: <sect1><sect2><screen>
-#: lfs-en/chapter08/systemd.xml lfs-en/chapter08/udev.xml
-#, no-wrap
-msgid ""
-"<userinput remap=\"pre\">sed -i '/DEVMEM_MAGIC 0/{n;n;a \\\n"
-"/* cb12fd8e0dabb9a1c8aef55a6a41e2c255fcdf4b (6.8) */ \\\n"
-"#ifndef PID_FS_MAGIC \\\n"
-"#define PID_FS_MAGIC 0x50494446 \\\n"
-"#endif\n"
-"}' src/basic/missing_magic.h\n"
-"\n"
-"sed -i '/OVERLAYFS_SUPER_MAGIC/a \\\n"
-"pidfs,           {PID_FS_MAGIC}' src/basic/filesystems-gperf.gperf</userinput>"
-msgstr ""
-"<userinput remap=\"pre\">sed -i '/DEVMEM_MAGIC 0/{n;n;a \\\n"
-"/* cb12fd8e0dabb9a1c8aef55a6a41e2c255fcdf4b (6.8) */ \\\n"
-"#ifndef PID_FS_MAGIC \\\n"
-"#define PID_FS_MAGIC 0x50494446 \\\n"
-"#endif\n"
-"}' src/basic/missing_magic.h\n"
-"\n"
-"sed -i '/OVERLAYFS_SUPER_MAGIC/a \\\n"
-"pidfs,           {PID_FS_MAGIC}' src/basic/filesystems-gperf.gperf</userinput>"
 
 #. type: Content of: <sect1><sect2><variablelist><title>
 #: lfs-en/chapter08/systemd.xml lfs-en/chapter08/udev.xml
