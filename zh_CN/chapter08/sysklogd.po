@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Linux From Scratch 11.4\n"
 "Report-Msgid-Bugs-To: lfs-dev@lists.linuxfromscratch.org\n"
-"POT-Creation-Date: 2024-05-01 15:22+0800\n"
+"POT-Creation-Date: 2024-07-04 13:21+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: Xi Ruoyao <xry111@xry111.site>\n"
 "Language-Team: none\n"
@@ -69,6 +69,11 @@ msgstr ""
 #: lfs-en/prologue/why.xml
 msgid "Sysklogd"
 msgstr "Sysklogd"
+
+#. type: Content of: <sect1><title>
+#: lfs-en/chapter01/whatsnew.xml lfs-en/chapter08/sysklogd.xml
+msgid "Sysklogd-&sysklogd-version;"
+msgstr "Sysklogd-&sysklogd-version;"
 
 #. type: Content of: <sect1><sect2><segmentedlist><segtitle>
 #: lfs-en/chapter05/binutils-pass1.xml lfs-en/chapter05/gcc-pass1.xml
@@ -404,34 +409,12 @@ msgid "Short Descriptions"
 msgstr "简要描述"
 
 #. type: Content of: <sect1><sect2><segmentedlist><segtitle>
-#: lfs-en/chapter08/acl.xml lfs-en/chapter08/attr.xml
-#: lfs-en/chapter08/autoconf.xml lfs-en/chapter08/automake.xml
-#: lfs-en/chapter08/bash.xml lfs-en/chapter08/bc.xml
-#: lfs-en/chapter08/binutils.xml lfs-en/chapter08/bison.xml
-#: lfs-en/chapter08/bzip2.xml lfs-en/chapter08/coreutils.xml
-#: lfs-en/chapter08/dbus.xml lfs-en/chapter08/diffutils.xml
-#: lfs-en/chapter08/e2fsprogs.xml lfs-en/chapter08/file.xml
-#: lfs-en/chapter08/findutils.xml lfs-en/chapter08/flex.xml
-#: lfs-en/chapter08/gawk.xml lfs-en/chapter08/gcc.xml lfs-en/chapter08/gdbm.xml
-#: lfs-en/chapter08/gettext.xml lfs-en/chapter08/glibc.xml
-#: lfs-en/chapter08/grep.xml lfs-en/chapter08/groff.xml
-#: lfs-en/chapter08/grub.xml lfs-en/chapter08/gzip.xml
-#: lfs-en/chapter08/inetutils.xml lfs-en/chapter08/intltool.xml
-#: lfs-en/chapter08/iproute2.xml lfs-en/chapter08/kbd.xml
-#: lfs-en/chapter08/kmod.xml lfs-en/chapter08/less.xml
-#: lfs-en/chapter08/libcap.xml lfs-en/chapter08/libtool.xml
-#: lfs-en/chapter08/lz4.xml lfs-en/chapter08/man-db.xml
-#: lfs-en/chapter08/meson.xml lfs-en/chapter08/ncurses.xml
-#: lfs-en/chapter08/ninja.xml lfs-en/chapter08/openssl.xml
-#: lfs-en/chapter08/perl.xml lfs-en/chapter08/pkgconf.xml
-#: lfs-en/chapter08/procps.xml lfs-en/chapter08/psmisc.xml
-#: lfs-en/chapter08/python.xml lfs-en/chapter08/shadow.xml
-#: lfs-en/chapter08/sysklogd.xml lfs-en/chapter08/systemd.xml
-#: lfs-en/chapter08/sysvinit.xml lfs-en/chapter08/tar.xml
-#: lfs-en/chapter08/tcl.xml lfs-en/chapter08/texinfo.xml
-#: lfs-en/chapter08/udev.xml lfs-en/chapter08/util-linux.xml
-#: lfs-en/chapter08/vim.xml lfs-en/chapter08/xz.xml lfs-en/chapter08/zstd.xml
-msgid "Installed programs"
+#: lfs-en/chapter08/check.xml lfs-en/chapter08/dejagnu.xml
+#: lfs-en/chapter08/expat.xml lfs-en/chapter08/expect.xml
+#: lfs-en/chapter08/gperf.xml lfs-en/chapter08/m4.xml lfs-en/chapter08/make.xml
+#: lfs-en/chapter08/patch.xml lfs-en/chapter08/sed.xml
+#: lfs-en/chapter08/sysklogd.xml lfs-en/chapter08/wheel.xml
+msgid "Installed program"
 msgstr "安装的程序"
 
 #. type: Content of: <sect1><sect2><para>
@@ -464,11 +447,6 @@ msgstr ""
 "<productname>sysklogd</productname> <productnumber>&sysklogd-version;</"
 "productnumber> <placeholder type=\"address\" id=\"0\"/>"
 
-#. type: Content of: <sect1><title>
-#: lfs-en/chapter08/sysklogd.xml
-msgid "Sysklogd-&sysklogd-version;"
-msgstr "Sysklogd-&sysklogd-version;"
-
 #. type: Content of: <sect1><sect2><para>
 #: lfs-en/chapter08/sysklogd.xml
 msgid ""
@@ -494,21 +472,22 @@ msgstr "安装 Sysklogd"
 
 #. type: Content of: <sect1><sect2><para>
 #: lfs-en/chapter08/sysklogd.xml
-msgid ""
-"First, fix a problem that causes a segmentation fault in klogd under some "
-"conditions, and fix an obsolete program construct:"
-msgstr ""
-"首先，修复 klogd 中在特定情况下会发生段错误的问题，并改正一个过时的程序结构："
+msgid "Prepare the package for compilation:"
+msgstr "准备编译该软件包："
 
 #. type: Content of: <sect1><sect2><screen>
 #: lfs-en/chapter08/sysklogd.xml
 #, no-wrap
 msgid ""
-"<userinput remap=\"pre\">sed -i '/Error loading kernel symbols/{n;n;d}' ksym_mod.c\n"
-"sed -i 's/union wait/int/' syslogd.c</userinput>"
+"<userinput remap=\"configure\">./configure --prefix=/usr      \\\n"
+"            --sysconfdir=/etc  \\\n"
+"            --runstatedir=/run \\\n"
+"            --without-logger</userinput>"
 msgstr ""
-"<userinput remap=\"pre\">sed -i '/Error loading kernel symbols/{n;n;d}' ksym_mod.c\n"
-"sed -i 's/union wait/int/' syslogd.c</userinput>"
+"<userinput remap=\"configure\">./configure --prefix=/usr      \\\n"
+"            --sysconfdir=/etc  \\\n"
+"            --runstatedir=/run \\\n"
+"            --without-logger</userinput>"
 
 #. type: Content of: <sect1><sect2><title>
 #: lfs-en/chapter08/sysklogd.xml
@@ -565,25 +544,10 @@ msgstr ""
 msgid "Contents of Sysklogd"
 msgstr "Sysklogd 的内容"
 
-#. type: Content of: <sect1><sect2><segmentedlist><seglistitem><seg>
-#: lfs-en/chapter08/sysklogd.xml
-msgid "klogd and syslogd"
-msgstr "klogd 和 syslogd"
-
-#. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
-#: lfs-en/chapter08/sysklogd.xml
-msgid "<command>klogd</command>"
-msgstr "<command>klogd</command>"
-
-#. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
-#: lfs-en/chapter08/sysklogd.xml
-msgid "A system daemon for intercepting and logging kernel messages"
-msgstr "一个截获并记录内核消息的系统守护程序"
-
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: lfs-en/chapter08/sysklogd.xml
-msgid "klogd"
-msgstr "klogd"
+msgid "syslogd"
+msgstr "syslogd"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: lfs-en/chapter08/sysklogd.xml
@@ -600,8 +564,3 @@ msgid ""
 msgstr ""
 "记录系统程序提供给日志系统的消息 [每条消息至少包含时间戳和主机名，通常还包含"
 "程序的名字，但这依赖于日志守护进程的信任度设置。]"
-
-#. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
-#: lfs-en/chapter08/sysklogd.xml
-msgid "syslogd"
-msgstr "syslogd"
