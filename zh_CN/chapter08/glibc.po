@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Linux From Scratch 11.0\n"
 "Report-Msgid-Bugs-To: lfs-dev@lists.linuxfromscratch.org\n"
-"POT-Creation-Date: 2024-06-15 01:10+0800\n"
+"POT-Creation-Date: 2024-08-01 00:22+0800\n"
 "PO-Revision-Date: 2021-08-21 11:33+0800\n"
 "Last-Translator: Xi Ruoyao <xry111@xry111.site>\n"
 "Language-Team: none\n"
@@ -74,6 +74,12 @@ msgstr ""
 #: lfs-en/chapter08/glibc.xml lfs-en/prologue/why.xml
 msgid "Glibc"
 msgstr "Glibc"
+
+#. type: Content of: <sect1><title>
+#: lfs-en/chapter01/whatsnew.xml lfs-en/chapter05/glibc.xml
+#: lfs-en/chapter08/glibc.xml
+msgid "Glibc-&glibc-version;"
+msgstr "Glibc-&glibc-version;"
 
 #. type: Content of: <sect1><sect2><segmentedlist><segtitle>
 #: lfs-en/chapter05/binutils-pass1.xml lfs-en/chapter05/gcc-pass1.xml
@@ -370,11 +376,6 @@ msgstr ""
 "<productname>glibc</productname> <productnumber>&glibc-version;</"
 "productnumber> <placeholder type=\"address\" id=\"0\"/>"
 
-#. type: Content of: <sect1><title>
-#: lfs-en/chapter05/glibc.xml lfs-en/chapter08/glibc.xml
-msgid "Glibc-&glibc-version;"
-msgstr "Glibc-&glibc-version;"
-
 #. type: Content of: <sect1><sect2><title>
 #: lfs-en/chapter05/glibc.xml lfs-en/chapter08/glibc.xml
 msgid "Installation of Glibc"
@@ -544,11 +545,11 @@ msgstr "简要描述"
 #: lfs-en/chapter08/perl.xml lfs-en/chapter08/pkgconf.xml
 #: lfs-en/chapter08/procps.xml lfs-en/chapter08/psmisc.xml
 #: lfs-en/chapter08/python.xml lfs-en/chapter08/shadow.xml
-#: lfs-en/chapter08/sysklogd.xml lfs-en/chapter08/systemd.xml
-#: lfs-en/chapter08/sysvinit.xml lfs-en/chapter08/tar.xml
-#: lfs-en/chapter08/tcl.xml lfs-en/chapter08/texinfo.xml
-#: lfs-en/chapter08/udev.xml lfs-en/chapter08/util-linux.xml
-#: lfs-en/chapter08/vim.xml lfs-en/chapter08/xz.xml lfs-en/chapter08/zstd.xml
+#: lfs-en/chapter08/systemd.xml lfs-en/chapter08/sysvinit.xml
+#: lfs-en/chapter08/tar.xml lfs-en/chapter08/tcl.xml
+#: lfs-en/chapter08/texinfo.xml lfs-en/chapter08/udev.xml
+#: lfs-en/chapter08/util-linux.xml lfs-en/chapter08/vim.xml
+#: lfs-en/chapter08/xz.xml lfs-en/chapter08/zstd.xml
 msgid "Installed programs"
 msgstr "安装的程序"
 
@@ -630,17 +631,6 @@ msgstr ""
 #, no-wrap
 msgid "<userinput remap=\"pre\">patch -Np1 -i ../&glibc-fhs-patch;</userinput>"
 msgstr "<userinput remap=\"pre\">patch -Np1 -i ../&glibc-fhs-patch;</userinput>"
-
-#. type: Content of: <sect1><sect2><para>
-#: lfs-en/chapter08/glibc.xml
-msgid "Now fix a security vulnerability:"
-msgstr "现在修复一处安全缺陷："
-
-#. type: Content of: <sect1><sect2><screen>
-#: lfs-en/chapter08/glibc.xml
-#, no-wrap
-msgid "<userinput remap=\"pre\">patch -Np1 -i ../&glibc-upstream-patch;</userinput>"
-msgstr "<userinput remap=\"pre\">patch -Np1 -i ../&glibc-upstream-patch;</userinput>"
 
 #. type: Content of: <sect1><sect2><para>
 #: lfs-en/chapter08/glibc.xml
