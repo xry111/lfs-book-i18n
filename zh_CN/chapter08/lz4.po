@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \"Linux From Scratch\" 11.3\n"
 "Report-Msgid-Bugs-To: lfs-dev@lists.linuxfromscratch.org\n"
-"POT-Creation-Date: 2024-03-20 15:18+0800\n"
+"POT-Creation-Date: 2024-08-05 12:04+0800\n"
 "PO-Revision-Date: 2024-03-20 15:18+0800\n"
 "Last-Translator: Automatically generated\n"
 "Language-Team: none\n"
@@ -354,11 +354,11 @@ msgstr "简要描述"
 #: lfs-en/chapter08/perl.xml lfs-en/chapter08/pkgconf.xml
 #: lfs-en/chapter08/procps.xml lfs-en/chapter08/psmisc.xml
 #: lfs-en/chapter08/python.xml lfs-en/chapter08/shadow.xml
-#: lfs-en/chapter08/sysklogd.xml lfs-en/chapter08/systemd.xml
-#: lfs-en/chapter08/sysvinit.xml lfs-en/chapter08/tar.xml
-#: lfs-en/chapter08/tcl.xml lfs-en/chapter08/texinfo.xml
-#: lfs-en/chapter08/udev.xml lfs-en/chapter08/util-linux.xml
-#: lfs-en/chapter08/vim.xml lfs-en/chapter08/xz.xml lfs-en/chapter08/zstd.xml
+#: lfs-en/chapter08/systemd.xml lfs-en/chapter08/sysvinit.xml
+#: lfs-en/chapter08/tar.xml lfs-en/chapter08/tcl.xml
+#: lfs-en/chapter08/texinfo.xml lfs-en/chapter08/udev.xml
+#: lfs-en/chapter08/util-linux.xml lfs-en/chapter08/vim.xml
+#: lfs-en/chapter08/xz.xml lfs-en/chapter08/zstd.xml
 msgid "Installed programs"
 msgstr "安装的程序"
 
@@ -391,11 +391,10 @@ msgstr "安装的库"
 #: lfs-en/chapter08/libxcrypt.xml lfs-en/chapter08/lz4.xml
 #: lfs-en/chapter08/m4.xml lfs-en/chapter08/make.xml
 #: lfs-en/chapter08/man-db.xml lfs-en/chapter08/mpc.xml
-#: lfs-en/chapter08/ninja.xml lfs-en/chapter08/openssl.xml
-#: lfs-en/chapter08/patch.xml lfs-en/chapter08/sed.xml lfs-en/chapter08/tar.xml
-#: lfs-en/chapter08/tcl.xml lfs-en/chapter08/texinfo.xml
-#: lfs-en/chapter08/xml-parser.xml lfs-en/chapter08/xz.xml
-#: lfs-en/chapter08/zlib.xml lfs-en/chapter08/zstd.xml
+#: lfs-en/chapter08/openssl.xml lfs-en/chapter08/patch.xml
+#: lfs-en/chapter08/sed.xml lfs-en/chapter08/tar.xml lfs-en/chapter08/tcl.xml
+#: lfs-en/chapter08/texinfo.xml lfs-en/chapter08/xml-parser.xml
+#: lfs-en/chapter08/xz.xml lfs-en/chapter08/zlib.xml lfs-en/chapter08/zstd.xml
 msgid "To test the results, issue:"
 msgstr "运行命令以测试编译结果："
 
@@ -452,8 +451,8 @@ msgstr "安装 Lz4"
 #. type: Content of: <sect1><sect2><screen>
 #: lfs-en/chapter08/lz4.xml
 #, no-wrap
-msgid "<userinput remap=\"make\">make BUILD_STATIC=no</userinput>"
-msgstr "<userinput remap=\"make\">make BUILD_STATIC=no</userinput>"
+msgid "<userinput remap=\"make\">make BUILD_STATIC=no PREFIX=/usr</userinput>"
+msgstr "<userinput remap=\"make\">make BUILD_STATIC=no PREFIX=/usr</userinput>"
 
 #. type: Content of: <sect1><sect2><screen>
 #: lfs-en/chapter08/lz4.xml
