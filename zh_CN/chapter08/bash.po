@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Linux From Scratch 11.4\n"
 "Report-Msgid-Bugs-To: lfs-dev@lists.linuxfromscratch.org\n"
-"POT-Creation-Date: 2024-05-12 21:27+0800\n"
+"POT-Creation-Date: 2024-08-18 15:24+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: Xi Ruoyao <xry111@xry111.site>\n"
 "Language-Team: none\n"
@@ -69,6 +69,12 @@ msgstr ""
 #: lfs-en/chapter08/bash.xml lfs-en/prologue/why.xml
 msgid "Bash"
 msgstr "Bash"
+
+#. type: Content of: <sect1><title>
+#: lfs-en/chapter01/whatsnew.xml lfs-en/chapter06/bash.xml
+#: lfs-en/chapter08/bash.xml
+msgid "Bash-&bash-version;"
+msgstr "Bash-&bash-version;"
 
 #. type: Content of: <sect1><sect2><segmentedlist><segtitle>
 #: lfs-en/chapter05/binutils-pass1.xml lfs-en/chapter05/gcc-pass1.xml
@@ -418,11 +424,6 @@ msgstr ""
 "<productname>bash</productname> <productnumber>&bash-version;</"
 "productnumber> <placeholder type=\"address\" id=\"0\"/>"
 
-#. type: Content of: <sect1><title>
-#: lfs-en/chapter06/bash.xml lfs-en/chapter08/bash.xml
-msgid "Bash-&bash-version;"
-msgstr "Bash-&bash-version;"
-
 #. type: Content of: <sect1><sect2><title>
 #: lfs-en/chapter06/bash.xml lfs-en/chapter08/bash.xml
 msgid "Installation of Bash"
@@ -469,11 +470,11 @@ msgstr "<userinput>exec /usr/bin/bash --login</userinput>"
 #: lfs-en/chapter08/perl.xml lfs-en/chapter08/pkgconf.xml
 #: lfs-en/chapter08/procps.xml lfs-en/chapter08/psmisc.xml
 #: lfs-en/chapter08/python.xml lfs-en/chapter08/shadow.xml
-#: lfs-en/chapter08/sysklogd.xml lfs-en/chapter08/systemd.xml
-#: lfs-en/chapter08/sysvinit.xml lfs-en/chapter08/tar.xml
-#: lfs-en/chapter08/tcl.xml lfs-en/chapter08/texinfo.xml
-#: lfs-en/chapter08/udev.xml lfs-en/chapter08/util-linux.xml
-#: lfs-en/chapter08/vim.xml lfs-en/chapter08/xz.xml lfs-en/chapter08/zstd.xml
+#: lfs-en/chapter08/systemd.xml lfs-en/chapter08/sysvinit.xml
+#: lfs-en/chapter08/tar.xml lfs-en/chapter08/tcl.xml
+#: lfs-en/chapter08/texinfo.xml lfs-en/chapter08/udev.xml
+#: lfs-en/chapter08/util-linux.xml lfs-en/chapter08/vim.xml
+#: lfs-en/chapter08/xz.xml lfs-en/chapter08/zstd.xml
 msgid "Installed programs"
 msgstr "安装的程序"
 
@@ -507,17 +508,6 @@ msgstr "&bash-fin-sbu;"
 #: lfs-en/chapter08/bash.xml
 msgid "&bash-fin-du;"
 msgstr "&bash-fin-du;"
-
-#. type: Content of: <sect1><sect2><para>
-#: lfs-en/chapter08/bash.xml
-msgid "First, fix some issues identified upstream:"
-msgstr "首先，修复上游发现的一些问题："
-
-#. type: Content of: <sect1><sect2><screen>
-#: lfs-en/chapter08/bash.xml
-#, no-wrap
-msgid "<userinput remap=\"pre\">patch -Np1 -i ../&bash-upstream-fixes-patch;</userinput>"
-msgstr "<userinput remap=\"pre\">patch -Np1 -i ../&bash-upstream-fixes-patch;</userinput>"
 
 #. type: Content of: <sect1><sect2><screen>
 #: lfs-en/chapter08/bash.xml
