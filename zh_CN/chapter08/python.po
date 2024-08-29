@@ -581,13 +581,14 @@ msgid ""
 "Some tests are known to occasionally hang indefinitely.  So to test the "
 "results, run the test suite but set a 2-minute time limit for each test case:"
 msgstr ""
+"已知一些测试偶尔会陷入无限等待状态。因此如果需要测试编译结果，运行测试套件，"
+"但是将每个单项测试的最长运行时间限制为 2 分钟："
 
 #. type: Content of: <sect1><sect2><screen>
 #: lfs-en/chapter08/python.xml
-#, fuzzy, no-wrap
-#| msgid "<userinput remap=\"test\">make test</userinput>"
+#, no-wrap
 msgid "<userinput remap=\"test\">make test TESTOPTS=\"--timeout 120\"</userinput>"
-msgstr "<userinput remap=\"test\">make test</userinput>"
+msgstr "<userinput remap=\"test\">make test TESTOPTS=\"--timeout 120\"</userinput>"
 
 #. type: Content of: <sect1><sect2><para>
 #: lfs-en/chapter08/python.xml
@@ -598,6 +599,10 @@ msgid ""
 "failed tests.  If a test failed but then passed when re-run, it should be "
 "considered as passed."
 msgstr ""
+"对于较慢的系统，您可能需要放宽运行时间限制，1 SBU (通过仅用单个 CPU 核心构建"
+"第一遍的 Binutils 测得) 一般来说是足够的。一些测试并不精确，因此测试套件会自"
+"动重新运行失败的测试。如果某项测试失败后在重新运行时能够通过，则应该将其视为"
+"正常通过。"
 
 #. type: Content of: <sect1><sect2><para>
 #: lfs-en/chapter08/python.xml

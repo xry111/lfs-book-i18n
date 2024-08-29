@@ -492,8 +492,9 @@ msgstr ""
 "kernfs'/>，并确认 <systemitem class=\"filesystem\">devpts</systemitem> 文件系"
 "统 (以及其他虚拟内核文件系统) 已被正确挂载。之后按照<xref linkend='ch-tools-"
 "chroot'/>重新进入 chroot 环境。在继续构建之前，必须解决这一问题，否则需要使"
-"用 Expect 的测试套件 (例如 Bash，Binutils，GCC，GDBM，以及 (显然地) Expect 本"
-"身的测试套件) 都会出现大规模的测试失败，而且也可能产生其他隐蔽的问题。"
+"用 Expect 的测试套件 (例如 Bash，Binutils，GCC，GDBM 等的测试套件，当然还有 "
+"Expect 本身的测试套件) 都会出现大规模的测试失败，而且也可能产生其他隐蔽的问"
+"题。"
 
 #. type: Content of: <sect1><sect2><screen>
 #: lfs-en/chapter08/expect.xml
@@ -504,14 +505,13 @@ msgstr "<userinput remap=\"pre\">tar -C tclconfig &update-config-arg;</userinput
 #. type: Content of: <sect1><sect2><para>
 #: lfs-en/chapter08/expect.xml
 msgid "Now, make some changes to allow the package with gcc-14.1 or later:"
-msgstr ""
+msgstr "对该软件包进行一些修改，以允许使用 gcc-14.1 或更新版本构建它："
 
 #. type: Content of: <sect1><sect2><screen>
 #: lfs-en/chapter08/expect.xml
-#, fuzzy, no-wrap
-#| msgid "<userinput remap=\"pre\">patch -Np1 -i ../glibc-&glibc-version;-fhs-1.patch</userinput>"
+#, no-wrap
 msgid "<userinput remap=\"pre\">patch -Np1 -i ../expect-&expect-version;-gcc14-1.patch</userinput>"
-msgstr "<userinput remap=\"pre\">patch -Np1 -i ../glibc-&glibc-version;-fhs-1.patch</userinput>"
+msgstr "<userinput remap=\"pre\">patch -Np1 -i ../expect-&expect-version;-gcc14-1.patch</userinput>"
 
 #. type: Content of: <sect1><sect2><para>
 #: lfs-en/chapter08/expect.xml
@@ -520,13 +520,7 @@ msgstr "准备编译 Expect："
 
 #. type: Content of: <sect1><sect2><screen>
 #: lfs-en/chapter08/expect.xml
-#, fuzzy, no-wrap
-#| msgid ""
-#| "<userinput remap=\"configure\">./configure --prefix=/usr           \\\n"
-#| "            --with-tcl=/usr/lib     \\\n"
-#| "            --enable-shared         \\\n"
-#| "            --mandir=/usr/share/man \\\n"
-#| "            --with-tclinclude=/usr/include</userinput>"
+#, no-wrap
 msgid ""
 "<userinput remap=\"configure\">./configure --prefix=/usr           \\\n"
 "            --with-tcl=/usr/lib     \\\n"
@@ -538,6 +532,7 @@ msgstr ""
 "<userinput remap=\"configure\">./configure --prefix=/usr           \\\n"
 "            --with-tcl=/usr/lib     \\\n"
 "            --enable-shared         \\\n"
+"            --disable-rpath         \\\n"
 "            --mandir=/usr/share/man \\\n"
 "            --with-tclinclude=/usr/include</userinput>"
 

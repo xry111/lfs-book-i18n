@@ -667,13 +667,6 @@ msgstr "<userinput remap=\"test\">chown -R tester . </userinput>"
 
 #. type: Content of: <sect1><sect2><para>
 #: lfs-en/chapter08/coreutils.xml
-#, fuzzy
-#| msgid ""
-#| "Now run the tests (using <filename>/dev/null</filename> for the standard "
-#| "input, or two tests may be broken if building LFS in a graphical terminal "
-#| "or a session in SSH or GNU Screen etc. because the standard input is "
-#| "connected to a PTY from host distro, and the device node for such a PTY "
-#| "cannot be accessed from the LFS chroot environment):"
 msgid ""
 "Now run the tests (using <filename>/dev/null</filename> for the standard "
 "input, or two tests may be broken if building LFS in a graphical terminal or "
@@ -682,18 +675,18 @@ msgid ""
 "from the LFS chroot environment):"
 msgstr ""
 "现在运行测试 (使用 <filename>/dev/null</filename> 作为标准输入，否则在图形终"
-"端，SSH 会话，或者 GNU Screen 等环境构建 LFS 时，由于标准输入连接到了宿主发行"
-"版的 PTY，而该 PTY 的设备节点无法在 LFS chroot 环境中访问，两项测试无法正常工"
-"作)："
+"端，SSH 会话，或者 GNU Screen 构建 LFS 时，由于标准输入连接到了宿主发行版的 "
+"PTY，而该 PTY 的设备节点无法在 LFS chroot 环境中访问，两项测试无法正常工作)："
 
 #. type: Content of: <sect1><sect2><screen>
 #: lfs-en/chapter08/coreutils.xml
-#, fuzzy, no-wrap
-#| msgid "<userinput remap=\"test\">su tester -c \"PATH=$PATH make RUN_EXPENSIVE_TESTS=yes check\" &lt; /dev/null</userinput>"
+#, no-wrap
 msgid ""
 "<userinput remap=\"test\">su tester -c \"PATH=$PATH make -k RUN_EXPENSIVE_TESTS=yes check\" \\\n"
 "   &lt; /dev/null</userinput>"
-msgstr "<userinput remap=\"test\">su tester -c \"PATH=$PATH make RUN_EXPENSIVE_TESTS=yes check\" &lt; /dev/null</userinput>"
+msgstr ""
+"<userinput remap=\"test\">su tester -c \"PATH=$PATH make -k RUN_EXPENSIVE_TESTS=yes check\" \\\n"
+"   &lt; /dev/null</userinput>"
 
 #. type: Content of: <sect1><sect2><para>
 #: lfs-en/chapter08/coreutils.xml
@@ -713,6 +706,9 @@ msgid ""
 "<filename>tests/mv/acl.sh</filename>, are known to fail in the chroot "
 "environment, but pass in a complete system."
 msgstr ""
+"已知 <filename>tests/cp/preserve-mode.sh</filename> 和 <filename>tests/mv/"
+"acl.sh</filename> 这两项测试在 chroot 环境中会失败，但在构建完成的系统中能正"
+"常通过。"
 
 #. type: Content of: <sect1><sect2><para>
 #: lfs-en/chapter08/coreutils.xml

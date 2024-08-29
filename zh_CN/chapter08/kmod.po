@@ -427,14 +427,7 @@ msgstr "准备编译 Kmod："
 
 #. type: Content of: <sect1><sect2><screen>
 #: lfs-en/chapter08/kmod.xml
-#, fuzzy, no-wrap
-#| msgid ""
-#| "<userinput remap=\"configure\">./configure --prefix=/usr          \\\n"
-#| "            --sysconfdir=/etc      \\\n"
-#| "            --with-openssl         \\\n"
-#| "            --with-xz              \\\n"
-#| "            --with-zstd            \\\n"
-#| "            --with-zlib</userinput>"
+#, no-wrap
 msgid ""
 "<userinput remap=\"configure\">./configure --prefix=/usr     \\\n"
 "            --sysconfdir=/etc \\\n"
@@ -444,12 +437,13 @@ msgid ""
 "            --with-zlib       \\\n"
 "            --disable-manpages</userinput>"
 msgstr ""
-"<userinput remap=\"configure\">./configure --prefix=/usr          \\\n"
-"            --sysconfdir=/etc      \\\n"
-"            --with-openssl         \\\n"
-"            --with-xz              \\\n"
-"            --with-zstd            \\\n"
-"            --with-zlib</userinput>"
+"<userinput remap=\"configure\">./configure --prefix=/usr     \\\n"
+"            --sysconfdir=/etc \\\n"
+"            --with-openssl    \\\n"
+"            --with-xz         \\\n"
+"            --with-zstd       \\\n"
+"            --with-zlib       \\\n"
+"            --disable-manpages</userinput>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: lfs-en/chapter08/kmod.xml
@@ -477,17 +471,15 @@ msgstr "这些选项允许 Kmod 处理压缩过的内核模块。"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: lfs-en/chapter08/kmod.xml
-#, fuzzy
-#| msgid "<parameter>--disable-nls</parameter>"
 msgid "<parameter>--disable-manpages</parameter>"
-msgstr "<parameter>--disable-nls</parameter>"
+msgstr "<parameter>--disable-manpages</parameter>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: lfs-en/chapter08/kmod.xml
 msgid ""
 "This option disables generating the man pages which requires an external "
 "program."
-msgstr ""
+msgstr "该选项禁止生成手册页，因为生成手册页需要不属于 LFS 的程序。"
 
 #. type: Content of: <sect1><sect2><para>
 #: lfs-en/chapter08/kmod.xml
@@ -509,18 +501,15 @@ msgid ""
 "command> there and all other symlinks in <filename class='directory'>/usr/"
 "sbin</filename> instead:"
 msgstr ""
+"安装该软件包，并重新创建一些用于和 Module-Init-Tools (曾用于处理 Linux 内核模"
+"块的软件包) 相兼容的符号链接。构建系统会将所有兼容性符号链接创建在 <filename "
+"class='directory'>/usr/bin</filename> 中，但我们只希望 <command>lsmod</"
+"command> 位于该目录，而其他符号链接应该位于 <filename class='directory'>/usr/"
+"sbin</filename> 中："
 
 #. type: Content of: <sect1><sect2><screen>
 #: lfs-en/chapter08/kmod.xml
-#, fuzzy, no-wrap
-#| msgid ""
-#| "<userinput remap=\"install\">make install\n"
-#| "\n"
-#| "for target in depmod insmod modinfo modprobe rmmod; do\n"
-#| "  ln -sfv ../bin/kmod /usr/sbin/$target\n"
-#| "done\n"
-#| "\n"
-#| "ln -sfv kmod /usr/bin/lsmod</userinput>"
+#, no-wrap
 msgid ""
 "<userinput remap=\"install\">make install\n"
 "\n"
@@ -533,9 +522,8 @@ msgstr ""
 "\n"
 "for target in depmod insmod modinfo modprobe rmmod; do\n"
 "  ln -sfv ../bin/kmod /usr/sbin/$target\n"
-"done\n"
-"\n"
-"ln -sfv kmod /usr/bin/lsmod</userinput>"
+"  rm -fv /usr/bin/$target\n"
+"done</userinput>"
 
 #. type: Content of: <sect1><sect2><title>
 #: lfs-en/chapter08/kmod.xml

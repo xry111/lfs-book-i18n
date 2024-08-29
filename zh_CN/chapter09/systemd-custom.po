@@ -181,18 +181,6 @@ msgstr "q /tmp 1777 root root 10d"
 
 #. type: Content of: <sect1><sect2><para>
 #: lfs-en/chapter09/systemd-custom.xml
-#, fuzzy
-#| msgid ""
-#| "Note that the syntax for the <filename>/usr/lib/tmpfiles.d/*.conf</"
-#| "filename> files can be confusing.  For example, the default deletion of "
-#| "files in the /tmp directory is located in <filename>/usr/lib/tmpfiles.d/"
-#| "tmp.conf</filename> with the line: <placeholder type=\"screen\" id=\"0\"/"
-#| "> The type field, q, discusses creating a subvolume with quotas which is "
-#| "really only applicable to btrfs filesystems.  It references type v which "
-#| "in turn references type d (directory). This then creates the specified "
-#| "directory if it is not present and adjusts the permissions and ownership "
-#| "as specified. Contents of the directory will be subject to time based "
-#| "cleanup if the age argument is specified."
 msgid ""
 "Note that the syntax for the <filename>/usr/lib/tmpfiles.d/*.conf</filename> "
 "files can be confusing.  For example, the default deletion of files in the /"
@@ -554,13 +542,6 @@ msgstr ""
 
 #. type: Content of: <sect1><sect2><itemizedlist><listitem><para>
 #: lfs-en/chapter09/systemd-custom.xml
-#, fuzzy
-#| msgid ""
-#| "<emphasis>Disable at build-time</emphasis>: You can disable lingering by "
-#| "default while building systemd by adding the switch <parameter>-Ddefault-"
-#| "kill-user-processes=false</parameter> to the <command>meson</command> "
-#| "command for systemd. This completely disables the ability of systemd to "
-#| "kill user processes at session end."
 msgid ""
 "<emphasis>Disable at build-time</emphasis>: You can disable lingering by "
 "default while building systemd by adding the switch <parameter>-D default-"
@@ -569,6 +550,6 @@ msgid ""
 "user processes at session end."
 msgstr ""
 "<emphasis>在编译时禁用该功能</emphasis>：您可以在构建 systemd 时传递参数 "
-"<parameter>-Ddefault-kill-user-process=no</parameter> 给 <command>meson</"
+"<parameter>-D default-kill-user-process=no</parameter> 给 <command>meson</"
 "command>，使得 systemd 默认启用进程驻留。这完全禁用了 systemd 在会话结束时杀"
 "死用户进程的功能。"

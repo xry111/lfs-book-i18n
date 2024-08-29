@@ -461,32 +461,7 @@ msgstr "准备安装 systemd："
 
 #. type: Content of: <sect1><sect2><screen>
 #: lfs-en/chapter08/systemd.xml
-#, fuzzy, no-wrap
-#| msgid ""
-#| "<userinput remap=\"configure\">mkdir -p build\n"
-#| "cd       build\n"
-#| "\n"
-#| "CFLAGS+=\" -Wno-format-overflow\" \\\n"
-#| "meson setup \\\n"
-#| "      --prefix=/usr                 \\\n"
-#| "      --buildtype=release           \\\n"
-#| "      -Ddefault-dnssec=no           \\\n"
-#| "      -Dfirstboot=false             \\\n"
-#| "      -Dinstall-tests=false         \\\n"
-#| "      -Dldconfig=false              \\\n"
-#| "      -Dsysusers=false              \\\n"
-#| "      -Drpmmacrosdir=no             \\\n"
-#| "      -Dhomed=disabled              \\\n"
-#| "      -Duserdb=false                \\\n"
-#| "      -Dman=disabled                \\\n"
-#| "      -Dmode=release                \\\n"
-#| "      -Dpamconfdir=no               \\\n"
-#| "      -Ddev-kvm-mode=0660           \\\n"
-#| "      -Dnobody-group=nogroup        \\\n"
-#| "      -Dsysupdate=disabled          \\\n"
-#| "      -Dukify=disabled              \\\n"
-#| "      -Ddocdir=/usr/share/doc/systemd-&systemd-version; \\\n"
-#| "      ..</userinput>"
+#, no-wrap
 msgid ""
 "<userinput remap=\"configure\">mkdir -p build\n"
 "cd       build\n"
@@ -514,27 +489,25 @@ msgstr ""
 "<userinput remap=\"configure\">mkdir -p build\n"
 "cd       build\n"
 "\n"
-"CFLAGS+=\" -Wno-format-overflow\" \\\n"
-"meson setup \\\n"
-"      --prefix=/usr                 \\\n"
-"      --buildtype=release           \\\n"
-"      -Ddefault-dnssec=no           \\\n"
-"      -Dfirstboot=false             \\\n"
-"      -Dinstall-tests=false         \\\n"
-"      -Dldconfig=false              \\\n"
-"      -Dsysusers=false              \\\n"
-"      -Drpmmacrosdir=no             \\\n"
-"      -Dhomed=disabled              \\\n"
-"      -Duserdb=false                \\\n"
-"      -Dman=disabled                \\\n"
-"      -Dmode=release                \\\n"
-"      -Dpamconfdir=no               \\\n"
-"      -Ddev-kvm-mode=0660           \\\n"
-"      -Dnobody-group=nogroup        \\\n"
-"      -Dsysupdate=disabled          \\\n"
-"      -Dukify=disabled              \\\n"
-"      -Ddocdir=/usr/share/doc/systemd-&systemd-version; \\\n"
-"      ..</userinput>"
+"meson setup ..                \\\n"
+"      --prefix=/usr           \\\n"
+"      --buildtype=release     \\\n"
+"      -D default-dnssec=no    \\\n"
+"      -D firstboot=false      \\\n"
+"      -D install-tests=false  \\\n"
+"      -D ldconfig=false       \\\n"
+"      -D sysusers=false       \\\n"
+"      -D rpmmacrosdir=no      \\\n"
+"      -D homed=disabled       \\\n"
+"      -D userdb=false         \\\n"
+"      -D man=disabled         \\\n"
+"      -D mode=release         \\\n"
+"      -D pamconfdir=no        \\\n"
+"      -D dev-kvm-mode=0660    \\\n"
+"      -D nobody-group=nogroup \\\n"
+"      -D sysupdate=disabled   \\\n"
+"      -D ukify=disabled       \\\n"
+"      -D docdir=/usr/share/doc/systemd-&systemd-version;</userinput>"
 
 #. type: Content of: <sect1><sect2><variablelist><title>
 #: lfs-en/chapter08/systemd.xml lfs-en/chapter08/udev.xml
@@ -557,10 +530,8 @@ msgstr ""
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: lfs-en/chapter08/systemd.xml
-#, fuzzy
-#| msgid "<parameter>-Ddefault-dnssec=no</parameter>"
 msgid "<parameter>-D default-dnssec=no</parameter>"
-msgstr "<parameter>-Ddefault-dnssec=no</parameter>"
+msgstr "<parameter>-D default-dnssec=no</parameter>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: lfs-en/chapter08/systemd.xml
@@ -569,10 +540,8 @@ msgstr "这个开关禁用实验性的 DNSSEC 支持。"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: lfs-en/chapter08/systemd.xml
-#, fuzzy
-#| msgid "<parameter>-Dfirstboot=false</parameter>"
 msgid "<parameter>-D firstboot=false</parameter>"
-msgstr "<parameter>-Dfirstboot=false</parameter>"
+msgstr "<parameter>-D firstboot=false</parameter>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: lfs-en/chapter08/systemd.xml
@@ -581,15 +550,13 @@ msgid ""
 "setting up the system for the first time. These are not useful in LFS, "
 "because everything is done manually."
 msgstr ""
-"这个开关防止 systemd 安装用于初始化设定系统的服务。在 LFS 中所有工作都会手工"
+"这个开关防止 systemd 安装用于设定系统初始值的服务。在 LFS 中所有工作都会手工"
 "完成，因此不需要它们。"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: lfs-en/chapter08/systemd.xml
-#, fuzzy
-#| msgid "<parameter>-Dinstall-tests=false</parameter>"
 msgid "<parameter>-D install-tests=false</parameter>"
-msgstr "<parameter>-Dinstall-tests=false</parameter>"
+msgstr "<parameter>-D install-tests=false</parameter>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: lfs-en/chapter08/systemd.xml
@@ -598,10 +565,8 @@ msgstr "这个开关防止 systemd 安装编译好的测试文件。"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: lfs-en/chapter08/systemd.xml
-#, fuzzy
-#| msgid "<parameter>-Dldconfig=false</parameter>"
 msgid "<parameter>-D ldconfig=false</parameter>"
-msgstr "<parameter>-Dldconfig=false</parameter>"
+msgstr "<parameter>-D ldconfig=false</parameter>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: lfs-en/chapter08/systemd.xml
@@ -617,10 +582,8 @@ msgstr ""
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: lfs-en/chapter08/systemd.xml
-#, fuzzy
-#| msgid "<parameter>-Dsysusers=false</parameter>"
 msgid "<parameter>-D sysusers=false</parameter>"
-msgstr "<parameter>-Dsysusers=false</parameter>"
+msgstr "<parameter>-D sysusers=false</parameter>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: lfs-en/chapter08/systemd.xml
@@ -637,10 +600,8 @@ msgstr ""
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: lfs-en/chapter08/systemd.xml
-#, fuzzy
-#| msgid "<parameter>-Drpmmacrosdir=no</parameter>"
 msgid "<parameter>-D rpmmacrosdir=no</parameter>"
-msgstr "<parameter>-Drpmmacrosdir=no</parameter>"
+msgstr "<parameter>-D rpmmacrosdir=no</parameter>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: lfs-en/chapter08/systemd.xml
@@ -651,15 +612,11 @@ msgstr "该选项禁止安装用于 systemd 的 RPM 宏，因为 LFS 并不支�
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: lfs-en/chapter08/systemd.xml
-#, fuzzy
-#| msgid ""
-#| "<parameter>-Dhomed=disabled</parameter> and <parameter>-Duserdb=false</"
-#| "parameter>"
 msgid ""
 "<parameter>-D homed=disabled</parameter> and <parameter>-D userdb=false</"
 "parameter>"
 msgstr ""
-"<parameter>-Dhomed=disabled</parameter> 和 <parameter>-Duserdb=false</"
+"<parameter>-D homed=disabled</parameter> 和 <parameter>-D userdb=false</"
 "parameter>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
@@ -670,10 +627,8 @@ msgstr "移除两个守护程序，它们的依赖项超出了 LFS 的范围。"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: lfs-en/chapter08/systemd.xml
-#, fuzzy
-#| msgid "<parameter>-Dman=disabled</parameter>"
 msgid "<parameter>-D man=disabled</parameter>"
-msgstr "<parameter>-Dman=disabled</parameter>"
+msgstr "<parameter>-D man=disabled</parameter>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: lfs-en/chapter08/systemd.xml
@@ -686,9 +641,8 @@ msgstr ""
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: lfs-en/chapter08/systemd.xml lfs-en/chapter08/udev.xml
-#, fuzzy
 msgid "<parameter>-D mode=release</parameter>"
-msgstr "<parameter>-Dmode=release</parameter>"
+msgstr "<parameter>-D mode=release</parameter>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: lfs-en/chapter08/systemd.xml lfs-en/chapter08/udev.xml
@@ -697,10 +651,8 @@ msgstr "禁用一些上游开发者认为尚处于实验阶段的功能。"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: lfs-en/chapter08/systemd.xml
-#, fuzzy
-#| msgid "<parameter>-Dpamconfdir=no</parameter>"
 msgid "<parameter>-D pamconfdir=no</parameter>"
-msgstr "<parameter>-Dpamconfdir=no</parameter>"
+msgstr "<parameter>-D pamconfdir=no</parameter>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: lfs-en/chapter08/systemd.xml
@@ -710,9 +662,8 @@ msgstr "防止安装在 LFS 系统无法正常工作的 PAM 配置文件。"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: lfs-en/chapter08/systemd.xml lfs-en/chapter08/udev.xml
-#, fuzzy
 msgid "<parameter>-D dev-kvm-mode=0660</parameter>"
-msgstr "<parameter>-Ddev-kvm-mode=0660</parameter>"
+msgstr "<parameter>-D dev-kvm-mode=0660</parameter>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: lfs-en/chapter08/systemd.xml lfs-en/chapter08/udev.xml
@@ -726,10 +677,8 @@ msgstr ""
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: lfs-en/chapter08/systemd.xml
-#, fuzzy
-#| msgid "<parameter>-Dnobody-group=nogroup</parameter>"
 msgid "<parameter>-D nobody-group=nogroup</parameter>"
-msgstr "<parameter>-Dnobody-group=nogroup</parameter>"
+msgstr "<parameter>-D nobody-group=nogroup</parameter>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: lfs-en/chapter08/systemd.xml
@@ -742,10 +691,8 @@ msgstr ""
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: lfs-en/chapter08/systemd.xml
-#, fuzzy
-#| msgid "<parameter>-Dsysupdate=disabled</parameter>"
 msgid "<parameter>-D sysupdate=disabled</parameter>"
-msgstr "<parameter>-Dsysupdate=disabled</parameter>"
+msgstr "<parameter>-D sysupdate=disabled</parameter>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: lfs-en/chapter08/systemd.xml
@@ -757,14 +704,12 @@ msgid ""
 msgstr ""
 "不安装 <command>systemd-sysupdate</command> 工具。它被设计为用于更新二进制发"
 "行版，因此它对于从源码构建的，基本的 Linux 系统来说没有作用，而且如果它被启用"
-"但未正确配置，会在系统启动时产生错误消息："
+"但未正确配置，会在系统启动时产生错误消息。"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: lfs-en/chapter08/systemd.xml
-#, fuzzy
-#| msgid "<parameter>-Dukify=disabled</parameter>"
 msgid "<parameter>-D ukify=disabled</parameter>"
-msgstr "<parameter>-Dukify=disabled</parameter>"
+msgstr "<parameter>-D ukify=disabled</parameter>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: lfs-en/chapter08/systemd.xml
@@ -789,15 +734,18 @@ msgid ""
 "Some tests need a basic <filename>/etc/os-release</filename> file.  To test "
 "the results, issue:"
 msgstr ""
+"一些测试需要包含基本信息的 <filename>/etc/os-release</filename> 文件。如果需"
+"要测试结果，运行："
 
 #. type: Content of: <sect1><sect2><screen>
 #: lfs-en/chapter08/systemd.xml
-#, fuzzy, no-wrap
-#| msgid "<userinput>echo &version; &gt; /etc/lfs-release</userinput>"
+#, no-wrap
 msgid ""
 "<userinput remap=\"test\">echo 'NAME=\"Linux From Scratch\"' &gt; /etc/os-release\n"
 "ninja test</userinput>"
-msgstr "<userinput>echo &version; &gt; /etc/lfs-release</userinput>"
+msgstr ""
+"<userinput remap=\"test\">echo 'NAME=\"Linux From Scratch\"' &gt; /etc/os-release\n"
+"ninja test</userinput>"
 
 #. type: Content of: <sect1><sect2><para>
 #: lfs-en/chapter08/systemd.xml
@@ -806,6 +754,8 @@ msgid ""
 "fail in the LFS chroot environment.  Some other tests may fail because they "
 "depend on various kernel configuration options."
 msgstr ""
+"已知一项名为 <literal>systemd:core / test-namespace</literal> 的测试在 LFS "
+"chroot 环境中会失败。一些其他测试可能由于依赖一些内核配置选项而失败。"
 
 #. type: Content of: <sect1><sect2><screen>
 #: lfs-en/chapter08/systemd.xml
@@ -822,17 +772,13 @@ msgstr "安装手册页："
 #.          component in the path.  
 #. type: Content of: <sect1><sect2><screen>
 #: lfs-en/chapter08/systemd.xml
-#, fuzzy, no-wrap
-#| msgid ""
-#| "<userinput remap=\"install\">tar -xf ../../systemd-man-pages-&systemd-version;.tar.xz \\\n"
-#| "    --no-same-owner --strip-components=1   \\\n"
-#| "    -C /usr/share/man</userinput>"
+#, no-wrap
 msgid ""
 "<userinput remap=\"install\">tar -xf ../../systemd-man-pages-&systemd-man-version;.tar.xz \\\n"
 "    --no-same-owner --strip-components=1   \\\n"
 "    -C /usr/share/man</userinput>"
 msgstr ""
-"<userinput remap=\"install\">tar -xf ../../systemd-man-pages-&systemd-version;.tar.xz \\\n"
+"<userinput remap=\"install\">tar -xf ../../systemd-man-pages-&systemd-man-version;.tar.xz \\\n"
 "    --no-same-owner --strip-components=1   \\\n"
 "    -C /usr/share/man</userinput>"
 

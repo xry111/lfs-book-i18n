@@ -472,29 +472,22 @@ msgstr "安装 Sysklogd"
 
 #. type: Content of: <sect1><sect2><para>
 #: lfs-en/chapter08/sysklogd.xml
-#, fuzzy
-#| msgid "Prepare Check for compilation:"
 msgid "Prepare the package for compilation:"
-msgstr "准备编译 Check："
+msgstr "准备编译该软件包："
 
 #. type: Content of: <sect1><sect2><screen>
 #: lfs-en/chapter08/sysklogd.xml
-#, fuzzy, no-wrap
-#| msgid ""
-#| "<userinput remap=\"configure\">./configure --prefix=/usr          \\\n"
-#| "            --sysconfdir=/etc      \\\n"
-#| "            --disable-efiemu       \\\n"
-#| "            --disable-werror</userinput>"
+#, no-wrap
 msgid ""
 "<userinput remap=\"configure\">./configure --prefix=/usr      \\\n"
 "            --sysconfdir=/etc  \\\n"
 "            --runstatedir=/run \\\n"
 "            --without-logger</userinput>"
 msgstr ""
-"<userinput remap=\"configure\">./configure --prefix=/usr          \\\n"
-"            --sysconfdir=/etc      \\\n"
-"            --disable-efiemu       \\\n"
-"            --disable-werror</userinput>"
+"<userinput remap=\"configure\">./configure --prefix=/usr      \\\n"
+"            --sysconfdir=/etc  \\\n"
+"            --runstatedir=/run \\\n"
+"            --without-logger</userinput>"
 
 #. type: Content of: <sect1><sect2><title>
 #: lfs-en/chapter08/sysklogd.xml
@@ -516,21 +509,7 @@ msgstr ""
 
 #. type: Content of: <sect1><sect2><screen>
 #: lfs-en/chapter08/sysklogd.xml
-#, fuzzy, no-wrap
-#| msgid ""
-#| "<userinput>cat &gt; /etc/syslog.conf &lt;&lt; \"EOF\"\n"
-#| "<literal># Begin /etc/syslog.conf\n"
-#| "\n"
-#| "auth,authpriv.* -/var/log/auth.log\n"
-#| "*.*;auth,authpriv.none -/var/log/sys.log\n"
-#| "daemon.* -/var/log/daemon.log\n"
-#| "kern.* -/var/log/kern.log\n"
-#| "mail.* -/var/log/mail.log\n"
-#| "user.* -/var/log/user.log\n"
-#| "*.emerg *\n"
-#| "\n"
-#| "# End /etc/syslog.conf</literal>\n"
-#| "EOF</userinput>"
+#, no-wrap
 msgid ""
 "<userinput>cat &gt; /etc/syslog.conf &lt;&lt; \"EOF\"\n"
 "<literal># Begin /etc/syslog.conf\n"
@@ -559,6 +538,9 @@ msgstr ""
 "mail.* -/var/log/mail.log\n"
 "user.* -/var/log/user.log\n"
 "*.emerg *\n"
+"\n"
+"# Do not open any internet ports.\n"
+"secure_mode 2\n"
 "\n"
 "# End /etc/syslog.conf</literal>\n"
 "EOF</userinput>"

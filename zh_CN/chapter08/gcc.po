@@ -583,17 +583,7 @@ msgstr "&gcc-fin-du;"
 
 #. type: Content of: <sect1><sect2><screen>
 #: lfs-en/chapter08/gcc.xml
-#, fuzzy, no-wrap
-#| msgid ""
-#| "<userinput remap=\"configure\">../configure --prefix=/usr            \\\n"
-#| "             LD=ld                    \\\n"
-#| "             --enable-languages=c,c++ \\\n"
-#| "             --enable-default-pie     \\\n"
-#| "             --enable-default-ssp     \\\n"
-#| "             --disable-multilib       \\\n"
-#| "             --disable-bootstrap      \\\n"
-#| "             --disable-fixincludes    \\\n"
-#| "             --with-system-zlib</userinput>"
+#, no-wrap
 msgid ""
 "<userinput remap=\"configure\">../configure --prefix=/usr            \\\n"
 "             LD=ld                    \\\n"
@@ -611,6 +601,7 @@ msgstr ""
 "             --enable-languages=c,c++ \\\n"
 "             --enable-default-pie     \\\n"
 "             --enable-default-ssp     \\\n"
+"             --enable-host-pie        \\\n"
 "             --disable-multilib       \\\n"
 "             --disable-bootstrap      \\\n"
 "             --disable-fixincludes    \\\n"
@@ -726,18 +717,22 @@ msgid ""
 "stack size soft limit because GCC will automatically set it to an "
 "appropriate value, as long as the value does not exceed the hard limit:"
 msgstr ""
+"GCC 在编译一些具有复杂模式的代码时，可能需要更多的栈空间。万一宿主系统的栈空"
+"间限制较为严格，我们需要手工将栈空间的硬上限设为无限大。在多数宿主发行版 (和"
+"最终的 LFS 系统中)，默认的硬上限值已经是无限大，但手工调整限制无论如何都不会"
+"造成损害。我们不需要调整软上限，因为 GCC 会自动将软上限设为合适的值，只要确保"
+"该值不会超过硬限制即可。"
 
 #. type: Content of: <sect1><sect2><screen>
 #: lfs-en/chapter08/gcc.xml
-#, fuzzy, no-wrap
-#| msgid "<userinput remap=\"test\">ulimit -s 32768</userinput>"
+#, no-wrap
 msgid "<userinput remap=\"test\">ulimit -s -H unlimited</userinput>"
-msgstr "<userinput remap=\"test\">ulimit -s 32768</userinput>"
+msgstr "<userinput remap=\"test\">ulimit -s -H unlimited</userinput>"
 
 #. type: Content of: <sect1><sect2><para>
 #: lfs-en/chapter08/gcc.xml
 msgid "Now remove/fix several known test failures:"
-msgstr ""
+msgstr "现在移除或修复若干已知会失败的测试："
 
 #. type: Content of: <sect1><sect2><screen>
 #: lfs-en/chapter08/gcc.xml
@@ -807,20 +802,15 @@ msgstr ""
 #.     are usually aware of these issues, but have not resolved them yet.
 #. type: Content of: <sect1><sect2><para>
 #: lfs-en/chapter08/gcc.xml
-#, fuzzy
-#| msgid ""
-#| "A few unexpected failures cannot always be avoided. The GCC developers "
-#| "are usually aware of these issues, but have not resolved them yet.  "
-#| "Unless the test results are vastly different from those at the above URL, "
-#| "it is safe to continue."
 msgid ""
 "A few unexpected failures cannot always be avoided. In some cases test "
 "failures depend on the specific hardware of the system.  Unless the test "
 "results are vastly different from those at the above URL, it is safe to "
 "continue."
 msgstr ""
-"少量意外的失败有时无法避免，GCC 开发者一般知道这类问题，但尚未解决它们。我们"
-"可以继续安全地构建系统，除非测试结果和以上 URL 的结果截然不同。"
+"少量意外的失败有时无法避免。某些情况下特定的硬件配置可能触发测试失败。我们可"
+"以放心地忽略测试失败并继续构建系统，除非测试结果和上述 URL 提供的结果截然不"
+"同。"
 
 #. type: Content of: <sect1><sect2><para>
 #: lfs-en/chapter08/gcc.xml

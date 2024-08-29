@@ -408,17 +408,13 @@ msgstr "构建该软件包："
 
 #. type: Content of the tdbc-ver entity
 #: lfs-en/chapter08/tcl.xml
-#, fuzzy
-#| msgid "1.1.5"
 msgid "1.1.7"
-msgstr "1.1.5"
+msgstr "1.1.7"
 
 #. type: Content of the itcl-ver entity
 #: lfs-en/chapter08/tcl.xml
-#, fuzzy
-#| msgid "4.2.3"
 msgid "4.2.4"
-msgstr "4.2.3"
+msgstr "4.2.4"
 
 #. type: Content of: <sect1><sect1info><address>
 #: lfs-en/chapter08/tcl.xml
@@ -444,7 +440,7 @@ msgid ""
 "application> (pronounced \"tickle\")."
 msgstr ""
 "<application>Tcl</application> 软件包包含工具命令语言，它是一个可靠的通用脚本"
-"语言。<application>Except</application> 软件包是用 <application>Tcl</"
+"语言。<application>Expect</application> 软件包是用 <application>Tcl</"
 "application> (读作“tickle”) 编写的。"
 
 #. type: Content of: <sect1><sect2><segmentedlist><seglistitem><seg>
@@ -483,12 +479,7 @@ msgstr "准备编译 Tcl："
 
 #. type: Content of: <sect1><sect2><screen>
 #: lfs-en/chapter08/tcl.xml
-#, fuzzy, no-wrap
-#| msgid ""
-#| "<userinput remap=\"configure\">SRCDIR=$(pwd)\n"
-#| "cd unix\n"
-#| "./configure --prefix=/usr           \\\n"
-#| "            --mandir=/usr/share/man</userinput>"
+#, no-wrap
 msgid ""
 "<userinput remap=\"configure\">SRCDIR=$(pwd)\n"
 "cd unix\n"
@@ -499,14 +490,13 @@ msgstr ""
 "<userinput remap=\"configure\">SRCDIR=$(pwd)\n"
 "cd unix\n"
 "./configure --prefix=/usr           \\\n"
-"            --mandir=/usr/share/man</userinput>"
+"            --mandir=/usr/share/man \\\n"
+"            --disable-rpath</userinput>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: lfs-en/chapter08/tcl.xml
-#, fuzzy
-#| msgid "<parameter>--disable-r*</parameter>"
 msgid "<parameter>--disable-rpath</parameter>"
-msgstr "<parameter>--disable-r*</parameter>"
+msgstr "<parameter>--disable-rpath</parameter>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: lfs-en/chapter08/tcl.xml
@@ -516,6 +506,9 @@ msgid ""
 "rpath for an installation into the standard location, and rpath may "
 "sometimes cause unwanted effects or even security issues."
 msgstr ""
+"该选项阻止在二进制可执行文件和共享库中硬编码库文件搜索路径 (rpath)。该软件包"
+"在安装到标准位置时并不需要 rpath，而且 rpath 在一些情况下会产生我们不希望的副"
+"作用，甚至导致安全问题。"
 
 #. type: Content of: <sect1><sect2><screen>
 #: lfs-en/chapter08/tcl.xml

@@ -28,10 +28,8 @@ msgstr "Binutils"
 
 #. type: Attribute 'xreflabel' of: <sect1>
 #: lfs-en/chapter05/binutils-pass1.xml
-#, fuzzy
-#| msgid "&binutils-tmpp1-du;"
 msgid "binutils-pass1"
-msgstr "&binutils-tmpp1-du;"
+msgstr "第一遍的 Binutils"
 
 #. type: Content of: <sect1><sect1info><address>
 #: lfs-en/chapter05/binutils-pass1.xml lfs-en/chapter06/binutils-pass2.xml
@@ -253,15 +251,7 @@ msgstr "现在，准备编译 Binutils："
 
 #. type: Content of: <sect1><sect2><screen>
 #: lfs-en/chapter05/binutils-pass1.xml
-#, fuzzy, no-wrap
-#| msgid ""
-#| "<userinput remap=\"configure\">../configure --prefix=$LFS/tools \\\n"
-#| "             --with-sysroot=$LFS \\\n"
-#| "             --target=$LFS_TGT   \\\n"
-#| "             --disable-nls       \\\n"
-#| "             --enable-gprofng=no \\\n"
-#| "             --disable-werror    \\\n"
-#| "             --enable-default-hash-style=gnu</userinput>"
+#, no-wrap
 msgid ""
 "<userinput remap=\"configure\">../configure --prefix=$LFS/tools \\\n"
 "             --with-sysroot=$LFS \\\n"
@@ -278,6 +268,7 @@ msgstr ""
 "             --disable-nls       \\\n"
 "             --enable-gprofng=no \\\n"
 "             --disable-werror    \\\n"
+"             --enable-new-dtags  \\\n"
 "             --enable-default-hash-style=gnu</userinput>"
 
 #. type: Content of: <sect1><sect2><variablelist><title>
@@ -375,10 +366,8 @@ msgstr "该选项防止宿主系统编译器警告导致构建失败。"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: lfs-en/chapter05/binutils-pass1.xml
-#, fuzzy
-#| msgid "<parameter>--enable-widec</parameter>"
 msgid "<parameter>--enable-new-dtags</parameter>"
-msgstr "<parameter>--enable-widec</parameter>"
+msgstr "<parameter>--enable-new-dtags</parameter>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: lfs-en/chapter05/binutils-pass1.xml
@@ -389,6 +378,9 @@ msgid ""
 "executables easier and works around potential issues in the test suite of "
 "some packages."
 msgstr ""
+"该选项使得链接器使用<quote>runpath</quote>标记在可执行程序和共享库中嵌入库文"
+"件搜索路径，而非传统的<quote>rpath</quote>标记。这样能使得调试动态链接的可执"
+"行程序更容易，且能绕过一些软件包的测试套件中潜藏的问题。"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: lfs-en/chapter05/binutils-pass1.xml

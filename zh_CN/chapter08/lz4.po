@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: \"Linux From Scratch\" 11.3\n"
 "Report-Msgid-Bugs-To: lfs-dev@lists.linuxfromscratch.org\n"
 "POT-Creation-Date: 2024-08-29 15:01+0800\n"
-"PO-Revision-Date: 2024-08-29 15:01+0800\n"
+"PO-Revision-Date: 2024-03-20 15:18+0800\n"
 "Last-Translator: Automatically generated\n"
 "Language-Team: none\n"
 "Language: zh_CN\n"
@@ -69,13 +69,12 @@ msgstr ""
 #. type: Content of: <sect1><indexterm><primary>
 #: lfs-en/appendices/dependencies.xml lfs-en/chapter08/lz4.xml
 msgid "Lz4"
-msgstr ""
+msgstr "Lz4"
 
 #. type: Content of: <sect1><title>
 #: lfs-en/chapter01/whatsnew.xml lfs-en/chapter08/lz4.xml
-#, fuzzy
 msgid "Lz4-&lz4-version;"
-msgstr "M4-&m4-version;"
+msgstr "Lz4-&lz4-version;"
 
 #. type: Content of: <sect1><sect2><segmentedlist><segtitle>
 #: lfs-en/chapter05/binutils-pass1.xml lfs-en/chapter05/gcc-pass1.xml
@@ -409,22 +408,17 @@ msgstr "<userinput remap=\"test\">make -j1 check</userinput>"
 
 #. type: Content of: <sect1><sect1info><address>
 #: lfs-en/chapter08/lz4.xml
-#, fuzzy, no-wrap
-#| msgid "&m4-url;"
+#, no-wrap
 msgid "&lz4-url;"
-msgstr "&m4-url;"
+msgstr "&lz4-url;"
 
 #. type: Content of: <sect1><sect1info>
 #: lfs-en/chapter08/lz4.xml
-#, fuzzy
-#| msgid ""
-#| "<productname>m4</productname> <productnumber>&m4-version;</productnumber> "
-#| "<placeholder type=\"address\" id=\"0\"/>"
 msgid ""
 "<productname>Lz4</productname> <productnumber>&lz4-version;</productnumber> "
 "<placeholder type=\"address\" id=\"0\"/>"
 msgstr ""
-"<productname>m4</productname> <productnumber>&m4-version;</productnumber> "
+"<productname>Lz4</productname> <productnumber>&lz4-version;</productnumber> "
 "<placeholder type=\"address\" id=\"0\"/>"
 
 #. type: Content of: <sect1><sect2><para>
@@ -435,165 +429,126 @@ msgid ""
 "multiple GB/s per core. Lz4 can work with Zstandard to allow both algorithms "
 "to compress data faster."
 msgstr ""
+"Lz4 是一种无损压缩算法，其压缩速率可达每 CPU 核心 500 MB/s。它的优势是解压缩"
+"非常快，速率高达每 CPU 核心若干 GB/s。Lz4 可以和 Zstandard 共同使用以达到更高"
+"的压缩速率。"
 
 #. type: Content of: <sect1><sect2><segmentedlist><seglistitem><seg>
 #: lfs-en/chapter08/lz4.xml
-#, fuzzy
-#| msgid "&m4-fin-sbu;"
 msgid "&lz4-fin-sbu;"
-msgstr "&m4-fin-sbu;"
+msgstr "&lz4-fin-sbu;"
 
 #. type: Content of: <sect1><sect2><segmentedlist><seglistitem><seg>
 #: lfs-en/chapter08/lz4.xml
-#, fuzzy
-#| msgid "&m4-fin-du;"
 msgid "&lz4-fin-du;"
-msgstr "&m4-fin-du;"
+msgstr "&lz4-fin-du;"
 
 #. type: Content of: <sect1><sect2><title>
 #: lfs-en/chapter08/lz4.xml
-#, fuzzy
-#| msgid "Installation of M4"
 msgid "Installation of Lz4"
-msgstr "安装 M4"
+msgstr "安装 Lz4"
 
 #. type: Content of: <sect1><sect2><screen>
 #: lfs-en/chapter08/lz4.xml
-#, fuzzy, no-wrap
-#| msgid "<userinput remap=\"make\">make tooldir=/usr</userinput>"
+#, no-wrap
 msgid "<userinput remap=\"make\">make BUILD_STATIC=no PREFIX=/usr</userinput>"
-msgstr "<userinput remap=\"make\">make tooldir=/usr</userinput>"
+msgstr "<userinput remap=\"make\">make BUILD_STATIC=no PREFIX=/usr</userinput>"
 
 #. type: Content of: <sect1><sect2><screen>
 #: lfs-en/chapter08/lz4.xml
-#, fuzzy, no-wrap
-#| msgid "<userinput remap=\"install\">make PREFIX=/usr install</userinput>"
+#, no-wrap
 msgid "<userinput remap=\"install\">make BUILD_STATIC=no PREFIX=/usr install</userinput>"
-msgstr "<userinput remap=\"install\">make PREFIX=/usr install</userinput>"
+msgstr "<userinput remap=\"install\">make BUILD_STATIC=no PREFIX=/usr install</userinput>"
 
 #. type: Content of: <sect1><sect2><title>
 #: lfs-en/chapter08/lz4.xml
-#, fuzzy
-#| msgid "Contents of M4"
 msgid "Contents of Lz4"
-msgstr "M4 的内容"
+msgstr "Lz4 的内容"
 
 #. type: Content of: <sect1><sect2><segmentedlist><seglistitem><seg>
 #: lfs-en/chapter08/lz4.xml
-#, fuzzy
-#| msgid ""
-#| "zstd, zstdcat (link to zstd), zstdgrep, zstdless, zstdmt (link to zstd), "
-#| "and unzstd (link to zstd)"
 msgid "lz4, lz4c (link to lz4), lz4cat (link to lz4), and unlz4 (link to lz4)"
 msgstr ""
-"zstd, zstdcat (到 zstd 的链接), zstdgrep, zstdless, zstdmt (到 zstd 的链接), "
-"以及 unzstd (到 zstd 的链接)"
+"lz4, lz4c (到 lz4 的链接), lz4cat (到 zstd 的链接), 以及 unlz4 (到 lz4 的链"
+"接)"
 
 #. type: Content of: <sect1><sect2><segmentedlist><seglistitem><seg>
 #: lfs-en/chapter08/lz4.xml
-#, fuzzy
-#| msgid "liblzma.so"
 msgid "liblz4.so"
-msgstr "liblzma.so"
+msgstr "liblz4.so"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: lfs-en/chapter08/lz4.xml
-#, fuzzy
-#| msgid "<command>lzma</command>"
 msgid "<command>lz4</command>"
-msgstr "<command>lzma</command>"
+msgstr "<command>lz4</command>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: lfs-en/chapter08/lz4.xml
-#, fuzzy
-#| msgid "Compresses or decompresses files using the LZMA format"
 msgid "Compresses or decompresses files using the LZ4 format"
-msgstr "使用 LZMA 格式压缩或解压缩文件"
+msgstr "使用 LZ4 格式压缩或解压缩文件"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: lfs-en/chapter08/lz4.xml
 msgid "lz4"
-msgstr ""
+msgstr "lz4"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: lfs-en/chapter08/lz4.xml
-#, fuzzy
-#| msgid "<command>lzcat</command>"
 msgid "<command>lz4c</command>"
-msgstr "<command>lzcat</command>"
+msgstr "<command>lz4c</command>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: lfs-en/chapter08/lz4.xml
-#, fuzzy
-#| msgid "Decompresses files using the LZMA format"
 msgid "Compresses files using the LZ4 format"
-msgstr "使用 LZMA 格式解压缩文件"
+msgstr "使用 LZ4 格式压缩文件"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: lfs-en/chapter08/lz4.xml
 msgid "lz4c"
-msgstr ""
+msgstr "lz4c"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: lfs-en/chapter08/lz4.xml
-#, fuzzy
-#| msgid "<command>lzcat</command>"
 msgid "<command>lz4cat</command>"
-msgstr "<command>lzcat</command>"
+msgstr "<command>lz4cat</command>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: lfs-en/chapter08/lz4.xml
-#, fuzzy
-#| msgid "Compresses or decompresses files using the LZMA format"
 msgid "Lists the contents of a file compressed using the LZ4 format"
-msgstr "使用 LZMA 格式压缩或解压缩文件"
+msgstr "解压缩 LZ4 压缩文件并输出解压缩后的内容"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: lfs-en/chapter08/lz4.xml
 msgid "lz4cat"
-msgstr ""
+msgstr "lz4cat"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: lfs-en/chapter08/lz4.xml
-#, fuzzy
-#| msgid "<command>unlzma</command>"
 msgid "<command>unlz4</command>"
-msgstr "<command>unlzma</command>"
+msgstr "<command>unlz4</command>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: lfs-en/chapter08/lz4.xml
-#, fuzzy
-#| msgid "Decompresses files using the LZMA format"
 msgid "Decompresses files using the LZ4 format"
-msgstr "使用 LZMA 格式解压缩文件"
+msgstr "解压缩 LZ4 压缩文件"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: lfs-en/chapter08/lz4.xml
-#, fuzzy
-#| msgid "unlzma"
 msgid "unlz4"
-msgstr "unlzma"
+msgstr "unlz4"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: lfs-en/chapter08/lz4.xml
-#, fuzzy
-#| msgid "<filename class=\"libraryfile\">libz</filename>"
 msgid "<filename class=\"libraryfile\">liblz4</filename>"
-msgstr "<filename class=\"libraryfile\">libz</filename>"
+msgstr "<filename class=\"libraryfile\">liblz4</filename>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: lfs-en/chapter08/lz4.xml
-#, fuzzy
-#| msgid ""
-#| "The library implementing lossless data compression, using the ZSTD "
-#| "algorithm"
 msgid ""
 "The library implementing lossless data compression, using the LZ4 algorithm"
-msgstr "基于 ZSTD 算法实现无损数据压缩的库"
+msgstr "基于 LZ4 算法实现无损数据压缩的库"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: lfs-en/chapter08/lz4.xml
-#, fuzzy
-#| msgid "liblzma"
 msgid "liblz4"
-msgstr "liblzma"
+msgstr "liblz4"

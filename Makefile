@@ -108,7 +108,6 @@ $(MLANG)/book/%: $(LFS_EN)/%
 
 KNOWN_DIFF = chapter09/*-symlinks \
              chapter09/*-network  \
-             chapter09/*-profile  \
              chapter09/*-console  \
              chapter09/*-locale   \
              chapter10/*-fstab

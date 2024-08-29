@@ -460,13 +460,15 @@ msgid ""
 "location, and rpath may sometimes cause unwanted effects or even security "
 "issues:"
 msgstr ""
+"下面防止在共享库中硬编码库文件搜索路径 (rpath)。该软件包在安装到标准位置时并"
+"不需要 rpath，而且 rpath 在一些情况下会产生我们不希望的副作用，甚至导致安全问"
+"题："
 
 #. type: Content of: <sect1><sect2><screen>
 #: lfs-en/chapter08/readline.xml
-#, fuzzy, no-wrap
-#| msgid "<userinput>sed 's/metadata_csum_seed,//' -i /etc/mke2fs.conf</userinput>"
+#, no-wrap
 msgid "<userinput>sed -i 's/-Wl,-rpath,[^ ]*//' support/shobj-conf</userinput>"
-msgstr "<userinput>sed 's/metadata_csum_seed,//' -i /etc/mke2fs.conf</userinput>"
+msgstr "<userinput>sed -i 's/-Wl,-rpath,[^ ]*//' support/shobj-conf</userinput>"
 
 #. type: Content of: <sect1><sect2><para>
 #: lfs-en/chapter08/readline.xml

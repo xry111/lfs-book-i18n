@@ -520,17 +520,6 @@ msgstr "<parameter>--target=$LFS_TGT</parameter>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: lfs-en/chapter06/gcc-pass2.xml
-#, fuzzy
-#| msgid ""
-#| "We are cross-compiling GCC, so it's impossible to build target libraries "
-#| "(<filename class=\"libraryfile\">libgcc</filename> and <filename "
-#| "class=\"libraryfile\">libstdc++</filename>) with the previously compiled "
-#| "GCC binaries&mdash;those binaries won't run on the host.  The GCC build "
-#| "system will attempt to use the host's C and C++ compilers as a workaround "
-#| "by default.  Building the GCC target libraries with a different version "
-#| "of GCC is not supported, so using the host's compilers may cause the "
-#| "build to fail. This parameter ensures the libraries are built by GCC pass "
-#| "1."
 msgid ""
 "We are cross-compiling GCC, so it's impossible to build target libraries "
 "(<filename class=\"libraryfile\">libgcc</filename> and <filename "
@@ -541,12 +530,12 @@ msgid ""
 "is not supported, so using the host's compilers may cause the build to fail. "
 "This parameter ensures the libraries are built by GCC pass 1."
 msgstr ""
-"我们正在交叉编译 GCC，因此不可能用编译得到的 GCC 二进制程序构建用于目标系统的"
-"运行库 (<filename class=\"libraryfile\">libgcc</filename> 和 <filename "
-"class=\"libraryfile\">libstdc++</filename>) —— 这些二进制程序无法在宿主系统运"
-"行。GCC 构建系统在默认情况下会试图使用宿主系统提供的 C 和 C++ 编译器来绕过这"
-"个问题。但是，用不同版本的 GCC 构建 GCC 运行库不受支持，所以使用宿主系统的编"
-"译器可能导致构建失败。该选项保证使用第一遍构建的 GCC 编译运行库。"
+"我们正在交叉编译 GCC，因此无法使用这一遍构建的 GCC 二进制程序 —— 它们无法在宿"
+"主系统运行 —— 为目标系统构建运行库 (<filename class=\"libraryfile\">libgcc</"
+"filename> 和 <filename class=\"libraryfile\">libstdc++</filename>)。GCC 构建"
+"系统在默认情况下会试图使用宿主系统提供的 C 和 C++ 编译器来绕过这个问题。但"
+"是，用不同版本的 GCC 构建 GCC 运行库不受支持，所以使用宿主系统的编译器可能导"
+"致构建失败。该选项保证使用第一遍构建的 GCC 编译运行库。"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: lfs-en/chapter06/gcc-pass2.xml
@@ -555,12 +544,6 @@ msgstr "<parameter>LDFLAGS_FOR_TARGET=...</parameter>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: lfs-en/chapter06/gcc-pass2.xml
-#, fuzzy
-#| msgid ""
-#| "Allow <filename class=\"libraryfile\">libstdc++</filename> to use the "
-#| "shared <filename class=\"libraryfile\">libgcc</filename> being built in "
-#| "this pass, instead of the static version that was built in GCC pass 1. "
-#| "This is necessary to support C++ exception handling."
 msgid ""
 "Allow <filename class=\"libraryfile\">libstdc++</filename> to use the "
 "<filename class=\"libraryfile\">libgcc</filename> being built in this pass, "
@@ -569,8 +552,9 @@ msgid ""
 "because it was built without libc support."
 msgstr ""
 "允许 <filename class=\"libraryfile\">libstdc++</filename> 使用即将构建的 "
-"<filename class=\"libraryfile\">libgcc</filename> 共享库，而不是第一遍构建 "
-"GCC 时得到的静态库。这对于 C++ 异常处理支持是必要的。"
+"<filename class=\"libraryfile\">libgcc</filename>，而不是之前在<xref "
+"linkend='ch-tools-gcc-pass1'/> 中构建的版本。之前构建的版本无法正确支持 C++ "
+"异常处理，因为它在构建时缺乏 libc 的支持。"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: lfs-en/chapter06/gcc-pass2.xml
@@ -579,24 +563,15 @@ msgstr "<parameter>--disable-libsanitizer</parameter>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: lfs-en/chapter06/gcc-pass2.xml
-#, fuzzy
-#| msgid ""
-#| "Disable GCC sanitizer runtime libraries.  They are not needed for the "
-#| "temporary installation.  This switch is necessary to build GCC without "
-#| "<systemitem class='library'>libcrypt</systemitem> installed for the "
-#| "target.  In <xref linkend='ch-tools-gcc-pass1'/> it was implied by "
-#| "<parameter>--disable-libstdcxx</parameter>, but now we have to explicitly "
-#| "pass it."
 msgid ""
 "Disable GCC sanitizer runtime libraries.  They are not needed for the "
 "temporary installation.  In <xref linkend='ch-tools-gcc-pass1'/> it was "
 "implied by <parameter>--disable-libstdcxx</parameter>, and now we can "
 "explicitly pass it."
 msgstr ""
-"禁用 GCC 清理检查运行库。它们对于临时安装的 GCC 并不必要。为了在没有为目标安"
-"装 <systemitem class='library'>libcrypt</systemitem> 的情况下构建 GCC，必须使"
-"用该选项。在 <xref linkend='ch-tools-gcc-pass1'/> 中，<parameter>--disable-"
-"libstdcxx</parameter> 隐式地指定了该选项，但这里我们必须显式指定它。"
+"禁用 GCC 清理检查运行库。临时性安装 GCC 不需要它们。在<xref linkend='ch-"
+"tools-gcc-pass1'/> 中，<parameter>--disable-libstdcxx</parameter> 隐含了该选"
+"项，这里我们可以显式指定它。"
 
 #. type: Content of: <sect1><sect2><para>
 #: lfs-en/chapter06/gcc-pass2.xml
@@ -610,8 +585,8 @@ msgid ""
 msgstr ""
 "最后，还需要创建一个符号链接。许多程序和脚本运行 <command>cc</command> 而不"
 "是 <command>gcc</command>，因为前者能够保证程序的通用性，使它可以在所有 UNIX "
-"系统上使用，无论是否安装了 GNU C 编译器。运行 <command>cc</command> 可以将安"
-"装哪种 C 编译器的选择权留给系统管理员："
+"系统上使用，无论是否安装了 GNU C 编译器。运行 <command>cc</command> 可以将选"
+"择 C 编译器的权力留给系统管理员："
 
 #. type: Content of: <sect1><sect2><screen>
 #: lfs-en/chapter06/gcc-pass2.xml

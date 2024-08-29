@@ -494,6 +494,8 @@ msgid ""
 "postlfs/shadow.xml'>the BLFS shadow page</ulink> instead of this page to "
 "build (or, rebuild or upgrade)  shadow."
 msgstr ""
+"如果已经安装了 Linux-PAM，则应该按照 <ulink url='&blfs-book;postlfs/shadow."
+"xml'>BLFS shadow 页面</ulink>，而非本页的说明安装 shadow。"
 
 #. type: Content of: <sect1><sect2><note><para>
 #: lfs-en/chapter08/shadow.xml
@@ -803,21 +805,6 @@ msgstr "<parameter>GROUP=999</parameter>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: lfs-en/chapter08/shadow.xml
-#, fuzzy
-#| msgid ""
-#| "This parameter sets the beginning of the group numbers used in the "
-#| "<filename>/etc/group</filename> file. The particular value 999 comes from "
-#| "the <parameter>--gid</parameter> parameter above.  You may set it to any "
-#| "desired value.  Note that <command>useradd</command> will never reuse a "
-#| "UID or GID.  If the number identified in this parameter is used, it will "
-#| "use the next available number. Note also that if you don't have a group "
-#| "with an ID equal to this number on your system, then the first time you "
-#| "use <command>useradd</command> without the <parameter>-g</parameter> "
-#| "parameter, an error message will be generated&mdash;"
-#| "<computeroutput>useradd: unknown GID 999</computeroutput>, even though "
-#| "the account has been created correctly. That is why we created the group "
-#| "<systemitem class=\"groupname\">users</systemitem> with this group ID in "
-#| "<xref linkend='ch-tools-createfiles'/>."
 msgid ""
 "This parameter sets the beginning of the group numbers used in the "
 "<filename>/etc/group</filename> file. The particular value 999 comes from "

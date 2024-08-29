@@ -408,9 +408,8 @@ msgstr ""
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: lfs-en/chapter08/systemd.xml lfs-en/chapter08/udev.xml
-#, fuzzy
 msgid "<parameter>-D mode=release</parameter>"
-msgstr "<parameter>-Dmode=release</parameter>"
+msgstr "<parameter>-D mode=release</parameter>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: lfs-en/chapter08/systemd.xml lfs-en/chapter08/udev.xml
@@ -419,9 +418,8 @@ msgstr "禁用一些上游开发者认为尚处于实验阶段的功能。"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: lfs-en/chapter08/systemd.xml lfs-en/chapter08/udev.xml
-#, fuzzy
 msgid "<parameter>-D dev-kvm-mode=0660</parameter>"
-msgstr "<parameter>-Ddev-kvm-mode=0660</parameter>"
+msgstr "<parameter>-D dev-kvm-mode=0660</parameter>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: lfs-en/chapter08/systemd.xml lfs-en/chapter08/udev.xml
@@ -528,21 +526,7 @@ msgstr "准备编译 Udev："
 
 #. type: Content of: <sect1><sect2><screen>
 #: lfs-en/chapter08/udev.xml
-#, fuzzy, no-wrap
-#| msgid ""
-#| "<userinput remap=\"configure\">mkdir -p build\n"
-#| "cd       build\n"
-#| "\n"
-#| "CFLAGS+=\" -Wno-format-overflow\" \\\n"
-#| "meson setup \\\n"
-#| "      --prefix=/usr                 \\\n"
-#| "      --buildtype=release           \\\n"
-#| "      -Dmode=release                \\\n"
-#| "      -Ddev-kvm-mode=0660           \\\n"
-#| "      -Dlink-udev-shared=false      \\\n"
-#| "      -Dlogind=false                \\\n"
-#| "      -Dvconsole=false              \\\n"
-#| "      ..</userinput>"
+#, no-wrap
 msgid ""
 "<userinput remap=\"configure\">mkdir -p build\n"
 "cd       build\n"
@@ -559,23 +543,19 @@ msgstr ""
 "<userinput remap=\"configure\">mkdir -p build\n"
 "cd       build\n"
 "\n"
-"CFLAGS+=\" -Wno-format-overflow\" \\\n"
-"meson setup \\\n"
-"      --prefix=/usr                 \\\n"
-"      --buildtype=release           \\\n"
-"      -Dmode=release                \\\n"
-"      -Ddev-kvm-mode=0660           \\\n"
-"      -Dlink-udev-shared=false      \\\n"
-"      -Dlogind=false                \\\n"
-"      -Dvconsole=false              \\\n"
-"      ..</userinput>"
+"meson setup ..                  \\\n"
+"      --prefix=/usr             \\\n"
+"      --buildtype=release       \\\n"
+"      -D mode=release           \\\n"
+"      -D dev-kvm-mode=0660      \\\n"
+"      -D link-udev-shared=false \\\n"
+"      -D logind=false           \\\n"
+"      -D vconsole=false</userinput>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: lfs-en/chapter08/udev.xml
-#, fuzzy
-#| msgid "<parameter>-Dlink-udev-shared=false</parameter>"
 msgid "<parameter>-D link-udev-shared=false</parameter>"
-msgstr "<parameter>-Dlink-udev-shared=false</parameter>"
+msgstr "<parameter>-D link-udev-shared=false</parameter>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: lfs-en/chapter08/udev.xml
@@ -591,10 +571,8 @@ msgstr ""
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: lfs-en/chapter08/udev.xml
-#, fuzzy
-#| msgid "<parameter>-Dlogind=false -Dvconsole=false</parameter>"
 msgid "<parameter>-D logind=false -D vconsole=false</parameter>"
-msgstr "<parameter>-Dlogind=false -Dvconsole=false</parameter>"
+msgstr "<parameter>-D logind=false -D vconsole=false</parameter>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: lfs-en/chapter08/udev.xml
