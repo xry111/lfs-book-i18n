@@ -662,15 +662,6 @@ msgstr ""
 
 #. type: Content of: <sect1><sect2><para>
 #: lfs-en/chapter08/util-linux.xml
-#, fuzzy
-#| msgid ""
-#| "The <emphasis>hardlink</emphasis> tests will fail if the host's kernel "
-#| "does not have the option <option>CONFIG_CRYPTO_USER_API_HASH</option> "
-#| "enabled or does not have any options providing a SHA256 implementation "
-#| "(for example, <option>CONFIG_CRYPTO_SHA256</option>, or "
-#| "<option>CONFIG_CRYPTO_SHA256_SSSE3</option> if the CPU supports "
-#| "Supplemental SSE3) enabled. In addition, two sub-tests from misc: "
-#| "mbsencode and one sub-test from script: replay are known to fail."
 msgid ""
 "The <emphasis>hardlink</emphasis> tests will fail if the host's kernel does "
 "not have the option <option>CONFIG_CRYPTO_USER_API_HASH</option> enabled or "
@@ -681,10 +672,9 @@ msgid ""
 msgstr ""
 "如果宿主系统内核没有启用配置选项 <option>CONFIG_CRYPTO_USER_API_HASH</"
 "option>，或者没有启用任何提供 SHA256 实现的选项 (例如，"
-"<option>CONFIG_CRYPTO_SHA256</option>，或者 "
-"<option>CONFIG_CRYPTO_SHA256_SSSE3</option> —— 如果 CPU 支持扩展 SSE3)，则 "
-"<emphasis>hardlink</emphasis> 测试会失败。另外，已知 misc: mbsencode 测试和 "
-"script: replay 测试中各有一项子测试可能失败。"
+"<option>CONFIG_CRYPTO_SHA256</option>)，则 <emphasis>hardlink</emphasis> 测试"
+"会失败。另外，已知 lsfd: inotify 测试在内核配置选项 "
+"<option>CONFIG_NETLINK_DIAG</option> 未启用时会失败。"
 
 #. type: Content of: <sect1><sect2><title>
 #: lfs-en/chapter08/util-linux.xml

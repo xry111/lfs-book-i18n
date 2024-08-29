@@ -736,14 +736,9 @@ msgstr "现在移除或修复若干已知会失败的测试："
 
 #. type: Content of: <sect1><sect2><screen>
 #: lfs-en/chapter08/gcc.xml
-#, fuzzy, no-wrap
-#| msgid ""
-#| "<userinput remap=\"pre\">sed -e 's/lib64/lib/' \\\n"
-#| "    -i.orig gcc/config/loongarch/{t-linux,linux.h}</userinput>"
+#, no-wrap
 msgid "<userinput remap=\"test\">sed -e '/cpython/d'               -i ../gcc/testsuite/gcc.dg/plugin/plugin.exp</userinput>"
-msgstr ""
-"<userinput remap=\"pre\">sed -e 's/lib64/lib/' \\\n"
-"    -i.orig gcc/config/loongarch/{t-linux,linux.h}</userinput>"
+msgstr "<userinput remap=\"test\">sed -e '/cpython/d'               -i ../gcc/testsuite/gcc.dg/plugin/plugin.exp</userinput>"
 
 #. type: Content of: <sect1><sect2><para>
 #: lfs-en/chapter08/gcc.xml
@@ -797,6 +792,11 @@ msgid ""
 "<filename>update-threading.c</filename>, and <filename>vect-117.c</filename> "
 "are known to fail."
 msgstr ""
+"已知名为 <filename>gen-vect-11b.c</filename>, <filename>gen-vect-11c.c</"
+"filename>, <filename>gen-vect-26.c</filename>, <filename>gen-vect-28.c</"
+"filename>, <filename>pr64076</filename>, <filename>pr108357.c</filename>, "
+"<filename>update-threading.c</filename>, 以及 <filename>vect-117.c</"
+"filename> 的测试会失败。"
 
 #. The GCC developers
 #.     are usually aware of these issues, but have not resolved them yet.

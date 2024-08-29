@@ -52,18 +52,14 @@ msgstr "使用 GRUB 设定引导过程"
 
 #. type: Content of: <sect1><note><para>
 #: lfs-en/chapter10/grub.xml
-#, fuzzy
-#| msgid ""
-#| "If your system does not support UEFI or you don't want to use it, you'll "
-#| "need to figure out how to configure the booting process of the system on "
-#| "your own."
 msgid ""
 "This section assume your system has UEFI support and you wish to boot LFS "
 "with UEFI.  If your system does not support UEFI or you don't want to use "
 "it, you'll need to figure out how to configure the booting process of the "
 "system on your own."
 msgstr ""
-"如果您的系统不支持 UEFI，或者您不想使用它，您需要自行寻找配置引导过程的方法。"
+"本节假设您的系统支持 UEFI 且您希望使用它引导 LFS 系统。如果您的系统不支持 "
+"UEFI，或者您不想使用它，您需要自行寻找配置引导过程的方法。"
 
 #. type: Content of: <sect1><sect2><warning><para>
 #: lfs-en/chapter10/grub.xml
@@ -318,16 +314,6 @@ msgstr ""
 
 #. type: Content of: <sect1><sect2><note><para>
 #: lfs-en/chapter10/grub.xml
-#, fuzzy
-#| msgid ""
-#| "Some UEFI implementation may completely skip the hardcoded path if there "
-#| "are other boot loaders in the same hard drive with paths recorded in an "
-#| "EFI variable.  Then you need to create an EFI variable for the newly "
-#| "installed boot loader.  Install <ulink url=\"&blfs-book;postlfs/"
-#| "efibootmgr.html\">efibootmgr</ulink>, then run the following commands: "
-#| "<placeholder type=\"screen\" id=\"0\"/> Replace <filename>/dev/sda</"
-#| "filename> with the device node of the hard drive where you are installing "
-#| "GRUB into."
 msgid ""
 "Some UEFI implementation may completely skip the hardcoded path if there are "
 "other boot loaders in the same hard drive with paths recorded in an EFI "
@@ -339,9 +325,10 @@ msgid ""
 msgstr ""
 "某些 UEFI 实现在同一硬盘中存在记录于 EFI 变量的引导加载器时，会完全忽略硬编码"
 "的路径。此时您需要为新安装的引导加载器创建一个 EFI 变量。安装 <ulink "
-"url=\"&blfs-book;postlfs/efibootmgr.html\">efibootmgr</ulink>，运行下列命令："
-"<placeholder type=\"screen\" id=\"0\"/> 将 <filename>/dev/sda</filename> 替换"
-"为安装 GRUB 的硬盘对应的设备节点路径。"
+"url=\"&blfs-book;postlfs/efibootmgr.html\">efibootmgr</ulink>，并按照 <ulink "
+"url=\"&blfs-book;postlfs/grub-setup.html\">BLFS 中的说明</ulink>在不用 "
+"<parameter>--removable</parameter> 选项的情况下执行 <command>grub-install</"
+"command> 命令。"
 
 #. type: Content of: <sect1><sect2><title>
 #: lfs-en/chapter10/grub.xml
@@ -355,23 +342,7 @@ msgstr "生成 <filename>/boot/grub/grub.cfg</filename>："
 
 #. type: Content of: <sect1><sect2><screen>
 #: lfs-en/chapter10/grub.xml
-#, fuzzy, no-wrap
-#| msgid ""
-#| "<userinput>cat &gt; /boot/grub/grub.cfg &lt;&lt; \"EOF\"\n"
-#| "<literal># Begin /boot/grub/grub.cfg\n"
-#| "set default=0\n"
-#| "set timeout=5\n"
-#| "\n"
-#| "insmod part_gpt\n"
-#| "insmod ext2\n"
-#| "set root=(hd0,2)\n"
-#| "\n"
-#| "insmod all_video\n"
-#| "\n"
-#| "menuentry \"GNU/Linux, Linux &linux-version;-lfs-&version;\" {\n"
-#| "        linux   /boot/vmlinuz-&linux-version;-lfs-&version; root=/dev/sda2 ro\n"
-#| "}</literal>\n"
-#| "EOF</userinput>"
+#, no-wrap
 msgid ""
 "<userinput>cat &gt; /boot/grub/grub.cfg &lt;&lt; \"EOF\"\n"
 "<literal># Begin /boot/grub/grub.cfg\n"
@@ -399,7 +370,8 @@ msgstr ""
 "insmod ext2\n"
 "set root=(hd0,2)\n"
 "\n"
-"insmod all_video\n"
+"insmod efi_gop\n"
+"insmod efi_uga\n"
 "\n"
 "menuentry \"GNU/Linux, Linux &linux-version;-lfs-&version;\" {\n"
 "        linux   /boot/vmlinuz-&linux-version;-lfs-&version; root=/dev/sda2 ro\n"
