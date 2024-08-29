@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Linux From Scratch 11.1\n"
 "Report-Msgid-Bugs-To: lfs-dev@lists.linuxfromscratch.org\n"
-"POT-Creation-Date: 2024-05-12 21:27+0800\n"
+"POT-Creation-Date: 2024-08-29 14:27+0800\n"
 "PO-Revision-Date: 2022-03-03 03:00+0800\n"
 "Last-Translator: Xi Ruoyao <xry111@xry111.site>\n"
 "Language-Team: none\n"
@@ -526,16 +526,17 @@ msgstr ""
 #: lfs-en/chapter08/perl.xml lfs-en/chapter08/pkgconf.xml
 #: lfs-en/chapter08/procps.xml lfs-en/chapter08/psmisc.xml
 #: lfs-en/chapter08/python.xml lfs-en/chapter08/shadow.xml
-#: lfs-en/chapter08/sysklogd.xml lfs-en/chapter08/systemd.xml
-#: lfs-en/chapter08/sysvinit.xml lfs-en/chapter08/tar.xml
-#: lfs-en/chapter08/tcl.xml lfs-en/chapter08/texinfo.xml
-#: lfs-en/chapter08/udev.xml lfs-en/chapter08/util-linux.xml
-#: lfs-en/chapter08/vim.xml lfs-en/chapter08/xz.xml lfs-en/chapter08/zstd.xml
+#: lfs-en/chapter08/systemd.xml lfs-en/chapter08/sysvinit.xml
+#: lfs-en/chapter08/tar.xml lfs-en/chapter08/tcl.xml
+#: lfs-en/chapter08/texinfo.xml lfs-en/chapter08/udev.xml
+#: lfs-en/chapter08/util-linux.xml lfs-en/chapter08/vim.xml
+#: lfs-en/chapter08/xz.xml lfs-en/chapter08/zstd.xml
 msgid "Installed programs"
 msgstr "安装的程序"
 
 #. type: Content of: <sect1><sect2><variablelist><title>
 #: lfs-en/chapter08/binutils.xml lfs-en/chapter08/gcc.xml
+#: lfs-en/chapter08/tcl.xml
 msgid "The meaning of the new configure parameters:"
 msgstr "新的配置选项的含义："
 
@@ -715,16 +716,25 @@ msgstr ""
 #. type: Content of: <sect1><sect2><para>
 #: lfs-en/chapter08/gcc.xml
 msgid ""
-"One set of tests in the GCC test suite is known to exhaust the default "
-"stack, so increase the stack size prior to running the tests:"
+"GCC may need more stack space compiling some extremely complex code "
+"patterns.  As a precaution for the host distros with a tight stack limit, "
+"explicitly set the stack size hard limit to infinite.  On most host distros "
+"(and the final LFS system) the hard limit is infinite by default, but there "
+"is no harm done by setting it explicitly.  It's not necessary to change the "
+"stack size soft limit because GCC will automatically set it to an "
+"appropriate value, as long as the value does not exceed the hard limit:"
 msgstr ""
-"已知 GCC 测试套件中的一组测试可能耗尽默认栈空间，因此运行测试前要增加栈空间："
+"GCC 在编译一些具有复杂模式的代码时，可能需要更多的栈空间。万一宿主系统的栈空"
+"间限制较为严格，我们需要手工将栈空间的硬上限设为无限大。在多数宿主发行版 (和"
+"最终的 LFS 系统中)，默认的硬上限值已经是无限大，但手工调整限制无论如何都不会"
+"造成损害。我们不需要调整软上限，因为 GCC 会自动将软上限设为合适的值，只要确保"
+"该值不会超过硬限制即可。"
 
 #. type: Content of: <sect1><sect2><screen>
 #: lfs-en/chapter08/gcc.xml
 #, no-wrap
-msgid "<userinput remap=\"test\">ulimit -s 32768</userinput>"
-msgstr "<userinput remap=\"test\">ulimit -s 32768</userinput>"
+msgid "<userinput remap=\"test\">ulimit -s -H unlimited</userinput>"
+msgstr "<userinput remap=\"test\">ulimit -s -H unlimited</userinput>"
 
 #. type: Content of: <sect1><sect2><para>
 #: lfs-en/chapter08/gcc.xml
