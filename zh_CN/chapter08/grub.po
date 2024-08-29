@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Linux From Scratch 11.4\n"
 "Report-Msgid-Bugs-To: lfs-dev@lists.linuxfromscratch.org\n"
-"POT-Creation-Date: 2024-01-02 21:03+0800\n"
+"POT-Creation-Date: 2024-08-29 15:01+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: Xi Ruoyao <xry111@xry111.site>\n"
 "Language-Team: none\n"
@@ -41,7 +41,7 @@ msgstr ""
 #: lfs-en/chapter08/libcap.xml lfs-en/chapter08/libelf.xml
 #: lfs-en/chapter08/libffi.xml lfs-en/chapter08/libpipeline.xml
 #: lfs-en/chapter08/libtool.xml lfs-en/chapter08/libxcrypt.xml
-#: lfs-en/chapter08/m4.xml lfs-en/chapter08/make.xml
+#: lfs-en/chapter08/lz4.xml lfs-en/chapter08/m4.xml lfs-en/chapter08/make.xml
 #: lfs-en/chapter08/man-db.xml lfs-en/chapter08/man-pages.xml
 #: lfs-en/chapter08/meson.xml lfs-en/chapter08/mpc.xml
 #: lfs-en/chapter08/mpfr.xml lfs-en/chapter08/ncurses.xml
@@ -69,11 +69,6 @@ msgstr ""
 #: lfs-en/prologue/why.xml
 msgid "GRUB"
 msgstr "GRUB"
-
-#. type: Content of: <sect1><title>
-#: lfs-en/chapter01/whatsnew.xml lfs-en/chapter08/grub.xml
-msgid "GRUB-&grub-version;"
-msgstr "GRUB-&grub-version;"
 
 #. type: Content of: <sect1><sect2><segmentedlist><segtitle>
 #: lfs-en/chapter05/binutils-pass1.xml lfs-en/chapter05/gcc-pass1.xml
@@ -112,7 +107,7 @@ msgstr "GRUB-&grub-version;"
 #: lfs-en/chapter08/libcap.xml lfs-en/chapter08/libelf.xml
 #: lfs-en/chapter08/libffi.xml lfs-en/chapter08/libpipeline.xml
 #: lfs-en/chapter08/libtool.xml lfs-en/chapter08/libxcrypt.xml
-#: lfs-en/chapter08/m4.xml lfs-en/chapter08/make.xml
+#: lfs-en/chapter08/lz4.xml lfs-en/chapter08/m4.xml lfs-en/chapter08/make.xml
 #: lfs-en/chapter08/man-db.xml lfs-en/chapter08/man-pages.xml
 #: lfs-en/chapter08/markupsafe.xml lfs-en/chapter08/meson.xml
 #: lfs-en/chapter08/mpc.xml lfs-en/chapter08/mpfr.xml
@@ -170,7 +165,7 @@ msgstr "&buildtime;"
 #: lfs-en/chapter08/libcap.xml lfs-en/chapter08/libelf.xml
 #: lfs-en/chapter08/libffi.xml lfs-en/chapter08/libpipeline.xml
 #: lfs-en/chapter08/libtool.xml lfs-en/chapter08/libxcrypt.xml
-#: lfs-en/chapter08/m4.xml lfs-en/chapter08/make.xml
+#: lfs-en/chapter08/lz4.xml lfs-en/chapter08/m4.xml lfs-en/chapter08/make.xml
 #: lfs-en/chapter08/man-db.xml lfs-en/chapter08/man-pages.xml
 #: lfs-en/chapter08/markupsafe.xml lfs-en/chapter08/meson.xml
 #: lfs-en/chapter08/mpc.xml lfs-en/chapter08/mpfr.xml
@@ -261,11 +256,12 @@ msgstr "<userinput remap=\"make\">make</userinput>"
 #: lfs-en/chapter08/bc.xml lfs-en/chapter08/binutils.xml
 #: lfs-en/chapter08/bison.xml lfs-en/chapter08/check.xml
 #: lfs-en/chapter08/coreutils.xml lfs-en/chapter08/dbus.xml
-#: lfs-en/chapter08/diffutils.xml lfs-en/chapter08/e2fsprogs.xml
-#: lfs-en/chapter08/expat.xml lfs-en/chapter08/expect.xml
-#: lfs-en/chapter08/file.xml lfs-en/chapter08/findutils.xml
-#: lfs-en/chapter08/flex.xml lfs-en/chapter08/flit-core.xml
-#: lfs-en/chapter08/gawk.xml lfs-en/chapter08/gcc.xml lfs-en/chapter08/gdbm.xml
+#: lfs-en/chapter08/dejagnu.xml lfs-en/chapter08/diffutils.xml
+#: lfs-en/chapter08/e2fsprogs.xml lfs-en/chapter08/expat.xml
+#: lfs-en/chapter08/expect.xml lfs-en/chapter08/file.xml
+#: lfs-en/chapter08/findutils.xml lfs-en/chapter08/flex.xml
+#: lfs-en/chapter08/flit-core.xml lfs-en/chapter08/gawk.xml
+#: lfs-en/chapter08/gcc.xml lfs-en/chapter08/gdbm.xml
 #: lfs-en/chapter08/gettext.xml lfs-en/chapter08/glibc.xml
 #: lfs-en/chapter08/gperf.xml lfs-en/chapter08/grep.xml
 #: lfs-en/chapter08/groff.xml lfs-en/chapter08/grub.xml
@@ -275,7 +271,7 @@ msgstr "<userinput remap=\"make\">make</userinput>"
 #: lfs-en/chapter08/less.xml lfs-en/chapter08/libcap.xml
 #: lfs-en/chapter08/libffi.xml lfs-en/chapter08/libpipeline.xml
 #: lfs-en/chapter08/libtool.xml lfs-en/chapter08/libxcrypt.xml
-#: lfs-en/chapter08/m4.xml lfs-en/chapter08/make.xml
+#: lfs-en/chapter08/lz4.xml lfs-en/chapter08/m4.xml lfs-en/chapter08/make.xml
 #: lfs-en/chapter08/man-db.xml lfs-en/chapter08/markupsafe.xml
 #: lfs-en/chapter08/meson.xml lfs-en/chapter08/ninja.xml
 #: lfs-en/chapter08/openssl.xml lfs-en/chapter08/patch.xml
@@ -323,7 +319,7 @@ msgstr "安装该软件包："
 #: lfs-en/chapter08/libcap.xml lfs-en/chapter08/libelf.xml
 #: lfs-en/chapter08/libffi.xml lfs-en/chapter08/libpipeline.xml
 #: lfs-en/chapter08/libtool.xml lfs-en/chapter08/libxcrypt.xml
-#: lfs-en/chapter08/m4.xml lfs-en/chapter08/make.xml
+#: lfs-en/chapter08/lz4.xml lfs-en/chapter08/m4.xml lfs-en/chapter08/make.xml
 #: lfs-en/chapter08/man-db.xml lfs-en/chapter08/ncurses.xml
 #: lfs-en/chapter08/openssl.xml lfs-en/chapter08/patch.xml
 #: lfs-en/chapter08/perl.xml lfs-en/chapter08/pkgconf.xml
@@ -381,7 +377,7 @@ msgstr "安装的目录"
 #: lfs-en/chapter08/libcap.xml lfs-en/chapter08/libelf.xml
 #: lfs-en/chapter08/libffi.xml lfs-en/chapter08/libpipeline.xml
 #: lfs-en/chapter08/libtool.xml lfs-en/chapter08/libxcrypt.xml
-#: lfs-en/chapter08/m4.xml lfs-en/chapter08/make.xml
+#: lfs-en/chapter08/lz4.xml lfs-en/chapter08/m4.xml lfs-en/chapter08/make.xml
 #: lfs-en/chapter08/man-db.xml lfs-en/chapter08/man-pages.xml
 #: lfs-en/chapter08/meson.xml lfs-en/chapter08/mpc.xml
 #: lfs-en/chapter08/mpfr.xml lfs-en/chapter08/ncurses.xml
@@ -426,12 +422,12 @@ msgstr "新的配置选项的含义："
 #: lfs-en/chapter08/iproute2.xml lfs-en/chapter08/kbd.xml
 #: lfs-en/chapter08/kmod.xml lfs-en/chapter08/less.xml
 #: lfs-en/chapter08/libcap.xml lfs-en/chapter08/libtool.xml
-#: lfs-en/chapter08/man-db.xml lfs-en/chapter08/meson.xml
-#: lfs-en/chapter08/ncurses.xml lfs-en/chapter08/ninja.xml
-#: lfs-en/chapter08/openssl.xml lfs-en/chapter08/perl.xml
-#: lfs-en/chapter08/pkgconf.xml lfs-en/chapter08/procps.xml
-#: lfs-en/chapter08/psmisc.xml lfs-en/chapter08/python.xml
-#: lfs-en/chapter08/shadow.xml lfs-en/chapter08/sysklogd.xml
+#: lfs-en/chapter08/lz4.xml lfs-en/chapter08/man-db.xml
+#: lfs-en/chapter08/meson.xml lfs-en/chapter08/ncurses.xml
+#: lfs-en/chapter08/ninja.xml lfs-en/chapter08/openssl.xml
+#: lfs-en/chapter08/perl.xml lfs-en/chapter08/pkgconf.xml
+#: lfs-en/chapter08/procps.xml lfs-en/chapter08/psmisc.xml
+#: lfs-en/chapter08/python.xml lfs-en/chapter08/shadow.xml
 #: lfs-en/chapter08/systemd.xml lfs-en/chapter08/sysvinit.xml
 #: lfs-en/chapter08/tar.xml lfs-en/chapter08/tcl.xml
 #: lfs-en/chapter08/texinfo.xml lfs-en/chapter08/udev.xml
@@ -454,6 +450,11 @@ msgid ""
 msgstr ""
 "<productname>grub</productname> <productnumber>&grub-version;</"
 "productnumber> <placeholder type=\"address\" id=\"0\"/>"
+
+#. type: Content of: <sect1><title>
+#: lfs-en/chapter08/grub.xml
+msgid "GRUB-&grub-version;"
+msgstr "GRUB-&grub-version;"
 
 #. type: Content of: <sect1><sect2><para>
 #: lfs-en/chapter08/grub.xml
@@ -479,11 +480,16 @@ msgstr "安装 GRUB"
 #: lfs-en/chapter08/grub.xml
 msgid ""
 "On LoongArch systems, the following instruction builds GRUB for UEFI.  But "
-"the built GRUB lacks some features because a few optional dependencies of "
-"GRUB for UEFI is beyond the scope of LFS and not installed yet."
+"because LFS lacks the FreeType package and the Unifont data file, GRUB won't "
+"install any font for the boot loader and the GRUB boot menu will be "
+"displayed using a coarse font or in a smaller region on the screen.  If "
+"wanted, after the LFS system is finished, install <ulink url=\"&blfs-book;"
+"general/freetype.html\">FreeType</ulink> and then install the GRUB compoents "
+"not installed from LFS following <ulink url=\"&blfs-book;postlfs/grub-efi."
+"html\">the BLFS instruction</ulink>, but remove the <option>--target=x86_64</"
+"option> option and skip the command to install the <filename "
+"class='directory'>/usr/lib/grub/x86_64-efi</filename> directory."
 msgstr ""
-"在 LoongArch 系统上，后文给出的指令为 UEFI 构建 GRUB。构建得到的 GRUB 会缺失"
-"一些功能，这是由于一些可选依赖项超过了 LFS 的范围，因此尚未安装。"
 
 #. type: Content of: <sect1><sect2><note><para>
 #: lfs-en/chapter08/grub.xml
@@ -492,20 +498,6 @@ msgid ""
 "of this page and try to figure out how to boot your system."
 msgstr ""
 "如果您的系统固件不支持 UEFI，您需要跳过该软件包，自行尝试找出引导系统的方法。"
-
-#. type: Content of: <sect1><sect2><note><para>
-#: lfs-en/chapter08/grub.xml
-msgid ""
-"If your system firmware supports UEFI and you want a fully functional GRUB, "
-"you can skip the content of this page, and install GRUB with UEFI support "
-"(and its dependencies) following <ulink url=\"&blfs-book;postlfs/grub-efi."
-"html\">the BLFS page</ulink> (with <parameter>--target=x86_64</parameter> "
-"removed) at the end of this chapter."
-msgstr ""
-"如果您的系统支持 UEFI，且您希望通过 UEFI 引导 LFS，您可以跳过这个 LFS 软件"
-"包，并按照 <ulink url=\"&blfs-book;postlfs/grub-efi.html\">BLFS 页面</ulink>"
-"中的说明 (请自行移除其中的 <parameter>--target=x86_64</parameter> 选项)，安装"
-"支持 UEFI 的 GRUB (及其依赖项)。"
 
 #. type: Content of: <sect1><sect2><warning><para>
 #: lfs-en/chapter08/grub.xml
@@ -599,9 +591,13 @@ msgstr ""
 
 #. type: Content of: <sect1><sect2><para>
 #: lfs-en/chapter08/grub.xml
+#, fuzzy
+#| msgid ""
+#| "Making your LFS system bootable with GRUB will be discussed in <xref "
+#| "linkend=\"ch-bootable-grub\"/>."
 msgid ""
 "Making your LFS system bootable with GRUB will be discussed in <xref "
-"linkend=\"ch-bootable-grub\"/>."
+"linkend=\"ch-bootable-grub\" role='.'/>"
 msgstr ""
 "使用 GRUB 引导您的 LFS 系统的方法将在<xref linkend=\"ch-bootable-grub\"/>中讨"
 "论。"

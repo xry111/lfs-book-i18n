@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Linux From Scratch 11.4\n"
 "Report-Msgid-Bugs-To: lfs-dev@lists.linuxfromscratch.org\n"
-"POT-Creation-Date: 2024-01-02 21:02+0800\n"
+"POT-Creation-Date: 2024-08-29 15:01+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: Xi Ruoyao <xry111@xry111.site>\n"
 "Language-Team: none\n"
@@ -49,10 +49,17 @@ msgstr ""
 
 #. type: Content of: <sect1><para>
 #: lfs-en/chapter04/aboutsbus.xml
+#, fuzzy
+#| msgid ""
+#| "For example, consider a package whose compilation time is 4.5 SBUs. This "
+#| "means that if your system took 10 minutes to compile and install the "
+#| "first pass of binutils, it will take <emphasis>approximately</emphasis> "
+#| "45 minutes to build the example package.  Fortunately, most build times "
+#| "are shorter than one SBU."
 msgid ""
 "For example, consider a package whose compilation time is 4.5 SBUs. This "
-"means that if your system took 10 minutes to compile and install the first "
-"pass of binutils, it will take <emphasis>approximately</emphasis> 45 minutes "
+"means that if your system took 4 minutes to compile and install the first "
+"pass of binutils, it will take <emphasis>approximately</emphasis> 18 minutes "
 "to build the example package.  Fortunately, most build times are shorter "
 "than one SBU."
 msgstr ""
@@ -72,6 +79,38 @@ msgstr ""
 "SBU 只能用来估计安装一个软件包可能需要的时间，估计结果的误差在个别情况下可能"
 "达到几十分钟。"
 
+#. type: Content of: <sect1><para>
+#: lfs-en/chapter04/aboutsbus.xml
+msgid ""
+"On some newer systems, the motherboard is capable of contolling the system "
+"clock speed. This can be controlled with a command such as "
+"<command>powerprofilesctl</command>. This is not available in LFS, but may "
+"be available on the host distro. After LFS is complete, it can be added to a "
+"system with the procedures at the <ulink url='&blfs-book;sysutils/power-"
+"profiles-daemon.html'> BLFS power-profiles-daemon</ulink> page.  Before "
+"measuring the build time of any package it is advisable to use a system "
+"power profile set for maximum performance (and maximum power consumption).  "
+"Otherwise the measured SBU value may be inaccurate because the system may "
+"react differently when building <xref linkend='ch-tools-binutils-pass1'/> or "
+"other packages.  Be aware that a significant inaccuracy can still show up "
+"even if the same profile is used for both packages because the system may "
+"respond slower if the system is idle when starting the build procedure. "
+"Setting the power profile to <quote>performance</quote> will minimize this "
+"problem.  And obviously doing so will also make the system build LFS faster."
+msgstr ""
+
+#. type: Content of: <sect1><para>
+#: lfs-en/chapter04/aboutsbus.xml
+msgid ""
+"If <command>powerprofilesctl</command> is available, issue the "
+"<command>powerprofilesctl set performance</command> command to select the "
+"<literal>performance</literal> profile.  Some distros provides the "
+"<command>tuned-adm</command> command for managing the profiles instead of "
+"<command>powerprofilesctl</command>, on these distros issue the "
+"<command>tuned-adm profile throughput-performance</command> command to "
+"select the <literal>throughput-performance</literal> profile."
+msgstr ""
+
 #. type: Content of: <sect1><note><para>
 #: lfs-en/chapter04/aboutsbus.xml
 msgid ""
@@ -89,10 +128,16 @@ msgstr ""
 
 #. type: Content of: <sect1><note><para>
 #: lfs-en/chapter04/aboutsbus.xml
+#, fuzzy
+#| msgid ""
+#| "The times presented here are based upon using four cores (-j4). The times "
+#| "in Chapter 8 also include the time to run the regression tests for the "
+#| "package unless specified otherwise."
 msgid ""
-"The times presented here are based upon using four cores (-j4). The times in "
-"Chapter 8 also include the time to run the regression tests for the package "
-"unless specified otherwise."
+"The times presented here for all packages (except <xref linkend='ch-tools-"
+"binutils-pass1'/> which is based on one core)  are based upon using four "
+"cores (-j4). The times in Chapter 8 also include the time to run the "
+"regression tests for the package unless specified otherwise."
 msgstr ""
 "我们给出的 SBU 值根据使用四个 CPU 核心 (-j4) 的计时计算。第 8 章中的时间还会"
 "包含运行软件包退化测试的时间，除非另有说明。"

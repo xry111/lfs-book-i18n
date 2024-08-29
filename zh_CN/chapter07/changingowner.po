@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Linux From Scratch 11.4\n"
 "Report-Msgid-Bugs-To: lfs-dev@lists.linuxfromscratch.org\n"
-"POT-Creation-Date: 2023-07-16 03:48+0800\n"
+"POT-Creation-Date: 2024-08-29 15:01+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: Xi Ruoyao <xry111@xry111.site>\n"
 "Language-Team: none\n"
@@ -65,6 +65,7 @@ msgstr ""
 
 #. type: Content of: <sect1><screen>
 #: lfs-en/chapter07/changingowner.xml
-#, no-wrap
-msgid "<userinput>chown -R root:root $LFS/{usr,lib,lib64,var,etc,bin,sbin,tools}</userinput>"
+#, fuzzy, no-wrap
+#| msgid "<userinput>chown -R root:root $LFS/{usr,lib,lib64,var,etc,bin,sbin,tools}</userinput>"
+msgid "<userinput>chown --from lfs -R root:root $LFS/{usr,lib,lib64,var,etc,bin,sbin,tools}</userinput>"
 msgstr "<userinput>chown -R root:root $LFS/{usr,lib,lib64,var,etc,bin,sbin,tools}</userinput>"

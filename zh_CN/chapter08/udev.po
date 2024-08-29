@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Linux From Scratch 11.4\n"
 "Report-Msgid-Bugs-To: lfs-dev@lists.linuxfromscratch.org\n"
-"POT-Creation-Date: 2024-01-23 18:37+0800\n"
+"POT-Creation-Date: 2024-08-29 15:11+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: Xi Ruoyao <xry111@xry111.site>\n"
 "Language-Team: none\n"
@@ -41,7 +41,7 @@ msgstr ""
 #: lfs-en/chapter08/libcap.xml lfs-en/chapter08/libelf.xml
 #: lfs-en/chapter08/libffi.xml lfs-en/chapter08/libpipeline.xml
 #: lfs-en/chapter08/libtool.xml lfs-en/chapter08/libxcrypt.xml
-#: lfs-en/chapter08/m4.xml lfs-en/chapter08/make.xml
+#: lfs-en/chapter08/lz4.xml lfs-en/chapter08/m4.xml lfs-en/chapter08/make.xml
 #: lfs-en/chapter08/man-db.xml lfs-en/chapter08/man-pages.xml
 #: lfs-en/chapter08/meson.xml lfs-en/chapter08/mpc.xml
 #: lfs-en/chapter08/mpfr.xml lfs-en/chapter08/ncurses.xml
@@ -69,6 +69,11 @@ msgstr ""
 #: lfs-en/chapter09/udev.xml lfs-en/prologue/why.xml
 msgid "Udev"
 msgstr "Udev"
+
+#. type: Content of: <sect1><title>
+#: lfs-en/chapter01/whatsnew.xml lfs-en/chapter08/udev.xml
+msgid "Udev from Systemd-&systemd-version;"
+msgstr "Systemd-&systemd-version; 中的 Udev"
 
 #. type: Content of: <sect1><sect2><segmentedlist><segtitle>
 #: lfs-en/chapter05/binutils-pass1.xml lfs-en/chapter05/gcc-pass1.xml
@@ -107,7 +112,7 @@ msgstr "Udev"
 #: lfs-en/chapter08/libcap.xml lfs-en/chapter08/libelf.xml
 #: lfs-en/chapter08/libffi.xml lfs-en/chapter08/libpipeline.xml
 #: lfs-en/chapter08/libtool.xml lfs-en/chapter08/libxcrypt.xml
-#: lfs-en/chapter08/m4.xml lfs-en/chapter08/make.xml
+#: lfs-en/chapter08/lz4.xml lfs-en/chapter08/m4.xml lfs-en/chapter08/make.xml
 #: lfs-en/chapter08/man-db.xml lfs-en/chapter08/man-pages.xml
 #: lfs-en/chapter08/markupsafe.xml lfs-en/chapter08/meson.xml
 #: lfs-en/chapter08/mpc.xml lfs-en/chapter08/mpfr.xml
@@ -165,7 +170,7 @@ msgstr "&buildtime;"
 #: lfs-en/chapter08/libcap.xml lfs-en/chapter08/libelf.xml
 #: lfs-en/chapter08/libffi.xml lfs-en/chapter08/libpipeline.xml
 #: lfs-en/chapter08/libtool.xml lfs-en/chapter08/libxcrypt.xml
-#: lfs-en/chapter08/m4.xml lfs-en/chapter08/make.xml
+#: lfs-en/chapter08/lz4.xml lfs-en/chapter08/m4.xml lfs-en/chapter08/make.xml
 #: lfs-en/chapter08/man-db.xml lfs-en/chapter08/man-pages.xml
 #: lfs-en/chapter08/markupsafe.xml lfs-en/chapter08/meson.xml
 #: lfs-en/chapter08/mpc.xml lfs-en/chapter08/mpfr.xml
@@ -219,7 +224,7 @@ msgstr "&diskspace;"
 #: lfs-en/chapter08/less.xml lfs-en/chapter08/libcap.xml
 #: lfs-en/chapter08/libffi.xml lfs-en/chapter08/libpipeline.xml
 #: lfs-en/chapter08/libtool.xml lfs-en/chapter08/libxcrypt.xml
-#: lfs-en/chapter08/m4.xml lfs-en/chapter08/make.xml
+#: lfs-en/chapter08/lz4.xml lfs-en/chapter08/m4.xml lfs-en/chapter08/make.xml
 #: lfs-en/chapter08/man-db.xml lfs-en/chapter08/markupsafe.xml
 #: lfs-en/chapter08/meson.xml lfs-en/chapter08/ninja.xml
 #: lfs-en/chapter08/openssl.xml lfs-en/chapter08/patch.xml
@@ -280,7 +285,7 @@ msgstr "安装的目录"
 #: lfs-en/chapter08/libcap.xml lfs-en/chapter08/libelf.xml
 #: lfs-en/chapter08/libffi.xml lfs-en/chapter08/libpipeline.xml
 #: lfs-en/chapter08/libtool.xml lfs-en/chapter08/libxcrypt.xml
-#: lfs-en/chapter08/m4.xml lfs-en/chapter08/make.xml
+#: lfs-en/chapter08/lz4.xml lfs-en/chapter08/m4.xml lfs-en/chapter08/make.xml
 #: lfs-en/chapter08/man-db.xml lfs-en/chapter08/man-pages.xml
 #: lfs-en/chapter08/meson.xml lfs-en/chapter08/mpc.xml
 #: lfs-en/chapter08/mpfr.xml lfs-en/chapter08/ncurses.xml
@@ -317,12 +322,12 @@ msgstr "简要描述"
 #: lfs-en/chapter08/iproute2.xml lfs-en/chapter08/kbd.xml
 #: lfs-en/chapter08/kmod.xml lfs-en/chapter08/less.xml
 #: lfs-en/chapter08/libcap.xml lfs-en/chapter08/libtool.xml
-#: lfs-en/chapter08/man-db.xml lfs-en/chapter08/meson.xml
-#: lfs-en/chapter08/ncurses.xml lfs-en/chapter08/ninja.xml
-#: lfs-en/chapter08/openssl.xml lfs-en/chapter08/perl.xml
-#: lfs-en/chapter08/pkgconf.xml lfs-en/chapter08/procps.xml
-#: lfs-en/chapter08/psmisc.xml lfs-en/chapter08/python.xml
-#: lfs-en/chapter08/shadow.xml lfs-en/chapter08/sysklogd.xml
+#: lfs-en/chapter08/lz4.xml lfs-en/chapter08/man-db.xml
+#: lfs-en/chapter08/meson.xml lfs-en/chapter08/ncurses.xml
+#: lfs-en/chapter08/ninja.xml lfs-en/chapter08/openssl.xml
+#: lfs-en/chapter08/perl.xml lfs-en/chapter08/pkgconf.xml
+#: lfs-en/chapter08/procps.xml lfs-en/chapter08/psmisc.xml
+#: lfs-en/chapter08/python.xml lfs-en/chapter08/shadow.xml
 #: lfs-en/chapter08/systemd.xml lfs-en/chapter08/sysvinit.xml
 #: lfs-en/chapter08/tar.xml lfs-en/chapter08/tcl.xml
 #: lfs-en/chapter08/texinfo.xml lfs-en/chapter08/udev.xml
@@ -403,7 +408,8 @@ msgstr ""
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: lfs-en/chapter08/systemd.xml lfs-en/chapter08/udev.xml
-msgid "<parameter>-Dmode=release</parameter>"
+#, fuzzy
+msgid "<parameter>-D mode=release</parameter>"
 msgstr "<parameter>-Dmode=release</parameter>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
@@ -413,7 +419,8 @@ msgstr "禁用一些上游开发者认为尚处于实验阶段的功能。"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: lfs-en/chapter08/systemd.xml lfs-en/chapter08/udev.xml
-msgid "<parameter>-Ddev-kvm-mode=0660</parameter>"
+#, fuzzy
+msgid "<parameter>-D dev-kvm-mode=0660</parameter>"
 msgstr "<parameter>-Ddev-kvm-mode=0660</parameter>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
@@ -459,11 +466,6 @@ msgid ""
 msgstr ""
 "<productname>udev</productname> <productnumber>&systemd-version;</"
 "productnumber> <placeholder type=\"address\" id=\"0\"/>"
-
-#. type: Content of: <sect1><title>
-#: lfs-en/chapter08/udev.xml
-msgid "Udev from Systemd-&systemd-version;"
-msgstr "Systemd-&systemd-version; 中的 Udev"
 
 #. type: Content of: <sect1><sect2><para>
 #: lfs-en/chapter08/udev.xml
@@ -526,21 +528,33 @@ msgstr "准备编译 Udev："
 
 #. type: Content of: <sect1><sect2><screen>
 #: lfs-en/chapter08/udev.xml
-#, no-wrap
+#, fuzzy, no-wrap
+#| msgid ""
+#| "<userinput remap=\"configure\">mkdir -p build\n"
+#| "cd       build\n"
+#| "\n"
+#| "CFLAGS+=\" -Wno-format-overflow\" \\\n"
+#| "meson setup \\\n"
+#| "      --prefix=/usr                 \\\n"
+#| "      --buildtype=release           \\\n"
+#| "      -Dmode=release                \\\n"
+#| "      -Ddev-kvm-mode=0660           \\\n"
+#| "      -Dlink-udev-shared=false      \\\n"
+#| "      -Dlogind=false                \\\n"
+#| "      -Dvconsole=false              \\\n"
+#| "      ..</userinput>"
 msgid ""
 "<userinput remap=\"configure\">mkdir -p build\n"
 "cd       build\n"
 "\n"
-"CFLAGS+=\" -Wno-format-overflow\" \\\n"
-"meson setup \\\n"
-"      --prefix=/usr                 \\\n"
-"      --buildtype=release           \\\n"
-"      -Dmode=release                \\\n"
-"      -Ddev-kvm-mode=0660           \\\n"
-"      -Dlink-udev-shared=false      \\\n"
-"      -Dlogind=false                \\\n"
-"      -Dvconsole=false              \\\n"
-"      ..</userinput>"
+"meson setup ..                  \\\n"
+"      --prefix=/usr             \\\n"
+"      --buildtype=release       \\\n"
+"      -D mode=release           \\\n"
+"      -D dev-kvm-mode=0660      \\\n"
+"      -D link-udev-shared=false \\\n"
+"      -D logind=false           \\\n"
+"      -D vconsole=false</userinput>"
 msgstr ""
 "<userinput remap=\"configure\">mkdir -p build\n"
 "cd       build\n"
@@ -558,7 +572,9 @@ msgstr ""
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: lfs-en/chapter08/udev.xml
-msgid "<parameter>-Dlink-udev-shared=false</parameter>"
+#, fuzzy
+#| msgid "<parameter>-Dlink-udev-shared=false</parameter>"
+msgid "<parameter>-D link-udev-shared=false</parameter>"
 msgstr "<parameter>-Dlink-udev-shared=false</parameter>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
@@ -575,7 +591,9 @@ msgstr ""
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: lfs-en/chapter08/udev.xml
-msgid "<parameter>-Dlogind=false -Dvconsole=false</parameter>"
+#, fuzzy
+#| msgid "<parameter>-Dlogind=false -Dvconsole=false</parameter>"
+msgid "<parameter>-D logind=false -D vconsole=false</parameter>"
 msgstr "<parameter>-Dlogind=false -Dvconsole=false</parameter>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>

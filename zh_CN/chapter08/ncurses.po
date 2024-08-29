@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Linux From Scratch 11.4\n"
 "Report-Msgid-Bugs-To: lfs-dev@lists.linuxfromscratch.org\n"
-"POT-Creation-Date: 2024-01-23 18:37+0800\n"
+"POT-Creation-Date: 2024-08-29 15:01+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: Xi Ruoyao <xry111@xry111.site>\n"
 "Language-Team: none\n"
@@ -41,7 +41,7 @@ msgstr ""
 #: lfs-en/chapter08/libcap.xml lfs-en/chapter08/libelf.xml
 #: lfs-en/chapter08/libffi.xml lfs-en/chapter08/libpipeline.xml
 #: lfs-en/chapter08/libtool.xml lfs-en/chapter08/libxcrypt.xml
-#: lfs-en/chapter08/m4.xml lfs-en/chapter08/make.xml
+#: lfs-en/chapter08/lz4.xml lfs-en/chapter08/m4.xml lfs-en/chapter08/make.xml
 #: lfs-en/chapter08/man-db.xml lfs-en/chapter08/man-pages.xml
 #: lfs-en/chapter08/meson.xml lfs-en/chapter08/mpc.xml
 #: lfs-en/chapter08/mpfr.xml lfs-en/chapter08/ncurses.xml
@@ -113,7 +113,7 @@ msgstr "Ncurses-&ncurses-version;"
 #: lfs-en/chapter08/libcap.xml lfs-en/chapter08/libelf.xml
 #: lfs-en/chapter08/libffi.xml lfs-en/chapter08/libpipeline.xml
 #: lfs-en/chapter08/libtool.xml lfs-en/chapter08/libxcrypt.xml
-#: lfs-en/chapter08/m4.xml lfs-en/chapter08/make.xml
+#: lfs-en/chapter08/lz4.xml lfs-en/chapter08/m4.xml lfs-en/chapter08/make.xml
 #: lfs-en/chapter08/man-db.xml lfs-en/chapter08/man-pages.xml
 #: lfs-en/chapter08/markupsafe.xml lfs-en/chapter08/meson.xml
 #: lfs-en/chapter08/mpc.xml lfs-en/chapter08/mpfr.xml
@@ -171,7 +171,7 @@ msgstr "&buildtime;"
 #: lfs-en/chapter08/libcap.xml lfs-en/chapter08/libelf.xml
 #: lfs-en/chapter08/libffi.xml lfs-en/chapter08/libpipeline.xml
 #: lfs-en/chapter08/libtool.xml lfs-en/chapter08/libxcrypt.xml
-#: lfs-en/chapter08/m4.xml lfs-en/chapter08/make.xml
+#: lfs-en/chapter08/lz4.xml lfs-en/chapter08/m4.xml lfs-en/chapter08/make.xml
 #: lfs-en/chapter08/man-db.xml lfs-en/chapter08/man-pages.xml
 #: lfs-en/chapter08/markupsafe.xml lfs-en/chapter08/meson.xml
 #: lfs-en/chapter08/mpc.xml lfs-en/chapter08/mpfr.xml
@@ -268,7 +268,7 @@ msgstr "<userinput remap=\"make\">make</userinput>"
 #: lfs-en/chapter08/libcap.xml lfs-en/chapter08/libelf.xml
 #: lfs-en/chapter08/libffi.xml lfs-en/chapter08/libpipeline.xml
 #: lfs-en/chapter08/libtool.xml lfs-en/chapter08/libxcrypt.xml
-#: lfs-en/chapter08/m4.xml lfs-en/chapter08/make.xml
+#: lfs-en/chapter08/lz4.xml lfs-en/chapter08/m4.xml lfs-en/chapter08/make.xml
 #: lfs-en/chapter08/man-db.xml lfs-en/chapter08/ncurses.xml
 #: lfs-en/chapter08/openssl.xml lfs-en/chapter08/patch.xml
 #: lfs-en/chapter08/perl.xml lfs-en/chapter08/pkgconf.xml
@@ -326,7 +326,7 @@ msgstr "安装的目录"
 #: lfs-en/chapter08/libcap.xml lfs-en/chapter08/libelf.xml
 #: lfs-en/chapter08/libffi.xml lfs-en/chapter08/libpipeline.xml
 #: lfs-en/chapter08/libtool.xml lfs-en/chapter08/libxcrypt.xml
-#: lfs-en/chapter08/m4.xml lfs-en/chapter08/make.xml
+#: lfs-en/chapter08/lz4.xml lfs-en/chapter08/m4.xml lfs-en/chapter08/make.xml
 #: lfs-en/chapter08/man-db.xml lfs-en/chapter08/man-pages.xml
 #: lfs-en/chapter08/meson.xml lfs-en/chapter08/mpc.xml
 #: lfs-en/chapter08/mpfr.xml lfs-en/chapter08/ncurses.xml
@@ -413,11 +413,6 @@ msgstr ""
 "该选项使得 Ncurses 将 C++ 绑定构建并安装为共享库，同时防止构建和安装静态的 C+"
 "+ 绑定库。"
 
-#. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
-#: lfs-en/chapter06/ncurses.xml lfs-en/chapter08/ncurses.xml
-msgid "<parameter>--enable-widec</parameter>"
-msgstr "<parameter>--enable-widec</parameter>"
-
 #. type: Content of: <sect1><sect2><segmentedlist><segtitle>
 #: lfs-en/chapter08/acl.xml lfs-en/chapter08/attr.xml
 #: lfs-en/chapter08/autoconf.xml lfs-en/chapter08/automake.xml
@@ -435,12 +430,12 @@ msgstr "<parameter>--enable-widec</parameter>"
 #: lfs-en/chapter08/iproute2.xml lfs-en/chapter08/kbd.xml
 #: lfs-en/chapter08/kmod.xml lfs-en/chapter08/less.xml
 #: lfs-en/chapter08/libcap.xml lfs-en/chapter08/libtool.xml
-#: lfs-en/chapter08/man-db.xml lfs-en/chapter08/meson.xml
-#: lfs-en/chapter08/ncurses.xml lfs-en/chapter08/ninja.xml
-#: lfs-en/chapter08/openssl.xml lfs-en/chapter08/perl.xml
-#: lfs-en/chapter08/pkgconf.xml lfs-en/chapter08/procps.xml
-#: lfs-en/chapter08/psmisc.xml lfs-en/chapter08/python.xml
-#: lfs-en/chapter08/shadow.xml lfs-en/chapter08/sysklogd.xml
+#: lfs-en/chapter08/lz4.xml lfs-en/chapter08/man-db.xml
+#: lfs-en/chapter08/meson.xml lfs-en/chapter08/ncurses.xml
+#: lfs-en/chapter08/ninja.xml lfs-en/chapter08/openssl.xml
+#: lfs-en/chapter08/perl.xml lfs-en/chapter08/pkgconf.xml
+#: lfs-en/chapter08/procps.xml lfs-en/chapter08/psmisc.xml
+#: lfs-en/chapter08/python.xml lfs-en/chapter08/shadow.xml
 #: lfs-en/chapter08/systemd.xml lfs-en/chapter08/sysvinit.xml
 #: lfs-en/chapter08/tar.xml lfs-en/chapter08/tcl.xml
 #: lfs-en/chapter08/texinfo.xml lfs-en/chapter08/udev.xml
@@ -485,7 +480,17 @@ msgstr "&ncurses-fin-du;"
 
 #. type: Content of: <sect1><sect2><screen>
 #: lfs-en/chapter08/ncurses.xml
-#, no-wrap
+#, fuzzy, no-wrap
+#| msgid ""
+#| "<userinput remap=\"configure\">./configure --prefix=/usr           \\\n"
+#| "            --mandir=/usr/share/man \\\n"
+#| "            --with-shared           \\\n"
+#| "            --without-debug         \\\n"
+#| "            --without-normal        \\\n"
+#| "            --with-cxx-shared       \\\n"
+#| "            --enable-pc-files       \\\n"
+#| "            --enable-widec          \\\n"
+#| "            --with-pkg-config-libdir=/usr/lib/pkgconfig</userinput>"
 msgid ""
 "<userinput remap=\"configure\">./configure --prefix=/usr           \\\n"
 "            --mandir=/usr/share/man \\\n"
@@ -494,7 +499,6 @@ msgid ""
 "            --without-normal        \\\n"
 "            --with-cxx-shared       \\\n"
 "            --enable-pc-files       \\\n"
-"            --enable-widec          \\\n"
 "            --with-pkg-config-libdir=/usr/lib/pkgconfig</userinput>"
 msgstr ""
 "<userinput remap=\"configure\">./configure --prefix=/usr           \\\n"
@@ -527,24 +531,6 @@ msgstr "<parameter>--enable-pc-files</parameter>"
 msgid "This switch generates and installs .pc files for pkg-config."
 msgstr "该参数使得构建系统生成并安装 pkg-config 使用的 .pc 文件。"
 
-#. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
-#: lfs-en/chapter08/ncurses.xml
-msgid ""
-"This switch causes wide-character libraries (e.g., <filename "
-"class=\"libraryfile\">libncursesw.so.&ncurses-release;</filename>)  to be "
-"built instead of normal ones (e.g., <filename "
-"class=\"libraryfile\">libncurses.so.&ncurses-release;</filename>).  These "
-"wide-character libraries are usable in both multibyte and traditional 8-bit "
-"locales, while normal libraries work properly only in 8-bit locales. Wide-"
-"character and normal libraries are source-compatible, but not binary-"
-"compatible."
-msgstr ""
-"该选项使得宽字符库 (例如 <filename class=\"libraryfile\">libncursesw.so."
-"&ncurses-release;</filename>) 被构建，而不构建常规字符库 (例如 <filename "
-"class=\"libraryfile\">libncurses.so.&ncurses-release;</filename>)。宽字符库在"
-"多字节和传统 8 位 locale 中都能工作，而常规字符库只能在 8 位 locale 中工作。"
-"宽字符库和普通字符库在源码层面是兼容的，但二进制不兼容。"
-
 #. type: Content of: <sect1><sect2><para>
 #: lfs-en/chapter08/ncurses.xml
 msgid ""
@@ -559,9 +545,19 @@ msgstr ""
 
 #. type: Content of: <sect1><sect2><para>
 #: lfs-en/chapter08/ncurses.xml
+#, fuzzy
+#| msgid ""
+#| "The installation of this package will overwrite <filename "
+#| "class=\"libraryfile\">libncursesw.so.&ncurses-release;</filename> in-"
+#| "place.  It may crash the shell process which is using code and data from "
+#| "the library file.  Install the package with <literal>DESTDIR</literal>, "
+#| "and replace the library file correctly using <command>install</command> "
+#| "command (the header <filename>curses.h</filename> is also edited to "
+#| "ensure the wide-character ABI to be used as what we've done in <xref "
+#| "linkend='ch-tools-ncurses'/>):"
 msgid ""
 "The installation of this package will overwrite <filename "
-"class=\"libraryfile\">libncursesw.so.&ncurses-release;</filename> in-place.  "
+"class=\"libraryfile\">libncursesw.so.&ncurses-version;</filename> in-place.  "
 "It may crash the shell process which is using code and data from the library "
 "file.  Install the package with <literal>DESTDIR</literal>, and replace the "
 "library file correctly using <command>install</command> command (the header "
@@ -575,11 +571,18 @@ msgstr ""
 
 #. type: Content of: <sect1><sect2><screen>
 #: lfs-en/chapter08/ncurses.xml
-#, no-wrap
+#, fuzzy, no-wrap
+#| msgid ""
+#| "<userinput remap=\"install\">make DESTDIR=$PWD/dest install\n"
+#| "install -vm755 dest/usr/lib/libncursesw.so.&ncurses-release; /usr/lib\n"
+#| "rm -v  dest/usr/lib/libncursesw.so.&ncurses-release;\n"
+#| "sed -e 's/^#if.*XOPEN.*$/#if 1/' \\\n"
+#| "    -i dest/usr/include/curses.h\n"
+#| "cp -av dest/* /</userinput>"
 msgid ""
 "<userinput remap=\"install\">make DESTDIR=$PWD/dest install\n"
-"install -vm755 dest/usr/lib/libncursesw.so.&ncurses-release; /usr/lib\n"
-"rm -v  dest/usr/lib/libncursesw.so.&ncurses-release;\n"
+"install -vm755 dest/usr/lib/libncursesw.so.&ncurses-version; /usr/lib\n"
+"rm -v  dest/usr/lib/libncursesw.so.&ncurses-version;\n"
 "sed -e 's/^#if.*XOPEN.*$/#if 1/' \\\n"
 "    -i dest/usr/include/curses.h\n"
 "cp -av dest/* /</userinput>"

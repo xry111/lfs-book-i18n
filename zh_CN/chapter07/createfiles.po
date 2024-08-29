@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Linux From Scratch 11.4\n"
 "Report-Msgid-Bugs-To: lfs-dev@lists.linuxfromscratch.org\n"
-"POT-Creation-Date: 2024-01-02 21:02+0800\n"
+"POT-Creation-Date: 2024-08-29 15:01+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: Xi Ruoyao <xry111@xry111.site>\n"
 "Language-Team: none\n"
@@ -370,6 +370,18 @@ msgstr ""
 "class=\"groupname\">nogroup</systemitem> 分配该编号，以避免出现未命名的编号。"
 "但是其他发行版可能用不同方式处理这个编号，因此需要移植的程序不能依赖于这里给"
 "出的分配方式。"
+
+#. type: Content of: <sect1><para>
+#: lfs-en/chapter07/createfiles.xml
+msgid "Some packages need a locale."
+msgstr ""
+
+#. type: Content of: <sect1><screen>
+#: lfs-en/chapter07/createfiles.xml
+#, fuzzy, no-wrap
+#| msgid "<userinput>locale -a</userinput>"
+msgid "<userinput>localedef -i C -f UTF-8 C.UTF-8</userinput>"
+msgstr "<userinput>locale -a</userinput>"
 
 #. type: Content of: <sect1><para>
 #: lfs-en/chapter07/createfiles.xml

@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Linux From Scratch 11.0\n"
 "Report-Msgid-Bugs-To: lfs-dev@lists.linuxfromscratch.org\n"
-"POT-Creation-Date: 2023-08-26 23:59+0800\n"
+"POT-Creation-Date: 2024-08-29 15:01+0800\n"
 "PO-Revision-Date: 2021-09-08 14:04+0800\n"
 "Last-Translator: Xi Ruoyao <xry111@xry111.site>\n"
 "Language-Team: none\n"
@@ -20,13 +20,13 @@ msgstr ""
 "X-Pootle-Path: /zh_CN/lfs/chapter10/grub.po\n"
 
 #. type: Content of: <sect1><title>
+#: lfs-en/chapter01/chapter01.xml lfs-en/chapter02/introduction.xml
 #: lfs-en/chapter03/introduction.xml lfs-en/chapter04/introduction.xml
-#: lfs-en/chapter06/introduction.xml lfs-en/part3intro/introduction.xml
-#: lfs-en/chapter01/chapter01.xml lfs-en/chapter05/introduction.xml
-#: lfs-en/chapter07/introduction.xml lfs-en/index.xml
-#: lfs-en/chapter08/introduction.xml lfs-en/chapter10/grub.xml
-#: lfs-en/chapter10/introduction.xml lfs-en/chapter02/introduction.xml
-#: lfs-en/chapter09/introductiond.xml lfs-en/chapter09/introduction.xml
+#: lfs-en/chapter05/introduction.xml lfs-en/chapter06/introduction.xml
+#: lfs-en/chapter07/introduction.xml lfs-en/chapter08/introduction.xml
+#: lfs-en/chapter09/introduction.xml lfs-en/chapter09/introductiond.xml
+#: lfs-en/chapter10/grub.xml lfs-en/chapter10/introduction.xml lfs-en/index.xml
+#: lfs-en/part3intro/introduction.xml
 msgid "Introduction"
 msgstr "概述"
 
@@ -52,38 +52,16 @@ msgstr "使用 GRUB 设定引导过程"
 
 #. type: Content of: <sect1><note><para>
 #: lfs-en/chapter10/grub.xml
+#, fuzzy
+#| msgid ""
+#| "If your system does not support UEFI or you don't want to use it, you'll "
+#| "need to figure out how to configure the booting process of the system on "
+#| "your own."
 msgid ""
 "This section assume your system has UEFI support and you wish to boot LFS "
-"with UEFI and GRUB built following the instructions in Chapter 8."
-msgstr ""
-"本节假设您的系统支持 UEFI，且您希望通过 UEFI 和按照第 8 章给出的命令构建的 "
-"GRUB 引导 LFS。"
-
-#. type: Content of: <sect1><note><para>
-#: lfs-en/chapter10/grub.xml
-msgid ""
-"If you've installed GRUB for UEFI with optional dependencies following BLFS, "
-"you should skip the instructions in this page but still learn the syntax of "
-"<filename>grub.cfg</filename> and the method to specify a partition in the "
-"file from this page, and configure GRUB with UEFI using the instructions "
-"provided in <ulink url=\"&blfs-book;postlfs/grub-setup.html\">the BLFS page</"
-"ulink>, but replace <parameter>--target=x86_64-efi</parameter> with "
-"<parameter>--target=loongarch64-efi</parameter> for the 64-bit LoongArch "
-"system."
-msgstr ""
-"如果您按照 BLFS 的说明安装了支持 UEFI 的 GRUB 及其可选依赖项，您应该跳过本页"
-"中的指令，但仍然阅读本页以学习 <filename>grub.cfg</filename> 的语法和在该文件"
-"中指定分区的方法，并按照 <ulink url=\"&blfs-book;postlfs/grub-setup."
-"html\">BLFS 页面</ulink>中的说明，配置支持 UEFI 的 GRUB，但是您需要将 BLFS 页"
-"面给出的<parameter>--target=x86_64-efi</parameter> 替换为适合 LoongArch 的 "
-"<parameter>--target=loongarch64-efi</parameter>。"
-
-#. type: Content of: <sect1><note><para>
-#: lfs-en/chapter10/grub.xml
-msgid ""
-"If your system does not support UEFI or you don't want to use it, you'll "
-"need to figure out how to configure the booting process of the system on "
-"your own."
+"with UEFI.  If your system does not support UEFI or you don't want to use "
+"it, you'll need to figure out how to configure the booting process of the "
+"system on your own."
 msgstr ""
 "如果您的系统不支持 UEFI，或者您不想使用它，您需要自行寻找配置引导过程的方法。"
 
@@ -338,30 +316,26 @@ msgstr ""
 "引导系统时，您可能需要使用 EFI 固件提供的引导设备选择目录或者设置界面，以手动"
 "选择引导加载器。"
 
-#. type: Content of: <sect1><sect2><note><para><screen>
-#: lfs-en/chapter10/grub.xml
-#, no-wrap
-msgid ""
-"<userinput>mount -v -t efivarfs efivarfs /sys/firmware/efi/efivars\n"
-"efibootmgr -B -L LFS || true\n"
-"efibootmgr -c -L LFS -l '\\EFI\\BOOT\\BOOTLOONGARCH64.EFI' -d /dev/sda\n"
-"umount /sys/firmware/efi/efivars</userinput>"
-msgstr ""
-"<userinput>mount -v -t efivarfs efivarfs /sys/firmware/efi/efivars\n"
-"efibootmgr -B -L LFS || true\n"
-"efibootmgr -c -L LFS -l '\\EFI\\BOOT\\BOOTLOONGARCH64.EFI' -d /dev/sda\n"
-"umount /sys/firmware/efi/efivars</userinput>"
-
 #. type: Content of: <sect1><sect2><note><para>
 #: lfs-en/chapter10/grub.xml
+#, fuzzy
+#| msgid ""
+#| "Some UEFI implementation may completely skip the hardcoded path if there "
+#| "are other boot loaders in the same hard drive with paths recorded in an "
+#| "EFI variable.  Then you need to create an EFI variable for the newly "
+#| "installed boot loader.  Install <ulink url=\"&blfs-book;postlfs/"
+#| "efibootmgr.html\">efibootmgr</ulink>, then run the following commands: "
+#| "<placeholder type=\"screen\" id=\"0\"/> Replace <filename>/dev/sda</"
+#| "filename> with the device node of the hard drive where you are installing "
+#| "GRUB into."
 msgid ""
 "Some UEFI implementation may completely skip the hardcoded path if there are "
 "other boot loaders in the same hard drive with paths recorded in an EFI "
 "variable.  Then you need to create an EFI variable for the newly installed "
 "boot loader.  Install <ulink url=\"&blfs-book;postlfs/efibootmgr."
-"html\">efibootmgr</ulink>, then run the following commands: <placeholder "
-"type=\"screen\" id=\"0\"/> Replace <filename>/dev/sda</filename> with the "
-"device node of the hard drive where you are installing GRUB into."
+"html\">efibootmgr</ulink>, and follow <ulink url=\"&blfs-book;postlfs/grub-"
+"setup.html\">the BLFS instruction</ulink> to run the <command>grub-install</"
+"command> command without the <parameter>--removable</parameter> option then."
 msgstr ""
 "某些 UEFI 实现在同一硬盘中存在记录于 EFI 变量的引导加载器时，会完全忽略硬编码"
 "的路径。此时您需要为新安装的引导加载器创建一个 EFI 变量。安装 <ulink "
@@ -381,7 +355,23 @@ msgstr "生成 <filename>/boot/grub/grub.cfg</filename>："
 
 #. type: Content of: <sect1><sect2><screen>
 #: lfs-en/chapter10/grub.xml
-#, no-wrap
+#, fuzzy, no-wrap
+#| msgid ""
+#| "<userinput>cat &gt; /boot/grub/grub.cfg &lt;&lt; \"EOF\"\n"
+#| "<literal># Begin /boot/grub/grub.cfg\n"
+#| "set default=0\n"
+#| "set timeout=5\n"
+#| "\n"
+#| "insmod part_gpt\n"
+#| "insmod ext2\n"
+#| "set root=(hd0,2)\n"
+#| "\n"
+#| "insmod all_video\n"
+#| "\n"
+#| "menuentry \"GNU/Linux, Linux &linux-version;-lfs-&version;\" {\n"
+#| "        linux   /boot/vmlinuz-&linux-version;-lfs-&version; root=/dev/sda2 ro\n"
+#| "}</literal>\n"
+#| "EOF</userinput>"
 msgid ""
 "<userinput>cat &gt; /boot/grub/grub.cfg &lt;&lt; \"EOF\"\n"
 "<literal># Begin /boot/grub/grub.cfg\n"
@@ -392,7 +382,8 @@ msgid ""
 "insmod ext2\n"
 "set root=(hd0,2)\n"
 "\n"
-"insmod all_video\n"
+"insmod efi_gop\n"
+"insmod efi_uga\n"
 "\n"
 "menuentry \"GNU/Linux, Linux &linux-version;-lfs-&version;\" {\n"
 "        linux   /boot/vmlinuz-&linux-version;-lfs-&version; root=/dev/sda2 ro\n"

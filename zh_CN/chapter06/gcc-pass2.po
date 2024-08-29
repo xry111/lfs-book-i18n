@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Linux From Scratch 11.4\n"
 "Report-Msgid-Bugs-To: lfs-dev@lists.linuxfromscratch.org\n"
-"POT-Creation-Date: 2024-02-28 01:01+0800\n"
+"POT-Creation-Date: 2024-08-29 15:01+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: Xi Ruoyao <xry111@xry111.site>\n"
 "Language-Team: none\n"
@@ -58,7 +58,7 @@ msgstr "GCC"
 #: lfs-en/chapter08/libcap.xml lfs-en/chapter08/libelf.xml
 #: lfs-en/chapter08/libffi.xml lfs-en/chapter08/libpipeline.xml
 #: lfs-en/chapter08/libtool.xml lfs-en/chapter08/libxcrypt.xml
-#: lfs-en/chapter08/m4.xml lfs-en/chapter08/make.xml
+#: lfs-en/chapter08/lz4.xml lfs-en/chapter08/m4.xml lfs-en/chapter08/make.xml
 #: lfs-en/chapter08/man-db.xml lfs-en/chapter08/man-pages.xml
 #: lfs-en/chapter08/markupsafe.xml lfs-en/chapter08/meson.xml
 #: lfs-en/chapter08/mpc.xml lfs-en/chapter08/mpfr.xml
@@ -116,7 +116,7 @@ msgstr "&buildtime;"
 #: lfs-en/chapter08/libcap.xml lfs-en/chapter08/libelf.xml
 #: lfs-en/chapter08/libffi.xml lfs-en/chapter08/libpipeline.xml
 #: lfs-en/chapter08/libtool.xml lfs-en/chapter08/libxcrypt.xml
-#: lfs-en/chapter08/m4.xml lfs-en/chapter08/make.xml
+#: lfs-en/chapter08/lz4.xml lfs-en/chapter08/m4.xml lfs-en/chapter08/make.xml
 #: lfs-en/chapter08/man-db.xml lfs-en/chapter08/man-pages.xml
 #: lfs-en/chapter08/markupsafe.xml lfs-en/chapter08/meson.xml
 #: lfs-en/chapter08/mpc.xml lfs-en/chapter08/mpfr.xml
@@ -231,7 +231,7 @@ msgstr "<userinput remap=\"make\">make</userinput>"
 #: lfs-en/chapter08/less.xml lfs-en/chapter08/libcap.xml
 #: lfs-en/chapter08/libffi.xml lfs-en/chapter08/libpipeline.xml
 #: lfs-en/chapter08/libtool.xml lfs-en/chapter08/libxcrypt.xml
-#: lfs-en/chapter08/m4.xml lfs-en/chapter08/make.xml
+#: lfs-en/chapter08/lz4.xml lfs-en/chapter08/m4.xml lfs-en/chapter08/make.xml
 #: lfs-en/chapter08/man-db.xml lfs-en/chapter08/markupsafe.xml
 #: lfs-en/chapter08/meson.xml lfs-en/chapter08/ninja.xml
 #: lfs-en/chapter08/openssl.xml lfs-en/chapter08/patch.xml
@@ -255,17 +255,6 @@ msgstr "安装该软件包："
 #, no-wrap
 msgid "&gcc-url;"
 msgstr "&gcc-url;"
-
-#. type: Content of: <sect1><sect2><screen>
-#: lfs-en/chapter05/gcc-pass1.xml lfs-en/chapter06/gcc-pass2.xml
-#: lfs-en/chapter08/gcc.xml
-#, no-wrap
-msgid ""
-"<userinput remap='pre'>sed -e '/ASM_OUTPUT_ALIGN_WITH_NOP/,+1d' \\\n"
-"    -i gcc/config/loongarch/loongarch.h</userinput>"
-msgstr ""
-"<userinput remap='pre'>sed -e '/ASM_OUTPUT_ALIGN_WITH_NOP/,+1d' \\\n"
-"    -i gcc/config/loongarch/loongarch.h</userinput>"
 
 #. type: Content of: <sect1><sect2><screen>
 #: lfs-en/chapter05/gcc-pass1.xml lfs-en/chapter06/gcc-pass2.xml
@@ -341,7 +330,7 @@ msgstr "该软件包的详细信息在<xref linkend=\"contents-gcc\"/>可以找�
 #: lfs-en/chapter08/libcap.xml lfs-en/chapter08/libelf.xml
 #: lfs-en/chapter08/libffi.xml lfs-en/chapter08/libpipeline.xml
 #: lfs-en/chapter08/libtool.xml lfs-en/chapter08/libxcrypt.xml
-#: lfs-en/chapter08/m4.xml lfs-en/chapter08/make.xml
+#: lfs-en/chapter08/lz4.xml lfs-en/chapter08/m4.xml lfs-en/chapter08/make.xml
 #: lfs-en/chapter08/man-db.xml lfs-en/chapter08/ncurses.xml
 #: lfs-en/chapter08/openssl.xml lfs-en/chapter08/patch.xml
 #: lfs-en/chapter08/perl.xml lfs-en/chapter08/pkgconf.xml
@@ -420,15 +409,6 @@ msgstr "&gcc-tmpp2-du;"
 #: lfs-en/chapter06/gcc-pass2.xml lfs-en/chapter08/gcc.xml
 msgid "Installation of GCC"
 msgstr "安装 GCC"
-
-#. type: Content of: <sect1><sect2><para>
-#: lfs-en/chapter06/gcc-pass2.xml lfs-en/chapter08/gcc.xml
-msgid ""
-"Again, fix an issue producing illegal instructions in linked executables and "
-"shared libraries with GCC &gcc-version; and Binutils-2.42:"
-msgstr ""
-"再次修复 GCC &gcc-version; 中导致 Binutils-2.42 链接生成的可执行文件可能包含"
-"非法指令的问题："
 
 #. type: Content of: <sect1><sect2><para>
 #: lfs-en/chapter06/gcc-pass2.xml
@@ -540,12 +520,23 @@ msgstr "<parameter>--target=$LFS_TGT</parameter>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: lfs-en/chapter06/gcc-pass2.xml
+#, fuzzy
+#| msgid ""
+#| "We are cross-compiling GCC, so it's impossible to build target libraries "
+#| "(<filename class=\"libraryfile\">libgcc</filename> and <filename "
+#| "class=\"libraryfile\">libstdc++</filename>) with the previously compiled "
+#| "GCC binaries&mdash;those binaries won't run on the host.  The GCC build "
+#| "system will attempt to use the host's C and C++ compilers as a workaround "
+#| "by default.  Building the GCC target libraries with a different version "
+#| "of GCC is not supported, so using the host's compilers may cause the "
+#| "build to fail. This parameter ensures the libraries are built by GCC pass "
+#| "1."
 msgid ""
 "We are cross-compiling GCC, so it's impossible to build target libraries "
 "(<filename class=\"libraryfile\">libgcc</filename> and <filename "
-"class=\"libraryfile\">libstdc++</filename>) with the previously compiled GCC "
-"binaries&mdash;those binaries won't run on the host.  The GCC build system "
-"will attempt to use the host's C and C++ compilers as a workaround by "
+"class=\"libraryfile\">libstdc++</filename>) with the GCC binaries compiled "
+"in this pass&mdash;those binaries won't run on the host.  The GCC build "
+"system will attempt to use the host's C and C++ compilers as a workaround by "
 "default.  Building the GCC target libraries with a different version of GCC "
 "is not supported, so using the host's compilers may cause the build to fail. "
 "This parameter ensures the libraries are built by GCC pass 1."
@@ -564,11 +555,18 @@ msgstr "<parameter>LDFLAGS_FOR_TARGET=...</parameter>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: lfs-en/chapter06/gcc-pass2.xml
+#, fuzzy
+#| msgid ""
+#| "Allow <filename class=\"libraryfile\">libstdc++</filename> to use the "
+#| "shared <filename class=\"libraryfile\">libgcc</filename> being built in "
+#| "this pass, instead of the static version that was built in GCC pass 1. "
+#| "This is necessary to support C++ exception handling."
 msgid ""
-"Allow <filename class=\"libraryfile\">libstdc++</filename> to use the shared "
+"Allow <filename class=\"libraryfile\">libstdc++</filename> to use the "
 "<filename class=\"libraryfile\">libgcc</filename> being built in this pass, "
-"instead of the static version that was built in GCC pass 1. This is "
-"necessary to support C++ exception handling."
+"instead of the previous version built in <xref linkend='ch-tools-gcc-pass1'/"
+">.  The previous version cannot properly support C++ exception handling "
+"because it was built without libc support."
 msgstr ""
 "允许 <filename class=\"libraryfile\">libstdc++</filename> 使用即将构建的 "
 "<filename class=\"libraryfile\">libgcc</filename> 共享库，而不是第一遍构建 "
@@ -581,12 +579,19 @@ msgstr "<parameter>--disable-libsanitizer</parameter>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: lfs-en/chapter06/gcc-pass2.xml
+#, fuzzy
+#| msgid ""
+#| "Disable GCC sanitizer runtime libraries.  They are not needed for the "
+#| "temporary installation.  This switch is necessary to build GCC without "
+#| "<systemitem class='library'>libcrypt</systemitem> installed for the "
+#| "target.  In <xref linkend='ch-tools-gcc-pass1'/> it was implied by "
+#| "<parameter>--disable-libstdcxx</parameter>, but now we have to explicitly "
+#| "pass it."
 msgid ""
 "Disable GCC sanitizer runtime libraries.  They are not needed for the "
-"temporary installation.  This switch is necessary to build GCC without "
-"<systemitem class='library'>libcrypt</systemitem> installed for the target.  "
-"In <xref linkend='ch-tools-gcc-pass1'/> it was implied by <parameter>--"
-"disable-libstdcxx</parameter>, but now we have to explicitly pass it."
+"temporary installation.  In <xref linkend='ch-tools-gcc-pass1'/> it was "
+"implied by <parameter>--disable-libstdcxx</parameter>, and now we can "
+"explicitly pass it."
 msgstr ""
 "禁用 GCC 清理检查运行库。它们对于临时安装的 GCC 并不必要。为了在没有为目标安"
 "装 <systemitem class='library'>libcrypt</systemitem> 的情况下构建 GCC，必须使"
