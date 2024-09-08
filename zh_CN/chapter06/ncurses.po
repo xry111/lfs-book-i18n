@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Linux From Scratch 11.4\n"
 "Report-Msgid-Bugs-To: lfs-dev@lists.linuxfromscratch.org\n"
-"POT-Creation-Date: 2024-05-13 18:32+0800\n"
+"POT-Creation-Date: 2024-09-08 18:40+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: Xi Ruoyao <xry111@xry111.site>\n"
 "Language-Team: none\n"
@@ -19,12 +19,6 @@ msgstr ""
 #: lfs-en/chapter08/ncurses.xml lfs-en/prologue/why.xml
 msgid "Ncurses"
 msgstr "Ncurses"
-
-#. type: Content of: <sect1><title>
-#: lfs-en/chapter01/whatsnew.xml lfs-en/chapter06/ncurses.xml
-#: lfs-en/chapter08/ncurses.xml
-msgid "Ncurses-&ncurses-version;"
-msgstr "Ncurses-&ncurses-version;"
 
 #. type: Content of: <sect1><sect2><segmentedlist><segtitle>
 #: lfs-en/chapter05/binutils-pass1.xml lfs-en/chapter05/gcc-pass1.xml
@@ -320,6 +314,11 @@ msgstr ""
 "<productname>ncurses</productname> <productnumber>&ncurses-version;</"
 "productnumber> <placeholder type=\"address\" id=\"0\"/>"
 
+#. type: Content of: <sect1><title>
+#: lfs-en/chapter06/ncurses.xml lfs-en/chapter08/ncurses.xml
+msgid "Ncurses-&ncurses-version;"
+msgstr "Ncurses-&ncurses-version;"
+
 #. type: Content of: <sect1><sect2><segmentedlist><seglistitem><seg>
 #: lfs-en/chapter06/ncurses.xml
 msgid "&ncurses-tmp-sbu;"
@@ -338,22 +337,9 @@ msgstr "安装 Ncurses"
 #. type: Content of: <sect1><sect2><para>
 #: lfs-en/chapter06/ncurses.xml
 msgid ""
-"First, ensure that <command>gawk</command> is found first during "
-"configuration:"
-msgstr "首先，保证在配置时优先查找 <command>gawk</command> 命令："
-
-#. type: Content of: <sect1><sect2><screen>
-#: lfs-en/chapter06/ncurses.xml
-#, no-wrap
-msgid "<userinput remap=\"pre\">sed -i s/mawk// configure</userinput>"
-msgstr "<userinput remap=\"pre\">sed -i s/mawk// configure</userinput>"
-
-#. type: Content of: <sect1><sect2><para>
-#: lfs-en/chapter06/ncurses.xml
-msgid ""
-"Then, run the following commands to build the <quote>tic</quote> program on "
+"First, run the following commands to build the <quote>tic</quote> program on "
 "the build host:"
-msgstr "然后，运行以下命令，在宿主系统构建<quote>tic</quote>程序："
+msgstr "首先，运行以下命令，在宿主系统构建<quote>tic</quote>程序："
 
 #. type: Content of: <sect1><sect2><screen>
 #: lfs-en/chapter06/ncurses.xml
@@ -361,14 +347,14 @@ msgstr "然后，运行以下命令，在宿主系统构建<quote>tic</quote>程
 msgid ""
 "<userinput remap=\"pre\">mkdir build\n"
 "pushd build\n"
-"  ../configure\n"
+"  ../configure AWK=gawk\n"
 "  make -C include\n"
 "  make -C progs tic\n"
 "popd</userinput>"
 msgstr ""
 "<userinput remap=\"pre\">mkdir build\n"
 "pushd build\n"
-"  ../configure\n"
+"  ../configure AWK=gawk\n"
 "  make -C include\n"
 "  make -C progs tic\n"
 "popd</userinput>"
@@ -392,7 +378,8 @@ msgid ""
 "            --with-cxx-shared            \\\n"
 "            --without-debug              \\\n"
 "            --without-ada                \\\n"
-"            --disable-stripping</userinput>"
+"            --disable-stripping          \\\n"
+"            AWK=gawk</userinput>"
 msgstr ""
 "<userinput remap=\"configure\">./configure --prefix=/usr                \\\n"
 "            --host=$LFS_TGT              \\\n"
@@ -404,7 +391,8 @@ msgstr ""
 "            --with-cxx-shared            \\\n"
 "            --without-debug              \\\n"
 "            --without-ada                \\\n"
-"            --disable-stripping</userinput>"
+"            --disable-stripping          \\\n"
+"            AWK=gawk</userinput>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: lfs-en/chapter06/ncurses.xml
@@ -493,6 +481,24 @@ msgid ""
 msgstr ""
 "该选项防止构建过程使用宿主系统的 <command>strip</command> 程序。对交叉编译产"
 "生的程序使用宿主工具可能导致构建失败。"
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
+#: lfs-en/chapter06/ncurses.xml
+msgid "<parameter>AWK=gawk</parameter>"
+msgstr "<parameter>AWK=gawk</parameter>"
+
+#.  FIXME vauge 
+#.  It seems happened in 2015,
+#.           is there any updated into? 
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
+#: lfs-en/chapter06/ncurses.xml
+msgid ""
+"This switch prevents the building system from using the <command>mawk</"
+"command> program from the host.  Some versions of <command>mawk</command> "
+"can cause this package to fail to build."
+msgstr ""
+"该选项防止构建过程使用宿主系统的 <command>mawk</command> 程序。一些版本的 "
+"<command>mawk</command> 会导致该软件包构建失败。"
 
 #. type: Content of: <sect1><sect2><screen>
 #: lfs-en/chapter06/ncurses.xml
