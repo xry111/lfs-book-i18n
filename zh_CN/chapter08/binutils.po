@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Linux From Scratch 11.0\n"
 "Report-Msgid-Bugs-To: lfs-dev@lists.linuxfromscratch.org\n"
-"POT-Creation-Date: 2024-09-08 18:40+0800\n"
+"POT-Creation-Date: 2024-11-10 18:17+0800\n"
 "PO-Revision-Date: 2021-08-16 11:42+0800\n"
 "Last-Translator: Xi Ruoyao <xry111@xry111.site>\n"
 "Language-Team: none\n"
@@ -247,14 +247,14 @@ msgstr ""
 #: lfs-en/chapter08/gcc.xml lfs-en/chapter08/gdbm.xml
 #: lfs-en/chapter08/gettext.xml lfs-en/chapter08/glibc.xml
 #: lfs-en/chapter08/gperf.xml lfs-en/chapter08/grep.xml
-#: lfs-en/chapter08/groff.xml lfs-en/chapter08/grub.xml
-#: lfs-en/chapter08/gzip.xml lfs-en/chapter08/inetutils.xml
-#: lfs-en/chapter08/intltool.xml lfs-en/chapter08/iproute2.xml
-#: lfs-en/chapter08/jinja2.xml lfs-en/chapter08/kbd.xml
-#: lfs-en/chapter08/less.xml lfs-en/chapter08/libcap.xml
-#: lfs-en/chapter08/libffi.xml lfs-en/chapter08/libpipeline.xml
-#: lfs-en/chapter08/libtool.xml lfs-en/chapter08/libxcrypt.xml
-#: lfs-en/chapter08/lz4.xml lfs-en/chapter08/m4.xml lfs-en/chapter08/make.xml
+#: lfs-en/chapter08/groff.xml lfs-en/chapter08/gzip.xml
+#: lfs-en/chapter08/inetutils.xml lfs-en/chapter08/intltool.xml
+#: lfs-en/chapter08/iproute2.xml lfs-en/chapter08/jinja2.xml
+#: lfs-en/chapter08/kbd.xml lfs-en/chapter08/less.xml
+#: lfs-en/chapter08/libcap.xml lfs-en/chapter08/libffi.xml
+#: lfs-en/chapter08/libpipeline.xml lfs-en/chapter08/libtool.xml
+#: lfs-en/chapter08/libxcrypt.xml lfs-en/chapter08/lz4.xml
+#: lfs-en/chapter08/m4.xml lfs-en/chapter08/make.xml
 #: lfs-en/chapter08/man-db.xml lfs-en/chapter08/markupsafe.xml
 #: lfs-en/chapter08/meson.xml lfs-en/chapter08/ninja.xml
 #: lfs-en/chapter08/openssl.xml lfs-en/chapter08/patch.xml
@@ -447,6 +447,21 @@ msgstr "&binutils-fin-sbu;"
 #: lfs-en/chapter08/binutils.xml
 msgid "&binutils-fin-du;"
 msgstr "&binutils-fin-du;"
+
+#. type: Content of: <sect1><sect2><para>
+#: lfs-en/chapter08/binutils.xml
+msgid ""
+"First, apply a patch to prevent a bug that causing unnecessary relinking "
+"with packages that depend on cmake-3.31.0 or newer:"
+msgstr ""
+"首先，应用补丁，以修复导致使用 cmake-3.31.0 或更新版本构建软件包时发生非必要"
+"重新链接的 bug："
+
+#. type: Content of: <sect1><sect2><screen>
+#: lfs-en/chapter08/binutils.xml
+#, no-wrap
+msgid "<userinput remap=\"pre\">patch -Np1 -i ../&binutils-upstream-patch;</userinput>"
+msgstr "<userinput remap=\"pre\">patch -Np1 -i ../&binutils-upstream-patch;</userinput>"
 
 #. type: Content of: <sect1><sect2><screen>
 #: lfs-en/chapter08/binutils.xml
