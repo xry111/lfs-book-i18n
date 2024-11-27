@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Linux From Scratch 11.4\n"
 "Report-Msgid-Bugs-To: lfs-dev@lists.linuxfromscratch.org\n"
-"POT-Creation-Date: 2024-11-10 18:17+0800\n"
+"POT-Creation-Date: 2024-11-27 11:02+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: Xi Ruoyao <xry111@xry111.site>\n"
 "Language-Team: none\n"
@@ -560,18 +560,18 @@ msgstr ""
 "filename>，因为它们只是指向 <filename class=\"directory\">/usr</filename> 中"
 "对应目录的符号链接："
 
-#. type: Content of: <sect1><sect2><note><para>
+#.  known example: SPIRV-LLVM-Translator 
+#. type: Content of: <sect1><sect2><warning><para>
 #: lfs-en/chapter08/shadow.xml
 msgid ""
-"If you wish to include <filename class=\"directory\">/bin</filename> and/or "
-"<filename class=\"directory\">/sbin</filename> in the <envar>PATH</envar> "
-"for some reason, modify the <envar>PATH</envar> in <filename>.bashrc</"
-"filename> after LFS has been built."
+"Including <filename class=\"directory\">/bin</filename> and/or <filename "
+"class=\"directory\">/sbin</filename> in the <envar>PATH</envar> variable may "
+"cause some BLFS packages fail to build, so don't do that in the <filename>."
+"bashrc</filename> file or anywhere else."
 msgstr ""
-"如果由于某种原因，希望将 <filename class=\"directory\">/bin</filename> 和/或 "
-"<filename class=\"directory\">/sbin</filename> 包含在 <envar>PATH</envar> "
-"中，可以在构建 LFS 后通过 <filename>.bashrc</filename> 修改 <envar>PATH</"
-"envar>。"
+"将 <filename class=\"directory\">/bin</filename> 和/或 <filename "
+"class=\"directory\">/sbin</filename> 包含在 <envar>PATH</envar> 中会导致一些 "
+"BLFS 软件包构建失败，因此不要通过 <filename>.bashrc</filename> 等这样做。"
 
 #. type: Content of: <sect1><sect2><screen>
 #: lfs-en/chapter08/shadow.xml
