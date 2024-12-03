@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Linux From Scratch 11.4\n"
 "Report-Msgid-Bugs-To: lfs-dev@lists.linuxfromscratch.org\n"
-"POT-Creation-Date: 2024-12-03 20:01+0800\n"
+"POT-Creation-Date: 2024-12-03 20:07+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: Xi Ruoyao <xry111@xry111.site>\n"
 "Language-Team: none\n"
@@ -695,6 +695,93 @@ msgstr ""
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: lfs-en/chapter10/kernel.xml
 msgid ""
+"<parameter> Display a user-friendly message when a kernel panic occurs </"
+"parameter>"
+msgstr ""
+"<parameter> Display a user-friendly message when a kernel panic occurs </"
+"parameter>"
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
+#: lfs-en/chapter10/kernel.xml
+msgid ""
+"This will make the kernel correctly display the message in case a kernel "
+"panic happens and a running DRM driver supports to do so.  Without this, it "
+"would be more difficult to diagnose a panic: if no DRM driver is running, "
+"we'd be on the VGA console which can only hold 24 lines and the relevent "
+"kernel message is often flushed away; if a DRM driver is running, the "
+"display is often completely messed up on panic.  As of Linux-6.12, none of "
+"the dedicated drivers for mainstream GPU models really supports this, but "
+"it's supported by the <quote>Simple framebuffer driver</quote> which runs on "
+"the VESA (or EFI) framebuffer before the dedicated GPU driver is loaded.  If "
+"the dedicated GPU driver is built as a module (instead of a part of the "
+"kernel image) and no initramfs is used, this functionality will work just "
+"fine before the root file system is mounted and it's already enough for "
+"providing information about most LFS configuration errors causing a panic "
+"(for example, an incorrect <parameter>root=</parameter> setting in <xref "
+"linkend='ch-bootable-grub'/>)."
+msgstr ""
+"该选项使得内核在内核恐慌时正确显示消息。如果不启用它，诊断内核恐慌原因会更加"
+"困难：如果没有运行 DRM 驱动，则我们只能使用 VGA 控制台，而它只能显示 24 行，"
+"因此有用的内核消息往往已被刷新到屏幕以外；而如果正在运行 DRM 驱动，在内核恐慌"
+"时屏幕显示往往会完全错乱。在 Linux-6.12 中，适用于主流 GPU 型号的驱动程序都无"
+"法真正支持该选项提供的功能，但在专用的 GPU 驱动加在之前，VESA (或 EFI) 帧缓冲"
+"之上运行的简单帧缓冲驱动 (<quote>Simple framebuffer driver</quote>) 能够支持"
+"它。如果将专用的 GPU 驱动构建为内核模块 (而非内核映像的一部分)，且没有使用 "
+"initramfs，则这一功能在根文件系统成功挂载之前会正常工作，而这足以提供诊断大多"
+"数由错误配置 LFS (例如，<xref linkend='ch-bootable-grub'/> 中 "
+"<parameter>root=</parameter> 的设定值不正确) 导致的内核恐慌。"
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
+#: lfs-en/chapter10/kernel.xml
+msgid "<parameter> Panic screen formatter </parameter>"
+msgstr "<parameter> Panic screen formatter </parameter>"
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
+#: lfs-en/chapter10/kernel.xml
+msgid ""
+"Set this <literal>kmsg</literal> to make sure the last kernel messages lines "
+"are displayed when a kernel panic happens.  The default, <literal>user</"
+"literal>, would make the kernel show only a <quote>user friendly</quote> "
+"panic message which is not helpful on diagnostic.  The third choice, "
+"<literal>qr_code</literal>, would make the kernel to compress the last "
+"kernel message lines into a QR code and display it.  The QR code can hold "
+"more message lines than plain text and it can be decoded with an external "
+"device (like a smart phone).  But it requires a Rust compiler that LFS does "
+"not provide."
+msgstr ""
+"将该选项设为 <literal>kmsg</literal>，以确保在内核恐慌时显示恐慌前的内核消"
+"息。该选项的默认值，<literal>user</literal>，会导致内核只显示一条<quote>用户"
+"友好</quote>的，对于诊断毫无帮助的消息。还有一个可选的值 <literal>qr_code</"
+"literal>，会使得内核将恐慌前的消息压缩到一个二维码中，并显示该二维码。和文本"
+"输出相比，使用外部设备 (如智能手机) 解码二维码能得到更多行内核消息。但二维码"
+"输出功能需要 Rust 编译器才能构建，而 LFS 不提供 Rust 编译器。"
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
+#: lfs-en/chapter10/kernel.xml
+msgid ""
+"<parameter> Mark VGA/VBE/EFI FB as generic system framebuffer </parameter> "
+"and <parameter>Simple framebuffer driver</parameter>"
+msgstr ""
+"<parameter> Mark VGA/VBE/EFI FB as generic system framebuffer </parameter> "
+"和 <parameter>Simple framebuffer driver</parameter>"
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
+#: lfs-en/chapter10/kernel.xml
+msgid ""
+"These allow to use the VESA framebuffer (or the EFI framebuffer if booting "
+"the LFS system via UEFI) as a DRM device.  The VESA framebuffer will be set "
+"up by GRUB (or the EFI framebuffer will be set up by the UEFI firmware), so "
+"the DRM panic handler can function before the GPU-specific DRM driver is "
+"loaded."
+msgstr ""
+"它们允许使用 VESA 帧缓冲 (或者如果使用 UEFI 引导 LFS 系统，则使用 EFI 帧缓"
+"冲) 作为 DRM 设备。GRUB 会设置好 VESA 帧缓冲 (在使用 UEFI 时，EFI 固件会设置"
+"好 EFI 帧缓冲)，这样在 GPU 专用的 DRM 驱动加载前，基于 DRM 的内核恐慌处理程序"
+"也能正常工作。"
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
+#: lfs-en/chapter10/kernel.xml
+msgid ""
 "<parameter> Enable legacy fbdev support for your modesetting driver </"
 "parameter> and <parameter>Framebuffer Console support</parameter>"
 msgstr ""
@@ -705,13 +792,14 @@ msgstr ""
 #: lfs-en/chapter10/kernel.xml
 msgid ""
 "These are needed to display the Linux console on a GPU driven by a DRI "
-"(Direct Rendering Infrastructure) driver.  If <option>CONFIG_DRM</option> "
-"(Direct Rendering Manager) is enabled, you should enable these two options "
-"as well or you'll see a blank screen once the DRI driver is loaded."
+"(Direct Rendering Infrastructure) driver.  As <option>CONFIG_DRM</option> "
+"(Direct Rendering Manager) is enabled, we should enable these two options as "
+"well or we'll see a blank screen once the DRI driver is loaded."
 msgstr ""
 "它们允许使用基于 DRI (Direct Rendering Infrastructure) 的 GPU 驱动显示 Linux "
-"控制台。如果 <option>CONFIG_DRM</option> (Direct Rendering Manager) 被启用，"
-"则需要同时启用这两项特性，否则一旦 DRI 驱动被加载，就只能看到空白屏幕。"
+"控制台。鉴于已经启用了 <option>CONFIG_DRM</option> (Direct Rendering "
+"Manager)，需要同时启用这两项特性，否则一旦 DRI 驱动被加载，就只能看到空白屏"
+"幕。"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: lfs-en/chapter10/kernel.xml
