@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Linux From Scratch 11.0\n"
 "Report-Msgid-Bugs-To: lfs-dev@lists.linuxfromscratch.org\n"
-"POT-Creation-Date: 2023-08-24 09:53+0800\n"
+"POT-Creation-Date: 2024-12-03 20:01+0800\n"
 "PO-Revision-Date: 2021-09-08 14:04+0800\n"
 "Last-Translator: Xi Ruoyao <xry111@xry111.site>\n"
 "Language-Team: none\n"
@@ -20,13 +20,13 @@ msgstr ""
 "X-Pootle-Path: /zh_CN/lfs/chapter10/grub.po\n"
 
 #. type: Content of: <sect1><title>
+#: lfs-en/chapter01/chapter01.xml lfs-en/chapter02/introduction.xml
 #: lfs-en/chapter03/introduction.xml lfs-en/chapter04/introduction.xml
-#: lfs-en/chapter06/introduction.xml lfs-en/part3intro/introduction.xml
-#: lfs-en/chapter01/chapter01.xml lfs-en/chapter05/introduction.xml
-#: lfs-en/chapter07/introduction.xml lfs-en/index.xml
-#: lfs-en/chapter08/introduction.xml lfs-en/chapter10/grub.xml
-#: lfs-en/chapter10/introduction.xml lfs-en/chapter02/introduction.xml
-#: lfs-en/chapter09/introductiond.xml lfs-en/chapter09/introduction.xml
+#: lfs-en/chapter05/introduction.xml lfs-en/chapter06/introduction.xml
+#: lfs-en/chapter07/introduction.xml lfs-en/chapter08/introduction.xml
+#: lfs-en/chapter09/introduction.xml lfs-en/chapter09/introductiond.xml
+#: lfs-en/chapter10/grub.xml lfs-en/chapter10/introduction.xml lfs-en/index.xml
+#: lfs-en/part3intro/introduction.xml
 msgid "Introduction"
 msgstr "概述"
 
@@ -57,8 +57,8 @@ msgid ""
 "should skip the instructions in this page but still learn the syntax of "
 "<filename>grub.cfg</filename> and the method to specify a partition in the "
 "file from this page, and configure GRUB with UEFI support using the "
-"instructions provided in <ulink url=\"&blfs-book;postlfs/grub-setup."
-"html\">the BLFS page</ulink>."
+"instructions provided in <ulink url=\"&blfs-book;postlfs/grub-"
+"setup.html\">the BLFS page</ulink>."
 msgstr ""
 "如果您的系统支持 UEFI，且您希望通过 UEFI 引导 LFS，您应该跳过本页中的指令，但"
 "仍然阅读本页以学习 <filename>grub.cfg</filename> 的语法和在该文件中指定分区的"
@@ -91,8 +91,8 @@ msgstr ""
 "您务必保证自己拥有一个紧急引导磁盘，它在计算机不可用 (无法引导) 时能够 "
 "<quote>抢修</quote> 计算机。如果您现在还没有引导设备，您可以执行以下命令创建"
 "一个。在运行下列命令前，您需要跳到 BLFS，安装包含 <userinput>xorriso</"
-"userinput> 的 <ulink url=\"&blfs-book;multimedia/libisoburn."
-"html\">libisoburn</ulink> 软件包："
+"userinput> 的 <ulink url=\"&blfs-book;multimedia/"
+"libisoburn.html\">libisoburn</ulink> 软件包："
 
 #. type: Content of: <sect1><sect2><screen>
 #: lfs-en/chapter10/grub.xml
@@ -331,21 +331,21 @@ msgid ""
 "cause boot failure because <filename>grub.cfg</filename> refers to some "
 "<quote>old</quote> designators.  If you wish to avoid such a problem, you "
 "may use the UUID of a partition and the UUID of a filesystem instead of a "
-"GRUB designator to specify a device.  Run <command>lsblk -o UUID,PARTUUID,"
-"PATH,MOUNTPOINT</command> to show the UUIDs of your filesystems (in the "
-"<literal>UUID</literal> column) and partitions (in the <literal>PARTUUID</"
-"literal> column).  Then replace <literal>set root=(hdx,y)</literal> with "
-"<literal>search --set=root --fs-uuid <replaceable>&lt;UUID of the filesystem "
-"where the kernel is installed&gt;</replaceable></literal>, and replace "
-"<literal>root=/dev/sda2</literal> with "
+"GRUB designator to specify a device.  Run <command>lsblk -o "
+"UUID,PARTUUID,PATH,MOUNTPOINT</command> to show the UUIDs of your "
+"filesystems (in the <literal>UUID</literal> column) and partitions (in the "
+"<literal>PARTUUID</literal> column).  Then replace <literal>set "
+"root=(hdx,y)</literal> with <literal>search --set=root --fs-uuid "
+"<replaceable>&lt;UUID of the filesystem where the kernel is installed&gt;</"
+"replaceable></literal>, and replace <literal>root=/dev/sda2</literal> with "
 "<literal>root=PARTUUID=<replaceable>&lt;UUID of the partition where LFS is "
 "built&gt;</replaceable></literal>."
 msgstr ""
 "如果新增或移除了一些存储设备 (包括 USB 闪存盘等可移动存储设备)，则 GRUB 赋予"
 "分区的编号可能发生改变。这可能导致引导失败，因为 <filename>grub.cfg</"
 "filename> 仍然在使用<quote>旧的</quote>编号。如果希望避免这种问题，可以使用分"
-"区和文件系统的 UUID 指定分区，以代替 GRUB 编号。运行 <command>lsblk -o UUID,"
-"PARTUUID,PATH,MOUNTPOINT</command> 以显示文件系统 (在 <literal>UUID</"
+"区和文件系统的 UUID 指定分区，以代替 GRUB 编号。运行 <command>lsblk -o "
+"UUID,PARTUUID,PATH,MOUNTPOINT</command> 以显示文件系统 (在 <literal>UUID</"
 "literal> 列) 和分区 (在 <literal>PARTUUID</literal> 列) 的 UUID。之后将 "
 "<literal>set root=(hdx,y)</literal> 替换为 <literal>search --set=root --fs-"
 "uuid <replaceable>&lt;内核所在文件系统的 UUID&gt;</replaceable></literal>，并"
@@ -402,11 +402,11 @@ msgstr ""
 #: lfs-en/chapter10/grub.xml
 msgid ""
 "There is a command, <application>grub-mkconfig</application>, that can write "
-"a configuration file automatically.  It uses a set of scripts in /etc/grub."
-"d/ and will destroy any customizations that you make.  These scripts are "
-"designed primarily for non-source distributions and are not recommended for "
-"LFS.  If you install a commercial Linux distribution, there is a good chance "
-"that this program will be run.  Be sure to back up your grub.cfg file."
+"a configuration file automatically.  It uses a set of scripts in /etc/"
+"grub.d/ and will destroy any customizations that you make.  These scripts "
+"are designed primarily for non-source distributions and are not recommended "
+"for LFS.  If you install a commercial Linux distribution, there is a good "
+"chance that this program will be run.  Be sure to back up your grub.cfg file."
 msgstr ""
 "有一个命令 <application>grub-mkconfig</application> 被用于自动创建配置文件。"
 "它使用 /etc/grub.d 中的脚本创建新配置文件，这会覆盖您手动编写的 grub.cfg。这"

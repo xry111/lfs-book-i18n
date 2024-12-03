@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Linux From Scratch 11.0\n"
 "Report-Msgid-Bugs-To: lfs-dev@lists.linuxfromscratch.org\n"
-"POT-Creation-Date: 2024-09-08 18:40+0800\n"
+"POT-Creation-Date: 2024-12-03 19:51+0800\n"
 "PO-Revision-Date: 2021-08-21 11:33+0800\n"
 "Last-Translator: Xi Ruoyao <xry111@xry111.site>\n"
 "Language-Team: none\n"
@@ -298,14 +298,14 @@ msgstr "<userinput remap=\"make\">make</userinput>"
 #: lfs-en/chapter08/gcc.xml lfs-en/chapter08/gdbm.xml
 #: lfs-en/chapter08/gettext.xml lfs-en/chapter08/glibc.xml
 #: lfs-en/chapter08/gperf.xml lfs-en/chapter08/grep.xml
-#: lfs-en/chapter08/groff.xml lfs-en/chapter08/grub.xml
-#: lfs-en/chapter08/gzip.xml lfs-en/chapter08/inetutils.xml
-#: lfs-en/chapter08/intltool.xml lfs-en/chapter08/iproute2.xml
-#: lfs-en/chapter08/jinja2.xml lfs-en/chapter08/kbd.xml
-#: lfs-en/chapter08/less.xml lfs-en/chapter08/libcap.xml
-#: lfs-en/chapter08/libffi.xml lfs-en/chapter08/libpipeline.xml
-#: lfs-en/chapter08/libtool.xml lfs-en/chapter08/libxcrypt.xml
-#: lfs-en/chapter08/lz4.xml lfs-en/chapter08/m4.xml lfs-en/chapter08/make.xml
+#: lfs-en/chapter08/groff.xml lfs-en/chapter08/gzip.xml
+#: lfs-en/chapter08/inetutils.xml lfs-en/chapter08/intltool.xml
+#: lfs-en/chapter08/iproute2.xml lfs-en/chapter08/jinja2.xml
+#: lfs-en/chapter08/kbd.xml lfs-en/chapter08/less.xml
+#: lfs-en/chapter08/libcap.xml lfs-en/chapter08/libffi.xml
+#: lfs-en/chapter08/libpipeline.xml lfs-en/chapter08/libtool.xml
+#: lfs-en/chapter08/libxcrypt.xml lfs-en/chapter08/lz4.xml
+#: lfs-en/chapter08/m4.xml lfs-en/chapter08/make.xml
 #: lfs-en/chapter08/man-db.xml lfs-en/chapter08/markupsafe.xml
 #: lfs-en/chapter08/meson.xml lfs-en/chapter08/ninja.xml
 #: lfs-en/chapter08/openssl.xml lfs-en/chapter08/patch.xml
@@ -346,11 +346,12 @@ msgstr "安装该软件包："
 #: lfs-en/chapter08/man-db.xml lfs-en/chapter08/patch.xml
 #: lfs-en/chapter08/pkgconf.xml lfs-en/chapter08/procps.xml
 #: lfs-en/chapter08/psmisc.xml lfs-en/chapter08/python.xml
-#: lfs-en/chapter08/sysklogd.xml lfs-en/chapter08/sysvinit.xml
-#: lfs-en/chapter08/tcl.xml lfs-en/chapter08/texinfo.xml
-#: lfs-en/chapter08/util-linux.xml lfs-en/chapter08/vim.xml
-#: lfs-en/chapter08/xml-parser.xml lfs-en/chapter08/xz.xml
-#: lfs-en/chapter08/zlib.xml lfs-en/chapter09/bootscripts.xml
+#: lfs-en/chapter08/readline.xml lfs-en/chapter08/sysklogd.xml
+#: lfs-en/chapter08/sysvinit.xml lfs-en/chapter08/tcl.xml
+#: lfs-en/chapter08/texinfo.xml lfs-en/chapter08/util-linux.xml
+#: lfs-en/chapter08/vim.xml lfs-en/chapter08/xml-parser.xml
+#: lfs-en/chapter08/xz.xml lfs-en/chapter08/zlib.xml
+#: lfs-en/chapter09/bootscripts.xml
 #, no-wrap
 msgid "<userinput remap=\"install\">make install</userinput>"
 msgstr "<userinput remap=\"install\">make install</userinput>"
@@ -853,9 +854,9 @@ msgstr ""
 "如果在 12.0 (不含) 之前版本的 LFS 系统上进行升级，需要按照<xref linkend='ch-"
 "system-libxcrypt'/> 安装 <application>Libxcrypt</application>。除了正常安装 "
 "<application>Libxcrypt</application> 外，<emphasis role='bold'>必须按照 "
-"Libxcrypt 一节中的“注意”部分，安装 <filename class='libraryfile'>libcrypt."
-"so.1*</filename> (将之前 Glibc 安装的 <filename class='libraryfile'>libcrypt."
-"so.1</filename> 替换)</emphasis>。"
+"Libxcrypt 一节中的“注意”部分，安装 <filename "
+"class='libraryfile'>libcrypt.so.1*</filename> (将之前 Glibc 安装的 <filename "
+"class='libraryfile'>libcrypt.so.1</filename> 替换)</emphasis>。"
 
 #. type: Content of: <sect1><sect2><important><itemizedlist><listitem><para>
 #: lfs-en/chapter08/glibc.xml
@@ -1125,12 +1126,12 @@ msgstr ""
 msgid ""
 "Glibc now uses libidn2 when resolving internationalized domain names.  This "
 "is a run time dependency.  If this capability is needed, the instructions "
-"for installing libidn2 are in the <ulink url=\"&blfs-book;general/libidn2."
-"html\">BLFS libidn2 page</ulink>."
+"for installing libidn2 are in the <ulink url=\"&blfs-book;general/"
+"libidn2.html\">BLFS libidn2 page</ulink>."
 msgstr ""
 "目前 glibc 在解析国际化域名时使用 libidn2。这形成了一个运行时依赖关系。如果需"
-"要使用解析国际化域名的功能，参阅 <ulink url=\"&blfs-book;general/libidn2."
-"html\">BLFS libidn2 页面</ulink>安装 libidn2。"
+"要使用解析国际化域名的功能，参阅 <ulink url=\"&blfs-book;general/"
+"libidn2.html\">BLFS libidn2 页面</ulink>安装 libidn2。"
 
 #. type: Content of: <sect1><sect2><title>
 #: lfs-en/chapter08/glibc.xml
