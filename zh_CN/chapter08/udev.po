@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Linux From Scratch 11.4\n"
 "Report-Msgid-Bugs-To: lfs-dev@lists.linuxfromscratch.org\n"
-"POT-Creation-Date: 2024-08-01 00:22+0800\n"
+"POT-Creation-Date: 2024-12-17 16:33+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: Xi Ruoyao <xry111@xry111.site>\n"
 "Language-Team: none\n"
@@ -217,14 +217,14 @@ msgstr "&diskspace;"
 #: lfs-en/chapter08/gcc.xml lfs-en/chapter08/gdbm.xml
 #: lfs-en/chapter08/gettext.xml lfs-en/chapter08/glibc.xml
 #: lfs-en/chapter08/gperf.xml lfs-en/chapter08/grep.xml
-#: lfs-en/chapter08/groff.xml lfs-en/chapter08/grub.xml
-#: lfs-en/chapter08/gzip.xml lfs-en/chapter08/inetutils.xml
-#: lfs-en/chapter08/intltool.xml lfs-en/chapter08/iproute2.xml
-#: lfs-en/chapter08/jinja2.xml lfs-en/chapter08/kbd.xml
-#: lfs-en/chapter08/less.xml lfs-en/chapter08/libcap.xml
-#: lfs-en/chapter08/libffi.xml lfs-en/chapter08/libpipeline.xml
-#: lfs-en/chapter08/libtool.xml lfs-en/chapter08/libxcrypt.xml
-#: lfs-en/chapter08/lz4.xml lfs-en/chapter08/m4.xml lfs-en/chapter08/make.xml
+#: lfs-en/chapter08/groff.xml lfs-en/chapter08/gzip.xml
+#: lfs-en/chapter08/inetutils.xml lfs-en/chapter08/intltool.xml
+#: lfs-en/chapter08/iproute2.xml lfs-en/chapter08/jinja2.xml
+#: lfs-en/chapter08/kbd.xml lfs-en/chapter08/less.xml
+#: lfs-en/chapter08/libcap.xml lfs-en/chapter08/libffi.xml
+#: lfs-en/chapter08/libpipeline.xml lfs-en/chapter08/libtool.xml
+#: lfs-en/chapter08/libxcrypt.xml lfs-en/chapter08/lz4.xml
+#: lfs-en/chapter08/m4.xml lfs-en/chapter08/make.xml
 #: lfs-en/chapter08/man-db.xml lfs-en/chapter08/markupsafe.xml
 #: lfs-en/chapter08/meson.xml lfs-en/chapter08/ninja.xml
 #: lfs-en/chapter08/openssl.xml lfs-en/chapter08/patch.xml
@@ -377,16 +377,6 @@ msgstr ""
 "从默认的 udev 规则中删除不必要的组 <systemitem class=\"groupname\">render</"
 "systemitem> 和 <systemitem class=\"groupname\">sgx</systemitem>："
 
-#. type: Content of: <sect1><sect2><screen>
-#: lfs-en/chapter08/systemd.xml lfs-en/chapter08/udev.xml
-#, no-wrap
-msgid ""
-"<userinput remap=\"pre\">sed -i -e 's/GROUP=\"render\"/GROUP=\"video\"/' \\\n"
-"       -e 's/GROUP=\"sgx\", //' rules.d/50-udev-default.rules.in</userinput>"
-msgstr ""
-"<userinput remap=\"pre\">sed -i -e 's/GROUP=\"render\"/GROUP=\"video\"/' \\\n"
-"       -e 's/GROUP=\"sgx\", //' rules.d/50-udev-default.rules.in</userinput>"
-
 #. type: Content of: <sect1><sect2><variablelist><title>
 #: lfs-en/chapter08/systemd.xml lfs-en/chapter08/udev.xml
 msgid "The meaning of the meson options:"
@@ -495,6 +485,18 @@ msgstr ""
 "Udev 是 systemd-&systemd-version; 软件包的一部分。请使用 systemd-&systemd-"
 "version;.tar.xz 作为源代码包。"
 
+#. type: Content of: <sect1><sect2><screen>
+#: lfs-en/chapter08/udev.xml
+#, no-wrap
+msgid ""
+"<userinput remap=\"pre\">sed -e 's/GROUP=\"render\"/GROUP=\"video\"/' \\\n"
+"    -e 's/GROUP=\"sgx\", //'               \\\n"
+"    -i rules.d/50-udev-default.rules.in</userinput>"
+msgstr ""
+"<userinput remap=\"pre\">sed -e 's/GROUP=\"render\"/GROUP=\"video\"/' \\\n"
+"    -e 's/GROUP=\"sgx\", //'               \\\n"
+"    -i rules.d/50-udev-default.rules.in</userinput>"
+
 #. type: Content of: <sect1><sect2><para>
 #: lfs-en/chapter08/udev.xml
 msgid "Remove one udev rule requiring a full Systemd installation:"
@@ -503,8 +505,8 @@ msgstr "删除一条需要完整安装 Systemd 的 udev 规则："
 #. type: Content of: <sect1><sect2><screen>
 #: lfs-en/chapter08/udev.xml
 #, no-wrap
-msgid "<userinput remap=\"pre\">sed '/systemd-sysctl/s/^/#/' -i rules.d/99-systemd.rules.in</userinput>"
-msgstr "<userinput remap=\"pre\">sed '/systemd-sysctl/s/^/#/' -i rules.d/99-systemd.rules.in</userinput>"
+msgid "<userinput remap=\"pre\">sed -i '/systemd-sysctl/s/^/#/' rules.d/99-systemd.rules.in</userinput>"
+msgstr "<userinput remap=\"pre\">sed -i '/systemd-sysctl/s/^/#/' rules.d/99-systemd.rules.in</userinput>"
 
 #. type: Content of: <sect1><sect2><para>
 #: lfs-en/chapter08/udev.xml
@@ -516,8 +518,12 @@ msgstr "调整硬编码的网络配置文件路径，使之适合单独安装 ud
 #. type: Content of: <sect1><sect2><screen>
 #: lfs-en/chapter08/udev.xml
 #, no-wrap
-msgid "<userinput remap=\"pre\">sed '/NETWORK_DIRS/s/systemd/udev/' -i src/basic/path-lookup.h</userinput>"
-msgstr "<userinput remap=\"pre\">sed '/NETWORK_DIRS/s/systemd/udev/' -i src/basic/path-lookup.h</userinput>"
+msgid ""
+"<userinput remap=\"pre\">sed -e '/NETWORK_DIRS/s/systemd/udev/' \\\n"
+"    -i src/libsystemd/sd-network/network-util.h</userinput>"
+msgstr ""
+"<userinput remap=\"pre\">sed -e '/NETWORK_DIRS/s/systemd/udev/' \\\n"
+"    -i src/libsystemd/sd-network/network-util.h</userinput>"
 
 #. type: Content of: <sect1><sect2><para>
 #: lfs-en/chapter08/udev.xml

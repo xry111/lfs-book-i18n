@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Linux From Scratch 11.4\n"
 "Report-Msgid-Bugs-To: lfs-dev@lists.linuxfromscratch.org\n"
-"POT-Creation-Date: 2024-12-03 19:51+0800\n"
+"POT-Creation-Date: 2024-12-17 16:33+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: Xi Ruoyao <xry111@xry111.site>\n"
 "Language-Team: none\n"
@@ -601,12 +601,8 @@ msgstr "<userinput remap=\"install\">ln -sv gawk.1 /usr/share/man/man1/awk.1</us
 #. type: Content of: <sect1><sect2><screen>
 #: lfs-en/chapter08/gawk.xml
 #, no-wrap
-msgid ""
-"<userinput remap=\"install\">mkdir -pv                                   /usr/share/doc/gawk-&gawk-version;\n"
-"cp    -v doc/{awkforai.txt,*.{eps,pdf,jpg}} /usr/share/doc/gawk-&gawk-version;</userinput>"
-msgstr ""
-"<userinput remap=\"install\">mkdir -pv                                   /usr/share/doc/gawk-&gawk-version;\n"
-"cp    -v doc/{awkforai.txt,*.{eps,pdf,jpg}} /usr/share/doc/gawk-&gawk-version;</userinput>"
+msgid "<userinput remap=\"install\">install -vDm644 doc/{awkforai.txt,*.{eps,pdf,jpg}} -t /usr/share/doc/gawk-&gawk-version;</userinput>"
+msgstr "<userinput remap=\"install\">install -vDm644 doc/{awkforai.txt,*.{eps,pdf,jpg}} -t /usr/share/doc/gawk-&gawk-version;</userinput>"
 
 #. type: Content of: <sect1><sect2><title>
 #: lfs-en/chapter08/gawk.xml
