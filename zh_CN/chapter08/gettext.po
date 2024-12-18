@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Linux From Scratch 11.4\n"
 "Report-Msgid-Bugs-To: lfs-dev@lists.linuxfromscratch.org\n"
-"POT-Creation-Date: 2024-12-17 21:36+0800\n"
+"POT-Creation-Date: 2024-12-18 10:55+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: Xi Ruoyao <xry111@xry111.site>\n"
 "Language-Team: none\n"
@@ -512,6 +512,27 @@ msgstr "&gettext-fin-sbu;"
 #: lfs-en/chapter08/gettext.xml
 msgid "&gettext-fin-du;"
 msgstr "&gettext-fin-du;"
+
+#. type: Content of: <sect1><sect2><para>
+#: lfs-en/chapter08/gettext.xml
+msgid ""
+"At first, fix an issue causing the package fail to build with libxml-2.12 or "
+"later.  The fix is optional for building LFS, but required if rebuilding "
+"this package in BLFS with libxml installed:"
+msgstr ""
+"首先，修复导致该软件包在使用 libxml-2.12 或更新版本时构建失败的问题。这项修复"
+"在构建 LFS 时是可选的，但如果安装了 BLFS 的 libxml 软件包后重新构建该软件包，"
+"则必须进行修复："
+
+#. type: Content of: <sect1><sect2><screen>
+#: lfs-en/chapter08/gettext.xml
+#, no-wrap
+msgid ""
+"<userinput remap=\"pre\">sed -e '/^structured/s/xmlError \\*/typeof(xmlCtxtGetLastError(NULL)) /' \\\n"
+"    -i gettext-tools/src/its.c</userinput>"
+msgstr ""
+"<userinput remap=\"pre\">sed -e '/^structured/s/xmlError \\*/typeof(xmlCtxtGetLastError(NULL)) /' \\\n"
+"    -i gettext-tools/src/its.c</userinput>"
 
 #. type: Content of: <sect1><sect2><screen>
 #: lfs-en/chapter08/gettext.xml
