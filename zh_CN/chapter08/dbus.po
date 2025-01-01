@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Linux From Scratch 11.4\n"
 "Report-Msgid-Bugs-To: lfs-dev@lists.linuxfromscratch.org\n"
-"POT-Creation-Date: 2024-03-03 18:07+0800\n"
+"POT-Creation-Date: 2025-01-01 14:22+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: Xi Ruoyao <xry111@xry111.site>\n"
 "Language-Team: none\n"
@@ -41,7 +41,7 @@ msgstr ""
 #: lfs-en/chapter08/libcap.xml lfs-en/chapter08/libelf.xml
 #: lfs-en/chapter08/libffi.xml lfs-en/chapter08/libpipeline.xml
 #: lfs-en/chapter08/libtool.xml lfs-en/chapter08/libxcrypt.xml
-#: lfs-en/chapter08/m4.xml lfs-en/chapter08/make.xml
+#: lfs-en/chapter08/lz4.xml lfs-en/chapter08/m4.xml lfs-en/chapter08/make.xml
 #: lfs-en/chapter08/man-db.xml lfs-en/chapter08/man-pages.xml
 #: lfs-en/chapter08/meson.xml lfs-en/chapter08/mpc.xml
 #: lfs-en/chapter08/mpfr.xml lfs-en/chapter08/ncurses.xml
@@ -69,6 +69,11 @@ msgstr ""
 #: lfs-en/prologue/why.xml
 msgid "D-Bus"
 msgstr "D-Bus"
+
+#. type: Content of: <sect1><title>
+#: lfs-en/chapter01/whatsnew.xml lfs-en/chapter08/dbus.xml
+msgid "D-Bus-&dbus-version;"
+msgstr "D-Bus-&dbus-version;"
 
 #. type: Content of: <sect1><sect2><segmentedlist><segtitle>
 #: lfs-en/chapter05/binutils-pass1.xml lfs-en/chapter05/gcc-pass1.xml
@@ -107,7 +112,7 @@ msgstr "D-Bus"
 #: lfs-en/chapter08/libcap.xml lfs-en/chapter08/libelf.xml
 #: lfs-en/chapter08/libffi.xml lfs-en/chapter08/libpipeline.xml
 #: lfs-en/chapter08/libtool.xml lfs-en/chapter08/libxcrypt.xml
-#: lfs-en/chapter08/m4.xml lfs-en/chapter08/make.xml
+#: lfs-en/chapter08/lz4.xml lfs-en/chapter08/m4.xml lfs-en/chapter08/make.xml
 #: lfs-en/chapter08/man-db.xml lfs-en/chapter08/man-pages.xml
 #: lfs-en/chapter08/markupsafe.xml lfs-en/chapter08/meson.xml
 #: lfs-en/chapter08/mpc.xml lfs-en/chapter08/mpfr.xml
@@ -165,7 +170,7 @@ msgstr "&buildtime;"
 #: lfs-en/chapter08/libcap.xml lfs-en/chapter08/libelf.xml
 #: lfs-en/chapter08/libffi.xml lfs-en/chapter08/libpipeline.xml
 #: lfs-en/chapter08/libtool.xml lfs-en/chapter08/libxcrypt.xml
-#: lfs-en/chapter08/m4.xml lfs-en/chapter08/make.xml
+#: lfs-en/chapter08/lz4.xml lfs-en/chapter08/m4.xml lfs-en/chapter08/make.xml
 #: lfs-en/chapter08/man-db.xml lfs-en/chapter08/man-pages.xml
 #: lfs-en/chapter08/markupsafe.xml lfs-en/chapter08/meson.xml
 #: lfs-en/chapter08/mpc.xml lfs-en/chapter08/mpfr.xml
@@ -185,66 +190,6 @@ msgstr "&buildtime;"
 #: lfs-en/chapter09/bootscripts.xml lfs-en/chapter10/kernel.xml
 msgid "&diskspace;"
 msgstr "&diskspace;"
-
-#. type: Content of: <sect1><sect2><variablelist><title>
-#: lfs-en/chapter05/binutils-pass1.xml lfs-en/chapter05/gcc-pass1.xml
-#: lfs-en/chapter05/glibc.xml lfs-en/chapter05/libstdc++.xml
-#: lfs-en/chapter06/bash.xml lfs-en/chapter06/coreutils.xml
-#: lfs-en/chapter07/util-linux.xml lfs-en/chapter08/bc.xml
-#: lfs-en/chapter08/coreutils.xml lfs-en/chapter08/dbus.xml
-#: lfs-en/chapter08/e2fsprogs.xml lfs-en/chapter08/expect.xml
-#: lfs-en/chapter08/findutils.xml lfs-en/chapter08/glibc.xml
-#: lfs-en/chapter08/inetutils.xml lfs-en/chapter08/kmod.xml
-#: lfs-en/chapter08/less.xml lfs-en/chapter08/man-db.xml
-#: lfs-en/chapter08/python.xml
-msgid "The meaning of the configure options:"
-msgstr "配置选项的含义："
-
-#. type: Content of: <sect1><sect2><screen>
-#: lfs-en/chapter05/binutils-pass1.xml lfs-en/chapter05/gcc-pass1.xml
-#: lfs-en/chapter05/glibc.xml lfs-en/chapter05/libstdc++.xml
-#: lfs-en/chapter06/bash.xml lfs-en/chapter06/binutils-pass2.xml
-#: lfs-en/chapter06/coreutils.xml lfs-en/chapter06/diffutils.xml
-#: lfs-en/chapter06/findutils.xml lfs-en/chapter06/gawk.xml
-#: lfs-en/chapter06/gcc-pass2.xml lfs-en/chapter06/grep.xml
-#: lfs-en/chapter06/gzip.xml lfs-en/chapter06/m4.xml lfs-en/chapter06/make.xml
-#: lfs-en/chapter06/ncurses.xml lfs-en/chapter06/patch.xml
-#: lfs-en/chapter06/sed.xml lfs-en/chapter06/tar.xml lfs-en/chapter06/xz.xml
-#: lfs-en/chapter07/bison.xml lfs-en/chapter07/gettext.xml
-#: lfs-en/chapter07/perl.xml lfs-en/chapter07/python.xml
-#: lfs-en/chapter07/texinfo.xml lfs-en/chapter07/util-linux.xml
-#: lfs-en/chapter08/acl.xml lfs-en/chapter08/attr.xml
-#: lfs-en/chapter08/autoconf.xml lfs-en/chapter08/automake.xml
-#: lfs-en/chapter08/bash.xml lfs-en/chapter08/bc.xml lfs-en/chapter08/bison.xml
-#: lfs-en/chapter08/bzip2.xml lfs-en/chapter08/check.xml
-#: lfs-en/chapter08/coreutils.xml lfs-en/chapter08/dbus.xml
-#: lfs-en/chapter08/diffutils.xml lfs-en/chapter08/e2fsprogs.xml
-#: lfs-en/chapter08/expat.xml lfs-en/chapter08/expect.xml
-#: lfs-en/chapter08/file.xml lfs-en/chapter08/findutils.xml
-#: lfs-en/chapter08/flex.xml lfs-en/chapter08/gawk.xml lfs-en/chapter08/gcc.xml
-#: lfs-en/chapter08/gdbm.xml lfs-en/chapter08/gettext.xml
-#: lfs-en/chapter08/glibc.xml lfs-en/chapter08/gperf.xml
-#: lfs-en/chapter08/grep.xml lfs-en/chapter08/groff.xml
-#: lfs-en/chapter08/grub.xml lfs-en/chapter08/gzip.xml
-#: lfs-en/chapter08/inetutils.xml lfs-en/chapter08/intltool.xml
-#: lfs-en/chapter08/kbd.xml lfs-en/chapter08/kmod.xml lfs-en/chapter08/less.xml
-#: lfs-en/chapter08/libelf.xml lfs-en/chapter08/libffi.xml
-#: lfs-en/chapter08/libpipeline.xml lfs-en/chapter08/libtool.xml
-#: lfs-en/chapter08/libxcrypt.xml lfs-en/chapter08/m4.xml
-#: lfs-en/chapter08/make.xml lfs-en/chapter08/man-db.xml
-#: lfs-en/chapter08/ncurses.xml lfs-en/chapter08/openssl.xml
-#: lfs-en/chapter08/patch.xml lfs-en/chapter08/perl.xml
-#: lfs-en/chapter08/pkgconf.xml lfs-en/chapter08/procps.xml
-#: lfs-en/chapter08/psmisc.xml lfs-en/chapter08/python.xml
-#: lfs-en/chapter08/shadow.xml lfs-en/chapter08/sysklogd.xml
-#: lfs-en/chapter08/sysvinit.xml lfs-en/chapter08/tar.xml
-#: lfs-en/chapter08/texinfo.xml lfs-en/chapter08/util-linux.xml
-#: lfs-en/chapter08/vim.xml lfs-en/chapter08/xml-parser.xml
-#: lfs-en/chapter08/xz.xml lfs-en/chapter08/zlib.xml
-#: lfs-en/chapter10/kernel.xml
-#, no-wrap
-msgid "<userinput remap=\"make\">make</userinput>"
-msgstr "<userinput remap=\"make\">make</userinput>"
 
 #. type: Content of: <sect1><sect2><para>
 #: lfs-en/chapter05/binutils-pass1.xml lfs-en/chapter05/gcc-pass1.xml
@@ -272,13 +217,13 @@ msgstr "<userinput remap=\"make\">make</userinput>"
 #: lfs-en/chapter08/gcc.xml lfs-en/chapter08/gdbm.xml
 #: lfs-en/chapter08/gettext.xml lfs-en/chapter08/glibc.xml
 #: lfs-en/chapter08/gperf.xml lfs-en/chapter08/grep.xml
-#: lfs-en/chapter08/groff.xml lfs-en/chapter08/grub.xml
-#: lfs-en/chapter08/gzip.xml lfs-en/chapter08/inetutils.xml
-#: lfs-en/chapter08/intltool.xml lfs-en/chapter08/iproute2.xml
-#: lfs-en/chapter08/jinja2.xml lfs-en/chapter08/kbd.xml
-#: lfs-en/chapter08/less.xml lfs-en/chapter08/libcap.xml
-#: lfs-en/chapter08/libffi.xml lfs-en/chapter08/libpipeline.xml
-#: lfs-en/chapter08/libtool.xml lfs-en/chapter08/libxcrypt.xml
+#: lfs-en/chapter08/groff.xml lfs-en/chapter08/gzip.xml
+#: lfs-en/chapter08/inetutils.xml lfs-en/chapter08/intltool.xml
+#: lfs-en/chapter08/iproute2.xml lfs-en/chapter08/jinja2.xml
+#: lfs-en/chapter08/kbd.xml lfs-en/chapter08/less.xml
+#: lfs-en/chapter08/libcap.xml lfs-en/chapter08/libffi.xml
+#: lfs-en/chapter08/libpipeline.xml lfs-en/chapter08/libtool.xml
+#: lfs-en/chapter08/libxcrypt.xml lfs-en/chapter08/lz4.xml
 #: lfs-en/chapter08/m4.xml lfs-en/chapter08/make.xml
 #: lfs-en/chapter08/man-db.xml lfs-en/chapter08/markupsafe.xml
 #: lfs-en/chapter08/meson.xml lfs-en/chapter08/ninja.xml
@@ -296,38 +241,6 @@ msgstr "<userinput remap=\"make\">make</userinput>"
 #: lfs-en/chapter09/bootscripts.xml
 msgid "Install the package:"
 msgstr "安装该软件包："
-
-#. type: Content of: <sect1><sect2><screen>
-#: lfs-en/chapter05/binutils-pass1.xml lfs-en/chapter05/gcc-pass1.xml
-#: lfs-en/chapter07/bison.xml lfs-en/chapter07/perl.xml
-#: lfs-en/chapter07/python.xml lfs-en/chapter07/texinfo.xml
-#: lfs-en/chapter07/util-linux.xml lfs-en/chapter08/acl.xml
-#: lfs-en/chapter08/attr.xml lfs-en/chapter08/autoconf.xml
-#: lfs-en/chapter08/automake.xml lfs-en/chapter08/bash.xml
-#: lfs-en/chapter08/bc.xml lfs-en/chapter08/bison.xml
-#: lfs-en/chapter08/coreutils.xml lfs-en/chapter08/dbus.xml
-#: lfs-en/chapter08/diffutils.xml lfs-en/chapter08/e2fsprogs.xml
-#: lfs-en/chapter08/expat.xml lfs-en/chapter08/file.xml
-#: lfs-en/chapter08/findutils.xml lfs-en/chapter08/flex.xml
-#: lfs-en/chapter08/gcc.xml lfs-en/chapter08/gdbm.xml
-#: lfs-en/chapter08/glibc.xml lfs-en/chapter08/gperf.xml
-#: lfs-en/chapter08/grep.xml lfs-en/chapter08/groff.xml
-#: lfs-en/chapter08/gzip.xml lfs-en/chapter08/inetutils.xml
-#: lfs-en/chapter08/kbd.xml lfs-en/chapter08/less.xml
-#: lfs-en/chapter08/libffi.xml lfs-en/chapter08/libpipeline.xml
-#: lfs-en/chapter08/libtool.xml lfs-en/chapter08/libxcrypt.xml
-#: lfs-en/chapter08/m4.xml lfs-en/chapter08/make.xml
-#: lfs-en/chapter08/man-db.xml lfs-en/chapter08/patch.xml
-#: lfs-en/chapter08/pkgconf.xml lfs-en/chapter08/procps.xml
-#: lfs-en/chapter08/psmisc.xml lfs-en/chapter08/python.xml
-#: lfs-en/chapter08/sysvinit.xml lfs-en/chapter08/tcl.xml
-#: lfs-en/chapter08/texinfo.xml lfs-en/chapter08/util-linux.xml
-#: lfs-en/chapter08/vim.xml lfs-en/chapter08/xml-parser.xml
-#: lfs-en/chapter08/xz.xml lfs-en/chapter08/zlib.xml
-#: lfs-en/chapter09/bootscripts.xml
-#, no-wrap
-msgid "<userinput remap=\"install\">make install</userinput>"
-msgstr "<userinput remap=\"install\">make install</userinput>"
 
 #. type: Content of: <sect1><sect2><para>
 #: lfs-en/chapter05/glibc.xml lfs-en/chapter06/bash.xml
@@ -359,7 +272,7 @@ msgstr "<userinput remap=\"install\">make install</userinput>"
 #: lfs-en/chapter08/libcap.xml lfs-en/chapter08/libelf.xml
 #: lfs-en/chapter08/libffi.xml lfs-en/chapter08/libpipeline.xml
 #: lfs-en/chapter08/libtool.xml lfs-en/chapter08/libxcrypt.xml
-#: lfs-en/chapter08/m4.xml lfs-en/chapter08/make.xml
+#: lfs-en/chapter08/lz4.xml lfs-en/chapter08/m4.xml lfs-en/chapter08/make.xml
 #: lfs-en/chapter08/man-db.xml lfs-en/chapter08/ncurses.xml
 #: lfs-en/chapter08/openssl.xml lfs-en/chapter08/patch.xml
 #: lfs-en/chapter08/perl.xml lfs-en/chapter08/pkgconf.xml
@@ -417,7 +330,7 @@ msgstr "安装的目录"
 #: lfs-en/chapter08/libcap.xml lfs-en/chapter08/libelf.xml
 #: lfs-en/chapter08/libffi.xml lfs-en/chapter08/libpipeline.xml
 #: lfs-en/chapter08/libtool.xml lfs-en/chapter08/libxcrypt.xml
-#: lfs-en/chapter08/m4.xml lfs-en/chapter08/make.xml
+#: lfs-en/chapter08/lz4.xml lfs-en/chapter08/m4.xml lfs-en/chapter08/make.xml
 #: lfs-en/chapter08/man-db.xml lfs-en/chapter08/man-pages.xml
 #: lfs-en/chapter08/meson.xml lfs-en/chapter08/mpc.xml
 #: lfs-en/chapter08/mpfr.xml lfs-en/chapter08/ncurses.xml
@@ -454,12 +367,12 @@ msgstr "简要描述"
 #: lfs-en/chapter08/iproute2.xml lfs-en/chapter08/kbd.xml
 #: lfs-en/chapter08/kmod.xml lfs-en/chapter08/less.xml
 #: lfs-en/chapter08/libcap.xml lfs-en/chapter08/libtool.xml
-#: lfs-en/chapter08/man-db.xml lfs-en/chapter08/meson.xml
-#: lfs-en/chapter08/ncurses.xml lfs-en/chapter08/ninja.xml
-#: lfs-en/chapter08/openssl.xml lfs-en/chapter08/perl.xml
-#: lfs-en/chapter08/pkgconf.xml lfs-en/chapter08/procps.xml
-#: lfs-en/chapter08/psmisc.xml lfs-en/chapter08/python.xml
-#: lfs-en/chapter08/shadow.xml lfs-en/chapter08/sysklogd.xml
+#: lfs-en/chapter08/lz4.xml lfs-en/chapter08/man-db.xml
+#: lfs-en/chapter08/meson.xml lfs-en/chapter08/ncurses.xml
+#: lfs-en/chapter08/ninja.xml lfs-en/chapter08/openssl.xml
+#: lfs-en/chapter08/perl.xml lfs-en/chapter08/pkgconf.xml
+#: lfs-en/chapter08/procps.xml lfs-en/chapter08/psmisc.xml
+#: lfs-en/chapter08/python.xml lfs-en/chapter08/shadow.xml
 #: lfs-en/chapter08/systemd.xml lfs-en/chapter08/sysvinit.xml
 #: lfs-en/chapter08/tar.xml lfs-en/chapter08/tcl.xml
 #: lfs-en/chapter08/texinfo.xml lfs-en/chapter08/udev.xml
@@ -467,29 +380,6 @@ msgstr "简要描述"
 #: lfs-en/chapter08/xz.xml lfs-en/chapter08/zstd.xml
 msgid "Installed programs"
 msgstr "安装的程序"
-
-#. type: Content of: <sect1><sect2><screen>
-#: lfs-en/chapter08/attr.xml lfs-en/chapter08/autoconf.xml
-#: lfs-en/chapter08/bison.xml lfs-en/chapter08/check.xml
-#: lfs-en/chapter08/dbus.xml lfs-en/chapter08/dejagnu.xml
-#: lfs-en/chapter08/diffutils.xml lfs-en/chapter08/e2fsprogs.xml
-#: lfs-en/chapter08/expat.xml lfs-en/chapter08/file.xml
-#: lfs-en/chapter08/flex.xml lfs-en/chapter08/gdbm.xml
-#: lfs-en/chapter08/gettext.xml lfs-en/chapter08/glibc.xml
-#: lfs-en/chapter08/grep.xml lfs-en/chapter08/groff.xml
-#: lfs-en/chapter08/gzip.xml lfs-en/chapter08/inetutils.xml
-#: lfs-en/chapter08/intltool.xml lfs-en/chapter08/kbd.xml
-#: lfs-en/chapter08/less.xml lfs-en/chapter08/libelf.xml
-#: lfs-en/chapter08/libffi.xml lfs-en/chapter08/libpipeline.xml
-#: lfs-en/chapter08/libxcrypt.xml lfs-en/chapter08/m4.xml
-#: lfs-en/chapter08/man-db.xml lfs-en/chapter08/mpc.xml
-#: lfs-en/chapter08/mpfr.xml lfs-en/chapter08/patch.xml
-#: lfs-en/chapter08/psmisc.xml lfs-en/chapter08/tar.xml
-#: lfs-en/chapter08/texinfo.xml lfs-en/chapter08/xz.xml
-#: lfs-en/chapter08/zlib.xml lfs-en/chapter08/zstd.xml
-#, no-wrap
-msgid "<userinput remap=\"test\">make check</userinput>"
-msgstr "<userinput remap=\"test\">make check</userinput>"
 
 #. type: Content of: <sect1><sect2><para>
 #: lfs-en/chapter08/autoconf.xml lfs-en/chapter08/dbus.xml
@@ -503,9 +393,9 @@ msgstr "<userinput remap=\"test\">make check</userinput>"
 #: lfs-en/chapter08/less.xml lfs-en/chapter08/libcap.xml
 #: lfs-en/chapter08/libelf.xml lfs-en/chapter08/libffi.xml
 #: lfs-en/chapter08/libpipeline.xml lfs-en/chapter08/libtool.xml
-#: lfs-en/chapter08/libxcrypt.xml lfs-en/chapter08/m4.xml
-#: lfs-en/chapter08/make.xml lfs-en/chapter08/man-db.xml
-#: lfs-en/chapter08/mpc.xml lfs-en/chapter08/ninja.xml
+#: lfs-en/chapter08/libxcrypt.xml lfs-en/chapter08/lz4.xml
+#: lfs-en/chapter08/m4.xml lfs-en/chapter08/make.xml
+#: lfs-en/chapter08/man-db.xml lfs-en/chapter08/mpc.xml
 #: lfs-en/chapter08/openssl.xml lfs-en/chapter08/patch.xml
 #: lfs-en/chapter08/sed.xml lfs-en/chapter08/tar.xml lfs-en/chapter08/tcl.xml
 #: lfs-en/chapter08/texinfo.xml lfs-en/chapter08/xml-parser.xml
@@ -544,11 +434,6 @@ msgid ""
 msgstr ""
 "<productname>dbus</productname> <productnumber>&dbus-version;</"
 "productnumber> <placeholder type=\"address\" id=\"0\"/>"
-
-#. type: Content of: <sect1><title>
-#: lfs-en/chapter08/dbus.xml
-msgid "D-Bus-&dbus-version;"
-msgstr "D-Bus-&dbus-version;"
 
 #. type: Content of: <sect1><sect2><para>
 #: lfs-en/chapter08/dbus.xml
@@ -591,63 +476,45 @@ msgstr "准备编译 D-Bus："
 #: lfs-en/chapter08/dbus.xml
 #, no-wrap
 msgid ""
-"<userinput remap=\"configure\">./configure --prefix=/usr                        \\\n"
-"            --sysconfdir=/etc                    \\\n"
-"            --localstatedir=/var                 \\\n"
-"            --runstatedir=/run                   \\\n"
-"            --enable-user-session                \\\n"
-"            --disable-static                     \\\n"
-"            --disable-doxygen-docs               \\\n"
-"            --disable-xml-docs                   \\\n"
-"            --docdir=/usr/share/doc/dbus-&dbus-version; \\\n"
-"            --with-system-socket=/run/dbus/system_bus_socket</userinput>"
+"<userinput remap=\"configure\">mkdir build\n"
+"cd    build\n"
+"\n"
+"meson setup --prefix=/usr --buildtype=release --wrap-mode=nofallback ..</userinput>"
 msgstr ""
-"<userinput remap=\"configure\">./configure --prefix=/usr                        \\\n"
-"            --sysconfdir=/etc                    \\\n"
-"            --localstatedir=/var                 \\\n"
-"            --runstatedir=/run                   \\\n"
-"            --enable-user-session                \\\n"
-"            --disable-static                     \\\n"
-"            --disable-doxygen-docs               \\\n"
-"            --disable-xml-docs                   \\\n"
-"            --docdir=/usr/share/doc/dbus-&dbus-version; \\\n"
-"            --with-system-socket=/run/dbus/system_bus_socket</userinput>"
+"<userinput remap=\"configure\">mkdir build\n"
+"cd    build\n"
+"\n"
+"meson setup --prefix=/usr --buildtype=release --wrap-mode=nofallback ..</userinput>"
+
+#. type: Content of: <sect1><sect2><variablelist><title>
+#: lfs-en/chapter08/dbus.xml lfs-en/chapter08/systemd.xml
+#: lfs-en/chapter08/udev.xml
+msgid "The meaning of the meson options:"
+msgstr "meson 选项的含义："
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: lfs-en/chapter08/dbus.xml
-msgid ""
-"<parameter>--runstatedir=/run</parameter> and <parameter>--with-system-"
-"socket=/run/dbus/system_bus_socket</parameter>"
-msgstr ""
-"<parameter>--runstatedir=/run</parameter> 和 <parameter>--with-system-"
-"socket=/run/dbus/system_bus_socket</parameter>"
+msgid "<parameter>--wrap-mode=nofallback</parameter>"
+msgstr "<parameter>--wrap-mode=nofallback</parameter>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: lfs-en/chapter08/dbus.xml
 msgid ""
-"These cause the PID file and the system bus socket to be in <filename "
-"class=\"directory\">/run</filename>, instead of the deprecated <filename "
-"class=\"directory\">/var/run</filename>."
-msgstr ""
-"这些选项使得 PID 文件和系统总线套接字位于 <filename class=\"directory\">/"
-"run</filename> 中，而非使用过时的 <filename class=\"directory\">/var/run</"
-"filename>。"
+"This switch prevents meson from attempting to download a copy of the Glib "
+"package for the tests."
+msgstr "该选项防止 meson 为了构建一些测试而尝试下载一份 Glib 软件包。"
 
-#. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
-#: lfs-en/chapter08/dbus.xml
-msgid "<parameter>--enable-user-session</parameter>"
-msgstr "<parameter>--enable-user-session</parameter>"
+#. type: Content of: <sect1><sect2><screen>
+#: lfs-en/chapter08/dbus.xml lfs-en/chapter08/systemd.xml
+#, no-wrap
+msgid "<userinput remap=\"make\">ninja</userinput>"
+msgstr "<userinput remap=\"make\">ninja</userinput>"
 
-#. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
+#. type: Content of: <sect1><sect2><screen>
 #: lfs-en/chapter08/dbus.xml
-msgid ""
-"This ensures the D-Bus per-user service and socket unit files are installed "
-"for Systemd.  They are not useful (but harmless) in a base LFS installation, "
-"however they can be used once systemd is rebuilt with PAM support in BLFS."
-msgstr ""
-"该选项确保为 Systemd 安装 D-Bus 的用户专属服务和套接字单元文件。它们对于基本"
-"的 LFS 系统没有实际作用 (但无害)，然而在 BLFS 中重新构建具有 PAM 支持的 "
-"systemd 后即可使用它们。"
+#, no-wrap
+msgid "<userinput remap=\"test\">ninja test</userinput>"
+msgstr "<userinput remap=\"test\">ninja test</userinput>"
 
 #. type: Content of: <sect1><sect2><para>
 #: lfs-en/chapter08/dbus.xml
@@ -659,6 +526,12 @@ msgid ""
 msgstr ""
 "许多测试被禁用，因为它们需要 LFS 不包含的软件包。阅读 <ulink url=\"&blfs-"
 "book;general/dbus.html\"> BLFS 手册</ulink>以查阅如何运行完整的测试套件。"
+
+#. type: Content of: <sect1><sect2><screen>
+#: lfs-en/chapter08/dbus.xml lfs-en/chapter08/systemd.xml
+#, no-wrap
+msgid "<userinput remap=\"install\">ninja install</userinput>"
+msgstr "<userinput remap=\"install\">ninja install</userinput>"
 
 #. type: Content of: <sect1><sect2><para>
 #: lfs-en/chapter08/dbus.xml
@@ -727,7 +600,7 @@ msgstr "<command>dbus-daemon</command>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: lfs-en/chapter08/dbus.xml
-msgid "Is the D-Bus message bus daemon"
+msgid "is the D-Bus message bus daemon"
 msgstr "是 D-Bus 消息总线守护程序"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
@@ -742,7 +615,7 @@ msgstr "<command>dbus-launch</command>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: lfs-en/chapter08/dbus.xml
-msgid "Starts <command>dbus-daemon</command> from a shell script"
+msgid "starts <command>dbus-daemon</command> from a shell script"
 msgstr "从 shell 脚本启动 <command>dbus-daemon</command>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
@@ -757,7 +630,7 @@ msgstr "<command>dbus-monitor</command>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: lfs-en/chapter08/dbus.xml
-msgid "Monitors messages passing through a D-Bus message bus"
+msgid "monitors messages passing through a D-Bus message bus"
 msgstr "监视通过一个 D-Bus 消息总线的消息"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
@@ -773,7 +646,7 @@ msgstr "<command>dbus-run-session</command>"
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: lfs-en/chapter08/dbus.xml
 msgid ""
-"Starts a session bus instance of <command>dbus-daemon</command> from a shell "
+"starts a session bus instance of <command>dbus-daemon</command> from a shell "
 "script and starts a specified program in that session"
 msgstr ""
 "从 shell 脚本启动一个 <command>dbus-daemon</command> 的会话总线实例，并在该会"
@@ -791,7 +664,7 @@ msgstr "<command>dbus-send</command>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: lfs-en/chapter08/dbus.xml
-msgid "Sends a message to a D-Bus message bus"
+msgid "sends a message to a D-Bus message bus"
 msgstr "向 D-Bus 消息总线发送消息"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
@@ -806,7 +679,7 @@ msgstr "<command>dbus-test-tool</command>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: lfs-en/chapter08/dbus.xml
-msgid "Is a tool to help packages test <application>D-Bus</application>"
+msgid "is a tool to help packages test <application>D-Bus</application>"
 msgstr "是一个帮助软件包测试 <application>D-Bus</application> 的工具"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
@@ -822,7 +695,7 @@ msgstr "<command>dbus-update-activation-environment</command>"
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: lfs-en/chapter08/dbus.xml
 msgid ""
-"Updates environment variables that will be set for <application>D-Bus</"
+"updates environment variables that will be set for <application>D-Bus</"
 "application> session services"
 msgstr "更新将会为 <application>D-Bus</application> 会话服务设置的环境变量"
 
