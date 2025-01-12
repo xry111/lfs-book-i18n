@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Linux From Scratch 11.4\n"
 "Report-Msgid-Bugs-To: lfs-dev@lists.linuxfromscratch.org\n"
-"POT-Creation-Date: 2024-07-04 13:21+0800\n"
+"POT-Creation-Date: 2025-01-12 13:22+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: Xi Ruoyao <xry111@xry111.site>\n"
 "Language-Team: none\n"
@@ -45,11 +45,11 @@ msgstr ""
 #: lfs-en/chapter04/addinguser.xml
 #, no-wrap
 msgid ""
-"<userinput>groupadd lfs\n"
-"useradd -s /bin/bash -g lfs -m -k /dev/null lfs</userinput>"
+"<userinput>groupadd &lfs-groupname;\n"
+"useradd -s /bin/bash -g &lfs-groupname; -m -k /dev/null &lfs-username;</userinput>"
 msgstr ""
 "<userinput>groupadd lfs\n"
-"useradd -s /bin/bash -g lfs -m -k /dev/null lfs</userinput>"
+"useradd -s /bin/bash -g &lfs-groupname; -m -k /dev/null &lfs-username;</userinput>"
 
 #. type: Content of: <sect1><variablelist><title>
 #: lfs-en/chapter04/addinguser.xml
@@ -138,8 +138,8 @@ msgstr ""
 #. type: Content of: <sect1><screen>
 #: lfs-en/chapter04/addinguser.xml
 #, no-wrap
-msgid "<userinput>passwd lfs</userinput>"
-msgstr "<userinput>passwd lfs</userinput>"
+msgid "<userinput>passwd &lfs-username;</userinput>"
+msgstr "<userinput>passwd &lfs-username;</userinput>"
 
 #. type: Content of: <sect1><para>
 #: lfs-en/chapter04/addinguser.xml
@@ -156,14 +156,14 @@ msgstr ""
 #: lfs-en/chapter04/addinguser.xml
 #, no-wrap
 msgid ""
-"<userinput>chown -v lfs $LFS/{usr{,/*},lib,var,etc,bin,sbin,tools}\n"
+"<userinput>chown -v &lfs-username; $LFS/{usr{,/*},lib,var,etc,bin,sbin,tools}\n"
 "case $(uname -m) in\n"
-"  x86_64) chown -v lfs $LFS/lib64 ;;\n"
+"  x86_64) chown -v &lfs-username; $LFS/lib64 ;;\n"
 "esac</userinput>"
 msgstr ""
-"<userinput>chown -v lfs $LFS/{usr{,/*},lib,var,etc,bin,sbin,tools}\n"
+"<userinput>chown -v &lfs-username; $LFS/{usr{,/*},lib,var,etc,bin,sbin,tools}\n"
 "case $(uname -m) in\n"
-"  x86_64) chown -v lfs $LFS/lib64 ;;\n"
+"  x86_64) chown -v &lfs-username; $LFS/lib64 ;;\n"
 "esac</userinput>"
 
 #. type: Content of: <sect1><note><para>
@@ -191,8 +191,8 @@ msgstr ""
 #. type: Content of: <sect1><screen>
 #: lfs-en/chapter04/addinguser.xml
 #, no-wrap
-msgid "<userinput>su - lfs</userinput>"
-msgstr "<userinput>su - lfs</userinput>"
+msgid "<userinput>su - &lfs-username;</userinput>"
+msgstr "<userinput>su - &lfs-username;</userinput>"
 
 #. type: Content of: <sect1><para>
 #: lfs-en/chapter04/addinguser.xml
