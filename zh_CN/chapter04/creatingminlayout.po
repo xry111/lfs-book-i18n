@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Linux From Scratch 11.4\n"
 "Report-Msgid-Bugs-To: lfs-dev@lists.linuxfromscratch.org\n"
-"POT-Creation-Date: 2025-01-12 13:22+0800\n"
+"POT-Creation-Date: 2025-01-13 16:52+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: Xi Ruoyao <xry111@xry111.site>\n"
 "Language-Team: none\n"
@@ -34,30 +34,6 @@ msgstr ""
 "tools\"/>中编译的程序 (以及<xref linkend=\"chapter-cross-tools\"/>中的 glibc "
 "和 libstdc++) 可以被安装到它们的最终位置。这样，在<xref linkend=\"chapter-"
 "building-system\"/>中重新构建它们时，就能直接覆盖这些临时程序。"
-
-#. type: Content of: <sect1><para>
-#: lfs-en/chapter04/creatingminlayout.xml
-msgid ""
-"At first, set the owner and permission mode of the <filename "
-"class='directory'>$LFS</filename> directory (i.e. the root directory in the "
-"newly created file system for the LFS system) to &root; and <literal>755</"
-"literal> in case the host distro has been configured to use a different "
-"default for <command>mkfs</command>:"
-msgstr ""
-"首先，将 <filename class='directory'>$LFS</filename> 目录 (即为 LFS 系统新创"
-"建的文件系统的根目录) 的所有者设为 &root;，访问权限设为 <literal>755</"
-"literal>，以防个别宿主发行版中 <command>mkfs</command> 被配置为使用与此不同的"
-"默认值："
-
-#. type: Content of: <sect1><screen>
-#: lfs-en/chapter04/creatingminlayout.xml
-#, no-wrap
-msgid ""
-"<userinput>chown root:root $LFS\n"
-"chmod 755 $LFS</userinput>"
-msgstr ""
-"<userinput>chown root:root $LFS\n"
-"chmod 755 $LFS</userinput>"
 
 #. type: Content of: <sect1><para>
 #: lfs-en/chapter04/creatingminlayout.xml

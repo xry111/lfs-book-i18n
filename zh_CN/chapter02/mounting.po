@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Linux From Scratch 11.4\n"
 "Report-Msgid-Bugs-To: lfs-dev@lists.linuxfromscratch.org\n"
-"POT-Creation-Date: 2024-01-28 20:56+0800\n"
+"POT-Creation-Date: 2025-01-13 16:52+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: Xi Ruoyao <xry111@xry111.site>\n"
 "Language-Team: none\n"
@@ -101,6 +101,29 @@ msgid ""
 msgstr ""
 "将 <replaceable>&lt;xxx&gt;</replaceable> 和 <replaceable>&lt;yyy&gt;</"
 "replaceable> 替换成对应的分区代号。"
+
+#. type: Content of: <sect1><para>
+#: lfs-en/chapter02/mounting.xml
+msgid ""
+"Set the owner and permission mode of the <filename class='directory'>$LFS</"
+"filename> directory (i.e. the root directory in the newly created file "
+"system for the LFS system) to &root; and <literal>755</literal> in case the "
+"host distro has been configured to use a different default for "
+"<command>mkfs</command>:"
+msgstr ""
+"将 <filename class='directory'>$LFS</filename> 目录 (即为 LFS 系统新创建的文"
+"件系统的根目录) 的所有者设为 &root;，访问权限设为 <literal>755</literal>，以"
+"防个别宿主发行版中 <command>mkfs</command> 被配置为使用与此不同的默认值："
+
+#. type: Content of: <sect1><screen>
+#: lfs-en/chapter02/mounting.xml
+#, no-wrap
+msgid ""
+"<userinput>chown root:root $LFS\n"
+"chmod 755 $LFS</userinput>"
+msgstr ""
+"<userinput>chown root:root $LFS\n"
+"chmod 755 $LFS</userinput>"
 
 #. type: Content of: <sect1><para>
 #: lfs-en/chapter02/mounting.xml
