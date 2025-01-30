@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Linux From Scratch 11.0\n"
 "Report-Msgid-Bugs-To: lfs-dev@lists.linuxfromscratch.org\n"
-"POT-Creation-Date: 2024-08-29 15:01+0800\n"
+"POT-Creation-Date: 2025-01-30 19:19+0800\n"
 "PO-Revision-Date: 2022-01-16 00:53+0800\n"
 "Last-Translator: Xi Ruoyao <xry111@xry111.site>\n"
 "Language-Team: none\n"
@@ -35,6 +35,58 @@ msgid ""
 msgstr ""
 "除了软件包外，我们还需要一些补丁。有些补丁解决了本应由维护者修复的问题，有些"
 "则对软件包进行微小的修改，使得它们更容易使用。构建 LFS 系统需要下列补丁："
+
+#. type: Content of: <sect1><variablelist><varlistentry><term>
+#: lfs-en/chapter03/patches.xml
+#, fuzzy
+#| msgid ""
+#| "Coreutils Internationalization Fixes Patch - <token>&coreutils-i18n-patch-"
+#| "size;</token>:"
+msgid ""
+"Binutils LoongArch Fix Patch - <token>&binutils-loongarch-patch-size;</"
+"token>:"
+msgstr "Coreutils 国际化修复补丁 - <token>&coreutils-i18n-patch-size;</token>:"
+
+#. type: Content of: <sect1><variablelist><varlistentry><listitem><para>
+#: lfs-en/chapter03/patches.xml
+#, fuzzy
+#| msgid "Download: <ulink url=\"&patches-root;&coreutils-i18n-patch;\"/>"
+msgid ""
+"Download: <ulink url=\"&lfs-root;~xry111/lfs/patches/&binutils-loongarch-"
+"patch;\"/>"
+msgstr "下载地址：<ulink url=\"&patches-root;&coreutils-i18n-patch;\"/>"
+
+#. type: Content of: <sect1><variablelist><varlistentry><listitem><para>
+#: lfs-en/chapter03/patches.xml
+#, fuzzy
+#| msgid "MD5 sum: <literal>&binutils-md5;</literal>"
+msgid "MD5 sum: <literal>&binutils-loongarch-patch-md5;</literal>"
+msgstr "MD5 校验和：<literal>&binutils-md5;</literal>"
+
+#. type: Content of: <sect1><variablelist><varlistentry><term>
+#: lfs-en/chapter03/patches.xml
+#, fuzzy
+#| msgid ""
+#| "Coreutils Internationalization Fixes Patch - <token>&coreutils-i18n-patch-"
+#| "size;</token>:"
+msgid ""
+"Binutils Upstream Fixes Patch - <token>&binutils-upstream-patch-size;</"
+"token>:"
+msgstr "Coreutils 国际化修复补丁 - <token>&coreutils-i18n-patch-size;</token>:"
+
+#. type: Content of: <sect1><variablelist><varlistentry><listitem><para>
+#: lfs-en/chapter03/patches.xml
+#, fuzzy
+#| msgid "Download: <ulink url=\"&patches-root;&coreutils-i18n-patch;\"/>"
+msgid "Download: <ulink url=\"&patches-root;&binutils-upstream-patch;\"/>"
+msgstr "下载地址：<ulink url=\"&patches-root;&coreutils-i18n-patch;\"/>"
+
+#. type: Content of: <sect1><variablelist><varlistentry><listitem><para>
+#: lfs-en/chapter03/patches.xml
+#, fuzzy
+#| msgid "MD5 sum: <literal>&binutils-md5;</literal>"
+msgid "MD5 sum: <literal>&binutils-upstream-patch-md5;</literal>"
+msgstr "MD5 校验和：<literal>&binutils-md5;</literal>"
 
 #. type: Content of: <sect1><variablelist><varlistentry><term>
 #: lfs-en/chapter03/patches.xml
@@ -147,5 +199,5 @@ msgid ""
 "downloads/\"/> and acquire any additional patches to suit your system needs."
 msgstr ""
 "除了上述必要的补丁外，LFS 社区还创建了一些可选补丁。它们有的解决了一些微小的"
-"问题，有的启用了一些默认没有启用的功能。您可以浏览 <ulink url=\"&lfs-root;"
-"patches/downloads/\"/> 查询 LFS 补丁库，并获取各种适合您需求的补丁。"
+"问题，有的启用了一些默认没有启用的功能。您可以浏览 <ulink url=\"&lfs-"
+"root;patches/downloads/\"/> 查询 LFS 补丁库，并获取各种适合您需求的补丁。"

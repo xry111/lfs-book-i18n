@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Linux From Scratch 11.4\n"
 "Report-Msgid-Bugs-To: lfs-dev@lists.linuxfromscratch.org\n"
-"POT-Creation-Date: 2023-09-18 16:58+0800\n"
+"POT-Creation-Date: 2025-01-30 19:13+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: Xi Ruoyao <xry111@xry111.site>\n"
 "Language-Team: none\n"
@@ -16,7 +16,9 @@ msgstr ""
 
 #. type: Content of: <sect1><title>
 #: lfs-en/chapter02/aboutlfs.xml
-msgid "Setting The $LFS Variable"
+#, fuzzy
+#| msgid "Setting The $LFS Variable"
+msgid "Setting the $LFS Variable and the Umask"
 msgstr "设置 $LFS 环境变量"
 
 #. type: Content of: <sect1><para>
@@ -56,13 +58,59 @@ msgstr ""
 "$LFS/tools</command>。Shell 在解析命令时会自动将 <quote>$LFS</quote> 替换成 "
 "<quote>/mnt/lfs</quote> (或是您设置的其他值)。"
 
-#. type: Content of: <sect1><caution><para>
+#. type: Content of: <sect1><para>
 #: lfs-en/chapter02/aboutlfs.xml
 msgid ""
-"Do not forget to check that <envar>LFS</envar> is set whenever you leave and "
-"reenter the current working environment (such as when doing a <command>su</"
-"command> to <systemitem class=\"username\">root</systemitem> or another "
-"user). Check that the <envar>LFS</envar> variable is set up properly with:"
+"Now set the file mode creation mask (umask) to <literal>022</literal> in "
+"case the host distro uses a different default:"
+msgstr ""
+
+#. type: Content of: <sect1><screen>
+#: lfs-en/chapter02/aboutlfs.xml
+#, fuzzy, no-wrap
+#| msgid "<userinput>make -j32</userinput>"
+msgid "<userinput>umask 022</userinput>"
+msgstr "<userinput>make -j32</userinput>"
+
+#. type: Content of: <sect1><para>
+#: lfs-en/chapter02/aboutlfs.xml
+#, fuzzy
+#| msgid ""
+#| "Setting the user file-creation mask (umask) to 022 ensures that newly "
+#| "created files and directories are only writable by their owner, but are "
+#| "readable and executable by anyone (assuming default modes are used by the "
+#| "<ulink role='man' url='&man;open.2'>open(2)</ulink> system call, new "
+#| "files will end up with permission mode 644 and directories with mode 755)."
+msgid ""
+"Setting the umask to 022 ensures that newly created files and directories "
+"are only writable by their owner, but are readable and searchable (only for "
+"directories) by anyone (assuming default modes are used by the <ulink "
+"role='man' url='&man;open.2'>open(2)</ulink> system call, new files will end "
+"up with permission mode 644 and directories with mode 755).  An overly-"
+"permissive default can leave security holes in the LFS system, and an overly-"
+"restrictive default can cause strange issues building or using the LFS "
+"system."
+msgstr ""
+"将用户的文件创建掩码 (umask) 设定为 022，保证只有文件所有者可以写新创建的文件"
+"和目录，但任何人都可读取、执行它们。(如果 <ulink role='man' "
+"url='&man;open.2'>open(2)</ulink> 系统调用使用默认模式，则新文件将具有权限模"
+"式 644，而新目录具有权限模式 755)。"
+
+#. type: Content of: <sect1><caution><para>
+#: lfs-en/chapter02/aboutlfs.xml
+#, fuzzy
+#| msgid ""
+#| "Do not forget to check that <envar>LFS</envar> is set whenever you leave "
+#| "and reenter the current working environment (such as when doing a "
+#| "<command>su</command> to <systemitem class=\"username\">root</systemitem> "
+#| "or another user). Check that the <envar>LFS</envar> variable is set up "
+#| "properly with:"
+msgid ""
+"Do not forget to check that <envar>LFS</envar> is set and the umask is set "
+"to <literal>022</literal> whenever you leave and reenter the current working "
+"environment (such as when doing a <command>su</command> to <systemitem "
+"class=\"username\">root</systemitem> or another user). Check that the "
+"<envar>LFS</envar> variable is set up properly with:"
 msgstr ""
 "无论何时，如果您离开并重新进入了工作环境，一定要确认 <envar>LFS</envar> 的设"
 "定值和您离开工作环境时相同。(例如，使用 <command>su</command> 切换到 "
@@ -77,46 +125,99 @@ msgstr "<userinput>echo $LFS</userinput>"
 
 #. type: Content of: <sect1><caution><para>
 #: lfs-en/chapter02/aboutlfs.xml
+#, fuzzy
+#| msgid ""
+#| "Make sure the output shows the path to the LFS partition's mount point, "
+#| "which is <filename class=\"directory\">/mnt/lfs</filename>, using our "
+#| "example."
 msgid ""
 "Make sure the output shows the path to your LFS system's build location, "
 "which is <filename class=\"directory\">/mnt/lfs</filename> if the provided "
-"example was followed. If the output is incorrect, use the command given "
-"earlier on this page to set <envar>$LFS</envar> to the correct directory "
-"name."
+"example was followed."
 msgstr ""
-"确认该命令的输出是您构建 LFS 的位置，如果您使用本书提供的例子，那么输出应该"
-"是 <filename class=\"directory\">/mnt/lfs</filename>。如果输出不正确，使用前"
-"文给出的命令，将 <envar>$LFS</envar> 设置成正确的目录名。"
+"确认上述命令输出 LFS 分区挂载点的路径，如果使用了本书的例子，就是 <filename "
+"class=\"directory\">/mnt/lfs</filename>。"
 
-#. type: Content of: <sect1><note><para>
+#. type: Content of: <sect1><caution><para>
+#: lfs-en/chapter02/aboutlfs.xml
+msgid "Check that the umask is set up properly with:"
+msgstr ""
+
+#. type: Content of: <sect1><caution><screen>
+#: lfs-en/chapter02/aboutlfs.xml
+#, fuzzy, no-wrap
+#| msgid "<userinput>make -j32</userinput>"
+msgid "<userinput>umask</userinput>"
+msgstr "<userinput>make -j32</userinput>"
+
+#. type: Content of: <sect1><caution><para>
 #: lfs-en/chapter02/aboutlfs.xml
 msgid ""
-"One way to ensure that the <envar>LFS</envar> variable is always set is to "
-"edit the <filename>.bash_profile</filename> file in both your personal home "
-"directory and in <filename>/root/.bash_profile</filename> and enter the "
-"export command above.  In addition, the shell specified in the <filename>/"
-"etc/passwd</filename> file for all users that need the <envar>LFS</envar> "
-"variable must be bash to ensure that the <filename>/root/.bash_profile</"
-"filename> file is incorporated as a part of the login process."
+"The output may be <computeroutput>0022</computeroutput> or "
+"<computeroutput>022</computeroutput> (the number of leading zeros depends on "
+"the host distro)."
 msgstr ""
-"确保 <envar>LFS</envar> 始终正确的一种方法是：编辑您的主目录中的 <filename>."
-"bash_profile</filename>，以及<filename>/root/.bash_profile</filename>，为它们"
-"加入上述设置并导出 LFS 变量的 export 命令。另外，在 <filename>/etc/passwd</"
-"filename> 中，每个需要使用 <envar>LFS</envar> 变量的用户的 shell 都必须是 "
-"bash，以保证每次登录时都执行 <filename>.bash_profile</filename> 中的命令。"
+
+#. type: Content of: <sect1><caution><para>
+#: lfs-en/chapter02/aboutlfs.xml
+msgid ""
+"If any output of these two commands is incorrect, use the command given "
+"earlier on this page to set <envar>$LFS</envar> to the correct directory "
+"name and set umask to <literal>022</literal>."
+msgstr ""
 
 #. type: Content of: <sect1><note><para>
 #: lfs-en/chapter02/aboutlfs.xml
+#, fuzzy
+#| msgid ""
+#| "One way to ensure that the <envar>LFS</envar> variable is always set is "
+#| "to edit the <filename>.bash_profile</filename> file in both your personal "
+#| "home directory and in <filename>/root/.bash_profile</filename> and enter "
+#| "the export command above.  In addition, the shell specified in the "
+#| "<filename>/etc/passwd</filename> file for all users that need the "
+#| "<envar>LFS</envar> variable must be bash to ensure that the <filename>/"
+#| "root/.bash_profile</filename> file is incorporated as a part of the login "
+#| "process."
+msgid ""
+"One way to ensure that the <envar>LFS</envar> variable and the umask are "
+"always set properly is to edit the <filename>.bash_profile</filename> file "
+"in both your personal home directory and in <filename>/root/.bash_profile</"
+"filename> and enter the <command>export</command> and <command>umask</"
+"command> commands above.  In addition, the shell specified in the <filename>/"
+"etc/passwd</filename> file for all users that need the <envar>LFS</envar> "
+"variable must be bash to ensure that the <filename>.bash_profile</filename> "
+"file is incorporated as a part of the login process."
+msgstr ""
+"确保 <envar>LFS</envar> 始终正确的一种方法是：编辑您的主目录中的 "
+"<filename>.bash_profile</filename>，以及<filename>/root/.bash_profile</"
+"filename>，为它们加入上述设置并导出 LFS 变量的 export 命令。另外，在 "
+"<filename>/etc/passwd</filename> 中，每个需要使用 <envar>LFS</envar> 变量的用"
+"户的 shell 都必须是 bash，以保证每次登录时都执行 <filename>.bash_profile</"
+"filename> 中的命令。"
+
+#. type: Content of: <sect1><note><para>
+#: lfs-en/chapter02/aboutlfs.xml
+#, fuzzy
+#| msgid ""
+#| "Another consideration is the method that is used to log into the host "
+#| "system.  If logging in through a graphical display manager, the user's "
+#| "<filename>.bash_profile</filename> is not normally used when a virtual "
+#| "terminal is started.  In this case, add the export command to the "
+#| "<filename>.bashrc</filename> file for the user and <systemitem "
+#| "class=\"username\">root</systemitem>.  In addition, some distributions "
+#| "use an \"if\" test, and do not run the remaining <filename>.bashrc</"
+#| "filename> instructions for a non-interactive bash invocation.  Be sure to "
+#| "place the export command ahead of the test for non-interactive use."
 msgid ""
 "Another consideration is the method that is used to log into the host "
 "system.  If logging in through a graphical display manager, the user's "
 "<filename>.bash_profile</filename> is not normally used when a virtual "
-"terminal is started.  In this case, add the export command to the <filename>."
-"bashrc</filename> file for the user and <systemitem class=\"username\">root</"
-"systemitem>.  In addition, some distributions use an \"if\" test, and do not "
-"run the remaining <filename>.bashrc</filename> instructions for a non-"
-"interactive bash invocation.  Be sure to place the export command ahead of "
-"the test for non-interactive use."
+"terminal is started.  In this case, add the commands to the "
+"<filename>.bashrc</filename> file for the user and <systemitem "
+"class=\"username\">root</systemitem>.  In addition, some distributions use "
+"an \"if\" test, and do not run the remaining <filename>.bashrc</filename> "
+"instructions for a non-interactive bash invocation.  Be sure to place the "
+"commands ahead of the test for non-interactive use."
 msgstr ""
 "另外还要考虑登录宿主系统的方式，如果您使用图形显示管理器登录，再启动虚拟终"
 "端，那么 <filename>.bash_profile</filename> 一般不会被虚拟终端执行。此时，应"

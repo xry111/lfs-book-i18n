@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Linux From Scratch 11.4\n"
 "Report-Msgid-Bugs-To: lfs-dev@lists.linuxfromscratch.org\n"
-"POT-Creation-Date: 2024-08-29 15:01+0800\n"
+"POT-Creation-Date: 2025-01-30 19:19+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: Xi Ruoyao <xry111@xry111.site>\n"
 "Language-Team: none\n"
@@ -208,17 +208,17 @@ msgstr "&diskspace;"
 #: lfs-en/chapter08/autoconf.xml lfs-en/chapter08/automake.xml
 #: lfs-en/chapter08/bash.xml lfs-en/chapter08/bc.xml lfs-en/chapter08/bison.xml
 #: lfs-en/chapter08/bzip2.xml lfs-en/chapter08/check.xml
-#: lfs-en/chapter08/coreutils.xml lfs-en/chapter08/dbus.xml
-#: lfs-en/chapter08/diffutils.xml lfs-en/chapter08/e2fsprogs.xml
-#: lfs-en/chapter08/expat.xml lfs-en/chapter08/expect.xml
-#: lfs-en/chapter08/file.xml lfs-en/chapter08/findutils.xml
-#: lfs-en/chapter08/flex.xml lfs-en/chapter08/gawk.xml lfs-en/chapter08/gcc.xml
-#: lfs-en/chapter08/gdbm.xml lfs-en/chapter08/gettext.xml
-#: lfs-en/chapter08/glibc.xml lfs-en/chapter08/gperf.xml
-#: lfs-en/chapter08/grep.xml lfs-en/chapter08/groff.xml
-#: lfs-en/chapter08/grub.xml lfs-en/chapter08/gzip.xml
-#: lfs-en/chapter08/inetutils.xml lfs-en/chapter08/intltool.xml
-#: lfs-en/chapter08/kbd.xml lfs-en/chapter08/kmod.xml lfs-en/chapter08/less.xml
+#: lfs-en/chapter08/coreutils.xml lfs-en/chapter08/diffutils.xml
+#: lfs-en/chapter08/e2fsprogs.xml lfs-en/chapter08/expat.xml
+#: lfs-en/chapter08/expect.xml lfs-en/chapter08/file.xml
+#: lfs-en/chapter08/findutils.xml lfs-en/chapter08/flex.xml
+#: lfs-en/chapter08/gawk.xml lfs-en/chapter08/gcc.xml lfs-en/chapter08/gdbm.xml
+#: lfs-en/chapter08/gettext.xml lfs-en/chapter08/glibc.xml
+#: lfs-en/chapter08/gperf.xml lfs-en/chapter08/grep.xml
+#: lfs-en/chapter08/groff.xml lfs-en/chapter08/grub.xml
+#: lfs-en/chapter08/gzip.xml lfs-en/chapter08/inetutils.xml
+#: lfs-en/chapter08/intltool.xml lfs-en/chapter08/kbd.xml
+#: lfs-en/chapter08/kmod.xml lfs-en/chapter08/less.xml
 #: lfs-en/chapter08/libelf.xml lfs-en/chapter08/libffi.xml
 #: lfs-en/chapter08/libpipeline.xml lfs-en/chapter08/libtool.xml
 #: lfs-en/chapter08/libxcrypt.xml lfs-en/chapter08/m4.xml
@@ -380,9 +380,9 @@ msgstr ""
 #. type: Content of: <sect1><sect2><important><para>
 #: lfs-en/chapter10/kernel.xml
 msgid ""
-"For general information on kernel configuration see <ulink url=\"&hints-root;"
-"kernel-configuration.txt\"/>.  Additional information about configuring and "
-"building the kernel can be found at <ulink url=\"&anduin-sources;/kernel-"
+"For general information on kernel configuration see <ulink url=\"&hints-"
+"root;kernel-configuration.txt\"/>.  Additional information about configuring "
+"and building the kernel can be found at <ulink url=\"&anduin-sources;/kernel-"
 "nutshell/\"/>.  These references are a bit dated, but still give a "
 "reasonable overview of the process."
 msgstr ""
@@ -393,13 +393,13 @@ msgstr ""
 #. type: Content of: <sect1><sect2><important><para>
 #: lfs-en/chapter10/kernel.xml
 msgid ""
-"If all else fails, you can ask for help on the <ulink url=\"https://www."
-"linuxfromscratch.org/mail.html\">lfs-support</ulink> mailing list.  Note "
+"If all else fails, you can ask for help on the <ulink url=\"https://"
+"www.linuxfromscratch.org/mail.html\">lfs-support</ulink> mailing list.  Note "
 "that subscribing is required in order for the list to avoid spam."
 msgstr ""
-"如果所有其他尝试都无法解决问题，可以在 <ulink url='https://www."
-"linuxfromscratch.org/mail.html'>lfs-support</ulink> 邮件列表提问。注意为了防"
-"止垃圾邮件，必须先订阅列表才能向列表发送邮件。"
+"如果所有其他尝试都无法解决问题，可以在 <ulink url='https://"
+"www.linuxfromscratch.org/mail.html'>lfs-support</ulink> 邮件列表提问。注意为"
+"了防止垃圾邮件，必须先订阅列表才能向列表发送邮件。"
 
 #. type: Content of: <sect1><sect2><para>
 #: lfs-en/chapter10/kernel.xml
@@ -520,26 +520,12 @@ msgstr ""
 msgid ""
 "There are several other options that may be desired depending on the "
 "requirements for the system. For a list of options needed for BLFS packages, "
-"see the <ulink url=\"&lfs-root;blfs/view/&short-version;/longindex."
-"html#kernel-config-index\">BLFS Index of Kernel Settings</ulink>."
+"see the <ulink url=\"&lfs-root;blfs/view/&short-version;/"
+"longindex.html#kernel-config-index\">BLFS Index of Kernel Settings</ulink>."
 msgstr ""
 "根据系统的需求，可能需要一些其他配置选项。BLFS 软件包需要的内核配置选项列表可"
 "以在 <ulink url=\"&lfs-root;blfs/view/&short-version;/longindex.html#kernel-"
 "config-index\">BLFS 内核配置索引</ulink>查阅。"
-
-#. type: Content of: <sect1><sect2><note><para>
-#: lfs-en/chapter10/kernel.xml
-msgid ""
-"If your host hardware is using UEFI and you wish to boot the LFS system with "
-"it, you should adjust some kernel configuration following <ulink url=\"&blfs-"
-"book;postlfs/grub-setup.html#uefi-kernel\"> the BLFS page</ulink> <emphasis "
-"role='bold'>even if you'll use the UEFI bootloader from the host distro</"
-"emphasis>."
-msgstr ""
-"如果您的硬件支持 UEFI，且您希望通过 UEFI 引导 LFS 系统，则您需要按照 <ulink "
-"url=\"&blfs-book;postlfs/grub-setup.html#uefi-kernel\">BLFS 页面</ulink>的说"
-"明，调整一些内核配置选项，<emphasis role='bold'>即使您准备使用宿主发行版提供"
-"的 UEFI 加载器引导 LFS 系统，也需要进行调整。</emphasis>"
 
 #. type: Content of: <sect1><sect2><variablelist><title>
 #: lfs-en/chapter10/kernel.xml
@@ -683,6 +669,79 @@ msgstr ""
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: lfs-en/chapter10/kernel.xml
+#, fuzzy
+#| msgid "<parameter> Compile the kernel with warnings as errors </parameter>"
+msgid ""
+"<parameter> Display a user-friendly message when a kernel panic occurs </"
+"parameter>"
+msgstr "<parameter> Compile the kernel with warnings as errors </parameter>"
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
+#: lfs-en/chapter10/kernel.xml
+msgid ""
+"This will make the kernel correctly display the message in case a kernel "
+"panic happens and a running DRM driver supports to do so.  Without this, it "
+"would be more difficult to diagnose a panic: if no DRM driver is running, "
+"we'd be on the VGA console which can only hold 24 lines and the relevant "
+"kernel message is often flushed away; if a DRM driver is running, the "
+"display is often completely messed up on panic.  As of Linux-6.12, none of "
+"the dedicated drivers for mainstream GPU models really supports this, but "
+"it's supported by the <quote>Simple framebuffer driver</quote> which runs on "
+"the VESA (or EFI) framebuffer before the dedicated GPU driver is loaded.  If "
+"the dedicated GPU driver is built as a module (instead of a part of the "
+"kernel image) and no initramfs is used, this functionality will work just "
+"fine before the root file system is mounted and it's already enough for "
+"providing information about most LFS configuration errors causing a panic "
+"(for example, an incorrect <parameter>root=</parameter> setting in <xref "
+"linkend='ch-bootable-grub'/>)."
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
+#: lfs-en/chapter10/kernel.xml
+#, fuzzy
+#| msgid "<parameter>set +h</parameter>"
+msgid "<parameter> Panic screen formatter </parameter>"
+msgstr "<parameter>set +h</parameter>"
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
+#: lfs-en/chapter10/kernel.xml
+msgid ""
+"Set this <literal>kmsg</literal> to make sure the last kernel messages lines "
+"are displayed when a kernel panic happens.  The default, <literal>user</"
+"literal>, would make the kernel show only a <quote>user friendly</quote> "
+"panic message which is not helpful on diagnostic.  The third choice, "
+"<literal>qr_code</literal>, would make the kernel to compress the last "
+"kernel message lines into a QR code and display it.  The QR code can hold "
+"more message lines than plain text and it can be decoded with an external "
+"device (like a smart phone).  But it requires a Rust compiler that LFS does "
+"not provide."
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
+#: lfs-en/chapter10/kernel.xml
+#, fuzzy
+#| msgid ""
+#| "<parameter> Enable legacy fbdev support for your modesetting driver </"
+#| "parameter> and <parameter>Framebuffer Console support</parameter>"
+msgid ""
+"<parameter> Mark VGA/VBE/EFI FB as generic system framebuffer </parameter> "
+"and <parameter>Simple framebuffer driver</parameter>"
+msgstr ""
+"<parameter> Enable legacy fbdev support for your modesetting driver </"
+"parameter> 和 <parameter>Framebuffer Console support</parameter>"
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
+#: lfs-en/chapter10/kernel.xml
+msgid ""
+"These allow to use the VESA framebuffer (or the EFI framebuffer if booting "
+"the LFS system via UEFI) as a DRM device.  The VESA framebuffer will be set "
+"up by GRUB (or the EFI framebuffer will be set up by the UEFI firmware), so "
+"the DRM panic handler can function before the GPU-specific DRM driver is "
+"loaded."
+msgstr ""
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
+#: lfs-en/chapter10/kernel.xml
 msgid ""
 "<parameter> Enable legacy fbdev support for your modesetting driver </"
 "parameter> and <parameter>Framebuffer Console support</parameter>"
@@ -692,11 +751,18 @@ msgstr ""
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: lfs-en/chapter10/kernel.xml
+#, fuzzy
+#| msgid ""
+#| "These are needed to display the Linux console on a GPU driven by a DRI "
+#| "(Direct Rendering Infrastructure) driver.  If <option>CONFIG_DRM</option> "
+#| "(Direct Rendering Manager) is enabled, you should enable these two "
+#| "options as well or you'll see a blank screen once the DRI driver is "
+#| "loaded."
 msgid ""
 "These are needed to display the Linux console on a GPU driven by a DRI "
-"(Direct Rendering Infrastructure) driver.  If <option>CONFIG_DRM</option> "
-"(Direct Rendering Manager) is enabled, you should enable these two options "
-"as well or you'll see a blank screen once the DRI driver is loaded."
+"(Direct Rendering Infrastructure) driver.  As <option>CONFIG_DRM</option> "
+"(Direct Rendering Manager) is enabled, we should enable these two options as "
+"well or we'll see a blank screen once the DRI driver is loaded."
 msgstr ""
 "它们允许使用基于 DRI (Direct Rendering Infrastructure) 的 GPU 驱动显示 Linux "
 "控制台。如果 <option>CONFIG_DRM</option> (Direct Rendering Manager) 被启用，"
@@ -743,11 +809,11 @@ msgid ""
 "directory.  Also, <ulink role='man' url='&man;modprobe.d.5'>modprobe.d(5)</"
 "ulink> may be of interest."
 msgstr ""
-"如果要使用内核模块，可能需要在 <filename class=\"directory\">/etc/modprobe."
-"d</filename> 中写入模块配置。讨论模块和内核配置的信息位于<xref linkend=\"ch-"
-"config-udev\"/>和 <filename class=\"directory\">linux-&linux-version;/"
-"Documentation </filename> 目录下的内核文档中。另外 <ulink role='man' "
-"url='&man;modprobe.d.5'>modprobe.d(5)</ulink> 也可以作为参考。"
+"如果要使用内核模块，可能需要在 <filename class=\"directory\">/etc/"
+"modprobe.d</filename> 中写入模块配置。讨论模块和内核配置的信息位于<xref "
+"linkend=\"ch-config-udev\"/>和 <filename class=\"directory\">linux-&linux-"
+"version;/Documentation </filename> 目录下的内核文档中。另外 <ulink "
+"role='man' url='&man;modprobe.d.5'>modprobe.d(5)</ulink> 也可以作为参考。"
 
 #. type: Content of: <sect1><sect2><para>
 #: lfs-en/chapter10/kernel.xml
@@ -774,9 +840,17 @@ msgstr ""
 
 #. type: Content of: <sect1><sect2><caution><para>
 #: lfs-en/chapter10/kernel.xml
+#, fuzzy
+#| msgid ""
+#| "If you've decided to use a separate &boot-dir; partition for the LFS "
+#| "system (maybe sharing a &boot-dir; partition with the host distro) , the "
+#| "files copied below should go there. The easiest way to do that is to "
+#| "create the entry for &boot-dir; in &fstab; first (read the previous "
+#| "section for details), then issue the following command as the &root; user "
+#| "in the <emphasis>chroot environment</emphasis>:"
 msgid ""
 "If you've decided to use a separate &boot-dir; partition for the LFS system "
-"(maybe sharing a &boot-dir; partition with the host distro) , the files "
+"(maybe sharing a &boot-dir; partition with the host distro), the files "
 "copied below should go there. The easiest way to do that is to create the "
 "entry for &boot-dir; in &fstab; first (read the previous section for "
 "details), then issue the following command as the &root; user in the "
@@ -914,6 +988,31 @@ msgstr ""
 "命令，以保证 <filename class=\"directory\">linux-&linux-version;</filename> "
 "目录中所有文件都属于 <emphasis>root</emphasis>。"
 
+#. type: Content of: <sect1><sect2><note><para>
+#: lfs-en/chapter10/kernel.xml
+msgid ""
+"If you are updating the configuration and rebuilding the kernel from a "
+"retained kernel source tree, normally you should <emphasis role='bold'>not</"
+"emphasis> run the <command>make mrproper</command> command.  The command "
+"would purge the <filename>.config</filename> file and all the <filename "
+"class='extension'>.o</filename> files from the previous build.  Despite it's "
+"easy to restore <filename>.config</filename> from the copy in <filename "
+"class='directory'>/boot</filename>, purging all the <filename "
+"class='extension'>.o</filename> files is still a waste: for a simple "
+"configuration change, often only a few <filename class='extension'>.o</"
+"filename> files need to be (re)built and the kernel build system will "
+"correctly skip other <filename class='extension'>.o</filename> files if they "
+"are not purged."
+msgstr ""
+
+#. type: Content of: <sect1><sect2><note><para>
+#: lfs-en/chapter10/kernel.xml
+msgid ""
+"On the other hand, if you've upgraded GCC, you should run <command>make "
+"clean</command> to purge all the <filename class='extension'>.o</filename> "
+"files from the previous build, or the new build may fail."
+msgstr ""
+
 #. type: Content of: <sect1><sect2><warning><para>
 #: lfs-en/chapter10/kernel.xml
 msgid ""
@@ -928,22 +1027,6 @@ msgstr ""
 "filename> 指向内核源代码目录，这仅仅适用于 2.6 系列之前的内核。在 LFS 系统上"
 "<emphasis>绝对不要</emphasis>创建它，因为在构建完基本 LFS 系统后，它可能在您"
 "构建其他软件包时引起问题。"
-
-#. type: Content of: <sect1><sect2><warning><para>
-#: lfs-en/chapter10/kernel.xml
-msgid ""
-"The headers in the system's <filename class=\"directory\">include</filename> "
-"directory (<filename class=\"directory\">/usr/include</filename>) should "
-"<emphasis>always</emphasis> be the ones against which Glibc was compiled, "
-"that is, the sanitised headers installed in <xref linkend=\"ch-tools-linux-"
-"headers\"/>.  Therefore, they should <emphasis>never</emphasis> be replaced "
-"by either the raw kernel headers or any other kernel sanitized headers."
-msgstr ""
-"在系统 <filename class=\"directory\">include</filename> 目录 (即 <filename "
-"class=\"directory\">/usr/include</filename>) 中的内核头文件应该<emphasis>总是"
-"</emphasis>与构建 Glibc 时使用的内核头文件一致，即保持为<xref linkend=\"ch-"
-"tools-linux-headers\"/>中安装的净化头文件。换句话说，<emphasis>永远不要</"
-"emphasis>用原始内核头文件，或其他版本内核的净化头文件替换它们。"
 
 #. type: Content of: <sect1><sect2><title>
 #: lfs-en/chapter10/kernel.xml
@@ -1014,11 +1097,11 @@ msgstr "Linux 的内容"
 #. type: Content of: <sect1><sect2><segmentedlist><seglistitem><seg>
 #: lfs-en/chapter10/kernel.xml
 msgid ""
-"config-&linux-version;, vmlinuz-&linux-version;-lfs-&version;, and System."
-"map-&linux-version;"
+"config-&linux-version;, vmlinuz-&linux-version;-lfs-&version;, and "
+"System.map-&linux-version;"
 msgstr ""
-"config-&linux-version;, vmlinuz-&linux-version;-lfs-&version;, 以及 System."
-"map-&linux-version;"
+"config-&linux-version;, vmlinuz-&linux-version;-lfs-&version;, 以及 "
+"System.map-&linux-version;"
 
 #. type: Content of: <sect1><sect2><segmentedlist><seglistitem><seg>
 #: lfs-en/chapter10/kernel.xml

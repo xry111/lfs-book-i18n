@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Linux From Scratch 11.4\n"
 "Report-Msgid-Bugs-To: lfs-dev@lists.linuxfromscratch.org\n"
-"POT-Creation-Date: 2024-02-28 01:01+0800\n"
+"POT-Creation-Date: 2025-01-30 19:19+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: Xi Ruoyao <xry111@xry111.site>\n"
 "Language-Team: none\n"
@@ -43,10 +43,13 @@ msgstr ""
 
 #. type: Content of: <sect1><screen>
 #: lfs-en/chapter04/addinguser.xml
-#, no-wrap
+#, fuzzy, no-wrap
+#| msgid ""
+#| "<userinput>groupadd lfs\n"
+#| "useradd -s /bin/bash -g lfs -m -k /dev/null lfs</userinput>"
 msgid ""
-"<userinput>groupadd lfs\n"
-"useradd -s /bin/bash -g lfs -m -k /dev/null lfs</userinput>"
+"<userinput>groupadd &lfs-groupname;\n"
+"useradd -s /bin/bash -g &lfs-groupname; -m -k /dev/null &lfs-username;</userinput>"
 msgstr ""
 "<userinput>groupadd lfs\n"
 "useradd -s /bin/bash -g lfs -m -k /dev/null lfs</userinput>"
@@ -137,8 +140,9 @@ msgstr ""
 
 #. type: Content of: <sect1><screen>
 #: lfs-en/chapter04/addinguser.xml
-#, no-wrap
-msgid "<userinput>passwd lfs</userinput>"
+#, fuzzy, no-wrap
+#| msgid "<userinput>passwd lfs</userinput>"
+msgid "<userinput>passwd &lfs-username;</userinput>"
 msgstr "<userinput>passwd lfs</userinput>"
 
 #. type: Content of: <sect1><para>
@@ -154,8 +158,9 @@ msgstr ""
 
 #. type: Content of: <sect1><screen>
 #: lfs-en/chapter04/addinguser.xml
-#, no-wrap
-msgid "<userinput>chown -v lfs $LFS/{usr{,/*},lib,lib64,var,etc,bin,sbin,tools}</userinput>"
+#, fuzzy, no-wrap
+#| msgid "<userinput>chown -v lfs $LFS/{usr{,/*},lib,lib64,var,etc,bin,sbin,tools}</userinput>"
+msgid "<userinput>chown -v &lfs-username; $LFS/{usr{,/*},lib,lib64,var,etc,bin,sbin,tools}</userinput>"
 msgstr "<userinput>chown -v lfs $LFS/{usr{,/*},lib,lib64,var,etc,bin,sbin,tools}</userinput>"
 
 #. type: Content of: <sect1><note><para>
@@ -182,8 +187,9 @@ msgstr ""
 
 #. type: Content of: <sect1><screen>
 #: lfs-en/chapter04/addinguser.xml
-#, no-wrap
-msgid "<userinput>su - lfs</userinput>"
+#, fuzzy, no-wrap
+#| msgid "<userinput>su - lfs</userinput>"
+msgid "<userinput>su - &lfs-username;</userinput>"
 msgstr "<userinput>su - lfs</userinput>"
 
 #. type: Content of: <sect1><para>
@@ -196,6 +202,6 @@ msgid ""
 "command>."
 msgstr ""
 "参数 <quote><parameter>-</parameter></quote> 使得 <command>su</command> 启动"
-"一个登录 shell，而不是非登录 shell。<ulink role='man' url='&man;"
-"bash.1'>bash(1)</ulink> 和 <command>info bash</command> 详细介绍了它们的区"
-"别。"
+"一个登录 shell，而不是非登录 shell。<ulink role='man' "
+"url='&man;bash.1'>bash(1)</ulink> 和 <command>info bash</command> 详细介绍了"
+"它们的区别。"
