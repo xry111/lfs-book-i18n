@@ -43,16 +43,13 @@ msgstr ""
 
 #. type: Content of: <sect1><screen>
 #: lfs-en/chapter04/addinguser.xml
-#, fuzzy, no-wrap
-#| msgid ""
-#| "<userinput>groupadd lfs\n"
-#| "useradd -s /bin/bash -g lfs -m -k /dev/null lfs</userinput>"
+#, no-wrap
 msgid ""
 "<userinput>groupadd &lfs-groupname;\n"
 "useradd -s /bin/bash -g &lfs-groupname; -m -k /dev/null &lfs-username;</userinput>"
 msgstr ""
 "<userinput>groupadd lfs\n"
-"useradd -s /bin/bash -g lfs -m -k /dev/null lfs</userinput>"
+"useradd -s /bin/bash -g &lfs-groupname; -m -k /dev/null &lfs-username;</userinput>"
 
 #. type: Content of: <sect1><variablelist><title>
 #: lfs-en/chapter04/addinguser.xml
@@ -140,10 +137,9 @@ msgstr ""
 
 #. type: Content of: <sect1><screen>
 #: lfs-en/chapter04/addinguser.xml
-#, fuzzy, no-wrap
-#| msgid "<userinput>passwd lfs</userinput>"
+#, no-wrap
 msgid "<userinput>passwd &lfs-username;</userinput>"
-msgstr "<userinput>passwd lfs</userinput>"
+msgstr "<userinput>passwd &lfs-username;</userinput>"
 
 #. type: Content of: <sect1><para>
 #: lfs-en/chapter04/addinguser.xml
@@ -187,10 +183,9 @@ msgstr ""
 
 #. type: Content of: <sect1><screen>
 #: lfs-en/chapter04/addinguser.xml
-#, fuzzy, no-wrap
-#| msgid "<userinput>su - lfs</userinput>"
+#, no-wrap
 msgid "<userinput>su - &lfs-username;</userinput>"
-msgstr "<userinput>su - lfs</userinput>"
+msgstr "<userinput>su - &lfs-username;</userinput>"
 
 #. type: Content of: <sect1><para>
 #: lfs-en/chapter04/addinguser.xml

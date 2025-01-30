@@ -358,7 +358,7 @@ msgstr ""
 "filename>)。为了准确确定动态链接器名称，可以从宿主系统找一个二进制可执行文"
 "件，然后执行：<userinput>readelf -l &lt;二进制文件名&gt; | grep interpreter</"
 "userinput> 并观察输出。可以在 <ulink url='https://sourceware.org/glibc/wiki/"
-"ABIList'>Glibc wiki 页面</ulink> 找到包含所有平台的权威参考。"
+"ABIList'>Glibc wiki 页面</ulink>找到包含所有平台的权威参考。"
 
 #. type: Content of: <sect1><sect2><para>
 #: lfs-en/part3intro/toolchaintechnotes.xml
@@ -374,10 +374,10 @@ msgid ""
 msgstr ""
 "在 LFS 的构建过程中，为了将本机伪装成交叉编译目标机器，我们在 "
 "<envar>LFS_TGT</envar> 变量中，将宿主系统三元组的 &quot;vendor&quot; 域修改"
-"为 &quot;lfs&quot;。改。我们还会在构建交叉链接器和交叉编译器时使用 "
-"<parameter>--with-sysroot</parameter> 选项，指定查找所需的 host 系统文件的位"
-"置。这保证在<xref linkend=\"chapter-temporary-tools\"/>中的其他程序在构建时不"
-"会链接到宿主 (build) 系统的库。前两个阶段是必要的，第三个阶段可以用于测试："
+"为 &quot;lfs&quot;。我们还会在构建交叉链接器和交叉编译器时使用 <parameter>--"
+"with-sysroot</parameter> 选项，指定查找所需的 host 系统文件的位置。这保证在"
+"<xref linkend=\"chapter-temporary-tools\"/>中的其他程序在构建时不会链接到宿"
+"主 (build) 系统的库。前两个阶段是必要的，第三个阶段可以用于测试："
 
 #. type: Content of: <sect1><sect2><informaltable><tgroup><tbody><row><entry>
 #: lfs-en/part3intro/toolchaintechnotes.xml
@@ -639,23 +639,6 @@ msgstr ""
 
 #. type: Content of: <sect1><sect2><para>
 #: lfs-en/part3intro/toolchaintechnotes.xml
-#, fuzzy
-#| msgid ""
-#| "Next comes glibc. The most important considerations for building glibc "
-#| "are the compiler, binary tools, and kernel headers. The compiler and "
-#| "binary tools are generally not an issue since glibc will always those "
-#| "relating to the <parameter>--host</parameter> parameter passed to its "
-#| "configure script; e.g., in our case, the compiler will be "
-#| "<command>$LFS_TGT-gcc</command> and the <command>readelf</command> tool "
-#| "will be <command>$LFS_TGT-readelf</command>. The kernel headers can be a "
-#| "bit more complicated. Therefore, we take no risks and use the available "
-#| "configure switch to enforce the correct selection. After the run of "
-#| "<command>configure</command>, check the contents of the "
-#| "<filename>config.make</filename> file in the <filename "
-#| "class=\"directory\">build</filename> directory for all important "
-#| "details.  These items highlight an important aspect of the glibc "
-#| "package&mdash;it is very self-sufficient in terms of its build machinery, "
-#| "and generally does not rely on toolchain defaults."
 msgid ""
 "Next comes glibc. The most important considerations for building glibc are "
 "the compiler, binary tools, and kernel headers. The compiler and binary "

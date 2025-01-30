@@ -474,14 +474,17 @@ msgstr "准备编译 D-Bus："
 
 #. type: Content of: <sect1><sect2><screen>
 #: lfs-en/chapter08/dbus.xml
-#, fuzzy, no-wrap
-#| msgid "<userinput remap=\"configure\">./configure --prefix=/usr --disable-vlock</userinput>"
+#, no-wrap
 msgid ""
 "<userinput remap=\"configure\">mkdir build\n"
 "cd    build\n"
 "\n"
 "meson setup --prefix=/usr --buildtype=release --wrap-mode=nofallback ..</userinput>"
-msgstr "<userinput remap=\"configure\">./configure --prefix=/usr --disable-vlock</userinput>"
+msgstr ""
+"<userinput remap=\"configure\">mkdir build\n"
+"cd    build\n"
+"\n"
+"meson setup --prefix=/usr --buildtype=release --wrap-mode=nofallback ..</userinput>"
 
 #. type: Content of: <sect1><sect2><variablelist><title>
 #: lfs-en/chapter08/dbus.xml lfs-en/chapter08/systemd.xml
@@ -491,17 +494,15 @@ msgstr "meson 选项的含义："
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: lfs-en/chapter08/dbus.xml
-#, fuzzy
-#| msgid "<parameter>--with-openssl</parameter>"
 msgid "<parameter>--wrap-mode=nofallback</parameter>"
-msgstr "<parameter>--with-openssl</parameter>"
+msgstr "<parameter>--wrap-mode=nofallback</parameter>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: lfs-en/chapter08/dbus.xml
 msgid ""
 "This switch prevents meson from attempting to download a copy of the Glib "
 "package for the tests."
-msgstr ""
+msgstr "该选项防止 meson 为了构建一些测试而尝试下载一份 Glib 软件包。"
 
 #. type: Content of: <sect1><sect2><screen>
 #: lfs-en/chapter08/dbus.xml lfs-en/chapter08/systemd.xml
@@ -511,10 +512,9 @@ msgstr "<userinput remap=\"make\">ninja</userinput>"
 
 #. type: Content of: <sect1><sect2><screen>
 #: lfs-en/chapter08/dbus.xml
-#, fuzzy, no-wrap
-#| msgid "<userinput remap=\"test\">make test</userinput>"
+#, no-wrap
 msgid "<userinput remap=\"test\">ninja test</userinput>"
-msgstr "<userinput remap=\"test\">make test</userinput>"
+msgstr "<userinput remap=\"test\">ninja test</userinput>"
 
 #. type: Content of: <sect1><sect2><para>
 #: lfs-en/chapter08/dbus.xml
@@ -600,8 +600,6 @@ msgstr "<command>dbus-daemon</command>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: lfs-en/chapter08/dbus.xml
-#, fuzzy
-#| msgid "Is the D-Bus message bus daemon"
 msgid "is the D-Bus message bus daemon"
 msgstr "是 D-Bus 消息总线守护程序"
 
@@ -617,8 +615,6 @@ msgstr "<command>dbus-launch</command>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: lfs-en/chapter08/dbus.xml
-#, fuzzy
-#| msgid "Starts <command>dbus-daemon</command> from a shell script"
 msgid "starts <command>dbus-daemon</command> from a shell script"
 msgstr "从 shell 脚本启动 <command>dbus-daemon</command>"
 
@@ -634,8 +630,6 @@ msgstr "<command>dbus-monitor</command>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: lfs-en/chapter08/dbus.xml
-#, fuzzy
-#| msgid "Monitors messages passing through a D-Bus message bus"
 msgid "monitors messages passing through a D-Bus message bus"
 msgstr "监视通过一个 D-Bus 消息总线的消息"
 
@@ -651,10 +645,6 @@ msgstr "<command>dbus-run-session</command>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: lfs-en/chapter08/dbus.xml
-#, fuzzy
-#| msgid ""
-#| "Starts a session bus instance of <command>dbus-daemon</command> from a "
-#| "shell script and starts a specified program in that session"
 msgid ""
 "starts a session bus instance of <command>dbus-daemon</command> from a shell "
 "script and starts a specified program in that session"
@@ -674,8 +664,6 @@ msgstr "<command>dbus-send</command>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: lfs-en/chapter08/dbus.xml
-#, fuzzy
-#| msgid "Sends a message to a D-Bus message bus"
 msgid "sends a message to a D-Bus message bus"
 msgstr "向 D-Bus 消息总线发送消息"
 
@@ -691,8 +679,6 @@ msgstr "<command>dbus-test-tool</command>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: lfs-en/chapter08/dbus.xml
-#, fuzzy
-#| msgid "Is a tool to help packages test <application>D-Bus</application>"
 msgid "is a tool to help packages test <application>D-Bus</application>"
 msgstr "是一个帮助软件包测试 <application>D-Bus</application> 的工具"
 
@@ -708,10 +694,6 @@ msgstr "<command>dbus-update-activation-environment</command>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: lfs-en/chapter08/dbus.xml
-#, fuzzy
-#| msgid ""
-#| "Updates environment variables that will be set for <application>D-Bus</"
-#| "application> session services"
 msgid ""
 "updates environment variables that will be set for <application>D-Bus</"
 "application> session services"

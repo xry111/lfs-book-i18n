@@ -1259,23 +1259,7 @@ msgstr "输入以下命令，安装并设置时区数据："
 
 #. type: Content of: <sect1><sect2><sect3><screen>
 #: lfs-en/chapter08/glibc.xml
-#, fuzzy, no-wrap
-#| msgid ""
-#| "<userinput>tar -xf ../../tzdata&tzdata-version;.tar.gz\n"
-#| "\n"
-#| "ZONEINFO=/usr/share/zoneinfo\n"
-#| "mkdir -pv $ZONEINFO/{posix,right}\n"
-#| "\n"
-#| "for tz in etcetera southamerica northamerica europe africa antarctica  \\\n"
-#| "          asia australasia backward; do\n"
-#| "    zic -L /dev/null   -d $ZONEINFO       ${tz}\n"
-#| "    zic -L /dev/null   -d $ZONEINFO/posix ${tz}\n"
-#| "    zic -L leapseconds -d $ZONEINFO/right ${tz}\n"
-#| "done\n"
-#| "\n"
-#| "cp -v zone.tab zone1970.tab iso3166.tab $ZONEINFO\n"
-#| "zic -d $ZONEINFO -p America/New_York\n"
-#| "unset ZONEINFO</userinput>"
+#, no-wrap
 msgid ""
 "<userinput>tar -xf ../../tzdata&tzdata-version;.tar.gz\n"
 "\n"
@@ -1307,7 +1291,7 @@ msgstr ""
 "\n"
 "cp -v zone.tab zone1970.tab iso3166.tab $ZONEINFO\n"
 "zic -d $ZONEINFO -p America/New_York\n"
-"unset ZONEINFO</userinput>"
+"unset ZONEINFO tz</userinput>"
 
 #. type: Content of: <sect1><sect2><sect3><variablelist><title>
 #: lfs-en/chapter08/glibc.xml

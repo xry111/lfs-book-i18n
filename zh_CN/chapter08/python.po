@@ -591,13 +591,6 @@ msgstr "<userinput remap=\"test\">make test TESTOPTS=\"--timeout 120\"</userinpu
 
 #. type: Content of: <sect1><sect2><para>
 #: lfs-en/chapter08/python.xml
-#, fuzzy
-#| msgid ""
-#| "For a relatively slow system you may need to increase the time limit and "
-#| "1 SBU (measured when building Binutils pass 1 with one CPU core) should "
-#| "be enough.  Some tests are flaky, so the test suite will automatically re-"
-#| "run failed tests.  If a test failed but then passed when re-run, it "
-#| "should be considered as passed."
 msgid ""
 "For a relatively slow system you may need to increase the time limit and 1 "
 "SBU (measured when building Binutils pass 1 with one CPU core) should be "
@@ -609,7 +602,7 @@ msgstr ""
 "对于较慢的系统，您可能需要放宽运行时间限制，1 SBU (通过仅用单个 CPU 核心构建"
 "第一遍的 Binutils 测得) 一般来说是足够的。一些测试并不精确，因此测试套件会自"
 "动重新运行失败的测试。如果某项测试失败后在重新运行时能够通过，则应该将其视为"
-"正常通过。"
+"正常通过。已知一项名为 test_ssl 的测试在 chroot 环境中会失败。"
 
 #. type: Content of: <sect1><sect2><para>
 #: lfs-en/chapter08/python.xml

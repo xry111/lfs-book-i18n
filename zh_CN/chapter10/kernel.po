@@ -669,12 +669,12 @@ msgstr ""
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: lfs-en/chapter10/kernel.xml
-#, fuzzy
-#| msgid "<parameter> Compile the kernel with warnings as errors </parameter>"
 msgid ""
 "<parameter> Display a user-friendly message when a kernel panic occurs </"
 "parameter>"
-msgstr "<parameter> Compile the kernel with warnings as errors </parameter>"
+msgstr ""
+"<parameter> Display a user-friendly message when a kernel panic occurs </"
+"parameter>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: lfs-en/chapter10/kernel.xml
@@ -695,13 +695,21 @@ msgid ""
 "(for example, an incorrect <parameter>root=</parameter> setting in <xref "
 "linkend='ch-bootable-grub'/>)."
 msgstr ""
+"该选项使得内核在内核恐慌时正确显示消息。如果不启用它，诊断内核恐慌原因会更加"
+"困难：如果没有运行 DRM 驱动，则我们只能使用 VGA 控制台，而它只能显示 24 行，"
+"因此有用的内核消息往往已被刷新到屏幕以外；而如果正在运行 DRM 驱动，在内核恐慌"
+"时屏幕显示往往会完全错乱。在 Linux-6.12 中，适用于主流 GPU 型号的驱动程序都无"
+"法真正支持该选项提供的功能，但在专用的 GPU 驱动加在之前，VESA (或 EFI) 帧缓冲"
+"之上运行的简单帧缓冲驱动 (<quote>Simple framebuffer driver</quote>) 能够支持"
+"它。如果将专用的 GPU 驱动构建为内核模块 (而非内核映像的一部分)，且没有使用 "
+"initramfs，则这一功能在根文件系统成功挂载之前会正常工作，而这足以提供诊断大多"
+"数由错误配置 LFS (例如，<xref linkend='ch-bootable-grub'/> 中 "
+"<parameter>root=</parameter> 的设定值不正确) 导致的内核恐慌。"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: lfs-en/chapter10/kernel.xml
-#, fuzzy
-#| msgid "<parameter>set +h</parameter>"
 msgid "<parameter> Panic screen formatter </parameter>"
-msgstr "<parameter>set +h</parameter>"
+msgstr "<parameter> Panic screen formatter </parameter>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: lfs-en/chapter10/kernel.xml
@@ -716,19 +724,21 @@ msgid ""
 "device (like a smart phone).  But it requires a Rust compiler that LFS does "
 "not provide."
 msgstr ""
+"将该选项设为 <literal>kmsg</literal>，以确保在内核恐慌时显示恐慌前的内核消"
+"息。该选项的默认值，<literal>user</literal>，会导致内核只显示一条<quote>用户"
+"友好</quote>的，对于诊断毫无帮助的消息。还有一个可选的值 <literal>qr_code</"
+"literal>，会使得内核将恐慌前的消息压缩到一个二维码中，并显示该二维码。和文本"
+"输出相比，使用外部设备 (如智能手机) 解码二维码能得到更多行内核消息。但二维码"
+"输出功能需要 Rust 编译器才能构建，而 LFS 不提供 Rust 编译器。"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: lfs-en/chapter10/kernel.xml
-#, fuzzy
-#| msgid ""
-#| "<parameter> Enable legacy fbdev support for your modesetting driver </"
-#| "parameter> and <parameter>Framebuffer Console support</parameter>"
 msgid ""
 "<parameter> Mark VGA/VBE/EFI FB as generic system framebuffer </parameter> "
 "and <parameter>Simple framebuffer driver</parameter>"
 msgstr ""
-"<parameter> Enable legacy fbdev support for your modesetting driver </"
-"parameter> 和 <parameter>Framebuffer Console support</parameter>"
+"<parameter> Mark VGA/VBE/EFI FB as generic system framebuffer </parameter> "
+"和 <parameter>Simple framebuffer driver</parameter>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: lfs-en/chapter10/kernel.xml
@@ -739,6 +749,10 @@ msgid ""
 "the DRM panic handler can function before the GPU-specific DRM driver is "
 "loaded."
 msgstr ""
+"它们允许使用 VESA 帧缓冲 (或者如果使用 UEFI 引导 LFS 系统，则使用 EFI 帧缓"
+"冲) 作为 DRM 设备。GRUB 会设置好 VESA 帧缓冲 (在使用 UEFI 时，EFI 固件会设置"
+"好 EFI 帧缓冲)，这样在 GPU 专用的 DRM 驱动加载前，基于 DRM 的内核恐慌处理程序"
+"也能正常工作。"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: lfs-en/chapter10/kernel.xml
@@ -751,13 +765,6 @@ msgstr ""
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: lfs-en/chapter10/kernel.xml
-#, fuzzy
-#| msgid ""
-#| "These are needed to display the Linux console on a GPU driven by a DRI "
-#| "(Direct Rendering Infrastructure) driver.  If <option>CONFIG_DRM</option> "
-#| "(Direct Rendering Manager) is enabled, you should enable these two "
-#| "options as well or you'll see a blank screen once the DRI driver is "
-#| "loaded."
 msgid ""
 "These are needed to display the Linux console on a GPU driven by a DRI "
 "(Direct Rendering Infrastructure) driver.  As <option>CONFIG_DRM</option> "
@@ -765,8 +772,9 @@ msgid ""
 "well or we'll see a blank screen once the DRI driver is loaded."
 msgstr ""
 "它们允许使用基于 DRI (Direct Rendering Infrastructure) 的 GPU 驱动显示 Linux "
-"控制台。如果 <option>CONFIG_DRM</option> (Direct Rendering Manager) 被启用，"
-"则需要同时启用这两项特性，否则一旦 DRI 驱动被加载，就只能看到空白屏幕。"
+"控制台。鉴于已经启用了 <option>CONFIG_DRM</option> (Direct Rendering "
+"Manager)，需要同时启用这两项特性，否则一旦 DRI 驱动被加载，就只能看到空白屏"
+"幕。"
 
 #. type: Content of: <sect1><sect2><para>
 #: lfs-en/chapter10/kernel.xml
@@ -840,14 +848,6 @@ msgstr ""
 
 #. type: Content of: <sect1><sect2><caution><para>
 #: lfs-en/chapter10/kernel.xml
-#, fuzzy
-#| msgid ""
-#| "If you've decided to use a separate &boot-dir; partition for the LFS "
-#| "system (maybe sharing a &boot-dir; partition with the host distro) , the "
-#| "files copied below should go there. The easiest way to do that is to "
-#| "create the entry for &boot-dir; in &fstab; first (read the previous "
-#| "section for details), then issue the following command as the &root; user "
-#| "in the <emphasis>chroot environment</emphasis>:"
 msgid ""
 "If you've decided to use a separate &boot-dir; partition for the LFS system "
 "(maybe sharing a &boot-dir; partition with the host distro), the files "
@@ -1004,6 +1004,15 @@ msgid ""
 "correctly skip other <filename class='extension'>.o</filename> files if they "
 "are not purged."
 msgstr ""
+"如果正在使用保留的内核源码树和新的内核配置重新构建内核，则一般<emphasis "
+"role='bold'>不</emphasis>>应该执行 <command>make mrproper</command> 命令。该"
+"命令会清理 <filename>.config</filename> 文件和之前构建的所有 <filename "
+"class='extension'>.o</filename> 文件。尽管可以从 <filename "
+"class='directory'>/boot</filename> 中的副本恢复 <filename>.config</"
+"filename>，清理所有 <filename class='extension'>.o</filename> 文件仍然会造成"
+"巨大的浪费：对于简单的内核配置变更，通常只需要 (重新) 构建少数几个 <filename "
+"class='extension'>.o</filename> 文件，在不进行清理时，内核构建系统会正确跳过"
+"其他 <filename class='extension'>.o</filename> 文件。"
 
 #. type: Content of: <sect1><sect2><note><para>
 #: lfs-en/chapter10/kernel.xml
@@ -1012,6 +1021,9 @@ msgid ""
 "clean</command> to purge all the <filename class='extension'>.o</filename> "
 "files from the previous build, or the new build may fail."
 msgstr ""
+"然而，如果更新了 GCC，则应该执行 <command>make clean</command> 命令，以清理之"
+"前构建的所有 <filename class='extension'>.o</filename> 文件，否则可能导致构建"
+"失败。"
 
 #. type: Content of: <sect1><sect2><warning><para>
 #: lfs-en/chapter10/kernel.xml

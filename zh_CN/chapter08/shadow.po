@@ -489,18 +489,13 @@ msgstr "安装 Shadow"
 
 #. type: Content of: <sect1><sect2><important><para>
 #: lfs-en/chapter08/shadow.xml
-#, fuzzy
-#| msgid ""
-#| "If you've installed Linux-PAM, you should follow <ulink url='&blfs-"
-#| "book;postlfs/shadow.xml'>the BLFS shadow page</ulink> instead of this "
-#| "page to build (or, rebuild or upgrade)  shadow."
 msgid ""
 "If you've installed Linux-PAM, you should follow <ulink url='&blfs-"
 "book;postlfs/shadow.html'>the BLFS instruction</ulink> instead of this page "
 "to build (or, rebuild or upgrade) shadow."
 msgstr ""
 "如果已经安装了 Linux-PAM，则应该按照 <ulink url='&blfs-book;postlfs/"
-"shadow.xml'>BLFS shadow 页面</ulink>，而非本页的说明安装 shadow。"
+"shadow.html'>BLFS shadow 页面</ulink>，而非本页的说明安装 shadow。"
 
 #. type: Content of: <sect1><sect2><note><para>
 #: lfs-en/chapter08/shadow.xml
@@ -511,6 +506,10 @@ msgid ""
 "shadow with the PAM support</ulink>.  Finally <ulink url='&blfs-book;postlfs/"
 "libpwquality.html'>install libpwquality and configure PAM to use it</ulink>."
 msgstr ""
+"如果您希望强制使用强密码，首先<ulink url='&blfs-book;postlfs/linux-pam.html'>"
+"安装并配置 Linux-PAM</ulink>。之后<ulink url='&blfs-book;postlfs/"
+"shadow.html'>安装并配置带有 PAM 支持的shadow</ulink>。最后<ulink url='&blfs-"
+"book;postlfs/libpwquality.html'>安装 libpwquality 并配置 PAM 使用它</ulink>。"
 
 #. type: Content of: <sect1><sect2><para>
 #: lfs-en/chapter08/shadow.xml
@@ -564,22 +563,15 @@ msgstr ""
 #.  known example: SPIRV-LLVM-Translator 
 #. type: Content of: <sect1><sect2><warning><para>
 #: lfs-en/chapter08/shadow.xml
-#, fuzzy
-#| msgid ""
-#| "If you wish to include <filename class=\"directory\">/bin</filename> and/"
-#| "or <filename class=\"directory\">/sbin</filename> in the <envar>PATH</"
-#| "envar> for some reason, modify the <envar>PATH</envar> in "
-#| "<filename>.bashrc</filename> after LFS has been built."
 msgid ""
 "Including <filename class=\"directory\">/bin</filename> and/or <filename "
 "class=\"directory\">/sbin</filename> in the <envar>PATH</envar> variable may "
 "cause some BLFS packages fail to build, so don't do that in the "
 "<filename>.bashrc</filename> file or anywhere else."
 msgstr ""
-"如果由于某种原因，希望将 <filename class=\"directory\">/bin</filename> 和/或 "
-"<filename class=\"directory\">/sbin</filename> 包含在 <envar>PATH</envar> "
-"中，可以在构建 LFS 后通过 <filename>.bashrc</filename> 修改 <envar>PATH</"
-"envar>。"
+"将 <filename class=\"directory\">/bin</filename> 和/或 <filename "
+"class=\"directory\">/sbin</filename> 包含在 <envar>PATH</envar> 中会导致一些 "
+"BLFS 软件包构建失败，因此不要通过 <filename>.bashrc</filename> 等这样做。"
 
 #. type: Content of: <sect1><sect2><screen>
 #: lfs-en/chapter08/shadow.xml

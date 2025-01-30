@@ -111,15 +111,19 @@ msgid ""
 "host distro has been configured to use a different default for "
 "<command>mkfs</command>:"
 msgstr ""
+"将 <filename class='directory'>$LFS</filename> 目录 (即为 LFS 系统新创建的文"
+"件系统的根目录) 的所有者设为 &root;，访问权限设为 <literal>755</literal>，以"
+"防个别宿主发行版中 <command>mkfs</command> 被配置为使用与此不同的默认值："
 
 #. type: Content of: <sect1><screen>
 #: lfs-en/chapter02/mounting.xml
-#, fuzzy, no-wrap
-#| msgid "<userinput>chown root:root $LFS/sources/*</userinput>"
+#, no-wrap
 msgid ""
 "<userinput>chown root:root $LFS\n"
 "chmod 755 $LFS</userinput>"
-msgstr "<userinput>chown root:root $LFS/sources/*</userinput>"
+msgstr ""
+"<userinput>chown root:root $LFS\n"
+"chmod 755 $LFS</userinput>"
 
 #. type: Content of: <sect1><para>
 #: lfs-en/chapter02/mounting.xml

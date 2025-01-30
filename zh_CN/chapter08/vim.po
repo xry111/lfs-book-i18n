@@ -541,10 +541,6 @@ msgstr "准备编译 Vim："
 
 #. type: Content of: <sect1><sect2><para>
 #: lfs-en/chapter08/vim.xml
-#, fuzzy
-#| msgid ""
-#| "To prepare the tests, ensure that user <systemitem "
-#| "class=\"username\">tester</systemitem> can write to the source tree:"
 msgid ""
 "To prepare the tests, ensure that user <systemitem "
 "class=\"username\">tester</systemitem> can write to the source tree and "
@@ -552,20 +548,18 @@ msgid ""
 "<command>wget</command>:"
 msgstr ""
 "为了准备运行测试套件，需要使得 <systemitem class=\"username\">tester</"
-"systemitem> 用户拥有写入源代码目录树的权限："
+"systemitem> 用户拥有写入源代码目录树的权限，并排除一个含有需要 "
+"<command>curl</command> 或 <command>wget</command> 的测试的文件："
 
 #. type: Content of: <sect1><sect2><screen>
 #: lfs-en/chapter08/vim.xml
-#, fuzzy, no-wrap
-#| msgid ""
-#| "<userinput remap=\"test\">chown -R tester .\n"
-#| "su tester -c \"PATH=$PATH make check\"</userinput>"
+#, no-wrap
 msgid ""
 "<userinput remap=\"test\">chown -R tester .\n"
 "sed '/test_glvs/d' -i src/testdir/Make_all.mak</userinput>"
 msgstr ""
 "<userinput remap=\"test\">chown -R tester .\n"
-"su tester -c \"PATH=$PATH make check\"</userinput>"
+"sed '/test_glvs/d' -i src/testdir/Make_all.mak</userinput>"
 
 #. type: Content of: <sect1><sect2><para>
 #: lfs-en/chapter08/vim.xml

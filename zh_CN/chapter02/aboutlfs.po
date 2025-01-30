@@ -16,10 +16,8 @@ msgstr ""
 
 #. type: Content of: <sect1><title>
 #: lfs-en/chapter02/aboutlfs.xml
-#, fuzzy
-#| msgid "Setting The $LFS Variable"
 msgid "Setting the $LFS Variable and the Umask"
-msgstr "设置 $LFS 环境变量"
+msgstr "设置 $LFS 环境变量和 Umask"
 
 #. type: Content of: <sect1><para>
 #: lfs-en/chapter02/aboutlfs.xml
@@ -64,23 +62,17 @@ msgid ""
 "Now set the file mode creation mask (umask) to <literal>022</literal> in "
 "case the host distro uses a different default:"
 msgstr ""
+"现在设定创建文件时使用的访问权限模式掩码 (umask) 为 <literal>022</literal>，"
+"以防个别宿主发行版使用不同的默认值："
 
 #. type: Content of: <sect1><screen>
 #: lfs-en/chapter02/aboutlfs.xml
-#, fuzzy, no-wrap
-#| msgid "<userinput>make -j32</userinput>"
+#, no-wrap
 msgid "<userinput>umask 022</userinput>"
-msgstr "<userinput>make -j32</userinput>"
+msgstr "<userinput>umask 022</userinput>"
 
 #. type: Content of: <sect1><para>
 #: lfs-en/chapter02/aboutlfs.xml
-#, fuzzy
-#| msgid ""
-#| "Setting the user file-creation mask (umask) to 022 ensures that newly "
-#| "created files and directories are only writable by their owner, but are "
-#| "readable and executable by anyone (assuming default modes are used by the "
-#| "<ulink role='man' url='&man;open.2'>open(2)</ulink> system call, new "
-#| "files will end up with permission mode 644 and directories with mode 755)."
 msgid ""
 "Setting the umask to 022 ensures that newly created files and directories "
 "are only writable by their owner, but are readable and searchable (only for "
@@ -91,20 +83,14 @@ msgid ""
 "restrictive default can cause strange issues building or using the LFS "
 "system."
 msgstr ""
-"将用户的文件创建掩码 (umask) 设定为 022，保证只有文件所有者可以写新创建的文件"
-"和目录，但任何人都可读取、执行它们。(如果 <ulink role='man' "
+"将 umask 设定为 022，保证只有文件所有者可以写新创建的文件和目录，但任何人都可"
+"读取或搜索 (仅针对目录) 它们 (如果 <ulink role='man' "
 "url='&man;open.2'>open(2)</ulink> 系统调用使用默认模式，则新文件将具有权限模"
-"式 644，而新目录具有权限模式 755)。"
+"式 644，而新目录具有权限模式 755)。过于宽松的默认值可能在 LFS 系统中遗留安全"
+"问题，而过于严格的默认值可能在构建或使用 LFS 时引发奇怪的问题。"
 
 #. type: Content of: <sect1><caution><para>
 #: lfs-en/chapter02/aboutlfs.xml
-#, fuzzy
-#| msgid ""
-#| "Do not forget to check that <envar>LFS</envar> is set whenever you leave "
-#| "and reenter the current working environment (such as when doing a "
-#| "<command>su</command> to <systemitem class=\"username\">root</systemitem> "
-#| "or another user). Check that the <envar>LFS</envar> variable is set up "
-#| "properly with:"
 msgid ""
 "Do not forget to check that <envar>LFS</envar> is set and the umask is set "
 "to <literal>022</literal> whenever you leave and reenter the current working "
@@ -112,10 +98,11 @@ msgid ""
 "class=\"username\">root</systemitem> or another user). Check that the "
 "<envar>LFS</envar> variable is set up properly with:"
 msgstr ""
-"无论何时，如果您离开并重新进入了工作环境，一定要确认 <envar>LFS</envar> 的设"
-"定值和您离开工作环境时相同。(例如，使用 <command>su</command> 切换到 "
-"<systemitem class=\"username\">root</systemitem> 或者其他用户时。) 请执行以下"
-"命令，检查 <envar>LFS</envar> 的设置是否正确："
+"无论何时，如果您离开并重新进入了工作环境，一定要再次确认 <envar>LFS</envar> "
+"已经正确设定，且 umask 被设为 <literal>022</literal> (例如，使用 "
+"<command>su</command> 切换到 <systemitem class=\"username\">root</"
+"systemitem> 或者其他用户时)。以下命令可用于检查 <envar>LFS</envar> 的设置是否"
+"正确："
 
 #. type: Content of: <sect1><itemizedlist><listitem><screen>
 #: lfs-en/chapter02/aboutlfs.xml lfs-en/part3intro/generalinstructions.xml
@@ -125,30 +112,24 @@ msgstr "<userinput>echo $LFS</userinput>"
 
 #. type: Content of: <sect1><caution><para>
 #: lfs-en/chapter02/aboutlfs.xml
-#, fuzzy
-#| msgid ""
-#| "Make sure the output shows the path to the LFS partition's mount point, "
-#| "which is <filename class=\"directory\">/mnt/lfs</filename>, using our "
-#| "example."
 msgid ""
 "Make sure the output shows the path to your LFS system's build location, "
 "which is <filename class=\"directory\">/mnt/lfs</filename> if the provided "
 "example was followed."
 msgstr ""
-"确认上述命令输出 LFS 分区挂载点的路径，如果使用了本书的例子，就是 <filename "
-"class=\"directory\">/mnt/lfs</filename>。"
+"确认上述命令输出用于构建 LFS 系统的位置，如果使用了本书的例子，就是 "
+"<filename class=\"directory\">/mnt/lfs</filename>。"
 
 #. type: Content of: <sect1><caution><para>
 #: lfs-en/chapter02/aboutlfs.xml
 msgid "Check that the umask is set up properly with:"
-msgstr ""
+msgstr "以下命令可用于检查 umask 是否设定正确："
 
 #. type: Content of: <sect1><caution><screen>
 #: lfs-en/chapter02/aboutlfs.xml
-#, fuzzy, no-wrap
-#| msgid "<userinput>make -j32</userinput>"
+#, no-wrap
 msgid "<userinput>umask</userinput>"
-msgstr "<userinput>make -j32</userinput>"
+msgstr "<userinput>umask</userinput>"
 
 #. type: Content of: <sect1><caution><para>
 #: lfs-en/chapter02/aboutlfs.xml
@@ -157,6 +138,8 @@ msgid ""
 "<computeroutput>022</computeroutput> (the number of leading zeros depends on "
 "the host distro)."
 msgstr ""
+"输出可能是 <computeroutput>0022</computeroutput> 或 <computeroutput>022</"
+"computeroutput> (先导零的个数依赖于宿主发行版)。"
 
 #. type: Content of: <sect1><caution><para>
 #: lfs-en/chapter02/aboutlfs.xml
@@ -165,19 +148,12 @@ msgid ""
 "earlier on this page to set <envar>$LFS</envar> to the correct directory "
 "name and set umask to <literal>022</literal>."
 msgstr ""
+"如果上述两条命令中任意一条的输出不正确，则需要按照本页面之前给出的命令，将 "
+"<envar>$LFS</envar> 设为正确的目录名，并将 umask 设为 <literal>022</"
+"literal>。"
 
 #. type: Content of: <sect1><note><para>
 #: lfs-en/chapter02/aboutlfs.xml
-#, fuzzy
-#| msgid ""
-#| "One way to ensure that the <envar>LFS</envar> variable is always set is "
-#| "to edit the <filename>.bash_profile</filename> file in both your personal "
-#| "home directory and in <filename>/root/.bash_profile</filename> and enter "
-#| "the export command above.  In addition, the shell specified in the "
-#| "<filename>/etc/passwd</filename> file for all users that need the "
-#| "<envar>LFS</envar> variable must be bash to ensure that the <filename>/"
-#| "root/.bash_profile</filename> file is incorporated as a part of the login "
-#| "process."
 msgid ""
 "One way to ensure that the <envar>LFS</envar> variable and the umask are "
 "always set properly is to edit the <filename>.bash_profile</filename> file "
@@ -188,26 +164,15 @@ msgid ""
 "variable must be bash to ensure that the <filename>.bash_profile</filename> "
 "file is incorporated as a part of the login process."
 msgstr ""
-"确保 <envar>LFS</envar> 始终正确的一种方法是：编辑您的主目录中的 "
-"<filename>.bash_profile</filename>，以及<filename>/root/.bash_profile</"
-"filename>，为它们加入上述设置并导出 LFS 变量的 export 命令。另外，在 "
-"<filename>/etc/passwd</filename> 中，每个需要使用 <envar>LFS</envar> 变量的用"
-"户的 shell 都必须是 bash，以保证每次登录时都执行 <filename>.bash_profile</"
-"filename> 中的命令。"
+"确保 <envar>LFS</envar> 变量和 umask 始终正确的一种方法是：编辑您的主目录中"
+"的 <filename>.bash_profile</filename>，以及<filename>/root/.bash_profile</"
+"filename>，为它们加入上述 <command>export</command> 和 <command>umask</"
+"command> 命令。另外，在 <filename>/etc/passwd</filename> 中，每个需要使用 "
+"<envar>LFS</envar> 变量的用户的 shell 都必须是 bash，以保证每次登录时都执行 "
+"<filename>.bash_profile</filename> 中的命令。"
 
 #. type: Content of: <sect1><note><para>
 #: lfs-en/chapter02/aboutlfs.xml
-#, fuzzy
-#| msgid ""
-#| "Another consideration is the method that is used to log into the host "
-#| "system.  If logging in through a graphical display manager, the user's "
-#| "<filename>.bash_profile</filename> is not normally used when a virtual "
-#| "terminal is started.  In this case, add the export command to the "
-#| "<filename>.bashrc</filename> file for the user and <systemitem "
-#| "class=\"username\">root</systemitem>.  In addition, some distributions "
-#| "use an \"if\" test, and do not run the remaining <filename>.bashrc</"
-#| "filename> instructions for a non-interactive bash invocation.  Be sure to "
-#| "place the export command ahead of the test for non-interactive use."
 msgid ""
 "Another consideration is the method that is used to log into the host "
 "system.  If logging in through a graphical display manager, the user's "
@@ -221,7 +186,7 @@ msgid ""
 msgstr ""
 "另外还要考虑登录宿主系统的方式，如果您使用图形显示管理器登录，再启动虚拟终"
 "端，那么 <filename>.bash_profile</filename> 一般不会被虚拟终端执行。此时，应"
-"该将 export 命令加入到您使用的用户和 <systemitem class=\"username\">root</"
+"该将上述命令加入到您使用的用户和 <systemitem class=\"username\">root</"
 "systemitem> 用户的 <filename>.bashrc</filename> 文件中。另外，一些发行版的 "
 "<filename>.bashrc</filename> 中使用 \"if\" 命令，使其在非交互 bash 的启动过程"
-"中不执行其余命令。此时必须将 export 命令添加到交互性检测之前。"
+"中不执行其余命令。此时必须将上述命令添加到交互性检测之前。"

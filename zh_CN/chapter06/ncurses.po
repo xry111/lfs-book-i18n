@@ -336,25 +336,14 @@ msgstr "安装 Ncurses"
 
 #. type: Content of: <sect1><sect2><para>
 #: lfs-en/chapter06/ncurses.xml
-#, fuzzy
-#| msgid ""
-#| "Then, run the following commands to build the <quote>tic</quote> program "
-#| "on the build host:"
 msgid ""
 "First, run the following commands to build the <quote>tic</quote> program on "
 "the build host:"
-msgstr "然后，运行以下命令，在宿主系统构建<quote>tic</quote>程序："
+msgstr "首先，运行以下命令，在宿主系统构建<quote>tic</quote>程序："
 
 #. type: Content of: <sect1><sect2><screen>
 #: lfs-en/chapter06/ncurses.xml
-#, fuzzy, no-wrap
-#| msgid ""
-#| "<userinput remap=\"pre\">mkdir build\n"
-#| "pushd build\n"
-#| "  ../configure\n"
-#| "  make -C include\n"
-#| "  make -C progs tic\n"
-#| "popd</userinput>"
+#, no-wrap
 msgid ""
 "<userinput remap=\"pre\">mkdir build\n"
 "pushd build\n"
@@ -365,7 +354,7 @@ msgid ""
 msgstr ""
 "<userinput remap=\"pre\">mkdir build\n"
 "pushd build\n"
-"  ../configure\n"
+"  ../configure AWK=gawk\n"
 "  make -C include\n"
 "  make -C progs tic\n"
 "popd</userinput>"
@@ -377,19 +366,7 @@ msgstr "准备编译 Ncurses："
 
 #. type: Content of: <sect1><sect2><screen>
 #: lfs-en/chapter06/ncurses.xml
-#, fuzzy, no-wrap
-#| msgid ""
-#| "<userinput remap=\"configure\">./configure --prefix=/usr                \\\n"
-#| "            --host=$LFS_TGT              \\\n"
-#| "            --build=$(./config.guess)    \\\n"
-#| "            --mandir=/usr/share/man      \\\n"
-#| "            --with-manpage-format=normal \\\n"
-#| "            --with-shared                \\\n"
-#| "            --without-normal             \\\n"
-#| "            --with-cxx-shared            \\\n"
-#| "            --without-debug              \\\n"
-#| "            --without-ada                \\\n"
-#| "            --disable-stripping</userinput>"
+#, no-wrap
 msgid ""
 "<userinput remap=\"configure\">./configure --prefix=/usr                \\\n"
 "            --host=$LFS_TGT              \\\n"
@@ -414,7 +391,8 @@ msgstr ""
 "            --with-cxx-shared            \\\n"
 "            --without-debug              \\\n"
 "            --without-ada                \\\n"
-"            --disable-stripping</userinput>"
+"            --disable-stripping          \\\n"
+"            AWK=gawk</userinput>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: lfs-en/chapter06/ncurses.xml
@@ -506,28 +484,21 @@ msgstr ""
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: lfs-en/chapter06/ncurses.xml
-#, fuzzy
-#| msgid "<parameter>CC=gcc</parameter>"
 msgid "<parameter>AWK=gawk</parameter>"
-msgstr "<parameter>CC=gcc</parameter>"
+msgstr "<parameter>AWK=gawk</parameter>"
 
 #.  FIXME vauge 
 #.  It seems happened in 2015,
 #.           is there any updated into? 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: lfs-en/chapter06/ncurses.xml
-#, fuzzy
-#| msgid ""
-#| "This switch prevents the building system from using the <command>strip</"
-#| "command> program from the host.  Using host tools on cross-compiled "
-#| "programs can cause failure."
 msgid ""
 "This switch prevents the building system from using the <command>mawk</"
 "command> program from the host.  Some versions of <command>mawk</command> "
 "can cause this package to fail to build."
 msgstr ""
-"该选项防止构建过程使用宿主系统的 <command>strip</command> 程序。对交叉编译产"
-"生的程序使用宿主工具可能导致构建失败。"
+"该选项防止构建过程使用宿主系统的 <command>mawk</command> 程序。一些版本的 "
+"<command>mawk</command> 会导致该软件包构建失败。"
 
 #. type: Content of: <sect1><sect2><screen>
 #: lfs-en/chapter06/ncurses.xml

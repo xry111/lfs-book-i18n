@@ -385,14 +385,15 @@ msgstr ""
 
 #. type: Content of: <sect1><sect2><screen>
 #: lfs-en/chapter08/systemd.xml lfs-en/chapter08/udev.xml
-#, fuzzy, no-wrap
+#, no-wrap
 msgid ""
 "<userinput remap=\"pre\">sed -e 's/GROUP=\"render\"/GROUP=\"video\"/' \\\n"
 "    -e 's/GROUP=\"sgx\", //'               \\\n"
 "    -i rules.d/50-udev-default.rules.in</userinput>"
 msgstr ""
-"<userinput remap=\"pre\">sed -i -e 's/GROUP=\"render\"/GROUP=\"video\"/' \\\n"
-"       -e 's/GROUP=\"sgx\", //' rules.d/50-udev-default.rules.in</userinput>"
+"<userinput remap=\"pre\">sed -e 's/GROUP=\"render\"/GROUP=\"video\"/' \\\n"
+"    -e 's/GROUP=\"sgx\", //'               \\\n"
+"    -i rules.d/50-udev-default.rules.in</userinput>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: lfs-en/chapter08/systemd.xml lfs-en/chapter08/udev.xml
@@ -504,10 +505,9 @@ msgstr "删除一条需要完整安装 Systemd 的 udev 规则："
 
 #. type: Content of: <sect1><sect2><screen>
 #: lfs-en/chapter08/udev.xml
-#, fuzzy, no-wrap
-#| msgid "<userinput remap=\"pre\">sed '/systemd-sysctl/s/^/#/' -i rules.d/99-systemd.rules.in</userinput>"
+#, no-wrap
 msgid "<userinput remap=\"pre\">sed -i '/systemd-sysctl/s/^/#/' rules.d/99-systemd.rules.in</userinput>"
-msgstr "<userinput remap=\"pre\">sed '/systemd-sysctl/s/^/#/' -i rules.d/99-systemd.rules.in</userinput>"
+msgstr "<userinput remap=\"pre\">sed -i '/systemd-sysctl/s/^/#/' rules.d/99-systemd.rules.in</userinput>"
 
 #. type: Content of: <sect1><sect2><para>
 #: lfs-en/chapter08/udev.xml
@@ -518,12 +518,13 @@ msgstr "调整硬编码的网络配置文件路径，使之适合单独安装 ud
 
 #. type: Content of: <sect1><sect2><screen>
 #: lfs-en/chapter08/udev.xml
-#, fuzzy, no-wrap
-#| msgid "<userinput remap=\"pre\">sed '/NETWORK_DIRS/s/systemd/udev/' -i src/basic/path-lookup.h</userinput>"
+#, no-wrap
 msgid ""
 "<userinput remap=\"pre\">sed -e '/NETWORK_DIRS/s/systemd/udev/' \\\n"
 "    -i src/libsystemd/sd-network/network-util.h</userinput>"
-msgstr "<userinput remap=\"pre\">sed '/NETWORK_DIRS/s/systemd/udev/' -i src/basic/path-lookup.h</userinput>"
+msgstr ""
+"<userinput remap=\"pre\">sed -e '/NETWORK_DIRS/s/systemd/udev/' \\\n"
+"    -i src/libsystemd/sd-network/network-util.h</userinput>"
 
 #. type: Content of: <sect1><sect2><para>
 #: lfs-en/chapter08/udev.xml
