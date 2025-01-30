@@ -117,14 +117,6 @@ msgstr ""
 
 #. type: Content of: <sect1><itemizedlist><listitem><para>
 #: lfs-en/prologue/standards.xml
-#, fuzzy
-#| msgid ""
-#| "The LSB has four separate specifications: Core, Desktop, Runtime "
-#| "Languages, and Imaging.  Some parts of Core and Desktop specifications "
-#| "are architecture specific.  There are also two trial specifications: Gtk3 "
-#| "and Graphics.  LFS attempts to conform to the LSB specifications for the "
-#| "IA32 (32-bit x86) or AMD64 (x86_64)  architectures discussed in the "
-#| "previous section."
 msgid ""
 "The LSB has four separate specifications: Core, Desktop, Languages, and "
 "Imaging.  Some parts of Core and Desktop specifications are architecture "
@@ -136,8 +128,9 @@ msgid ""
 msgstr ""
 "LSB 由四个独立的规范组成：Core、Desktop、Runtime Language 和 Imaging。Core "
 "和 Desktop 规范中一些部分是架构相关的。另外，还有两个处于试用阶段的规范："
-"Gtk3 和 Graphics。LFS 试图遵循 LSB 对前一节讨论的 IA32 (32 位 x86) 和AMD64 "
-"(x86_64) 架构的要求。"
+"Gtk3 和 Graphics。LSB 没有为 LoongArch 编写架构相关的部分。且 LoongArch 平台"
+"上 Glibc 特意忽略了 LSB Core 的架构无关部分要求的一些符号版本，因此我们无法满"
+"足 LSB 的架构无关部分，但我们仍然将其作为参考。"
 
 #. type: Content of: <sect1><itemizedlist><listitem><note><para>
 #: lfs-en/prologue/standards.xml
@@ -275,6 +268,18 @@ msgid ""
 "be provided as a symlink to <filename class='libraryfile'>libc.so.6</"
 "filename>)"
 msgstr ""
+"<command>install_initd</command>, <filename class='libraryfile'>libc.so.6</"
+"filename> (LFS Glibc 软件包提供该文件，但缺失 LSB 要求的符号版本), <filename "
+"class='libraryfile'>libcrypt.so.1</filename> (可以通过 LFS Libxcrypt 软件包的"
+"可选命令提供), <filename class='libraryfile'>libpthread.so.2</filename> (LFS "
+"Glibc 软件包提供该文件，但缺失 LSB 要求的符号版本), <filename "
+"class='libraryfile'>libncurses.so.5</filename> (可以通过 LFS Ncurses 软件包的"
+"可选命令提供), <filename class='libraryfile'>libncursesw.so.5</filename> (但 "
+"LFS Ncurses 软件包提供 <filename class='libraryfile'>libncursesw.so.6</"
+"filename>), <filename class='libraryfile'>librt.so.1</filename> (LFS Glibc 软"
+"件包提供该文件，但缺失 LSB 要求的符号版本), <filename "
+"class='libraryfile'>libutil.so.1</filename> (可以提供为 <filename "
+"class='libraryfile'>libc.so.6</filename> 的符号链接)"
 
 #. type: Content of: <sect1><variablelist><varlistentry><listitem><para>
 #: lfs-en/prologue/standards.xml
