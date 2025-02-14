@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Linux From Scratch 11.0\n"
 "Report-Msgid-Bugs-To: lfs-dev@lists.linuxfromscratch.org\n"
-"POT-Creation-Date: 2025-02-03 22:59+0800\n"
+"POT-Creation-Date: 2025-02-13 21:14+0800\n"
 "PO-Revision-Date: 2021-08-16 11:42+0800\n"
 "Last-Translator: Xi Ruoyao <xry111@xry111.site>\n"
 "Language-Team: none\n"
@@ -454,7 +454,6 @@ msgstr "&binutils-fin-du;"
 msgid ""
 "<userinput remap=\"configure\">../configure --prefix=/usr       \\\n"
 "             --sysconfdir=/etc   \\\n"
-"             --enable-gold       \\\n"
 "             --enable-ld=default \\\n"
 "             --enable-plugins    \\\n"
 "             --enable-shared     \\\n"
@@ -466,7 +465,6 @@ msgid ""
 msgstr ""
 "<userinput remap=\"configure\">../configure --prefix=/usr       \\\n"
 "             --sysconfdir=/etc   \\\n"
-"             --enable-gold       \\\n"
 "             --enable-ld=default \\\n"
 "             --enable-plugins    \\\n"
 "             --enable-shared     \\\n"
@@ -481,18 +479,6 @@ msgstr ""
 #: lfs-en/chapter08/tcl.xml
 msgid "The meaning of the new configure parameters:"
 msgstr "新的配置选项的含义："
-
-#. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
-#: lfs-en/chapter08/binutils.xml
-msgid "<parameter>--enable-gold</parameter>"
-msgstr "<parameter>--enable-gold</parameter>"
-
-#. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
-#: lfs-en/chapter08/binutils.xml
-msgid ""
-"Build the gold linker and install it as ld.gold (alongside the default "
-"linker)."
-msgstr "构建 gold 链接器，并且将它安装为 ld.gold (不影响默认链接器的安装)。"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: lfs-en/chapter08/binutils.xml
@@ -596,16 +582,6 @@ msgstr "如果需要列出所有失败的测试，执行："
 msgid "<userinput remap=\"test\">grep '^FAIL:' $(find -name '*.log')</userinput>"
 msgstr "<userinput remap=\"test\">grep '^FAIL:' $(find -name '*.log')</userinput>"
 
-#. type: Content of: <sect1><sect2><para>
-#: lfs-en/chapter08/binutils.xml
-msgid ""
-"Twelve tests fail in the gold test suite when the <option>--enable-default-"
-"pie</option> and <option>--enable-default-ssp</option> options are passed to "
-"GCC."
-msgstr ""
-"Gold 测试套件中，有十二项测试在构建 GCC 时启用 <option>--enable-default-pie</"
-"option> 和 <option>--enable-default-ssp</option> 的情况下会失败。"
-
 #. type: Content of: <sect1><sect2><screen>
 #: lfs-en/chapter08/binutils.xml
 #, no-wrap
@@ -613,15 +589,19 @@ msgid "<userinput remap=\"install\">make tooldir=/usr install</userinput>"
 msgstr "<userinput remap=\"install\">make tooldir=/usr install</userinput>"
 
 #. type: Content of: <sect1><sect2><para>
-#: lfs-en/chapter08/binutils.xml lfs-en/chapter08/e2fsprogs.xml
-msgid "Remove useless static libraries:"
-msgstr "删除无用的静态库："
+#: lfs-en/chapter08/binutils.xml
+msgid "Remove useless static libraries and other files:"
+msgstr "删除无用的静态库等文件："
 
 #. type: Content of: <sect1><sect2><screen>
 #: lfs-en/chapter08/binutils.xml
 #, no-wrap
-msgid "<userinput remap=\"install\">rm -fv /usr/lib/lib{bfd,ctf,ctf-nobfd,gprofng,opcodes,sframe}.a</userinput>"
-msgstr "<userinput remap=\"install\">rm -fv /usr/lib/lib{bfd,ctf,ctf-nobfd,gprofng,opcodes,sframe}.a</userinput>"
+msgid ""
+"<userinput remap=\"install\">rm -rfv /usr/lib/lib{bfd,ctf,ctf-nobfd,gprofng,opcodes,sframe}.a \\\n"
+"        /usr/share/doc/gprofng/</userinput>"
+msgstr ""
+"<userinput remap=\"install\">rm -rfv /usr/lib/lib{bfd,ctf,ctf-nobfd,gprofng,opcodes,sframe}.a \\\n"
+"        /usr/share/doc/gprofng/</userinput>"
 
 #. type: Content of: <sect1><sect2><title>
 #: lfs-en/chapter08/binutils.xml
@@ -648,11 +628,11 @@ msgstr "安装的库"
 #. type: Content of: <sect1><sect2><segmentedlist><seglistitem><seg>
 #: lfs-en/chapter08/binutils.xml
 msgid ""
-"addr2line, ar, as, c++filt, dwp, elfedit, gprof, gprofng, ld, ld.bfd, "
-"ld.gold, nm, objcopy, objdump, ranlib, readelf, size, strings, and strip"
+"addr2line, ar, as, c++filt, dwp, elfedit, gprof, gprofng, ld, ld.bfd, nm, "
+"objcopy, objdump, ranlib, readelf, size, strings, and strip"
 msgstr ""
-"addr2line, ar, as, c++filt, dwp, elfedit, gprof, gprofng, ld, ld.bfd, "
-"ld.gold, nm, objcopy, objdump, ranlib, readelf, size, strings, 以及 strip"
+"addr2line, ar, as, c++filt, dwp, elfedit, gprof, gprofng, ld, ld.bfd, nm, "
+"objcopy, objdump, ranlib, readelf, size, strings, 以及 strip"
 
 #. type: Content of: <sect1><sect2><segmentedlist><seglistitem><seg>
 #: lfs-en/chapter08/binutils.xml
@@ -817,21 +797,6 @@ msgstr ""
 #: lfs-en/chapter08/binutils.xml
 msgid "ld"
 msgstr "ld"
-
-#. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
-#: lfs-en/chapter08/binutils.xml
-msgid "<command>ld.gold</command>"
-msgstr "<command>ld.gold</command>"
-
-#. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
-#: lfs-en/chapter08/binutils.xml
-msgid "A cut down version of ld that only supports the elf object file format"
-msgstr "ld 的一个裁减版，只支持 ELF 目标文件格式"
-
-#. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
-#: lfs-en/chapter08/binutils.xml
-msgid "ld.gold"
-msgstr "ld.gold"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: lfs-en/chapter08/binutils.xml

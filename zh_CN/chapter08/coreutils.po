@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Linux From Scratch 11.0\n"
 "Report-Msgid-Bugs-To: lfs-dev@lists.linuxfromscratch.org\n"
-"POT-Creation-Date: 2025-02-03 22:59+0800\n"
+"POT-Creation-Date: 2025-02-14 22:16+0800\n"
 "PO-Revision-Date: 2021-07-28 19:07+0800\n"
 "Last-Translator: Xi Ruoyao <xry111@xry111.site>\n"
 "Language-Team: none\n"
@@ -196,19 +196,6 @@ msgstr "&buildtime;"
 #: lfs-en/chapter09/bootscripts.xml lfs-en/chapter10/kernel.xml
 msgid "&diskspace;"
 msgstr "&diskspace;"
-
-#. type: Content of: <sect1><sect2><variablelist><title>
-#: lfs-en/chapter05/binutils-pass1.xml lfs-en/chapter05/gcc-pass1.xml
-#: lfs-en/chapter05/glibc.xml lfs-en/chapter05/libstdc++.xml
-#: lfs-en/chapter06/bash.xml lfs-en/chapter06/coreutils.xml
-#: lfs-en/chapter07/util-linux.xml lfs-en/chapter08/bc.xml
-#: lfs-en/chapter08/coreutils.xml lfs-en/chapter08/e2fsprogs.xml
-#: lfs-en/chapter08/expect.xml lfs-en/chapter08/findutils.xml
-#: lfs-en/chapter08/glibc.xml lfs-en/chapter08/inetutils.xml
-#: lfs-en/chapter08/kmod.xml lfs-en/chapter08/less.xml
-#: lfs-en/chapter08/man-db.xml lfs-en/chapter08/python.xml
-msgid "The meaning of the configure options:"
-msgstr "配置选项的含义："
 
 #. type: Content of: <sect1><sect2><screen>
 #: lfs-en/chapter05/binutils-pass1.xml lfs-en/chapter05/gcc-pass1.xml
@@ -508,16 +495,6 @@ msgstr "安装的库"
 msgid "Installed directory"
 msgstr "安装的目录"
 
-#. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
-#: lfs-en/chapter08/autoconf.xml lfs-en/chapter08/coreutils.xml
-msgid "<command>autoreconf</command>"
-msgstr "<command>autoreconf</command>"
-
-#. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
-#: lfs-en/chapter08/automake.xml lfs-en/chapter08/coreutils.xml
-msgid "<command>automake</command>"
-msgstr "<command>automake</command>"
-
 #. type: Content of: <sect1><sect2><para>
 #: lfs-en/chapter08/bash.xml lfs-en/chapter08/coreutils.xml
 msgid ""
@@ -590,17 +567,44 @@ msgstr ""
 "            --prefix=/usr            \\\n"
 "            --enable-no-install-program=kill,uptime</userinput>"
 
+#. type: Content of: <sect1><sect2><variablelist><title>
+#: lfs-en/chapter08/coreutils.xml
+msgid "The meaning of the commands and configure options:"
+msgstr "命令和配置选项的含义："
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
+#: lfs-en/chapter08/coreutils.xml
+msgid "<command>autoreconf -fv</command>"
+msgstr "<command>autoreconf -fv</command>"
+
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: lfs-en/chapter08/coreutils.xml
 msgid ""
 "The patch for internationalization has modified the build system, so the "
-"configuration files must be regenerated."
-msgstr "国际化补丁修改了构建系统，因此需要重新生成配置文件："
+"configuration files must be regenerated.  Normally we would use the "
+"<parameter>-i</parameter> option to update the standard auxiliary files, but "
+"for this package it does not work because <filename>configure.ac</filename> "
+"specified an old gettext version."
+msgstr ""
+"国际化补丁更改了构建系统，因此需要重新生成配置文件。一般来说我们会使用 "
+"<parameter>-i</parameter> 选项以更新通用的辅助文件，但该软件包的 "
+"<filename>configure.ac</filename> 指定了过时的 gettext 版本，因此该选项无法正"
+"常工作。"
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
+#: lfs-en/chapter08/coreutils.xml
+msgid "<command>automake -af</command>"
+msgstr "<command>automake -af</command>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: lfs-en/chapter08/coreutils.xml
-msgid "Work around a problem with an older versions of autotools."
-msgstr "绕过旧版 autotools 导致的问题。"
+msgid ""
+"The automake auxiliary files were not updated by <command>autoreconf</"
+"command> due to the missing <parameter>-i</parameter> option.  This command "
+"updates them to prevent a build failure."
+msgstr ""
+"由于未使用 <parameter>-i</parameter> 选项，automake 使用的辅助文件未被 "
+"<command>autoreconf</command> 更新。该命令直接更新它们，以防止构建失败。"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: lfs-en/chapter08/coreutils.xml lfs-en/chapter08/tar.xml
@@ -709,17 +713,6 @@ msgstr "删除临时组："
 #, no-wrap
 msgid "<userinput remap=\"test\">groupdel dummy</userinput>"
 msgstr "<userinput remap=\"test\">groupdel dummy</userinput>"
-
-#. type: Content of: <sect1><sect2><para>
-#: lfs-en/chapter08/coreutils.xml
-msgid ""
-"Two tests, <filename>tests/cp/preserve-mode.sh</filename> and "
-"<filename>tests/mv/acl.sh</filename>, are known to fail in the chroot "
-"environment, but pass in a complete system."
-msgstr ""
-"已知 <filename>tests/cp/preserve-mode.sh</filename> 和 <filename>tests/mv/"
-"acl.sh</filename> 这两项测试在 chroot 环境中会失败，但在构建完成的系统中能正"
-"常通过。"
 
 #. type: Content of: <sect1><sect2><para>
 #: lfs-en/chapter08/coreutils.xml
