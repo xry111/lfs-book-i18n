@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Linux From Scratch 11.4\n"
 "Report-Msgid-Bugs-To: lfs-dev@lists.linuxfromscratch.org\n"
-"POT-Creation-Date: 2025-01-30 19:13+0800\n"
+"POT-Creation-Date: 2025-02-15 20:05+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: Xi Ruoyao <xry111@xry111.site>\n"
 "Language-Team: none\n"
@@ -421,8 +421,9 @@ msgstr "构建 Ninja："
 
 #. type: Content of: <sect1><sect2><screen>
 #: lfs-en/chapter08/ninja.xml
-#, no-wrap
-msgid "<userinput remap=\"configure\">python3 configure.py --bootstrap</userinput>"
+#, fuzzy, no-wrap
+#| msgid "<userinput remap=\"configure\">python3 configure.py --bootstrap</userinput>"
+msgid "<userinput remap=\"configure\">python3 configure.py --bootstrap --verbose</userinput>"
 msgstr "<userinput remap=\"configure\">python3 configure.py --bootstrap</userinput>"
 
 #. type: Content of: <sect1><sect2><variablelist><title>
@@ -440,11 +441,31 @@ msgstr "<parameter>--bootstrap</parameter>"
 msgid "This parameter forces Ninja to rebuild itself for the current system."
 msgstr "这个参数强制 Ninja 为当前系统重新构建自身。"
 
-#. type: Content of: <sect1><sect2><para>
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
+#: lfs-en/chapter08/ninja.xml
+#, fuzzy
+#| msgid "<parameter>-des</parameter>"
+msgid "<parameter>--verbose</parameter>"
+msgstr "<parameter>-des</parameter>"
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: lfs-en/chapter08/ninja.xml
 msgid ""
+"This parameter makes <command>configure.py</command> show the progress "
+"building Ninja."
+msgstr ""
+
+#. type: Content of: <sect1><sect2><para>
+#: lfs-en/chapter08/ninja.xml
+#, fuzzy
+#| msgid ""
+#| "The package tests cannot run in the chroot environment. They require "
+#| "<ulink url=\"&blfs-book;general/cmake.html\">cmake</ulink>."
+msgid ""
 "The package tests cannot run in the chroot environment. They require <ulink "
-"url=\"&blfs-book;general/cmake.html\">cmake</ulink>."
+"url=\"&blfs-book;general/cmake.html\">cmake</ulink>.  But the basic function "
+"of this package is already tested by rebuilding itself (with the "
+"<parameter>--bootstrap</parameter> option) anyway."
 msgstr ""
 "测试套件无法在 chroot 环境中运行。它需要 <ulink url=\"&blfs-book;general/"
 "cmake.html\">cmake</ulink>。"

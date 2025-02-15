@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Linux From Scratch 11.4\n"
 "Report-Msgid-Bugs-To: lfs-dev@lists.linuxfromscratch.org\n"
-"POT-Creation-Date: 2025-01-30 19:19+0800\n"
+"POT-Creation-Date: 2025-02-15 20:05+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: Xi Ruoyao <xry111@xry111.site>\n"
 "Language-Team: none\n"
@@ -197,11 +197,11 @@ msgstr "&diskspace;"
 #: lfs-en/chapter05/glibc.xml lfs-en/chapter05/libstdc++.xml
 #: lfs-en/chapter06/bash.xml lfs-en/chapter06/coreutils.xml
 #: lfs-en/chapter07/util-linux.xml lfs-en/chapter08/bc.xml
-#: lfs-en/chapter08/coreutils.xml lfs-en/chapter08/e2fsprogs.xml
-#: lfs-en/chapter08/expect.xml lfs-en/chapter08/findutils.xml
-#: lfs-en/chapter08/glibc.xml lfs-en/chapter08/inetutils.xml
-#: lfs-en/chapter08/kmod.xml lfs-en/chapter08/less.xml
-#: lfs-en/chapter08/man-db.xml lfs-en/chapter08/python.xml
+#: lfs-en/chapter08/e2fsprogs.xml lfs-en/chapter08/expect.xml
+#: lfs-en/chapter08/findutils.xml lfs-en/chapter08/glibc.xml
+#: lfs-en/chapter08/inetutils.xml lfs-en/chapter08/kmod.xml
+#: lfs-en/chapter08/less.xml lfs-en/chapter08/man-db.xml
+#: lfs-en/chapter08/python.xml
 msgid "The meaning of the configure options:"
 msgstr "配置选项的含义："
 
@@ -724,14 +724,22 @@ msgstr "如果需要的话，安装预先格式化的文档："
 
 #. type: Content of: <sect1><sect2><screen>
 #: lfs-en/chapter08/python.xml
-#, no-wrap
+#, fuzzy, no-wrap
+#| msgid ""
+#| "<userinput remap=\"install\">install -v -dm755 /usr/share/doc/python-&python-version;/html\n"
+#| "\n"
+#| "tar --no-same-owner \\\n"
+#| "    -xvf ../python-&python-version;-docs-html.tar.bz2\n"
+#| "cp -R --no-preserve=mode python-&python-version;-docs-html/* \\\n"
+#| "    /usr/share/doc/python-&python-version;/html</userinput>"
 msgid ""
 "<userinput remap=\"install\">install -v -dm755 /usr/share/doc/python-&python-version;/html\n"
 "\n"
-"tar --no-same-owner \\\n"
-"    -xvf ../python-&python-version;-docs-html.tar.bz2\n"
-"cp -R --no-preserve=mode python-&python-version;-docs-html/* \\\n"
-"    /usr/share/doc/python-&python-version;/html</userinput>"
+"tar --strip-components=1  \\\n"
+"    --no-same-owner       \\\n"
+"    --no-same-permissions \\\n"
+"    -C /usr/share/doc/python-&python-version;/html \\\n"
+"    -xvf ../python-&python-version;-docs-html.tar.bz2</userinput>"
 msgstr ""
 "<userinput remap=\"install\">install -v -dm755 /usr/share/doc/python-&python-version;/html\n"
 "\n"
@@ -747,20 +755,28 @@ msgstr "文档安装命令的含义："
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: lfs-en/chapter08/python.xml
+#, fuzzy
+#| msgid ""
+#| "<option>--no-same-owner</option> (tar) and <option>--no-preserve=mode</"
+#| "option> (cp)"
 msgid ""
-"<option>--no-same-owner</option> (tar) and <option>--no-preserve=mode</"
-"option> (cp)"
+"<option>--no-same-owner</option> and <option>--no-same-permissions</option>"
 msgstr ""
 "<option>--no-same-owner</option> (tar) 和 <option>--no-preserve=mode</"
 "option> (cp)"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: lfs-en/chapter08/python.xml
+#, fuzzy
+#| msgid ""
+#| "Ensure the installed files have the correct ownership and permissions.  "
+#| "Without these options, <application>tar</application> will install the "
+#| "package files with the upstream creator's values and files would have "
+#| "restrictive permissions."
 msgid ""
 "Ensure the installed files have the correct ownership and permissions.  "
 "Without these options, <application>tar</application> will install the "
-"package files with the upstream creator's values and files would have "
-"restrictive permissions."
+"package files with the upstream creator's values."
 msgstr ""
 "保证安装的文件拥有正确的所有者和权限模式。在没有这些选项的时候，"
 "<application>tar</application> 会以上游开发者使用的用户作为所有者，且安装的文"

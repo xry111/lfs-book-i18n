@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Linux From Scratch 11.4\n"
 "Report-Msgid-Bugs-To: lfs-dev@lists.linuxfromscratch.org\n"
-"POT-Creation-Date: 2025-01-30 19:13+0800\n"
+"POT-Creation-Date: 2025-02-15 20:05+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: Xi Ruoyao <xry111@xry111.site>\n"
 "Language-Team: none\n"
@@ -534,26 +534,41 @@ msgstr "准备编译 Procps-ng："
 
 #. type: Content of: <sect1><sect2><screen>
 #: lfs-en/chapter08/procps.xml
-#, no-wrap
-msgid ""
-"<userinput remap=\"configure\">./configure --prefix=/usr                           \\\n"
-"            --docdir=/usr/share/doc/procps-ng-&procps-ng-version; \\\n"
-"            --disable-static                        \\\n"
-"            --disable-kill</userinput>"
-msgstr ""
-"<userinput remap=\"configure\">./configure --prefix=/usr                           \\\n"
-"            --docdir=/usr/share/doc/procps-ng-&procps-ng-version; \\\n"
-"            --disable-static                        \\\n"
-"            --disable-kill</userinput>"
-
-#. type: Content of: <sect1><sect2><screen>
-#: lfs-en/chapter08/procps.xml
-#, no-wrap
+#, fuzzy, no-wrap
+#| msgid ""
+#| "<userinput remap=\"configure\">./configure --prefix=/usr                           \\\n"
+#| "            --docdir=/usr/share/doc/procps-ng-&procps-ng-version; \\\n"
+#| "            --disable-static                        \\\n"
+#| "            --disable-kill                          \\\n"
+#| "            --with-systemd</userinput>"
 msgid ""
 "<userinput remap=\"configure\">./configure --prefix=/usr                           \\\n"
 "            --docdir=/usr/share/doc/procps-ng-&procps-ng-version; \\\n"
 "            --disable-static                        \\\n"
 "            --disable-kill                          \\\n"
+"            --enable-watch8bit</userinput>"
+msgstr ""
+"<userinput remap=\"configure\">./configure --prefix=/usr                           \\\n"
+"            --docdir=/usr/share/doc/procps-ng-&procps-ng-version; \\\n"
+"            --disable-static                        \\\n"
+"            --disable-kill                          \\\n"
+"            --with-systemd</userinput>"
+
+#. type: Content of: <sect1><sect2><screen>
+#: lfs-en/chapter08/procps.xml
+#, fuzzy, no-wrap
+#| msgid ""
+#| "<userinput remap=\"configure\">./configure --prefix=/usr                           \\\n"
+#| "            --docdir=/usr/share/doc/procps-ng-&procps-ng-version; \\\n"
+#| "            --disable-static                        \\\n"
+#| "            --disable-kill                          \\\n"
+#| "            --with-systemd</userinput>"
+msgid ""
+"<userinput remap=\"configure\">./configure --prefix=/usr                           \\\n"
+"            --docdir=/usr/share/doc/procps-ng-&procps-ng-version; \\\n"
+"            --disable-static                        \\\n"
+"            --disable-kill                          \\\n"
+"            --enable-watch8bit                      \\\n"
 "            --with-systemd</userinput>"
 msgstr ""
 "<userinput remap=\"configure\">./configure --prefix=/usr                           \\\n"
@@ -576,6 +591,20 @@ msgstr ""
 "该选项使得 <command>kill</command> 命令不被构建；它将由 Util-linux 软件包提"
 "供。"
 
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
+#: lfs-en/chapter08/procps.xml
+#, fuzzy
+#| msgid "<parameter>--enable-cxx</parameter>"
+msgid "<parameter>--enable-watch8bit</parameter>"
+msgstr "<parameter>--enable-cxx</parameter>"
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
+#: lfs-en/chapter08/procps.xml
+msgid ""
+"This switch enables the ncursesw support for the <command>watch</command> "
+"command, so it can handle 8-bit characters."
+msgstr ""
+
 #. type: Content of: <sect1><sect2><para>
 #: lfs-en/chapter08/procps.xml lfs-en/chapter08/psmisc.xml
 msgid "To run the test suite, run:"
@@ -583,10 +612,16 @@ msgstr "如果要运行测试套件，执行命令："
 
 #. type: Content of: <sect1><sect2><para>
 #: lfs-en/chapter08/procps.xml
+#, fuzzy
+#| msgid ""
+#| "One test named <literal>ps with output flag bsdtime,cputime,etime,etimes</"
+#| "literal> is known to fail if the host kernel is not built with "
+#| "<literal>CONFIG_BSD_PROCESS_ACCT</literal> enabled."
 msgid ""
 "One test named <literal>ps with output flag bsdtime,cputime,etime,etimes</"
 "literal> is known to fail if the host kernel is not built with "
-"<literal>CONFIG_BSD_PROCESS_ACCT</literal> enabled."
+"<literal>CONFIG_BSD_PROCESS_ACCT</literal> enabled. In addition, one pgrep "
+"test may fail in the chroot environment."
 msgstr ""
 "已知名为 <literal>ps with output flag bsdtime,cputime,etime,etimes</literal> "
 "的一项测试在宿主系统内核未启用 <literal>CONFIG_BSD_PROCESS_ACCT</literal> 时"
