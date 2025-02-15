@@ -553,12 +553,7 @@ msgstr "现在准备编译 Coreutils："
 
 #. type: Content of: <sect1><sect2><screen>
 #: lfs-en/chapter08/coreutils.xml
-#, fuzzy, no-wrap
-#| msgid ""
-#| "<userinput remap=\"configure\">autoreconf -fiv\n"
-#| "FORCE_UNSAFE_CONFIGURE=1 ./configure \\\n"
-#| "            --prefix=/usr            \\\n"
-#| "            --enable-no-install-program=kill,uptime</userinput>"
+#, no-wrap
 msgid ""
 "<userinput remap=\"configure\">autoreconf -fv\n"
 "automake -af\n"
@@ -566,24 +561,21 @@ msgid ""
 "            --prefix=/usr            \\\n"
 "            --enable-no-install-program=kill,uptime</userinput>"
 msgstr ""
-"<userinput remap=\"configure\">autoreconf -fiv\n"
+"<userinput remap=\"configure\">autoreconf -fv\n"
+"automake -af\n"
 "FORCE_UNSAFE_CONFIGURE=1 ./configure \\\n"
 "            --prefix=/usr            \\\n"
 "            --enable-no-install-program=kill,uptime</userinput>"
 
 #. type: Content of: <sect1><sect2><variablelist><title>
 #: lfs-en/chapter08/coreutils.xml
-#, fuzzy
-#| msgid "The meaning of the new configure options:"
 msgid "The meaning of the commands and configure options:"
-msgstr "新的配置选项的含义："
+msgstr "命令和配置选项的含义："
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: lfs-en/chapter08/coreutils.xml
-#, fuzzy
-#| msgid "<command>autoreconf</command>"
 msgid "<command>autoreconf -fv</command>"
-msgstr "<command>autoreconf</command>"
+msgstr "<command>autoreconf -fv</command>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: lfs-en/chapter08/coreutils.xml
@@ -594,13 +586,15 @@ msgid ""
 "for this package it does not work because <filename>configure.ac</filename> "
 "specified an old gettext version."
 msgstr ""
+"国际化补丁更改了构建系统，因此需要重新生成配置文件。一般来说我们会使用 "
+"<parameter>-i</parameter> 选项以更新通用的辅助文件，但该软件包的 "
+"<filename>configure.ac</filename> 指定了过时的 gettext 版本，因此该选项无法正"
+"常工作。"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: lfs-en/chapter08/coreutils.xml
-#, fuzzy
-#| msgid "<command>automake</command>"
 msgid "<command>automake -af</command>"
-msgstr "<command>automake</command>"
+msgstr "<command>automake -af</command>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: lfs-en/chapter08/coreutils.xml
@@ -609,6 +603,8 @@ msgid ""
 "command> due to the missing <parameter>-i</parameter> option.  This command "
 "updates them to prevent a build failure."
 msgstr ""
+"由于未使用 <parameter>-i</parameter> 选项，automake 使用的辅助文件未被 "
+"<command>autoreconf</command> 更新。该命令直接更新它们，以防止构建失败。"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: lfs-en/chapter08/coreutils.xml lfs-en/chapter08/tar.xml

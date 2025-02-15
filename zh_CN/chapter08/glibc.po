@@ -724,12 +724,6 @@ msgstr ""
 
 #. type: Content of: <sect1><sect2><para>
 #: lfs-en/chapter08/glibc.xml
-#, fuzzy
-#| msgid ""
-#| "You may see some test failures. The Glibc test suite is somewhat "
-#| "dependent on the host system. A few failures out of over 5000 tests can "
-#| "generally be ignored. This is a list of the most common issues seen for "
-#| "recent versions of LFS:"
 msgid ""
 "You may see some test failures. The Glibc test suite is somewhat dependent "
 "on the host system. A few failures out of over 6000 tests can generally be "
@@ -737,7 +731,7 @@ msgid ""
 "of LFS:"
 msgstr ""
 "您可能看到一些失败结果。Glibc 的测试套件和宿主系统之间有某种依赖关系。在 "
-"5000 多项测试中，如果只有几项测试失败，一般可以忽略它们。下面列出在一些版本"
+"6000 多项测试中，如果只有几项测试失败，一般可以忽略它们。下面列出在一些版本"
 "的 LFS 上发现的，最常见的问题："
 
 #. type: Content of: <sect1><sect2><itemizedlist><listitem><para>
@@ -969,6 +963,10 @@ msgid ""
 "location and remove the stale <quote>fixed</quote> copies of the Glibc "
 "headers:"
 msgstr ""
+"如果正在运行版本 12.0 之前 (不含) 的 LFS 系统，由于 GCC 构建时未使用 "
+"<parameter>--disable-fixincludes</parameter> 选项，在重启成功后，需要将两个 "
+"GCC 头文件移动到更好的位置，并删除遗留的<quote>修复过的</quote> Glibc 头文件"
+"副本："
 
 #. type: Content of: <sect1><sect2><important><screen>
 #: lfs-en/chapter08/glibc.xml
@@ -979,6 +977,10 @@ msgid ""
 "[ -e $DIR/include/syslimits.h ] || mv $DIR/include{-fixed,}/syslimits.h\n"
 "rm -rfv $(dirname $(gcc -print-libgcc-file-name))/include-fixed/*</userinput>"
 msgstr ""
+"<userinput>DIR=$(dirname $(gcc -print-libgcc-file-name))\n"
+"[ -e $DIR/include/limits.h ] || mv $DIR/include{-fixed,}/limits.h\n"
+"[ -e $DIR/include/syslimits.h ] || mv $DIR/include{-fixed,}/syslimits.h\n"
+"rm -rfv $(dirname $(gcc -print-libgcc-file-name))/include-fixed/*</userinput>"
 
 #. type: Content of: <sect1><sect2><para>
 #: lfs-en/chapter08/glibc.xml

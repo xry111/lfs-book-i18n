@@ -487,16 +487,11 @@ msgstr ""
 
 #. type: Content of: <sect1><sect2><para>
 #: lfs-en/chapter08/acl.xml
-#, fuzzy
-#| msgid ""
-#| "The tests must be run on a filesystem that supports extended attributes "
-#| "such as the ext2, ext3, or ext4 filesystems.  To test the results, issue:"
 msgid ""
 "The Acl tests must be run on a filesystem that supports access controls.  To "
 "test the results, issue:"
 msgstr ""
-"测试套件必须在支持扩展属性的文件系统，如 ext2、ext3 或 ext4 上运行。运行下列"
-"命令以测试编译结果："
+"测试套件必须在支持访问控制的文件系统上运行。运行下列命令以测试编译结果："
 
 #. type: Content of: <sect1><sect2><screen>
 #: lfs-en/chapter08/acl.xml lfs-en/chapter08/attr.xml
@@ -528,6 +523,9 @@ msgid ""
 "<application>Coreutils</application> is not built with the <application>Acl</"
 "application> support yet."
 msgstr ""
+"已知名为 <filename>test/cp.test</filename> 的一项测试会由于 "
+"<application>Coreutils</application> 的 <application>Acl</application> 支持尚"
+"未构建而失败。"
 
 #. type: Content of: <sect1><sect2><title>
 #: lfs-en/chapter08/acl.xml

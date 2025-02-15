@@ -421,10 +421,9 @@ msgstr "构建 Ninja："
 
 #. type: Content of: <sect1><sect2><screen>
 #: lfs-en/chapter08/ninja.xml
-#, fuzzy, no-wrap
-#| msgid "<userinput remap=\"configure\">python3 configure.py --bootstrap</userinput>"
+#, no-wrap
 msgid "<userinput remap=\"configure\">python3 configure.py --bootstrap --verbose</userinput>"
-msgstr "<userinput remap=\"configure\">python3 configure.py --bootstrap</userinput>"
+msgstr "<userinput remap=\"configure\">python3 configure.py --bootstrap --verbose</userinput>"
 
 #. type: Content of: <sect1><sect2><variablelist><title>
 #: lfs-en/chapter08/ninja.xml
@@ -443,24 +442,18 @@ msgstr "这个参数强制 Ninja 为当前系统重新构建自身。"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: lfs-en/chapter08/ninja.xml
-#, fuzzy
-#| msgid "<parameter>-des</parameter>"
 msgid "<parameter>--verbose</parameter>"
-msgstr "<parameter>-des</parameter>"
+msgstr "<parameter>--verbose</parameter>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: lfs-en/chapter08/ninja.xml
 msgid ""
 "This parameter makes <command>configure.py</command> show the progress "
 "building Ninja."
-msgstr ""
+msgstr "该选项使得 <command>configure.py</command> 显示构建 Ninja 的进度。"
 
 #. type: Content of: <sect1><sect2><para>
 #: lfs-en/chapter08/ninja.xml
-#, fuzzy
-#| msgid ""
-#| "The package tests cannot run in the chroot environment. They require "
-#| "<ulink url=\"&blfs-book;general/cmake.html\">cmake</ulink>."
 msgid ""
 "The package tests cannot run in the chroot environment. They require <ulink "
 "url=\"&blfs-book;general/cmake.html\">cmake</ulink>.  But the basic function "
@@ -468,7 +461,8 @@ msgid ""
 "<parameter>--bootstrap</parameter> option) anyway."
 msgstr ""
 "测试套件无法在 chroot 环境中运行。它需要 <ulink url=\"&blfs-book;general/"
-"cmake.html\">cmake</ulink>。"
+"cmake.html\">cmake</ulink>。不过，重新构建该软件包本身 (由 <parameter>--"
+"bootstrap</parameter> 选项要求) 已经测试了它的基本功能。"
 
 #. type: Content of: <sect1><sect2><screen>
 #: lfs-en/chapter08/ninja.xml

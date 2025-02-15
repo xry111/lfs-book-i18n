@@ -534,13 +534,7 @@ msgstr "准备编译 Procps-ng："
 
 #. type: Content of: <sect1><sect2><screen>
 #: lfs-en/chapter08/procps.xml
-#, fuzzy, no-wrap
-#| msgid ""
-#| "<userinput remap=\"configure\">./configure --prefix=/usr                           \\\n"
-#| "            --docdir=/usr/share/doc/procps-ng-&procps-ng-version; \\\n"
-#| "            --disable-static                        \\\n"
-#| "            --disable-kill                          \\\n"
-#| "            --with-systemd</userinput>"
+#, no-wrap
 msgid ""
 "<userinput remap=\"configure\">./configure --prefix=/usr                           \\\n"
 "            --docdir=/usr/share/doc/procps-ng-&procps-ng-version; \\\n"
@@ -552,17 +546,11 @@ msgstr ""
 "            --docdir=/usr/share/doc/procps-ng-&procps-ng-version; \\\n"
 "            --disable-static                        \\\n"
 "            --disable-kill                          \\\n"
-"            --with-systemd</userinput>"
+"            --enable-watch8bit</userinput>"
 
 #. type: Content of: <sect1><sect2><screen>
 #: lfs-en/chapter08/procps.xml
-#, fuzzy, no-wrap
-#| msgid ""
-#| "<userinput remap=\"configure\">./configure --prefix=/usr                           \\\n"
-#| "            --docdir=/usr/share/doc/procps-ng-&procps-ng-version; \\\n"
-#| "            --disable-static                        \\\n"
-#| "            --disable-kill                          \\\n"
-#| "            --with-systemd</userinput>"
+#, no-wrap
 msgid ""
 "<userinput remap=\"configure\">./configure --prefix=/usr                           \\\n"
 "            --docdir=/usr/share/doc/procps-ng-&procps-ng-version; \\\n"
@@ -575,6 +563,7 @@ msgstr ""
 "            --docdir=/usr/share/doc/procps-ng-&procps-ng-version; \\\n"
 "            --disable-static                        \\\n"
 "            --disable-kill                          \\\n"
+"            --enable-watch8bit                      \\\n"
 "            --with-systemd</userinput>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
@@ -593,10 +582,8 @@ msgstr ""
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: lfs-en/chapter08/procps.xml
-#, fuzzy
-#| msgid "<parameter>--enable-cxx</parameter>"
 msgid "<parameter>--enable-watch8bit</parameter>"
-msgstr "<parameter>--enable-cxx</parameter>"
+msgstr "<parameter>--enable-watch8bit</parameter>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: lfs-en/chapter08/procps.xml
@@ -604,6 +591,8 @@ msgid ""
 "This switch enables the ncursesw support for the <command>watch</command> "
 "command, so it can handle 8-bit characters."
 msgstr ""
+"该选项为 <command>watch</command> 命令启用 ncursesw 支持，这样它就能处理 8 位"
+"字符。"
 
 #. type: Content of: <sect1><sect2><para>
 #: lfs-en/chapter08/procps.xml lfs-en/chapter08/psmisc.xml
@@ -612,11 +601,6 @@ msgstr "如果要运行测试套件，执行命令："
 
 #. type: Content of: <sect1><sect2><para>
 #: lfs-en/chapter08/procps.xml
-#, fuzzy
-#| msgid ""
-#| "One test named <literal>ps with output flag bsdtime,cputime,etime,etimes</"
-#| "literal> is known to fail if the host kernel is not built with "
-#| "<literal>CONFIG_BSD_PROCESS_ACCT</literal> enabled."
 msgid ""
 "One test named <literal>ps with output flag bsdtime,cputime,etime,etimes</"
 "literal> is known to fail if the host kernel is not built with "
@@ -625,7 +609,7 @@ msgid ""
 msgstr ""
 "已知名为 <literal>ps with output flag bsdtime,cputime,etime,etimes</literal> "
 "的一项测试在宿主系统内核未启用 <literal>CONFIG_BSD_PROCESS_ACCT</literal> 时"
-"会失败。"
+"会失败。另外，一项 pgrep 测试在 chroot 环境中可能失败。"
 
 #. type: Content of: <sect1><sect2><title>
 #: lfs-en/chapter08/procps.xml
