@@ -25,6 +25,7 @@ sed -n "${sed_cmd}" -i \
 	chapter08/autoconf.xml                       \
 	chapter08/gettext.xml                        \
 	chapter08/ninja.xml                          \
+	chapter08/findutils.xml                      \
 	chapter08/texinfo.xml                        \
 	chapter08/systemd.xml                        \
 	chapter08/shadow.xml                         \
