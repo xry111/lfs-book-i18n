@@ -20,10 +20,12 @@ sed -n "${sed_cmd}" -i \
 	chapter06/ncurses.xml                        \
 	chapter07/kernfs.xml                         \
 	chapter08/glibc.xml                          \
+	chapter08/lz4.xml                            \
 	chapter08/flex.xml                           \
 	chapter08/autoconf.xml                       \
 	chapter08/gettext.xml                        \
 	chapter08/ninja.xml                          \
+	chapter08/findutils.xml                      \
 	chapter08/texinfo.xml                        \
 	chapter08/systemd.xml                        \
 	chapter08/shadow.xml                         \
