@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Linux From Scratch 11.4\n"
 "Report-Msgid-Bugs-To: lfs-dev@lists.linuxfromscratch.org\n"
-"POT-Creation-Date: 2025-02-03 22:59+0800\n"
+"POT-Creation-Date: 2025-02-26 17:44+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: Xi Ruoyao <xry111@xry111.site>\n"
 "Language-Team: none\n"
@@ -296,10 +296,46 @@ msgid "Install Man-pages by running:"
 msgstr "执行以下命令安装 Man-pages："
 
 #. type: Content of: <sect1><sect2><screen>
-#: lfs-en/chapter08/man-pages.xml lfs-en/chapter08/zstd.xml
+#: lfs-en/chapter08/man-pages.xml
 #, no-wrap
-msgid "<userinput remap=\"install\">make prefix=/usr install</userinput>"
-msgstr "<userinput remap=\"install\">make prefix=/usr install</userinput>"
+msgid "<userinput remap=\"install\">make -R GIT=false prefix=/usr install</userinput>"
+msgstr "<userinput remap=\"install\">make -R GIT=false prefix=/usr install</userinput>"
+
+#. type: Content of: <sect1><sect2><variablelist><title>
+#: lfs-en/chapter08/man-pages.xml
+msgid "The meaning of the options:"
+msgstr "各选项的含义："
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
+#: lfs-en/chapter08/man-pages.xml
+msgid "<parameter>-R</parameter>"
+msgstr "<parameter>-R</parameter>"
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
+#: lfs-en/chapter08/man-pages.xml
+msgid ""
+"This prevents <command>make</command> from setting any built-in variables.  "
+"The building system of man-pages does not work well with built-in variables, "
+"but currently there is no way to disable them except passing <parameter>-R</"
+"parameter> explicitly via the command line."
+msgstr ""
+"该选项阻止 <command>make</command> 设置内建变量。内建变量会干扰 man-pages 构"
+"建系统的正常工作，但目前除了直接通过命令行传递 <parameter>-R</parameter> 选项"
+"外，没有其他禁用内建变量的方法。"
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
+#: lfs-en/chapter08/man-pages.xml
+msgid "<parameter>GIT=false</parameter>"
+msgstr "<parameter>GIT=false</parameter>"
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
+#: lfs-en/chapter08/man-pages.xml
+msgid ""
+"This prevents the building system from emitting many <computeroutput>git: "
+"command not found</computeroutput> warnings lines."
+msgstr ""
+"该选项防止构建系统输出大量 <computeroutput>git: command not found</"
+"computeroutput> (git: 未找到命令) 警告行。"
 
 #. type: Content of: <sect1><sect2><title>
 #: lfs-en/chapter08/man-pages.xml
