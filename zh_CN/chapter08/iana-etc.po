@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Linux From Scratch 11.4\n"
 "Report-Msgid-Bugs-To: lfs-dev@lists.linuxfromscratch.org\n"
-"POT-Creation-Date: 2023-10-02 11:33+0800\n"
+"POT-Creation-Date: 2025-03-14 14:37+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: Xi Ruoyao <xry111@xry111.site>\n"
 "Language-Team: none\n"
@@ -41,7 +41,7 @@ msgstr ""
 #: lfs-en/chapter08/libcap.xml lfs-en/chapter08/libelf.xml
 #: lfs-en/chapter08/libffi.xml lfs-en/chapter08/libpipeline.xml
 #: lfs-en/chapter08/libtool.xml lfs-en/chapter08/libxcrypt.xml
-#: lfs-en/chapter08/m4.xml lfs-en/chapter08/make.xml
+#: lfs-en/chapter08/lz4.xml lfs-en/chapter08/m4.xml lfs-en/chapter08/make.xml
 #: lfs-en/chapter08/man-db.xml lfs-en/chapter08/man-pages.xml
 #: lfs-en/chapter08/meson.xml lfs-en/chapter08/mpc.xml
 #: lfs-en/chapter08/mpfr.xml lfs-en/chapter08/ncurses.xml
@@ -68,11 +68,6 @@ msgstr ""
 #: lfs-en/appendices/dependencies.xml lfs-en/chapter08/iana-etc.xml
 msgid "Iana-Etc"
 msgstr "Iana-Etc"
-
-#. type: Content of: <sect1><title>
-#: lfs-en/chapter01/whatsnew.xml lfs-en/chapter08/iana-etc.xml
-msgid "Iana-Etc-&iana-etc-version;"
-msgstr "Iana-Etc-&iana-etc-version;"
 
 #. type: Content of: <sect1><sect2><segmentedlist><segtitle>
 #: lfs-en/chapter05/binutils-pass1.xml lfs-en/chapter05/gcc-pass1.xml
@@ -111,7 +106,7 @@ msgstr "Iana-Etc-&iana-etc-version;"
 #: lfs-en/chapter08/libcap.xml lfs-en/chapter08/libelf.xml
 #: lfs-en/chapter08/libffi.xml lfs-en/chapter08/libpipeline.xml
 #: lfs-en/chapter08/libtool.xml lfs-en/chapter08/libxcrypt.xml
-#: lfs-en/chapter08/m4.xml lfs-en/chapter08/make.xml
+#: lfs-en/chapter08/lz4.xml lfs-en/chapter08/m4.xml lfs-en/chapter08/make.xml
 #: lfs-en/chapter08/man-db.xml lfs-en/chapter08/man-pages.xml
 #: lfs-en/chapter08/markupsafe.xml lfs-en/chapter08/meson.xml
 #: lfs-en/chapter08/mpc.xml lfs-en/chapter08/mpfr.xml
@@ -120,14 +115,14 @@ msgstr "Iana-Etc-&iana-etc-version;"
 #: lfs-en/chapter08/perl.xml lfs-en/chapter08/pkgconf.xml
 #: lfs-en/chapter08/procps.xml lfs-en/chapter08/psmisc.xml
 #: lfs-en/chapter08/python.xml lfs-en/chapter08/readline.xml
-#: lfs-en/chapter08/sed.xml lfs-en/chapter08/shadow.xml
-#: lfs-en/chapter08/sysklogd.xml lfs-en/chapter08/systemd.xml
-#: lfs-en/chapter08/sysvinit.xml lfs-en/chapter08/tar.xml
-#: lfs-en/chapter08/tcl.xml lfs-en/chapter08/texinfo.xml
-#: lfs-en/chapter08/udev.xml lfs-en/chapter08/util-linux.xml
-#: lfs-en/chapter08/vim.xml lfs-en/chapter08/wheel.xml
-#: lfs-en/chapter08/xml-parser.xml lfs-en/chapter08/xz.xml
-#: lfs-en/chapter08/zlib.xml lfs-en/chapter08/zstd.xml
+#: lfs-en/chapter08/sed.xml lfs-en/chapter08/setuptools.xml
+#: lfs-en/chapter08/shadow.xml lfs-en/chapter08/sysklogd.xml
+#: lfs-en/chapter08/systemd.xml lfs-en/chapter08/sysvinit.xml
+#: lfs-en/chapter08/tar.xml lfs-en/chapter08/tcl.xml
+#: lfs-en/chapter08/texinfo.xml lfs-en/chapter08/udev.xml
+#: lfs-en/chapter08/util-linux.xml lfs-en/chapter08/vim.xml
+#: lfs-en/chapter08/wheel.xml lfs-en/chapter08/xml-parser.xml
+#: lfs-en/chapter08/xz.xml lfs-en/chapter08/zlib.xml lfs-en/chapter08/zstd.xml
 #: lfs-en/chapter09/bootscripts.xml lfs-en/chapter10/kernel.xml
 msgid "&buildtime;"
 msgstr "&buildtime;"
@@ -169,7 +164,7 @@ msgstr "&buildtime;"
 #: lfs-en/chapter08/libcap.xml lfs-en/chapter08/libelf.xml
 #: lfs-en/chapter08/libffi.xml lfs-en/chapter08/libpipeline.xml
 #: lfs-en/chapter08/libtool.xml lfs-en/chapter08/libxcrypt.xml
-#: lfs-en/chapter08/m4.xml lfs-en/chapter08/make.xml
+#: lfs-en/chapter08/lz4.xml lfs-en/chapter08/m4.xml lfs-en/chapter08/make.xml
 #: lfs-en/chapter08/man-db.xml lfs-en/chapter08/man-pages.xml
 #: lfs-en/chapter08/markupsafe.xml lfs-en/chapter08/meson.xml
 #: lfs-en/chapter08/mpc.xml lfs-en/chapter08/mpfr.xml
@@ -178,14 +173,14 @@ msgstr "&buildtime;"
 #: lfs-en/chapter08/perl.xml lfs-en/chapter08/pkgconf.xml
 #: lfs-en/chapter08/procps.xml lfs-en/chapter08/psmisc.xml
 #: lfs-en/chapter08/python.xml lfs-en/chapter08/readline.xml
-#: lfs-en/chapter08/sed.xml lfs-en/chapter08/shadow.xml
-#: lfs-en/chapter08/sysklogd.xml lfs-en/chapter08/systemd.xml
-#: lfs-en/chapter08/sysvinit.xml lfs-en/chapter08/tar.xml
-#: lfs-en/chapter08/tcl.xml lfs-en/chapter08/texinfo.xml
-#: lfs-en/chapter08/udev.xml lfs-en/chapter08/util-linux.xml
-#: lfs-en/chapter08/vim.xml lfs-en/chapter08/wheel.xml
-#: lfs-en/chapter08/xml-parser.xml lfs-en/chapter08/xz.xml
-#: lfs-en/chapter08/zlib.xml lfs-en/chapter08/zstd.xml
+#: lfs-en/chapter08/sed.xml lfs-en/chapter08/setuptools.xml
+#: lfs-en/chapter08/shadow.xml lfs-en/chapter08/sysklogd.xml
+#: lfs-en/chapter08/systemd.xml lfs-en/chapter08/sysvinit.xml
+#: lfs-en/chapter08/tar.xml lfs-en/chapter08/tcl.xml
+#: lfs-en/chapter08/texinfo.xml lfs-en/chapter08/udev.xml
+#: lfs-en/chapter08/util-linux.xml lfs-en/chapter08/vim.xml
+#: lfs-en/chapter08/wheel.xml lfs-en/chapter08/xml-parser.xml
+#: lfs-en/chapter08/xz.xml lfs-en/chapter08/zlib.xml lfs-en/chapter08/zstd.xml
 #: lfs-en/chapter09/bootscripts.xml lfs-en/chapter10/kernel.xml
 msgid "&diskspace;"
 msgstr "&diskspace;"
@@ -213,7 +208,7 @@ msgstr "&diskspace;"
 #: lfs-en/chapter08/libcap.xml lfs-en/chapter08/libelf.xml
 #: lfs-en/chapter08/libffi.xml lfs-en/chapter08/libpipeline.xml
 #: lfs-en/chapter08/libtool.xml lfs-en/chapter08/libxcrypt.xml
-#: lfs-en/chapter08/m4.xml lfs-en/chapter08/make.xml
+#: lfs-en/chapter08/lz4.xml lfs-en/chapter08/m4.xml lfs-en/chapter08/make.xml
 #: lfs-en/chapter08/man-db.xml lfs-en/chapter08/man-pages.xml
 #: lfs-en/chapter08/meson.xml lfs-en/chapter08/mpc.xml
 #: lfs-en/chapter08/mpfr.xml lfs-en/chapter08/ncurses.xml
@@ -247,6 +242,11 @@ msgid ""
 msgstr ""
 "<productname>iana-etc</productname> <productnumber>&iana-etc-version;</"
 "productnumber> <placeholder type=\"address\" id=\"0\"/>"
+
+#. type: Content of: <sect1><title>
+#: lfs-en/chapter08/iana-etc.xml
+msgid "Iana-Etc-&iana-etc-version;"
+msgstr "Iana-Etc-&iana-etc-version;"
 
 #. type: Content of: <sect1><sect2><para>
 #: lfs-en/chapter08/iana-etc.xml
