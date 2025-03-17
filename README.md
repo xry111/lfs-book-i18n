@@ -1,7 +1,5 @@
 # Linux From Scratch 中文翻译项目
 
-[<img src="https://api.gitsponsors.com/api/badge/img?id=293338508" height="20">](https://api.gitsponsors.com/api/badge/link?p=yKjPzwKKR6yyASjRjQa1ZWEA0Rlu8QwtQG1q6TzpnSDvrUiGjp4sWmjLdyFsyXGU6/Z8mUANFv9wCFpnx2/1nhjnEI5CX1Mh3TRC1tu8et4wJTJsB3xmmj9D/AyeOrGcyMMB0+P368tPLkBXNJACPw==)
-
 尽管本仓库名为 `lfs-book-i18n`
 (因为理论上可以将其他语言的翻译也塞到本仓库中)，
 但现在只有中文，因此本 README 文件的其余部分也只有中文。
