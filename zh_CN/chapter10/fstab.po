@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Linux From Scratch 11.4\n"
 "Report-Msgid-Bugs-To: lfs-dev@lists.linuxfromscratch.org\n"
-"POT-Creation-Date: 2025-01-30 19:13+0800\n"
+"POT-Creation-Date: 2025-04-14 16:09+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: Xi Ruoyao <xry111@xry111.site>\n"
 "Language-Team: none\n"
@@ -205,37 +205,3 @@ msgstr ""
 "quote> (<option>CONFIG_FAT_DEFAULT_CODEPAGE</option>)，以及 <quote>Default "
 "iocharset for FAT</quote> (<option>CONFIG_FAT_DEFAULT_IOCHARSET</option>)。无"
 "法在编译内核时为 ntfs 文件系统指定这些默认值。"
-
-#. type: Content of: <sect1><para>
-#: lfs-en/chapter10/fstab.xml
-msgid ""
-"It is possible to make the ext3 filesystem reliable across power failures "
-"for some hard disk types.  To do this, add the <option>barrier=1</option> "
-"mount option to the appropriate entry in <filename>/etc/fstab</filename>.  "
-"To check if the disk drive supports this option, run <ulink url=\"&blfs-"
-"book;general/hdparm.html\">hdparm</ulink> on the applicable disk drive.  For "
-"example, if:"
-msgstr ""
-"在某些硬盘上，通过将 <option>barrier=1</option> 挂载选项加入 <filename>/etc/"
-"fstab</filename>，可以使得 ext3 文件系统在发生电源故障时更可靠。为了检查磁盘"
-"驱动器是否支持该选项，在可用的磁盘驱动器上运行 <ulink url=\"&blfs-"
-"book;general/hdparm.html\">hdparm</ulink>。例如："
-
-#. type: Content of: <sect1><screen>
-#: lfs-en/chapter10/fstab.xml
-#, no-wrap
-msgid "<userinput>hdparm -I /dev/sda | grep NCQ</userinput>"
-msgstr "<userinput>hdparm -I /dev/sda | grep NCQ</userinput>"
-
-#. type: Content of: <sect1><para>
-#: lfs-en/chapter10/fstab.xml
-msgid "returns non-empty output, the option is supported."
-msgstr "如果输出内容不为空，说明该选项可用。"
-
-#. type: Content of: <sect1><para>
-#: lfs-en/chapter10/fstab.xml
-msgid ""
-"Note: Logical Volume Management (LVM) based partitions cannot use the "
-"<option>barrier</option> option."
-msgstr ""
-"注意：基于逻辑卷管理 (LVM) 的分区不能使用 <option>barrier</option> 选项。"
