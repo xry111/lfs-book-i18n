@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Linux From Scratch 11.4\n"
 "Report-Msgid-Bugs-To: lfs-dev@lists.linuxfromscratch.org\n"
-"POT-Creation-Date: 2025-01-30 19:13+0800\n"
+"POT-Creation-Date: 2025-04-14 15:33+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: Xi Ruoyao <xry111@xry111.site>\n"
 "Language-Team: none\n"
@@ -399,13 +399,15 @@ msgid "The meaning of the meson options:"
 msgstr "meson 选项的含义："
 
 #. type: Content of: <sect1><sect2><screen>
-#: lfs-en/chapter08/dbus.xml lfs-en/chapter08/systemd.xml
+#: lfs-en/chapter08/dbus.xml lfs-en/chapter08/kmod.xml
+#: lfs-en/chapter08/systemd.xml
 #, no-wrap
 msgid "<userinput remap=\"make\">ninja</userinput>"
 msgstr "<userinput remap=\"make\">ninja</userinput>"
 
 #. type: Content of: <sect1><sect2><screen>
-#: lfs-en/chapter08/dbus.xml lfs-en/chapter08/systemd.xml
+#: lfs-en/chapter08/dbus.xml lfs-en/chapter08/kmod.xml
+#: lfs-en/chapter08/systemd.xml
 #, no-wrap
 msgid "<userinput remap=\"install\">ninja install</userinput>"
 msgstr "<userinput remap=\"install\">ninja install</userinput>"
@@ -758,10 +760,18 @@ msgstr ""
 
 #. type: Content of: <sect1><sect2><para>
 #: lfs-en/chapter08/systemd.xml
+#, fuzzy
+#| msgid ""
+#| "One test named <literal>systemd:core / test-namespace</literal> is known "
+#| "to fail in the LFS chroot environment.  Some other tests may fail because "
+#| "they depend on various kernel configuration options."
 msgid ""
 "One test named <literal>systemd:core / test-namespace</literal> is known to "
 "fail in the LFS chroot environment.  Some other tests may fail because they "
-"depend on various kernel configuration options."
+"depend on various kernel configuration options.  The test named "
+"<literal>systemd:test / test-copy</literal> may time out due to an I/O "
+"congestion with a large parallel job number, but it would pass if running "
+"alone with <command>meson test test-copy</command>."
 msgstr ""
 "已知一项名为 <literal>systemd:core / test-namespace</literal> 的测试在 LFS "
 "chroot 环境中会失败。一些其他测试可能由于依赖一些内核配置选项而失败。"
