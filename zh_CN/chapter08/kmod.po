@@ -394,12 +394,7 @@ msgstr "准备编译 Kmod："
 
 #. type: Content of: <sect1><sect2><screen>
 #: lfs-en/chapter08/kmod.xml
-#, fuzzy, no-wrap
-#| msgid ""
-#| "<userinput remap=\"configure\">mkdir build\n"
-#| "cd    build\n"
-#| "\n"
-#| "meson setup --prefix=/usr --buildtype=release --wrap-mode=nofallback ..</userinput>"
+#, no-wrap
 msgid ""
 "<userinput remap=\"configure\">mkdir -p build\n"
 "cd       build\n"
@@ -409,17 +404,18 @@ msgid ""
 "            --buildtype=release \\\n"
 "            -D manpages=false</userinput>"
 msgstr ""
-"<userinput remap=\"configure\">mkdir build\n"
-"cd    build\n"
+"<userinput remap=\"configure\">mkdir -p build\n"
+"cd       build\n"
 "\n"
-"meson setup --prefix=/usr --buildtype=release --wrap-mode=nofallback ..</userinput>"
+"meson setup --prefix=/usr ..    \\\n"
+"            --sbindir=/usr/sbin \\\n"
+"            --buildtype=release \\\n"
+"            -D manpages=false</userinput>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: lfs-en/chapter08/kmod.xml
-#, fuzzy
-#| msgid "<parameter>-D sysusers=false</parameter>"
 msgid "<parameter>-D manpages=false</parameter>"
-msgstr "<parameter>-D sysusers=false</parameter>"
+msgstr "<parameter>-D manpages=false</parameter>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: lfs-en/chapter08/kmod.xml
@@ -440,10 +436,8 @@ msgstr ""
 
 #. type: Content of: <sect1><sect2><para>
 #: lfs-en/chapter08/kmod.xml
-#, fuzzy
-#| msgid "Install the package:"
 msgid "Now install the package:"
-msgstr "安装该软件包："
+msgstr "现在安装该软件包："
 
 #. type: Content of: <sect1><sect2><title>
 #: lfs-en/chapter08/kmod.xml

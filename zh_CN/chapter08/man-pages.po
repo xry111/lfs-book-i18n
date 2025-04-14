@@ -297,24 +297,19 @@ msgstr "执行以下命令安装 Man-pages："
 
 #. type: Content of: <sect1><sect2><screen>
 #: lfs-en/chapter08/man-pages.xml
-#, fuzzy, no-wrap
-#| msgid "<userinput remap=\"install\">make prefix=/usr install</userinput>"
+#, no-wrap
 msgid "<userinput remap=\"install\">make -R GIT=false prefix=/usr install</userinput>"
-msgstr "<userinput remap=\"install\">make prefix=/usr install</userinput>"
+msgstr "<userinput remap=\"install\">make -R GIT=false prefix=/usr install</userinput>"
 
 #. type: Content of: <sect1><sect2><variablelist><title>
 #: lfs-en/chapter08/man-pages.xml
-#, fuzzy
-#| msgid "The meaning of the meson options:"
 msgid "The meaning of the options:"
-msgstr "meson 选项的含义："
+msgstr "各选项的含义："
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: lfs-en/chapter08/man-pages.xml
-#, fuzzy
-#| msgid "<parameter>-m</parameter>"
 msgid "<parameter>-R</parameter>"
-msgstr "<parameter>-m</parameter>"
+msgstr "<parameter>-R</parameter>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: lfs-en/chapter08/man-pages.xml
@@ -324,13 +319,14 @@ msgid ""
 "but currently there is no way to disable them except passing <parameter>-R</"
 "parameter> explicitly via the command line."
 msgstr ""
+"该选项阻止 <command>make</command> 设置内建变量。内建变量会干扰 man-pages 构"
+"建系统的正常工作，但目前除了直接通过命令行传递 <parameter>-R</parameter> 选项"
+"外，没有其他禁用内建变量的方法。"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: lfs-en/chapter08/man-pages.xml
-#, fuzzy
-#| msgid "<parameter>lfs</parameter>"
 msgid "<parameter>GIT=false</parameter>"
-msgstr "<parameter>lfs</parameter>"
+msgstr "<parameter>GIT=false</parameter>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: lfs-en/chapter08/man-pages.xml
@@ -338,6 +334,8 @@ msgid ""
 "This prevents the building system from emitting many <computeroutput>git: "
 "command not found</computeroutput> warnings lines."
 msgstr ""
+"该选项防止构建系统输出许多行 <computeroutput>git: command not found</"
+"computeroutput> (git: 未找到命令) 警告消息。"
 
 #. type: Content of: <sect1><sect2><title>
 #: lfs-en/chapter08/man-pages.xml

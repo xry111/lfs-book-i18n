@@ -760,11 +760,6 @@ msgstr ""
 
 #. type: Content of: <sect1><sect2><para>
 #: lfs-en/chapter08/systemd.xml
-#, fuzzy
-#| msgid ""
-#| "One test named <literal>systemd:core / test-namespace</literal> is known "
-#| "to fail in the LFS chroot environment.  Some other tests may fail because "
-#| "they depend on various kernel configuration options."
 msgid ""
 "One test named <literal>systemd:core / test-namespace</literal> is known to "
 "fail in the LFS chroot environment.  Some other tests may fail because they "
@@ -774,7 +769,10 @@ msgid ""
 "alone with <command>meson test test-copy</command>."
 msgstr ""
 "已知一项名为 <literal>systemd:core / test-namespace</literal> 的测试在 LFS "
-"chroot 环境中会失败。一些其他测试可能由于依赖一些内核配置选项而失败。"
+"chroot 环境中会失败。已知名为 <literal>systemd:test / test-copy</literal> 的"
+"测试在使用较多并行任务测试时可能由于 I/O 拥堵而失败，但如果使用 "
+"<command>meson test test-copy</command> 命令单独运行它，它应该能正常通过。一"
+"些其他测试可能由于依赖一些内核配置选项而失败。"
 
 #. type: Content of: <sect1><sect2><para>
 #: lfs-en/chapter08/systemd.xml lfs-en/chapter08/udev.xml
