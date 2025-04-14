@@ -677,24 +677,6 @@ msgstr ""
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: lfs-en/chapter10/kernel.xml
-#, fuzzy
-#| msgid ""
-#| "This will make the kernel correctly display the message in case a kernel "
-#| "panic happens and a running DRM driver supports to do so.  Without this, "
-#| "it would be more difficult to diagnose a panic: if no DRM driver is "
-#| "running, we'd be on the VGA console which can only hold 24 lines and the "
-#| "relevant kernel message is often flushed away; if a DRM driver is "
-#| "running, the display is often completely messed up on panic.  As of "
-#| "Linux-6.12, none of the dedicated drivers for mainstream GPU models "
-#| "really supports this, but it's supported by the <quote>Simple framebuffer "
-#| "driver</quote> which runs on the VESA (or EFI) framebuffer before the "
-#| "dedicated GPU driver is loaded.  If the dedicated GPU driver is built as "
-#| "a module (instead of a part of the kernel image) and no initramfs is "
-#| "used, this functionality will work just fine before the root file system "
-#| "is mounted and it's already enough for providing information about most "
-#| "LFS configuration errors causing a panic (for example, an incorrect "
-#| "<parameter>root=</parameter> setting in <xref linkend='ch-bootable-grub'/"
-#| ">)."
 msgid ""
 "This will make the kernel correctly display the message in case a kernel "
 "panic happens and a running DRM driver supports to do so.  Without this, it "
@@ -716,12 +698,12 @@ msgstr ""
 "困难：如果没有运行 DRM 驱动，则我们只能使用 VGA 控制台，而它只能显示 24 行，"
 "因此有用的内核消息往往已被刷新到屏幕以外；而如果正在运行 DRM 驱动，在内核恐慌"
 "时屏幕显示往往会完全错乱。在 Linux-6.12 中，适用于主流 GPU 型号的驱动程序都无"
-"法真正支持该选项提供的功能，但在专用的 GPU 驱动加在之前，VESA (或 EFI) 帧缓冲"
-"之上运行的简单帧缓冲驱动 (<quote>Simple framebuffer driver</quote>) 能够支持"
-"它。如果将专用的 GPU 驱动构建为内核模块 (而非内核映像的一部分)，且没有使用 "
-"initramfs，则这一功能在根文件系统成功挂载之前会正常工作，而这足以提供诊断大多"
-"数由错误配置 LFS (例如，<xref linkend='ch-bootable-grub'/> 中 "
-"<parameter>root=</parameter> 的设定值不正确) 导致的内核恐慌。"
+"法真正支持该选项提供的功能，但在专用的 GPU 驱动加在之前，EFI 帧缓冲之上运行的"
+"简单帧缓冲驱动 (<quote>Simple framebuffer driver</quote>) 能够支持它。如果将"
+"专用的 GPU 驱动构建为内核模块 (而非内核映像的一部分)，且没有使用 initramfs，"
+"则这一功能在根文件系统成功挂载之前会正常工作，而这足以提供诊断大多数由错误配"
+"置 LFS (例如，<xref linkend='ch-bootable-grub'/> 中 <parameter>root=</"
+"parameter> 的设定值不正确) 导致的内核恐慌。"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: lfs-en/chapter10/kernel.xml
@@ -759,22 +741,13 @@ msgstr ""
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: lfs-en/chapter10/kernel.xml
-#, fuzzy
-#| msgid ""
-#| "These allow to use the VESA framebuffer (or the EFI framebuffer if "
-#| "booting the LFS system via UEFI) as a DRM device.  The VESA framebuffer "
-#| "will be set up by GRUB (or the EFI framebuffer will be set up by the UEFI "
-#| "firmware), so the DRM panic handler can function before the GPU-specific "
-#| "DRM driver is loaded."
 msgid ""
 "These allow to use the EFI framebuffer as a DRM device.  The EFI framebuffer "
 "will be set up by the UEFI firmware, so the DRM panic handler can function "
 "before the GPU-specific DRM driver is loaded."
 msgstr ""
-"它们允许使用 VESA 帧缓冲 (或者如果使用 UEFI 引导 LFS 系统，则使用 EFI 帧缓"
-"冲) 作为 DRM 设备。GRUB 会设置好 VESA 帧缓冲 (在使用 UEFI 时，EFI 固件会设置"
-"好 EFI 帧缓冲)，这样在 GPU 专用的 DRM 驱动加载前，基于 DRM 的内核恐慌处理程序"
-"也能正常工作。"
+"它们允许使用 EFI 帧缓冲作为 DRM 设备。EFI 固件会设置好 EFI 帧缓冲，这样在 "
+"GPU 专用的 DRM 驱动加载前，基于 DRM 的内核恐慌处理程序也能正常工作。"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: lfs-en/chapter10/kernel.xml
