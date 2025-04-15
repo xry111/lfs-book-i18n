@@ -527,9 +527,9 @@ msgstr "在确认一切工作良好后，删除测试文件："
 
 #. type: Content of: <sect1><sect2><screen>
 #: lfs-en/chapter05/glibc.xml lfs-en/chapter08/gcc.xml
-#, fuzzy, no-wrap
+#, no-wrap
 msgid "<userinput>rm -v a.out dummy.log</userinput>"
-msgstr "<userinput>rm -v dummy.c a.out dummy.log</userinput>"
+msgstr "<userinput>rm -v a.out dummy.log</userinput>"
 
 #. type: Content of: <sect1><sect2><segmentedlist><segtitle>
 #: lfs-en/chapter05/linux-headers.xml lfs-en/chapter08/acl.xml
@@ -1007,17 +1007,12 @@ msgstr ""
 
 #. type: Content of: <sect1><sect2><screen>
 #: lfs-en/chapter08/gcc.xml
-#, fuzzy, no-wrap
-#| msgid ""
-#| "<userinput>echo 'int main(){}' &gt; dummy.c\n"
-#| "cc dummy.c -v -Wl,--verbose &amp;&gt; dummy.log\n"
-#| "readelf -l a.out | grep ': /lib'</userinput>"
+#, no-wrap
 msgid ""
 "<userinput>echo 'int main(){}' | cc -x c - -v -Wl,--verbose &amp;&gt; dummy.log\n"
 "readelf -l a.out | grep ': /lib'</userinput>"
 msgstr ""
-"<userinput>echo 'int main(){}' &gt; dummy.c\n"
-"cc dummy.c -v -Wl,--verbose &amp;&gt; dummy.log\n"
+"<userinput>echo 'int main(){}' | cc -x c - -v -Wl,--verbose &amp;&gt; dummy.log\n"
 "readelf -l a.out | grep ': /lib'</userinput>"
 
 #. type: Content of: <sect1><sect2><screen>

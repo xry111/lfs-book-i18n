@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: \"Linux From Scratch\" 11.3\n"
 "Report-Msgid-Bugs-To: lfs-dev@lists.linuxfromscratch.org\n"
 "POT-Creation-Date: 2025-04-15 20:51+0800\n"
-"PO-Revision-Date: 2025-04-15 20:51+0800\n"
+"PO-Revision-Date: 2025-04-15 19:40+0800\n"
 "Last-Translator: Automatically generated\n"
 "Language-Team: none\n"
 "Language: zh_CN\n"
@@ -18,9 +18,8 @@ msgstr ""
 
 #. type: Content of: <sect1><title>
 #: lfs-en/chapter01/whatsnew.xml lfs-en/chapter08/packaging.xml
-#, fuzzy
 msgid "Packaging-&packaging-version;"
-msgstr "Pkgconf-&pkgconf-version;"
+msgstr "Packaging-&packaging-version;"
 
 #. type: Content of: <sect1><sect2><segmentedlist><segtitle>
 #: lfs-en/chapter05/binutils-pass1.xml lfs-en/chapter05/gcc-pass1.xml
@@ -169,28 +168,23 @@ msgstr "<userinput remap=\"make\">pip3 wheel -w dist --no-cache-dir --no-build-i
 
 #. type: Content of: <sect1><sect1info><address>
 #: lfs-en/chapter08/packaging.xml
-#, fuzzy, no-wrap
-#| msgid "&pkgconf-url;"
+#, no-wrap
 msgid "&packaging-url;"
-msgstr "&pkgconf-url;"
+msgstr "&packaging-url;"
 
 #. type: Content of: <sect1><sect1info>
 #: lfs-en/chapter08/packaging.xml
-#, fuzzy
-#| msgid ""
-#| "<productname>pkgconf</productname> <productnumber>&pkgconf-version;</"
-#| "productnumber> <placeholder type=\"address\" id=\"0\"/>"
 msgid ""
 "<productname>packaging</productname> <productnumber>&packaging-version;</"
 "productnumber> <placeholder type=\"address\" id=\"0\"/>"
 msgstr ""
-"<productname>pkgconf</productname> <productnumber>&pkgconf-version;</"
+"<productname>packaging</productname> <productnumber>&packaging-version;</"
 "productnumber> <placeholder type=\"address\" id=\"0\"/>"
 
 #. type: Content of: <sect1><sect2><segmentedlist><seglistitem><seg>
 #: lfs-en/chapter08/packaging.xml
 msgid "packaging"
-msgstr ""
+msgstr "packaging"
 
 #. type: Content of: <sect1><sect2><para>
 #: lfs-en/chapter08/packaging.xml
@@ -201,65 +195,52 @@ msgid ""
 "implementation (PEP425). This includes utilities for version handling, "
 "specifiers, markers, tags, and requirements."
 msgstr ""
+"Packaging 模块是一个 Python 工具库，此库提供了实现互操作性规范的实用工具，这"
+"些规范具有明确且唯一正确的行 (例如 PEP440) 或从单一共享实现中获益良多 (例如 "
+"PEP 425)。这些工具处理 Python 包的版本，指定符，标记，需求，标签，以及依赖等"
+"属性。"
 
 #. type: Content of: <sect1><sect2><segmentedlist><seglistitem><seg>
 #: lfs-en/chapter08/packaging.xml
-#, fuzzy
-#| msgid "&pkgconf-fin-sbu;"
 msgid "&packaging-fin-sbu;"
-msgstr "&pkgconf-fin-sbu;"
+msgstr "&packaging-fin-sbu;"
 
 #. type: Content of: <sect1><sect2><segmentedlist><seglistitem><seg>
 #: lfs-en/chapter08/packaging.xml
-#, fuzzy
-#| msgid "&pkgconf-fin-du;"
 msgid "&packaging-fin-du;"
-msgstr "&pkgconf-fin-du;"
+msgstr "&packaging-fin-du;"
 
 #. type: Content of: <sect1><sect2><title>
 #: lfs-en/chapter08/packaging.xml
-#, fuzzy
-#| msgid "Installation of Pkgconf"
 msgid "Installation of Packaging"
-msgstr "安装 Pkgconf"
+msgstr "安装 Packaging"
 
 #. type: Content of: <sect1><sect2><para>
 #: lfs-en/chapter08/packaging.xml
-#, fuzzy
-#| msgid "Compile Meson with the following command:"
 msgid "Compile packaging with the following command:"
-msgstr "执行以下命令编译 Meson："
+msgstr "执行以下命令编译 packaging："
 
 #. type: Content of: <sect1><sect2><para>
 #: lfs-en/chapter08/packaging.xml
-#, fuzzy
-#| msgid "Install Wheel with the following command:"
 msgid "Install packaging with the following command:"
-msgstr "使用以下命令安装 Wheel："
+msgstr "使用以下命令安装 packaging："
 
 #. type: Content of: <sect1><sect2><screen>
 #: lfs-en/chapter08/packaging.xml
-#, fuzzy, no-wrap
-#| msgid "<userinput remap=\"install\">pip3 install --no-index --find-links dist Jinja2</userinput>"
+#, no-wrap
 msgid "<userinput remap=\"install\">pip3 install --no-index --find-links dist packaging</userinput>"
-msgstr "<userinput remap=\"install\">pip3 install --no-index --find-links dist Jinja2</userinput>"
+msgstr "<userinput remap=\"install\">pip3 install --no-index --find-links dist packaging</userinput>"
 
 #. type: Content of: <sect1><sect2><title>
 #: lfs-en/chapter08/packaging.xml
-#, fuzzy
-#| msgid "Contents of Pkgconf"
 msgid "Contents of Packaging"
-msgstr "Pkgconf 的内容"
+msgstr "Packaging 的内容"
 
 #. type: Content of: <sect1><sect2><segmentedlist><seglistitem><seg>
 #: lfs-en/chapter08/packaging.xml
-#, fuzzy
-#| msgid ""
-#| "/usr/lib/python&python-minor;/site-packages/wheel and /usr/lib/"
-#| "python&python-minor;/site-packages/wheel-&wheel-version;.dist-info"
 msgid ""
 "/usr/lib/python&python-minor;/site-packages/packaging and /usr/lib/"
 "python&python-minor;/site-packages/packaging-&packaging-version;.dist-info"
 msgstr ""
-"/usr/lib/python&python-minor;/site-packages/wheel 和 /usr/lib/python&python-"
-"minor;/site-packages/wheel-&wheel-version;.dist-info"
+"/usr/lib/python&python-minor;/site-packages/packaging and /usr/lib/"
+"python&python-minor;/site-packages/packaging-&packaging-version;.dist-info"

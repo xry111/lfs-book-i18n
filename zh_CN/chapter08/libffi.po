@@ -532,15 +532,6 @@ msgstr "安装 Libffi"
 
 #. type: Content of: <sect1><sect2><note><para>
 #: lfs-en/chapter08/libffi.xml
-#, fuzzy
-#| msgid ""
-#| "Like GMP, Libffi builds with optimizations specific to the processor in "
-#| "use. If building for another system, change the value of the <parameter>--"
-#| "with-gcc-arch=</parameter> parameter in the following command to an "
-#| "architecture name fully implemented by the CPU on that system.  If this "
-#| "is not done, all applications that link to <filename "
-#| "class='libraryfile'>libffi</filename> will trigger Illegal Operation "
-#| "Errors."
 msgid ""
 "Like GMP, Libffi builds with optimizations specific to the processor in use. "
 "If building for another system, change the value of the <parameter>--with-"
@@ -553,9 +544,11 @@ msgid ""
 "generic library."
 msgstr ""
 "和 GMP 类似，Libffi 在构建时会使用特定于当前处理器的优化。如果是在为另一台计"
-"算机构建系统，请将 <parameter>--with-gcc-arch=</parameter> 的设定值改为那一台"
-"计算机的 CPU 完全实现的某个架构名称。否则，所有链接到 <filename "
-"class='libraryfile'>libffi</filename> 的程序都可能触发非法指令异常。"
+"算机构建系统，请将 <parameter>--with-gcc-arch=</parameter> 的设定值改为当前计"
+"算机和那一台计算机的 CPU <emphasis role='bold'>都</emphasis>完全实现的某个架"
+"构名称。否则，所有链接到 <filename class='libraryfile'>libffi</filename> 的程"
+"序都可能触发非法指令异常。如果无法找出对两种 CPU 都合适的值，将该选项改为 "
+"<option>--without-gcc-arch</option> 可得到通用的库。"
 
 #. type: Content of: <sect1><sect2><para>
 #: lfs-en/chapter08/libffi.xml

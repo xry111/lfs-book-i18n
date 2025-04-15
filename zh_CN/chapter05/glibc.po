@@ -385,16 +385,7 @@ msgstr "下面，准备编译 Glibc："
 
 #. type: Content of: <sect1><sect2><screen>
 #: lfs-en/chapter05/glibc.xml
-#, fuzzy, no-wrap
-#| msgid ""
-#| "<userinput remap=\"configure\">../configure                             \\\n"
-#| "      --prefix=/usr                      \\\n"
-#| "      --host=$LFS_TGT                    \\\n"
-#| "      --build=$(../scripts/config.guess) \\\n"
-#| "      --enable-kernel=&min-kernel;               \\\n"
-#| "      --with-headers=$LFS/usr/include    \\\n"
-#| "      --disable-nscd                     \\\n"
-#| "      libc_cv_slibdir=/usr/lib</userinput>"
+#, no-wrap
 msgid ""
 "<userinput remap=\"configure\">../configure                             \\\n"
 "      --prefix=/usr                      \\\n"
@@ -409,7 +400,6 @@ msgstr ""
 "      --host=$LFS_TGT                    \\\n"
 "      --build=$(../scripts/config.guess) \\\n"
 "      --enable-kernel=&min-kernel;               \\\n"
-"      --with-headers=$LFS/usr/include    \\\n"
 "      --disable-nscd                     \\\n"
 "      libc_cv_slibdir=/usr/lib</userinput>"
 
@@ -594,14 +584,6 @@ msgstr "<parameter>DESTDIR=$LFS</parameter>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: lfs-en/chapter05/glibc.xml
-#, fuzzy
-#| msgid ""
-#| "The <envar>DESTDIR</envar> make variable is used by almost all packages "
-#| "to define the location where the package should be installed. If it is "
-#| "not set, it defaults to the root (<filename class=\"directory\">/</"
-#| "filename>) directory. Here we specify that the package is installed in "
-#| "<filename class=\"directory\"> $LFS</filename>, which will become the "
-#| "root directory in <xref linkend= \"ch-tools-chroot\"/>."
 msgid ""
 "The <envar>DESTDIR</envar> make variable is used by almost all packages to "
 "define the location where the package should be installed. If it is not set, "
@@ -630,32 +612,22 @@ msgstr "<userinput remap=\"install\">sed '/RTLDLIST=/s@/usr@@g' -i $LFS/usr/bin/
 
 #. type: Content of: <sect1><sect2><para>
 #: lfs-en/chapter05/glibc.xml
-#, fuzzy
-#| msgid ""
-#| "Now that our final toolchain is in place, it is important to again ensure "
-#| "that compiling and linking will work as expected. We do this by "
-#| "performing some sanity checks:"
 msgid ""
 "Now that our cross toolchain is in place, it is important to ensure that "
 "compiling and linking will work as expected. We do this by performing some "
 "sanity checks:"
 msgstr ""
-"现在最终的工具链已经就位，重要的是再次确认编译和链接像我们期望的一样正常工"
-"作。为此，进行下列完整性检查："
+"现在交叉工具链已经就位，重要的是再次确认编译和链接像我们期望的一样正常工作。"
+"为此，进行下列完整性检查："
 
 #. type: Content of: <sect1><sect2><screen>
 #: lfs-en/chapter05/glibc.xml
-#, fuzzy, no-wrap
-#| msgid ""
-#| "<userinput>echo 'int main(){}' &gt; dummy.c\n"
-#| "cc dummy.c -v -Wl,--verbose &amp;&gt; dummy.log\n"
-#| "readelf -l a.out | grep ': /lib'</userinput>"
+#, no-wrap
 msgid ""
 "<userinput>echo 'int main(){}' | $LFS_TGT-gcc -x c - -v -Wl,--verbose &amp;&gt; dummy.log\n"
 "readelf -l a.out | grep ': /lib'</userinput>"
 msgstr ""
-"<userinput>echo 'int main(){}' &gt; dummy.c\n"
-"cc dummy.c -v -Wl,--verbose &amp;&gt; dummy.log\n"
+"<userinput>echo 'int main(){}' | $LFS_TGT-gcc -x c - -v -Wl,--verbose &amp;&gt; dummy.log\n"
 "readelf -l a.out | grep ': /lib'</userinput>"
 
 #. type: Content of: <sect1><sect2><para>
@@ -683,6 +655,11 @@ msgid ""
 "kernel would consider <filename class='directory'>$LFS</filename> as the "
 "root directory (<filename class='directory'>/</filename>)."
 msgstr ""
+"注意该路径不应包含 <filename class='directory'>/mnt/lfs</filename> (或者您为 "
+"<envar>LFS</envar> 变量自行设置的值)。该路径在编译得到的程序运行时才会被解"
+"析，交叉编译得到的程序应该在进入 chroot 环境后才会运行，而在 chroot 环境中内"
+"核会将 <filename class='directory'>$LFS</filename> 视为根目录 (<filename "
+"class='directory'>/</filename>)。"
 
 #. type: Content of: <sect1><sect2><para>
 #: lfs-en/chapter05/glibc.xml lfs-en/chapter08/gcc.xml
@@ -691,10 +668,9 @@ msgstr "下面确认我们在使用正确的启动文件："
 
 #. type: Content of: <sect1><sect2><screen>
 #: lfs-en/chapter05/glibc.xml
-#, fuzzy, no-wrap
-#| msgid "<userinput>grep -E -o '/usr/lib.*/S?crt[1in].*succeeded' dummy.log</userinput>"
+#, no-wrap
 msgid "<userinput>grep -E -o \"$LFS/lib.*/S?crt[1in].*succeeded\" dummy.log</userinput>"
-msgstr "<userinput>grep -E -o '/usr/lib.*/S?crt[1in].*succeeded' dummy.log</userinput>"
+msgstr "<userinput>grep -E -o \"$LFS/lib.*/S?crt[1in].*succeeded\" dummy.log</userinput>"
 
 #. type: Content of: <sect1><sect2><para>
 #: lfs-en/chapter05/glibc.xml lfs-en/chapter08/gcc.xml
@@ -709,6 +685,9 @@ msgid ""
 "/mnt/lfs/lib/../lib/crti.o succeeded\n"
 "/mnt/lfs/lib/../lib/crtn.o succeeded</computeroutput>"
 msgstr ""
+"<computeroutput>/mnt/lfs/lib/../lib/Scrt1.o succeeded\n"
+"/mnt/lfs/lib/../lib/crti.o succeeded\n"
+"/mnt/lfs/lib/../lib/crtn.o succeeded</computeroutput>"
 
 #. type: Content of: <sect1><sect2><para>
 #: lfs-en/chapter05/glibc.xml lfs-en/chapter08/gcc.xml
@@ -717,10 +696,9 @@ msgstr "确认编译器能正确查找头文件："
 
 #. type: Content of: <sect1><sect2><screen>
 #: lfs-en/chapter05/glibc.xml
-#, fuzzy, no-wrap
-#| msgid "<userinput>grep -B4 '^ /usr/include' dummy.log</userinput>"
+#, no-wrap
 msgid "<userinput>grep -B3 \"^ $LFS/usr/include\" dummy.log</userinput>"
-msgstr "<userinput>grep -B4 '^ /usr/include' dummy.log</userinput>"
+msgstr "<userinput>grep -B3 \"^ $LFS/usr/include\" dummy.log</userinput>"
 
 #. type: Content of: <sect1><sect2><para>
 #: lfs-en/chapter05/glibc.xml lfs-en/chapter08/gcc.xml
@@ -814,6 +792,9 @@ msgid ""
 "literal>), which would be replaced with the sysroot directory that we've "
 "configured for the linker."
 msgstr ""
+"32 位系统可能使用不同的路径，但无论如何，需要关注的重点是所有这些路径都应该以"
+"等号 (<literal>=</literal>) 起始，链接器会自动以为其配置的 sysroot 目录替换等"
+"号。"
 
 #. type: Content of: <sect1><sect2><para>
 #: lfs-en/chapter05/glibc.xml lfs-en/chapter08/gcc.xml
@@ -828,10 +809,9 @@ msgstr "<userinput>grep \"/lib.*/libc.so.6 \" dummy.log</userinput>"
 
 #. type: Content of: <sect1><sect2><screen>
 #: lfs-en/chapter05/glibc.xml
-#, fuzzy, no-wrap
-#| msgid "<computeroutput>attempt to open /usr/lib/libc.so.6 succeeded</computeroutput>"
+#, no-wrap
 msgid "<computeroutput>attempt to open /mnt/lfs/usr/lib/libc.so.6 succeeded</computeroutput>"
-msgstr "<computeroutput>attempt to open /usr/lib/libc.so.6 succeeded</computeroutput>"
+msgstr "<computeroutput>attempt to open /mnt/lfs/usr/lib/libc.so.6 succeeded</computeroutput>"
 
 #. type: Content of: <sect1><sect2><para>
 #: lfs-en/chapter05/glibc.xml lfs-en/chapter08/gcc.xml
@@ -879,9 +859,9 @@ msgstr "在确认一切工作良好后，删除测试文件："
 
 #. type: Content of: <sect1><sect2><screen>
 #: lfs-en/chapter05/glibc.xml lfs-en/chapter08/gcc.xml
-#, fuzzy, no-wrap
+#, no-wrap
 msgid "<userinput>rm -v a.out dummy.log</userinput>"
-msgstr "<userinput>rm -v dummy.c a.out dummy.log</userinput>"
+msgstr "<userinput>rm -v a.out dummy.log</userinput>"
 
 #. type: Content of: <sect1><sect2><note><para>
 #: lfs-en/chapter05/glibc.xml

@@ -91,6 +91,9 @@ msgid ""
 "compiled in the book, and we won't <quote>fix</quote> it until we really "
 "need to cross-compile some package after GCC pass 2 in the future."
 msgstr ""
+"已知安装第二遍的 GCC 会破坏交叉工具链。我们认为这并不是 bug，因为第二遍的 "
+"GCC 是本书中最后一个交叉编译的软件包，因此除非在未来我们确实需要在第二遍的 "
+"GCC 之后交叉编译某个软件包，我们不会<quote>修复</quote>这个问题。"
 
 #. type: Content of: <sect1><sect2><para>
 #: lfs-en/part3intro/toolchaintechnotes.xml
@@ -371,10 +374,8 @@ msgstr ""
 
 #. type: Content of: <sect1><sect2><para>
 #: lfs-en/part3intro/toolchaintechnotes.xml
-#, fuzzy
-#| msgid "Prepare Binutils for compilation:"
 msgid "There are two key points for a cross-compilation:"
-msgstr "准备编译 Binutils："
+msgstr "在进行交叉编译时需要注意两个关键问题："
 
 #. type: Content of: <sect1><sect2><itemizedlist><listitem><para>
 #: lfs-en/part3intro/toolchaintechnotes.xml
@@ -388,6 +389,10 @@ msgid ""
 "compile the C source file with the cross-toolchain so the generated code "
 "will be able to run on <quote>the host.</quote>"
 msgstr ""
+"在生成和处理应该在 host 执行的机器码时，必须使用交叉工具链。注意构建过程仍然"
+"可能调用 build 的本地工具链以生成应该在 build 执行的机器码，例如构建系统可能"
+"首先用本地工具链编译一个生成器，然后用该生成器生成一个 C 源代码文件，最后再用"
+"交叉工具链编译生成的代码，使其能在 host 运行。"
 
 #. type: Content of: <sect1><sect2><itemizedlist><listitem><para>
 #: lfs-en/part3intro/toolchaintechnotes.xml
@@ -401,6 +406,12 @@ msgid ""
 "<command>readelf</command> tool will be <command>&host-triplet;-readelf</"
 "command>."
 msgstr ""
+"在使用基于 autoconf 的构建系统时，可以通过 <parameter>--host</parameter> 选项"
+"指定 host 三元组以满足上述需求。该选项使得构建系统使用带有 <literal>&host-"
+"triplet;</literal> (host 三元组) 前缀的工具链组件生成和处理用于 host 的机器"
+"码；例如，使用 <command>&host-triplet;-gcc</command> 作为编译器，使用 "
+"<command>&host-triplet;-readelf</command> 作为 <command>readelf</command> 工"
+"具。"
 
 #. type: Content of: <sect1><sect2><itemizedlist><listitem><para>
 #: lfs-en/part3intro/toolchaintechnotes.xml
@@ -413,6 +424,10 @@ msgid ""
 "the utility may fail to run on <quote>the build</quote>: it's obviously "
 "impossible to run ARM64 machine code on a x86 CPU (without an emulator)."
 msgstr ""
+"构建系统不应试图执行任何应该在 host 运行的机器码。例如，在本地编译某个工具"
+"时，可能通过运行它并传递 <parameter>--help</parameter> 选项，再处理其输出以生"
+"成它的手册页，但在交叉编译时通常不能这么做，因为该工具可能根本无法在 build 运"
+"行：显然不可能在 x86 CPU 上运行 ARM64 机器码 (如果没有模拟器的话)。"
 
 #. type: Content of: <sect1><sect2><itemizedlist><listitem><para>
 #: lfs-en/part3intro/toolchaintechnotes.xml
@@ -427,6 +442,12 @@ msgid ""
 "build</quote> triplet is explicitly specified via the <parameter>--build</"
 "parameter> switch and it's different from <quote>the host</quote> triplet."
 msgstr ""
+"在使用基于 autoconf 的构建系统时，可以通过所谓的<quote>交叉编译模式</quote>满"
+"足这一需求，在此模式下需要在构建时运行为 host 编译的机器码的可选功能会被全部"
+"禁用。在显式指定了 host 三元组的情况下，<quote>交叉编译模式</quote>当且仅当 "
+"<command>configure</command> 无法运行已经为 host 编译的样品程序，或通过 "
+"<parameter>--build</parameter> 显式指定了和 host 三元组不同的 build 三元组时"
+"被启用。"
 
 #. type: Content of: <sect1><sect2><para>
 #: lfs-en/part3intro/toolchaintechnotes.xml
@@ -456,6 +477,22 @@ msgid ""
 "<command>config.guess</command> output, but <quote>the cross-compilation "
 "mode</quote> depends on an explicit specification as we've discussed."
 msgstr ""
+"为了为 LFS 临时系统交叉编译软件包，首先微调系统三元组，将其"
+"&quot;vendor&quot; 字段改为 &quot;lfs&quot; 后写入<envar>LFS_TGT</envar> 环境"
+"变量，并将该变量值通过 <parameter>--host</parameter> 指定为 host 三元组，这样"
+"在生成和处理作为 LFS 临时系统一部分的机器码时，构建系统就会使用交叉工具链。此"
+"外，我们还需要启用<quote>交叉编译模式</quote>：host，即 LFS 临时系统所用的机"
+"器码尽管能够在当前 CPU 上运行，却可能使用 build (宿主发行版) 没有提供的库；即"
+"使库恰好存在，这些机器码也可能使用不存在或定义不同的代码或数据。在为 LFS 临时"
+"系统进行交叉编译时，我们不能期望 <command>configure</command> 通过运行样品程"
+"序来检测这一问题：样品程序只引用 <systemitem class='library'>libc</"
+"systemitem> 中的少数组件，而宿主发行版的 <systemitem class='library'>libc</"
+"systemitem> 很可能提供了这些组件 (或许，除非在宿主发行版使用了不同的 "
+"<systemitem class='library'>libc</systemitem> 实现，如 Musl)，故样品程序不会"
+"像那些真正有功能的程序大概会发生的一样运行失败。故我们必须显式指定 build 三元"
+"组，以启用<quote>交叉编译模式</quote>。我们指定的三元组就是默认值，即 "
+"<command>config.guess</command> 输出的，未经修改的系统三元组，但正如前文所"
+"述，<quote>交叉编译模式</quote>依赖于是否显式指定了该三元组。"
 
 #. type: Content of: <sect1><sect2><para>
 #: lfs-en/part3intro/toolchaintechnotes.xml
@@ -472,6 +509,14 @@ msgid ""
 "delete the libtool archive (<filename class='extension'>.la</filename>) "
 "files and fix up an outdated libtool copy shipped with the Binutils code."
 msgstr ""
+"在构建交叉链接器和交叉编译器时，我们指定 <parameter>--with-sysroot</"
+"parameter> 选项，以告知它们应该在何处搜索为 host 生成代码所需的文件。这几乎保"
+"证了<xref linkend=\"chapter-temporary-tools\"/>中构建的其他程序不会连接到 "
+"build 中的库。这里使用<quote>几乎</quote>这个词是因为 <command>libtool</"
+"command>，一个包装编译器和链接器的<quote>兼容层</quote>，可能自作聪明地传递一"
+"些导致链接器能找到 build 库的选项。为了防止这一问题，我们需要删除 libtool 档"
+"案 (<filename class='extension'>.la</filename>) 文件，并修复 Binutils 代码随"
+"附的过时的 libtool 副本。"
 
 #. type: Content of: <sect1><sect2><informaltable><tgroup><tbody><row><entry>
 #: lfs-en/part3intro/toolchaintechnotes.xml
@@ -495,10 +540,8 @@ msgstr "在 pc 上使用 cc1 构建 cc-lfs"
 
 #. type: Content of: <sect1><sect2><informaltable><tgroup><tbody><row><entry>
 #: lfs-en/part3intro/toolchaintechnotes.xml
-#, fuzzy
-#| msgid "Rebuild and test cc-lfs using cc-lfs on lfs."
 msgid "Rebuild (and maybe test) cc-lfs using cc-lfs on lfs."
-msgstr "在 lfs 上使用 cc-lfs 重新构建并测试它本身"
+msgstr "在 lfs 上使用 cc-lfs 重新构建 (同时可以测试) 它本身"
 
 #. type: Content of: <sect1><sect2><para>
 #: lfs-en/part3intro/toolchaintechnotes.xml
@@ -540,13 +583,6 @@ msgstr ""
 
 #. type: Content of: <sect1><sect2><para>
 #: lfs-en/part3intro/toolchaintechnotes.xml
-#, fuzzy
-#| msgid ""
-#| "The upshot of the preceding paragraph is that cc1 is unable to build a "
-#| "fully functional libstdc++ with the degraded libgcc, but cc1 is the only "
-#| "compiler available for building the C/C++ libraries during stage 2. There "
-#| "are two reasons we don't immediately use the compiler built in stage 2, "
-#| "cc-lfs, to build those libraries."
 msgid ""
 "The upshot of the preceding paragraph is that cc1 is unable to build a fully "
 "functional libstdc++ with the degraded libgcc, but cc1 is the only compiler "
@@ -558,27 +594,15 @@ msgid ""
 "instead of the old, degraded build.  This makes the rebuilt libstdc++ fully "
 "functional."
 msgstr ""
-"上面一段的结论是 cc1 无法使用功能降级的 libgcc 构建功能完整的 libstdc++，但这"
-"是我们在阶段 2 构建 C/C++ 库时唯一可用的编译器。两项原因导致我们目前不能用第"
-"二阶段构建的编译器，cc-lfs，构建这些库。"
+"上一自然段的结论是 cc1 无法使用功能降级的 libgcc 构建功能完整的 libstdc++，但"
+"这是我们在阶段 2 构建 C/C++ 库时唯一可用的编译器。如同前文所述，我们不能在 "
+"pc (宿主发行版) 运行 cc-lfs，因为它可能使用 build (宿主发行版) 未提供的库，代"
+"码，或数据。因此在构建第二阶段的 gcc 时，我们覆盖库文件搜索路径，以将 "
+"libstdc++ 链接到刚刚重新构建的 libgcc，而不是旧的，功能降级的版本。这样重新构"
+"建的 libstdc++ 就会具有完整的功能。"
 
 #. type: Content of: <sect1><sect2><para>
 #: lfs-en/part3intro/toolchaintechnotes.xml
-#, fuzzy
-#| msgid ""
-#| "In &ch-final; (or <quote>stage 3</quote>), all the packages needed for "
-#| "the LFS system are built. Even if a package has already been installed "
-#| "into the LFS system in a previous chapter, we still rebuild the package.  "
-#| "The main reason for rebuilding these packages is to make them stable: if "
-#| "we reinstall an LFS package on a completed LFS system, the reinstalled "
-#| "content of the package should be the same as the content of the same "
-#| "package when first installed in &ch-final;.  The temporary packages "
-#| "installed in &ch-tmp-cross; or &ch-tmp-chroot; cannot satisfy this "
-#| "requirement, because some of them are built without optional "
-#| "dependencies, and autoconf cannot perform some feature checks in &ch-tmp-"
-#| "cross; because of cross-compilation, causing the temporary packages to "
-#| "lack optional features, or use suboptimal code routines. Additionally, a "
-#| "minor reason for rebuilding the packages is to run the test suites."
 msgid ""
 "In &ch-final; (or <quote>stage 3</quote>), all the packages needed for the "
 "LFS system are built. Even if a package has already been installed into the "
@@ -596,10 +620,9 @@ msgstr ""
 "即使某个软件包在之前的章节已被构建，我们仍然重新构建它。重新构建的最主要原因"
 "是将软件包稳定下来：如果我们在完整的 LFS 系统上重新安装一个 LFS 软件包，则重"
 "新安装到系统中的内容应该和&ch-final;中初次安装的完全一致。&ch-tmp-cross;和"
-"&ch-tmp-chroot;中的临时软件包无法满足这一条件，因为其中一些软件包在构建时缺失"
-"可选依赖项，另外在&ch-tmp-cross;中由于进行交叉编译，autoconf 无法进行一些系统"
-"特性探测，导致临时软件包缺失可选功能，或使用非最优的子程序。另外，进行重新构"
-"建还有一个次要原因，即运行软件包的测试套件。"
+"&ch-tmp-chroot;中的临时软件包无法满足这一条件，因为它们的一些可选功能由于缺失"
+"依赖或使用<quote>交叉编译模式</quote>而被禁用。另外，进行重新构建还有一个次要"
+"原因，即运行软件包的测试套件。"
 
 #. type: Content of: <sect1><sect2><title>
 #: lfs-en/part3intro/toolchaintechnotes.xml
@@ -734,16 +757,14 @@ msgid ""
 "<envar>DESTDIR</envar> variable is used to force installation into the LFS "
 "file system."
 msgstr ""
+"下一步安装 Glibc。正如前文所述，我们使用 <parameter>--host=$LFS_TGT</"
+"parameter> 选项以保证构建系统使用那些带有 <literal>$LFS_TGT-</literal> 前缀的"
+"工具，并使用 <parameter>--build=$(../scripts/config.guess)</parameter> 选项启"
+"用<quote>交叉编译模式</quote>。最后，我们使用 <envar>DESTDIR</envar> 变量，将"
+"构建得到的 Glibc 强制安装到 LFS 文件系统中。"
 
 #. type: Content of: <sect1><sect2><para>
 #: lfs-en/part3intro/toolchaintechnotes.xml
-#, fuzzy
-#| msgid ""
-#| "As mentioned above, the standard C++ library is compiled next, followed "
-#| "in <xref linkend=\"chapter-temporary-tools\"/> by other programs that "
-#| "must be cross-compiled to break circular dependencies at build time.  The "
-#| "install step of all those packages uses the <envar>DESTDIR</envar> "
-#| "variable to force installation in the LFS filesystem."
 msgid ""
 "As mentioned above, the standard C++ library is compiled next, followed in "
 "<xref linkend=\"chapter-temporary-tools\"/> by other programs that must be "
@@ -751,23 +772,11 @@ msgid ""
 "those packages are similar to the steps for glibc."
 msgstr ""
 "正如前文所述，接下来构建 C++ 标准库，然后是<xref linkend=\"chapter-temporary-"
-"tools\"/>中的其他程序，必须交叉编译这些程序才能打破构建时的循环依赖。在安装这"
-"些软件包时使用 <envar>DESTDIR</envar> 变量，以确保将它们安装到 LFS 文件系统"
-"中。"
+"tools\"/>中的其他程序，必须交叉编译这些程序才能打破构建时的循环依赖。构建并安"
+"装这些软件包的步骤类似构建并安装 glibc。"
 
 #. type: Content of: <sect1><sect2><para>
 #: lfs-en/part3intro/toolchaintechnotes.xml
-#, fuzzy
-#| msgid ""
-#| "At the end of <xref linkend=\"chapter-temporary-tools\"/> the native LFS "
-#| "compiler is installed. First binutils-pass2 is built, in the same "
-#| "<envar>DESTDIR</envar> directory as the other programs, then the second "
-#| "pass of gcc is constructed, omitting some non-critical libraries.  Due to "
-#| "some weird logic in gcc's configure script, <envar>CC_FOR_TARGET</envar> "
-#| "ends up as <command>cc</command> when the host is the same as the target, "
-#| "but different from the build system. This is why "
-#| "<parameter>CC_FOR_TARGET=$LFS_TGT-gcc</parameter> is declared explicitly "
-#| "as one of the configuration options."
 msgid ""
 "At the end of <xref linkend=\"chapter-temporary-tools\"/> the native LFS "
 "compiler is installed. First binutils-pass2 is built, in the same "
@@ -776,10 +785,7 @@ msgid ""
 msgstr ""
 "在<xref linkend=\"chapter-temporary-tools\"/>的末尾，构建 LFS 本地编译器。首"
 "先使用和其他程序相同的 <envar>DESTDIR</envar> 第二次构建 binutils，然后第二次"
-"构建 GCC，构建时忽略一些不重要的库。由于 GCC 配置脚本的一些奇怪逻辑，"
-"<envar>CC_FOR_TARGET</envar> 变量在 host 系统和 target 相同，但与 build 不同"
-"时，被设定为 <command>cc</command>。因此我们必须显式地在配置选项中指定 "
-"<parameter>CC_FOR_TARGET=$LFS_TGT-gcc</parameter>。"
+"构建 GCC，构建时省略一些不重要的库。"
 
 #. type: Content of: <sect1><sect2><para>
 #: lfs-en/part3intro/toolchaintechnotes.xml

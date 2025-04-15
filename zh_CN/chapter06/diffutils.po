@@ -358,11 +358,7 @@ msgstr "准备编译 Diffutils："
 
 #. type: Content of: <sect1><sect2><screen>
 #: lfs-en/chapter06/diffutils.xml
-#, fuzzy, no-wrap
-#| msgid ""
-#| "<userinput remap=\"configure\">./configure --prefix=/usr   \\\n"
-#| "            --host=$LFS_TGT \\\n"
-#| "            --build=$(./build-aux/config.guess)</userinput>"
+#, no-wrap
 msgid ""
 "<userinput remap=\"configure\">./configure --prefix=/usr   \\\n"
 "            --host=$LFS_TGT \\\n"
@@ -371,14 +367,13 @@ msgid ""
 msgstr ""
 "<userinput remap=\"configure\">./configure --prefix=/usr   \\\n"
 "            --host=$LFS_TGT \\\n"
+"            gl_cv_func_strcasecmp_works=y \\\n"
 "            --build=$(./build-aux/config.guess)</userinput>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: lfs-en/chapter06/diffutils.xml
-#, fuzzy
-#| msgid "<parameter>runstatedir=/run</parameter>"
 msgid "<parameter>gl_cv_func_strcasecmp_works=y</parameter>"
-msgstr "<parameter>runstatedir=/run</parameter>"
+msgstr "<parameter>gl_cv_func_strcasecmp_works=y</parameter>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: lfs-en/chapter06/diffutils.xml
@@ -397,6 +392,16 @@ msgid ""
 "fine) instead, then <command>configure</command> will just use the specified "
 "value and skip the check."
 msgstr ""
+"该选项为一项针对 <function>strcasecmp</function> 的检查指定结果。这项检查需要"
+"编译并运行一个 C 程序，而在交叉编译时这是不可行的，因为通常来说交叉编译得到的"
+"程序不能在宿主发行版运行。正常情况下，<command>configure</command> 脚本在交叉"
+"编译时应该对这些检查回落到一个缺省值，但这项检查缺失了缺省值设定，因此 "
+"<command>configure</command> 脚本完全无法得出检查结果，并报错退出。上游开发者"
+"已经修复了这一问题，但应用修复后需要运行 宿主发行版未必提供的 "
+"<command>autoconf</command>。因此我们不使用上游修复，而是直接指定检查结果 "
+"(为 <literal>y</literal>，因为我们已经知道Glibc-&glibc-version; 中的 "
+"<function>strcasecmp</function> 函数能够正常工作)，这样 <command>configure</"
+"command> 就会直接使用我们给定的值，跳过有问题的检查。"
 
 #. type: Content of: <sect1><sect2><para>
 #: lfs-en/chapter06/diffutils.xml
