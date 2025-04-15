@@ -707,13 +707,7 @@ msgstr "该命令应当输出："
 
 #. type: Content of: <sect1><sect2><screen>
 #: lfs-en/chapter05/glibc.xml
-#, fuzzy, no-wrap
-#| msgid ""
-#| "<computeroutput>#include &lt;...&gt; search starts here:\n"
-#| " /usr/lib/gcc/loongarch64-unknown-linux-gnu/&gcc-version;/include\n"
-#| " /usr/local/include\n"
-#| " /usr/lib/gcc/loongarch64-unknown-linux-gnu/&gcc-version;/include-fixed\n"
-#| " /usr/include</computeroutput>"
+#, no-wrap
 msgid ""
 "<computeroutput>#include &lt;...&gt; search starts here:\n"
 " /mnt/lfs/tools/lib/gcc/loongarch64-lfs-linux-gnu/&gcc-version;/include\n"
@@ -721,10 +715,9 @@ msgid ""
 " /mnt/lfs/usr/include</computeroutput>"
 msgstr ""
 "<computeroutput>#include &lt;...&gt; search starts here:\n"
-" /usr/lib/gcc/x86_64-pc-linux-gnu/&gcc-version;/include\n"
-" /usr/local/include\n"
-" /usr/lib/gcc/x86_64-pc-linux-gnu/&gcc-version;/include-fixed\n"
-" /usr/include</computeroutput>"
+" /mnt/lfs/tools/lib/gcc/loongarch64-lfs-linux-gnu/&gcc-version;/include\n"
+" /mnt/lfs/tools/lib/gcc/loongarch64-lfs-linux-gnu/&gcc-version;/include-fixed\n"
+" /mnt/lfs/usr/include</computeroutput>"
 
 #. type: Content of: <sect1><sect2><para>
 #: lfs-en/chapter05/glibc.xml lfs-en/chapter08/gcc.xml
@@ -755,16 +748,7 @@ msgstr "那些包含 '-linux-gnu' 的路径应该忽略，除此之外，以上�
 
 #. type: Content of: <sect1><sect2><screen>
 #: lfs-en/chapter05/glibc.xml
-#, fuzzy, no-wrap
-#| msgid ""
-#| "<computeroutput>SEARCH_DIR(\"/usr/loongarch64-unknown-linux-gnu/lib64\")\n"
-#| "SEARCH_DIR(\"/usr/local/lib64\")\n"
-#| "SEARCH_DIR(\"/lib64\")\n"
-#| "SEARCH_DIR(\"/usr/lib64\")\n"
-#| "SEARCH_DIR(\"/usr/loongarch64-unknown-linux-gnu/lib\")\n"
-#| "SEARCH_DIR(\"/usr/local/lib\")\n"
-#| "SEARCH_DIR(\"/lib\")\n"
-#| "SEARCH_DIR(\"/usr/lib\");</computeroutput>"
+#, no-wrap
 msgid ""
 "<computeroutput>SEARCH_DIR(\"=/mnt/lfs/tools/loongarch64-lfs-linux-gnu/lib64\")\n"
 "SEARCH_DIR(\"=/usr/local/lib64\")\n"
@@ -775,14 +759,14 @@ msgid ""
 "SEARCH_DIR(\"=/lib\")\n"
 "SEARCH_DIR(\"=/usr/lib\");</computeroutput>"
 msgstr ""
-"<computeroutput>SEARCH_DIR(\"/usr/x86_64-pc-linux-gnu/lib64\")\n"
-"SEARCH_DIR(\"/usr/local/lib64\")\n"
-"SEARCH_DIR(\"/lib64\")\n"
-"SEARCH_DIR(\"/usr/lib64\")\n"
-"SEARCH_DIR(\"/usr/x86_64-pc-linux-gnu/lib\")\n"
-"SEARCH_DIR(\"/usr/local/lib\")\n"
-"SEARCH_DIR(\"/lib\")\n"
-"SEARCH_DIR(\"/usr/lib\");</computeroutput>"
+"<computeroutput>SEARCH_DIR(\"=/mnt/lfs/tools/loongarch64-lfs-linux-gnu/lib64\")\n"
+"SEARCH_DIR(\"=/usr/local/lib64\")\n"
+"SEARCH_DIR(\"=/lib64\")\n"
+"SEARCH_DIR(\"=/usr/lib64\")\n"
+"SEARCH_DIR(\"=/mnt/lfs/tools/loongarch64-lfs-linux-gnu/lib\")\n"
+"SEARCH_DIR(\"=/usr/local/lib\")\n"
+"SEARCH_DIR(\"=/lib\")\n"
+"SEARCH_DIR(\"=/usr/lib\");</computeroutput>"
 
 #. type: Content of: <sect1><sect2><para>
 #: lfs-en/chapter05/glibc.xml
@@ -833,10 +817,9 @@ msgstr "以上命令应该输出 (不同平台的动态链接器名称可能不�
 
 #. type: Content of: <sect1><sect2><screen>
 #: lfs-en/chapter05/glibc.xml
-#, fuzzy, no-wrap
-#| msgid "<computeroutput>found ld-linux-loongarch-lp64d.so.1 at /usr/lib/ld-linux-loongarch-lp64d.so.1</computeroutput>"
+#, no-wrap
 msgid "<computeroutput>found ld-linux-loongarch-lp64d.so.1 at /mnt/lfs/usr/lib/ld-linux-loongarch-lp64d.so.1</computeroutput>"
-msgstr "<computeroutput>found ld-linux-loongarch-lp64d.so.1 at /usr/lib/ld-linux-loongarch-lp64d.so.1</computeroutput>"
+msgstr "<computeroutput>found ld-linux-loongarch-lp64d.so.1 at /mnt/lfs/usr/lib/ld-linux-loongarch-lp64d.so.1</computeroutput>"
 
 #. The most likely
 #.   reason is that something went wrong with the specs file adjustment.
