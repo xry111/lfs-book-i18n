@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Linux From Scratch 11.4\n"
 "Report-Msgid-Bugs-To: lfs-dev@lists.linuxfromscratch.org\n"
-"POT-Creation-Date: 2025-04-15 19:40+0800\n"
+"POT-Creation-Date: 2025-06-01 12:49+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: Xi Ruoyao <xry111@xry111.site>\n"
 "Language-Team: none\n"
@@ -383,10 +383,10 @@ msgstr "安装的程序"
 #: lfs-en/chapter08/expect.xml lfs-en/chapter08/file.xml
 #: lfs-en/chapter08/findutils.xml lfs-en/chapter08/flex.xml
 #: lfs-en/chapter08/gawk.xml lfs-en/chapter08/gdbm.xml
-#: lfs-en/chapter08/gettext.xml lfs-en/chapter08/grep.xml
-#: lfs-en/chapter08/groff.xml lfs-en/chapter08/gzip.xml
-#: lfs-en/chapter08/inetutils.xml lfs-en/chapter08/intltool.xml
-#: lfs-en/chapter08/kbd.xml lfs-en/chapter08/less.xml
+#: lfs-en/chapter08/gettext.xml lfs-en/chapter08/gperf.xml
+#: lfs-en/chapter08/grep.xml lfs-en/chapter08/groff.xml
+#: lfs-en/chapter08/gzip.xml lfs-en/chapter08/inetutils.xml
+#: lfs-en/chapter08/intltool.xml lfs-en/chapter08/less.xml
 #: lfs-en/chapter08/libcap.xml lfs-en/chapter08/libelf.xml
 #: lfs-en/chapter08/libffi.xml lfs-en/chapter08/libpipeline.xml
 #: lfs-en/chapter08/libtool.xml lfs-en/chapter08/libxcrypt.xml
@@ -447,6 +447,17 @@ msgstr "&perl-fin-sbu;"
 #: lfs-en/chapter08/perl.xml
 msgid "&perl-fin-du;"
 msgstr "&perl-fin-du;"
+
+#. type: Content of: <sect1><sect2><para>
+#: lfs-en/chapter08/perl.xml
+msgid "First, apply a security patch identified upstream:"
+msgstr "首先，应用上游给出的安全补丁："
+
+#. type: Content of: <sect1><sect2><screen>
+#: lfs-en/chapter08/perl.xml
+#, no-wrap
+msgid "<userinput remap=\"pre\">patch -Np1 -i ../&perl-upstream-fix-patch;</userinput>"
+msgstr "<userinput remap=\"pre\">patch -Np1 -i ../&perl-upstream-fix-patch;</userinput>"
 
 #. type: Content of: <sect1><sect2><para>
 #: lfs-en/chapter08/perl.xml

@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Linux From Scratch 11.4\n"
 "Report-Msgid-Bugs-To: lfs-dev@lists.linuxfromscratch.org\n"
-"POT-Creation-Date: 2025-04-15 19:40+0800\n"
+"POT-Creation-Date: 2025-06-01 12:49+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: Xi Ruoyao <xry111@xry111.site>\n"
 "Language-Team: none\n"
@@ -529,19 +529,32 @@ msgstr "&python-fin-du;"
 msgid "Installation of Python 3"
 msgstr "安装 Python 3"
 
+#. type: Content of: <sect1><sect2><para>
+#: lfs-en/chapter08/python.xml
+msgid "First, apply a security patch to the current package:"
+msgstr "首先，对当前发布的软件包进行安全修复："
+
+#. type: Content of: <sect1><sect2><screen>
+#: lfs-en/chapter08/python.xml
+#, no-wrap
+msgid "<userinput remap=\"pre\">patch -Np1 -i ../&python-security-fixes-patch;</userinput>"
+msgstr "<userinput remap=\"pre\">patch -Np1 -i ../&python-security-fixes-patch;</userinput>"
+
 #. type: Content of: <sect1><sect2><screen>
 #: lfs-en/chapter08/python.xml
 #, no-wrap
 msgid ""
-"<userinput remap=\"configure\">./configure --prefix=/usr        \\\n"
-"            --enable-shared      \\\n"
-"            --with-system-expat  \\\n"
-"            --enable-optimizations</userinput>"
+"<userinput remap=\"configure\">./configure --prefix=/usr          \\\n"
+"            --enable-shared        \\\n"
+"            --with-system-expat    \\\n"
+"            --enable-optimizations \\\n"
+"            --without-static-libpython</userinput>"
 msgstr ""
-"<userinput remap=\"configure\">./configure --prefix=/usr        \\\n"
-"            --enable-shared      \\\n"
-"            --with-system-expat  \\\n"
-"            --enable-optimizations</userinput>"
+"<userinput remap=\"configure\">./configure --prefix=/usr          \\\n"
+"            --enable-shared        \\\n"
+"            --with-system-expat    \\\n"
+"            --enable-optimizations \\\n"
+"            --without-static-libpython</userinput>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: lfs-en/chapter08/python.xml
@@ -569,6 +582,16 @@ msgid ""
 msgstr ""
 "该选项启用有力，但是消耗时间的优化步骤。它会两次构建解释器；在初次构建结果上"
 "运行测试，并使用测试结果优化最终构建版本的性能。"
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
+#: lfs-en/chapter08/python.xml
+msgid "<parameter>--without-static-libpython</parameter>"
+msgstr "<parameter>--without-static-libpython</parameter>"
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
+#: lfs-en/chapter08/python.xml
+msgid "This switch prevents building a large, but unneeded, static library."
+msgstr "该选项防止安装一个巨大且不必要的静态库。"
 
 #. type: Content of: <sect1><sect2><para>
 #: lfs-en/chapter08/python.xml
