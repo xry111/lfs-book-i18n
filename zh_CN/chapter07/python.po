@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Linux From Scratch 11.0\n"
 "Report-Msgid-Bugs-To: lfs-dev@lists.linuxfromscratch.org\n"
-"POT-Creation-Date: 2025-04-15 19:40+0800\n"
+"POT-Creation-Date: 2025-07-01 10:53+0800\n"
 "PO-Revision-Date: 2021-07-28 12:52+0800\n"
 "Last-Translator: Xi Ruoyao <xry111@xry111.site>\n"
 "Language-Team: none\n"
@@ -387,13 +387,15 @@ msgstr "准备编译 Python："
 #: lfs-en/chapter07/python.xml
 #, no-wrap
 msgid ""
-"<userinput remap=\"configure\">./configure --prefix=/usr   \\\n"
-"            --enable-shared \\\n"
-"            --without-ensurepip</userinput>"
+"<userinput remap=\"configure\">./configure --prefix=/usr       \\\n"
+"            --enable-shared     \\\n"
+"            --without-ensurepip \\\n"
+"            --without-static-libpython</userinput>"
 msgstr ""
-"<userinput remap=\"configure\">./configure --prefix=/usr   \\\n"
-"            --enable-shared \\\n"
-"            --without-ensurepip</userinput>"
+"<userinput remap=\"configure\">./configure --prefix=/usr       \\\n"
+"            --enable-shared     \\\n"
+"            --without-ensurepip \\\n"
+"            --without-static-libpython</userinput>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: lfs-en/chapter07/python.xml
@@ -411,6 +413,16 @@ msgid ""
 "This switch disables the Python package installer, which is not needed at "
 "this stage."
 msgstr "该选项禁止构建 Python 软件包安装器，它在当前阶段没有必要。"
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
+#: lfs-en/chapter07/python.xml
+msgid "<parameter>--without-static-libpython</parameter>"
+msgstr "<parameter>--without-static-libpython</parameter>"
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
+#: lfs-en/chapter07/python.xml
+msgid "This switch prevents building a large, but unneeded, static library."
+msgstr "该选项防止安装一个巨大且不必要的静态库。"
 
 #. type: Content of: <sect1><sect2><note><para>
 #: lfs-en/chapter07/python.xml
