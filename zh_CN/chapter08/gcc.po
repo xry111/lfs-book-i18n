@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Linux From Scratch 11.1\n"
 "Report-Msgid-Bugs-To: lfs-dev@lists.linuxfromscratch.org\n"
-"POT-Creation-Date: 2025-06-01 12:49+0800\n"
+"POT-Creation-Date: 2025-07-29 14:44+0800\n"
 "PO-Revision-Date: 2022-03-03 03:00+0800\n"
 "Last-Translator: Xi Ruoyao <xry111@xry111.site>\n"
 "Language-Team: none\n"
@@ -845,24 +845,14 @@ msgstr "<userinput remap=\"test\">ulimit -s -H unlimited</userinput>"
 
 #. type: Content of: <sect1><sect2><para>
 #: lfs-en/chapter08/gcc.xml
-msgid "Now remove/fix several known test failures:"
-msgstr "现在移除或修复若干已知会失败的测试："
+msgid "Now remove several known test failures:"
+msgstr "现在移除若干已知会失败的测试："
 
 #. type: Content of: <sect1><sect2><screen>
 #: lfs-en/chapter08/gcc.xml
 #, no-wrap
-msgid ""
-"<userinput remap=\"test\">sed -e '/cpython/d'               -i ../gcc/testsuite/gcc.dg/plugin/plugin.exp\n"
-"sed -e 's/no-pic /&amp;-no-pie /'     -i ../gcc/testsuite/gcc.target/i386/pr113689-1.c\n"
-"sed -e 's/300000/(1|300000)/'     -i ../libgomp/testsuite/libgomp.c-c++-common/pr109062.c\n"
-"sed -e 's/{ target nonpic } //' \\\n"
-"    -e '/GOTPCREL/d'              -i ../gcc/testsuite/gcc.target/i386/fentryname3.c</userinput>"
-msgstr ""
-"<userinput remap=\"test\">sed -e '/cpython/d'               -i ../gcc/testsuite/gcc.dg/plugin/plugin.exp\n"
-"sed -e 's/no-pic /&amp;-no-pie /'     -i ../gcc/testsuite/gcc.target/i386/pr113689-1.c\n"
-"sed -e 's/300000/(1|300000)/'     -i ../libgomp/testsuite/libgomp.c-c++-common/pr109062.c\n"
-"sed -e 's/{ target nonpic } //' \\\n"
-"    -e '/GOTPCREL/d'              -i ../gcc/testsuite/gcc.target/i386/fentryname3.c</userinput>"
+msgid "<userinput remap=\"test\">sed -e '/cpython/d' -i ../gcc/testsuite/gcc.dg/plugin/plugin.exp</userinput>"
+msgstr "<userinput remap=\"test\">sed -e '/cpython/d' -i ../gcc/testsuite/gcc.dg/plugin/plugin.exp</userinput>"
 
 #. type: Content of: <sect1><sect2><para>
 #: lfs-en/chapter08/gcc.xml

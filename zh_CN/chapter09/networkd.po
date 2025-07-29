@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Linux From Scratch 11.4\n"
 "Report-Msgid-Bugs-To: lfs-dev@lists.linuxfromscratch.org\n"
-"POT-Creation-Date: 2025-06-01 12:49+0800\n"
+"POT-Creation-Date: 2025-07-29 14:44+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: Xi Ruoyao <xry111@xry111.site>\n"
 "Language-Team: none\n"
@@ -542,6 +542,24 @@ msgstr ""
 "command> 会将其创建为指向 <filename>/run/systemd/resolve/stub-resolv.conf</"
 "filename> 的符号链接。因此，不需要手动创建 <filename>/etc/resolv.conf</"
 "filename>。"
+
+#. type: Content of: <sect1><sect2><sect3><note><para>
+#: lfs-en/chapter09/networkd.xml
+msgid ""
+"If you want to use <command>systemd-resolved</command> for the LFS system "
+"but you need to access the Internet in the chroot environment (for example, "
+"for building a BLFS package of which the build process requires an Internet "
+"connection), create the <filename>/etc/resolv.conf</filename> file following "
+"the static configuration below for the chroot environment so the name "
+"resolution will work in the chroot environment.  When you exit the chroot "
+"environment, remove it so <command>systemd-resolved</command> will create "
+"the symlink on boot."
+msgstr ""
+"如果希望为 LFS 系统使用 <command>systemd-resolved</command>，但需要在 chroot "
+"环境中访问互联网 (例如，为了构建一个构建过程需要互联网连接的 BLFS 软件包)，需"
+"要参照下文给出的静态配置创建 <filename>/etc/resolv.conf</filename>，才能使得"
+"名称解析在 chroot 环境正常工作。在退出 chroot 环境时，可以删除它，这样 "
+"<command>systemd-resolved</command> 在 LFS 启动时就会将其创建为符号链接。"
 
 #. type: Content of: <sect1><sect2><sect3><title>
 #: lfs-en/chapter09/networkd.xml
