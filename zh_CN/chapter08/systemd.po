@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Linux From Scratch 11.4\n"
 "Report-Msgid-Bugs-To: lfs-dev@lists.linuxfromscratch.org\n"
-"POT-Creation-Date: 2025-04-15 20:51+0800\n"
+"POT-Creation-Date: 2025-07-29 21:04+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: Xi Ruoyao <xry111@xry111.site>\n"
 "Language-Team: none\n"
@@ -63,6 +63,11 @@ msgid ""
 "<?dbfo list-presentation=\"list\"?> <?dbhtml list-presentation=\"table\"?>"
 msgstr ""
 "<?dbfo list-presentation=\"list\"?> <?dbhtml list-presentation=\"table\"?>"
+
+#. type: Content of: <sect1><title>
+#: lfs-en/chapter01/whatsnew.xml lfs-en/chapter08/systemd.xml
+msgid "Systemd-&systemd-version;"
+msgstr "Systemd-&systemd-version;"
 
 #. type: Content of: <sect1><sect2><segmentedlist><segtitle>
 #: lfs-en/chapter05/binutils-pass1.xml lfs-en/chapter05/gcc-pass1.xml
@@ -420,11 +425,6 @@ msgstr ""
 "<productname>systemd</productname> <productnumber>&systemd-version;</"
 "productnumber> <placeholder type=\"address\" id=\"0\"/>"
 
-#. type: Content of: <sect1><title>
-#: lfs-en/chapter08/systemd.xml
-msgid "Systemd-&systemd-version;"
-msgstr "Systemd-&systemd-version;"
-
 #. type: Content of: <sect1><indexterm><primary>
 #: lfs-en/chapter08/systemd.xml
 msgid "systemd"
@@ -781,10 +781,14 @@ msgstr "安装手册页："
 #.          component in the path.  
 #. type: Content of: <sect1><sect2><screen>
 #: lfs-en/chapter08/systemd.xml
-#, no-wrap
+#, fuzzy, no-wrap
+#| msgid ""
+#| "<userinput remap=\"install\">tar -xf ../../systemd-man-pages-&systemd-man-version;.tar.xz \\\n"
+#| "    --no-same-owner --strip-components=1   \\\n"
+#| "    -C /usr/share/man</userinput>"
 msgid ""
 "<userinput remap=\"install\">tar -xf ../../systemd-man-pages-&systemd-man-version;.tar.xz \\\n"
-"    --no-same-owner --strip-components=1   \\\n"
+"    --no-same-owner --strip-components=1     \\\n"
 "    -C /usr/share/man</userinput>"
 msgstr ""
 "<userinput remap=\"install\">tar -xf ../../systemd-man-pages-&systemd-man-version;.tar.xz \\\n"

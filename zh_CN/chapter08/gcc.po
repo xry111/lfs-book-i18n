@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Linux From Scratch 11.1\n"
 "Report-Msgid-Bugs-To: lfs-dev@lists.linuxfromscratch.org\n"
-"POT-Creation-Date: 2025-04-15 20:51+0800\n"
+"POT-Creation-Date: 2025-07-29 21:04+0800\n"
 "PO-Revision-Date: 2022-03-03 03:00+0800\n"
 "Last-Translator: Xi Ruoyao <xry111@xry111.site>\n"
 "Language-Team: none\n"
@@ -75,6 +75,11 @@ msgstr ""
 #: lfs-en/chapter08/gcc.xml lfs-en/prologue/why.xml
 msgid "GCC"
 msgstr "GCC"
+
+#. type: Content of: <sect1><title>
+#: lfs-en/chapter01/whatsnew.xml lfs-en/chapter08/gcc.xml
+msgid "GCC-&gcc-version;"
+msgstr "GCC-&gcc-version;"
 
 #. type: Content of: <sect1><sect2><segmentedlist><segtitle>
 #: lfs-en/chapter05/binutils-pass1.xml lfs-en/chapter05/gcc-pass1.xml
@@ -666,11 +671,6 @@ msgstr ""
 "<productname>gcc</productname> <productnumber>&gcc-version;</productnumber> "
 "<placeholder type=\"address\" id=\"0\"/>"
 
-#. type: Content of: <sect1><title>
-#: lfs-en/chapter08/gcc.xml
-msgid "GCC-&gcc-version;"
-msgstr "GCC-&gcc-version;"
-
 #. type: Content of: <sect1><sect2><para>
 #: lfs-en/chapter08/gcc.xml
 msgid ""
@@ -838,13 +838,16 @@ msgstr "<userinput remap=\"test\">ulimit -s -H unlimited</userinput>"
 
 #. type: Content of: <sect1><sect2><para>
 #: lfs-en/chapter08/gcc.xml
-msgid "Now remove/fix several known test failures:"
+#, fuzzy
+#| msgid "Now remove/fix several known test failures:"
+msgid "Now remove several known test failures:"
 msgstr "现在移除或修复若干已知会失败的测试："
 
 #. type: Content of: <sect1><sect2><screen>
 #: lfs-en/chapter08/gcc.xml
-#, no-wrap
-msgid "<userinput remap=\"test\">sed -e '/cpython/d'               -i ../gcc/testsuite/gcc.dg/plugin/plugin.exp</userinput>"
+#, fuzzy, no-wrap
+#| msgid "<userinput remap=\"test\">sed -e '/cpython/d'               -i ../gcc/testsuite/gcc.dg/plugin/plugin.exp</userinput>"
+msgid "<userinput remap=\"test\">sed -e '/cpython/d' -i ../gcc/testsuite/gcc.dg/plugin/plugin.exp</userinput>"
 msgstr "<userinput remap=\"test\">sed -e '/cpython/d'               -i ../gcc/testsuite/gcc.dg/plugin/plugin.exp</userinput>"
 
 #. type: Content of: <sect1><sect2><para>

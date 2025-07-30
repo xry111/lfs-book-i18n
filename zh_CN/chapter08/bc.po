@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Linux From Scratch 11.4\n"
 "Report-Msgid-Bugs-To: lfs-dev@lists.linuxfromscratch.org\n"
-"POT-Creation-Date: 2025-04-15 20:51+0800\n"
+"POT-Creation-Date: 2025-07-29 21:04+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: Xi Ruoyao <xry111@xry111.site>\n"
 "Language-Team: none\n"
@@ -492,18 +492,23 @@ msgstr "准备编译 Bc："
 
 #. type: Content of: <sect1><sect2><screen>
 #: lfs-en/chapter08/bc.xml
-#, no-wrap
-msgid "<userinput remap=\"configure\">CC=gcc ./configure --prefix=/usr -G -O3 -r</userinput>"
+#, fuzzy, no-wrap
+#| msgid "<userinput remap=\"configure\">CC=gcc ./configure --prefix=/usr -G -O3 -r</userinput>"
+msgid "<userinput remap=\"configure\">CC='gcc -std=c99' ./configure --prefix=/usr -G -O3 -r</userinput>"
 msgstr "<userinput remap=\"configure\">CC=gcc ./configure --prefix=/usr -G -O3 -r</userinput>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: lfs-en/chapter08/bc.xml
-msgid "<parameter>CC=gcc</parameter>"
+#, fuzzy
+#| msgid "<parameter>CC=gcc</parameter>"
+msgid "<parameter>CC=gcc -std=c99</parameter>"
 msgstr "<parameter>CC=gcc</parameter>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: lfs-en/chapter08/bc.xml
-msgid "This parameter specifies the compiler to use."
+#, fuzzy
+#| msgid "This parameter specifies the compiler to use."
+msgid "This parameter specifies the compiler and C standard to use."
 msgstr "该选项指定编译时使用的编译器。"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>

@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Linux From Scratch 11.4\n"
 "Report-Msgid-Bugs-To: lfs-dev@lists.linuxfromscratch.org\n"
-"POT-Creation-Date: 2025-01-30 19:13+0800\n"
+"POT-Creation-Date: 2025-07-29 21:04+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: Xi Ruoyao <xry111@xry111.site>\n"
 "Language-Team: none\n"
@@ -50,9 +50,8 @@ msgstr "一般网络配置"
 msgid "Creating the /etc/resolv.conf File"
 msgstr "创建 /etc/resolv.conf 文件"
 
-#. type: Content of: <sect1><itemizedlist><listitem><itemizedlist><listitem><para>
+#. type: Content of: <sect1><sect2><indexterm><primary>
 #: lfs-en/chapter09/network.xml lfs-en/chapter09/networkd.xml
-#: lfs-en/chapter11/reboot.xml
 msgid "/etc/resolv.conf"
 msgstr "/etc/resolv.conf"
 
@@ -543,6 +542,19 @@ msgstr ""
 "command> 会将其创建为指向 <filename>/run/systemd/resolve/stub-resolv.conf</"
 "filename> 的符号链接。因此，不需要手动创建 <filename>/etc/resolv.conf</"
 "filename>。"
+
+#. type: Content of: <sect1><sect2><sect3><note><para>
+#: lfs-en/chapter09/networkd.xml
+msgid ""
+"If you want to use <command>systemd-resolved</command> for the LFS system "
+"but you need to access the Internet in the chroot environment (for example, "
+"for building a BLFS package of which the build process requires an Internet "
+"connection), create the <filename>/etc/resolv.conf</filename> file following "
+"the static configuration below for the chroot environment so the name "
+"resolution will work in the chroot environment.  When you exit the chroot "
+"environment, remove it so <command>systemd-resolved</command> will create "
+"the symlink on boot."
+msgstr ""
 
 #. type: Content of: <sect1><sect2><sect3><title>
 #: lfs-en/chapter09/networkd.xml
