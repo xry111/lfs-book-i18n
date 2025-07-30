@@ -340,17 +340,13 @@ msgid ""
 "class=\"directory\">$LFS/tools</filename>, so that it is found in the "
 "<envar>PATH</envar> when needed:"
 msgstr ""
+"首先，运行下列命令，为宿主系统构建 <command>tic</command> 程序。我们将其安装"
+"到 <filename class=\"directory\">$LFS/tools</filename> 中，这样需要该程序时，"
+"就能通过 <envar>PATH</envar> 环境变量找到它："
 
 #. type: Content of: <sect1><sect2><screen>
 #: lfs-en/chapter06/ncurses.xml
-#, fuzzy, no-wrap
-#| msgid ""
-#| "<userinput remap=\"pre\">mkdir build\n"
-#| "pushd build\n"
-#| "  ../configure AWK=gawk\n"
-#| "  make -C include\n"
-#| "  make -C progs tic\n"
-#| "popd</userinput>"
+#, no-wrap
 msgid ""
 "<userinput remap=\"pre\">mkdir build\n"
 "pushd build\n"
@@ -362,9 +358,10 @@ msgid ""
 msgstr ""
 "<userinput remap=\"pre\">mkdir build\n"
 "pushd build\n"
-"  ../configure AWK=gawk\n"
+"  ../configure --prefix=$LFS/tools AWK=gawk\n"
 "  make -C include\n"
 "  make -C progs tic\n"
+"  install progs/tic $LFS/tools/bin\n"
 "popd</userinput>"
 
 #. type: Content of: <sect1><sect2><para>
@@ -510,19 +507,14 @@ msgstr ""
 
 #. type: Content of: <sect1><sect2><screen>
 #: lfs-en/chapter06/ncurses.xml
-#, fuzzy, no-wrap
-#| msgid ""
-#| "<userinput remap=\"install\">make DESTDIR=$LFS TIC_PATH=$(pwd)/build/progs/tic install\n"
-#| "ln -sv libncursesw.so $LFS/usr/lib/libncurses.so\n"
-#| "sed -e 's/^#if.*XOPEN.*$/#if 1/' \\\n"
-#| "    -i $LFS/usr/include/curses.h</userinput>"
+#, no-wrap
 msgid ""
 "<userinput remap=\"install\">make DESTDIR=$LFS install\n"
 "ln -sv libncursesw.so $LFS/usr/lib/libncurses.so\n"
 "sed -e 's/^#if.*XOPEN.*$/#if 1/' \\\n"
 "    -i $LFS/usr/include/curses.h</userinput>"
 msgstr ""
-"<userinput remap=\"install\">make DESTDIR=$LFS TIC_PATH=$(pwd)/build/progs/tic install\n"
+"<userinput remap=\"install\">make DESTDIR=$LFS install\n"
 "ln -sv libncursesw.so $LFS/usr/lib/libncurses.so\n"
 "sed -e 's/^#if.*XOPEN.*$/#if 1/' \\\n"
 "    -i $LFS/usr/include/curses.h</userinput>"

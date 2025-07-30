@@ -351,17 +351,14 @@ msgstr ""
 
 #. type: Content of: <sect1><sect2><para>
 #: lfs-en/chapter08/gmp.xml
-#, fuzzy
-#| msgid "First, make the package build with gcc-14.1 or later:"
 msgid "First, make an adjustment for compatibility with gcc-15 and later:"
-msgstr "首先，使得该软件包能够用 gcc-14.1 或更新版本构建："
+msgstr "首先，使得该软件包能够用 gcc-15 或更新版本构建："
 
 #. type: Content of: <sect1><sect2><screen>
 #: lfs-en/chapter08/gmp.xml
-#, fuzzy, no-wrap
-#| msgid "<userinput remap=\"pre\">sed -i 's/extras//' Makefile.in</userinput>"
+#, no-wrap
 msgid "<userinput remap=\"pre\">sed -i '/long long t1;/,+1s/()/(...)/' configure</userinput>"
-msgstr "<userinput remap=\"pre\">sed -i 's/extras//' Makefile.in</userinput>"
+msgstr "<userinput remap=\"pre\">sed -i '/long long t1;/,+1s/()/(...)/' configure</userinput>"
 
 #. type: Content of: <sect1><sect2><para>
 #: lfs-en/chapter08/gmp.xml

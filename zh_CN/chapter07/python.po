@@ -385,22 +385,17 @@ msgstr "准备编译 Python："
 
 #. type: Content of: <sect1><sect2><screen>
 #: lfs-en/chapter07/python.xml
-#, fuzzy, no-wrap
-#| msgid ""
-#| "<userinput remap=\"configure\">./configure --prefix=/usr        \\\n"
-#| "            --enable-shared      \\\n"
-#| "            --with-system-expat  \\\n"
-#| "            --enable-optimizations</userinput>"
+#, no-wrap
 msgid ""
 "<userinput remap=\"configure\">./configure --prefix=/usr       \\\n"
 "            --enable-shared     \\\n"
 "            --without-ensurepip \\\n"
 "            --without-static-libpython</userinput>"
 msgstr ""
-"<userinput remap=\"configure\">./configure --prefix=/usr        \\\n"
-"            --enable-shared      \\\n"
-"            --with-system-expat  \\\n"
-"            --enable-optimizations</userinput>"
+"<userinput remap=\"configure\">./configure --prefix=/usr       \\\n"
+"            --enable-shared     \\\n"
+"            --without-ensurepip \\\n"
+"            --without-static-libpython</userinput>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: lfs-en/chapter07/python.xml
@@ -421,17 +416,13 @@ msgstr "该选项禁止构建 Python 软件包安装器，它在当前阶段没�
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: lfs-en/chapter07/python.xml
-#, fuzzy
-#| msgid "<parameter>--without-python</parameter>"
 msgid "<parameter>--without-static-libpython</parameter>"
-msgstr "<parameter>--without-python</parameter>"
+msgstr "<parameter>--without-static-libpython</parameter>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: lfs-en/chapter07/python.xml
-#, fuzzy
-#| msgid "This switch prevents installation of static libraries."
 msgid "This switch prevents building a large, but unneeded, static library."
-msgstr "该选项防止安装静态库。"
+msgstr "该选项防止安装一个巨大且不必要的静态库。"
 
 #. type: Content of: <sect1><sect2><note><para>
 #: lfs-en/chapter07/python.xml

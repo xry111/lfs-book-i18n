@@ -385,15 +385,7 @@ msgstr "下面，准备编译 Glibc："
 
 #. type: Content of: <sect1><sect2><screen>
 #: lfs-en/chapter05/glibc.xml
-#, fuzzy, no-wrap
-#| msgid ""
-#| "<userinput remap=\"configure\">../configure                             \\\n"
-#| "      --prefix=/usr                      \\\n"
-#| "      --host=$LFS_TGT                    \\\n"
-#| "      --build=$(../scripts/config.guess) \\\n"
-#| "      --enable-kernel=&min-kernel;               \\\n"
-#| "      --disable-nscd                     \\\n"
-#| "      libc_cv_slibdir=/usr/lib</userinput>"
+#, no-wrap
 msgid ""
 "<userinput remap=\"configure\">../configure                             \\\n"
 "      --prefix=/usr                      \\\n"
@@ -407,9 +399,9 @@ msgstr ""
 "      --prefix=/usr                      \\\n"
 "      --host=$LFS_TGT                    \\\n"
 "      --build=$(../scripts/config.guess) \\\n"
-"      --enable-kernel=&min-kernel;               \\\n"
 "      --disable-nscd                     \\\n"
-"      libc_cv_slibdir=/usr/lib</userinput>"
+"      libc_cv_slibdir=/usr/lib           \\\n"
+"      --enable-kernel=&min-kernel;</userinput>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: lfs-en/chapter05/glibc.xml
@@ -440,8 +432,8 @@ msgid ""
 "This tells Glibc to compile the library with support for &min-kernel; and "
 "later Linux kernels.  Workarounds for older kernels are not enabled."
 msgstr ""
-"该选项告诉 Glibc 编译出支持 &min-kernel; 版或者更新的 Linux 内核，这样就不会"
-"使用那些为更老内核准备的替代方案。"
+"该选项使得编译得到的 Glibc 库只支持 &min-kernel; 版或更新版本的 Linux 内核，"
+"这样就不会编译那些为更老内核准备的替代方案。"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: lfs-en/chapter05/glibc.xml lfs-en/chapter08/glibc.xml

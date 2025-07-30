@@ -643,14 +643,7 @@ msgstr "准备编译 Glibc："
 
 #. type: Content of: <sect1><sect2><screen>
 #: lfs-en/chapter08/glibc.xml
-#, fuzzy, no-wrap
-#| msgid ""
-#| "<userinput remap=\"configure\">../configure --prefix=/usr                            \\\n"
-#| "             --disable-werror                         \\\n"
-#| "             --enable-kernel=&min-kernel;                     \\\n"
-#| "             --enable-stack-protector=strong          \\\n"
-#| "             --disable-nscd                           \\\n"
-#| "             libc_cv_slibdir=/usr/lib</userinput>"
+#, no-wrap
 msgid ""
 "<userinput remap=\"configure\">../configure --prefix=/usr                   \\\n"
 "             --disable-werror                \\\n"
@@ -659,12 +652,12 @@ msgid ""
 "             --enable-stack-protector=strong \\\n"
 "             --enable-kernel=&min-kernel;</userinput>"
 msgstr ""
-"<userinput remap=\"configure\">../configure --prefix=/usr                            \\\n"
-"             --disable-werror                         \\\n"
-"             --enable-kernel=&min-kernel;                     \\\n"
-"             --enable-stack-protector=strong          \\\n"
-"             --disable-nscd                           \\\n"
-"             libc_cv_slibdir=/usr/lib</userinput>"
+"<userinput remap=\"configure\">../configure --prefix=/usr                   \\\n"
+"             --disable-werror                \\\n"
+"             --disable-nscd                  \\\n"
+"             libc_cv_slibdir=/usr/lib        \\\n"
+"             --enable-stack-protector=strong \\\n"
+"             --enable-kernel=&min-kernel;</userinput>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: lfs-en/chapter08/glibc.xml
@@ -972,12 +965,7 @@ msgstr ""
 
 #. type: Content of: <sect1><sect2><important><screen>
 #: lfs-en/chapter08/glibc.xml
-#, fuzzy, no-wrap
-#| msgid ""
-#| "<userinput>DIR=$(dirname $(gcc -print-libgcc-file-name))\n"
-#| "[ -e $DIR/include/limits.h ] || mv $DIR/include{-fixed,}/limits.h\n"
-#| "[ -e $DIR/include/syslimits.h ] || mv $DIR/include{-fixed,}/syslimits.h\n"
-#| "rm -rfv $(dirname $(gcc -print-libgcc-file-name))/include-fixed/*</userinput>"
+#, no-wrap
 msgid ""
 "<userinput>DIR=$(dirname $(gcc -print-libgcc-file-name))\n"
 "[ -e $DIR/include/limits.h ]    || mv $DIR/include{-fixed,}/limits.h\n"
@@ -986,9 +974,10 @@ msgid ""
 "unset DIR</userinput>"
 msgstr ""
 "<userinput>DIR=$(dirname $(gcc -print-libgcc-file-name))\n"
-"[ -e $DIR/include/limits.h ] || mv $DIR/include{-fixed,}/limits.h\n"
+"[ -e $DIR/include/limits.h ]    || mv $DIR/include{-fixed,}/limits.h\n"
 "[ -e $DIR/include/syslimits.h ] || mv $DIR/include{-fixed,}/syslimits.h\n"
-"rm -rfv $(dirname $(gcc -print-libgcc-file-name))/include-fixed/*</userinput>"
+"rm -rfv $DIR/include-fixed/*\n"
+"unset DIR</userinput>"
 
 #. type: Content of: <sect1><sect2><para>
 #: lfs-en/chapter08/glibc.xml

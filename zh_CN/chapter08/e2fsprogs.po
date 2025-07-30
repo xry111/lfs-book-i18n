@@ -586,15 +586,7 @@ msgstr "准备编译 E2fsprogs："
 
 #. type: Content of: <sect1><sect2><screen>
 #: lfs-en/chapter08/e2fsprogs.xml
-#, fuzzy, no-wrap
-#| msgid ""
-#| "<userinput remap=\"configure\">../configure --prefix=/usr           \\\n"
-#| "             --sysconfdir=/etc       \\\n"
-#| "             --enable-elf-shlibs     \\\n"
-#| "             --disable-libblkid      \\\n"
-#| "             --disable-libuuid       \\\n"
-#| "             --disable-uuidd         \\\n"
-#| "             --disable-fsck</userinput>"
+#, no-wrap
 msgid ""
 "<userinput remap=\"configure\">../configure --prefix=/usr       \\\n"
 "             --sysconfdir=/etc   \\\n"
@@ -604,12 +596,12 @@ msgid ""
 "             --disable-uuidd     \\\n"
 "             --disable-fsck</userinput>"
 msgstr ""
-"<userinput remap=\"configure\">../configure --prefix=/usr           \\\n"
-"             --sysconfdir=/etc       \\\n"
-"             --enable-elf-shlibs     \\\n"
-"             --disable-libblkid      \\\n"
-"             --disable-libuuid       \\\n"
-"             --disable-uuidd         \\\n"
+"<userinput remap=\"configure\">../configure --prefix=/usr       \\\n"
+"             --sysconfdir=/etc   \\\n"
+"             --enable-elf-shlibs \\\n"
+"             --disable-libblkid  \\\n"
+"             --disable-libuuid   \\\n"
+"             --disable-uuidd     \\\n"
 "             --disable-fsck</userinput>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
@@ -718,17 +710,6 @@ msgstr "/etc/mke2fs.conf"
 
 #. type: Content of: <sect1><sect2><para>
 #: lfs-en/chapter08/e2fsprogs.xml
-#, fuzzy
-#| msgid ""
-#| "<filename>/etc/mke2fs.conf</filename> contains the default value of "
-#| "various command line options of <command>mke2fs</command>.  You may edit "
-#| "the file to make the default values suitable for your needs.  For "
-#| "example, some utilities (not in LFS or BLFS) cannot recognize a "
-#| "<systemitem class='filesystem'>ext4</systemitem> file system with "
-#| "<literal>metadata_csum_seed</literal> feature enabled.  <emphasis "
-#| "role='bold'>If</emphasis> you need such an utility, you may remove the "
-#| "feature from the default <systemitem class='filesystem'>ext4</systemitem> "
-#| "feature list with the command:"
 msgid ""
 "<filename>/etc/mke2fs.conf</filename> contains the default value of various "
 "command line options of <command>mke2fs</command>.  You may edit the file to "
