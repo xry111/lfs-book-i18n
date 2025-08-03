@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Linux From Scratch 11.1\n"
 "Report-Msgid-Bugs-To: lfs-dev@lists.linuxfromscratch.org\n"
-"POT-Creation-Date: 2025-07-29 21:04+0800\n"
+"POT-Creation-Date: 2025-08-03 15:18+0800\n"
 "PO-Revision-Date: 2022-03-03 03:00+0800\n"
 "Last-Translator: Xi Ruoyao <xry111@xry111.site>\n"
 "Language-Team: none\n"
@@ -688,6 +688,20 @@ msgstr "&gcc-fin-sbu;"
 msgid "&gcc-fin-du;"
 msgstr "&gcc-fin-du;"
 
+#. type: Content of: <sect1><sect2><para>
+#: lfs-en/chapter08/gcc.xml
+#, fuzzy
+#| msgid "First, make the package build with gcc-14.1 or later:"
+msgid "First, make a change required by glibc-2.42 or later:"
+msgstr "首先，使得该软件包能够用 gcc-14.1 或更新版本构建："
+
+#. type: Content of: <sect1><sect2><screen>
+#: lfs-en/chapter08/gcc.xml
+#, fuzzy, no-wrap
+#| msgid "<userinput remap=\"pre\">sed -i 's/extras//' Makefile.in</userinput>"
+msgid "<userinput remap=\"pre\">sed -i '/struct_termio_sz/d' libsanitizer/sanitizer_common/*</userinput>"
+msgstr "<userinput remap=\"pre\">sed -i 's/extras//' Makefile.in</userinput>"
+
 #. type: Content of: <sect1><sect2><screen>
 #: lfs-en/chapter08/gcc.xml
 #, no-wrap
@@ -897,12 +911,20 @@ msgstr "已知 tsan 测试在一些宿主系统上构建时可能失败。"
 
 #. type: Content of: <sect1><sect2><para>
 #: lfs-en/chapter08/gcc.xml
+#, fuzzy
+#| msgid ""
+#| "The tests named <filename>gen-vect-11b.c</filename>, <filename>gen-"
+#| "vect-11c.c</filename>, <filename>gen-vect-26.c</filename>, <filename>gen-"
+#| "vect-28.c</filename>, <filename>pr108357.c</filename>, <filename>update-"
+#| "threading.c</filename>, and <filename>vect-117.c</filename> are known to "
+#| "fail."
 msgid ""
-"The tests named <filename>gen-vect-11b.c</filename>, <filename>gen-"
-"vect-11c.c</filename>, <filename>gen-vect-26.c</filename>, <filename>gen-"
-"vect-28.c</filename>, <filename>pr108357.c</filename>, <filename>update-"
-"threading.c</filename>, and <filename>vect-117.c</filename> are known to "
-"fail."
+"The tests named <filename>gen-vect-11*.c</filename>, <filename>gen-"
+"vect-26.c</filename>, <filename>gen-vect-28.c</filename>, "
+"<filename>predcom-8.c</filename>, <filename>pr113026-2.c</filename>, "
+"<filename>update-threading.c</filename>, <filename>vect-117.c</filename>, "
+"<filename>vect-121.c</filename>, <filename>vect-epilogues.c</filename>, "
+"<filename>vect-reduc-chain-*.c</filename> are known to fail."
 msgstr ""
 "已知名为 <filename>gen-vect-11b.c</filename>, <filename>gen-vect-11c.c</"
 "filename>, <filename>gen-vect-26.c</filename>, <filename>gen-vect-28.c</"
