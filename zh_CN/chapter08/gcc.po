@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Linux From Scratch 11.1\n"
 "Report-Msgid-Bugs-To: lfs-dev@lists.linuxfromscratch.org\n"
-"POT-Creation-Date: 2025-08-03 15:18+0800\n"
+"POT-Creation-Date: 2025-08-09 17:52+0800\n"
 "PO-Revision-Date: 2022-03-03 03:00+0800\n"
 "Last-Translator: Xi Ruoyao <xry111@xry111.site>\n"
 "Language-Team: none\n"
@@ -688,17 +688,6 @@ msgstr "&gcc-fin-sbu;"
 msgid "&gcc-fin-du;"
 msgstr "&gcc-fin-du;"
 
-#. type: Content of: <sect1><sect2><para>
-#: lfs-en/chapter08/gcc.xml
-msgid "First, make a change required by glibc-2.42 or later:"
-msgstr "首先，使得该软件包能够用 glibc-2.42 或更新版本构建："
-
-#. type: Content of: <sect1><sect2><screen>
-#: lfs-en/chapter08/gcc.xml
-#, no-wrap
-msgid "<userinput remap=\"pre\">sed -i '/struct_termio_sz/d' libsanitizer/sanitizer_common/*</userinput>"
-msgstr "<userinput remap=\"pre\">sed -i '/struct_termio_sz/d' libsanitizer/sanitizer_common/*</userinput>"
-
 #. type: Content of: <sect1><sect2><screen>
 #: lfs-en/chapter08/gcc.xml
 #, no-wrap
@@ -903,8 +892,11 @@ msgstr ""
 
 #. type: Content of: <sect1><sect2><para>
 #: lfs-en/chapter08/gcc.xml
-msgid "The tsan tests are known to fail on some host distros."
-msgstr "已知 tsan 测试在一些宿主系统上构建时可能失败。"
+#, fuzzy
+#| msgid ""
+#| "One test named <filename>libls.sh</filename> is known to fail sometimes."
+msgid "The tests related to <filename>pr90579.c</filename> are known to fail."
+msgstr "已知名为 <filename>libls.sh</filename> 的一项测试有时会失败。"
 
 #. type: Content of: <sect1><sect2><para>
 #: lfs-en/chapter08/gcc.xml
