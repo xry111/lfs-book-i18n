@@ -20,7 +20,7 @@ jobs:
           sudo apt install gettext python3-polib po4a
           echo "MAKEFLAGS=-j2" >> $GITHUB_ENV
       - name: Checkout
-        uses: actions/checkout@v4
+        uses: actions/checkout@v5
         with:
           submodules: recursive
           fetch-depth: 0
