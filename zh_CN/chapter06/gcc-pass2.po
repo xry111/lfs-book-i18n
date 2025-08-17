@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Linux From Scratch 11.4\n"
 "Report-Msgid-Bugs-To: lfs-dev@lists.linuxfromscratch.org\n"
-"POT-Creation-Date: 2025-06-01 12:49+0800\n"
+"POT-Creation-Date: 2025-08-17 16:01+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: Xi Ruoyao <xry111@xry111.site>\n"
 "Language-Team: none\n"
@@ -400,11 +400,12 @@ msgstr ""
 "包，并将它们移动到 GCC 要求的目录名："
 
 #. type: Content of: <sect1><sect2><para>
-#: lfs-en/chapter06/gcc-pass2.xml lfs-en/chapter08/gcc.xml
+#: lfs-en/chapter06/gcc-pass2.xml
 msgid ""
-"If building on x86_64, change the default directory name for 64-bit "
+"If you are building on x86_64, change the default directory name for 64-bit "
 "libraries to <quote>lib</quote>:"
-msgstr "在 x86_64 上构建时，修改存放 64 位库的默认路径为 <quote>lib</quote>:"
+msgstr ""
+"如果正在 x86_64 上进行构建，修改存放 64 位库的默认路径为 <quote>lib</quote>:"
 
 #. type: Content of: <sect1><sect2><screen>
 #: lfs-en/chapter06/gcc-pass2.xml lfs-en/chapter08/gcc.xml
@@ -427,7 +428,7 @@ msgstr ""
 #. type: Content of: <sect1><sect2><para>
 #: lfs-en/chapter06/gcc-pass2.xml
 msgid ""
-"Override the building rule of libgcc and libstdc++ headers, to allow "
+"Override the build rules of the libgcc and libstdc++ headers to allow "
 "building these libraries with POSIX threads support:"
 msgstr ""
 "覆盖 libgcc 和 libstdc++ 头文件的构建规则，以允许在构建它们时启用 POSIX 线程"
@@ -507,16 +508,16 @@ msgstr "<parameter>--with-build-sysroot=$LFS</parameter>"
 msgid ""
 "Normally, using <parameter>--host</parameter> ensures that a cross-compiler "
 "is used for building GCC, and that compiler knows that it has to look for "
-"headers and libraries in <filename class=\"directory\">$LFS</filename>. But "
-"the build system for GCC uses other tools, which are not aware of this "
-"location. This switch is needed so those tools will find the needed files in "
-"<filename class=\"directory\">$LFS</filename>, and not on the host."
+"headers and libraries in <filename class=\"directory\">$LFS</filename>. "
+"However, the build system for GCC uses additional tools which are not aware "
+"of this location. This switch is needed so those tools will find the needed "
+"files in <filename class=\"directory\">$LFS</filename>, and not on the host."
 msgstr ""
 "通常，指定 <parameter>--host</parameter> 即可保证使用交叉编译器构建 GCC，这个"
 "交叉编译器知道它应该在 <filename class=\"directory\">$LFS</filename> 中查找头"
-"文件和库。但是 GCC 构建系统使用其他一些工具，它们不知道这个位置。因此需要该选"
-"项，使得这些工具在 <filename class=\"directory\">$LFS</filename> 中查找需要的"
-"文件，而不是在宿主系统中查找。"
+"文件和库。然而，GCC 构建系统还会使用一些不知道该位置的工具。因此需要该选项，"
+"才能使得这些工具在 <filename class=\"directory\">$LFS</filename> 中查找需要的"
+"文件，而非在宿主系统中查找。"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: lfs-en/chapter06/gcc-pass2.xml
