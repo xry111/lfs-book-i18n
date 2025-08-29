@@ -419,10 +419,6 @@ msgstr ""
 
 #. type: Content of: <sect1><sect2><para>
 #: lfs-en/chapter06/gcc-pass2.xml
-#, fuzzy
-#| msgid ""
-#| "Override the building rule of libgcc and libstdc++ headers, to allow "
-#| "building these libraries with POSIX threads support:"
 msgid ""
 "Override the build rules of the libgcc and libstdc++ headers to allow "
 "building these libraries with POSIX threads support:"
@@ -501,15 +497,6 @@ msgstr "<parameter>--with-build-sysroot=$LFS</parameter>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: lfs-en/chapter06/gcc-pass2.xml
-#, fuzzy
-#| msgid ""
-#| "Normally, using <parameter>--host</parameter> ensures that a cross-"
-#| "compiler is used for building GCC, and that compiler knows that it has to "
-#| "look for headers and libraries in <filename class=\"directory\">$LFS</"
-#| "filename>. But the build system for GCC uses other tools, which are not "
-#| "aware of this location. This switch is needed so those tools will find "
-#| "the needed files in <filename class=\"directory\">$LFS</filename>, and "
-#| "not on the host."
 msgid ""
 "Normally, using <parameter>--host</parameter> ensures that a cross-compiler "
 "is used for building GCC, and that compiler knows that it has to look for "
@@ -520,9 +507,9 @@ msgid ""
 msgstr ""
 "通常，指定 <parameter>--host</parameter> 即可保证使用交叉编译器构建 GCC，这个"
 "交叉编译器知道它应该在 <filename class=\"directory\">$LFS</filename> 中查找头"
-"文件和库。但是 GCC 构建系统使用其他一些工具，它们不知道这个位置。因此需要该选"
-"项，使得这些工具在 <filename class=\"directory\">$LFS</filename> 中查找需要的"
-"文件，而不是在宿主系统中查找。"
+"文件和库。然而，GCC 构建系统还会使用一些不知道该位置的工具。因此需要该选项，"
+"才能使得这些工具在 <filename class=\"directory\">$LFS</filename> 中查找需要的"
+"文件，而非在宿主系统中查找。"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: lfs-en/chapter06/gcc-pass2.xml

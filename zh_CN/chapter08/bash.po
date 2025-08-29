@@ -571,15 +571,7 @@ msgstr ""
 
 #. type: Content of: <sect1><sect2><screen>
 #: lfs-en/chapter08/bash.xml
-#, fuzzy, no-wrap
-#| msgid ""
-#| "<userinput remap=\"test\">su -s /usr/bin/expect tester &lt;&lt; \"EOF\"\n"
-#| "set timeout -1\n"
-#| "spawn make tests\n"
-#| "expect eof\n"
-#| "lassign [wait] _ _ _ value\n"
-#| "exit $value\n"
-#| "EOF</userinput>"
+#, no-wrap
 msgid ""
 "<userinput remap=\"test\">LC_ALL=C.UTF-8 su -s /usr/bin/expect tester &lt;&lt; \"EOF\"\n"
 "set timeout -1\n"
@@ -589,7 +581,7 @@ msgid ""
 "exit $value\n"
 "EOF</userinput>"
 msgstr ""
-"<userinput remap=\"test\">su -s /usr/bin/expect tester &lt;&lt; \"EOF\"\n"
+"<userinput remap=\"test\">LC_ALL=C.UTF-8 su -s /usr/bin/expect tester &lt;&lt; \"EOF\"\n"
 "set timeout -1\n"
 "spawn make tests\n"
 "expect eof\n"
@@ -603,16 +595,6 @@ msgstr ""
 #.          and fail.  
 #. type: Content of: <sect1><sect2><para>
 #: lfs-en/chapter08/bash.xml
-#, fuzzy
-#| msgid ""
-#| "The test suite uses <command>diff</command> to detect the difference "
-#| "between test script output and the expected output.  Any output from "
-#| "<command>diff</command> (prefixed with <computeroutput>&lt;</"
-#| "computeroutput> and <computeroutput>&gt;</computeroutput>) indicates a "
-#| "test failure, unless there is a message saying the difference can be "
-#| "ignored.  One test named <filename>run-builtins</filename> is known to "
-#| "fail on some host distros with a difference on the first line of the "
-#| "output."
 msgid ""
 "The test suite uses <command>diff</command> to detect the difference between "
 "test script output and the expected output.  Any output from <command>diff</"
@@ -628,7 +610,9 @@ msgstr ""
 "<command>diff</command> 的任何输出 (以 <computeroutput>&lt;</computeroutput> "
 "和 <computeroutput>&gt;</computeroutput> 开头) 都表示测试失败，除非有消息提示"
 "可以忽略这里报告的差别。已知一项名为 <filename>run-builtins</filename> 的测试"
-"在一些宿主系统上可能失败，此时该测试输出的第一行和预期存在不同。"
+"在一些宿主系统上可能失败，此时该测试输出的 479 和 480 行和预期存在不同。已知"
+"其他一些使用 <literal>zh_TW.BIG5</literal> 和 <literal>ja_JP.SJIS</literal> "
+"locale 的测试在未安装对应 locale 时会失败。"
 
 #. type: Content of: <sect1><sect2><para>
 #: lfs-en/chapter08/bash.xml

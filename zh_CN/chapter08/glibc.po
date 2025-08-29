@@ -629,7 +629,7 @@ msgstr "<userinput remap=\"pre\">patch -Np1 -i ../&glibc-fhs-patch;</userinput>"
 #. type: Content of: <sect1><sect2><para>
 #: lfs-en/chapter08/glibc.xml
 msgid "Now fix an issue which may break Valgrind in BLFS:"
-msgstr ""
+msgstr "现在修复一项可能导致 BLFS 中的 Valgrind 出现故障的问题："
 
 #. type: Content of: <sect1><sect2><screen>
 #: lfs-en/chapter08/glibc.xml
@@ -641,6 +641,11 @@ msgid ""
 "  memcpy (&amp;lock, &amp;reset_lock, sizeof (lock));' \\\n"
 "    -i stdlib/abort.c </userinput>"
 msgstr ""
+"<userinput remap=\"pre\">sed -e '/unistd.h/i #include &lt;string.h&gt;' \\\n"
+"    -e '/libc_rwlock_init/c\\\n"
+"  __libc_rwlock_define_initialized (, reset_lock);\\\n"
+"  memcpy (&amp;lock, &amp;reset_lock, sizeof (lock));' \\\n"
+"    -i stdlib/abort.c </userinput>"
 
 #. type: Content of: <sect1><sect2><para>
 #: lfs-en/chapter08/glibc.xml
@@ -759,6 +764,8 @@ msgid ""
 "preadvwritev64v2</emphasis> are known to fail if the host kernel is "
 "Linux-6.14 or later."
 msgstr ""
+"已知 <emphasis>misc/tst-preadvwritev2</emphasis> 和 <emphasis>misc/tst-"
+"preadvwritev64v2</emphasis> 在宿主内核为 Linux-6.14 或更高版本时可能失败。"
 
 #. type: Content of: <sect1><sect2><itemizedlist><listitem><para>
 #: lfs-en/chapter08/glibc.xml
