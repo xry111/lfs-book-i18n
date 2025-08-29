@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Linux From Scratch 11.4\n"
 "Report-Msgid-Bugs-To: lfs-dev@lists.linuxfromscratch.org\n"
-"POT-Creation-Date: 2025-06-01 12:49+0800\n"
+"POT-Creation-Date: 2025-08-30 03:14+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: Xi Ruoyao <xry111@xry111.site>\n"
 "Language-Team: none\n"
@@ -310,11 +310,10 @@ msgstr "安装该软件包："
 #: lfs-en/chapter08/pkgconf.xml lfs-en/chapter08/procps.xml
 #: lfs-en/chapter08/psmisc.xml lfs-en/chapter08/python.xml
 #: lfs-en/chapter08/readline.xml lfs-en/chapter08/sysklogd.xml
-#: lfs-en/chapter08/sysvinit.xml lfs-en/chapter08/tcl.xml
-#: lfs-en/chapter08/texinfo.xml lfs-en/chapter08/util-linux.xml
-#: lfs-en/chapter08/vim.xml lfs-en/chapter08/xml-parser.xml
-#: lfs-en/chapter08/xz.xml lfs-en/chapter08/zlib.xml
-#: lfs-en/chapter09/bootscripts.xml
+#: lfs-en/chapter08/sysvinit.xml lfs-en/chapter08/texinfo.xml
+#: lfs-en/chapter08/util-linux.xml lfs-en/chapter08/vim.xml
+#: lfs-en/chapter08/xml-parser.xml lfs-en/chapter08/xz.xml
+#: lfs-en/chapter08/zlib.xml lfs-en/chapter09/bootscripts.xml
 #, no-wrap
 msgid "<userinput remap=\"install\">make install</userinput>"
 msgstr "<userinput remap=\"install\">make install</userinput>"
@@ -574,7 +573,7 @@ msgstr ""
 #: lfs-en/chapter08/bash.xml
 #, no-wrap
 msgid ""
-"<userinput remap=\"test\">su -s /usr/bin/expect tester &lt;&lt; \"EOF\"\n"
+"<userinput remap=\"test\">LC_ALL=C.UTF-8 su -s /usr/bin/expect tester &lt;&lt; \"EOF\"\n"
 "set timeout -1\n"
 "spawn make tests\n"
 "expect eof\n"
@@ -582,7 +581,7 @@ msgid ""
 "exit $value\n"
 "EOF</userinput>"
 msgstr ""
-"<userinput remap=\"test\">su -s /usr/bin/expect tester &lt;&lt; \"EOF\"\n"
+"<userinput remap=\"test\">LC_ALL=C.UTF-8 su -s /usr/bin/expect tester &lt;&lt; \"EOF\"\n"
 "set timeout -1\n"
 "spawn make tests\n"
 "expect eof\n"
@@ -601,15 +600,19 @@ msgid ""
 "test script output and the expected output.  Any output from <command>diff</"
 "command> (prefixed with <computeroutput>&lt;</computeroutput> and "
 "<computeroutput>&gt;</computeroutput>) indicates a test failure, unless "
-"there is a message saying the difference can be ignored.  One test named "
+"there is a message saying the difference can be ignored.  The test named "
 "<filename>run-builtins</filename> is known to fail on some host distros with "
-"a difference on the first line of the output."
+"a difference on the 479 and 480 lines of the output.  Some other tests need "
+"the <literal>zh_TW.BIG5</literal> and <literal>ja_JP.SJIS</literal> locales, "
+"they are known to fail unless those locales are installed."
 msgstr ""
 "测试套件使用 <command>diff</command> 检测测试脚本输出和预期是否存在不同。"
 "<command>diff</command> 的任何输出 (以 <computeroutput>&lt;</computeroutput> "
 "和 <computeroutput>&gt;</computeroutput> 开头) 都表示测试失败，除非有消息提示"
 "可以忽略这里报告的差别。已知一项名为 <filename>run-builtins</filename> 的测试"
-"在一些宿主系统上可能失败，此时该测试输出的第一行和预期存在不同。"
+"在一些宿主系统上可能失败，此时该测试输出的 479 和 480 行和预期存在不同。已知"
+"其他一些使用 <literal>zh_TW.BIG5</literal> 和 <literal>ja_JP.SJIS</literal> "
+"locale 的测试在未安装对应 locale 时会失败。"
 
 #. type: Content of: <sect1><sect2><para>
 #: lfs-en/chapter08/bash.xml
