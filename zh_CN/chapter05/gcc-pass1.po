@@ -414,6 +414,15 @@ msgid ""
 "change it to <parameter>-i.orig</parameter> in any case you want to keep a "
 "copy of the original file."
 msgstr ""
+"这里演示了 <parameter>-i.orig</parameter> 选项的用法。它使得 <command>sed</"
+"command> 将 <filename>t-linux</filename> 和 <filename>linux.h</filename> 文件"
+"分别复制到 <filename>t-linux.orig</filename> 和 <filename>linux.h.orig</"
+"filename>，然后再编辑原本的 <filename>t-linux64</filename> 和 "
+"<filename>linux.h</filename> 文件。这样，之后可以使用 <command>diff -u gcc/"
+"config/i386/t-linux{.orig,}</command> 这样的命令展示 <command>sed</command> "
+"命令所做的修改。对于本书中的其他软件包，我们会简单使用 <parameter>-i</"
+"parameter> (并不复制原始文件，而是直接编辑它)，但如果您需要保留原始文件的一份"
+"副本，可以随时将其替换为 <parameter>-i.orig</parameter>。"
 
 #. type: Content of: <sect1><sect2><para>
 #: lfs-en/chapter05/gcc-pass1.xml lfs-en/chapter08/gcc.xml
