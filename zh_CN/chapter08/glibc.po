@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Linux From Scratch 11.0\n"
 "Report-Msgid-Bugs-To: lfs-dev@lists.linuxfromscratch.org\n"
-"POT-Creation-Date: 2025-08-03 15:18+0800\n"
+"POT-Creation-Date: 2025-08-30 04:41+0800\n"
 "PO-Revision-Date: 2021-08-21 11:33+0800\n"
 "Last-Translator: Xi Ruoyao <xry111@xry111.site>\n"
 "Language-Team: none\n"
@@ -349,11 +349,10 @@ msgstr "安装该软件包："
 #: lfs-en/chapter08/pkgconf.xml lfs-en/chapter08/procps.xml
 #: lfs-en/chapter08/psmisc.xml lfs-en/chapter08/python.xml
 #: lfs-en/chapter08/readline.xml lfs-en/chapter08/sysklogd.xml
-#: lfs-en/chapter08/sysvinit.xml lfs-en/chapter08/tcl.xml
-#: lfs-en/chapter08/texinfo.xml lfs-en/chapter08/util-linux.xml
-#: lfs-en/chapter08/vim.xml lfs-en/chapter08/xml-parser.xml
-#: lfs-en/chapter08/xz.xml lfs-en/chapter08/zlib.xml
-#: lfs-en/chapter09/bootscripts.xml
+#: lfs-en/chapter08/sysvinit.xml lfs-en/chapter08/texinfo.xml
+#: lfs-en/chapter08/util-linux.xml lfs-en/chapter08/vim.xml
+#: lfs-en/chapter08/xml-parser.xml lfs-en/chapter08/xz.xml
+#: lfs-en/chapter08/zlib.xml lfs-en/chapter09/bootscripts.xml
 #, no-wrap
 msgid "<userinput remap=\"install\">make install</userinput>"
 msgstr "<userinput remap=\"install\">make install</userinput>"
@@ -629,6 +628,22 @@ msgstr "<userinput remap=\"pre\">patch -Np1 -i ../&glibc-fhs-patch;</userinput>"
 
 #. type: Content of: <sect1><sect2><para>
 #: lfs-en/chapter08/glibc.xml
+msgid "Now fix an issue which may break Valgrind in BLFS:"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><screen>
+#: lfs-en/chapter08/glibc.xml
+#, no-wrap
+msgid ""
+"<userinput remap=\"pre\">sed -e '/unistd.h/i #include &lt;string.h&gt;' \\\n"
+"    -e '/libc_rwlock_init/c\\\n"
+"  __libc_rwlock_define_initialized (, reset_lock);\\\n"
+"  memcpy (&amp;lock, &amp;reset_lock, sizeof (lock));' \\\n"
+"    -i stdlib/abort.c </userinput>"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><para>
+#: lfs-en/chapter08/glibc.xml
 msgid ""
 "Ensure that the <command>ldconfig</command> and <command>sln</command> "
 "utilities will be installed into <filename class=\"directory\">/usr/sbin</"
@@ -736,6 +751,14 @@ msgid ""
 "<emphasis>io/tst-lchmod</emphasis> is known to fail in the LFS chroot "
 "environment."
 msgstr "已知 <emphasis>io/tst-lchmod</emphasis> 在 LFS chroot 环境中会失败。"
+
+#. type: Content of: <sect1><sect2><itemizedlist><listitem><para>
+#: lfs-en/chapter08/glibc.xml
+msgid ""
+"<emphasis>misc/tst-preadvwritev2</emphasis> and <emphasis>misc/tst-"
+"preadvwritev64v2</emphasis> are known to fail if the host kernel is "
+"Linux-6.14 or later."
+msgstr ""
 
 #. type: Content of: <sect1><sect2><itemizedlist><listitem><para>
 #: lfs-en/chapter08/glibc.xml
