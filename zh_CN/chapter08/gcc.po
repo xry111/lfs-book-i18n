@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Linux From Scratch 11.1\n"
 "Report-Msgid-Bugs-To: lfs-dev@lists.linuxfromscratch.org\n"
-"POT-Creation-Date: 2025-08-17 16:01+0800\n"
+"POT-Creation-Date: 2025-09-05 23:55+0800\n"
 "PO-Revision-Date: 2022-03-03 03:00+0800\n"
 "Last-Translator: Xi Ruoyao <xry111@xry111.site>\n"
 "Language-Team: none\n"
@@ -51,11 +51,12 @@ msgstr ""
 #: lfs-en/chapter08/meson.xml lfs-en/chapter08/mpc.xml
 #: lfs-en/chapter08/mpfr.xml lfs-en/chapter08/ncurses.xml
 #: lfs-en/chapter08/ninja.xml lfs-en/chapter08/openssl.xml
-#: lfs-en/chapter08/patch.xml lfs-en/chapter08/perl.xml
-#: lfs-en/chapter08/pkgconf.xml lfs-en/chapter08/procps.xml
-#: lfs-en/chapter08/psmisc.xml lfs-en/chapter08/python.xml
-#: lfs-en/chapter08/readline.xml lfs-en/chapter08/sed.xml
-#: lfs-en/chapter08/shadow.xml lfs-en/chapter08/sysklogd.xml
+#: lfs-en/chapter08/patch.xml lfs-en/chapter08/pcre.xml
+#: lfs-en/chapter08/perl.xml lfs-en/chapter08/pkgconf.xml
+#: lfs-en/chapter08/procps.xml lfs-en/chapter08/psmisc.xml
+#: lfs-en/chapter08/python.xml lfs-en/chapter08/readline.xml
+#: lfs-en/chapter08/sed.xml lfs-en/chapter08/shadow.xml
+#: lfs-en/chapter08/sqlite.xml lfs-en/chapter08/sysklogd.xml
 #: lfs-en/chapter08/systemd.xml lfs-en/chapter08/sysvinit.xml
 #: lfs-en/chapter08/tar.xml lfs-en/chapter08/tcl.xml
 #: lfs-en/chapter08/texinfo.xml lfs-en/chapter08/udev.xml
@@ -75,11 +76,6 @@ msgstr ""
 #: lfs-en/chapter08/gcc.xml lfs-en/prologue/why.xml
 msgid "GCC"
 msgstr "GCC"
-
-#. type: Content of: <sect1><title>
-#: lfs-en/chapter01/whatsnew.xml lfs-en/chapter08/gcc.xml
-msgid "GCC-&gcc-version;"
-msgstr "GCC-&gcc-version;"
 
 #. type: Content of: <sect1><sect2><segmentedlist><segtitle>
 #: lfs-en/chapter05/binutils-pass1.xml lfs-en/chapter05/gcc-pass1.xml
@@ -123,11 +119,12 @@ msgstr "GCC-&gcc-version;"
 #: lfs-en/chapter08/mpc.xml lfs-en/chapter08/mpfr.xml
 #: lfs-en/chapter08/ncurses.xml lfs-en/chapter08/ninja.xml
 #: lfs-en/chapter08/openssl.xml lfs-en/chapter08/packaging.xml
-#: lfs-en/chapter08/patch.xml lfs-en/chapter08/perl.xml
-#: lfs-en/chapter08/pkgconf.xml lfs-en/chapter08/procps.xml
-#: lfs-en/chapter08/psmisc.xml lfs-en/chapter08/python.xml
-#: lfs-en/chapter08/readline.xml lfs-en/chapter08/sed.xml
-#: lfs-en/chapter08/setuptools.xml lfs-en/chapter08/shadow.xml
+#: lfs-en/chapter08/patch.xml lfs-en/chapter08/pcre.xml
+#: lfs-en/chapter08/perl.xml lfs-en/chapter08/pkgconf.xml
+#: lfs-en/chapter08/procps.xml lfs-en/chapter08/psmisc.xml
+#: lfs-en/chapter08/python.xml lfs-en/chapter08/readline.xml
+#: lfs-en/chapter08/sed.xml lfs-en/chapter08/setuptools.xml
+#: lfs-en/chapter08/shadow.xml lfs-en/chapter08/sqlite.xml
 #: lfs-en/chapter08/sysklogd.xml lfs-en/chapter08/systemd.xml
 #: lfs-en/chapter08/sysvinit.xml lfs-en/chapter08/tar.xml
 #: lfs-en/chapter08/tcl.xml lfs-en/chapter08/texinfo.xml
@@ -181,11 +178,12 @@ msgstr "&buildtime;"
 #: lfs-en/chapter08/mpc.xml lfs-en/chapter08/mpfr.xml
 #: lfs-en/chapter08/ncurses.xml lfs-en/chapter08/ninja.xml
 #: lfs-en/chapter08/openssl.xml lfs-en/chapter08/packaging.xml
-#: lfs-en/chapter08/patch.xml lfs-en/chapter08/perl.xml
-#: lfs-en/chapter08/pkgconf.xml lfs-en/chapter08/procps.xml
-#: lfs-en/chapter08/psmisc.xml lfs-en/chapter08/python.xml
-#: lfs-en/chapter08/readline.xml lfs-en/chapter08/sed.xml
-#: lfs-en/chapter08/setuptools.xml lfs-en/chapter08/shadow.xml
+#: lfs-en/chapter08/patch.xml lfs-en/chapter08/pcre.xml
+#: lfs-en/chapter08/perl.xml lfs-en/chapter08/pkgconf.xml
+#: lfs-en/chapter08/procps.xml lfs-en/chapter08/psmisc.xml
+#: lfs-en/chapter08/python.xml lfs-en/chapter08/readline.xml
+#: lfs-en/chapter08/sed.xml lfs-en/chapter08/setuptools.xml
+#: lfs-en/chapter08/shadow.xml lfs-en/chapter08/sqlite.xml
 #: lfs-en/chapter08/sysklogd.xml lfs-en/chapter08/systemd.xml
 #: lfs-en/chapter08/sysvinit.xml lfs-en/chapter08/tar.xml
 #: lfs-en/chapter08/tcl.xml lfs-en/chapter08/texinfo.xml
@@ -244,10 +242,11 @@ msgstr ""
 #: lfs-en/chapter08/libxcrypt.xml lfs-en/chapter08/m4.xml
 #: lfs-en/chapter08/make.xml lfs-en/chapter08/man-db.xml
 #: lfs-en/chapter08/ncurses.xml lfs-en/chapter08/openssl.xml
-#: lfs-en/chapter08/patch.xml lfs-en/chapter08/perl.xml
-#: lfs-en/chapter08/pkgconf.xml lfs-en/chapter08/procps.xml
-#: lfs-en/chapter08/psmisc.xml lfs-en/chapter08/python.xml
-#: lfs-en/chapter08/shadow.xml lfs-en/chapter08/sysklogd.xml
+#: lfs-en/chapter08/patch.xml lfs-en/chapter08/pcre.xml
+#: lfs-en/chapter08/perl.xml lfs-en/chapter08/pkgconf.xml
+#: lfs-en/chapter08/procps.xml lfs-en/chapter08/psmisc.xml
+#: lfs-en/chapter08/python.xml lfs-en/chapter08/shadow.xml
+#: lfs-en/chapter08/sqlite.xml lfs-en/chapter08/sysklogd.xml
 #: lfs-en/chapter08/sysvinit.xml lfs-en/chapter08/tar.xml
 #: lfs-en/chapter08/texinfo.xml lfs-en/chapter08/util-linux.xml
 #: lfs-en/chapter08/vim.xml lfs-en/chapter08/xml-parser.xml
@@ -293,10 +292,11 @@ msgstr "<userinput remap=\"make\">make</userinput>"
 #: lfs-en/chapter08/man-db.xml lfs-en/chapter08/markupsafe.xml
 #: lfs-en/chapter08/meson.xml lfs-en/chapter08/ninja.xml
 #: lfs-en/chapter08/openssl.xml lfs-en/chapter08/patch.xml
-#: lfs-en/chapter08/pkgconf.xml lfs-en/chapter08/procps.xml
-#: lfs-en/chapter08/psmisc.xml lfs-en/chapter08/python.xml
-#: lfs-en/chapter08/readline.xml lfs-en/chapter08/setuptools.xml
-#: lfs-en/chapter08/shadow.xml lfs-en/chapter08/sysklogd.xml
+#: lfs-en/chapter08/pcre.xml lfs-en/chapter08/pkgconf.xml
+#: lfs-en/chapter08/procps.xml lfs-en/chapter08/psmisc.xml
+#: lfs-en/chapter08/python.xml lfs-en/chapter08/readline.xml
+#: lfs-en/chapter08/setuptools.xml lfs-en/chapter08/shadow.xml
+#: lfs-en/chapter08/sqlite.xml lfs-en/chapter08/sysklogd.xml
 #: lfs-en/chapter08/systemd.xml lfs-en/chapter08/sysvinit.xml
 #: lfs-en/chapter08/tar.xml lfs-en/chapter08/tcl.xml
 #: lfs-en/chapter08/texinfo.xml lfs-en/chapter08/udev.xml
@@ -327,9 +327,10 @@ msgstr "安装该软件包："
 #: lfs-en/chapter08/libtool.xml lfs-en/chapter08/libxcrypt.xml
 #: lfs-en/chapter08/m4.xml lfs-en/chapter08/make.xml
 #: lfs-en/chapter08/man-db.xml lfs-en/chapter08/patch.xml
-#: lfs-en/chapter08/pkgconf.xml lfs-en/chapter08/procps.xml
-#: lfs-en/chapter08/psmisc.xml lfs-en/chapter08/python.xml
-#: lfs-en/chapter08/readline.xml lfs-en/chapter08/sysklogd.xml
+#: lfs-en/chapter08/pcre.xml lfs-en/chapter08/pkgconf.xml
+#: lfs-en/chapter08/procps.xml lfs-en/chapter08/psmisc.xml
+#: lfs-en/chapter08/python.xml lfs-en/chapter08/readline.xml
+#: lfs-en/chapter08/sqlite.xml lfs-en/chapter08/sysklogd.xml
 #: lfs-en/chapter08/sysvinit.xml lfs-en/chapter08/texinfo.xml
 #: lfs-en/chapter08/util-linux.xml lfs-en/chapter08/vim.xml
 #: lfs-en/chapter08/xml-parser.xml lfs-en/chapter08/xz.xml
@@ -389,10 +390,11 @@ msgstr "准备编译 GCC："
 #: lfs-en/chapter08/lz4.xml lfs-en/chapter08/m4.xml lfs-en/chapter08/make.xml
 #: lfs-en/chapter08/man-db.xml lfs-en/chapter08/ncurses.xml
 #: lfs-en/chapter08/openssl.xml lfs-en/chapter08/patch.xml
-#: lfs-en/chapter08/perl.xml lfs-en/chapter08/pkgconf.xml
-#: lfs-en/chapter08/procps.xml lfs-en/chapter08/psmisc.xml
-#: lfs-en/chapter08/python.xml lfs-en/chapter08/readline.xml
-#: lfs-en/chapter08/shadow.xml lfs-en/chapter08/sysklogd.xml
+#: lfs-en/chapter08/pcre.xml lfs-en/chapter08/perl.xml
+#: lfs-en/chapter08/pkgconf.xml lfs-en/chapter08/procps.xml
+#: lfs-en/chapter08/psmisc.xml lfs-en/chapter08/python.xml
+#: lfs-en/chapter08/readline.xml lfs-en/chapter08/shadow.xml
+#: lfs-en/chapter08/sqlite.xml lfs-en/chapter08/sysklogd.xml
 #: lfs-en/chapter08/systemd.xml lfs-en/chapter08/sysvinit.xml
 #: lfs-en/chapter08/tar.xml lfs-en/chapter08/texinfo.xml
 #: lfs-en/chapter08/util-linux.xml lfs-en/chapter08/vim.xml
@@ -530,10 +532,11 @@ msgstr "<userinput>rm -v a.out dummy.log</userinput>"
 #: lfs-en/chapter08/openssl.xml lfs-en/chapter08/packaging.xml
 #: lfs-en/chapter08/procps.xml lfs-en/chapter08/python.xml
 #: lfs-en/chapter08/readline.xml lfs-en/chapter08/shadow.xml
-#: lfs-en/chapter08/systemd.xml lfs-en/chapter08/texinfo.xml
-#: lfs-en/chapter08/udev.xml lfs-en/chapter08/util-linux.xml
-#: lfs-en/chapter08/wheel.xml lfs-en/chapter08/xz.xml
-#: lfs-en/chapter09/bootscripts.xml lfs-en/chapter10/kernel.xml
+#: lfs-en/chapter08/sqlite.xml lfs-en/chapter08/systemd.xml
+#: lfs-en/chapter08/texinfo.xml lfs-en/chapter08/udev.xml
+#: lfs-en/chapter08/util-linux.xml lfs-en/chapter08/wheel.xml
+#: lfs-en/chapter08/xz.xml lfs-en/chapter09/bootscripts.xml
+#: lfs-en/chapter10/kernel.xml
 msgid "Installed directories"
 msgstr "安装的目录"
 
@@ -564,11 +567,12 @@ msgstr "安装的目录"
 #: lfs-en/chapter08/meson.xml lfs-en/chapter08/mpc.xml
 #: lfs-en/chapter08/mpfr.xml lfs-en/chapter08/ncurses.xml
 #: lfs-en/chapter08/ninja.xml lfs-en/chapter08/openssl.xml
-#: lfs-en/chapter08/patch.xml lfs-en/chapter08/perl.xml
-#: lfs-en/chapter08/pkgconf.xml lfs-en/chapter08/procps.xml
-#: lfs-en/chapter08/psmisc.xml lfs-en/chapter08/python.xml
-#: lfs-en/chapter08/readline.xml lfs-en/chapter08/sed.xml
-#: lfs-en/chapter08/shadow.xml lfs-en/chapter08/sysklogd.xml
+#: lfs-en/chapter08/patch.xml lfs-en/chapter08/pcre.xml
+#: lfs-en/chapter08/perl.xml lfs-en/chapter08/pkgconf.xml
+#: lfs-en/chapter08/procps.xml lfs-en/chapter08/psmisc.xml
+#: lfs-en/chapter08/python.xml lfs-en/chapter08/readline.xml
+#: lfs-en/chapter08/sed.xml lfs-en/chapter08/shadow.xml
+#: lfs-en/chapter08/sqlite.xml lfs-en/chapter08/sysklogd.xml
 #: lfs-en/chapter08/systemd.xml lfs-en/chapter08/sysvinit.xml
 #: lfs-en/chapter08/tar.xml lfs-en/chapter08/tcl.xml
 #: lfs-en/chapter08/texinfo.xml lfs-en/chapter08/udev.xml
@@ -622,9 +626,10 @@ msgstr ""
 #: lfs-en/chapter08/lz4.xml lfs-en/chapter08/man-db.xml
 #: lfs-en/chapter08/meson.xml lfs-en/chapter08/ncurses.xml
 #: lfs-en/chapter08/ninja.xml lfs-en/chapter08/openssl.xml
-#: lfs-en/chapter08/perl.xml lfs-en/chapter08/pkgconf.xml
-#: lfs-en/chapter08/procps.xml lfs-en/chapter08/psmisc.xml
-#: lfs-en/chapter08/python.xml lfs-en/chapter08/shadow.xml
+#: lfs-en/chapter08/pcre.xml lfs-en/chapter08/perl.xml
+#: lfs-en/chapter08/pkgconf.xml lfs-en/chapter08/procps.xml
+#: lfs-en/chapter08/psmisc.xml lfs-en/chapter08/python.xml
+#: lfs-en/chapter08/shadow.xml lfs-en/chapter08/sqlite.xml
 #: lfs-en/chapter08/systemd.xml lfs-en/chapter08/sysvinit.xml
 #: lfs-en/chapter08/tar.xml lfs-en/chapter08/tcl.xml
 #: lfs-en/chapter08/texinfo.xml lfs-en/chapter08/udev.xml
@@ -655,9 +660,10 @@ msgstr "<parameter>--with-system-zlib</parameter>"
 #: lfs-en/chapter08/mpc.xml lfs-en/chapter08/mpfr.xml
 #: lfs-en/chapter08/ncurses.xml lfs-en/chapter08/openssl.xml
 #: lfs-en/chapter08/perl.xml lfs-en/chapter08/readline.xml
-#: lfs-en/chapter08/shadow.xml lfs-en/chapter08/systemd.xml
-#: lfs-en/chapter08/udev.xml lfs-en/chapter08/util-linux.xml
-#: lfs-en/chapter08/xz.xml lfs-en/chapter08/zlib.xml
+#: lfs-en/chapter08/shadow.xml lfs-en/chapter08/sqlite.xml
+#: lfs-en/chapter08/systemd.xml lfs-en/chapter08/udev.xml
+#: lfs-en/chapter08/util-linux.xml lfs-en/chapter08/xz.xml
+#: lfs-en/chapter08/zlib.xml
 msgid "Installed libraries"
 msgstr "安装的库"
 
@@ -669,6 +675,11 @@ msgid ""
 msgstr ""
 "<productname>gcc</productname> <productnumber>&gcc-version;</productnumber> "
 "<placeholder type=\"address\" id=\"0\"/>"
+
+#. type: Content of: <sect1><title>
+#: lfs-en/chapter08/gcc.xml
+msgid "GCC-&gcc-version;"
+msgstr "GCC-&gcc-version;"
 
 #. type: Content of: <sect1><sect2><para>
 #: lfs-en/chapter08/gcc.xml
@@ -723,14 +734,28 @@ msgstr ""
 #. type: Content of: <sect1><sect2><para>
 #: lfs-en/chapter08/gcc.xml
 msgid ""
-"GCC supports seven different computer languages, but the prerequisites for "
-"most of them have not yet been installed. See the <ulink url=\"&blfs-"
-"book;general/gcc.html\">BLFS Book GCC page</ulink> for instructions on how "
-"to build all of GCC's supported languages."
+"We only enable C and C++ here to save the build time as no packages in LFS "
+"and BLFS require GCC to compile other languages. Append <literal>cobol</"
+"literal> for Cobol (note that it will cause GCC fail to build on a 32-bit "
+"LFS system), <literal>fortran</literal> for Fortran, <literal>go</literal> "
+"for Go, <literal>objc</literal> for Objective C, <literal>obj-c++</literal> "
+"for Objective C++, and/or <literal>m2</literal> for Modula 2 into the value "
+"of <parameter>--enable-languages</parameter> option if you want to compile "
+"programs in one or more of those languages with GCC.  GCC also supports Ada "
+"and D, but the code to support Ada or D is written in Ada or D itself, so "
+"the support can only be built with an existing Ada or D compiler "
+"installation and we cannot enable the support here."
 msgstr ""
-"GCC 支持七种程序设计语言，但其中多数语言需要尚未安装的依赖项。阅读 <ulink "
-"url=\"&blfs-book;general/gcc.html\">BLFS 手册</ulink>，以了解如何构建 GCC 支"
-"持的所有语言。"
+"由于 LFS 和 BLFS 软件包都不需要 GCC 支持其他语言，在这里我们只启用了 C 和 C+"
+"+ 语言支持，以减少构建 GCC 所需的时间。如果您希望使用 GCC 编译其他语言编写的"
+"程序，可以在 <parameter>--enable-languages</parameter> 选项的值中加入"
+"<literal>cobol</literal> 以启用 Cobol 支持，加入 <literal>fortran</literal> "
+"以启用 Fortran 支持，加入 <literal>go</literal> 以启用 Go 语言支持，加入 "
+"<literal>objc</literal> 以启用 Objective C 支持，加入 <literal>obj-c++</"
+"literal> 以启用 Objective C++ 支持，和/或加入 <literal>m2</literal> 以启用 "
+"Modula 2 支持。GCC 还支持 Ada 和 D 语言，但用于支持它们的代码分别以 Ada 和 D "
+"本身编写而成，因此构建 Ada 或 D 语言支持需要首先安装好一个可用的 Ada 或 D 编"
+"译器，我们就无法在此处启用针对它们的支持。"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: lfs-en/chapter08/gcc.xml
@@ -746,6 +771,30 @@ msgid ""
 msgstr ""
 "该选项使得配置脚本使用之前在本章中构建的 Binutils 提供的 ld 程序，而不是交叉"
 "编译构建的版本。"
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
+#: lfs-en/chapter08/gcc.xml
+msgid "<parameter>--disable-bootstrap</parameter>"
+msgstr "<parameter>--disable-bootstrap</parameter>"
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
+#: lfs-en/chapter08/gcc.xml
+msgid ""
+"By default, the build system of GCC will bootstrap it in 3 stages unless "
+"it's built as a cross-compiler or it is being cross-compiled.  The bootstrap "
+"process is needed for robustness, especially when upgrading GCC to a new "
+"version.  In LFS we are using a different method to bootstrap GCC (as we "
+"introduced in <xref linkend='ch-tools-toolchaintechnotes'/>), so here we "
+"don't need the bootstrap process provided by the build system and we disable "
+"it to significantly reduce the build time.  Remove this option when you "
+"upgrade GCC on a complete LFS system (instead of building LFS)."
+msgstr ""
+"默认情况下，除非正在将 GCC 构建为交叉编译器或正在交叉编译 GCC 本身，GCC 构建"
+"系统会对 GCC 进行三阶段自举。这能够提高 GCC 的稳定性，在更新 GCC 版本时尤为重"
+"要。在 LFS 中，我们使用另一种方法自举 GCC (即<xref linkend='ch-tools-"
+"toolchaintechnotes'/>中介绍的方法)，这里就不需要构建系统本身提供的自举过程。"
+"因此，我们禁用自举，这样可以显著减少所需的构建时间。如果正在完整的 LFS 系统上"
+"升级 GCC (而非构建 LFS)，请自行删除该选项。"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: lfs-en/chapter08/gcc.xml

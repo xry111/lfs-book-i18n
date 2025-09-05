@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Linux From Scratch 11.4\n"
 "Report-Msgid-Bugs-To: lfs-dev@lists.linuxfromscratch.org\n"
-"POT-Creation-Date: 2025-08-17 16:01+0800\n"
+"POT-Creation-Date: 2025-09-05 23:55+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: Xi Ruoyao <xry111@xry111.site>\n"
 "Language-Team: none\n"
@@ -46,11 +46,12 @@ msgstr ""
 #: lfs-en/chapter08/meson.xml lfs-en/chapter08/mpc.xml
 #: lfs-en/chapter08/mpfr.xml lfs-en/chapter08/ncurses.xml
 #: lfs-en/chapter08/ninja.xml lfs-en/chapter08/openssl.xml
-#: lfs-en/chapter08/patch.xml lfs-en/chapter08/perl.xml
-#: lfs-en/chapter08/pkgconf.xml lfs-en/chapter08/procps.xml
-#: lfs-en/chapter08/psmisc.xml lfs-en/chapter08/python.xml
-#: lfs-en/chapter08/readline.xml lfs-en/chapter08/sed.xml
-#: lfs-en/chapter08/shadow.xml lfs-en/chapter08/sysklogd.xml
+#: lfs-en/chapter08/patch.xml lfs-en/chapter08/pcre.xml
+#: lfs-en/chapter08/perl.xml lfs-en/chapter08/pkgconf.xml
+#: lfs-en/chapter08/procps.xml lfs-en/chapter08/psmisc.xml
+#: lfs-en/chapter08/python.xml lfs-en/chapter08/readline.xml
+#: lfs-en/chapter08/sed.xml lfs-en/chapter08/shadow.xml
+#: lfs-en/chapter08/sqlite.xml lfs-en/chapter08/sysklogd.xml
 #: lfs-en/chapter08/systemd.xml lfs-en/chapter08/sysvinit.xml
 #: lfs-en/chapter08/tar.xml lfs-en/chapter08/tcl.xml
 #: lfs-en/chapter08/texinfo.xml lfs-en/chapter08/udev.xml
@@ -69,12 +70,6 @@ msgstr ""
 #: lfs-en/chapter08/ncurses.xml lfs-en/prologue/why.xml
 msgid "Ncurses"
 msgstr "Ncurses"
-
-#. type: Content of: <sect1><title>
-#: lfs-en/chapter01/whatsnew.xml lfs-en/chapter06/ncurses.xml
-#: lfs-en/chapter08/ncurses.xml
-msgid "Ncurses-&ncurses-version;"
-msgstr "Ncurses-&ncurses-version;"
 
 #. type: Content of: <sect1><sect2><segmentedlist><segtitle>
 #: lfs-en/chapter05/binutils-pass1.xml lfs-en/chapter05/gcc-pass1.xml
@@ -118,11 +113,12 @@ msgstr "Ncurses-&ncurses-version;"
 #: lfs-en/chapter08/mpc.xml lfs-en/chapter08/mpfr.xml
 #: lfs-en/chapter08/ncurses.xml lfs-en/chapter08/ninja.xml
 #: lfs-en/chapter08/openssl.xml lfs-en/chapter08/packaging.xml
-#: lfs-en/chapter08/patch.xml lfs-en/chapter08/perl.xml
-#: lfs-en/chapter08/pkgconf.xml lfs-en/chapter08/procps.xml
-#: lfs-en/chapter08/psmisc.xml lfs-en/chapter08/python.xml
-#: lfs-en/chapter08/readline.xml lfs-en/chapter08/sed.xml
-#: lfs-en/chapter08/setuptools.xml lfs-en/chapter08/shadow.xml
+#: lfs-en/chapter08/patch.xml lfs-en/chapter08/pcre.xml
+#: lfs-en/chapter08/perl.xml lfs-en/chapter08/pkgconf.xml
+#: lfs-en/chapter08/procps.xml lfs-en/chapter08/psmisc.xml
+#: lfs-en/chapter08/python.xml lfs-en/chapter08/readline.xml
+#: lfs-en/chapter08/sed.xml lfs-en/chapter08/setuptools.xml
+#: lfs-en/chapter08/shadow.xml lfs-en/chapter08/sqlite.xml
 #: lfs-en/chapter08/sysklogd.xml lfs-en/chapter08/systemd.xml
 #: lfs-en/chapter08/sysvinit.xml lfs-en/chapter08/tar.xml
 #: lfs-en/chapter08/tcl.xml lfs-en/chapter08/texinfo.xml
@@ -176,11 +172,12 @@ msgstr "&buildtime;"
 #: lfs-en/chapter08/mpc.xml lfs-en/chapter08/mpfr.xml
 #: lfs-en/chapter08/ncurses.xml lfs-en/chapter08/ninja.xml
 #: lfs-en/chapter08/openssl.xml lfs-en/chapter08/packaging.xml
-#: lfs-en/chapter08/patch.xml lfs-en/chapter08/perl.xml
-#: lfs-en/chapter08/pkgconf.xml lfs-en/chapter08/procps.xml
-#: lfs-en/chapter08/psmisc.xml lfs-en/chapter08/python.xml
-#: lfs-en/chapter08/readline.xml lfs-en/chapter08/sed.xml
-#: lfs-en/chapter08/setuptools.xml lfs-en/chapter08/shadow.xml
+#: lfs-en/chapter08/patch.xml lfs-en/chapter08/pcre.xml
+#: lfs-en/chapter08/perl.xml lfs-en/chapter08/pkgconf.xml
+#: lfs-en/chapter08/procps.xml lfs-en/chapter08/psmisc.xml
+#: lfs-en/chapter08/python.xml lfs-en/chapter08/readline.xml
+#: lfs-en/chapter08/sed.xml lfs-en/chapter08/setuptools.xml
+#: lfs-en/chapter08/shadow.xml lfs-en/chapter08/sqlite.xml
 #: lfs-en/chapter08/sysklogd.xml lfs-en/chapter08/systemd.xml
 #: lfs-en/chapter08/sysvinit.xml lfs-en/chapter08/tar.xml
 #: lfs-en/chapter08/tcl.xml lfs-en/chapter08/texinfo.xml
@@ -224,10 +221,11 @@ msgstr "&diskspace;"
 #: lfs-en/chapter08/libxcrypt.xml lfs-en/chapter08/m4.xml
 #: lfs-en/chapter08/make.xml lfs-en/chapter08/man-db.xml
 #: lfs-en/chapter08/ncurses.xml lfs-en/chapter08/openssl.xml
-#: lfs-en/chapter08/patch.xml lfs-en/chapter08/perl.xml
-#: lfs-en/chapter08/pkgconf.xml lfs-en/chapter08/procps.xml
-#: lfs-en/chapter08/psmisc.xml lfs-en/chapter08/python.xml
-#: lfs-en/chapter08/shadow.xml lfs-en/chapter08/sysklogd.xml
+#: lfs-en/chapter08/patch.xml lfs-en/chapter08/pcre.xml
+#: lfs-en/chapter08/perl.xml lfs-en/chapter08/pkgconf.xml
+#: lfs-en/chapter08/procps.xml lfs-en/chapter08/psmisc.xml
+#: lfs-en/chapter08/python.xml lfs-en/chapter08/shadow.xml
+#: lfs-en/chapter08/sqlite.xml lfs-en/chapter08/sysklogd.xml
 #: lfs-en/chapter08/sysvinit.xml lfs-en/chapter08/tar.xml
 #: lfs-en/chapter08/texinfo.xml lfs-en/chapter08/util-linux.xml
 #: lfs-en/chapter08/vim.xml lfs-en/chapter08/xml-parser.xml
@@ -270,10 +268,11 @@ msgstr "<userinput remap=\"make\">make</userinput>"
 #: lfs-en/chapter08/lz4.xml lfs-en/chapter08/m4.xml lfs-en/chapter08/make.xml
 #: lfs-en/chapter08/man-db.xml lfs-en/chapter08/ncurses.xml
 #: lfs-en/chapter08/openssl.xml lfs-en/chapter08/patch.xml
-#: lfs-en/chapter08/perl.xml lfs-en/chapter08/pkgconf.xml
-#: lfs-en/chapter08/procps.xml lfs-en/chapter08/psmisc.xml
-#: lfs-en/chapter08/python.xml lfs-en/chapter08/readline.xml
-#: lfs-en/chapter08/shadow.xml lfs-en/chapter08/sysklogd.xml
+#: lfs-en/chapter08/pcre.xml lfs-en/chapter08/perl.xml
+#: lfs-en/chapter08/pkgconf.xml lfs-en/chapter08/procps.xml
+#: lfs-en/chapter08/psmisc.xml lfs-en/chapter08/python.xml
+#: lfs-en/chapter08/readline.xml lfs-en/chapter08/shadow.xml
+#: lfs-en/chapter08/sqlite.xml lfs-en/chapter08/sysklogd.xml
 #: lfs-en/chapter08/systemd.xml lfs-en/chapter08/sysvinit.xml
 #: lfs-en/chapter08/tar.xml lfs-en/chapter08/texinfo.xml
 #: lfs-en/chapter08/util-linux.xml lfs-en/chapter08/vim.xml
@@ -295,10 +294,11 @@ msgstr "编译该软件包："
 #: lfs-en/chapter08/openssl.xml lfs-en/chapter08/packaging.xml
 #: lfs-en/chapter08/procps.xml lfs-en/chapter08/python.xml
 #: lfs-en/chapter08/readline.xml lfs-en/chapter08/shadow.xml
-#: lfs-en/chapter08/systemd.xml lfs-en/chapter08/texinfo.xml
-#: lfs-en/chapter08/udev.xml lfs-en/chapter08/util-linux.xml
-#: lfs-en/chapter08/wheel.xml lfs-en/chapter08/xz.xml
-#: lfs-en/chapter09/bootscripts.xml lfs-en/chapter10/kernel.xml
+#: lfs-en/chapter08/sqlite.xml lfs-en/chapter08/systemd.xml
+#: lfs-en/chapter08/texinfo.xml lfs-en/chapter08/udev.xml
+#: lfs-en/chapter08/util-linux.xml lfs-en/chapter08/wheel.xml
+#: lfs-en/chapter08/xz.xml lfs-en/chapter09/bootscripts.xml
+#: lfs-en/chapter10/kernel.xml
 msgid "Installed directories"
 msgstr "安装的目录"
 
@@ -329,11 +329,12 @@ msgstr "安装的目录"
 #: lfs-en/chapter08/meson.xml lfs-en/chapter08/mpc.xml
 #: lfs-en/chapter08/mpfr.xml lfs-en/chapter08/ncurses.xml
 #: lfs-en/chapter08/ninja.xml lfs-en/chapter08/openssl.xml
-#: lfs-en/chapter08/patch.xml lfs-en/chapter08/perl.xml
-#: lfs-en/chapter08/pkgconf.xml lfs-en/chapter08/procps.xml
-#: lfs-en/chapter08/psmisc.xml lfs-en/chapter08/python.xml
-#: lfs-en/chapter08/readline.xml lfs-en/chapter08/sed.xml
-#: lfs-en/chapter08/shadow.xml lfs-en/chapter08/sysklogd.xml
+#: lfs-en/chapter08/patch.xml lfs-en/chapter08/pcre.xml
+#: lfs-en/chapter08/perl.xml lfs-en/chapter08/pkgconf.xml
+#: lfs-en/chapter08/procps.xml lfs-en/chapter08/psmisc.xml
+#: lfs-en/chapter08/python.xml lfs-en/chapter08/readline.xml
+#: lfs-en/chapter08/sed.xml lfs-en/chapter08/shadow.xml
+#: lfs-en/chapter08/sqlite.xml lfs-en/chapter08/sysklogd.xml
 #: lfs-en/chapter08/systemd.xml lfs-en/chapter08/sysvinit.xml
 #: lfs-en/chapter08/tar.xml lfs-en/chapter08/tcl.xml
 #: lfs-en/chapter08/texinfo.xml lfs-en/chapter08/udev.xml
@@ -348,7 +349,7 @@ msgstr "简要描述"
 #: lfs-en/chapter06/binutils-pass2.xml lfs-en/chapter06/gcc-pass2.xml
 #: lfs-en/chapter06/ncurses.xml lfs-en/chapter08/gmp.xml
 #: lfs-en/chapter08/grub.xml lfs-en/chapter08/libxcrypt.xml
-#: lfs-en/chapter08/ncurses.xml
+#: lfs-en/chapter08/ncurses.xml lfs-en/chapter08/pcre.xml
 msgid "The meaning of the new configure options:"
 msgstr "新的配置选项的含义："
 
@@ -366,6 +367,11 @@ msgid ""
 msgstr ""
 "<productname>ncurses</productname> <productnumber>&ncurses-version;</"
 "productnumber> <placeholder type=\"address\" id=\"0\"/>"
+
+#. type: Content of: <sect1><title>
+#: lfs-en/chapter06/ncurses.xml lfs-en/chapter08/ncurses.xml
+msgid "Ncurses-&ncurses-version;"
+msgstr "Ncurses-&ncurses-version;"
 
 #. type: Content of: <sect1><sect2><title>
 #: lfs-en/chapter06/ncurses.xml lfs-en/chapter08/ncurses.xml
@@ -431,9 +437,10 @@ msgstr ""
 #: lfs-en/chapter08/lz4.xml lfs-en/chapter08/man-db.xml
 #: lfs-en/chapter08/meson.xml lfs-en/chapter08/ncurses.xml
 #: lfs-en/chapter08/ninja.xml lfs-en/chapter08/openssl.xml
-#: lfs-en/chapter08/perl.xml lfs-en/chapter08/pkgconf.xml
-#: lfs-en/chapter08/procps.xml lfs-en/chapter08/psmisc.xml
-#: lfs-en/chapter08/python.xml lfs-en/chapter08/shadow.xml
+#: lfs-en/chapter08/pcre.xml lfs-en/chapter08/perl.xml
+#: lfs-en/chapter08/pkgconf.xml lfs-en/chapter08/procps.xml
+#: lfs-en/chapter08/psmisc.xml lfs-en/chapter08/python.xml
+#: lfs-en/chapter08/shadow.xml lfs-en/chapter08/sqlite.xml
 #: lfs-en/chapter08/systemd.xml lfs-en/chapter08/sysvinit.xml
 #: lfs-en/chapter08/tar.xml lfs-en/chapter08/tcl.xml
 #: lfs-en/chapter08/texinfo.xml lfs-en/chapter08/udev.xml
@@ -453,9 +460,10 @@ msgstr "安装的程序"
 #: lfs-en/chapter08/mpc.xml lfs-en/chapter08/mpfr.xml
 #: lfs-en/chapter08/ncurses.xml lfs-en/chapter08/openssl.xml
 #: lfs-en/chapter08/perl.xml lfs-en/chapter08/readline.xml
-#: lfs-en/chapter08/shadow.xml lfs-en/chapter08/systemd.xml
-#: lfs-en/chapter08/udev.xml lfs-en/chapter08/util-linux.xml
-#: lfs-en/chapter08/xz.xml lfs-en/chapter08/zlib.xml
+#: lfs-en/chapter08/shadow.xml lfs-en/chapter08/sqlite.xml
+#: lfs-en/chapter08/systemd.xml lfs-en/chapter08/udev.xml
+#: lfs-en/chapter08/util-linux.xml lfs-en/chapter08/xz.xml
+#: lfs-en/chapter08/zlib.xml
 msgid "Installed libraries"
 msgstr "安装的库"
 
@@ -537,34 +545,30 @@ msgid ""
 "class=\"libraryfile\">libncursesw.so.&ncurses-base-version;</filename> in-"
 "place.  It may crash the shell process which is using code and data from the "
 "library file.  Install the package with <literal>DESTDIR</literal>, and "
-"replace the library file correctly using <command>install</command> command "
-"(the header <filename>curses.h</filename> is also edited to ensure the wide-"
-"character ABI to be used as what we've done in <xref linkend='ch-tools-"
-"ncurses'/>):"
+"replace the library file correctly using the <parameter>--remove-"
+"destination</parameter> option of <command>cp</command> (the header "
+"<filename>curses.h</filename> is also edited to ensure the wide-character "
+"ABI to be used as what we've done in <xref linkend='ch-tools-ncurses'/>):"
 msgstr ""
 "安装该软件包会直接覆盖文件 <filename "
 "class=\"libraryfile\">libncursesw.so.&ncurses-base-version;</filename>。这可"
 "能导致正在使用该库文件中的代码和数据的 shell 进程发生崩溃。因此，需要使用 "
-"<literal>DESTDIR</literal> 进行安装，并正确地使用 <command>install</command> "
-"命令安装库文件："
+"<literal>DESTDIR</literal> 进行安装，并正确地使用 <command>cp</command> 命令"
+"的 <parameter>--remove-destination</parameter> 选项安装库文件："
 
 #. type: Content of: <sect1><sect2><screen>
 #: lfs-en/chapter08/ncurses.xml
 #, no-wrap
 msgid ""
 "<userinput remap=\"install\">make DESTDIR=$PWD/dest install\n"
-"install -vm755 dest/usr/lib/libncursesw.so.&ncurses-base-version; /usr/lib\n"
-"rm -v  dest/usr/lib/libncursesw.so.&ncurses-base-version;\n"
 "sed -e 's/^#if.*XOPEN.*$/#if 1/' \\\n"
 "    -i dest/usr/include/curses.h\n"
-"cp -av dest/* /</userinput>"
+"cp --remove-destination -av dest/* /</userinput>"
 msgstr ""
 "<userinput remap=\"install\">make DESTDIR=$PWD/dest install\n"
-"install -vm755 dest/usr/lib/libncursesw.so.&ncurses-base-version; /usr/lib\n"
-"rm -v  dest/usr/lib/libncursesw.so.&ncurses-base-version;\n"
 "sed -e 's/^#if.*XOPEN.*$/#if 1/' \\\n"
 "    -i dest/usr/include/curses.h\n"
-"cp -av dest/* /</userinput>"
+"cp --remove-destination -av dest/* /</userinput>"
 
 #. type: Content of: <sect1><sect2><para>
 #: lfs-en/chapter08/ncurses.xml

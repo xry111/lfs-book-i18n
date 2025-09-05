@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Linux From Scratch 11.0\n"
 "Report-Msgid-Bugs-To: lfs-dev@lists.linuxfromscratch.org\n"
-"POT-Creation-Date: 2025-04-15 19:40+0800\n"
+"POT-Creation-Date: 2025-09-05 23:55+0800\n"
 "PO-Revision-Date: 2021-07-28 19:09+0800\n"
 "Last-Translator: Xi Ruoyao <xry111@xry111.site>\n"
 "Language-Team: none\n"
@@ -18,6 +18,11 @@ msgstr ""
 "X-Bugs: https://github.com/xry111/lfs-book-i18n/issues\n"
 "X-Pootle-Revision: 9999999\n"
 "X-Pootle-Path: /zh_CN/lfs/chapter03/packages.po\n"
+
+#. type: Content of the kernel-directory entity
+#: lfs-en/chapter03/packages.xml
+msgid "https://www.kernel.org/pub/linux/kernel/v6.x"
+msgstr "https://www.kernel.org/pub/linux/kernel/v6.x"
 
 #. type: Content of: <sect1><title>
 #: lfs-en/chapter03/packages.xml
@@ -1017,8 +1022,6 @@ msgstr "下载地址：<ulink url=\"&linux-url;\"/>"
 msgid "MD5 sum: <literal>&linux-md5;</literal>"
 msgstr "MD5 校验和：<literal>&linux-md5;</literal>"
 
-#. &linux-major-version;.&linux-minor-version;.x
-#. should
 #. type: Content of: <sect1><variablelist><varlistentry><listitem><note><para>
 #: lfs-en/chapter03/packages.xml
 msgid ""
@@ -1039,6 +1042,46 @@ msgid ""
 msgstr ""
 "对于那些上网很慢或者流量很贵的用户来说，可以分别下载内核的基线版本和补丁。这"
 "可以节省内核修订号更新时的下载时间和网费。"
+
+#. type: Content of: <sect1><variablelist><varlistentry><listitem><note><para>
+#: lfs-en/chapter03/packages.xml
+msgid ""
+"As an example, for linux-&linux-version;, the following could be downloaded:"
+msgstr "例如，对于 linux-&linux-version;，可以下载："
+
+#. type: Content of: <sect1><variablelist><varlistentry><listitem><note><para><itemizedlist><listitem><para>
+#: lfs-en/chapter03/packages.xml
+msgid "<ulink url='&kernel-directory;/linux-&linux-majmin-version;.tar.xz'/>"
+msgstr "<ulink url='&kernel-directory;/linux-&linux-majmin-version;.tar.xz'/>"
+
+#. type: Content of: <sect1><variablelist><varlistentry><listitem><note><para><itemizedlist><listitem><para>
+#: lfs-en/chapter03/packages.xml
+msgid "<ulink url='&kernel-directory;/patch-&linux-version;.xz'/>"
+msgstr "<ulink url='&kernel-directory;/patch-&linux-version;.xz'/>"
+
+#. type: Content of: <sect1><variablelist><varlistentry><listitem><note><para>
+#: lfs-en/chapter03/packages.xml
+msgid ""
+"Then in <xref linkend='ch-tools-linux-headers'/> and <xref linkend='ch-"
+"bootable-kernel'/> unpack the kernel, change to the package directory and "
+"then apply the patch with <userinput>xzcat ../patch-&linux-version;.xz | "
+"patch -Np1</userinput>."
+msgstr ""
+"之后，在<xref linkend='ch-tools-linux-headers'/>和<xref linkend='ch-bootable-"
+"kernel'/>两节，解压内核，切换到解压得到的软件包目录，再执行 "
+"<userinput>xzcat ../patch-&linux-version;.xz | patch -Np1</userinput> 以应用"
+"补丁。"
+
+#. type: Content of: <sect1><variablelist><varlistentry><listitem><note><para>
+#: lfs-en/chapter03/packages.xml
+msgid ""
+"At this point, if a newer point version of the kernel is needed, then only "
+"the newer patch is needed. However, if a new minor version is desired, then "
+"both full minor version and any desired patch will both need to be "
+"downloaded."
+msgstr ""
+"这样，更新内核时，如果只有最后一部分版本号发生变化，则只需要下载新的补丁。但"
+"是，如果之前两部分的版本号有变化，就需要下载新的基线版本压缩包和需要的补丁。"
 
 #. type: Content of: <sect1><variablelist><varlistentry><term>
 #: lfs-en/chapter03/packages.xml
@@ -1322,6 +1365,26 @@ msgstr "MD5 校验和：<literal>&patch-md5;</literal>"
 
 #. type: Content of: <sect1><variablelist><varlistentry><term>
 #: lfs-en/chapter03/packages.xml
+msgid "Pcre2 (&pcre2-version;) - <token>&pcre2-size;</token>:"
+msgstr "Pcre2 (&pcre2-version;) - <token>&pcre2-size;</token>:"
+
+#. type: Content of: <sect1><variablelist><varlistentry><listitem><para>
+#: lfs-en/chapter03/packages.xml
+msgid "Home page: <ulink url=\"&pcre2-home;\"/>"
+msgstr "主页：<ulink url=\"&pcre2-home;\"/>"
+
+#. type: Content of: <sect1><variablelist><varlistentry><listitem><para>
+#: lfs-en/chapter03/packages.xml
+msgid "Download: <ulink url=\"&pcre2-url;\"/>"
+msgstr "下载地址：<ulink url=\"&pcre2-url;\"/>"
+
+#. type: Content of: <sect1><variablelist><varlistentry><listitem><para>
+#: lfs-en/chapter03/packages.xml
+msgid "MD5 sum: <literal>&pcre2-md5;</literal>"
+msgstr "MD5 校验和：<literal>&pcre2-md5;</literal>"
+
+#. type: Content of: <sect1><variablelist><varlistentry><term>
+#: lfs-en/chapter03/packages.xml
 msgid "Perl (&perl-version;) - <token>&perl-size;</token>:"
 msgstr "Perl (&perl-version;) - <token>&perl-size;</token>:"
 
@@ -1515,6 +1578,52 @@ msgstr "下载地址：<ulink url=\"&shadow-url;\"/>"
 #: lfs-en/chapter03/packages.xml
 msgid "MD5 sum: <literal>&shadow-md5;</literal>"
 msgstr "MD5 校验和：<literal>&shadow-md5;</literal>"
+
+#. type: Content of: <sect1><variablelist><varlistentry><term>
+#: lfs-en/chapter03/packages.xml
+msgid "Sqlite (&sqlite-version;) - <token>&sqlite-size;</token>:"
+msgstr "Sqlite (&sqlite-version;) - <token>&sqlite-size;</token>:"
+
+#. type: Content of: <sect1><variablelist><varlistentry><listitem><para>
+#: lfs-en/chapter03/packages.xml
+msgid "Home page: <ulink url=\"&sqlite-home;\"/>"
+msgstr "主页：<ulink url=\"&sqlite-home;\"/>"
+
+#. type: Content of: <sect1><variablelist><varlistentry><listitem><para>
+#: lfs-en/chapter03/packages.xml
+msgid "Download: <ulink url=\"&sqlite-url;\"/>"
+msgstr "下载地址：<ulink url=\"&sqlite-url;\"/>"
+
+#. type: Content of: <sect1><variablelist><varlistentry><listitem><para>
+#: lfs-en/chapter03/packages.xml
+msgid "MD5 sum: <literal>&sqlite-md5;</literal>"
+msgstr "MD5 校验和：<literal>&sqlite-md5;</literal>"
+
+#. type: Content of: <sect1><variablelist><varlistentry><term>
+#: lfs-en/chapter03/packages.xml
+msgid ""
+"Sqlite Documentation (&sqlite-version;) - <token>&sqlite-doc-size;</token>:"
+msgstr "Sqlite 文档 (&sqlite-version;) - <token>&sqlite-doc-size;</token>:"
+
+#. type: Content of: <sect1><variablelist><varlistentry><listitem><para>
+#: lfs-en/chapter03/packages.xml
+msgid "Download: <ulink url=\"&sqlite-doc-url;\"/>"
+msgstr "下载地址：<ulink url=\"&sqlite-doc-url;\"/>"
+
+#. type: Content of: <sect1><variablelist><varlistentry><listitem><para>
+#: lfs-en/chapter03/packages.xml
+msgid "MD5 sum: <literal>&sqlite-doc-md5;</literal>"
+msgstr "MD5 校验和：<literal>&sqlite-doc-md5;</literal>"
+
+#. type: Content of: <sect1><variablelist><varlistentry><listitem><note><para>
+#: lfs-en/chapter03/packages.xml
+msgid ""
+"The Linux From Scratch team generates its own tarball of the documentation "
+"pages using the sqlite documentation zip file. This is done in order to "
+"avoid unnecessary dependencies."
+msgstr ""
+"Linux From Scratch 团队自行将包含 sqlite 文档的 zip 文件转换成了基于 tar 的压"
+"缩包，以避免不必要的依赖项。"
 
 #. type: Content of: <sect1><variablelist><varlistentry><term>
 #: lfs-en/chapter03/packages.xml
