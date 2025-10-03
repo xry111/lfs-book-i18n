@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Linux From Scratch 11.4\n"
 "Report-Msgid-Bugs-To: lfs-dev@lists.linuxfromscratch.org\n"
-"POT-Creation-Date: 2025-09-15 10:58+0800\n"
+"POT-Creation-Date: 2025-10-03 14:14+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: Xi Ruoyao <xry111@xry111.site>\n"
 "Language-Team: none\n"
@@ -358,14 +358,6 @@ msgstr "安装的库"
 msgid "To test the results, issue:"
 msgstr "运行命令以测试编译结果："
 
-#. type: Content of: <sect1><sect2><screen>
-#: lfs-en/chapter08/bc.xml lfs-en/chapter08/expect.xml
-#: lfs-en/chapter08/libcap.xml lfs-en/chapter08/tcl.xml
-#: lfs-en/chapter08/xml-parser.xml
-#, no-wrap
-msgid "<userinput remap=\"test\">make test</userinput>"
-msgstr "<userinput remap=\"test\">make test</userinput>"
-
 #. type: Content of: <sect1><sect2><variablelist><title>
 #: lfs-en/chapter08/binutils.xml lfs-en/chapter08/gcc.xml
 #: lfs-en/chapter08/tcl.xml
@@ -538,14 +530,11 @@ msgstr ""
 "录，并用安装目录替换它们。构建 LFS 的后续过程不对此严格要求，但如果之后构建使"
 "用 Tcl 的软件包，则可能需要这样的操作。"
 
-#. type: Content of: <sect1><sect2><para>
+#. type: Content of: <sect1><sect2><screen>
 #: lfs-en/chapter08/tcl.xml
-msgid ""
-"Three tests (out of over 43000 total tests) from the cmdAH.test file are "
-"known to fail in the chroot environment.  All tests pass in a full system."
-msgstr ""
-"已知 cmdAH.test 文件中的三项测试 (总计有超过 43000 项) 在 chroot 环境中会失"
-"败。在完整系统上，所有测试都能通过。"
+#, no-wrap
+msgid "<userinput remap=\"test\">LC_ALL=C.UTF-8 make test</userinput>"
+msgstr "<userinput remap=\"test\">LC_ALL=C.UTF-8 make test</userinput>"
 
 #. type: Content of: <sect1><sect2><screen>
 #: lfs-en/chapter08/tcl.xml

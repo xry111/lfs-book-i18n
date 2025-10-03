@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Linux From Scratch 11.0\n"
 "Report-Msgid-Bugs-To: lfs-dev@lists.linuxfromscratch.org\n"
-"POT-Creation-Date: 2025-09-05 23:55+0800\n"
+"POT-Creation-Date: 2025-10-03 14:14+0800\n"
 "PO-Revision-Date: 2021-07-28 12:48+0800\n"
 "Last-Translator: Xi Ruoyao <xry111@xry111.site>\n"
 "Language-Team: none\n"
@@ -75,6 +75,12 @@ msgstr ""
 #: lfs-en/chapter08/util-linux.xml lfs-en/prologue/why.xml
 msgid "Util-linux"
 msgstr "Util-linux"
+
+#. type: Content of: <sect1><title>
+#: lfs-en/chapter01/whatsnew.xml lfs-en/chapter07/util-linux.xml
+#: lfs-en/chapter08/util-linux.xml
+msgid "Util-linux-&util-linux-version;"
+msgstr "Util-linux-&util-linux-version;"
 
 #. type: Content of: <sect1><sect2><segmentedlist><segtitle>
 #: lfs-en/chapter05/binutils-pass1.xml lfs-en/chapter05/gcc-pass1.xml
@@ -448,11 +454,6 @@ msgstr ""
 "<productname>util-linux</productname> <productnumber>&util-linux-version;</"
 "productnumber> <placeholder type=\"address\" id=\"0\"/>"
 
-#. type: Content of: <sect1><title>
-#: lfs-en/chapter07/util-linux.xml lfs-en/chapter08/util-linux.xml
-msgid "Util-linux-&util-linux-version;"
-msgstr "Util-linux-&util-linux-version;"
-
 #. type: Content of: <sect1><sect2><title>
 #: lfs-en/chapter07/util-linux.xml lfs-en/chapter08/util-linux.xml
 msgid "Installation of Util-linux"
@@ -683,15 +684,6 @@ msgstr ""
 "<option>CONFIG_CRYPTO_SHA256_SSSE3</option> —— 如果 CPU 支持扩展 SSE3)，则 "
 "<emphasis>hardlink</emphasis> 测试会失败。另外，lsfd: inotify 这项测试在内核"
 "配置选项 <option>CONFIG_NETLINK_DIAG</option> 未启用时会失败。"
-
-#. type: Content of: <sect1><sect2><para>
-#: lfs-en/chapter08/util-linux.xml
-msgid ""
-"One test, <literal>kill: decode functions</literal>, is known to fail with "
-"bash-5.3-rc1 or newer."
-msgstr ""
-"已知一项测试，<literal>kill: decode functions</literal>，在使用 bash-5.3-rc1 "
-"或更新版本时会失败。"
 
 #. type: Content of: <sect1><sect2><title>
 #: lfs-en/chapter08/util-linux.xml
