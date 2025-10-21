@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Linux From Scratch 11.4\n"
 "Report-Msgid-Bugs-To: lfs-dev@lists.linuxfromscratch.org\n"
-"POT-Creation-Date: 2025-10-03 14:14+0800\n"
+"POT-Creation-Date: 2025-10-21 10:38+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: Xi Ruoyao <xry111@xry111.site>\n"
 "Language-Team: none\n"
@@ -514,17 +514,6 @@ msgstr "删除一条需要完整安装 Systemd 的 udev 规则："
 #, no-wrap
 msgid "<userinput remap=\"pre\">sed -i '/systemd-sysctl/s/^/#/' rules.d/99-systemd.rules.in</userinput>"
 msgstr "<userinput remap=\"pre\">sed -i '/systemd-sysctl/s/^/#/' rules.d/99-systemd.rules.in</userinput>"
-
-#. type: Content of: <sect1><sect2><para>
-#: lfs-en/chapter08/udev.xml
-msgid "Fix a bug that prevents udev from running correctly:"
-msgstr "修复导致 udev 无法正常运行的 bug："
-
-#. type: Content of: <sect1><sect2><screen>
-#: lfs-en/chapter08/udev.xml
-#, no-wrap
-msgid "<userinput remap=\"pre\">sed -i \"/udev_dependencies,/a \\                'link_with': udev_link_with,\" src/udev/meson.build</userinput>"
-msgstr "<userinput remap=\"pre\">sed -i \"/udev_dependencies,/a \\                'link_with': udev_link_with,\" src/udev/meson.build</userinput>"
 
 #. type: Content of: <sect1><sect2><para>
 #: lfs-en/chapter08/udev.xml
