@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Linux From Scratch 11.4\n"
 "Report-Msgid-Bugs-To: lfs-dev@lists.linuxfromscratch.org\n"
-"POT-Creation-Date: 2025-10-03 14:14+0800\n"
+"POT-Creation-Date: 2025-11-10 14:15+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: Xi Ruoyao <xry111@xry111.site>\n"
 "Language-Team: none\n"
@@ -70,6 +70,11 @@ msgstr ""
 #: lfs-en/prologue/why.xml
 msgid "Libelf"
 msgstr "Libelf"
+
+#. type: Content of: <sect1><title>
+#: lfs-en/chapter01/whatsnew.xml lfs-en/chapter08/libelf.xml
+msgid "Libelf from Elfutils-&elfutils-version;"
+msgstr "Elfutils-&elfutils-version; 中的 Libelf"
 
 #. type: Content of: <sect1><sect2><segmentedlist><segtitle>
 #: lfs-en/chapter05/binutils-pass1.xml lfs-en/chapter05/gcc-pass1.xml
@@ -189,98 +194,6 @@ msgstr "&buildtime;"
 msgid "&diskspace;"
 msgstr "&diskspace;"
 
-#. type: Content of: <sect1><sect2><screen>
-#: lfs-en/chapter05/binutils-pass1.xml lfs-en/chapter05/gcc-pass1.xml
-#: lfs-en/chapter05/glibc.xml lfs-en/chapter05/libstdc++.xml
-#: lfs-en/chapter06/bash.xml lfs-en/chapter06/binutils-pass2.xml
-#: lfs-en/chapter06/coreutils.xml lfs-en/chapter06/diffutils.xml
-#: lfs-en/chapter06/findutils.xml lfs-en/chapter06/gawk.xml
-#: lfs-en/chapter06/gcc-pass2.xml lfs-en/chapter06/grep.xml
-#: lfs-en/chapter06/gzip.xml lfs-en/chapter06/m4.xml lfs-en/chapter06/make.xml
-#: lfs-en/chapter06/ncurses.xml lfs-en/chapter06/patch.xml
-#: lfs-en/chapter06/sed.xml lfs-en/chapter06/tar.xml lfs-en/chapter06/xz.xml
-#: lfs-en/chapter07/bison.xml lfs-en/chapter07/gettext.xml
-#: lfs-en/chapter07/perl.xml lfs-en/chapter07/python.xml
-#: lfs-en/chapter07/texinfo.xml lfs-en/chapter07/util-linux.xml
-#: lfs-en/chapter08/acl.xml lfs-en/chapter08/attr.xml
-#: lfs-en/chapter08/autoconf.xml lfs-en/chapter08/automake.xml
-#: lfs-en/chapter08/bash.xml lfs-en/chapter08/bc.xml lfs-en/chapter08/bison.xml
-#: lfs-en/chapter08/bzip2.xml lfs-en/chapter08/coreutils.xml
-#: lfs-en/chapter08/diffutils.xml lfs-en/chapter08/e2fsprogs.xml
-#: lfs-en/chapter08/expat.xml lfs-en/chapter08/expect.xml
-#: lfs-en/chapter08/file.xml lfs-en/chapter08/findutils.xml
-#: lfs-en/chapter08/flex.xml lfs-en/chapter08/gawk.xml lfs-en/chapter08/gcc.xml
-#: lfs-en/chapter08/gdbm.xml lfs-en/chapter08/gettext.xml
-#: lfs-en/chapter08/glibc.xml lfs-en/chapter08/gperf.xml
-#: lfs-en/chapter08/grep.xml lfs-en/chapter08/groff.xml
-#: lfs-en/chapter08/grub.xml lfs-en/chapter08/gzip.xml
-#: lfs-en/chapter08/inetutils.xml lfs-en/chapter08/intltool.xml
-#: lfs-en/chapter08/kbd.xml lfs-en/chapter08/less.xml
-#: lfs-en/chapter08/libelf.xml lfs-en/chapter08/libffi.xml
-#: lfs-en/chapter08/libpipeline.xml lfs-en/chapter08/libtool.xml
-#: lfs-en/chapter08/libxcrypt.xml lfs-en/chapter08/m4.xml
-#: lfs-en/chapter08/make.xml lfs-en/chapter08/man-db.xml
-#: lfs-en/chapter08/ncurses.xml lfs-en/chapter08/openssl.xml
-#: lfs-en/chapter08/patch.xml lfs-en/chapter08/pcre.xml
-#: lfs-en/chapter08/perl.xml lfs-en/chapter08/pkgconf.xml
-#: lfs-en/chapter08/procps.xml lfs-en/chapter08/psmisc.xml
-#: lfs-en/chapter08/python.xml lfs-en/chapter08/shadow.xml
-#: lfs-en/chapter08/sqlite.xml lfs-en/chapter08/sysklogd.xml
-#: lfs-en/chapter08/sysvinit.xml lfs-en/chapter08/tar.xml
-#: lfs-en/chapter08/texinfo.xml lfs-en/chapter08/util-linux.xml
-#: lfs-en/chapter08/vim.xml lfs-en/chapter08/xml-parser.xml
-#: lfs-en/chapter08/xz.xml lfs-en/chapter08/zlib.xml
-#: lfs-en/chapter10/kernel.xml
-#, no-wrap
-msgid "<userinput remap=\"make\">make</userinput>"
-msgstr "<userinput remap=\"make\">make</userinput>"
-
-#. type: Content of: <sect1><sect2><para>
-#: lfs-en/chapter05/glibc.xml lfs-en/chapter06/bash.xml
-#: lfs-en/chapter06/binutils-pass2.xml lfs-en/chapter06/coreutils.xml
-#: lfs-en/chapter06/diffutils.xml lfs-en/chapter06/file.xml
-#: lfs-en/chapter06/findutils.xml lfs-en/chapter06/gawk.xml
-#: lfs-en/chapter06/gcc-pass2.xml lfs-en/chapter06/grep.xml
-#: lfs-en/chapter06/gzip.xml lfs-en/chapter06/m4.xml lfs-en/chapter06/make.xml
-#: lfs-en/chapter06/ncurses.xml lfs-en/chapter06/patch.xml
-#: lfs-en/chapter06/sed.xml lfs-en/chapter06/tar.xml lfs-en/chapter06/xz.xml
-#: lfs-en/chapter07/bison.xml lfs-en/chapter07/gettext.xml
-#: lfs-en/chapter07/perl.xml lfs-en/chapter07/python.xml
-#: lfs-en/chapter07/texinfo.xml lfs-en/chapter07/util-linux.xml
-#: lfs-en/chapter08/acl.xml lfs-en/chapter08/attr.xml
-#: lfs-en/chapter08/autoconf.xml lfs-en/chapter08/automake.xml
-#: lfs-en/chapter08/bash.xml lfs-en/chapter08/bc.xml
-#: lfs-en/chapter08/binutils.xml lfs-en/chapter08/bison.xml
-#: lfs-en/chapter08/coreutils.xml lfs-en/chapter08/dbus.xml
-#: lfs-en/chapter08/diffutils.xml lfs-en/chapter08/e2fsprogs.xml
-#: lfs-en/chapter08/expat.xml lfs-en/chapter08/file.xml
-#: lfs-en/chapter08/findutils.xml lfs-en/chapter08/flex.xml
-#: lfs-en/chapter08/gawk.xml lfs-en/chapter08/gcc.xml lfs-en/chapter08/gdbm.xml
-#: lfs-en/chapter08/gettext.xml lfs-en/chapter08/glibc.xml
-#: lfs-en/chapter08/gperf.xml lfs-en/chapter08/grep.xml
-#: lfs-en/chapter08/grub.xml lfs-en/chapter08/gzip.xml
-#: lfs-en/chapter08/inetutils.xml lfs-en/chapter08/intltool.xml
-#: lfs-en/chapter08/iproute2.xml lfs-en/chapter08/kbd.xml
-#: lfs-en/chapter08/kmod.xml lfs-en/chapter08/less.xml
-#: lfs-en/chapter08/libcap.xml lfs-en/chapter08/libelf.xml
-#: lfs-en/chapter08/libffi.xml lfs-en/chapter08/libpipeline.xml
-#: lfs-en/chapter08/libtool.xml lfs-en/chapter08/libxcrypt.xml
-#: lfs-en/chapter08/lz4.xml lfs-en/chapter08/m4.xml lfs-en/chapter08/make.xml
-#: lfs-en/chapter08/man-db.xml lfs-en/chapter08/ncurses.xml
-#: lfs-en/chapter08/openssl.xml lfs-en/chapter08/patch.xml
-#: lfs-en/chapter08/pcre.xml lfs-en/chapter08/perl.xml
-#: lfs-en/chapter08/pkgconf.xml lfs-en/chapter08/procps.xml
-#: lfs-en/chapter08/psmisc.xml lfs-en/chapter08/python.xml
-#: lfs-en/chapter08/readline.xml lfs-en/chapter08/shadow.xml
-#: lfs-en/chapter08/sqlite.xml lfs-en/chapter08/sysklogd.xml
-#: lfs-en/chapter08/systemd.xml lfs-en/chapter08/sysvinit.xml
-#: lfs-en/chapter08/tar.xml lfs-en/chapter08/texinfo.xml
-#: lfs-en/chapter08/util-linux.xml lfs-en/chapter08/vim.xml
-#: lfs-en/chapter08/xml-parser.xml lfs-en/chapter08/xz.xml
-#: lfs-en/chapter08/zlib.xml lfs-en/chapter08/zstd.xml
-msgid "Compile the package:"
-msgstr "编译该软件包："
-
 #. type: Content of: <sect1><sect2><variablelist><bridgehead>
 #: lfs-en/chapter05/linux-headers.xml lfs-en/chapter08/acl.xml
 #: lfs-en/chapter08/attr.xml lfs-en/chapter08/autoconf.xml
@@ -399,11 +312,6 @@ msgstr ""
 "<productname>libelf</productname> <productnumber>&elfutils-version;</"
 "productnumber> <placeholder type=\"address\" id=\"0\"/>"
 
-#. type: Content of: <sect1><title>
-#: lfs-en/chapter08/libelf.xml
-msgid "Libelf from Elfutils-&elfutils-version;"
-msgstr "Elfutils-&elfutils-version; 中的 Libelf"
-
 #. type: Content of: <sect1><sect2><para>
 #: lfs-en/chapter08/libelf.xml
 msgid ""
@@ -453,11 +361,28 @@ msgstr ""
 
 #. type: Content of: <sect1><sect2><para>
 #: lfs-en/chapter08/libelf.xml
+msgid "Compile only Libelf:"
+msgstr "只编译 Libelf："
+
+#. type: Content of: <sect1><sect2><screen>
+#: lfs-en/chapter08/libelf.xml
+#, no-wrap
 msgid ""
-"Two tests are known to fail, dwarf_srclang_check and run-backtrace-native-"
-"core.sh."
+"<userinput remap=\"make\">make -C lib\n"
+"make -C libelf</userinput>"
 msgstr ""
-"已知 dwarf_srclang_check 和 run-backtrace-native-core.sh 这两项测试可能失败。"
+"<userinput remap=\"make\">make -C lib\n"
+"make -C libelf</userinput>"
+
+#. type: Content of: <sect1><sect2><para>
+#: lfs-en/chapter08/libelf.xml
+msgid ""
+"The above command builds the utilities that are part of the package as well "
+"as the unit tests. Two tests are known to fail: dwarf_srclang_check and run-"
+"backtrace-native-core.sh."
+msgstr ""
+"上述命令除了进行单元测试外，还会构建源码包提供的一些工具程序。已知 "
+"dwarf_srclang_check 和 run-backtrace-native-core.sh 这两项测试可能失败。"
 
 #. type: Content of: <sect1><sect2><para>
 #: lfs-en/chapter08/libelf.xml
