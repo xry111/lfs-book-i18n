@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Linux From Scratch 11.0\n"
 "Report-Msgid-Bugs-To: lfs-dev@lists.linuxfromscratch.org\n"
-"POT-Creation-Date: 2025-04-15 20:51+0800\n"
+"POT-Creation-Date: 2025-11-13 15:15+0800\n"
 "PO-Revision-Date: 2021-07-09 13:31+0800\n"
 "Last-Translator: Xi Ruoyao <xry111@xry111.site>\n"
 "Language-Team: none\n"
@@ -22,6 +22,11 @@ msgstr ""
 #: lfs-en/prologue/why.xml
 msgid "MarkupSafe"
 msgstr "MarkupSafe"
+
+#. type: Content of: <sect1><title>
+#: lfs-en/chapter01/whatsnew.xml lfs-en/chapter08/markupsafe.xml
+msgid "MarkupSafe-&markupsafe-version;"
+msgstr "MarkupSafe-&markupsafe-version;"
 
 #. type: Content of: <sect1><sect2><segmentedlist><segtitle>
 #: lfs-en/chapter05/binutils-pass1.xml lfs-en/chapter05/gcc-pass1.xml
@@ -65,11 +70,12 @@ msgstr "MarkupSafe"
 #: lfs-en/chapter08/mpc.xml lfs-en/chapter08/mpfr.xml
 #: lfs-en/chapter08/ncurses.xml lfs-en/chapter08/ninja.xml
 #: lfs-en/chapter08/openssl.xml lfs-en/chapter08/packaging.xml
-#: lfs-en/chapter08/patch.xml lfs-en/chapter08/perl.xml
-#: lfs-en/chapter08/pkgconf.xml lfs-en/chapter08/procps.xml
-#: lfs-en/chapter08/psmisc.xml lfs-en/chapter08/python.xml
-#: lfs-en/chapter08/readline.xml lfs-en/chapter08/sed.xml
-#: lfs-en/chapter08/setuptools.xml lfs-en/chapter08/shadow.xml
+#: lfs-en/chapter08/patch.xml lfs-en/chapter08/pcre.xml
+#: lfs-en/chapter08/perl.xml lfs-en/chapter08/pkgconf.xml
+#: lfs-en/chapter08/procps.xml lfs-en/chapter08/psmisc.xml
+#: lfs-en/chapter08/python.xml lfs-en/chapter08/readline.xml
+#: lfs-en/chapter08/sed.xml lfs-en/chapter08/setuptools.xml
+#: lfs-en/chapter08/shadow.xml lfs-en/chapter08/sqlite.xml
 #: lfs-en/chapter08/sysklogd.xml lfs-en/chapter08/systemd.xml
 #: lfs-en/chapter08/sysvinit.xml lfs-en/chapter08/tar.xml
 #: lfs-en/chapter08/tcl.xml lfs-en/chapter08/texinfo.xml
@@ -123,11 +129,12 @@ msgstr "&buildtime;"
 #: lfs-en/chapter08/mpc.xml lfs-en/chapter08/mpfr.xml
 #: lfs-en/chapter08/ncurses.xml lfs-en/chapter08/ninja.xml
 #: lfs-en/chapter08/openssl.xml lfs-en/chapter08/packaging.xml
-#: lfs-en/chapter08/patch.xml lfs-en/chapter08/perl.xml
-#: lfs-en/chapter08/pkgconf.xml lfs-en/chapter08/procps.xml
-#: lfs-en/chapter08/psmisc.xml lfs-en/chapter08/python.xml
-#: lfs-en/chapter08/readline.xml lfs-en/chapter08/sed.xml
-#: lfs-en/chapter08/setuptools.xml lfs-en/chapter08/shadow.xml
+#: lfs-en/chapter08/patch.xml lfs-en/chapter08/pcre.xml
+#: lfs-en/chapter08/perl.xml lfs-en/chapter08/pkgconf.xml
+#: lfs-en/chapter08/procps.xml lfs-en/chapter08/psmisc.xml
+#: lfs-en/chapter08/python.xml lfs-en/chapter08/readline.xml
+#: lfs-en/chapter08/sed.xml lfs-en/chapter08/setuptools.xml
+#: lfs-en/chapter08/shadow.xml lfs-en/chapter08/sqlite.xml
 #: lfs-en/chapter08/sysklogd.xml lfs-en/chapter08/systemd.xml
 #: lfs-en/chapter08/sysvinit.xml lfs-en/chapter08/tar.xml
 #: lfs-en/chapter08/tcl.xml lfs-en/chapter08/texinfo.xml
@@ -175,10 +182,11 @@ msgstr "&diskspace;"
 #: lfs-en/chapter08/man-db.xml lfs-en/chapter08/markupsafe.xml
 #: lfs-en/chapter08/meson.xml lfs-en/chapter08/ninja.xml
 #: lfs-en/chapter08/openssl.xml lfs-en/chapter08/patch.xml
-#: lfs-en/chapter08/pkgconf.xml lfs-en/chapter08/procps.xml
-#: lfs-en/chapter08/psmisc.xml lfs-en/chapter08/python.xml
-#: lfs-en/chapter08/readline.xml lfs-en/chapter08/setuptools.xml
-#: lfs-en/chapter08/shadow.xml lfs-en/chapter08/sysklogd.xml
+#: lfs-en/chapter08/pcre.xml lfs-en/chapter08/pkgconf.xml
+#: lfs-en/chapter08/procps.xml lfs-en/chapter08/psmisc.xml
+#: lfs-en/chapter08/python.xml lfs-en/chapter08/readline.xml
+#: lfs-en/chapter08/setuptools.xml lfs-en/chapter08/shadow.xml
+#: lfs-en/chapter08/sqlite.xml lfs-en/chapter08/sysklogd.xml
 #: lfs-en/chapter08/systemd.xml lfs-en/chapter08/sysvinit.xml
 #: lfs-en/chapter08/tar.xml lfs-en/chapter08/tcl.xml
 #: lfs-en/chapter08/texinfo.xml lfs-en/chapter08/udev.xml
@@ -229,11 +237,6 @@ msgstr ""
 "<productname>markupsafe</productname> <productnumber>&markupsafe-version;</"
 "productnumber> <placeholder type=\"address\" id=\"0\"/>"
 
-#. type: Content of: <sect1><title>
-#: lfs-en/chapter08/markupsafe.xml
-msgid "MarkupSafe-&markupsafe-version;"
-msgstr "MarkupSafe-&markupsafe-version;"
-
 #. type: Content of: <sect1><sect2><para>
 #: lfs-en/chapter08/markupsafe.xml
 msgid ""
@@ -264,8 +267,8 @@ msgstr "输入以下命令，编译 MarkupSafe："
 
 #. type: Content of: <sect1><sect2><para>
 #: lfs-en/chapter08/markupsafe.xml lfs-en/chapter08/readline.xml
-#: lfs-en/chapter08/shadow.xml lfs-en/chapter08/sysklogd.xml
-#: lfs-en/chapter08/sysvinit.xml
+#: lfs-en/chapter08/shadow.xml lfs-en/chapter08/sqlite.xml
+#: lfs-en/chapter08/sysklogd.xml lfs-en/chapter08/sysvinit.xml
 msgid "This package does not come with a test suite."
 msgstr "该软件包不包含测试套件。"
 

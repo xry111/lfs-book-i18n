@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Linux From Scratch 11.4\n"
 "Report-Msgid-Bugs-To: lfs-dev@lists.linuxfromscratch.org\n"
-"POT-Creation-Date: 2025-04-15 20:51+0800\n"
+"POT-Creation-Date: 2025-11-13 15:15+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: Xi Ruoyao <xry111@xry111.site>\n"
 "Language-Team: none\n"
@@ -686,6 +686,18 @@ msgstr ""
 "项，覆盖特定于架构的优化，以得到既能在当前硬件运行，又能在计划部署 LFS 系统的"
 "硬件运行的库。否则在运行 LFS 时，会出现 <computeroutput>Illegal Instruction</"
 "computeroutput> (非法指令) 错误。"
+
+#. type: Content of: <sect1><sect2><important><para>
+#: lfs-en/chapter08/pkgmgt.xml
+msgid ""
+"The GMP build system stores the architecture-specific optimization option "
+"used to build GMP into <filename>gmp.h</filename>, and the build system of "
+"some package using GMP can read it from the header and use it when building "
+"the package itself.  At least the MPFR build system is known to do so.  Thus "
+"simply rebuilding GMP on a complete LFS system is not enough: you'll need to "
+"recompile MPFR and maybe other packages using GMP if you want to "
+"<quote>convert</quote> a complete LFS system to be used for a different CPU."
+msgstr ""
 
 #. type: Content of: <sect1><sect2><para>
 #: lfs-en/chapter08/pkgmgt.xml
