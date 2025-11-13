@@ -698,6 +698,11 @@ msgid ""
 "recompile MPFR and maybe other packages using GMP if you want to "
 "<quote>convert</quote> a complete LFS system to be used for a different CPU."
 msgstr ""
+"GMP 构建系统会将构建 GMP 时使用的架构特定优化选项保存到 <filename>gmp.h</"
+"filename>，而一些使用 GMP 的软件包的构建系统可能从这个头文件读取这些选项并使"
+"用它们。已知 MPFR 构建系统确实会使用这些选项。因此，如果需要将完整的 LFS 系统"
+"<quote>转换</quote>为可供不同的 CPU 使用，仅仅重新构建 GMP 是不够的：还需要重"
+"新编译 MPFR，或许还需要重新编译其他使用 GMP 的软件包。"
 
 #. type: Content of: <sect1><sect2><para>
 #: lfs-en/chapter08/pkgmgt.xml

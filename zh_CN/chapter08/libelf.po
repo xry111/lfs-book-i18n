@@ -361,36 +361,28 @@ msgstr ""
 
 #. type: Content of: <sect1><sect2><para>
 #: lfs-en/chapter08/libelf.xml
-#, fuzzy
-#| msgid "Install only Libelf:"
 msgid "Compile only Libelf:"
-msgstr "只安装 Libelf："
+msgstr "只编译 Libelf："
 
 #. type: Content of: <sect1><sect2><screen>
 #: lfs-en/chapter08/libelf.xml
-#, fuzzy, no-wrap
-#| msgid ""
-#| "<userinput remap=\"make\">make\n"
-#| "make html</userinput>"
+#, no-wrap
 msgid ""
 "<userinput remap=\"make\">make -C lib\n"
 "make -C libelf</userinput>"
 msgstr ""
-"<userinput remap=\"make\">make\n"
-"make html</userinput>"
+"<userinput remap=\"make\">make -C lib\n"
+"make -C libelf</userinput>"
 
 #. type: Content of: <sect1><sect2><para>
 #: lfs-en/chapter08/libelf.xml
-#, fuzzy
-#| msgid ""
-#| "Two tests are known to fail, dwarf_srclang_check and run-backtrace-native-"
-#| "core.sh."
 msgid ""
 "The above command builds the utilities that are part of the package as well "
 "as the unit tests. Two tests are known to fail: dwarf_srclang_check and run-"
 "backtrace-native-core.sh."
 msgstr ""
-"已知 dwarf_srclang_check 和 run-backtrace-native-core.sh 这两项测试可能失败。"
+"上述命令除了进行单元测试外，还会构建源码包提供的一些工具程序。已知 "
+"dwarf_srclang_check 和 run-backtrace-native-core.sh 这两项测试可能失败。"
 
 #. type: Content of: <sect1><sect2><para>
 #: lfs-en/chapter08/libelf.xml

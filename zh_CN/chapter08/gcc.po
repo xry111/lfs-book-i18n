@@ -738,6 +738,16 @@ msgid ""
 "the support can only be built with an existing Ada or D compiler "
 "installation and we cannot enable the support here."
 msgstr ""
+"由于 LFS 和 BLFS 软件包都不需要 GCC 支持其他语言，在这里我们只启用了 C 和 C+"
+"+ 语言支持，以减少构建 GCC 所需的时间。如果您希望使用 GCC 编译其他语言编写的"
+"程序，可以在 <parameter>--enable-languages</parameter> 选项的值中加入"
+"<literal>cobol</literal> 以启用 Cobol 支持，加入 <literal>fortran</literal> "
+"以启用 Fortran 支持，加入 <literal>go</literal> 以启用 Go 语言支持，加入 "
+"<literal>objc</literal> 以启用 Objective C 支持，加入 <literal>obj-c++</"
+"literal> 以启用 Objective C++ 支持，和/或加入 <literal>m2</literal> 以启用 "
+"Modula 2 支持。GCC 还支持 Ada 和 D 语言，但用于支持它们的代码分别以 Ada 和 D "
+"本身编写而成，因此构建 Ada 或 D 语言支持需要首先安装好一个可用的 Ada 或 D 编"
+"译器，我们就无法在此处启用针对它们的支持。"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: lfs-en/chapter08/gcc.xml
@@ -756,10 +766,8 @@ msgstr ""
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: lfs-en/chapter08/gcc.xml
-#, fuzzy
-#| msgid "<parameter>--bootstrap</parameter>"
 msgid "<parameter>--disable-bootstrap</parameter>"
-msgstr "<parameter>--bootstrap</parameter>"
+msgstr "<parameter>--disable-bootstrap</parameter>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: lfs-en/chapter08/gcc.xml
@@ -773,6 +781,12 @@ msgid ""
 "it to significantly reduce the build time.  Remove this option when you "
 "upgrade GCC on a complete LFS system (instead of building LFS)."
 msgstr ""
+"默认情况下，除非正在将 GCC 构建为交叉编译器或正在交叉编译 GCC 本身，GCC 构建"
+"系统会对 GCC 进行三阶段自举。这能够提高 GCC 的稳定性，在更新 GCC 版本时尤为重"
+"要。在 LFS 中，我们使用另一种方法自举 GCC (即<xref linkend='ch-tools-"
+"toolchaintechnotes'/>中介绍的方法)，这里就不需要构建系统本身提供的自举过程。"
+"因此，我们禁用自举，这样可以显著减少所需的构建时间。如果正在完整的 LFS 系统上"
+"升级 GCC (而非构建 LFS)，请自行删除该选项。"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: lfs-en/chapter08/gcc.xml

@@ -490,30 +490,7 @@ msgstr "准备安装 systemd："
 
 #. type: Content of: <sect1><sect2><screen>
 #: lfs-en/chapter08/systemd.xml
-#, fuzzy, no-wrap
-#| msgid ""
-#| "<userinput remap=\"configure\">mkdir -p build\n"
-#| "cd       build\n"
-#| "\n"
-#| "meson setup ..                \\\n"
-#| "      --prefix=/usr           \\\n"
-#| "      --buildtype=release     \\\n"
-#| "      -D default-dnssec=no    \\\n"
-#| "      -D firstboot=false      \\\n"
-#| "      -D install-tests=false  \\\n"
-#| "      -D ldconfig=false       \\\n"
-#| "      -D sysusers=false       \\\n"
-#| "      -D rpmmacrosdir=no      \\\n"
-#| "      -D homed=disabled       \\\n"
-#| "      -D userdb=false         \\\n"
-#| "      -D man=disabled         \\\n"
-#| "      -D mode=release         \\\n"
-#| "      -D pamconfdir=no        \\\n"
-#| "      -D dev-kvm-mode=0660    \\\n"
-#| "      -D nobody-group=nogroup \\\n"
-#| "      -D sysupdate=disabled   \\\n"
-#| "      -D ukify=disabled       \\\n"
-#| "      -D docdir=/usr/share/doc/systemd-&systemd-version;</userinput>"
+#, no-wrap
 msgid ""
 "<userinput remap=\"configure\">mkdir -p build\n"
 "cd       build\n"
@@ -550,7 +527,6 @@ msgstr ""
 "      -D sysusers=false       \\\n"
 "      -D rpmmacrosdir=no      \\\n"
 "      -D homed=disabled       \\\n"
-"      -D userdb=false         \\\n"
 "      -D man=disabled         \\\n"
 "      -D mode=release         \\\n"
 "      -D pamconfdir=no        \\\n"
@@ -658,21 +634,15 @@ msgstr "该选项禁止安装用于 systemd 的 RPM 宏，因为 LFS 并不支�
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: lfs-en/chapter08/systemd.xml
-#, fuzzy
-#| msgid "<parameter>-D man=disabled</parameter>"
 msgid "<parameter>-D homed=disabled</parameter>"
-msgstr "<parameter>-D man=disabled</parameter>"
+msgstr "<parameter>-D homed=disabled</parameter>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: lfs-en/chapter08/systemd.xml
-#, fuzzy
-#| msgid ""
-#| "Remove two daemons with dependencies that do not fit within the scope of "
-#| "LFS."
 msgid ""
 "Remove a daemon which has dependencies that do not fit within the scope of "
 "LFS."
-msgstr "移除两个守护程序，它们的依赖项超出了 LFS 的范围。"
+msgstr "移除一个守护程序，它的依赖项超出了 LFS 的范围。"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: lfs-en/chapter08/systemd.xml
@@ -815,18 +785,14 @@ msgstr "安装手册页："
 #.          component in the path.  
 #. type: Content of: <sect1><sect2><screen>
 #: lfs-en/chapter08/systemd.xml
-#, fuzzy, no-wrap
-#| msgid ""
-#| "<userinput remap=\"install\">tar -xf ../../systemd-man-pages-&systemd-man-version;.tar.xz \\\n"
-#| "    --no-same-owner --strip-components=1     \\\n"
-#| "    -C /usr/share/man</userinput>"
+#, no-wrap
 msgid ""
 "<userinput remap=\"install\">tar -xf ../../systemd-man-pages-&systemd-man-version;.tar.xz \\\n"
 "    --no-same-owner --strip-components=1   \\\n"
 "    -C /usr/share/man</userinput>"
 msgstr ""
 "<userinput remap=\"install\">tar -xf ../../systemd-man-pages-&systemd-man-version;.tar.xz \\\n"
-"    --no-same-owner --strip-components=1     \\\n"
+"    --no-same-owner --strip-components=1   \\\n"
 "    -C /usr/share/man</userinput>"
 
 #. type: Content of: <sect1><sect2><para>
@@ -862,23 +828,6 @@ msgstr "systemd 的内容"
 
 #. type: Content of: <sect1><sect2><segmentedlist><seglistitem><seg>
 #: lfs-en/chapter08/systemd.xml
-#, fuzzy
-#| msgid ""
-#| "busctl, coredumpctl, halt (symlink to systemctl), hostnamectl, init, "
-#| "journalctl, kernel-install, localectl, loginctl, machinectl, mount.ddi "
-#| "(symlink to systemd-dissect), networkctl, oomctl, portablectl, poweroff "
-#| "(symlink to systemctl), reboot (symlink to systemctl), resolvconf "
-#| "(symlink to resolvectl), resolvectl, runlevel (symlink to systemctl), "
-#| "shutdown (symlink to systemctl), systemctl, systemd-ac-power, systemd-"
-#| "analyze, systemd-ask-password, systemd-cat, systemd-cgls, systemd-cgtop, "
-#| "systemd-confext (symlink to systemd-sysext), systemd-creds, systemd-"
-#| "delta, systemd-detect-virt, systemd-dissect, systemd-escape, systemd-"
-#| "hwdb, systemd-id128, systemd-inhibit, systemd-machine-id-setup, systemd-"
-#| "mount, systemd-notify, systemd-nspawn, systemd-path, systemd-repart, "
-#| "systemd-resolve (symlink to resolvectl), systemd-run, systemd-socket-"
-#| "activate, systemd-stdio-bridge, systemd-sysext, systemd-tmpfiles, systemd-"
-#| "tty-ask-password-agent, systemd-umount (symlink to systemd-mount), "
-#| "telinit (symlink to systemctl), timedatectl, and udevadm"
 msgid ""
 "bootctl, busctl, coredumpctl, halt (symlink to systemctl), hostnamectl, "
 "init, journalctl, kernel-install, localectl, loginctl, machinectl, mount.ddi "
@@ -896,21 +845,22 @@ msgid ""
 "tty-ask-password-agent, systemd-vpick, systemd-umount (symlink to systemd-"
 "mount), timedatectl, udevadm, userdbctl, and varlinkctl"
 msgstr ""
-"busctl, coredumpctl, halt (到 systemctl 的符号链接), hostnamectl, init, "
-"journalctl, kernel-install, localectl, loginctl, machinectl, mount.ddi (到 "
-"systemd-dissect 的符号链接), networkctl, oomctl, portablectl, poweroff (到 "
-"systemctl 的符号链接), reboot (到 systemctl 的符号链接), resolvconf (到 "
-"resolvectl 的符号链接), resolvectl, runlevel (到 systemctl 的符号链接), "
-"shutdown (到 systemctl 的符号链接), systemctl, systemd-ac-power, systemd-"
-"analyze, systemd-ask-password, systemd-cat, systemd-cgls, systemd-cgtop, "
-"systemd-confext (到 systemd-sysext 的符号链接), systemd-creds, systemd-"
-"delta, systemd-detect-virt, systemd-dissect, systemd-escape, systemd-hwdb, "
-"systemd-id128, systemd-inhibit, systemd-machine-id-setup, systemd-mount, "
-"systemd-notify, systemd-nspawn, systemd-path, systemd-repart, systemd-"
-"resolve (到 resolvectl 的符号链接), systemd-run, systemd-socket-activate, "
-"systemd-stdio-bridge, systemd-sysext, systemd-tmpfiles, systemd-tty-ask-"
-"password-agent, systemd-umount (到 systemd-mount 的符号链接), telinit (到 "
-"systemctl 的符号链接), timedatectl, 以及 udevadm"
+"busctl, busctl, coredumpctl, halt (到 systemctl 的符号链接), hostnamectl, "
+"init, journalctl, kernel-install, localectl, loginctl, machinectl, mount.ddi "
+"(到 systemd-dissect 的符号链接), networkctl, oomctl, portablectl, poweroff "
+"(到 systemctl 的符号链接), reboot (到 systemctl 的符号链接), resolvconf (到 "
+"resolvectl 的符号链接), resolvectl, run0 (到 systemd-run 的符号链接), "
+"runlevel (到 systemctl 的符号链接), shutdown (到 systemctl 的符号链接), "
+"systemctl, systemd-ac-power, systemd-analyze, systemd-ask-password, systemd-"
+"cat, systemd-cgls, systemd-cgtop, systemd-confext (到 systemd-sysext 的符号链"
+"接), systemd-creds, systemd-delta, systemd-detect-virt, systemd-dissect, "
+"systemd-escape, systemd-hwdb, systemd-id128, systemd-inhibit, systemd-"
+"machine-id-setup, systemd-mount, systemd-notify, systemd-nspawn, systemd-"
+"path, systemd-pty-forward, systemd-repart, systemd-resolve (到 resolvectl 的"
+"符号链接), systemd-run, systemd-socket-activate, systemd-stdio-bridge, "
+"systemd-sysext, systemd-tmpfiles, systemd-tty-ask-password-agent, systemd-"
+"vpick, systemd-umount (到 systemd-mount 的符号链接), timedatectl, udevadm, "
+"userdbctl, 以及 varlinkctl"
 
 #. type: Content of: <sect1><sect2><segmentedlist><seglistitem><seg>
 #: lfs-en/chapter08/systemd.xml
@@ -925,15 +875,6 @@ msgstr ""
 
 #. type: Content of: <sect1><sect2><segmentedlist><seglistitem><seg>
 #: lfs-en/chapter08/systemd.xml
-#, fuzzy
-#| msgid ""
-#| "/etc/binfmt.d, /etc/init.d, /etc/kernel, /etc/modules-load.d, /etc/"
-#| "sysctl.d, /etc/systemd, /etc/tmpfiles.d, /etc/udev, /etc/xdg/systemd, /"
-#| "usr/lib/systemd, /usr/lib/udev, /usr/include/systemd, /usr/lib/binfmt.d, /"
-#| "usr/lib/environment.d, /usr/lib/kernel, /usr/lib/modules-load.d, /usr/lib/"
-#| "sysctl.d, /usr/lib/systemd, /usr/lib/tmpfiles.d, /usr/share/doc/systemd-"
-#| "&systemd-version;, /usr/share/factory, /usr/share/systemd, /var/lib/"
-#| "systemd, and /var/log/journal"
 msgid ""
 "/etc/binfmt.d, /etc/init.d, /etc/kernel, /etc/modules-load.d, /etc/"
 "sysctl.d, /etc/systemd, /etc/tmpfiles.d, /etc/udev, /etc/xdg/systemd, /usr/"
@@ -945,30 +886,26 @@ msgid ""
 msgstr ""
 "/etc/binfmt.d, /etc/init.d, /etc/kernel, /etc/modules-load.d, /etc/"
 "sysctl.d, /etc/systemd, /etc/tmpfiles.d, /etc/udev, /etc/xdg/systemd, /usr/"
-"lib/systemd, /usr/lib/udev, /usr/include/systemd, /usr/lib/binfmt.d, /usr/"
-"lib/environment.d, /usr/lib/kernel, /usr/lib/modules-load.d, /usr/lib/"
-"sysctl.d, /usr/lib/systemd, /usr/lib/tmpfiles.d, /usr/share/doc/systemd-"
-"&systemd-version;, /usr/share/factory, /usr/share/systemd, /var/lib/systemd, "
-"以及 /var/log/journal"
+"include/systemd, /usr/lib/binfmt.d, /usr/lib/credstore, /usr/lib/"
+"environment.d, /usr/lib/kernel, /usr/lib/modprobe.d, /usr/lib/modules-"
+"load.d, /usr/lib/systemd, /usr/lib/udev, /usr/lib/sysctl.d, /usr/lib/"
+"systemd, /usr/lib/tmpfiles.d, /usr/share/doc/systemd-&systemd-version;, /usr/"
+"share/factory, /usr/share/systemd, /var/lib/systemd, 以及 /var/log/journal"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: lfs-en/chapter08/systemd.xml
-#, fuzzy
-#| msgid "<command>oomctl</command>"
 msgid "<command>bootctl</command>"
-msgstr "<command>oomctl</command>"
+msgstr "<command>bootctl</command>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: lfs-en/chapter08/systemd.xml
 msgid "Is used to control EFI firmware boot settings on a system"
-msgstr ""
+msgstr "用于管理系统的 EFI 固件引导设定"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: lfs-en/chapter08/systemd.xml
-#, fuzzy
-#| msgid "bootlogd"
 msgid "bootctl"
-msgstr "bootlogd"
+msgstr "bootctl"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: lfs-en/chapter08/systemd.xml
@@ -1262,20 +1199,18 @@ msgstr "resolvectl"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: lfs-en/chapter08/systemd.xml
-#, fuzzy
-#| msgid "<command>grn</command>"
 msgid "<command>run0</command>"
-msgstr "<command>grn</command>"
+msgstr "<command>run0</command>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: lfs-en/chapter08/systemd.xml
 msgid "Temporary elevates or acquires different privileges, similar to sudo"
-msgstr ""
+msgstr "临时提升或获取不同的权限等级，类似 sudo"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: lfs-en/chapter08/systemd.xml
 msgid "run0"
-msgstr ""
+msgstr "run0"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: lfs-en/chapter08/systemd.xml lfs-en/chapter08/sysvinit.xml
@@ -1648,23 +1583,19 @@ msgstr "systemd-path"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: lfs-en/chapter08/systemd.xml
-#, fuzzy
-#| msgid "<command>systemd-ac-power</command>"
 msgid "<command>systemd-pty-forward</command>"
-msgstr "<command>systemd-ac-power</command>"
+msgstr "<command>systemd-pty-forward</command>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: lfs-en/chapter08/systemd.xml
 msgid ""
 "Is used to run a command with a custom terminal background color or title"
-msgstr ""
+msgstr "用于在运行命令的同时定制终端背景颜色或标题"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: lfs-en/chapter08/systemd.xml
-#, fuzzy
-#| msgid "systemd-ac-power"
 msgid "systemd-pty-forward"
-msgstr "systemd-ac-power"
+msgstr "systemd-pty-forward"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: lfs-en/chapter08/systemd.xml
@@ -1805,24 +1736,18 @@ msgstr "systemd-tty-ask-password-agent"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: lfs-en/chapter08/systemd.xml
-#, fuzzy
-#| msgid "<command>systemd-cat</command>"
 msgid "<command>systemd-vpick</command>"
-msgstr "<command>systemd-cat</command>"
+msgstr "<command>systemd-vpick</command>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: lfs-en/chapter08/systemd.xml
-#, fuzzy
-#| msgid "is used to remove leftover sockets in a directory"
 msgid "Is used to resolve paths to a \".v/\" versioned directory"
-msgstr "用于清理目录中遗留的套接字"
+msgstr "用于将路径解析到名称包含 \".v/\" 版本号的目录"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: lfs-en/chapter08/systemd.xml
-#, fuzzy
-#| msgid "systemd-cat"
 msgid "systemd-vpick"
-msgstr "systemd-cat"
+msgstr "systemd-vpick"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: lfs-en/chapter08/systemd.xml
@@ -1863,45 +1788,33 @@ msgstr "udevadm"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: lfs-en/chapter08/systemd.xml
-#, fuzzy
-#| msgid "<command>userdel</command>"
 msgid "<command>userdbctl</command>"
-msgstr "<command>userdel</command>"
+msgstr "<command>userdbctl</command>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: lfs-en/chapter08/systemd.xml
-#, fuzzy
-#| msgid "Reports a user's group memberships"
 msgid "Is used to inspect users, groups, and group memberships"
-msgstr "报告用户所属的组"
+msgstr "用于查看用户，组，以及组中包含的用户等信息"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: lfs-en/chapter08/systemd.xml
-#, fuzzy
-#| msgid "userdel"
 msgid "userdbctl"
-msgstr "userdel"
+msgstr "userdbctl"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: lfs-en/chapter08/systemd.xml
-#, fuzzy
-#| msgid "<command>loginctl</command>"
 msgid "<command>varlinkctl</command>"
-msgstr "<command>loginctl</command>"
+msgstr "<command>varlinkctl</command>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: lfs-en/chapter08/systemd.xml
-#, fuzzy
-#| msgid "Is used to chat with another user"
 msgid "Is used to interact with and invoke Varlink services"
-msgstr "用于和其他用户聊天"
+msgstr "用于和 Varlink 服务交互或启动它们"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: lfs-en/chapter08/systemd.xml
-#, fuzzy
-#| msgid "hardlink"
 msgid "varlinkctl"
-msgstr "hardlink"
+msgstr "varlinkctl"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: lfs-en/chapter08/systemd.xml

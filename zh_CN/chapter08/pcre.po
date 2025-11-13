@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: \"Linux From Scratch\" 11.3\n"
 "Report-Msgid-Bugs-To: lfs-dev@lists.linuxfromscratch.org\n"
 "POT-Creation-Date: 2025-11-13 15:15+0800\n"
-"PO-Revision-Date: 2025-11-13 15:15+0800\n"
+"PO-Revision-Date: 2025-09-05 23:55+0800\n"
 "Last-Translator: Automatically generated\n"
 "Language-Team: none\n"
 "Language: zh_CN\n"
@@ -71,13 +71,12 @@ msgstr ""
 #: lfs-en/appendices/dependencies.xml lfs-en/chapter08/pcre.xml
 #: lfs-en/prologue/why.xml
 msgid "Pcre2"
-msgstr ""
+msgstr "Pcre2"
 
 #. type: Content of: <sect1><title>
 #: lfs-en/chapter01/whatsnew.xml lfs-en/chapter08/pcre.xml
-#, fuzzy
 msgid "Pcre2-&pcre2-version;"
-msgstr "IPRoute2-&iproute2-version;"
+msgstr "Pcre2-&pcre2-version;"
 
 #. type: Content of: <sect1><sect2><segmentedlist><segtitle>
 #: lfs-en/chapter05/binutils-pass1.xml lfs-en/chapter05/gcc-pass1.xml
@@ -516,73 +515,49 @@ msgstr "运行命令以测试编译结果："
 
 #. type: Content of: <sect1><sect1info><address>
 #: lfs-en/chapter08/pcre.xml
-#, fuzzy, no-wrap
-#| msgid "&iproute2-url;"
+#, no-wrap
 msgid "&pcre2-url;"
-msgstr "&iproute2-url;"
+msgstr "&pcre2-url;"
 
 #. type: Content of: <sect1><sect1info>
 #: lfs-en/chapter08/pcre.xml
-#, fuzzy
-#| msgid ""
-#| "<productname>mpc</productname> <productnumber>&mpc-version;</"
-#| "productnumber> <placeholder type=\"address\" id=\"0\"/>"
 msgid ""
 "<productname>pcre2</productname> <productnumber>&pcre2-version;</"
 "productnumber> <placeholder type=\"address\" id=\"0\"/>"
 msgstr ""
-"<productname>mpc</productname> <productnumber>&mpc-version;</productnumber> "
-"<placeholder type=\"address\" id=\"0\"/>"
+"<productname>pcre2</productname> <productnumber>&pcre2-version;</"
+"productnumber> <placeholder type=\"address\" id=\"0\"/>"
 
 #. type: Content of: <sect1><sect2><para>
 #: lfs-en/chapter08/pcre.xml
 msgid ""
 "The pcre2 package contains a new generation of the Perl Compatible Regular "
 "Expression libraries."
-msgstr ""
+msgstr "Pcre2 软件包提供了新一代的和 Perl 兼容的正则表达式库。"
 
 #. type: Content of: <sect1><sect2><segmentedlist><seglistitem><seg>
 #: lfs-en/chapter08/pcre.xml
-#, fuzzy
-#| msgid "&mpc-fin-sbu;"
 msgid "&pcre2-fin-sbu;"
-msgstr "&mpc-fin-sbu;"
+msgstr "&pcre2-fin-sbu;"
 
 #. type: Content of: <sect1><sect2><segmentedlist><seglistitem><seg>
 #: lfs-en/chapter08/pcre.xml
-#, fuzzy
-#| msgid "&mpc-fin-du;"
 msgid "&pcre2-fin-du;"
-msgstr "&mpc-fin-du;"
+msgstr "&pcre2-fin-du;"
 
 #. type: Content of: <sect1><sect2><title>
 #: lfs-en/chapter08/pcre.xml
-#, fuzzy
-#| msgid "Installation of Perl"
 msgid "Installation of Pcre2"
-msgstr "安装 Perl"
+msgstr "安装 Pcre2"
 
 #. type: Content of: <sect1><sect2><para>
 #: lfs-en/chapter08/pcre.xml
-#, fuzzy
-#| msgid "Prepare Grep for compilation:"
 msgid "Prepare pcre2 for compilation:"
-msgstr "准备编译 Grep："
+msgstr "准备编译 pcre2："
 
 #. type: Content of: <sect1><sect2><screen>
 #: lfs-en/chapter08/pcre.xml
-#, fuzzy, no-wrap
-#| msgid ""
-#| "<userinput remap=\"configure\">./configure --prefix=/usr                         \\\n"
-#| "            --docdir=/usr/share/doc/man-db-&man-db-version; \\\n"
-#| "            --sysconfdir=/etc                     \\\n"
-#| "            --disable-setuid                      \\\n"
-#| "            --enable-cache-owner=bin              \\\n"
-#| "            --with-browser=/usr/bin/lynx          \\\n"
-#| "            --with-vgrind=/usr/bin/vgrind         \\\n"
-#| "            --with-grap=/usr/bin/grap             \\\n"
-#| "            --with-systemdtmpfilesdir=            \\\n"
-#| "            --with-systemdsystemunitdir=</userinput>"
+#, no-wrap
 msgid ""
 "<userinput remap=\"configure\">./configure --prefix=/usr                       \\\n"
 "            --docdir=/usr/share/doc/pcre2-&pcre2-version; \\\n"
@@ -595,23 +570,21 @@ msgid ""
 "            --enable-pcre2test-libreadline      \\\n"
 "            --disable-static</userinput>"
 msgstr ""
-"<userinput remap=\"configure\">./configure --prefix=/usr                         \\\n"
-"            --docdir=/usr/share/doc/man-db-&man-db-version; \\\n"
-"            --sysconfdir=/etc                     \\\n"
-"            --disable-setuid                      \\\n"
-"            --enable-cache-owner=bin              \\\n"
-"            --with-browser=/usr/bin/lynx          \\\n"
-"            --with-vgrind=/usr/bin/vgrind         \\\n"
-"            --with-grap=/usr/bin/grap             \\\n"
-"            --with-systemdtmpfilesdir=            \\\n"
-"            --with-systemdsystemunitdir=</userinput>"
+"<userinput remap=\"configure\">./configure --prefix=/usr                       \\\n"
+"            --docdir=/usr/share/doc/pcre2-&pcre2-version; \\\n"
+"            --enable-unicode                    \\\n"
+"            --enable-jit                        \\\n"
+"            --enable-pcre2-16                   \\\n"
+"            --enable-pcre2-32                   \\\n"
+"            --enable-pcre2grep-libz             \\\n"
+"            --enable-pcre2grep-libbz2           \\\n"
+"            --enable-pcre2test-libreadline      \\\n"
+"            --disable-static</userinput>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: lfs-en/chapter08/pcre.xml
-#, fuzzy
-#| msgid "<parameter>--enable-cxx</parameter>"
 msgid "<parameter>--enable-unicode</parameter>"
-msgstr "<parameter>--enable-cxx</parameter>"
+msgstr "<parameter>--enable-unicode</parameter>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: lfs-en/chapter08/pcre.xml
@@ -619,147 +592,115 @@ msgid ""
 "This option enables Unicode support and includes the functions for handling "
 "UTF-8/16/32 character strings in the library."
 msgstr ""
+"该选项启用 Unicode 支持，使得编译得到的库包含处理以 UTF-8/16/32 编码的字符串"
+"的函数。"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: lfs-en/chapter08/pcre.xml
-#, fuzzy
-#| msgid "<parameter>--enable-cxx</parameter>"
 msgid "<parameter>--enable-jit</parameter>"
-msgstr "<parameter>--enable-cxx</parameter>"
+msgstr "<parameter>--enable-jit</parameter>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: lfs-en/chapter08/pcre.xml
 msgid ""
 "This option enables Just-in-time compiling, which can greatly speed up "
 "pattern matching."
-msgstr ""
+msgstr "该选项启用即时编译，这样能显著提高模式匹配的速率。"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: lfs-en/chapter08/pcre.xml
-#, fuzzy
-#| msgid "<parameter>--enable-cxx</parameter>"
 msgid "<parameter>--enable-pcre2-16</parameter>"
-msgstr "<parameter>--enable-cxx</parameter>"
+msgstr "<parameter>--enable-pcre2-16</parameter>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: lfs-en/chapter08/pcre.xml
-#, fuzzy
-#| msgid "This parameter enables C++ support"
 msgid "This option enables 16 bit character support."
-msgstr "该参数启用 C++ 支持"
+msgstr "该选项启用 16 位字符类型支持。"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: lfs-en/chapter08/pcre.xml
-#, fuzzy
-#| msgid "<parameter>--enable-cxx</parameter>"
 msgid "<parameter>--enable-pcre2-32</parameter>"
-msgstr "<parameter>--enable-cxx</parameter>"
+msgstr "<parameter>--enable-pcre2-32</parameter>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: lfs-en/chapter08/pcre.xml
-#, fuzzy
-#| msgid "This parameter enables C++ support"
 msgid "This option enables 32 bit character support."
-msgstr "该参数启用 C++ 支持"
+msgstr "该选项启用 32 位字符类型支持。"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: lfs-en/chapter08/pcre.xml
-#, fuzzy
-#| msgid "<parameter>--enable-elf-shlibs</parameter>"
 msgid "<parameter>--enable-pcre2grep-libz</parameter>"
-msgstr "<parameter>--enable-elf-shlibs</parameter>"
+msgstr "<parameter>--enable-pcre2grep-libz</parameter>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: lfs-en/chapter08/pcre.xml
 msgid "This option adds support for reading .gz compressed files to pcre2grep."
-msgstr ""
+msgstr "该选项为 pcre2grep 增加读取 .gz 格式压缩文件的功能。"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: lfs-en/chapter08/pcre.xml
-#, fuzzy
-#| msgid "<parameter>--enable-elf-shlibs</parameter>"
 msgid "<parameter>--enable-pcre2grep-libbz2</parameter>"
-msgstr "<parameter>--enable-elf-shlibs</parameter>"
+msgstr "<parameter>--enable-pcre2grep-libbz2</parameter>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: lfs-en/chapter08/pcre.xml
 msgid ""
 "This option adds support for reading .bz2 compressed files to pcre2grep."
-msgstr ""
+msgstr "该选项为 pcre2grep 增加读取 .bz2 格式压缩文件的功能。"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: lfs-en/chapter08/pcre.xml
-#, fuzzy
-#| msgid "<parameter>--enable-pc-files</parameter>"
 msgid "<parameter>--enable-pcre2test-libreadline</parameter>"
-msgstr "<parameter>--enable-pc-files</parameter>"
+msgstr "<parameter>--enable-pcre2test-libreadline</parameter>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: lfs-en/chapter08/pcre.xml
-#, fuzzy
-#| msgid ""
-#| "This option disables generating the man pages which requires an external "
-#| "program."
 msgid ""
 "This option adds line editing and history features to the pcre2test program."
-msgstr "该选项禁止生成手册页，因为生成手册页需要不属于 LFS 的程序。"
+msgstr "该选项为 pcre2test 程序增加命令行编辑和历史记录功能。"
 
 #. type: Content of: <sect1><sect2><title>
 #: lfs-en/chapter08/pcre.xml
-#, fuzzy
-#| msgid "Contents of Perl"
 msgid "Contents of Pcre2"
-msgstr "Perl 的内容"
+msgstr "Pcre2 的内容"
 
 #. type: Content of: <sect1><sect2><segmentedlist><seglistitem><seg>
 #: lfs-en/chapter08/pcre.xml
 msgid "pcre2grep and pcre2test"
-msgstr ""
+msgstr "pcre2grep 和 pcre2test"
 
 #. type: Content of: <sect1><sect2><segmentedlist><seglistitem><seg>
 #: lfs-en/chapter08/pcre.xml
-#, fuzzy
-#| msgid "libcom_err.so, libe2p.so, libext2fs.so, and libss.so"
 msgid "libpcre2-8.so, libpcre2-16.so, libpcre2-32.so, and libpcre2-posix.so"
-msgstr "libcom_err.so, libe2p.so, libext2fs.so, 以及 libss.so"
+msgstr "libpcre2-8.so, libpcre2-16.so, libpcre2-32.so, 以及 libpcre2-posix.so"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: lfs-en/chapter08/pcre.xml
-#, fuzzy
-#| msgid "<command>pgrep</command>"
 msgid "<command>pcre2grep</command>"
-msgstr "<command>pgrep</command>"
+msgstr "<command>pcre2grep</command>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: lfs-en/chapter08/pcre.xml
 msgid ""
 "is a version of grep that understands Perl compatible regular expressions"
-msgstr ""
+msgstr "是 grep 的一个变式版本，能够支持和 Perl 兼容的正则表达式。"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: lfs-en/chapter08/pcre.xml
-#, fuzzy
-#| msgid "egrep"
 msgid "pcre2grep"
-msgstr "egrep"
+msgstr "pcre2grep"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: lfs-en/chapter08/pcre.xml
-#, fuzzy
-#| msgid "<command>test</command>"
 msgid "<command>pcre2test</command>"
-msgstr "<command>test</command>"
+msgstr "<command>pcre2test</command>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: lfs-en/chapter08/pcre.xml
-#, fuzzy
-#| msgid "Perl Compatible Regular Expression"
 msgid "can test a Perl compatible regular expression"
-msgstr "Perl 兼容的正则表达式 (Perl Compatible Regular Expression)"
+msgstr "用于测试和 Perl 兼容的正则表达式"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: lfs-en/chapter08/pcre.xml
-#, fuzzy
-#| msgid "runtest"
 msgid "pcre2test"
-msgstr "runtest"
+msgstr "pcre2test"

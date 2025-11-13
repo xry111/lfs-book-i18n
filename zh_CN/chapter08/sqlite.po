@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: \"Linux From Scratch\" 11.3\n"
 "Report-Msgid-Bugs-To: lfs-dev@lists.linuxfromscratch.org\n"
 "POT-Creation-Date: 2025-11-13 15:15+0800\n"
-"PO-Revision-Date: 2025-11-13 15:15+0800\n"
+"PO-Revision-Date: 2025-09-05 23:55+0800\n"
 "Last-Translator: Automatically generated\n"
 "Language-Team: none\n"
 "Language: zh_CN\n"
@@ -458,35 +458,28 @@ msgstr "该软件包不包含测试套件。"
 
 #. type: Content of: <sect1><sect1info><address>
 #: lfs-en/chapter08/sqlite.xml
-#, fuzzy, no-wrap
-#| msgid "&sed-url;"
+#, no-wrap
 msgid "&sqlite-url;"
-msgstr "&sed-url;"
+msgstr "&sqlite-url;"
 
 #. type: Content of: <sect1><sect1info>
 #: lfs-en/chapter08/sqlite.xml
-#, fuzzy
-#| msgid ""
-#| "<productname>sed</productname> <productnumber>&sed-version;</"
-#| "productnumber> <placeholder type=\"address\" id=\"0\"/>"
 msgid ""
 "<productname>sqlite</productname> <productnumber>&sqlite-version;</"
 "productnumber> <placeholder type=\"address\" id=\"0\"/>"
 msgstr ""
-"<productname>sed</productname> <productnumber>&sed-version;</productnumber> "
-"<placeholder type=\"address\" id=\"0\"/>"
+"<productname>sqlite</productname> <productnumber>&sqlite-version;</"
+"productnumber> <placeholder type=\"address\" id=\"0\"/>"
 
 #. type: Content of: <sect1><title>
 #: lfs-en/chapter08/sqlite.xml
-#, fuzzy
-#| msgid "Sed-&sed-version;"
 msgid "Sqlite-&sqlite-version;"
-msgstr "Sed-&sed-version;"
+msgstr "Sqlite-&sqlite-version;"
 
 #. type: Content of: <sect1><itemizedlist><listitem><para>
 #: lfs-en/chapter08/sqlite.xml lfs-en/prologue/why.xml
 msgid "Sqlite"
-msgstr ""
+msgstr "Sqlite"
 
 #. type: Content of: <sect1><sect2><para>
 #: lfs-en/chapter08/sqlite.xml
@@ -494,60 +487,43 @@ msgid ""
 "The Sqlite package is a software library that implements a self-contained, "
 "serverless, zero-configuration, transactional SQL database engine."
 msgstr ""
+"Sqlite 软件包是一个程序库，它实现了一个独立的，不需服务器和额外配置的，支持事"
+"务的 SQL 数据库引擎。"
 
 #. type: Content of: <sect1><sect2><segmentedlist><seglistitem><seg>
 #: lfs-en/chapter08/sqlite.xml
-#, fuzzy
-#| msgid "&sed-fin-sbu;"
 msgid "&sqlite-fin-sbu;"
-msgstr "&sed-fin-sbu;"
+msgstr "&sqlite-fin-sbu;"
 
 #. type: Content of: <sect1><sect2><segmentedlist><seglistitem><seg>
 #: lfs-en/chapter08/sqlite.xml
-#, fuzzy
-#| msgid "&sed-fin-du;"
 msgid "&sqlite-fin-du;"
-msgstr "&sed-fin-du;"
+msgstr "&sqlite-fin-du;"
 
 #. type: Content of: <sect1><sect2><title>
 #: lfs-en/chapter08/sqlite.xml
-#, fuzzy
-#| msgid "Installation of Sed"
 msgid "Installation of Sqlite"
-msgstr "安装 Sed"
+msgstr "安装 Sqlite"
 
 #. type: Content of: <sect1><sect2><para>
 #: lfs-en/chapter08/sqlite.xml
-#, fuzzy
-#| msgid "If desired, install the documentation:"
 msgid "Unpack the documentation:"
-msgstr "如果需要，安装该软件包的文档："
+msgstr "解压该软件包的文档："
 
 #. type: Content of: <sect1><sect2><screen>
 #: lfs-en/chapter08/sqlite.xml
-#, fuzzy, no-wrap
-#| msgid "<userinput remap=\"pre\">patch -Np1 -i ../glibc-&glibc-version;-fhs-1.patch</userinput>"
+#, no-wrap
 msgid "<userinput remap=\"pre\">tar -xf ../sqlite-doc-&sqlite-doc-version;.tar.xz</userinput>"
-msgstr "<userinput remap=\"pre\">patch -Np1 -i ../glibc-&glibc-version;-fhs-1.patch</userinput>"
+msgstr "<userinput remap=\"pre\">tar -xf ../sqlite-doc-&sqlite-doc-version;.tar.xz</userinput>"
 
 #. type: Content of: <sect1><sect2><para>
 #: lfs-en/chapter08/sqlite.xml
-#, fuzzy
-#| msgid "Prepare Xz for compilation with:"
 msgid "Prepare Sqlite for compilation with:"
-msgstr "准备编译 Xz："
+msgstr "准备编译 Sqlite："
 
 #. type: Content of: <sect1><sect2><screen>
 #: lfs-en/chapter08/sqlite.xml
-#, fuzzy, no-wrap
-#| msgid ""
-#| "<userinput remap=\"configure\">../configure --prefix=/usr       \\\n"
-#| "             --sysconfdir=/etc   \\\n"
-#| "             --enable-elf-shlibs \\\n"
-#| "             --disable-libblkid  \\\n"
-#| "             --disable-libuuid   \\\n"
-#| "             --disable-uuidd     \\\n"
-#| "             --disable-fsck</userinput>"
+#, no-wrap
 msgid ""
 "<userinput remap=\"configure\">./configure --prefix=/usr     \\\n"
 "            --disable-static  \\\n"
@@ -557,35 +533,32 @@ msgid ""
 "                      -D SQLITE_ENABLE_DBSTAT_VTAB=1     \\\n"
 "                      -D SQLITE_SECURE_DELETE=1\"</userinput>"
 msgstr ""
-"<userinput remap=\"configure\">../configure --prefix=/usr       \\\n"
-"             --sysconfdir=/etc   \\\n"
-"             --enable-elf-shlibs \\\n"
-"             --disable-libblkid  \\\n"
-"             --disable-libuuid   \\\n"
-"             --disable-uuidd     \\\n"
-"             --disable-fsck</userinput>"
+"<userinput remap=\"configure\">./configure --prefix=/usr     \\\n"
+"            --disable-static  \\\n"
+"            --enable-fts{4,5} \\\n"
+"            CPPFLAGS=\"-D SQLITE_ENABLE_COLUMN_METADATA=1 \\\n"
+"                      -D SQLITE_ENABLE_UNLOCK_NOTIFY=1   \\\n"
+"                      -D SQLITE_ENABLE_DBSTAT_VTAB=1     \\\n"
+"                      -D SQLITE_SECURE_DELETE=1\"</userinput>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: lfs-en/chapter08/sqlite.xml
-#, fuzzy
-#| msgid "<parameter>--enable-cxx</parameter>"
 msgid "<parameter>--enable-fts{4,5}</parameter>"
-msgstr "<parameter>--enable-cxx</parameter>"
+msgstr "<parameter>--enable-fts{4,5}</parameter>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: lfs-en/chapter08/sqlite.xml
 msgid ""
 "These switches enable support for version 4 and 5 of the full text search "
 "(FTS) extension."
-msgstr ""
+msgstr "启用全文搜索 (FTS) 扩展的第四、第五两个版本。"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: lfs-en/chapter08/sqlite.xml
-#, fuzzy
-#| msgid "<parameter>LDFLAGS_FOR_TARGET=...</parameter>"
 msgid ""
 "<parameter>CPPFLAGS=\"-D SQLITE_ENABLE_COLUMN_METADATA=1 ...</parameter>"
-msgstr "<parameter>LDFLAGS_FOR_TARGET=...</parameter>"
+msgstr ""
+"<parameter>CPPFLAGS=\"-D SQLITE_ENABLE_COLUMN_METADATA=1 ...</parameter>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: lfs-en/chapter08/sqlite.xml
@@ -596,97 +569,76 @@ msgid ""
 "For further information on what can be specified see https://www.sqlite.org/"
 "compile.html."
 msgstr ""
+"一些应用程序需要打开这些额外选项。它们只能通过 CFLAGS 或 CPPFLAGS 打开，我们"
+"使用后者，这样 CFLAGS 的默认值 (或者用户指定的值) 就不会受到影响。阅读 "
+"https://www.sqlite.org/compile.html 以详细了解这些选项。"
 
 #. type: Content of: <sect1><sect2><screen>
 #: lfs-en/chapter08/sqlite.xml
-#, fuzzy, no-wrap
-#| msgid "<userinput remap=\"make\">make</userinput>"
+#, no-wrap
 msgid "<userinput remap=\"make\">make LDFLAGS.rpath=\"\"</userinput>"
-msgstr "<userinput remap=\"make\">make</userinput>"
+msgstr "<userinput remap=\"make\">make LDFLAGS.rpath=\"\"</userinput>"
 
 #. type: Content of: <sect1><sect2><para>
 #: lfs-en/chapter08/sqlite.xml
-#, fuzzy
-#| msgid ""
-#| "Prevent hard coding library search paths (rpath) into the shared "
-#| "libraries.  This package does not need rpath for an installation into the "
-#| "standard location, and rpath may sometimes cause unwanted effects or even "
-#| "security issues:"
 msgid ""
 "The <parameter>LDFLAGS.rpath=\"\"</parameter> option prevents hard coding "
 "library search paths (rpath) into the shared library.  This package does not "
 "need rpath for an installation into the standard location, and rpath may "
 "sometimes cause unwanted effects or even security issues."
 msgstr ""
-"下面防止在共享库中硬编码库文件搜索路径 (rpath)。该软件包在安装到标准位置时并"
-"不需要 rpath，而且 rpath 在一些情况下会产生我们不希望的副作用，甚至导致安全问"
-"题："
+"<parameter>LDFLAGS.rpath=\"\"</parameter> 选项防止在共享库中硬编码库文件搜索"
+"路径 (rpath)。该软件包在安装到标准位置时并不需要 rpath，而且 rpath 在一些情况"
+"下会产生我们不希望的副作用，甚至导致安全问题。"
 
 #. type: Content of: <sect1><sect2><screen>
 #: lfs-en/chapter08/sqlite.xml
-#, fuzzy, no-wrap
-#| msgid ""
-#| "<userinput remap=\"install\">make install\n"
-#| "install -d -m755           /usr/share/doc/sed-&sed-version;\n"
-#| "install -m644 doc/sed.html /usr/share/doc/sed-&sed-version;</userinput>"
+#, no-wrap
 msgid ""
 "<userinput remap=\"install\">install -v -m755 -d /usr/share/doc/sqlite-&sqlite-short-version;\n"
 "cp -v -R sqlite-doc-&sqlite-doc-version;/* /usr/share/doc/sqlite-&sqlite-short-version;</userinput>"
 msgstr ""
-"<userinput remap=\"install\">make install\n"
-"install -d -m755           /usr/share/doc/sed-&sed-version;\n"
-"install -m644 doc/sed.html /usr/share/doc/sed-&sed-version;</userinput>"
+"<userinput remap=\"install\">install -v -m755 -d /usr/share/doc/sqlite-&sqlite-short-version;\n"
+"cp -v -R sqlite-doc-&sqlite-doc-version;/* /usr/share/doc/sqlite-&sqlite-short-version;</userinput>"
 
 #. type: Content of: <sect1><sect2><title>
 #: lfs-en/chapter08/sqlite.xml
-#, fuzzy
-#| msgid "Contents of Sed"
 msgid "Contents of Sqlite"
-msgstr "Sed 的内容"
+msgstr "Sqlite 的内容"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: lfs-en/chapter08/sqlite.xml
 msgid "sqlite3"
-msgstr ""
+msgstr "sqlite3"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: lfs-en/chapter08/sqlite.xml
-#, fuzzy
-#| msgid "libssl.so"
 msgid "libsqlite3.so"
-msgstr "libssl.so"
+msgstr "libsqlite3.so"
 
 #. type: Content of: <sect1><sect2><segmentedlist><seglistitem><seg>
 #: lfs-en/chapter08/sqlite.xml
-#, fuzzy
-#| msgid "/usr/share/doc/sed-&sed-version;"
 msgid "/usr/share/doc/sqlite-&sqlite-short-version;"
-msgstr "/usr/share/doc/sed-&sed-version;"
+msgstr "/usr/share/doc/sqlite-&sqlite-short-version;"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: lfs-en/chapter08/sqlite.xml
-#, fuzzy
-#| msgid "<command>split</command>"
 msgid "<command>sqlite3</command>"
-msgstr "<command>split</command>"
+msgstr "<command>sqlite3</command>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: lfs-en/chapter08/sqlite.xml
 msgid ""
 "is a terminal-based front-end to the SQLite library that can evaluate "
 "queries interactively and display the results"
-msgstr ""
+msgstr "是基于终端的 SQLite 库前端，可以交互式地执行查询并显示结果"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: lfs-en/chapter08/sqlite.xml
-#, fuzzy
-#| msgid "<filename class=\"libraryfile\">libssl.so</filename>"
 msgid "<filename class=\"libraryfile\">libsqlite3.so</filename>"
-msgstr "<filename class=\"libraryfile\">libssl.so</filename>"
+msgstr "<filename class=\"libraryfile\">libsqlite3.so</filename>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: lfs-en/chapter08/sqlite.xml
-#, fuzzy
-#| msgid "Contains the foreign function interface API functions"
 msgid "contains the SQLite API functions"
-msgstr "包含跨语言函数接口 API 函数"
+msgstr "包含 SQLite API 函数"
