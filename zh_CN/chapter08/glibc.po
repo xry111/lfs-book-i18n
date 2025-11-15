@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Linux From Scratch 11.0\n"
 "Report-Msgid-Bugs-To: lfs-dev@lists.linuxfromscratch.org\n"
-"POT-Creation-Date: 2025-11-13 15:15+0800\n"
+"POT-Creation-Date: 2025-11-16 02:36+0800\n"
 "PO-Revision-Date: 2021-08-21 11:33+0800\n"
 "Last-Translator: Xi Ruoyao <xry111@xry111.site>\n"
 "Language-Team: none\n"
@@ -620,6 +620,18 @@ msgstr "&glibc-fin-du;"
 
 #. type: Content of: <sect1><sect2><para>
 #: lfs-en/chapter08/glibc.xml
+msgid "First, apply some changes from upstream:"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><screen>
+#: lfs-en/chapter08/glibc.xml
+#, fuzzy, no-wrap
+#| msgid "<userinput remap=\"pre\">patch -Np1 -i ../&glibc-fhs-patch;</userinput>"
+msgid "<userinput remap=\"pre\">patch -Np1 -i ../&glibc-upstream-patch;</userinput>"
+msgstr "<userinput remap=\"pre\">patch -Np1 -i ../&glibc-fhs-patch;</userinput>"
+
+#. type: Content of: <sect1><sect2><para>
+#: lfs-en/chapter08/glibc.xml
 msgid ""
 "Some of the Glibc programs use the non-FHS compliant <filename "
 "class=\"directory\">/var/db</filename> directory to store their runtime "
@@ -766,16 +778,6 @@ msgid ""
 "<emphasis>io/tst-lchmod</emphasis> is known to fail in the LFS chroot "
 "environment."
 msgstr "已知 <emphasis>io/tst-lchmod</emphasis> 在 LFS chroot 环境中会失败。"
-
-#. type: Content of: <sect1><sect2><itemizedlist><listitem><para>
-#: lfs-en/chapter08/glibc.xml
-msgid ""
-"<emphasis>misc/tst-preadvwritev2</emphasis> and <emphasis>misc/tst-"
-"preadvwritev64v2</emphasis> are known to fail if the host kernel is "
-"Linux-6.14 or later."
-msgstr ""
-"已知 <emphasis>misc/tst-preadvwritev2</emphasis> 和 <emphasis>misc/tst-"
-"preadvwritev64v2</emphasis> 在宿主内核为 Linux-6.14 或更高版本时可能失败。"
 
 #. type: Content of: <sect1><sect2><itemizedlist><listitem><para>
 #: lfs-en/chapter08/glibc.xml

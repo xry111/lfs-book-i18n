@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Linux From Scratch 11.0\n"
 "Report-Msgid-Bugs-To: lfs-dev@lists.linuxfromscratch.org\n"
-"POT-Creation-Date: 2025-11-13 15:15+0800\n"
+"POT-Creation-Date: 2025-11-16 02:36+0800\n"
 "PO-Revision-Date: 2022-01-16 00:53+0800\n"
 "Last-Translator: Xi Ruoyao <xry111@xry111.site>\n"
 "Language-Team: none\n"
@@ -35,28 +35,6 @@ msgid ""
 msgstr ""
 "除了软件包外，我们还需要一些补丁。有些补丁解决了本应由维护者修复的问题，有些"
 "则对软件包进行微小的修改，使得它们更容易使用。构建 LFS 系统需要下列补丁："
-
-#. type: Content of: <sect1><variablelist><varlistentry><term>
-#: lfs-en/chapter03/patches.xml
-msgid ""
-"Binutils LoongArch Fix Patch - <token>&binutils-loongarch-patch-size;</"
-"token>:"
-msgstr ""
-"Binutils LoongArch 修复补丁 - <token>&binutils-loongarch-patch-size;</token>:"
-
-#. type: Content of: <sect1><variablelist><varlistentry><listitem><para>
-#: lfs-en/chapter03/patches.xml
-msgid ""
-"Download: <ulink url=\"&lfs-root;~xry111/lfs/patches/&binutils-loongarch-"
-"patch;\"/>"
-msgstr ""
-"下载地址：<ulink url=\"&lfs-root;~xry111/lfs/patches/&binutils-loongarch-"
-"patch;\"/>"
-
-#. type: Content of: <sect1><variablelist><varlistentry><listitem><para>
-#: lfs-en/chapter03/patches.xml
-msgid "MD5 sum: <literal>&binutils-loongarch-patch-md5;</literal>"
-msgstr "MD5 校验和：<literal>&binutils-loongarch-patch-md5;</literal>"
 
 #. type: Content of: <sect1><variablelist><varlistentry><term>
 #: lfs-en/chapter03/patches.xml
@@ -104,6 +82,27 @@ msgstr "下载地址：<ulink url=\"&patches-root;&expect-gcc15-patch;\"/>"
 #: lfs-en/chapter03/patches.xml
 msgid "MD5 sum: <literal>&expect-gcc15-patch-md5;</literal>"
 msgstr "MD5 校验和：<literal>&expect-gcc15-patch-md5;</literal>"
+
+#. type: Content of: <sect1><variablelist><varlistentry><term>
+#: lfs-en/chapter03/patches.xml
+#, fuzzy
+#| msgid "Glibc FHS Patch - <token>&glibc-fhs-patch-size;</token>:"
+msgid "Glibc Upstream Fix Patch - <token>&glibc-upstream-patch-size;</token>:"
+msgstr "Glibc FHS 补丁 - <token>&glibc-fhs-patch-size;</token>:"
+
+#. type: Content of: <sect1><variablelist><varlistentry><listitem><para>
+#: lfs-en/chapter03/patches.xml
+#, fuzzy
+#| msgid "Download: <ulink url=\"&patches-root;&glibc-fhs-patch;\"/>"
+msgid "Download: <ulink url=\"&patches-root;&glibc-upstream-patch;\"/>"
+msgstr "下载地址：<ulink url=\"&patches-root;&glibc-fhs-patch;\"/>"
+
+#. type: Content of: <sect1><variablelist><varlistentry><listitem><para>
+#: lfs-en/chapter03/patches.xml
+#, fuzzy
+#| msgid "MD5 sum: <literal>&glibc-fhs-patch-md5;</literal>"
+msgid "MD5 sum: <literal>&glibc-upstream-patch-md5;</literal>"
+msgstr "MD5 校验和：<literal>&glibc-fhs-patch-md5;</literal>"
 
 #. type: Content of: <sect1><variablelist><varlistentry><term>
 #: lfs-en/chapter03/patches.xml
