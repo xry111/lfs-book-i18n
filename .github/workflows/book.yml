@@ -264,7 +264,7 @@ jobs:
       - name: Untar XML
         run: tar --strip-components=1 -xf book.tar
       - name: Cache Fonts
-        uses: actions/cache@v4
+        uses: actions/cache@v5
         with:
           path: fonts/
           key: ${{ hashFiles('noto-cjk-commit', 'source-han-mono-commit') }}
@@ -318,7 +318,7 @@ jobs:
       - name: Untar XML
         run: tar --strip-components=1 -xf book.tar
       - name: Cache Fonts
-        uses: actions/cache@v4
+        uses: actions/cache@v5
         with:
           path: fonts/
           key: ${{ hashFiles('noto-cjk-commit', 'source-han-mono-commit') }}
