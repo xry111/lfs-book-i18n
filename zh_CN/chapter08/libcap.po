@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Linux From Scratch 11.4\n"
 "Report-Msgid-Bugs-To: lfs-dev@lists.linuxfromscratch.org\n"
-"POT-Creation-Date: 2025-11-10 14:15+0800\n"
+"POT-Creation-Date: 2025-12-24 15:38+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: Xi Ruoyao <xry111@xry111.site>\n"
 "Language-Team: none\n"
@@ -450,6 +450,18 @@ msgstr "&libcap-fin-du;"
 #: lfs-en/chapter08/libcap.xml
 msgid "Installation of Libcap"
 msgstr "安装 Libcap"
+
+#. type: Content of: <sect1><sect2><note><para>
+#: lfs-en/chapter08/libcap.xml
+msgid ""
+"If updating this package on an existing system and the go compiler is "
+"installed, prevent a build error by using <command>export GOLANG=no</"
+"command> before running the commands below.  Be sure to unset <envar>GOLANG</"
+"envar> after installation is complete."
+msgstr ""
+"如果正在现有的 LFS 系统升级该软件包，而且系统安装了 go 编译器，需要在下列命令"
+"前执行 <command>export GOLANG=no</command> 以防止构建错误。在安装该软件包后，"
+"记得取消设定 <envar>GOLANG</envar> 环境变量。"
 
 #. type: Content of: <sect1><sect2><para>
 #: lfs-en/chapter08/libcap.xml
