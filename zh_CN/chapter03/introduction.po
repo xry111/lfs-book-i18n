@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Linux From Scratch 11.4\n"
 "Report-Msgid-Bugs-To: lfs-dev@lists.linuxfromscratch.org\n"
-"POT-Creation-Date: 2025-11-13 15:15+0800\n"
+"POT-Creation-Date: 2025-12-25 18:45+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: Xi Ruoyao <xry111@xry111.site>\n"
 "Language-Team: none\n"
@@ -80,13 +80,22 @@ msgstr ""
 
 #. type: Content of: <sect1><important><para>
 #: lfs-en/chapter03/introduction.xml
+#, fuzzy
+#| msgid ""
+#| "Listed on the next page are several important packages located at "
+#| "ftp.gnu.org.  That site is the canonical location of the subject packages "
+#| "but has been affected by a long term distributed denial of services "
+#| "(DDOS) attack.  See <ulink url=\"https://news.slashdot.org/story/"
+#| "25/07/06/1737253/the-fsf-faces-active-ongoing-and-increasing-ddos-"
+#| "attacks\">Slashdot News</ulink> for details."
 msgid ""
 "Listed on the next page are several important packages located at "
-"ftp.gnu.org.  That site is the canonical location of the subject packages "
-"but has been affected by a long term distributed denial of services (DDOS) "
-"attack.  See <ulink url=\"https://news.slashdot.org/story/25/07/06/1737253/"
-"the-fsf-faces-active-ongoing-and-increasing-ddos-attacks\">Slashdot News</"
-"ulink> for details."
+"<uri>ftpmirror.gnu.org</uri>.  The canonical location of the subject "
+"packages are <uri>ftp.gnu.org</uri> but due to a long term distributed "
+"denial of services (DDOS) attack the site administrator suggested the LFS "
+"editors to use <uri>ftpmirror.gnu.org</uri> instead.  See <ulink "
+"url=\"https://news.slashdot.org/story/25/07/06/1737253/the-fsf-faces-active-"
+"ongoing-and-increasing-ddos-attacks\">Slashdot News</ulink> for details."
 msgstr ""
 "下一页会列出位于 ftp.gnu.org 的一些关键软件包。它是这些软件包的官方发布站点，"
 "但它遭到了长期的分布式拒绝服务 (DDOS) 攻击。详情见 <ulink url=\"https://"
@@ -96,19 +105,13 @@ msgstr ""
 #. type: Content of: <sect1><important><para>
 #: lfs-en/chapter03/introduction.xml
 msgid ""
-"An alternative for ftp.gnu.org is to use one of the mirrors for that site.  "
-"A list of mirrors is located at <ulink url=\"https://www.gnu.org/prep/"
-"ftp.en.html\"/>"
+"The <uri>ftpmirror.gnu.org</uri> URL actually redirects to one of the "
+"mirrors of the <uri>ftp.gnu.org</uri> site.  You may also select a mirror "
+"manually instead of using <uri>ftpmirror.gnu.org</uri>.  A list of mirrors "
+"is located at <ulink url=\"https://www.gnu.org/prep/ftp.en.html\"/>.  If you "
+"choose to use the wget list described below, that file also can be modified "
+"to use your desired mirror."
 msgstr ""
-"可以使用 ftp.gnu.org 的镜像站代替它。<ulink url=\"https://www.gnu.org/prep/"
-"ftp.en.html\"/> 列出了一些镜像站。"
-
-#. type: Content of: <sect1><important><para>
-#: lfs-en/chapter03/introduction.xml
-msgid ""
-"If you choose to use the wget list described below, that file will also need "
-"to be modified to use your desired mirror."
-msgstr "如果使用了下面给出的 wget 列表，则使用镜像站需要修改列表文件。"
 
 #. type: Content of: <sect1><para>
 #: lfs-en/chapter03/introduction.xml
