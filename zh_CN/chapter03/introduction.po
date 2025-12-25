@@ -80,14 +80,6 @@ msgstr ""
 
 #. type: Content of: <sect1><important><para>
 #: lfs-en/chapter03/introduction.xml
-#, fuzzy
-#| msgid ""
-#| "Listed on the next page are several important packages located at "
-#| "ftp.gnu.org.  That site is the canonical location of the subject packages "
-#| "but has been affected by a long term distributed denial of services "
-#| "(DDOS) attack.  See <ulink url=\"https://news.slashdot.org/story/"
-#| "25/07/06/1737253/the-fsf-faces-active-ongoing-and-increasing-ddos-"
-#| "attacks\">Slashdot News</ulink> for details."
 msgid ""
 "Listed on the next page are several important packages located at "
 "<uri>ftpmirror.gnu.org</uri>.  The canonical location of the subject "
@@ -97,10 +89,11 @@ msgid ""
 "url=\"https://news.slashdot.org/story/25/07/06/1737253/the-fsf-faces-active-"
 "ongoing-and-increasing-ddos-attacks\">Slashdot News</ulink> for details."
 msgstr ""
-"下一页会列出位于 ftp.gnu.org 的一些关键软件包。它是这些软件包的官方发布站点，"
-"但它遭到了长期的分布式拒绝服务 (DDOS) 攻击。详情见 <ulink url=\"https://"
-"news.slashdot.org/story/25/07/06/1737253/the-fsf-faces-active-ongoing-and-"
-"increasing-ddos-attacks\">Slashdot 新闻</ulink>。"
+"下一页会列出位于 <uri>ftpmirror.gnu.org</uri> 的一些关键软件包。这些软件包的"
+"官方发布站点是 <uri>ftp.gnu.org</uri>，但由于它遭到长期的分布式拒绝服务 "
+"(DDOS) 攻击，其管理员建议 LFS 编辑团队改用 <uri>ftpmirror.gnu.org</uri>。详情"
+"见 <ulink url=\"https://news.slashdot.org/story/25/07/06/1737253/the-fsf-"
+"faces-active-ongoing-and-increasing-ddos-attacks\">Slashdot 新闻</ulink>。"
 
 #. type: Content of: <sect1><important><para>
 #: lfs-en/chapter03/introduction.xml
@@ -112,6 +105,11 @@ msgid ""
 "choose to use the wget list described below, that file also can be modified "
 "to use your desired mirror."
 msgstr ""
+"这些主机名为 <uri>ftpmirror.gnu.org</uri> 的 URL 实际上会重定向到 "
+"<uri>ftp.gnu.org</uri> 站点的某个镜像站。您也可以自行选择一个镜像替代 "
+"<uri>ftpmirror.gnu.org</uri>。<ulink url=\"https://www.gnu.org/prep/"
+"ftp.en.html\"/> 列出了一些镜像站。如果您选用下文给出的 wget 列表，也可以修改"
+"列表文件以使用您希望的镜像站。"
 
 #. type: Content of: <sect1><para>
 #: lfs-en/chapter03/introduction.xml

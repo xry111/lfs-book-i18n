@@ -20,7 +20,7 @@ jobs:
           sudo apt install gettext python3-polib po4a
           echo "MAKEFLAGS=-j2" >> $GITHUB_ENV
       - name: Checkout
-        uses: actions/checkout@v5
+        uses: actions/checkout@v6
         with:
           submodules: recursive
           fetch-depth: 0
@@ -34,12 +34,12 @@ jobs:
           make booksrc
           tar -C zh_CN -cf book.tar book
       - name: Upload Translated XML Files
-        uses: actions/upload-artifact@v5
+        uses: actions/upload-artifact@v6
         with:
           name: lfs-xml-zh_CN
           path: book.tar
       - name: Upload Auxilary Files
-        uses: actions/upload-artifact@v5
+        uses: actions/upload-artifact@v6
         with:
           name: aux-files
           path: aux-files
@@ -54,7 +54,7 @@ jobs:
           sudo apt update
           sudo apt install xsltproc libxml2-utils docbook-xml docbook-xsl tidy
       - name: Fetch XML
-        uses: actions/download-artifact@v6
+        uses: actions/download-artifact@v7
         with:
           name: lfs-xml-zh_CN
       - name: Untar XML
@@ -64,7 +64,7 @@ jobs:
           make REV=sysv book BASEDIR=lfs-sysv-zh_CN
           tar -cJf lfs-sysv-zh_CN.tar.xz lfs-sysv-zh_CN
       - name: Upload Artifacts
-        uses: actions/upload-artifact@v5
+        uses: actions/upload-artifact@v6
         with:
           name: lfs-sysv-zh_CN-html
           path: lfs-sysv-zh_CN.tar.xz
@@ -80,11 +80,11 @@ jobs:
         with:
           ssh-private-key: ${{ secrets.SSH_PRIVATE_KEY }}
       - name: Fetch the Book
-        uses: actions/download-artifact@v6
+        uses: actions/download-artifact@v7
         with:
           name: lfs-sysv-zh_CN-html
       - name: Fetch Auxilary Files
-        uses: actions/download-artifact@v6
+        uses: actions/download-artifact@v7
         with:
           name: aux-files
       - name: Set SSH Host Key
@@ -106,7 +106,7 @@ jobs:
           sudo apt update
           sudo apt install xsltproc libxml2-utils docbook-xml docbook-xsl tidy
       - name: Fetch XML
-        uses: actions/download-artifact@v6
+        uses: actions/download-artifact@v7
         with:
           name: lfs-xml-zh_CN
       - name: Untar XML
@@ -116,7 +116,7 @@ jobs:
           make REV=systemd book BASEDIR=lfs-systemd-zh_CN
           tar -cJf lfs-systemd-zh_CN.tar.xz lfs-systemd-zh_CN
       - name: Upload Artifacts
-        uses: actions/upload-artifact@v5
+        uses: actions/upload-artifact@v6
         with:
           name: lfs-systemd-zh_CN-html
           path: lfs-systemd-zh_CN.tar.xz
@@ -132,11 +132,11 @@ jobs:
         with:
           ssh-private-key: ${{ secrets.SSH_PRIVATE_KEY }}
       - name: Fetch the Book
-        uses: actions/download-artifact@v6
+        uses: actions/download-artifact@v7
         with:
           name: lfs-systemd-zh_CN-html
       - name: Fetch Auxilary Files
-        uses: actions/download-artifact@v6
+        uses: actions/download-artifact@v7
         with:
           name: aux-files
       - name: Set SSH Host Key
@@ -158,7 +158,7 @@ jobs:
           sudo apt update
           sudo apt install xsltproc libxml2-utils docbook-xml docbook-xsl tidy
       - name: Fetch XML
-        uses: actions/download-artifact@v6
+        uses: actions/download-artifact@v7
         with:
           name: lfs-xml-zh_CN
       - name: Untar XML
@@ -166,7 +166,7 @@ jobs:
       - name: Generate Translated Book
         run: make REV=sysv nochunks BASEDIR=render
       - name: Upload Artifacts
-        uses: actions/upload-artifact@v5
+        uses: actions/upload-artifact@v6
         with:
           name: lfs-sysv-zh_CN-nochunks
           path: render/LFS-BOOK.html
@@ -185,11 +185,11 @@ jobs:
         with:
           ssh-private-key: ${{ secrets.SSH_PRIVATE_KEY }}
       - name: Fetch the Book
-        uses: actions/download-artifact@v6
+        uses: actions/download-artifact@v7
         with:
           name: lfs-sysv-zh_CN-nochunks
       - name: Fetch Auxilary Files
-        uses: actions/download-artifact@v6
+        uses: actions/download-artifact@v7
         with:
           name: aux-files
       - name: Set SSH Host Key
@@ -209,7 +209,7 @@ jobs:
           sudo apt update
           sudo apt install xsltproc libxml2-utils docbook-xml docbook-xsl tidy
       - name: Fetch XML
-        uses: actions/download-artifact@v6
+        uses: actions/download-artifact@v7
         with:
           name: lfs-xml-zh_CN
       - name: Untar XML
@@ -217,7 +217,7 @@ jobs:
       - name: Generate Translated Book
         run: make REV=systemd nochunks BASEDIR=render
       - name: Upload Artifacts
-        uses: actions/upload-artifact@v5
+        uses: actions/upload-artifact@v6
         with:
           name: lfs-systemd-zh_CN-nochunks
           path: render/LFS-SYSD-BOOK.html
@@ -233,11 +233,11 @@ jobs:
         with:
           ssh-private-key: ${{ secrets.SSH_PRIVATE_KEY }}
       - name: Fetch the Book
-        uses: actions/download-artifact@v6
+        uses: actions/download-artifact@v7
         with:
           name: lfs-systemd-zh_CN-nochunks
       - name: Fetch Auxilary Files
-        uses: actions/download-artifact@v6
+        uses: actions/download-artifact@v7
         with:
           name: aux-files
       - name: Set SSH Host Key
@@ -257,21 +257,21 @@ jobs:
           sudo apt update
           sudo apt install xsltproc libxml2-utils docbook-xml docbook-xsl fop
       - name: Fetch XML
-        uses: actions/download-artifact@v6
+        uses: actions/download-artifact@v7
         with:
           name: lfs-xml-zh_CN
           path: .
       - name: Untar XML
         run: tar --strip-components=1 -xf book.tar
       - name: Cache Fonts
-        uses: actions/cache@v4
+        uses: actions/cache@v5
         with:
           path: fonts/
           key: ${{ hashFiles('noto-cjk-commit', 'source-han-mono-commit') }}
       - name: Generate Translated Book
         run: make REV=sysv pdf BASEDIR=render
       - name: Upload Artifacts
-        uses: actions/upload-artifact@v5
+        uses: actions/upload-artifact@v6
         with:
           name: lfs-sysv-zh_CN-pdf
           path: render/LFS-BOOK.pdf
@@ -287,11 +287,11 @@ jobs:
         with:
           ssh-private-key: ${{ secrets.SSH_PRIVATE_KEY }}
       - name: Fetch the Book
-        uses: actions/download-artifact@v6
+        uses: actions/download-artifact@v7
         with:
           name: lfs-sysv-zh_CN-pdf
       - name: Fetch Auxilary Files
-        uses: actions/download-artifact@v6
+        uses: actions/download-artifact@v7
         with:
           name: aux-files
       - name: Set SSH Host Key
@@ -311,14 +311,14 @@ jobs:
           sudo apt update
           sudo apt install xsltproc libxml2-utils docbook-xml docbook-xsl fop
       - name: Fetch XML
-        uses: actions/download-artifact@v6
+        uses: actions/download-artifact@v7
         with:
           name: lfs-xml-zh_CN
           path: .
       - name: Untar XML
         run: tar --strip-components=1 -xf book.tar
       - name: Cache Fonts
-        uses: actions/cache@v4
+        uses: actions/cache@v5
         with:
           path: fonts/
           key: ${{ hashFiles('noto-cjk-commit', 'source-han-mono-commit') }}
@@ -326,7 +326,7 @@ jobs:
         run: |
           make REV=systemd pdf BASEDIR=render
       - name: Upload Artifacts
-        uses: actions/upload-artifact@v5
+        uses: actions/upload-artifact@v6
         with:
           name: lfs-systemd-zh_CN-pdf
           path: render/LFS-SYSD-BOOK.pdf
@@ -342,11 +342,11 @@ jobs:
         with:
           ssh-private-key: ${{ secrets.SSH_PRIVATE_KEY }}
       - name: Fetch the Book
-        uses: actions/download-artifact@v6
+        uses: actions/download-artifact@v7
         with:
           name: lfs-systemd-zh_CN-pdf
       - name: Fetch Auxilary Files
-        uses: actions/download-artifact@v6
+        uses: actions/download-artifact@v7
         with:
           name: aux-files
       - name: Set SSH Host Key
@@ -374,32 +374,32 @@ jobs:
           TAG: ${{ github.ref_name }}
         run: echo VERSION=$(echo $TAG | sed 's/^v//') >> $GITHUB_ENV
       - name: Fetch Chunked HTML (sysv)
-        uses: actions/download-artifact@v6
+        uses: actions/download-artifact@v7
         with:
           name: lfs-sysv-zh_CN-html
           path: ${{ runner.temp }}/release
       - name: Fetch Single Page HTML (sysv)
-        uses: actions/download-artifact@v6
+        uses: actions/download-artifact@v7
         with:
           name: lfs-sysv-zh_CN-nochunks
           path: ${{ runner.temp }}/release
       - name: Fetch PDF (sysv)
-        uses: actions/download-artifact@v6
+        uses: actions/download-artifact@v7
         with:
           name: lfs-sysv-zh_CN-pdf
           path: ${{ runner.temp }}/release
       - name: Fetch Chunked HTML (systemd)
-        uses: actions/download-artifact@v6
+        uses: actions/download-artifact@v7
         with:
           name: lfs-systemd-zh_CN-html
           path: ${{ runner.temp }}/release
       - name: Fetch Single Page HTML (systemd)
-        uses: actions/download-artifact@v6
+        uses: actions/download-artifact@v7
         with:
           name: lfs-systemd-zh_CN-nochunks
           path: ${{ runner.temp }}/release
       - name: Fetch PDF (systemd)
-        uses: actions/download-artifact@v6
+        uses: actions/download-artifact@v7
         with:
           name: lfs-systemd-zh_CN-pdf
           path: ${{ runner.temp }}/release

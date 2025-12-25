@@ -511,7 +511,7 @@ msgstr "<userinput>sed -i 's/-Wl,-rpath,[^ ]*//' support/shobj-conf</userinput>"
 #: lfs-en/chapter08/readline.xml
 msgid ""
 "Fix a problem identified upstream specifically for this version of readline:"
-msgstr ""
+msgstr "修复上游在这一版本 readline 中发现的一项问题："
 
 #. type: Content of: <sect1><sect2><screen>
 #: lfs-en/chapter08/readline.xml
@@ -523,6 +523,11 @@ msgid ""
 "    -e '288i\\   result = -1;' \\\n"
 "    -i.orig input.c</userinput>"
 msgstr ""
+"<userinput>sed -e '270a\\\n"
+"     else\\\n"
+"       chars_avail = 1;'      \\\n"
+"    -e '288i\\   result = -1;' \\\n"
+"    -i.orig input.c</userinput>"
 
 #. type: Content of: <sect1><sect2><para>
 #: lfs-en/chapter08/readline.xml
