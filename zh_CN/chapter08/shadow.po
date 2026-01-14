@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Linux From Scratch 11.4\n"
 "Report-Msgid-Bugs-To: lfs-dev@lists.linuxfromscratch.org\n"
-"POT-Creation-Date: 2025-09-05 23:55+0800\n"
+"POT-Creation-Date: 2026-01-14 12:40+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: Xi Ruoyao <xry111@xry111.site>\n"
 "Language-Team: none\n"
@@ -70,6 +70,11 @@ msgstr ""
 #: lfs-en/prologue/why.xml
 msgid "Shadow"
 msgstr "Shadow"
+
+#. type: Content of: <sect1><title>
+#: lfs-en/chapter01/whatsnew.xml lfs-en/chapter08/shadow.xml
+msgid "Shadow-&shadow-version;"
+msgstr "Shadow-&shadow-version;"
 
 #. type: Content of: <sect1><sect2><segmentedlist><segtitle>
 #: lfs-en/chapter05/binutils-pass1.xml lfs-en/chapter05/gcc-pass1.xml
@@ -216,16 +221,15 @@ msgstr "&diskspace;"
 #: lfs-en/chapter08/grub.xml lfs-en/chapter08/gzip.xml
 #: lfs-en/chapter08/inetutils.xml lfs-en/chapter08/intltool.xml
 #: lfs-en/chapter08/kbd.xml lfs-en/chapter08/less.xml
-#: lfs-en/chapter08/libelf.xml lfs-en/chapter08/libffi.xml
-#: lfs-en/chapter08/libpipeline.xml lfs-en/chapter08/libtool.xml
-#: lfs-en/chapter08/libxcrypt.xml lfs-en/chapter08/m4.xml
-#: lfs-en/chapter08/make.xml lfs-en/chapter08/man-db.xml
-#: lfs-en/chapter08/ncurses.xml lfs-en/chapter08/openssl.xml
-#: lfs-en/chapter08/patch.xml lfs-en/chapter08/pcre.xml
-#: lfs-en/chapter08/perl.xml lfs-en/chapter08/pkgconf.xml
-#: lfs-en/chapter08/procps.xml lfs-en/chapter08/psmisc.xml
-#: lfs-en/chapter08/python.xml lfs-en/chapter08/shadow.xml
-#: lfs-en/chapter08/sqlite.xml lfs-en/chapter08/sysklogd.xml
+#: lfs-en/chapter08/libffi.xml lfs-en/chapter08/libpipeline.xml
+#: lfs-en/chapter08/libtool.xml lfs-en/chapter08/libxcrypt.xml
+#: lfs-en/chapter08/m4.xml lfs-en/chapter08/make.xml
+#: lfs-en/chapter08/man-db.xml lfs-en/chapter08/ncurses.xml
+#: lfs-en/chapter08/openssl.xml lfs-en/chapter08/patch.xml
+#: lfs-en/chapter08/pcre.xml lfs-en/chapter08/perl.xml
+#: lfs-en/chapter08/pkgconf.xml lfs-en/chapter08/procps.xml
+#: lfs-en/chapter08/psmisc.xml lfs-en/chapter08/python.xml
+#: lfs-en/chapter08/shadow.xml lfs-en/chapter08/sysklogd.xml
 #: lfs-en/chapter08/sysvinit.xml lfs-en/chapter08/tar.xml
 #: lfs-en/chapter08/texinfo.xml lfs-en/chapter08/util-linux.xml
 #: lfs-en/chapter08/vim.xml lfs-en/chapter08/xml-parser.xml
@@ -313,10 +317,10 @@ msgstr "安装该软件包："
 #: lfs-en/chapter08/inetutils.xml lfs-en/chapter08/intltool.xml
 #: lfs-en/chapter08/iproute2.xml lfs-en/chapter08/kbd.xml
 #: lfs-en/chapter08/kmod.xml lfs-en/chapter08/less.xml
-#: lfs-en/chapter08/libcap.xml lfs-en/chapter08/libelf.xml
-#: lfs-en/chapter08/libffi.xml lfs-en/chapter08/libpipeline.xml
-#: lfs-en/chapter08/libtool.xml lfs-en/chapter08/libxcrypt.xml
-#: lfs-en/chapter08/lz4.xml lfs-en/chapter08/m4.xml lfs-en/chapter08/make.xml
+#: lfs-en/chapter08/libcap.xml lfs-en/chapter08/libffi.xml
+#: lfs-en/chapter08/libpipeline.xml lfs-en/chapter08/libtool.xml
+#: lfs-en/chapter08/libxcrypt.xml lfs-en/chapter08/lz4.xml
+#: lfs-en/chapter08/m4.xml lfs-en/chapter08/make.xml
 #: lfs-en/chapter08/man-db.xml lfs-en/chapter08/ncurses.xml
 #: lfs-en/chapter08/openssl.xml lfs-en/chapter08/patch.xml
 #: lfs-en/chapter08/pcre.xml lfs-en/chapter08/perl.xml
@@ -468,11 +472,6 @@ msgstr ""
 "<productname>shadow</productname> <productnumber>&shadow-version;</"
 "productnumber> <placeholder type=\"address\" id=\"0\"/>"
 
-#. type: Content of: <sect1><title>
-#: lfs-en/chapter08/shadow.xml
-msgid "Shadow-&shadow-version;"
-msgstr "Shadow-&shadow-version;"
-
 #. type: Content of: <sect1><sect2><para>
 #: lfs-en/chapter08/shadow.xml
 msgid ""
@@ -608,6 +607,7 @@ msgid ""
 "            --disable-static    \\\n"
 "            --with-{b,yes}crypt \\\n"
 "            --without-libbsd    \\\n"
+"            --disable-logind    \\\n"
 "            --with-group-name-max-length=32</userinput>"
 msgstr ""
 "<userinput remap=\"configure\">touch /usr/bin/passwd\n"
@@ -615,6 +615,7 @@ msgstr ""
 "            --disable-static    \\\n"
 "            --with-{b,yes}crypt \\\n"
 "            --without-libbsd    \\\n"
+"            --disable-logind    \\\n"
 "            --with-group-name-max-length=32</userinput>"
 
 #. type: Content of: <sect1><sect2><variablelist><title>
@@ -669,6 +670,28 @@ msgid ""
 "The longest permissible user name is 32 characters.  Make the maximum length "
 "of a group name the same."
 msgstr "用户名最长只能有 32 个字符。设定组名称最大长度为相同值。"
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
+#: lfs-en/chapter08/shadow.xml
+msgid "<parameter>--disable-logind</parameter>"
+msgstr "<parameter>--disable-logind</parameter>"
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
+#: lfs-en/chapter08/shadow.xml
+msgid ""
+"This option makes Shadow (specifically, the <command>login</command> and "
+"<command>who</command> programs) use the <filename>/run/utmp</filename> file "
+"instead of logind to track the active login sessions, as logind isn't "
+"available yet in the incomplete LFS system.  But as we've discussed in <xref "
+"linkend='ch-tools-createfiles'/>, the <filename>/run/utmp</filename> file "
+"format will be completely broken after year 2038.  The LFS editors will "
+"attempt to resolve the issue before that year."
+msgstr ""
+"该选项使得 Shadow (准确来说，其中的 <command>login</command> 和<command>who</"
+"command> 程序) 使用 <filename>/run/utmp</filename> 而非 logind 跟踪运行中的登"
+"录会话，这是由于 logind 在当前不完整的 LFS 系统中尚不可用。但是，正如<xref "
+"linkend='ch-tools-createfiles'/>所述，<filename>/run/utmp</filename> 的文件格"
+"式在 2038 年后将完全无法使用。LFS 编辑团队将试图在 2038 年前解决该问题。"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: lfs-en/chapter08/shadow.xml
