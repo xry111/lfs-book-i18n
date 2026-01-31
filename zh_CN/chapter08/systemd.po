@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Linux From Scratch 11.4\n"
 "Report-Msgid-Bugs-To: lfs-dev@lists.linuxfromscratch.org\n"
-"POT-Creation-Date: 2025-11-16 02:04+0800\n"
+"POT-Creation-Date: 2026-02-01 00:44+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: Xi Ruoyao <xry111@xry111.site>\n"
 "Language-Team: none\n"
@@ -213,14 +213,14 @@ msgstr "&diskspace;"
 #: lfs-en/chapter08/gawk.xml lfs-en/chapter08/gcc.xml lfs-en/chapter08/gdbm.xml
 #: lfs-en/chapter08/gettext.xml lfs-en/chapter08/glibc.xml
 #: lfs-en/chapter08/gperf.xml lfs-en/chapter08/grep.xml
-#: lfs-en/chapter08/groff.xml lfs-en/chapter08/gzip.xml
-#: lfs-en/chapter08/inetutils.xml lfs-en/chapter08/intltool.xml
-#: lfs-en/chapter08/iproute2.xml lfs-en/chapter08/jinja2.xml
-#: lfs-en/chapter08/kbd.xml lfs-en/chapter08/less.xml
-#: lfs-en/chapter08/libcap.xml lfs-en/chapter08/libffi.xml
-#: lfs-en/chapter08/libpipeline.xml lfs-en/chapter08/libtool.xml
-#: lfs-en/chapter08/libxcrypt.xml lfs-en/chapter08/lz4.xml
-#: lfs-en/chapter08/m4.xml lfs-en/chapter08/make.xml
+#: lfs-en/chapter08/groff.xml lfs-en/chapter08/grub.xml
+#: lfs-en/chapter08/gzip.xml lfs-en/chapter08/inetutils.xml
+#: lfs-en/chapter08/intltool.xml lfs-en/chapter08/iproute2.xml
+#: lfs-en/chapter08/jinja2.xml lfs-en/chapter08/kbd.xml
+#: lfs-en/chapter08/less.xml lfs-en/chapter08/libcap.xml
+#: lfs-en/chapter08/libffi.xml lfs-en/chapter08/libpipeline.xml
+#: lfs-en/chapter08/libtool.xml lfs-en/chapter08/libxcrypt.xml
+#: lfs-en/chapter08/lz4.xml lfs-en/chapter08/m4.xml lfs-en/chapter08/make.xml
 #: lfs-en/chapter08/man-db.xml lfs-en/chapter08/markupsafe.xml
 #: lfs-en/chapter08/meson.xml lfs-en/chapter08/ninja.xml
 #: lfs-en/chapter08/openssl.xml lfs-en/chapter08/patch.xml
@@ -744,21 +744,28 @@ msgstr ""
 #. type: Content of: <sect1><sect2><para>
 #: lfs-en/chapter08/systemd.xml
 msgid ""
-"Some tests need a basic <filename>/etc/os-release</filename> file.  To test "
-"the results, issue:"
+"One test creates a mount point in <filename class='directory'>/tmp</"
+"filename> that we cannot clean up so easily after running the test suite, "
+"and some tests need a basic <filename>/etc/os-release</filename> file.  To "
+"test the results, create this file and run the test suite in a separate "
+"mount namespace (so the mount point is only visible for the test suite and "
+"it gets cleaned up automatically after the test suite finishes):"
 msgstr ""
-"一些测试需要包含基本信息的 <filename>/etc/os-release</filename> 文件。如果需"
-"要测试结果，运行："
+"一项测试会在 <filename class='directory'>/tmp</filename> 中创建挂载点，在测试"
+"结束后我们不太容易清理这一挂载点，另外一些测试需要能提供基本信息的 "
+"<filename>/etc/os-release</filename> 文件。如果需要测试构建结果，创建这一文"
+"件，并在独立的挂载命名空间中 (这样上述挂载点仅有测试套件可见，且会在测试套件"
+"运行完成后被自动清理) 运行测试："
 
 #. type: Content of: <sect1><sect2><screen>
 #: lfs-en/chapter08/systemd.xml
 #, no-wrap
 msgid ""
 "<userinput remap=\"test\">echo 'NAME=\"Linux From Scratch\"' &gt; /etc/os-release\n"
-"ninja test</userinput>"
+"unshare -m ninja test</userinput>"
 msgstr ""
 "<userinput remap=\"test\">echo 'NAME=\"Linux From Scratch\"' &gt; /etc/os-release\n"
-"ninja test</userinput>"
+"unshare -m ninja test</userinput>"
 
 #. type: Content of: <sect1><sect2><para>
 #: lfs-en/chapter08/systemd.xml
