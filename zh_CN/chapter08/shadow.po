@@ -600,14 +600,7 @@ msgstr "准备编译 Shadow："
 
 #. type: Content of: <sect1><sect2><screen>
 #: lfs-en/chapter08/shadow.xml
-#, fuzzy, no-wrap
-#| msgid ""
-#| "<userinput remap=\"configure\">touch /usr/bin/passwd\n"
-#| "./configure --sysconfdir=/etc   \\\n"
-#| "            --disable-static    \\\n"
-#| "            --with-{b,yes}crypt \\\n"
-#| "            --without-libbsd    \\\n"
-#| "            --with-group-name-max-length=32</userinput>"
+#, no-wrap
 msgid ""
 "<userinput remap=\"configure\">touch /usr/bin/passwd\n"
 "./configure --sysconfdir=/etc   \\\n"
@@ -622,6 +615,7 @@ msgstr ""
 "            --disable-static    \\\n"
 "            --with-{b,yes}crypt \\\n"
 "            --without-libbsd    \\\n"
+"            --disable-logind    \\\n"
 "            --with-group-name-max-length=32</userinput>"
 
 #. type: Content of: <sect1><sect2><variablelist><title>
@@ -679,10 +673,8 @@ msgstr "用户名最长只能有 32 个字符。设定组名称最大长度为�
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: lfs-en/chapter08/shadow.xml
-#, fuzzy
-#| msgid "<parameter>--disable-logger</parameter>"
 msgid "<parameter>--disable-logind</parameter>"
-msgstr "<parameter>--disable-logger</parameter>"
+msgstr "<parameter>--disable-logind</parameter>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: lfs-en/chapter08/shadow.xml
@@ -695,6 +687,11 @@ msgid ""
 "format will be completely broken after year 2038.  The LFS editors will "
 "attempt to resolve the issue before that year."
 msgstr ""
+"该选项使得 Shadow (准确来说，其中的 <command>login</command> 和<command>who</"
+"command> 程序) 使用 <filename>/run/utmp</filename> 而非 logind 跟踪运行中的登"
+"录会话，这是由于 logind 在当前不完整的 LFS 系统中尚不可用。但是，正如<xref "
+"linkend='ch-tools-createfiles'/>所述，<filename>/run/utmp</filename> 的文件格"
+"式在 2038 年后将完全无法使用。LFS 编辑团队将试图在 2038 年前解决该问题。"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: lfs-en/chapter08/shadow.xml
@@ -793,7 +790,7 @@ msgstr ""
 "的组。默认情况下，用户 ID (UID) 和组 ID (GID) 会从 1000 开始。这意味着，如果"
 "您不向 <command>useradd</command> 传递参数，每个用户都会属于一个不同的组。如"
 "果您不希望这样，就要传递 <parameter>-g</parameter> 或者 <parameter>-N</"
-"parameter> 参数给 <command>useradd</command>，或者在<filename>/etc/"
+"parameter> 参数给 <command>useradd</command>，或者在 <filename>/etc/"
 "login.defs</filename> 中修改 <parameter>USERGROUPS_ENAB</parameter> 的值。参"
 "阅 <ulink role='man' url='&man;useradd.8'>useradd(8)</ulink> 了解更多相关信"
 "息。"

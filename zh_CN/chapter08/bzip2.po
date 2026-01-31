@@ -502,17 +502,17 @@ msgid ""
 "class='libraryfile'>libbz2.so.1</filename> that some other distros are "
 "using.  Create a compatibility symlink for them:"
 msgstr ""
+"上述共享库的名称并未标准化，它在不同发行版中可能不同。上述命令已经安装了 "
+"<filename class='libraryfile'>libbz2.so.1.0</filename>，但一些应用程序，例如 "
+"Kbd，使用其他发行版采用的另一个共享库名称 <filename "
+"class='libraryfile'>libbz2.so.1</filename>。考虑兼容这些程序的需求，创建一个"
+"符号链接："
 
 #. type: Content of: <sect1><sect2><screen>
 #: lfs-en/chapter08/bzip2.xml
-#, fuzzy, no-wrap
-#| msgid ""
-#| "<userinput remap=\"install\">cp -av libbz2.so.* /usr/lib\n"
-#| "ln -sv libbz2.so.&bzip2-version; /usr/lib/libbz2.so</userinput>"
+#, no-wrap
 msgid "<userinput>ln -sv libbz2.so.&bzip2-version; /usr/lib/libbz2.so.1</userinput>"
-msgstr ""
-"<userinput remap=\"install\">cp -av libbz2.so.* /usr/lib\n"
-"ln -sv libbz2.so.&bzip2-version; /usr/lib/libbz2.so</userinput>"
+msgstr "<userinput>ln -sv libbz2.so.&bzip2-version; /usr/lib/libbz2.so.1</userinput>"
 
 #. type: Content of: <sect1><sect2><note><para>
 #: lfs-en/chapter08/bzip2.xml
@@ -524,6 +524,11 @@ msgid ""
 "<quote>hide</quote> the difference via a symlink.  Read <xref "
 "linkend='pkgmgmt-upgrade-issues'/> for details about library names."
 msgstr ""
+"这里可以采用创建符号链接的方法，纯粹是因为共享库名称的区别仅仅是因为不同发行"
+"版维护者的美学观点区别，而非 ABI 实际不兼容。一般来说，如两共享库的名称不同，"
+"则这一区别大概率反映它们的 ABI 互不兼容，此时通过符号链接<quote>隐藏</quote>"
+"名称区别通常是错误的。共享库名称的概念已在<xref linkend='pkgmgmt-upgrade-"
+"issues'/>详述。"
 
 #. type: Content of: <sect1><sect2><para>
 #: lfs-en/chapter08/bzip2.xml

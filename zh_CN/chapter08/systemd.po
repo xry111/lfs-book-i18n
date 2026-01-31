@@ -751,19 +751,21 @@ msgid ""
 "mount namespace (so the mount point is only visible for the test suite and "
 "it gets cleaned up automatically after the test suite finishes):"
 msgstr ""
+"一项测试会在 <filename class='directory'>/tmp</filename> 中创建挂载点，在测试"
+"结束后我们不太容易清理这一挂载点，另外一些测试需要能提供基本信息的 "
+"<filename>/etc/os-release</filename> 文件。如果需要测试构建结果，创建这一文"
+"件，并在独立的挂载命名空间中 (这样上述挂载点仅有测试套件可见，且会在测试套件"
+"运行完成后被自动清理) 运行测试："
 
 #. type: Content of: <sect1><sect2><screen>
 #: lfs-en/chapter08/systemd.xml
-#, fuzzy, no-wrap
-#| msgid ""
-#| "<userinput remap=\"test\">echo 'NAME=\"Linux From Scratch\"' &gt; /etc/os-release\n"
-#| "ninja test</userinput>"
+#, no-wrap
 msgid ""
 "<userinput remap=\"test\">echo 'NAME=\"Linux From Scratch\"' &gt; /etc/os-release\n"
 "unshare -m ninja test</userinput>"
 msgstr ""
 "<userinput remap=\"test\">echo 'NAME=\"Linux From Scratch\"' &gt; /etc/os-release\n"
-"ninja test</userinput>"
+"unshare -m ninja test</userinput>"
 
 #. type: Content of: <sect1><sect2><para>
 #: lfs-en/chapter08/systemd.xml
