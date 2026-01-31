@@ -831,10 +831,9 @@ msgstr "如果内核配置使用了模块，安装它们："
 
 #. type: Content of: <sect1><sect2><screen>
 #: lfs-en/chapter10/kernel.xml
-#, fuzzy, no-wrap
-#| msgid "<userinput remap=\"install\">make modules_install</userinput>"
+#, no-wrap
 msgid "<userinput remap=\"install\">make INSTALL_MOD_STRIP=1 modules_install</userinput>"
-msgstr "<userinput remap=\"install\">make modules_install</userinput>"
+msgstr "<userinput remap=\"install\">make INSTALL_MOD_STRIP=1 modules_install</userinput>"
 
 #. type: Content of: <sect1><sect2><para>
 #: lfs-en/chapter10/kernel.xml
@@ -844,6 +843,9 @@ msgid ""
 "memory allocate failure when the kernel loads large modules (for example the "
 "AMDGPU module)."
 msgstr ""
+"<parameter>INSTALL_MOD_STRIP=1</parameter> 选项使得构建系统在安装内核模块后移"
+"除它们的调试符号。我们必须移除调试符号，以绕过内核在加载较大的模块 (例如 "
+"AMDGPU 模块) 时出现的内存分配失败问题。"
 
 #. type: Content of: <sect1><sect2><para>
 #: lfs-en/chapter10/kernel.xml
