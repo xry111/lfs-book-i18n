@@ -44,58 +44,6 @@ jobs:
           name: aux-files
           path: aux-files
 
-  build-sysv-html:
-    needs: xml-translation
-    name: Build Chunked HTML (sysv)
-    runs-on: ubuntu-22.04
-    steps:
-      - name: Prepare
-        run: |
-          sudo apt update
-          sudo apt install xsltproc libxml2-utils docbook-xml docbook-xsl tidy
-      - name: Fetch XML
-        uses: actions/download-artifact@v7
-        with:
-          name: lfs-xml-zh_CN
-      - name: Untar XML
-        run: tar --strip-components=1 -xf book.tar
-      - name: Generate Translated Book
-        run: |
-          make REV=sysv book BASEDIR=lfs-sysv-zh_CN
-          tar -cJf lfs-sysv-zh_CN.tar.xz lfs-sysv-zh_CN
-      - name: Upload Artifacts
-        uses: actions/upload-artifact@v6
-        with:
-          name: lfs-sysv-zh_CN-html
-          path: lfs-sysv-zh_CN.tar.xz
-
-  upload-sysv-html:
-    if: github.event_name != 'pull_request' && github.ref_type == 'branch'
-    needs: build-sysv-html
-    name: Upload Chunked HTML (sysv)
-    runs-on: ubuntu-22.04
-    steps:
-      - name: Prepare SSH Key
-        uses: webfactory/ssh-agent@v0.9.1
-        with:
-          ssh-private-key: ${{ secrets.SSH_PRIVATE_KEY }}
-      - name: Fetch the Book
-        uses: actions/download-artifact@v7
-        with:
-          name: lfs-sysv-zh_CN-html
-      - name: Fetch Auxilary Files
-        uses: actions/download-artifact@v7
-        with:
-          name: aux-files
-      - name: Set SSH Host Key
-        run: cat known_hosts >> ~/.ssh/known_hosts
-      - name: Set Environment
-        run: sh setenv.sh "${GITHUB_REF}"
-      - name: Upload the Book
-        run: |
-          scp lfs-sysv-zh_CN.tar.xz "lfsbook@xry111.site:/tmp/lfs-sysv-zh_CN.tar.xz"
-          ssh "lfsbook@xry111.site" "/usr/local/bin/update-lfs" "/tmp/lfs-sysv-zh_CN.tar.xz" "/var/www/xry111/lfs/zh_CN/${SYSV}"
-
   build-systemd-html:
     needs: xml-translation
     name: Build Chunked HTML (systemd)
@@ -148,57 +96,6 @@ jobs:
           scp lfs-systemd-zh_CN.tar.xz "lfsbook@xry111.site:/tmp/lfs-systemd-zh_CN.tar.xz"
           ssh "lfsbook@xry111.site" "/usr/local/bin/update-lfs" "/tmp/lfs-systemd-zh_CN.tar.xz" "/var/www/xry111/lfs/zh_CN/${SYSD}"
 
-  build-sysv-nochunks:
-    needs: xml-translation
-    name: Build Single Page HTML (sysv)
-    runs-on: ubuntu-22.04
-    steps:
-      - name: Prepare
-        run: |
-          sudo apt update
-          sudo apt install xsltproc libxml2-utils docbook-xml docbook-xsl tidy
-      - name: Fetch XML
-        uses: actions/download-artifact@v7
-        with:
-          name: lfs-xml-zh_CN
-      - name: Untar XML
-        run: tar --strip-components=1 -xf book.tar
-      - name: Generate Translated Book
-        run: make REV=sysv nochunks BASEDIR=render
-      - name: Upload Artifacts
-        uses: actions/upload-artifact@v6
-        with:
-          name: lfs-sysv-zh_CN-nochunks
-          path: render/LFS-BOOK.html
-
-  # attention: upload-sysv-{nochunks,pdf} must be scheduled after
-  # upload-sysv-html, because the latter will delete and recreate the
-  # directory containing the book.  For systemd, likewise.
-  upload-sysv-nochunks:
-    if: github.event_name != 'pull_request' && github.ref_type == 'branch'
-    needs: [build-sysv-nochunks, upload-sysv-html]
-    name: Upload Single Page HTML (sysv)
-    runs-on: ubuntu-22.04
-    steps:
-      - name: Prepare SSH Key
-        uses: webfactory/ssh-agent@v0.9.1
-        with:
-          ssh-private-key: ${{ secrets.SSH_PRIVATE_KEY }}
-      - name: Fetch the Book
-        uses: actions/download-artifact@v7
-        with:
-          name: lfs-sysv-zh_CN-nochunks
-      - name: Fetch Auxilary Files
-        uses: actions/download-artifact@v7
-        with:
-          name: aux-files
-      - name: Set SSH Host Key
-        run: cat known_hosts >> ~/.ssh/known_hosts
-      - name: Set Environment
-        run: sh setenv.sh "${GITHUB_REF}"
-      - name: Upload the Book
-        run: scp LFS-BOOK.html "lfsbook@xry111.site:/var/www/xry111/lfs/zh_CN/${SYSV}"
-
   build-systemd-nochunks:
     needs: xml-translation
     name: Build Single Page HTML (systemd)
@@ -222,6 +119,9 @@ jobs:
           name: lfs-systemd-zh_CN-nochunks
           path: render/LFS-SYSD-BOOK.html
 
+  # attention: upload-systemd-{nochunks,pdf} must be scheduled after
+  # upload-systemd-html, because the latter will delete and recreate the
+  # directory containing the book.
   upload-systemd-nochunks:
     if: github.event_name != 'pull_request' && github.ref_type == 'branch'
     needs: [build-systemd-nochunks, upload-systemd-html]
@@ -246,60 +146,6 @@ jobs:
         run: sh setenv.sh "${GITHUB_REF}"
       - name: Upload the Book
         run: scp LFS-SYSD-BOOK.html "lfsbook@xry111.site:/var/www/xry111/lfs/zh_CN/${SYSD}"
-
-  build-sysv-pdf:
-    needs: xml-translation
-    name: Build PDF (sysv)
-    runs-on: ubuntu-22.04
-    steps:
-      - name: Prepare
-        run: |
-          sudo apt update
-          sudo apt install xsltproc libxml2-utils docbook-xml docbook-xsl fop
-      - name: Fetch XML
-        uses: actions/download-artifact@v7
-        with:
-          name: lfs-xml-zh_CN
-          path: .
-      - name: Untar XML
-        run: tar --strip-components=1 -xf book.tar
-      - name: Cache Fonts
-        uses: actions/cache@v5
-        with:
-          path: fonts/
-          key: ${{ hashFiles('noto-cjk-commit', 'source-han-mono-commit') }}
-      - name: Generate Translated Book
-        run: make REV=sysv pdf BASEDIR=render
-      - name: Upload Artifacts
-        uses: actions/upload-artifact@v6
-        with:
-          name: lfs-sysv-zh_CN-pdf
-          path: render/LFS-BOOK.pdf
-
-  upload-sysv-pdf:
-    if: github.event_name != 'pull_request' && github.ref_type == 'branch'
-    needs: [build-sysv-pdf, upload-sysv-html]
-    name: Upload PDF (sysv)
-    runs-on: ubuntu-22.04
-    steps:
-      - name: Prepare SSH Key
-        uses: webfactory/ssh-agent@v0.9.1
-        with:
-          ssh-private-key: ${{ secrets.SSH_PRIVATE_KEY }}
-      - name: Fetch the Book
-        uses: actions/download-artifact@v7
-        with:
-          name: lfs-sysv-zh_CN-pdf
-      - name: Fetch Auxilary Files
-        uses: actions/download-artifact@v7
-        with:
-          name: aux-files
-      - name: Set SSH Host Key
-        run: cat known_hosts >> ~/.ssh/known_hosts
-      - name: Set Environment
-        run: sh setenv.sh "${GITHUB_REF}"
-      - name: Upload the Book
-        run: scp LFS-BOOK.pdf "lfsbook@xry111.site:/var/www/xry111/lfs/zh_CN/${SYSV}"
 
   build-systemd-pdf:
     needs: xml-translation
@@ -360,9 +206,6 @@ jobs:
     permissions:
       contents: write
     needs:
-      - build-sysv-html
-      - build-sysv-nochunks
-      - build-sysv-pdf
       - build-systemd-html
       - build-systemd-nochunks
       - build-systemd-pdf
@@ -373,21 +216,6 @@ jobs:
         env:
           TAG: ${{ github.ref_name }}
         run: echo VERSION=$(echo $TAG | sed 's/^v//') >> $GITHUB_ENV
-      - name: Fetch Chunked HTML (sysv)
-        uses: actions/download-artifact@v7
-        with:
-          name: lfs-sysv-zh_CN-html
-          path: ${{ runner.temp }}/release
-      - name: Fetch Single Page HTML (sysv)
-        uses: actions/download-artifact@v7
-        with:
-          name: lfs-sysv-zh_CN-nochunks
-          path: ${{ runner.temp }}/release
-      - name: Fetch PDF (sysv)
-        uses: actions/download-artifact@v7
-        with:
-          name: lfs-sysv-zh_CN-pdf
-          path: ${{ runner.temp }}/release
       - name: Fetch Chunked HTML (systemd)
         uses: actions/download-artifact@v7
         with:
@@ -407,11 +235,8 @@ jobs:
         env:
           DIR: ${{ runner.temp }}/release
         run: |
-          mv $DIR/lfs-{sysv,${VERSION}}-zh_CN.tar.xz
           mv $DIR/lfs-{,${VERSION}-}systemd-zh_CN.tar.xz
-          mv $DIR/{LFS-BOOK.html,lfs-${VERSION}-zh_CN.html}
           mv $DIR/{LFS-SYSD-BOOK.html,lfs-${VERSION}-systemd-zh_CN.html}
-          mv $DIR/{LFS-BOOK.pdf,lfs-${VERSION}-zh_CN.pdf}
           mv $DIR/{LFS-SYSD-BOOK.pdf,lfs-${VERSION}-systemd-zh_CN.pdf}
       - name: Release
         uses: softprops/action-gh-release@v2
