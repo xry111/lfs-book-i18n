@@ -55,19 +55,19 @@ pofiles: $(PO_FILES) $(MLANG)/chapter01/changelog.po
 html: booksrc
 	rm -rf $(MLANG)/book/render # without this tidy may be stupidly slow
 	tmpdir=$$(mktemp -d); \
-	make -j1 -C $(MLANG)/book REV=$(REV) BASEDIR=render RENDERTMP=$$tmpdir; \
+	make -j1 -C $(MLANG)/book BASEDIR=render RENDERTMP=$$tmpdir; \
 	rm -rf $$tmpdir
 
 nochunks: booksrc
 	rm -rf $(MLANG)/book/nochunks
 	tmpdir=$$(mktemp -d); \
-	make -j1 -C $(MLANG)/book REV=$(REV) BASEDIR=nochunks RENDERTMP=$$tmpdir nochunks; \
+	make -j1 -C $(MLANG)/book BASEDIR=nochunks RENDERTMP=$$tmpdir nochunks; \
 	rm -rf $$tmpdir
 
 pdf: booksrc
 	rm -rf $(MLANG)/book/pdf
 	tmpdir=$$(mktemp -d); \
-	make -j1 -C $(MLANG)/book REV=$(REV) BASEDIR=pdf RENDERTMP=$$tmpdir pdf; \
+	make -j1 -C $(MLANG)/book BASEDIR=pdf RENDERTMP=$$tmpdir pdf; \
 	rm -rf $$tmpdir
 
 booksrc: $(MBOOK_FILES) $(ORIG_FILES) $(MLANG)/book/version.ent
@@ -114,13 +114,13 @@ KNOWN_DIFF = chapter09/*-symlinks \
 
 cmd/en/systemd/stamp: $(EN_BOOK_FILES)
 	rm -rf "$(PWD)/$(@D)"
-	make -C $(LFS_EN) DUMPDIR="$(PWD)/$(@D)" REV=systemd dump-commands
+	make -C $(LFS_EN) DUMPDIR="$(PWD)/$(@D)" dump-commands
 	cd $(@D); rm -f $(KNOWN_DIFF)
 	touch $@
 
 cmd/$(MLANG)/systemd/stamp: $(MBOOK_FILES)
 	rm -rf "$(PWD)/$(@D)"
-	make -C $(MLANG)/book DUMPDIR="$(PWD)/$(@D)" REV=systemd dump-commands
+	make -C $(MLANG)/book DUMPDIR="$(PWD)/$(@D)" dump-commands
 	cd $(@D); rm -f $(KNOWN_DIFF)
 	touch $@
 
