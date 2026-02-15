@@ -13,6 +13,15 @@ EXCLUDE_XML = $(LFS_EN)/stylesheets/lfs-xsl/lfs-l10n.xml              \
               $(LFS_EN)/appendices/creat-comm.xml                     \
               $(LFS_EN)/appendices/mit-lic.xml                        \
               $(wildcard $(LFS_EN)/chapter10/kernel/*.xml)
+
+EXCLUDE_XML += $(LFS_EN)/appendices/scripts.xml    \
+               $(LFS_EN)/appendices/udev-rules.xml \
+               $(LFS_EN)/chapter08/sysklogd.xml    \
+               $(LFS_EN)/chapter08/sysvinit.xml    \
+               $(LFS_EN)/chapter08/udev.xml        \
+               $(LFS_EN)/chapter09/bootscripts.xml \
+               $(LFS_EN)/chapter09/network.xml
+
 CMD_FIND_XML = find $(LFS_EN) -type f -name '*.xml'
 XML_FILES = $(filter-out $(EXCLUDE_XML), $(wildcard $(shell $(CMD_FIND_XML))))
 POT_DIRS = $(sort $(patsubst $(LFS_EN)/%, pot/%, $(dir $(XML_FILES))))
