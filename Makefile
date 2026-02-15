@@ -76,12 +76,12 @@ booksrc: $(MBOOK_FILES) $(ORIG_FILES) $(MLANG)/book/version.ent
 # now and silence git-version.sh.  lang.mk SHALL contain the recipe to
 # localize git-version.sh.
 #
-# The content of version.ent does not depend on REV, so just say "sysv"
+# The content of version.ent does not depend on REV, so just say "systemd"
 # here.
 .PHONY: version
 version: $(MLANG)/book/git-version.sh
 	cd $(<D); rm LFS-RELEASE; \
-	DIST=./LFS-RELEASE GIT_DIR=$(PWD)/$(LFS_EN)/.git ./$(<F) sysv
+	DIST=./LFS-RELEASE GIT_DIR=$(PWD)/$(LFS_EN)/.git ./$(<F) systemd
 	rm -fv $(MLANG)/book/conditional.ent
 
 $(MLANG)/book/version.ent: version; true
@@ -112,32 +112,19 @@ KNOWN_DIFF = chapter09/*-symlinks \
              chapter09/*-locale   \
              chapter10/*-fstab
 
-cmd/en/sysv/stamp: $(EN_BOOK_FILES)
-	make -C $(LFS_EN) DUMPDIR="$(PWD)/$(@D)" REV=sysv dump-commands
-	cd $(@D); rm -f $(KNOWN_DIFF)
-	touch $@
-
 cmd/en/systemd/stamp: $(EN_BOOK_FILES)
+	rm -rf "$(PWD)/$(@D)"
 	make -C $(LFS_EN) DUMPDIR="$(PWD)/$(@D)" REV=systemd dump-commands
 	cd $(@D); rm -f $(KNOWN_DIFF)
 	touch $@
 
-cmd/$(MLANG)/sysv/stamp: $(MBOOK_FILES)
-	make -C $(MLANG)/book DUMPDIR="$(PWD)/$(@D)" REV=sysv dump-commands
-	cd $(@D); rm -f $(KNOWN_DIFF)
-	touch $@
-
 cmd/$(MLANG)/systemd/stamp: $(MBOOK_FILES)
+	rm -rf "$(PWD)/$(@D)"
 	make -C $(MLANG)/book DUMPDIR="$(PWD)/$(@D)" REV=systemd dump-commands
 	cd $(@D); rm -f $(KNOWN_DIFF)
 	touch $@
 
-.PHONY: check-cmd check-cmd-sysv check-cmd-systemd
+.PHONY: check-cmd
 
-check-cmd-sysv: cmd/en/sysv/stamp cmd/$(MLANG)/sysv/stamp
+check-cmd: cmd/en/systemd/stamp cmd/$(MLANG)/systemd/stamp
 	diff $(^D) -Naur
-
-check-cmd-systemd: cmd/en/systemd/stamp cmd/$(MLANG)/systemd/stamp
-	diff $(^D) -Naur
-
-check-cmd: check-cmd-sysv check-cmd-systemd
