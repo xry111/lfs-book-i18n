@@ -18,6 +18,9 @@ contribute other translations, please mail to `xry111@xry111.site`
 访问[主页](https://lfs.xry111.site/zh_CN/)即可。
 如果您希望自己从翻译文件生成手册，或者修改翻译文件，继续阅读。
 
+> [!NOTE]
+> 如果需要生成之前版本的手册，请参阅对应分支中的 `README.md` 文件。
+
 首先安装依赖项：
 
 * GNU Make (>= 4.3)
@@ -47,29 +50,18 @@ cd lfs-book-i18n
 git checkout 11.1 --recurse-submodules
 ```
 
-注意：10.1 和之前版本的英文原版手册使用 SVN 进行版本控制。
-如果需要生成它们，请参阅对应分支中的 `README.md` 文件。
-
 之后即可生成手册：
 
 ```
-make html nochunks pdf REV=sysv
+make html nochunks pdf
 ```
 
 生成的手册将位于 `zh_CN/book/render` 中。
-将 `sysv` 改为 `systemd` 可以生成 systemd 版本的手册。
 如果不需要单页 HTML 或 PDF 格式手册，可以从命令中删除对应的
 `nochunks` 或者 `pdf`。
 
 注意在生成 PDF 格式的手册时，会自动下载一些中文字体，可能额外消耗几十 MB
 的流量。
-
-如果您长期使用翻译项目，则可以在仓库中创建文件 `local.mk`，
-设定 `REV` 的值，即可避免每次输入。如：
-
-```
-REV=systemd
-```
 
 ## 参与翻译
 
