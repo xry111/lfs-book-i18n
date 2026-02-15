@@ -38,6 +38,7 @@ $(MLANG)/chapter01/changelog.po: $(LFS_EN)/chapter01/changelog.xml \
 	# Run again. polib does not agree with po4a on line wrappings
 	# in the .po file, so we need to settle it down.
 	po4a --no-translations --force po4a-changelog.cfg
+	touch $@
 
 MXML_FILES = $(patsubst $(LFS_EN)/%.xml, $(MLANG)/book/%.xml, $(XML_FILES))
 
@@ -92,6 +93,7 @@ $(MXML_FILES) &: $(XML_FILES) $(PO_FILES) mkpo4acfg.py po4a_issue295.sh
 	po4a po4a.cfg
 	sed -e 's|<book>|<book lang="$(M_DOCBOOK_LANG)">|' -i $(MLANG)/book/index.xml
 	cd $(MLANG)/book; $(PWD)/po4a_issue295.sh
+	touch $(MXML_FILES)
 
 $(MLANG)/book/chapter01/changelog.xml: $(LFS_EN)/chapter01/changelog.xml \
                                        $(MLANG)/chapter01/changelog.po
