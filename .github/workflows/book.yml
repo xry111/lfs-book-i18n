@@ -54,7 +54,7 @@ jobs:
           sudo apt update
           sudo apt install xsltproc libxml2-utils docbook-xml docbook-xsl tidy
       - name: Fetch XML
-        uses: actions/download-artifact@v7
+        uses: actions/download-artifact@v8
         with:
           name: lfs-xml-zh_CN
       - name: Untar XML
@@ -80,11 +80,11 @@ jobs:
         with:
           ssh-private-key: ${{ secrets.SSH_PRIVATE_KEY }}
       - name: Fetch the Book
-        uses: actions/download-artifact@v7
+        uses: actions/download-artifact@v8
         with:
           name: lfs-systemd-zh_CN-html
       - name: Fetch Auxilary Files
-        uses: actions/download-artifact@v7
+        uses: actions/download-artifact@v8
         with:
           name: aux-files
       - name: Set SSH Host Key
@@ -106,7 +106,7 @@ jobs:
           sudo apt update
           sudo apt install xsltproc libxml2-utils docbook-xml docbook-xsl tidy
       - name: Fetch XML
-        uses: actions/download-artifact@v7
+        uses: actions/download-artifact@v8
         with:
           name: lfs-xml-zh_CN
       - name: Untar XML
@@ -133,11 +133,11 @@ jobs:
         with:
           ssh-private-key: ${{ secrets.SSH_PRIVATE_KEY }}
       - name: Fetch the Book
-        uses: actions/download-artifact@v7
+        uses: actions/download-artifact@v8
         with:
           name: lfs-systemd-zh_CN-nochunks
       - name: Fetch Auxilary Files
-        uses: actions/download-artifact@v7
+        uses: actions/download-artifact@v8
         with:
           name: aux-files
       - name: Set SSH Host Key
@@ -157,7 +157,7 @@ jobs:
           sudo apt update
           sudo apt install xsltproc libxml2-utils docbook-xml docbook-xsl fop
       - name: Fetch XML
-        uses: actions/download-artifact@v7
+        uses: actions/download-artifact@v8
         with:
           name: lfs-xml-zh_CN
           path: .
@@ -188,11 +188,11 @@ jobs:
         with:
           ssh-private-key: ${{ secrets.SSH_PRIVATE_KEY }}
       - name: Fetch the Book
-        uses: actions/download-artifact@v7
+        uses: actions/download-artifact@v8
         with:
           name: lfs-systemd-zh_CN-pdf
       - name: Fetch Auxilary Files
-        uses: actions/download-artifact@v7
+        uses: actions/download-artifact@v8
         with:
           name: aux-files
       - name: Set SSH Host Key
@@ -217,17 +217,17 @@ jobs:
           TAG: ${{ github.ref_name }}
         run: echo VERSION=$(echo $TAG | sed 's/^v//') >> $GITHUB_ENV
       - name: Fetch Chunked HTML (systemd)
-        uses: actions/download-artifact@v7
+        uses: actions/download-artifact@v8
         with:
           name: lfs-systemd-zh_CN-html
           path: ${{ runner.temp }}/release
       - name: Fetch Single Page HTML (systemd)
-        uses: actions/download-artifact@v7
+        uses: actions/download-artifact@v8
         with:
           name: lfs-systemd-zh_CN-nochunks
           path: ${{ runner.temp }}/release
       - name: Fetch PDF (systemd)
-        uses: actions/download-artifact@v7
+        uses: actions/download-artifact@v8
         with:
           name: lfs-systemd-zh_CN-pdf
           path: ${{ runner.temp }}/release
