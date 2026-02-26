@@ -34,12 +34,12 @@ jobs:
           make booksrc
           tar -C zh_CN -cf book.tar book
       - name: Upload Translated XML Files
-        uses: actions/upload-artifact@v6
+        uses: actions/upload-artifact@v7
         with:
           name: lfs-xml-zh_CN
           path: book.tar
       - name: Upload Auxilary Files
-        uses: actions/upload-artifact@v6
+        uses: actions/upload-artifact@v7
         with:
           name: aux-files
           path: aux-files
@@ -64,7 +64,7 @@ jobs:
           make REV=systemd book BASEDIR=lfs-systemd-zh_CN
           tar -cJf lfs-systemd-zh_CN.tar.xz lfs-systemd-zh_CN
       - name: Upload Artifacts
-        uses: actions/upload-artifact@v6
+        uses: actions/upload-artifact@v7
         with:
           name: lfs-systemd-zh_CN-html
           path: lfs-systemd-zh_CN.tar.xz
@@ -114,7 +114,7 @@ jobs:
       - name: Generate Translated Book
         run: make REV=systemd nochunks BASEDIR=render
       - name: Upload Artifacts
-        uses: actions/upload-artifact@v6
+        uses: actions/upload-artifact@v7
         with:
           name: lfs-systemd-zh_CN-nochunks
           path: render/LFS-SYSD-BOOK.html
@@ -172,7 +172,7 @@ jobs:
         run: |
           make REV=systemd pdf BASEDIR=render
       - name: Upload Artifacts
-        uses: actions/upload-artifact@v6
+        uses: actions/upload-artifact@v7
         with:
           name: lfs-systemd-zh_CN-pdf
           path: render/LFS-SYSD-BOOK.pdf
