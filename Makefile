@@ -13,6 +13,15 @@ EXCLUDE_XML = $(LFS_EN)/stylesheets/lfs-xsl/lfs-l10n.xml              \
               $(LFS_EN)/appendices/creat-comm.xml                     \
               $(LFS_EN)/appendices/mit-lic.xml                        \
               $(wildcard $(LFS_EN)/chapter10/kernel/*.xml)
+
+EXCLUDE_XML += $(LFS_EN)/appendices/scripts.xml    \
+               $(LFS_EN)/appendices/udev-rules.xml \
+               $(LFS_EN)/chapter08/sysklogd.xml    \
+               $(LFS_EN)/chapter08/sysvinit.xml    \
+               $(LFS_EN)/chapter08/udev.xml        \
+               $(LFS_EN)/chapter09/bootscripts.xml \
+               $(LFS_EN)/chapter09/network.xml
+
 CMD_FIND_XML = find $(LFS_EN) -type f -name '*.xml'
 XML_FILES = $(filter-out $(EXCLUDE_XML), $(wildcard $(shell $(CMD_FIND_XML))))
 POT_DIRS = $(sort $(patsubst $(LFS_EN)/%, pot/%, $(dir $(XML_FILES))))
@@ -38,6 +47,7 @@ $(MLANG)/chapter01/changelog.po: $(LFS_EN)/chapter01/changelog.xml \
 	# Run again. polib does not agree with po4a on line wrappings
 	# in the .po file, so we need to settle it down.
 	po4a --no-translations --force po4a-changelog.cfg
+	touch $@
 
 MXML_FILES = $(patsubst $(LFS_EN)/%.xml, $(MLANG)/book/%.xml, $(XML_FILES))
 
@@ -55,19 +65,19 @@ pofiles: $(PO_FILES) $(MLANG)/chapter01/changelog.po
 html: booksrc
 	rm -rf $(MLANG)/book/render # without this tidy may be stupidly slow
 	tmpdir=$$(mktemp -d); \
-	make -j1 -C $(MLANG)/book REV=$(REV) BASEDIR=render RENDERTMP=$$tmpdir; \
+	make -j1 -C $(MLANG)/book BASEDIR=render RENDERTMP=$$tmpdir; \
 	rm -rf $$tmpdir
 
 nochunks: booksrc
 	rm -rf $(MLANG)/book/nochunks
 	tmpdir=$$(mktemp -d); \
-	make -j1 -C $(MLANG)/book REV=$(REV) BASEDIR=nochunks RENDERTMP=$$tmpdir nochunks; \
+	make -j1 -C $(MLANG)/book BASEDIR=nochunks RENDERTMP=$$tmpdir nochunks; \
 	rm -rf $$tmpdir
 
 pdf: booksrc
 	rm -rf $(MLANG)/book/pdf
 	tmpdir=$$(mktemp -d); \
-	make -j1 -C $(MLANG)/book REV=$(REV) BASEDIR=pdf RENDERTMP=$$tmpdir pdf; \
+	make -j1 -C $(MLANG)/book BASEDIR=pdf RENDERTMP=$$tmpdir pdf; \
 	rm -rf $$tmpdir
 
 booksrc: $(MBOOK_FILES) $(ORIG_FILES) $(MLANG)/book/version.ent
@@ -76,12 +86,12 @@ booksrc: $(MBOOK_FILES) $(ORIG_FILES) $(MLANG)/book/version.ent
 # now and silence git-version.sh.  lang.mk SHALL contain the recipe to
 # localize git-version.sh.
 #
-# The content of version.ent does not depend on REV, so just say "sysv"
+# The content of version.ent does not depend on REV, so just say "systemd"
 # here.
 .PHONY: version
 version: $(MLANG)/book/git-version.sh
 	cd $(<D); rm LFS-RELEASE; \
-	DIST=./LFS-RELEASE GIT_DIR=$(PWD)/$(LFS_EN)/.git ./$(<F) sysv
+	DIST=./LFS-RELEASE GIT_DIR=$(PWD)/$(LFS_EN)/.git ./$(<F) systemd
 	rm -fv $(MLANG)/book/conditional.ent
 
 $(MLANG)/book/version.ent: version; true
@@ -92,6 +102,7 @@ $(MXML_FILES) &: $(XML_FILES) $(PO_FILES) mkpo4acfg.py po4a_issue295.sh
 	po4a po4a.cfg
 	sed -e 's|<book>|<book lang="$(M_DOCBOOK_LANG)">|' -i $(MLANG)/book/index.xml
 	cd $(MLANG)/book; $(PWD)/po4a_issue295.sh
+	touch $(MXML_FILES)
 
 $(MLANG)/book/chapter01/changelog.xml: $(LFS_EN)/chapter01/changelog.xml \
                                        $(MLANG)/chapter01/changelog.po
@@ -112,32 +123,19 @@ KNOWN_DIFF = chapter09/*-symlinks \
              chapter09/*-locale   \
              chapter10/*-fstab
 
-cmd/en/sysv/stamp: $(EN_BOOK_FILES)
-	make -C $(LFS_EN) DUMPDIR="$(PWD)/$(@D)" REV=sysv dump-commands
-	cd $(@D); rm -f $(KNOWN_DIFF)
-	touch $@
-
 cmd/en/systemd/stamp: $(EN_BOOK_FILES)
-	make -C $(LFS_EN) DUMPDIR="$(PWD)/$(@D)" REV=systemd dump-commands
-	cd $(@D); rm -f $(KNOWN_DIFF)
-	touch $@
-
-cmd/$(MLANG)/sysv/stamp: $(MBOOK_FILES)
-	make -C $(MLANG)/book DUMPDIR="$(PWD)/$(@D)" REV=sysv dump-commands
+	rm -rf "$(PWD)/$(@D)"
+	make -C $(LFS_EN) DUMPDIR="$(PWD)/$(@D)" dump-commands
 	cd $(@D); rm -f $(KNOWN_DIFF)
 	touch $@
 
 cmd/$(MLANG)/systemd/stamp: $(MBOOK_FILES)
-	make -C $(MLANG)/book DUMPDIR="$(PWD)/$(@D)" REV=systemd dump-commands
+	rm -rf "$(PWD)/$(@D)"
+	make -C $(MLANG)/book DUMPDIR="$(PWD)/$(@D)" dump-commands
 	cd $(@D); rm -f $(KNOWN_DIFF)
 	touch $@
 
-.PHONY: check-cmd check-cmd-sysv check-cmd-systemd
+.PHONY: check-cmd
 
-check-cmd-sysv: cmd/en/sysv/stamp cmd/$(MLANG)/sysv/stamp
+check-cmd: cmd/en/systemd/stamp cmd/$(MLANG)/systemd/stamp
 	diff $(^D) -Naur
-
-check-cmd-systemd: cmd/en/systemd/stamp cmd/$(MLANG)/systemd/stamp
-	diff $(^D) -Naur
-
-check-cmd: check-cmd-sysv check-cmd-systemd
