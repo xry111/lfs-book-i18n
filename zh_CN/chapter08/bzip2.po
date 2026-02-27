@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Linux From Scratch 11.4\n"
 "Report-Msgid-Bugs-To: lfs-dev@lists.linuxfromscratch.org\n"
-"POT-Creation-Date: 2026-02-01 03:38+0800\n"
+"POT-Creation-Date: 2026-02-27 14:38+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: Xi Ruoyao <xry111@xry111.site>\n"
 "Language-Team: none\n"
@@ -484,23 +484,34 @@ msgstr "安装共享库："
 
 #. type: Content of: <sect1><sect2><screen>
 #: lfs-en/chapter08/bzip2.xml
-#, no-wrap
+#, fuzzy, no-wrap
+#| msgid ""
+#| "<userinput remap=\"install\">cp -av libbz2.so.* /usr/lib\n"
+#| "ln -sv libbz2.so.&bzip2-version; /usr/lib/libbz2.so</userinput>"
 msgid ""
 "<userinput remap=\"install\">cp -av libbz2.so.* /usr/lib\n"
-"ln -sv libbz2.so.&bzip2-version; /usr/lib/libbz2.so</userinput>"
+"ln -sfv libbz2.so.&bzip2-version; /usr/lib/libbz2.so</userinput>"
 msgstr ""
 "<userinput remap=\"install\">cp -av libbz2.so.* /usr/lib\n"
 "ln -sv libbz2.so.&bzip2-version; /usr/lib/libbz2.so</userinput>"
 
 #. type: Content of: <sect1><sect2><para>
 #: lfs-en/chapter08/bzip2.xml
+#, fuzzy
+#| msgid ""
+#| "The name of the shared library isn't standardized and it varies among "
+#| "distros.  The instruction above has installed <filename "
+#| "class='libraryfile'>libbz2.so.1.0</filename>, but some applications, for "
+#| "example Kbd, expects a different name <filename "
+#| "class='libraryfile'>libbz2.so.1</filename> that some other distros are "
+#| "using.  Create a compatibility symlink for them:"
 msgid ""
 "The name of the shared library isn't standardized and it varies among "
-"distros.  The instruction above has installed <filename "
+"distros. The instruction above has installed <filename "
 "class='libraryfile'>libbz2.so.1.0</filename>, but some applications, for "
 "example Kbd, expects a different name <filename "
 "class='libraryfile'>libbz2.so.1</filename> that some other distros are "
-"using.  Create a compatibility symlink for them:"
+"using. Create a compatibility symlink for them:"
 msgstr ""
 "上述共享库的名称并未标准化，它在不同发行版中可能不同。上述命令已经安装了 "
 "<filename class='libraryfile'>libbz2.so.1.0</filename>，但一些应用程序，例如 "
@@ -510,8 +521,9 @@ msgstr ""
 
 #. type: Content of: <sect1><sect2><screen>
 #: lfs-en/chapter08/bzip2.xml
-#, no-wrap
-msgid "<userinput>ln -sv libbz2.so.&bzip2-version; /usr/lib/libbz2.so.1</userinput>"
+#, fuzzy, no-wrap
+#| msgid "<userinput>ln -sv libbz2.so.&bzip2-version; /usr/lib/libbz2.so.1</userinput>"
+msgid "<userinput>ln -sfv libbz2.so.&bzip2-version; /usr/lib/libbz2.so.1</userinput>"
 msgstr "<userinput>ln -sv libbz2.so.&bzip2-version; /usr/lib/libbz2.so.1</userinput>"
 
 #. type: Content of: <sect1><sect2><note><para>

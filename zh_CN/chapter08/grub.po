@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Linux From Scratch 11.4\n"
 "Report-Msgid-Bugs-To: lfs-dev@lists.linuxfromscratch.org\n"
-"POT-Creation-Date: 2026-02-01 03:38+0800\n"
+"POT-Creation-Date: 2026-02-27 14:38+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: Xi Ruoyao <xry111@xry111.site>\n"
 "Language-Team: none\n"
@@ -544,6 +544,20 @@ msgid ""
 msgstr ""
 "不要尝试使用自定义的编译选项<quote>优化</quote>该软件包。该软件包是一个引导加"
 "载器，其源代码中的低级操作可能被一些激进的优化所破坏。"
+
+#. type: Content of: <sect1><sect2><para>
+#: lfs-en/chapter08/grub.xml
+#, fuzzy
+#| msgid "First, make some fixes introduced by glibc-2.43:"
+msgid "First fix a bug introduced in grub-2.14:"
+msgstr "首先，进行 glibc-2.43 所要求的一些修复："
+
+#. type: Content of: <sect1><sect2><screen>
+#: lfs-en/chapter08/grub.xml
+#, fuzzy, no-wrap
+#| msgid "<userinput remap=\"pre\">sed -i '/long long t1;/,+1s/()/(...)/' configure</userinput>"
+msgid "<userinput remap=\"pre\">sed 's/--image-base/--nonexist-linker-option/' -i configure</userinput>"
+msgstr "<userinput remap=\"pre\">sed -i '/long long t1;/,+1s/()/(...)/' configure</userinput>"
 
 #. type: Content of: <sect1><sect2><para>
 #: lfs-en/chapter08/grub.xml
