@@ -19,7 +19,11 @@ contribute other translations, please mail to `xry111@xry111.site`
 如果您希望自己从翻译文件生成手册，或者修改翻译文件，继续阅读。
 
 > [!NOTE]
-> 如果需要生成之前版本的手册，请参阅对应分支中的 `README.md` 文件。
+> **如果**需要生成稳定版本的手册，请切换到对应分支，例如：
+> ```
+> git checkout 12.3 --recurse-submodules
+> ```
+> 并参阅对应分支中的 `README.md` 文件。
 
 首先安装依赖项：
 
@@ -42,12 +46,6 @@ contribute other translations, please mail to `xry111@xry111.site`
 ```
 git clone https://github.com/xry111/lfs-book-i18n --recurse-submodules
 cd lfs-book-i18n
-```
-
-**如果**需要生成稳定版手册，切换到对应的分支：
-
-```
-git checkout 11.1 --recurse-submodules
 ```
 
 之后即可生成手册：
