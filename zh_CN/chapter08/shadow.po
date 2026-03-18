@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Linux From Scratch 11.4\n"
 "Report-Msgid-Bugs-To: lfs-dev@lists.linuxfromscratch.org\n"
-"POT-Creation-Date: 2026-02-26 21:52+0800\n"
+"POT-Creation-Date: 2026-03-18 09:22+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: Xi Ruoyao <xry111@xry111.site>\n"
 "Language-Team: none\n"
@@ -504,27 +504,19 @@ msgstr ""
 #. type: Content of: <sect1><sect2><para>
 #: lfs-en/chapter08/shadow.xml
 msgid ""
-"Disable the installation of the <command>groups</command> program and its "
-"man pages, as Coreutils provides a better version. Also, prevent the "
-"installation of manual pages that were already installed in <xref "
-"linkend=\"ch-system-man-pages\"/>:"
+"Prevent the installation of manual pages that were already installed in "
+"<xref linkend=\"ch-system-man-pages\"/>:"
 msgstr ""
-"禁止该软件包安装 <command>groups</command> 程序和它的手册页，因为 Coreutils "
-"会提供更好的版本。同样，避免安装<xref linkend=\"ch-system-man-pages\"/>软件包"
-"已经提供的手册页："
+"阻止该软件包安装 <xref linkend=\"ch-system-man-pages\"/> 中已安装的手册页："
 
 #. type: Content of: <sect1><sect2><screen>
 #: lfs-en/chapter08/shadow.xml
 #, no-wrap
 msgid ""
-"<userinput remap=\"pre\">sed -i 's/groups$(EXEEXT) //' src/Makefile.in\n"
-"find man -name Makefile.in -exec sed -i 's/groups\\.1 / /'   {} \\;\n"
-"find man -name Makefile.in -exec sed -i 's/getspnam\\.3 / /' {} \\;\n"
+"<userinput remap=\"pre\">find man -name Makefile.in -exec sed -i 's/getspnam\\.3 / /' {} \\;\n"
 "find man -name Makefile.in -exec sed -i 's/passwd\\.5 / /'   {} \\;</userinput>"
 msgstr ""
-"<userinput remap=\"pre\">sed -i 's/groups$(EXEEXT) //' src/Makefile.in\n"
-"find man -name Makefile.in -exec sed -i 's/groups\\.1 / /'   {} \\;\n"
-"find man -name Makefile.in -exec sed -i 's/getspnam\\.3 / /' {} \\;\n"
+"<userinput remap=\"pre\">find man -name Makefile.in -exec sed -i 's/getspnam\\.3 / /' {} \\;\n"
 "find man -name Makefile.in -exec sed -i 's/passwd\\.5 / /'   {} \\;</userinput>"
 
 #. type: Content of: <sect1><sect2><para>
