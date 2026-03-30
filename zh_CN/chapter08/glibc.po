@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Linux From Scratch 11.0\n"
 "Report-Msgid-Bugs-To: lfs-dev@lists.linuxfromscratch.org\n"
-"POT-Creation-Date: 2026-03-18 09:22+0800\n"
+"POT-Creation-Date: 2026-03-30 12:03+0800\n"
 "PO-Revision-Date: 2021-08-21 11:33+0800\n"
 "Last-Translator: Xi Ruoyao <xry111@xry111.site>\n"
 "Language-Team: none\n"
@@ -607,6 +607,23 @@ msgstr "&glibc-fin-sbu;"
 #: lfs-en/chapter08/glibc.xml
 msgid "&glibc-fin-du;"
 msgstr "&glibc-fin-du;"
+
+#. type: Content of: <sect1><sect2><para>
+#: lfs-en/chapter08/glibc.xml
+msgid "First, apply a fix to DNS processing from upstream:"
+msgstr "首先，应用来自上游的针对 DNS 解析的修复："
+
+#. type: Content of: <sect1><sect2><screen>
+#: lfs-en/chapter08/glibc.xml
+#, no-wrap
+msgid ""
+"<userinput remap=\"pre\">sed -e '/while..ancount/c\\  for (; ancount > 0; --ancount)'  \\\n"
+"    -e '/binary_hnok..expected/s/expected_name/name_buffer/' \\\n"
+"    -i resolv/nss_dns/dns-host.c</userinput>"
+msgstr ""
+"<userinput remap=\"pre\">sed -e '/while..ancount/c\\  for (; ancount > 0; --ancount)'  \\\n"
+"    -e '/binary_hnok..expected/s/expected_name/name_buffer/' \\\n"
+"    -i resolv/nss_dns/dns-host.c</userinput>"
 
 #. type: Content of: <sect1><sect2><para>
 #: lfs-en/chapter08/glibc.xml
