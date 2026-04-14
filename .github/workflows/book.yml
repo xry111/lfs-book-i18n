@@ -239,7 +239,7 @@ jobs:
           mv $DIR/{LFS-SYSD-BOOK.html,lfs-${VERSION}-systemd-zh_CN.html}
           mv $DIR/{LFS-SYSD-BOOK.pdf,lfs-${VERSION}-systemd-zh_CN.pdf}
       - name: Release
-        uses: softprops/action-gh-release@v2
+        uses: softprops/action-gh-release@v3
         with:
           files: ${{ runner.temp }}/release/*.*
           name: Linux From Scratch ${{ env.VERSION }}
