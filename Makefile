@@ -14,6 +14,9 @@ EXCLUDE_XML = $(LFS_EN)/stylesheets/lfs-xsl/lfs-l10n.xml              \
               $(LFS_EN)/appendices/mit-lic.xml                        \
               $(wildcard $(LFS_EN)/chapter10/kernel/*.xml)
 
+EXCLUDE_XML += $(LFS_EN)/chapter08/xml-parser.xml \
+               $(LFS_EN)/chapter08/intltool.xml
+
 EXCLUDE_XML += $(LFS_EN)/appendices/scripts.xml    \
                $(LFS_EN)/appendices/udev-rules.xml \
                $(LFS_EN)/chapter08/sysklogd.xml    \

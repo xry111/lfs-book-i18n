@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Linux From Scratch 11.4\n"
 "Report-Msgid-Bugs-To: lfs-dev@lists.linuxfromscratch.org\n"
-"POT-Creation-Date: 2024-05-22 16:24+0800\n"
+"POT-Creation-Date: 2026-04-30 11:37+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: Xi Ruoyao <xry111@xry111.site>\n"
 "Language-Team: none\n"
@@ -130,9 +130,9 @@ msgstr ""
 #. type: Content of: <sect1><para>
 #: lfs-en/chapter02/creatingfilesystem.xml
 msgid ""
-"If you are using an existing <systemitem class=\"filesystem\">swap </"
+"If you are using an existing <systemitem class=\"filesystem\">swap</"
 "systemitem> partition, there is no need to format it. If a new <systemitem "
-"class=\"filesystem\"> swap</systemitem> partition was created, it will need "
+"class=\"filesystem\">swap</systemitem> partition was created, it will need "
 "to be initialized with this command:"
 msgstr ""
 "如果您拥有一个现成的 <systemitem class=\"filesystem\">swap</systemitem> 分"
@@ -153,3 +153,52 @@ msgid ""
 msgstr ""
 "命令中 <replaceable>&lt;yyy&gt;</replaceable> 应该替换成 <systemitem "
 "class=\"filesystem\">swap</systemitem> 分区的名称。"
+
+#. type: Content of: <sect1><para>
+#: lfs-en/chapter02/creatingfilesystem.xml
+msgid ""
+"If you have created an EFI System Partition, you have a few options.  "
+"Motherboards when booting with UEFI look for EFI applications in partitions "
+"formatted with a FAT variant (FAT12, FAT16, FAT32, VFAT, etc).  Usually, "
+"FAT32 or VFAT are the recommended options."
+msgstr ""
+"对于 EFI 系统分区，可以使用某种 FAT 文件系统（FAT12，FAT16，FAT32，VFAT，"
+"等），主板通过 UEFI 引导系统时会在以 FAT 文件系统格式化的分区中寻找 EFI 程"
+"序。通常建议使用 FAT32 或 VFAT。"
+
+#. type: Content of: <sect1><para>
+#: lfs-en/chapter02/creatingfilesystem.xml
+msgid ""
+"If you have chosen <systemitem class=\"filesystem\">FAT32</systemitem>, "
+"format the ESP with the following command:"
+msgstr ""
+"例如，如果选择使用 <systemitem class=\"filesystem\">FAT32</systemitem>，执行"
+"以下命令以格式化 ESP："
+
+#. type: Content of: <sect1><screen>
+#: lfs-en/chapter02/creatingfilesystem.xml
+#, no-wrap
+msgid "<userinput>mkfs.fat -F 32 /dev/<replaceable>&lt;yyy&gt;</replaceable></userinput>"
+msgstr "<userinput>mkfs.fat -F 32 /dev/<replaceable>&lt;yyy&gt;</replaceable></userinput>"
+
+#. type: Content of: <sect1><para>
+#: lfs-en/chapter02/creatingfilesystem.xml
+msgid ""
+"On the other hand, if you have chosen <systemitem class=\"filesystem\">VFAT</"
+"systemitem>, you can run the following instead:"
+msgstr ""
+"如果选用 <systemitem class=\"filesystem\">VFAT</systemitem>，则运行下列命令："
+
+#. type: Content of: <sect1><screen>
+#: lfs-en/chapter02/creatingfilesystem.xml
+#, no-wrap
+msgid "<userinput>mkfs.vfat /dev/<replaceable>&lt;zzz&gt;</replaceable></userinput>"
+msgstr "<userinput>mkfs.vfat /dev/<replaceable>&lt;zzz&gt;</replaceable></userinput>"
+
+#. type: Content of: <sect1><para>
+#: lfs-en/chapter02/creatingfilesystem.xml
+msgid ""
+"Replace <replaceable>&lt;zzz&gt;</replaceable> with the name of the EFI "
+"System Partition."
+msgstr ""
+"命令中 <replaceable>&lt;xxx&gt;</replaceable> 应该替换成 EFI 系统分区的名称。"

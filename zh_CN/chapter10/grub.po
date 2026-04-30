@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Linux From Scratch 11.0\n"
 "Report-Msgid-Bugs-To: lfs-dev@lists.linuxfromscratch.org\n"
-"POT-Creation-Date: 2024-12-03 20:07+0800\n"
+"POT-Creation-Date: 2026-05-01 01:32+0800\n"
 "PO-Revision-Date: 2021-09-08 14:04+0800\n"
 "Last-Translator: Xi Ruoyao <xry111@xry111.site>\n"
 "Language-Team: none\n"
@@ -50,33 +50,17 @@ msgstr ""
 msgid "Using GRUB to Set Up the Boot Process"
 msgstr "使用 GRUB 设定引导过程"
 
-#. type: Content of: <sect1><note><para>
-#: lfs-en/chapter10/grub.xml
-msgid ""
-"If your system has UEFI support and you wish to boot LFS with UEFI, you "
-"should skip the instructions in this page but still learn the syntax of "
-"<filename>grub.cfg</filename> and the method to specify a partition in the "
-"file from this page, and configure GRUB with UEFI support using the "
-"instructions provided in <ulink url=\"&blfs-book;postlfs/grub-"
-"setup.html\">the BLFS page</ulink>."
-msgstr ""
-"如果您的系统支持 UEFI，且您希望通过 UEFI 引导 LFS，您应该跳过本页中的指令，但"
-"仍然阅读本页以学习 <filename>grub.cfg</filename> 的语法和在该文件中指定分区的"
-"方法，并按照 <ulink url=\"&blfs-book;postlfs/grub-setup.html\">BLFS 页面</"
-"ulink>中的说明，配置支持 UEFI 的 GRUB。"
-
 #. type: Content of: <sect1><sect2><warning><para>
 #: lfs-en/chapter10/grub.xml
 msgid ""
 "Configuring GRUB incorrectly can render your system inoperable without an "
 "alternate boot device such as a CD-ROM or bootable USB drive. This section "
 "is not required to boot your LFS system.  You may just want to modify your "
-"current boot loader, e.g. Grub-Legacy, GRUB2, or LILO."
+"current boot loader, e.g. Grub-Legacy or GRUB2."
 msgstr ""
 "如果您不小心错误地配置了 GRUB，可能导致您的系统完全无法使用，除非使用 CD-ROM "
 "或可引导的 USB 存储器等备用引导设备。本节不是引导您的 LFS 系统的唯一方案，您"
-"可能只要修改现有的启动加载器 (如 Grub-Legacy、GRUB2 或 LILO) 配置即可引导 "
-"LFS。"
+"可能只要修改现有的启动加载器 (如 Grub-Legacy 或 GRUB2) 配置即可引导 LFS。"
 
 #. type: Content of: <sect1><sect2><para>
 #: lfs-en/chapter10/grub.xml
@@ -105,6 +89,24 @@ msgstr ""
 "<userinput>cd /tmp\n"
 "grub-mkrescue --output=grub-img.iso\n"
 "xorriso -as cdrecord -v dev=/dev/cdrw blank=as_needed grub-img.iso</userinput>"
+
+#. type: Content of: <sect1><sect2><title>
+#: lfs-en/chapter10/grub.xml
+msgid "Turn off Secure Boot"
+msgstr "关闭安全启动"
+
+#. type: Content of: <sect1><sect2><para>
+#: lfs-en/chapter10/grub.xml
+msgid ""
+"LFS does not have the essential packages to support Secure Boot.  To set up "
+"the boot process following the instructions in this section, Secure Boot "
+"must be turned off from the configuration interface of the firmware. Read "
+"the documentation provided by the manufacturer of your system to find out "
+"how to turn off Secure Boot support."
+msgstr ""
+"LFS 不包含支持安全启动所需的软件包。因此，如果要按照本节的说明配置引导过程，"
+"必须在固件的配置界面关闭安全启动。阅读系统生产商提供的文档以找出关闭安全启动"
+"的方法。"
 
 #. type: Content of: <sect1><sect2><title>
 #: lfs-en/chapter10/grub.xml
@@ -147,36 +149,88 @@ msgstr "设定 GRUB 配置"
 #. type: Content of: <sect1><sect2><para>
 #: lfs-en/chapter10/grub.xml
 msgid ""
-"GRUB works by writing data to the first physical track of the hard disk.  "
-"This area is not part of any file system.  The programs there access GRUB "
-"modules in the boot partition.  The default location is /boot/grub/."
+"If booting the system via BIOS, GRUB works by writing a stub to the first "
+"sector (named the Master Boot Record, or MBR) of the hard disk. This area is "
+"not part of any file system. The BIOS loads and executes the content of MBR, "
+"then the stub loads the main GRUB image from the BIOS Boot Partition. The "
+"GRUB image is stored as raw data instead of a file (there must be no file "
+"system on the BIOS Boot Partition), so the stub doesn't need to support any "
+"file system and it can be made small enough to fit in the MBR."
 msgstr ""
-"GRUB 的工作方式是，将数据写入硬盘的第一个物理磁道。这里不属于任何文件系统，在"
-"启动时，第一个物理磁道中的程序从引导分区加载 GRUB 模块，默认在 /boot/grub 中"
-"查找模块。"
+"如果使用 BIOS 引导系统，GRUB 会在硬盘的首个扇区 (称为主引导记录，或 MBR) 写入"
+"一个端桩。MBR 区域不属于任何文件系统。BIOS 会加载并执行 MBR 的内容，这样端桩"
+"即可从 BIOS Boot 分区 (没有文件系统结构) 加载 GRUB 主映像。这样，端桩就不需要"
+"支持任何文件系统，才能小到足以存放到 MBR 中。"
+
+#. type: Content of: <sect1><sect2><para>
+#: lfs-en/chapter10/grub.xml
+msgid ""
+"If booting the system via UEFI, GRUB works by storing the main GRUB image as "
+"a PE-COFF executable file at a standard location in the EFI System "
+"Partition: <filename>EFI/BOOT/BOOTX64.EFI</filename> (or <filename>EFI/BOOT/"
+"BOOTIA32.EFI</filename> for <literal>i386-efi</literal>). The UEFI firmware "
+"loads it from the standard location and executes it, launching GRUB."
+msgstr ""
+"如果通过 UEFI 引导系统，GRUB 将其主映像写入到位于标准位置的 PE-COFF 可执行文"
+"件 <filename>EFI/BOOT/BOOTX64.EFI</filename> 中 (对于 <literal>i386-efi</"
+"literal> 则是 <filename>EFI/BOOT/BOOTIA32.EFI</filename>)。UEFI 固件从标准位"
+"置加载并执行这个文件，启动 GRUB。"
+
+#. type: Content of: <sect1><sect2><para>
+#: lfs-en/chapter10/grub.xml
+msgid ""
+"Many GRUB functions (including booting the Linux kernel) are not included in "
+"the main GRUB image. Instead, they are stored in a file system as GRUB "
+"modules. That file system is usually mounted in a way that the GRUB modules "
+"can be accessed in <filename class='directory'>/boot/grub</filename> on most "
+"Linux distributions. To avoid the chicken-and-egg problem, <command>grub-"
+"install</command> embeds the modules necessary to access this file system "
+"into the main GRUB image, so it can find and load other modules."
+msgstr ""
+"GRUB 主映像并不包含 GRUB 的大多数功能 (包括引导 Linux 内核)。实际上，这些功能"
+"作为 GRUB 模块，被存储在某个文件系统中。在多数 Linux 发行版中，这个文件系统的"
+"挂载点允许通过 <filename class='directory'>/boot/grub</filename> 路径访问 "
+"GRUB 模块。为了避免“先有鸡还是先有蛋”的问题，<command>grub-install</command> "
+"将访问这一文件系统所必须的模块嵌入到 GRUB 主映像中，使它能够找到和加载其他模"
+"块。"
 
 #. type: Content of: <sect1><sect2><para>
 #: lfs-en/chapter10/grub.xml
 msgid ""
 "The location of the boot partition is a choice of the user that affects the "
-"configuration.  One recommendation is to have a separate small (suggested "
-"size is 200 MB) partition just for boot information.  That way each build, "
-"whether LFS or some commercial distro, can access the same boot files and "
-"access can be made from any booted system.  If you choose to do this, you "
-"will need to mount the separate partition, move all files in the current "
-"<filename class=\"directory\">/boot</filename> directory (e.g. the Linux "
-"kernel you just built in the previous section) to the new partition.  You "
-"will then need to unmount the partition and remount it as <filename "
-"class=\"directory\">/boot</filename>.  If you do this, be sure to update "
+"configuration. One recommendation is to have a separate small (suggested "
+"size is 200 MB) partition just for boot information. In doing so, not just "
+"LFS, but any Linux distribution, can access the same boot files, and in turn "
+"any booted system. If you choose to do this, you will need to mount the "
+"separate partition, move all files in the current <filename "
+"class=\"directory\">/boot</filename> directory (e.g. the Linux kernel you "
+"just built in the previous section) to the new partition.  You will then "
+"need to unmount the partition and remount it as <filename "
+"class=\"directory\">/boot</filename>. If you do this, be sure to update "
 "<filename>/etc/fstab</filename>."
 msgstr ""
-"引导分区的位置由负责进行配置的用户自己决定，作者推荐创建一个小的 (建议大小为 "
-"200 MB) 分区，专门存放引导信息。这样，不同的 Linux 系统 (无论是 LFS 还是商业"
-"发行版) 在启动时和启动后都能访问相同的引导文件。如果您选择这样做，您需要挂载"
-"这个单独的分区，将 <filename class=\"directory\">/boot</filename> 中已有的文"
-"件 (例如上一节中构建的 Linux 内核) 移动到新的分区中。之后，解除该分区的挂载，"
-"并将它挂载为 <filename class=\"directory\">/boot</filename>。另外，还要注意更"
+"引导分区的位置可由负责进行配置的用户自行决定，作者推荐创建一个小的 (建议大小"
+"为 200 MB) 分区，专门存放引导信息。这样，不仅是 LFS，安装在硬盘上的所有 "
+"Linux 发行版都能访问各个发行版的引导文件。如果您选择这样做，您需要挂载这个单"
+"独的分区，将 <filename class=\"directory\">/boot</filename> 中已有的文件 (例"
+"如上一节中构建的 Linux 内核) 移动到新的分区中。之后，解除该分区的挂载，再将它"
+"重新挂载为 <filename class=\"directory\">/boot</filename>。另外，还要注意更"
 "新 <filename>/etc/fstab</filename>。"
+
+#. type: Content of: <sect1><sect2><note><para>
+#: lfs-en/chapter10/grub.xml
+msgid ""
+"If the host distro utilizes a separate partition for <filename "
+"class=\"directory\">/boot</filename> and you want the LFS system to use that "
+"partition for <filename class=\"directory\">/boot</filename> as well, just "
+"mount the partition at <filename class=\"directory\">$LFS/boot</filename> in "
+"the host distro. The Linux kernel supports mounting one partition at "
+"multiple mount points."
+msgstr ""
+"如果宿主发行版为 <filename class=\"directory\">/boot</filename> 使用了单独的"
+"分区，且希望 LFS 系统也以这个分区作为 <filename class=\"directory\">/boot</"
+"filename>，直接在宿主发行版将它挂载到 <filename class=\"directory\">$LFS/"
+"boot</filename> 即可。Linux 内核允许将一个分区挂载到多个挂载点。"
 
 #. type: Content of: <sect1><sect2><para>
 #: lfs-en/chapter10/grub.xml
@@ -187,6 +241,15 @@ msgid ""
 msgstr ""
 "直接将 <filename class=\"directory\">/boot</filename> 目录保留在 LFS 分区也是"
 "可以的，但这样在配置多系统启动时比较麻烦。"
+
+#. type: Content of: <sect1><sect2><para>
+#: lfs-en/chapter10/grub.xml
+msgid ""
+"For examples and more information on boot partition layouts, looking at "
+"<xref linkend=\"ch-partitioning-creatingpartition\"/> may be informative."
+msgstr ""
+"在 <xref linkend=\"ch-partitioning-creatingpartition\"/> 可以找到引导分区布局"
+"的更多信息和示例。"
 
 #. type: Content of: <sect1><sect2><para>
 #: lfs-en/chapter10/grub.xml
@@ -203,41 +266,242 @@ msgstr ""
 #. type: Content of: <sect1><sect2><para>
 #: lfs-en/chapter10/grub.xml
 msgid ""
-"Install the GRUB files into <filename class=\"directory\">/boot/grub</"
-"filename> and set up the boot track:"
+"The following sections go over how to boot with BIOS and UEFI.  The GRUB "
+"installations for BIOS, 64-bit UEFI, and 32-bit UEFI can coexist and share "
+"the same configuration. The images and data live at different locations, so "
+"you can create both the BIOS Boot Partition and the EFI System Partition, "
+"and install GRUB for all the supported firmware types (i.e. running three "
+"<command>grub-install</command> commands). If you are unsure about your "
+"firmware type, or you plan to move the hard drive to a different computer, "
+"this is something you can do as a blanket strategy."
 msgstr ""
-"将 GRUB 文件安装到 <filename class=\"directory\">/boot/grub</filename> 并设定"
-"引导磁道："
-
-#. type: Content of: <sect1><sect2><warning><para>
-#: lfs-en/chapter10/grub.xml
-msgid ""
-"The following command will overwrite the current boot loader. Do not run the "
-"command if this is not desired, for example, if using a third party boot "
-"manager to manage the Master Boot Record (MBR)."
-msgstr ""
-"以下命令会覆盖当前启动引导器，如果这不是您希望的，不要运行该命令。例如，如果"
-"您使用第三方启动引导器管理主引导记录 (MBR)。"
-
-#. type: Content of: <sect1><sect2><screen>
-#: lfs-en/chapter10/grub.xml
-#, no-wrap
-msgid "<userinput>grub-install /dev/sda</userinput>"
-msgstr "<userinput>grub-install /dev/sda</userinput>"
+"以下各节描述配置 BIOS 和 UEFI 引导的方法。为 BIOS，64 位 UEFI，以及 32 位 "
+"UEFI 安装的 GRUB 可共存并共用一份配置，它们的代码和数据存放在不同的位置。因"
+"此，可以既创建 BIOS Boot 分区，又创建 EFI 系统分区，再为所有支持的固件类型安"
+"装 GRUB (即运行三次 <command>grub-install</command>。在不确定固件类型，或者计"
+"划将硬盘移动到其他计算机上使用的情况下，可以这样直接覆盖所有情况。"
 
 #. type: Content of: <sect1><sect2><note><para>
 #: lfs-en/chapter10/grub.xml
 msgid ""
-"If the system has been booted using UEFI, <command>grub-install</command> "
-"will try to install files for the <emphasis>x86_64-efi</emphasis> target, "
-"but those files have not been installed in <xref linkend=\"chapter-building-"
-"system\"/>.  If this is the case, add <option>--target i386-pc</option> to "
-"the command above."
+"If you're doing UEFI boot but have created the Grub BIOS partition, it may "
+"be a good idea to run the command for BIOS in case UEFI booting does not "
+"work as expected."
 msgstr ""
-"如果系统是使用 UEFI 引导的，<command>grub-install</command> 会试图为 "
-"<emphasis>x86_64-efi</emphasis> 目标安装文件，但它们并未在<xref "
-"linkend=\"chapter-building-system\"/>中安装。如果出现了这类问题，请在以上命令"
-"中添加 <option>--target i386-pc</option> 选项。"
+"如果使用 UEFI 引导系统，但已经创建了 Grub BIOS 分区，则可以执行配置 BIOS 引导"
+"的命令，以作为 UEFI 引导不能正常工作时的备份。"
+
+#. type: Content of: <sect1><sect2><note><para>
+#: lfs-en/chapter10/grub.xml
+msgid ""
+"If you only need to install GRUB for one boot method, you don't have to run "
+"commands for both methods. You can just run the command for the boot method "
+"you need."
+msgstr ""
+"如果只需要为一种引导方案安装 GRUB，只运行为该引导方案进行安装的命令即可。"
+
+#. type: Content of: <sect1><sect2><sect3><title>
+#: lfs-en/chapter10/grub.xml
+msgid "Booting With BIOS"
+msgstr "使用 BIOS 进行引导"
+
+#. type: Content of: <sect1><sect2><sect3><para>
+#: lfs-en/chapter10/grub.xml
+msgid ""
+"For booting with BIOS, make sure the boot partition is mounted (if using a "
+"separate one) and the BIOS Boot partition exists. After that, install the "
+"GRUB files into <filename class=\"directory\">/boot/grub</filename> and set "
+"up the boot track:"
+msgstr ""
+"如果需要使用 BIOS 引导 LFS，首先确认 boot 分区已经挂载（如果使用了单独的 "
+"boot 分区），并确认 BIOS Boot 分区存在。然后即可将 GRUB 文件安装到 <filename "
+"class=\"directory\">/boot/grub</filename> 并设定引导磁道："
+
+#. type: Content of: <sect1><sect2><sect3><warning><para>
+#: lfs-en/chapter10/grub.xml
+msgid ""
+"The following command will overwrite the current boot loader. Do not run the "
+"command if this is not desired, for example, if using a third party boot "
+"manager to manage the MBR."
+msgstr ""
+"以下命令会覆盖当前启动引导器，如果您不希望这样做，例如要使用第三方引导管理器"
+"管理 MBR，则不要运行该命令。"
+
+#. type: Content of: <sect1><sect2><sect3><screen>
+#: lfs-en/chapter10/grub.xml
+#, no-wrap
+msgid "<userinput>grub-install /dev/sda --target=i386-pc</userinput>"
+msgstr "<userinput>grub-install /dev/sda --target=i386-pc</userinput>"
+
+#. type: Content of: <sect1><sect2><sect3><title>
+#: lfs-en/chapter10/grub.xml
+msgid "Booting With UEFI"
+msgstr "使用 UEFI 引导系统"
+
+#. type: Content of: <sect1><sect2><sect3><para>
+#: lfs-en/chapter10/grub.xml
+msgid ""
+"For booting with UEFI, make sure the boot partition is mounted (if using a "
+"separate one) and the EFI System Partition is mounted at <filename "
+"class='directory'>/boot/efi</filename>. After that, install the GRUB files "
+"into <filename class=\"directory\">/boot/grub</filename> and the main GRUB "
+"image at <filename>/boot/efi/EFI/BOOT/BOOTX64.EFI</filename>:"
+msgstr ""
+"如果需要使用 UEFI 引导 LFS，首先确认 boot 分区已经挂载（如果使用了单独的 "
+"boot 分区），并确认 EFI 系统分区已经挂载到 <filename class='directory'>/boot/"
+"efi</filename>。然后即可将 GRUB 文件安装到 <filename class=\"directory\">/"
+"boot/grub</filename> 并将 GRUB 主映像安装到 <filename>/boot/efi/EFI/BOOT/"
+"BOOTX64.EFI</filename>："
+
+#. type: Content of: <sect1><sect2><sect3><warning><para>
+#: lfs-en/chapter10/grub.xml
+msgid ""
+"The following command will overwrite the <filename>/boot/efi/EFI/BOOT/"
+"BOOTX64.EFI</filename> file.  If it already exists, it's likely that it's "
+"the entry of another boot loader (for example the GRUB installation from the "
+"host distro, or the Windows Boot Manager). Backup the file so it can be "
+"restored later or loaded as a secondary boot loader by the new GRUB "
+"installation from LFS."
+msgstr ""
+"以下命令会覆盖 <filename>/boot/efi/EFI/BOOT/BOOTX64.EFI</filename> 文件。如果"
+"该文件已经存在，则它很可能是另一引导加载器的入口点（例如宿主发行版安装的 "
+"GRUB，或者 Windows 引导管理器）。可以备份该文件，这样之后可以恢复它，或使用 "
+"LFS 新安装的 GRUB 将其加载为次级引导加载器。"
+
+#. type: Content of: <sect1><sect2><sect3><screen>
+#: lfs-en/chapter10/grub.xml
+#, no-wrap
+msgid "<userinput>grub-install --target=x86_64-efi --removable</userinput>"
+msgstr "<userinput>grub-install --target=x86_64-efi --removable</userinput>"
+
+#. type: Content of: <sect1><sect2><sect3><para>
+#: lfs-en/chapter10/grub.xml
+msgid ""
+"The command above assumes that you have 64-bit UEFI firmware.  If you want "
+"to make the system bootable on 32-bit UEFI firmware, run the command with "
+"<literal>x86_64-efi</literal> replaced by <literal>i386-efi</literal>."
+msgstr ""
+"上述命令假设 UEFI 固件是 64 位的。如果需要通过 32 位 UEFI 固件引导系统，需要"
+"将命令中的 <literal>x86_64-efi</literal> 改为 <literal>i386-efi</literal>。"
+
+#. type: Content of: <sect1><sect2><sect3><para>
+#: lfs-en/chapter10/grub.xml
+msgid ""
+"The <parameter>--removable</parameter> option makes <command>grub-install</"
+"command> use the standard location, <filename>EFI/BOOT/BOOTX64.EFI</"
+"filename> (or <filename>EFI/BOOT/BOOTIA32.EFI</filename> for <literal>i386-"
+"efi</literal>), instead of the location GRUB prefers (<filename>EFI/GRUB/"
+"GRUBX64.EFI</filename> or <filename>EFI/GRUB/GRUBIA32.EFI</filename>).  "
+"Using a non-standard location would result in the location in a EFI variable "
+"be recorded, but LFS lacks the BLFS package <ulink url=\"&blfs-book;postlfs/"
+"efibootmgr.html\">efibootmgr</ulink>, which is needed by GRUB to record the "
+"location into the EFI variable."
+msgstr ""
+"<parameter>--removable</parameter> 选项使得 <command>grub-install</command> "
+"使用标准位置，<filename>EFI/BOOT/BOOTX64.EFI</filename> (或者对于 "
+"<literal>i386-efi</literal> 则为 <filename>EFI/BOOT/BOOTIA32.EFI</"
+"filename>)，而非 GRUB 通常使用的位置 (<filename>EFI/GRUB/GRUBX64.EFI</"
+"filename> 或者 <filename>EFI/GRUB/GRUBIA32.EFI</filename>。)如果使用非标准位"
+"置，则需要将它记录在一个 EFI 变量中，但 LFS 没有 BLFS 软件包 <ulink "
+"url=\"&blfs-book;postlfs/efibootmgr.html\">efibootmgr</ulink>，而 GRUB 需要它"
+"才能在 EFI 变量记录位置。"
+
+#. type: Content of: <sect1><sect2><sect3><note><para>
+#: lfs-en/chapter10/grub.xml
+msgid ""
+"Some UEFI firmware implementations, while rare, skip the standard EFI path. "
+"Such systems most of the time are old, like Lenovo ThinkPads or HP desktops/"
+"laptops. When the boot entry is missing in the firmware setup, you will need "
+"to install the BLFS package <ulink url=\"&blfs-book;postlfs/"
+"efibootmgr.html\">efibootmgr</ulink> to create a boot entry for UEFI. If "
+"it's easier, the package can be installed via the distribution's package "
+"manager, if applicable, and used on the host instead of on the LFS system. "
+"This can prevent the need for downloading more tarballs onto the LFS system "
+"for now."
+msgstr ""
+"一些很少见的 UEFI 固件实现会忽略标准路径。这些系统一般出现在较为陈旧的系统"
+"上，例如旧款的的联想 Thinkpad 或 HP 台式机/笔记本。如果在固件设置中找不到对应"
+"于标准路径的引导项，则需要使用 BLFS 软件包 <ulink url=\"&blfs-book;postlfs/"
+"efibootmgr.html\">efibootmgr</ulink> 创建引导项。如果宿主发行版提供了该软件"
+"包，也可以通过其包管理器安装并使用它。这样可以暂时避免为 LFS 系统下载更多源码"
+"包。"
+
+#. type: Content of: <sect1><sect2><sect3><note><para>
+#: lfs-en/chapter10/grub.xml
+msgid ""
+"First install the package, then mount the EFI variable file system if it "
+"isn't already mounted:"
+msgstr "首先安装上述软件包，然后挂载 EFI 变量文件系统，除非它已被挂载："
+
+#. type: Content of: <sect1><sect2><sect3><note><screen>
+#: lfs-en/chapter10/grub.xml
+#, no-wrap
+msgid ""
+"<userinput>mountpoint /sys/firmware/efi/efivars ||\n"
+"  mount -v -t efivarfs efivarfs /sys/firmware/efi/efivars</userinput>"
+msgstr ""
+"<userinput>mountpoint /sys/firmware/efi/efivars ||\n"
+"  mount -v -t efivarfs efivarfs /sys/firmware/efi/efivars</userinput>"
+
+#. type: Content of: <sect1><sect2><sect3><note><para>
+#: lfs-en/chapter10/grub.xml
+msgid "Now create a boot entry for the EFI:"
+msgstr "现在创建一个 EFI 引导项："
+
+#. type: Content of: <sect1><sect2><sect3><note><screen>
+#: lfs-en/chapter10/grub.xml
+#, no-wrap
+msgid ""
+"<userinput>efibootmgr -c -d /dev/sd<replaceable>&lt;x&gt;</replaceable> \\\n"
+"  -p <replaceable>&lt;y&gt;</replaceable> -L \"LFS\" -l '\\EFI\\BOOT\\BOOT<replaceable>&lt;X64&gt;</replaceable>.EFI'</userinput>"
+msgstr ""
+"<userinput>efibootmgr -c -d /dev/sd<replaceable>&lt;x&gt;</replaceable> \\\n"
+"  -p <replaceable>&lt;y&gt;</replaceable> -L \"LFS\" -l '\\EFI\\BOOT\\BOOT<replaceable>&lt;X64&gt;</replaceable>.EFI'</userinput>"
+
+#. type: Content of: <sect1><sect2><sect3><note><para>
+#: lfs-en/chapter10/grub.xml
+msgid ""
+"The <literal>/dev/sd<replaceable>&lt;x&gt;</replaceable></literal> drive "
+"should be the device node for the disk where the ESP exists. The "
+"<replaceable>&lt;y&gt;</replaceable> partition number should match the "
+"number of the ESP. If the ESP is on <literal>/dev/sda2</literal>, then the "
+"partition number would be <literal>2</literal>. If you are using 32-bit "
+"UEFI, replace <replaceable>&lt;X64&gt;</replaceable> with <literal>IA32</"
+"literal>."
+msgstr ""
+"其中 <literal>/dev/sd<replaceable>&lt;x&gt;</replaceable></literal> 应改为 "
+"ESP 所在磁盘对应的设备节点，<replaceable>&lt;y&gt;</replaceable> 应改为 ESP "
+"在磁盘上的编号，例如如果 ESP 对应的设备节点是 <literal>/dev/sda2</literal>，"
+"则编号就是 <literal>2</literal>。如果使用 32 位 UEFI，需要将 "
+"<replaceable>&lt;X64&gt;</replaceable> 替换成 <literal>IA32</literal>。"
+
+#. type: Content of: <sect1><sect2><sect3><note><para>
+#: lfs-en/chapter10/grub.xml
+msgid ""
+"Some (broken) firmware may require additional parameters for "
+"<command>efibootmgr</command>, like <parameter>--full-dev-path</parameter> "
+"or <parameter>-e 1 -E</parameter>.  Read the man page <ulink role='man' "
+"url='&man;efibootmgr.8'>efibootmgr(8)</ulink> for details."
+msgstr ""
+"一些 (实现不正确的) 固件需要向 <command>efibootmgr</command> 传递更多选项，类"
+"似 <parameter>--full-dev-path</parameter> 或者 <parameter>-e 1 -E</"
+"parameter>。详见手册页 <ulink role='man' "
+"url='&man;efibootmgr.8'>efibootmgr(8)</ulink>。"
+
+# sysv-only phrase skipped deliberately
+#. type: Content of: <sect1><sect2><sect3><note><para>
+#: lfs-en/chapter10/grub.xml
+msgid ""
+"Now unmount the EFI variable file system<phrase revision='sysv'>, which "
+"should no longer be needed for the boot process, as the file system is only "
+"used for EFI variable manipulation</phrase>:"
+msgstr "取消挂载 EFI 变量文件系统："
+
+#. type: Content of: <sect1><sect2><sect3><note><screen>
+#: lfs-en/chapter10/grub.xml
+#, no-wrap
+msgid "<userinput>umount -v /sys/firmware/efi/efivars</userinput>"
+msgstr "<userinput>umount -v /sys/firmware/efi/efivars</userinput>"
 
 #. type: Content of: <sect1><sect2><title>
 #: lfs-en/chapter10/grub.xml
@@ -260,7 +524,13 @@ msgid ""
 "\n"
 "insmod part_gpt\n"
 "insmod ext2\n"
+"\n"
 "set root=(hd0,2)\n"
+"\n"
+"# For UEFI\n"
+"insmod efi_gop\n"
+"insmod efi_uga\n"
+"\n"
 "set gfxpayload=1024x768x32\n"
 "\n"
 "menuentry \"GNU/Linux, Linux &linux-version;-lfs-&version;\" {\n"
@@ -275,7 +545,13 @@ msgstr ""
 "\n"
 "insmod part_gpt\n"
 "insmod ext2\n"
+"\n"
 "set root=(hd0,2)\n"
+"\n"
+"# For UEFI\n"
+"insmod efi_gop\n"
+"insmod efi_uga\n"
+"\n"
 "set gfxpayload=1024x768x32\n"
 "\n"
 "menuentry \"GNU/Linux, Linux &linux-version;-lfs-&version;\" {\n"
@@ -287,30 +563,35 @@ msgstr ""
 #: lfs-en/chapter10/grub.xml
 msgid ""
 "The <command>insmod</command> commands load the <application>GRUB</"
-"application> modules named <filename>part_gpt</filename> and <filename>ext2</"
-"filename>.  Despite the naming, <filename>ext2</filename> actually supports "
-"<systemitem class='filesystem'>ext2</systemitem>, <systemitem "
-"class='filesystem'>ext3</systemitem>, and <systemitem "
-"class='filesystem'>ext4</systemitem> filesystems.  The <command>grub-"
-"install</command> command has embedded some modules into the main "
-"<application>GRUB</application> image (installed into the MBR or the GRUB "
-"BIOS partition) to access the other modules (in <filename class='directory'>/"
-"boot/grub/i386-pc</filename>) without a chicken-or-egg issue, so with a "
-"typical configuration these two modules are already embedded and those two "
-"<command>insmod</command> commands will do nothing.  But they do no harm "
-"anyway, and they may be needed with some rare configurations."
+"application> modules named <filename>part_gpt</filename>, <filename>ext2</"
+"filename>, <filename>efi_gop</filename>, and <filename>efi_uga</filename>.  "
+"Despite the naming, <filename>ext2</filename> actually supports <systemitem "
+"class='filesystem'>ext2</systemitem>, <systemitem class='filesystem'>ext3</"
+"systemitem>, and <systemitem class='filesystem'>ext4</systemitem> "
+"filesystems.  On UEFI systems, <filename>efi_gop</filename> and "
+"<filename>efi_uga</filename> are for video support. GOP, or Graphics Output "
+"Protocol, is the modern approach. UGA, or Universal Graphics Adaptor, is a "
+"legacy way of handling it.  In a typical configuration, the "
+"<filename>part_gpt</filename> and <filename>ext2</filename> modules are "
+"already embedded in the main GRUB image by <command>grub-install</command>, "
+"and the <command>insmod</command> commands for them will do nothing. "
+"However, they do no harm anyway, and they may be needed with some rare "
+"configurations."
 msgstr ""
-"<command>insmod</command> 命令加载 <application>GRUB</application> 模块 "
-"<filename>part_gpt</filename> and <filename>ext2</filename>。<filename>ext2</"
-"filename> 模块尽管如此命名，实际上却支持 <systemitem "
-"class='filesystem'>ext2</systemitem>，<systemitem class='filesystem'>ext3</"
-"systemitem>，以及 <systemitem class='filesystem'>ext4</systemitem> 文件系统。"
-"<command>grub-install</command> 命令已经将一些模块嵌入 <application>GRUB</"
-"application> 主映像 (它安装在 MBR 或 GRUB BIOS 分区中)，以便在访问其他模块 "
-"(这些模块在 <filename class='directory'>/boot/grub/i386-pc</filename> 中) 时"
-"避免“先有鸡还是先有蛋”的问题。因此，在典型的系统配置中，这两个模块已经被嵌入"
-"主映像，此时这两条 <command>insmod</command> 命令不会产生任何效果。但是无论如"
-"何它们不会造成损害，而且在一些少见的系统配置中它们可能是必要的。"
+"配置文件使用 <command>insmod</command> 命令加载 <application>GRUB</"
+"application> 模块 <filename>part_gpt</filename>，<filename>ext2</filename>，"
+"<filename>efi_gop</filename>，以及 <filename>efi_uga</filename>。"
+"<filename>ext2</filename> 模块虽然其名称只包含一个文件系统，实际上却支持 "
+"<systemitem class='filesystem'>ext2</systemitem>，<systemitem "
+"class='filesystem'>ext3</systemitem>，以及 <systemitem "
+"class='filesystem'>ext4</systemitem> 文件系统。在 UEFI 系统上，"
+"<filename>efi_gop</filename> 和 <filename>efi_uga</filename> 提供视频输出支"
+"持。GOP，即图形输出协议，是现代 UEFI 固件采用的视频接口。UGA，即通用图形适配"
+"器，则出现在一些老式 UEFI 固件上。在典型的系统配置中，<command>grub-install</"
+"command> 命令已经将 <filename>part_gpt</filename> 和 <filename>ext2</"
+"filename> 嵌入 <application>GRUB</application> 主映像中，此时对应的两条 "
+"<command>insmod</command> 命令不会产生任何效果。但是无论如何它们不会造成损"
+"害，而且在一些少见的系统配置中它们可能是必要的。"
 
 #. type: Content of: <sect1><sect2><para>
 #: lfs-en/chapter10/grub.xml
@@ -319,11 +600,12 @@ msgid ""
 "resolution and color depth of the VESA framebuffer to be passed to the "
 "kernel.  It's necessary for the kernel SimpleDRM driver to use the VESA "
 "framebuffer.  You can use a different resolution or color depth value which "
-"better suits for your monitor."
+"better suits for your monitor.  This line does nothing when the system is "
+"booted via UEFI, but it does no harm anyway."
 msgstr ""
 "<command>set gfxpayload=1024x768x32</command> 命令设置 VESA 帧缓冲的分辨率和"
 "色深。内核 SimpleDRM 驱动需要它才能使用 VESA 帧缓冲。可以自行改用更适合显示器"
-"的分辨率和色深值。"
+"的分辨率和色深值。这一行在使用 UEFI 引导系统时没有作用，但也不会造成损害。"
 
 #. type: Content of: <sect1><sect2><note><para>
 #: lfs-en/chapter10/grub.xml
@@ -388,17 +670,18 @@ msgstr ""
 #: lfs-en/chapter10/grub.xml
 msgid ""
 "The name of the device node for a partition in <filename class='directory'>/"
-"dev</filename> may also change (this is less likely than a GRUB designator "
-"change).  You can also replace paths to device nodes like <literal>/dev/"
-"sda1</literal> with <literal>PARTUUID=<replaceable>&lt;partition UUID&gt;</"
-"replaceable></literal>, in <filename>/etc/fstab</filename>, to avoid a "
-"potential boot failure in case the device node name has changed."
+"dev</filename> may also change (very frequently on some systems with "
+"multiple NVME disks).  You can also replace paths to device nodes like "
+"<literal>/dev/sda1</literal> with "
+"<literal>PARTUUID=<replaceable>&lt;partition UUID&gt;</replaceable></"
+"literal>, in <filename>/etc/fstab</filename>, to avoid a potential boot "
+"failure in case the device node name has changed."
 msgstr ""
 "<filename class='directory'>/dev</filename> 中分区对应的设备节点名也可能发生"
-"改变 (和 GRUB 分区编号的变化相比较为少见)。在 <filename>/etc/fstab</"
-"filename> 中，也可以将 <literal>/dev/sda1</literal> 这样的设备节点路径改为 "
-"<literal>PARTUUID=<replaceable>&lt;分区 UUID&gt;</replaceable></literal>，从"
-"而避免设备节点命名发生改变时可能导致的引导失败。"
+"改变 (这一现象在在配备多块 NVME 盘的系统上经常出现)。在 <filename>/etc/"
+"fstab</filename> 中，也可以将 <literal>/dev/sda1</literal> 这样的设备节点路径"
+"改为 <literal>PARTUUID=<replaceable>&lt;分区 UUID&gt;</replaceable></"
+"literal>，从而避免设备节点命名发生改变时可能导致的引导失败。"
 
 #. type: Content of: <sect1><sect2><para>
 #: lfs-en/chapter10/grub.xml
@@ -420,10 +703,10 @@ msgid ""
 "a configuration file automatically.  It uses a set of scripts in /etc/"
 "grub.d/ and will destroy any customizations that you make.  These scripts "
 "are designed primarily for non-source distributions and are not recommended "
-"for LFS.  If you install a commercial Linux distribution, there is a good "
+"for LFS. If you install a commercial Linux distribution, there is a good "
 "chance that this program will be run.  Be sure to back up your grub.cfg file."
 msgstr ""
-"有一个命令 <application>grub-mkconfig</application> 被用于自动创建配置文件。"
-"它使用 /etc/grub.d 中的脚本创建新配置文件，这会覆盖您手动编写的 grub.cfg。这"
-"些脚本主要是为非源代码发行版设计的，在 LFS 中不推荐使用。但是，如果您安装了商"
-"业发行版，它很可能在发行版中被运行，记得备份 grub.cfg 以防它被覆盖。"
+"有一个命令 <application>grub-mkconfig</application> 可用于自动创建配置文件。"
+"它使用 /etc/grub.d 中的脚本创建新配置文件，这会覆盖您手动编写的配置。这些脚本"
+"主要是为非源代码发行版设计的，在 LFS 中不推荐使用它们。但是，如果您安装了商业"
+"发行版，它很可能在发行版中被运行，记得备份 grub.cfg 以防它被覆盖。"

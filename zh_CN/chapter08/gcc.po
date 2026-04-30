@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Linux From Scratch 11.1\n"
 "Report-Msgid-Bugs-To: lfs-dev@lists.linuxfromscratch.org\n"
-"POT-Creation-Date: 2026-03-30 12:03+0800\n"
+"POT-Creation-Date: 2026-04-27 10:05+0800\n"
 "PO-Revision-Date: 2022-03-03 03:00+0800\n"
 "Last-Translator: Xi Ruoyao <xry111@xry111.site>\n"
 "Language-Team: none\n"
@@ -709,6 +709,7 @@ msgid ""
 "             --enable-default-pie     \\\n"
 "             --enable-default-ssp     \\\n"
 "             --enable-host-pie        \\\n"
+"             --enable-targets=all     \\\n"
 "             --disable-multilib       \\\n"
 "             --disable-bootstrap      \\\n"
 "             --disable-fixincludes    \\\n"
@@ -720,6 +721,7 @@ msgstr ""
 "             --enable-default-pie     \\\n"
 "             --enable-default-ssp     \\\n"
 "             --enable-host-pie        \\\n"
+"             --enable-targets=all     \\\n"
 "             --disable-multilib       \\\n"
 "             --disable-bootstrap      \\\n"
 "             --disable-fixincludes    \\\n"
@@ -814,6 +816,21 @@ msgid ""
 "This switch tells GCC to link to the system installed copy of the Zlib "
 "library, rather than its own internal copy."
 msgstr "该选项使得 GCC 链接到系统安装的 Zlib 库，而不是它自带的 Zlib 副本。"
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
+#: lfs-en/chapter08/gcc.xml
+msgid "<parameter>--enable-targets=all</parameter>"
+msgstr "<parameter>--enable-targets=all</parameter>"
+
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
+#: lfs-en/chapter08/gcc.xml
+msgid ""
+"This switch tells GCC to enable 64-bit code generation support even if we "
+"are building it for a 32-bit system.  It's needed to build GRUB for 64-bit "
+"UEFI.  This switch has no effect if building for 64-bit."
+msgstr ""
+"该选项在我们为 32 位系统编译 GCC 时，也启用 64 位代码生成支持。为 64 位 UEFI "
+"编译 GRUB 需要此项支持。在为 64 位系统编译 GCC 时，该选项没有作用。"
 
 #. type: Attribute 'xreflabel' of: <sect1><sect2><note><anchor>
 #: lfs-en/chapter08/gcc.xml
