@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Linux From Scratch 11.0\n"
 "Report-Msgid-Bugs-To: lfs-dev@lists.linuxfromscratch.org\n"
-"POT-Creation-Date: 2026-04-30 11:37+0800\n"
+"POT-Creation-Date: 2026-05-28 00:30+0800\n"
 "PO-Revision-Date: 2021-09-08 14:05+0800\n"
 "Last-Translator: Xi Ruoyao <xry111@xry111.site>\n"
 "Language-Team: none\n"
@@ -70,6 +70,44 @@ msgid ""
 "tested."
 msgstr "比下列最低版本更古老的版本可能正常工作，但作者没有进行测试。"
 
+#. type: Content of: <sect1><sect2><warning><para>
+#: lfs-en/chapter02/hostreqs.xml
+msgid ""
+"Be aware that GCC newer than &gcc-version; or Binutils newer than &binutils-"
+"version; are not tested.  A newer GCC is highly likely to break the build of "
+"this LFS release.  Do not report such a breakage to the LFS editors.  If "
+"your host distro has newer versions of these packages, you have several "
+"options:"
+msgstr ""
+"注意比 &gcc-version; 更新的宿主 GCC 版本和比 &binutils-version; 更新的宿主 "
+"Binutils 版本未经测试。更新的 GCC 有较大概率导致该版本的 LFS 无法构建，这种情"
+"况下不要向 LFS 编辑报告构建问题。如果您的宿主发行版使用了这两个软件包的更新版"
+"本，可以选择："
+
+#. type: Content of: <sect1><sect2><warning><para><itemizedlist><listitem><simpara>
+#: lfs-en/chapter02/hostreqs.xml
+msgid "Use a newer release of the LFS book if one exists"
+msgstr "如果已经发布了更新版本的 LFS，阅读更新版本"
+
+#. type: Content of: <sect1><sect2><warning><para><itemizedlist><listitem><simpara>
+#: lfs-en/chapter02/hostreqs.xml
+msgid "Use an older host distro"
+msgstr "使用较老的宿主发行版"
+
+#. type: Content of: <sect1><sect2><warning><para><itemizedlist><listitem><simpara>
+#: lfs-en/chapter02/hostreqs.xml
+msgid "Downgrade GCC if that is supported by the host distro"
+msgstr "如果宿主发行版支持，降级 GCC 版本"
+
+#. type: Content of: <sect1><sect2><warning><para><itemizedlist><listitem><simpara>
+#: lfs-en/chapter02/hostreqs.xml
+msgid ""
+"Use the latest LFS development book. Updates to the latest version of "
+"packages in LFS are usually added within two to four weeks after release."
+msgstr ""
+"阅读最新的，开发中的 LFS 手册。在上述软件包发布新版本后，开发状态的 LFS 手册"
+"通常会在两到四周内更新。"
+
 #. type: Content of: <sect1><sect2><itemizedlist><listitem><para>
 #: lfs-en/chapter02/hostreqs.xml
 msgid ""
@@ -83,10 +121,10 @@ msgstr ""
 #: lfs-en/chapter02/hostreqs.xml
 msgid ""
 "<emphasis role=\"strong\">Binutils-2.13.1</emphasis> (Versions greater than "
-"&binutils-version; are not recommended as they have not been tested)"
+"&binutils-version; may not work as they have not been tested)"
 msgstr ""
 "<emphasis role=\"strong\">Binutils-2.13.1</emphasis> (比 &binutils-version; "
-"更新的版本未经测试，不推荐使用)"
+"更新的版本未经测试，可能无法正常构建)"
 
 #. type: Content of: <sect1><sect2><itemizedlist><listitem><para>
 #: lfs-en/chapter02/hostreqs.xml
@@ -99,8 +137,12 @@ msgstr ""
 
 #. type: Content of: <sect1><sect2><itemizedlist><listitem><para>
 #: lfs-en/chapter02/hostreqs.xml
-msgid "<emphasis role=\"strong\">Coreutils-8.1</emphasis>"
-msgstr "<emphasis role=\"strong\">Coreutils-8.1</emphasis>"
+msgid ""
+"<emphasis role=\"strong\">GNU Coreutils-8.1</emphasis> or <emphasis "
+"role=\"strong\">Uutils Coreutils-0.8</emphasis>"
+msgstr ""
+"<emphasis role=\"strong\">GNU Coreutils-8.1</emphasis> 或<emphasis "
+"role=\"strong\">Uutils Coreutils-0.8</emphasis>"
 
 #. type: Content of: <sect1><sect2><itemizedlist><listitem><para>
 #: lfs-en/chapter02/hostreqs.xml
@@ -125,14 +167,13 @@ msgstr ""
 #: lfs-en/chapter02/hostreqs.xml
 msgid ""
 "<emphasis role=\"strong\">GCC-5.4</emphasis> including the C++ compiler, "
-"<command>g++</command> (Versions greater than &gcc-version; are not "
-"recommended as they have not been tested). C and C++ standard libraries "
-"(with headers) must also be present so the C++ compiler can build hosted "
-"programs"
+"<command>g++</command> (Versions greater than &gcc-version; may not work as "
+"they have not been tested). C and C++ standard libraries (with headers) must "
+"also be present so the C++ compiler can build hosted programs"
 msgstr ""
 "<emphasis role=\"strong\">GCC-5.4</emphasis>，包括 C++ 编译器 <command>g++</"
-"command> (比 &gcc-version; 更新的版本未经测试，不推荐使用)。C 和 C++ 标准库 "
-"(包括头文件) 也必须可用，这样 C++ 编译器才能构建宿主环境的程序"
+"command> (比 &gcc-version; 更新的版本未经测试，可能无法正常构建)。C 和 C++ 标"
+"准库 (包括头文件) 也必须可用，这样 C++ 编译器才能构建宿主环境的程序"
 
 #. type: Content of: <sect1><sect2><itemizedlist><listitem><para>
 #: lfs-en/chapter02/hostreqs.xml
@@ -251,11 +292,11 @@ msgstr "<emphasis role=\"strong\">Xz-5.0.0</emphasis>"
 #. type: Content of: <sect1><sect2><para>
 #: lfs-en/chapter02/hostreqs.xml
 msgid ""
-"Additionally, if you need to create a new ESP (EFI System Partition read "
+"Additionally, if you need to create a new ESP (EFI System Partition, read "
 "<xref linkend='ch-partitioning-creatingfilesystem'/> for details), <ulink "
 "url='&blfs-book;postlfs/dosfstools.html'>dosfstools</ulink> is needed."
 msgstr ""
-"另外，如果需要新建 ESP (EFI 系统分区，详见 <xref linkend='ch-partitioning-"
+"另外，如果需要新建 ESP (EFI 系统分区，详见<xref linkend='ch-partitioning-"
 "creatingfilesystem'/>)，则需要 <ulink url='&blfs-book;postlfs/"
 "dosfstools.html'>dosfstools</ulink>。"
 
@@ -329,7 +370,11 @@ msgid ""
 "}\n"
 "\n"
 "# Coreutils first because --version-sort needs Coreutils >= 7.0\n"
-"ver_check Coreutils      sort     8.1 || bail \"Coreutils too old, stop\"\n"
+"if sort --version |&amp; grep -q uutils; then\n"
+"    ver_check Coreutils  sort     0.8 || bail \"Uutils Coreutils too old, stop\"\n"
+"else\n"
+"    ver_check Coreutils  sort     8.1 || bail \"GNU Coreutils too old, stop\"\n"
+"fi\n"
 "ver_check Bash           bash     3.2\n"
 "ver_check Binutils       ld       2.13.1\n"
 "ver_check Bison          bison    2.7\n"
@@ -424,7 +469,11 @@ msgstr ""
 "}\n"
 "\n"
 "# Coreutils first because --version-sort needs Coreutils >= 7.0\n"
-"ver_check Coreutils      sort     8.1 || bail \"Coreutils too old, stop\"\n"
+"if sort --version |&amp; grep -q uutils; then\n"
+"    ver_check Coreutils  sort     0.8 || bail \"Uutils Coreutils too old, stop\"\n"
+"else\n"
+"    ver_check Coreutils  sort     8.1 || bail \"GNU Coreutils too old, stop\"\n"
+"fi\n"
 "ver_check Bash           bash     3.2\n"
 "ver_check Binutils       ld       2.13.1\n"
 "ver_check Bison          bison    2.7\n"
