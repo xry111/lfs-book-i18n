@@ -23,7 +23,8 @@ EXCLUDE_XML += $(LFS_EN)/appendices/scripts.xml    \
                $(LFS_EN)/chapter08/sysvinit.xml    \
                $(LFS_EN)/chapter08/udev.xml        \
                $(LFS_EN)/chapter09/bootscripts.xml \
-               $(LFS_EN)/chapter09/network.xml
+               $(LFS_EN)/chapter09/network.xml     \
+               $(LFS_EN)/chapter09/usage.xml
 
 CMD_FIND_XML = find $(LFS_EN) -type f -name '*.xml'
 XML_FILES = $(filter-out $(EXCLUDE_XML), $(wildcard $(shell $(CMD_FIND_XML))))
