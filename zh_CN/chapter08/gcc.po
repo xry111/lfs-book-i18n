@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Linux From Scratch 11.1\n"
 "Report-Msgid-Bugs-To: lfs-dev@lists.linuxfromscratch.org\n"
-"POT-Creation-Date: 2026-05-28 00:30+0800\n"
+"POT-Creation-Date: 2026-06-02 21:33+0800\n"
 "PO-Revision-Date: 2022-03-03 03:00+0800\n"
 "Last-Translator: Xi Ruoyao <xry111@xry111.site>\n"
 "Language-Team: none\n"
@@ -705,27 +705,35 @@ msgstr ""
 #: lfs-en/chapter08/gcc.xml
 msgid ""
 "We only enable C and C++ here to save the build time as no packages in LFS "
-"and BLFS require GCC to compile other languages. Append <literal>cobol</"
-"literal> for Cobol (note that it will cause GCC fail to build on a 32-bit "
-"LFS system), <literal>fortran</literal> for Fortran, <literal>go</literal> "
-"for Go, <literal>objc</literal> for Objective C, <literal>obj-c++</literal> "
-"for Objective C++, and/or <literal>m2</literal> for Modula 2 into the value "
-"of <parameter>--enable-languages</parameter> option if you want to compile "
-"programs in one or more of those languages with GCC.  GCC also supports Ada "
-"and D, but the code to support Ada or D is written in Ada or D itself, so "
-"the support can only be built with an existing Ada or D compiler "
-"installation and we cannot enable the support here."
+"and BLFS require GCC to compile other languages. Append <literal>algol68</"
+"literal> for Algol 68, <literal>fortran</literal> for Fortran, <literal>go</"
+"literal> for Go, <literal>objc</literal> for Objective C, <literal>obj-c++</"
+"literal> for Objective C++, and/or <literal>m2</literal> for Modula 2 into "
+"the value of <parameter>--enable-languages</parameter> option if you want to "
+"compile programs in one or more of those languages with GCC."
 msgstr ""
 "由于 LFS 和 BLFS 软件包都不需要 GCC 支持其他语言，在这里我们只启用了 C 和 C+"
 "+ 语言支持，以减少构建 GCC 所需的时间。如果您希望使用 GCC 编译其他语言编写的"
 "程序，可以在 <parameter>--enable-languages</parameter> 选项的值中加入"
-"<literal>cobol</literal> 以启用 Cobol 支持，加入 <literal>fortran</literal> "
-"以启用 Fortran 支持，加入 <literal>go</literal> 以启用 Go 语言支持，加入 "
-"<literal>objc</literal> 以启用 Objective C 支持，加入 <literal>obj-c++</"
+"<literal>algol68</literal> 以启用 Alogl 68 支持，加入 <literal>fortran</"
+"literal> 以启用 Fortran 支持，加入 <literal>go</literal> 以启用 Go 语言支持，"
+"加入 <literal>objc</literal> 以启用 Objective C 支持，加入 <literal>obj-c++</"
 "literal> 以启用 Objective C++ 支持，和/或加入 <literal>m2</literal> 以启用 "
 "Modula 2 支持。GCC 还支持 Ada 和 D 语言，但用于支持它们的代码分别以 Ada 和 D "
 "本身编写而成，因此构建 Ada 或 D 语言支持需要首先安装好一个可用的 Ada 或 D 编"
 "译器，我们就无法在此处启用针对它们的支持。"
+
+#. type: Content of: <sect1><sect2><para>
+#: lfs-en/chapter08/gcc.xml
+msgid ""
+"GCC also supports the Ada, COBOL, and D languages.  But that would require "
+"some dependencies which are not available in the base LFS system and would "
+"exceed the scope of this book.  Read <ulink url='https://gcc.gnu.org/install/"
+"prerequisites.html'>the upstream documentation</ulink> for details."
+msgstr ""
+"GCC 还支持 Ada、COBOL、D 语言。但它们依赖不属于基本的 LFS 系统且超出本书应有"
+"涵盖范围的软件包。详见<ulink url='https://gcc.gnu.org/"
+"instaprerequisites.html'>上游文档</ulink>。"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: lfs-en/chapter08/gcc.xml
@@ -899,8 +907,8 @@ msgstr "输入以下命令提取测试结果的摘要："
 #. type: Content of: <sect1><sect2><screen>
 #: lfs-en/chapter08/gcc.xml
 #, no-wrap
-msgid "<userinput remap=\"test\">../contrib/test_summary</userinput>"
-msgstr "<userinput remap=\"test\">../contrib/test_summary</userinput>"
+msgid "<userinput remap=\"test\">../contrib/test_summary -t</userinput>"
+msgstr "<userinput remap=\"test\">../contrib/test_summary -t</userinput>"
 
 #. type: Content of: <sect1><sect2><para>
 #: lfs-en/chapter08/gcc.xml
