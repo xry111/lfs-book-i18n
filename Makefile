@@ -9,7 +9,6 @@ MLANG = zh_CN
 include $(MLANG)/lang.mk
 
 EXCLUDE_XML = $(LFS_EN)/stylesheets/lfs-xsl/lfs-l10n.xml              \
-              $(LFS_EN)/chapter01/changelog.xml                       \
               $(LFS_EN)/appendices/creat-comm.xml                     \
               $(LFS_EN)/appendices/mit-lic.xml                        \
               $(wildcard $(LFS_EN)/chapter10/kernel/*.xml)
@@ -40,18 +39,10 @@ $(PO_FILES) &: $(XML_FILES) mkpo4acfg.py
 	mkdir -pv $(POT_DIRS)
 	$(MKPO4ACFG) $(XML_FILES) > po4a.cfg
 	po4a --no-translations po4a.cfg
-
-$(MLANG)/chapter01/changelog.po: $(LFS_EN)/chapter01/changelog.xml \
-                                 changelogtranslator.py         \
-                                 templatetranslator.py
-	mkdir -pv pot/chapter01
-	$(MKPO4ACFG) $(LFS_EN)/chapter01/changelog.xml > po4a-changelog.cfg
-	po4a --no-translations po4a-changelog.cfg
 	./changelogtranslator.py $(MLANG)
 	# Run again. polib does not agree with po4a on line wrappings
 	# in the .po file, so we need to settle it down.
 	po4a --no-translations --force po4a-changelog.cfg
-	touch $@
 
 MXML_FILES = $(patsubst $(LFS_EN)/%.xml, $(MLANG)/book/%.xml, $(XML_FILES))
 
@@ -107,12 +98,6 @@ $(MXML_FILES) &: $(XML_FILES) $(PO_FILES) mkpo4acfg.py po4a_issue295.sh
 	sed -e 's|<book>|<book lang="$(M_DOCBOOK_LANG)">|' -i $(MLANG)/book/index.xml
 	cd $(MLANG)/book; $(PWD)/po4a_issue295.sh
 	touch $(MXML_FILES)
-
-$(MLANG)/book/chapter01/changelog.xml: $(LFS_EN)/chapter01/changelog.xml \
-                                       $(MLANG)/chapter01/changelog.po
-	mkdir -pv pot/chapter01
-	$(MKPO4ACFG) $(LFS_EN)/chapter01/changelog.xml > po4a-changelog.cfg
-	po4a po4a-changelog.cfg
 
 $(MLANG)/book/%: $(LFS_EN)/%
 	mkdir -pv "$(@D)"
