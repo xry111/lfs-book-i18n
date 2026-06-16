@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Linux From Scratch 11.4\n"
 "Report-Msgid-Bugs-To: lfs-dev@lists.linuxfromscratch.org\n"
-"POT-Creation-Date: 2024-12-03 19:51+0800\n"
+"POT-Creation-Date: 2026-06-16 16:21+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: Xi Ruoyao <xry111@xry111.site>\n"
 "Language-Team: none\n"
@@ -105,8 +105,8 @@ msgstr ""
 #. type: Content of: <sect1><sect2><screen>
 #: lfs-en/chapter09/systemd-custom.xml
 #, no-wrap
-msgid "<userinput>ln -sfv /dev/null /etc/systemd/system/tmp.mount</userinput>"
-msgstr "<userinput>ln -sfv /dev/null /etc/systemd/system/tmp.mount</userinput>"
+msgid "<userinput>systemctl mask tmp.mount</userinput>"
+msgstr "<userinput>systemctl mask tmp.mount</userinput>"
 
 #. type: Content of: <sect1><sect2><para>
 #: lfs-en/chapter09/systemd-custom.xml
@@ -117,18 +117,6 @@ msgid ""
 msgstr ""
 "或者，如果希望使用一个单独的 <filename class=\"directory\">/tmp</filename> 分"
 "区，在 <filename>/etc/fstab</filename> 中为其添加一个条目。"
-
-#. type: Content of: <sect1><sect2><warning><para>
-#: lfs-en/chapter09/systemd-custom.xml
-msgid ""
-"Do not create the symbolic link above if a separate partition is used for "
-"<filename class=\"directory\">/tmp</filename>.  This will prevent the root "
-"file system (/) from being remounted r/w and make the system unusable when "
-"booted."
-msgstr ""
-"如果使用了单独的 <filename class=\"directory\">/tmp</filename> 分区，不要创建"
-"上面的符号链接。这会导致根文件系统 (/) 无法重新挂载为可读写，使得系统在引导后"
-"不可用。"
 
 #. type: Content of: <sect1><sect2><title>
 #: lfs-en/chapter09/systemd-custom.xml
