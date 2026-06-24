@@ -42,7 +42,7 @@ $(PO_FILES) &: $(XML_FILES) mkpo4acfg.py
 	./changelogtranslator.py $(MLANG)
 	# Run again. polib does not agree with po4a on line wrappings
 	# in the .po file, so we need to settle it down.
-	po4a --no-translations --force po4a-changelog.cfg
+	po4a --no-translations po4a.cfg
 
 MXML_FILES = $(patsubst $(LFS_EN)/%.xml, $(MLANG)/book/%.xml, $(XML_FILES))
 
