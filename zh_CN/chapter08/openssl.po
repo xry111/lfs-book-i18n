@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Linux From Scratch 11.0\n"
 "Report-Msgid-Bugs-To: lfs-dev@lists.linuxfromscratch.org\n"
-"POT-Creation-Date: 2026-05-28 00:30+0800\n"
+"POT-Creation-Date: 2026-07-04 00:27+0800\n"
 "PO-Revision-Date: 2021-08-31 16:47+0800\n"
 "Last-Translator: Xi Ruoyao <xry111@xry111.site>\n"
 "Language-Team: none\n"
@@ -385,6 +385,13 @@ msgstr "安装的程序"
 msgid "To test the results, issue:"
 msgstr "运行命令以测试编译结果："
 
+#. type: Content of: <sect1><sect2><screen>
+#: lfs-en/chapter08/bc.xml lfs-en/chapter08/expect.xml
+#: lfs-en/chapter08/libcap.xml lfs-en/chapter08/openssl.xml
+#, no-wrap
+msgid "<userinput remap=\"test\">make test</userinput>"
+msgstr "<userinput remap=\"test\">make test</userinput>"
+
 #. type: Content of: <sect1><sect2><segmentedlist><segtitle>
 #: lfs-en/chapter08/binutils.xml lfs-en/chapter08/bzip2.xml
 #: lfs-en/chapter08/dbus.xml lfs-en/chapter08/e2fsprogs.xml
@@ -464,11 +471,17 @@ msgstr ""
 "         shared                \\\n"
 "         zlib-dynamic</userinput>"
 
-#. type: Content of: <sect1><sect2><screen>
+#. type: Content of: <sect1><sect2><para>
 #: lfs-en/chapter08/openssl.xml
-#, no-wrap
-msgid "<userinput remap=\"test\">HARNESS_JOBS=<replaceable>$(nproc)</replaceable> make test</userinput>"
-msgstr "<userinput remap=\"test\">HARNESS_JOBS=<replaceable>$(nproc)</replaceable> make test</userinput>"
+msgid ""
+"By default the test suite uses all available CPU cores.  If you want to use "
+"less cores, prepend <parameter>HARNESS_JOBS=<replaceable>&lt;N&gt;</"
+"replaceable></parameter> with N replaced by the number of logic CPU cores "
+"you want to use."
+msgstr ""
+"测试套件默认使用全部可用 CPU 核心。如果希望使用较少的核心，在命令前加入 "
+"<parameter>HARNESS_JOBS=<replaceable>&lt;N&gt;</replaceable></parameter> 并"
+"将 N 替换成希望使用的逻辑 CPU 核心数。"
 
 #. type: Content of: <sect1><sect2><para>
 #: lfs-en/chapter08/openssl.xml
