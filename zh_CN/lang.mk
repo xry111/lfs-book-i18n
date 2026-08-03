@@ -68,3 +68,11 @@ zh_CN/book/$(PDF_XSL): $(LFS_EN)/$(PDF_XSL) $(FONTS_XSL) $(THIS)
 zh_CN/book/pdf-fixups.sh: $(LFS_EN)/pdf-fixups.sh $(THIS)
 	mkdir -pv $(@D)
 	sed 's/monospace/Mono SC/' < $< > $@
+
+zh_CN/book/stylesheets/md5sum.xsl: $(LFS_EN)/stylesheets/md5sum.xsl $(THIS)
+	mkdir -pv $(@D)
+	sed 's/Download/下载/' < $< > $@
+
+zh_CN/book/stylesheets/wget-list.xsl: $(LFS_EN)/stylesheets/wget-list.xsl $(THIS)
+	mkdir -pv $(@D)
+	sed 's/Download/下载/' < $< > $@
