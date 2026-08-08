@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Linux From Scratch 11.4\n"
 "Report-Msgid-Bugs-To: lfs-dev@lists.linuxfromscratch.org\n"
-"POT-Creation-Date: 2026-07-15 09:35+0800\n"
+"POT-Creation-Date: 2026-08-09 02:24+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: Xi Ruoyao <xry111@xry111.site>\n"
 "Language-Team: none\n"
@@ -483,9 +483,10 @@ msgstr "安装的程序"
 #: lfs-en/chapter08/man-db.xml lfs-en/chapter08/mpc.xml
 #: lfs-en/chapter08/mpdecimal.xml lfs-en/chapter08/openssl.xml
 #: lfs-en/chapter08/patch.xml lfs-en/chapter08/pcre.xml
-#: lfs-en/chapter08/perl.xml lfs-en/chapter08/sed.xml lfs-en/chapter08/tar.xml
-#: lfs-en/chapter08/tcl.xml lfs-en/chapter08/texinfo.xml
-#: lfs-en/chapter08/xz.xml lfs-en/chapter08/zlib.xml lfs-en/chapter08/zstd.xml
+#: lfs-en/chapter08/perl.xml lfs-en/chapter08/pkgconf.xml
+#: lfs-en/chapter08/sed.xml lfs-en/chapter08/tar.xml lfs-en/chapter08/tcl.xml
+#: lfs-en/chapter08/texinfo.xml lfs-en/chapter08/xz.xml
+#: lfs-en/chapter08/zlib.xml lfs-en/chapter08/zstd.xml
 msgid "To test the results, issue:"
 msgstr "运行命令以测试编译结果："
 
@@ -559,16 +560,19 @@ msgstr ""
 "class=\"directory\">/var/lib/locate</filename>，以与 FHS 兼容。"
 
 #. type: Content of: <sect1><sect2><screen>
-#: lfs-en/chapter08/findutils.xml lfs-en/chapter08/gawk.xml
-#: lfs-en/chapter08/make.xml lfs-en/chapter08/procps.xml
-#: lfs-en/chapter08/sed.xml
+#: lfs-en/chapter08/findutils.xml
 #, no-wrap
 msgid ""
 "<userinput remap=\"test\">chown -R tester .\n"
-"su tester -c \"PATH=$PATH make check\"</userinput>"
+"su tester -c \"PATH=$PATH make check -k\"</userinput>"
 msgstr ""
 "<userinput remap=\"test\">chown -R tester .\n"
-"su tester -c \"PATH=$PATH make check\"</userinput>"
+"su tester -c \"PATH=$PATH make check -k\"</userinput>"
+
+#. type: Content of: <sect1><sect2><para>
+#: lfs-en/chapter08/findutils.xml
+msgid "One test named <filename>test-regex-el</filename> is known to fail."
+msgstr "已知名为 <filename>test-regex-el</filename> 的一项测试会失败。"
 
 #. type: Content of: <sect1><sect2><title>
 #: lfs-en/chapter08/findutils.xml
