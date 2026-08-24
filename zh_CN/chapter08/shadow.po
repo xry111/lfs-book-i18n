@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Linux From Scratch 11.4\n"
 "Report-Msgid-Bugs-To: lfs-dev@lists.linuxfromscratch.org\n"
-"POT-Creation-Date: 2026-08-03 20:36+0800\n"
+"POT-Creation-Date: 2026-08-24 20:37+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: Xi Ruoyao <xry111@xry111.site>\n"
 "Language-Team: none\n"
@@ -568,17 +568,6 @@ msgstr ""
 
 #. type: Content of: <sect1><sect2><para>
 #: lfs-en/chapter08/shadow.xml
-msgid "Now fix a problem with included headers:"
-msgstr "现在修复头文件包含问题："
-
-#. type: Content of: <sect1><sect2><screen>
-#: lfs-en/chapter08/shadow.xml
-#, no-wrap
-msgid "<userinput remap=\"pre\">sed -i '/stdio.h/i #include &lt;stdint.h&gt;' lib/find_new_sub_*ids.c</userinput>"
-msgstr "<userinput remap=\"pre\">sed -i '/stdio.h/i #include &lt;stdint.h&gt;' lib/find_new_sub_*ids.c</userinput>"
-
-#. type: Content of: <sect1><sect2><para>
-#: lfs-en/chapter08/shadow.xml
 msgid "Prepare Shadow for compilation:"
 msgstr "准备编译 Shadow："
 
@@ -719,22 +708,16 @@ msgid ""
 "This package contains utilities to add, modify, and delete users and groups; "
 "set and change their passwords; and perform other administrative tasks. For "
 "a full explanation of what <emphasis>password shadowing</emphasis> means, "
-"see the <filename>doc/HOWTO</filename> file within the unpacked source tree. "
-"If you use Shadow support, keep in mind that programs which need to verify "
-"passwords (display managers, FTP programs, pop3 daemons, etc.)  must be "
-"Shadow-compliant. That is, they must be able to work with shadowed passwords."
+"see the <filename>doc/HOWTO</filename> file within the unpacked source tree."
 msgstr ""
 "该软件包包含用于添加、修改、删除用户和组，设定和修改它们的密码，以及进行其他"
 "管理任务的工具。如果希望查阅关于 <emphasis>password shadowing</emphasis> 的详"
-"细解释，阅读解压得到源代码目录树中的 <filename>doc/HOWTO</filename> 文件。如"
-"果使用 Shadow 支持，请注意所有需要验证密码的程序 (如显示管理器、FTP 程序、"
-"pop3 守护进程等)  都必须和 Shadow 兼容。换句话说，它们必须能使用 Shadow 加密"
-"的密码。"
+"细解释，阅读解压得到源代码目录树中的 <filename>doc/HOWTO</filename> 文件。"
 
 #. type: Content of: <sect1><sect2><para>
 #: lfs-en/chapter08/shadow.xml
-msgid "To enable shadowed passwords, run the following command:"
-msgstr "如果要对用户密码启用 Shadow 加密，执行以下命令："
+msgid "Enable shadowed passwords:"
+msgstr "对用户密码启用 Shadow 机制："
 
 #. type: Content of: <sect1><sect2><screen>
 #: lfs-en/chapter08/shadow.xml
@@ -744,8 +727,8 @@ msgstr "<userinput>pwconv</userinput>"
 
 #. type: Content of: <sect1><sect2><para>
 #: lfs-en/chapter08/shadow.xml
-msgid "To enable shadowed group passwords, run:"
-msgstr "如果要对组密码启用 Shadow 加密，执行："
+msgid "Enable shadowed group passwords as well:"
+msgstr "对组密码启用 Shadow 机制："
 
 #. type: Content of: <sect1><sect2><screen>
 #: lfs-en/chapter08/shadow.xml
@@ -913,27 +896,27 @@ msgstr "Shadow 的内容"
 #. type: Content of: <sect1><sect2><segmentedlist><seglistitem><seg>
 #: lfs-en/chapter08/shadow.xml
 msgid ""
-"chage, chfn, chgpasswd, chpasswd, chsh, expiry, faillog, getsubids, gpasswd, "
-"groupadd, groupdel, groupmems, groupmod, grpck, grpconv, grpunconv, login, "
-"logoutd, newgidmap, newgrp, newuidmap, newusers, nologin, passwd, pwck, "
-"pwconv, pwunconv, sg (link to newgrp), su, useradd, userdel, usermod, vigr "
-"(link to vipw), and vipw"
+"chage, chfn, chgpasswd, chpasswd, chsh, faillog, getsubids, gpasswd, "
+"groupadd, groupdel, groupmod, grpck, grpconv, grpunconv, login, newgidmap, "
+"newgrp, newuidmap, newusers, nologin, passwd, pwck, pwconv, pwunconv, sg "
+"(link to newgrp), su, useradd, userdel, usermod, vigr (link to vipw), and "
+"vipw"
 msgstr ""
-"chage, chfn, chgpasswd, chpasswd, chsh, expiry, faillog, getsubids, gpasswd, "
-"groupadd, groupdel, groupmems, groupmod, grpck, grpconv, grpunconv, login, "
-"logoutd, newgidmap, newgrp, newuidmap, newusers, nologin, passwd, pwck, "
-"pwconv, pwunconv, sg (到 newgrp 的链接), su, useradd, userdel, usermod, vigr "
-"(到 vipw 的链接), 以及 vipw"
-
-#. type: Content of: <sect1><sect2><segmentedlist><seglistitem><seg>
-#: lfs-en/chapter08/shadow.xml
-msgid "/etc/default and /usr/include/shadow"
-msgstr "/etc/default 和 /usr/include/shadow"
+"chage, chfn, chgpasswd, chpasswd, chsh, faillog, getsubids, gpasswd, "
+"groupadd, groupdel, groupmod, grpck, grpconv, grpunconv, login, newgidmap, "
+"newgrp, newuidmap, newusers, nologin, passwd, pwck, pwconv, pwunconv, sg (到 "
+"newgrp 的链接), su, useradd, userdel, usermod, vigr (到 vipw 的链接), 以及 "
+"vipw"
 
 #. type: Content of: <sect1><sect2><segmentedlist><seglistitem><seg>
 #: lfs-en/chapter08/shadow.xml
 msgid "libsubid.so"
 msgstr "libsubid.so"
+
+#. type: Content of: <sect1><sect2><segmentedlist><seglistitem><seg>
+#: lfs-en/chapter08/shadow.xml
+msgid "/etc/default and /usr/include/shadow"
+msgstr "/etc/default 和 /usr/include/shadow"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: lfs-en/chapter08/shadow.xml
@@ -1013,21 +996,6 @@ msgstr "chsh"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: lfs-en/chapter08/shadow.xml
-msgid "<command>expiry</command>"
-msgstr "<command>expiry</command>"
-
-#. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
-#: lfs-en/chapter08/shadow.xml
-msgid "Checks and enforces the current password expiration policy"
-msgstr "检查并强制保证当前密码过期策略"
-
-#. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
-#: lfs-en/chapter08/shadow.xml
-msgid "expiry"
-msgstr "expiry"
-
-#. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
-#: lfs-en/chapter08/shadow.xml
 msgid "<command>faillog</command>"
 msgstr "<command>faillog</command>"
 
@@ -1102,23 +1070,6 @@ msgstr "删除指定的组"
 #: lfs-en/chapter08/shadow.xml
 msgid "groupdel"
 msgstr "groupdel"
-
-#. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
-#: lfs-en/chapter08/shadow.xml
-msgid "<command>groupmems</command>"
-msgstr "<command>groupmems</command>"
-
-#. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
-#: lfs-en/chapter08/shadow.xml
-msgid ""
-"Allows a user to administer his/her own group membership list without the "
-"requirement of super user privileges."
-msgstr "允许用户在不需要超级用户权限的情况下，管理自己的组成员列表"
-
-#. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
-#: lfs-en/chapter08/shadow.xml
-msgid "groupmems"
-msgstr "groupmems"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: lfs-en/chapter08/shadow.xml
@@ -1202,21 +1153,6 @@ msgstr "被系统用于允许用户登录"
 #: lfs-en/chapter08/shadow.xml
 msgid "login"
 msgstr "login"
-
-#. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
-#: lfs-en/chapter08/shadow.xml
-msgid "<command>logoutd</command>"
-msgstr "<command>logoutd</command>"
-
-#. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
-#: lfs-en/chapter08/shadow.xml
-msgid "Is a daemon used to enforce restrictions on log-on time and ports"
-msgstr "是一个限制登录时间和端口的守护进程"
-
-#. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
-#: lfs-en/chapter08/shadow.xml
-msgid "logoutd"
-msgstr "logoutd"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: lfs-en/chapter08/shadow.xml
