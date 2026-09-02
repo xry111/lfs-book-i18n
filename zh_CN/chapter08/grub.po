@@ -396,6 +396,9 @@ msgid ""
 "may not work for the system at all), and you may need to figure out how to "
 "boot the LFS system on your own."
 msgstr ""
+"构建该软件包的说明假设您的系统使用 UEFI 固件。否则，您可能需要使用不同的 "
+"GRUB 配置 (甚至 GRUB 可能完全无法为您的系统工作)，并自行找出引导 LFS 系统的方"
+"法。"
 
 #. type: Content of: <sect1><sect2><warning><para>
 #: lfs-en/chapter08/grub.xml
@@ -430,24 +433,17 @@ msgstr "&grub-fin-du;"
 
 #. type: Content of: <sect1><sect2><title>
 #: lfs-en/chapter08/grub.xml
-#, fuzzy
-#| msgid "Installation of GRUB"
 msgid "Installation of GRUB for UEFI"
-msgstr "安装 GRUB"
+msgstr "为 UEFI 安装 GRUB"
 
 #. type: Content of: <sect1><sect2><para>
 #: lfs-en/chapter08/grub.xml
 msgid "Now configure GRUB for UEFI support:"
-msgstr ""
+msgstr "现在配置 GRUB，使其支持 UEFI："
 
 #. type: Content of: <sect1><sect2><screen>
 #: lfs-en/chapter08/grub.xml
-#, fuzzy, no-wrap
-#| msgid ""
-#| "<userinput remap=\"configure\">./configure --prefix=/usr     \\\n"
-#| "            --sysconfdir=/etc \\\n"
-#| "            --disable-efiemu  \\\n"
-#| "            --disable-werror</userinput>"
+#, no-wrap
 msgid ""
 "<userinput remap=\"configure\">./configure --prefix=/usr       \\\n"
 "            --sysconfdir=/etc   \\\n"
@@ -455,9 +451,10 @@ msgid ""
 "            --disable-efiemu    \\\n"
 "            --disable-werror</userinput>"
 msgstr ""
-"<userinput remap=\"configure\">./configure --prefix=/usr     \\\n"
-"            --sysconfdir=/etc \\\n"
-"            --disable-efiemu  \\\n"
+"<userinput remap=\"configure\">./configure --prefix=/usr       \\\n"
+"            --sysconfdir=/etc   \\\n"
+"            --with-platform=efi \\\n"
+"            --disable-efiemu    \\\n"
 "            --disable-werror</userinput>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
@@ -468,19 +465,17 @@ msgstr "<parameter>--with-platform=efi</parameter>"
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: lfs-en/chapter08/grub.xml
 msgid "This specifies that EFI is a platform GRUB should target."
-msgstr ""
+msgstr "该选项指定 GRUB 应支持 EFI 平台。"
 
 #. type: Content of: <sect1><sect2><para>
 #: lfs-en/chapter08/grub.xml
-#, fuzzy
-#| msgid "Compile the package:"
 msgid "Compile the package for UEFI support:"
-msgstr "编译该软件包："
+msgstr "编译支持 UEFI 的该软件包："
 
 #. type: Content of: <sect1><sect2><para>
 #: lfs-en/chapter08/grub.xml
 msgid "Install support for UEFI:"
-msgstr ""
+msgstr "安装 UEFI 支持："
 
 #. type: Content of: <sect1><sect2><title>
 #: lfs-en/chapter08/grub.xml

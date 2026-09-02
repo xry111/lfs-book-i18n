@@ -274,6 +274,13 @@ msgid ""
 "<quote>chainload</quote> the host bootloader from the LFS grub, as we'll "
 "explain in <xref linkend='ch-bootable-grub' role='.'/>"
 msgstr ""
+"/boot &ndash; <emphasis role='bold'>在这一 LFS 改编版上不受支持。</emphasis>"
+"将不同发行版的内核都挤在同一个跨发行版共享的分区带来的问题过于棘手，以至于维"
+"护这一改编版的编辑不愿意在这种配置上浪费时间。如果您希望在多个 LFS 实例中共"
+"享 GRUB，考虑为 <filename class='directory'>/boot/grub</filename> 准备一个单"
+"独的分区。如果希望配置 LFS 和宿主发行版的双重引导，则更干净的做法是保持它们的"
+"引导加载器的独立性，并从 LFS 的 grub <quote>链式加载</quote>宿主发行版的引导"
+"加载器，详见 <xref linkend='ch-bootable-grub'/>。"
 
 #. type: Content of: <sect1><sect2><sect3><itemizedlist><listitem><para>
 #: lfs-en/chapter02/creatingpartition.xml
@@ -395,6 +402,11 @@ msgid ""
 "   3         4216832        88102911       40.0 GiB  8300  lfs13.0+\n"
 "   4        88102912       171988991       40.0 GiB  8300  /home"
 msgstr ""
+"Number  Start (sector)    End (sector)        Size   Code  Name\n"
+"   1            2048           22527       10.0 MiB  EF00  EFI system partition\n"
+"   2           22528         4216831        2.0 GiB  8200  swap\n"
+"   3         4216832        88102911       40.0 GiB  8300  lfs13.0+\n"
+"   4        88102912       171988991       40.0 GiB  8300  /home"
 
 #. type: Content of: <sect1><sect2><para>
 #: lfs-en/chapter02/creatingpartition.xml
