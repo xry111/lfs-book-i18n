@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Linux From Scratch 11.0\n"
 "Report-Msgid-Bugs-To: lfs-dev@lists.linuxfromscratch.org\n"
-"POT-Creation-Date: 2026-02-01 03:38+0800\n"
+"POT-Creation-Date: 2026-09-02 23:03+0800\n"
 "PO-Revision-Date: 2022-02-11 20:04+0800\n"
 "Last-Translator: Xi Ruoyao <xry111@xry111.site>\n"
 "Language-Team: none\n"
@@ -109,9 +109,13 @@ msgstr "&dependencies;"
 
 #. type: Content of: <appendix><segmentedlist><seglistitem><seg>
 #: lfs-en/appendices/dependencies.xml
+#, fuzzy
+#| msgid ""
+#| "Attr, Bash, Binutils, Coreutils, GCC, Gettext, Grep, M4, Make, Perl, Sed, "
+#| "and Texinfo"
 msgid ""
-"Attr, Bash, Binutils, Coreutils, GCC, Gettext, Grep, M4, Make, Perl, Sed, "
-"and Texinfo"
+"Bash, Binutils, Coreutils, GCC, Gettext, Grep, M4, Make, Perl, Sed, and "
+"Texinfo"
 msgstr ""
 "Attr, Bash, Binutils, Coreutils, GCC, Gettext, Grep, M4, Make, Perl, Sed, 以"
 "及 Texinfo"
@@ -121,10 +125,11 @@ msgstr ""
 msgid "&runtime;"
 msgstr "&runtime;"
 
-#. type: Content of: <appendix><segmentedlist><seglistitem><seg>
-#: lfs-en/appendices/dependencies.xml
-msgid "Attr and Glibc"
-msgstr "Attr 和 Glibc"
+#. type: Content of: <sect1><itemizedlist><listitem><para>
+#: lfs-en/appendices/dependencies.xml lfs-en/chapter05/glibc.xml
+#: lfs-en/chapter08/glibc.xml lfs-en/prologue/why.xml
+msgid "Glibc"
+msgstr "Glibc"
 
 #. type: Content of: <appendix><segmentedlist><segtitle>
 #: lfs-en/appendices/dependencies.xml
@@ -170,12 +175,6 @@ msgid ""
 msgstr ""
 "Bash, Binutils, Coreutils, GCC, Gettext, Glibc, Grep, M4, Make, Perl, Sed, 以"
 "及 Texinfo"
-
-#. type: Content of: <sect1><itemizedlist><listitem><para>
-#: lfs-en/appendices/dependencies.xml lfs-en/chapter05/glibc.xml
-#: lfs-en/chapter08/glibc.xml lfs-en/prologue/why.xml
-msgid "Glibc"
-msgstr "Glibc"
 
 #. type: Content of: <appendix><segmentedlist><seglistitem><seg>
 #: lfs-en/appendices/dependencies.xml
@@ -930,17 +929,6 @@ msgstr "GCC, Glibc, Ncurses, 以及 Readline"
 msgid "Tar"
 msgstr "Tar"
 
-#. type: Content of: <sect1><itemizedlist><listitem><para>
-#: lfs-en/appendices/dependencies.xml lfs-en/chapter08/intltool.xml
-#: lfs-en/prologue/why.xml
-msgid "Intltool"
-msgstr "Intltool"
-
-#. type: Content of: <appendix><segmentedlist><seglistitem><seg>
-#: lfs-en/appendices/dependencies.xml
-msgid "Bash, Gawk, Glibc, Make, Perl, Sed, and XML::Parser"
-msgstr "Bash, Gawk, Glibc, Make, Perl, Sed, 以及 XML::Parser"
-
 #. type: Content of: <appendix><segmentedlist><seglistitem><seg>
 #: lfs-en/appendices/dependencies.xml
 msgid "Autoconf, Automake, Bash, Glibc, Grep, Perl, and Sed"
@@ -1322,6 +1310,23 @@ msgid "Ninja, Python, Setuptools, and Wheel"
 msgstr "Ninja, Python, Setuptools, 以及 Wheel"
 
 #. type: Content of: <sect1><itemizedlist><listitem><para>
+#: lfs-en/appendices/dependencies.xml lfs-en/prologue/why.xml
+msgid "Mpdecimal"
+msgstr ""
+
+#. type: Content of: <appendix><segmentedlist><seglistitem><seg>
+#: lfs-en/appendices/dependencies.xml
+#, fuzzy
+#| msgid ""
+#| "Bash, Binutils, Coreutils, Diffutils, Gawk, GCC, Glibc, Grep, Make, Perl, "
+#| "and Sed"
+msgid ""
+"Bash, Binutils, Coreutils, Diffutils, Gawk, GCC, Glibc, Grep, Make, and Sed"
+msgstr ""
+"Bash, Binutils, Coreutils, Diffutils, Gawk, GCC, Glibc, Grep, Make, Perl, 以"
+"及 Sed"
+
+#. type: Content of: <sect1><itemizedlist><listitem><para>
 #: lfs-en/appendices/dependencies.xml lfs-en/chapter08/mpc.xml
 #: lfs-en/prologue/why.xml
 msgid "MPC"
@@ -1474,6 +1479,11 @@ msgstr "Attr, Bash, Binutils, Coreutils, GCC, Glibc, Grep, Make, 以及 Sed"
 
 #. type: Content of: <appendix><segmentedlist><seglistitem><seg>
 #: lfs-en/appendices/dependencies.xml
+msgid "Attr and Glibc"
+msgstr "Attr 和 Glibc"
+
+#. type: Content of: <appendix><segmentedlist><seglistitem><seg>
+#: lfs-en/appendices/dependencies.xml
 msgid "<ulink url=\"&blfs-book;postlfs/ed.html\">Ed</ulink>"
 msgstr "<ulink url=\"&blfs-book;postlfs/ed.html\">Ed</ulink>"
 
@@ -1529,10 +1539,10 @@ msgstr "&bdb;"
 
 #. type: Content of: <appendix><segmentedlist><seglistitem><seg>
 #: lfs-en/appendices/dependencies.xml
-msgid ""
-"Bash, Binutils, Coreutils, Gawk, GCC, Glibc, Grep, Make, Sed, and Sqlite"
-msgstr ""
-"Bash, Binutils, Coreutils, Gawk, GCC, Glibc, Grep, Make, Sed, 以及 Sqlite"
+#, fuzzy
+#| msgid "Bash, Binutils, Glibc, Mpc, and Python"
+msgid "Binutils, GCC, Glibc, Meson, Ninja, and Python"
+msgstr "Bash, Binutils, Glibc, Mpc, 以及 Python"
 
 #. type: Content of: <appendix><segmentedlist><seglistitem><seg>
 #: lfs-en/appendices/dependencies.xml
@@ -1583,17 +1593,27 @@ msgstr ""
 
 #. type: Content of: <appendix><segmentedlist><seglistitem><seg>
 #: lfs-en/appendices/dependencies.xml
+#, fuzzy
+#| msgid ""
+#| "Bash, Binutils, Coreutils, Expat, GCC, Gdbm, Gettext, Glibc, Grep, "
+#| "Libffi, Libxcrypt, Make, Ncurses, OpenSSL, Pkgconf, Sed, Util-linux, and "
+#| "Zstd"
 msgid ""
 "Bash, Binutils, Coreutils, Expat, GCC, Gdbm, Gettext, Glibc, Grep, Libffi, "
-"Libxcrypt, Make, Ncurses, OpenSSL, Pkgconf, Sed, Util-linux, and Zstd"
+"Libxcrypt, Make, Mpdecimal, Ncurses, OpenSSL, Pkgconf, Sed, Util-linux, and "
+"Zlib"
 msgstr ""
 "Bash, Binutils, Coreutils, Expat, GCC, Gdbm, Gettext, Glibc, Grep, Libffi, "
 "Libxcrypt, Make, Ncurses, OpenSSL, Pkgconf, Sed, Util-linux, 以及 Zstd"
 
 #. type: Content of: <appendix><segmentedlist><seglistitem><seg>
 #: lfs-en/appendices/dependencies.xml
+#, fuzzy
+#| msgid ""
+#| "Bzip2, Expat, Gdbm, Glibc, Libffi, Libxcrypt, Ncurses, OpenSSL, and Zlib"
 msgid ""
-"Bzip2, Expat, Gdbm, Glibc, Libffi, Libxcrypt, Ncurses, OpenSSL, and Zlib"
+"Bzip2, Expat, Gdbm, Glibc, Libffi, Libxcrypt, Mpdecimal, Ncurses, OpenSSL, "
+"and Zlib"
 msgstr ""
 "Bzip2, Expat, Gdbm, Glibc, Libffi, Libxcrypt, Ncurses, OpenSSL, 以及 Zlib"
 
@@ -1604,10 +1624,14 @@ msgstr "GDB 和 Valgrind"
 
 #. type: Content of: <appendix><segmentedlist><seglistitem><seg>
 #: lfs-en/appendices/dependencies.xml
+#, fuzzy
+#| msgid ""
+#| "&bdb;, <ulink url=\"&blfs-book;basicnet/libnsl.html\">libnsl</ulink>, "
+#| "<ulink url=\"&blfs-book;server/sqlite.html\">SQLite</ulink>, and <ulink "
+#| "url=\"&blfs-book;general/tk.html\">Tk</ulink>"
 msgid ""
-"&bdb;, <ulink url=\"&blfs-book;basicnet/libnsl.html\">libnsl</ulink>, <ulink "
-"url=\"&blfs-book;server/sqlite.html\">SQLite</ulink>, and <ulink url=\"&blfs-"
-"book;general/tk.html\">Tk</ulink>"
+"&bdb;, <ulink url=\"&blfs-book;basicnet/libnsl.html\">libnsl</ulink>, and "
+"<ulink url=\"&blfs-book;general/tk.html\">Tk</ulink>"
 msgstr ""
 "&bdb;, <ulink url=\"&blfs-book;basicnet/libnsl.html\">libnsl</ulink>, <ulink "
 "url=\"&blfs-book;server/sqlite.html\"> SQLite</ulink>, 以及 <ulink "
@@ -1698,9 +1722,17 @@ msgstr ""
 "<ulink url=\"&blfs-book;postlfs/cracklib.html\">CrackLib</ulink> 和 <ulink "
 "url=\"&blfs-book;postlfs/linux-pam.html\">Linux-PAM</ulink>"
 
+#. type: Content of: <sect1><itemizedlist><listitem><para>
+#: lfs-en/appendices/dependencies.xml lfs-en/chapter08/sqlite.xml
+#: lfs-en/prologue/why.xml
+msgid "Sqlite"
+msgstr "Sqlite"
+
 #. type: Content of: <appendix><segmentedlist><seglistitem><seg>
 #: lfs-en/appendices/dependencies.xml
-msgid "Bash, Binutils, GCC, Glibc, Gzip, Make, Ncurses, and Readline"
+#, fuzzy
+#| msgid "Bash, Binutils, GCC, Glibc, Gzip, Make, Ncurses, and Readline"
+msgid "Bash, Binutils, GCC, Glibc, Gzip, Make, Ncurses, Readline, and Zlib"
 msgstr "Bash, Binutils, GCC, Glibc, Gzip, Make, Ncurses, 以及 Readline"
 
 #. type: Content of: <appendix><segmentedlist><seglistitem><seg>
@@ -1713,8 +1745,7 @@ msgstr ""
 "<ulink url=\"https://thrysoee.dk/editline/\">libedit</ulink>"
 
 #. type: Content of: <sect1><itemizedlist><listitem><para>
-#: lfs-en/appendices/dependencies.xml lfs-en/chapter08/sysklogd.xml
-#: lfs-en/prologue/why.xml
+#: lfs-en/appendices/dependencies.xml lfs-en/prologue/why.xml
 msgid "Sysklogd"
 msgstr "Sysklogd"
 
@@ -1833,8 +1864,8 @@ msgstr ""
 "book;postlfs/zsh.html\">zsh</ulink>"
 
 #. type: Content of: <sect1><itemizedlist><listitem><para>
-#: lfs-en/appendices/dependencies.xml lfs-en/chapter08/sysvinit.xml
-#: lfs-en/chapter09/usage.xml lfs-en/prologue/why.xml
+#: lfs-en/appendices/dependencies.xml lfs-en/chapter09/usage.xml
+#: lfs-en/prologue/why.xml
 msgid "SysVinit"
 msgstr "SysVinit"
 
@@ -1893,9 +1924,14 @@ msgstr ""
 "Bash, Binutils, Coreutils, GCC, Gettext, Glibc, Grep, Make, Ncurses, Patch, "
 "以及 Sed"
 
+#. type: Content of: <appendix><segmentedlist><seglistitem><seg>
+#: lfs-en/appendices/dependencies.xml
+msgid "SWIG"
+msgstr ""
+
 #. type: Content of: <sect1><itemizedlist><listitem><para>
-#: lfs-en/appendices/dependencies.xml lfs-en/chapter08/udev.xml
-#: lfs-en/chapter09/udev.xml lfs-en/prologue/why.xml
+#: lfs-en/appendices/dependencies.xml lfs-en/chapter09/udev.xml
+#: lfs-en/prologue/why.xml
 msgid "Udev"
 msgstr "Udev"
 
@@ -1996,21 +2032,15 @@ msgstr "Python, Flit-core, 以及 packaging"
 msgid "Jinja2, MarkupSafe, Meson, and Setuptools"
 msgstr "Jinja2, MarkupSafe, Meson, 以及 Setuptools"
 
-#. type: Content of: <sect1><itemizedlist><listitem><para>
-#: lfs-en/appendices/dependencies.xml lfs-en/chapter08/xml-parser.xml
-#: lfs-en/prologue/why.xml
-msgid "XML::Parser"
-msgstr "XML::Parser"
-
-#. type: Content of: <appendix><segmentedlist><seglistitem><seg>
-#: lfs-en/appendices/dependencies.xml
-msgid "Bash, Binutils, Coreutils, Expat, GCC, Glibc, Make, and Perl"
-msgstr "Bash, Binutils, Coreutils, Expat, GCC, Glibc, Make, 以及 Perl"
-
 #. type: Content of: <appendix><segmentedlist><seglistitem><seg>
 #: lfs-en/appendices/dependencies.xml
 msgid "Expat, Glibc, and Perl"
 msgstr "Expat, Glibc, 以及 Perl"
+
+#. type: Content of: <sect1><indexterm><primary>
+#: lfs-en/appendices/dependencies.xml lfs-en/chapter08/intltool.xml
+msgid "Intltool"
+msgstr "Intltool"
 
 #. type: Content of: <appendix><segmentedlist><seglistitem><seg>
 #: lfs-en/appendices/dependencies.xml
@@ -2036,14 +2066,16 @@ msgid "File, GRUB, Kmod, Libelf, Man-DB, and &systemd-udev;"
 msgstr "File, GRUB, Kmod, Libelf, Man-DB, 以及 &systemd-udev;"
 
 #. type: Content of: <sect1><itemizedlist><listitem><para>
-#: lfs-en/appendices/dependencies.xml lfs-en/chapter08/zlib.xml
-#: lfs-en/prologue/why.xml
+#: lfs-en/appendices/dependencies.xml lfs-en/chapter07/zlib.xml
+#: lfs-en/chapter08/zlib.xml lfs-en/prologue/why.xml
 msgid "Zlib"
 msgstr "Zlib"
 
 #. type: Content of: <appendix><segmentedlist><seglistitem><seg>
 #: lfs-en/appendices/dependencies.xml
-msgid "File, Kmod, Libelf, Perl, and Util-linux"
+#, fuzzy
+#| msgid "File, Kmod, Libelf, Perl, and Util-linux"
+msgid "File, Kmod, Libelf, Perl, Python, and Util-linux"
 msgstr "File, Kmod, Libelf, Perl, 以及 Util-linux"
 
 #. type: Content of: <sect1><itemizedlist><listitem><para>

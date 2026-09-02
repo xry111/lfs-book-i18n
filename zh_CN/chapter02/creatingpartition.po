@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Linux From Scratch 11.4\n"
 "Report-Msgid-Bugs-To: lfs-dev@lists.linuxfromscratch.org\n"
-"POT-Creation-Date: 2025-01-30 19:13+0800\n"
+"POT-Creation-Date: 2026-09-02 23:03+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: Xi Ruoyao <xry111@xry111.site>\n"
 "Language-Team: none\n"
@@ -210,39 +210,39 @@ msgstr ""
 
 #. type: Content of: <sect1><sect2><sect3><title>
 #: lfs-en/chapter02/creatingpartition.xml
-msgid "The Grub Bios Partition"
-msgstr "Grub Bios 分区"
+#, fuzzy
+#| msgid "The Root Partition"
+msgid "The EFI System Partition"
+msgstr "根分区"
 
-# "Critical" warning suppressed because in Chinese we have no we to put "EF02" earlier.
 #. type: Content of: <sect1><sect2><sect3><para>
 #: lfs-en/chapter02/creatingpartition.xml
 msgid ""
-"If the <emphasis>boot disk</emphasis> has been partitioned with a GUID "
-"Partition Table (GPT), then a small, typically 1 MB, partition must be "
-"created if it does not already exist.  This partition is not formatted, but "
-"must be available for GRUB to use during installation of the boot loader. "
-"This partition will normally be labeled 'BIOS Boot' if using <command>fdisk</"
-"command> or have a code of <emphasis>EF02</emphasis> if using the "
-"<command>gdisk</command> command."
+"This partition, also known as the <emphasis>ESP</emphasis>, is needed when "
+"booting the system with UEFI.  It stores the EFI application that is ran "
+"during bootup. The boot drive can be partitioned with MBR Partition Table, "
+"or DOS, but compatibility issues will tend to arise as a result.  Therefore, "
+"it is always a good idea in this case to partition the boot drive with a "
+"GUID Partition Table (GPT). If you're only booting LFS from the partition, "
+"20 MB or lower can suffice. The partition should be bigger than the EFI "
+"image size because GRUB dumps a lot of data to the partition before creating "
+"the EFI image. To be safe, 128 MB to 256 MB is recommended but can be "
+"dropped much lower with some experimentation. The partition label should be "
+"'EFI System' if using <command>fdisk</command>."
 msgstr ""
-"如果<emphasis>启动磁盘</emphasis>采用 GUID 分区表 (GPT)，那么必须创建一个小"
-"的，一般占据 1MB 的分区，除非它已经存在。这个分区不能格式化，在安装启动引导器"
-"时必须能够被 GRUB 发现。这个分区在使用 <command>fdisk</command> 命令时显示为 "
-"'BIOS Boot' 分区，在使用 <command>gdisk</command> 命令时分区类型代号显示为为 "
-"<emphasis>EF02</emphasis>。"
 
-#. type: Content of: <sect1><sect2><sect3><note><para>
+#. type: Content of: <sect1><sect2><sect3><para>
 #: lfs-en/chapter02/creatingpartition.xml
+#, fuzzy
+#| msgid ""
+#| "If the ESP is not mounted at <filename class=\"directory\">/boot/efi</"
+#| "filename> (in the chroot), mount it now:"
 msgid ""
-"The Grub Bios partition must be on the drive that the BIOS uses to boot the "
-"system.  This is not necessarily the drive that holds the LFS root "
-"partition. The disks on a system may use different partition table types. "
-"The necessity of the Grub Bios partition depends only on the partition table "
-"type of the boot disk."
+"For Grub, the EFI System Partition should be located at <filename "
+"class=\"directory\">/boot/efi</filename>."
 msgstr ""
-"Grub Bios 分区必须位于 BIOS 引导系统使用的磁盘上。这个磁盘未必是存放 LFS 根分"
-"区的磁盘。不同磁盘可以使用不同分区表格式，只有引导盘采用 GPT 时才必须创建该分"
-"区。"
+"如果 ESP 没有挂载到 (chroot 中的) <filename class=\"directory\">/boot/efi</"
+"filename>，现在挂载它："
 
 #. type: Content of: <sect1><sect2><sect3><title>
 #: lfs-en/chapter02/creatingpartition.xml
@@ -262,24 +262,17 @@ msgstr ""
 #. type: Content of: <sect1><sect2><sect3><itemizedlist><listitem><para>
 #: lfs-en/chapter02/creatingpartition.xml
 msgid ""
-"/boot &ndash; Highly recommended.  Use this partition to store kernels and "
-"other booting information.  To minimize potential boot problems with larger "
-"disks, make this the first physical partition on your first disk drive.  A "
-"partition size of 200 megabytes is adequate."
+"/boot &ndash; <emphasis role='bold'>NOT supported by this LFS edition.</"
+"emphasis> The churn caused by squashing kernels of different distros into "
+"one shared partition is so much that the editor maintaining this edition "
+"does not want to spend any time on such a configuration.  If you want to "
+"share one GRUB installation for multiple LFS installations, consider using a "
+"separate partition for <filename class='directory'>/boot/grub</filename> "
+"instead.  If you want to configure a dual-boot for LFS and the host distro, "
+"it's cleaner to keep their bootloader installations separated and "
+"<quote>chainload</quote> the host bootloader from the LFS grub, as we'll "
+"explain in <xref linkend='ch-bootable-grub' role='.'/>"
 msgstr ""
-"/boot &ndash; 高度推荐。这个分区可以存储内核和其他引导信息。为了减少大磁盘可"
-"能引起的问题，建议将 /boot 分区设为第一块磁盘的第一个分区。为它分配 200 MB 就"
-"绰绰有余。"
-
-#. type: Content of: <sect1><sect2><sect3><itemizedlist><listitem><para>
-#: lfs-en/chapter02/creatingpartition.xml
-msgid ""
-"/boot/efi &ndash; The EFI System Partition, which is needed for booting the "
-"system with UEFI.  Read <ulink url=\"&blfs-book;postlfs/grub-"
-"setup.html\">the BLFS page</ulink> for details."
-msgstr ""
-"/boot/efi &ndash; EFI 系统分区，在使用 UEFI 引导系统时是必要的。阅读 <ulink "
-"url=\"&blfs-book;postlfs/grub-setup.html\">BLFS 页面</ulink>以获得详细信息。"
 
 #. type: Content of: <sect1><sect2><sect3><itemizedlist><listitem><para>
 #: lfs-en/chapter02/creatingpartition.xml
@@ -380,3 +373,62 @@ msgstr ""
 "如果您希望在启动时自动挂载任何独立的分区，就要在 <filename>/etc/fstab</"
 "filename> 文件中指定。指定挂载分区的详细过程将在<xref linkend=\"ch-bootable-"
 "fstab\"/>中讨论。"
+
+#. type: Content of: <sect1><sect2><title>
+#: lfs-en/chapter02/creatingpartition.xml
+msgid "An Example Disk Layout"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><para>
+#: lfs-en/chapter02/creatingpartition.xml
+msgid "Below is an example layout for an empty disk drive."
+msgstr ""
+
+#. type: Content of: <sect1><sect2><screen>
+#: lfs-en/chapter02/creatingpartition.xml
+#, no-wrap
+msgid ""
+"Number  Start (sector)    End (sector)        Size   Code  Name\n"
+"   1            2048           22527       10.0 MiB  EF00  EFI system partition\n"
+"   2           22528         4216831        2.0 GiB  8200  swap\n"
+"   3         4216832        88102911       40.0 GiB  8300  lfs13.0+\n"
+"   4        88102912       171988991       40.0 GiB  8300  /home"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><para>
+#: lfs-en/chapter02/creatingpartition.xml
+msgid "The above example makes a few assumptions:"
+msgstr ""
+
+#. type: Content of: <sect1><sect2><para><itemizedlist><listitem><para>
+#: lfs-en/chapter02/creatingpartition.xml
+msgid "The partition table is a GUID Partition Table (GPT)."
+msgstr ""
+
+#. type: Content of: <sect1><sect2><para><itemizedlist><listitem><para>
+#: lfs-en/chapter02/creatingpartition.xml
+#, fuzzy
+#| msgid "The /mnt/lfs partition must be mounted."
+msgid "The EFI partition must be formatted as VFAT."
+msgstr "/mnt/lfs 分区需要重新挂载。"
+
+#. type: Content of: <sect1><sect2><para><itemizedlist><listitem><para>
+#: lfs-en/chapter02/creatingpartition.xml
+#, fuzzy
+#| msgid "The /mnt/lfs partition must be mounted."
+msgid "The swap partition must be initialized."
+msgstr "/mnt/lfs 分区需要重新挂载。"
+
+#. type: Content of: <sect1><sect2><para><itemizedlist><listitem><para>
+#: lfs-en/chapter02/creatingpartition.xml
+msgid "The recommendation for all other partitions is to use ext4 formatting."
+msgstr ""
+
+#. type: Content of: <sect1><sect2><para><itemizedlist><listitem><para>
+#: lfs-en/chapter02/creatingpartition.xml
+msgid ""
+"Another partition can be added for installing the \"host\" system for "
+"building LFS. A minimal sized partition, 10 GiB, should be sufficient. If "
+"you are building the system using a LiveCD, a host partition may not be "
+"required."
+msgstr ""

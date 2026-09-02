@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Linux From Scratch 11.4\n"
 "Report-Msgid-Bugs-To: lfs-dev@lists.linuxfromscratch.org\n"
-"POT-Creation-Date: 2025-04-15 19:12+0800\n"
+"POT-Creation-Date: 2026-09-02 23:03+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: Xi Ruoyao <xry111@xry111.site>\n"
 "Language-Team: none\n"
@@ -184,6 +184,54 @@ msgstr ""
 "注意此时使用的 <option>iocharset</option> 默认为 <literal>iso8859-1</"
 "literal> (这保证文件系统是大小写不敏感的)，而 <option>utf8</option> 选项告诉"
 "内核使用 UTF-8 编码转换文件名，这样它们就能在 UTF-8 locale 中被正确解析。"
+
+#. type: Content of: <sect1><para>
+#: lfs-en/chapter10/fstab.xml
+msgid ""
+"When installing GRUB with UEFI, the ESP must be formatted as a FAT file "
+"system (EXFAT should not be considered one).  In the Linux kernel the VFAT "
+"driver handles all the FAT file systems, so this file will contain "
+"<literal>vfat</literal> regardless.  An example of how you would go about an "
+"entry for the ESP would look like this:"
+msgstr ""
+
+#. type: Content of: <sect1><screen>
+#: lfs-en/chapter10/fstab.xml
+#, fuzzy, no-wrap
+#| msgid ""
+#| "<userinput>cat &gt;&gt; ~/.bashrc &lt;&lt; \"EOF\"\n"
+#| "<literal>export MAKEFLAGS=-j<replaceable>$(nproc)</replaceable></literal>\n"
+#| "EOF</userinput>"
+msgid ""
+"<userinput>cat &gt;&gt; /etc/fstab &lt;&lt; \"EOF\"\n"
+"<literal>/dev/<replaceable>&lt;zzz&gt;</replaceable>  /boot/efi  vfat  rw,relatime,codepage=437,iocharset=iso8859-1   0   2</literal>\n"
+"EOF</userinput>"
+msgstr ""
+"<userinput>cat &gt;&gt; ~/.bashrc &lt;&lt; \"EOF\"\n"
+"<literal>export MAKEFLAGS=-j<replaceable>$(nproc)</replaceable></literal>\n"
+"EOF</userinput>"
+
+#. type: Content of: <sect1><para>
+#: lfs-en/chapter10/fstab.xml
+msgid ""
+"The <literal>iso8859-1</literal> IO charset is used here as we'll enable it "
+"as a part of the kernel UEFI configuration in <xref linkend='ch-bootable-"
+"kernel' role='.'/> Technically the IO charset should match your locale as "
+"we've discussed above.  However the name of all the files in the ESP only "
+"contains 7-bit ASCII characters, so things will be OK as long as the "
+"character set for your locale treats 7-bit ASCII characters in the same way "
+"as ISO-8859-1.  For example, UTF-8 is such a character set."
+msgstr ""
+
+#. type: Content of: <sect1><note><para>
+#: lfs-en/chapter10/fstab.xml
+msgid ""
+"The EFI filesystem only needs to be mounted when installing GRUB.  The "
+"system uses this partition before the kernel is loaded and is not used "
+"otherwise.  An alternative to adding this entry to the fstab file is to "
+"manually mount it before running <command>grub-install</command> below in "
+"<xref linkend=\"ch-bootable-grub\" role='.'/>"
+msgstr ""
 
 #. type: Content of: <sect1><para>
 #: lfs-en/chapter10/fstab.xml
