@@ -531,17 +531,14 @@ msgstr "安装 Python 3"
 
 #. type: Content of: <sect1><sect2><para>
 #: lfs-en/chapter08/python.xml
-#, fuzzy
-#| msgid "First, make an adjustment for compatibility with gcc-15 and later:"
 msgid "First, apply a patch for compatibility with OpenSSL 4:"
-msgstr "首先，使得该软件包能够用 gcc-15 或更新版本构建："
+msgstr "首先，应用补丁，修复和 OpenSSL 4 的兼容性："
 
 #. type: Content of: <sect1><sect2><screen>
 #: lfs-en/chapter08/python.xml
-#, fuzzy, no-wrap
-#| msgid "<userinput remap=\"pre\">patch -Np1 -i ../&gcc-loongarch-fixes-patch;</userinput>"
+#, no-wrap
 msgid "<userinput remap=\"pre\">patch -Np1 -i ../&python-openssl4-fixes-patch;</userinput>"
-msgstr "<userinput remap=\"pre\">patch -Np1 -i ../&gcc-loongarch-fixes-patch;</userinput>"
+msgstr "<userinput remap=\"pre\">patch -Np1 -i ../&python-openssl4-fixes-patch;</userinput>"
 
 #. type: Content of: <sect1><sect2><screen>
 #: lfs-en/chapter08/python.xml
@@ -622,6 +619,8 @@ msgid ""
 "literal>, are known to fail because name resolution is not configured in the "
 "incomplete LFS environment."
 msgstr ""
+"已知有两项测试，<literal>test_urllib2</literal> and <literal>test_urllibnet</"
+"literal>，会由于我们在不完整的 LFS 环境中未配置域名解析而失败。"
 
 #. type: Content of: <sect1><sect2><para>
 #: lfs-en/chapter08/python.xml

@@ -364,12 +364,15 @@ msgid ""
 "function to crash on some old x86_64 processors, and to fix installing with "
 "multiple <command>make</command> jobs:"
 msgstr ""
+"现在修复导致 <ulink role='man' url='&man;tanh.3'>tanh(3)</ulink> 函数在一些较"
+"老的 x86_64 处理器崩溃的问题，以及使用多个 <command>make</command> 任务并行构"
+"建失败的问题："
 
 #. type: Content of: <sect1><sect2><screen>
 #: lfs-en/chapter05/glibc.xml lfs-en/chapter08/glibc.xml
-#, fuzzy, no-wrap
+#, no-wrap
 msgid "<userinput remap=\"pre\">patch -Np1 -i ../&glibc-upstream-patch;</userinput>"
-msgstr "<userinput remap=\"pre\">patch -Np1 -i ../&glibc-fhs-patch;</userinput>"
+msgstr "<userinput remap=\"pre\">patch -Np1 -i ../&glibc-upstream-patch;</userinput>"
 
 #. type: Content of: <sect1><sect2><para>
 #: lfs-en/chapter05/glibc.xml lfs-en/chapter08/glibc.xml
@@ -638,16 +641,13 @@ msgstr ""
 
 #. type: Content of: <sect1><sect2><screen>
 #: lfs-en/chapter05/glibc.xml
-#, fuzzy, no-wrap
-#| msgid ""
-#| "<userinput>echo 'int main(){}' | $LFS_TGT-gcc -x c - -v -Wl,--verbose &amp;&gt; dummy.log\n"
-#| "readelf -l a.out | grep ': /lib'</userinput>"
+#, no-wrap
 msgid ""
 "<userinput>echo 'int main(){}' | $LFS_TGT-gcc -x c - -v -Wl,--verbose &amp;&gt; dummy.log\n"
 "$LFS_TGT-readelf -l a.out | grep ': /lib'</userinput>"
 msgstr ""
 "<userinput>echo 'int main(){}' | $LFS_TGT-gcc -x c - -v -Wl,--verbose &amp;&gt; dummy.log\n"
-"readelf -l a.out | grep ': /lib'</userinput>"
+"$LFS_TGT-readelf -l a.out | grep ': /lib'</userinput>"
 
 #. type: Content of: <sect1><sect2><para>
 #: lfs-en/chapter05/glibc.xml lfs-en/chapter08/gcc.xml

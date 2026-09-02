@@ -194,21 +194,21 @@ msgid ""
 "<literal>vfat</literal> regardless.  An example of how you would go about an "
 "entry for the ESP would look like this:"
 msgstr ""
+"在为 UEFI 安装 GRUB 时，必须将 ESP 格式化为一种 FAT 文件系统 (EXFAT 不属于 "
+"FAT 文件系统)。在 Linux 内核中，VFAT 驱动处理所有 FAT 文件系统，因此无论使用"
+"何种 FAT 文件系统，在 fstab 中都应该写入 <literal>vfat</literal>。挂载 ESP 的"
+"条目看上去应该类似下面给出的例子："
 
 #. type: Content of: <sect1><screen>
 #: lfs-en/chapter10/fstab.xml
-#, fuzzy, no-wrap
-#| msgid ""
-#| "<userinput>cat &gt;&gt; ~/.bashrc &lt;&lt; \"EOF\"\n"
-#| "<literal>export MAKEFLAGS=-j<replaceable>$(nproc)</replaceable></literal>\n"
-#| "EOF</userinput>"
+#, no-wrap
 msgid ""
 "<userinput>cat &gt;&gt; /etc/fstab &lt;&lt; \"EOF\"\n"
 "<literal>/dev/<replaceable>&lt;zzz&gt;</replaceable>  /boot/efi  vfat  rw,relatime,codepage=437,iocharset=iso8859-1   0   2</literal>\n"
 "EOF</userinput>"
 msgstr ""
-"<userinput>cat &gt;&gt; ~/.bashrc &lt;&lt; \"EOF\"\n"
-"<literal>export MAKEFLAGS=-j<replaceable>$(nproc)</replaceable></literal>\n"
+"<userinput>cat &gt;&gt; /etc/fstab &lt;&lt; \"EOF\"\n"
+"<literal>/dev/<replaceable>&lt;zzz&gt;</replaceable>  /boot/efi  vfat  rw,relatime,codepage=437,iocharset=iso8859-1   0   2</literal>\n"
 "EOF</userinput>"
 
 #. type: Content of: <sect1><para>
@@ -222,6 +222,11 @@ msgid ""
 "character set for your locale treats 7-bit ASCII characters in the same way "
 "as ISO-8859-1.  For example, UTF-8 is such a character set."
 msgstr ""
+"这里选用 <literal>iso8859-1</literal> IO 字符集，是由于我们会在 <xref "
+"linkend='ch-bootable-kernel'/> 的 UEFI 内核配置中启用它。严格来说，正如前文讨"
+"论的那样，IO 字符集需要和使用的 locale 一致。但 ESP 中所有文件名都只包含 7 "
+"位 ASCII 字符，因此只要所用的 locale 处理 7 位 ASCII 字符的方式和 ISO-8859-1 "
+"一致，就不会出现问题。例如，UTF-8 就满足这一条件。"
 
 #. type: Content of: <sect1><note><para>
 #: lfs-en/chapter10/fstab.xml
@@ -232,6 +237,9 @@ msgid ""
 "manually mount it before running <command>grub-install</command> below in "
 "<xref linkend=\"ch-bootable-grub\" role='.'/>"
 msgstr ""
+"EFI 文件系统只需要在安装 GRUB 时挂载。系统只会在加载内核前使用它。因此，也可"
+"以不将它加入 fstab 文件，而是在 <xref linkend=\"ch-bootable-grub\"/> 中运行 "
+"<command>grub-install</command> 前手动挂载它。"
 
 #. type: Content of: <sect1><para>
 #: lfs-en/chapter10/fstab.xml

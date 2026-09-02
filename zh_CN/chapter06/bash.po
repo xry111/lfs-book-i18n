@@ -358,12 +358,7 @@ msgstr "准备编译 Bash："
 
 #. type: Content of: <sect1><sect2><screen>
 #: lfs-en/chapter06/bash.xml
-#, fuzzy, no-wrap
-#| msgid ""
-#| "<userinput remap=\"configure\">./configure --prefix=/usr                      \\\n"
-#| "            --build=$(sh support/config.guess) \\\n"
-#| "            --host=$LFS_TGT                    \\\n"
-#| "            --without-bash-malloc</userinput>"
+#, no-wrap
 msgid ""
 "<userinput remap=\"configure\">./configure --prefix=/usr                      \\\n"
 "            --build=$(sh support/config.guess) \\\n"
@@ -374,7 +369,8 @@ msgstr ""
 "<userinput remap=\"configure\">./configure --prefix=/usr                      \\\n"
 "            --build=$(sh support/config.guess) \\\n"
 "            --host=$LFS_TGT                    \\\n"
-"            --without-bash-malloc</userinput>"
+"            --without-bash-malloc              \\\n"
+"            --docdir=/usr/share/doc/bash-&bash-version;</userinput>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: lfs-en/chapter06/bash.xml

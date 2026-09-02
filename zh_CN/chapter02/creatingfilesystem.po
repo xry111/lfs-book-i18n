@@ -129,12 +129,6 @@ msgstr ""
 
 #. type: Content of: <sect1><para>
 #: lfs-en/chapter02/creatingfilesystem.xml
-#, fuzzy
-#| msgid ""
-#| "If you are using an existing <systemitem class=\"filesystem\">swap </"
-#| "systemitem> partition, there is no need to format it. If a new "
-#| "<systemitem class=\"filesystem\"> swap</systemitem> partition was "
-#| "created, it will need to be initialized with this command:"
 msgid ""
 "If you are using an existing <systemitem class=\"filesystem\">swap</"
 "systemitem> partition, there is no need to format it. If a new <systemitem "
@@ -168,56 +162,43 @@ msgid ""
 "formatted with a FAT variant (FAT12, FAT16, FAT32, VFAT, etc).  Usually, "
 "FAT32 or VFAT are the recommended options."
 msgstr ""
+"对于 EFI 系统分区，可以使用某种 FAT 文件系统 (FAT12，FAT16，FAT32，VFAT，"
+"等)，主板通过 UEFI 引导系统时会在以 FAT 文件系统格式化的分区中寻找 EFI 程序。"
+"通常建议使用 FAT32 或 VFAT。"
 
 #. type: Content of: <sect1><para>
 #: lfs-en/chapter02/creatingfilesystem.xml
-#, fuzzy
-#| msgid ""
-#| "If you are using a <systemitem class=\"filesystem\">swap</systemitem> "
-#| "partition, ensure that it is enabled using the <command>swapon</command> "
-#| "command:"
 msgid ""
 "If you have chosen <systemitem class=\"filesystem\">FAT32</systemitem>, "
 "format the ESP with the following command:"
 msgstr ""
-"如果您使用了 <systemitem class=\"filesystem\">swap</systemitem> 分区，使用 "
-"<command>swapon</command> 命令启用它："
+"例如，如果选择使用 <systemitem class=\"filesystem\">FAT32</systemitem>，执行"
+"以下命令以格式化 ESP："
 
 #. type: Content of: <sect1><screen>
 #: lfs-en/chapter02/creatingfilesystem.xml
-#, fuzzy, no-wrap
-#| msgid "<userinput>mkswap /dev/<replaceable>&lt;yyy&gt;</replaceable></userinput>"
+#, no-wrap
 msgid "<userinput>mkfs.fat -F 32 /dev/<replaceable>&lt;yyy&gt;</replaceable></userinput>"
-msgstr "<userinput>mkswap /dev/<replaceable>&lt;yyy&gt;</replaceable></userinput>"
+msgstr "<userinput>mkfs.fat -F 32 /dev/<replaceable>&lt;yyy&gt;</replaceable></userinput>"
 
 #. type: Content of: <sect1><para>
 #: lfs-en/chapter02/creatingfilesystem.xml
-#, fuzzy
-#| msgid ""
-#| "Checks the contents of a mounted <systemitem class=\"filesystem\">ext{234}"
-#| "</systemitem> file system"
 msgid ""
 "On the other hand, if you have chosen <systemitem class=\"filesystem\">VFAT</"
 "systemitem>, you can run the following instead:"
 msgstr ""
-"检查已经挂载的 <systemitem class=\"filesystem\">ext{234}</systemitem> 文件系"
-"统的内容"
+"如果选用 <systemitem class=\"filesystem\">VFAT</systemitem>，则运行下列命令："
 
 #. type: Content of: <sect1><screen>
 #: lfs-en/chapter02/creatingfilesystem.xml
-#, fuzzy, no-wrap
-#| msgid "<userinput>mkswap /dev/<replaceable>&lt;yyy&gt;</replaceable></userinput>"
+#, no-wrap
 msgid "<userinput>mkfs.vfat /dev/<replaceable>&lt;zzz&gt;</replaceable></userinput>"
-msgstr "<userinput>mkswap /dev/<replaceable>&lt;yyy&gt;</replaceable></userinput>"
+msgstr "<userinput>mkfs.vfat /dev/<replaceable>&lt;zzz&gt;</replaceable></userinput>"
 
 #. type: Content of: <sect1><para>
 #: lfs-en/chapter02/creatingfilesystem.xml
-#, fuzzy
-#| msgid ""
-#| "Replace <replaceable>&lt;xxx&gt;</replaceable> with the name of the LFS "
-#| "partition."
 msgid ""
 "Replace <replaceable>&lt;zzz&gt;</replaceable> with the name of the EFI "
 "System Partition."
 msgstr ""
-"命令中 <replaceable>&lt;xxx&gt;</replaceable> 应该替换成 LFS 分区的名称。"
+"命令中 <replaceable>&lt;xxx&gt;</replaceable> 应该替换成 EFI 系统分区的名称。"

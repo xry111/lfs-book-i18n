@@ -79,21 +79,25 @@ msgid ""
 "your host distro has newer versions of these packages, you have several "
 "options:"
 msgstr ""
+"注意比 &gcc-version; 更新的宿主 GCC 版本和比 &binutils-version; 更新的宿主 "
+"Binutils 版本未经测试。更新的 GCC 有较大概率导致该版本的 LFS 无法构建，这种情"
+"况下不要向 LFS 编辑报告构建问题。如果您的宿主发行版使用了这两个软件包的更新版"
+"本，可以选择："
 
 #. type: Content of: <sect1><sect2><warning><para><itemizedlist><listitem><simpara>
 #: lfs-en/chapter02/hostreqs.xml
 msgid "Use a newer release of the LFS book if one exists"
-msgstr ""
+msgstr "如果已经发布了更新版本的 LFS，阅读更新版本"
 
 #. type: Content of: <sect1><sect2><warning><para><itemizedlist><listitem><simpara>
 #: lfs-en/chapter02/hostreqs.xml
 msgid "Use an older host distro"
-msgstr ""
+msgstr "使用较老的宿主发行版"
 
 #. type: Content of: <sect1><sect2><warning><para><itemizedlist><listitem><simpara>
 #: lfs-en/chapter02/hostreqs.xml
 msgid "Downgrade GCC if that is supported by the host distro"
-msgstr ""
+msgstr "如果宿主发行版支持，降级 GCC 版本"
 
 #. type: Content of: <sect1><sect2><warning><para><itemizedlist><listitem><simpara>
 #: lfs-en/chapter02/hostreqs.xml
@@ -101,6 +105,8 @@ msgid ""
 "Use the latest LFS development book. Updates to the latest version of "
 "packages in LFS are usually added within two to four weeks after release."
 msgstr ""
+"阅读最新的，开发中的 LFS 手册。在上述软件包发布新版本后，开发状态的 LFS 手册"
+"通常会在两到四周内更新。"
 
 #. type: Content of: <sect1><sect2><itemizedlist><listitem><para>
 #: lfs-en/chapter02/hostreqs.xml
@@ -135,12 +141,12 @@ msgstr ""
 
 #. type: Content of: <sect1><sect2><itemizedlist><listitem><para>
 #: lfs-en/chapter02/hostreqs.xml
-#, fuzzy
-#| msgid "<emphasis role=\"strong\">Coreutils-8.1</emphasis>"
 msgid ""
 "<emphasis role=\"strong\">GNU Coreutils-8.1</emphasis> or <emphasis "
 "role=\"strong\">Uutils Coreutils-0.8</emphasis>"
-msgstr "<emphasis role=\"strong\">Coreutils-8.1</emphasis>"
+msgstr ""
+"<emphasis role=\"strong\">GNU Coreutils-8.1</emphasis> 或<emphasis "
+"role=\"strong\">Uutils Coreutils-0.8</emphasis>"
 
 #. type: Content of: <sect1><sect2><itemizedlist><listitem><para>
 #: lfs-en/chapter02/hostreqs.xml
@@ -350,6 +356,9 @@ msgid ""
 "<xref linkend='ch-partitioning-creatingfilesystem'/> for details), <ulink "
 "url='&blfs-book;postlfs/dosfstools.html'>dosfstools</ulink> is needed."
 msgstr ""
+"另外，如果需要新建 ESP (EFI 系统分区，详见<xref linkend='ch-partitioning-"
+"creatingfilesystem'/>)，则需要 <ulink url='&blfs-book;postlfs/"
+"dosfstools.html'>dosfstools</ulink>。"
 
 #. type: Content of: <sect1><sect2><important><para>
 #: lfs-en/chapter02/hostreqs.xml

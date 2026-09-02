@@ -449,18 +449,7 @@ msgstr "&binutils-fin-du;"
 
 #. type: Content of: <sect1><sect2><screen>
 #: lfs-en/chapter08/binutils.xml
-#, fuzzy, no-wrap
-#| msgid ""
-#| "<userinput remap=\"configure\">../configure --prefix=/usr       \\\n"
-#| "             --sysconfdir=/etc   \\\n"
-#| "             --enable-ld=default \\\n"
-#| "             --enable-plugins    \\\n"
-#| "             --enable-shared     \\\n"
-#| "             --disable-werror    \\\n"
-#| "             --enable-64-bit-bfd \\\n"
-#| "             --enable-new-dtags  \\\n"
-#| "             --with-system-zlib  \\\n"
-#| "             --enable-default-hash-style=gnu</userinput>"
+#, no-wrap
 msgid ""
 "<userinput remap=\"configure\">../configure --prefix=/usr       \\\n"
 "             --sysconfdir=/etc   \\\n"
@@ -483,6 +472,7 @@ msgstr ""
 "             --enable-64-bit-bfd \\\n"
 "             --enable-new-dtags  \\\n"
 "             --with-system-zlib  \\\n"
+"             --with-lib-path=/usr/lib \\\n"
 "             --enable-default-hash-style=gnu</userinput>"
 
 #. type: Content of: <sect1><sect2><variablelist><title>
@@ -510,8 +500,6 @@ msgstr "<parameter>--enable-plugins</parameter>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: lfs-en/chapter08/binutils.xml
-#, fuzzy
-#| msgid "Enables plugin support for the linker."
 msgid "Enable plugin support for the linker."
 msgstr "启用链接器插件支持。"
 
@@ -528,10 +516,8 @@ msgstr "使用安装好的 zlib 库，而不是构建附带的版本。"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: lfs-en/chapter08/binutils.xml
-#, fuzzy
-#| msgid "<parameter>--with-tcl=/usr/lib</parameter>"
 msgid "<parameter>--with-lib-path=/usr/lib</parameter>"
-msgstr "<parameter>--with-tcl=/usr/lib</parameter>"
+msgstr "<parameter>--with-lib-path=/usr/lib</parameter>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: lfs-en/chapter08/binutils.xml
@@ -545,6 +531,12 @@ msgid ""
 "<command>ld</command> not search the path can highlight the issue earlier "
 "with a failure to find those libraries at build time instead of run time."
 msgstr ""
+"指定链接器 (<command>ld</command>) 搜索库文件的路径。默认情况下，除了 "
+"<filename class='directory'>/usr/lib</filename> 外，它还会搜索一些在 LFS 不存"
+"在的目录，特别是我们有意避免的 <filename class='directory'>/usr/lib64</"
+"filename> 目录。考虑不小心创建了 <filename class='directory'>/usr/lib64</"
+"filename> 并在其中安装了一些库的情况，此时 <command>ld</command> 不搜索该目录"
+"有利于更早发现问题：搜索库会在构建时失败，而非推迟到运行时。"
 
 #. type: Content of: <sect1><sect2><screen>
 #: lfs-en/chapter08/binutils.xml

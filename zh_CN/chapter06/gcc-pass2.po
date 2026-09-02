@@ -250,7 +250,7 @@ msgstr "&gcc-url;"
 
 #. type: Content of: <sect1><sect2><screen>
 #: lfs-en/chapter05/gcc-pass1.xml lfs-en/chapter06/gcc-pass2.xml
-#, fuzzy, no-wrap
+#, no-wrap
 msgid ""
 "<userinput remap=\"pre\">tar -xf ../mpfr-&mpfr-version;.tar.xz\n"
 "mv -v mpfr-&mpfr-version; mpfr\n"
@@ -263,7 +263,7 @@ msgstr ""
 "mv -v mpfr-&mpfr-version; mpfr\n"
 "tar -xf ../gmp-&gmp-version;.tar.xz\n"
 "mv -v gmp-&gmp-version; gmp\n"
-"tar -xf ../mpc-&mpc-version;.tar.gz\n"
+"tar -xf ../mpc-&mpc-version;.tar.xz\n"
 "mv -v mpc-&mpc-version; mpc</userinput>"
 
 #. type: Content of: <sect1><sect2><para>
@@ -430,26 +430,7 @@ msgstr "现在准备编译 GCC："
 
 #. type: Content of: <sect1><sect2><screen>
 #: lfs-en/chapter06/gcc-pass2.xml
-#, fuzzy, no-wrap
-#| msgid ""
-#| "<userinput remap=\"configure\">../configure                   \\\n"
-#| "    --build=$(../config.guess) \\\n"
-#| "    --host=$LFS_TGT            \\\n"
-#| "    --target=$LFS_TGT          \\\n"
-#| "    --prefix=/usr              \\\n"
-#| "    --with-build-sysroot=$LFS  \\\n"
-#| "    --enable-default-pie       \\\n"
-#| "    --enable-default-ssp       \\\n"
-#| "    --disable-nls              \\\n"
-#| "    --disable-multilib         \\\n"
-#| "    --disable-libatomic        \\\n"
-#| "    --disable-libgomp          \\\n"
-#| "    --disable-libquadmath      \\\n"
-#| "    --disable-libsanitizer     \\\n"
-#| "    --disable-libssp           \\\n"
-#| "    --disable-libvtv           \\\n"
-#| "    --enable-languages=c,c++   \\\n"
-#| "    LDFLAGS_FOR_TARGET=-L$PWD/$LFS_TGT/libgcc</userinput>"
+#, no-wrap
 msgid ""
 "<userinput remap=\"configure\">../configure                   \\\n"
 "    --build=$(../config.guess) \\\n"
@@ -481,6 +462,7 @@ msgstr ""
 "    --with-build-sysroot=$LFS  \\\n"
 "    --enable-default-pie       \\\n"
 "    --enable-default-ssp       \\\n"
+"    --disable-fixincludes      \\\n"
 "    --disable-nls              \\\n"
 "    --disable-multilib         \\\n"
 "    --disable-libatomic        \\\n"
@@ -490,7 +472,9 @@ msgstr ""
 "    --disable-libssp           \\\n"
 "    --disable-libvtv           \\\n"
 "    --enable-languages=c,c++   \\\n"
-"    LDFLAGS_FOR_TARGET=-L$PWD/$LFS_TGT/libgcc</userinput>"
+"    CXX_FOR_TARGET=\"$LFS_TGT-gcc -nostdinc++\" \\\n"
+"    LDFLAGS_FOR_TARGET=-L$PWD/$LFS_TGT/libgcc \\\n"
+"    target_configargs=gcc_cv_target_thread_file=posix</userinput>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: lfs-en/chapter06/gcc-pass2.xml
@@ -569,10 +553,8 @@ msgstr ""
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: lfs-en/chapter06/gcc-pass2.xml
-#, fuzzy
-#| msgid "<parameter>CC='gcc -std=c99'</parameter>"
 msgid "<parameter>CXX=\"$LFS_TGT-gcc -nostdinc++\"</parameter>"
-msgstr "<parameter>CC='gcc -std=c99'</parameter>"
+msgstr "<parameter>CXX=\"$LFS_TGT-gcc -nostdinc++\"</parameter>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: lfs-en/chapter06/gcc-pass2.xml
@@ -586,6 +568,12 @@ msgid ""
 "<command>configure</command> script from the top level directory.  Here we "
 "explicitly pass it."
 msgstr ""
+"如同在<xref linkend='ch-tools-libstdcpp'/>所做的那样指定使用 "
+"<command>$LFS_TGT-gcc</command> 编译 C++ 代码，并阻止编译器使用之前安装的 "
+"libstdc++ 中的头文件。混用那些头文件和当前正在构建的 libstdc++ 的头文件会导"
+"致 <literal>#include_next</literal> 指令无法找到 C 头文件。在常规的 GCC 构建"
+"过程中，顶层的 <command>configure</command> 脚本会自动应用这一覆盖设置，此处"
+"我们明确指定它。"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: lfs-en/chapter06/gcc-pass2.xml
@@ -611,6 +599,7 @@ msgstr ""
 msgid ""
 "<parameter>target_configargs=gcc_cv_target_thread_file=posix</parameter>"
 msgstr ""
+"<parameter>target_configargs=gcc_cv_target_thread_file=posix</parameter>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: lfs-en/chapter06/gcc-pass2.xml
@@ -620,6 +609,9 @@ msgid ""
 "for building the target library (in this case, <xref linkend='ch-tools-gcc-"
 "pass1'/> which was configured with none thread support)."
 msgstr ""
+"在构建目标系统的运行库 libgcc 和 libstdc++ 时启用 POSIX 线程支持。默认值取决"
+"于用于编译这些运行库的编译器 (这里是<xref linkend='ch-tools-gcc-pass1'/>，而"
+"它被配置为无线程支持)。"
 
 #. type: Content of: <sect1><sect2><para>
 #: lfs-en/chapter06/gcc-pass2.xml

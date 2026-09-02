@@ -503,10 +503,9 @@ msgstr "解压该软件包的文档："
 
 #. type: Content of: <sect1><sect2><screen>
 #: lfs-en/chapter08/sqlite.xml
-#, fuzzy, no-wrap
-#| msgid "<userinput remap=\"pre\">tar -xf ../sqlite-doc-&sqlite-doc-version;.tar.xz</userinput>"
+#, no-wrap
 msgid "<userinput remap=\"pre\">python3 -m zipfile -e ../sqlite-doc-&sqlite-doc-version;.zip .</userinput>"
-msgstr "<userinput remap=\"pre\">tar -xf ../sqlite-doc-&sqlite-doc-version;.tar.xz</userinput>"
+msgstr "<userinput remap=\"pre\">python3 -m zipfile -e ../sqlite-doc-&sqlite-doc-version;.zip .</userinput>"
 
 #. type: Content of: <sect1><sect2><para>
 #: lfs-en/chapter08/sqlite.xml
@@ -585,14 +584,9 @@ msgstr ""
 
 #. type: Content of: <sect1><sect2><screen>
 #: lfs-en/chapter08/sqlite.xml
-#, fuzzy, no-wrap
-#| msgid ""
-#| "<userinput remap=\"install\">install -v -m755 -d /usr/share/doc/sqlite-&sqlite-short-version;\n"
-#| "cp -v -R sqlite-doc-&sqlite-doc-version;/* /usr/share/doc/sqlite-&sqlite-short-version;</userinput>"
+#, no-wrap
 msgid "<userinput remap=\"install\">cp -v -R sqlite-doc-&sqlite-doc-version; -T /usr/share/doc/sqlite-&sqlite-short-version;</userinput>"
-msgstr ""
-"<userinput remap=\"install\">install -v -m755 -d /usr/share/doc/sqlite-&sqlite-short-version;\n"
-"cp -v -R sqlite-doc-&sqlite-doc-version;/* /usr/share/doc/sqlite-&sqlite-short-version;</userinput>"
+msgstr "<userinput remap=\"install\">cp -v -R sqlite-doc-&sqlite-doc-version; -T /usr/share/doc/sqlite-&sqlite-short-version;</userinput>"
 
 #. type: Content of: <sect1><sect2><title>
 #: lfs-en/chapter08/sqlite.xml

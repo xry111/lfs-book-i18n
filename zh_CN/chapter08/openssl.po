@@ -499,6 +499,9 @@ msgid ""
 "replaceable></parameter> with N replaced by the number of logic CPU cores "
 "you want to use."
 msgstr ""
+"测试套件默认使用全部可用 CPU 核心。如果希望使用较少的核心，在命令前加入 "
+"<parameter>HARNESS_JOBS=<replaceable>&lt;N&gt;</replaceable></parameter> 并"
+"将 N 替换成希望使用的逻辑 CPU 核心数。"
 
 #. type: Content of: <sect1><sect2><para>
 #: lfs-en/chapter08/openssl.xml
@@ -523,14 +526,13 @@ msgstr ""
 msgid ""
 "Install the package (setting an empty <envar>INSTALL_LIBS</envar> prevents "
 "the installation of static libraries):"
-msgstr ""
+msgstr "安装该软件包 (设定 <envar>INSTALL_LIBS</envar> 为空以防止安装静态库)："
 
 #. type: Content of: <sect1><sect2><screen>
 #: lfs-en/chapter08/openssl.xml
-#, fuzzy, no-wrap
-#| msgid "<userinput remap=\"install\">make INSTALL_MOD_STRIP=1 modules_install</userinput>"
+#, no-wrap
 msgid "<userinput remap=\"install\">make INSTALL_LIBS= MANSUFFIX=ssl install</userinput>"
-msgstr "<userinput remap=\"install\">make INSTALL_MOD_STRIP=1 modules_install</userinput>"
+msgstr "<userinput remap=\"install\">make INSTALL_LIBS= MANSUFFIX=ssl install</userinput>"
 
 #. type: Content of: <sect1><sect2><para>
 #: lfs-en/chapter08/openssl.xml

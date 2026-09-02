@@ -473,14 +473,13 @@ msgstr "安装 Pkgconf"
 #. type: Content of: <sect1><sect2><para>
 #: lfs-en/chapter08/pkgconf.xml
 msgid "First, work around a circular dependency on meson:"
-msgstr ""
+msgstr "首先，绕过和 meson 的循环依赖："
 
 #. type: Content of: <sect1><sect2><screen>
 #: lfs-en/chapter08/pkgconf.xml
-#, fuzzy, no-wrap
-#| msgid "<userinput remap=\"pre\">tar -xf ../sqlite-doc-&sqlite-doc-version;.tar.xz</userinput>"
+#, no-wrap
 msgid "<userinput remap=\"pre\">tar -xf ../meson-&meson-version;.tar.gz</userinput>"
-msgstr "<userinput remap=\"pre\">tar -xf ../sqlite-doc-&sqlite-doc-version;.tar.xz</userinput>"
+msgstr "<userinput remap=\"pre\">tar -xf ../meson-&meson-version;.tar.gz</userinput>"
 
 #. type: Content of: <sect1><sect2><para>
 #: lfs-en/chapter08/pkgconf.xml
@@ -489,12 +488,7 @@ msgstr "准备编译 Pkgconf："
 
 #. type: Content of: <sect1><sect2><screen>
 #: lfs-en/chapter08/pkgconf.xml
-#, fuzzy, no-wrap
-#| msgid ""
-#| "<userinput remap=\"configure\">mkdir build\n"
-#| "cd    build\n"
-#| "\n"
-#| "meson setup --prefix=/usr --buildtype=release --wrap-mode=nofallback ..</userinput>"
+#, no-wrap
 msgid ""
 "<userinput remap=\"configure\">mkdir build\n"
 "cd    build\n"
@@ -504,16 +498,17 @@ msgstr ""
 "<userinput remap=\"configure\">mkdir build\n"
 "cd    build\n"
 "\n"
-"meson setup --prefix=/usr --buildtype=release --wrap-mode=nofallback ..</userinput>"
+"python3 ../meson-&meson-version;/meson.py setup --prefix=/usr --buildtype=release ..</userinput>"
 
 #. type: Content of: <sect1><sect2><screen>
 #: lfs-en/chapter08/pkgconf.xml
-#, fuzzy, no-wrap
-#| msgid "<userinput remap=\"install\">cp -vfr doc/* /usr/share/doc/openssl-&openssl-version;</userinput>"
+#, no-wrap
 msgid ""
 "<userinput remap=\"install\">ninja install\n"
 "mv /usr/share/doc/pkgconf{,-&pkgconf-version;}</userinput>"
-msgstr "<userinput remap=\"install\">cp -vfr doc/* /usr/share/doc/openssl-&openssl-version;</userinput>"
+msgstr ""
+"<userinput remap=\"install\">ninja install\n"
+"mv /usr/share/doc/pkgconf{,-&pkgconf-version;}</userinput>"
 
 #. type: Content of: <sect1><sect2><para>
 #: lfs-en/chapter08/pkgconf.xml
@@ -583,10 +578,8 @@ msgstr "bomtool"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: lfs-en/chapter08/pkgconf.xml
-#, fuzzy
-#| msgid "<filename class=\"libraryfile\">libpkgconf</filename>"
 msgid "<filename class=\"libraryfile\">libpkgconf.so</filename>"
-msgstr "<filename class=\"libraryfile\">libpkgconf</filename>"
+msgstr "<filename class=\"libraryfile\">libpkgconf.so</filename>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: lfs-en/chapter08/pkgconf.xml

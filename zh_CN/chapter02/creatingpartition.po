@@ -81,7 +81,7 @@ msgid ""
 "url='&man;fdisk.8'>fdisk(8)</ulink> if you do not yet know how to use the "
 "programs."
 msgstr ""
-"启动一个磁盘分区程序，例如 <command>cfdisk</command> 或者<command>fdisk</"
+"启动一个磁盘分区程序，例如 <command>cfdisk</command> 或者 <command>fdisk</"
 "command>。在启动分区程序时需要一个命令行参数，表示希望创建新分区的硬盘，例如"
 "主硬盘 <filename class=\"devicefile\">/dev/sda</filename>。创建一个 Linux 原"
 "生分区，如果有必要的话再创建一个 <systemitem class=\"filesystem\">swap</"
@@ -210,10 +210,8 @@ msgstr ""
 
 #. type: Content of: <sect1><sect2><sect3><title>
 #: lfs-en/chapter02/creatingpartition.xml
-#, fuzzy
-#| msgid "The Root Partition"
 msgid "The EFI System Partition"
-msgstr "根分区"
+msgstr "EFI 系统分区"
 
 #. type: Content of: <sect1><sect2><sect3><para>
 #: lfs-en/chapter02/creatingpartition.xml
@@ -230,19 +228,22 @@ msgid ""
 "dropped much lower with some experimentation. The partition label should be "
 "'EFI System' if using <command>fdisk</command>."
 msgstr ""
+"使用 UEFI 引导系统需要这个分区 (简称 <emphasis>ESP</emphasis>)。它存储在引导"
+"过程中运行的 EFI 程序。引导磁盘或许可以采用 MBR (DOS) 分区表，但它往往会导致"
+"兼容问题。建议总是将引导磁盘以 GUID 分区表 (GPT) 格式分区。如果仅通过 UEFI 引"
+"导 LFS，则 ESP 只需要不超过 20 MB 空间。它需要略大于 GRUB 的 EFI 映像，因为 "
+"GRUB 在创建 EFI 映像前会向分区写入较多数据。一般建议为其分配 128 MB 至 256 "
+"MB 空间，但实验表明实际不需要如此之多的空间。在使用 <command>fdisk</command> "
+"分区时，应将该分区的标签设为 'EFI 系统'。"
 
 #. type: Content of: <sect1><sect2><sect3><para>
 #: lfs-en/chapter02/creatingpartition.xml
-#, fuzzy
-#| msgid ""
-#| "If the ESP is not mounted at <filename class=\"directory\">/boot/efi</"
-#| "filename> (in the chroot), mount it now:"
 msgid ""
 "For Grub, the EFI System Partition should be located at <filename "
 "class=\"directory\">/boot/efi</filename>."
 msgstr ""
-"如果 ESP 没有挂载到 (chroot 中的) <filename class=\"directory\">/boot/efi</"
-"filename>，现在挂载它："
+"GRUB 预期将 EFI 系统分区挂载到 <filename class=\"directory\">/boot/efi</"
+"filename>。"
 
 #. type: Content of: <sect1><sect2><sect3><title>
 #: lfs-en/chapter02/creatingpartition.xml
@@ -377,12 +378,12 @@ msgstr ""
 #. type: Content of: <sect1><sect2><title>
 #: lfs-en/chapter02/creatingpartition.xml
 msgid "An Example Disk Layout"
-msgstr ""
+msgstr "磁盘分区布局实例"
 
 #. type: Content of: <sect1><sect2><para>
 #: lfs-en/chapter02/creatingpartition.xml
 msgid "Below is an example layout for an empty disk drive."
-msgstr ""
+msgstr "下面给出在空的磁盘上安装 LFS 时可用的一种分区布局。"
 
 #. type: Content of: <sect1><sect2><screen>
 #: lfs-en/chapter02/creatingpartition.xml
@@ -398,31 +399,27 @@ msgstr ""
 #. type: Content of: <sect1><sect2><para>
 #: lfs-en/chapter02/creatingpartition.xml
 msgid "The above example makes a few assumptions:"
-msgstr ""
+msgstr "本例假设："
 
 #. type: Content of: <sect1><sect2><para><itemizedlist><listitem><para>
 #: lfs-en/chapter02/creatingpartition.xml
 msgid "The partition table is a GUID Partition Table (GPT)."
-msgstr ""
+msgstr "采用 GUID 分区表 (GPT)"
 
 #. type: Content of: <sect1><sect2><para><itemizedlist><listitem><para>
 #: lfs-en/chapter02/creatingpartition.xml
-#, fuzzy
-#| msgid "The /mnt/lfs partition must be mounted."
 msgid "The EFI partition must be formatted as VFAT."
-msgstr "/mnt/lfs 分区需要重新挂载。"
+msgstr "必须将 EFI 分区格式化为 VFAT。"
 
 #. type: Content of: <sect1><sect2><para><itemizedlist><listitem><para>
 #: lfs-en/chapter02/creatingpartition.xml
-#, fuzzy
-#| msgid "The /mnt/lfs partition must be mounted."
 msgid "The swap partition must be initialized."
-msgstr "/mnt/lfs 分区需要重新挂载。"
+msgstr "需要初始化 swap 分区。"
 
 #. type: Content of: <sect1><sect2><para><itemizedlist><listitem><para>
 #: lfs-en/chapter02/creatingpartition.xml
 msgid "The recommendation for all other partitions is to use ext4 formatting."
-msgstr ""
+msgstr "建议使用 ext4 格式化其他所有分区。"
 
 #. type: Content of: <sect1><sect2><para><itemizedlist><listitem><para>
 #: lfs-en/chapter02/creatingpartition.xml
@@ -432,3 +429,5 @@ msgid ""
 "you are building the system using a LiveCD, a host partition may not be "
 "required."
 msgstr ""
+"另外可以增加一个安装构建 LFS 所用的“宿主”发行版的分区。一般来说分配 10 GiB 就"
+"足以安装宿主发行版了。如果使用 LiveCD 构建系统，就不需要这个分区。"

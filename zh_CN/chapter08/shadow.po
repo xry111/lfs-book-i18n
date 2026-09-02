@@ -509,51 +509,24 @@ msgstr ""
 
 #. type: Content of: <sect1><sect2><para>
 #: lfs-en/chapter08/shadow.xml
-#, fuzzy
-#| msgid ""
-#| "Disable the installation of the <command>groups</command> program and its "
-#| "man pages, as Coreutils provides a better version. Also, prevent the "
-#| "installation of manual pages that were already installed in <xref "
-#| "linkend=\"ch-system-man-pages\"/>:"
 msgid ""
 "Prevent the installation of manual pages that were already installed in "
 "<xref linkend=\"ch-system-man-pages\"/>:"
 msgstr ""
-"禁止该软件包安装 <command>groups</command> 程序和它的手册页，因为 Coreutils "
-"会提供更好的版本。同样，避免安装<xref linkend=\"ch-system-man-pages\"/>软件包"
-"已经提供的手册页："
+"阻止该软件包安装 <xref linkend=\"ch-system-man-pages\"/> 中已安装的手册页："
 
 #. type: Content of: <sect1><sect2><screen>
 #: lfs-en/chapter08/shadow.xml
-#, fuzzy, no-wrap
-#| msgid ""
-#| "<userinput remap=\"pre\">sed -i 's/groups$(EXEEXT) //' src/Makefile.in\n"
-#| "find man -name Makefile.in -exec sed -i 's/groups\\.1 / /'   {} \\;\n"
-#| "find man -name Makefile.in -exec sed -i 's/getspnam\\.3 / /' {} \\;\n"
-#| "find man -name Makefile.in -exec sed -i 's/passwd\\.5 / /'   {} \\;</userinput>"
+#, no-wrap
 msgid ""
 "<userinput remap=\"pre\">find man -name Makefile.in -exec sed -i 's/getspnam\\.3 / /' {} \\;\n"
 "find man -name Makefile.in -exec sed -i 's/passwd\\.5 / /'   {} \\;</userinput>"
 msgstr ""
-"<userinput remap=\"pre\">sed -i 's/groups$(EXEEXT) //' src/Makefile.in\n"
-"find man -name Makefile.in -exec sed -i 's/groups\\.1 / /'   {} \\;\n"
-"find man -name Makefile.in -exec sed -i 's/getspnam\\.3 / /' {} \\;\n"
+"<userinput remap=\"pre\">find man -name Makefile.in -exec sed -i 's/getspnam\\.3 / /' {} \\;\n"
 "find man -name Makefile.in -exec sed -i 's/passwd\\.5 / /'   {} \\;</userinput>"
 
 #. type: Content of: <sect1><sect2><para>
 #: lfs-en/chapter08/shadow.xml
-#, fuzzy
-#| msgid ""
-#| "Instead of using the default <emphasis>crypt</emphasis> method, use the "
-#| "much more secure <emphasis>YESCRYPT</emphasis> method of password "
-#| "encryption, which also allows passwords longer than 8 characters.  It is "
-#| "also necessary to change the obsolete <filename class=\"directory\">/var/"
-#| "spool/mail</filename> location for user mailboxes that Shadow uses by "
-#| "default to the <filename class=\"directory\">/var/mail</filename> "
-#| "location used currently. And, remove <filename class=\"directory\">/bin</"
-#| "filename> and <filename class=\"directory\">/sbin</filename> from the "
-#| "<envar>PATH</envar>, since they are simply symlinks to their counterparts "
-#| "in <filename class=\"directory\">/usr</filename>."
 msgid ""
 "Instead of using the default <emphasis>SHA512</emphasis> method, use the "
 "more secure <emphasis>YESCRYPT</emphasis> method of password encryption.  It "
@@ -565,14 +538,13 @@ msgid ""
 "envar>, since they are simply symlinks to their counterparts in <filename "
 "class=\"directory\">/usr</filename>."
 msgstr ""
-"不使用默认的 <emphasis>crypt</emphasis> 加密方法，使用安全程度高很多的 "
-"<emphasis>YESCRYPT</emphasis> 算法加密密码，这也允许设定长度超过 8 个字符的密"
-"码。还需要把过时的用户邮箱位置 <filename class=\"directory\">/var/spool/"
-"mail</filename> 改为当前普遍使用的 <filename class=\"directory\">/var/mail</"
-"filename> 目录。另外，从默认的 <envar>PATH</envar> 中删除<filename "
-"class=\"directory\">/bin</filename> 和 <filename class=\"directory\">/sbin</"
-"filename>，因为它们只是指向 <filename class=\"directory\">/usr</filename> 中"
-"对应目录的符号链接："
+"不使用默认的 <emphasis>SHA512</emphasis> 加密方法，使用安全程度高很多的 "
+"<emphasis>YESCRYPT</emphasis> 算法加密密码。还需要把过时的用户邮箱位置 "
+"<filename class=\"directory\">/var/spool/mail</filename> 改为当前普遍使用的 "
+"<filename class=\"directory\">/var/mail</filename> 目录。另外，从默认的 "
+"<envar>PATH</envar> 中删除<filename class=\"directory\">/bin</filename> 和 "
+"<filename class=\"directory\">/sbin</filename>，因为它们只是指向 <filename "
+"class=\"directory\">/usr</filename> 中对应目录的符号链接："
 
 #.  known example: SPIRV-LLVM-Translator 
 #. type: Content of: <sect1><sect2><warning><para>
@@ -589,21 +561,16 @@ msgstr ""
 
 #. type: Content of: <sect1><sect2><screen>
 #: lfs-en/chapter08/shadow.xml
-#, fuzzy, no-wrap
-#| msgid ""
-#| "<userinput remap=\"pre\">sed -e 's:#ENCRYPT_METHOD DES:ENCRYPT_METHOD YESCRYPT:' \\\n"
-#| "    -e 's:/var/spool/mail:/var/mail:'                   \\\n"
-#| "    -e '/PATH=/{s@/sbin:@@;s@/bin:@@}'                  \\\n"
-#| "    -i etc/login.defs</userinput>"
+#, no-wrap
 msgid ""
 "<userinput remap=\"pre\">sed -e 's:#ENCRYPT_METHOD SHA512:ENCRYPT_METHOD YESCRYPT:' \\\n"
 "    -e 's:/var/spool/mail:/var/mail:'                      \\\n"
 "    -e '/PATH=/{s@/sbin:@@;s@/bin:@@}'                     \\\n"
 "    -i etc/login.defs</userinput>"
 msgstr ""
-"<userinput remap=\"pre\">sed -e 's:#ENCRYPT_METHOD DES:ENCRYPT_METHOD YESCRYPT:' \\\n"
-"    -e 's:/var/spool/mail:/var/mail:'                   \\\n"
-"    -e '/PATH=/{s@/sbin:@@;s@/bin:@@}'                  \\\n"
+"<userinput remap=\"pre\">sed -e 's:#ENCRYPT_METHOD SHA512:ENCRYPT_METHOD YESCRYPT:' \\\n"
+"    -e 's:/var/spool/mail:/var/mail:'                      \\\n"
+"    -e '/PATH=/{s@/sbin:@@;s@/bin:@@}'                     \\\n"
 "    -i etc/login.defs</userinput>"
 
 #. type: Content of: <sect1><sect2><para>
@@ -700,11 +667,12 @@ msgid ""
 "format will be completely broken after year 2038.  The LFS editors will "
 "attempt to resolve the issue before that year."
 msgstr ""
-"该选项使得 Shadow (准确来说，其中的 <command>login</command> 和<command>who</"
-"command> 程序) 使用 <filename>/run/utmp</filename> 而非 logind 跟踪运行中的登"
-"录会话，这是由于 logind 在当前不完整的 LFS 系统中尚不可用。但是，正如<xref "
-"linkend='ch-tools-createfiles'/>所述，<filename>/run/utmp</filename> 的文件格"
-"式在 2038 年后将完全无法使用。LFS 编辑团队将试图在 2038 年前解决该问题。"
+"该选项使得 Shadow (准确来说，其中的 <command>login</command> 和 "
+"<command>who</command> 程序) 使用 <filename>/run/utmp</filename> 而非 logind "
+"跟踪运行中的登录会话，这是由于 logind 在当前不完整的 LFS 系统中尚不可用。但"
+"是，正如<xref linkend='ch-tools-createfiles'/>所述，<filename>/run/utmp</"
+"filename> 的文件格式在 2038 年后将完全无法使用。LFS 编辑团队将试图在 2038 年"
+"前解决该问题。"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: lfs-en/chapter08/shadow.xml
@@ -744,16 +712,6 @@ msgstr "配置"
 
 #. type: Content of: <sect1><sect2><para>
 #: lfs-en/chapter08/shadow.xml
-#, fuzzy
-#| msgid ""
-#| "This package contains utilities to add, modify, and delete users and "
-#| "groups; set and change their passwords; and perform other administrative "
-#| "tasks. For a full explanation of what <emphasis>password shadowing</"
-#| "emphasis> means, see the <filename>doc/HOWTO</filename> file within the "
-#| "unpacked source tree. If you use Shadow support, keep in mind that "
-#| "programs which need to verify passwords (display managers, FTP programs, "
-#| "pop3 daemons, etc.)  must be Shadow-compliant. That is, they must be able "
-#| "to work with shadowed passwords."
 msgid ""
 "This package contains utilities to add, modify, and delete users and groups; "
 "set and change their passwords; and perform other administrative tasks. For "
@@ -762,17 +720,12 @@ msgid ""
 msgstr ""
 "该软件包包含用于添加、修改、删除用户和组，设定和修改它们的密码，以及进行其他"
 "管理任务的工具。如果希望查阅关于 <emphasis>password shadowing</emphasis> 的详"
-"细解释，阅读解压得到源代码目录树中的 <filename>doc/HOWTO</filename> 文件。如"
-"果使用 Shadow 支持，请注意所有需要验证密码的程序 (如显示管理器、FTP 程序、"
-"pop3 守护进程等)  都必须和 Shadow 兼容。换句话说，它们必须能使用 Shadow 加密"
-"的密码。"
+"细解释，阅读解压得到源代码目录树中的 <filename>doc/HOWTO</filename> 文件。"
 
 #. type: Content of: <sect1><sect2><para>
 #: lfs-en/chapter08/shadow.xml
-#, fuzzy
-#| msgid "To enable shadowed group passwords, run:"
 msgid "Enable shadowed passwords:"
-msgstr "如果要对组密码启用 Shadow 加密，执行："
+msgstr "对用户密码启用 Shadow 机制："
 
 #. type: Content of: <sect1><sect2><screen>
 #: lfs-en/chapter08/shadow.xml
@@ -782,10 +735,8 @@ msgstr "<userinput>pwconv</userinput>"
 
 #. type: Content of: <sect1><sect2><para>
 #: lfs-en/chapter08/shadow.xml
-#, fuzzy
-#| msgid "To enable shadowed group passwords, run:"
 msgid "Enable shadowed group passwords as well:"
-msgstr "如果要对组密码启用 Shadow 加密，执行："
+msgstr "对组密码启用 Shadow 机制："
 
 #. type: Content of: <sect1><sect2><screen>
 #: lfs-en/chapter08/shadow.xml
@@ -902,23 +853,18 @@ msgstr "<userinput>sed -i '/MAIL/s/yes/no/' /etc/default/useradd</userinput>"
 
 #. type: Content of: <sect1><sect2><para>
 #: lfs-en/chapter08/shadow.xml
-#, fuzzy
-#| msgid ""
-#| "Edits the <filename>/etc/passwd</filename> or <filename>/etc/shadow</"
-#| "filename> files"
 msgid ""
 "Finally, create the empty <filename>/etc/subuid</filename> and <filename>/"
 "etc/subgid</filename> files:"
 msgstr ""
-"编辑 <filename>/etc/passwd</filename> 或 <filename>/etc/shadow</filename> 文"
-"件"
+"最后，创建空的 <filename>/etc/subuid</filename> 和 <filename>/etc/subgid</"
+"filename> 文件："
 
 #. type: Content of: <sect1><sect2><screen>
 #: lfs-en/chapter08/shadow.xml
-#, fuzzy, no-wrap
-#| msgid "<userinput>mount /boot</userinput>"
+#, no-wrap
 msgid "<userinput>touch /etc/sub{u,g}id</userinput>"
-msgstr "<userinput>mount /boot</userinput>"
+msgstr "<userinput>touch /etc/sub{u,g}id</userinput>"
 
 #. type: Content of: <sect1><sect2><para>
 #: lfs-en/chapter08/shadow.xml
@@ -929,6 +875,9 @@ msgid ""
 "role='man' url='&man;subgid.5'>subgid(5)</ulink> for the details about the "
 "subordinate IDs."
 msgstr ""
+"Shadow 提供的一些工具会自动更新这两个文件的内容，以分配次级用户和组 ID。阅读"
+"手册页 <ulink role='man' url='&man;subuid.5'>subuid(5)</ulink> 和 <ulink "
+"role='man' url='&man;subgid.5'>subgid(5)</ulink> 以了解次级 ID 的详细信息。"
 
 #. type: Content of: <sect1><sect2><title>
 #: lfs-en/chapter08/shadow.xml
@@ -954,13 +903,6 @@ msgstr "Shadow 的内容"
 
 #. type: Content of: <sect1><sect2><segmentedlist><seglistitem><seg>
 #: lfs-en/chapter08/shadow.xml
-#, fuzzy
-#| msgid ""
-#| "chage, chfn, chgpasswd, chpasswd, chsh, expiry, faillog, getsubids, "
-#| "gpasswd, groupadd, groupdel, groupmems, groupmod, grpck, grpconv, "
-#| "grpunconv, login, logoutd, newgidmap, newgrp, newuidmap, newusers, "
-#| "nologin, passwd, pwck, pwconv, pwunconv, sg (link to newgrp), su, "
-#| "useradd, userdel, usermod, vigr (link to vipw), and vipw"
 msgid ""
 "chage, chfn, chgpasswd, chpasswd, chsh, faillog, getsubids, gpasswd, "
 "groupadd, groupdel, groupmod, grpck, grpconv, grpunconv, login, newgidmap, "
@@ -968,11 +910,11 @@ msgid ""
 "(link to newgrp), su, useradd, userdel, usermod, vigr (link to vipw), and "
 "vipw"
 msgstr ""
-"chage, chfn, chgpasswd, chpasswd, chsh, expiry, faillog, getsubids, gpasswd, "
-"groupadd, groupdel, groupmems, groupmod, grpck, grpconv, grpunconv, login, "
-"logoutd, newgidmap, newgrp, newuidmap, newusers, nologin, passwd, pwck, "
-"pwconv, pwunconv, sg (到 newgrp 的链接), su, useradd, userdel, usermod, vigr "
-"(到 vipw 的链接), 以及 vipw"
+"chage, chfn, chgpasswd, chpasswd, chsh, faillog, getsubids, gpasswd, "
+"groupadd, groupdel, groupmod, grpck, grpconv, grpunconv, login, newgidmap, "
+"newgrp, newuidmap, newusers, nologin, passwd, pwck, pwconv, pwunconv, sg (到 "
+"newgrp 的链接), su, useradd, userdel, usermod, vigr (到 vipw 的链接), 以及 "
+"vipw"
 
 #. type: Content of: <sect1><sect2><segmentedlist><seglistitem><seg>
 #: lfs-en/chapter08/shadow.xml

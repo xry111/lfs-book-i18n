@@ -529,17 +529,14 @@ msgstr "&tar-fin-du;"
 
 #. type: Content of: <sect1><sect2><para>
 #: lfs-en/chapter08/tar.xml
-#, fuzzy
-#| msgid "First, make the package build with gcc-14.1 or later:"
 msgid "First fix the package to build with acl-2.4.0:"
-msgstr "首先，使得该软件包能够用 gcc-14.1 或更新版本构建："
+msgstr "首先修复该软件包，使其可用 acl-2.4.0 构建："
 
 #. type: Content of: <sect1><sect2><screen>
 #: lfs-en/chapter08/tar.xml
-#, fuzzy, no-wrap
-#| msgid "<userinput remap=\"pre\">patch -Np1 -i ../&expect-gcc15-patch;</userinput>"
+#, no-wrap
 msgid "<userinput remap=\"pre\">patch -Np1 -i ../tar-1.35-acl_fix-1.patch</userinput>"
-msgstr "<userinput remap=\"pre\">patch -Np1 -i ../&expect-gcc15-patch;</userinput>"
+msgstr "<userinput remap=\"pre\">patch -Np1 -i ../tar-1.35-acl_fix-1.patch</userinput>"
 
 #. type: Content of: <sect1><sect2><screen>
 #: lfs-en/chapter08/tar.xml

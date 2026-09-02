@@ -358,12 +358,7 @@ msgstr "准备编译 Diffutils："
 
 #. type: Content of: <sect1><sect2><screen>
 #: lfs-en/chapter06/diffutils.xml
-#, fuzzy, no-wrap
-#| msgid ""
-#| "<userinput remap=\"configure\">./configure --prefix=/usr   \\\n"
-#| "            --host=$LFS_TGT \\\n"
-#| "            gl_cv_func_strcasecmp_works=y \\\n"
-#| "            --build=$(./build-aux/config.guess)</userinput>"
+#, no-wrap
 msgid ""
 "<userinput remap=\"configure\">./configure --prefix=/usr   \\\n"
 "            --host=$LFS_TGT \\\n"
@@ -372,33 +367,16 @@ msgid ""
 msgstr ""
 "<userinput remap=\"configure\">./configure --prefix=/usr   \\\n"
 "            --host=$LFS_TGT \\\n"
-"            gl_cv_func_strcasecmp_works=y \\\n"
+"            gl_cv_func_strcasecmp_works=yes \\\n"
 "            --build=$(./build-aux/config.guess)</userinput>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: lfs-en/chapter06/diffutils.xml
-#, fuzzy
-#| msgid "<parameter>gl_cv_func_strcasecmp_works=y</parameter>"
 msgid "<parameter>gl_cv_func_strcasecmp_works=yes</parameter>"
-msgstr "<parameter>gl_cv_func_strcasecmp_works=y</parameter>"
+msgstr "<parameter>gl_cv_func_strcasecmp_works=yes</parameter>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: lfs-en/chapter06/diffutils.xml
-#, fuzzy
-#| msgid ""
-#| "This option specify the result of a check for the <function>strcasecmp</"
-#| "function>.  The check requires running a compiled C program, and this is "
-#| "impossible during cross-compilation because in general a cross-compiled "
-#| "program cannot run on the host distro.  Normally for such a check the "
-#| "<command>configure</command> script would use a fall-back value for cross-"
-#| "compilation, but the fall-back value for this check is absent and the "
-#| "<command>configure</command> script would have no value to use and error "
-#| "out.  The upstream has already fixed the issue, but to apply the fix we'd "
-#| "need to run <command>autoconf</command> that the host distro may lack.  "
-#| "So we just specify the check result (<literal>y</literal> as we know the "
-#| "<function>strcasecmp</function> function in Glibc-&glibc-version; works "
-#| "fine) instead, then <command>configure</command> will just use the "
-#| "specified value and skip the check."
 msgid ""
 "This option specify the result of a check for the <function>strcasecmp</"
 "function> function. The check requires running a compiled C program, and "
@@ -421,7 +399,7 @@ msgstr ""
 "<command>configure</command> 脚本完全无法得出检查结果，并报错退出。上游开发者"
 "已经修复了这一问题，但应用修复后需要运行 宿主发行版未必提供的 "
 "<command>autoconf</command>。因此我们不使用上游修复，而是直接指定检查结果 "
-"(为 <literal>y</literal>，因为我们已经知道Glibc-&glibc-version; 中的 "
+"(为 <literal>yes</literal>，因为我们已经知道 Glibc-&glibc-version; 中的 "
 "<function>strcasecmp</function> 函数能够正常工作)，这样 <command>configure</"
 "command> 就会直接使用我们给定的值，跳过有问题的检查。"
 

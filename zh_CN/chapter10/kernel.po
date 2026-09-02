@@ -511,6 +511,8 @@ msgid ""
 "and runtime support, on top of supporting the DOS VFAT filesystem which is "
 "needed for the EFI partition:"
 msgstr ""
+"如果用 UEFI 引导系统，调整内核配置，加入 EFI 分区格式和运行时支持，以及挂载 "
+"EFI 分区所需的 DOS VFAT 文件系统支持："
 
 #. type: Content of: <sect1><sect2><note><para>
 #: lfs-en/chapter10/kernel.xml
@@ -520,6 +522,9 @@ msgid ""
 "Don't select <literal>PARTITION_ADVANCED</literal> just because you need to "
 "boot via UEFI."
 msgstr ""
+"如果没有选择 <literal>PARTITION_ADVANCED</literal>，则 "
+"<literal>EFI_PARTITION</literal> 会在不可见的状态下但被隐式选中。不要仅仅为了"
+"通过 UEFI 引导系统而选择 <literal>PARTITION_ADVANCED</literal>。"
 
 #. type: Content of: <sect1><sect2><note><para>
 #: lfs-en/chapter10/kernel.xml

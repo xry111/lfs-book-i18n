@@ -474,10 +474,9 @@ msgstr "务必确认测试套件中至少 199 项测试通过。运行以下命�
 
 #. type: Content of: <sect1><sect2><screen>
 #: lfs-en/chapter08/gmp.xml
-#, fuzzy, no-wrap
-#| msgid "<userinput remap=\"test\">grep '^FAIL:' $(find -name '*.log')</userinput>"
+#, no-wrap
 msgid "<userinput remap=\"test\">cat $(find -name '*.log') | grep -c ^PASS</userinput>"
-msgstr "<userinput remap=\"test\">grep '^FAIL:' $(find -name '*.log')</userinput>"
+msgstr "<userinput remap=\"test\">cat $(find -name '*.log') | grep -c ^PASS</userinput>"
 
 #. type: Content of: <sect1><sect2><para>
 #: lfs-en/chapter08/gmp.xml lfs-en/chapter08/mpc.xml lfs-en/chapter08/mpfr.xml

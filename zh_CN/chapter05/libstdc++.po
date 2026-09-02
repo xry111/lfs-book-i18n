@@ -308,16 +308,7 @@ msgstr "准备编译 Libstdc++："
 
 #. type: Content of: <sect1><sect2><screen>
 #: lfs-en/chapter05/libstdc++.xml
-#, fuzzy, no-wrap
-#| msgid ""
-#| "<userinput remap=\"configure\">../libstdc++-v3/configure      \\\n"
-#| "    --host=$LFS_TGT            \\\n"
-#| "    --build=$(../config.guess) \\\n"
-#| "    --prefix=/usr              \\\n"
-#| "    --disable-multilib         \\\n"
-#| "    --disable-nls              \\\n"
-#| "    --disable-libstdcxx-pch    \\\n"
-#| "    --with-gxx-include-dir=/tools/$LFS_TGT/include/c++/&gcc-version;</userinput>"
+#, no-wrap
 msgid ""
 "<userinput remap=\"configure\">../libstdc++-v3/configure      \\\n"
 "    --host=$LFS_TGT            \\\n"
@@ -332,6 +323,7 @@ msgstr ""
 "<userinput remap=\"configure\">../libstdc++-v3/configure      \\\n"
 "    --host=$LFS_TGT            \\\n"
 "    --build=$(../config.guess) \\\n"
+"    CXX=$LFS_TGT-gcc           \\\n"
 "    --prefix=/usr              \\\n"
 "    --disable-multilib         \\\n"
 "    --disable-nls              \\\n"
@@ -354,10 +346,8 @@ msgstr ""
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: lfs-en/chapter05/libstdc++.xml
-#, fuzzy
-#| msgid "<parameter>--target=$LFS_TGT</parameter>"
 msgid "<parameter>CXX=$LFS_TGT-gcc</parameter>"
-msgstr "<parameter>--target=$LFS_TGT</parameter>"
+msgstr "<parameter>CXX=$LFS_TGT-gcc</parameter>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: lfs-en/chapter05/libstdc++.xml
@@ -372,6 +362,8 @@ msgid ""
 "<command>configure</command> script from the top level directory.  Here we "
 "explicitly pass it."
 msgstr ""
+"指定使用 <command>$LFS_TGT-gcc</command> 编译 C++ 代码。默认使用的 "
+"<command>$LFS_TGT-g++</command> 会在调用链接器时"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: lfs-en/chapter05/libstdc++.xml
