@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Linux From Scratch 11.1\n"
 "Report-Msgid-Bugs-To: lfs-dev@lists.linuxfromscratch.org\n"
-"POT-Creation-Date: 2026-09-02 23:22+0800\n"
+"POT-Creation-Date: 2026-09-16 17:32+0800\n"
 "PO-Revision-Date: 2022-03-03 03:00+0800\n"
 "Last-Translator: Xi Ruoyao <xry111@xry111.site>\n"
 "Language-Team: none\n"
@@ -335,6 +335,23 @@ msgstr "<userinput remap=\"install\">make install</userinput>"
 #, no-wrap
 msgid "&gcc-url;"
 msgstr "&gcc-url;"
+
+#. type: Content of: <sect1><sect2><para>
+#: lfs-en/chapter05/gcc-pass1.xml lfs-en/chapter06/gcc-pass2.xml
+#: lfs-en/chapter08/gcc.xml
+msgid ""
+"Fix an incorrect code generation for some logical and operations "
+"(<literal>&amp;&amp;</literal> in C) on LoongArch:"
+msgstr ""
+"修复龙架构上对于一些逻辑与操作 (C 语言中的 <literal>&amp;&amp;</literal>) 生"
+"成错误代码的问题："
+
+#. type: Content of: <sect1><sect2><screen>
+#: lfs-en/chapter05/gcc-pass1.xml lfs-en/chapter06/gcc-pass2.xml
+#: lfs-en/chapter08/gcc.xml
+#, no-wrap
+msgid "<userinput remap=\"pre\">patch -Np1 -i ../&gcc-loongarch-fixes-patch;</userinput>"
+msgstr "<userinput remap=\"pre\">patch -Np1 -i ../&gcc-loongarch-fixes-patch;</userinput>"
 
 #. type: Content of: <sect1><sect2><para>
 #: lfs-en/chapter05/gcc-pass1.xml lfs-en/chapter06/gcc-pass2.xml
