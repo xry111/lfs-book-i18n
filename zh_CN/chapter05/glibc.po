@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Linux From Scratch 11.0\n"
 "Report-Msgid-Bugs-To: lfs-dev@lists.linuxfromscratch.org\n"
-"POT-Creation-Date: 2026-09-08 18:37+0800\n"
+"POT-Creation-Date: 2026-09-19 19:53+0800\n"
 "PO-Revision-Date: 2021-08-07 09:09+0800\n"
 "Last-Translator: Xi Ruoyao <xry111@xry111.site>\n"
 "Language-Team: none\n"
@@ -369,15 +369,21 @@ msgid "<userinput remap=\"pre\">patch -Np1 -i ../&glibc-fhs-patch;</userinput>"
 msgstr "<userinput remap=\"pre\">patch -Np1 -i ../&glibc-fhs-patch;</userinput>"
 
 #. type: Content of: <sect1><sect2><para>
-#: lfs-en/chapter05/glibc.xml lfs-en/chapter08/glibc.xml
+#: lfs-en/chapter05/glibc.xml
 msgid ""
-"Fix an issue causing the <ulink role='man' url='&man;tanh.3'>tanh(3)</ulink> "
-"function to crash on some old x86_64 processors, and to fix installing with "
-"multiple <command>make</command> jobs:"
+"Fix various issues identified after the glibc 2.44 release, including one "
+"causing the <ulink role='man' url='&man;tanh.3'>tanh(3)</ulink> function to "
+"crash on some old x86_64 processors, one causing some packages using gnulib "
+"to hang indefinitely at runtime, some causing building or testing failures "
+"with parallel <command>make</command> jobs, and six security vulnerabilities "
+"(some of them may not really affect the temporary build but the fixes make "
+"no harm anyway):"
 msgstr ""
-"现在修复导致 <ulink role='man' url='&man;tanh.3'>tanh(3)</ulink> 函数在一些较"
-"老的 x86_64 处理器崩溃的问题，以及使用多个 <command>make</command> 任务并行构"
-"建失败的问题："
+"修复 glibc 2.44 发布后发现的一些问题，包括 <ulink role='man' "
+"url='&man;tanh.3'>tanh(3)</ulink> 函数在较老的 x86_64 处理器上崩溃、使用 "
+"gnulib 的一些软件包在运行时会陷入无限等待状态、使用多个并行的 <command>make</"
+"command> 任务时出现构建或测试失败，以及六个安全漏洞 (一些问题可能并不实际影响"
+"这里临时构建的 glibc，但修复它们也不会造成损失)："
 
 #. type: Content of: <sect1><sect2><screen>
 #: lfs-en/chapter05/glibc.xml lfs-en/chapter08/glibc.xml
