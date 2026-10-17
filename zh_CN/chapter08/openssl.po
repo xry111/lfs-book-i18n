@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Linux From Scratch 11.0\n"
 "Report-Msgid-Bugs-To: lfs-dev@lists.linuxfromscratch.org\n"
-"POT-Creation-Date: 2026-09-19 19:53+0800\n"
+"POT-Creation-Date: 2026-10-18 02:14+0800\n"
 "PO-Revision-Date: 2021-08-31 16:47+0800\n"
 "Last-Translator: Xi Ruoyao <xry111@xry111.site>\n"
 "Language-Team: none\n"
@@ -495,24 +495,6 @@ msgstr ""
 #. type: Content of: <sect1><sect2><para>
 #: lfs-en/chapter08/openssl.xml
 msgid ""
-"One test, 30-test_afalg.t, is known to fail if the host kernel does not have "
-"<option>CONFIG_CRYPTO_USER_API_SKCIPHER</option> enabled, or does not have "
-"any options providing an AES with CBC implementation (for example, the "
-"combination of <option>CONFIG_CRYPTO_AES</option> and "
-"<option>CONFIG_CRYPTO_CBC</option>, or <option>CONFIG_CRYPTO_AES_NI_INTEL</"
-"option> if the CPU supports AES-NI)  enabled.  If it fails, it can safely be "
-"ignored."
-msgstr ""
-"一项名为 30-test_afalg.t 的测试在宿主内核未启用 "
-"<option>CONFIG_CRYPTO_USER_API_SKCIPHER</option>，或未启用任何提供 AES-CBC 模"
-"式加密实现的选项 (例如，<option>CONFIG_CRYPTO_AES</option> 和 "
-"<option>CONFIG_CRYPTO_CBC</option> 的组合，或者 "
-"<option>CONFIG_CRYPTO_AES_NI_INTEL</option> —— 如果 CPU 支持 AES-NI)。如果该"
-"测试失败，可以安全地忽略它。"
-
-#. type: Content of: <sect1><sect2><para>
-#: lfs-en/chapter08/openssl.xml
-msgid ""
 "Install the package (setting an empty <envar>INSTALL_LIBS</envar> prevents "
 "the installation of static libraries):"
 msgstr "安装该软件包 (设定 <envar>INSTALL_LIBS</envar> 为空以防止安装静态库)："
@@ -581,10 +563,10 @@ msgstr ""
 msgid "Contents of OpenSSL"
 msgstr "OpenSSL 的内容"
 
-#. type: Content of: <sect1><sect2><segmentedlist><seglistitem><seg>
+#. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: lfs-en/chapter08/openssl.xml
-msgid "c_rehash and openssl"
-msgstr "c_rehash 和 openssl"
+msgid "openssl"
+msgstr "openssl"
 
 #. type: Content of: <sect1><sect2><segmentedlist><seglistitem><seg>
 #: lfs-en/chapter08/openssl.xml
@@ -602,28 +584,6 @@ msgstr ""
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: lfs-en/chapter08/openssl.xml
-msgid "<command>c_rehash</command>"
-msgstr "<command>c_rehash</command>"
-
-#. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
-#: lfs-en/chapter08/openssl.xml
-msgid ""
-"is a <application>Perl</application> script that scans all files in a "
-"directory and adds symbolic links to their hash values.  Use of "
-"<command>c_rehash</command> is considered obsolete and should be replaced by "
-"<command>openssl rehash</command> command"
-msgstr ""
-"一个 <application>Perl</application> 脚本，扫描一个目录中的所有文件，并添加它"
-"们的符号链接，符号链接名为对应文件的散列值。<command>c_rehash</command> 已弃"
-"用，应该使用 <command>openssl rehash</command> 命令替代它"
-
-#. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
-#: lfs-en/chapter08/openssl.xml
-msgid "c_rehash"
-msgstr "c_rehash"
-
-#. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
-#: lfs-en/chapter08/openssl.xml
 msgid "<command>openssl</command>"
 msgstr "<command>openssl</command>"
 
@@ -638,11 +598,6 @@ msgstr ""
 "一个命令行工具，用于从 shell 使用 <application>OpenSSL</application>的密码学"
 "库的一些密码学函数。它可以被用于 <ulink role='man' "
 "url='&man;openssl.1'>openssl(1)</ulink> 描述的许多功能"
-
-#. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
-#: lfs-en/chapter08/openssl.xml
-msgid "openssl"
-msgstr "openssl"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: lfs-en/chapter08/openssl.xml

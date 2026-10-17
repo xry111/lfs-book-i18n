@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Linux From Scratch 11.3\n"
 "Report-Msgid-Bugs-To: lfs-dev@lists.linuxfromscratch.org\n"
-"POT-Creation-Date: 2026-09-19 19:53+0800\n"
+"POT-Creation-Date: 2026-10-18 02:14+0800\n"
 "PO-Revision-Date: 2023-06-19 19:15+0800\n"
 "Last-Translator: Automatically generated\n"
 "Language-Team: none\n"
@@ -464,8 +464,19 @@ msgstr "安装 Pkgconf"
 
 #. type: Content of: <sect1><sect2><para>
 #: lfs-en/chapter08/pkgconf.xml
-msgid "First, work around a circular dependency on meson:"
-msgstr "首先，绕过和 meson 的循环依赖："
+msgid "First, remove a test the causes the build to fail:"
+msgstr "首先，删除一项导致构建失败的测试："
+
+#. type: Content of: <sect1><sect2><screen>
+#: lfs-en/chapter08/pkgconf.xml
+#, no-wrap
+msgid "<userinput remap=\"pre\">sed '/^test_api_util_exe/,/^test(.*test_api_util_exe)/d' -i meson.build</userinput>"
+msgstr "<userinput remap=\"pre\">sed '/^test_api_util_exe/,/^test(.*test_api_util_exe)/d' -i meson.build</userinput>"
+
+#. type: Content of: <sect1><sect2><para>
+#: lfs-en/chapter08/pkgconf.xml
+msgid "Now, work around a circular dependency on meson:"
+msgstr "然后，绕过和 meson 的循环依赖："
 
 #. type: Content of: <sect1><sect2><screen>
 #: lfs-en/chapter08/pkgconf.xml
