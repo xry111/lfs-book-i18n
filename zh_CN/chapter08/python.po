@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Linux From Scratch 11.4\n"
 "Report-Msgid-Bugs-To: lfs-dev@lists.linuxfromscratch.org\n"
-"POT-Creation-Date: 2026-10-03 21:13+0800\n"
+"POT-Creation-Date: 2026-11-16 17:10+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: Xi Ruoyao <xry111@xry111.site>\n"
 "Language-Team: none\n"
@@ -518,17 +518,6 @@ msgstr "&python-fin-du;"
 msgid "Installation of Python 3"
 msgstr "安装 Python 3"
 
-#. type: Content of: <sect1><sect2><para>
-#: lfs-en/chapter08/python.xml
-msgid "First, apply a patch for compatibility with OpenSSL 4:"
-msgstr "首先，应用补丁，修复和 OpenSSL 4 的兼容性："
-
-#. type: Content of: <sect1><sect2><screen>
-#: lfs-en/chapter08/python.xml
-#, no-wrap
-msgid "<userinput remap=\"pre\">patch -Np1 -i ../&python-openssl4-fixes-patch;</userinput>"
-msgstr "<userinput remap=\"pre\">patch -Np1 -i ../&python-openssl4-fixes-patch;</userinput>"
-
 #. type: Content of: <sect1><sect2><screen>
 #: lfs-en/chapter08/python.xml
 #, no-wrap
@@ -604,12 +593,11 @@ msgstr ""
 #. type: Content of: <sect1><sect2><para>
 #: lfs-en/chapter08/python.xml
 msgid ""
-"Two tests, <literal>test_urllib2</literal> and <literal>test_urllibnet</"
-"literal>, are known to fail because name resolution is not configured in the "
-"incomplete LFS environment."
+"Two tests, <literal>test_os2</literal> and <literal>test_httplib</literal>, "
+"are known to fail."
 msgstr ""
-"已知有两项测试，<literal>test_urllib2</literal> and <literal>test_urllibnet</"
-"literal>，会由于我们在不完整的 LFS 环境中未配置域名解析而失败。"
+"已知 <literal>test_os2</literal> 和 <literal>test_httplib</literal> 两项测试"
+"可能失败。"
 
 #. type: Content of: <sect1><sect2><para>
 #: lfs-en/chapter08/python.xml

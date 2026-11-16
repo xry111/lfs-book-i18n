@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Linux From Scratch 11.0\n"
 "Report-Msgid-Bugs-To: lfs-dev@lists.linuxfromscratch.org\n"
-"POT-Creation-Date: 2026-09-19 19:53+0800\n"
+"POT-Creation-Date: 2026-11-16 17:10+0800\n"
 "PO-Revision-Date: 2021-08-07 09:09+0800\n"
 "Last-Translator: Xi Ruoyao <xry111@xry111.site>\n"
 "Language-Team: none\n"
@@ -375,14 +375,14 @@ msgid ""
 "causing the <ulink role='man' url='&man;tanh.3'>tanh(3)</ulink> function to "
 "crash on some old x86_64 processors, one causing some packages using gnulib "
 "to hang indefinitely at runtime, some causing building or testing failures "
-"with parallel <command>make</command> jobs, and six security vulnerabilities "
-"(some of them may not really affect the temporary build but the fixes make "
-"no harm anyway):"
+"with parallel <command>make</command> jobs, and seven security "
+"vulnerabilities (some of them may not really affect the temporary build but "
+"the fixes make no harm anyway):"
 msgstr ""
 "修复 glibc 2.44 发布后发现的一些问题，包括 <ulink role='man' "
 "url='&man;tanh.3'>tanh(3)</ulink> 函数在较老的 x86_64 处理器上崩溃、使用 "
 "gnulib 的一些软件包在运行时会陷入无限等待状态、使用多个并行的 <command>make</"
-"command> 任务时出现构建或测试失败，以及六个安全漏洞 (一些问题可能并不实际影响"
+"command> 任务时出现构建或测试失败，以及七个安全漏洞 (一些问题可能并不实际影响"
 "这里临时构建的 glibc，但修复它们也不会造成损失)："
 
 #. type: Content of: <sect1><sect2><screen>
@@ -579,6 +579,19 @@ msgstr ""
 msgid "Compile the package:"
 msgstr "编译该软件包："
 
+#. type: Content of: <sect1><sect2><para>
+#: lfs-en/chapter05/glibc.xml
+msgid ""
+"Fix a hard coded path to the executable loader in the <command>ldd</command> "
+"script:"
+msgstr "改正 <command>ldd</command> 脚本中硬编码的可执行文件加载器路径："
+
+#. type: Content of: <sect1><sect2><screen>
+#: lfs-en/chapter05/glibc.xml lfs-en/chapter08/glibc.xml
+#, no-wrap
+msgid "<userinput remap=\"install\">sed '/RTLDLIST=/s@/usr@@g' -i elf/ldd</userinput>"
+msgstr "<userinput remap=\"install\">sed '/RTLDLIST=/s@/usr@@g' -i elf/ldd</userinput>"
+
 #. type: Content of: <sect1><sect2><warning><para>
 #: lfs-en/chapter05/glibc.xml
 msgid ""
@@ -632,19 +645,6 @@ msgstr ""
 "定它，默认值为根 (<filename class=\"directory\">/</filename>) 目录。这里我们"
 "指定将软件包安装到 <filename class=\"directory\">$LFS</filename>，它在<xref "
 "linkend=\"ch-tools-chroot\"/>之后将成为根目录。"
-
-#. type: Content of: <sect1><sect2><para>
-#: lfs-en/chapter05/glibc.xml
-msgid ""
-"Fix a hard coded path to the executable loader in the <command>ldd</command> "
-"script:"
-msgstr "改正 <command>ldd</command> 脚本中硬编码的可执行文件加载器路径："
-
-#. type: Content of: <sect1><sect2><screen>
-#: lfs-en/chapter05/glibc.xml
-#, no-wrap
-msgid "<userinput remap=\"install\">sed '/RTLDLIST=/s@/usr@@g' -i $LFS/usr/bin/ldd</userinput>"
-msgstr "<userinput remap=\"install\">sed '/RTLDLIST=/s@/usr@@g' -i $LFS/usr/bin/ldd</userinput>"
 
 #. type: Content of: <sect1><sect2><para>
 #: lfs-en/chapter05/glibc.xml
